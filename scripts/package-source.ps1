@@ -42,9 +42,9 @@ try {
   foreach ($name in $allowed) {
     $target = Join-Path $projectRoot $name
     if (-not (Test-Path -LiteralPath $target)) { continue }
-    $item = Get-Item -LiteralPath $target
+    $item = Get-Item -LiteralPath $target -Force
     if ($item.Attributes -band [IO.FileAttributes]::ReparsePoint) { continue }
-    $files = if ($item.PSIsContainer) { Get-ChildItem -LiteralPath $target -File -Recurse } else { @($item) }
+    $files = if ($item.PSIsContainer) { Get-ChildItem -LiteralPath $target -File -Recurse -Force } else { @($item) }
     foreach ($file in $files) {
       $fullPath = [IO.Path]::GetFullPath($file.FullName)
       if (-not $fullPath.StartsWith($boundary, [StringComparison]::OrdinalIgnoreCase)) {
@@ -52,8 +52,8 @@ try {
       }
       if ($file.Attributes -band [IO.FileAttributes]::ReparsePoint) { continue }
       $entry = $fullPath.Substring($boundary.Length).Replace('\', '/')
-      if ($entry -match '(^|/)(node_modules|\.audit-tmp|downloads|release|\.git)(/|$)') { continue }
-      if ($entry -match '\.(zip|blend[0-9]+|log)$' -or $file.Name -like '.env*') { continue }
+      if ($entry -match '(^|/)(node_modules|\.audit-tmp|downloads|release|\.git|__pycache__)(/|$)') { continue }
+      if ($entry -match '\.(zip|blend[0-9]+|log|pyc)$' -or $file.Name -like '.env*') { continue }
       if ($fullPath -eq $archivePath) { continue }
       [IO.Compression.ZipFileExtensions]::CreateEntryFromFile($zip, $fullPath, $entry, [IO.Compression.CompressionLevel]::Optimal) | Out-Null
     }
