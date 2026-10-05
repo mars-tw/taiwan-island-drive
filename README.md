@@ -10,6 +10,10 @@
 
 ![島嶼公路遊戲畫面](docs/game-desktop.png)
 
+## 親子學習版
+
+同系列還有 [島嶼鐵道學校](https://mars-tw.github.io/taiwan-train-school/) 與 [島嶼飛行學校](https://mars-tw.github.io/island-flight-school/)，預設提供 3～5 歲幼兒的大按鈕、中文語音及物理操作輔助。兩版皆提供 Blender 模型、真正 IMG UV 貼圖及公開原始碼，也能從汽車版頂端圖示直接開啟。
+
 ## 遊戲內容
 
 | 路線 | 風景 | 距離 |

@@ -19,3 +19,7 @@ iPhone Safari 可能會詢問是否允許動作與方向存取，選擇允許即
 桌面瀏覽器的模擬事件只能驗證程式邏輯。iPhone 的系統權限視窗、實際握持感受與不同手機的感測器表現，仍需實體裝置驗證。
 
 參考官方文件：[MDN：requestPermission](https://developer.mozilla.org/en-US/docs/Web/API/DeviceOrientationEvent/requestPermission_static)、[MDN：DeviceOrientationEvent](https://developer.mozilla.org/en-US/docs/Web/API/DeviceOrientationEvent)、[MDN：方向與動作資料](https://developer.mozilla.org/en-US/docs/Web/API/Device_orientation_events/Orientation_and_motion_data_explained)。
+# 公開版瀏覽器驗證
+
+啟用後等待正常權限回覆，再以模擬 `DeviceOrientationEvent` 校準。右傾 25 度時，平滑後轉向值約為 0.987；鍵盤左轉優先為 −1，放開後恢復傾斜轉向，回正歸零，暫停後感測不再影響轉向。這是瀏覽器模擬驗證，沒有宣稱已在實體手機驗收。
+
