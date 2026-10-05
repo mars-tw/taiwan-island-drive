@@ -23,3 +23,7 @@
 @media(max-height:520px) and (orientation:landscape){.menu{margin-left:20px;margin-right:20px}.vehicle-panel{bottom:auto}.vehicle-choice{flex-direction:row;gap:3px;min-height:25px;padding:3px}.vehicle-choice svg{width:40px;height:23px}}
 @media(max-width:600px) and (min-height:521px){.intro .mode-selector,.intro .route-note{top:132px}}
 @media(max-height:520px) and (orientation:landscape){.intro h1 br{display:initial}.intro .mode-selector{top:139px}}
+.tilt-toolbar{position:absolute;top:132px;right:32px;display:flex;gap:8px;pointer-events:auto}.tilt-toolbar .hud-button{width:56px;height:56px;flex-direction:column;gap:4px;touch-action:manipulation}.tilt-toolbar span{font-size:9px;white-space:nowrap}.tilt-toggle.is-active{background:#e4f29ac9;color:#173c35;border-color:#e8f5b2}.tilt-toolbar button:disabled{opacity:.65}.tilt-settings-button{min-width:64px;min-height:44px;border:1px solid #b5c6b2;border-radius:6px;background:#e1e9dc;color:var(--ink);font-size:12px}.tilt-settings-button[aria-pressed=true]{background:var(--lime)}.tilt-setting small{line-height:1.7}.tilt-setting #tilt-status{color:#326f5c}.tilt-enabled .steering-controls{opacity:.6}.tilt-enabled .steering-controls:has(.held){opacity:1}
+@media(max-width:900px){.tilt-toolbar{top:120px;right:20px}}
+@media(max-width:600px){.tilt-toolbar{top:112px;right:16px;gap:6px}.tilt-toolbar .hud-button{width:50px;height:50px}}
+@media(max-height:520px) and (orientation:landscape){.tilt-toolbar{top:96px;right:18px;gap:6px}.tilt-toolbar .hud-button{width:48px;height:48px}.tilt-toolbar span{font-size:8px}}

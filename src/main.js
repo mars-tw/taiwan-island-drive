@@ -6,6 +6,7 @@ import '@fontsource/barlow-condensed/latin-800.css';
 import { MAPS, VEHICLES, COLORS, TRACK_LENGTH } from './config.js';
 import { Game } from './game.js';
 import { roadCenter } from './physics.js';
+import { TiltController, combineSteering } from './tilt.js';
 
 const $ = (s) => document.querySelector(s);
 const $$ = (s) => [...document.querySelectorAll(s)];
@@ -127,6 +128,8 @@ function drawMinimap(progress) {
 
 function updateHUD(state) {
   lastState = state;
+  tilt.setActive(state.phase === 'running');
+  updateInput();
   $('#speed').textContent = String(Math.round(state.speed || 0)).padStart(3, '0');
   $('#gear').textContent = state.speed < 1 ? 'N' : Math.min(6, 1 + Math.floor(state.speed / 34));
   $('#progress-bar').style.width = `${Math.min(100, state.progress * 100)}%`;
@@ -184,16 +187,19 @@ function returnToMenu() {
   $$('.overlay, #countdown').forEach(el => el.classList.add('hidden'));
 }
 
-function bindControls() {
-  const updateInput = () => {
+function updateInput() {
     const touches = new Set(pointers.values());
     const active = (...keys) => keys.some(k => pressedKeys.has(k));
-    game.input.steer = (active('d', 'arrowright') || touches.has('right') ? 1 : 0) - (active('a', 'arrowleft') || touches.has('left') ? 1 : 0);
+    const left = active('a', 'arrowleft') || touches.has('left');
+    const right = active('d', 'arrowright') || touches.has('right');
+    game.input.steer = game.phase === 'running' ? combineSteering(left, right, tilt.enabled, tilt.steer) : 0;
     game.input.throttle = active('w', 'arrowup') || touches.has('throttle') ? 1 : 0;
     game.input.brake = active('s', 'arrowdown') || touches.has('brake') ? 1 : 0;
     game.input.boost = active('shift') || touches.has('boost');
     $$('[data-input]').forEach(el => el.classList.toggle('held', touches.has(el.dataset.input)));
-  };
+}
+
+function bindControls() {
   $$('[data-input]').forEach(button => {
     button.addEventListener('pointerdown', event => { event.preventDefault(); button.setPointerCapture(event.pointerId); pointers.set(event.pointerId, button.dataset.input); updateInput(); });
     const up = event => { pointers.delete(event.pointerId); updateInput(); };
@@ -214,6 +220,7 @@ function bindControls() {
 
 function releaseInput() {
   pressedKeys.clear(); pointers.clear();
+  tilt.resetSteer();
   if (typeof game !== 'undefined') Object.assign(game.input, { steer: 0, throttle: 0, brake: 0, boost: false });
   $$('[data-input]').forEach(el => el.classList.remove('held'));
 }
@@ -223,6 +230,36 @@ const game = new Game({
   onReady: () => {},
   onError: error => { console.error(error); toast('3D 場景載入遇到問題，請重新整理。'); }
 });
+
+function syncTiltUI(state = tilt.getState()) {
+  const labels = { off: '觸控轉向', permission: '等待權限', waiting: '等待感測', ready: '方向盤已開',
+    denied: '權限未開啟', unsupported: '瀏覽器不支援', insecure: '請使用 HTTPS', unavailable: '未收到感測資料', error: '無法取得權限' };
+  const hud = $('#tilt-toggle');
+  hud.setAttribute('aria-pressed', String(state.enabled));
+  hud.setAttribute('aria-label', state.enabled ? '關閉手機方向盤' : '啟用手機方向盤');
+  hud.classList.toggle('is-active', state.enabled);
+  hud.disabled = state.pending;
+  hud.querySelector('span').textContent = state.status === 'waiting' ? '等待感測' : state.enabled ? '方向盤開' : '方向盤';
+  const settings = $('#tilt-settings-toggle');
+  settings.setAttribute('aria-pressed', String(state.enabled));
+  settings.disabled = state.pending;
+  settings.textContent = state.pending ? '等待權限' : state.enabled ? '關閉' : '啟用';
+  $('#tilt-status').textContent = labels[state.status] || '觸控轉向';
+  $('#tilt-calibrate').classList.toggle('hidden', !state.enabled);
+  $('#tilt-calibrate').disabled = !state.ready;
+  document.body.classList.toggle('tilt-enabled', state.enabled);
+  if (ready) $('#start-hint').textContent = state.enabled ? '傾斜手機轉向 · 右手按油門' : mode === 'cruise' ? '手機觸控 · 電腦鍵盤' : '倒數結束前，跑完 2.4 公里';
+}
+
+const tilt = new TiltController({ onSteer: updateInput, onStatus: syncTiltUI, onNotice: toast });
+function toggleTilt() {
+  if (tilt.enabled) { tilt.disable(); updateInput(); toast('已切回觸控轉向。'); }
+  else void tilt.enable();
+}
+$('#tilt-settings-toggle').addEventListener('click', toggleTilt);
+$('#tilt-toggle').addEventListener('click', toggleTilt);
+$('#tilt-calibrate').addEventListener('click', () => tilt.calibrate());
+syncTiltUI();
 
 $$('[data-map]').forEach(button => button.addEventListener('click', () => { if (!ready) return; const id = button.dataset.map; queueChange(async () => { mapId = id; syncSelection(); await game.setMap(id); }); }));
 $$('[data-vehicle]').forEach(button => button.addEventListener('click', () => { if (!ready) return; const id = button.dataset.vehicle; queueChange(async () => { vehicleId = id; syncSelection(); await game.setVehicle(id); game.setColor(paint); }); }));
@@ -249,7 +286,7 @@ document.addEventListener('visibilitychange', () => { if (document.hidden) { rel
 syncSelection();
 bindControls();
 
-window.__islandDrive = { game, getSelected: () => ({ mapId, vehicleId, mode, paint }), getRecords: () => ({ ...records }) };
+window.__islandDrive = { game, tilt, getTilt: () => tilt.getState(), getSelected: () => ({ mapId, vehicleId, mode, paint }), getRecords: () => ({ ...records }) };
 
 try {
   await game.init();
