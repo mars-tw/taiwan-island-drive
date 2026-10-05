@@ -56,7 +56,8 @@ export function stepPhysics(previous, input, vehicle, map, dt, obstacles = []) {
   s.boost = clamp(s.boost + (boosting ? -0.145 : 0.048) * step, 0, 1);
   if (boosting) s.boostTime += step;
   // A gently stabilising heading keeps touch steering forgiving at highway speeds.
-  const desiredYaw = s.steer * (0.31 * handling) / (1 + s.speed * 0.008);
+  // Chase camera looks along +Z: screen-right is world -X. Input +1 means right.
+  const desiredYaw = -s.steer * (0.31 * handling) / (1 + s.speed * 0.008);
   const oldHeading = roadHeading(s.distance, map);
   s.yaw += (desiredYaw - s.yaw) * Math.min(1, step * 4.5);
   const advance = Math.cos(s.yaw) * s.speed * step;

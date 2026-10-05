@@ -1,5 +1,6 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
+import { PerspectiveCamera, Vector3 } from 'three';
 import { MAPS, VEHICLES, TRACK_LENGTH, ROAD_HALF_WIDTH } from '../src/config.js';
 import {
   createPhysicsState, stepPhysics, calculateScore, timeAttackLimit,
@@ -43,6 +44,19 @@ test('throttle accelerates, brake reduces speed, and specs affect performance', 
   const unbraked = simulate(coupe, coast, 1, fast);
   assert.ok(braked.speed < unbraked.speed);
   assert.ok(braked.speed >= 0);
+});
+
+test('right touch/key/tilt input moves screen-right in the forward-facing chase camera', () => {
+  const initial = { ...createPhysicsState(), lateral: 0, speed: 22 };
+  const left = simulate(coupe, { ...cruise, steer: -1 }, 0.5, initial);
+  const right = simulate(coupe, { ...cruise, steer: 1 }, 0.5, initial);
+  const straight = simulate(coupe, cruise, 0.5, initial);
+  const camera = new PerspectiveCamera(55, 1, 0.1, 1800);
+  camera.position.set(0, 4.2, -9.2); camera.lookAt(0, 1.15, 15); camera.updateMatrixWorld();
+  const screenX = state => new Vector3(state.lateral, 0.8, state.distance).project(camera).x;
+  assert.ok(screenX(left) < screenX(straight), 'left must move to the left side of the rendered view');
+  assert.ok(screenX(right) > screenX(straight), 'right must move to the right side of the rendered view');
+  assert.ok(right.yaw < 0 && left.yaw > 0, '+Z travel reverses world-X relative to screen-right');
 });
 
 test('boost increases speed, spends charge, recovers charge, and is disabled while braking', () => {

@@ -226,11 +226,11 @@ export class Game {
     const slope = (routeAltitude(distance + 1, this.mapId) - routeAltitude(distance - 1, this.mapId)) / 2;
     this.vehicleRoot.rotation.x = -Math.atan(slope);
     if (this.car) {
-      this.car.rotation.z = this.phase === 'menu' ? 0 : this.physics.steer * 0.045 * (this.physics.speed / 40);
+      this.car.rotation.z = this.phase === 'menu' ? 0 : -this.physics.steer * 0.045 * (this.physics.speed / 40);
       this.car.position.y = this.phase === 'menu' ? 0 : Math.sin(distance * 1.8) * (this.physics.offRoad ? 0.024 : 0.003);
       for (const wheel of this.wheels) {
         wheel.object.rotation.x = wheel.x + distance / 0.34;
-        wheel.object.rotation.y = wheel.y + (wheel.front ? this.physics.steer * 0.3 : 0);
+        wheel.object.rotation.y = wheel.y - (wheel.front ? this.physics.steer * 0.3 : 0);
       }
     }
     const env = ENVIRONMENTS[this.mapId];
