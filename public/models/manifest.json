@@ -1,0 +1,160 @@
+{
+  "generator": "Blender 5.2.0 LTS / blender/build_assets.py",
+  "blender_build": "fbe6228777e7",
+  "coordinates": "Y-up; vehicles face +Z; metres; ground Y=0",
+  "license": "MIT",
+  "assets": [
+    {
+      "id": "coupe",
+      "file": "coupe.glb",
+      "bytes": 1118816,
+      "triangles": 19852,
+      "vertices": 11436,
+      "bounds_gltf": {
+        "min": [
+          -1.16,
+          0.0,
+          -2.215
+        ],
+        "max": [
+          1.16,
+          1.553,
+          2.116
+        ]
+      }
+    },
+    {
+      "id": "rally",
+      "file": "rally.glb",
+      "bytes": 1360208,
+      "triangles": 23976,
+      "vertices": 13556,
+      "bounds_gltf": {
+        "min": [
+          -1.16,
+          0.0,
+          -2.215
+        ],
+        "max": [
+          1.16,
+          1.76,
+          2.267
+        ]
+      }
+    },
+    {
+      "id": "suv",
+      "file": "suv.glb",
+      "bytes": 1199288,
+      "triangles": 20784,
+      "vertices": 11908,
+      "bounds_gltf": {
+        "min": [
+          -1.205,
+          0.0,
+          -2.315
+        ],
+        "max": [
+          1.205,
+          2.068,
+          2.237
+        ]
+      }
+    },
+    {
+      "id": "van",
+      "file": "van.glb",
+      "bytes": 1180092,
+      "triangles": 20988,
+      "vertices": 12012,
+      "bounds_gltf": {
+        "min": [
+          -1.2,
+          0.0,
+          -2.547
+        ],
+        "max": [
+          1.2,
+          2.285,
+          2.391
+        ]
+      }
+    },
+    {
+      "id": "palm",
+      "file": "palm.glb",
+      "bytes": 18928,
+      "triangles": 228,
+      "vertices": 182,
+      "bounds_gltf": {
+        "min": [
+          -1.407,
+          0.0,
+          -1.851
+        ],
+        "max": [
+          2.24,
+          3.715,
+          1.851
+        ]
+      }
+    },
+    {
+      "id": "pine",
+      "file": "pine.glb",
+      "bytes": 9296,
+      "triangles": 92,
+      "vertices": 56,
+      "bounds_gltf": {
+        "min": [
+          -1.054,
+          0.0,
+          -1.07
+        ],
+        "max": [
+          1.054,
+          3.72,
+          1.005
+        ]
+      }
+    },
+    {
+      "id": "city_tower",
+      "file": "city_tower.glb",
+      "bytes": 222532,
+      "triangles": 3124,
+      "vertices": 1792,
+      "bounds_gltf": {
+        "min": [
+          -6.5,
+          0.0,
+          -6.5
+        ],
+        "max": [
+          6.5,
+          69.95,
+          6.5
+        ]
+      }
+    },
+    {
+      "id": "road_sign",
+      "file": "road_sign.glb",
+      "bytes": 119124,
+      "triangles": 2792,
+      "vertices": 2712,
+      "bounds_gltf": {
+        "min": [
+          -0.89,
+          0.0,
+          -0.06
+        ],
+        "max": [
+          0.89,
+          3.065,
+          0.087
+        ]
+      }
+    }
+  ]
+}
