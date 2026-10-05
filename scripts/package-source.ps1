@@ -10,7 +10,7 @@ if ([string]::IsNullOrWhiteSpace($OutputPath)) {
 $archivePath = [IO.Path]::GetFullPath($OutputPath)
 if ([IO.Path]::GetExtension($archivePath) -ne '.zip') { throw 'Output must be a .zip file.' }
 $allowed = @(
-  'README.md', 'LICENSE', 'CONTRIBUTING.md', '.gitignore',
+  'README.md', 'LICENSE', 'CONTRIBUTING.md', '.gitignore', '.gitattributes', '.github',
   'package.json', 'package-lock.json', 'index.html', 'vite.config.js',
   'src', 'public', 'blender', 'docs', 'tests', 'scripts', 'dist'
 )

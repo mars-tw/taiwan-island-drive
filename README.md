@@ -2,7 +2,11 @@
 
 一款可以用手機瀏覽器玩的 3D 台灣公路駕駛遊戲。挑選路線、車種與車色，玩自由駕駛或計時挑戰。車輛與道路旁的模型由 Blender 建模，匯出 GLB 後交給 Three.js 呈現；原始 `.blend`、建模腳本、遊戲程式與製作步驟都包含在專案內。
 
-本專案採 MIT 授權，可以修改、再散布及商業使用。目前交付的是本機開源專案與下載包，尚未建立公開 GitHub 儲存庫，也尚未上架 App Store 或 Google Play。
+本專案採 MIT 授權，可以修改、再散布及商業使用。原始碼與 Blender 模型公開於 [GitHub](https://github.com/mars-tw/taiwan-island-drive)，遊戲使用 GitHub Pages 提供 HTTPS 手機版；目前尚未上架 App Store 或 Google Play。
+
+**[直接玩島嶼公路](https://mars-tw.github.io/taiwan-island-drive/)** · [下載完整開源專案](https://mars-tw.github.io/taiwan-island-drive/downloads/island-drive-source.zip)
+
+手機可直接開啟遊戲網址。Android 可選「安裝應用程式」，iPhone 可在 Safari 分享選單選擇「加入主畫面」。第一次連網完整載入後，即可使用離線功能。電腦不需要保持開機。
 
 ![島嶼公路遊戲畫面](docs/game-desktop.png)
 
@@ -105,6 +109,12 @@ powershell -ExecutionPolicy Bypass -File scripts/package-source.ps1
 ```
 
 輸出為 `release/island-drive-source.zip`，內容包括程式、MIT 授權、Blender 腳本與 `.blend`、GLB，以及可直接託管的 `dist/`。腳本會確認 Blender 原檔、GLB 與正式版存在；不打包 `node_modules`、`.audit-tmp`、下載包本身、密鑰檔或 Blender 備份。先執行 `npm run build` 再打包。
+
+## 自動部署
+
+`.github/workflows/pages.yml` 會在 `main` 更新後安裝鎖定的依賴、執行測試、建置離線遊戲、製作完整開源下載包，再部署到 GitHub Pages。Blender 資產已隨原始碼提供，雲端建置不用另行安裝 Blender。
+
+自行 fork 後，請在 GitHub 儲存庫的 Settings → Pages 將來源選為 GitHub Actions，再執行工作流程。網站使用相對路徑，可部署在儲存庫子目錄；README 中的專案與遊戲網址需要改成自己的帳號。
 
 遊戲中的「下載原始碼」使用 `downloads/island-drive-source.zip`。若自己重製此按鈕的下載檔，打包後複製到 `public/downloads/` 與 `dist/downloads/`；ZIP 內容不包含這兩個下載目錄，可避免重複打包。
 
