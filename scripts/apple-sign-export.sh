@@ -38,6 +38,20 @@ def main():
 if __name__=='__main__': main()
 PY
 }
+verification_policy_diagnostic() {
+  # Match entire lines against constants; never echo a raw line or captured value.
+  python3 - "$1" <<'PY'
+import pathlib,sys
+labels='profile UUID|profile team|explicit application identifier|App Store profile|iOS platform|profile expiry|profile certificates|bundle ID|marketing version|build number|device platform|device families|SDK|compiler build|distribution certificate|signing team|embedded profile certificate|application entitlement|release entitlements|profile entitlement coverage|not internal-only|required privacy manifest|native bundle configuration'.split('|')
+resources='index.html|car/index.html|train/index.html|flight/index.html|privacy.html|support.html|models/coupe.glb|models/train.glb|models/aircraft.glb'.split('|')
+try:
+    with pathlib.Path(sys.argv[1]).open('r',errors='replace') as stream: lines=set(stream.read(65536).splitlines())
+except OSError: lines=set()
+matched=[label for label in labels if 'Rejected '+label in lines]
+matched.extend('missing resource '+name for name in resources if 'Missing bundled game resource: '+name in lines)
+print('Verification rejected gates: '+(', '.join(matched) if matched else 'UNCLASSIFIED'),file=sys.stderr)
+PY
+}
 cleanup() {
   local code=$?
   trap - EXIT INT TERM
@@ -179,17 +193,33 @@ PY
 }
 
 verify_app() {
-  local app="$1" check_dir="$2"
-  mkdir -p "$check_dir"
+  local app="$1" check_dir="$2" verification_label="${3:-application}"
+  signing_stage "$verification_label verification directory"
+  mkdir -p "$check_dir" 2>"$TASK_TMP/verification-directory.log" || fail 'application verification directory creation failed'
+  signing_stage "$verification_label signature verification"
   codesign --verify --deep --strict "$app" >"$check_dir/signature.log" 2>&1 || fail 'invalid or unsigned application/framework signature'
+  signing_stage "$verification_label embedded profile CMS decode"
   security cms -D -i "$app/embedded.mobileprovision" >"$check_dir/profile.plist" 2>"$check_dir/profile.log" || fail 'missing or invalid embedded App Store profile'
-  check_profile "$check_dir/profile.plist"
-  codesign -d --entitlements :- "$app" >"$check_dir/entitlements.plist" 2>"$check_dir/entitlements.log"
-  codesign -dv --verbose=4 "$app" >"$check_dir/identity.txt" 2>&1
-  codesign -d --extract-certificates "$check_dir/cert" "$app" >"$check_dir/cert.log" 2>&1
+  signing_stage "$verification_label embedded profile policy verification"
+  if ! check_profile "$check_dir/profile.plist" >"$check_dir/profile-policy.log" 2>&1; then
+    verification_policy_diagnostic "$check_dir/profile-policy.log" || true
+    fail 'embedded App Store profile policy verification failed'
+  fi
+  signing_stage "$verification_label entitlements extraction"
+  codesign -d --entitlements :- "$app" >"$check_dir/entitlements.plist" 2>"$check_dir/entitlements.log" || fail 'application entitlements extraction failed'
+  [ -s "$check_dir/entitlements.plist" ] || fail 'application entitlements extraction produced no data'
+  signing_stage "$verification_label signature identity extraction"
+  codesign -dv --verbose=4 "$app" >"$check_dir/identity.txt" 2>&1 || fail 'application signature identity extraction failed'
+  signing_stage "$verification_label signing certificate extraction"
+  # Optional long-option values must be attached, so the prefix is not a code operand.
+  codesign -d --extract-certificates="$check_dir/cert" "$app" >"$check_dir/cert.log" 2>&1 || fail 'application signing certificate extraction failed'
+  [ -s "$check_dir/cert0" ] || fail 'application signing certificate extraction produced no leaf certificate'
+  signing_stage "$verification_label signing certificate expiry verification"
   openssl x509 -inform DER -in "$check_dir/cert0" -checkend 0 -noout >"$check_dir/expiry.log" 2>&1 || fail 'expired signing certificate'
-  openssl x509 -inform DER -in "$check_dir/cert0" -noout -subject -nameopt RFC2253 >"$check_dir/subject.txt"
-  python3 - "$app" "$check_dir" <<'PY'
+  signing_stage "$verification_label certificate subject extraction"
+  openssl x509 -inform DER -in "$check_dir/cert0" -noout -subject -nameopt RFC2253 >"$check_dir/subject.txt" 2>"$check_dir/subject.log" || fail 'application certificate subject extraction failed'
+  signing_stage "$verification_label identity entitlements and bundled resources verification"
+  if ! python3 - "$app" "$check_dir" >"$check_dir/policy-verification.log" 2>&1 <<'PY'
 import fnmatch,hashlib,json,os,pathlib,plistlib,re,sys
 app=pathlib.Path(sys.argv[1]); d=pathlib.Path(sys.argv[2]); team=os.environ['APPLE_TEAM_ID']
 info=plistlib.load(open(app/'Info.plist','rb')); p=plistlib.load(open(d/'profile.plist','rb')); ent=plistlib.load(open(d/'entitlements.plist','rb'))
@@ -225,6 +255,10 @@ for f in ['index.html','car/index.html','train/index.html','flight/index.html','
 config=json.loads((app/'capacitor.config.json').read_text())
 if config.get('appId')!='tw.mars.islandtransport' or config.get('server',{}).get('url'): raise SystemExit('Rejected native bundle configuration')
 PY
+  then
+    verification_policy_diagnostic "$check_dir/policy-verification.log" || true
+    fail 'application identity entitlements and bundled resources verification failed'
+  fi
 }
 
 verify_ipa() {
@@ -240,7 +274,7 @@ PY
   ditto -x -k "$ipa" "$TASK_TMP/ipa"
   local apps=("$TASK_TMP/ipa/Payload/"*.app)
   [ "${#apps[@]}" -eq 1 ] && [ -d "${apps[0]}" ] || fail 'IPA must contain exactly one device application'
-  verify_app "${apps[0]}" "$TASK_TMP/check-ipa"
+  verify_app "${apps[0]}" "$TASK_TMP/check-ipa" 'IPA'
 }
 
 if [ "$MODE" = verify-ipa ]; then
@@ -346,15 +380,17 @@ for cid in config_ids:
     text=text[:matches[0].start()]+block+text[matches[0].end():]
 path.write_text(text)
 PY
-STAGE='signed device archive'
+signing_stage 'signed archive command'
 xcodebuild -project "$PROJECT" -scheme App -configuration Release -destination 'generic/platform=iOS' -archivePath "$TASK_TMP/IslandTransport.xcarchive" -derivedDataPath "$TASK_TMP/derived" OTHER_CODE_SIGN_FLAGS="--keychain $KEYCHAIN" archive >"$TASK_TMP/archive.log" 2>&1 || fail 'signed archive command failed'
-verify_app "$TASK_TMP/IslandTransport.xcarchive/Products/Applications/App.app" "$TASK_TMP/check-archive"
-python3 - "$TASK_TMP/ExportOptions.plist" "$PROFILE_UUID" "$CERT_SHA" <<'PY'
+signing_stage 'signed archive verification'
+verify_app "$TASK_TMP/IslandTransport.xcarchive/Products/Applications/App.app" "$TASK_TMP/check-archive" 'archive'
+signing_stage 'App Store export options creation'
+python3 - "$TASK_TMP/ExportOptions.plist" "$PROFILE_UUID" "$CERT_SHA" >"$TASK_TMP/export-options.log" 2>&1 <<'PY' || fail 'App Store export options creation failed'
 import os,plistlib,sys
 options={'method':'app-store-connect','destination':'export','signingStyle':'manual','teamID':os.environ['APPLE_TEAM_ID'],'signingCertificate':sys.argv[3],'provisioningProfiles':{'tw.mars.islandtransport':sys.argv[2]},'manageAppVersionAndBuildNumber':False,'testFlightInternalTestingOnly':False,'uploadSymbols':True,'stripSwiftSymbols':True}
 plistlib.dump(options,open(sys.argv[1],'wb'))
 PY
-STAGE='App Store export'
+signing_stage 'App Store export command'
 xcodebuild -exportArchive -archivePath "$TASK_TMP/IslandTransport.xcarchive" -exportPath "$TASK_TMP/export" -exportOptionsPlist "$TASK_TMP/ExportOptions.plist" >"$TASK_TMP/export.log" 2>&1 || fail 'App Store IPA export failed'
 ipas=("$TASK_TMP/export/"*.ipa)
 [ "${#ipas[@]}" -eq 1 ] && [ -f "${ipas[0]}" ] || fail 'expected one exported IPA'
