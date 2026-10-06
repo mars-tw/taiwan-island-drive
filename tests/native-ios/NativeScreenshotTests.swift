@@ -32,10 +32,32 @@ final class NativeScreenshotTests: XCTestCase {
     func tap(_ label: String, exact: Bool = false) {
         var target = element(label, exact: exact)
         XCTAssertTrue(target.waitForExistence(timeout: 45), "Missing accessibility label: \(label)")
-        for _ in 0..<4 {
+        for attempt in 0..<4 {
             if target.isHittable { break }
-            app.webViews.firstMatch.swipeUp()
+            let viewport = app.webViews.firstMatch
+            // A header above the viewport needs a downward gesture. Repeated upward
+            // gestures would move it farther away after a dialog restores scroll/focus.
+            if target.frame.minY < viewport.frame.minY ||
+                (target.frame.maxY <= viewport.frame.maxY && attempt % 2 == 0) {
+                viewport.swipeDown()
+            } else {
+                viewport.swipeUp()
+            }
             target = element(label, exact: exact)
+        }
+        if !target.isHittable {
+            let screen = XCUIScreen.main.screenshot()
+            let shot = XCTAttachment(screenshot: screen)
+            shot.name = "failure-untappable-original"
+            shot.lifetime = .keepAlways
+            add(shot)
+            try? screen.pngRepresentation.write(to: output.appendingPathComponent("failure-untappable-original.png"), options: .atomic)
+            let description = "Requested label: \(label)\nTarget frame: \(target.frame)\nWebView frame: \(app.webViews.firstMatch.frame)\n" + app.debugDescription
+            let hierarchy = XCTAttachment(string: description)
+            hierarchy.name = "failure-untappable-accessibility"
+            hierarchy.lifetime = .keepAlways
+            add(hierarchy)
+            try? Data(description.utf8).write(to: output.appendingPathComponent("failure-untappable-accessibility.txt"), options: .atomic)
         }
         XCTAssertTrue(target.isHittable, "Label must be tappable: \(label)")
         target.tap()
