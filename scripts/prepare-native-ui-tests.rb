@@ -33,6 +33,8 @@ end
 tests.build_configurations.each do |config|
   config.build_settings.merge!({
     'PRODUCT_BUNDLE_IDENTIFIER' => 'tw.mars.islandtransport.screenshottests',
+    'PRODUCT_NAME' => 'NativeScreenshotTests',
+    'PRODUCT_MODULE_NAME' => 'NativeScreenshotTests',
     'GENERATE_INFOPLIST_FILE' => 'YES', 'SWIFT_VERSION' => '5.0',
     'TEST_TARGET_NAME' => 'App', 'TARGETED_DEVICE_FAMILY' => '1,2',
     'IPHONEOS_DEPLOYMENT_TARGET' => '16.4',
