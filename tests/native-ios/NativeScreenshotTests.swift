@@ -29,8 +29,8 @@ final class NativeScreenshotTests: XCTestCase {
         return app.descendants(matching: .any).matching(predicate).firstMatch
     }
 
-    func tap(_ label: String, exact: Bool = false) {
-        var target = element(label, exact: exact)
+    func tap(_ label: String, exact: Bool = false, control: XCUIElement? = nil) {
+        var target = control ?? element(label, exact: exact)
         XCTAssertTrue(target.waitForExistence(timeout: 45), "Missing accessibility label: \(label)")
         for attempt in 0..<4 {
             if target.isHittable { break }
@@ -43,7 +43,7 @@ final class NativeScreenshotTests: XCTestCase {
             } else {
                 viewport.swipeUp()
             }
-            target = element(label, exact: exact)
+            target = control ?? element(label, exact: exact)
         }
         if !target.isHittable {
             let screen = XCUIScreen.main.screenshot()
@@ -132,16 +132,34 @@ final class NativeScreenshotTests: XCTestCase {
     func testCaptureNavigation() throws {
         try capture("01-lobby")
         tap("開汽車", exact: true)
-        let start = element("出發上路")
+        // Lobby has a StaticText with the same wording. Only the car's real button is valid.
+        let start = app.buttons.matching(NSPredicate(format: "label == %@", "出發上路")).firstMatch
         XCTAssertTrue(start.waitForExistence(timeout: 90), "Bundled car scene must become ready")
         let ready = NSPredicate { _, _ in start.exists && start.isEnabled }
         XCTAssertEqual(XCTWaiter.wait(for: [XCTNSPredicateExpectation(predicate: ready, object: start)], timeout: 90), .completed)
-        tap("出發上路")
-        XCTAssertTrue(element("暫停遊戲", exact: true).waitForExistence(timeout: 30))
+        tap("出發上路", exact: true, control: start)
+        let playing = element("暫停遊戲", exact: true).waitForExistence(timeout: 30)
+        if !playing {
+            let screen = XCUIScreen.main.screenshot()
+            let shot = XCTAttachment(screenshot: screen)
+            shot.name = "failure-after-car-start-original"
+            shot.lifetime = .keepAlways
+            add(shot)
+            try? screen.pngRepresentation.write(to: output.appendingPathComponent("failure-after-car-start-original.png"), options: .atomic)
+            let description = app.debugDescription
+            let hierarchy = XCTAttachment(string: description)
+            hierarchy.name = "failure-after-car-start-accessibility"
+            hierarchy.lifetime = .keepAlways
+            add(hierarchy)
+            try? Data(description.utf8).write(to: output.appendingPathComponent("failure-after-car-start-accessibility.txt"), options: .atomic)
+        }
+        XCTAssertTrue(playing)
         try capture("02-car")
         home()
 
         tap("開火車", exact: true)
+        let trainControl = app.buttons.matching(NSPredicate(format: "label == %@", "暫停課程")).firstMatch
+        XCTAssertTrue(trainControl.waitForExistence(timeout: 45), "Train-owned controls must be ready")
         XCTAssertTrue(element("準備出發").waitForExistence(timeout: 45))
         let assetsReady = NSPredicate { _, _ in !self.element("正在準備駕駛艙", exact: true).exists }
         XCTAssertEqual(XCTWaiter.wait(for: [XCTNSPredicateExpectation(predicate: assetsReady, object: app)], timeout: 90), .completed)
