@@ -9,6 +9,12 @@ on:
         options: [build-only, validate, upload-testflight]
         default: build-only
         required: true
+      runner_image:
+        description: 'Official hosted macOS runner; stable Xcode and iPhoneOS SDK are verified at runtime'
+        type: choice
+        options: [macos-26, macos-15]
+        default: macos-26
+        required: true
       marketing_version:
         description: 'CFBundleShortVersionString'
         type: string
@@ -28,8 +34,8 @@ concurrency:
 
 jobs:
   release:
-    if: github.ref == 'refs/heads/main'
-    runs-on: macos-26
+    if: github.ref == 'refs/heads/main' && (inputs.runner_image == 'macos-26' || inputs.runner_image == 'macos-15')
+    runs-on: ${{ inputs.runner_image }}
     environment: apple-release
     timeout-minutes: 45
     env:

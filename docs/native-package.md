@@ -58,6 +58,8 @@ iOS 用 macOS／Xcode26 以上，開啟 `ios/App/App.xcodeproj`，選擇擁有�
 
 工具選擇先檢查有效的 `DEVELOPER_DIR`，再檢查 runner 的 `xcode-select -p`；若不合格，才逐一檢查 `/Applications/Xcode*.app`。每個候選都要實際執行 `xcodebuild -version` 與 iPhoneOS SDK 查詢，Xcode 與 SDK 主版本均須至少 26，版本／build 配對須在官方穩定 runner 清單內；路徑、版本輸出或 App metadata 含 Beta／RC／preview 的候選拒絕使用。官方清單暫時無法取得時，使用 2026-10-06 已查核的穩定配對；未知 build 不會自行標為通過。選定工具以 `GITHUB_ENV` 傳給同 job 的 signer／uploader，報告記錄實際版本、build、SDK，IPA compiler build 也會核對。[Apple SDK 門檻](https://developer.apple.com/news/?id=6lxhtioi)、[官方 macOS runner manifest](https://github.com/actions/runner-images/blob/main/images/macos/macos-26-Readme.md)
 
+`runner_image` 只允許官方 hosted `macos-26`（預設）或備選 `macos-15`，仍限 main 分支、手動執行與同一 environment 保護；兩者都須通過實際 Xcode／SDK 檢查。[macOS 15 官方清單](https://github.com/actions/runner-images/blob/main/images/macos/macos-15-Readme.md)
+
 輸入 `marketing_version` 與正整數 `build_number`；預設 `1.0.0`／`1`，每次 Apple 已接受的上傳都要增加 build number。只修改 CI 暫存副本的 App target signing／版本，不改原工程或把 App profile 套到 SPM framework targets。這裡沒有啟用 automatic signing，也不讓 CI 自動建立憑證、profile 或 API key。
 
 成功簽章後的 artifact 只含 `IslandTransport.ipa`、`verification.json`，以及實際平台操作成功才產出的 `platform-result.json`。IPA 依法定發行格式含 `embedded.mobileprovision`；**不額外發布 profile 檔、`.p12`、`.p8`、keychain、archive、ExportOptions 或原始私密 log**。腳本用 `umask 077`、停用 shell tracing、temporary keychain／profile 與 EXIT／INT／TERM trap 清除。強制終止 runner 時依 GitHub 臨時 runner 的生命週期銷毀；禁止自行公開 runner diagnostics 或原始私密 log。
