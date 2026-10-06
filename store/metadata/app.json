@@ -4,7 +4,12 @@
   "lookupDate": "2026-10-06",
   "displayName": "島嶼交通學院",
   "bundleId": "tw.mars.islandtransport",
-  "bundleIdStatus": "proposed_owner_and_platform_availability_check_required",
+  "bundleIdStatus": "apple_explicit_app_id_registered_google_registration_and_upload_pending",
+  "bundleIdPlatformStatus": {
+    "apple": "registered_explicit_app_id",
+    "googlePlay": "not_registered_no_app_draft_or_upload"
+  },
+  "appleAppId": "6819605203",
   "marketingVersion": "1.0.0",
   "buildNumber": 1,
   "webSourceVersion": "2.3.0",
@@ -60,8 +65,37 @@
     "category": "Educational"
   },
   "platformAccountStatus": {
-    "appleDeveloper": "not_created_user_confirmed",
-    "googlePlayDeveloper": "not_created_user_confirmed"
+    "appleDeveloper": "active_membership_and_app_record_verified_signing_and_upload_pending",
+    "googlePlayDeveloper": "identity_approved_phone_and_physical_android_verification_pending"
+  },
+  "platformAccountVerificationStatus": {
+    "appleDeveloper": {
+      "membershipOrderPaidByOwner": true,
+      "membershipActivationVerified": true,
+      "membershipActive": true,
+      "appStoreConnectAppsAccessVerified": true,
+      "programTermsAcceptedWithOwnerAuthorization": true,
+      "appIdRegistered": true,
+      "appRecordCreated": true,
+      "appDraftCreated": true,
+      "appStoreConnectAppleId": "6819605203",
+      "appStoreConnectVersionState": "prepare_for_submission",
+      "codeSigningConfigured": false,
+      "platformUploadPerformed": false,
+      "submissionPerformed": false
+    },
+    "googlePlayDeveloper": {
+      "accountExists": true,
+      "accountType": "personal",
+      "registrationFeePaidByOwner": true,
+      "identityDocumentsSubmittedByOwner": true,
+      "identityReview": "approved",
+      "phoneVerified": false,
+      "physicalAndroidDeviceVerified": false,
+      "appCreationEnabled": false,
+      "appDraftCreated": false,
+      "platformUploadPerformed": false
+    }
   },
   "automaticSignupOrPaymentAuthorized": false
 }

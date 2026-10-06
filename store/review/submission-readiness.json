@@ -3,14 +3,35 @@
   "status": "prepared_package_not_ready_to_submit",
   "lookupDate": "2026-10-06",
   "ownerConfirmed": {
-    "appleDeveloperAccountExists": false,
-    "googlePlayDeveloperAccountExists": false
+    "appleDeveloperAccountExists": true,
+    "appleMembershipOrderPaid": true,
+    "appleMembershipActivationVerified": true,
+    "appleMembershipActive": true,
+    "appleAppStoreConnectAppsAccessVerified": true,
+    "appleAppIdRegistered": true,
+    "appleAppRecordCreated": true,
+    "appleAppDraftCreated": true,
+    "appleAppStoreConnectAppleId": "6819605203",
+    "appleAppStoreConnectVersionState": "prepare_for_submission",
+    "appleCodeSigningConfigured": false,
+    "applePlatformUploadPerformed": false,
+    "appleSubmissionPerformed": false,
+    "googlePlayDeveloperAccountExists": true,
+    "googlePlayAccountType": "personal",
+    "googlePlayRegistrationFeePaid": true,
+    "googleIdentityDocumentsSubmitted": true,
+    "googleIdentityReview": "approved",
+    "googlePhoneVerified": false,
+    "googlePhysicalAndroidDeviceVerified": false,
+    "googleAppCreationEnabled": false,
+    "googleAppDraftCreated": false,
+    "googlePlatformUploadPerformed": false
   },
   "blockers": [
     {
       "id": "developer_accounts",
-      "status": "needs_owner",
-      "detail": "Owner explicitly confirmed that neither developer account exists. Enrollment, identity verification, agreements and fees require the owner; no signup or payment has been performed."
+      "status": "pending_google_phone_and_physical_android_verification",
+      "detail": "Apple Developer Program activation and active membership were verified in the official membership page, and access to App Store Connect Apps was confirmed. Program terms were accepted with explicit owner authorization. Google Play identity verification is approved, confirmed by the official Console and the owner's approval notification; phone and physical Android device verification remain incomplete. Google Create app remains disabled, so no Google app draft or platform upload exists."
     },
     {
       "id": "public_contact",
@@ -19,8 +40,8 @@
     },
     {
       "id": "identifier",
-      "status": "needs_owner_and_platform_check",
-      "detail": "tw.mars.islandtransport is proposed, not reserved or registered."
+      "status": "apple_registered_google_registration_pending",
+      "detail": "Apple explicit App ID tw.mars.islandtransport is registered, and the App Store Connect record for 島嶼交通學院 is created with public Apple app ID 6819605203; iOS 1.0 is in Prepare for Submission. Google app creation remains disabled, with no Google app draft, package registration or platform upload. Apple signing, build upload and review submission have not been completed."
     },
     {
       "id": "ios_build",
@@ -34,8 +55,8 @@
     },
     {
       "id": "new_personal_play_account_testing",
-      "status": "conditional_owner_work",
-      "detail": "If the owner registers a new personal Google Play account, at least 12 opted-in testers must remain in closed testing continuously for at least 14 days before a production-access request. No testers or elapsed period are claimed."
+      "status": "pending_closed_testing_after_account_verification",
+      "detail": "The newly created Google Play account is personal, so the new-personal-account requirement applies: at least 12 opted-in testers continuously for at least 14 days before a production-access request. App creation is still disabled while account verification remains incomplete; no closed test, testers or elapsed testing period are claimed."
     },
     {
       "id": "final_binary_privacy_and_gates",
@@ -75,7 +96,23 @@
     "apple": "USD 99 per membership year; region-local pricing and eligibility may vary",
     "googlePlay": "USD 25 one-time registration fee",
     "paidAppsAgreement": "Only required for paid apps/IAP; free distribution is under the Apple Developer Program License Agreement",
-    "charged": false
+    "charged": true,
+    "chargedByAgent": false
+  },
+  "feePaymentStatus": {
+    "apple": {
+      "status": "annual_membership_order_paid_by_owner",
+      "receiptStatus": "owner_payment_confirmed_no_private_receipt_stored",
+      "membershipActivationVerified": true,
+      "membershipActive": true
+    },
+    "googlePlay": {
+      "status": "one_time_registration_fee_paid_by_owner",
+      "amountUSD": 25,
+      "receiptStatus": "payment_confirmed_in_official_ui_no_private_receipt_stored"
+    },
+    "privateReceiptOrAccountIdsStored": false,
+    "agentPerformedPayment": false
   },
   "sources": [
     "https://developer.apple.com/programs/enroll/",
