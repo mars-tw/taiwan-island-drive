@@ -44,13 +44,22 @@
   },
   "parentGateTests": {
     "iphone": {
-      "status": "failed",
+      "status": "passed",
       "cases": 1,
-      "passed": 0,
-      "failed": 1,
-      "finalAssertionsVerified": false,
-      "failureLabel": "UI_CONTROL_NOT_HITTABLE",
-      "publicSource": "tests/native-ios/NativeScreenshotTests.swift:40"
+      "passed": 1,
+      "failed": 0,
+      "finalAssertionsVerified": true,
+      "verifiedAssertions": [
+        "cancelDenied",
+        "settingsStayedClosed",
+        "secondRequestStillRequiresGate"
+      ],
+      "resultSha256": "0f6a5f354a4ede8814102591a44bf8c5e83e9fc4b7431e14289e14be2562aa29",
+      "evidenceFile": "store/review/native-ios-parent-gate/iphone.json",
+      "proofRunUrl": "https://github.com/mars-tw/taiwan-island-drive/actions/runs/37489663357",
+      "captureCommit": "11ebddbc47c79263fd0ae44a74326a20088fcee9",
+      "nativeSimulator": true,
+      "hardwareTest": false
     },
     "ipad": {
       "status": "passed",
@@ -63,15 +72,25 @@
         "settingsStayedClosed",
         "secondRequestStillRequiresGate"
       ],
-      "resultSha256": "203776803f87e521efc3bc0f57500404b056786345bf7e70fbdf565ae19a41e4"
+      "resultSha256": "419b3a216c975736f76a82e061c99b6d02ba352fbd823dc1211ff137e55699b5",
+      "evidenceFile": "store/review/native-ios-parent-gate/ipad.json",
+      "proofRunUrl": "https://github.com/mars-tw/taiwan-island-drive/actions/runs/37489663357",
+      "captureCommit": "11ebddbc47c79263fd0ae44a74326a20088fcee9",
+      "nativeSimulator": true,
+      "hardwareTest": false
     }
   },
   "parentGateReplay": {
     "runUrl": "https://github.com/mars-tw/taiwan-island-drive/actions/runs/37489663357",
-    "status": "in_progress_unverified",
-    "testOnly": true
+    "status": "completed_success_verified",
+    "testOnly": true,
+    "captureCommit": "11ebddbc47c79263fd0ae44a74326a20088fcee9",
+    "productionGameSourceCommit": "7cd0d7517f1cb2e221a3c13b38a0131df5e32813",
+    "productionRuntimeUnchanged": true,
+    "canonicalManifest": "store/review/native-ios-parent-gate/manifest.json"
   },
   "globalParentGateDeviceTestPassed": false,
+  "globalParentGateDeviceTestScope": "physical_hardware_only",
   "screenshots": [
     {
       "name": "01-lobby",
@@ -314,5 +333,6 @@
       "approved": false
     }
   ],
-  "note": "Actual native iOS Simulator screenshots; no physical-device, global parent-gate, binary-upload, submission or App Store approval claim."
+  "note": "Actual native iOS Simulator screenshots; no physical-device, global parent-gate, binary-upload, submission or App Store approval claim.",
+  "parentGateSimulatorVerified": true
 }

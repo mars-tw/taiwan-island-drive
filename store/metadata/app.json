@@ -93,7 +93,9 @@
       "storeScreenshotAssetLibraryUploaded": true,
       "storeScreenshotAssetCount": 8,
       "appStoreConnectApiKeyCreationAuthorized": true,
-      "appStoreConnectApiKeyCreationStatus": "authorized_pending_owner_chrome_login_no_p8_created",
+      "appStoreConnectApiKeyEncryptedStorageAuthorized": true,
+      "ownerAppleLoginInChromeRequired": true,
+      "appStoreConnectApiKeyCreationStatus": "authorized_pending_owner_apple_login_in_chrome_no_p8_created",
       "appStoreConnectApiUploadKeyAvailable": false,
       "platformValidationPerformed": false,
       "platformUploadPerformed": false,
@@ -144,7 +146,7 @@
     "ownerLegalConfirmationCompleted": true,
     "published": true
   },
-  "nativeMediaStatus": "apple_native_simulator_media_visually_approved_asset_library_uploaded_iphone_parent_gate_pending",
+  "nativeMediaStatus": "apple_native_simulator_media_and_parent_gate_verified_asset_library_uploaded_binary_upload_pending",
   "appleNativeMediaEvidence": {
     "manifest": "store/screenshots/native-ios/manifest.json",
     "captureRunUrl": "https://github.com/mars-tw/taiwan-island-drive/actions/runs/37465941350",
@@ -160,11 +162,13 @@
     "submitted": false,
     "approved": false,
     "parentGateTests": {
-      "iphone": "failed",
+      "iphone": "passed",
       "ipad": "passed"
     },
+    "parentGateSimulatorVerified": true,
+    "parentGateProofManifest": "store/review/native-ios-parent-gate/manifest.json",
     "parentGateReplayRunUrl": "https://github.com/mars-tw/taiwan-island-drive/actions/runs/37489663357",
-    "parentGateReplayStatus": "in_progress_unverified"
+    "parentGateReplayStatus": "completed_success_verified"
   },
   "automaticSignupOrPaymentAuthorized": false
 }

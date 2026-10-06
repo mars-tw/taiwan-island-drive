@@ -26,10 +26,10 @@ Android 測試 APK 與上傳簽章 AAB 已在 Windows 實際編譯。官方 bund
 
 原生媒體：[原生截圖 run 37465941350](https://github.com/mars-tw/taiwan-island-drive/actions/runs/37465941350) 已成功，來源為 `7cd0d75`、1.0.0／build 1。iPhone 與 iPad 各取得大廳、汽車、火車、飛機四張 `XCUIScreen` 畫面，八張 PNG 的尺寸、雜湊及完整 RGB 解碼通過，Root 視覺覆核也已通過。原檔已逐 byte 複製至 `store/screenshots/native-ios/`，並上傳 Apple 素材庫，辨識為四張 Dynamic Island medium 與四張 iPad 13 吋圖片；目前仍是準備提交，App build 未上傳、送審或核准。
 
-家長 gate 的實際 XCTest 結果為 iPad 一個案例通過、三項最終斷言皆成立；iPhone 一個案例失敗，在「家長設定」控件不可點選時停下，沒有最終通過證據。[測試重跑 37489663357](https://github.com/mars-tw/taiwan-island-drive/actions/runs/37489663357) 尚在執行，不預先標示通過。媒體就緒不代表完整家長 gate 或實體裝置驗收完成。
+2026 年 10 月 7 日，[測試重跑 37489663357](https://github.com/mars-tw/taiwan-island-drive/actions/runs/37489663357) 的四個實際 XCTest case 全部通過：iPhone、iPad 各一個導覽擷取案例與一個家長 gate 案例。兩份最終結果各三項取消相關斷言皆為 true，SHA 與 artifact manifest 相符，[公開最終證據](../store/review/native-ios-parent-gate/manifest.json) 已保存。重跑來源為 `11ebddb`，正式 runtime 相較已簽章來源 `7cd0d75` 沒有變更；已上傳的八張圖片仍使用原擷取來源與雜湊。家長 gate 已通過 Simulator 驗證，實體硬體、網路隱私與離線驗收仍待完成。
 
 實際界線：本機 Android 模擬器因缺少 hypervisor driver，軟體啟動嘗試退出，沒有取得原生裝置遊玩證據。原有 Chromium 參考圖保留模擬標記；新增 iOS 圖片是真正原生 Simulator 擷取，仍非實體硬體。感測器、系統音色與真實裝置網路行為仍需實機驗收。
 
-Apple Developer Program 已啟用，App Store Connect 已建立「島嶼交通學院」（Apple ID `6819605203`），免費、台灣地區、商店 metadata、身分與審查聯絡資料已儲存並經擁有者確認。發佈簽章 IPA 已驗證；八張原生截圖已上傳素材庫。擁有者已授權建立 Developer API key，目前仍待 Chrome 帳號登入，尚未產生 p8，App build 尚未完成平台驗證、上傳或送審。「不收集資料」隱私聲明已獲擁有者最終確認，並已在 App Store Connect 發布。
+Apple Developer Program 已啟用，App Store Connect 已建立「島嶼交通學院」（Apple ID `6819605203`），免費、台灣地區、商店 metadata、身分與審查聯絡資料已儲存並經擁有者確認。發佈簽章 IPA 已驗證；八張原生截圖已上傳素材庫。擁有者已授權使用 Chrome 建立 Developer API key 及加密儲存新金鑰，目前仍待擁有者在 Chrome 登入 Apple，尚未產生 p8，App build 尚未完成平台驗證、上傳或送審。「不收集資料」隱私聲明已獲擁有者最終確認，並已在 App Store Connect 發布。
 
 Google Play 身分審核已通過，電話與實體 Android 裝置驗證仍待完成；尚未建立 Google App 或上傳。Google 商店問卷、商店身分與審查聯絡欄位，以及適用的新個人 Play 帳號封閉測試仍待完成。Android 原生媒體、裝置網路行為、離線與完整家長 gate 的裝置驗收也尚未通過。

@@ -1,0 +1,89 @@
+{
+  "schemaVersion": 1,
+  "status": "native_ios_simulator_parent_gate_verified",
+  "verificationDate": "2026-10-07",
+  "runUrl": "https://github.com/mars-tw/taiwan-island-drive/actions/runs/37489663357",
+  "artifactName": "native-ios-simulator-screenshots",
+  "captureCommit": "11ebddbc47c79263fd0ae44a74326a20088fcee9",
+  "productionGameSourceCommit": "7cd0d7517f1cb2e221a3c13b38a0131df5e32813",
+  "productionRuntimeUnchanged": true,
+  "testOnlyReplay": true,
+  "nativeVersion": "1.0.0",
+  "buildNumber": 1,
+  "runtimeVersion": "26.2",
+  "captureAPI": "XCUIScreen.main.screenshot",
+  "nativeSimulator": true,
+  "parentGateSimulatorVerified": true,
+  "hardwareTest": false,
+  "privacyNetworkAudit": false,
+  "offlineDeviceTest": false,
+  "actualTestCounts": {
+    "executed": 4,
+    "passed": 4,
+    "failed": 0,
+    "perFamily": {
+      "iphone": {
+        "captureNavigation": {
+          "executed": 1,
+          "passed": 1,
+          "failed": 0
+        },
+        "parentGateDenied": {
+          "executed": 1,
+          "passed": 1,
+          "failed": 0
+        }
+      },
+      "ipad": {
+        "captureNavigation": {
+          "executed": 1,
+          "passed": 1,
+          "failed": 0
+        },
+        "parentGateDenied": {
+          "executed": 1,
+          "passed": 1,
+          "failed": 0
+        }
+      }
+    }
+  },
+  "parentGateTests": {
+    "iphone": {
+      "status": "passed",
+      "evidenceFile": "store/review/native-ios-parent-gate/iphone.json",
+      "evidenceSha256": "0f6a5f354a4ede8814102591a44bf8c5e83e9fc4b7431e14289e14be2562aa29",
+      "testCases": 1,
+      "passed": 1,
+      "failed": 0,
+      "assertionCount": 3,
+      "assertions": {
+        "cancelDenied": true,
+        "settingsStayedClosed": true,
+        "secondRequestStillRequiresGate": true
+      },
+      "hardwareTest": false
+    },
+    "ipad": {
+      "status": "passed",
+      "evidenceFile": "store/review/native-ios-parent-gate/ipad.json",
+      "evidenceSha256": "419b3a216c975736f76a82e061c99b6d02ba352fbd823dc1211ff137e55699b5",
+      "testCases": 1,
+      "passed": 1,
+      "failed": 0,
+      "assertionCount": 3,
+      "assertions": {
+        "cancelDenied": true,
+        "settingsStayedClosed": true,
+        "secondRequestStillRequiresGate": true
+      },
+      "hardwareTest": false
+    }
+  },
+  "alreadyUploadedMediaManifest": "store/screenshots/native-ios/manifest.json",
+  "uploadedMediaCaptureRun": "https://github.com/mars-tw/taiwan-island-drive/actions/runs/37465941350",
+  "replayImagesReplacedUploadedMedia": false,
+  "binaryUploaded": false,
+  "submitted": false,
+  "approved": false
+}
