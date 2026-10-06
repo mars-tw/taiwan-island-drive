@@ -16,6 +16,28 @@ INSTALLED_PROFILES=()
 STAGE='preflight'
 
 fail() { printf 'Apple release failed: %s\n' "$1" >&2; exit 1; }
+signing_stage() { STAGE="$1"; printf 'Apple signing step: %s\n' "$STAGE"; }
+p12_import_diagnostic() {
+  # Print only fixed categories. Never echo a matching line, captured group or raw log.
+  python3 - "$1" <<'PY'
+import pathlib,re,sys
+def classify(text):
+    rules=[
+        ('MAC_VERIFICATION',r'mac verification|mac verify error'),
+        ('UNSUPPORTED_FORMAT',r'(?:unknown|unsupported|unrecognized) (?:format|algorithm)|invalid (?:format|pkcs12)|unsupported pkcs(?:#)?12'),
+        ('WRONG_PASSWORD',r'wrong password|incorrect password|invalid password|password (?:is )?(?:incorrect|invalid)|passphrase[^\n]*(?:incorrect|invalid)'),
+        ('ACCESS_DENIED',r'access denied|permission denied|not authorized|authorization denied'),
+        ('USER_INTERACTION',r'user interaction is not allowed|interaction (?:is )?not allowed|user interaction required|requires user interaction'),
+    ]
+    return [label for label,pattern in rules if re.search(pattern,text,re.I)] or ['UNCLASSIFIED']
+def main():
+    try:
+        with pathlib.Path(sys.argv[1]).open('r',errors='replace') as stream: text=stream.read(65536)
+    except OSError: text=''
+    print('P12 import message categories: '+', '.join(classify(text))+' (not a confirmed cause)',file=sys.stderr)
+if __name__=='__main__': main()
+PY
+}
 cleanup() {
   local code=$?
   trap - EXIT INT TERM
@@ -243,22 +265,36 @@ for env,file in [('APPLE_DISTRIBUTION_P12_BASE64','distribution.p12'),('APPLE_AP
     if not data: raise SystemExit('Empty decoded secret: '+env)
     (d/file).write_bytes(data)
 PY
-security cms -D -i "$TASK_TMP/distribution.mobileprovision" >"$TASK_TMP/profile.plist" 2>"$TASK_TMP/profile.log"
+signing_stage 'profile CMS decode'
+security cms -D -i "$TASK_TMP/distribution.mobileprovision" >"$TASK_TMP/profile.plist" 2>"$TASK_TMP/profile.log" || fail 'profile CMS decode failed'
+signing_stage 'profile policy verification'
 check_profile "$TASK_TMP/profile.plist"
 PROFILE_UUID="$(python3 -c 'import plistlib,sys; print(plistlib.load(open(sys.argv[1],"rb"))["UUID"])' "$TASK_TMP/profile.plist")"
 KEYCHAIN="$TASK_TMP/signing.keychain-db"
-KEYCHAIN_PASSWORD="$(openssl rand -base64 32)"
-security list-keychains -d user >"$TASK_TMP/previous-keychains.txt"
+signing_stage 'temporary keychain password generation'
+KEYCHAIN_PASSWORD="$(openssl rand -base64 32 2>"$TASK_TMP/password-generation.log")" || fail 'temporary keychain password generation failed'
+signing_stage 'keychain search list capture'
+security list-keychains -d user >"$TASK_TMP/previous-keychains.txt" 2>"$TASK_TMP/search-list-capture.log" || fail 'keychain search list capture failed'
 while IFS= read -r entry; do PREVIOUS_KEYCHAINS+=("$entry"); done < <(python3 -c 'import shlex,sys; print("\n".join(shlex.split(open(sys.argv[1]).read())))' "$TASK_TMP/previous-keychains.txt")
-security create-keychain -p "$KEYCHAIN_PASSWORD" "$KEYCHAIN" >/dev/null 2>&1
+signing_stage 'temporary keychain creation'
+security create-keychain -p "$KEYCHAIN_PASSWORD" "$KEYCHAIN" >"$TASK_TMP/keychain-create.log" 2>&1 || fail 'temporary keychain creation failed'
 KEYCHAIN_INSTALLED=true
-security set-keychain-settings -lut 21600 "$KEYCHAIN"
-security unlock-keychain -p "$KEYCHAIN_PASSWORD" "$KEYCHAIN"
-security list-keychains -d user -s "$KEYCHAIN" ${PREVIOUS_KEYCHAINS[@]+"${PREVIOUS_KEYCHAINS[@]}"}
-security import "$TASK_TMP/distribution.p12" -k "$KEYCHAIN" -P "$APPLE_DISTRIBUTION_P12_PASSWORD" -T /usr/bin/codesign -T /usr/bin/security >"$TASK_TMP/import.log" 2>&1
-security set-key-partition-list -S apple-tool:,apple:,codesign: -s -k "$KEYCHAIN_PASSWORD" "$KEYCHAIN" >"$TASK_TMP/partition.log" 2>&1
+signing_stage 'temporary keychain settings'
+security set-keychain-settings -lut 21600 "$KEYCHAIN" >"$TASK_TMP/keychain-settings.log" 2>&1 || fail 'temporary keychain settings failed'
+signing_stage 'temporary keychain unlock'
+security unlock-keychain -p "$KEYCHAIN_PASSWORD" "$KEYCHAIN" >"$TASK_TMP/keychain-unlock.log" 2>&1 || fail 'temporary keychain unlock failed'
+signing_stage 'keychain search list installation'
+security list-keychains -d user -s "$KEYCHAIN" ${PREVIOUS_KEYCHAINS[@]+"${PREVIOUS_KEYCHAINS[@]}"} >"$TASK_TMP/search-list-install.log" 2>&1 || fail 'keychain search list installation failed'
+signing_stage 'P12 identity import'
+if ! security import "$TASK_TMP/distribution.p12" -k "$KEYCHAIN" -P "$APPLE_DISTRIBUTION_P12_PASSWORD" -T /usr/bin/codesign -T /usr/bin/security >"$TASK_TMP/import.log" 2>&1; then
+  p12_import_diagnostic "$TASK_TMP/import.log" || true
+  fail 'P12 identity import failed; no cryptographic settings were changed'
+fi
+signing_stage 'keychain partition access'
+security set-key-partition-list -S apple-tool:,apple:,codesign: -s -k "$KEYCHAIN_PASSWORD" "$KEYCHAIN" >"$TASK_TMP/partition.log" 2>&1 || fail 'keychain partition access failed'
 unset APPLE_DISTRIBUTION_P12_BASE64 APPLE_DISTRIBUTION_P12_PASSWORD APPLE_APP_STORE_PROFILE_BASE64 KEYCHAIN_PASSWORD
-security find-identity -v -p codesigning "$KEYCHAIN" >"$TASK_TMP/identities.txt"
+signing_stage 'matching distribution identity verification'
+security find-identity -v -p codesigning "$KEYCHAIN" >"$TASK_TMP/identities.txt" 2>"$TASK_TMP/identity-query.log" || fail 'distribution identity query failed'
 CERT_SHA="$(python3 - "$TASK_TMP" <<'PY'
 import hashlib,pathlib,plistlib,re,sys
 d=pathlib.Path(sys.argv[1]); p=plistlib.load(open(d/'profile.plist','rb'))
