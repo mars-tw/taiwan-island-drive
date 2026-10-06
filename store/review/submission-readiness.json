@@ -20,6 +20,10 @@
     "appleStoreQuestionnairesSaved": true,
     "appleCodeSigningConfigured": true,
     "appleSignedIpaVerified": true,
+    "appleScreenshotAssetLibraryUploaded": true,
+    "appleScreenshotAssetCount": 8,
+    "appleUploadApiKeyCreationAuthorized": true,
+    "appleUploadApiKeyCreationStatus": "authorized_pending_owner_chrome_login_no_p8_created",
     "appleUploadApiKeyAvailable": false,
     "applePlatformValidationPerformed": false,
     "applePlatformUploadPerformed": false,
@@ -62,7 +66,7 @@
     {
       "id": "signing_and_upload",
       "status": "signed_binaries_verified_upload_key_and_platform_upload_pending",
-      "detail": "Local Android upload-signed AAB passes jarsigner and bundletool; its upload certificate is not registered with Google Play. The Apple signed IPA is verified, but the App Store Connect API p8 upload key is missing. Apple platform validation, upload, review submission and approval are not performed; no Google platform upload exists."
+      "detail": "Local Android upload-signed AAB passes jarsigner and bundletool; its upload certificate is not registered with Google Play. The Apple signed IPA is verified. The owner authorized Developer API key creation, but owner Chrome login is still required and no p8 exists. Eight screenshots are uploaded to Apple's Asset Library; Apple binary platform validation, upload, review submission and approval are not performed. No Google platform upload exists."
     },
     {
       "id": "new_personal_play_account_testing",
@@ -72,12 +76,12 @@
     {
       "id": "final_binary_privacy_and_gates",
       "status": "pending_final_release_audit",
-      "detail": "Apple signed-binary profile, entitlements, required manifests and bundled models passed CI and independent package verification; private key files are absent from the IPA. Actual native privacy/network behavior, installed-local-voice-only speech, offline use and parent gates still require device evidence. The owner finally confirmed the Apple No Data Collected declaration, and it is published in App Store Connect."
+      "detail": "Apple signed-binary profile, entitlements, required manifests and bundled models passed CI and independent package verification; private key files are absent from the IPA. Native Simulator parent-gate evidence is split: iPad passed one case with three final assertions; iPhone failed one case because the Parent Settings control was not hittable in XCTest. Test-only replay 37489663357 is active and unverified. Actual privacy/network behavior, local speech, offline use and complete parent-gate/device verification remain pending. The owner-confirmed Apple No Data Collected declaration is published in App Store Connect."
     },
     {
       "id": "store_forms_and_native_media",
-      "status": "pending",
-      "detail": "Apple store metadata and questionnaires, free Taiwan distribution, identity and review contacts are saved and owner-confirmed. The Apple No Data Collected privacy declaration is owner-confirmed and published in App Store Connect. Remaining store identity/contact/questionnaire fields apply to Google Play, where no App exists. Existing store screenshots are explicitly Chrome browser simulations. The current safe-area native capture run 37465941350 is in progress; native UI visual verification and complete native media acceptance are not proven. Neither platform has an uploaded or approved build."
+      "status": "apple_native_simulator_media_uploaded_google_forms_pending",
+      "detail": "Apple store metadata and questionnaires, free Taiwan distribution, identity and review contacts are saved and owner-confirmed; No Data Collected is published. Capture run 37465941350 produced eight genuine Simulator PNGs, hash/dimensions/RGB decode verified and Root visually approved. All eight are uploaded to Apple Asset Library, recognized as four Dynamic Island medium and four iPad 13-inch assets. Existing Chrome captures retain simulated=true. Remaining store identity/contact/questionnaire fields apply to Google Play. This media acceptance does not resolve the iPhone parent-gate failure or hardware audit; neither platform has an uploaded or approved binary."
     },
     {
       "id": "owner_identity",
@@ -100,6 +104,9 @@
     "androidSignedRelease": true,
     "iosSignedArchive": true,
     "iosSignedIpa": true,
+    "nativeSimulatorScreenshots": true,
+    "nativeSimulatorVisualReview": true,
+    "appleScreenshotAssetLibraryUpload": true,
     "nativePrivacyNetworkAudit": false,
     "offlineDeviceTest": false,
     "parentGateDeviceTest": false
@@ -161,9 +168,26 @@
   },
   "nativeMediaEvidence": {
     "browserCapturesSimulated": true,
+    "manifest": "store/screenshots/native-ios/manifest.json",
     "captureRunUrl": "https://github.com/mars-tw/taiwan-island-drive/actions/runs/37465941350",
-    "captureRunStatus": "in_progress_unverified",
-    "nativeUiCaptureVerified": false,
-    "nativeMediaAcceptancePassed": false
+    "captureRunStatus": "completed_success",
+    "gameSourceCommit": "7cd0d7517f1cb2e221a3c13b38a0131df5e32813",
+    "captureCommit": "7cd0d7517f1cb2e221a3c13b38a0131df5e32813",
+    "screenshotCount": 8,
+    "nativeSimulator": true,
+    "hardwareTest": false,
+    "rootVisualApproved": true,
+    "storeAssetLibraryUploaded": true,
+    "binaryUploaded": false,
+    "submitted": false,
+    "approved": false,
+    "nativeUiCaptureVerified": true,
+    "nativeMediaAcceptancePassed": true,
+    "parentGateTests": {
+      "iphone": "failed",
+      "ipad": "passed"
+    },
+    "parentGateReplayRunUrl": "https://github.com/mars-tw/taiwan-island-drive/actions/runs/37489663357",
+    "parentGateReplayStatus": "in_progress_unverified"
   }
 }

@@ -90,6 +90,10 @@
       "storeQuestionnairesSaved": true,
       "codeSigningConfigured": true,
       "signedIpaVerified": true,
+      "storeScreenshotAssetLibraryUploaded": true,
+      "storeScreenshotAssetCount": 8,
+      "appStoreConnectApiKeyCreationAuthorized": true,
+      "appStoreConnectApiKeyCreationStatus": "authorized_pending_owner_chrome_login_no_p8_created",
       "appStoreConnectApiUploadKeyAvailable": false,
       "platformValidationPerformed": false,
       "platformUploadPerformed": false,
@@ -140,6 +144,27 @@
     "ownerLegalConfirmationCompleted": true,
     "published": true
   },
-  "nativeMediaStatus": "store_captures_browser_simulated_native_safe_area_visual_verification_pending",
+  "nativeMediaStatus": "apple_native_simulator_media_visually_approved_asset_library_uploaded_iphone_parent_gate_pending",
+  "appleNativeMediaEvidence": {
+    "manifest": "store/screenshots/native-ios/manifest.json",
+    "captureRunUrl": "https://github.com/mars-tw/taiwan-island-drive/actions/runs/37465941350",
+    "captureRunStatus": "completed_success",
+    "gameSourceCommit": "7cd0d7517f1cb2e221a3c13b38a0131df5e32813",
+    "captureCommit": "7cd0d7517f1cb2e221a3c13b38a0131df5e32813",
+    "screenshotCount": 8,
+    "nativeSimulator": true,
+    "hardwareTest": false,
+    "rootVisualApproved": true,
+    "storeAssetLibraryUploaded": true,
+    "binaryUploaded": false,
+    "submitted": false,
+    "approved": false,
+    "parentGateTests": {
+      "iphone": "failed",
+      "ipad": "passed"
+    },
+    "parentGateReplayRunUrl": "https://github.com/mars-tw/taiwan-island-drive/actions/runs/37489663357",
+    "parentGateReplayStatus": "in_progress_unverified"
+  },
   "automaticSignupOrPaymentAuthorized": false
 }
