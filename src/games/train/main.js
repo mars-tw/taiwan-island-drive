@@ -2,6 +2,7 @@ import './styles.css';
 import '../../shared/bootstrap.js';
 import {APP_REPOSITORY} from '../../shared/paths.js';
 import {readSettings,updateSettings,subscribeSettings} from '../../shared/settings.js';
+import {speakNative,stopNativeSpeech} from '../../shared/native.js';
 import {TrainGame} from './game.js';
 import {TrainWorld} from './world.js';
 import {TrainAudio} from './audio.js';
@@ -9,18 +10,18 @@ import {ROUTES,LESSONS,VEHICLES,clamp} from './config.js';
 const $=id=>document.getElementById(id),game=new TrainGame(),audio=new TrainAudio();let world;
 const initialSettings=readSettings();game.childMode=initialSettings.childMode;
 try{world=new TrainWorld($('world'),game);}catch(error){$('asset-loading').innerHTML='<b>這台瀏覽器無法啟動 3D 畫面</b><span>請在 Safari 或 Chrome 重新開啟。</span>';console.error(error);}
-window.__trainSchool={game,getState:()=>game.getState(),getAssets:()=>world?.assetStatus,world};
+window.__trainSchool={game,audio,getState:()=>game.getState(),getAssets:()=>world?.assetStatus,world};
 window.addEventListener('train-assets',()=>{const status=world.assetStatus;if(Object.values(status).every(v=>v==='ready'))$('asset-loading').hidden=true;else if(Object.values(status).includes('error'))$('asset-loading').innerHTML='<b>模型載入未完成</b><span>請重新整理，或確認網路連線後再試。</span>';});
 let voiceEnabled=!initialSettings.muted,voiceActivated=false,lastSpoken='',lastSpokenAt=0;
 function activateAudio(){audio.unlock();audio.enabled=voiceEnabled;}
 function applySharedSettings(settings,force=false){
  const modeChanged=game.childMode!==settings.childMode;game.childMode=settings.childMode;voiceEnabled=!settings.muted;audio.enabled=voiceEnabled;
- if(!voiceEnabled&&'speechSynthesis'in window)speechSynthesis.cancel();
+ if(!voiceEnabled)void stopNativeSpeech();
  $('child-mode').checked=game.childMode;$('sound').setAttribute('aria-label',voiceEnabled?'關閉語音教練':'開啟語音教練');$('sound').textContent=voiceEnabled?'♪':'♩';
  if(modeChanged||force){$('child-console').hidden=!game.childMode;$('advanced-console').hidden=game.childMode;$('advanced-toggle').textContent='家長／進階操作 ⌄';}
  world?.applyQuality(settings.quality);updateUI();
 }
-function speak(text,force=false){if(!voiceActivated||!voiceEnabled||!('speechSynthesis'in window))return;if(text===lastSpoken&&!force)return;if(!force&&performance.now()-lastSpokenAt<3500)return;lastSpoken=text;lastSpokenAt=performance.now();const utterance=new SpeechSynthesisUtterance(text);utterance.lang='zh-TW';utterance.rate=.83;utterance.pitch=1.08;const voices=speechSynthesis.getVoices();utterance.voice=voices.find(v=>v.lang==='zh-TW')||voices.find(v=>v.lang.startsWith('zh'))||null;speechSynthesis.cancel();speechSynthesis.speak(utterance);}
+function speak(text,force=false){if(!voiceActivated||!voiceEnabled)return;if(text===lastSpoken&&!force)return;if(!force&&performance.now()-lastSpokenAt<3500)return;lastSpoken=text;lastSpokenAt=performance.now();void speakNative(text,{lang:'zh-TW',rate:.83,pitch:1.08});}
 const run=fn=>()=>{activateAudio();voiceActivated=true;if(!game.completed)fn();updateUI();if(game.childMode)speak(game.childHint().text,true);};
 $('child-prepare').onclick=run(()=>game.prepare());$('child-go').onclick=run(()=>game.childGo());$('child-stop').onclick=run(()=>game.gentleStop());$('child-help-stop').onclick=run(()=>game.helpStop());$('child-doors').onclick=run(()=>game.toggleDoors());$('child-emergency').onclick=run(()=>game.controls.emergency?game.releaseEmergency():game.emergency());
 $('advanced-toggle').onclick=()=>{$('advanced-console').hidden=!$('advanced-console').hidden;$('advanced-toggle').textContent=$('advanced-console').hidden?'家長／進階操作 ⌄':'收起進階操作 ⌃';};
@@ -29,8 +30,8 @@ $('throttle').oninput=run(()=>game.throttle(Number($('throttle').value)));$('bra
 for(const [id,field,sign] of [['throttle-up','throttle',1],['throttle-down','throttle',-1],['brake-up','brake',1],['brake-down','brake',-1]])$(id).onclick=run(()=>game[field](game.controls[field]+sign));
 $('emergency').onclick=run(()=>game.controls.emergency?game.releaseEmergency():game.emergency());$('horn').onclick=()=>{voiceActivated=true;if(voiceEnabled){activateAudio();audio.horn();}};$('sound').onclick=()=>{voiceActivated=true;updateSettings({muted:!readSettings().muted});if(voiceEnabled){activateAudio();speak(game.childHint().text,true);}};
 $('view').onclick=()=>{world.view=world.view==='cab'?'outside':'cab';$('view').textContent=world.view==='cab'?'外部視角 ↗':'駕駛艙 ↙';};
-function pause(){game.paused?game.resume():game.pause();updateUI();}
-$('pause').onclick=pause;$('resume').onclick=()=>{game.resume();updateUI();};$('restart-pause').onclick=()=>{game.reset();updateUI();};
+function pause(){if(game.paused){activateAudio();game.resume();}else game.pause();updateUI();}
+$('pause').onclick=pause;$('resume').onclick=()=>{activateAudio();game.resume();updateUI();};$('restart-pause').onclick=()=>{game.reset();updateUI();};
 let selectedRoute='coast',selectedLesson='lesson1',wasPaused=false;
 function selectOptions(){document.querySelectorAll('[data-route]').forEach(b=>b.classList.toggle('selected',b.dataset.route===selectedRoute));document.querySelectorAll('[data-lesson]').forEach(b=>b.classList.toggle('selected',b.dataset.lesson===selectedLesson));}
 function openSettings(){wasPaused=game.paused;game.pause();selectedRoute=game.routeId;selectedLesson=game.lessonId;selectOptions();$('vehicle-select').value=game.vehicleId;$('assisted').checked=game.assisted;$('child-mode').checked=game.childMode;$('settings-dialog').showModal();}
@@ -55,5 +56,5 @@ function updateUI(){
 }
 let previous=performance.now(),accumulator=0,lastUI=0;
 function frame(now){const dt=Math.min((now-previous)/1000,.1);previous=now;accumulator+=dt;while(accumulator>=1/60){game.update(1/60);accumulator-=1/60;}world?.render();audio.update(game.physics.v*3.6,game.paused);if(now-lastUI>80){updateUI();lastUI=now;}requestAnimationFrame(frame);}
-document.querySelector('a[href*="github.com/mars-tw/"]').href=APP_REPOSITORY;
+const repositoryLink=document.querySelector('a[href*="github.com/mars-tw/"],a[data-parent-url*="github.com/mars-tw/"]');if(repositoryLink)repositoryLink.href=APP_REPOSITORY;
 applySharedSettings(readSettings(),true);subscribeSettings(applySharedSettings);requestAnimationFrame(frame);

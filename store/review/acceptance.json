@@ -1,0 +1,18 @@
+{
+  "schemaVersion": 1,
+  "status": "executable_review_spec_not_claimed_passed",
+  "tests": [
+    {"id": "metadata_limits", "command": "node store/metadata/validate.mjs", "expected": "Exit 0 and metadataValid=true; Apple keywords counted as UTF-8 bytes"},
+    {"id": "submission_gate", "command": "node store/metadata/validate.mjs --require-submission-ready", "expectedCurrent": "Exit 2 because owner/platform/signing blockers remain", "expectedForSubmission": "All blockers resolved by verified evidence before upload; do not flip status merely to pass"},
+    {"id": "privacy_pages", "procedure": "Open bundled privacy.html and support.html on phone/tablet with network disabled", "expected": "Readable HTML, product identified, no remote font/script/image dependencies"},
+    {"id": "native_external_links", "procedure": "From lobby, every game, privacy and support, attempt support/source/download navigation", "expected": "Native app does not launch external sites or download files; text address may be displayed to a parent"},
+    {"id": "parent_gate", "procedure": "Try cancel, incorrect answer, timeout, hardware Back, then correct answer for parent settings and motion", "expected": "Cancel/incorrect/expired never grant access; child game stays paused; parent action requires current adult challenge"},
+    {"id": "local_voice", "procedure": "Test native build with installed local zh-TW voice, then without any suitable local Chinese voice, with Airplane Mode enabled", "expected": "Local installed voice works or full visual fallback remains. No network voice, online API, browser fallback in native mode, auto-download or installer launch"},
+    {"id": "motion_denied", "procedure": "Deny optional motion permission and play the car mode with touch controls", "expected": "Playable; sensor samples stay local and are not persisted/uploaded"},
+    {"id": "binary_network_audit", "procedure": "Inspect release AAB/IPA dependencies and merged permissions; observe first launch and all modes without external links", "expected": "No unexpected analytics, ads, identifiers, accounts, upload or remote game server URL"},
+    {"id": "ios_privacy_archive", "procedure": "On Mac, archive with iOS26+ SDK and generate Xcode privacy report", "expected": "App and SDK manifests present; UserDefaults/CA92.1 where actually used; no unsupported/redundant reasons; signed archive succeeds"},
+    {"id": "store_forms", "procedure": "Owner reviews privacy, target audience, Families and age/IARC questionnaires against signed build", "expected": "No-collection answer only after final release evidence; age rating assigned by platform, not invented"},
+    {"id": "native_media", "procedure": "Capture actual native phone/tablet gameplay in all modes", "expected": "No browser chrome, clipped aircraft, UI overlap or fabricated native-build provenance"},
+    {"id": "closed_test", "condition": "New personal Google Play account", "procedure": "Retain Play Console enrollment evidence for 12 opted-in testers over 14 continuous days and request production access", "expected": "Real cohort and elapsed time; no claimed pass from a generated checklist"}
+  ]
+}

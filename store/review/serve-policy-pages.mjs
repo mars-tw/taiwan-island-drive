@@ -1,0 +1,3 @@
+import {createServer} from 'node:http';import {readFile} from 'node:fs/promises';import {resolve,dirname} from 'node:path';import {fileURLToPath} from 'node:url';
+const root=resolve(dirname(fileURLToPath(import.meta.url)),'../../public');
+createServer(async(req,res)=>{const path=new URL(req.url,'http://localhost').pathname;if(!['/privacy.html','/support.html'].includes(path)){res.writeHead(404);res.end();return;}try{const bytes=await readFile(resolve(root,path.slice(1)));res.writeHead(200,{'Content-Type':'text/html; charset=utf-8','Cache-Control':'no-store'});res.end(bytes);}catch{res.writeHead(404);res.end();}}).listen(5194,'127.0.0.1',()=>process.stdout.write('Policy preview http://localhost:5194/privacy.html\n'));

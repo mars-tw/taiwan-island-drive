@@ -1,6 +1,9 @@
 import './navigation.css';
+import './parent-gate.css';
 import { APP_BASE, APP_REPOSITORY, appUrl } from './paths.js';
-import { readSettings, updateSettings } from './settings.js';
+import { readSettings, updateSettings,subscribeSettings,SETTINGS_KEY } from './settings.js';
+import { installParentGate } from './parent-gate.js';
+import { isNativeBuild,initNativeRuntime,nativeLocalHref,syncNativePreferences,disposeNativeRuntime,stopNativeSpeech } from './native.js';
 
 if (typeof document !== 'undefined') {
   const mode = document.body.dataset.game;
@@ -13,7 +16,12 @@ if (typeof document !== 'undefined') {
   }
   document.querySelectorAll('[data-app-url]').forEach(link => link.href = appUrl(link.dataset.appUrl));
   document.querySelectorAll('[data-repository]').forEach(link => link.href = APP_REPOSITORY);
-  if ('serviceWorker' in navigator && import.meta.env.PROD) {
+  if(isNativeBuild()){document.body.classList.add('is-native-app');document.querySelectorAll('a[href]').forEach(link=>{try{const url=new URL(link.href,document.baseURI);if(url.protocol===location.protocol&&url.host===location.host)link.href=nativeLocalHref(url.href,document.baseURI);}catch{}});}
+  installParentGate();void initNativeRuntime();
+  if(isNativeBuild())void syncNativePreferences({key:SETTINGS_KEY,read:readSettings,update:updateSettings,subscribe:subscribeSettings});
+  addEventListener('pagehide',()=>{void disposeNativeRuntime();});
+  document.addEventListener('click',event=>{const link=event.target?.closest?.('a[href]');if(!link||!isNativeBuild())return;try{const url=new URL(link.href,document.baseURI);if(url.protocol===location.protocol&&url.host===location.host){event.preventDefault();void stopNativeSpeech().finally(()=>location.assign(nativeLocalHref(url.href,document.baseURI)));}}catch{}},true);
+  if ('serviceWorker' in navigator && import.meta.env.PROD&&!isNativeBuild()) {
     navigator.serviceWorker.register(appUrl('sw.js'), { scope: APP_BASE }).catch(error => console.warn('Offline setup:', error.message));
   }
   window.__transportAcademy = { base: APP_BASE, readSettings, updateSettings, repository: APP_REPOSITORY };

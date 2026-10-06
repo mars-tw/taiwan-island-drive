@@ -1,0 +1,11 @@
+{
+  "schemaVersion": 1,
+  "status": "recommendation_not_platform_classification",
+  "lookupDate": "2026-10-06",
+  "productAudience": "Preschool children ages 3 to 5, with parental participation",
+  "apple": {"madeForKids": true, "ageBand": "5 and under", "expectedCalculatedAgeRating": "4+ subject to questionnaire and regional calculation", "contentQuestionnaireRecommendation": {"violence": "none; reviewer must verify vehicle failure screens show no injury", "fearHorror": "none", "sexualContentNudity": "none", "profanity": "none", "alcoholTobaccoDrugs": "none", "gambling": "none", "lootBoxes": false, "userGeneratedContent": false, "messagingChat": false, "unrestrictedWebAccess": false, "advertising": false}, "ageAssuranceScreen": "No birth date or child's identity is requested. Parent gate controls adult actions; it is not identity verification or consent to collect child data."},
+  "google": {"targetAudienceSelections": ["Ages 5 and under"], "doNotSelectAdultAgeBandOnlyBecauseAParentSupervises": true, "familiesPolicyApplies": true, "containsAds": false, "adSdk": null, "neutralAgeScreen": "not_needed_for_child_only_no_ads_design", "iarcRating": "Questionnaire required; no rating certificate has been issued", "questionnaireRecommendation": {"violenceInjury": "none; verify final crash/failure screens", "sexualContent": "none", "gambling": "none", "purchases": false, "chatUserContent": false, "locationSharing": false}},
+  "requiredParentGates": ["All external source-code/support/download links", "Optional motion-permission request or platform settings/install actions", "Any future purchases; not present in this release"],
+  "designEvidence": ["Default preschool controls use large buttons and icons", "Traditional Chinese spoken guidance with on-screen fallback", "Car, train and plane all playable without an account", "All 3D assets are bundled, not an external website-only experience"],
+  "sources": ["https://developer.apple.com/kids/", "https://developer.apple.com/app-store/review/guidelines/#kids-category", "https://developer.apple.com/help/app-store-connect/manage-app-information/set-an-app-age-rating", "https://support.google.com/googleplay/android-developer/answer/9867159?hl=en", "https://support.google.com/googleplay/android-developer/answer/9893335?hl=en"]
+}

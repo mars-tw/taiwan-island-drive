@@ -1,0 +1,139 @@
+{
+  "lookupDate": "2026-10-06",
+  "status": "source_audit_complete_final_signed_binary_audit_pending",
+  "evidence": [
+    {
+      "path": "src/shared/settings.js",
+      "feature": "Preferences",
+      "data": [
+        "childMode",
+        "muted",
+        "quality"
+      ],
+      "storage": "localStorage with in-memory fallback",
+      "transmittedByApp": false
+    },
+    {
+      "path": "src/games/car/main.js",
+      "feature": "Car preferences and records",
+      "keys": [
+        "island-drive:preferences",
+        "island-drive:records"
+      ],
+      "data": [
+        "map",
+        "vehicle",
+        "paint",
+        "mode",
+        "quality",
+        "muted",
+        "play records"
+      ],
+      "storage": "localStorage",
+      "transmittedByApp": false
+    },
+    {
+      "path": "src/games/flight/main.js",
+      "feature": "Flight scores",
+      "keys": [
+        "island-flight-school-record"
+      ],
+      "storage": "localStorage",
+      "transmittedByApp": false
+    },
+    {
+      "path": "src/games/train/game.js",
+      "feature": "Train lesson state",
+      "storage": "in-memory lesson/game object",
+      "transmittedByApp": false
+    },
+    {
+      "path": "src/games/car/tilt.js",
+      "feature": "Optional steering",
+      "data": [
+        "beta/gamma device orientation",
+        "screen angle",
+        "neutral calibration"
+      ],
+      "storage": "transient memory only",
+      "transmittedByApp": false
+    },
+    {
+      "path": "src/shared/native.js",
+      "feature": "Native voice",
+      "findings": [
+        "selectLocalChineseVoice requires localService===true",
+        "networkConnectionRequired!==true",
+        "native missing voice returns text-only",
+        "native speak does not fall through to browser speech",
+        "No auto-install/download voice method"
+      ],
+      "input": "fixed instructional phrases",
+      "microphoneUsed": false
+    },
+    {
+      "path": "src/shared/native.js",
+      "feature": "Native storage and motion",
+      "findings": [
+        "Preferences get/set bridge is device-local",
+        "Motion orientation listener is active only while app is active",
+        "requestMotion is initiated by user action"
+      ],
+      "transmittedByApp": false
+    },
+    {
+      "path": "node_modules/@capacitor-community/text-to-speech/android/src/main/java/com/getcapacitor/community/tts/TextToSpeech.java",
+      "feature": "TTS SDK source",
+      "finding": "Voice.localService is !Voice.isNetworkConnectionRequired()"
+    },
+    {
+      "path": "node_modules/@capacitor/preferences/ios/Sources/PreferencesPlugin/Preferences.swift",
+      "feature": "Native preferences",
+      "finding": "UserDefaults storage; privacy reason CA92.1 recommended by the plugin documentation"
+    },
+    {
+      "path": "src/shared/parent-gate.js",
+      "feature": "Parent gate",
+      "findings": [
+        "Random adult addition task",
+        "Session 90s and limited attempts",
+        "Native external/download links display text address instead of opening",
+        "Web external links need approved parent challenge"
+      ],
+      "childIdentityRequested": false
+    },
+    {
+      "path": "public/sw.js",
+      "feature": "Browser offline caching",
+      "network": "same-origin file download/update; not a play-record upload",
+      "nativeApplicability": "native integration disables browser SW and uses bundled files"
+    },
+    {
+      "path": "public/support.html",
+      "feature": "Support",
+      "network": "native displays address; browser opens parent-gated GitHub issue tracker",
+      "note": "User-submitted public support text is governed by GitHub; no automatic child-data submission"
+    }
+  ],
+  "notFoundInAuditedApplicationSource": [
+    "Advertising SDK",
+    "analytics upload API",
+    "self-hosted TTS endpoint",
+    "account registration/login",
+    "camera capture",
+    "microphone recording",
+    "GPS/geolocation access",
+    "contacts API",
+    "advertising identifier API"
+  ],
+  "dependenciesToRecheckInRelease": [
+    "@capacitor/core 8.5.2",
+    "@capacitor/app 8.1.2",
+    "@capacitor/motion 8.0.1",
+    "@capacitor/preferences 8.0.1",
+    "@capacitor-community/text-to-speech 8.0.2"
+  ],
+  "importantBoundary": "Absence in inspected JS/source is not a signed-binary network audit. OS backup, platform diagnostic settings and third-party system voice engine behavior are not falsely described as never connecting to a network.",
+  "ownerIdentityOrEmailInferredFromMachine": false,
+  "optionalExternalEmailSupport": "Parent independently sends email using an external mail service; native app only displays address. Voluntarily provided address/content used for support; no child information requested. Re-assess labels if an in-app form or automatic diagnostic upload is added."
+}

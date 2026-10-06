@@ -1,0 +1,67 @@
+{
+  "date": "2026-10-06",
+  "files": [
+    {
+      "path": "src/shared/native.js",
+      "sha256": "be02ba467d6a7128587034d1ae1bc2567c40fb4b4880090758cd2cc863ba07b5"
+    },
+    {
+      "path": "src/shared/parent-gate.js",
+      "sha256": "5f26f529db23929978266c86df6d6bae88f59bcab2afb2b5df91a674f00a0581"
+    },
+    {
+      "path": "src/shared/bootstrap.js",
+      "sha256": "78298a19651975fcfef4581a5c58e8114b434008e62bfde56c24595860faa61e"
+    },
+    {
+      "path": "src/shared/settings.js",
+      "sha256": "05e3022080e3ad6f513ca18141daee63029124282b7a6ea502ee300c2ba7e16f"
+    },
+    {
+      "path": "src/games/car/tilt.js",
+      "sha256": "3c44a1362aeb8593c55c367742f3feae53fef66b039c07ae4812e06fd2ef8eff"
+    },
+    {
+      "path": "src/games/car/main.js",
+      "sha256": "336d313d28e89a4742c011c268df39e62ac8e197cc39a8ea80967c2800cbc3ed"
+    },
+    {
+      "path": "src/games/train/main.js",
+      "sha256": "e6930231c75ef52a4710833399631c3b5fcfcbe96626b687a6842811ec8adef2"
+    },
+    {
+      "path": "src/games/flight/voice.js",
+      "sha256": "0606804c0e91f3fe707625adc28f913050e8678ef56cfeb0b13161944eaf411d"
+    },
+    {
+      "path": "src/games/flight/main.js",
+      "sha256": "4054cab0c3317bd90d45d6d2ec2db59a6a2eba1b832dea675771a10255b0e6cf"
+    },
+    {
+      "path": "capacitor.config.json",
+      "sha256": "fcd863417f22c6722fbc99e0abe4fac8dd19963ad30bc85a4201a7cee5e85e7e"
+    },
+    {
+      "path": "package.json",
+      "sha256": "388cfbd98aa31928a7debaad348b5255d5dd02a3a3827d11915dbf439ac02862"
+    },
+    {
+      "path": "public/privacy.html",
+      "sha256": "ee9ad80d5bf722fd80a2574a3ec1da302fc43bc7b715a323320277c6173c60c2"
+    },
+    {
+      "path": "public/support.html",
+      "sha256": "e5ff59e1b00130259d13b1158dab3011200437251d1cb3b0c917c2717231d051"
+    }
+  ],
+  "nativeCallersVerified": [
+    "train main uses speakNative",
+    "flight voice uses speakNative",
+    "car tilt uses native motion bridge",
+    "bootstrap disables SW in native build and synchronizes Preferences"
+  ],
+  "status": "source_read_verified_not_signed_binary",
+  "publicOwnerProvidedContact": "a820628a@gmail.com",
+  "publicationAuthorizedByOwner": true,
+  "privateIdentityInferred": false
+}

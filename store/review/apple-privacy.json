@@ -1,0 +1,29 @@
+{
+  "schemaVersion": 1,
+  "status": "self_assessment_not_entered_in_app_store_connect",
+  "lookupDate": "2026-10-06",
+  "scope": "Native release 1.0.0 build 1; browser-host traffic assessed separately",
+  "candidateAnswer": {"developerOrThirdPartyPartnersCollectData": false, "privacyLabel": "Data Not Collected", "dataTypes": [], "tracking": false, "trackingDomains": []},
+  "onDeviceUse": ["Preferences and play records", "Optional orientation/motion steering", "Fixed Traditional Chinese instructional text passed to an installed local voice"],
+  "releaseConditions": [
+    "Inspect the signed release and all native dependencies, not only JavaScript source.",
+    "Native voice selection must require localService=true and never fall back to a network-required voice or browser speech in native mode.",
+    "No analytics, ad SDK, user account, identifier collection, upload endpoint, or remote server.url is added.",
+    "All game resources remain bundled; privacy/support pages are locally readable.",
+    "Any newly added data collection requires re-assessment before store submission."
+  ],
+  "privacyManifest": {
+    "owner": "native integration lane",
+    "tracking": false,
+    "collectedDataTypes": [],
+    "requiredReasonAPIs": [{"category": "NSPrivacyAccessedAPICategoryUserDefaults", "reason": "CA92.1", "evidence": "@capacitor/preferences 8.0.1 README and iOS Preferences.swift use UserDefaults for app preferences"}],
+    "sdkAudit": "Inspect Capacitor and all plugin privacy manifests in the final iOS archive. Add other categories only where actual APIs and an approved reason apply. Do not copy unused reason declarations.",
+    "verifiedInSignedArchive": false
+  },
+  "sources": [
+    "https://developer.apple.com/app-store/app-privacy-details/",
+    "https://developer.apple.com/help/app-store-connect/manage-app-information/manage-app-privacy",
+    "https://developer.apple.com/documentation/bundleresources/describing-use-of-required-reason-api",
+    "https://capacitorjs.com/docs/apis/preferences"
+  ]
+}

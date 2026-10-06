@@ -1,3 +1,4 @@
+import { isNative,requestNativeMotion,subscribeNativeMotion } from '../../shared/native.js';
 const bounded = value => Math.max(-1, Math.min(1, Number.isFinite(value) ? value : 0));
 
 /** Device axes are rotated into the current screen's left/right axis. Degrees. */
@@ -28,8 +29,9 @@ export function combineSteering(left, right, tiltEnabled, tiltValue) {
 }
 
 export class TiltController {
-  constructor({ host = window, onSteer = () => {}, onStatus = () => {}, onNotice = () => {} } = {}) {
+  constructor({ host = window, onSteer = () => {}, onStatus = () => {}, onNotice = () => {},nativeMotionBridge={request:requestNativeMotion,subscribe:subscribeNativeMotion} } = {}) {
     this.host = host; this.onSteer = onSteer; this.onStatus = onStatus; this.onNotice = onNotice;
+    this.nativeMotionBridge=nativeMotionBridge;this.nativeRemove=null;
     this.enabled = false; this.active = false; this.status = 'off'; this.steer = 0; this.neutral = null;
     this.raw = null; this.lastSample = -Infinity; this.activeSince = Infinity; this.previousFrame = null; this.awaitFresh = true;
     this.pending = false; this.generation = 0; this.raf = 0; this.timeout = 0; this.angle = this.screenAngle();
@@ -47,7 +49,8 @@ export class TiltController {
 
   async enable() {
     if (this.pending || this.enabled) return this.enabled;
-    if (!this.host.isSecureContext) {
+    const native=isNative(this.host);
+    if (!this.host.isSecureContext&&!native) {
       this.status = 'insecure'; this.notify();
       this.onNotice('手機方向盤需要 HTTPS，請從正式遊戲網址開啟。'); return false;
     }
@@ -60,7 +63,13 @@ export class TiltController {
     this.pending = true; this.status = 'permission'; this.notify();
     try {
       // This call must stay synchronous within the initiating button click.
-      if (typeof Orientation.requestPermission === 'function') {
+      if(native){
+        const permission=await this.nativeMotionBridge.request();
+        if(generation!==this.generation)return false;
+        if(!permission.granted){this.pending=false;this.status=permission.status||'denied';this.notify();this.onNotice('方向感測尚未開啟，請由家長確認權限，或使用觸控轉向。');return false;}
+        const remove=await this.nativeMotionBridge.subscribe(this.handleOrientation);
+        if(generation!==this.generation){void remove();return false;}this.nativeRemove=remove;
+      }else if (typeof Orientation.requestPermission === 'function') {
         const result = await Orientation.requestPermission();
         if (generation !== this.generation) return false;
         if (result !== 'granted') {
@@ -71,7 +80,7 @@ export class TiltController {
       if (generation !== this.generation) return false;
       this.pending = false; this.enabled = true; this.status = 'waiting'; this.neutral = null;
       this.raw = null; this.angle = this.screenAngle(); this.lastSample = -Infinity;
-      this.host.addEventListener('deviceorientation', this.handleOrientation);
+      if(!native)this.host.addEventListener('deviceorientation', this.handleOrientation);
       this.host.addEventListener('orientationchange', this.handleScreenChange);
       this.host.screen?.orientation?.addEventListener('change', this.handleScreenChange);
       this.waitForSensor(); this.notify(); this.raf = this.host.requestAnimationFrame(this.tick);
@@ -141,6 +150,7 @@ export class TiltController {
   disable(status = 'off') {
     ++this.generation; this.enabled = false; this.pending = false; this.status = status; this.neutral = null; this.raw = null;
     this.host.clearTimeout(this.timeout); this.host.cancelAnimationFrame(this.raf);
+    const removal=this.nativeRemove?.();removal?.catch?.(()=>{});this.nativeRemove=null;
     this.host.removeEventListener('deviceorientation', this.handleOrientation);
     this.host.removeEventListener('orientationchange', this.handleScreenChange);
     this.host.screen?.orientation?.removeEventListener('change', this.handleScreenChange);

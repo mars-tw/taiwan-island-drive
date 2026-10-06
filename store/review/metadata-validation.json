@@ -1,0 +1,254 @@
+{
+  "generatedAt": "2026-10-06T06:30:27.844Z",
+  "lookupDate": "2026-10-06",
+  "metadataValid": true,
+  "submissionReady": false,
+  "checks": [
+    {
+      "id": "zh-TW.locale",
+      "passed": true,
+      "value": "zh-TW"
+    },
+    {
+      "id": "zh-TW.apple.name",
+      "passed": true,
+      "count": 6,
+      "max": 30,
+      "unit": "Unicode characters"
+    },
+    {
+      "id": "zh-TW.apple.subtitle",
+      "passed": true,
+      "count": 15,
+      "max": 30,
+      "unit": "Unicode characters"
+    },
+    {
+      "id": "zh-TW.apple.promotionalText",
+      "passed": true,
+      "count": 48,
+      "max": 170,
+      "unit": "Unicode characters"
+    },
+    {
+      "id": "zh-TW.apple.description",
+      "passed": true,
+      "count": 523,
+      "max": 4000,
+      "unit": "Unicode characters"
+    },
+    {
+      "id": "zh-TW.apple.keywords",
+      "passed": true,
+      "count": 81,
+      "max": 100,
+      "unit": "UTF-8 bytes"
+    },
+    {
+      "id": "zh-TW.apple.releaseNotes",
+      "passed": true,
+      "count": 47,
+      "max": 4000,
+      "unit": "Unicode characters"
+    },
+    {
+      "id": "zh-TW.google.name",
+      "passed": true,
+      "count": 6,
+      "max": 30,
+      "unit": "Unicode characters"
+    },
+    {
+      "id": "zh-TW.google.shortDescription",
+      "passed": true,
+      "count": 35,
+      "max": 80,
+      "unit": "Unicode characters"
+    },
+    {
+      "id": "zh-TW.google.fullDescription",
+      "passed": true,
+      "count": 444,
+      "max": 4000,
+      "unit": "Unicode characters"
+    },
+    {
+      "id": "zh-TW.keywords.nonduplicate",
+      "passed": true,
+      "keywords": [
+        "小汽車",
+        "開火車",
+        "開飛機",
+        "親子遊戲",
+        "台灣風景",
+        "幼兒探索",
+        "離線遊玩"
+      ]
+    },
+    {
+      "id": "en-US.locale",
+      "passed": true,
+      "value": "en-US"
+    },
+    {
+      "id": "en-US.apple.name",
+      "passed": true,
+      "count": 24,
+      "max": 30,
+      "unit": "Unicode characters"
+    },
+    {
+      "id": "en-US.apple.subtitle",
+      "passed": true,
+      "count": 29,
+      "max": 30,
+      "unit": "Unicode characters"
+    },
+    {
+      "id": "en-US.apple.promotionalText",
+      "passed": true,
+      "count": 157,
+      "max": 170,
+      "unit": "Unicode characters"
+    },
+    {
+      "id": "en-US.apple.description",
+      "passed": true,
+      "count": 1678,
+      "max": 4000,
+      "unit": "Unicode characters"
+    },
+    {
+      "id": "en-US.apple.keywords",
+      "passed": true,
+      "count": 58,
+      "max": 100,
+      "unit": "UTF-8 bytes"
+    },
+    {
+      "id": "en-US.apple.releaseNotes",
+      "passed": true,
+      "count": 150,
+      "max": 4000,
+      "unit": "Unicode characters"
+    },
+    {
+      "id": "en-US.google.name",
+      "passed": true,
+      "count": 24,
+      "max": 30,
+      "unit": "Unicode characters"
+    },
+    {
+      "id": "en-US.google.shortDescription",
+      "passed": true,
+      "count": 72,
+      "max": 80,
+      "unit": "Unicode characters"
+    },
+    {
+      "id": "en-US.google.fullDescription",
+      "passed": true,
+      "count": 1441,
+      "max": 4000,
+      "unit": "Unicode characters"
+    },
+    {
+      "id": "en-US.keywords.nonduplicate",
+      "passed": true,
+      "keywords": [
+        "preschool",
+        "cars",
+        "trains",
+        "planes",
+        "taiwan",
+        "offline",
+        "family",
+        "explore"
+      ]
+    },
+    {
+      "id": "proposed.bundleId",
+      "passed": true,
+      "value": "tw.mars.islandtransport",
+      "platformReserved": false
+    },
+    {
+      "id": "release.version",
+      "passed": true,
+      "marketingVersion": "1.0.0",
+      "build": 1
+    },
+    {
+      "id": "privacy.productIdentified",
+      "passed": true,
+      "path": "public/privacy.html"
+    },
+    {
+      "id": "privacy.noRemoteEmbeddedResources",
+      "passed": true,
+      "path": "public/privacy.html"
+    },
+    {
+      "id": "support.productIdentified",
+      "passed": true,
+      "path": "public/support.html"
+    },
+    {
+      "id": "support.noRemoteEmbeddedResources",
+      "passed": true,
+      "path": "public/support.html"
+    }
+  ],
+  "unresolvedOwnerFields": [
+    "sellerLegalName",
+    "copyrightOwner",
+    "appReviewContact.firstName",
+    "appReviewContact.lastName",
+    "appReviewContact.phone"
+  ],
+  "openBlockers": [
+    {
+      "id": "developer_accounts",
+      "status": "needs_owner",
+      "detail": "Owner explicitly confirmed that neither developer account exists. Enrollment, identity verification, agreements and fees require the owner; no signup or payment has been performed."
+    },
+    {
+      "id": "identifier",
+      "status": "needs_owner_and_platform_check",
+      "detail": "tw.mars.islandtransport is proposed, not reserved or registered."
+    },
+    {
+      "id": "ios_build",
+      "status": "needs_mac_or_macos_ci",
+      "detail": "Current host is Windows. A final iOS 26+ SDK archive, code signing and device tests cannot be claimed from an unbuilt Xcode project."
+    },
+    {
+      "id": "signing_and_upload",
+      "status": "pending",
+      "detail": "No store credentials/signing identity has been created or verified for submission. A debug APK or unsigned archive is not a submitted store release."
+    },
+    {
+      "id": "new_personal_play_account_testing",
+      "status": "conditional_owner_work",
+      "detail": "If the owner registers a new personal Google Play account, at least 12 opted-in testers must remain in closed testing continuously for at least 14 days before a production-access request. No testers or elapsed period are claimed."
+    },
+    {
+      "id": "final_binary_privacy_and_gates",
+      "status": "pending_final_release_audit",
+      "detail": "Confirm bundled resources, installed-local-voice-only speech, permissions, required-reason manifests, parent gates and actual device network behavior."
+    },
+    {
+      "id": "store_forms_and_native_media",
+      "status": "pending",
+      "detail": "Privacy, Families, age/IARC, screenshots, availability and content-rights declarations have not been filled or approved on either platform."
+    },
+    {
+      "id": "owner_identity",
+      "status": "needs_owner",
+      "detail": "Seller legal name, copyright owner, App Review first/last name and phone remain pending; none is inferred or invented."
+    }
+  ],
+  "releaseEvidenceComplete": false,
+  "note": "Text/schema validation is not store submission, platform approval, signed-build verification, or a legal certification."
+}

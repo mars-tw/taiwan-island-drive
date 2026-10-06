@@ -1,0 +1,76 @@
+name: Build native Android and iOS packages
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - 'src/**'
+      - 'android/**'
+      - 'ios/**'
+      - 'public/**'
+      - 'resources/**'
+      - 'capacitor.config.json'
+      - 'package*.json'
+      - 'scripts/build-native.mjs'
+      - '.github/workflows/native.yml'
+permissions:
+  contents: read
+concurrency:
+  group: native-packages-${{ github.ref }}
+  cancel-in-progress: true
+jobs:
+  android:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@d23441a48e516b6c34aea4fa41551a30e30af803
+      - uses: actions/setup-node@820762786026740c76f36085b0efc47a31fe5020
+        with: { node-version: '24', cache: npm }
+      - uses: actions/setup-java@b6effb05e454b25005698d916606bdc6ffcbf961
+        with: { distribution: temurin, java-version: '21' }
+      - run: npm ci
+      - run: npm test
+      - run: npm run native:build
+      - run: node scripts/verify-native-package.mjs
+      - run: npx cap sync android
+      - name: Compile test APK and unsigned bundle
+        run: |
+          chmod +x android/gradlew
+          android/gradlew -p android assembleDebug bundleRelease --no-daemon
+      - name: Collect Android packages and bundle inventory
+        run: |
+          mkdir -p native-artifacts/android
+          cp android/app/build/outputs/apk/debug/app-debug.apk native-artifacts/android/island-transport-test.apk
+          cp android/app/build/outputs/bundle/release/app-release.aab native-artifacts/android/island-transport-unsigned.aab
+          cp output/native/bundle-manifest.json native-artifacts/android/bundle-manifest.json
+      - uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        with: { name: android-native-packages, path: native-artifacts/android, retention-days: 14 }
+  ios:
+    runs-on: macos-26
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@d23441a48e516b6c34aea4fa41551a30e30af803
+      - uses: actions/setup-node@820762786026740c76f36085b0efc47a31fe5020
+        with: { node-version: '24', cache: npm }
+      - run: npm ci
+      - run: npm run native:build
+      - run: node scripts/verify-native-package.mjs
+      - run: npx cap sync ios
+      - name: Verify SDK and compile iOS simulator application
+        run: |
+          xcodebuild -version
+          xcrun --sdk iphoneos --show-sdk-version
+          xcodebuild -project ios/App/App.xcodeproj -scheme App -configuration Debug -sdk iphonesimulator -destination 'generic/platform=iOS Simulator' -derivedDataPath output/ios-derived CODE_SIGNING_ALLOWED=NO build
+      - name: Archive unsigned iOS device application
+        run: |
+          xcodebuild -project ios/App/App.xcodeproj -scheme App -configuration Release -destination 'generic/platform=iOS' -archivePath output/IslandTransport-unsigned.xcarchive CODE_SIGNING_ALLOWED=NO archive
+      - name: Verify bundled privacy manifest and collect packages
+        run: |
+          test -f output/ios-derived/Build/Products/Debug-iphonesimulator/App.app/PrivacyInfo.xcprivacy
+          plutil -lint output/ios-derived/Build/Products/Debug-iphonesimulator/App.app/PrivacyInfo.xcprivacy
+          mkdir -p native-artifacts/ios
+          ditto -c -k --sequesterRsrc --keepParent output/ios-derived/Build/Products/Debug-iphonesimulator/App.app native-artifacts/ios/IslandTransport-simulator.app.zip
+          ditto -c -k --sequesterRsrc --keepParent output/IslandTransport-unsigned.xcarchive native-artifacts/ios/IslandTransport-unsigned.xcarchive.zip
+          cp output/native/bundle-manifest.json native-artifacts/ios/bundle-manifest.json
+      - uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        with: { name: ios-native-packages, path: native-artifacts/ios, retention-days: 14 }

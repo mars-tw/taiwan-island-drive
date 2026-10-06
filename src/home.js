@@ -2,6 +2,7 @@ import '@fontsource/barlow-condensed/latin-600.css';
 import './home.css';
 import './shared/bootstrap.js';
 import { readSettings, updateSettings, subscribeSettings } from './shared/settings.js';
+import { isNativeBuild } from './shared/native.js';
 const $ = id => document.getElementById(id);
 function showSettings(value = readSettings()) {
   $('child-mode').checked = value.childMode;
@@ -15,5 +16,5 @@ $('family-sound').onchange = event => updateSettings({ muted: !event.target.chec
 $('family-quality').onchange = event => updateSettings({ quality: event.target.value });
 subscribeSettings(showSettings); showSettings();
 let installation;
-addEventListener('beforeinstallprompt', event => { event.preventDefault(); installation = event; $('install-app').hidden = false; });
-$('install-app').onclick = async () => { await installation?.prompt(); $('install-app').hidden = true; };
+if(!isNativeBuild())addEventListener('beforeinstallprompt', event => { event.preventDefault(); installation = event; $('install-app').hidden = false; });
+$('install-app').hidden=true;$('install-app').onclick = async () => { if(!isNativeBuild())await installation?.prompt(); $('install-app').hidden = true; };

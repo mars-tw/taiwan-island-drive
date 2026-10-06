@@ -1,0 +1,26 @@
+{
+  "lookupDate": "2026-10-06",
+  "sources": [
+    {"id": "apple-kids", "title": "Apple: Design safe and age-appropriate experiences", "url": "https://developer.apple.com/kids/", "finding": "5 and under age band and parent-gated adult actions"},
+    {"id": "apple-review", "title": "App Review Guidelines", "url": "https://developer.apple.com/app-store/review/guidelines/", "finding": "Kids restrictions and meaningful interactive app functionality"},
+    {"id": "apple-age", "title": "Set an app age rating", "url": "https://developer.apple.com/help/app-store-connect/manage-app-information/set-an-app-age-rating", "finding": "Questionnaire calculates rating; Made for Kids band is separate and remains a commitment after approval"},
+    {"id": "apple-privacy", "title": "App Privacy Details", "url": "https://developer.apple.com/app-store/app-privacy-details/", "finding": "On-device-only data processing is distinct from collection; all included partner SDKs matter"},
+    {"id": "apple-reasons", "title": "Required reason API declarations", "url": "https://developer.apple.com/documentation/bundleresources/describing-use-of-required-reason-api", "finding": "Privacy manifest reasons must match actually used APIs"},
+    {"id": "preferences", "title": "Capacitor Preferences v8", "url": "https://capacitorjs.com/docs/apis/preferences", "finding": "UserDefaults/SharedPreferences, with CA92.1 recommendation for the iOS manifest"},
+    {"id": "apple-metadata", "title": "App information", "url": "https://developer.apple.com/help/app-store-connect/reference/app-information/app-information", "finding": "Name/subtitle each at most 30 characters"},
+    {"id": "apple-version-fields", "title": "Platform version information", "url": "https://developer.apple.com/help/app-store-connect/reference/app-information/platform-version-information", "finding": "Description 4000 characters; keywords 100 bytes; promotional text 170 characters"},
+    {"id": "play-metadata", "title": "Create and set up your app", "url": "https://support.google.com/googleplay/android-developer/answer/9859152?hl=en", "finding": "Name 30, short description 80, full description 4000; support email required"},
+    {"id": "play-families", "title": "Google Play Families Policies", "url": "https://support.google.com/googleplay/android-developer/answer/9893335?hl=en", "finding": "Child-directed functionality, privacy and SDK requirements"},
+    {"id": "play-audience", "title": "Manage target audience and app content settings", "url": "https://support.google.com/googleplay/android-developer/answer/9867159?hl=en", "finding": "Preschool-only product selects Ages 5 and under; parental supervision does not automatically make it adult-targeted"},
+    {"id": "play-data-safety", "title": "Provide information for Data safety", "url": "https://support.google.com/googleplay/android-developer/answer/10787469?hl=en-GB", "finding": "On-device processing, off-device transmission, SDK behavior and open-web links must be assessed separately"},
+    {"id": "play-user-data", "title": "User Data", "url": "https://support.google.com/googleplay/android-developer/answer/10144311", "finding": "Public HTML privacy policy, app/developer identification, contact mechanism, retention and deletion"},
+    {"id": "play-personal-testing", "title": "App testing requirements for new personal accounts", "url": "https://support.google.com/googleplay/android-developer/answer/14151465?hl=en", "finding": "Applicable new personal accounts need 12 continuously opted-in testers for at least 14 days before production-access request"},
+    {"id": "play-sdk", "title": "Target API level requirements", "url": "https://support.google.com/googleplay/android-developer/answer/11926878?hl=en-sg", "finding": "New Android apps and updates target API 36+ from August 31, 2026"},
+    {"id": "apple-sdk", "title": "App Store submissions now open for latest OS releases", "url": "https://developer.apple.com/news/?id=6lxhtioi", "finding": "iOS/iPadOS 26 SDK+ uploads from April 2026"},
+    {"id": "apple-enroll", "title": "Become a member", "url": "https://developer.apple.com/programs/enroll/", "finding": "Owner identity and annual membership purchase; USD99 reference varies by region"},
+    {"id": "play-enroll", "title": "Get started with Play Console", "url": "https://support.google.com/googleplay/android-developer/answer/6112435?hl=en", "finding": "Owner enrollment and identity/device verification; USD25 registration reference"},
+    {"id": "apple-agreements", "title": "Agreements and Guidelines", "url": "https://developer.apple.com/support/terms", "finding": "Free apps under program agreement; paid apps/IAP need the additional Paid Apps Agreement"},
+    {"id": "apple-screenshots", "title": "Screenshot specifications", "url": "https://developer.apple.com/help/app-store-connect/reference/app-information/screenshot-specifications/", "finding": "Verify actual device screenshot classes and pixel sizes at submission"},
+    {"id": "play-assets", "title": "Add preview assets", "url": "https://support.google.com/googleplay/android-developer/answer/9866151?hl=en-en", "finding": "Feature graphic 1024x500 and current preview/screenshot specifications"}
+  ]
+}

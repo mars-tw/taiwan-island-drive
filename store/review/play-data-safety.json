@@ -1,0 +1,23 @@
+{
+  "schemaVersion": 1,
+  "status": "self_assessment_not_entered_in_play_console",
+  "lookupDate": "2026-10-06",
+  "scope": "Native release 1.0.0 build 1 after final-binary audit",
+  "candidateAnswer": {
+    "collectsOrSharesRequiredUserDataTypes": false,
+    "collectedDataTypes": [],
+    "sharedDataTypes": [],
+    "accountCreation": false,
+    "accountDeletionUrl": null,
+    "accountDeletionApplicability": "not_applicable_no_account",
+    "encryptionInTransit": null,
+    "encryptionApplicability": "not_applicable_when_no_user_data_is_transmitted; do not claim encryption without a transport to assess",
+    "privacyPolicyUrl": "https://mars-tw.github.io/taiwan-island-drive/privacy.html"
+  },
+  "localDataDeletion": "Android app-storage Clear data or uninstall; OS backup copies are controlled separately. Parent-area clear action may be used when implemented and tested.",
+  "sensitiveAccess": {"orientationMotion": "optional_on_device_only", "location": "not_requested", "microphone": "not_requested", "camera": "not_requested", "contacts": "not_requested", "advertisingId": "not_requested"},
+  "nativeSpeech": "Fixed instructional text goes to an installed local device speech engine. No personal input or recording; network-required voices and automatic engine/voice installation are disabled. Audit the selected engine and release network behavior before confirming the form.",
+  "releaseConditions": ["Final AAB and merged manifest match this worksheet", "No upload/ads/analytics SDK is added", "No network-required speech fallback", "Native external links display an address and never open; browser version opens only after the parent gate", "Public privacy URL is live and matches the app"],
+  "sources": ["https://support.google.com/googleplay/android-developer/answer/10787469?hl=en-GB", "https://support.google.com/googleplay/android-developer/answer/10144311", "https://support.google.com/googleplay/android-developer/answer/9893335?hl=en"]
+}
+

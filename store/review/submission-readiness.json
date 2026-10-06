@@ -1,0 +1,88 @@
+{
+  "schemaVersion": 1,
+  "status": "prepared_package_not_ready_to_submit",
+  "lookupDate": "2026-10-06",
+  "ownerConfirmed": {
+    "appleDeveloperAccountExists": false,
+    "googlePlayDeveloperAccountExists": false
+  },
+  "blockers": [
+    {
+      "id": "developer_accounts",
+      "status": "needs_owner",
+      "detail": "Owner explicitly confirmed that neither developer account exists. Enrollment, identity verification, agreements and fees require the owner; no signup or payment has been performed."
+    },
+    {
+      "id": "public_contact",
+      "status": "resolved",
+      "detail": "Owner explicitly provided and authorized public support email a820628a@gmail.com; used in store metadata, App Review email and privacy/support pages."
+    },
+    {
+      "id": "identifier",
+      "status": "needs_owner_and_platform_check",
+      "detail": "tw.mars.islandtransport is proposed, not reserved or registered."
+    },
+    {
+      "id": "ios_build",
+      "status": "needs_mac_or_macos_ci",
+      "detail": "Current host is Windows. A final iOS 26+ SDK archive, code signing and device tests cannot be claimed from an unbuilt Xcode project."
+    },
+    {
+      "id": "signing_and_upload",
+      "status": "pending",
+      "detail": "No store credentials/signing identity has been created or verified for submission. A debug APK or unsigned archive is not a submitted store release."
+    },
+    {
+      "id": "new_personal_play_account_testing",
+      "status": "conditional_owner_work",
+      "detail": "If the owner registers a new personal Google Play account, at least 12 opted-in testers must remain in closed testing continuously for at least 14 days before a production-access request. No testers or elapsed period are claimed."
+    },
+    {
+      "id": "final_binary_privacy_and_gates",
+      "status": "pending_final_release_audit",
+      "detail": "Confirm bundled resources, installed-local-voice-only speech, permissions, required-reason manifests, parent gates and actual device network behavior."
+    },
+    {
+      "id": "store_forms_and_native_media",
+      "status": "pending",
+      "detail": "Privacy, Families, age/IARC, screenshots, availability and content-rights declarations have not been filled or approved on either platform."
+    },
+    {
+      "id": "owner_identity",
+      "status": "needs_owner",
+      "detail": "Seller legal name, copyright owner, App Review first/last name and phone remain pending; none is inferred or invented."
+    }
+  ],
+  "releaseDefaultsPendingFinalOwnerConfirmation": {
+    "free": true,
+    "ads": false,
+    "iap": false,
+    "analytics": false,
+    "account": false
+  },
+  "platformMinimumsChecked": {
+    "androidNewAppTargetSdk": 36,
+    "iosUploadSdk": "iOS 26 / iPadOS 26 or later"
+  },
+  "verifiedReleaseEvidence": {
+    "androidSignedRelease": false,
+    "iosSignedArchive": false,
+    "nativePrivacyNetworkAudit": false,
+    "offlineDeviceTest": false,
+    "parentGateDeviceTest": false
+  },
+  "feesReferenceOnly": {
+    "apple": "USD 99 per membership year; region-local pricing and eligibility may vary",
+    "googlePlay": "USD 25 one-time registration fee",
+    "paidAppsAgreement": "Only required for paid apps/IAP; free distribution is under the Apple Developer Program License Agreement",
+    "charged": false
+  },
+  "sources": [
+    "https://developer.apple.com/programs/enroll/",
+    "https://support.google.com/googleplay/android-developer/answer/6112435?hl=en",
+    "https://support.google.com/googleplay/android-developer/answer/14151465?hl=en",
+    "https://developer.apple.com/news/?id=6lxhtioi",
+    "https://support.google.com/googleplay/android-developer/answer/11926878?hl=en-sg",
+    "https://developer.apple.com/support/terms"
+  ]
+}

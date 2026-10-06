@@ -1,0 +1,47 @@
+{
+  "date": "2026-10-06",
+  "status": "browser_UI_verified_native_bridge_mock_verified_device_validation_pending",
+  "previewOrigin": "http://localhost:5194",
+  "privacy": {
+    "title": "隱私權政策｜島嶼交通學院",
+    "viewportWidth": 390,
+    "documentWidth": 390,
+    "remoteEmbeddedResources": [],
+    "productIdentified": true,
+    "screenshot": "store/review/privacy-phone.png"
+  },
+  "support": {
+    "viewportWidth": 390,
+    "documentWidth": 390,
+    "incorrectAnswer": {
+      "dialogOpen": true,
+      "externalOpenCalls": 0
+    },
+    "cancel": {
+      "dialogOpen": false,
+      "externalOpenCalls": 0
+    },
+    "correctWebAnswer": {
+      "dialogOpen": false,
+      "externalOpenCalls": 1,
+      "requestedUrl": "https://github.com/mars-tw/taiwan-island-drive/issues"
+    },
+    "nativeBridgeMock": {
+      "bridgePlatform": "android",
+      "dialogOpen": false,
+      "externalOpenCalls": 0,
+      "buttonText": "請家長在瀏覽器使用下方網址"
+    },
+    "screenshots": [
+      "store/review/support-phone.png",
+      "store/review/support-native-mock-phone.png"
+    ]
+  },
+  "method": "Chromium/Playwright actual rendered HTML with real click/fill/submit. window.open was stubbed to count requests; no support issue was posted. Native restriction used an explicit mocked Capacitor bridge, not an Android/iOS device claim.",
+  "publicDeploymentVerified": false,
+  "nativeDeviceVerified": false,
+  "note": "Final public URLs and bundled native pages must be checked after the owner publishes/builds them.",
+  "ownerEmail": "a820628a@gmail.com",
+  "ownerAuthorizedPublicContact": true,
+  "nativeMailtoLinks": 0
+}

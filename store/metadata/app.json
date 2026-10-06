@@ -1,0 +1,67 @@
+{
+  "schemaVersion": 1,
+  "status": "prepared_not_submitted",
+  "lookupDate": "2026-10-06",
+  "displayName": "島嶼交通學院",
+  "bundleId": "tw.mars.islandtransport",
+  "bundleIdStatus": "proposed_owner_and_platform_availability_check_required",
+  "marketingVersion": "1.0.0",
+  "buildNumber": 1,
+  "webSourceVersion": "2.3.0",
+  "primaryStoreLocale": "zh-TW",
+  "storeLocales": [
+    "zh-TW",
+    "en-US"
+  ],
+  "interfaceLanguages": [
+    "Traditional Chinese"
+  ],
+  "englishStoreTextIsNotEnglishInterfaceSupport": true,
+  "audience": {
+    "minimumDesignedAge": 3,
+    "maximumDesignedAge": 5,
+    "appleKidsAgeBand": "5 and under",
+    "googleTargetAudience": [
+      "Ages 5 and under"
+    ]
+  },
+  "firstReleaseDefaults": {
+    "price": "free",
+    "ads": false,
+    "inAppPurchases": false,
+    "subscriptions": false,
+    "analytics": false,
+    "accounts": false,
+    "ownerMonetizationConfirmation": "pending"
+  },
+  "distributionCountries": null,
+  "privacyPolicyUrl": "https://mars-tw.github.io/taiwan-island-drive/privacy.html",
+  "supportUrl": "https://mars-tw.github.io/taiwan-island-drive/support.html",
+  "repository": "https://github.com/mars-tw/taiwan-island-drive",
+  "supportMechanism": "https://github.com/mars-tw/taiwan-island-drive/issues",
+  "publicSupportEmail": "a820628a@gmail.com",
+  "sellerLegalName": null,
+  "copyrightOwner": null,
+  "appReviewContact": {
+    "firstName": null,
+    "lastName": null,
+    "email": "a820628a@gmail.com",
+    "phone": null
+  },
+  "loginRequired": false,
+  "demoCredentials": null,
+  "appleCategoryRecommendation": {
+    "primary": "Games",
+    "subcategory": "Simulation",
+    "madeForKids": true
+  },
+  "googleCategoryRecommendation": {
+    "type": "Game",
+    "category": "Educational"
+  },
+  "platformAccountStatus": {
+    "appleDeveloper": "not_created_user_confirmed",
+    "googlePlayDeveloper": "not_created_user_confirmed"
+  },
+  "automaticSignupOrPaymentAuthorized": false
+}
