@@ -9,17 +9,46 @@ from pathlib import Path
 import bpy
 import math
 import json
+import hashlib
+import struct
+import shutil
+import sys
 from mathutils import Vector
 
 ROOT = Path(__file__).resolve().parents[1]
 OUT = ROOT / "public" / "models"
 DOCS = ROOT / "docs"
+REALISM = DOCS / 'realism' / 'car'
+REALISM.mkdir(parents=True, exist_ok=True)
+ATLAS_PATH = ROOT / 'public' / 'textures' / 'car-detail-atlas.png'
+# Remove PNG descriptive metadata without decoding or changing any pixel data.
+raw_png = ATLAS_PATH.read_bytes()
+clean_png = raw_png[:8]
+offset = 8
+while offset < len(raw_png):
+    length = struct.unpack('>I', raw_png[offset:offset+4])[0]
+    kind = raw_png[offset+4:offset+8]
+    if kind in (b'IHDR',b'PLTE',b'IDAT',b'IEND',b'tRNS',b'sRGB',b'gAMA',b'cHRM',b'sBIT',b'cICP'):
+        clean_png += raw_png[offset:offset+length+12]
+    offset += length + 12
+ATLAS_PATH.write_bytes(clean_png)
+ATLAS_HASH = hashlib.sha256(clean_png).hexdigest()
 OUT.mkdir(parents=True, exist_ok=True)
 DOCS.mkdir(parents=True, exist_ok=True)
 bpy.ops.object.select_all(action='SELECT')
 bpy.ops.object.delete(use_global=False)
 for block in list(bpy.data.materials):
     bpy.data.materials.remove(block)
+ATLAS = bpy.data.images.load(str(ATLAS_PATH), check_existing=False)
+ATLAS.name = 'CarDetailAtlas16Tiles'
+ATLAS.pack()
+ATLAS.filepath = '/'*1023
+ATLAS.filepath = '//../public/textures/car-detail-atlas.png'
+for packed in ATLAS.packed_files:
+    packed.filepath = '/'*1023
+    packed.filepath = ATLAS.filepath
+TILE_NAMES = ['body_panel', 'door_panel', 'hood_vents', 'roof_paint', 'brushed_alloy', 'polished_rim', 'rubber_sidewall', 'tire_tread', 'dashboard_vinyl', 'seat_leather', 'charcoal_trim', 'perforated_grille', 'subtle_glass', 'headlamp_optics', 'red_tail_optics', 'carbon_vent']
+TILE_STATS = []
 
 
 def material(name, color, metallic=0, roughness=.45, emission=0):
@@ -36,15 +65,52 @@ def material(name, color, metallic=0, roughness=.45, emission=0):
     return mat
 
 
+def textured_material(name, tile, color=(1,1,1), metallic=0, roughness=.45, alpha=1, emission=0):
+    mat = material(name,color,metallic,roughness,emission)
+    mat['atlas_tile'] = tile
+    mat['tile_id'] = tile+1
+    mat['atlas_source'] = 'public/textures/car-detail-atlas.png'
+    bsdf = next(node for node in mat.node_tree.nodes if node.type == 'BSDF_PRINCIPLED')
+    tex = mat.node_tree.nodes.new('ShaderNodeTexImage')
+    tex.name = 'Atlas16TileBaseColor'; tex.image = ATLAS; tex.interpolation = 'Linear'
+    # ImageTexture -> Principled Base Color is a glTF-supported connection.
+    if name.startswith('BodyPaint'):
+        tint = mat.node_tree.nodes.new('ShaderNodeMixRGB')
+        tint.blend_type = 'MULTIPLY'; tint.inputs[0].default_value = 1
+        tint.inputs[2].default_value = (*color,1)
+        mat.node_tree.links.new(tex.outputs['Color'], tint.inputs[1])
+        mat.node_tree.links.new(tint.outputs['Color'], bsdf.inputs['Base Color'])
+    else:
+        mat.node_tree.links.new(tex.outputs['Color'], bsdf.inputs['Base Color'])
+    bsdf.inputs['Alpha'].default_value = alpha
+    if name.startswith('BodyPaint'):
+        bsdf.inputs['Coat Weight'].default_value = .85
+        bsdf.inputs['Coat Roughness'].default_value = .16
+    if alpha < 1:
+        mat.surface_render_method = 'BLENDED'
+        bsdf.inputs['Transmission Weight'].default_value = .05
+        bsdf.inputs['IOR'].default_value = 1.46
+    if emission:
+        mat.node_tree.links.new(tex.outputs['Color'], bsdf.inputs['Emission Color'])
+    return mat
+
+
 MAT = {
-    'rubber': material('TireRubber', (.018, .023, .031), 0, .92),
-    'trim': material('GraphiteTrim', (.032, .043, .056), .25, .37),
-    'glass': material('SmokedGlass', (.042, .105, .145), .4, .16),
-    'alloy': material('BrushedAlloy', (.61, .7, .76), .85, .23),
-    'rim': material('ForgedGraphite', (.10, .13, .16), .85, .26),
+    'rubber': textured_material('TireRubber', 6, roughness=.94),
+    'tread': textured_material('TireTreadRubber', 7, roughness=.96),
+    'trim': textured_material('GraphiteTrim', 10, metallic=.04, roughness=.76),
+    'glass': textured_material('SmokedGlass', 12, metallic=0, roughness=.08, alpha=.14),
+    'mirror': textured_material('MirrorGlass', 12, metallic=.95, roughness=.06),
+    'alloy': textured_material('BrushedAlloy', 4, metallic=.88, roughness=.31),
+    'polished': textured_material('PolishedRim', 5, metallic=.95, roughness=.19),
+    'rim': textured_material('ForgedGraphite', 5, metallic=.87, roughness=.30),
+    'dashboard': textured_material('DashboardVinyl', 8, roughness=.85),
+    'seat': textured_material('SeatLeather', 9, roughness=.74),
+    'grille': textured_material('PerforatedGrille', 11, metallic=.55, roughness=.48),
+    'carbon': textured_material('CarbonVent', 15, metallic=.15, roughness=.44),
     'white': material('WarmIvory', (.91, .89, .79), .12, .3),
-    'lamp': material('LEDHeadlight', (.78, .94, 1), .1, .15, 2.5),
-    'tail': material('TailLight', (.95, .035, .035), .1, .18, 2.0),
+    'lamp': textured_material('LEDHeadlight', 13, metallic=.12, roughness=.14, emission=.8),
+    'tail': textured_material('TailLight', 14, metallic=.08, roughness=.18, emission=1.4),
     'amber': material('AmberIndicator', (1, .47, .055), .1, .2, 1.5),
     'red': material('BrakeCaliper', (.68, .06, .025), .35, .32),
     'bark': material('PalmBark', (.37, .25, .14), 0, .9),
@@ -161,20 +227,20 @@ def text(name, value, loc, size, parent, mat, rotation=(math.pi / 2, 0, 0)):
 
 
 def ringbody(name, rings, parent, mat):
-    # Eight chamfered cross-section points per longitudinal station.
+    # Twelve stations around a gently radiused shoulder and sill.
     verts = []
     for y, w, bottom, top in rings:
         verts.extend([
-            (-w + .10, y, bottom), (w - .10, y, bottom),
-            (w, y, bottom + .09), (w, y, top - .08),
-            (w - .09, y, top), (-w + .09, y, top),
-            (-w, y, top - .08), (-w, y, bottom + .09),
+            (-w+.11,y,bottom),(w-.11,y,bottom),(w-.025,y,bottom+.035),
+            (w,y,bottom+.11),(w,y,top-.13),(w-.03,y,top-.035),
+            (w-.12,y,top),(-w+.12,y,top),(-w+.03,y,top-.035),
+            (-w,y,top-.13),(-w,y,bottom+.11),(-w+.025,y,bottom+.035),
         ])
-    faces = [tuple(range(7, -1, -1))]
+    faces = [tuple(range(11, -1, -1))]
     for row in range(len(rings) - 1):
-        for i in range(8):
-            faces.append((row*8+i, row*8+(i+1)%8, (row+1)*8+(i+1)%8, (row+1)*8+i))
-    faces.append(tuple((len(rings)-1)*8+i for i in range(8)))
+        for i in range(12):
+            faces.append((row*12+i,row*12+(i+1)%12,(row+1)*12+(i+1)%12,(row+1)*12+i))
+    faces.append(tuple((len(rings)-1)*12+i for i in range(12)))
     return mesh(name, verts, faces, parent, mat)
 
 
@@ -186,11 +252,20 @@ def cabin(parent, paint, settings):
         (-roofwidth, rr, roof), (roofwidth, rr, roof),
         (-width, rear, lower), (width, rear, lower),
     ]
-    mesh('CabinFrame', verts, [(0,1,3,2),(2,3,5,4),(4,5,7,6),(0,2,4,6),(1,7,5,3),(0,6,7,1)], parent, paint)
-    # Slightly inset panoramic windshield and rear glass.
+    # An open cabin: only the roof and real pillars are opaque. Glass never
+    # sits on top of an opaque side / windshield plane.
+    roof_obj = cube('CabinRoof', (0,(rf+rr)/2,roof+.015), (roofwidth*2+.07,rr-rf+.16,.075), parent,paint,.045)
+    for side in [-1,1]:
+        line('APillar',[(side*width,front,lower),(side*roofwidth,rf,roof)],.034,parent,paint)
+        line('CPillar',[(side*roofwidth,rr,roof),(side*width,rear,lower)],.040,parent,paint)
+        line('RoofGasket',[(side*roofwidth,rf,roof-.022),(side*roofwidth,rr,roof-.022)],.014,parent,MAT['trim'])
+    # Physically thin laminated window meshes; glTF ALPHA BLEND, visible cabin.
     f0 = Vector((0, front, lower)); f1 = Vector((0, rf, roof))
     a = f0.lerp(f1, .12); b = f0.lerp(f1, .90)
-    mesh('Windshield', [(-width*.88,a.y-.013,a.z),(width*.88,a.y-.013,a.z),(roofwidth*.91,b.y-.013,b.z),(-roofwidth*.91,b.y-.013,b.z)], [(0,1,2,3)], parent, MAT['glass'])
+    windshield=mesh('Windshield', [(-width*.94,a.y-.013,a.z),(width*.94,a.y-.013,a.z),(roofwidth*.96,b.y-.013,b.z),(-roofwidth*.96,b.y-.013,b.z)], [(0,1,2,3)], parent, MAT['glass'])
+    mod=windshield.modifiers.new('LaminatedGlass4mm','SOLIDIFY'); mod.thickness=.004
+    bpy.context.view_layer.objects.active=windshield; bpy.ops.object.modifier_apply(modifier=mod.name)
+    line('WindscreenLowerSeal',[(-width,front,lower),(width,front,lower)],.018,parent,MAT['trim'])
     r0 = Vector((0, rear, lower)); r1 = Vector((0, rr, roof))
     a = r0.lerp(r1, .12); b = r0.lerp(r1, .89)
     mesh('RearGlass', [(-width*.88,a.y+.013,a.z),(-roofwidth*.91,b.y+.013,b.z),(roofwidth*.91,b.y+.013,b.z),(width*.88,a.y+.013,a.z)], [(0,1,2,3)], parent, MAT['glass'])
@@ -201,16 +276,36 @@ def cabin(parent, paint, settings):
         wu = roofwidth + .030
         mesh('SideGlassFront', [(side*(wl+.014),front+.14,lower+.07),(side*(wu+.014),rf+.10,roof-.065),(side*(wu+.014),middle-.045,roof-.065),(side*(wl+.014),middle-.045,lower+.07)], [(0,1,2,3)], parent, MAT['glass'])
         mesh('SideGlassRear', [(side*(wl+.014),middle+.045,lower+.07),(side*(wu+.014),middle+.045,roof-.065),(side*(wu+.014),rr-.09,roof-.065),(side*(wl+.014),rear-.13,lower+.07)], [(0,1,2,3)], parent, MAT['glass'])
+        line('BPillar',[(side*width,middle,lower+.02),(side*roofwidth,middle,roof-.015)],.031,parent,paint)
         # Subtle lower window seal and door shutline.
         line('WindowRubberSeal', [(side*(width+.01),front+.12,lower+.045),(side*(width+.01),rear-.10,lower+.045)], .011, parent, MAT['trim'])
         line('DoorShutline', [(side*(width+.023),front+.12,lower-.02),(side*(width+.065),front+.15,.57),(side*(width+.065),middle,.53),(side*(width+.065),middle,lower-.04)], .007, parent, MAT['trim'])
         cube('FlushDoorHandle', (side*(width+.070),middle-.15,lower-.16), (.025,.20,.042), parent, MAT['alloy'], .011)
         cube('MirrorStem', (side*(width+.12),front+.15,lower+.035), (.19,.05,.055), parent, MAT['trim'], .01)
         cube('MirrorHousing', (side*(width+.23),front+.11,lower+.075), (.18,.24,.12), parent, paint, .04)
-        cube('MirrorGlass', (side*(width+.23),front+.24,lower+.075), (.135,.018,.075), parent, MAT['glass'], .018)
+        cube('MirrorGlass', (side*(width+.23),front+.24,lower+.075), (.135,.018,.075), parent, MAT['mirror'], .018)
     # Two windshield wipers lie against the base of the screen.
     for x in [-.34, .34]:
         line('Wiper', [(x-.18,front+.075,lower+.075),(x+.15,front+.17,lower+.17)], .010, parent, MAT['trim'])
+    # Visible, correctly scaled front seats, bench, centre console and wheel.
+    seat_y=(front+rear)/2-.16
+    floor_z=lower-.38
+    for x in [-.39,.39]:
+        cube('FrontSeatCushion',(x,seat_y,floor_z+.115),(.48,.53,.18),parent,MAT['seat'],.055)
+        back=cube('FrontSeatBackrest',(x,seat_y+.20,lower+.005),(.48,.15,.54),parent,MAT['seat'],.045)
+        back.rotation_euler[0]=math.radians(-9)
+        cube('SeatHeadrest',(x,seat_y+.21,lower+.35),(.27,.12,.16),parent,MAT['seat'],.04)
+    cube('RearSeatBench',(0,rear-.38,floor_z+.11),(1.20,.35,.17),parent,MAT['seat'],.04)
+    cube('RearSeatBackrest',(0,rear-.22,lower-.005),(1.20,.14,.37),parent,MAT['seat'],.035)
+    cube('CabinFloor',(0,(front+rear)/2,floor_z-.01),(1.39,rear-front-.16,.07),parent,MAT['trim'],.025)
+    cube('Dashboard',(0,front+.27,lower-.085),(1.46,.31,.20),parent,MAT['dashboard'],.055)
+    cube('CentreConsole',(0,seat_y-.12,floor_z+.19),(.22,.65,.28),parent,MAT['dashboard'],.035)
+    for x in [-.50,.50]:
+        cube('DashboardAirVent',(x,front+.44,lower-.055),(.22,.013,.055),parent,MAT['carbon'],.008)
+    bpy.ops.mesh.primitive_torus_add(major_segments=24,minor_segments=8,major_radius=.145,minor_radius=.015,location=(-.39,front+.56,lower+.035),rotation=(math.radians(70),0,0))
+    attach(bpy.context.object,parent,MAT['dashboard']).name='SteeringWheel'
+    cylinder('SteeringColumn',(-.39,front+.45,lower-.055),.04,.20,parent,MAT['trim'],'Y',12)
+    cube('SteeringHub',(-.39,front+.56,lower+.035),(.16,.045,.08),parent,MAT['dashboard'],.015)
 
 
 def wheel(parent, x, y, radius, name, rally=False):
@@ -219,14 +314,19 @@ def wheel(parent, x, y, radius, name, rally=False):
     root.parent = parent
     # Model in local wheel coordinates so Wheel nodes can animate about local X.
     tire = cylinder('Tire', (0,0,0), radius, .29, root, MAT['rubber'], 'X', 32, .055)
+    tire.data.materials.append(MAT['tread'])
+    for polygon in tire.data.polygons:
+        # Cylinder source axis is Z; after its X-axis transform the round
+        # shoulder / circumference use the tread tile, end caps sidewall.
+        polygon.material_index=1 if abs(polygon.normal.z)<.75 else 0
     outer = (1 if x > 0 else -1)*.159
     cylinder('BrakeDisc', (outer*.75,0,0), radius*.65, .025, root, MAT['alloy'], 'X', 24)
     cylinder('RimInner', (outer,0,0), radius*.72, .035, root, MAT['rim'], 'X', 24, .012)
     bpy.ops.mesh.primitive_torus_add(major_segments=24, minor_segments=6, major_radius=radius*.66, minor_radius=.025, location=(outer*1.12,0,0), rotation=(0,math.pi/2,0))
-    attach(bpy.context.object, root, MAT['alloy']).name = 'RimLip'
+    attach(bpy.context.object, root, MAT['polished']).name = 'RimLip'
     for i in range(6 if rally else 5):
         angle = math.tau*i/(6 if rally else 5)
-        obj = cube('WheelSpoke', (outer*1.15,math.sin(angle)*radius*.32,math.cos(angle)*radius*.32), (.028,.040,radius*.58), root, MAT['alloy'], .008)
+        obj = cube('WheelSpoke', (outer*1.15,math.sin(angle)*radius*.32,math.cos(angle)*radius*.32), (.028,.040,radius*.58), root, MAT['polished'], .008)
         obj.rotation_euler[0] = -angle
     cylinder('Hub', (outer*1.24,0,0), .075, .033, root, MAT['rim'], 'X', 16, .008)
     for i in range(5):
@@ -235,7 +335,7 @@ def wheel(parent, x, y, radius, name, rally=False):
     # Tread marks are physical geometry; restrained enough for mobile use.
     for i in range(16 if rally else 12):
         a=math.tau*i/(16 if rally else 12)
-        o=cube('TireTread', (0,math.sin(a)*(radius-.005),math.cos(a)*(radius-.005)), (.19,.032,.020), root, MAT['trim'], .004)
+        o=cube('TireTread', (0,math.sin(a)*(radius-.005),math.cos(a)*(radius-.005)), (.19,.032,.020), root, MAT['tread'], .004)
         o.rotation_euler[0] = -a
 
 
@@ -250,14 +350,19 @@ def arch(parent, x, y, radius):
 
 def vehicle(kind, color):
     root=empty(kind)
-    paint=material('BodyPaint' if kind == 'coupe' else 'BodyPaint_'+kind,color,.58,.25)
+    paint=textured_material('BodyPaint' if kind == 'coupe' else 'BodyPaint_'+kind,0,color,.44,.26)
+    paint['paint_role']='BodyPaint'
+    variants={}
+    for role,tile,rough in [('Door',1,.27),('Hood',2,.23),('Roof',3,.21)]:
+        variants[role]=textured_material('BodyPaint_'+kind+'_'+role,tile,color,.44,rough)
+        variants[role]['paint_role']='BodyPaint_'+role
     # Each exported material has the exact BodyPaint name, regardless of source suffix.
     length=4.6 if kind=='van' else (4.25 if kind=='suv' else 4.05)
     half=length/2
     wide=.96 if kind=='van' else (.99 if kind=='suv' else .94)
     top=1.03 if kind=='van' else (1.13 if kind=='suv' else .97)
     lower=.37 if kind in ['coupe','rally'] else .43
-    body=ringbody('SculptedBody', [(-half,.78 if kind=='coupe' else wide-.09,lower+.06,top-.12),(-half+.18,wide,lower,top),(-.7,wide,lower,top+.05),(.8,wide,lower,top),(half-.16,wide,lower,top-.02),(half,wide-.09,lower+.04,top-.09)],root,paint)
+    body=ringbody('SculptedBody', [(-half,wide-.17,lower+.08,top-.13),(-half+.13,wide-.045,lower+.02,top-.035),(-half+.35,wide,lower,top+.015),(-.7,wide,lower,top+.045),(.8,wide,lower,top+.015),(half-.32,wide-.015,lower,top),(half-.12,wide-.06,lower+.015,top-.03),(half,wide-.16,lower+.065,top-.095)],root,paint)
     radius=.41 if kind in ['coupe','rally'] else .45
     axle=1.3 if kind!='van' else 1.47
     for y in [-axle,axle]:
@@ -267,7 +372,6 @@ def vehicle(kind, color):
         bpy.context.view_layer.objects.active=body
         bpy.ops.object.modifier_apply(modifier=mod.name)
         bpy.data.objects.remove(cutter,do_unlink=True)
-    bevel(body,.025,2)
     cube('Underbody',(0,0,.40),(1.60,length-.3,.16),root,MAT['trim'],.035)
     if kind=='coupe':
         config=(-.78,-.20,.53,1.07,1.53,1.00,.84,.69)
@@ -277,7 +381,30 @@ def vehicle(kind, color):
         config=(-.94,-.53,.96,1.48,1.91,1.14,.88,.80)
     else:
         config=(-1.57,-1.17,1.39,1.76,2.06,1.10,.88,.82)
+    # Remove the deck inside the cabin; the lower hull remains below the seats.
+    cabin_front,rf,rr,cabin_rear,roof,cabin_lower,cabin_width,roofwidth=config
+    bpy.ops.mesh.primitive_cube_add(size=1,location=(0,(cabin_front+cabin_rear)/2,.65+1.3))
+    cavity=bpy.context.object; cavity.dimensions=(1.47,cabin_rear-cabin_front-.06,2.6)
+    bpy.ops.object.transform_apply(location=False,rotation=False,scale=True)
+    mod=body.modifiers.new('OpenInteriorFootwell','BOOLEAN'); mod.operation='DIFFERENCE'; mod.object=cavity
+    bpy.context.view_layer.objects.active=body; bpy.ops.object.modifier_apply(modifier=mod.name)
+    bpy.data.objects.remove(cavity,do_unlink=True)
+    body.data.materials.clear(); body.data.materials.append(paint)
+    for polygon in body.data.polygons:
+        polygon.material_index=0
+    bevel(body,.045,3)
     cabin(root,paint,config)
+    # Separate semantic paint slots: BodyPaint remains exact for tinting.
+    body.data.materials.append(variants['Door']); body.data.materials.append(variants['Hood'])
+    for polygon in body.data.polygons:
+        if abs(polygon.normal.x)>.55:
+            polygon.material_index=1
+        elif polygon.normal.z>.60 and polygon.center.y < cabin_front:
+            polygon.material_index=2
+        polygon.use_smooth=True
+    for obj in list(root.children):
+        if obj.type=='MESH' and obj.name.startswith('CabinRoof'):
+            obj.data.materials.clear(); obj.data.materials.append(variants['Roof'])
     for side in [-1,1]:
         for y,label in [(-axle,'F'),(axle,'R')]:
             wheel(root, side*(wide-.012),y,radius,'Wheel'+label+('L' if side<0 else 'R'), kind=='rally')
@@ -287,7 +414,8 @@ def vehicle(kind, color):
     front=-half-.01; rear=half+.01
     cube('FrontBumper',(0,front,.57),(wide*1.90,.13,.22),root,MAT['trim'],.045)
     cube('RearBumper',(0,rear,.56),(wide*1.92,.14,.21),root,MAT['trim'],.045)
-    cube('FrontGrille',(0,front-.025,.77),(1.02,.043,.26),root,MAT['trim'],.02)
+    cube('FrontGrille',(0,front-.025,.77),(1.02,.043,.26),root,MAT['grille'],.02)
+    cube('BonnetVent',(0,-half+.72,top+.028),(.44,.19,.012),root,MAT['carbon'],.014)
     for z in [.70,.77,.84]:
         cube('GrilleSlat',(0,front-.05,z),(.90,.014,.015),root,MAT['alloy'],.005)
     for side in [-1,1]:
@@ -307,7 +435,7 @@ def vehicle(kind, color):
         cube('DucktailSpoiler',(0,half-.23,1.04),(1.68,.22,.095),root,paint,.025)
         for x in [-.40,.40]:
             line('HoodCrease',[(x,-half+.26,top+.005),(x*.78,-.82,top+.053)],.010,root,MAT['alloy'])
-        cube('RoofPanel',(0,.16,1.54),(1.13,.57,.025),root,MAT['glass'],.04)
+        cube('RoofPanel',(0,.16,1.58),(1.13,.57,.012),root,variants['Roof'],.025)
     elif kind=='rally':
         cube('HoodRaceStripe',(0,-1.32,1.008),(.40,1.02,.012),root,MAT['white'],.006)
         cube('RoofRaceStripe',(0,.05,1.645),(.40,.70,.014),root,MAT['white'],.006)
@@ -410,10 +538,60 @@ def descendants(root):
     return [root]+list(root.children_recursive)
 
 
+def tile_rect(tile):
+    row,column=divmod(tile,4)
+    inset=.04/4
+    return [column/4+inset,(3-row)/4+inset,(column+1)/4-inset,(4-row)/4-inset]
+
+
+def assign_atlas_uv(root,vehicle_id):
+    """Project each real face into its semantic square, 4% inset per tile."""
+    for obj in descendants(root):
+        if obj.type!='MESH':
+            continue
+        uv=obj.data.uv_layers.get('UVMap') or obj.data.uv_layers.new(name='UVMap')
+        groups={}
+        transform=obj.matrix_local
+        for polygon in obj.data.polygons:
+            mat=obj.data.materials[polygon.material_index]
+            if mat is None or 'atlas_tile' not in mat:
+                continue
+            tile=int(mat['atlas_tile'])
+            normal=transform.to_3x3()@polygon.normal
+            axis=max(range(3),key=lambda n:abs(normal[n]))
+            plane={0:(1,2),1:(0,2),2:(0,1)}[axis]
+            groups.setdefault((tile,plane),[]).append(polygon)
+        for (tile,plane),polygons in groups.items():
+            coords=[transform@obj.data.vertices[obj.data.loops[i].vertex_index].co for p in polygons for i in p.loop_indices]
+            lows=[min(v[a] for v in coords) for a in plane]
+            highs=[max(v[a] for v in coords) for a in plane]
+            rect=tile_rect(tile)
+            for polygon in polygons:
+                for loop_index in polygon.loop_indices:
+                    point=transform@obj.data.vertices[obj.data.loops[loop_index].vertex_index].co
+                    unit=[(point[a]-lo)/max(hi-lo,1e-6) for a,lo,hi in zip(plane,lows,highs)]
+                    uv.data[loop_index].uv=(rect[0]+unit[0]*(rect[2]-rect[0]),rect[1]+unit[1]*(rect[3]-rect[1]))
+            TILE_STATS.append({'vehicle':vehicle_id,'tileId':tile+1,'object':obj.name,'material':obj.data.materials[polygons[0].material_index].name,'faceCount':len(polygons),'loopCount':sum(p.loop_total for p in polygons),'projectionAxes':list(plane)})
+
+
 def mobile_merge(root):
     """Batch meshes by material while retaining four animated wheel pivots."""
     parents=[root]+[o for o in root.children if o.type=='EMPTY']
     for parent in parents:
+        # Split material regions first, preserving the per-loop semantic UVs.
+        for source in list(parent.children):
+            if source.type!='MESH' or len({p.material_index for p in source.data.polygons})<2:
+                continue
+            bpy.ops.object.select_all(action='DESELECT'); source.select_set(True)
+            bpy.context.view_layer.objects.active=source
+            bpy.ops.object.mode_set(mode='EDIT'); bpy.ops.mesh.select_all(action='SELECT')
+            bpy.ops.mesh.separate(type='MATERIAL'); bpy.ops.object.mode_set(mode='OBJECT')
+            for part in list(bpy.context.selected_objects):
+                if part.type=='MESH' and part.data.polygons:
+                    material_used=part.data.materials[part.data.polygons[0].material_index]
+                    part.data.materials.clear(); part.data.materials.append(material_used)
+                    for p in part.data.polygons:
+                        p.material_index=0
         groups={}
         for obj in list(parent.children):
             if obj.type=='MESH' and len(obj.data.materials)==1:
@@ -438,18 +616,20 @@ def export(root, name, paint=None):
         obj.select_set(True)
     bpy.context.view_layer.objects.active=root
     # glTF preserves material names; use one exact recolour contract per exported file.
-    old_name=paint.name if paint else None
-    displaced=bpy.data.materials.get('BodyPaint') if paint else None
-    if paint and displaced and displaced != paint:
-        displaced.name='BodyPaint_source'
-    if paint:
-        paint.name='BodyPaint'
+    active_paints=list({m for o in objs if o.type=='MESH' for m in o.data.materials if m and 'paint_role' in m})
+    old_names=[(m,m.name) for m in active_paints]
+    displaced=[]
+    for m in active_paints:
+        desired=m['paint_role']; other=bpy.data.materials.get(desired)
+        if other and other!=m:
+            displaced.append((other,other.name)); other.name=other.name+'_source'
+        m.name=desired
     path=OUT/(name+'.glb')
     bpy.ops.export_scene.gltf(filepath=str(path), export_format='GLB', use_selection=True, export_yup=True, export_apply=True, export_materials='EXPORT', export_extras=True, export_cameras=False, export_lights=False)
-    if paint:
-        paint.name=old_name
-        if displaced and displaced != paint:
-            displaced.name='BodyPaint'
+    for m,old_name in old_names:
+        m.name=old_name
+    for m,old_name in displaced:
+        m.name=old_name
     # Statistics reflect the evaluated mesh, including applied bevels and wheel detail.
     triangles=0; vertices=0
     mins=Vector((1e9,1e9,1e9)); maxs=Vector((-1e9,-1e9,-1e9))
@@ -462,22 +642,28 @@ def export(root, name, paint=None):
             p=obj.matrix_world@Vector(corner)
             for axis in range(3):
                 mins[axis]=min(mins[axis],p[axis]); maxs[axis]=max(maxs[axis],p[axis])
-    return {'id':name,'file':name+'.glb','bytes':path.stat().st_size,'triangles':triangles,'vertices':vertices,'bounds_gltf':{'min':[round(mins.x,3),round(mins.z,3),round(-maxs.y,3)],'max':[round(maxs.x,3),round(maxs.z,3),round(-mins.y,3)]}}
+    draw_calls=sum(len({p.material_index for p in o.data.polygons}) for o in objs if o.type=='MESH')
+    assert triangles<=35000, f'{name} exceeds mobile triangle budget: {triangles}'
+    assert draw_calls<=40, f'{name} exceeds draw-call budget: {draw_calls}'
+    return {'id':name,'file':name+'.glb','bytes':path.stat().st_size,'triangles':triangles,'vertices':vertices,'drawCalls':draw_calls,'sha256':hashlib.sha256(path.read_bytes()).hexdigest(),'bounds_gltf':{'min':[round(mins.x,3),round(mins.z,3),round(-maxs.y,3)],'max':[round(maxs.x,3),round(maxs.z,3),round(-mins.y,3)]}}
 
 
 cars=[]; manifest=[]
 for kind,color in [('coupe',(.065,.48,.62)),('rally',(.86,.25,.055)),('suv',(.17,.37,.29)),('van',(.89,.64,.22))]:
     root,paint=vehicle(kind,color)
     bpy.context.view_layer.update()
+    assign_atlas_uv(root,kind)
     mobile_merge(root)
     manifest.append(export(root,kind,paint))
     cars.append(root)
-props=[palm(),pine(),tower(),roadsign()]
-for root in props:
-    bpy.context.view_layer.update()
-    mobile_merge(root)
-    manifest.append(export(root,root.name))
-(OUT/'manifest.json').write_text(json.dumps({'generator':f'Blender {bpy.app.version_string} / blender/build_assets.py','blender_build':bpy.app.build_hash.decode('utf-8'),'coordinates':'Y-up; vehicles face +Z; metres; ground Y=0','license':'MIT','assets':manifest},indent=2),encoding='utf-8')
+props=[]  # Existing environment GLBs are intentionally preserved.
+build_report={'generator':f'Blender {bpy.app.version_string} / blender/build_assets.py','blender_build':bpy.app.build_hash.decode('utf-8'),'coordinates':'Y-up; vehicles face +Z; metres; ground Y=0','license':'MIT','atlas':'public/textures/car-detail-atlas.png','atlasSha256':ATLAS_HASH,'assets':manifest}
+(REALISM/'build-report.json').write_text(json.dumps(build_report,indent=2),encoding='utf-8')
+tiles=[]
+for tile,label in enumerate(TILE_NAMES):
+    assignments=[a for a in TILE_STATS if a['tileId']==tile+1]
+    tiles.append({'tileId':tile+1,'row':tile//4+1,'column':tile%4+1,'label':label,'uvRect':tile_rect(tile),'faceCount':sum(a['faceCount'] for a in assignments),'loopCount':sum(a['loopCount'] for a in assignments),'assignments':assignments})
+(REALISM/'tile-map.json').write_text(json.dumps({'atlas':'public/textures/car-detail-atlas.png','atlasSha256':ATLAS_HASH,'grid':[4,4],'tileInsetFraction':.04,'tiles':tiles},indent=2),encoding='utf-8')
 
 # Keep a reusable, fully editable showroom in the .blend source.
 for root,loc in zip(cars,[(-3.1,-3.4,0),(3.1,-3.4,0),(-3.1,3.8,0),(3.1,3.8,0)]):
@@ -496,7 +682,7 @@ scene=bpy.context.scene
 scene.render.engine='BLENDER_EEVEE'
 scene.render.resolution_x=1800; scene.render.resolution_y=1400; scene.render.resolution_percentage=100
 scene.render.image_settings.file_format='PNG'
-scene.render.filepath='//../docs/vehicles.png'
+scene.render.filepath='//../docs/realism/car/after.png'
 scene.render.film_transparent=False
 scene.world.color=(.14,.18,.24)
 scene.world.use_nodes=True
@@ -511,7 +697,25 @@ bpy.context.collection.objects.link(cam); cam.location=(12,-18,17)
 cam.rotation_euler=(Vector((0,.15,.40))-cam.location).to_track_quat('-Z','Y').to_euler()
 camdata.type='ORTHO'; camdata.ortho_scale=16.8; scene.camera=cam
 scene.view_settings.view_transform='AgX'
+for screen in bpy.data.screens:
+    for area in screen.areas:
+        for space in area.spaces:
+            if space.type=='FILE_BROWSER' and space.params:
+                space.params.directory=b'/'*1023
+                space.params.directory=b'//'
 bpy.context.preferences.filepaths.save_version=0
-bpy.ops.wm.save_as_mainfile(filepath=str(ROOT/'blender'/'island-drive.blend'))
-bpy.ops.render.render(write_still=True)
+bpy.ops.wm.save_as_mainfile(filepath=str(ROOT/'blender'/'island-drive.blend'),compress=False)
+if '--skip-render' not in sys.argv:
+    bpy.ops.render.render(write_still=True)
+# Keep only PNG pixel / colour chunks in the distributable preview.
+render_png=(REALISM/'after.png').read_bytes()
+render_clean=render_png[:8]; offset=8
+while offset<len(render_png):
+    length=struct.unpack('>I',render_png[offset:offset+4])[0]
+    kind=render_png[offset+4:offset+8]
+    if kind in (b'IHDR',b'PLTE',b'IDAT',b'IEND',b'tRNS',b'sRGB',b'gAMA',b'cHRM',b'sBIT',b'cICP'):
+        render_clean+=render_png[offset:offset+length+12]
+    offset+=length+12
+(REALISM/'after.png').write_bytes(render_clean)
+shutil.copyfile(REALISM/'after.png',ROOT/'public'/'previews'/'car.png')
 print('ASSET_BUILD_COMPLETE '+json.dumps(manifest))

@@ -1,0 +1,6606 @@
+{
+  "schema": 1,
+  "image": "public/textures/train-detail-atlas.png",
+  "grid": [
+    4,
+    4
+  ],
+  "gutterPerTile": 0.03,
+  "coordinates": "Blender UV bottom-left",
+  "worldStripeProjection": {
+    "zMin": 0.35,
+    "zMax": 3.55,
+    "doorAffineScale": 0.9723,
+    "doorAffineOffset": 0.0022
+  },
+  "tiles": [
+    {
+      "tileId": 1,
+      "row": 1,
+      "column": 1,
+      "label": "Ivory teal body A",
+      "uvRect": [
+        0.0075,
+        0.7575,
+        0.2425,
+        0.9925
+      ],
+      "faceCount": 1710,
+      "loopCount": 6840,
+      "objects": [
+        "World aligned body panel 00",
+        "World aligned body panel 01",
+        "World aligned body panel 02",
+        "World aligned body panel 03",
+        "World aligned body panel 04",
+        "World aligned body panel 05",
+        "World aligned body panel 06",
+        "World aligned body panel 07",
+        "World aligned body panel 08",
+        "World aligned body panel 09",
+        "World aligned body panel 10",
+        "World aligned body panel 11",
+        "Window mullion",
+        "Window mullion.001",
+        "Window mullion.002",
+        "Window mullion.003",
+        "Window mullion.004",
+        "Window mullion.005",
+        "Window mullion.006",
+        "Window mullion.007",
+        "Window mullion.008",
+        "Window mullion.009",
+        "Window mullion.010",
+        "Window mullion.011",
+        "Window mullion.012",
+        "Window mullion.013",
+        "Window mullion.014",
+        "Window mullion.015",
+        "Window mullion.016",
+        "Window mullion.017",
+        "Window mullion.018",
+        "Window mullion.019",
+        "Cab pillar",
+        "Cab pillar.001",
+        "Cab brow",
+        "Cab pillar.002",
+        "Cab pillar.003",
+        "Cab brow.001"
+      ],
+      "objectUsage": [
+        {
+          "name": "World aligned body panel 00",
+          "faceCount": 45,
+          "loopCount": 180,
+          "uvMin": [
+            0.00820715632289648,
+            0.7588110566139221
+          ],
+          "uvMax": [
+            0.24179284274578094,
+            0.9911889433860779
+          ]
+        },
+        {
+          "name": "World aligned body panel 01",
+          "faceCount": 45,
+          "loopCount": 180,
+          "uvMin": [
+            0.00820715632289648,
+            0.7588110566139221
+          ],
+          "uvMax": [
+            0.24179284274578094,
+            0.9911889433860779
+          ]
+        },
+        {
+          "name": "World aligned body panel 02",
+          "faceCount": 45,
+          "loopCount": 180,
+          "uvMin": [
+            0.00820715632289648,
+            0.7588110566139221
+          ],
+          "uvMax": [
+            0.24179284274578094,
+            0.9911889433860779
+          ]
+        },
+        {
+          "name": "World aligned body panel 03",
+          "faceCount": 45,
+          "loopCount": 180,
+          "uvMin": [
+            0.00820715632289648,
+            0.7588110566139221
+          ],
+          "uvMax": [
+            0.24179284274578094,
+            0.9911889433860779
+          ]
+        },
+        {
+          "name": "World aligned body panel 04",
+          "faceCount": 45,
+          "loopCount": 180,
+          "uvMin": [
+            0.00820715632289648,
+            0.7588110566139221
+          ],
+          "uvMax": [
+            0.24179284274578094,
+            0.9911889433860779
+          ]
+        },
+        {
+          "name": "World aligned body panel 05",
+          "faceCount": 45,
+          "loopCount": 180,
+          "uvMin": [
+            0.00820715632289648,
+            0.7588110566139221
+          ],
+          "uvMax": [
+            0.24179284274578094,
+            0.9911889433860779
+          ]
+        },
+        {
+          "name": "World aligned body panel 06",
+          "faceCount": 45,
+          "loopCount": 180,
+          "uvMin": [
+            0.00820715632289648,
+            0.7588110566139221
+          ],
+          "uvMax": [
+            0.24179284274578094,
+            0.9911889433860779
+          ]
+        },
+        {
+          "name": "World aligned body panel 07",
+          "faceCount": 45,
+          "loopCount": 180,
+          "uvMin": [
+            0.00820715632289648,
+            0.7588110566139221
+          ],
+          "uvMax": [
+            0.24179284274578094,
+            0.9911889433860779
+          ]
+        },
+        {
+          "name": "World aligned body panel 08",
+          "faceCount": 45,
+          "loopCount": 180,
+          "uvMin": [
+            0.00820715632289648,
+            0.7588110566139221
+          ],
+          "uvMax": [
+            0.24179284274578094,
+            0.9911889433860779
+          ]
+        },
+        {
+          "name": "World aligned body panel 09",
+          "faceCount": 45,
+          "loopCount": 180,
+          "uvMin": [
+            0.00820715632289648,
+            0.7588110566139221
+          ],
+          "uvMax": [
+            0.24179284274578094,
+            0.9911889433860779
+          ]
+        },
+        {
+          "name": "World aligned body panel 10",
+          "faceCount": 45,
+          "loopCount": 180,
+          "uvMin": [
+            0.00820715632289648,
+            0.7588110566139221
+          ],
+          "uvMax": [
+            0.24179284274578094,
+            0.9911889433860779
+          ]
+        },
+        {
+          "name": "World aligned body panel 11",
+          "faceCount": 45,
+          "loopCount": 180,
+          "uvMin": [
+            0.00820715632289648,
+            0.7588110566139221
+          ],
+          "uvMax": [
+            0.24179284274578094,
+            0.9911889433860779
+          ]
+        },
+        {
+          "name": "Window mullion",
+          "faceCount": 45,
+          "loopCount": 180,
+          "uvMin": [
+            0.018089206889271736,
+            0.768089234828949
+          ],
+          "uvMax": [
+            0.2319107949733734,
+            0.981910765171051
+          ]
+        },
+        {
+          "name": "Window mullion.001",
+          "faceCount": 45,
+          "loopCount": 180,
+          "uvMin": [
+            0.018089206889271736,
+            0.768089234828949
+          ],
+          "uvMax": [
+            0.2319107949733734,
+            0.981910765171051
+          ]
+        },
+        {
+          "name": "Window mullion.002",
+          "faceCount": 45,
+          "loopCount": 180,
+          "uvMin": [
+            0.018089206889271736,
+            0.768089234828949
+          ],
+          "uvMax": [
+            0.2319107949733734,
+            0.981910765171051
+          ]
+        },
+        {
+          "name": "Window mullion.003",
+          "faceCount": 45,
+          "loopCount": 180,
+          "uvMin": [
+            0.018089206889271736,
+            0.768089234828949
+          ],
+          "uvMax": [
+            0.2319107949733734,
+            0.981910765171051
+          ]
+        },
+        {
+          "name": "Window mullion.004",
+          "faceCount": 45,
+          "loopCount": 180,
+          "uvMin": [
+            0.018089206889271736,
+            0.768089234828949
+          ],
+          "uvMax": [
+            0.2319107949733734,
+            0.981910765171051
+          ]
+        },
+        {
+          "name": "Window mullion.005",
+          "faceCount": 45,
+          "loopCount": 180,
+          "uvMin": [
+            0.018089206889271736,
+            0.768089234828949
+          ],
+          "uvMax": [
+            0.2319107949733734,
+            0.981910765171051
+          ]
+        },
+        {
+          "name": "Window mullion.006",
+          "faceCount": 45,
+          "loopCount": 180,
+          "uvMin": [
+            0.018089206889271736,
+            0.768089234828949
+          ],
+          "uvMax": [
+            0.2319107949733734,
+            0.981910765171051
+          ]
+        },
+        {
+          "name": "Window mullion.007",
+          "faceCount": 45,
+          "loopCount": 180,
+          "uvMin": [
+            0.018089206889271736,
+            0.768089234828949
+          ],
+          "uvMax": [
+            0.2319107949733734,
+            0.981910765171051
+          ]
+        },
+        {
+          "name": "Window mullion.008",
+          "faceCount": 45,
+          "loopCount": 180,
+          "uvMin": [
+            0.018089206889271736,
+            0.768089234828949
+          ],
+          "uvMax": [
+            0.2319107949733734,
+            0.981910765171051
+          ]
+        },
+        {
+          "name": "Window mullion.009",
+          "faceCount": 45,
+          "loopCount": 180,
+          "uvMin": [
+            0.018089206889271736,
+            0.768089234828949
+          ],
+          "uvMax": [
+            0.2319107949733734,
+            0.981910765171051
+          ]
+        },
+        {
+          "name": "Window mullion.010",
+          "faceCount": 45,
+          "loopCount": 180,
+          "uvMin": [
+            0.018089206889271736,
+            0.768089234828949
+          ],
+          "uvMax": [
+            0.2319107949733734,
+            0.981910765171051
+          ]
+        },
+        {
+          "name": "Window mullion.011",
+          "faceCount": 45,
+          "loopCount": 180,
+          "uvMin": [
+            0.018089206889271736,
+            0.768089234828949
+          ],
+          "uvMax": [
+            0.2319107949733734,
+            0.981910765171051
+          ]
+        },
+        {
+          "name": "Window mullion.012",
+          "faceCount": 45,
+          "loopCount": 180,
+          "uvMin": [
+            0.018089206889271736,
+            0.768089234828949
+          ],
+          "uvMax": [
+            0.2319107949733734,
+            0.981910765171051
+          ]
+        },
+        {
+          "name": "Window mullion.013",
+          "faceCount": 45,
+          "loopCount": 180,
+          "uvMin": [
+            0.018089206889271736,
+            0.768089234828949
+          ],
+          "uvMax": [
+            0.2319107949733734,
+            0.981910765171051
+          ]
+        },
+        {
+          "name": "Window mullion.014",
+          "faceCount": 45,
+          "loopCount": 180,
+          "uvMin": [
+            0.018089206889271736,
+            0.768089234828949
+          ],
+          "uvMax": [
+            0.2319107949733734,
+            0.981910765171051
+          ]
+        },
+        {
+          "name": "Window mullion.015",
+          "faceCount": 45,
+          "loopCount": 180,
+          "uvMin": [
+            0.018089206889271736,
+            0.768089234828949
+          ],
+          "uvMax": [
+            0.2319107949733734,
+            0.981910765171051
+          ]
+        },
+        {
+          "name": "Window mullion.016",
+          "faceCount": 45,
+          "loopCount": 180,
+          "uvMin": [
+            0.018089206889271736,
+            0.768089234828949
+          ],
+          "uvMax": [
+            0.2319107949733734,
+            0.981910765171051
+          ]
+        },
+        {
+          "name": "Window mullion.017",
+          "faceCount": 45,
+          "loopCount": 180,
+          "uvMin": [
+            0.018089206889271736,
+            0.768089234828949
+          ],
+          "uvMax": [
+            0.2319107949733734,
+            0.981910765171051
+          ]
+        },
+        {
+          "name": "Window mullion.018",
+          "faceCount": 45,
+          "loopCount": 180,
+          "uvMin": [
+            0.018089206889271736,
+            0.768089234828949
+          ],
+          "uvMax": [
+            0.2319107949733734,
+            0.981910765171051
+          ]
+        },
+        {
+          "name": "Window mullion.019",
+          "faceCount": 45,
+          "loopCount": 180,
+          "uvMin": [
+            0.018089206889271736,
+            0.768089234828949
+          ],
+          "uvMax": [
+            0.2319107949733734,
+            0.981910765171051
+          ]
+        },
+        {
+          "name": "Cab pillar",
+          "faceCount": 45,
+          "loopCount": 180,
+          "uvMin": [
+            0.015147763304412365,
+            0.7651477456092834
+          ],
+          "uvMax": [
+            0.23485223948955536,
+            0.9848522543907166
+          ]
+        },
+        {
+          "name": "Cab pillar.001",
+          "faceCount": 45,
+          "loopCount": 180,
+          "uvMin": [
+            0.015147763304412365,
+            0.7651477456092834
+          ],
+          "uvMax": [
+            0.23485223948955536,
+            0.9848522543907166
+          ]
+        },
+        {
+          "name": "Cab brow",
+          "faceCount": 45,
+          "loopCount": 180,
+          "uvMin": [
+            0.00944570917636156,
+            0.7682968378067017
+          ],
+          "uvMax": [
+            0.24055428802967072,
+            0.9885761141777039
+          ]
+        },
+        {
+          "name": "Cab pillar.002",
+          "faceCount": 45,
+          "loopCount": 180,
+          "uvMin": [
+            0.015147763304412365,
+            0.7651477456092834
+          ],
+          "uvMax": [
+            0.23485223948955536,
+            0.9848522543907166
+          ]
+        },
+        {
+          "name": "Cab pillar.003",
+          "faceCount": 45,
+          "loopCount": 180,
+          "uvMin": [
+            0.015147763304412365,
+            0.7651477456092834
+          ],
+          "uvMax": [
+            0.23485223948955536,
+            0.9848522543907166
+          ]
+        },
+        {
+          "name": "Cab brow.001",
+          "faceCount": 45,
+          "loopCount": 180,
+          "uvMin": [
+            0.00944570917636156,
+            0.7682968378067017
+          ],
+          "uvMax": [
+            0.24055428802967072,
+            0.9885761141777039
+          ]
+        }
+      ]
+    },
+    {
+      "tileId": 2,
+      "row": 1,
+      "column": 2,
+      "label": "Ivory teal body B",
+      "uvRect": [
+        0.2575,
+        0.7575,
+        0.4925,
+        0.9925
+      ],
+      "faceCount": 1058,
+      "loopCount": 4280,
+      "objects": [
+        "World aligned body panel 00",
+        "World aligned body panel 01",
+        "World aligned body panel 02",
+        "World aligned body panel 03",
+        "World aligned body panel 04",
+        "World aligned body panel 05",
+        "World aligned body panel 06",
+        "World aligned body panel 07",
+        "World aligned body panel 08",
+        "World aligned body panel 09",
+        "World aligned body panel 10",
+        "World aligned body panel 11",
+        "Upper side rail panel",
+        "Upper side rail panel.001",
+        "Upper side rail panel.002",
+        "Upper side rail panel.003",
+        "Upper side rail panel.004",
+        "Upper side rail panel.005",
+        "Window mullion",
+        "Window mullion.001",
+        "Window mullion.002",
+        "Window mullion.003",
+        "Window mullion.004",
+        "Window mullion.005",
+        "Window mullion.006",
+        "Window mullion.007",
+        "Window mullion.008",
+        "Window mullion.009",
+        "Upper side rail panel.006",
+        "Upper side rail panel.007",
+        "Upper side rail panel.008",
+        "Upper side rail panel.009",
+        "Upper side rail panel.010",
+        "Upper side rail panel.011",
+        "Window mullion.010",
+        "Window mullion.011",
+        "Window mullion.012",
+        "Window mullion.013",
+        "Window mullion.014",
+        "Window mullion.015",
+        "Window mullion.016",
+        "Window mullion.017",
+        "Window mullion.018",
+        "Window mullion.019",
+        "Formed rounded cab nose",
+        "Cab pillar",
+        "Cab pillar.001",
+        "Cab brow",
+        "Formed rounded cab nose.001",
+        "Cab pillar.002",
+        "Cab pillar.003",
+        "Cab brow.001"
+      ],
+      "objectUsage": [
+        {
+          "name": "World aligned body panel 00",
+          "faceCount": 9,
+          "loopCount": 36,
+          "uvMin": [
+            0.25881102681159973,
+            0.8146921396255493
+          ],
+          "uvMax": [
+            0.49118897318840027,
+            0.8809641003608704
+          ]
+        },
+        {
+          "name": "World aligned body panel 01",
+          "faceCount": 9,
+          "loopCount": 36,
+          "uvMin": [
+            0.25881102681159973,
+            0.8146921396255493
+          ],
+          "uvMax": [
+            0.49118897318840027,
+            0.8809641003608704
+          ]
+        },
+        {
+          "name": "World aligned body panel 02",
+          "faceCount": 9,
+          "loopCount": 36,
+          "uvMin": [
+            0.25881102681159973,
+            0.8146921396255493
+          ],
+          "uvMax": [
+            0.49118897318840027,
+            0.8809641003608704
+          ]
+        },
+        {
+          "name": "World aligned body panel 03",
+          "faceCount": 9,
+          "loopCount": 36,
+          "uvMin": [
+            0.25881102681159973,
+            0.8146921396255493
+          ],
+          "uvMax": [
+            0.49118897318840027,
+            0.8809641003608704
+          ]
+        },
+        {
+          "name": "World aligned body panel 04",
+          "faceCount": 9,
+          "loopCount": 36,
+          "uvMin": [
+            0.25881102681159973,
+            0.8146921396255493
+          ],
+          "uvMax": [
+            0.49118897318840027,
+            0.8809641003608704
+          ]
+        },
+        {
+          "name": "World aligned body panel 05",
+          "faceCount": 9,
+          "loopCount": 36,
+          "uvMin": [
+            0.25881102681159973,
+            0.8146921396255493
+          ],
+          "uvMax": [
+            0.49118897318840027,
+            0.8809641003608704
+          ]
+        },
+        {
+          "name": "World aligned body panel 06",
+          "faceCount": 9,
+          "loopCount": 36,
+          "uvMin": [
+            0.25881102681159973,
+            0.8146921396255493
+          ],
+          "uvMax": [
+            0.49118897318840027,
+            0.8809641003608704
+          ]
+        },
+        {
+          "name": "World aligned body panel 07",
+          "faceCount": 9,
+          "loopCount": 36,
+          "uvMin": [
+            0.25881102681159973,
+            0.8146921396255493
+          ],
+          "uvMax": [
+            0.49118897318840027,
+            0.8809641003608704
+          ]
+        },
+        {
+          "name": "World aligned body panel 08",
+          "faceCount": 9,
+          "loopCount": 36,
+          "uvMin": [
+            0.25881102681159973,
+            0.8146921396255493
+          ],
+          "uvMax": [
+            0.49118897318840027,
+            0.8809641003608704
+          ]
+        },
+        {
+          "name": "World aligned body panel 09",
+          "faceCount": 9,
+          "loopCount": 36,
+          "uvMin": [
+            0.25881102681159973,
+            0.8146921396255493
+          ],
+          "uvMax": [
+            0.49118897318840027,
+            0.8809641003608704
+          ]
+        },
+        {
+          "name": "World aligned body panel 10",
+          "faceCount": 9,
+          "loopCount": 36,
+          "uvMin": [
+            0.25881102681159973,
+            0.8146921396255493
+          ],
+          "uvMax": [
+            0.49118897318840027,
+            0.8809641003608704
+          ]
+        },
+        {
+          "name": "World aligned body panel 11",
+          "faceCount": 9,
+          "loopCount": 36,
+          "uvMin": [
+            0.25881102681159973,
+            0.8146921396255493
+          ],
+          "uvMax": [
+            0.49118897318840027,
+            0.8809641003608704
+          ]
+        },
+        {
+          "name": "Upper side rail panel",
+          "faceCount": 54,
+          "loopCount": 216,
+          "uvMin": [
+            0.25794652104377747,
+            0.7579464912414551
+          ],
+          "uvMax": [
+            0.49205347895622253,
+            0.9920535087585449
+          ]
+        },
+        {
+          "name": "Upper side rail panel.001",
+          "faceCount": 54,
+          "loopCount": 216,
+          "uvMin": [
+            0.25794652104377747,
+            0.7579464912414551
+          ],
+          "uvMax": [
+            0.49205347895622253,
+            0.9920535087585449
+          ]
+        },
+        {
+          "name": "Upper side rail panel.002",
+          "faceCount": 54,
+          "loopCount": 216,
+          "uvMin": [
+            0.25794652104377747,
+            0.7579464912414551
+          ],
+          "uvMax": [
+            0.49205347895622253,
+            0.9920535087585449
+          ]
+        },
+        {
+          "name": "Upper side rail panel.003",
+          "faceCount": 54,
+          "loopCount": 216,
+          "uvMin": [
+            0.25794652104377747,
+            0.7579464912414551
+          ],
+          "uvMax": [
+            0.49205347895622253,
+            0.9920535087585449
+          ]
+        },
+        {
+          "name": "Upper side rail panel.004",
+          "faceCount": 54,
+          "loopCount": 216,
+          "uvMin": [
+            0.25794652104377747,
+            0.7579464912414551
+          ],
+          "uvMax": [
+            0.49205347895622253,
+            0.9920535087585449
+          ]
+        },
+        {
+          "name": "Upper side rail panel.005",
+          "faceCount": 54,
+          "loopCount": 216,
+          "uvMin": [
+            0.25794652104377747,
+            0.7579464912414551
+          ],
+          "uvMax": [
+            0.49205347895622253,
+            0.9920535087585449
+          ]
+        },
+        {
+          "name": "Window mullion",
+          "faceCount": 9,
+          "loopCount": 36,
+          "uvMin": [
+            0.2680892050266266,
+            0.891586422920227
+          ],
+          "uvMax": [
+            0.4819107949733734,
+            0.9788510799407959
+          ]
+        },
+        {
+          "name": "Window mullion.001",
+          "faceCount": 9,
+          "loopCount": 36,
+          "uvMin": [
+            0.2680892050266266,
+            0.891586422920227
+          ],
+          "uvMax": [
+            0.4819107949733734,
+            0.9788510799407959
+          ]
+        },
+        {
+          "name": "Window mullion.002",
+          "faceCount": 9,
+          "loopCount": 36,
+          "uvMin": [
+            0.2680892050266266,
+            0.891586422920227
+          ],
+          "uvMax": [
+            0.4819107949733734,
+            0.9788510799407959
+          ]
+        },
+        {
+          "name": "Window mullion.003",
+          "faceCount": 9,
+          "loopCount": 36,
+          "uvMin": [
+            0.2680892050266266,
+            0.891586422920227
+          ],
+          "uvMax": [
+            0.4819107949733734,
+            0.9788510799407959
+          ]
+        },
+        {
+          "name": "Window mullion.004",
+          "faceCount": 9,
+          "loopCount": 36,
+          "uvMin": [
+            0.2680892050266266,
+            0.891586422920227
+          ],
+          "uvMax": [
+            0.4819107949733734,
+            0.9788510799407959
+          ]
+        },
+        {
+          "name": "Window mullion.005",
+          "faceCount": 9,
+          "loopCount": 36,
+          "uvMin": [
+            0.2680892050266266,
+            0.891586422920227
+          ],
+          "uvMax": [
+            0.4819107949733734,
+            0.9788510799407959
+          ]
+        },
+        {
+          "name": "Window mullion.006",
+          "faceCount": 9,
+          "loopCount": 36,
+          "uvMin": [
+            0.2680892050266266,
+            0.891586422920227
+          ],
+          "uvMax": [
+            0.4819107949733734,
+            0.9788510799407959
+          ]
+        },
+        {
+          "name": "Window mullion.007",
+          "faceCount": 9,
+          "loopCount": 36,
+          "uvMin": [
+            0.2680892050266266,
+            0.891586422920227
+          ],
+          "uvMax": [
+            0.4819107949733734,
+            0.9788510799407959
+          ]
+        },
+        {
+          "name": "Window mullion.008",
+          "faceCount": 9,
+          "loopCount": 36,
+          "uvMin": [
+            0.2680892050266266,
+            0.891586422920227
+          ],
+          "uvMax": [
+            0.4819107949733734,
+            0.9788510799407959
+          ]
+        },
+        {
+          "name": "Window mullion.009",
+          "faceCount": 9,
+          "loopCount": 36,
+          "uvMin": [
+            0.2680892050266266,
+            0.891586422920227
+          ],
+          "uvMax": [
+            0.4819107949733734,
+            0.9788510799407959
+          ]
+        },
+        {
+          "name": "Upper side rail panel.006",
+          "faceCount": 54,
+          "loopCount": 216,
+          "uvMin": [
+            0.25794652104377747,
+            0.7579464912414551
+          ],
+          "uvMax": [
+            0.49205347895622253,
+            0.9920535087585449
+          ]
+        },
+        {
+          "name": "Upper side rail panel.007",
+          "faceCount": 54,
+          "loopCount": 216,
+          "uvMin": [
+            0.25794652104377747,
+            0.7579464912414551
+          ],
+          "uvMax": [
+            0.49205347895622253,
+            0.9920535087585449
+          ]
+        },
+        {
+          "name": "Upper side rail panel.008",
+          "faceCount": 54,
+          "loopCount": 216,
+          "uvMin": [
+            0.25794652104377747,
+            0.7579464912414551
+          ],
+          "uvMax": [
+            0.49205347895622253,
+            0.9920535087585449
+          ]
+        },
+        {
+          "name": "Upper side rail panel.009",
+          "faceCount": 54,
+          "loopCount": 216,
+          "uvMin": [
+            0.25794652104377747,
+            0.7579464912414551
+          ],
+          "uvMax": [
+            0.49205347895622253,
+            0.9920535087585449
+          ]
+        },
+        {
+          "name": "Upper side rail panel.010",
+          "faceCount": 54,
+          "loopCount": 216,
+          "uvMin": [
+            0.25794652104377747,
+            0.7579464912414551
+          ],
+          "uvMax": [
+            0.49205347895622253,
+            0.9920535087585449
+          ]
+        },
+        {
+          "name": "Upper side rail panel.011",
+          "faceCount": 54,
+          "loopCount": 216,
+          "uvMin": [
+            0.25794652104377747,
+            0.7579464912414551
+          ],
+          "uvMax": [
+            0.49205347895622253,
+            0.9920535087585449
+          ]
+        },
+        {
+          "name": "Window mullion.010",
+          "faceCount": 9,
+          "loopCount": 36,
+          "uvMin": [
+            0.2680892050266266,
+            0.891586422920227
+          ],
+          "uvMax": [
+            0.4819107949733734,
+            0.9788510799407959
+          ]
+        },
+        {
+          "name": "Window mullion.011",
+          "faceCount": 9,
+          "loopCount": 36,
+          "uvMin": [
+            0.2680892050266266,
+            0.891586422920227
+          ],
+          "uvMax": [
+            0.4819107949733734,
+            0.9788510799407959
+          ]
+        },
+        {
+          "name": "Window mullion.012",
+          "faceCount": 9,
+          "loopCount": 36,
+          "uvMin": [
+            0.2680892050266266,
+            0.891586422920227
+          ],
+          "uvMax": [
+            0.4819107949733734,
+            0.9788510799407959
+          ]
+        },
+        {
+          "name": "Window mullion.013",
+          "faceCount": 9,
+          "loopCount": 36,
+          "uvMin": [
+            0.2680892050266266,
+            0.891586422920227
+          ],
+          "uvMax": [
+            0.4819107949733734,
+            0.9788510799407959
+          ]
+        },
+        {
+          "name": "Window mullion.014",
+          "faceCount": 9,
+          "loopCount": 36,
+          "uvMin": [
+            0.2680892050266266,
+            0.891586422920227
+          ],
+          "uvMax": [
+            0.4819107949733734,
+            0.9788510799407959
+          ]
+        },
+        {
+          "name": "Window mullion.015",
+          "faceCount": 9,
+          "loopCount": 36,
+          "uvMin": [
+            0.2680892050266266,
+            0.891586422920227
+          ],
+          "uvMax": [
+            0.4819107949733734,
+            0.9788510799407959
+          ]
+        },
+        {
+          "name": "Window mullion.016",
+          "faceCount": 9,
+          "loopCount": 36,
+          "uvMin": [
+            0.2680892050266266,
+            0.891586422920227
+          ],
+          "uvMax": [
+            0.4819107949733734,
+            0.9788510799407959
+          ]
+        },
+        {
+          "name": "Window mullion.017",
+          "faceCount": 9,
+          "loopCount": 36,
+          "uvMin": [
+            0.2680892050266266,
+            0.891586422920227
+          ],
+          "uvMax": [
+            0.4819107949733734,
+            0.9788510799407959
+          ]
+        },
+        {
+          "name": "Window mullion.018",
+          "faceCount": 9,
+          "loopCount": 36,
+          "uvMin": [
+            0.2680892050266266,
+            0.891586422920227
+          ],
+          "uvMax": [
+            0.4819107949733734,
+            0.9788510799407959
+          ]
+        },
+        {
+          "name": "Window mullion.019",
+          "faceCount": 9,
+          "loopCount": 36,
+          "uvMin": [
+            0.2680892050266266,
+            0.891586422920227
+          ],
+          "uvMax": [
+            0.4819107949733734,
+            0.9788510799407959
+          ]
+        },
+        {
+          "name": "Formed rounded cab nose",
+          "faceCount": 34,
+          "loopCount": 160,
+          "uvMin": [
+            0.2574999928474426,
+            0.7574999928474426
+          ],
+          "uvMax": [
+            0.4925000071525574,
+            0.9925000071525574
+          ]
+        },
+        {
+          "name": "Cab pillar",
+          "faceCount": 9,
+          "loopCount": 36,
+          "uvMin": [
+            0.26514777541160583,
+            0.8892942070960999
+          ],
+          "uvMax": [
+            0.48485222458839417,
+            0.9840807914733887
+          ]
+        },
+        {
+          "name": "Cab pillar.001",
+          "faceCount": 9,
+          "loopCount": 36,
+          "uvMin": [
+            0.26514777541160583,
+            0.8892942070960999
+          ],
+          "uvMax": [
+            0.48485222458839417,
+            0.9840807914733887
+          ]
+        },
+        {
+          "name": "Cab brow",
+          "faceCount": 9,
+          "loopCount": 36,
+          "uvMin": [
+            0.26829683780670166,
+            0.9758613705635071
+          ],
+          "uvMax": [
+            0.48170316219329834,
+            0.9885761141777039
+          ]
+        },
+        {
+          "name": "Formed rounded cab nose.001",
+          "faceCount": 34,
+          "loopCount": 160,
+          "uvMin": [
+            0.2574999928474426,
+            0.7574999928474426
+          ],
+          "uvMax": [
+            0.4925000071525574,
+            0.9925000071525574
+          ]
+        },
+        {
+          "name": "Cab pillar.002",
+          "faceCount": 9,
+          "loopCount": 36,
+          "uvMin": [
+            0.26514777541160583,
+            0.8892942070960999
+          ],
+          "uvMax": [
+            0.48485222458839417,
+            0.9840807914733887
+          ]
+        },
+        {
+          "name": "Cab pillar.003",
+          "faceCount": 9,
+          "loopCount": 36,
+          "uvMin": [
+            0.26514777541160583,
+            0.8892942070960999
+          ],
+          "uvMax": [
+            0.48485222458839417,
+            0.9840807914733887
+          ]
+        },
+        {
+          "name": "Cab brow.001",
+          "faceCount": 9,
+          "loopCount": 36,
+          "uvMin": [
+            0.26829683780670166,
+            0.9758613705635071
+          ],
+          "uvMax": [
+            0.48170316219329834,
+            0.9885761141777039
+          ]
+        }
+      ]
+    },
+    {
+      "tileId": 3,
+      "row": 1,
+      "column": 3,
+      "label": "Roof sheet metal",
+      "uvRect": [
+        0.5075,
+        0.7575,
+        0.7425,
+        0.9925
+      ],
+      "faceCount": 594,
+      "loopCount": 2376,
+      "objects": [
+        "Curved roof metal panel 00",
+        "Curved roof metal panel 01",
+        "Curved roof metal panel 02",
+        "Curved roof metal panel 03",
+        "Curved roof metal panel 04",
+        "Curved roof metal panel 05",
+        "Curved roof metal panel 06",
+        "Curved roof metal panel 07",
+        "Curved roof metal panel 08",
+        "Curved roof metal panel 09",
+        "Roof spine"
+      ],
+      "objectUsage": [
+        {
+          "name": "Curved roof metal panel 00",
+          "faceCount": 54,
+          "loopCount": 216,
+          "uvMin": [
+            0.5116575360298157,
+            0.7640207409858704
+          ],
+          "uvMax": [
+            0.7383424639701843,
+            0.9859792590141296
+          ]
+        },
+        {
+          "name": "Curved roof metal panel 01",
+          "faceCount": 54,
+          "loopCount": 216,
+          "uvMin": [
+            0.5116575360298157,
+            0.7640207409858704
+          ],
+          "uvMax": [
+            0.7383424639701843,
+            0.9859792590141296
+          ]
+        },
+        {
+          "name": "Curved roof metal panel 02",
+          "faceCount": 54,
+          "loopCount": 216,
+          "uvMin": [
+            0.5116575360298157,
+            0.7640207409858704
+          ],
+          "uvMax": [
+            0.7383424639701843,
+            0.9859792590141296
+          ]
+        },
+        {
+          "name": "Curved roof metal panel 03",
+          "faceCount": 54,
+          "loopCount": 216,
+          "uvMin": [
+            0.5116575360298157,
+            0.7640207409858704
+          ],
+          "uvMax": [
+            0.7383424639701843,
+            0.9859792590141296
+          ]
+        },
+        {
+          "name": "Curved roof metal panel 04",
+          "faceCount": 54,
+          "loopCount": 216,
+          "uvMin": [
+            0.5116575360298157,
+            0.7640207409858704
+          ],
+          "uvMax": [
+            0.7383424639701843,
+            0.9859792590141296
+          ]
+        },
+        {
+          "name": "Curved roof metal panel 05",
+          "faceCount": 54,
+          "loopCount": 216,
+          "uvMin": [
+            0.5116575360298157,
+            0.7640207409858704
+          ],
+          "uvMax": [
+            0.7383424639701843,
+            0.9859792590141296
+          ]
+        },
+        {
+          "name": "Curved roof metal panel 06",
+          "faceCount": 54,
+          "loopCount": 216,
+          "uvMin": [
+            0.5116575360298157,
+            0.7640207409858704
+          ],
+          "uvMax": [
+            0.7383424639701843,
+            0.9859792590141296
+          ]
+        },
+        {
+          "name": "Curved roof metal panel 07",
+          "faceCount": 54,
+          "loopCount": 216,
+          "uvMin": [
+            0.5116575360298157,
+            0.7640207409858704
+          ],
+          "uvMax": [
+            0.7383424639701843,
+            0.9859792590141296
+          ]
+        },
+        {
+          "name": "Curved roof metal panel 08",
+          "faceCount": 54,
+          "loopCount": 216,
+          "uvMin": [
+            0.5116575360298157,
+            0.7640207409858704
+          ],
+          "uvMax": [
+            0.7383424639701843,
+            0.9859792590141296
+          ]
+        },
+        {
+          "name": "Curved roof metal panel 09",
+          "faceCount": 54,
+          "loopCount": 216,
+          "uvMin": [
+            0.5116575360298157,
+            0.7640207409858704
+          ],
+          "uvMax": [
+            0.7383424639701843,
+            0.9859792590141296
+          ]
+        },
+        {
+          "name": "Roof spine",
+          "faceCount": 54,
+          "loopCount": 216,
+          "uvMin": [
+            0.5074999928474426,
+            0.7578195929527283
+          ],
+          "uvMax": [
+            0.7425000071525574,
+            0.9921804070472717
+          ]
+        }
+      ]
+    },
+    {
+      "tileId": 4,
+      "row": 1,
+      "column": 4,
+      "label": "Lower panel fasteners",
+      "uvRect": [
+        0.7575,
+        0.7575,
+        0.9925,
+        0.9925
+      ],
+      "faceCount": 1000,
+      "loopCount": 4080,
+      "objects": [
+        "Lower access panel 00",
+        "Lower access panel 01",
+        "Lower access panel 02",
+        "Lower access panel 03",
+        "Lower access panel 04",
+        "Lower access panel 05",
+        "Lower access panel 06",
+        "Lower access panel 07",
+        "Lower access panel 08",
+        "Lower access panel 09",
+        "Lower access panel 10",
+        "Lower access panel 11",
+        "Pantograph ceramic insulator",
+        "Pantograph ceramic insulator.001",
+        "Cab lower sidewall",
+        "Cab lower sidewall.001"
+      ],
+      "objectUsage": [
+        {
+          "name": "Lower access panel 00",
+          "faceCount": 54,
+          "loopCount": 216,
+          "uvMin": [
+            0.7579730153083801,
+            0.7583796381950378
+          ],
+          "uvMax": [
+            0.9920269846916199,
+            0.9916203618049622
+          ]
+        },
+        {
+          "name": "Lower access panel 01",
+          "faceCount": 54,
+          "loopCount": 216,
+          "uvMin": [
+            0.7579730153083801,
+            0.7583796381950378
+          ],
+          "uvMax": [
+            0.9920269846916199,
+            0.9916203618049622
+          ]
+        },
+        {
+          "name": "Lower access panel 02",
+          "faceCount": 54,
+          "loopCount": 216,
+          "uvMin": [
+            0.7579730153083801,
+            0.7583796381950378
+          ],
+          "uvMax": [
+            0.9920269846916199,
+            0.9916203618049622
+          ]
+        },
+        {
+          "name": "Lower access panel 03",
+          "faceCount": 54,
+          "loopCount": 216,
+          "uvMin": [
+            0.7579730153083801,
+            0.7583796381950378
+          ],
+          "uvMax": [
+            0.9920269846916199,
+            0.9916203618049622
+          ]
+        },
+        {
+          "name": "Lower access panel 04",
+          "faceCount": 54,
+          "loopCount": 216,
+          "uvMin": [
+            0.7579730153083801,
+            0.7583796381950378
+          ],
+          "uvMax": [
+            0.9920269846916199,
+            0.9916203618049622
+          ]
+        },
+        {
+          "name": "Lower access panel 05",
+          "faceCount": 54,
+          "loopCount": 216,
+          "uvMin": [
+            0.7579730153083801,
+            0.7583796381950378
+          ],
+          "uvMax": [
+            0.9920269846916199,
+            0.9916203618049622
+          ]
+        },
+        {
+          "name": "Lower access panel 06",
+          "faceCount": 54,
+          "loopCount": 216,
+          "uvMin": [
+            0.7579730153083801,
+            0.7583796381950378
+          ],
+          "uvMax": [
+            0.9920269846916199,
+            0.9916203618049622
+          ]
+        },
+        {
+          "name": "Lower access panel 07",
+          "faceCount": 54,
+          "loopCount": 216,
+          "uvMin": [
+            0.7579730153083801,
+            0.7583796381950378
+          ],
+          "uvMax": [
+            0.9920269846916199,
+            0.9916203618049622
+          ]
+        },
+        {
+          "name": "Lower access panel 08",
+          "faceCount": 54,
+          "loopCount": 216,
+          "uvMin": [
+            0.7579730153083801,
+            0.7583796381950378
+          ],
+          "uvMax": [
+            0.9920269846916199,
+            0.9916203618049622
+          ]
+        },
+        {
+          "name": "Lower access panel 09",
+          "faceCount": 54,
+          "loopCount": 216,
+          "uvMin": [
+            0.7579730153083801,
+            0.7583796381950378
+          ],
+          "uvMax": [
+            0.9920269846916199,
+            0.9916203618049622
+          ]
+        },
+        {
+          "name": "Lower access panel 10",
+          "faceCount": 54,
+          "loopCount": 216,
+          "uvMin": [
+            0.7579730153083801,
+            0.7583796381950378
+          ],
+          "uvMax": [
+            0.9920269846916199,
+            0.9916203618049622
+          ]
+        },
+        {
+          "name": "Lower access panel 11",
+          "faceCount": 54,
+          "loopCount": 216,
+          "uvMin": [
+            0.7579730153083801,
+            0.7583796381950378
+          ],
+          "uvMax": [
+            0.9920269846916199,
+            0.9916203618049622
+          ]
+        },
+        {
+          "name": "Pantograph ceramic insulator",
+          "faceCount": 122,
+          "loopCount": 528,
+          "uvMin": [
+            0.7598141431808472,
+            0.7597943544387817
+          ],
+          "uvMax": [
+            0.9901858568191528,
+            0.9902056455612183
+          ]
+        },
+        {
+          "name": "Pantograph ceramic insulator.001",
+          "faceCount": 122,
+          "loopCount": 528,
+          "uvMin": [
+            0.7598141431808472,
+            0.7597943544387817
+          ],
+          "uvMax": [
+            0.9901858568191528,
+            0.9902056455612183
+          ]
+        },
+        {
+          "name": "Cab lower sidewall",
+          "faceCount": 54,
+          "loopCount": 216,
+          "uvMin": [
+            0.7584559917449951,
+            0.7584559917449951
+          ],
+          "uvMax": [
+            0.9915440082550049,
+            0.9915440082550049
+          ]
+        },
+        {
+          "name": "Cab lower sidewall.001",
+          "faceCount": 54,
+          "loopCount": 216,
+          "uvMin": [
+            0.7584559917449951,
+            0.7584559917449951
+          ],
+          "uvMax": [
+            0.9915440082550049,
+            0.9915440082550049
+          ]
+        }
+      ]
+    },
+    {
+      "tileId": 5,
+      "row": 2,
+      "column": 1,
+      "label": "Sliding door stripe",
+      "uvRect": [
+        0.085,
+        0.5075,
+        0.2425,
+        0.7425
+      ],
+      "faceCount": 648,
+      "loopCount": 2592,
+      "objects": [
+        "Door leaf stripe aligned",
+        "Door leaf stripe aligned.001",
+        "Door leaf stripe aligned.002",
+        "Door leaf stripe aligned.003",
+        "Door leaf stripe aligned.004",
+        "Door leaf stripe aligned.005",
+        "Door leaf stripe aligned.006",
+        "Door leaf stripe aligned.007",
+        "Door leaf stripe aligned.008",
+        "Door leaf stripe aligned.009",
+        "Door leaf stripe aligned.010",
+        "Door leaf stripe aligned.011"
+      ],
+      "objectUsage": [
+        {
+          "name": "Door leaf stripe aligned",
+          "faceCount": 54,
+          "loopCount": 216,
+          "uvMin": [
+            0.08613435924053192,
+            0.5091925263404846
+          ],
+          "uvMax": [
+            0.24136564135551453,
+            0.7408074736595154
+          ]
+        },
+        {
+          "name": "Door leaf stripe aligned.001",
+          "faceCount": 54,
+          "loopCount": 216,
+          "uvMin": [
+            0.08613435924053192,
+            0.5091925263404846
+          ],
+          "uvMax": [
+            0.24136564135551453,
+            0.7408074736595154
+          ]
+        },
+        {
+          "name": "Door leaf stripe aligned.002",
+          "faceCount": 54,
+          "loopCount": 216,
+          "uvMin": [
+            0.08613435924053192,
+            0.5091925263404846
+          ],
+          "uvMax": [
+            0.24136564135551453,
+            0.7408074736595154
+          ]
+        },
+        {
+          "name": "Door leaf stripe aligned.003",
+          "faceCount": 54,
+          "loopCount": 216,
+          "uvMin": [
+            0.08613435924053192,
+            0.5091925263404846
+          ],
+          "uvMax": [
+            0.24136564135551453,
+            0.7408074736595154
+          ]
+        },
+        {
+          "name": "Door leaf stripe aligned.004",
+          "faceCount": 54,
+          "loopCount": 216,
+          "uvMin": [
+            0.08613435924053192,
+            0.5091925263404846
+          ],
+          "uvMax": [
+            0.24136564135551453,
+            0.7408074736595154
+          ]
+        },
+        {
+          "name": "Door leaf stripe aligned.005",
+          "faceCount": 54,
+          "loopCount": 216,
+          "uvMin": [
+            0.08613435924053192,
+            0.5091925263404846
+          ],
+          "uvMax": [
+            0.24136564135551453,
+            0.7408074736595154
+          ]
+        },
+        {
+          "name": "Door leaf stripe aligned.006",
+          "faceCount": 54,
+          "loopCount": 216,
+          "uvMin": [
+            0.08613435924053192,
+            0.5091925263404846
+          ],
+          "uvMax": [
+            0.24136564135551453,
+            0.7408074736595154
+          ]
+        },
+        {
+          "name": "Door leaf stripe aligned.007",
+          "faceCount": 54,
+          "loopCount": 216,
+          "uvMin": [
+            0.08613435924053192,
+            0.5091925263404846
+          ],
+          "uvMax": [
+            0.24136564135551453,
+            0.7408074736595154
+          ]
+        },
+        {
+          "name": "Door leaf stripe aligned.008",
+          "faceCount": 54,
+          "loopCount": 216,
+          "uvMin": [
+            0.08613435924053192,
+            0.5091925263404846
+          ],
+          "uvMax": [
+            0.24136564135551453,
+            0.7408074736595154
+          ]
+        },
+        {
+          "name": "Door leaf stripe aligned.009",
+          "faceCount": 54,
+          "loopCount": 216,
+          "uvMin": [
+            0.08613435924053192,
+            0.5091925263404846
+          ],
+          "uvMax": [
+            0.24136564135551453,
+            0.7408074736595154
+          ]
+        },
+        {
+          "name": "Door leaf stripe aligned.010",
+          "faceCount": 54,
+          "loopCount": 216,
+          "uvMin": [
+            0.08613435924053192,
+            0.5091925263404846
+          ],
+          "uvMax": [
+            0.24136564135551453,
+            0.7408074736595154
+          ]
+        },
+        {
+          "name": "Door leaf stripe aligned.011",
+          "faceCount": 54,
+          "loopCount": 216,
+          "uvMin": [
+            0.08613435924053192,
+            0.5091925263404846
+          ],
+          "uvMax": [
+            0.24136564135551453,
+            0.7408074736595154
+          ]
+        }
+      ]
+    },
+    {
+      "tileId": 6,
+      "row": 2,
+      "column": 2,
+      "label": "Brushed aluminium",
+      "uvRect": [
+        0.2575,
+        0.5075,
+        0.4925,
+        0.7425
+      ],
+      "faceCount": 4158,
+      "loopCount": 17712,
+      "objects": [
+        "Door grab rail",
+        "Door grab rail.001",
+        "Door grab rail.002",
+        "Door grab rail.003",
+        "Door grab rail.004",
+        "Door grab rail.005",
+        "Door grab rail.006",
+        "Door grab rail.007",
+        "Door grab rail.008",
+        "Door grab rail.009",
+        "Door grab rail.010",
+        "Door grab rail.011",
+        "Axle bearing cap",
+        "Axle bearing cap.001",
+        "Axle bearing cap.002",
+        "Axle bearing cap.003",
+        "Axle bearing cap.004",
+        "Axle bearing cap.005",
+        "Axle bearing cap.006",
+        "Axle bearing cap.007",
+        "Roof louver",
+        "Roof louver.001",
+        "Roof louver.002",
+        "Roof louver.003",
+        "Roof louver.004",
+        "Roof louver.005",
+        "Roof louver.006",
+        "Roof louver.007",
+        "Roof louver.008",
+        "Roof louver.009",
+        "Roof louver.010",
+        "Roof louver.011",
+        "Roof louver.012",
+        "Roof louver.013",
+        "Roof louver.014",
+        "Roof louver.015",
+        "Front window side pillar",
+        "Side window rear pillar",
+        "Front window side pillar.001",
+        "Side window rear pillar.001",
+        "Front upper window frame",
+        "TractionLever shaft",
+        "BrakeLever shaft"
+      ],
+      "objectUsage": [
+        {
+          "name": "Door grab rail",
+          "faceCount": 122,
+          "loopCount": 528,
+          "uvMin": [
+            0.27485597133636475,
+            0.5089240670204163
+          ],
+          "uvMax": [
+            0.47514402866363525,
+            0.7410759329795837
+          ]
+        },
+        {
+          "name": "Door grab rail.001",
+          "faceCount": 122,
+          "loopCount": 528,
+          "uvMin": [
+            0.27485597133636475,
+            0.5089240670204163
+          ],
+          "uvMax": [
+            0.47514402866363525,
+            0.7410759329795837
+          ]
+        },
+        {
+          "name": "Door grab rail.002",
+          "faceCount": 122,
+          "loopCount": 528,
+          "uvMin": [
+            0.27485597133636475,
+            0.5089240670204163
+          ],
+          "uvMax": [
+            0.47514402866363525,
+            0.7410759329795837
+          ]
+        },
+        {
+          "name": "Door grab rail.003",
+          "faceCount": 122,
+          "loopCount": 528,
+          "uvMin": [
+            0.27485597133636475,
+            0.5089240670204163
+          ],
+          "uvMax": [
+            0.47514402866363525,
+            0.7410759329795837
+          ]
+        },
+        {
+          "name": "Door grab rail.004",
+          "faceCount": 122,
+          "loopCount": 528,
+          "uvMin": [
+            0.27485597133636475,
+            0.5089240670204163
+          ],
+          "uvMax": [
+            0.47514402866363525,
+            0.7410759329795837
+          ]
+        },
+        {
+          "name": "Door grab rail.005",
+          "faceCount": 122,
+          "loopCount": 528,
+          "uvMin": [
+            0.27485597133636475,
+            0.5089240670204163
+          ],
+          "uvMax": [
+            0.47514402866363525,
+            0.7410759329795837
+          ]
+        },
+        {
+          "name": "Door grab rail.006",
+          "faceCount": 122,
+          "loopCount": 528,
+          "uvMin": [
+            0.27485597133636475,
+            0.5089240670204163
+          ],
+          "uvMax": [
+            0.47514402866363525,
+            0.7410759329795837
+          ]
+        },
+        {
+          "name": "Door grab rail.007",
+          "faceCount": 122,
+          "loopCount": 528,
+          "uvMin": [
+            0.27485597133636475,
+            0.5089240670204163
+          ],
+          "uvMax": [
+            0.47514402866363525,
+            0.7410759329795837
+          ]
+        },
+        {
+          "name": "Door grab rail.008",
+          "faceCount": 122,
+          "loopCount": 528,
+          "uvMin": [
+            0.27485597133636475,
+            0.5089240670204163
+          ],
+          "uvMax": [
+            0.47514402866363525,
+            0.7410759329795837
+          ]
+        },
+        {
+          "name": "Door grab rail.009",
+          "faceCount": 122,
+          "loopCount": 528,
+          "uvMin": [
+            0.27485597133636475,
+            0.5089240670204163
+          ],
+          "uvMax": [
+            0.47514402866363525,
+            0.7410759329795837
+          ]
+        },
+        {
+          "name": "Door grab rail.010",
+          "faceCount": 122,
+          "loopCount": 528,
+          "uvMin": [
+            0.27485597133636475,
+            0.5089240670204163
+          ],
+          "uvMax": [
+            0.47514402866363525,
+            0.7410759329795837
+          ]
+        },
+        {
+          "name": "Door grab rail.011",
+          "faceCount": 122,
+          "loopCount": 528,
+          "uvMin": [
+            0.27485597133636475,
+            0.5089240670204163
+          ],
+          "uvMax": [
+            0.47514402866363525,
+            0.7410759329795837
+          ]
+        },
+        {
+          "name": "Axle bearing cap",
+          "faceCount": 122,
+          "loopCount": 528,
+          "uvMin": [
+            0.258725106716156,
+            0.508725106716156
+          ],
+          "uvMax": [
+            0.491274893283844,
+            0.741274893283844
+          ]
+        },
+        {
+          "name": "Axle bearing cap.001",
+          "faceCount": 122,
+          "loopCount": 528,
+          "uvMin": [
+            0.258725106716156,
+            0.508725106716156
+          ],
+          "uvMax": [
+            0.491274893283844,
+            0.741274893283844
+          ]
+        },
+        {
+          "name": "Axle bearing cap.002",
+          "faceCount": 122,
+          "loopCount": 528,
+          "uvMin": [
+            0.258725106716156,
+            0.508725106716156
+          ],
+          "uvMax": [
+            0.491274893283844,
+            0.741274893283844
+          ]
+        },
+        {
+          "name": "Axle bearing cap.003",
+          "faceCount": 122,
+          "loopCount": 528,
+          "uvMin": [
+            0.258725106716156,
+            0.508725106716156
+          ],
+          "uvMax": [
+            0.491274893283844,
+            0.741274893283844
+          ]
+        },
+        {
+          "name": "Axle bearing cap.004",
+          "faceCount": 122,
+          "loopCount": 528,
+          "uvMin": [
+            0.258725106716156,
+            0.508725106716156
+          ],
+          "uvMax": [
+            0.491274893283844,
+            0.741274893283844
+          ]
+        },
+        {
+          "name": "Axle bearing cap.005",
+          "faceCount": 122,
+          "loopCount": 528,
+          "uvMin": [
+            0.258725106716156,
+            0.508725106716156
+          ],
+          "uvMax": [
+            0.491274893283844,
+            0.741274893283844
+          ]
+        },
+        {
+          "name": "Axle bearing cap.006",
+          "faceCount": 122,
+          "loopCount": 528,
+          "uvMin": [
+            0.258725106716156,
+            0.508725106716156
+          ],
+          "uvMax": [
+            0.491274893283844,
+            0.741274893283844
+          ]
+        },
+        {
+          "name": "Axle bearing cap.007",
+          "faceCount": 122,
+          "loopCount": 528,
+          "uvMin": [
+            0.258725106716156,
+            0.508725106716156
+          ],
+          "uvMax": [
+            0.491274893283844,
+            0.741274893283844
+          ]
+        },
+        {
+          "name": "Roof louver",
+          "faceCount": 54,
+          "loopCount": 216,
+          "uvMin": [
+            0.25769665837287903,
+            0.5133997201919556
+          ],
+          "uvMax": [
+            0.49230334162712097,
+            0.7366002798080444
+          ]
+        },
+        {
+          "name": "Roof louver.001",
+          "faceCount": 54,
+          "loopCount": 216,
+          "uvMin": [
+            0.25769665837287903,
+            0.5133997201919556
+          ],
+          "uvMax": [
+            0.49230334162712097,
+            0.7366002798080444
+          ]
+        },
+        {
+          "name": "Roof louver.002",
+          "faceCount": 54,
+          "loopCount": 216,
+          "uvMin": [
+            0.25769665837287903,
+            0.5133997201919556
+          ],
+          "uvMax": [
+            0.49230334162712097,
+            0.7366002798080444
+          ]
+        },
+        {
+          "name": "Roof louver.003",
+          "faceCount": 54,
+          "loopCount": 216,
+          "uvMin": [
+            0.25769665837287903,
+            0.5133997201919556
+          ],
+          "uvMax": [
+            0.49230334162712097,
+            0.7366002798080444
+          ]
+        },
+        {
+          "name": "Roof louver.004",
+          "faceCount": 54,
+          "loopCount": 216,
+          "uvMin": [
+            0.25769665837287903,
+            0.5133997201919556
+          ],
+          "uvMax": [
+            0.49230334162712097,
+            0.7366002798080444
+          ]
+        },
+        {
+          "name": "Roof louver.005",
+          "faceCount": 54,
+          "loopCount": 216,
+          "uvMin": [
+            0.25769665837287903,
+            0.5133997201919556
+          ],
+          "uvMax": [
+            0.49230334162712097,
+            0.7366002798080444
+          ]
+        },
+        {
+          "name": "Roof louver.006",
+          "faceCount": 54,
+          "loopCount": 216,
+          "uvMin": [
+            0.25769665837287903,
+            0.5133997201919556
+          ],
+          "uvMax": [
+            0.49230334162712097,
+            0.7366002798080444
+          ]
+        },
+        {
+          "name": "Roof louver.007",
+          "faceCount": 54,
+          "loopCount": 216,
+          "uvMin": [
+            0.25769665837287903,
+            0.5133997201919556
+          ],
+          "uvMax": [
+            0.49230334162712097,
+            0.7366002798080444
+          ]
+        },
+        {
+          "name": "Roof louver.008",
+          "faceCount": 54,
+          "loopCount": 216,
+          "uvMin": [
+            0.25769665837287903,
+            0.5133997201919556
+          ],
+          "uvMax": [
+            0.49230334162712097,
+            0.7366002798080444
+          ]
+        },
+        {
+          "name": "Roof louver.009",
+          "faceCount": 54,
+          "loopCount": 216,
+          "uvMin": [
+            0.25769665837287903,
+            0.5133997201919556
+          ],
+          "uvMax": [
+            0.49230334162712097,
+            0.7366002798080444
+          ]
+        },
+        {
+          "name": "Roof louver.010",
+          "faceCount": 54,
+          "loopCount": 216,
+          "uvMin": [
+            0.25769665837287903,
+            0.5133997201919556
+          ],
+          "uvMax": [
+            0.49230334162712097,
+            0.7366002798080444
+          ]
+        },
+        {
+          "name": "Roof louver.011",
+          "faceCount": 54,
+          "loopCount": 216,
+          "uvMin": [
+            0.25769665837287903,
+            0.5133997201919556
+          ],
+          "uvMax": [
+            0.49230334162712097,
+            0.7366002798080444
+          ]
+        },
+        {
+          "name": "Roof louver.012",
+          "faceCount": 54,
+          "loopCount": 216,
+          "uvMin": [
+            0.25769665837287903,
+            0.5133997201919556
+          ],
+          "uvMax": [
+            0.49230334162712097,
+            0.7366002798080444
+          ]
+        },
+        {
+          "name": "Roof louver.013",
+          "faceCount": 54,
+          "loopCount": 216,
+          "uvMin": [
+            0.25769665837287903,
+            0.5133997201919556
+          ],
+          "uvMax": [
+            0.49230334162712097,
+            0.7366002798080444
+          ]
+        },
+        {
+          "name": "Roof louver.014",
+          "faceCount": 54,
+          "loopCount": 216,
+          "uvMin": [
+            0.25769665837287903,
+            0.5133997201919556
+          ],
+          "uvMax": [
+            0.49230334162712097,
+            0.7366002798080444
+          ]
+        },
+        {
+          "name": "Roof louver.015",
+          "faceCount": 54,
+          "loopCount": 216,
+          "uvMin": [
+            0.25769665837287903,
+            0.5133997201919556
+          ],
+          "uvMax": [
+            0.49230334162712097,
+            0.7366002798080444
+          ]
+        },
+        {
+          "name": "Front window side pillar",
+          "faceCount": 122,
+          "loopCount": 528,
+          "uvMin": [
+            0.26270678639411926,
+            0.5078326463699341
+          ],
+          "uvMax": [
+            0.48729321360588074,
+            0.7421673536300659
+          ]
+        },
+        {
+          "name": "Side window rear pillar",
+          "faceCount": 122,
+          "loopCount": 528,
+          "uvMin": [
+            0.26270678639411926,
+            0.5078529715538025
+          ],
+          "uvMax": [
+            0.48729321360588074,
+            0.7421470284461975
+          ]
+        },
+        {
+          "name": "Front window side pillar.001",
+          "faceCount": 122,
+          "loopCount": 528,
+          "uvMin": [
+            0.26270678639411926,
+            0.5078326463699341
+          ],
+          "uvMax": [
+            0.48729321360588074,
+            0.7421673536300659
+          ]
+        },
+        {
+          "name": "Side window rear pillar.001",
+          "faceCount": 122,
+          "loopCount": 528,
+          "uvMin": [
+            0.26270678639411926,
+            0.5078529715538025
+          ],
+          "uvMax": [
+            0.48729321360588074,
+            0.7421470284461975
+          ]
+        },
+        {
+          "name": "Front upper window frame",
+          "faceCount": 122,
+          "loopCount": 528,
+          "uvMin": [
+            0.2629808187484741,
+            0.507658839225769
+          ],
+          "uvMax": [
+            0.4870191812515259,
+            0.742341160774231
+          ]
+        },
+        {
+          "name": "TractionLever shaft",
+          "faceCount": 122,
+          "loopCount": 528,
+          "uvMin": [
+            0.26907065510749817,
+            0.5098305940628052
+          ],
+          "uvMax": [
+            0.48092934489250183,
+            0.7401694059371948
+          ]
+        },
+        {
+          "name": "BrakeLever shaft",
+          "faceCount": 122,
+          "loopCount": 528,
+          "uvMin": [
+            0.26907065510749817,
+            0.5098305940628052
+          ],
+          "uvMax": [
+            0.48092934489250183,
+            0.7401694059371948
+          ]
+        }
+      ]
+    },
+    {
+      "tileId": 7,
+      "row": 2,
+      "column": 3,
+      "label": "Rubber wear pads",
+      "uvRect": [
+        0.5075,
+        0.5075,
+        0.7425,
+        0.7425
+      ],
+      "faceCount": 976,
+      "loopCount": 4224,
+      "objects": [
+        "Rubber spring wear pad",
+        "Rubber spring wear pad.001",
+        "Rubber spring wear pad.002",
+        "Rubber spring wear pad.003",
+        "Rubber spring wear pad.004",
+        "Rubber spring wear pad.005",
+        "Rubber spring wear pad.006",
+        "Rubber spring wear pad.007"
+      ],
+      "objectUsage": [
+        {
+          "name": "Rubber spring wear pad",
+          "faceCount": 122,
+          "loopCount": 528,
+          "uvMin": [
+            0.5093110203742981,
+            0.5093110203742981
+          ],
+          "uvMax": [
+            0.7406889796257019,
+            0.7406889796257019
+          ]
+        },
+        {
+          "name": "Rubber spring wear pad.001",
+          "faceCount": 122,
+          "loopCount": 528,
+          "uvMin": [
+            0.5093110203742981,
+            0.5093110203742981
+          ],
+          "uvMax": [
+            0.7406889796257019,
+            0.7406889796257019
+          ]
+        },
+        {
+          "name": "Rubber spring wear pad.002",
+          "faceCount": 122,
+          "loopCount": 528,
+          "uvMin": [
+            0.5093110203742981,
+            0.5093110203742981
+          ],
+          "uvMax": [
+            0.7406889796257019,
+            0.7406889796257019
+          ]
+        },
+        {
+          "name": "Rubber spring wear pad.003",
+          "faceCount": 122,
+          "loopCount": 528,
+          "uvMin": [
+            0.5093110203742981,
+            0.5093110203742981
+          ],
+          "uvMax": [
+            0.7406889796257019,
+            0.7406889796257019
+          ]
+        },
+        {
+          "name": "Rubber spring wear pad.004",
+          "faceCount": 122,
+          "loopCount": 528,
+          "uvMin": [
+            0.5093110203742981,
+            0.5093110203742981
+          ],
+          "uvMax": [
+            0.7406889796257019,
+            0.7406889796257019
+          ]
+        },
+        {
+          "name": "Rubber spring wear pad.005",
+          "faceCount": 122,
+          "loopCount": 528,
+          "uvMin": [
+            0.5093110203742981,
+            0.5093110203742981
+          ],
+          "uvMax": [
+            0.7406889796257019,
+            0.7406889796257019
+          ]
+        },
+        {
+          "name": "Rubber spring wear pad.006",
+          "faceCount": 122,
+          "loopCount": 528,
+          "uvMin": [
+            0.5093110203742981,
+            0.5093110203742981
+          ],
+          "uvMax": [
+            0.7406889796257019,
+            0.7406889796257019
+          ]
+        },
+        {
+          "name": "Rubber spring wear pad.007",
+          "faceCount": 122,
+          "loopCount": 528,
+          "uvMin": [
+            0.5093110203742981,
+            0.5093110203742981
+          ],
+          "uvMax": [
+            0.7406889796257019,
+            0.7406889796257019
+          ]
+        }
+      ]
+    },
+    {
+      "tileId": 8,
+      "row": 2,
+      "column": 4,
+      "label": "Machined axle steel",
+      "uvRect": [
+        0.7575,
+        0.5075,
+        0.9925,
+        0.7425
+      ],
+      "faceCount": 6008,
+      "loopCount": 26048,
+      "objects": [
+        "Wheel axle",
+        "Rail steel wheel",
+        "Wheel flange",
+        "Stacked suspension coil",
+        "Stacked suspension coil.001",
+        "Stacked suspension coil.002",
+        "Rail steel wheel.001",
+        "Wheel flange.001",
+        "Stacked suspension coil.003",
+        "Stacked suspension coil.004",
+        "Stacked suspension coil.005",
+        "Wheel axle.001",
+        "Rail steel wheel.002",
+        "Wheel flange.002",
+        "Stacked suspension coil.006",
+        "Stacked suspension coil.007",
+        "Stacked suspension coil.008",
+        "Rail steel wheel.003",
+        "Wheel flange.003",
+        "Stacked suspension coil.009",
+        "Stacked suspension coil.010",
+        "Stacked suspension coil.011",
+        "Wheel axle.002",
+        "Rail steel wheel.004",
+        "Wheel flange.004",
+        "Stacked suspension coil.012",
+        "Stacked suspension coil.013",
+        "Stacked suspension coil.014",
+        "Rail steel wheel.005",
+        "Wheel flange.005",
+        "Stacked suspension coil.015",
+        "Stacked suspension coil.016",
+        "Stacked suspension coil.017",
+        "Wheel axle.003",
+        "Rail steel wheel.006",
+        "Wheel flange.006",
+        "Stacked suspension coil.018",
+        "Stacked suspension coil.019",
+        "Stacked suspension coil.020",
+        "Rail steel wheel.007",
+        "Wheel flange.007",
+        "Stacked suspension coil.021",
+        "Stacked suspension coil.022",
+        "Stacked suspension coil.023"
+      ],
+      "objectUsage": [
+        {
+          "name": "Wheel axle",
+          "faceCount": 122,
+          "loopCount": 528,
+          "uvMin": [
+            0.7576434016227722,
+            0.5096923112869263
+          ],
+          "uvMax": [
+            0.9923565983772278,
+            0.7403076887130737
+          ]
+        },
+        {
+          "name": "Rail steel wheel",
+          "faceCount": 162,
+          "loopCount": 704,
+          "uvMin": [
+            0.7579824924468994,
+            0.5079824924468994
+          ],
+          "uvMax": [
+            0.9920175075531006,
+            0.7420175075531006
+          ]
+        },
+        {
+          "name": "Wheel flange",
+          "faceCount": 162,
+          "loopCount": 704,
+          "uvMin": [
+            0.757961094379425,
+            0.507961094379425
+          ],
+          "uvMax": [
+            0.992038905620575,
+            0.742038905620575
+          ]
+        },
+        {
+          "name": "Stacked suspension coil",
+          "faceCount": 122,
+          "loopCount": 528,
+          "uvMin": [
+            0.7591021060943604,
+            0.5091021060943604
+          ],
+          "uvMax": [
+            0.9908978939056396,
+            0.7408978939056396
+          ]
+        },
+        {
+          "name": "Stacked suspension coil.001",
+          "faceCount": 122,
+          "loopCount": 528,
+          "uvMin": [
+            0.7591021060943604,
+            0.5091021060943604
+          ],
+          "uvMax": [
+            0.9908978939056396,
+            0.7408978939056396
+          ]
+        },
+        {
+          "name": "Stacked suspension coil.002",
+          "faceCount": 122,
+          "loopCount": 528,
+          "uvMin": [
+            0.7591021060943604,
+            0.5091021060943604
+          ],
+          "uvMax": [
+            0.9908978939056396,
+            0.7408978939056396
+          ]
+        },
+        {
+          "name": "Rail steel wheel.001",
+          "faceCount": 162,
+          "loopCount": 704,
+          "uvMin": [
+            0.7579824924468994,
+            0.5079824924468994
+          ],
+          "uvMax": [
+            0.9920175075531006,
+            0.7420175075531006
+          ]
+        },
+        {
+          "name": "Wheel flange.001",
+          "faceCount": 162,
+          "loopCount": 704,
+          "uvMin": [
+            0.757961094379425,
+            0.507961094379425
+          ],
+          "uvMax": [
+            0.992038905620575,
+            0.742038905620575
+          ]
+        },
+        {
+          "name": "Stacked suspension coil.003",
+          "faceCount": 122,
+          "loopCount": 528,
+          "uvMin": [
+            0.7591021060943604,
+            0.5091021060943604
+          ],
+          "uvMax": [
+            0.9908978939056396,
+            0.7408978939056396
+          ]
+        },
+        {
+          "name": "Stacked suspension coil.004",
+          "faceCount": 122,
+          "loopCount": 528,
+          "uvMin": [
+            0.7591021060943604,
+            0.5091021060943604
+          ],
+          "uvMax": [
+            0.9908978939056396,
+            0.7408978939056396
+          ]
+        },
+        {
+          "name": "Stacked suspension coil.005",
+          "faceCount": 122,
+          "loopCount": 528,
+          "uvMin": [
+            0.7591021060943604,
+            0.5091021060943604
+          ],
+          "uvMax": [
+            0.9908978939056396,
+            0.7408978939056396
+          ]
+        },
+        {
+          "name": "Wheel axle.001",
+          "faceCount": 122,
+          "loopCount": 528,
+          "uvMin": [
+            0.7576434016227722,
+            0.5096923112869263
+          ],
+          "uvMax": [
+            0.9923565983772278,
+            0.7403076887130737
+          ]
+        },
+        {
+          "name": "Rail steel wheel.002",
+          "faceCount": 162,
+          "loopCount": 704,
+          "uvMin": [
+            0.7579824924468994,
+            0.5079824924468994
+          ],
+          "uvMax": [
+            0.9920175075531006,
+            0.7420175075531006
+          ]
+        },
+        {
+          "name": "Wheel flange.002",
+          "faceCount": 162,
+          "loopCount": 704,
+          "uvMin": [
+            0.757961094379425,
+            0.507961094379425
+          ],
+          "uvMax": [
+            0.992038905620575,
+            0.742038905620575
+          ]
+        },
+        {
+          "name": "Stacked suspension coil.006",
+          "faceCount": 122,
+          "loopCount": 528,
+          "uvMin": [
+            0.7591021060943604,
+            0.5091021060943604
+          ],
+          "uvMax": [
+            0.9908978939056396,
+            0.7408978939056396
+          ]
+        },
+        {
+          "name": "Stacked suspension coil.007",
+          "faceCount": 122,
+          "loopCount": 528,
+          "uvMin": [
+            0.7591021060943604,
+            0.5091021060943604
+          ],
+          "uvMax": [
+            0.9908978939056396,
+            0.7408978939056396
+          ]
+        },
+        {
+          "name": "Stacked suspension coil.008",
+          "faceCount": 122,
+          "loopCount": 528,
+          "uvMin": [
+            0.7591021060943604,
+            0.5091021060943604
+          ],
+          "uvMax": [
+            0.9908978939056396,
+            0.7408978939056396
+          ]
+        },
+        {
+          "name": "Rail steel wheel.003",
+          "faceCount": 162,
+          "loopCount": 704,
+          "uvMin": [
+            0.7579824924468994,
+            0.5079824924468994
+          ],
+          "uvMax": [
+            0.9920175075531006,
+            0.7420175075531006
+          ]
+        },
+        {
+          "name": "Wheel flange.003",
+          "faceCount": 162,
+          "loopCount": 704,
+          "uvMin": [
+            0.757961094379425,
+            0.507961094379425
+          ],
+          "uvMax": [
+            0.992038905620575,
+            0.742038905620575
+          ]
+        },
+        {
+          "name": "Stacked suspension coil.009",
+          "faceCount": 122,
+          "loopCount": 528,
+          "uvMin": [
+            0.7591021060943604,
+            0.5091021060943604
+          ],
+          "uvMax": [
+            0.9908978939056396,
+            0.7408978939056396
+          ]
+        },
+        {
+          "name": "Stacked suspension coil.010",
+          "faceCount": 122,
+          "loopCount": 528,
+          "uvMin": [
+            0.7591021060943604,
+            0.5091021060943604
+          ],
+          "uvMax": [
+            0.9908978939056396,
+            0.7408978939056396
+          ]
+        },
+        {
+          "name": "Stacked suspension coil.011",
+          "faceCount": 122,
+          "loopCount": 528,
+          "uvMin": [
+            0.7591021060943604,
+            0.5091021060943604
+          ],
+          "uvMax": [
+            0.9908978939056396,
+            0.7408978939056396
+          ]
+        },
+        {
+          "name": "Wheel axle.002",
+          "faceCount": 122,
+          "loopCount": 528,
+          "uvMin": [
+            0.7576434016227722,
+            0.5096923112869263
+          ],
+          "uvMax": [
+            0.9923565983772278,
+            0.7403076887130737
+          ]
+        },
+        {
+          "name": "Rail steel wheel.004",
+          "faceCount": 162,
+          "loopCount": 704,
+          "uvMin": [
+            0.7579824924468994,
+            0.5079824924468994
+          ],
+          "uvMax": [
+            0.9920175075531006,
+            0.7420175075531006
+          ]
+        },
+        {
+          "name": "Wheel flange.004",
+          "faceCount": 162,
+          "loopCount": 704,
+          "uvMin": [
+            0.757961094379425,
+            0.507961094379425
+          ],
+          "uvMax": [
+            0.992038905620575,
+            0.742038905620575
+          ]
+        },
+        {
+          "name": "Stacked suspension coil.012",
+          "faceCount": 122,
+          "loopCount": 528,
+          "uvMin": [
+            0.7591021060943604,
+            0.5091021060943604
+          ],
+          "uvMax": [
+            0.9908978939056396,
+            0.7408978939056396
+          ]
+        },
+        {
+          "name": "Stacked suspension coil.013",
+          "faceCount": 122,
+          "loopCount": 528,
+          "uvMin": [
+            0.7591021060943604,
+            0.5091021060943604
+          ],
+          "uvMax": [
+            0.9908978939056396,
+            0.7408978939056396
+          ]
+        },
+        {
+          "name": "Stacked suspension coil.014",
+          "faceCount": 122,
+          "loopCount": 528,
+          "uvMin": [
+            0.7591021060943604,
+            0.5091021060943604
+          ],
+          "uvMax": [
+            0.9908978939056396,
+            0.7408978939056396
+          ]
+        },
+        {
+          "name": "Rail steel wheel.005",
+          "faceCount": 162,
+          "loopCount": 704,
+          "uvMin": [
+            0.7579824924468994,
+            0.5079824924468994
+          ],
+          "uvMax": [
+            0.9920175075531006,
+            0.7420175075531006
+          ]
+        },
+        {
+          "name": "Wheel flange.005",
+          "faceCount": 162,
+          "loopCount": 704,
+          "uvMin": [
+            0.757961094379425,
+            0.507961094379425
+          ],
+          "uvMax": [
+            0.992038905620575,
+            0.742038905620575
+          ]
+        },
+        {
+          "name": "Stacked suspension coil.015",
+          "faceCount": 122,
+          "loopCount": 528,
+          "uvMin": [
+            0.7591021060943604,
+            0.5091021060943604
+          ],
+          "uvMax": [
+            0.9908978939056396,
+            0.7408978939056396
+          ]
+        },
+        {
+          "name": "Stacked suspension coil.016",
+          "faceCount": 122,
+          "loopCount": 528,
+          "uvMin": [
+            0.7591021060943604,
+            0.5091021060943604
+          ],
+          "uvMax": [
+            0.9908978939056396,
+            0.7408978939056396
+          ]
+        },
+        {
+          "name": "Stacked suspension coil.017",
+          "faceCount": 122,
+          "loopCount": 528,
+          "uvMin": [
+            0.7591021060943604,
+            0.5091021060943604
+          ],
+          "uvMax": [
+            0.9908978939056396,
+            0.7408978939056396
+          ]
+        },
+        {
+          "name": "Wheel axle.003",
+          "faceCount": 122,
+          "loopCount": 528,
+          "uvMin": [
+            0.7576434016227722,
+            0.5096923112869263
+          ],
+          "uvMax": [
+            0.9923565983772278,
+            0.7403076887130737
+          ]
+        },
+        {
+          "name": "Rail steel wheel.006",
+          "faceCount": 162,
+          "loopCount": 704,
+          "uvMin": [
+            0.7579824924468994,
+            0.5079824924468994
+          ],
+          "uvMax": [
+            0.9920175075531006,
+            0.7420175075531006
+          ]
+        },
+        {
+          "name": "Wheel flange.006",
+          "faceCount": 162,
+          "loopCount": 704,
+          "uvMin": [
+            0.757961094379425,
+            0.507961094379425
+          ],
+          "uvMax": [
+            0.992038905620575,
+            0.742038905620575
+          ]
+        },
+        {
+          "name": "Stacked suspension coil.018",
+          "faceCount": 122,
+          "loopCount": 528,
+          "uvMin": [
+            0.7591021060943604,
+            0.5091021060943604
+          ],
+          "uvMax": [
+            0.9908978939056396,
+            0.7408978939056396
+          ]
+        },
+        {
+          "name": "Stacked suspension coil.019",
+          "faceCount": 122,
+          "loopCount": 528,
+          "uvMin": [
+            0.7591021060943604,
+            0.5091021060943604
+          ],
+          "uvMax": [
+            0.9908978939056396,
+            0.7408978939056396
+          ]
+        },
+        {
+          "name": "Stacked suspension coil.020",
+          "faceCount": 122,
+          "loopCount": 528,
+          "uvMin": [
+            0.7591021060943604,
+            0.5091021060943604
+          ],
+          "uvMax": [
+            0.9908978939056396,
+            0.7408978939056396
+          ]
+        },
+        {
+          "name": "Rail steel wheel.007",
+          "faceCount": 162,
+          "loopCount": 704,
+          "uvMin": [
+            0.7579824924468994,
+            0.5079824924468994
+          ],
+          "uvMax": [
+            0.9920175075531006,
+            0.7420175075531006
+          ]
+        },
+        {
+          "name": "Wheel flange.007",
+          "faceCount": 162,
+          "loopCount": 704,
+          "uvMin": [
+            0.757961094379425,
+            0.507961094379425
+          ],
+          "uvMax": [
+            0.992038905620575,
+            0.742038905620575
+          ]
+        },
+        {
+          "name": "Stacked suspension coil.021",
+          "faceCount": 122,
+          "loopCount": 528,
+          "uvMin": [
+            0.7591021060943604,
+            0.5091021060943604
+          ],
+          "uvMax": [
+            0.9908978939056396,
+            0.7408978939056396
+          ]
+        },
+        {
+          "name": "Stacked suspension coil.022",
+          "faceCount": 122,
+          "loopCount": 528,
+          "uvMin": [
+            0.7591021060943604,
+            0.5091021060943604
+          ],
+          "uvMax": [
+            0.9908978939056396,
+            0.7408978939056396
+          ]
+        },
+        {
+          "name": "Stacked suspension coil.023",
+          "faceCount": 122,
+          "loopCount": 528,
+          "uvMin": [
+            0.7591021060943604,
+            0.5091021060943604
+          ],
+          "uvMax": [
+            0.9908978939056396,
+            0.7408978939056396
+          ]
+        }
+      ]
+    },
+    {
+      "tileId": 9,
+      "row": 3,
+      "column": 1,
+      "label": "Blank navy cockpit powdercoat",
+      "uvRect": [
+        0.0075,
+        0.2575,
+        0.2425,
+        0.4925
+      ],
+      "faceCount": 270,
+      "loopCount": 1080,
+      "objects": [
+        "Destination blank frame",
+        "Destination blank frame.001",
+        "Blank instrument panel",
+        "Panel lower console",
+        "Roof lining"
+      ],
+      "objectUsage": [
+        {
+          "name": "Destination blank frame",
+          "faceCount": 54,
+          "loopCount": 216,
+          "uvMin": [
+            0.008264766074717045,
+            0.2648746073246002
+          ],
+          "uvMax": [
+            0.24173523485660553,
+            0.4851253926753998
+          ]
+        },
+        {
+          "name": "Destination blank frame.001",
+          "faceCount": 54,
+          "loopCount": 216,
+          "uvMin": [
+            0.008264766074717045,
+            0.2648746073246002
+          ],
+          "uvMax": [
+            0.24173523485660553,
+            0.4851253926753998
+          ]
+        },
+        {
+          "name": "Blank instrument panel",
+          "faceCount": 54,
+          "loopCount": 216,
+          "uvMin": [
+            0.008869289420545101,
+            0.2668858766555786
+          ],
+          "uvMax": [
+            0.24113070964813232,
+            0.4831141233444214
+          ]
+        },
+        {
+          "name": "Panel lower console",
+          "faceCount": 54,
+          "loopCount": 216,
+          "uvMin": [
+            0.009012742899358273,
+            0.26610374450683594
+          ],
+          "uvMax": [
+            0.24098725616931915,
+            0.48389625549316406
+          ]
+        },
+        {
+          "name": "Roof lining",
+          "faceCount": 54,
+          "loopCount": 216,
+          "uvMin": [
+            0.007977982051670551,
+            0.25797799229621887
+          ],
+          "uvMax": [
+            0.24202202260494232,
+            0.49202200770378113
+          ]
+        }
+      ]
+    },
+    {
+      "tileId": 10,
+      "row": 3,
+      "column": 2,
+      "label": "Woven navy upholstery",
+      "uvRect": [
+        0.2575,
+        0.2575,
+        0.4925,
+        0.4925
+      ],
+      "faceCount": 9348,
+      "loopCount": 39072,
+      "objects": [
+        "Interior seat",
+        "Interior seat back",
+        "Interior seat.001",
+        "Interior seat back.001",
+        "Interior seat.002",
+        "Interior seat back.002",
+        "Interior seat.003",
+        "Interior seat back.003",
+        "Interior seat.004",
+        "Interior seat back.004",
+        "Interior seat.005",
+        "Interior seat back.005",
+        "Interior seat.006",
+        "Interior seat back.006",
+        "Interior seat.007",
+        "Interior seat back.007",
+        "Interior seat.008",
+        "Interior seat back.008",
+        "Interior seat.009",
+        "Interior seat back.009",
+        "Cab armrest",
+        "Cab armrest.001",
+        "Seat cushion",
+        "Seat back"
+      ],
+      "objectUsage": [
+        {
+          "name": "Interior seat",
+          "faceCount": 408,
+          "loopCount": 1704,
+          "uvMin": [
+            0.2574999928474426,
+            0.2574999928474426
+          ],
+          "uvMax": [
+            0.4925000071525574,
+            0.4925000071525574
+          ]
+        },
+        {
+          "name": "Interior seat back",
+          "faceCount": 408,
+          "loopCount": 1704,
+          "uvMin": [
+            0.2574999928474426,
+            0.2574999928474426
+          ],
+          "uvMax": [
+            0.4925000071525574,
+            0.4925000071525574
+          ]
+        },
+        {
+          "name": "Interior seat.001",
+          "faceCount": 408,
+          "loopCount": 1704,
+          "uvMin": [
+            0.2574999928474426,
+            0.2574999928474426
+          ],
+          "uvMax": [
+            0.4925000071525574,
+            0.4925000071525574
+          ]
+        },
+        {
+          "name": "Interior seat back.001",
+          "faceCount": 408,
+          "loopCount": 1704,
+          "uvMin": [
+            0.2574999928474426,
+            0.2574999928474426
+          ],
+          "uvMax": [
+            0.4925000071525574,
+            0.4925000071525574
+          ]
+        },
+        {
+          "name": "Interior seat.002",
+          "faceCount": 408,
+          "loopCount": 1704,
+          "uvMin": [
+            0.2574999928474426,
+            0.2574999928474426
+          ],
+          "uvMax": [
+            0.4925000071525574,
+            0.4925000071525574
+          ]
+        },
+        {
+          "name": "Interior seat back.002",
+          "faceCount": 408,
+          "loopCount": 1704,
+          "uvMin": [
+            0.2574999928474426,
+            0.2574999928474426
+          ],
+          "uvMax": [
+            0.4925000071525574,
+            0.4925000071525574
+          ]
+        },
+        {
+          "name": "Interior seat.003",
+          "faceCount": 408,
+          "loopCount": 1704,
+          "uvMin": [
+            0.2574999928474426,
+            0.2574999928474426
+          ],
+          "uvMax": [
+            0.4925000071525574,
+            0.4925000071525574
+          ]
+        },
+        {
+          "name": "Interior seat back.003",
+          "faceCount": 408,
+          "loopCount": 1704,
+          "uvMin": [
+            0.2574999928474426,
+            0.2574999928474426
+          ],
+          "uvMax": [
+            0.4925000071525574,
+            0.4925000071525574
+          ]
+        },
+        {
+          "name": "Interior seat.004",
+          "faceCount": 408,
+          "loopCount": 1704,
+          "uvMin": [
+            0.2574999928474426,
+            0.2574999928474426
+          ],
+          "uvMax": [
+            0.4925000071525574,
+            0.4925000071525574
+          ]
+        },
+        {
+          "name": "Interior seat back.004",
+          "faceCount": 408,
+          "loopCount": 1704,
+          "uvMin": [
+            0.2574999928474426,
+            0.2574999928474426
+          ],
+          "uvMax": [
+            0.4925000071525574,
+            0.4925000071525574
+          ]
+        },
+        {
+          "name": "Interior seat.005",
+          "faceCount": 408,
+          "loopCount": 1704,
+          "uvMin": [
+            0.2574999928474426,
+            0.2574999928474426
+          ],
+          "uvMax": [
+            0.4925000071525574,
+            0.4925000071525574
+          ]
+        },
+        {
+          "name": "Interior seat back.005",
+          "faceCount": 408,
+          "loopCount": 1704,
+          "uvMin": [
+            0.2574999928474426,
+            0.2574999928474426
+          ],
+          "uvMax": [
+            0.4925000071525574,
+            0.4925000071525574
+          ]
+        },
+        {
+          "name": "Interior seat.006",
+          "faceCount": 408,
+          "loopCount": 1704,
+          "uvMin": [
+            0.2574999928474426,
+            0.2574999928474426
+          ],
+          "uvMax": [
+            0.4925000071525574,
+            0.4925000071525574
+          ]
+        },
+        {
+          "name": "Interior seat back.006",
+          "faceCount": 408,
+          "loopCount": 1704,
+          "uvMin": [
+            0.2574999928474426,
+            0.2574999928474426
+          ],
+          "uvMax": [
+            0.4925000071525574,
+            0.4925000071525574
+          ]
+        },
+        {
+          "name": "Interior seat.007",
+          "faceCount": 408,
+          "loopCount": 1704,
+          "uvMin": [
+            0.2574999928474426,
+            0.2574999928474426
+          ],
+          "uvMax": [
+            0.4925000071525574,
+            0.4925000071525574
+          ]
+        },
+        {
+          "name": "Interior seat back.007",
+          "faceCount": 408,
+          "loopCount": 1704,
+          "uvMin": [
+            0.2574999928474426,
+            0.2574999928474426
+          ],
+          "uvMax": [
+            0.4925000071525574,
+            0.4925000071525574
+          ]
+        },
+        {
+          "name": "Interior seat.008",
+          "faceCount": 408,
+          "loopCount": 1704,
+          "uvMin": [
+            0.2574999928474426,
+            0.2574999928474426
+          ],
+          "uvMax": [
+            0.4925000071525574,
+            0.4925000071525574
+          ]
+        },
+        {
+          "name": "Interior seat back.008",
+          "faceCount": 408,
+          "loopCount": 1704,
+          "uvMin": [
+            0.2574999928474426,
+            0.2574999928474426
+          ],
+          "uvMax": [
+            0.4925000071525574,
+            0.4925000071525574
+          ]
+        },
+        {
+          "name": "Interior seat.009",
+          "faceCount": 408,
+          "loopCount": 1704,
+          "uvMin": [
+            0.2574999928474426,
+            0.2574999928474426
+          ],
+          "uvMax": [
+            0.4925000071525574,
+            0.4925000071525574
+          ]
+        },
+        {
+          "name": "Interior seat back.009",
+          "faceCount": 408,
+          "loopCount": 1704,
+          "uvMin": [
+            0.2574999928474426,
+            0.2574999928474426
+          ],
+          "uvMax": [
+            0.4925000071525574,
+            0.4925000071525574
+          ]
+        },
+        {
+          "name": "Cab armrest",
+          "faceCount": 234,
+          "loopCount": 1008,
+          "uvMin": [
+            0.2574999928474426,
+            0.2574999928474426
+          ],
+          "uvMax": [
+            0.4925000071525574,
+            0.4925000071525574
+          ]
+        },
+        {
+          "name": "Cab armrest.001",
+          "faceCount": 234,
+          "loopCount": 1008,
+          "uvMin": [
+            0.2574999928474426,
+            0.2574999928474426
+          ],
+          "uvMax": [
+            0.4925000071525574,
+            0.4925000071525574
+          ]
+        },
+        {
+          "name": "Seat cushion",
+          "faceCount": 360,
+          "loopCount": 1488,
+          "uvMin": [
+            0.2574999928474426,
+            0.2574999928474426
+          ],
+          "uvMax": [
+            0.4925000071525574,
+            0.4925000071525574
+          ]
+        },
+        {
+          "name": "Seat back",
+          "faceCount": 360,
+          "loopCount": 1488,
+          "uvMin": [
+            0.2574999928474426,
+            0.2574999928474426
+          ],
+          "uvMax": [
+            0.4925000071525574,
+            0.4925000071525574
+          ]
+        }
+      ]
+    },
+    {
+      "tileId": 11,
+      "row": 3,
+      "column": 3,
+      "label": "Rubber window gaskets",
+      "uvRect": [
+        0.5075,
+        0.2575,
+        0.7425,
+        0.4925
+      ],
+      "faceCount": 7072,
+      "loopCount": 28320,
+      "objects": [
+        "Window horizontal gasket",
+        "Window horizontal gasket.001",
+        "Window vertical gasket",
+        "Window vertical gasket.001",
+        "Window horizontal gasket.002",
+        "Window horizontal gasket.003",
+        "Window vertical gasket.002",
+        "Window vertical gasket.003",
+        "Window horizontal gasket.004",
+        "Window horizontal gasket.005",
+        "Window vertical gasket.004",
+        "Window vertical gasket.005",
+        "Window horizontal gasket.006",
+        "Window horizontal gasket.007",
+        "Window vertical gasket.006",
+        "Window vertical gasket.007",
+        "Window horizontal gasket.008",
+        "Window horizontal gasket.009",
+        "Window vertical gasket.008",
+        "Window vertical gasket.009",
+        "Window horizontal gasket.010",
+        "Window horizontal gasket.011",
+        "Window vertical gasket.010",
+        "Window vertical gasket.011",
+        "Window horizontal gasket.012",
+        "Window horizontal gasket.013",
+        "Window vertical gasket.012",
+        "Window vertical gasket.013",
+        "Window horizontal gasket.014",
+        "Window horizontal gasket.015",
+        "Window vertical gasket.014",
+        "Window vertical gasket.015",
+        "Window horizontal gasket.016",
+        "Window horizontal gasket.017",
+        "Window vertical gasket.016",
+        "Window vertical gasket.017",
+        "Window horizontal gasket.018",
+        "Window horizontal gasket.019",
+        "Window vertical gasket.018",
+        "Window vertical gasket.019",
+        "Door frame horizontal gasket",
+        "Door frame horizontal gasket.001",
+        "Door frame vertical gasket",
+        "Door frame vertical gasket.001",
+        "Door central rubber seal",
+        "Door frame horizontal gasket.002",
+        "Door frame horizontal gasket.003",
+        "Door frame vertical gasket.002",
+        "Door frame vertical gasket.003",
+        "Door central rubber seal.001",
+        "Door frame horizontal gasket.004",
+        "Door frame horizontal gasket.005",
+        "Door frame vertical gasket.004",
+        "Door frame vertical gasket.005",
+        "Door central rubber seal.002",
+        "Window horizontal gasket.020",
+        "Window horizontal gasket.021",
+        "Window vertical gasket.020",
+        "Window vertical gasket.021",
+        "Window horizontal gasket.022",
+        "Window horizontal gasket.023",
+        "Window vertical gasket.022",
+        "Window vertical gasket.023",
+        "Window horizontal gasket.024",
+        "Window horizontal gasket.025",
+        "Window vertical gasket.024",
+        "Window vertical gasket.025",
+        "Window horizontal gasket.026",
+        "Window horizontal gasket.027",
+        "Window vertical gasket.026",
+        "Window vertical gasket.027",
+        "Window horizontal gasket.028",
+        "Window horizontal gasket.029",
+        "Window vertical gasket.028",
+        "Window vertical gasket.029",
+        "Window horizontal gasket.030",
+        "Window horizontal gasket.031",
+        "Window vertical gasket.030",
+        "Window vertical gasket.031",
+        "Window horizontal gasket.032",
+        "Window horizontal gasket.033",
+        "Window vertical gasket.032",
+        "Window vertical gasket.033",
+        "Window horizontal gasket.034",
+        "Window horizontal gasket.035",
+        "Window vertical gasket.034",
+        "Window vertical gasket.035",
+        "Window horizontal gasket.036",
+        "Window horizontal gasket.037",
+        "Window vertical gasket.036",
+        "Window vertical gasket.037",
+        "Window horizontal gasket.038",
+        "Window horizontal gasket.039",
+        "Window vertical gasket.038",
+        "Window vertical gasket.039",
+        "Door frame horizontal gasket.006",
+        "Door frame horizontal gasket.007",
+        "Door frame vertical gasket.006",
+        "Door frame vertical gasket.007",
+        "Door central rubber seal.003",
+        "Door frame horizontal gasket.008",
+        "Door frame horizontal gasket.009",
+        "Door frame vertical gasket.008",
+        "Door frame vertical gasket.009",
+        "Door central rubber seal.004",
+        "Door frame horizontal gasket.010",
+        "Door frame horizontal gasket.011",
+        "Door frame vertical gasket.010",
+        "Door frame vertical gasket.011",
+        "Door central rubber seal.005",
+        "LED surround",
+        "LED surround.001",
+        "Windshield wiper",
+        "LED surround.002",
+        "LED surround.003",
+        "Windshield wiper.001",
+        "Panel top glare shield",
+        "Cab windshield gasket",
+        "Cab windshield gasket.001",
+        "Cab windshield gasket.002",
+        "Cab windshield gasket.003",
+        "Blank auxiliary panel surround",
+        "Blank auxiliary panel surround.001",
+        "TractionLever grip",
+        "Documentation floor"
+      ],
+      "objectUsage": [
+        {
+          "name": "Window horizontal gasket",
+          "faceCount": 54,
+          "loopCount": 216,
+          "uvMin": [
+            0.5080469846725464,
+            0.2580469846725464
+          ],
+          "uvMax": [
+            0.7419530153274536,
+            0.4919530153274536
+          ]
+        },
+        {
+          "name": "Window horizontal gasket.001",
+          "faceCount": 54,
+          "loopCount": 216,
+          "uvMin": [
+            0.5080469846725464,
+            0.2580469846725464
+          ],
+          "uvMax": [
+            0.7419530153274536,
+            0.4919530153274536
+          ]
+        },
+        {
+          "name": "Window vertical gasket",
+          "faceCount": 54,
+          "loopCount": 216,
+          "uvMin": [
+            0.5267083644866943,
+            0.2582719326019287
+          ],
+          "uvMax": [
+            0.7232916355133057,
+            0.4917280673980713
+          ]
+        },
+        {
+          "name": "Window vertical gasket.001",
+          "faceCount": 54,
+          "loopCount": 216,
+          "uvMin": [
+            0.5267083644866943,
+            0.2582719326019287
+          ],
+          "uvMax": [
+            0.7232916355133057,
+            0.4917280673980713
+          ]
+        },
+        {
+          "name": "Window horizontal gasket.002",
+          "faceCount": 54,
+          "loopCount": 216,
+          "uvMin": [
+            0.5080469846725464,
+            0.2580469846725464
+          ],
+          "uvMax": [
+            0.7419530153274536,
+            0.4919530153274536
+          ]
+        },
+        {
+          "name": "Window horizontal gasket.003",
+          "faceCount": 54,
+          "loopCount": 216,
+          "uvMin": [
+            0.5080469846725464,
+            0.2580469846725464
+          ],
+          "uvMax": [
+            0.7419530153274536,
+            0.4919530153274536
+          ]
+        },
+        {
+          "name": "Window vertical gasket.002",
+          "faceCount": 54,
+          "loopCount": 216,
+          "uvMin": [
+            0.5267083644866943,
+            0.2582719326019287
+          ],
+          "uvMax": [
+            0.7232916355133057,
+            0.4917280673980713
+          ]
+        },
+        {
+          "name": "Window vertical gasket.003",
+          "faceCount": 54,
+          "loopCount": 216,
+          "uvMin": [
+            0.5267083644866943,
+            0.2582719326019287
+          ],
+          "uvMax": [
+            0.7232916355133057,
+            0.4917280673980713
+          ]
+        },
+        {
+          "name": "Window horizontal gasket.004",
+          "faceCount": 54,
+          "loopCount": 216,
+          "uvMin": [
+            0.5080469846725464,
+            0.2580469846725464
+          ],
+          "uvMax": [
+            0.7419530153274536,
+            0.4919530153274536
+          ]
+        },
+        {
+          "name": "Window horizontal gasket.005",
+          "faceCount": 54,
+          "loopCount": 216,
+          "uvMin": [
+            0.5080469846725464,
+            0.2580469846725464
+          ],
+          "uvMax": [
+            0.7419530153274536,
+            0.4919530153274536
+          ]
+        },
+        {
+          "name": "Window vertical gasket.004",
+          "faceCount": 54,
+          "loopCount": 216,
+          "uvMin": [
+            0.5267083644866943,
+            0.2582719326019287
+          ],
+          "uvMax": [
+            0.7232916355133057,
+            0.4917280673980713
+          ]
+        },
+        {
+          "name": "Window vertical gasket.005",
+          "faceCount": 54,
+          "loopCount": 216,
+          "uvMin": [
+            0.5267083644866943,
+            0.2582719326019287
+          ],
+          "uvMax": [
+            0.7232916355133057,
+            0.4917280673980713
+          ]
+        },
+        {
+          "name": "Window horizontal gasket.006",
+          "faceCount": 54,
+          "loopCount": 216,
+          "uvMin": [
+            0.5080469846725464,
+            0.2580469846725464
+          ],
+          "uvMax": [
+            0.7419530153274536,
+            0.4919530153274536
+          ]
+        },
+        {
+          "name": "Window horizontal gasket.007",
+          "faceCount": 54,
+          "loopCount": 216,
+          "uvMin": [
+            0.5080469846725464,
+            0.2580469846725464
+          ],
+          "uvMax": [
+            0.7419530153274536,
+            0.4919530153274536
+          ]
+        },
+        {
+          "name": "Window vertical gasket.006",
+          "faceCount": 54,
+          "loopCount": 216,
+          "uvMin": [
+            0.5267083644866943,
+            0.2582719326019287
+          ],
+          "uvMax": [
+            0.7232916355133057,
+            0.4917280673980713
+          ]
+        },
+        {
+          "name": "Window vertical gasket.007",
+          "faceCount": 54,
+          "loopCount": 216,
+          "uvMin": [
+            0.5267083644866943,
+            0.2582719326019287
+          ],
+          "uvMax": [
+            0.7232916355133057,
+            0.4917280673980713
+          ]
+        },
+        {
+          "name": "Window horizontal gasket.008",
+          "faceCount": 54,
+          "loopCount": 216,
+          "uvMin": [
+            0.5080469846725464,
+            0.2580469846725464
+          ],
+          "uvMax": [
+            0.7419530153274536,
+            0.4919530153274536
+          ]
+        },
+        {
+          "name": "Window horizontal gasket.009",
+          "faceCount": 54,
+          "loopCount": 216,
+          "uvMin": [
+            0.5080469846725464,
+            0.2580469846725464
+          ],
+          "uvMax": [
+            0.7419530153274536,
+            0.4919530153274536
+          ]
+        },
+        {
+          "name": "Window vertical gasket.008",
+          "faceCount": 54,
+          "loopCount": 216,
+          "uvMin": [
+            0.5267083644866943,
+            0.2582719326019287
+          ],
+          "uvMax": [
+            0.7232916355133057,
+            0.4917280673980713
+          ]
+        },
+        {
+          "name": "Window vertical gasket.009",
+          "faceCount": 54,
+          "loopCount": 216,
+          "uvMin": [
+            0.5267083644866943,
+            0.2582719326019287
+          ],
+          "uvMax": [
+            0.7232916355133057,
+            0.4917280673980713
+          ]
+        },
+        {
+          "name": "Window horizontal gasket.010",
+          "faceCount": 54,
+          "loopCount": 216,
+          "uvMin": [
+            0.5080469846725464,
+            0.2580469846725464
+          ],
+          "uvMax": [
+            0.7419530153274536,
+            0.4919530153274536
+          ]
+        },
+        {
+          "name": "Window horizontal gasket.011",
+          "faceCount": 54,
+          "loopCount": 216,
+          "uvMin": [
+            0.5080469846725464,
+            0.2580469846725464
+          ],
+          "uvMax": [
+            0.7419530153274536,
+            0.4919530153274536
+          ]
+        },
+        {
+          "name": "Window vertical gasket.010",
+          "faceCount": 54,
+          "loopCount": 216,
+          "uvMin": [
+            0.5267083644866943,
+            0.2582719326019287
+          ],
+          "uvMax": [
+            0.7232916355133057,
+            0.4917280673980713
+          ]
+        },
+        {
+          "name": "Window vertical gasket.011",
+          "faceCount": 54,
+          "loopCount": 216,
+          "uvMin": [
+            0.5267083644866943,
+            0.2582719326019287
+          ],
+          "uvMax": [
+            0.7232916355133057,
+            0.4917280673980713
+          ]
+        },
+        {
+          "name": "Window horizontal gasket.012",
+          "faceCount": 54,
+          "loopCount": 216,
+          "uvMin": [
+            0.5080469846725464,
+            0.2580469846725464
+          ],
+          "uvMax": [
+            0.7419530153274536,
+            0.4919530153274536
+          ]
+        },
+        {
+          "name": "Window horizontal gasket.013",
+          "faceCount": 54,
+          "loopCount": 216,
+          "uvMin": [
+            0.5080469846725464,
+            0.2580469846725464
+          ],
+          "uvMax": [
+            0.7419530153274536,
+            0.4919530153274536
+          ]
+        },
+        {
+          "name": "Window vertical gasket.012",
+          "faceCount": 54,
+          "loopCount": 216,
+          "uvMin": [
+            0.5267083644866943,
+            0.2582719326019287
+          ],
+          "uvMax": [
+            0.7232916355133057,
+            0.4917280673980713
+          ]
+        },
+        {
+          "name": "Window vertical gasket.013",
+          "faceCount": 54,
+          "loopCount": 216,
+          "uvMin": [
+            0.5267083644866943,
+            0.2582719326019287
+          ],
+          "uvMax": [
+            0.7232916355133057,
+            0.4917280673980713
+          ]
+        },
+        {
+          "name": "Window horizontal gasket.014",
+          "faceCount": 54,
+          "loopCount": 216,
+          "uvMin": [
+            0.5080469846725464,
+            0.2580469846725464
+          ],
+          "uvMax": [
+            0.7419530153274536,
+            0.4919530153274536
+          ]
+        },
+        {
+          "name": "Window horizontal gasket.015",
+          "faceCount": 54,
+          "loopCount": 216,
+          "uvMin": [
+            0.5080469846725464,
+            0.2580469846725464
+          ],
+          "uvMax": [
+            0.7419530153274536,
+            0.4919530153274536
+          ]
+        },
+        {
+          "name": "Window vertical gasket.014",
+          "faceCount": 54,
+          "loopCount": 216,
+          "uvMin": [
+            0.5267083644866943,
+            0.2582719326019287
+          ],
+          "uvMax": [
+            0.7232916355133057,
+            0.4917280673980713
+          ]
+        },
+        {
+          "name": "Window vertical gasket.015",
+          "faceCount": 54,
+          "loopCount": 216,
+          "uvMin": [
+            0.5267083644866943,
+            0.2582719326019287
+          ],
+          "uvMax": [
+            0.7232916355133057,
+            0.4917280673980713
+          ]
+        },
+        {
+          "name": "Window horizontal gasket.016",
+          "faceCount": 54,
+          "loopCount": 216,
+          "uvMin": [
+            0.5080469846725464,
+            0.2580469846725464
+          ],
+          "uvMax": [
+            0.7419530153274536,
+            0.4919530153274536
+          ]
+        },
+        {
+          "name": "Window horizontal gasket.017",
+          "faceCount": 54,
+          "loopCount": 216,
+          "uvMin": [
+            0.5080469846725464,
+            0.2580469846725464
+          ],
+          "uvMax": [
+            0.7419530153274536,
+            0.4919530153274536
+          ]
+        },
+        {
+          "name": "Window vertical gasket.016",
+          "faceCount": 54,
+          "loopCount": 216,
+          "uvMin": [
+            0.5267083644866943,
+            0.2582719326019287
+          ],
+          "uvMax": [
+            0.7232916355133057,
+            0.4917280673980713
+          ]
+        },
+        {
+          "name": "Window vertical gasket.017",
+          "faceCount": 54,
+          "loopCount": 216,
+          "uvMin": [
+            0.5267083644866943,
+            0.2582719326019287
+          ],
+          "uvMax": [
+            0.7232916355133057,
+            0.4917280673980713
+          ]
+        },
+        {
+          "name": "Window horizontal gasket.018",
+          "faceCount": 54,
+          "loopCount": 216,
+          "uvMin": [
+            0.5080469846725464,
+            0.2580469846725464
+          ],
+          "uvMax": [
+            0.7419530153274536,
+            0.4919530153274536
+          ]
+        },
+        {
+          "name": "Window horizontal gasket.019",
+          "faceCount": 54,
+          "loopCount": 216,
+          "uvMin": [
+            0.5080469846725464,
+            0.2580469846725464
+          ],
+          "uvMax": [
+            0.7419530153274536,
+            0.4919530153274536
+          ]
+        },
+        {
+          "name": "Window vertical gasket.018",
+          "faceCount": 54,
+          "loopCount": 216,
+          "uvMin": [
+            0.5267083644866943,
+            0.2582719326019287
+          ],
+          "uvMax": [
+            0.7232916355133057,
+            0.4917280673980713
+          ]
+        },
+        {
+          "name": "Window vertical gasket.019",
+          "faceCount": 54,
+          "loopCount": 216,
+          "uvMin": [
+            0.5267083644866943,
+            0.2582719326019287
+          ],
+          "uvMax": [
+            0.7232916355133057,
+            0.4917280673980713
+          ]
+        },
+        {
+          "name": "Door frame horizontal gasket",
+          "faceCount": 54,
+          "loopCount": 216,
+          "uvMin": [
+            0.5080136656761169,
+            0.25801366567611694
+          ],
+          "uvMax": [
+            0.7419863343238831,
+            0.49198633432388306
+          ]
+        },
+        {
+          "name": "Door frame horizontal gasket.001",
+          "faceCount": 54,
+          "loopCount": 216,
+          "uvMin": [
+            0.5080136656761169,
+            0.25801366567611694
+          ],
+          "uvMax": [
+            0.7419863343238831,
+            0.49198633432388306
+          ]
+        },
+        {
+          "name": "Door frame vertical gasket",
+          "faceCount": 54,
+          "loopCount": 216,
+          "uvMin": [
+            0.5224630236625671,
+            0.257808655500412
+          ],
+          "uvMax": [
+            0.7275369763374329,
+            0.492191344499588
+          ]
+        },
+        {
+          "name": "Door frame vertical gasket.001",
+          "faceCount": 54,
+          "loopCount": 216,
+          "uvMin": [
+            0.5224630236625671,
+            0.257808655500412
+          ],
+          "uvMax": [
+            0.7275369763374329,
+            0.492191344499588
+          ]
+        },
+        {
+          "name": "Door central rubber seal",
+          "faceCount": 54,
+          "loopCount": 216,
+          "uvMin": [
+            0.5176970362663269,
+            0.25763365626335144
+          ],
+          "uvMax": [
+            0.7323029637336731,
+            0.49236634373664856
+          ]
+        },
+        {
+          "name": "Door frame horizontal gasket.002",
+          "faceCount": 54,
+          "loopCount": 216,
+          "uvMin": [
+            0.5080136656761169,
+            0.25801366567611694
+          ],
+          "uvMax": [
+            0.7419863343238831,
+            0.49198633432388306
+          ]
+        },
+        {
+          "name": "Door frame horizontal gasket.003",
+          "faceCount": 54,
+          "loopCount": 216,
+          "uvMin": [
+            0.5080136656761169,
+            0.25801366567611694
+          ],
+          "uvMax": [
+            0.7419863343238831,
+            0.49198633432388306
+          ]
+        },
+        {
+          "name": "Door frame vertical gasket.002",
+          "faceCount": 54,
+          "loopCount": 216,
+          "uvMin": [
+            0.5224630236625671,
+            0.257808655500412
+          ],
+          "uvMax": [
+            0.7275369763374329,
+            0.492191344499588
+          ]
+        },
+        {
+          "name": "Door frame vertical gasket.003",
+          "faceCount": 54,
+          "loopCount": 216,
+          "uvMin": [
+            0.5224630236625671,
+            0.257808655500412
+          ],
+          "uvMax": [
+            0.7275369763374329,
+            0.492191344499588
+          ]
+        },
+        {
+          "name": "Door central rubber seal.001",
+          "faceCount": 54,
+          "loopCount": 216,
+          "uvMin": [
+            0.5176970362663269,
+            0.25763365626335144
+          ],
+          "uvMax": [
+            0.7323029637336731,
+            0.49236634373664856
+          ]
+        },
+        {
+          "name": "Door frame horizontal gasket.004",
+          "faceCount": 54,
+          "loopCount": 216,
+          "uvMin": [
+            0.5080136656761169,
+            0.25801366567611694
+          ],
+          "uvMax": [
+            0.7419863343238831,
+            0.49198633432388306
+          ]
+        },
+        {
+          "name": "Door frame horizontal gasket.005",
+          "faceCount": 54,
+          "loopCount": 216,
+          "uvMin": [
+            0.5080136656761169,
+            0.25801366567611694
+          ],
+          "uvMax": [
+            0.7419863343238831,
+            0.49198633432388306
+          ]
+        },
+        {
+          "name": "Door frame vertical gasket.004",
+          "faceCount": 54,
+          "loopCount": 216,
+          "uvMin": [
+            0.5224630236625671,
+            0.257808655500412
+          ],
+          "uvMax": [
+            0.7275369763374329,
+            0.492191344499588
+          ]
+        },
+        {
+          "name": "Door frame vertical gasket.005",
+          "faceCount": 54,
+          "loopCount": 216,
+          "uvMin": [
+            0.5224630236625671,
+            0.257808655500412
+          ],
+          "uvMax": [
+            0.7275369763374329,
+            0.492191344499588
+          ]
+        },
+        {
+          "name": "Door central rubber seal.002",
+          "faceCount": 54,
+          "loopCount": 216,
+          "uvMin": [
+            0.5176970362663269,
+            0.25763365626335144
+          ],
+          "uvMax": [
+            0.7323029637336731,
+            0.49236634373664856
+          ]
+        },
+        {
+          "name": "Window horizontal gasket.020",
+          "faceCount": 54,
+          "loopCount": 216,
+          "uvMin": [
+            0.5080469846725464,
+            0.2580469846725464
+          ],
+          "uvMax": [
+            0.7419530153274536,
+            0.4919530153274536
+          ]
+        },
+        {
+          "name": "Window horizontal gasket.021",
+          "faceCount": 54,
+          "loopCount": 216,
+          "uvMin": [
+            0.5080469846725464,
+            0.2580469846725464
+          ],
+          "uvMax": [
+            0.7419530153274536,
+            0.4919530153274536
+          ]
+        },
+        {
+          "name": "Window vertical gasket.020",
+          "faceCount": 54,
+          "loopCount": 216,
+          "uvMin": [
+            0.5267083644866943,
+            0.2582719326019287
+          ],
+          "uvMax": [
+            0.7232916355133057,
+            0.4917280673980713
+          ]
+        },
+        {
+          "name": "Window vertical gasket.021",
+          "faceCount": 54,
+          "loopCount": 216,
+          "uvMin": [
+            0.5267083644866943,
+            0.2582719326019287
+          ],
+          "uvMax": [
+            0.7232916355133057,
+            0.4917280673980713
+          ]
+        },
+        {
+          "name": "Window horizontal gasket.022",
+          "faceCount": 54,
+          "loopCount": 216,
+          "uvMin": [
+            0.5080469846725464,
+            0.2580469846725464
+          ],
+          "uvMax": [
+            0.7419530153274536,
+            0.4919530153274536
+          ]
+        },
+        {
+          "name": "Window horizontal gasket.023",
+          "faceCount": 54,
+          "loopCount": 216,
+          "uvMin": [
+            0.5080469846725464,
+            0.2580469846725464
+          ],
+          "uvMax": [
+            0.7419530153274536,
+            0.4919530153274536
+          ]
+        },
+        {
+          "name": "Window vertical gasket.022",
+          "faceCount": 54,
+          "loopCount": 216,
+          "uvMin": [
+            0.5267083644866943,
+            0.2582719326019287
+          ],
+          "uvMax": [
+            0.7232916355133057,
+            0.4917280673980713
+          ]
+        },
+        {
+          "name": "Window vertical gasket.023",
+          "faceCount": 54,
+          "loopCount": 216,
+          "uvMin": [
+            0.5267083644866943,
+            0.2582719326019287
+          ],
+          "uvMax": [
+            0.7232916355133057,
+            0.4917280673980713
+          ]
+        },
+        {
+          "name": "Window horizontal gasket.024",
+          "faceCount": 54,
+          "loopCount": 216,
+          "uvMin": [
+            0.5080469846725464,
+            0.2580469846725464
+          ],
+          "uvMax": [
+            0.7419530153274536,
+            0.4919530153274536
+          ]
+        },
+        {
+          "name": "Window horizontal gasket.025",
+          "faceCount": 54,
+          "loopCount": 216,
+          "uvMin": [
+            0.5080469846725464,
+            0.2580469846725464
+          ],
+          "uvMax": [
+            0.7419530153274536,
+            0.4919530153274536
+          ]
+        },
+        {
+          "name": "Window vertical gasket.024",
+          "faceCount": 54,
+          "loopCount": 216,
+          "uvMin": [
+            0.5267083644866943,
+            0.2582719326019287
+          ],
+          "uvMax": [
+            0.7232916355133057,
+            0.4917280673980713
+          ]
+        },
+        {
+          "name": "Window vertical gasket.025",
+          "faceCount": 54,
+          "loopCount": 216,
+          "uvMin": [
+            0.5267083644866943,
+            0.2582719326019287
+          ],
+          "uvMax": [
+            0.7232916355133057,
+            0.4917280673980713
+          ]
+        },
+        {
+          "name": "Window horizontal gasket.026",
+          "faceCount": 54,
+          "loopCount": 216,
+          "uvMin": [
+            0.5080469846725464,
+            0.2580469846725464
+          ],
+          "uvMax": [
+            0.7419530153274536,
+            0.4919530153274536
+          ]
+        },
+        {
+          "name": "Window horizontal gasket.027",
+          "faceCount": 54,
+          "loopCount": 216,
+          "uvMin": [
+            0.5080469846725464,
+            0.2580469846725464
+          ],
+          "uvMax": [
+            0.7419530153274536,
+            0.4919530153274536
+          ]
+        },
+        {
+          "name": "Window vertical gasket.026",
+          "faceCount": 54,
+          "loopCount": 216,
+          "uvMin": [
+            0.5267083644866943,
+            0.2582719326019287
+          ],
+          "uvMax": [
+            0.7232916355133057,
+            0.4917280673980713
+          ]
+        },
+        {
+          "name": "Window vertical gasket.027",
+          "faceCount": 54,
+          "loopCount": 216,
+          "uvMin": [
+            0.5267083644866943,
+            0.2582719326019287
+          ],
+          "uvMax": [
+            0.7232916355133057,
+            0.4917280673980713
+          ]
+        },
+        {
+          "name": "Window horizontal gasket.028",
+          "faceCount": 54,
+          "loopCount": 216,
+          "uvMin": [
+            0.5080469846725464,
+            0.2580469846725464
+          ],
+          "uvMax": [
+            0.7419530153274536,
+            0.4919530153274536
+          ]
+        },
+        {
+          "name": "Window horizontal gasket.029",
+          "faceCount": 54,
+          "loopCount": 216,
+          "uvMin": [
+            0.5080469846725464,
+            0.2580469846725464
+          ],
+          "uvMax": [
+            0.7419530153274536,
+            0.4919530153274536
+          ]
+        },
+        {
+          "name": "Window vertical gasket.028",
+          "faceCount": 54,
+          "loopCount": 216,
+          "uvMin": [
+            0.5267083644866943,
+            0.2582719326019287
+          ],
+          "uvMax": [
+            0.7232916355133057,
+            0.4917280673980713
+          ]
+        },
+        {
+          "name": "Window vertical gasket.029",
+          "faceCount": 54,
+          "loopCount": 216,
+          "uvMin": [
+            0.5267083644866943,
+            0.2582719326019287
+          ],
+          "uvMax": [
+            0.7232916355133057,
+            0.4917280673980713
+          ]
+        },
+        {
+          "name": "Window horizontal gasket.030",
+          "faceCount": 54,
+          "loopCount": 216,
+          "uvMin": [
+            0.5080469846725464,
+            0.2580469846725464
+          ],
+          "uvMax": [
+            0.7419530153274536,
+            0.4919530153274536
+          ]
+        },
+        {
+          "name": "Window horizontal gasket.031",
+          "faceCount": 54,
+          "loopCount": 216,
+          "uvMin": [
+            0.5080469846725464,
+            0.2580469846725464
+          ],
+          "uvMax": [
+            0.7419530153274536,
+            0.4919530153274536
+          ]
+        },
+        {
+          "name": "Window vertical gasket.030",
+          "faceCount": 54,
+          "loopCount": 216,
+          "uvMin": [
+            0.5267083644866943,
+            0.2582719326019287
+          ],
+          "uvMax": [
+            0.7232916355133057,
+            0.4917280673980713
+          ]
+        },
+        {
+          "name": "Window vertical gasket.031",
+          "faceCount": 54,
+          "loopCount": 216,
+          "uvMin": [
+            0.5267083644866943,
+            0.2582719326019287
+          ],
+          "uvMax": [
+            0.7232916355133057,
+            0.4917280673980713
+          ]
+        },
+        {
+          "name": "Window horizontal gasket.032",
+          "faceCount": 54,
+          "loopCount": 216,
+          "uvMin": [
+            0.5080469846725464,
+            0.2580469846725464
+          ],
+          "uvMax": [
+            0.7419530153274536,
+            0.4919530153274536
+          ]
+        },
+        {
+          "name": "Window horizontal gasket.033",
+          "faceCount": 54,
+          "loopCount": 216,
+          "uvMin": [
+            0.5080469846725464,
+            0.2580469846725464
+          ],
+          "uvMax": [
+            0.7419530153274536,
+            0.4919530153274536
+          ]
+        },
+        {
+          "name": "Window vertical gasket.032",
+          "faceCount": 54,
+          "loopCount": 216,
+          "uvMin": [
+            0.5267083644866943,
+            0.2582719326019287
+          ],
+          "uvMax": [
+            0.7232916355133057,
+            0.4917280673980713
+          ]
+        },
+        {
+          "name": "Window vertical gasket.033",
+          "faceCount": 54,
+          "loopCount": 216,
+          "uvMin": [
+            0.5267083644866943,
+            0.2582719326019287
+          ],
+          "uvMax": [
+            0.7232916355133057,
+            0.4917280673980713
+          ]
+        },
+        {
+          "name": "Window horizontal gasket.034",
+          "faceCount": 54,
+          "loopCount": 216,
+          "uvMin": [
+            0.5080469846725464,
+            0.2580469846725464
+          ],
+          "uvMax": [
+            0.7419530153274536,
+            0.4919530153274536
+          ]
+        },
+        {
+          "name": "Window horizontal gasket.035",
+          "faceCount": 54,
+          "loopCount": 216,
+          "uvMin": [
+            0.5080469846725464,
+            0.2580469846725464
+          ],
+          "uvMax": [
+            0.7419530153274536,
+            0.4919530153274536
+          ]
+        },
+        {
+          "name": "Window vertical gasket.034",
+          "faceCount": 54,
+          "loopCount": 216,
+          "uvMin": [
+            0.5267083644866943,
+            0.2582719326019287
+          ],
+          "uvMax": [
+            0.7232916355133057,
+            0.4917280673980713
+          ]
+        },
+        {
+          "name": "Window vertical gasket.035",
+          "faceCount": 54,
+          "loopCount": 216,
+          "uvMin": [
+            0.5267083644866943,
+            0.2582719326019287
+          ],
+          "uvMax": [
+            0.7232916355133057,
+            0.4917280673980713
+          ]
+        },
+        {
+          "name": "Window horizontal gasket.036",
+          "faceCount": 54,
+          "loopCount": 216,
+          "uvMin": [
+            0.5080469846725464,
+            0.2580469846725464
+          ],
+          "uvMax": [
+            0.7419530153274536,
+            0.4919530153274536
+          ]
+        },
+        {
+          "name": "Window horizontal gasket.037",
+          "faceCount": 54,
+          "loopCount": 216,
+          "uvMin": [
+            0.5080469846725464,
+            0.2580469846725464
+          ],
+          "uvMax": [
+            0.7419530153274536,
+            0.4919530153274536
+          ]
+        },
+        {
+          "name": "Window vertical gasket.036",
+          "faceCount": 54,
+          "loopCount": 216,
+          "uvMin": [
+            0.5267083644866943,
+            0.2582719326019287
+          ],
+          "uvMax": [
+            0.7232916355133057,
+            0.4917280673980713
+          ]
+        },
+        {
+          "name": "Window vertical gasket.037",
+          "faceCount": 54,
+          "loopCount": 216,
+          "uvMin": [
+            0.5267083644866943,
+            0.2582719326019287
+          ],
+          "uvMax": [
+            0.7232916355133057,
+            0.4917280673980713
+          ]
+        },
+        {
+          "name": "Window horizontal gasket.038",
+          "faceCount": 54,
+          "loopCount": 216,
+          "uvMin": [
+            0.5080469846725464,
+            0.2580469846725464
+          ],
+          "uvMax": [
+            0.7419530153274536,
+            0.4919530153274536
+          ]
+        },
+        {
+          "name": "Window horizontal gasket.039",
+          "faceCount": 54,
+          "loopCount": 216,
+          "uvMin": [
+            0.5080469846725464,
+            0.2580469846725464
+          ],
+          "uvMax": [
+            0.7419530153274536,
+            0.4919530153274536
+          ]
+        },
+        {
+          "name": "Window vertical gasket.038",
+          "faceCount": 54,
+          "loopCount": 216,
+          "uvMin": [
+            0.5267083644866943,
+            0.2582719326019287
+          ],
+          "uvMax": [
+            0.7232916355133057,
+            0.4917280673980713
+          ]
+        },
+        {
+          "name": "Window vertical gasket.039",
+          "faceCount": 54,
+          "loopCount": 216,
+          "uvMin": [
+            0.5267083644866943,
+            0.2582719326019287
+          ],
+          "uvMax": [
+            0.7232916355133057,
+            0.4917280673980713
+          ]
+        },
+        {
+          "name": "Door frame horizontal gasket.006",
+          "faceCount": 54,
+          "loopCount": 216,
+          "uvMin": [
+            0.5080136656761169,
+            0.25801366567611694
+          ],
+          "uvMax": [
+            0.7419863343238831,
+            0.49198633432388306
+          ]
+        },
+        {
+          "name": "Door frame horizontal gasket.007",
+          "faceCount": 54,
+          "loopCount": 216,
+          "uvMin": [
+            0.5080136656761169,
+            0.25801366567611694
+          ],
+          "uvMax": [
+            0.7419863343238831,
+            0.49198633432388306
+          ]
+        },
+        {
+          "name": "Door frame vertical gasket.006",
+          "faceCount": 54,
+          "loopCount": 216,
+          "uvMin": [
+            0.5224630236625671,
+            0.257808655500412
+          ],
+          "uvMax": [
+            0.7275369763374329,
+            0.492191344499588
+          ]
+        },
+        {
+          "name": "Door frame vertical gasket.007",
+          "faceCount": 54,
+          "loopCount": 216,
+          "uvMin": [
+            0.5224630236625671,
+            0.257808655500412
+          ],
+          "uvMax": [
+            0.7275369763374329,
+            0.492191344499588
+          ]
+        },
+        {
+          "name": "Door central rubber seal.003",
+          "faceCount": 54,
+          "loopCount": 216,
+          "uvMin": [
+            0.5176970362663269,
+            0.25763365626335144
+          ],
+          "uvMax": [
+            0.7323029637336731,
+            0.49236634373664856
+          ]
+        },
+        {
+          "name": "Door frame horizontal gasket.008",
+          "faceCount": 54,
+          "loopCount": 216,
+          "uvMin": [
+            0.5080136656761169,
+            0.25801366567611694
+          ],
+          "uvMax": [
+            0.7419863343238831,
+            0.49198633432388306
+          ]
+        },
+        {
+          "name": "Door frame horizontal gasket.009",
+          "faceCount": 54,
+          "loopCount": 216,
+          "uvMin": [
+            0.5080136656761169,
+            0.25801366567611694
+          ],
+          "uvMax": [
+            0.7419863343238831,
+            0.49198633432388306
+          ]
+        },
+        {
+          "name": "Door frame vertical gasket.008",
+          "faceCount": 54,
+          "loopCount": 216,
+          "uvMin": [
+            0.5224630236625671,
+            0.257808655500412
+          ],
+          "uvMax": [
+            0.7275369763374329,
+            0.492191344499588
+          ]
+        },
+        {
+          "name": "Door frame vertical gasket.009",
+          "faceCount": 54,
+          "loopCount": 216,
+          "uvMin": [
+            0.5224630236625671,
+            0.257808655500412
+          ],
+          "uvMax": [
+            0.7275369763374329,
+            0.492191344499588
+          ]
+        },
+        {
+          "name": "Door central rubber seal.004",
+          "faceCount": 54,
+          "loopCount": 216,
+          "uvMin": [
+            0.5176970362663269,
+            0.25763365626335144
+          ],
+          "uvMax": [
+            0.7323029637336731,
+            0.49236634373664856
+          ]
+        },
+        {
+          "name": "Door frame horizontal gasket.010",
+          "faceCount": 54,
+          "loopCount": 216,
+          "uvMin": [
+            0.5080136656761169,
+            0.25801366567611694
+          ],
+          "uvMax": [
+            0.7419863343238831,
+            0.49198633432388306
+          ]
+        },
+        {
+          "name": "Door frame horizontal gasket.011",
+          "faceCount": 54,
+          "loopCount": 216,
+          "uvMin": [
+            0.5080136656761169,
+            0.25801366567611694
+          ],
+          "uvMax": [
+            0.7419863343238831,
+            0.49198633432388306
+          ]
+        },
+        {
+          "name": "Door frame vertical gasket.010",
+          "faceCount": 54,
+          "loopCount": 216,
+          "uvMin": [
+            0.5224630236625671,
+            0.257808655500412
+          ],
+          "uvMax": [
+            0.7275369763374329,
+            0.492191344499588
+          ]
+        },
+        {
+          "name": "Door frame vertical gasket.011",
+          "faceCount": 54,
+          "loopCount": 216,
+          "uvMin": [
+            0.5224630236625671,
+            0.257808655500412
+          ],
+          "uvMax": [
+            0.7275369763374329,
+            0.492191344499588
+          ]
+        },
+        {
+          "name": "Door central rubber seal.005",
+          "faceCount": 54,
+          "loopCount": 216,
+          "uvMin": [
+            0.5176970362663269,
+            0.25763365626335144
+          ],
+          "uvMax": [
+            0.7323029637336731,
+            0.49236634373664856
+          ]
+        },
+        {
+          "name": "LED surround",
+          "faceCount": 54,
+          "loopCount": 216,
+          "uvMin": [
+            0.5097726583480835,
+            0.26251885294914246
+          ],
+          "uvMax": [
+            0.7402273416519165,
+            0.48748114705085754
+          ]
+        },
+        {
+          "name": "LED surround.001",
+          "faceCount": 54,
+          "loopCount": 216,
+          "uvMin": [
+            0.5097726583480835,
+            0.26251885294914246
+          ],
+          "uvMax": [
+            0.7402273416519165,
+            0.48748114705085754
+          ]
+        },
+        {
+          "name": "Windshield wiper",
+          "faceCount": 122,
+          "loopCount": 528,
+          "uvMin": [
+            0.5190706253051758,
+            0.25802138447761536
+          ],
+          "uvMax": [
+            0.7309293746948242,
+            0.49197861552238464
+          ]
+        },
+        {
+          "name": "LED surround.002",
+          "faceCount": 54,
+          "loopCount": 216,
+          "uvMin": [
+            0.5097726583480835,
+            0.26251885294914246
+          ],
+          "uvMax": [
+            0.7402273416519165,
+            0.48748114705085754
+          ]
+        },
+        {
+          "name": "LED surround.003",
+          "faceCount": 54,
+          "loopCount": 216,
+          "uvMin": [
+            0.5097726583480835,
+            0.26251885294914246
+          ],
+          "uvMax": [
+            0.7402273416519165,
+            0.48748114705085754
+          ]
+        },
+        {
+          "name": "Windshield wiper.001",
+          "faceCount": 122,
+          "loopCount": 528,
+          "uvMin": [
+            0.5190706253051758,
+            0.25802138447761536
+          ],
+          "uvMax": [
+            0.7309293746948242,
+            0.49197861552238464
+          ]
+        },
+        {
+          "name": "Panel top glare shield",
+          "faceCount": 54,
+          "loopCount": 216,
+          "uvMin": [
+            0.508455216884613,
+            0.26222363114356995
+          ],
+          "uvMax": [
+            0.741544783115387,
+            0.48777636885643005
+          ]
+        },
+        {
+          "name": "Cab windshield gasket",
+          "faceCount": 54,
+          "loopCount": 216,
+          "uvMin": [
+            0.5219905376434326,
+            0.25798299908638
+          ],
+          "uvMax": [
+            0.7280094623565674,
+            0.49201700091362
+          ]
+        },
+        {
+          "name": "Cab windshield gasket.001",
+          "faceCount": 54,
+          "loopCount": 216,
+          "uvMin": [
+            0.5219905376434326,
+            0.25798299908638
+          ],
+          "uvMax": [
+            0.7280094623565674,
+            0.49201700091362
+          ]
+        },
+        {
+          "name": "Cab windshield gasket.002",
+          "faceCount": 54,
+          "loopCount": 216,
+          "uvMin": [
+            0.5077159404754639,
+            0.27199050784111023
+          ],
+          "uvMax": [
+            0.7422840595245361,
+            0.47800949215888977
+          ]
+        },
+        {
+          "name": "Cab windshield gasket.003",
+          "faceCount": 54,
+          "loopCount": 216,
+          "uvMin": [
+            0.5077159404754639,
+            0.27199050784111023
+          ],
+          "uvMax": [
+            0.7422840595245361,
+            0.47800949215888977
+          ]
+        },
+        {
+          "name": "Blank auxiliary panel surround",
+          "faceCount": 54,
+          "loopCount": 216,
+          "uvMin": [
+            0.5089406371116638,
+            0.26192477345466614
+          ],
+          "uvMax": [
+            0.7410593628883362,
+            0.48807522654533386
+          ]
+        },
+        {
+          "name": "Blank auxiliary panel surround.001",
+          "faceCount": 54,
+          "loopCount": 216,
+          "uvMin": [
+            0.5089406371116638,
+            0.26192477345466614
+          ],
+          "uvMax": [
+            0.7410593628883362,
+            0.48807522654533386
+          ]
+        },
+        {
+          "name": "TractionLever grip",
+          "faceCount": 288,
+          "loopCount": 1104,
+          "uvMin": [
+            0.5368749499320984,
+            0.2732419967651367
+          ],
+          "uvMax": [
+            0.7131249904632568,
+            0.4767579734325409
+          ]
+        },
+        {
+          "name": "Documentation floor",
+          "faceCount": 6,
+          "loopCount": 24,
+          "uvMin": [
+            0.5074999928474426,
+            0.2574999928474426
+          ],
+          "uvMax": [
+            0.7425000071525574,
+            0.4925000071525574
+          ]
+        }
+      ]
+    },
+    {
+      "tileId": 12,
+      "row": 3,
+      "column": 4,
+      "label": "Antislip floor",
+      "uvRect": [
+        0.7575,
+        0.2575,
+        0.9925,
+        0.4925
+      ],
+      "faceCount": 197,
+      "loopCount": 788,
+      "objects": [
+        "Passenger floor",
+        "Cab antislip floor 24cm UV panels"
+      ],
+      "objectUsage": [
+        {
+          "name": "Passenger floor",
+          "faceCount": 54,
+          "loopCount": 216,
+          "uvMin": [
+            0.7575752139091492,
+            0.25757524371147156
+          ],
+          "uvMax": [
+            0.9924247860908508,
+            0.49242475628852844
+          ]
+        },
+        {
+          "name": "Cab antislip floor 24cm UV panels",
+          "faceCount": 143,
+          "loopCount": 572,
+          "uvMin": [
+            0.7574999928474426,
+            0.2574999928474426
+          ],
+          "uvMax": [
+            0.9925000071525574,
+            0.4925000071525574
+          ]
+        }
+      ]
+    },
+    {
+      "tileId": 13,
+      "row": 4,
+      "column": 1,
+      "label": "Underbody mechanical steel",
+      "uvRect": [
+        0.0075,
+        0.0075,
+        0.2425,
+        0.2425
+      ],
+      "faceCount": 2028,
+      "loopCount": 8352,
+      "objects": [
+        "Underframe",
+        "Door step",
+        "Door step.001",
+        "Door step.002",
+        "Door step.003",
+        "Door step.004",
+        "Door step.005",
+        "Automatic coupler",
+        "Automatic coupler.001",
+        "Bogie frame",
+        "Suspension spring housing",
+        "Suspension spring housing.001",
+        "Suspension spring housing.002",
+        "Suspension spring housing.003",
+        "Underfloor air reservoir",
+        "Bogie frame.001",
+        "Suspension spring housing.004",
+        "Suspension spring housing.005",
+        "Suspension spring housing.006",
+        "Suspension spring housing.007",
+        "Underfloor air reservoir.001",
+        "Pantograph lower arm",
+        "Pantograph upper arm",
+        "Pantograph lower arm.001",
+        "Pantograph upper arm.001",
+        "Seat pedestal",
+        "TractionLever base",
+        "BrakeLever base",
+        "Driver foot pedal",
+        "Driver foot pedal.001"
+      ],
+      "objectUsage": [
+        {
+          "name": "Underframe",
+          "faceCount": 54,
+          "loopCount": 216,
+          "uvMin": [
+            0.007827774621546268,
+            0.007827774621546268
+          ],
+          "uvMax": [
+            0.2421722263097763,
+            0.2421722263097763
+          ]
+        },
+        {
+          "name": "Door step",
+          "faceCount": 54,
+          "loopCount": 216,
+          "uvMin": [
+            0.008512218482792377,
+            0.008512218482792377
+          ],
+          "uvMax": [
+            0.2414877861738205,
+            0.2414877861738205
+          ]
+        },
+        {
+          "name": "Door step.001",
+          "faceCount": 54,
+          "loopCount": 216,
+          "uvMin": [
+            0.008512218482792377,
+            0.008512218482792377
+          ],
+          "uvMax": [
+            0.2414877861738205,
+            0.2414877861738205
+          ]
+        },
+        {
+          "name": "Door step.002",
+          "faceCount": 54,
+          "loopCount": 216,
+          "uvMin": [
+            0.008512218482792377,
+            0.008512218482792377
+          ],
+          "uvMax": [
+            0.2414877861738205,
+            0.2414877861738205
+          ]
+        },
+        {
+          "name": "Door step.003",
+          "faceCount": 54,
+          "loopCount": 216,
+          "uvMin": [
+            0.008512218482792377,
+            0.008512218482792377
+          ],
+          "uvMax": [
+            0.2414877861738205,
+            0.2414877861738205
+          ]
+        },
+        {
+          "name": "Door step.004",
+          "faceCount": 54,
+          "loopCount": 216,
+          "uvMin": [
+            0.008512218482792377,
+            0.008512218482792377
+          ],
+          "uvMax": [
+            0.2414877861738205,
+            0.2414877861738205
+          ]
+        },
+        {
+          "name": "Door step.005",
+          "faceCount": 54,
+          "loopCount": 216,
+          "uvMin": [
+            0.008512218482792377,
+            0.008512218482792377
+          ],
+          "uvMax": [
+            0.2414877861738205,
+            0.2414877861738205
+          ]
+        },
+        {
+          "name": "Automatic coupler",
+          "faceCount": 122,
+          "loopCount": 528,
+          "uvMin": [
+            0.00858677551150322,
+            0.00858677551150322
+          ],
+          "uvMax": [
+            0.24141322076320648,
+            0.24141322076320648
+          ]
+        },
+        {
+          "name": "Automatic coupler.001",
+          "faceCount": 122,
+          "loopCount": 528,
+          "uvMin": [
+            0.00858677551150322,
+            0.00858677551150322
+          ],
+          "uvMax": [
+            0.24141322076320648,
+            0.24141322076320648
+          ]
+        },
+        {
+          "name": "Bogie frame",
+          "faceCount": 54,
+          "loopCount": 216,
+          "uvMin": [
+            0.009450648911297321,
+            0.009450648911297321
+          ],
+          "uvMax": [
+            0.24054935574531555,
+            0.24054935574531555
+          ]
+        },
+        {
+          "name": "Suspension spring housing",
+          "faceCount": 54,
+          "loopCount": 216,
+          "uvMin": [
+            0.011323877610266209,
+            0.011323877610266209
+          ],
+          "uvMax": [
+            0.23867611587047577,
+            0.23867611587047577
+          ]
+        },
+        {
+          "name": "Suspension spring housing.001",
+          "faceCount": 54,
+          "loopCount": 216,
+          "uvMin": [
+            0.011323877610266209,
+            0.011323877610266209
+          ],
+          "uvMax": [
+            0.23867611587047577,
+            0.23867611587047577
+          ]
+        },
+        {
+          "name": "Suspension spring housing.002",
+          "faceCount": 54,
+          "loopCount": 216,
+          "uvMin": [
+            0.011323877610266209,
+            0.011323877610266209
+          ],
+          "uvMax": [
+            0.23867611587047577,
+            0.23867611587047577
+          ]
+        },
+        {
+          "name": "Suspension spring housing.003",
+          "faceCount": 54,
+          "loopCount": 216,
+          "uvMin": [
+            0.011323877610266209,
+            0.011323877610266209
+          ],
+          "uvMax": [
+            0.23867611587047577,
+            0.23867611587047577
+          ]
+        },
+        {
+          "name": "Underfloor air reservoir",
+          "faceCount": 54,
+          "loopCount": 216,
+          "uvMin": [
+            0.013399707153439522,
+            0.024707477539777756
+          ],
+          "uvMax": [
+            0.23660029470920563,
+            0.22529251873493195
+          ]
+        },
+        {
+          "name": "Bogie frame.001",
+          "faceCount": 54,
+          "loopCount": 216,
+          "uvMin": [
+            0.009450648911297321,
+            0.009450648911297321
+          ],
+          "uvMax": [
+            0.24054935574531555,
+            0.24054935574531555
+          ]
+        },
+        {
+          "name": "Suspension spring housing.004",
+          "faceCount": 54,
+          "loopCount": 216,
+          "uvMin": [
+            0.011323877610266209,
+            0.011323877610266209
+          ],
+          "uvMax": [
+            0.23867611587047577,
+            0.23867611587047577
+          ]
+        },
+        {
+          "name": "Suspension spring housing.005",
+          "faceCount": 54,
+          "loopCount": 216,
+          "uvMin": [
+            0.011323877610266209,
+            0.011323877610266209
+          ],
+          "uvMax": [
+            0.23867611587047577,
+            0.23867611587047577
+          ]
+        },
+        {
+          "name": "Suspension spring housing.006",
+          "faceCount": 54,
+          "loopCount": 216,
+          "uvMin": [
+            0.011323877610266209,
+            0.011323877610266209
+          ],
+          "uvMax": [
+            0.23867611587047577,
+            0.23867611587047577
+          ]
+        },
+        {
+          "name": "Suspension spring housing.007",
+          "faceCount": 54,
+          "loopCount": 216,
+          "uvMin": [
+            0.011323877610266209,
+            0.011323877610266209
+          ],
+          "uvMax": [
+            0.23867611587047577,
+            0.23867611587047577
+          ]
+        },
+        {
+          "name": "Underfloor air reservoir.001",
+          "faceCount": 54,
+          "loopCount": 216,
+          "uvMin": [
+            0.013399707153439522,
+            0.024707477539777756
+          ],
+          "uvMax": [
+            0.23660029470920563,
+            0.22529251873493195
+          ]
+        },
+        {
+          "name": "Pantograph lower arm",
+          "faceCount": 122,
+          "loopCount": 528,
+          "uvMin": [
+            0.013128957711160183,
+            0.007880778051912785
+          ],
+          "uvMax": [
+            0.23687104880809784,
+            0.2421192228794098
+          ]
+        },
+        {
+          "name": "Pantograph upper arm",
+          "faceCount": 122,
+          "loopCount": 528,
+          "uvMin": [
+            0.013811255805194378,
+            0.007961731404066086
+          ],
+          "uvMax": [
+            0.23618873953819275,
+            0.24203826487064362
+          ]
+        },
+        {
+          "name": "Pantograph lower arm.001",
+          "faceCount": 122,
+          "loopCount": 528,
+          "uvMin": [
+            0.013128957711160183,
+            0.007880778051912785
+          ],
+          "uvMax": [
+            0.23687104880809784,
+            0.2421192228794098
+          ]
+        },
+        {
+          "name": "Pantograph upper arm.001",
+          "faceCount": 122,
+          "loopCount": 528,
+          "uvMin": [
+            0.013811255805194378,
+            0.007961731404066086
+          ],
+          "uvMax": [
+            0.23618873953819275,
+            0.24203826487064362
+          ]
+        },
+        {
+          "name": "Seat pedestal",
+          "faceCount": 54,
+          "loopCount": 216,
+          "uvMin": [
+            0.013006391003727913,
+            0.01194063201546669
+          ],
+          "uvMax": [
+            0.23699361085891724,
+            0.2380593717098236
+          ]
+        },
+        {
+          "name": "TractionLever base",
+          "faceCount": 54,
+          "loopCount": 216,
+          "uvMin": [
+            0.013757253997027874,
+            0.013757253997027874
+          ],
+          "uvMax": [
+            0.23624274134635925,
+            0.23624274134635925
+          ]
+        },
+        {
+          "name": "BrakeLever base",
+          "faceCount": 54,
+          "loopCount": 216,
+          "uvMin": [
+            0.013757253997027874,
+            0.013757253997027874
+          ],
+          "uvMax": [
+            0.23624274134635925,
+            0.23624274134635925
+          ]
+        },
+        {
+          "name": "Driver foot pedal",
+          "faceCount": 54,
+          "loopCount": 216,
+          "uvMin": [
+            0.01569403149187565,
+            0.01569403149187565
+          ],
+          "uvMax": [
+            0.2343059629201889,
+            0.2343059629201889
+          ]
+        },
+        {
+          "name": "Driver foot pedal.001",
+          "faceCount": 54,
+          "loopCount": 216,
+          "uvMin": [
+            0.01569403149187565,
+            0.01569403149187565
+          ],
+          "uvMax": [
+            0.2343059629201889,
+            0.2343059629201889
+          ]
+        }
+      ]
+    },
+    {
+      "tileId": 14,
+      "row": 4,
+      "column": 2,
+      "label": "Vent grille",
+      "uvRect": [
+        0.2575,
+        0.0075,
+        0.4925,
+        0.2425
+      ],
+      "faceCount": 108,
+      "loopCount": 432,
+      "objects": [
+        "Roof ventilation grille",
+        "Roof ventilation grille.001"
+      ],
+      "objectUsage": [
+        {
+          "name": "Roof ventilation grille",
+          "faceCount": 54,
+          "loopCount": 216,
+          "uvMin": [
+            0.2609414756298065,
+            0.010941487736999989
+          ],
+          "uvMax": [
+            0.4890585243701935,
+            0.2390585094690323
+          ]
+        },
+        {
+          "name": "Roof ventilation grille.001",
+          "faceCount": 54,
+          "loopCount": 216,
+          "uvMin": [
+            0.2609414756298065,
+            0.010941487736999989
+          ],
+          "uvMax": [
+            0.4890585243701935,
+            0.2390585094690323
+          ]
+        }
+      ]
+    },
+    {
+      "tileId": 15,
+      "row": 4,
+      "column": 3,
+      "label": "Pantograph copper contact wear",
+      "uvRect": [
+        0.5075,
+        0.0075,
+        0.7425,
+        0.2425
+      ],
+      "faceCount": 54,
+      "loopCount": 216,
+      "objects": [
+        "Pantograph copper contact strip"
+      ],
+      "objectUsage": [
+        {
+          "name": "Pantograph copper contact strip",
+          "faceCount": 54,
+          "loopCount": 216,
+          "uvMin": [
+            0.5081478357315063,
+            0.015366270206868649
+          ],
+          "uvMax": [
+            0.7418521642684937,
+            0.23463372886180878
+          ]
+        }
+      ]
+    },
+    {
+      "tileId": 16,
+      "row": 4,
+      "column": 4,
+      "label": "Fine smudged safety glazing",
+      "uvRect": [
+        0.7575,
+        0.0075,
+        0.9925,
+        0.2425
+      ],
+      "faceCount": 1854,
+      "loopCount": 7416,
+      "objects": [
+        "Window glass",
+        "Window glass.001",
+        "Window glass.002",
+        "Window glass.003",
+        "Window glass.004",
+        "Window glass.005",
+        "Window glass.006",
+        "Window glass.007",
+        "Window glass.008",
+        "Window glass.009",
+        "Door safety glazing",
+        "Door safety glazing.001",
+        "Door safety glazing.002",
+        "Door safety glazing.003",
+        "Door safety glazing.004",
+        "Door safety glazing.005",
+        "Window glass.010",
+        "Window glass.011",
+        "Window glass.012",
+        "Window glass.013",
+        "Window glass.014",
+        "Window glass.015",
+        "Window glass.016",
+        "Window glass.017",
+        "Window glass.018",
+        "Window glass.019",
+        "Door safety glazing.006",
+        "Door safety glazing.007",
+        "Door safety glazing.008",
+        "Door safety glazing.009",
+        "Door safety glazing.010",
+        "Door safety glazing.011",
+        "Cab windshield",
+        "Cab windshield.001",
+        "Side safety glazing",
+        "Side safety glazing.001",
+        "Front safety glazing"
+      ],
+      "objectUsage": [
+        {
+          "name": "Window glass",
+          "faceCount": 54,
+          "loopCount": 216,
+          "uvMin": [
+            0.7582701444625854,
+            0.008270125836133957
+          ],
+          "uvMax": [
+            0.9917298555374146,
+            0.24172987043857574
+          ]
+        },
+        {
+          "name": "Window glass.001",
+          "faceCount": 54,
+          "loopCount": 216,
+          "uvMin": [
+            0.7582701444625854,
+            0.008270125836133957
+          ],
+          "uvMax": [
+            0.9917298555374146,
+            0.24172987043857574
+          ]
+        },
+        {
+          "name": "Window glass.002",
+          "faceCount": 54,
+          "loopCount": 216,
+          "uvMin": [
+            0.7582701444625854,
+            0.008270125836133957
+          ],
+          "uvMax": [
+            0.9917298555374146,
+            0.24172987043857574
+          ]
+        },
+        {
+          "name": "Window glass.003",
+          "faceCount": 54,
+          "loopCount": 216,
+          "uvMin": [
+            0.7582701444625854,
+            0.008270125836133957
+          ],
+          "uvMax": [
+            0.9917298555374146,
+            0.24172987043857574
+          ]
+        },
+        {
+          "name": "Window glass.004",
+          "faceCount": 54,
+          "loopCount": 216,
+          "uvMin": [
+            0.7582701444625854,
+            0.008270125836133957
+          ],
+          "uvMax": [
+            0.9917298555374146,
+            0.24172987043857574
+          ]
+        },
+        {
+          "name": "Window glass.005",
+          "faceCount": 54,
+          "loopCount": 216,
+          "uvMin": [
+            0.7582701444625854,
+            0.008270125836133957
+          ],
+          "uvMax": [
+            0.9917298555374146,
+            0.24172987043857574
+          ]
+        },
+        {
+          "name": "Window glass.006",
+          "faceCount": 54,
+          "loopCount": 216,
+          "uvMin": [
+            0.7582701444625854,
+            0.008270125836133957
+          ],
+          "uvMax": [
+            0.9917298555374146,
+            0.24172987043857574
+          ]
+        },
+        {
+          "name": "Window glass.007",
+          "faceCount": 54,
+          "loopCount": 216,
+          "uvMin": [
+            0.7582701444625854,
+            0.008270125836133957
+          ],
+          "uvMax": [
+            0.9917298555374146,
+            0.24172987043857574
+          ]
+        },
+        {
+          "name": "Window glass.008",
+          "faceCount": 54,
+          "loopCount": 216,
+          "uvMin": [
+            0.7582701444625854,
+            0.008270125836133957
+          ],
+          "uvMax": [
+            0.9917298555374146,
+            0.24172987043857574
+          ]
+        },
+        {
+          "name": "Window glass.009",
+          "faceCount": 54,
+          "loopCount": 216,
+          "uvMin": [
+            0.7582701444625854,
+            0.008270125836133957
+          ],
+          "uvMax": [
+            0.9917298555374146,
+            0.24172987043857574
+          ]
+        },
+        {
+          "name": "Door safety glazing",
+          "faceCount": 54,
+          "loopCount": 216,
+          "uvMin": [
+            0.7586205005645752,
+            0.008151083253324032
+          ],
+          "uvMax": [
+            0.9913794994354248,
+            0.2418489158153534
+          ]
+        },
+        {
+          "name": "Door safety glazing.001",
+          "faceCount": 54,
+          "loopCount": 216,
+          "uvMin": [
+            0.7586205005645752,
+            0.008151083253324032
+          ],
+          "uvMax": [
+            0.9913794994354248,
+            0.2418489158153534
+          ]
+        },
+        {
+          "name": "Door safety glazing.002",
+          "faceCount": 54,
+          "loopCount": 216,
+          "uvMin": [
+            0.7586205005645752,
+            0.008151083253324032
+          ],
+          "uvMax": [
+            0.9913794994354248,
+            0.2418489158153534
+          ]
+        },
+        {
+          "name": "Door safety glazing.003",
+          "faceCount": 54,
+          "loopCount": 216,
+          "uvMin": [
+            0.7586205005645752,
+            0.008151083253324032
+          ],
+          "uvMax": [
+            0.9913794994354248,
+            0.2418489158153534
+          ]
+        },
+        {
+          "name": "Door safety glazing.004",
+          "faceCount": 54,
+          "loopCount": 216,
+          "uvMin": [
+            0.7586205005645752,
+            0.008151083253324032
+          ],
+          "uvMax": [
+            0.9913794994354248,
+            0.2418489158153534
+          ]
+        },
+        {
+          "name": "Door safety glazing.005",
+          "faceCount": 54,
+          "loopCount": 216,
+          "uvMin": [
+            0.7586205005645752,
+            0.008151083253324032
+          ],
+          "uvMax": [
+            0.9913794994354248,
+            0.2418489158153534
+          ]
+        },
+        {
+          "name": "Window glass.010",
+          "faceCount": 54,
+          "loopCount": 216,
+          "uvMin": [
+            0.7582701444625854,
+            0.008270125836133957
+          ],
+          "uvMax": [
+            0.9917298555374146,
+            0.24172987043857574
+          ]
+        },
+        {
+          "name": "Window glass.011",
+          "faceCount": 54,
+          "loopCount": 216,
+          "uvMin": [
+            0.7582701444625854,
+            0.008270125836133957
+          ],
+          "uvMax": [
+            0.9917298555374146,
+            0.24172987043857574
+          ]
+        },
+        {
+          "name": "Window glass.012",
+          "faceCount": 54,
+          "loopCount": 216,
+          "uvMin": [
+            0.7582701444625854,
+            0.008270125836133957
+          ],
+          "uvMax": [
+            0.9917298555374146,
+            0.24172987043857574
+          ]
+        },
+        {
+          "name": "Window glass.013",
+          "faceCount": 54,
+          "loopCount": 216,
+          "uvMin": [
+            0.7582701444625854,
+            0.008270125836133957
+          ],
+          "uvMax": [
+            0.9917298555374146,
+            0.24172987043857574
+          ]
+        },
+        {
+          "name": "Window glass.014",
+          "faceCount": 54,
+          "loopCount": 216,
+          "uvMin": [
+            0.7582701444625854,
+            0.008270125836133957
+          ],
+          "uvMax": [
+            0.9917298555374146,
+            0.24172987043857574
+          ]
+        },
+        {
+          "name": "Window glass.015",
+          "faceCount": 54,
+          "loopCount": 216,
+          "uvMin": [
+            0.7582701444625854,
+            0.008270125836133957
+          ],
+          "uvMax": [
+            0.9917298555374146,
+            0.24172987043857574
+          ]
+        },
+        {
+          "name": "Window glass.016",
+          "faceCount": 54,
+          "loopCount": 216,
+          "uvMin": [
+            0.7582701444625854,
+            0.008270125836133957
+          ],
+          "uvMax": [
+            0.9917298555374146,
+            0.24172987043857574
+          ]
+        },
+        {
+          "name": "Window glass.017",
+          "faceCount": 54,
+          "loopCount": 216,
+          "uvMin": [
+            0.7582701444625854,
+            0.008270125836133957
+          ],
+          "uvMax": [
+            0.9917298555374146,
+            0.24172987043857574
+          ]
+        },
+        {
+          "name": "Window glass.018",
+          "faceCount": 54,
+          "loopCount": 216,
+          "uvMin": [
+            0.7582701444625854,
+            0.008270125836133957
+          ],
+          "uvMax": [
+            0.9917298555374146,
+            0.24172987043857574
+          ]
+        },
+        {
+          "name": "Window glass.019",
+          "faceCount": 54,
+          "loopCount": 216,
+          "uvMin": [
+            0.7582701444625854,
+            0.008270125836133957
+          ],
+          "uvMax": [
+            0.9917298555374146,
+            0.24172987043857574
+          ]
+        },
+        {
+          "name": "Door safety glazing.006",
+          "faceCount": 54,
+          "loopCount": 216,
+          "uvMin": [
+            0.7586205005645752,
+            0.008151083253324032
+          ],
+          "uvMax": [
+            0.9913794994354248,
+            0.2418489158153534
+          ]
+        },
+        {
+          "name": "Door safety glazing.007",
+          "faceCount": 54,
+          "loopCount": 216,
+          "uvMin": [
+            0.7586205005645752,
+            0.008151083253324032
+          ],
+          "uvMax": [
+            0.9913794994354248,
+            0.2418489158153534
+          ]
+        },
+        {
+          "name": "Door safety glazing.008",
+          "faceCount": 54,
+          "loopCount": 216,
+          "uvMin": [
+            0.7586205005645752,
+            0.008151083253324032
+          ],
+          "uvMax": [
+            0.9913794994354248,
+            0.2418489158153534
+          ]
+        },
+        {
+          "name": "Door safety glazing.009",
+          "faceCount": 54,
+          "loopCount": 216,
+          "uvMin": [
+            0.7586205005645752,
+            0.008151083253324032
+          ],
+          "uvMax": [
+            0.9913794994354248,
+            0.2418489158153534
+          ]
+        },
+        {
+          "name": "Door safety glazing.010",
+          "faceCount": 54,
+          "loopCount": 216,
+          "uvMin": [
+            0.7586205005645752,
+            0.008151083253324032
+          ],
+          "uvMax": [
+            0.9913794994354248,
+            0.2418489158153534
+          ]
+        },
+        {
+          "name": "Door safety glazing.011",
+          "faceCount": 54,
+          "loopCount": 216,
+          "uvMin": [
+            0.7586205005645752,
+            0.008151083253324032
+          ],
+          "uvMax": [
+            0.9913794994354248,
+            0.2418489158153534
+          ]
+        },
+        {
+          "name": "Cab windshield",
+          "faceCount": 54,
+          "loopCount": 216,
+          "uvMin": [
+            0.7579737305641174,
+            0.008614391088485718
+          ],
+          "uvMax": [
+            0.9920262694358826,
+            0.24138560891151428
+          ]
+        },
+        {
+          "name": "Cab windshield.001",
+          "faceCount": 54,
+          "loopCount": 216,
+          "uvMin": [
+            0.7579737305641174,
+            0.008614391088485718
+          ],
+          "uvMax": [
+            0.9920262694358826,
+            0.24138560891151428
+          ]
+        },
+        {
+          "name": "Side safety glazing",
+          "faceCount": 6,
+          "loopCount": 24,
+          "uvMin": [
+            0.7574999928474426,
+            0.007499999832361937
+          ],
+          "uvMax": [
+            0.9925000071525574,
+            0.24250000715255737
+          ]
+        },
+        {
+          "name": "Side safety glazing.001",
+          "faceCount": 6,
+          "loopCount": 24,
+          "uvMin": [
+            0.7574999928474426,
+            0.007499999832361937
+          ],
+          "uvMax": [
+            0.9925000071525574,
+            0.24250000715255737
+          ]
+        },
+        {
+          "name": "Front safety glazing",
+          "faceCount": 6,
+          "loopCount": 24,
+          "uvMin": [
+            0.7574999928474426,
+            0.007499999832361937
+          ],
+          "uvMax": [
+            0.9925000071525574,
+            0.24250000715255737
+          ]
+        }
+      ]
+    }
+  ]
+}

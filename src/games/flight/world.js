@@ -1,6 +1,7 @@
 import { readSettings } from '../../shared/settings.js';
 import * as THREE from 'three';
 import { GLTFLoader } from 'three/addons/loaders/GLTFLoader.js';
+import { RoomEnvironment } from 'three/addons/environments/RoomEnvironment.js';
 import { MAPS, BASE, RUNWAY } from './config.js';
 import { WAYPOINTS } from './mission.js';
 export function aircraftQuaternion(s){return new THREE.Quaternion().setFromEuler(new THREE.Euler(-s.pitch,-s.heading,s.bank,'YXZ'));}
@@ -9,7 +10,7 @@ export class FlightWorld {
   constructor(canvas){
     this.renderer=new THREE.WebGLRenderer({canvas,antialias:true,alpha:false,powerPreference:'high-performance'});
     this.renderer.setPixelRatio(Math.min(devicePixelRatio,readSettings().quality==='low'?1:1.6));this.renderer.shadowMap.enabled=true;this.renderer.shadowMap.type=THREE.PCFShadowMap;this.renderer.outputColorSpace=THREE.SRGBColorSpace;this.renderer.toneMapping=THREE.ACESFilmicToneMapping;this.renderer.toneMappingExposure=1.16;
-    this.scene=new THREE.Scene();this.camera=new THREE.PerspectiveCamera(58,1,.07,14000);this.group=new THREE.Group();this.scene.add(this.group);
+    this.scene=new THREE.Scene();const room=new RoomEnvironment();const pmrem=new THREE.PMREMGenerator(this.renderer);this.environment=pmrem.fromScene(room,.04).texture;this.scene.environment=this.environment;this.scene.environmentIntensity=.65;room.dispose();pmrem.dispose();this.camera=new THREE.PerspectiveCamera(58,1,.07,14000);this.group=new THREE.Group();this.scene.add(this.group);
     this.scene.add(new THREE.HemisphereLight(0xe5f4ff,0x7f886f,2.1));const sun=new THREE.DirectionalLight(0xfff4dc,2.4);sun.position.set(-150,220,80);sun.castShadow=true;sun.shadow.mapSize.set(1024,1024);sun.shadow.camera.left=-45;sun.shadow.camera.right=45;sun.shadow.camera.top=50;sun.shadow.camera.bottom=-50;sun.shadow.camera.near=1;sun.shadow.camera.far=460;sun.shadow.bias=-.0002;this.scene.add(sun);this.sun=sun;
     this.aircraft=new THREE.Group();this.cab=new THREE.Group();this.scene.add(this.aircraft,this.cab);this.props=[];this.surfaces=[];this.loaded=false;this.view='chase';this.gates=[];
     this.setMap('coast');this.resize();this.loadAssets();

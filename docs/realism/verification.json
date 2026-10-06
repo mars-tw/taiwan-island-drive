@@ -1,0 +1,5709 @@
+{
+  "schema": 1,
+  "status": "VERIFIED",
+  "method": "Deterministic local GLB binary/accessor inspection; no rendering or model inference",
+  "reviewContext": {
+    "car": "asset author self-verification",
+    "train": "separate context from asset author",
+    "flight": "separate context from asset author",
+    "modelComparison": false
+  },
+  "uvConvention": "glTF V is converted to Blender V with 1 - V",
+  "uvTolerance": 0.0001,
+  "modelCount": 8,
+  "familyCount": 3,
+  "totalTriangles": 219396,
+  "totalUvVertexCount": 270107,
+  "families": [
+    {
+      "family": "car",
+      "tileMap": "docs/realism/car/tile-map.json",
+      "sourceTexture": {
+        "file": "public/textures/car-detail-atlas.png",
+        "bytes": 2847387,
+        "sha256": "dd17dfcd5ce2f222277cca265e8a2d04876d4b6c556d3d98be869505bff7281a",
+        "dimensions": [
+          1254,
+          1254
+        ],
+        "pngChunks": [
+          "IHDR",
+          "IDAT",
+          "IEND"
+        ],
+        "privatePathScan": {
+          "homePathMatchCount": 0,
+          "bytesScanned": 2847387
+        }
+      },
+      "modelCount": 4,
+      "usedTileCount": 16,
+      "usedTileIds": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16
+      ],
+      "tiles": [
+        {
+          "tileId": 1,
+          "label": "body_panel",
+          "authoringFaceCount": 2761,
+          "authoringLoopCount": 11222,
+          "actualUvVertexCount": 6070,
+          "primitiveCount": 4,
+          "triangleCount": 5700
+        },
+        {
+          "tileId": 2,
+          "label": "door_panel",
+          "authoringFaceCount": 1716,
+          "authoringLoopCount": 7174,
+          "actualUvVertexCount": 2916,
+          "primitiveCount": 4,
+          "triangleCount": 3742
+        },
+        {
+          "tileId": 3,
+          "label": "hood_vents",
+          "authoringFaceCount": 51,
+          "authoringLoopCount": 216,
+          "actualUvVertexCount": 126,
+          "primitiveCount": 4,
+          "triangleCount": 114
+        },
+        {
+          "tileId": 4,
+          "label": "roof_paint",
+          "authoringFaceCount": 270,
+          "authoringLoopCount": 1080,
+          "actualUvVertexCount": 1060,
+          "primitiveCount": 4,
+          "triangleCount": 540
+        },
+        {
+          "tileId": 5,
+          "label": "brushed_alloy",
+          "authoringFaceCount": 3000,
+          "authoringLoopCount": 13152,
+          "actualUvVertexCount": 11378,
+          "primitiveCount": 20,
+          "triangleCount": 7152
+        },
+        {
+          "tileId": 6,
+          "label": "polished_rim",
+          "authoringFaceCount": 10104,
+          "authoringLoopCount": 41440,
+          "actualUvVertexCount": 31296,
+          "primitiveCount": 32,
+          "triangleCount": 21232
+        },
+        {
+          "tileId": 7,
+          "label": "rubber_sidewall",
+          "authoringFaceCount": 1178,
+          "authoringLoopCount": 5648,
+          "actualUvVertexCount": 2252,
+          "primitiveCount": 17,
+          "triangleCount": 3292
+        },
+        {
+          "tileId": 8,
+          "label": "tire_tread",
+          "authoringFaceCount": 12768,
+          "authoringLoopCount": 51072,
+          "actualUvVertexCount": 47104,
+          "primitiveCount": 16,
+          "triangleCount": 25536
+        },
+        {
+          "tileId": 9,
+          "label": "dashboard_vinyl",
+          "authoringFaceCount": 1416,
+          "authoringLoopCount": 5664,
+          "actualUvVertexCount": 5664,
+          "primitiveCount": 4,
+          "triangleCount": 2832
+        },
+        {
+          "tileId": 10,
+          "label": "seat_leather",
+          "authoringFaceCount": 1728,
+          "authoringLoopCount": 6912,
+          "actualUvVertexCount": 6912,
+          "primitiveCount": 4,
+          "triangleCount": 3456
+        },
+        {
+          "tileId": 11,
+          "label": "charcoal_trim",
+          "authoringFaceCount": 10360,
+          "authoringLoopCount": 37384,
+          "actualUvVertexCount": 26339,
+          "primitiveCount": 4,
+          "triangleCount": 16664
+        },
+        {
+          "tileId": 12,
+          "label": "perforated_grille",
+          "authoringFaceCount": 216,
+          "authoringLoopCount": 864,
+          "actualUvVertexCount": 864,
+          "primitiveCount": 4,
+          "triangleCount": 432
+        },
+        {
+          "tileId": 13,
+          "label": "subtle_glass",
+          "authoringFaceCount": 476,
+          "authoringLoopCount": 1904,
+          "actualUvVertexCount": 1904,
+          "primitiveCount": 8,
+          "triangleCount": 952
+        },
+        {
+          "tileId": 14,
+          "label": "headlamp_optics",
+          "authoringFaceCount": 520,
+          "authoringLoopCount": 2208,
+          "actualUvVertexCount": 2060,
+          "primitiveCount": 4,
+          "triangleCount": 1168
+        },
+        {
+          "tileId": 15,
+          "label": "red_tail_optics",
+          "authoringFaceCount": 432,
+          "authoringLoopCount": 1728,
+          "actualUvVertexCount": 1728,
+          "primitiveCount": 4,
+          "triangleCount": 864
+        },
+        {
+          "tileId": 16,
+          "label": "carbon_vent",
+          "authoringFaceCount": 648,
+          "authoringLoopCount": 2592,
+          "actualUvVertexCount": 2464,
+          "primitiveCount": 4,
+          "triangleCount": 1296
+        }
+      ]
+    },
+    {
+      "family": "train",
+      "tileMap": "docs/realism/train/tile-map.json",
+      "sourceTexture": {
+        "file": "public/textures/train-detail-atlas.png",
+        "bytes": 2701470,
+        "sha256": "0284e44b73b0fb3809fe46d3afe8db2d546b5e821dbac1b4935cfae18851e15b",
+        "dimensions": [
+          1254,
+          1254
+        ],
+        "pngChunks": [
+          "IHDR",
+          "caBX",
+          "IDAT",
+          "IEND"
+        ],
+        "privatePathScan": {
+          "homePathMatchCount": 0,
+          "bytesScanned": 2701470
+        }
+      },
+      "modelCount": 2,
+      "usedTileCount": 16,
+      "usedTileIds": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16
+      ],
+      "tiles": [
+        {
+          "tileId": 1,
+          "label": "Ivory teal body A",
+          "authoringFaceCount": 1710,
+          "authoringLoopCount": 6840,
+          "actualUvVertexCount": 3040,
+          "primitiveCount": 1,
+          "triangleCount": 3420
+        },
+        {
+          "tileId": 2,
+          "label": "Ivory teal body B",
+          "authoringFaceCount": 1058,
+          "authoringLoopCount": 4280,
+          "actualUvVertexCount": 1942,
+          "primitiveCount": 1,
+          "triangleCount": 2164
+        },
+        {
+          "tileId": 3,
+          "label": "Roof sheet metal",
+          "authoringFaceCount": 594,
+          "authoringLoopCount": 2376,
+          "actualUvVertexCount": 1068,
+          "primitiveCount": 1,
+          "triangleCount": 1188
+        },
+        {
+          "tileId": 4,
+          "label": "Lower panel fasteners",
+          "authoringFaceCount": 1000,
+          "authoringLoopCount": 4080,
+          "actualUvVertexCount": 1744,
+          "primitiveCount": 2,
+          "triangleCount": 2080
+        },
+        {
+          "tileId": 5,
+          "label": "Sliding door stripe",
+          "authoringFaceCount": 648,
+          "authoringLoopCount": 2592,
+          "actualUvVertexCount": 1152,
+          "primitiveCount": 1,
+          "triangleCount": 1296
+        },
+        {
+          "tileId": 6,
+          "label": "Brushed aluminium",
+          "authoringFaceCount": 4158,
+          "authoringLoopCount": 17712,
+          "actualUvVertexCount": 6936,
+          "primitiveCount": 4,
+          "triangleCount": 9396
+        },
+        {
+          "tileId": 7,
+          "label": "Rubber wear pads",
+          "authoringFaceCount": 976,
+          "authoringLoopCount": 4224,
+          "actualUvVertexCount": 1600,
+          "primitiveCount": 1,
+          "triangleCount": 2272
+        },
+        {
+          "tileId": 8,
+          "label": "Machined axle steel",
+          "authoringFaceCount": 6008,
+          "authoringLoopCount": 26048,
+          "actualUvVertexCount": 9840,
+          "primitiveCount": 1,
+          "triangleCount": 14032
+        },
+        {
+          "tileId": 9,
+          "label": "Blank navy cockpit powdercoat",
+          "authoringFaceCount": 270,
+          "authoringLoopCount": 1080,
+          "actualUvVertexCount": 480,
+          "primitiveCount": 3,
+          "triangleCount": 540
+        },
+        {
+          "tileId": 10,
+          "label": "Woven navy upholstery",
+          "authoringFaceCount": 9348,
+          "authoringLoopCount": 39072,
+          "actualUvVertexCount": 37752,
+          "primitiveCount": 2,
+          "triangleCount": 20376
+        },
+        {
+          "tileId": 11,
+          "label": "Rubber window gaskets",
+          "authoringFaceCount": 7072,
+          "authoringLoopCount": 28320,
+          "actualUvVertexCount": 12350,
+          "primitiveCount": 3,
+          "triangleCount": 14164
+        },
+        {
+          "tileId": 12,
+          "label": "Antislip floor",
+          "authoringFaceCount": 197,
+          "authoringLoopCount": 788,
+          "actualUvVertexCount": 668,
+          "primitiveCount": 2,
+          "triangleCount": 394
+        },
+        {
+          "tileId": 13,
+          "label": "Underbody mechanical steel",
+          "authoringFaceCount": 2028,
+          "authoringLoopCount": 8352,
+          "actualUvVertexCount": 3520,
+          "primitiveCount": 2,
+          "triangleCount": 4296
+        },
+        {
+          "tileId": 14,
+          "label": "Vent grille",
+          "authoringFaceCount": 108,
+          "authoringLoopCount": 432,
+          "actualUvVertexCount": 192,
+          "primitiveCount": 1,
+          "triangleCount": 216
+        },
+        {
+          "tileId": 15,
+          "label": "Pantograph copper contact wear",
+          "authoringFaceCount": 54,
+          "authoringLoopCount": 216,
+          "actualUvVertexCount": 96,
+          "primitiveCount": 1,
+          "triangleCount": 108
+        },
+        {
+          "tileId": 16,
+          "label": "Fine smudged safety glazing",
+          "authoringFaceCount": 1854,
+          "authoringLoopCount": 7416,
+          "actualUvVertexCount": 3312,
+          "primitiveCount": 2,
+          "triangleCount": 3708
+        }
+      ]
+    },
+    {
+      "family": "flight",
+      "tileMap": "docs/realism/flight/tile-map.json",
+      "sourceTexture": {
+        "file": "public/textures/flight-detail-atlas.png",
+        "bytes": 2723969,
+        "sha256": "3da59811320b72f19fbc9159603b328079897d788f02089dfa420effaa6d442b",
+        "dimensions": [
+          1254,
+          1254
+        ],
+        "pngChunks": [
+          "IHDR",
+          "caBX",
+          "IDAT",
+          "IEND"
+        ],
+        "privatePathScan": {
+          "homePathMatchCount": 0,
+          "bytesScanned": 2723969
+        }
+      },
+      "modelCount": 2,
+      "usedTileCount": 16,
+      "usedTileIds": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16
+      ],
+      "tiles": [
+        {
+          "tileId": 1,
+          "label": "Ivory navy orange fuselage left",
+          "authoringFaceCount": 830,
+          "authoringLoopCount": 3300,
+          "actualUvVertexCount": 973,
+          "primitiveCount": 2,
+          "triangleCount": 1640
+        },
+        {
+          "tileId": 2,
+          "label": "Ivory navy orange fuselage right",
+          "authoringFaceCount": 318,
+          "authoringLoopCount": 1316,
+          "actualUvVertexCount": 391,
+          "primitiveCount": 1,
+          "triangleCount": 680
+        },
+        {
+          "tileId": 3,
+          "label": "Riveted wing skin",
+          "authoringFaceCount": 1754,
+          "authoringLoopCount": 7296,
+          "actualUvVertexCount": 2936,
+          "primitiveCount": 2,
+          "triangleCount": 3788
+        },
+        {
+          "tileId": 4,
+          "label": "Engine cooling vent",
+          "authoringFaceCount": 98,
+          "authoringLoopCount": 384,
+          "actualUvVertexCount": 352,
+          "primitiveCount": 1,
+          "triangleCount": 188
+        },
+        {
+          "tileId": 5,
+          "label": "Riveted aluminium",
+          "authoringFaceCount": 910,
+          "authoringLoopCount": 3768,
+          "actualUvVertexCount": 1424,
+          "primitiveCount": 2,
+          "triangleCount": 1948
+        },
+        {
+          "tileId": 6,
+          "label": "Polished wheel hub",
+          "authoringFaceCount": 1386,
+          "authoringLoopCount": 5808,
+          "actualUvVertexCount": 2536,
+          "primitiveCount": 4,
+          "triangleCount": 3036
+        },
+        {
+          "tileId": 7,
+          "label": "Rubber tyre tread",
+          "authoringFaceCount": 800,
+          "authoringLoopCount": 3200,
+          "actualUvVertexCount": 1040,
+          "primitiveCount": 1,
+          "triangleCount": 1600
+        },
+        {
+          "tileId": 8,
+          "label": "Rubber tyre sidewall",
+          "authoringFaceCount": 880,
+          "authoringLoopCount": 3520,
+          "actualUvVertexCount": 1120,
+          "primitiveCount": 1,
+          "triangleCount": 1760
+        },
+        {
+          "tileId": 9,
+          "label": "Blank cockpit powdercoat",
+          "authoringFaceCount": 196,
+          "authoringLoopCount": 768,
+          "actualUvVertexCount": 768,
+          "primitiveCount": 1,
+          "triangleCount": 376
+        },
+        {
+          "tileId": 10,
+          "label": "Stitched tobacco leather",
+          "authoringFaceCount": 2760,
+          "authoringLoopCount": 11008,
+          "actualUvVertexCount": 6379,
+          "primitiveCount": 2,
+          "triangleCount": 5488
+        },
+        {
+          "tileId": 11,
+          "label": "Woven upholstery",
+          "authoringFaceCount": 378,
+          "authoringLoopCount": 1512,
+          "actualUvVertexCount": 1512,
+          "primitiveCount": 2,
+          "triangleCount": 756
+        },
+        {
+          "tileId": 12,
+          "label": "Matte cockpit plastic",
+          "authoringFaceCount": 2932,
+          "authoringLoopCount": 11968,
+          "actualUvVertexCount": 5303,
+          "primitiveCount": 5,
+          "triangleCount": 6104
+        },
+        {
+          "tileId": 13,
+          "label": "Control hinge skin",
+          "authoringFaceCount": 1344,
+          "authoringLoopCount": 5904,
+          "actualUvVertexCount": 2680,
+          "primitiveCount": 7,
+          "triangleCount": 3216
+        },
+        {
+          "tileId": 14,
+          "label": "Mechanical gear steel",
+          "authoringFaceCount": 3080,
+          "authoringLoopCount": 12480,
+          "actualUvVertexCount": 5132,
+          "primitiveCount": 2,
+          "triangleCount": 6320
+        },
+        {
+          "tileId": 15,
+          "label": "Antislip floor",
+          "authoringFaceCount": 420,
+          "authoringLoopCount": 1648,
+          "actualUvVertexCount": 1648,
+          "primitiveCount": 1,
+          "triangleCount": 808
+        },
+        {
+          "tileId": 16,
+          "label": "Faint glass smudges",
+          "authoringFaceCount": 21,
+          "authoringLoopCount": 84,
+          "actualUvVertexCount": 84,
+          "primitiveCount": 2,
+          "triangleCount": 42
+        }
+      ]
+    }
+  ],
+  "vehicles": [
+    {
+      "family": "car",
+      "id": "coupe",
+      "file": "public/models/coupe.glb",
+      "bytes": 4124368,
+      "sha256": "da0705986b4ee8df8e8b4d4ca4396309adddb7148ffac51faf85114cd2ec5cda",
+      "triangles": 22862,
+      "drawCalls": 36,
+      "meshCount": 36,
+      "materialCount": 20,
+      "imageCount": 1,
+      "nodeCount": 41,
+      "texturedPrimitiveCount": 34,
+      "untexturedPrimitiveCount": 2,
+      "uvVertexCount": 35391,
+      "usedTileIds": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16
+      ],
+      "transparentGlassCount": 1,
+      "glassMaterials": [
+        {
+          "name": "SmokedGlass",
+          "alphaMode": "BLEND",
+          "alpha": 0.14000000059604645,
+          "transmission": 0.05000000074505806
+        },
+        {
+          "name": "MirrorGlass",
+          "alphaMode": "OPAQUE",
+          "alpha": 1,
+          "transmission": 0
+        }
+      ],
+      "animationGroups": [
+        "WheelFL",
+        "WheelFR",
+        "WheelRL",
+        "WheelRR",
+        "coupe"
+      ],
+      "dynamicNodeVerification": [
+        {
+          "name": "WheelFL",
+          "nodeIndex": 21,
+          "nodeType": "animationPivotGroup",
+          "directChildren": 5,
+          "descendantMeshCount": 5,
+          "translation": [
+            -0.9279999732971191,
+            0.41499999165534973,
+            1.2999999523162842
+          ],
+          "rotationQuaternion": [
+            0,
+            0,
+            0,
+            1
+          ],
+          "scale": [
+            1,
+            1,
+            1
+          ]
+        },
+        {
+          "name": "WheelFR",
+          "nodeIndex": 27,
+          "nodeType": "animationPivotGroup",
+          "directChildren": 5,
+          "descendantMeshCount": 5,
+          "translation": [
+            0.9279999732971191,
+            0.41499999165534973,
+            1.2999999523162842
+          ],
+          "rotationQuaternion": [
+            0,
+            0,
+            0,
+            1
+          ],
+          "scale": [
+            1,
+            1,
+            1
+          ]
+        },
+        {
+          "name": "WheelRL",
+          "nodeIndex": 33,
+          "nodeType": "animationPivotGroup",
+          "directChildren": 5,
+          "descendantMeshCount": 5,
+          "translation": [
+            -0.9279999732971191,
+            0.41499999165534973,
+            -1.2999999523162842
+          ],
+          "rotationQuaternion": [
+            0,
+            0,
+            0,
+            1
+          ],
+          "scale": [
+            1,
+            1,
+            1
+          ]
+        },
+        {
+          "name": "WheelRR",
+          "nodeIndex": 39,
+          "nodeType": "animationPivotGroup",
+          "directChildren": 5,
+          "descendantMeshCount": 5,
+          "translation": [
+            0.9279999732971191,
+            0.41499999165534973,
+            -1.2999999523162842
+          ],
+          "rotationQuaternion": [
+            0,
+            0,
+            0,
+            1
+          ],
+          "scale": [
+            1,
+            1,
+            1
+          ]
+        }
+      ],
+      "images": [
+        {
+          "index": 0,
+          "name": "car-detail-atlas",
+          "mimeType": "image/png",
+          "bytes": 2847387,
+          "sha256": "dd17dfcd5ce2f222277cca265e8a2d04876d4b6c556d3d98be869505bff7281a",
+          "matchesFamilySourceBytes": true,
+          "dimensions": [
+            1254,
+            1254
+          ],
+          "pngChunks": [
+            "IHDR",
+            "IDAT",
+            "IEND"
+          ],
+          "privatePathScan": {
+            "homePathMatchCount": 0,
+            "bytesScanned": 2847387
+          }
+        }
+      ],
+      "tiles": [
+        {
+          "tileId": 1,
+          "label": "body_panel",
+          "uvRect": [
+            0.01,
+            0.76,
+            0.24,
+            0.99
+          ],
+          "uvVertexCount": 1474,
+          "indexReferenceCount": 4086,
+          "primitiveCount": 1,
+          "triangleCount": 1362,
+          "uvMin": [
+            0.009999999776482582,
+            0.7599999904632568
+          ],
+          "uvMax": [
+            0.23999999463558197,
+            0.9900000095367432
+          ],
+          "materialNames": [
+            "BodyPaint"
+          ],
+          "objects": [
+            "BodyPaintParts"
+          ],
+          "imageIndices": [
+            0
+          ]
+        },
+        {
+          "tileId": 2,
+          "label": "door_panel",
+          "uvRect": [
+            0.26,
+            0.76,
+            0.49,
+            0.99
+          ],
+          "uvVertexCount": 714,
+          "indexReferenceCount": 2742,
+          "primitiveCount": 1,
+          "triangleCount": 914,
+          "uvMin": [
+            0.25999999046325684,
+            0.7599999904632568
+          ],
+          "uvMax": [
+            0.49000000953674316,
+            0.9900000095367432
+          ],
+          "materialNames": [
+            "BodyPaint_Door"
+          ],
+          "objects": [
+            "BodyPaint_coupe_DoorParts"
+          ],
+          "imageIndices": [
+            0
+          ]
+        },
+        {
+          "tileId": 3,
+          "label": "hood_vents",
+          "uvRect": [
+            0.51,
+            0.76,
+            0.74,
+            0.99
+          ],
+          "uvVertexCount": 34,
+          "indexReferenceCount": 96,
+          "primitiveCount": 1,
+          "triangleCount": 32,
+          "uvMin": [
+            0.5099999904632568,
+            0.7599999904632568
+          ],
+          "uvMax": [
+            0.7400000095367432,
+            0.9900000095367432
+          ],
+          "materialNames": [
+            "BodyPaint_Hood"
+          ],
+          "objects": [
+            "BodyPaint_coupe_HoodParts"
+          ],
+          "imageIndices": [
+            0
+          ]
+        },
+        {
+          "tileId": 4,
+          "label": "roof_paint",
+          "uvRect": [
+            0.76,
+            0.76,
+            0.99,
+            0.99
+          ],
+          "uvVertexCount": 412,
+          "indexReferenceCount": 648,
+          "primitiveCount": 1,
+          "triangleCount": 216,
+          "uvMin": [
+            0.7599999904632568,
+            0.7599999904632568
+          ],
+          "uvMax": [
+            0.9900000095367432,
+            0.9900000095367432
+          ],
+          "materialNames": [
+            "BodyPaint_Roof"
+          ],
+          "objects": [
+            "BodyPaint_coupe_RoofParts"
+          ],
+          "imageIndices": [
+            0
+          ]
+        },
+        {
+          "tileId": 5,
+          "label": "brushed_alloy",
+          "uvRect": [
+            0.01,
+            0.51,
+            0.24,
+            0.74
+          ],
+          "uvVertexCount": 2384,
+          "indexReferenceCount": 4680,
+          "primitiveCount": 5,
+          "triangleCount": 1560,
+          "uvMin": [
+            0.009999999776482582,
+            0.5099999904632568
+          ],
+          "uvMax": [
+            0.23999999463558197,
+            0.7400000095367432
+          ],
+          "materialNames": [
+            "BrushedAlloy"
+          ],
+          "objects": [
+            "AlloyParts",
+            "AlloyParts.001",
+            "AlloyParts.002",
+            "AlloyParts.003",
+            "AlloyParts.004"
+          ],
+          "imageIndices": [
+            0
+          ]
+        },
+        {
+          "tileId": 6,
+          "label": "polished_rim",
+          "uvRect": [
+            0.26,
+            0.51,
+            0.49,
+            0.74
+          ],
+          "uvVertexCount": 7608,
+          "indexReferenceCount": 15600,
+          "primitiveCount": 8,
+          "triangleCount": 5200,
+          "uvMin": [
+            0.25999999046325684,
+            0.5099999904632568
+          ],
+          "uvMax": [
+            0.49000000953674316,
+            0.7400000095367432
+          ],
+          "materialNames": [
+            "ForgedGraphite",
+            "PolishedRim"
+          ],
+          "objects": [
+            "ForgedGraphiteParts",
+            "PolishedRimParts",
+            "ForgedGraphiteParts.001",
+            "PolishedRimParts.001",
+            "ForgedGraphiteParts.002",
+            "PolishedRimParts.002",
+            "ForgedGraphiteParts.003",
+            "PolishedRimParts.003"
+          ],
+          "imageIndices": [
+            0
+          ]
+        },
+        {
+          "tileId": 7,
+          "label": "rubber_sidewall",
+          "uvRect": [
+            0.51,
+            0.51,
+            0.74,
+            0.74
+          ],
+          "uvVertexCount": 512,
+          "indexReferenceCount": 2256,
+          "primitiveCount": 4,
+          "triangleCount": 752,
+          "uvMin": [
+            0.5099999904632568,
+            0.5099999904632568
+          ],
+          "uvMax": [
+            0.7400000095367432,
+            0.7400000095367432
+          ],
+          "materialNames": [
+            "TireRubber"
+          ],
+          "objects": [
+            "TireParts",
+            "TireParts.001",
+            "TireParts.002",
+            "TireParts.003"
+          ],
+          "imageIndices": [
+            0
+          ]
+        },
+        {
+          "tileId": 8,
+          "label": "tire_tread",
+          "uvRect": [
+            0.76,
+            0.51,
+            0.99,
+            0.74
+          ],
+          "uvVertexCount": 10912,
+          "indexReferenceCount": 17856,
+          "primitiveCount": 4,
+          "triangleCount": 5952,
+          "uvMin": [
+            0.7599999904632568,
+            0.5099999904632568
+          ],
+          "uvMax": [
+            0.9900000095367432,
+            0.7400000095367432
+          ],
+          "materialNames": [
+            "TireTreadRubber"
+          ],
+          "objects": [
+            "TireTreadRubberParts",
+            "TireTreadRubberParts.001",
+            "TireTreadRubberParts.002",
+            "TireTreadRubberParts.003"
+          ],
+          "imageIndices": [
+            0
+          ]
+        },
+        {
+          "tileId": 9,
+          "label": "dashboard_vinyl",
+          "uvRect": [
+            0.01,
+            0.26,
+            0.24,
+            0.49
+          ],
+          "uvVertexCount": 1416,
+          "indexReferenceCount": 2124,
+          "primitiveCount": 1,
+          "triangleCount": 708,
+          "uvMin": [
+            0.009999999776482582,
+            0.25999999046325684
+          ],
+          "uvMax": [
+            0.23999999463558197,
+            0.49000000953674316
+          ],
+          "materialNames": [
+            "DashboardVinyl"
+          ],
+          "objects": [
+            "DashboardVinylParts"
+          ],
+          "imageIndices": [
+            0
+          ]
+        },
+        {
+          "tileId": 10,
+          "label": "seat_leather",
+          "uvRect": [
+            0.26,
+            0.26,
+            0.49,
+            0.49
+          ],
+          "uvVertexCount": 1728,
+          "indexReferenceCount": 2592,
+          "primitiveCount": 1,
+          "triangleCount": 864,
+          "uvMin": [
+            0.25999999046325684,
+            0.25999999046325684
+          ],
+          "uvMax": [
+            0.49000000953674316,
+            0.49000000953674316
+          ],
+          "materialNames": [
+            "SeatLeather"
+          ],
+          "objects": [
+            "SeatLeatherParts"
+          ],
+          "imageIndices": [
+            0
+          ]
+        },
+        {
+          "tileId": 11,
+          "label": "charcoal_trim",
+          "uvRect": [
+            0.51,
+            0.26,
+            0.74,
+            0.49
+          ],
+          "uvVertexCount": 6025,
+          "indexReferenceCount": 11304,
+          "primitiveCount": 1,
+          "triangleCount": 3768,
+          "uvMin": [
+            0.5099999904632568,
+            0.25999999046325684
+          ],
+          "uvMax": [
+            0.7400000095367432,
+            0.49000000953674316
+          ],
+          "materialNames": [
+            "GraphiteTrim"
+          ],
+          "objects": [
+            "TrimParts"
+          ],
+          "imageIndices": [
+            0
+          ]
+        },
+        {
+          "tileId": 12,
+          "label": "perforated_grille",
+          "uvRect": [
+            0.76,
+            0.26,
+            0.99,
+            0.49
+          ],
+          "uvVertexCount": 216,
+          "indexReferenceCount": 324,
+          "primitiveCount": 1,
+          "triangleCount": 108,
+          "uvMin": [
+            0.7599999904632568,
+            0.25999999046325684
+          ],
+          "uvMax": [
+            0.9900000095367432,
+            0.49000000953674316
+          ],
+          "materialNames": [
+            "PerforatedGrille"
+          ],
+          "objects": [
+            "PerforatedGrilleParts"
+          ],
+          "imageIndices": [
+            0
+          ]
+        },
+        {
+          "tileId": 13,
+          "label": "subtle_glass",
+          "uvRect": [
+            0.01,
+            0.01,
+            0.24,
+            0.24
+          ],
+          "uvVertexCount": 476,
+          "indexReferenceCount": 714,
+          "primitiveCount": 2,
+          "triangleCount": 238,
+          "uvMin": [
+            0.009999999776482582,
+            0.009999990463256836
+          ],
+          "uvMax": [
+            0.23999999463558197,
+            0.24000000953674316
+          ],
+          "materialNames": [
+            "SmokedGlass",
+            "MirrorGlass"
+          ],
+          "objects": [
+            "GlassParts",
+            "MirrorGlassParts"
+          ],
+          "imageIndices": [
+            0
+          ]
+        },
+        {
+          "tileId": 14,
+          "label": "headlamp_optics",
+          "uvRect": [
+            0.26,
+            0.01,
+            0.49,
+            0.24
+          ],
+          "uvVertexCount": 432,
+          "indexReferenceCount": 648,
+          "primitiveCount": 1,
+          "triangleCount": 216,
+          "uvMin": [
+            0.25999999046325684,
+            0.009999990463256836
+          ],
+          "uvMax": [
+            0.49000000953674316,
+            0.24000000953674316
+          ],
+          "materialNames": [
+            "LEDHeadlight"
+          ],
+          "objects": [
+            "HeadlightLEDParts"
+          ],
+          "imageIndices": [
+            0
+          ]
+        },
+        {
+          "tileId": 15,
+          "label": "red_tail_optics",
+          "uvRect": [
+            0.51,
+            0.01,
+            0.74,
+            0.24
+          ],
+          "uvVertexCount": 432,
+          "indexReferenceCount": 648,
+          "primitiveCount": 1,
+          "triangleCount": 216,
+          "uvMin": [
+            0.5099999904632568,
+            0.009999990463256836
+          ],
+          "uvMax": [
+            0.7400000095367432,
+            0.24000000953674316
+          ],
+          "materialNames": [
+            "TailLight"
+          ],
+          "objects": [
+            "TailLightBarParts"
+          ],
+          "imageIndices": [
+            0
+          ]
+        },
+        {
+          "tileId": 16,
+          "label": "carbon_vent",
+          "uvRect": [
+            0.76,
+            0.01,
+            0.99,
+            0.24
+          ],
+          "uvVertexCount": 616,
+          "indexReferenceCount": 972,
+          "primitiveCount": 1,
+          "triangleCount": 324,
+          "uvMin": [
+            0.7599999904632568,
+            0.009999990463256836
+          ],
+          "uvMax": [
+            0.9900000095367432,
+            0.24000000953674316
+          ],
+          "materialNames": [
+            "CarbonVent"
+          ],
+          "objects": [
+            "CarbonVentParts"
+          ],
+          "imageIndices": [
+            0
+          ]
+        }
+      ]
+    },
+    {
+      "family": "car",
+      "id": "rally",
+      "file": "public/models/rally.glb",
+      "bytes": 4356020,
+      "sha256": "94b5363596cf20a8308ea52057dcca222fc113ef71c9b8c50a3caf808c08bed5",
+      "triangles": 26986,
+      "drawCalls": 36,
+      "meshCount": 36,
+      "materialCount": 20,
+      "imageCount": 1,
+      "nodeCount": 41,
+      "texturedPrimitiveCount": 34,
+      "untexturedPrimitiveCount": 2,
+      "uvVertexCount": 41332,
+      "usedTileIds": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16
+      ],
+      "transparentGlassCount": 1,
+      "glassMaterials": [
+        {
+          "name": "SmokedGlass",
+          "alphaMode": "BLEND",
+          "alpha": 0.14000000059604645,
+          "transmission": 0.05000000074505806
+        },
+        {
+          "name": "MirrorGlass",
+          "alphaMode": "OPAQUE",
+          "alpha": 1,
+          "transmission": 0
+        }
+      ],
+      "animationGroups": [
+        "WheelFL.001",
+        "WheelFR.001",
+        "WheelRL.001",
+        "WheelRR.001",
+        "rally"
+      ],
+      "dynamicNodeVerification": [
+        {
+          "name": "WheelFL.001",
+          "nodeIndex": 21,
+          "nodeType": "animationPivotGroup",
+          "directChildren": 5,
+          "descendantMeshCount": 5,
+          "translation": [
+            -0.9279999732971191,
+            0.41499999165534973,
+            1.2999999523162842
+          ],
+          "rotationQuaternion": [
+            0,
+            0,
+            0,
+            1
+          ],
+          "scale": [
+            1,
+            1,
+            1
+          ]
+        },
+        {
+          "name": "WheelFR.001",
+          "nodeIndex": 27,
+          "nodeType": "animationPivotGroup",
+          "directChildren": 5,
+          "descendantMeshCount": 5,
+          "translation": [
+            0.9279999732971191,
+            0.41499999165534973,
+            1.2999999523162842
+          ],
+          "rotationQuaternion": [
+            0,
+            0,
+            0,
+            1
+          ],
+          "scale": [
+            1,
+            1,
+            1
+          ]
+        },
+        {
+          "name": "WheelRL.001",
+          "nodeIndex": 33,
+          "nodeType": "animationPivotGroup",
+          "directChildren": 5,
+          "descendantMeshCount": 5,
+          "translation": [
+            -0.9279999732971191,
+            0.41499999165534973,
+            -1.2999999523162842
+          ],
+          "rotationQuaternion": [
+            0,
+            0,
+            0,
+            1
+          ],
+          "scale": [
+            1,
+            1,
+            1
+          ]
+        },
+        {
+          "name": "WheelRR.001",
+          "nodeIndex": 39,
+          "nodeType": "animationPivotGroup",
+          "directChildren": 5,
+          "descendantMeshCount": 5,
+          "translation": [
+            0.9279999732971191,
+            0.41499999165534973,
+            -1.2999999523162842
+          ],
+          "rotationQuaternion": [
+            0,
+            0,
+            0,
+            1
+          ],
+          "scale": [
+            1,
+            1,
+            1
+          ]
+        }
+      ],
+      "images": [
+        {
+          "index": 0,
+          "name": "car-detail-atlas",
+          "mimeType": "image/png",
+          "bytes": 2847387,
+          "sha256": "dd17dfcd5ce2f222277cca265e8a2d04876d4b6c556d3d98be869505bff7281a",
+          "matchesFamilySourceBytes": true,
+          "dimensions": [
+            1254,
+            1254
+          ],
+          "pngChunks": [
+            "IHDR",
+            "IDAT",
+            "IEND"
+          ],
+          "privatePathScan": {
+            "homePathMatchCount": 0,
+            "bytesScanned": 2847387
+          }
+        }
+      ],
+      "tiles": [
+        {
+          "tileId": 1,
+          "label": "body_panel",
+          "uvRect": [
+            0.01,
+            0.76,
+            0.24,
+            0.99
+          ],
+          "uvVertexCount": 1690,
+          "indexReferenceCount": 4404,
+          "primitiveCount": 1,
+          "triangleCount": 1468,
+          "uvMin": [
+            0.009999999776482582,
+            0.7599999904632568
+          ],
+          "uvMax": [
+            0.23999999463558197,
+            0.9900000095367432
+          ],
+          "materialNames": [
+            "BodyPaint"
+          ],
+          "objects": [
+            "BodyPaint_rallyParts"
+          ],
+          "imageIndices": [
+            0
+          ]
+        },
+        {
+          "tileId": 2,
+          "label": "door_panel",
+          "uvRect": [
+            0.26,
+            0.76,
+            0.49,
+            0.99
+          ],
+          "uvVertexCount": 696,
+          "indexReferenceCount": 2700,
+          "primitiveCount": 1,
+          "triangleCount": 900,
+          "uvMin": [
+            0.25999999046325684,
+            0.7599999904632568
+          ],
+          "uvMax": [
+            0.49000000953674316,
+            0.9900000095367432
+          ],
+          "materialNames": [
+            "BodyPaint_Door"
+          ],
+          "objects": [
+            "BodyPaint_rally_DoorParts"
+          ],
+          "imageIndices": [
+            0
+          ]
+        },
+        {
+          "tileId": 3,
+          "label": "hood_vents",
+          "uvRect": [
+            0.51,
+            0.76,
+            0.74,
+            0.99
+          ],
+          "uvVertexCount": 34,
+          "indexReferenceCount": 96,
+          "primitiveCount": 1,
+          "triangleCount": 32,
+          "uvMin": [
+            0.5099999904632568,
+            0.7599999904632568
+          ],
+          "uvMax": [
+            0.7400000095367432,
+            0.9900000095367432
+          ],
+          "materialNames": [
+            "BodyPaint_Hood"
+          ],
+          "objects": [
+            "BodyPaint_rally_HoodParts"
+          ],
+          "imageIndices": [
+            0
+          ]
+        },
+        {
+          "tileId": 4,
+          "label": "roof_paint",
+          "uvRect": [
+            0.76,
+            0.76,
+            0.99,
+            0.99
+          ],
+          "uvVertexCount": 216,
+          "indexReferenceCount": 324,
+          "primitiveCount": 1,
+          "triangleCount": 108,
+          "uvMin": [
+            0.7599999904632568,
+            0.7599999904632568
+          ],
+          "uvMax": [
+            0.9900000095367432,
+            0.9900000095367432
+          ],
+          "materialNames": [
+            "BodyPaint_Roof"
+          ],
+          "objects": [
+            "BodyPaint_rally_RoofParts"
+          ],
+          "imageIndices": [
+            0
+          ]
+        },
+        {
+          "tileId": 5,
+          "label": "brushed_alloy",
+          "uvRect": [
+            0.01,
+            0.51,
+            0.24,
+            0.74
+          ],
+          "uvVertexCount": 2344,
+          "indexReferenceCount": 4608,
+          "primitiveCount": 5,
+          "triangleCount": 1536,
+          "uvMin": [
+            0.009999999776482582,
+            0.5099999904632568
+          ],
+          "uvMax": [
+            0.23999999463558197,
+            0.7400000095367432
+          ],
+          "materialNames": [
+            "BrushedAlloy"
+          ],
+          "objects": [
+            "AlloyParts.005",
+            "AlloyParts.006",
+            "AlloyParts.007",
+            "AlloyParts.008",
+            "AlloyParts.009"
+          ],
+          "imageIndices": [
+            0
+          ]
+        },
+        {
+          "tileId": 6,
+          "label": "polished_rim",
+          "uvRect": [
+            0.26,
+            0.51,
+            0.49,
+            0.74
+          ],
+          "uvVertexCount": 8472,
+          "indexReferenceCount": 16896,
+          "primitiveCount": 8,
+          "triangleCount": 5632,
+          "uvMin": [
+            0.25999999046325684,
+            0.5099999904632568
+          ],
+          "uvMax": [
+            0.49000000953674316,
+            0.7400000095367432
+          ],
+          "materialNames": [
+            "ForgedGraphite",
+            "PolishedRim"
+          ],
+          "objects": [
+            "ForgedGraphiteParts.004",
+            "PolishedRimParts.004",
+            "ForgedGraphiteParts.005",
+            "PolishedRimParts.005",
+            "ForgedGraphiteParts.006",
+            "PolishedRimParts.006",
+            "ForgedGraphiteParts.007",
+            "PolishedRimParts.007"
+          ],
+          "imageIndices": [
+            0
+          ]
+        },
+        {
+          "tileId": 7,
+          "label": "rubber_sidewall",
+          "uvRect": [
+            0.51,
+            0.51,
+            0.74,
+            0.74
+          ],
+          "uvVertexCount": 512,
+          "indexReferenceCount": 2256,
+          "primitiveCount": 4,
+          "triangleCount": 752,
+          "uvMin": [
+            0.5099999904632568,
+            0.5099999904632568
+          ],
+          "uvMax": [
+            0.7400000095367432,
+            0.7400000095367432
+          ],
+          "materialNames": [
+            "TireRubber"
+          ],
+          "objects": [
+            "TireParts.004",
+            "TireParts.005",
+            "TireParts.006",
+            "TireParts.007"
+          ],
+          "imageIndices": [
+            0
+          ]
+        },
+        {
+          "tileId": 8,
+          "label": "tire_tread",
+          "uvRect": [
+            0.76,
+            0.51,
+            0.99,
+            0.74
+          ],
+          "uvVertexCount": 14368,
+          "indexReferenceCount": 23040,
+          "primitiveCount": 4,
+          "triangleCount": 7680,
+          "uvMin": [
+            0.7599999904632568,
+            0.5099999904632568
+          ],
+          "uvMax": [
+            0.9900000095367432,
+            0.7400000095367432
+          ],
+          "materialNames": [
+            "TireTreadRubber"
+          ],
+          "objects": [
+            "TireTreadRubberParts.004",
+            "TireTreadRubberParts.005",
+            "TireTreadRubberParts.006",
+            "TireTreadRubberParts.007"
+          ],
+          "imageIndices": [
+            0
+          ]
+        },
+        {
+          "tileId": 9,
+          "label": "dashboard_vinyl",
+          "uvRect": [
+            0.01,
+            0.26,
+            0.24,
+            0.49
+          ],
+          "uvVertexCount": 1416,
+          "indexReferenceCount": 2124,
+          "primitiveCount": 1,
+          "triangleCount": 708,
+          "uvMin": [
+            0.009999999776482582,
+            0.25999999046325684
+          ],
+          "uvMax": [
+            0.23999999463558197,
+            0.49000000953674316
+          ],
+          "materialNames": [
+            "DashboardVinyl"
+          ],
+          "objects": [
+            "DashboardVinylParts.001"
+          ],
+          "imageIndices": [
+            0
+          ]
+        },
+        {
+          "tileId": 10,
+          "label": "seat_leather",
+          "uvRect": [
+            0.26,
+            0.26,
+            0.49,
+            0.49
+          ],
+          "uvVertexCount": 1728,
+          "indexReferenceCount": 2592,
+          "primitiveCount": 1,
+          "triangleCount": 864,
+          "uvMin": [
+            0.25999999046325684,
+            0.25999999046325684
+          ],
+          "uvMax": [
+            0.49000000953674316,
+            0.49000000953674316
+          ],
+          "materialNames": [
+            "SeatLeather"
+          ],
+          "objects": [
+            "SeatLeatherParts.001"
+          ],
+          "imageIndices": [
+            0
+          ]
+        },
+        {
+          "tileId": 11,
+          "label": "charcoal_trim",
+          "uvRect": [
+            0.51,
+            0.26,
+            0.74,
+            0.49
+          ],
+          "uvVertexCount": 7352,
+          "indexReferenceCount": 15108,
+          "primitiveCount": 1,
+          "triangleCount": 5036,
+          "uvMin": [
+            0.5099999904632568,
+            0.25999999046325684
+          ],
+          "uvMax": [
+            0.7400000095367432,
+            0.49000000953674316
+          ],
+          "materialNames": [
+            "GraphiteTrim"
+          ],
+          "objects": [
+            "TrimParts.001"
+          ],
+          "imageIndices": [
+            0
+          ]
+        },
+        {
+          "tileId": 12,
+          "label": "perforated_grille",
+          "uvRect": [
+            0.76,
+            0.26,
+            0.99,
+            0.49
+          ],
+          "uvVertexCount": 216,
+          "indexReferenceCount": 324,
+          "primitiveCount": 1,
+          "triangleCount": 108,
+          "uvMin": [
+            0.7599999904632568,
+            0.25999999046325684
+          ],
+          "uvMax": [
+            0.9900000095367432,
+            0.49000000953674316
+          ],
+          "materialNames": [
+            "PerforatedGrille"
+          ],
+          "objects": [
+            "PerforatedGrilleParts.001"
+          ],
+          "imageIndices": [
+            0
+          ]
+        },
+        {
+          "tileId": 13,
+          "label": "subtle_glass",
+          "uvRect": [
+            0.01,
+            0.01,
+            0.24,
+            0.24
+          ],
+          "uvVertexCount": 476,
+          "indexReferenceCount": 714,
+          "primitiveCount": 2,
+          "triangleCount": 238,
+          "uvMin": [
+            0.009999999776482582,
+            0.009999990463256836
+          ],
+          "uvMax": [
+            0.23999999463558197,
+            0.24000000953674316
+          ],
+          "materialNames": [
+            "SmokedGlass",
+            "MirrorGlass"
+          ],
+          "objects": [
+            "GlassParts.001",
+            "MirrorGlassParts.001"
+          ],
+          "imageIndices": [
+            0
+          ]
+        },
+        {
+          "tileId": 14,
+          "label": "headlamp_optics",
+          "uvRect": [
+            0.26,
+            0.01,
+            0.49,
+            0.24
+          ],
+          "uvVertexCount": 764,
+          "indexReferenceCount": 1560,
+          "primitiveCount": 1,
+          "triangleCount": 520,
+          "uvMin": [
+            0.25999999046325684,
+            0.009999990463256836
+          ],
+          "uvMax": [
+            0.49000000953674316,
+            0.24000000953674316
+          ],
+          "materialNames": [
+            "LEDHeadlight"
+          ],
+          "objects": [
+            "HeadlightLEDParts.001"
+          ],
+          "imageIndices": [
+            0
+          ]
+        },
+        {
+          "tileId": 15,
+          "label": "red_tail_optics",
+          "uvRect": [
+            0.51,
+            0.01,
+            0.74,
+            0.24
+          ],
+          "uvVertexCount": 432,
+          "indexReferenceCount": 648,
+          "primitiveCount": 1,
+          "triangleCount": 216,
+          "uvMin": [
+            0.5099999904632568,
+            0.009999990463256836
+          ],
+          "uvMax": [
+            0.7400000095367432,
+            0.24000000953674316
+          ],
+          "materialNames": [
+            "TailLight"
+          ],
+          "objects": [
+            "TailLightBarParts.001"
+          ],
+          "imageIndices": [
+            0
+          ]
+        },
+        {
+          "tileId": 16,
+          "label": "carbon_vent",
+          "uvRect": [
+            0.76,
+            0.01,
+            0.99,
+            0.24
+          ],
+          "uvVertexCount": 616,
+          "indexReferenceCount": 972,
+          "primitiveCount": 1,
+          "triangleCount": 324,
+          "uvMin": [
+            0.7599999904632568,
+            0.009999990463256836
+          ],
+          "uvMax": [
+            0.9900000095367432,
+            0.24000000953674316
+          ],
+          "materialNames": [
+            "CarbonVent"
+          ],
+          "objects": [
+            "CarbonVentParts.001"
+          ],
+          "imageIndices": [
+            0
+          ]
+        }
+      ]
+    },
+    {
+      "family": "car",
+      "id": "suv",
+      "file": "public/models/suv.glb",
+      "bytes": 4199488,
+      "sha256": "e9cb8e12cb6eb62d51cf21c690314f7686a26a4be0c5bffe3d8382bb106953e0",
+      "triangles": 23898,
+      "drawCalls": 36,
+      "meshCount": 36,
+      "materialCount": 20,
+      "imageCount": 1,
+      "nodeCount": 41,
+      "texturedPrimitiveCount": 34,
+      "untexturedPrimitiveCount": 2,
+      "uvVertexCount": 37541,
+      "usedTileIds": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16
+      ],
+      "transparentGlassCount": 1,
+      "glassMaterials": [
+        {
+          "name": "SmokedGlass",
+          "alphaMode": "BLEND",
+          "alpha": 0.14000000059604645,
+          "transmission": 0.05000000074505806
+        },
+        {
+          "name": "MirrorGlass",
+          "alphaMode": "OPAQUE",
+          "alpha": 1,
+          "transmission": 0
+        }
+      ],
+      "animationGroups": [
+        "WheelFL.002",
+        "WheelFR.002",
+        "WheelRL.002",
+        "WheelRR.002",
+        "suv"
+      ],
+      "dynamicNodeVerification": [
+        {
+          "name": "WheelFL.002",
+          "nodeIndex": 21,
+          "nodeType": "animationPivotGroup",
+          "directChildren": 5,
+          "descendantMeshCount": 5,
+          "translation": [
+            -0.9779999852180481,
+            0.45500001311302185,
+            1.2999999523162842
+          ],
+          "rotationQuaternion": [
+            0,
+            0,
+            0,
+            1
+          ],
+          "scale": [
+            1,
+            1,
+            1
+          ]
+        },
+        {
+          "name": "WheelFR.002",
+          "nodeIndex": 27,
+          "nodeType": "animationPivotGroup",
+          "directChildren": 5,
+          "descendantMeshCount": 5,
+          "translation": [
+            0.9779999852180481,
+            0.45500001311302185,
+            1.2999999523162842
+          ],
+          "rotationQuaternion": [
+            0,
+            0,
+            0,
+            1
+          ],
+          "scale": [
+            1,
+            1,
+            1
+          ]
+        },
+        {
+          "name": "WheelRL.002",
+          "nodeIndex": 33,
+          "nodeType": "animationPivotGroup",
+          "directChildren": 5,
+          "descendantMeshCount": 5,
+          "translation": [
+            -0.9779999852180481,
+            0.45500001311302185,
+            -1.2999999523162842
+          ],
+          "rotationQuaternion": [
+            0,
+            0,
+            0,
+            1
+          ],
+          "scale": [
+            1,
+            1,
+            1
+          ]
+        },
+        {
+          "name": "WheelRR.002",
+          "nodeIndex": 39,
+          "nodeType": "animationPivotGroup",
+          "directChildren": 5,
+          "descendantMeshCount": 5,
+          "translation": [
+            0.9779999852180481,
+            0.45500001311302185,
+            -1.2999999523162842
+          ],
+          "rotationQuaternion": [
+            0,
+            0,
+            0,
+            1
+          ],
+          "scale": [
+            1,
+            1,
+            1
+          ]
+        }
+      ],
+      "images": [
+        {
+          "index": 0,
+          "name": "car-detail-atlas",
+          "mimeType": "image/png",
+          "bytes": 2847387,
+          "sha256": "dd17dfcd5ce2f222277cca265e8a2d04876d4b6c556d3d98be869505bff7281a",
+          "matchesFamilySourceBytes": true,
+          "dimensions": [
+            1254,
+            1254
+          ],
+          "pngChunks": [
+            "IHDR",
+            "IDAT",
+            "IEND"
+          ],
+          "privatePathScan": {
+            "homePathMatchCount": 0,
+            "bytesScanned": 2847387
+          }
+        }
+      ],
+      "tiles": [
+        {
+          "tileId": 1,
+          "label": "body_panel",
+          "uvRect": [
+            0.01,
+            0.76,
+            0.24,
+            0.99
+          ],
+          "uvVertexCount": 1332,
+          "indexReferenceCount": 4032,
+          "primitiveCount": 1,
+          "triangleCount": 1344,
+          "uvMin": [
+            0.009999999776482582,
+            0.7599999904632568
+          ],
+          "uvMax": [
+            0.23999999463558197,
+            0.9900000095367432
+          ],
+          "materialNames": [
+            "BodyPaint"
+          ],
+          "objects": [
+            "BodyPaint_suvParts"
+          ],
+          "imageIndices": [
+            0
+          ]
+        },
+        {
+          "tileId": 2,
+          "label": "door_panel",
+          "uvRect": [
+            0.26,
+            0.76,
+            0.49,
+            0.99
+          ],
+          "uvVertexCount": 725,
+          "indexReferenceCount": 2736,
+          "primitiveCount": 1,
+          "triangleCount": 912,
+          "uvMin": [
+            0.25999999046325684,
+            0.7599999904632568
+          ],
+          "uvMax": [
+            0.49000000953674316,
+            0.9900000095367432
+          ],
+          "materialNames": [
+            "BodyPaint_Door"
+          ],
+          "objects": [
+            "BodyPaint_suv_DoorParts"
+          ],
+          "imageIndices": [
+            0
+          ]
+        },
+        {
+          "tileId": 3,
+          "label": "hood_vents",
+          "uvRect": [
+            0.51,
+            0.76,
+            0.74,
+            0.99
+          ],
+          "uvVertexCount": 34,
+          "indexReferenceCount": 96,
+          "primitiveCount": 1,
+          "triangleCount": 32,
+          "uvMin": [
+            0.5099999904632568,
+            0.7599999904632568
+          ],
+          "uvMax": [
+            0.7400000095367432,
+            0.9900000095367432
+          ],
+          "materialNames": [
+            "BodyPaint_Hood"
+          ],
+          "objects": [
+            "BodyPaint_suv_HoodParts"
+          ],
+          "imageIndices": [
+            0
+          ]
+        },
+        {
+          "tileId": 4,
+          "label": "roof_paint",
+          "uvRect": [
+            0.76,
+            0.76,
+            0.99,
+            0.99
+          ],
+          "uvVertexCount": 216,
+          "indexReferenceCount": 324,
+          "primitiveCount": 1,
+          "triangleCount": 108,
+          "uvMin": [
+            0.7599999904632568,
+            0.7599999904632568
+          ],
+          "uvMax": [
+            0.9900000095367432,
+            0.9900000095367432
+          ],
+          "materialNames": [
+            "BodyPaint_Roof"
+          ],
+          "objects": [
+            "BodyPaint_suv_RoofParts"
+          ],
+          "imageIndices": [
+            0
+          ]
+        },
+        {
+          "tileId": 5,
+          "label": "brushed_alloy",
+          "uvRect": [
+            0.01,
+            0.51,
+            0.24,
+            0.74
+          ],
+          "uvVertexCount": 4288,
+          "indexReferenceCount": 7524,
+          "primitiveCount": 5,
+          "triangleCount": 2508,
+          "uvMin": [
+            0.009999999776482582,
+            0.5099999904632568
+          ],
+          "uvMax": [
+            0.23999999463558197,
+            0.7400000095367432
+          ],
+          "materialNames": [
+            "BrushedAlloy"
+          ],
+          "objects": [
+            "AlloyParts.010",
+            "AlloyParts.011",
+            "AlloyParts.012",
+            "AlloyParts.013",
+            "AlloyParts.014"
+          ],
+          "imageIndices": [
+            0
+          ]
+        },
+        {
+          "tileId": 6,
+          "label": "polished_rim",
+          "uvRect": [
+            0.26,
+            0.51,
+            0.49,
+            0.74
+          ],
+          "uvVertexCount": 7608,
+          "indexReferenceCount": 15600,
+          "primitiveCount": 8,
+          "triangleCount": 5200,
+          "uvMin": [
+            0.25999999046325684,
+            0.5099999904632568
+          ],
+          "uvMax": [
+            0.49000000953674316,
+            0.7400000095367432
+          ],
+          "materialNames": [
+            "ForgedGraphite",
+            "PolishedRim"
+          ],
+          "objects": [
+            "ForgedGraphiteParts.008",
+            "PolishedRimParts.008",
+            "ForgedGraphiteParts.009",
+            "PolishedRimParts.009",
+            "ForgedGraphiteParts.010",
+            "PolishedRimParts.010",
+            "ForgedGraphiteParts.011",
+            "PolishedRimParts.011"
+          ],
+          "imageIndices": [
+            0
+          ]
+        },
+        {
+          "tileId": 7,
+          "label": "rubber_sidewall",
+          "uvRect": [
+            0.51,
+            0.51,
+            0.74,
+            0.74
+          ],
+          "uvVertexCount": 512,
+          "indexReferenceCount": 2256,
+          "primitiveCount": 4,
+          "triangleCount": 752,
+          "uvMin": [
+            0.5099999904632568,
+            0.5099999904632568
+          ],
+          "uvMax": [
+            0.7400000095367432,
+            0.7400000095367432
+          ],
+          "materialNames": [
+            "TireRubber"
+          ],
+          "objects": [
+            "TireParts.008",
+            "TireParts.009",
+            "TireParts.010",
+            "TireParts.011"
+          ],
+          "imageIndices": [
+            0
+          ]
+        },
+        {
+          "tileId": 8,
+          "label": "tire_tread",
+          "uvRect": [
+            0.76,
+            0.51,
+            0.99,
+            0.74
+          ],
+          "uvVertexCount": 10912,
+          "indexReferenceCount": 17856,
+          "primitiveCount": 4,
+          "triangleCount": 5952,
+          "uvMin": [
+            0.7599999904632568,
+            0.5099999904632568
+          ],
+          "uvMax": [
+            0.9900000095367432,
+            0.7400000095367432
+          ],
+          "materialNames": [
+            "TireTreadRubber"
+          ],
+          "objects": [
+            "TireTreadRubberParts.008",
+            "TireTreadRubberParts.009",
+            "TireTreadRubberParts.010",
+            "TireTreadRubberParts.011"
+          ],
+          "imageIndices": [
+            0
+          ]
+        },
+        {
+          "tileId": 9,
+          "label": "dashboard_vinyl",
+          "uvRect": [
+            0.01,
+            0.26,
+            0.24,
+            0.49
+          ],
+          "uvVertexCount": 1416,
+          "indexReferenceCount": 2124,
+          "primitiveCount": 1,
+          "triangleCount": 708,
+          "uvMin": [
+            0.009999999776482582,
+            0.25999999046325684
+          ],
+          "uvMax": [
+            0.23999999463558197,
+            0.49000000953674316
+          ],
+          "materialNames": [
+            "DashboardVinyl"
+          ],
+          "objects": [
+            "DashboardVinylParts.002"
+          ],
+          "imageIndices": [
+            0
+          ]
+        },
+        {
+          "tileId": 10,
+          "label": "seat_leather",
+          "uvRect": [
+            0.26,
+            0.26,
+            0.49,
+            0.49
+          ],
+          "uvVertexCount": 1728,
+          "indexReferenceCount": 2592,
+          "primitiveCount": 1,
+          "triangleCount": 864,
+          "uvMin": [
+            0.25999999046325684,
+            0.25999999046325684
+          ],
+          "uvMax": [
+            0.49000000953674316,
+            0.49000000953674316
+          ],
+          "materialNames": [
+            "SeatLeather"
+          ],
+          "objects": [
+            "SeatLeatherParts.002"
+          ],
+          "imageIndices": [
+            0
+          ]
+        },
+        {
+          "tileId": 11,
+          "label": "charcoal_trim",
+          "uvRect": [
+            0.51,
+            0.26,
+            0.74,
+            0.49
+          ],
+          "uvVertexCount": 6598,
+          "indexReferenceCount": 11952,
+          "primitiveCount": 1,
+          "triangleCount": 3984,
+          "uvMin": [
+            0.5099999904632568,
+            0.25999999046325684
+          ],
+          "uvMax": [
+            0.7400000095367432,
+            0.49000000953674316
+          ],
+          "materialNames": [
+            "GraphiteTrim"
+          ],
+          "objects": [
+            "TrimParts.002"
+          ],
+          "imageIndices": [
+            0
+          ]
+        },
+        {
+          "tileId": 12,
+          "label": "perforated_grille",
+          "uvRect": [
+            0.76,
+            0.26,
+            0.99,
+            0.49
+          ],
+          "uvVertexCount": 216,
+          "indexReferenceCount": 324,
+          "primitiveCount": 1,
+          "triangleCount": 108,
+          "uvMin": [
+            0.7599999904632568,
+            0.25999999046325684
+          ],
+          "uvMax": [
+            0.9900000095367432,
+            0.49000000953674316
+          ],
+          "materialNames": [
+            "PerforatedGrille"
+          ],
+          "objects": [
+            "PerforatedGrilleParts.002"
+          ],
+          "imageIndices": [
+            0
+          ]
+        },
+        {
+          "tileId": 13,
+          "label": "subtle_glass",
+          "uvRect": [
+            0.01,
+            0.01,
+            0.24,
+            0.24
+          ],
+          "uvVertexCount": 476,
+          "indexReferenceCount": 714,
+          "primitiveCount": 2,
+          "triangleCount": 238,
+          "uvMin": [
+            0.009999999776482582,
+            0.009999990463256836
+          ],
+          "uvMax": [
+            0.23999999463558197,
+            0.24000000953674316
+          ],
+          "materialNames": [
+            "SmokedGlass",
+            "MirrorGlass"
+          ],
+          "objects": [
+            "GlassParts.002",
+            "MirrorGlassParts.002"
+          ],
+          "imageIndices": [
+            0
+          ]
+        },
+        {
+          "tileId": 14,
+          "label": "headlamp_optics",
+          "uvRect": [
+            0.26,
+            0.01,
+            0.49,
+            0.24
+          ],
+          "uvVertexCount": 432,
+          "indexReferenceCount": 648,
+          "primitiveCount": 1,
+          "triangleCount": 216,
+          "uvMin": [
+            0.25999999046325684,
+            0.009999990463256836
+          ],
+          "uvMax": [
+            0.49000000953674316,
+            0.24000000953674316
+          ],
+          "materialNames": [
+            "LEDHeadlight"
+          ],
+          "objects": [
+            "HeadlightLEDParts.002"
+          ],
+          "imageIndices": [
+            0
+          ]
+        },
+        {
+          "tileId": 15,
+          "label": "red_tail_optics",
+          "uvRect": [
+            0.51,
+            0.01,
+            0.74,
+            0.24
+          ],
+          "uvVertexCount": 432,
+          "indexReferenceCount": 648,
+          "primitiveCount": 1,
+          "triangleCount": 216,
+          "uvMin": [
+            0.5099999904632568,
+            0.009999990463256836
+          ],
+          "uvMax": [
+            0.7400000095367432,
+            0.24000000953674316
+          ],
+          "materialNames": [
+            "TailLight"
+          ],
+          "objects": [
+            "TailLightBarParts.002"
+          ],
+          "imageIndices": [
+            0
+          ]
+        },
+        {
+          "tileId": 16,
+          "label": "carbon_vent",
+          "uvRect": [
+            0.76,
+            0.01,
+            0.99,
+            0.24
+          ],
+          "uvVertexCount": 616,
+          "indexReferenceCount": 972,
+          "primitiveCount": 1,
+          "triangleCount": 324,
+          "uvMin": [
+            0.7599999904632568,
+            0.009999990463256836
+          ],
+          "uvMax": [
+            0.9900000095367432,
+            0.24000000953674316
+          ],
+          "materialNames": [
+            "CarbonVent"
+          ],
+          "objects": [
+            "CarbonVentParts.002"
+          ],
+          "imageIndices": [
+            0
+          ]
+        }
+      ]
+    },
+    {
+      "family": "car",
+      "id": "van",
+      "file": "public/models/van.glb",
+      "bytes": 4186796,
+      "sha256": "8f91a4d54de79ececa852660afd92f3cb8f93291eeabedbffb208bb079aa6b82",
+      "triangles": 24210,
+      "drawCalls": 37,
+      "meshCount": 37,
+      "materialCount": 20,
+      "imageCount": 1,
+      "nodeCount": 42,
+      "texturedPrimitiveCount": 35,
+      "untexturedPrimitiveCount": 2,
+      "uvVertexCount": 35873,
+      "usedTileIds": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16
+      ],
+      "transparentGlassCount": 1,
+      "glassMaterials": [
+        {
+          "name": "SmokedGlass",
+          "alphaMode": "BLEND",
+          "alpha": 0.14000000059604645,
+          "transmission": 0.05000000074505806
+        },
+        {
+          "name": "MirrorGlass",
+          "alphaMode": "OPAQUE",
+          "alpha": 1,
+          "transmission": 0
+        }
+      ],
+      "animationGroups": [
+        "WheelFL.003",
+        "WheelFR.003",
+        "WheelRL.003",
+        "WheelRR.003",
+        "van"
+      ],
+      "dynamicNodeVerification": [
+        {
+          "name": "WheelFL.003",
+          "nodeIndex": 22,
+          "nodeType": "animationPivotGroup",
+          "directChildren": 5,
+          "descendantMeshCount": 5,
+          "translation": [
+            -0.9480000138282776,
+            0.45500001311302185,
+            1.4700000286102295
+          ],
+          "rotationQuaternion": [
+            0,
+            0,
+            0,
+            1
+          ],
+          "scale": [
+            1,
+            1,
+            1
+          ]
+        },
+        {
+          "name": "WheelFR.003",
+          "nodeIndex": 28,
+          "nodeType": "animationPivotGroup",
+          "directChildren": 5,
+          "descendantMeshCount": 5,
+          "translation": [
+            0.9480000138282776,
+            0.45500001311302185,
+            1.4700000286102295
+          ],
+          "rotationQuaternion": [
+            0,
+            0,
+            0,
+            1
+          ],
+          "scale": [
+            1,
+            1,
+            1
+          ]
+        },
+        {
+          "name": "WheelRL.003",
+          "nodeIndex": 34,
+          "nodeType": "animationPivotGroup",
+          "directChildren": 5,
+          "descendantMeshCount": 5,
+          "translation": [
+            -0.9480000138282776,
+            0.45500001311302185,
+            -1.4700000286102295
+          ],
+          "rotationQuaternion": [
+            0,
+            0,
+            0,
+            1
+          ],
+          "scale": [
+            1,
+            1,
+            1
+          ]
+        },
+        {
+          "name": "WheelRR.003",
+          "nodeIndex": 40,
+          "nodeType": "animationPivotGroup",
+          "directChildren": 5,
+          "descendantMeshCount": 5,
+          "translation": [
+            0.9480000138282776,
+            0.45500001311302185,
+            -1.4700000286102295
+          ],
+          "rotationQuaternion": [
+            0,
+            0,
+            0,
+            1
+          ],
+          "scale": [
+            1,
+            1,
+            1
+          ]
+        }
+      ],
+      "images": [
+        {
+          "index": 0,
+          "name": "car-detail-atlas",
+          "mimeType": "image/png",
+          "bytes": 2847387,
+          "sha256": "dd17dfcd5ce2f222277cca265e8a2d04876d4b6c556d3d98be869505bff7281a",
+          "matchesFamilySourceBytes": true,
+          "dimensions": [
+            1254,
+            1254
+          ],
+          "pngChunks": [
+            "IHDR",
+            "IDAT",
+            "IEND"
+          ],
+          "privatePathScan": {
+            "homePathMatchCount": 0,
+            "bytesScanned": 2847387
+          }
+        }
+      ],
+      "tiles": [
+        {
+          "tileId": 1,
+          "label": "body_panel",
+          "uvRect": [
+            0.01,
+            0.76,
+            0.24,
+            0.99
+          ],
+          "uvVertexCount": 1574,
+          "indexReferenceCount": 4578,
+          "primitiveCount": 1,
+          "triangleCount": 1526,
+          "uvMin": [
+            0.009999999776482582,
+            0.7599999904632568
+          ],
+          "uvMax": [
+            0.23999999463558197,
+            0.9900000095367432
+          ],
+          "materialNames": [
+            "BodyPaint"
+          ],
+          "objects": [
+            "BodyPaint_vanParts"
+          ],
+          "imageIndices": [
+            0
+          ]
+        },
+        {
+          "tileId": 2,
+          "label": "door_panel",
+          "uvRect": [
+            0.26,
+            0.76,
+            0.49,
+            0.99
+          ],
+          "uvVertexCount": 781,
+          "indexReferenceCount": 3048,
+          "primitiveCount": 1,
+          "triangleCount": 1016,
+          "uvMin": [
+            0.25999999046325684,
+            0.7599999904632568
+          ],
+          "uvMax": [
+            0.49000000953674316,
+            0.9900000095367432
+          ],
+          "materialNames": [
+            "BodyPaint_Door"
+          ],
+          "objects": [
+            "BodyPaint_van_DoorParts"
+          ],
+          "imageIndices": [
+            0
+          ]
+        },
+        {
+          "tileId": 3,
+          "label": "hood_vents",
+          "uvRect": [
+            0.51,
+            0.76,
+            0.74,
+            0.99
+          ],
+          "uvVertexCount": 24,
+          "indexReferenceCount": 54,
+          "primitiveCount": 1,
+          "triangleCount": 18,
+          "uvMin": [
+            0.5099999904632568,
+            0.7599999904632568
+          ],
+          "uvMax": [
+            0.7400000095367432,
+            0.9900000095367432
+          ],
+          "materialNames": [
+            "BodyPaint_Hood"
+          ],
+          "objects": [
+            "BodyPaint_van_HoodParts"
+          ],
+          "imageIndices": [
+            0
+          ]
+        },
+        {
+          "tileId": 4,
+          "label": "roof_paint",
+          "uvRect": [
+            0.76,
+            0.76,
+            0.99,
+            0.99
+          ],
+          "uvVertexCount": 216,
+          "indexReferenceCount": 324,
+          "primitiveCount": 1,
+          "triangleCount": 108,
+          "uvMin": [
+            0.7599999904632568,
+            0.7599999904632568
+          ],
+          "uvMax": [
+            0.9900000095367432,
+            0.9900000095367432
+          ],
+          "materialNames": [
+            "BodyPaint_Roof"
+          ],
+          "objects": [
+            "BodyPaint_van_RoofParts"
+          ],
+          "imageIndices": [
+            0
+          ]
+        },
+        {
+          "tileId": 5,
+          "label": "brushed_alloy",
+          "uvRect": [
+            0.01,
+            0.51,
+            0.24,
+            0.74
+          ],
+          "uvVertexCount": 2362,
+          "indexReferenceCount": 4644,
+          "primitiveCount": 5,
+          "triangleCount": 1548,
+          "uvMin": [
+            0.009999999776482582,
+            0.5099999904632568
+          ],
+          "uvMax": [
+            0.23999999463558197,
+            0.7400000095367432
+          ],
+          "materialNames": [
+            "BrushedAlloy"
+          ],
+          "objects": [
+            "AlloyParts.015",
+            "AlloyParts.016",
+            "AlloyParts.017",
+            "AlloyParts.018",
+            "AlloyParts.019"
+          ],
+          "imageIndices": [
+            0
+          ]
+        },
+        {
+          "tileId": 6,
+          "label": "polished_rim",
+          "uvRect": [
+            0.26,
+            0.51,
+            0.49,
+            0.74
+          ],
+          "uvVertexCount": 7608,
+          "indexReferenceCount": 15600,
+          "primitiveCount": 8,
+          "triangleCount": 5200,
+          "uvMin": [
+            0.25999999046325684,
+            0.5099999904632568
+          ],
+          "uvMax": [
+            0.49000000953674316,
+            0.7400000095367432
+          ],
+          "materialNames": [
+            "ForgedGraphite",
+            "PolishedRim"
+          ],
+          "objects": [
+            "ForgedGraphiteParts.012",
+            "PolishedRimParts.012",
+            "ForgedGraphiteParts.013",
+            "PolishedRimParts.013",
+            "ForgedGraphiteParts.014",
+            "PolishedRimParts.014",
+            "ForgedGraphiteParts.015",
+            "PolishedRimParts.015"
+          ],
+          "imageIndices": [
+            0
+          ]
+        },
+        {
+          "tileId": 7,
+          "label": "rubber_sidewall",
+          "uvRect": [
+            0.51,
+            0.51,
+            0.74,
+            0.74
+          ],
+          "uvVertexCount": 716,
+          "indexReferenceCount": 3108,
+          "primitiveCount": 5,
+          "triangleCount": 1036,
+          "uvMin": [
+            0.5099999904632568,
+            0.5099999904632568
+          ],
+          "uvMax": [
+            0.7400000095367432,
+            0.7400000095367432
+          ],
+          "materialNames": [
+            "TireRubber"
+          ],
+          "objects": [
+            "TireParts.012",
+            "TireParts.013",
+            "TireParts.014",
+            "TireParts.015",
+            "TireParts.016"
+          ],
+          "imageIndices": [
+            0
+          ]
+        },
+        {
+          "tileId": 8,
+          "label": "tire_tread",
+          "uvRect": [
+            0.76,
+            0.51,
+            0.99,
+            0.74
+          ],
+          "uvVertexCount": 10912,
+          "indexReferenceCount": 17856,
+          "primitiveCount": 4,
+          "triangleCount": 5952,
+          "uvMin": [
+            0.7599999904632568,
+            0.5099999904632568
+          ],
+          "uvMax": [
+            0.9900000095367432,
+            0.7400000095367432
+          ],
+          "materialNames": [
+            "TireTreadRubber"
+          ],
+          "objects": [
+            "TireTreadRubberParts.012",
+            "TireTreadRubberParts.013",
+            "TireTreadRubberParts.014",
+            "TireTreadRubberParts.015"
+          ],
+          "imageIndices": [
+            0
+          ]
+        },
+        {
+          "tileId": 9,
+          "label": "dashboard_vinyl",
+          "uvRect": [
+            0.01,
+            0.26,
+            0.24,
+            0.49
+          ],
+          "uvVertexCount": 1416,
+          "indexReferenceCount": 2124,
+          "primitiveCount": 1,
+          "triangleCount": 708,
+          "uvMin": [
+            0.009999999776482582,
+            0.25999999046325684
+          ],
+          "uvMax": [
+            0.23999999463558197,
+            0.49000000953674316
+          ],
+          "materialNames": [
+            "DashboardVinyl"
+          ],
+          "objects": [
+            "DashboardVinylParts.003"
+          ],
+          "imageIndices": [
+            0
+          ]
+        },
+        {
+          "tileId": 10,
+          "label": "seat_leather",
+          "uvRect": [
+            0.26,
+            0.26,
+            0.49,
+            0.49
+          ],
+          "uvVertexCount": 1728,
+          "indexReferenceCount": 2592,
+          "primitiveCount": 1,
+          "triangleCount": 864,
+          "uvMin": [
+            0.25999999046325684,
+            0.25999999046325684
+          ],
+          "uvMax": [
+            0.49000000953674316,
+            0.49000000953674316
+          ],
+          "materialNames": [
+            "SeatLeather"
+          ],
+          "objects": [
+            "SeatLeatherParts.003"
+          ],
+          "imageIndices": [
+            0
+          ]
+        },
+        {
+          "tileId": 11,
+          "label": "charcoal_trim",
+          "uvRect": [
+            0.51,
+            0.26,
+            0.74,
+            0.49
+          ],
+          "uvVertexCount": 6364,
+          "indexReferenceCount": 11628,
+          "primitiveCount": 1,
+          "triangleCount": 3876,
+          "uvMin": [
+            0.5099999904632568,
+            0.25999999046325684
+          ],
+          "uvMax": [
+            0.7400000095367432,
+            0.49000000953674316
+          ],
+          "materialNames": [
+            "GraphiteTrim"
+          ],
+          "objects": [
+            "TrimParts.003"
+          ],
+          "imageIndices": [
+            0
+          ]
+        },
+        {
+          "tileId": 12,
+          "label": "perforated_grille",
+          "uvRect": [
+            0.76,
+            0.26,
+            0.99,
+            0.49
+          ],
+          "uvVertexCount": 216,
+          "indexReferenceCount": 324,
+          "primitiveCount": 1,
+          "triangleCount": 108,
+          "uvMin": [
+            0.7599999904632568,
+            0.25999999046325684
+          ],
+          "uvMax": [
+            0.9900000095367432,
+            0.49000000953674316
+          ],
+          "materialNames": [
+            "PerforatedGrille"
+          ],
+          "objects": [
+            "PerforatedGrilleParts.003"
+          ],
+          "imageIndices": [
+            0
+          ]
+        },
+        {
+          "tileId": 13,
+          "label": "subtle_glass",
+          "uvRect": [
+            0.01,
+            0.01,
+            0.24,
+            0.24
+          ],
+          "uvVertexCount": 476,
+          "indexReferenceCount": 714,
+          "primitiveCount": 2,
+          "triangleCount": 238,
+          "uvMin": [
+            0.009999999776482582,
+            0.009999990463256836
+          ],
+          "uvMax": [
+            0.23999999463558197,
+            0.24000000953674316
+          ],
+          "materialNames": [
+            "SmokedGlass",
+            "MirrorGlass"
+          ],
+          "objects": [
+            "GlassParts.003",
+            "MirrorGlassParts.003"
+          ],
+          "imageIndices": [
+            0
+          ]
+        },
+        {
+          "tileId": 14,
+          "label": "headlamp_optics",
+          "uvRect": [
+            0.26,
+            0.01,
+            0.49,
+            0.24
+          ],
+          "uvVertexCount": 432,
+          "indexReferenceCount": 648,
+          "primitiveCount": 1,
+          "triangleCount": 216,
+          "uvMin": [
+            0.25999999046325684,
+            0.009999990463256836
+          ],
+          "uvMax": [
+            0.49000000953674316,
+            0.24000000953674316
+          ],
+          "materialNames": [
+            "LEDHeadlight"
+          ],
+          "objects": [
+            "HeadlightLEDParts.003"
+          ],
+          "imageIndices": [
+            0
+          ]
+        },
+        {
+          "tileId": 15,
+          "label": "red_tail_optics",
+          "uvRect": [
+            0.51,
+            0.01,
+            0.74,
+            0.24
+          ],
+          "uvVertexCount": 432,
+          "indexReferenceCount": 648,
+          "primitiveCount": 1,
+          "triangleCount": 216,
+          "uvMin": [
+            0.5099999904632568,
+            0.009999990463256836
+          ],
+          "uvMax": [
+            0.7400000095367432,
+            0.24000000953674316
+          ],
+          "materialNames": [
+            "TailLight"
+          ],
+          "objects": [
+            "TailLightBarParts.003"
+          ],
+          "imageIndices": [
+            0
+          ]
+        },
+        {
+          "tileId": 16,
+          "label": "carbon_vent",
+          "uvRect": [
+            0.76,
+            0.01,
+            0.99,
+            0.24
+          ],
+          "uvVertexCount": 616,
+          "indexReferenceCount": 972,
+          "primitiveCount": 1,
+          "triangleCount": 324,
+          "uvMin": [
+            0.7599999904632568,
+            0.009999990463256836
+          ],
+          "uvMax": [
+            0.9900000095367432,
+            0.24000000953674316
+          ],
+          "materialNames": [
+            "CarbonVent"
+          ],
+          "objects": [
+            "CarbonVentParts.003"
+          ],
+          "imageIndices": [
+            0
+          ]
+        }
+      ]
+    },
+    {
+      "family": "train",
+      "id": "train",
+      "file": "public/models/train.glb",
+      "bytes": 5636312,
+      "sha256": "fac8ae7404353bd640d25d1aff0c705f46c860e5de097a6d79a819420bf6c284",
+      "triangles": 73008,
+      "drawCalls": 18,
+      "meshCount": 18,
+      "materialCount": 18,
+      "imageCount": 1,
+      "nodeCount": 21,
+      "texturedPrimitiveCount": 16,
+      "untexturedPrimitiveCount": 2,
+      "uvVertexCount": 76914,
+      "usedTileIds": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16
+      ],
+      "transparentGlassCount": 1,
+      "glassMaterials": [
+        {
+          "name": "IMG thin transparent safety glazing",
+          "alphaMode": "BLEND",
+          "alpha": 0.04500000178813934,
+          "transmission": 0.10000000149011612
+        }
+      ],
+      "animationGroups": [
+        "TrainRoot"
+      ],
+      "dynamicNodeVerification": [
+        {
+          "name": "DriverAnchor",
+          "nodeIndex": 0,
+          "nodeType": "staticDriverAnchor",
+          "directChildren": 0,
+          "descendantMeshCount": 0,
+          "translation": [
+            0,
+            2.299999952316284,
+            8
+          ],
+          "rotationQuaternion": [
+            0,
+            0,
+            0,
+            1
+          ],
+          "scale": [
+            1,
+            1,
+            1
+          ]
+        }
+      ],
+      "images": [
+        {
+          "index": 0,
+          "name": "train-detail-atlas",
+          "mimeType": "image/png",
+          "bytes": 2701470,
+          "sha256": "0284e44b73b0fb3809fe46d3afe8db2d546b5e821dbac1b4935cfae18851e15b",
+          "matchesFamilySourceBytes": true,
+          "dimensions": [
+            1254,
+            1254
+          ],
+          "pngChunks": [
+            "IHDR",
+            "caBX",
+            "IDAT",
+            "IEND"
+          ],
+          "privatePathScan": {
+            "homePathMatchCount": 0,
+            "bytesScanned": 2701470
+          }
+        }
+      ],
+      "tiles": [
+        {
+          "tileId": 1,
+          "label": "Ivory teal body A",
+          "uvRect": [
+            0.0075,
+            0.7575,
+            0.2425,
+            0.9925
+          ],
+          "uvVertexCount": 3040,
+          "indexReferenceCount": 10260,
+          "primitiveCount": 1,
+          "triangleCount": 3420,
+          "uvMin": [
+            0.00820715632289648,
+            0.7588110566139221
+          ],
+          "uvMax": [
+            0.24179284274578094,
+            0.9911889433860779
+          ],
+          "materialNames": [
+            "IMG Ivory teal body A"
+          ],
+          "objects": [
+            "TrainRoot_Static_IMG_Ivory_teal_body_A"
+          ],
+          "imageIndices": [
+            0
+          ]
+        },
+        {
+          "tileId": 2,
+          "label": "Ivory teal body B",
+          "uvRect": [
+            0.2575,
+            0.7575,
+            0.4925,
+            0.9925
+          ],
+          "uvVertexCount": 1942,
+          "indexReferenceCount": 6492,
+          "primitiveCount": 1,
+          "triangleCount": 2164,
+          "uvMin": [
+            0.2574999928474426,
+            0.7574999928474426
+          ],
+          "uvMax": [
+            0.4925000071525574,
+            0.9925000071525574
+          ],
+          "materialNames": [
+            "IMG Ivory teal body B"
+          ],
+          "objects": [
+            "TrainRoot_Static_IMG_Ivory_teal_body_B"
+          ],
+          "imageIndices": [
+            0
+          ]
+        },
+        {
+          "tileId": 3,
+          "label": "Roof sheet metal",
+          "uvRect": [
+            0.5075,
+            0.7575,
+            0.7425,
+            0.9925
+          ],
+          "uvVertexCount": 1068,
+          "indexReferenceCount": 3564,
+          "primitiveCount": 1,
+          "triangleCount": 1188,
+          "uvMin": [
+            0.5074999928474426,
+            0.7578195929527283
+          ],
+          "uvMax": [
+            0.7425000071525574,
+            0.9921804070472717
+          ],
+          "materialNames": [
+            "IMG satin formed roof"
+          ],
+          "objects": [
+            "TrainRoot_Static_IMG_satin_formed_roof"
+          ],
+          "imageIndices": [
+            0
+          ]
+        },
+        {
+          "tileId": 4,
+          "label": "Lower panel fasteners",
+          "uvRect": [
+            0.7575,
+            0.7575,
+            0.9925,
+            0.9925
+          ],
+          "uvVertexCount": 1552,
+          "indexReferenceCount": 5592,
+          "primitiveCount": 1,
+          "triangleCount": 1864,
+          "uvMin": [
+            0.7579730153083801,
+            0.7583796381950378
+          ],
+          "uvMax": [
+            0.9920269846916199,
+            0.9916203618049622
+          ],
+          "materialNames": [
+            "IMG Lower panel fasteners"
+          ],
+          "objects": [
+            "TrainRoot_Static_IMG_Lower_panel_fasteners"
+          ],
+          "imageIndices": [
+            0
+          ]
+        },
+        {
+          "tileId": 5,
+          "label": "Sliding door stripe",
+          "uvRect": [
+            0.085,
+            0.5075,
+            0.2425,
+            0.7425
+          ],
+          "uvVertexCount": 1152,
+          "indexReferenceCount": 3888,
+          "primitiveCount": 1,
+          "triangleCount": 1296,
+          "uvMin": [
+            0.08613435924053192,
+            0.5091925263404846
+          ],
+          "uvMax": [
+            0.24136564135551453,
+            0.7408074736595154
+          ],
+          "materialNames": [
+            "IMG Sliding door stripe"
+          ],
+          "objects": [
+            "TrainRoot_Static_IMG_Sliding_door_stripe"
+          ],
+          "imageIndices": [
+            0
+          ]
+        },
+        {
+          "tileId": 6,
+          "label": "Brushed aluminium",
+          "uvRect": [
+            0.2575,
+            0.5075,
+            0.4925,
+            0.7425
+          ],
+          "uvVertexCount": 5536,
+          "indexReferenceCount": 22224,
+          "primitiveCount": 1,
+          "triangleCount": 7408,
+          "uvMin": [
+            0.25769665837287903,
+            0.508725106716156
+          ],
+          "uvMax": [
+            0.49230334162712097,
+            0.741274893283844
+          ],
+          "materialNames": [
+            "IMG brushed aluminium"
+          ],
+          "objects": [
+            "TrainRoot_Static_IMG_brushed_aluminium"
+          ],
+          "imageIndices": [
+            0
+          ]
+        },
+        {
+          "tileId": 7,
+          "label": "Rubber wear pads",
+          "uvRect": [
+            0.5075,
+            0.5075,
+            0.7425,
+            0.7425
+          ],
+          "uvVertexCount": 1600,
+          "indexReferenceCount": 6816,
+          "primitiveCount": 1,
+          "triangleCount": 2272,
+          "uvMin": [
+            0.5093110203742981,
+            0.5093110203742981
+          ],
+          "uvMax": [
+            0.7406889796257019,
+            0.7406889796257019
+          ],
+          "materialNames": [
+            "IMG rubber suspension pads"
+          ],
+          "objects": [
+            "TrainRoot_Static_IMG_rubber_suspension_pads"
+          ],
+          "imageIndices": [
+            0
+          ]
+        },
+        {
+          "tileId": 8,
+          "label": "Machined axle steel",
+          "uvRect": [
+            0.7575,
+            0.5075,
+            0.9925,
+            0.7425
+          ],
+          "uvVertexCount": 9840,
+          "indexReferenceCount": 42096,
+          "primitiveCount": 1,
+          "triangleCount": 14032,
+          "uvMin": [
+            0.7576434016227722,
+            0.507961094379425
+          ],
+          "uvMax": [
+            0.9923565983772278,
+            0.742038905620575
+          ],
+          "materialNames": [
+            "IMG machined running steel"
+          ],
+          "objects": [
+            "TrainRoot_Static_IMG_machined_running_steel"
+          ],
+          "imageIndices": [
+            0
+          ]
+        },
+        {
+          "tileId": 9,
+          "label": "Blank navy cockpit powdercoat",
+          "uvRect": [
+            0.0075,
+            0.2575,
+            0.2425,
+            0.4925
+          ],
+          "uvVertexCount": 192,
+          "indexReferenceCount": 648,
+          "primitiveCount": 1,
+          "triangleCount": 216,
+          "uvMin": [
+            0.008264766074717045,
+            0.26487457752227783
+          ],
+          "uvMax": [
+            0.24173523485660553,
+            0.48512542247772217
+          ],
+          "materialNames": [
+            "IMG blank navy cockpit"
+          ],
+          "objects": [
+            "TrainRoot_Static_IMG_blank_navy_cockpit"
+          ],
+          "imageIndices": [
+            0
+          ]
+        },
+        {
+          "tileId": 10,
+          "label": "Woven navy upholstery",
+          "uvRect": [
+            0.2575,
+            0.2575,
+            0.4925,
+            0.4925
+          ],
+          "uvVertexCount": 32960,
+          "indexReferenceCount": 53280,
+          "primitiveCount": 1,
+          "triangleCount": 17760,
+          "uvMin": [
+            0.2574999928474426,
+            0.2574999928474426
+          ],
+          "uvMax": [
+            0.4925000071525574,
+            0.4925000071525574
+          ],
+          "materialNames": [
+            "IMG woven navy seating"
+          ],
+          "objects": [
+            "TrainRoot_Static_IMG_woven_navy_seating"
+          ],
+          "imageIndices": [
+            0
+          ]
+        },
+        {
+          "tileId": 11,
+          "label": "Rubber window gaskets",
+          "uvRect": [
+            0.5075,
+            0.2575,
+            0.7425,
+            0.4925
+          ],
+          "uvVertexCount": 11344,
+          "indexReferenceCount": 38640,
+          "primitiveCount": 1,
+          "triangleCount": 12880,
+          "uvMin": [
+            0.5080136656761169,
+            0.25763368606567383
+          ],
+          "uvMax": [
+            0.7419863343238831,
+            0.49236631393432617
+          ],
+          "materialNames": [
+            "IMG rubber gaskets"
+          ],
+          "objects": [
+            "TrainRoot_Static_IMG_rubber_gaskets"
+          ],
+          "imageIndices": [
+            0
+          ]
+        },
+        {
+          "tileId": 12,
+          "label": "Antislip floor",
+          "uvRect": [
+            0.7575,
+            0.2575,
+            0.9925,
+            0.4925
+          ],
+          "uvVertexCount": 96,
+          "indexReferenceCount": 324,
+          "primitiveCount": 1,
+          "triangleCount": 108,
+          "uvMin": [
+            0.7575752139091492,
+            0.25757527351379395
+          ],
+          "uvMax": [
+            0.9924247860908508,
+            0.49242472648620605
+          ],
+          "materialNames": [
+            "IMG antislip floor rubber"
+          ],
+          "objects": [
+            "TrainRoot_Static_IMG_antislip_floor_rubber"
+          ],
+          "imageIndices": [
+            0
+          ]
+        },
+        {
+          "tileId": 13,
+          "label": "Underbody mechanical steel",
+          "uvRect": [
+            0.0075,
+            0.0075,
+            0.2425,
+            0.2425
+          ],
+          "uvVertexCount": 3040,
+          "indexReferenceCount": 11268,
+          "primitiveCount": 1,
+          "triangleCount": 3756,
+          "uvMin": [
+            0.007827774621546268,
+            0.0078277587890625
+          ],
+          "uvMax": [
+            0.2421722263097763,
+            0.2421722412109375
+          ],
+          "materialNames": [
+            "IMG dark underbody steel"
+          ],
+          "objects": [
+            "TrainRoot_Static_IMG_dark_underbody_steel"
+          ],
+          "imageIndices": [
+            0
+          ]
+        },
+        {
+          "tileId": 14,
+          "label": "Vent grille",
+          "uvRect": [
+            0.2575,
+            0.0075,
+            0.4925,
+            0.2425
+          ],
+          "uvVertexCount": 192,
+          "indexReferenceCount": 648,
+          "primitiveCount": 1,
+          "triangleCount": 216,
+          "uvMin": [
+            0.2609414756298065,
+            0.010941505432128906
+          ],
+          "uvMax": [
+            0.4890585243701935,
+            0.2390584945678711
+          ],
+          "materialNames": [
+            "IMG metal ventilation slats"
+          ],
+          "objects": [
+            "TrainRoot_Static_IMG_metal_ventilation_slats"
+          ],
+          "imageIndices": [
+            0
+          ]
+        },
+        {
+          "tileId": 15,
+          "label": "Pantograph copper contact wear",
+          "uvRect": [
+            0.5075,
+            0.0075,
+            0.7425,
+            0.2425
+          ],
+          "uvVertexCount": 96,
+          "indexReferenceCount": 324,
+          "primitiveCount": 1,
+          "triangleCount": 108,
+          "uvMin": [
+            0.5081478357315063,
+            0.01536625623703003
+          ],
+          "uvMax": [
+            0.7418521642684937,
+            0.23463374376296997
+          ],
+          "materialNames": [
+            "IMG worn copper contact"
+          ],
+          "objects": [
+            "TrainRoot_Static_IMG_worn_copper_contact"
+          ],
+          "imageIndices": [
+            0
+          ]
+        },
+        {
+          "tileId": 16,
+          "label": "Fine smudged safety glazing",
+          "uvRect": [
+            0.7575,
+            0.0075,
+            0.9925,
+            0.2425
+          ],
+          "uvVertexCount": 3264,
+          "indexReferenceCount": 11016,
+          "primitiveCount": 1,
+          "triangleCount": 3672,
+          "uvMin": [
+            0.7579737305641174,
+            0.008151054382324219
+          ],
+          "uvMax": [
+            0.9920262694358826,
+            0.24184894561767578
+          ],
+          "materialNames": [
+            "IMG thin transparent safety glazing"
+          ],
+          "objects": [
+            "TrainRoot_Static_IMG_thin_transparent_safety_glazing"
+          ],
+          "imageIndices": [
+            0
+          ]
+        }
+      ]
+    },
+    {
+      "family": "train",
+      "id": "train-cab",
+      "file": "public/models/train-cab.glb",
+      "bytes": 3069012,
+      "sha256": "d508d7af683e610caf0235c78a198f7e3923d6b39e050ddd384425a6fb4b0517",
+      "triangles": 8386,
+      "drawCalls": 15,
+      "meshCount": 15,
+      "materialCount": 10,
+      "imageCount": 1,
+      "nodeCount": 18,
+      "texturedPrimitiveCount": 12,
+      "untexturedPrimitiveCount": 3,
+      "uvVertexCount": 8778,
+      "usedTileIds": [
+        4,
+        6,
+        9,
+        10,
+        11,
+        12,
+        13,
+        16
+      ],
+      "transparentGlassCount": 1,
+      "glassMaterials": [
+        {
+          "name": "IMG thin transparent safety glazing",
+          "alphaMode": "BLEND",
+          "alpha": 0.04500000178813934,
+          "transmission": 0.10000000149011612
+        }
+      ],
+      "animationGroups": [
+        "BrakeLever",
+        "TractionLever",
+        "TrainCabRoot"
+      ],
+      "dynamicNodeVerification": [
+        {
+          "name": "TractionLever",
+          "nodeIndex": 6,
+          "nodeType": "animationPivotGroup",
+          "directChildren": 2,
+          "descendantMeshCount": 2,
+          "translation": [
+            -0.8500000238418579,
+            0.8799999952316284,
+            0.41999998688697815
+          ],
+          "rotationQuaternion": [
+            0,
+            0,
+            0,
+            1
+          ],
+          "scale": [
+            1,
+            1,
+            1
+          ]
+        },
+        {
+          "name": "BrakeLever",
+          "nodeIndex": 2,
+          "nodeType": "animationPivotGroup",
+          "directChildren": 2,
+          "descendantMeshCount": 2,
+          "translation": [
+            0.8299999833106995,
+            0.8799999952316284,
+            0.41999998688697815
+          ],
+          "rotationQuaternion": [
+            0,
+            0,
+            0,
+            1
+          ],
+          "scale": [
+            1,
+            1,
+            1
+          ]
+        }
+      ],
+      "images": [
+        {
+          "index": 0,
+          "name": "train-detail-atlas",
+          "mimeType": "image/png",
+          "bytes": 2701470,
+          "sha256": "0284e44b73b0fb3809fe46d3afe8db2d546b5e821dbac1b4935cfae18851e15b",
+          "matchesFamilySourceBytes": true,
+          "dimensions": [
+            1254,
+            1254
+          ],
+          "pngChunks": [
+            "IHDR",
+            "caBX",
+            "IDAT",
+            "IEND"
+          ],
+          "privatePathScan": {
+            "homePathMatchCount": 0,
+            "bytesScanned": 2701470
+          }
+        }
+      ],
+      "tiles": [
+        {
+          "tileId": 1,
+          "label": "Ivory teal body A",
+          "uvRect": [
+            0.0075,
+            0.7575,
+            0.2425,
+            0.9925
+          ],
+          "uvVertexCount": 0,
+          "indexReferenceCount": 0,
+          "primitiveCount": 0,
+          "triangleCount": 0,
+          "uvMin": null,
+          "uvMax": null,
+          "materialNames": [],
+          "objects": [],
+          "imageIndices": []
+        },
+        {
+          "tileId": 2,
+          "label": "Ivory teal body B",
+          "uvRect": [
+            0.2575,
+            0.7575,
+            0.4925,
+            0.9925
+          ],
+          "uvVertexCount": 0,
+          "indexReferenceCount": 0,
+          "primitiveCount": 0,
+          "triangleCount": 0,
+          "uvMin": null,
+          "uvMax": null,
+          "materialNames": [],
+          "objects": [],
+          "imageIndices": []
+        },
+        {
+          "tileId": 3,
+          "label": "Roof sheet metal",
+          "uvRect": [
+            0.5075,
+            0.7575,
+            0.7425,
+            0.9925
+          ],
+          "uvVertexCount": 0,
+          "indexReferenceCount": 0,
+          "primitiveCount": 0,
+          "triangleCount": 0,
+          "uvMin": null,
+          "uvMax": null,
+          "materialNames": [],
+          "objects": [],
+          "imageIndices": []
+        },
+        {
+          "tileId": 4,
+          "label": "Lower panel fasteners",
+          "uvRect": [
+            0.7575,
+            0.7575,
+            0.9925,
+            0.9925
+          ],
+          "uvVertexCount": 192,
+          "indexReferenceCount": 648,
+          "primitiveCount": 1,
+          "triangleCount": 216,
+          "uvMin": [
+            0.7584559917449951,
+            0.7584559917449951
+          ],
+          "uvMax": [
+            0.9915440082550049,
+            0.9915440082550049
+          ],
+          "materialNames": [
+            "IMG Lower panel fasteners"
+          ],
+          "objects": [
+            "TrainCabRoot_Static_IMG_Lower_panel_fasteners"
+          ],
+          "imageIndices": [
+            0
+          ]
+        },
+        {
+          "tileId": 5,
+          "label": "Sliding door stripe",
+          "uvRect": [
+            0.085,
+            0.5075,
+            0.2425,
+            0.7425
+          ],
+          "uvVertexCount": 0,
+          "indexReferenceCount": 0,
+          "primitiveCount": 0,
+          "triangleCount": 0,
+          "uvMin": null,
+          "uvMax": null,
+          "materialNames": [],
+          "objects": [],
+          "imageIndices": []
+        },
+        {
+          "tileId": 6,
+          "label": "Brushed aluminium",
+          "uvRect": [
+            0.2575,
+            0.5075,
+            0.4925,
+            0.7425
+          ],
+          "uvVertexCount": 1400,
+          "indexReferenceCount": 5964,
+          "primitiveCount": 3,
+          "triangleCount": 1988,
+          "uvMin": [
+            0.26270678639411926,
+            0.507658839225769
+          ],
+          "uvMax": [
+            0.48729321360588074,
+            0.742341160774231
+          ],
+          "materialNames": [
+            "IMG brushed aluminium"
+          ],
+          "objects": [
+            "BrakeLever shaft",
+            "TractionLever shaft",
+            "TrainCabRoot_Static_IMG_brushed_aluminium"
+          ],
+          "imageIndices": [
+            0
+          ]
+        },
+        {
+          "tileId": 7,
+          "label": "Rubber wear pads",
+          "uvRect": [
+            0.5075,
+            0.5075,
+            0.7425,
+            0.7425
+          ],
+          "uvVertexCount": 0,
+          "indexReferenceCount": 0,
+          "primitiveCount": 0,
+          "triangleCount": 0,
+          "uvMin": null,
+          "uvMax": null,
+          "materialNames": [],
+          "objects": [],
+          "imageIndices": []
+        },
+        {
+          "tileId": 8,
+          "label": "Machined axle steel",
+          "uvRect": [
+            0.7575,
+            0.5075,
+            0.9925,
+            0.7425
+          ],
+          "uvVertexCount": 0,
+          "indexReferenceCount": 0,
+          "primitiveCount": 0,
+          "triangleCount": 0,
+          "uvMin": null,
+          "uvMax": null,
+          "materialNames": [],
+          "objects": [],
+          "imageIndices": []
+        },
+        {
+          "tileId": 9,
+          "label": "Blank navy cockpit powdercoat",
+          "uvRect": [
+            0.0075,
+            0.2575,
+            0.2425,
+            0.4925
+          ],
+          "uvVertexCount": 288,
+          "indexReferenceCount": 972,
+          "primitiveCount": 2,
+          "triangleCount": 324,
+          "uvMin": [
+            0.007977982051670551,
+            0.2579779624938965
+          ],
+          "uvMax": [
+            0.24202202260494232,
+            0.4920220375061035
+          ],
+          "materialNames": [
+            "IMG blank navy cockpit"
+          ],
+          "objects": [
+            "Roof lining",
+            "TrainCabRoot_Static_IMG_blank_navy_cockpit"
+          ],
+          "imageIndices": [
+            0
+          ]
+        },
+        {
+          "tileId": 10,
+          "label": "Woven navy upholstery",
+          "uvRect": [
+            0.2575,
+            0.2575,
+            0.4925,
+            0.4925
+          ],
+          "uvVertexCount": 4792,
+          "indexReferenceCount": 7848,
+          "primitiveCount": 1,
+          "triangleCount": 2616,
+          "uvMin": [
+            0.2574999928474426,
+            0.2574999928474426
+          ],
+          "uvMax": [
+            0.4925000071525574,
+            0.4925000071525574
+          ],
+          "materialNames": [
+            "IMG woven navy seating"
+          ],
+          "objects": [
+            "TrainCabRoot_Static_IMG_woven_navy_seating"
+          ],
+          "imageIndices": [
+            0
+          ]
+        },
+        {
+          "tileId": 11,
+          "label": "Rubber window gaskets",
+          "uvRect": [
+            0.5075,
+            0.2575,
+            0.7425,
+            0.4925
+          ],
+          "uvVertexCount": 1006,
+          "indexReferenceCount": 3852,
+          "primitiveCount": 2,
+          "triangleCount": 1284,
+          "uvMin": [
+            0.5077159404754639,
+            0.2579829692840576
+          ],
+          "uvMax": [
+            0.7422840595245361,
+            0.4920170307159424
+          ],
+          "materialNames": [
+            "IMG rubber gaskets"
+          ],
+          "objects": [
+            "TractionLever grip",
+            "TrainCabRoot_Static_IMG_rubber_gaskets"
+          ],
+          "imageIndices": [
+            0
+          ]
+        },
+        {
+          "tileId": 12,
+          "label": "Antislip floor",
+          "uvRect": [
+            0.7575,
+            0.2575,
+            0.9925,
+            0.4925
+          ],
+          "uvVertexCount": 572,
+          "indexReferenceCount": 858,
+          "primitiveCount": 1,
+          "triangleCount": 286,
+          "uvMin": [
+            0.7574999928474426,
+            0.2574999928474426
+          ],
+          "uvMax": [
+            0.9925000071525574,
+            0.4925000071525574
+          ],
+          "materialNames": [
+            "IMG antislip floor rubber"
+          ],
+          "objects": [
+            "TrainCabRoot_Static_IMG_antislip_floor_rubber"
+          ],
+          "imageIndices": [
+            0
+          ]
+        },
+        {
+          "tileId": 13,
+          "label": "Underbody mechanical steel",
+          "uvRect": [
+            0.0075,
+            0.0075,
+            0.2425,
+            0.2425
+          ],
+          "uvVertexCount": 480,
+          "indexReferenceCount": 1620,
+          "primitiveCount": 1,
+          "triangleCount": 540,
+          "uvMin": [
+            0.013006391003727913,
+            0.01194065809249878
+          ],
+          "uvMax": [
+            0.23699361085891724,
+            0.238059401512146
+          ],
+          "materialNames": [
+            "IMG dark underbody steel"
+          ],
+          "objects": [
+            "TrainCabRoot_Static_IMG_dark_underbody_steel"
+          ],
+          "imageIndices": [
+            0
+          ]
+        },
+        {
+          "tileId": 14,
+          "label": "Vent grille",
+          "uvRect": [
+            0.2575,
+            0.0075,
+            0.4925,
+            0.2425
+          ],
+          "uvVertexCount": 0,
+          "indexReferenceCount": 0,
+          "primitiveCount": 0,
+          "triangleCount": 0,
+          "uvMin": null,
+          "uvMax": null,
+          "materialNames": [],
+          "objects": [],
+          "imageIndices": []
+        },
+        {
+          "tileId": 15,
+          "label": "Pantograph copper contact wear",
+          "uvRect": [
+            0.5075,
+            0.0075,
+            0.7425,
+            0.2425
+          ],
+          "uvVertexCount": 0,
+          "indexReferenceCount": 0,
+          "primitiveCount": 0,
+          "triangleCount": 0,
+          "uvMin": null,
+          "uvMax": null,
+          "materialNames": [],
+          "objects": [],
+          "imageIndices": []
+        },
+        {
+          "tileId": 16,
+          "label": "Fine smudged safety glazing",
+          "uvRect": [
+            0.7575,
+            0.0075,
+            0.9925,
+            0.2425
+          ],
+          "uvVertexCount": 48,
+          "indexReferenceCount": 108,
+          "primitiveCount": 1,
+          "triangleCount": 36,
+          "uvMin": [
+            0.7574999928474426,
+            0.007499992847442627
+          ],
+          "uvMax": [
+            0.9925000071525574,
+            0.24250000715255737
+          ],
+          "materialNames": [
+            "IMG thin transparent safety glazing"
+          ],
+          "objects": [
+            "TrainCabRoot_Static_IMG_thin_transparent_safety_glazing"
+          ],
+          "imageIndices": [
+            0
+          ]
+        }
+      ]
+    },
+    {
+      "family": "flight",
+      "id": "aircraft",
+      "file": "public/models/aircraft.glb",
+      "bytes": 3514268,
+      "sha256": "f37fd5e4a7a961d7af67005a61eced19ae5e9b6ddc517a4848dff217fcac9caa",
+      "triangles": 24754,
+      "drawCalls": 25,
+      "meshCount": 23,
+      "materialCount": 17,
+      "imageCount": 1,
+      "nodeCount": 26,
+      "texturedPrimitiveCount": 22,
+      "untexturedPrimitiveCount": 3,
+      "uvVertexCount": 17488,
+      "usedTileIds": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        10,
+        11,
+        12,
+        13,
+        14,
+        16
+      ],
+      "transparentGlassCount": 1,
+      "glassMaterials": [
+        {
+          "name": "Tile 16 Faint glass smudges",
+          "alphaMode": "BLEND",
+          "alpha": 0.07500000298023224,
+          "transmission": 0.6000000238418579
+        }
+      ],
+      "animationGroups": [
+        "PropellerRoot",
+        "AircraftRoot"
+      ],
+      "dynamicNodeVerification": [
+        {
+          "name": "PropellerRoot",
+          "nodeIndex": 20,
+          "nodeType": "animationPivotGroup",
+          "directChildren": 3,
+          "descendantMeshCount": 3,
+          "translation": [
+            0,
+            1.340000033378601,
+            3.859999895095825
+          ],
+          "rotationQuaternion": [
+            0,
+            0,
+            0,
+            1
+          ],
+          "scale": [
+            1,
+            1,
+            1
+          ]
+        },
+        {
+          "name": "AileronLeft",
+          "nodeIndex": 0,
+          "nodeType": "controlSurfaceMesh",
+          "directChildren": 0,
+          "descendantMeshCount": 1,
+          "translation": [
+            -3.680000066757202,
+            2.1700000762939453,
+            -0.36000001430511475
+          ],
+          "rotationQuaternion": [
+            0,
+            0,
+            0,
+            1
+          ],
+          "scale": [
+            1,
+            1,
+            1
+          ]
+        },
+        {
+          "name": "AileronRight",
+          "nodeIndex": 1,
+          "nodeType": "controlSurfaceMesh",
+          "directChildren": 0,
+          "descendantMeshCount": 1,
+          "translation": [
+            3.680000066757202,
+            2.1700000762939453,
+            -0.36000001430511475
+          ],
+          "rotationQuaternion": [
+            0,
+            0,
+            0,
+            1
+          ],
+          "scale": [
+            1,
+            1,
+            1
+          ]
+        },
+        {
+          "name": "FlapLeft",
+          "nodeIndex": 14,
+          "nodeType": "controlSurfaceMesh",
+          "directChildren": 0,
+          "descendantMeshCount": 1,
+          "translation": [
+            -1.7799999713897705,
+            2.1649999618530273,
+            -0.3400000035762787
+          ],
+          "rotationQuaternion": [
+            0,
+            0,
+            0,
+            1
+          ],
+          "scale": [
+            1,
+            1,
+            1
+          ]
+        },
+        {
+          "name": "FlapRight",
+          "nodeIndex": 15,
+          "nodeType": "controlSurfaceMesh",
+          "directChildren": 0,
+          "descendantMeshCount": 1,
+          "translation": [
+            1.7799999713897705,
+            2.1649999618530273,
+            -0.3400000035762787
+          ],
+          "rotationQuaternion": [
+            0,
+            0,
+            0,
+            1
+          ],
+          "scale": [
+            1,
+            1,
+            1
+          ]
+        },
+        {
+          "name": "Elevator",
+          "nodeIndex": 13,
+          "nodeType": "controlSurfaceMesh",
+          "directChildren": 0,
+          "descendantMeshCount": 1,
+          "translation": [
+            0,
+            1.7300000190734863,
+            -3.5899999141693115
+          ],
+          "rotationQuaternion": [
+            0,
+            0,
+            0,
+            1
+          ],
+          "scale": [
+            1,
+            1,
+            1
+          ]
+        },
+        {
+          "name": "Rudder",
+          "nodeIndex": 21,
+          "nodeType": "controlSurfaceMesh",
+          "directChildren": 0,
+          "descendantMeshCount": 1,
+          "translation": [
+            0,
+            2.200000047683716,
+            -3.859999895095825
+          ],
+          "rotationQuaternion": [
+            0,
+            0,
+            0,
+            1
+          ],
+          "scale": [
+            1,
+            1,
+            1
+          ]
+        }
+      ],
+      "images": [
+        {
+          "index": 0,
+          "name": "flight-detail-atlas",
+          "mimeType": "image/png",
+          "bytes": 2723969,
+          "sha256": "3da59811320b72f19fbc9159603b328079897d788f02089dfa420effaa6d442b",
+          "matchesFamilySourceBytes": true,
+          "dimensions": [
+            1254,
+            1254
+          ],
+          "pngChunks": [
+            "IHDR",
+            "caBX",
+            "IDAT",
+            "IEND"
+          ],
+          "privatePathScan": {
+            "homePathMatchCount": 0,
+            "bytesScanned": 2723969
+          }
+        }
+      ],
+      "tiles": [
+        {
+          "tileId": 1,
+          "label": "Ivory navy orange fuselage left",
+          "uvRect": [
+            0.0075,
+            0.7575,
+            0.2425,
+            0.9925
+          ],
+          "uvVertexCount": 973,
+          "indexReferenceCount": 4920,
+          "primitiveCount": 2,
+          "triangleCount": 1640,
+          "uvMin": [
+            0.007500003557652235,
+            0.7574999928474426
+          ],
+          "uvMax": [
+            0.24250000715255737,
+            0.9726976752281189
+          ],
+          "materialNames": [
+            "Tile 01 Ivory navy orange fuselage left"
+          ],
+          "objects": [
+            "Elliptical spinner",
+            "Smooth formed fuselage with open cabin"
+          ],
+          "imageIndices": [
+            0
+          ]
+        },
+        {
+          "tileId": 2,
+          "label": "Ivory navy orange fuselage right",
+          "uvRect": [
+            0.2575,
+            0.7575,
+            0.4925,
+            0.9925
+          ],
+          "uvVertexCount": 391,
+          "indexReferenceCount": 2040,
+          "primitiveCount": 1,
+          "triangleCount": 680,
+          "uvMin": [
+            0.2574999928474426,
+            0.7574999928474426
+          ],
+          "uvMax": [
+            0.4925000071525574,
+            0.967676043510437
+          ],
+          "materialNames": [
+            "Tile 02 Ivory navy orange fuselage right"
+          ],
+          "objects": [
+            "Smooth formed fuselage with open cabin"
+          ],
+          "imageIndices": [
+            0
+          ]
+        },
+        {
+          "tileId": 3,
+          "label": "Riveted wing skin",
+          "uvRect": [
+            0.5075,
+            0.7575,
+            0.7425,
+            0.9925
+          ],
+          "uvVertexCount": 1968,
+          "indexReferenceCount": 7392,
+          "primitiveCount": 1,
+          "triangleCount": 2464,
+          "uvMin": [
+            0.5074999928474426,
+            0.7574999928474426
+          ],
+          "uvMax": [
+            0.7425000071525574,
+            0.9925000071525574
+          ],
+          "materialNames": [
+            "Tile 03 Riveted wing skin"
+          ],
+          "objects": [
+            "AircraftRoot Tile 03 Riveted wing skin"
+          ],
+          "imageIndices": [
+            0
+          ]
+        },
+        {
+          "tileId": 4,
+          "label": "Engine cooling vent",
+          "uvRect": [
+            0.7575,
+            0.7575,
+            0.9925,
+            0.9925
+          ],
+          "uvVertexCount": 352,
+          "indexReferenceCount": 564,
+          "primitiveCount": 1,
+          "triangleCount": 188,
+          "uvMin": [
+            0.7574999928474426,
+            0.7614243626594543
+          ],
+          "uvMax": [
+            0.9925000071525574,
+            0.9885756373405457
+          ],
+          "materialNames": [
+            "Tile 04 Engine cooling vent"
+          ],
+          "objects": [
+            "Cooling intake"
+          ],
+          "imageIndices": [
+            0
+          ]
+        },
+        {
+          "tileId": 5,
+          "label": "Riveted aluminium",
+          "uvRect": [
+            0.0075,
+            0.5075,
+            0.2425,
+            0.7425
+          ],
+          "uvVertexCount": 1424,
+          "indexReferenceCount": 5844,
+          "primitiveCount": 2,
+          "triangleCount": 1948,
+          "uvMin": [
+            0.008350602351129055,
+            0.5076308846473694
+          ],
+          "uvMax": [
+            0.24164940416812897,
+            0.7423691153526306
+          ],
+          "materialNames": [
+            "Tile 05 Riveted aluminium"
+          ],
+          "objects": [
+            "AircraftRoot Tile 05 Riveted aluminium",
+            "PropellerRoot Tile 05 Riveted aluminium"
+          ],
+          "imageIndices": [
+            0
+          ]
+        },
+        {
+          "tileId": 6,
+          "label": "Polished wheel hub",
+          "uvRect": [
+            0.2575,
+            0.5075,
+            0.4925,
+            0.7425
+          ],
+          "uvVertexCount": 1496,
+          "indexReferenceCount": 6852,
+          "primitiveCount": 1,
+          "triangleCount": 2284,
+          "uvMin": [
+            0.2578383982181549,
+            0.5078383684158325
+          ],
+          "uvMax": [
+            0.4921616017818451,
+            0.7421616315841675
+          ],
+          "materialNames": [
+            "Tile 06 Polished wheel hub"
+          ],
+          "objects": [
+            "AircraftRoot Tile 06 Polished wheel hub"
+          ],
+          "imageIndices": [
+            0
+          ]
+        },
+        {
+          "tileId": 7,
+          "label": "Rubber tyre tread",
+          "uvRect": [
+            0.5075,
+            0.5075,
+            0.7425,
+            0.7425
+          ],
+          "uvVertexCount": 1040,
+          "indexReferenceCount": 4800,
+          "primitiveCount": 1,
+          "triangleCount": 1600,
+          "uvMin": [
+            0.5074999928474426,
+            0.5074999928474426
+          ],
+          "uvMax": [
+            0.7425000071525574,
+            0.7425000071525574
+          ],
+          "materialNames": [
+            "Tile 07 Rubber tyre tread"
+          ],
+          "objects": [
+            "AircraftRoot Tile 07 Rubber tyre tread"
+          ],
+          "imageIndices": [
+            0
+          ]
+        },
+        {
+          "tileId": 8,
+          "label": "Rubber tyre sidewall",
+          "uvRect": [
+            0.7575,
+            0.5075,
+            0.9925,
+            0.7425
+          ],
+          "uvVertexCount": 1120,
+          "indexReferenceCount": 5280,
+          "primitiveCount": 1,
+          "triangleCount": 1760,
+          "uvMin": [
+            0.7604090571403503,
+            0.5104090571403503
+          ],
+          "uvMax": [
+            0.9895909428596497,
+            0.7395909428596497
+          ],
+          "materialNames": [
+            "Tile 08 Rubber tyre sidewall"
+          ],
+          "objects": [
+            "AircraftRoot Tile 07 Rubber tyre tread"
+          ],
+          "imageIndices": [
+            0
+          ]
+        },
+        {
+          "tileId": 9,
+          "label": "Blank cockpit powdercoat",
+          "uvRect": [
+            0.0075,
+            0.2575,
+            0.2425,
+            0.4925
+          ],
+          "uvVertexCount": 0,
+          "indexReferenceCount": 0,
+          "primitiveCount": 0,
+          "triangleCount": 0,
+          "uvMin": null,
+          "uvMax": null,
+          "materialNames": [],
+          "objects": [],
+          "imageIndices": []
+        },
+        {
+          "tileId": 10,
+          "label": "Stitched tobacco leather",
+          "uvRect": [
+            0.2575,
+            0.2575,
+            0.4925,
+            0.4925
+          ],
+          "uvVertexCount": 1488,
+          "indexReferenceCount": 2256,
+          "primitiveCount": 1,
+          "triangleCount": 752,
+          "uvMin": [
+            0.2609011232852936,
+            0.2603452205657959
+          ],
+          "uvMax": [
+            0.4890988767147064,
+            0.4896547794342041
+          ],
+          "materialNames": [
+            "Tile 10 Stitched tobacco leather"
+          ],
+          "objects": [
+            "AircraftRoot Tile 10 Stitched tobacco leather"
+          ],
+          "imageIndices": [
+            0
+          ]
+        },
+        {
+          "tileId": 11,
+          "label": "Woven upholstery",
+          "uvRect": [
+            0.5075,
+            0.2575,
+            0.7425,
+            0.4925
+          ],
+          "uvVertexCount": 504,
+          "indexReferenceCount": 756,
+          "primitiveCount": 1,
+          "triangleCount": 252,
+          "uvMin": [
+            0.5074999928474426,
+            0.2574999928474426
+          ],
+          "uvMax": [
+            0.7425000071525574,
+            0.4925000071525574
+          ],
+          "materialNames": [
+            "Tile 11 Woven upholstery"
+          ],
+          "objects": [
+            "AircraftRoot Tile 11 Woven upholstery"
+          ],
+          "imageIndices": [
+            0
+          ]
+        },
+        {
+          "tileId": 12,
+          "label": "Matte cockpit plastic",
+          "uvRect": [
+            0.7575,
+            0.2575,
+            0.9925,
+            0.4925
+          ],
+          "uvVertexCount": 1640,
+          "indexReferenceCount": 6768,
+          "primitiveCount": 1,
+          "triangleCount": 2256,
+          "uvMin": [
+            0.7615743279457092,
+            0.2577097415924072
+          ],
+          "uvMax": [
+            0.9884256720542908,
+            0.4922902584075928
+          ],
+          "materialNames": [
+            "Tile 12 Matte cockpit plastic"
+          ],
+          "objects": [
+            "AircraftRoot Tile 12 Matte cockpit plastic"
+          ],
+          "imageIndices": [
+            0
+          ]
+        },
+        {
+          "tileId": 13,
+          "label": "Control hinge skin",
+          "uvRect": [
+            0.0075,
+            0.0075,
+            0.2425,
+            0.2425
+          ],
+          "uvVertexCount": 2680,
+          "indexReferenceCount": 9648,
+          "primitiveCount": 7,
+          "triangleCount": 3216,
+          "uvMin": [
+            0.007499999832361937,
+            0.007499992847442627
+          ],
+          "uvMax": [
+            0.24250000715255737,
+            0.24250000715255737
+          ],
+          "materialNames": [
+            "Tile 13 Control hinge skin"
+          ],
+          "objects": [
+            "AileronLeft",
+            "AileronRight",
+            "AircraftRoot Tile 13 Control hinge skin",
+            "Elevator",
+            "FlapLeft",
+            "FlapRight",
+            "Rudder"
+          ],
+          "imageIndices": [
+            0
+          ]
+        },
+        {
+          "tileId": 14,
+          "label": "Mechanical gear steel",
+          "uvRect": [
+            0.2575,
+            0.0075,
+            0.4925,
+            0.2425
+          ],
+          "uvVertexCount": 2400,
+          "indexReferenceCount": 10236,
+          "primitiveCount": 1,
+          "triangleCount": 3412,
+          "uvMin": [
+            0.25804752111434937,
+            0.007600545883178711
+          ],
+          "uvMax": [
+            0.49195247888565063,
+            0.2423994541168213
+          ],
+          "materialNames": [
+            "Tile 14 Mechanical gear steel"
+          ],
+          "objects": [
+            "AircraftRoot Tile 14 Mechanical gear steel"
+          ],
+          "imageIndices": [
+            0
+          ]
+        },
+        {
+          "tileId": 15,
+          "label": "Antislip floor",
+          "uvRect": [
+            0.5075,
+            0.0075,
+            0.7425,
+            0.2425
+          ],
+          "uvVertexCount": 0,
+          "indexReferenceCount": 0,
+          "primitiveCount": 0,
+          "triangleCount": 0,
+          "uvMin": null,
+          "uvMax": null,
+          "materialNames": [],
+          "objects": [],
+          "imageIndices": []
+        },
+        {
+          "tileId": 16,
+          "label": "Faint glass smudges",
+          "uvRect": [
+            0.7575,
+            0.0075,
+            0.9925,
+            0.2425
+          ],
+          "uvVertexCount": 12,
+          "indexReferenceCount": 18,
+          "primitiveCount": 1,
+          "triangleCount": 6,
+          "uvMin": [
+            0.7574999928474426,
+            0.007499992847442627
+          ],
+          "uvMax": [
+            0.9925000071525574,
+            0.24250000715255737
+          ],
+          "materialNames": [
+            "Tile 16 Faint glass smudges"
+          ],
+          "objects": [
+            "AircraftRoot Tile 16 Faint glass smudges"
+          ],
+          "imageIndices": [
+            0
+          ]
+        }
+      ]
+    },
+    {
+      "family": "flight",
+      "id": "aircraft-cab",
+      "file": "public/models/aircraft-cab.glb",
+      "bytes": 3366512,
+      "sha256": "db422509a8c8c49c993e4eafb7799d613785a6015120336301c4e1c79708dd0e",
+      "triangles": 15292,
+      "drawCalls": 14,
+      "meshCount": 14,
+      "materialCount": 9,
+      "imageCount": 1,
+      "nodeCount": 17,
+      "texturedPrimitiveCount": 14,
+      "untexturedPrimitiveCount": 0,
+      "uvVertexCount": 16790,
+      "usedTileIds": [
+        3,
+        6,
+        9,
+        10,
+        11,
+        12,
+        14,
+        15,
+        16
+      ],
+      "transparentGlassCount": 1,
+      "glassMaterials": [
+        {
+          "name": "Tile 16 Faint glass smudges",
+          "alphaMode": "BLEND",
+          "alpha": 0.07500000298023224,
+          "transmission": 0.6000000238418579
+        }
+      ],
+      "animationGroups": [
+        "YokeLeft",
+        "YokeRight",
+        "AircraftCabRoot"
+      ],
+      "dynamicNodeVerification": [
+        {
+          "name": "YokeLeft",
+          "nodeIndex": 12,
+          "nodeType": "animationPivotGroup",
+          "directChildren": 2,
+          "descendantMeshCount": 2,
+          "translation": [
+            -0.3400000035762787,
+            0.8849999904632568,
+            0.44999998807907104
+          ],
+          "rotationQuaternion": [
+            0,
+            0,
+            0,
+            1
+          ],
+          "scale": [
+            1,
+            1,
+            1
+          ]
+        },
+        {
+          "name": "YokeRight",
+          "nodeIndex": 15,
+          "nodeType": "animationPivotGroup",
+          "directChildren": 2,
+          "descendantMeshCount": 2,
+          "translation": [
+            0.3400000035762787,
+            0.8849999904632568,
+            0.44999998807907104
+          ],
+          "rotationQuaternion": [
+            0,
+            0,
+            0,
+            1
+          ],
+          "scale": [
+            1,
+            1,
+            1
+          ]
+        }
+      ],
+      "images": [
+        {
+          "index": 0,
+          "name": "flight-detail-atlas",
+          "mimeType": "image/png",
+          "bytes": 2723969,
+          "sha256": "3da59811320b72f19fbc9159603b328079897d788f02089dfa420effaa6d442b",
+          "matchesFamilySourceBytes": true,
+          "dimensions": [
+            1254,
+            1254
+          ],
+          "pngChunks": [
+            "IHDR",
+            "caBX",
+            "IDAT",
+            "IEND"
+          ],
+          "privatePathScan": {
+            "homePathMatchCount": 0,
+            "bytesScanned": 2723969
+          }
+        }
+      ],
+      "tiles": [
+        {
+          "tileId": 1,
+          "label": "Ivory navy orange fuselage left",
+          "uvRect": [
+            0.0075,
+            0.7575,
+            0.2425,
+            0.9925
+          ],
+          "uvVertexCount": 0,
+          "indexReferenceCount": 0,
+          "primitiveCount": 0,
+          "triangleCount": 0,
+          "uvMin": null,
+          "uvMax": null,
+          "materialNames": [],
+          "objects": [],
+          "imageIndices": []
+        },
+        {
+          "tileId": 2,
+          "label": "Ivory navy orange fuselage right",
+          "uvRect": [
+            0.2575,
+            0.7575,
+            0.4925,
+            0.9925
+          ],
+          "uvVertexCount": 0,
+          "indexReferenceCount": 0,
+          "primitiveCount": 0,
+          "triangleCount": 0,
+          "uvMin": null,
+          "uvMax": null,
+          "materialNames": [],
+          "objects": [],
+          "imageIndices": []
+        },
+        {
+          "tileId": 3,
+          "label": "Riveted wing skin",
+          "uvRect": [
+            0.5075,
+            0.7575,
+            0.7425,
+            0.9925
+          ],
+          "uvVertexCount": 968,
+          "indexReferenceCount": 3972,
+          "primitiveCount": 1,
+          "triangleCount": 1324,
+          "uvMin": [
+            0.5091297030448914,
+            0.7575713992118835
+          ],
+          "uvMax": [
+            0.7408702969551086,
+            0.9924286007881165
+          ],
+          "materialNames": [
+            "Tile 03 Riveted wing skin"
+          ],
+          "objects": [
+            "AircraftCabRoot Tile 03 Riveted wing skin"
+          ],
+          "imageIndices": [
+            0
+          ]
+        },
+        {
+          "tileId": 4,
+          "label": "Engine cooling vent",
+          "uvRect": [
+            0.7575,
+            0.7575,
+            0.9925,
+            0.9925
+          ],
+          "uvVertexCount": 0,
+          "indexReferenceCount": 0,
+          "primitiveCount": 0,
+          "triangleCount": 0,
+          "uvMin": null,
+          "uvMax": null,
+          "materialNames": [],
+          "objects": [],
+          "imageIndices": []
+        },
+        {
+          "tileId": 5,
+          "label": "Riveted aluminium",
+          "uvRect": [
+            0.0075,
+            0.5075,
+            0.2425,
+            0.7425
+          ],
+          "uvVertexCount": 0,
+          "indexReferenceCount": 0,
+          "primitiveCount": 0,
+          "triangleCount": 0,
+          "uvMin": null,
+          "uvMax": null,
+          "materialNames": [],
+          "objects": [],
+          "imageIndices": []
+        },
+        {
+          "tileId": 6,
+          "label": "Polished wheel hub",
+          "uvRect": [
+            0.2575,
+            0.5075,
+            0.4925,
+            0.7425
+          ],
+          "uvVertexCount": 1040,
+          "indexReferenceCount": 2256,
+          "primitiveCount": 3,
+          "triangleCount": 752,
+          "uvMin": [
+            0.25972235202789307,
+            0.5088055729866028
+          ],
+          "uvMax": [
+            0.49027764797210693,
+            0.7411944270133972
+          ],
+          "materialNames": [
+            "Tile 06 Polished wheel hub"
+          ],
+          "objects": [
+            "AircraftCabRoot Tile 06 Polished wheel hub",
+            "Polished yoke column",
+            "Polished yoke column.001"
+          ],
+          "imageIndices": [
+            0
+          ]
+        },
+        {
+          "tileId": 7,
+          "label": "Rubber tyre tread",
+          "uvRect": [
+            0.5075,
+            0.5075,
+            0.7425,
+            0.7425
+          ],
+          "uvVertexCount": 0,
+          "indexReferenceCount": 0,
+          "primitiveCount": 0,
+          "triangleCount": 0,
+          "uvMin": null,
+          "uvMax": null,
+          "materialNames": [],
+          "objects": [],
+          "imageIndices": []
+        },
+        {
+          "tileId": 8,
+          "label": "Rubber tyre sidewall",
+          "uvRect": [
+            0.7575,
+            0.5075,
+            0.9925,
+            0.7425
+          ],
+          "uvVertexCount": 0,
+          "indexReferenceCount": 0,
+          "primitiveCount": 0,
+          "triangleCount": 0,
+          "uvMin": null,
+          "uvMax": null,
+          "materialNames": [],
+          "objects": [],
+          "imageIndices": []
+        },
+        {
+          "tileId": 9,
+          "label": "Blank cockpit powdercoat",
+          "uvRect": [
+            0.0075,
+            0.2575,
+            0.2425,
+            0.4925
+          ],
+          "uvVertexCount": 768,
+          "indexReferenceCount": 1128,
+          "primitiveCount": 1,
+          "triangleCount": 376,
+          "uvMin": [
+            0.008971641771495342,
+            0.2619149684906006
+          ],
+          "uvMax": [
+            0.24102835357189178,
+            0.4880850315093994
+          ],
+          "materialNames": [
+            "Tile 09 Blank cockpit powdercoat"
+          ],
+          "objects": [
+            "AircraftCabRoot Tile 09 Blank cockpit powdercoat"
+          ],
+          "imageIndices": [
+            0
+          ]
+        },
+        {
+          "tileId": 10,
+          "label": "Stitched tobacco leather",
+          "uvRect": [
+            0.2575,
+            0.2575,
+            0.4925,
+            0.4925
+          ],
+          "uvVertexCount": 4891,
+          "indexReferenceCount": 14208,
+          "primitiveCount": 1,
+          "triangleCount": 4736,
+          "uvMin": [
+            0.260156512260437,
+            0.2574999928474426
+          ],
+          "uvMax": [
+            0.489843487739563,
+            0.4924662113189697
+          ],
+          "materialNames": [
+            "Tile 10 Stitched tobacco leather"
+          ],
+          "objects": [
+            "AircraftCabRoot Tile 10 Stitched tobacco leather"
+          ],
+          "imageIndices": [
+            0
+          ]
+        },
+        {
+          "tileId": 11,
+          "label": "Woven upholstery",
+          "uvRect": [
+            0.5075,
+            0.2575,
+            0.7425,
+            0.4925
+          ],
+          "uvVertexCount": 1008,
+          "indexReferenceCount": 1512,
+          "primitiveCount": 1,
+          "triangleCount": 504,
+          "uvMin": [
+            0.5074999928474426,
+            0.2574999928474426
+          ],
+          "uvMax": [
+            0.7425000071525574,
+            0.4925000071525574
+          ],
+          "materialNames": [
+            "Tile 11 Woven upholstery"
+          ],
+          "objects": [
+            "AircraftCabRoot Tile 11 Woven upholstery"
+          ],
+          "imageIndices": [
+            0
+          ]
+        },
+        {
+          "tileId": 12,
+          "label": "Matte cockpit plastic",
+          "uvRect": [
+            0.7575,
+            0.2575,
+            0.9925,
+            0.4925
+          ],
+          "uvVertexCount": 3663,
+          "indexReferenceCount": 11544,
+          "primitiveCount": 4,
+          "triangleCount": 3848,
+          "uvMin": [
+            0.7576664090156555,
+            0.25766634941101074
+          ],
+          "uvMax": [
+            0.9923335909843445,
+            0.49233365058898926
+          ],
+          "materialNames": [
+            "Tile 12 Matte cockpit plastic"
+          ],
+          "objects": [
+            "AircraftCabRoot Tile 12 Matte cockpit plastic",
+            "Roof lining",
+            "YokeLeft Tile 12 Matte cockpit plastic",
+            "YokeRight Tile 12 Matte cockpit plastic"
+          ],
+          "imageIndices": [
+            0
+          ]
+        },
+        {
+          "tileId": 13,
+          "label": "Control hinge skin",
+          "uvRect": [
+            0.0075,
+            0.0075,
+            0.2425,
+            0.2425
+          ],
+          "uvVertexCount": 0,
+          "indexReferenceCount": 0,
+          "primitiveCount": 0,
+          "triangleCount": 0,
+          "uvMin": null,
+          "uvMax": null,
+          "materialNames": [],
+          "objects": [],
+          "imageIndices": []
+        },
+        {
+          "tileId": 14,
+          "label": "Mechanical gear steel",
+          "uvRect": [
+            0.2575,
+            0.0075,
+            0.4925,
+            0.2425
+          ],
+          "uvVertexCount": 2732,
+          "indexReferenceCount": 8724,
+          "primitiveCount": 1,
+          "triangleCount": 2908,
+          "uvMin": [
+            0.2609125077724457,
+            0.008048772811889648
+          ],
+          "uvMax": [
+            0.4890874922275543,
+            0.24195122718811035
+          ],
+          "materialNames": [
+            "Tile 14 Mechanical gear steel"
+          ],
+          "objects": [
+            "AircraftCabRoot Tile 14 Mechanical gear steel"
+          ],
+          "imageIndices": [
+            0
+          ]
+        },
+        {
+          "tileId": 15,
+          "label": "Antislip floor",
+          "uvRect": [
+            0.5075,
+            0.0075,
+            0.7425,
+            0.2425
+          ],
+          "uvVertexCount": 1648,
+          "indexReferenceCount": 2424,
+          "primitiveCount": 1,
+          "triangleCount": 808,
+          "uvMin": [
+            0.5074999928474426,
+            0.007499992847442627
+          ],
+          "uvMax": [
+            0.7425000071525574,
+            0.24250000715255737
+          ],
+          "materialNames": [
+            "Tile 15 Antislip floor"
+          ],
+          "objects": [
+            "AircraftCabRoot Tile 15 Antislip floor"
+          ],
+          "imageIndices": [
+            0
+          ]
+        },
+        {
+          "tileId": 16,
+          "label": "Faint glass smudges",
+          "uvRect": [
+            0.7575,
+            0.0075,
+            0.9925,
+            0.2425
+          ],
+          "uvVertexCount": 72,
+          "indexReferenceCount": 108,
+          "primitiveCount": 1,
+          "triangleCount": 36,
+          "uvMin": [
+            0.7574999928474426,
+            0.007499992847442627
+          ],
+          "uvMax": [
+            0.9925000071525574,
+            0.24250000715255737
+          ],
+          "materialNames": [
+            "Tile 16 Faint glass smudges"
+          ],
+          "objects": [
+            "AircraftCabRoot Tile 16 Faint glass smudges"
+          ],
+          "imageIndices": [
+            0
+          ]
+        }
+      ]
+    }
+  ]
+}

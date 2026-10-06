@@ -5,7 +5,7 @@ Blender: Z-up, nose -Y. Export: glTF Y-up, nose +Z. Distances are metres.
 This generator reads the shared asset library in the canonical repository.
 """
 from pathlib import Path
-import bpy, math, json, struct, re
+import bpy, bmesh, math, json, struct, re
 from mathutils import Vector
 
 BLENDER_DIR = Path(__file__).resolve().parent
@@ -13,23 +13,40 @@ ROOT = Path(__file__).resolve().parents[2]
 KIND = 'train'
 EDITION = 'train'
 OUT = ROOT / 'public' / 'models'
-DOCS = ROOT / 'docs' / 'editions' / EDITION
+DOCS = ROOT / 'docs' / 'realism' / EDITION
 OUT.mkdir(parents=True, exist_ok=True)
 DOCS.mkdir(parents=True, exist_ok=True)
 bpy.ops.wm.read_factory_settings(use_empty=True)
-texture_path = ROOT / 'public' / 'textures' / (KIND + '.png')
+texture_path = ROOT / 'public' / 'textures' / 'train-detail-atlas.png'
 if not texture_path.exists():
     raise FileNotFoundError('Generate the documented atlas before building: ' + texture_path.name)
+def clean_png_metadata(path):
+    src=path.read_bytes();dst=bytearray(src[:8]);offset=8
+    while offset<len(src):
+        length=struct.unpack_from('>I',src,offset)[0];chunk=src[offset+4:offset+8]
+        if chunk not in (b'tEXt',b'zTXt',b'iTXt',b'eXIf'):dst.extend(src[offset:offset+12+length])
+        offset+=12+length
+    path.write_bytes(dst)
+clean_png_metadata(texture_path)
 atlas = bpy.data.images.load(str(texture_path), check_existing=True)
-atlas.name = KIND + '_original_imagegen_atlas'
+atlas.name = 'train_detail_original_imagegen_16_tile_atlas'
 atlas.pack()
-atlas.filepath = '//../../public/textures/' + KIND + '.png'
+atlas.filepath = '//../../public/textures/train-detail-atlas.png'
 atlas.filepath_raw = atlas.filepath
 for packed in atlas.packed_files:packed.filepath=atlas.filepath
 
-RECT = {'paint':(.015,.515,.485,.985), 'metal':(.515,.515,.985,.985),
-        'panel':(.015,.015,.485,.485), 'seat':(.515,.015,.985,.485),
-        'rubber':(.82,.55,.975,.95)}
+TILES = [
+    ('paint','Ivory teal body A'),('paint2','Ivory teal body B'),('roof','Roof sheet metal'),('lower','Lower panel fasteners'),
+    ('door','Sliding door stripe'),('silver','Brushed aluminium'),('rubber','Rubber wear pads'),('axle','Machined axle steel'),
+    ('panel','Blank navy cockpit powdercoat'),('seat','Woven navy upholstery'),('trim','Rubber window gaskets'),('floor','Antislip floor'),
+    ('metal','Underbody mechanical steel'),('vent','Vent grille'),('copper','Pantograph copper contact wear'),('glass','Fine smudged safety glazing')]
+RECT = {}; TILE_INFO = {}; UV_RECORDS = []
+for i,(key,label) in enumerate(TILES):
+    row,col=divmod(i,4); margin=.25*.03
+    rect=(col*.25+margin,1-(row+1)*.25+margin,(col+1)*.25-margin,1-row*.25-margin)
+    # Avoid the image's decorative door-handle crop; hardware is true geometry.
+    if key=='door':rect=(.25*.34,rect[1],rect[2],rect[3])
+    RECT[key]=rect;TILE_INFO[key]={'tileId':i+1,'row':row+1,'column':col+1,'label':label,'uvRect':list(rect),'faceCount':0,'loopCount':0,'objects':[]}
 MAT = {}
 def material(name, color=(1,1,1), texture=None, roughness=.45, metallic=0, alpha=1, emit=0):
     m = bpy.data.materials.new(name)
@@ -46,6 +63,8 @@ def material(name, color=(1,1,1), texture=None, roughness=.45, metallic=0, alpha
         node.image = atlas
         m.node_tree.links.new(node.outputs['Color'], bsdf.inputs['Base Color'])
         m['uv_region'] = texture
+        m['tile_id'] = TILE_INFO[texture]['tileId']
+        m['tileId'] = TILE_INFO[texture]['tileId']
     if alpha < 1:
         bsdf.inputs['Transmission Weight'].default_value = .1
         m.surface_render_method = 'DITHERED'
@@ -54,14 +73,19 @@ def material(name, color=(1,1,1), texture=None, roughness=.45, metallic=0, alpha
         bsdf.inputs['Emission Color'].default_value = (*color, 1)
         bsdf.inputs['Emission Strength'].default_value = emit
     return m
-MAT['paint']=material('Image mapped ivory livery',texture='paint',metallic=.28,roughness=.32)
-MAT['metal']=material('Image mapped mechanical steel',texture='metal',metallic=.75,roughness=.38)
-MAT['rubber']=material('Image mapped tire rubber',texture='rubber',roughness=.92)
-MAT['panel']=material('Image mapped blank cockpit powdercoat',texture='panel',roughness=.65)
-MAT['seat']=material('Image mapped upholstery',texture='seat',roughness=.85)
-MAT['glass']=material('Transparent blue safety glazing',(.21,.43,.51),roughness=.14,alpha=.18)
-MAT['trim']=material('Charcoal gaskets',(.027,.038,.043),roughness=.7)
-MAT['silver']=material('Machined aluminium',(.61,.67,.72),metallic=.9,roughness=.27)
+for key in ('paint','paint2','lower','door'):MAT[key]=material('IMG '+TILE_INFO[key]['label'],texture=key,metallic=.18,roughness=.29)
+MAT['roof']=material('IMG satin formed roof',texture='roof',metallic=.75,roughness=.32)
+MAT['metal']=material('IMG dark underbody steel',texture='metal',metallic=.76,roughness=.48)
+MAT['rubber']=material('IMG rubber suspension pads',texture='rubber',roughness=.92)
+MAT['panel']=material('IMG blank navy cockpit',texture='panel',roughness=.53)
+MAT['seat']=material('IMG woven navy seating',texture='seat',roughness=.91)
+MAT['glass']=material('IMG thin transparent safety glazing',texture='glass',roughness=.095,alpha=.045)
+MAT['trim']=material('IMG rubber gaskets',texture='trim',roughness=.8)
+MAT['silver']=material('IMG brushed aluminium',texture='silver',metallic=.88,roughness=.26)
+MAT['axle']=material('IMG machined running steel',texture='axle',metallic=.94,roughness=.2)
+MAT['floor']=material('IMG antislip floor rubber',texture='floor',roughness=.87)
+MAT['vent']=material('IMG metal ventilation slats',texture='vent',metallic=.72,roughness=.45)
+MAT['copper']=material('IMG worn copper contact',texture='copper',metallic=.92,roughness=.3)
 MAT['light']=material('LED lamps',(.83,.94,1),roughness=.2,emit=2)
 MAT['red']=material('Emergency control red',(.78,.044,.026),roughness=.35)
 MAT['amber']=material('Control amber',(.96,.38,.035),roughness=.37)
@@ -77,22 +101,46 @@ def empty(name, loc=(0,0,0), parent=None):
 def uv_box(obj, material):
     key=material.get('uv_region')
     if not key:return
-    rect=RECT[key]
     mesh=obj.data
     uv=mesh.uv_layers.active or mesh.uv_layers.new(name='ImageAtlasUV')
+    # Primitive cubes and authored lofts must share one UV layer name before
+    # joining. Otherwise Blender fills the other layer with (0,0) on the nose.
+    uv.name='ImageAtlasUV'
     coords=[v.co for v in mesh.vertices]
     low=[min(v[a] for v in coords) for a in range(3)]
     high=[max(v[a] for v in coords) for a in range(3)]
+    bpy.context.view_layer.update()
+    face_usage={}
     for face in mesh.polygons:
         normal=face.normal
         axis=max(range(3),key=lambda a:abs(normal[a]))
+        face_key='paint2' if key=='paint' and normal.x>.55 else key
+        rect=RECT[face_key]
+        if face_key!=key:
+            if MAT[face_key].name not in obj.data.materials:obj.data.materials.append(MAT[face_key])
+            face.material_index=obj.data.materials.find(MAT[face_key].name)
         # Vertical body faces always use vertical Z as V, so stripes stay horizontal.
         axes=(1,2) if axis==0 else ((0,2) if axis==1 else (0,1))
+        entry=face_usage.setdefault(face_key,{'faceCount':0,'loopCount':0,'uvMin':[1,1],'uvMax':[0,0]})
+        entry['faceCount']+=1;entry['loopCount']+=len(face.loop_indices)
         for li in face.loop_indices:
             p=mesh.vertices[mesh.loops[li].vertex_index].co
             u=(p[axes[0]]-low[axes[0]])/max(high[axes[0]]-low[axes[0]],.001)
             v=(p[axes[1]]-low[axes[1]])/max(high[axes[1]]-low[axes[1]],.001)
+            if face_key=='seat':
+                face_coords=[mesh.vertices[mesh.loops[j].vertex_index].co for j in face.loop_indices]
+                a,b=axes;amin=min(c[a] for c in face_coords);bmin=min(c[b] for c in face_coords)
+                u=(p[a]-amin)/max(max(c[a] for c in face_coords)-amin,.00001)
+                v=(p[b]-bmin)/max(max(c[b] for c in face_coords)-bmin,.00001)
+            if face_key in ('paint','paint2','door') and axis!=2:
+                # All side, nose, pillar and door faces share the same WORLD Z.
+                world=obj.matrix_world@p;v=max(0,min(1,(world.z-.35)/3.2))
+                # Small affine compensation for the generated door band's pixels.
+                if face_key=='door':v=max(0,min(1,v*.9723+.0022))
             uv.data[li].uv=(rect[0]+u*(rect[2]-rect[0]),rect[1]+v*(rect[3]-rect[1]))
+            for a,value in enumerate(uv.data[li].uv):entry['uvMin'][a]=min(entry['uvMin'][a],value);entry['uvMax'][a]=max(entry['uvMax'][a],value)
+    for face_key,entry in face_usage.items():
+        info=TILE_INFO[face_key];info['faceCount']+=entry['faceCount'];info['loopCount']+=entry['loopCount'];info['objects'].append({'name':obj.name,**entry})
 
 def finish(obj, parent, key, edge=0):
     obj.parent=parent
@@ -100,11 +148,23 @@ def finish(obj, parent, key, edge=0):
     if edge:
         mod=obj.modifiers.new('Small physical edge radii','BEVEL')
         mod.width=edge
-        mod.segments=3
+        mod.segments=2
         bpy.context.view_layer.objects.active=obj
         bpy.ops.object.modifier_apply(modifier=mod.name)
+        normal=obj.modifiers.new('Area weighted bevel normals','WEIGHTED_NORMAL');normal.keep_sharp=True
+        bpy.ops.object.modifier_apply(modifier=normal.name)
+    if key=='seat':
+        # Split only broad upholstery panels; the rounded seat outline remains
+        # unchanged. Each small face receives one detailed knit-material tile.
+        bm=bmesh.new();bm.from_mesh(obj.data)
+        edges={edge for face in bm.faces if face.calc_area()>.008 for edge in face.edges}
+        if edges:bmesh.ops.subdivide_edges(bm,edges=list(edges),cuts=3,use_grid_fill=True)
+        bm.to_mesh(obj.data);bm.free();obj.data.update()
     uv_box(obj,MAT[key])
     for p in obj.data.polygons:p.use_smooth=True
+    if key=='seat':
+        normal=obj.modifiers.new('Recomputed upholstery panel normals','WEIGHTED_NORMAL');normal.keep_sharp=True
+        bpy.context.view_layer.objects.active=obj;bpy.ops.object.modifier_apply(modifier=normal.name)
     return obj
 
 def cube(name,loc,size,parent,key='paint',edge=.02):
@@ -117,6 +177,18 @@ def mesh(name,vertices,faces,parent,key='paint',edge=0):
     data=bpy.data.meshes.new(name);data.from_pydata(vertices,[],faces);data.update()
     obj=bpy.data.objects.new(name,data);bpy.context.collection.objects.link(obj)
     return finish(obj,parent,key,edge)
+
+def tiled_floor(name,parent,width,length,z,cell=.24):
+    nx=math.ceil(width/cell);ny=math.ceil(length/cell)
+    verts=[(-width/2+i*width/nx,-length/2+j*length/ny,z) for j in range(ny+1) for i in range(nx+1)]
+    faces=[]
+    for j in range(ny):
+        for i in range(nx):
+            a=j*(nx+1)+i;faces.append((a,a+1,a+nx+2,a+nx+1))
+    obj=mesh(name,verts,faces,parent,'floor');uv=obj.data.uv_layers.active;r=RECT['floor']
+    for f in obj.data.polygons:
+        for li,pair in zip(f.loop_indices,((r[0],r[1]),(r[2],r[1]),(r[2],r[3]),(r[0],r[3]))):uv.data[li].uv=pair
+    return obj
 
 def cylinder(name,loc,radius,depth,parent,key='metal',axis='Z',vertices=24):
     rot={'Z':(0,0,0),'X':(0,math.pi/2,0),'Y':(math.pi/2,0,0)}[axis]
@@ -140,31 +212,45 @@ def bar(name,start,end,radius,parent,key='metal'):
 def train():
     p=empty('TrainRoot')
     cube('Underframe',(0,0,.94),(2.78,18.9,.42),p,'metal',.09)
-    cube('Lower passenger body',(0,0,1.58),(3,18.9,.92),p,'paint',.14)
-    cube('Passenger floor',(0,0,1.25),(2.85,18.3,.1),p,'panel')
-    cube('Upper curved roof',(0,0,3.68),(3.02,19,.54),p,'paint',.25)
-    cube('Roof spine',(0,0,3.97),(1.12,14,.13),p,'metal',.07)
+    for n in range(12):
+        yy=-8.6625+n*1.575
+        cube('World aligned body panel %02d'%n,(0,yy,1.58),(2.92,1.575,.92),p,'paint',.03)
+        cube('Lower access panel %02d'%n,(0,yy,1.16),(2.91,1.565,.21),p,'lower',.02)
+    cube('Passenger floor',(0,0,1.25),(2.85,18.3,.1),p,'floor')
+    for n in range(10):cube('Curved roof metal panel %02d'%n,(0,-8.55+n*1.9,3.68),(2.98,1.9,.54),p,'roof',.18)
+    cube('Roof spine',(0,0,3.97),(1.12,14,.13),p,'roof',.07)
     for side in (-1,1):
         x=side*1.46
         cube('Window lower sill',(x,0,2.14),(.1,18.5,.18),p,'teal')
-        cube('Upper side rail',(x,0,3.37),(.1,18.5,.18),p,'paint')
+        for n in range(6):cube('Upper side rail panel',(x,-7.708+n*3.083,3.37),(.1,3.083,.18),p,'paint2',.02)
         for y in (-8.5,-6.7,-4.9,-3.1,-1.3,.5,2.3,4.1,5.9,7.7):
             cube('Window glass',(x,y,2.76),(.032,1.43,1.03),p,'glass',.04)
+            for z in (2.205,3.315):cube('Window horizontal gasket',(side*1.481,y,z),(.034,1.51,.047),p,'trim',.012)
+            for yy in (y-.749,y+.749):cube('Window vertical gasket',(side*1.481,yy,2.76),(.034,.043,1.07),p,'trim',.012)
             cube('Window mullion',(x,y+.78,2.77),(.12,.13,1.2),p,'paint')
         for y in (-5.7,0,5.7):
-            cube('Sliding doorway',(side*1.515,y,2.28),(.045,1.3,2.19),p,'metal',.035)
+            for z in (1.17,3.39):cube('Door frame horizontal gasket',(side*1.487,y,z),(.03,1.34,.045),p,'trim',.01)
+            for yy in (y-.666,y+.666):cube('Door frame vertical gasket',(side*1.487,yy,2.28),(.03,.046,2.23),p,'trim',.01)
             for offset in (-.33,.33):
-                cube('Door leaf',(side*1.542,y+offset,2.28),(.03,.61,2.09),p,'paint',.022)
-                cube('Door safety glazing',(side*1.563,y+offset,2.75),(.025,.43,.74),p,'glass',.03)
-                bar('Door grab rail',(side*1.58,y+offset,1.87),(side*1.58,y+offset,2.16),.025,p,'silver')
-            cube('Door step',(side*1.48,y,1.02),(.29,1.36,.11),p,'metal')
+                cube('Door leaf stripe aligned',(side*1.482,y+offset,2.28),(.03,.61,2.09),p,'door',.022)
+                cube('Door safety glazing',(side*1.493,y+offset,2.75),(.014,.43,.74),p,'glass',.03)
+                bar('Door grab rail',(side*1.488,y+offset,1.87),(side*1.488,y+offset,2.16),.012,p,'silver')
+            cube('Door step',(side*1.41,y,1.02),(.18,1.36,.11),p,'metal')
+            cube('Door central rubber seal',(side*1.498,y,2.28),(.012,.027,2.06),p,'trim',.004)
         for y in (-7.8,-4.1,-.4,3.3,7):
             cube('Interior seat',(side*.93,y,1.58),(.65,1.5,.2),p,'seat',.07)
             cube('Interior seat back',(side*1.23,y,1.96),(.17,1.5,.79),p,'seat',.06)
     # Original sculpted cab ends: clear front glazing above solid lower nose.
     for sign in (-1,1):
-        y=sign*9.65
-        cube('Cab lower nose',(0,y,1.69),(2.9,.69,1.23),p,'paint',.22)
+        y=sign*9.51
+        verts=[];count=16
+        for yy,rx,rz,zcenter in ((9.15,1.47,.64,1.75),(9.57,1.43,.66,1.76),(9.83,1.25,.55,1.76)):
+            for n in range(count):
+                a=2*math.pi*n/count;verts.append((rx*math.copysign(abs(math.cos(a))**.36,math.cos(a)),sign*yy,zcenter+rz*math.copysign(abs(math.sin(a))**.48,math.sin(a))))
+        faces=[tuple(range(count-1,-1,-1)),tuple(range(count*2,count*3))]
+        for ring in range(2):
+            for n in range(count):faces.append((ring*count+n,ring*count+(n+1)%count,(ring+1)*count+(n+1)%count,(ring+1)*count+n))
+        mesh('Formed rounded cab nose',verts,faces,p,'paint2')
         cube('Cab windshield',(0,y+sign*.28,2.81),(2.47,.034,1.05),p,'glass',.08)
         for x in (-1.35,1.35):
             cube('Cab pillar',(x,y,2.79),(.18,.45,1.32),p,'paint',.05)
@@ -174,26 +260,29 @@ def train():
             cube('LED surround',(x,y+sign*.36,1.83),(.53,.035,.24),p,'trim',.08)
             cube('LED headlight',(x,y+sign*.39,1.83),(.4,.025,.09),p,'light',.03)
         bar('Windshield wiper',(-.9,y+sign*.33,2.29),(-.42,y+sign*.34,2.92),.018,p,'trim')
-        cylinder('Automatic coupler',(0,y+sign*.51,.75),.16,.46,p,'metal','Y')
+        cylinder('Automatic coupler',(0,y+sign*.30,.75),.16,.38,p,'metal','Y')
     for y in (-6.2,6.2):
         cube('Bogie frame',(0,y,.61),(2.33,2.47,.33),p,'metal',.07)
         for ax in (-.83,.83):
-            cylinder('Wheel axle',(0,y+ax,.45),.095,2.88,p,'silver','X')
+            cylinder('Wheel axle',(0,y+ax,.45),.095,2.88,p,'axle','X')
             for side in (-1,1):
-                cylinder('Rail steel wheel',(side*1.37,y+ax,.45),.45,.19,p,'metal','X',32)
-                cylinder('Wheel flange',(side*1.26,y+ax,.45),.47,.04,p,'silver','X',32)
-                cylinder('Axle bearing cap',(side*1.51,y+ax,.45),.17,.11,p,'silver','X')
+                cylinder('Rail steel wheel',(side*1.29,y+ax,.45),.43,.19,p,'axle','X',32)
+                cylinder('Wheel flange',(side*1.2,y+ax,.45),.45,.04,p,'axle','X',32)
+                cylinder('Axle bearing cap',(side*1.42,y+ax,.45),.17,.11,p,'silver','X')
                 cube('Suspension spring housing',(side*1.12,y+ax,.84),(.3,.36,.23),p,'metal')
+                cylinder('Rubber spring wear pad',(side*1.12,y+ax,.89),.115,.14,p,'rubber')
+                for zz in (.68,.74,.80):cylinder('Stacked suspension coil',(side*1.12,y+ax,zz),.13,.035,p,'axle')
         cube('Underfloor air reservoir',(0,y+1.65,.67),(1.75,.6,.44),p,'metal',.15)
     for y in (-2.3,2.3):
-        cube('Roof ventilation',(0,y,4.03),(1.35,1.8,.25),p,'metal',.09)
+        cube('Roof ventilation grille',(0,y,4.03),(1.35,1.8,.25),p,'vent',.09)
         for gy in range(8):
             cube('Roof louver',(0,y-.65+gy*.18,4.18),(1.05,.035,.018),p,'silver',.003)
     pan=empty('PantographRoot',(0,0,0),p)
     for x in (-.5,.5):
         bar('Pantograph lower arm',(x,3.6,4.2),(x,4.6,4.62),.037,pan)
         bar('Pantograph upper arm',(x,4.6,4.62),(x,3.8,5.02),.033,pan)
-    cube('Pantograph contact strip',(0,3.8,5.05),(1.7,.14,.08),pan,'silver')
+    cube('Pantograph copper contact strip',(0,3.8,5.05),(1.7,.14,.08),pan,'copper',.016)
+    for x in (-.5,.5):cylinder('Pantograph ceramic insulator',(x,3.7,4.2),.09,.18,p,'lower')
     empty('DriverAnchor',(0,-8,2.3),p)
     return p
 
@@ -278,20 +367,23 @@ def cab(kind):
     panel_y=-.6 if kind=='train' else -.7
     panel_z=.8 if kind=='train' else .9
     glass_y=-1.3 if kind=='train' else -1.4
-    cube('Cab floor',(0,.1,.025),(width,3,.05),p,'metal')
+    floor=tiled_floor('Cab antislip floor 24cm UV panels',p,width,3,.05);floor.location.y=.1
     cube('Blank instrument panel',(0,panel_y,panel_z),(width*.87,.26,.33),p,'panel',.045)
     cube('Panel lower console',(0,panel_y+.03,panel_z-.27),(width*.7,.32,.28),p,'panel',.04)
     cube('Panel top glare shield',(0,panel_y-.03,panel_z+.205),(width*.97,.51,.07),p,'trim',.035)
     # No painted or embossed gauge readings: runtime instruments remain authoritative.
     for side in (-1,1):
         x=side*width/2
-        cube('Cab lower sidewall',(x,.03,.46),(.07,2.52,.89),p,'paint',.035)
-        bar('Front window side pillar',(x,glass_y,.87),(x,glass_y+.23,2.09),.04,p,'paint')
-        bar('Side window rear pillar',(x,.88,.89),(x,.88,2.06),.04,p,'paint')
+        cube('Cab lower sidewall',(x,.03,.46),(.07,2.52,.89),p,'lower',.035)
+        bar('Front window side pillar',(x,glass_y,.87),(x,glass_y+.23,2.09),.04,p,'silver')
+        bar('Side window rear pillar',(x,.88,.89),(x,.88,2.06),.04,p,'silver')
         cube('Side safety glazing',(x,-.14,1.49),(.014,1.96,1.09),p,'glass',0)
         cube('Cab armrest',(side*(width/2-.15),.3,.59),(.19,.68,.16),p,'seat',.055)
     cube('Front safety glazing',(0,glass_y,1.52),(width-.09,.015,1.13),p,'glass',0)
-    bar('Front upper window frame',(-width/2,glass_y,2.09),(width/2,glass_y,2.09),.038,p,'paint')
+    for x in (-width/2+.04,width/2-.04):cube('Cab windshield gasket',(x,glass_y+.006,1.52),(.035,.038,1.14),p,'trim',.008)
+    for z in (.965,2.075):cube('Cab windshield gasket',(0,glass_y+.006,z),(width-.05,.038,.035),p,'trim',.008)
+    for x in (-.47,.47):cube('Blank auxiliary panel surround',(x,panel_y+.136,.72),(.43,.018,.14),p,'trim',.013)
+    bar('Front upper window frame',(-width/2,glass_y,2.09),(width/2,glass_y,2.09),.038,p,'silver')
     cube('Roof lining',(0,.0,2.13),(width,2.88,.045),p,'panel')
     for x in ((0,) if kind=='train' else (-.32,.32)):
         cube('Seat cushion',(x,.64,.43),(.51,.59,.15),p,'seat',.07)
@@ -323,6 +415,37 @@ def cab(kind):
 
 def descendants(root):
     return [root]+list(root.children_recursive)
+
+def merge_static_by_material(root):
+    animated={'TractionLever','BrakeLever'};groups={}
+    for obj in list(descendants(root)):
+        if obj.type!='MESH' or obj.name.startswith('Roof lining'):continue
+        ancestor=obj.parent;dynamic=False
+        while ancestor and ancestor!=root:
+            if ancestor.name in animated:dynamic=True;break
+            ancestor=ancestor.parent
+        if dynamic:continue
+        # Separate the few dual body-side meshes before grouping. UVs remain in
+        # their true semantic tile; material extras identify the crop in GLB.
+        if len(obj.data.materials)>1:
+            bpy.ops.object.select_all(action='DESELECT');obj.select_set(True);bpy.context.view_layer.objects.active=obj
+            bpy.ops.object.mode_set(mode='EDIT');bpy.ops.mesh.select_all(action='SELECT');bpy.ops.mesh.separate(type='MATERIAL');bpy.ops.object.mode_set(mode='OBJECT')
+    for obj in list(descendants(root)):
+        if obj.type!='MESH' or obj.name.startswith('Roof lining'):continue
+        ancestor=obj.parent;dynamic=False
+        while ancestor and ancestor!=root:
+            if ancestor.name in animated:dynamic=True;break
+            ancestor=ancestor.parent
+        if not dynamic:groups.setdefault(obj.data.materials[obj.data.polygons[0].material_index].name,[]).append(obj)
+    for name,objects in groups.items():
+        bpy.ops.object.select_all(action='DESELECT')
+        for obj in objects:obj.select_set(True)
+        bpy.context.view_layer.objects.active=objects[0]
+        if len(objects)>1:bpy.ops.object.join()
+        merged=bpy.context.object;world=merged.matrix_world.copy();merged.parent=root;merged.matrix_world=world
+        merged.name=root.name+'_Static_'+name.replace(' ','_')
+        # Remove unused slots inherited from separation, avoiding false draws.
+        bpy.ops.object.material_slot_remove_unused()
 
 def export(root,name):
     bpy.ops.object.select_all(action='DESELECT')
@@ -370,13 +493,14 @@ def render(root,path,inside=False):
     bpy.ops.render.render(write_still=True)
     for o in lamps+[camera]+([] if inside else [floor]):bpy.data.objects.remove(o,do_unlink=True)
 
-exterior=train() if KIND=='train' else aircraft()
+exterior=train()
 interior=cab(KIND)
+merge_static_by_material(exterior);merge_static_by_material(interior)
 # Keep separate model origins while preserving an editable overview in the .blend.
 export(exterior,KIND+'.glb')
 export(interior,KIND+'-cab.glb')
-render(exterior,DOCS/'assets.png')
-render(interior,DOCS/'cab-assets.png',inside=True)
+render(exterior,DOCS/'after.png')
+render(interior,DOCS/'cab-after.png',inside=True)
 for o in bpy.data.objects:o.hide_render=False
 interior.location.x=18 if KIND=='train' else 12
 bpy.ops.object.select_all(action='DESELECT')
@@ -385,7 +509,7 @@ bpy.context.view_layer.objects.active=exterior
 for screen in bpy.data.screens:
     for area in screen.areas:
         if area.type=='FILE_BROWSER':area.type='VIEW_3D'
-bpy.context.scene.render.filepath='//../../docs/editions/'+EDITION+'/cab-assets.png'
+bpy.context.scene.render.filepath='//../../docs/realism/train/cab-after.png'
 bpy.ops.wm.save_as_mainfile(filepath=str(BLENDER_DIR/'models.blend'),compress=False,check_existing=False)
 # Factory startup may retain an operating-system file-picker directory.
 # Replace only null-terminated private directory fields, preserving block lengths.
@@ -397,24 +521,32 @@ blend_path.write_bytes(raw)
 backup=blend_path.with_suffix('.blend1')
 if backup.exists():backup.unlink()
 # Remove textual PNG metadata without altering the raster pixel data.
-for png in [texture_path,DOCS/'assets.png',DOCS/'cab-assets.png']:
-    src=png.read_bytes();dst=bytearray(src[:8]);offset=8
-    while offset<len(src):
-        length=struct.unpack_from('>I',src,offset)[0];kind=src[offset+4:offset+8]
-        if kind not in (b'tEXt',b'zTXt',b'iTXt',b'eXIf'):dst.extend(src[offset:offset+12+length])
-        offset+=12+length
-    png.write_bytes(dst)
+for png in [texture_path,DOCS/'after.png',DOCS/'cab-after.png']:
+    clean_png_metadata(png)
 manifest={'kind':KIND,'authoring':'Blender 5.2 original procedural geometry',
     'coordinates':{'up':'+Y','forward':'+Z','unit':'metre'},
-    'texture':{'file':'textures/'+KIND+'.png','source':'built-in image_gen',
-    'mapping':'Each mesh owns box projected UVs cropped to its atlas quadrant; Image Texture is connected to Principled Base Color'},
+    'texture':{'file':'textures/train-detail-atlas.png','source':'built-in image_gen',
+    'mapping':'16 actual semantic tile crops, per face loop UV; world Z projected body and doors; Image Texture feeds Principled Base Color'},
     'assets':[]}
 for filename in (KIND+'.glb',KIND+'-cab.glb'):
     raw=(OUT/filename).read_bytes();length,kind=struct.unpack_from('<II',raw,12)
     data=json.loads(raw[20:20+length])
+    primitives=[p for m in data.get('meshes',[]) for p in m['primitives']]
+    triangles=sum(data['accessors'][p['indices']]['count']//3 for p in primitives if 'indices' in p)
     manifest['assets'].append({'file':filename,'bytes':len(raw),'nodes':len(data.get('nodes',[])),
         'meshes':len(data.get('meshes',[])),'embeddedImages':len(data.get('images',[])),
+        'draws':len(primitives),'triangles':triangles,
         'texturedMaterials':sum('baseColorTexture' in m.get('pbrMetallicRoughness',{}) for m in data.get('materials',[])),
         'uvAccessors':sum('TEXCOORD_0' in p['attributes'] for m in data.get('meshes',[]) for p in m['primitives'])})
 (DOCS/'asset-manifest.json').write_text(json.dumps(manifest,indent=2),encoding='utf-8')
+tile_map={'schema':1,'image':'public/textures/train-detail-atlas.png','grid':[4,4],'gutterPerTile':.03,'coordinates':'Blender UV bottom-left','worldStripeProjection':{'zMin':.35,'zMax':3.55,'doorAffineScale':.9723,'doorAffineOffset':.0022},'tiles':[]}
+for key,label in TILES:
+    item=dict(TILE_INFO[key]);item['objectUsage']=item['objects'];item['objects']=[o['name'] for o in item['objectUsage']]
+    if not item['faceCount']:raise RuntimeError('Unused actual atlas tile: '+key)
+    tile_map['tiles'].append(item)
+(DOCS/'tile-map.json').write_text(json.dumps(tile_map,indent=2),encoding='utf-8')
+assert manifest['assets'][0]['draws']<=45 and manifest['assets'][1]['draws']<=40
+assert all(a['triangles']<=80000 for a in manifest['assets'])
+import shutil
+shutil.copyfile(DOCS/'after.png',ROOT/'public'/'previews'/'train.png')
 print('ASSET_BUILD_VERIFIED '+json.dumps(manifest))

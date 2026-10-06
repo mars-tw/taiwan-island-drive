@@ -1,0 +1,37 @@
+{
+  "blend": "blender/train/models.blend",
+  "meshObjects": 33,
+  "images": [
+    {
+      "name": "train_detail_original_imagegen_16_tile_atlas",
+      "size": [
+        1254,
+        1254
+      ],
+      "packed": true,
+      "relativePath": "//..\\..\\public\\textures\\train-detail-atlas.png",
+      "resolvedExists": true
+    }
+  ],
+  "animatedControls": [
+    {
+      "name": "TractionLever",
+      "children": 2,
+      "localPosition": [
+        -0.8500000238418579,
+        -0.41999998688697815,
+        0.8799999952316284
+      ]
+    },
+    {
+      "name": "BrakeLever",
+      "children": 2,
+      "localPosition": [
+        0.8299999833106995,
+        -0.41999998688697815,
+        0.8799999952316284
+      ]
+    }
+  ],
+  "uvLoops": 157260
+}

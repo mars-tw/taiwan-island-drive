@@ -1,0 +1,242 @@
+{
+  "status": "VERIFIED",
+  "texture": {
+    "path": "public/textures/car-detail-atlas.png",
+    "size": [
+      1254,
+      1254
+    ],
+    "sha256": "dd17dfcd5ce2f222277cca265e8a2d04876d4b6c556d3d98be869505bff7281a",
+    "rawImagePixelDataPreserved": true
+  },
+  "vehicles": [
+    {
+      "vehicle": "coupe",
+      "bytes": 4124368,
+      "sha256": "da0705986b4ee8df8e8b4d4ca4396309adddb7148ffac51faf85114cd2ec5cda",
+      "triangles": 22862,
+      "drawCalls": 36,
+      "tileIds": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16
+      ],
+      "uvVertexCounts": {
+        "5": 2384,
+        "2": 714,
+        "3": 34,
+        "4": 412,
+        "1": 1474,
+        "16": 616,
+        "9": 1416,
+        "13": 476,
+        "14": 432,
+        "12": 216,
+        "10": 1728,
+        "15": 432,
+        "11": 6025,
+        "6": 7608,
+        "7": 512,
+        "8": 10912
+      },
+      "embeddedImages": [
+        {
+          "bytes": 2847387,
+          "sha256": "dd17dfcd5ce2f222277cca265e8a2d04876d4b6c556d3d98be869505bff7281a",
+          "matchesSourcePng": true
+        }
+      ],
+      "glassAlpha": 0.14000000059604645,
+      "wheelGroups": [
+        "WheelFL",
+        "WheelFR",
+        "WheelRL",
+        "WheelRR"
+      ]
+    },
+    {
+      "vehicle": "rally",
+      "bytes": 4356020,
+      "sha256": "94b5363596cf20a8308ea52057dcca222fc113ef71c9b8c50a3caf808c08bed5",
+      "triangles": 26986,
+      "drawCalls": 36,
+      "tileIds": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16
+      ],
+      "uvVertexCounts": {
+        "5": 2344,
+        "2": 696,
+        "3": 34,
+        "4": 216,
+        "1": 1690,
+        "16": 616,
+        "9": 1416,
+        "13": 476,
+        "14": 764,
+        "12": 216,
+        "10": 1728,
+        "15": 432,
+        "11": 7352,
+        "6": 8472,
+        "7": 512,
+        "8": 14368
+      },
+      "embeddedImages": [
+        {
+          "bytes": 2847387,
+          "sha256": "dd17dfcd5ce2f222277cca265e8a2d04876d4b6c556d3d98be869505bff7281a",
+          "matchesSourcePng": true
+        }
+      ],
+      "glassAlpha": 0.14000000059604645,
+      "wheelGroups": [
+        "WheelFL.001",
+        "WheelFR.001",
+        "WheelRL.001",
+        "WheelRR.001"
+      ]
+    },
+    {
+      "vehicle": "suv",
+      "bytes": 4199488,
+      "sha256": "e9cb8e12cb6eb62d51cf21c690314f7686a26a4be0c5bffe3d8382bb106953e0",
+      "triangles": 23898,
+      "drawCalls": 36,
+      "tileIds": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16
+      ],
+      "uvVertexCounts": {
+        "5": 4288,
+        "2": 725,
+        "3": 34,
+        "4": 216,
+        "1": 1332,
+        "16": 616,
+        "9": 1416,
+        "13": 476,
+        "14": 432,
+        "12": 216,
+        "10": 1728,
+        "15": 432,
+        "11": 6598,
+        "6": 7608,
+        "7": 512,
+        "8": 10912
+      },
+      "embeddedImages": [
+        {
+          "bytes": 2847387,
+          "sha256": "dd17dfcd5ce2f222277cca265e8a2d04876d4b6c556d3d98be869505bff7281a",
+          "matchesSourcePng": true
+        }
+      ],
+      "glassAlpha": 0.14000000059604645,
+      "wheelGroups": [
+        "WheelFL.002",
+        "WheelFR.002",
+        "WheelRL.002",
+        "WheelRR.002"
+      ]
+    },
+    {
+      "vehicle": "van",
+      "bytes": 4186796,
+      "sha256": "8f91a4d54de79ececa852660afd92f3cb8f93291eeabedbffb208bb079aa6b82",
+      "triangles": 24210,
+      "drawCalls": 37,
+      "tileIds": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16
+      ],
+      "uvVertexCounts": {
+        "5": 2362,
+        "2": 781,
+        "3": 24,
+        "4": 216,
+        "1": 1574,
+        "16": 616,
+        "9": 1416,
+        "13": 476,
+        "14": 432,
+        "12": 216,
+        "10": 1728,
+        "15": 432,
+        "7": 716,
+        "11": 6364,
+        "6": 7608,
+        "8": 10912
+      },
+      "embeddedImages": [
+        {
+          "bytes": 2847387,
+          "sha256": "dd17dfcd5ce2f222277cca265e8a2d04876d4b6c556d3d98be869505bff7281a",
+          "matchesSourcePng": true
+        }
+      ],
+      "glassAlpha": 0.14000000059604645,
+      "wheelGroups": [
+        "WheelFL.003",
+        "WheelFR.003",
+        "WheelRL.003",
+        "WheelRR.003"
+      ]
+    }
+  ]
+}

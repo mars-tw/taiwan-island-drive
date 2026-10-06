@@ -1,0 +1,24 @@
+{
+  "generator": "built-in image_gen.imagegen",
+  "generationCalls": 1,
+  "useCase": "product-mockup",
+  "rawImage": "docs/realism/car/atlas-raw.png",
+  "rawSha256": "2d799b0bceb043c02890d016dfdbdb5eb269c9bd31aec774828bb55aebcaf709",
+  "sourceArtifactBasename": "exec-f52ab8c2-85c9-49e8-94f7-9028e01adabf.png",
+  "prompt": "docs/realism/car/atlas-prompt.txt",
+  "workingImage": "public/textures/car-detail-atlas.png",
+  "workingSha256": "dd17dfcd5ce2f222277cca265e8a2d04876d4b6c556d3d98be869505bff7281a",
+  "actualDimensions": [
+    1254,
+    1254
+  ],
+  "grid": [
+    4,
+    4
+  ],
+  "uvTileInsetFraction": 0.04,
+  "pixelProcessing": "None. Original PNG IDAT chunks preserved verbatim; descriptive PNG metadata removed.",
+  "render": "docs/realism/car/after.png",
+  "renderer": "Blender 5.2 EEVEE",
+  "portableBlend": "blender/island-drive.blend"
+}

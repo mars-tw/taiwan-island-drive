@@ -1,0 +1,26 @@
+{
+  "source": "blender/island-drive.blend",
+  "status": "VERIFIED_REOPEN",
+  "blenderVersion": "5.2.0 LTS",
+  "sourceBytes": 11426860,
+  "sourceSha256": "e1b6d8323bb195fb4b3464ec053d1eeb4a088121f119e459bda34537fb1272b4",
+  "privatePathByteScanPassed": true,
+  "meshCount": 150,
+  "images": [
+    {
+      "name": "CarDetailAtlas16Tiles",
+      "filepath": "//..\\public\\textures\\car-detail-atlas.png",
+      "packedPath": [
+        "//../public/textures/car-detail-atlas.png"
+      ],
+      "packed": true,
+      "bytes": 2847387,
+      "sha256": "dd17dfcd5ce2f222277cca265e8a2d04876d4b6c556d3d98be869505bff7281a"
+    }
+  ],
+  "renderPath": "//..\\docs\\realism\\car\\after.png",
+  "wheelGroups": 16,
+  "glassAlpha": [
+    0.14000000059604645
+  ]
+}

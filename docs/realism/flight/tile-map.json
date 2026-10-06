@@ -1,0 +1,497 @@
+{
+  "authoring": "Actual Blender 5.2 CLI geometry and GLB export",
+  "texture": "public/textures/flight-detail-atlas.png",
+  "source": "built-in image_gen",
+  "gutterPercentPerTile": 3,
+  "coordinates": {
+    "up": "+Y",
+    "forward": "+Z",
+    "unit": "metre"
+  },
+  "tiles": [
+    {
+      "tileId": 1,
+      "row": 1,
+      "column": 1,
+      "label": "Ivory navy orange fuselage left",
+      "uvRect": [
+        0.0075,
+        0.7575,
+        0.2425,
+        0.9925
+      ],
+      "faceCount": 830,
+      "loopCount": 3300,
+      "objects": [
+        "Elliptical spinner",
+        "Smooth formed fuselage with open cabin"
+      ],
+      "sourceObjects": [
+        "Elliptical spinner",
+        "Smooth formed fuselage with open cabin"
+      ]
+    },
+    {
+      "tileId": 2,
+      "row": 1,
+      "column": 2,
+      "label": "Ivory navy orange fuselage right",
+      "uvRect": [
+        0.2575,
+        0.7575,
+        0.4925,
+        0.9925
+      ],
+      "faceCount": 318,
+      "loopCount": 1316,
+      "objects": [
+        "Smooth formed fuselage with open cabin"
+      ],
+      "sourceObjects": [
+        "Smooth formed fuselage with open cabin"
+      ]
+    },
+    {
+      "tileId": 3,
+      "row": 1,
+      "column": 3,
+      "label": "Riveted wing skin",
+      "uvRect": [
+        0.5075,
+        0.7575,
+        0.7425,
+        0.9925
+      ],
+      "faceCount": 1754,
+      "loopCount": 7296,
+      "objects": [
+        "AircraftRoot Tile 03 Riveted wing skin",
+        "AircraftCabRoot Tile 03 Riveted wing skin"
+      ],
+      "sourceObjects": [
+        "Front pillar",
+        "Front pillar.001",
+        "High wing NACA profile",
+        "Horizontal stabilizer profile",
+        "Rear door pillar",
+        "Rear door pillar.001",
+        "Smooth cabin roof",
+        "Swept vertical stabilizer",
+        "Rear window pillar",
+        "Rear window pillar.001",
+        "Swept front pillar",
+        "Swept front pillar.001",
+        "Upper windshield frame"
+      ]
+    },
+    {
+      "tileId": 4,
+      "row": 1,
+      "column": 4,
+      "label": "Engine cooling vent",
+      "uvRect": [
+        0.7575,
+        0.7575,
+        0.9925,
+        0.9925
+      ],
+      "faceCount": 98,
+      "loopCount": 384,
+      "objects": [
+        "Cooling intake"
+      ],
+      "sourceObjects": [
+        "Cooling intake"
+      ]
+    },
+    {
+      "tileId": 5,
+      "row": 2,
+      "column": 1,
+      "label": "Riveted aluminium",
+      "uvRect": [
+        0.0075,
+        0.5075,
+        0.2425,
+        0.7425
+      ],
+      "faceCount": 910,
+      "loopCount": 3768,
+      "objects": [
+        "AircraftRoot Tile 05 Riveted aluminium",
+        "PropellerRoot Tile 05 Riveted aluminium"
+      ],
+      "sourceObjects": [
+        "Cowling service seam 1",
+        "Cowling service seam 1.001",
+        "Cowling service seam 2",
+        "Cowling service seam 2.001",
+        "Swept propeller blade",
+        "Swept propeller blade.001",
+        "Shock collar",
+        "Streamlined lift strut",
+        "Streamlined lift strut.001"
+      ]
+    },
+    {
+      "tileId": 6,
+      "row": 2,
+      "column": 2,
+      "label": "Polished wheel hub",
+      "uvRect": [
+        0.2575,
+        0.5075,
+        0.4925,
+        0.7425
+      ],
+      "faceCount": 1386,
+      "loopCount": 5808,
+      "objects": [
+        "AircraftRoot Tile 06 Polished wheel hub",
+        "AircraftCabRoot Tile 06 Polished wheel hub",
+        "Polished yoke column",
+        "Polished yoke column.001"
+      ],
+      "sourceObjects": [
+        "Brushed door pull",
+        "Brushed door pull.001",
+        "Polished main hub",
+        "Polished main hub.001",
+        "Polished nose hub",
+        "Harness buckle",
+        "Harness buckle.001",
+        "Polished yoke column",
+        "Polished yoke column.001"
+      ]
+    },
+    {
+      "tileId": 7,
+      "row": 2,
+      "column": 3,
+      "label": "Rubber tyre tread",
+      "uvRect": [
+        0.5075,
+        0.5075,
+        0.7425,
+        0.7425
+      ],
+      "faceCount": 800,
+      "loopCount": 3200,
+      "objects": [
+        "AircraftRoot Tile 07 Rubber tyre tread"
+      ],
+      "sourceObjects": [
+        "Rounded main tyre",
+        "Rounded main tyre.001",
+        "Rounded nose tyre"
+      ]
+    },
+    {
+      "tileId": 8,
+      "row": 2,
+      "column": 4,
+      "label": "Rubber tyre sidewall",
+      "uvRect": [
+        0.7575,
+        0.5075,
+        0.9925,
+        0.7425
+      ],
+      "faceCount": 880,
+      "loopCount": 3520,
+      "objects": [
+        "AircraftRoot Tile 07 Rubber tyre tread"
+      ],
+      "sourceObjects": [
+        "Rounded main tyre",
+        "Rounded main tyre.001",
+        "Rounded nose tyre"
+      ]
+    },
+    {
+      "tileId": 9,
+      "row": 3,
+      "column": 1,
+      "label": "Blank cockpit powdercoat",
+      "uvRect": [
+        0.0075,
+        0.2575,
+        0.2425,
+        0.4925
+      ],
+      "faceCount": 196,
+      "loopCount": 768,
+      "objects": [
+        "AircraftCabRoot Tile 09 Blank cockpit powdercoat"
+      ],
+      "sourceObjects": [
+        "Blank instrument panel",
+        "Blank lower console"
+      ]
+    },
+    {
+      "tileId": 10,
+      "row": 3,
+      "column": 2,
+      "label": "Stitched tobacco leather",
+      "uvRect": [
+        0.2575,
+        0.2575,
+        0.4925,
+        0.4925
+      ],
+      "faceCount": 2760,
+      "loopCount": 11008,
+      "objects": [
+        "AircraftRoot Tile 10 Stitched tobacco leather",
+        "AircraftCabRoot Tile 10 Stitched tobacco leather"
+      ],
+      "sourceObjects": [
+        "Interior leather back",
+        "Interior leather back.001",
+        "Interior leather cushion",
+        "Interior leather cushion.001",
+        "Armrest stitch 1",
+        "Armrest stitch 1.001",
+        "Back double stitch 1",
+        "Back double stitch 1.001",
+        "Back double stitch 1.002",
+        "Back double stitch 1.003",
+        "Cushion sewn piping 1",
+        "Cushion sewn piping 1.001",
+        "Cushion sewn piping 1.002",
+        "Cushion sewn piping 1.003",
+        "Leather armrest",
+        "Leather armrest.001",
+        "Mixture grip",
+        "Padded leather back",
+        "Padded leather back.001",
+        "Padded leather cushion",
+        "Padded leather cushion.001"
+      ]
+    },
+    {
+      "tileId": 11,
+      "row": 3,
+      "column": 3,
+      "label": "Woven upholstery",
+      "uvRect": [
+        0.5075,
+        0.2575,
+        0.7425,
+        0.4925
+      ],
+      "faceCount": 378,
+      "loopCount": 1512,
+      "objects": [
+        "AircraftRoot Tile 11 Woven upholstery",
+        "AircraftCabRoot Tile 11 Woven upholstery"
+      ],
+      "sourceObjects": [
+        "Interior woven insert",
+        "Interior woven insert.001",
+        "Back woven insert",
+        "Back woven insert.001",
+        "Cushion woven insert",
+        "Cushion woven insert.001"
+      ]
+    },
+    {
+      "tileId": 12,
+      "row": 3,
+      "column": 4,
+      "label": "Matte cockpit plastic",
+      "uvRect": [
+        0.7575,
+        0.2575,
+        0.9925,
+        0.4925
+      ],
+      "faceCount": 2932,
+      "loopCount": 11968,
+      "objects": [
+        "AircraftRoot Tile 12 Matte cockpit plastic",
+        "AircraftCabRoot Tile 12 Matte cockpit plastic",
+        "Roof lining",
+        "YokeLeft Tile 12 Matte cockpit plastic",
+        "YokeRight Tile 12 Matte cockpit plastic"
+      ],
+      "sourceObjects": [
+        "Inset door seam 1",
+        "Inset door seam 1.001",
+        "Inset door seam 2",
+        "Inset door seam 2.001",
+        "Inset door seam 3",
+        "Inset door seam 3.001",
+        "Windshield seal 1",
+        "Windshield seal 1.001",
+        "Windshield seal 2",
+        "Windshield seal 2.001",
+        "Windshield seal 3",
+        "Windshield seal 3.001",
+        "Interior door trim 1",
+        "Interior door trim 1.001",
+        "Matte glare shield",
+        "Moulded cabin wall",
+        "Moulded cabin wall.001",
+        "Roof lining",
+        "Shoulder harness",
+        "Shoulder harness.001",
+        "Throttle grip",
+        "Matte yoke lower grip",
+        "Yoke palm grip",
+        "Yoke palm grip.001",
+        "Matte yoke lower grip.001",
+        "Yoke palm grip.002",
+        "Yoke palm grip.003"
+      ]
+    },
+    {
+      "tileId": 13,
+      "row": 4,
+      "column": 1,
+      "label": "Control hinge skin",
+      "uvRect": [
+        0.0075,
+        0.0075,
+        0.2425,
+        0.2425
+      ],
+      "faceCount": 1344,
+      "loopCount": 5904,
+      "objects": [
+        "AileronLeft",
+        "AileronRight",
+        "AircraftRoot Tile 13 Control hinge skin",
+        "Elevator",
+        "FlapLeft",
+        "FlapRight",
+        "Rudder"
+      ],
+      "sourceObjects": [
+        "AileronLeft",
+        "AileronRight",
+        "Control hinge barrel",
+        "Control hinge barrel.001",
+        "Elevator",
+        "FlapLeft",
+        "FlapRight",
+        "Flush door hinge",
+        "Flush door hinge.001",
+        "Flush door hinge.002",
+        "Flush door hinge.003",
+        "Rudder"
+      ]
+    },
+    {
+      "tileId": 14,
+      "row": 4,
+      "column": 2,
+      "label": "Mechanical gear steel",
+      "uvRect": [
+        0.2575,
+        0.0075,
+        0.4925,
+        0.2425
+      ],
+      "faceCount": 3080,
+      "loopCount": 12480,
+      "objects": [
+        "AircraftRoot Tile 14 Mechanical gear steel",
+        "AircraftCabRoot Tile 14 Mechanical gear steel"
+      ],
+      "sourceObjects": [
+        "Axle nut",
+        "Axle nut.001",
+        "Main gear bearing",
+        "Main gear bearing.001",
+        "Nose oleo strut",
+        "Nose wheel fork",
+        "Nose wheel fork.001",
+        "Spring steel gear",
+        "Spring steel gear.001",
+        "Wing strut joint",
+        "Wing strut joint.001",
+        "Flush panel screw",
+        "Flush panel screw.001",
+        "Flush panel screw.002",
+        "Flush panel screw.003",
+        "Flush panel screw.004",
+        "Mixture shaft",
+        "Steel seat pedestal",
+        "Steel seat pedestal.001",
+        "Throttle shaft"
+      ]
+    },
+    {
+      "tileId": 15,
+      "row": 4,
+      "column": 3,
+      "label": "Antislip floor",
+      "uvRect": [
+        0.5075,
+        0.0075,
+        0.7425,
+        0.2425
+      ],
+      "faceCount": 420,
+      "loopCount": 1648,
+      "objects": [
+        "AircraftCabRoot Tile 15 Antislip floor"
+      ],
+      "sourceObjects": [
+        "Actual anti-slip floor cells",
+        "Rudder rubber pedal",
+        "Rudder rubber pedal.001",
+        "Rudder rubber pedal.002",
+        "Rudder rubber pedal.003"
+      ]
+    },
+    {
+      "tileId": 16,
+      "row": 4,
+      "column": 4,
+      "label": "Faint glass smudges",
+      "uvRect": [
+        0.7575,
+        0.0075,
+        0.9925,
+        0.2425
+      ],
+      "faceCount": 21,
+      "loopCount": 84,
+      "objects": [
+        "AircraftRoot Tile 16 Faint glass smudges",
+        "AircraftCabRoot Tile 16 Faint glass smudges"
+      ],
+      "sourceObjects": [
+        "Clear side window",
+        "Clear side window.001",
+        "Sloped windshield",
+        "Clear front windshield",
+        "Transparent side glazing",
+        "Transparent side glazing.001"
+      ]
+    }
+  ],
+  "assets": [
+    {
+      "file": "models/aircraft.glb",
+      "bytes": 3514268,
+      "drawCalls": 25,
+      "triangles": 24754,
+      "embeddedImages": 1,
+      "materials": 17,
+      "texturedMaterials": 14
+    },
+    {
+      "file": "models/aircraft-cab.glb",
+      "bytes": 3366512,
+      "drawCalls": 14,
+      "triangles": 15292,
+      "embeddedImages": 1,
+      "materials": 9,
+      "texturedMaterials": 9
+    }
+  ]
+}

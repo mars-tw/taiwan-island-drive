@@ -43,7 +43,16 @@ node scripts/serve.mjs
 
 ## Blender 模型與 IMG 貼圖
 
-共用 `public/models/` 包含 12 個 GLB，`public/textures/` 保留兩張 ImageGen PNG atlas。火車與飛機的 UV 與 Image Texture 真正連到材質，圖片內嵌在 GLB；不是拿車輛照片當模型。
+共用 `public/models/` 包含 12 個 GLB。2.1 版提供汽車、火車、飛機三張真正 ImageGen 4×4 PNG atlas，共 48 格材質，逐面 UV 對應車身、門板、輪胎、輪圈、金屬、玻璃、座椅與駕駛艙。三張新圖位於 `public/textures/*-detail-atlas.png`，舊兩張 atlas 留作歷史來源。圖片與 UV 真正連到材質，並內嵌於八個運輸工具／座艙 GLB。
+
+已改善空心汽車座艙、透明玻璃、列車門縫與窗框、飛機翼型與鼻罩、圓形輪胎及金屬零件；地板與座椅調整成合理紋理密度。換車色仍保留 IMG 細節，控制桿、車輪、螺旋槳及舵面動畫保持正常。原有幼兒教學、方向盤與物理設定保留。
+
+```sh
+node scripts/verify-vehicle-surfaces.mjs
+node scripts/update-asset-catalog.mjs
+```
+
+驗收工具直接讀取 GLB、Image Texture 與 UV accessor，核對各格對位、玻璃透明度、必要動畫節點及圖片雜湊。每次建置都先驗收模型，錯格、缺圖或缺控制節點會阻止發布。完整證據與生成提示詞見 [真實感更新](docs/realism/README.md)。
 
 ```sh
 blender --background --python blender/build_assets.py

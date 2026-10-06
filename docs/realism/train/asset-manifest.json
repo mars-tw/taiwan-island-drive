@@ -1,0 +1,38 @@
+{
+  "kind": "train",
+  "authoring": "Blender 5.2 original procedural geometry",
+  "coordinates": {
+    "up": "+Y",
+    "forward": "+Z",
+    "unit": "metre"
+  },
+  "texture": {
+    "file": "textures/train-detail-atlas.png",
+    "source": "built-in image_gen",
+    "mapping": "16 actual semantic tile crops, per face loop UV; world Z projected body and doors; Image Texture feeds Principled Base Color"
+  },
+  "assets": [
+    {
+      "file": "train.glb",
+      "bytes": 5636312,
+      "nodes": 21,
+      "meshes": 18,
+      "embeddedImages": 1,
+      "draws": 18,
+      "triangles": 73008,
+      "texturedMaterials": 16,
+      "uvAccessors": 18
+    },
+    {
+      "file": "train-cab.glb",
+      "bytes": 3069012,
+      "nodes": 18,
+      "meshes": 15,
+      "embeddedImages": 1,
+      "draws": 15,
+      "triangles": 8386,
+      "texturedMaterials": 8,
+      "uvAccessors": 15
+    }
+  ]
+}

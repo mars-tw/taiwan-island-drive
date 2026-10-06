@@ -130,10 +130,15 @@ export class Game {
       if (!object.isMesh) return;
       const cloneMaterial = material => {
         let cloned;
-        if (material.name === 'BodyPaint') {
-          cloned = new THREE.MeshPhysicalMaterial({ color: this.color, metalness: 0.42, roughness: 0.27,
+        if (material.name.startsWith('BodyPaint')) {
+          cloned = new THREE.MeshPhysicalMaterial({ color: this.color,
+            map: material.map, normalMap: material.normalMap, normalScale: material.normalScale?.clone(),
+            roughnessMap: material.roughnessMap, metalnessMap: material.metalnessMap,
+            bumpMap: material.bumpMap, bumpScale: material.bumpScale,
+            aoMap: material.aoMap, aoMapIntensity: material.aoMapIntensity,
+            metalness: material.metalness ?? 0.42, roughness: material.roughness ?? 0.27,
             clearcoat: 0.9, clearcoatRoughness: 0.19, envMapIntensity: 1.2 });
-          cloned.name = 'BodyPaint'; this.paintMaterials.push(cloned);
+          cloned.name = material.name; this.paintMaterials.push(cloned);
         } else {
           cloned = material.clone(); cloned.userData = { ...cloned.userData, importedAsset: false };
           cloned.envMapIntensity = 1.1;

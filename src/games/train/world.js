@@ -1,5 +1,6 @@
 import * as THREE from 'three';
 import {GLTFLoader} from 'three/addons/loaders/GLTFLoader.js';
+import {RoomEnvironment} from 'three/addons/environments/RoomEnvironment.js';
 import {assetUrl} from '../../shared/paths.js';
 import {readSettings} from '../../shared/settings.js';
 const material=(color,roughness=.85)=>new THREE.MeshStandardMaterial({color,roughness});
@@ -7,7 +8,8 @@ export class TrainWorld {
   constructor(canvas,game){
     this.canvas=canvas;this.game=game;this.view='cab';this.scene=new THREE.Scene();
     this.renderer=new THREE.WebGLRenderer({canvas,antialias:true,powerPreference:'high-performance'});this.applyQuality(readSettings().quality);this.renderer.outputColorSpace=THREE.SRGBColorSpace;this.renderer.toneMapping=THREE.ACESFilmicToneMapping;this.renderer.toneMappingExposure=1.2;
-    this.camera=new THREE.PerspectiveCamera(67,1,.07,1300);this.scene.add(new THREE.HemisphereLight(0xd6edf2,0x56624d,2));const sun=new THREE.DirectionalLight(0xffe0b4,3);sun.position.set(-80,140,100);this.scene.add(sun);
+    const environment=new RoomEnvironment();const pmrem=new THREE.PMREMGenerator(this.renderer);this.environmentTarget=pmrem.fromScene(environment,.04);this.scene.environment=this.environmentTarget.texture;this.scene.environmentIntensity=.75;environment.dispose();pmrem.dispose();
+    this.camera=new THREE.PerspectiveCamera(67,1,.07,1300);this.scene.add(new THREE.HemisphereLight(0xd6edf2,0x56624d,1.65));const sun=new THREE.DirectionalLight(0xffe0b4,2.6);sun.position.set(-80,140,100);this.scene.add(sun);
     this.trainRoot=new THREE.Group();this.cabRoot=new THREE.Group();this.scene.add(this.trainRoot,this.cabRoot);this.trainRoot.visible=false;
     this.environment=new THREE.Group();this.scene.add(this.environment);this.assetStatus={train:'loading',cab:'loading'};this.assetsReady=false;
     this.addLiveInstruments();this.loadAssets();this.rebuild();this.resize();this.resizeObserver=new ResizeObserver(()=>this.resize());this.resizeObserver.observe(canvas.parentElement);

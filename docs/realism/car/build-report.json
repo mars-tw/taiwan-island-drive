@@ -1,0 +1,94 @@
+{
+  "generator": "Blender 5.2.0 LTS / blender/build_assets.py",
+  "blender_build": "fbe6228777e7",
+  "coordinates": "Y-up; vehicles face +Z; metres; ground Y=0",
+  "license": "MIT",
+  "atlas": "public/textures/car-detail-atlas.png",
+  "atlasSha256": "dd17dfcd5ce2f222277cca265e8a2d04876d4b6c556d3d98be869505bff7281a",
+  "assets": [
+    {
+      "id": "coupe",
+      "file": "coupe.glb",
+      "bytes": 4124368,
+      "triangles": 22862,
+      "vertices": 13542,
+      "drawCalls": 36,
+      "sha256": "da0705986b4ee8df8e8b4d4ca4396309adddb7148ffac51faf85114cd2ec5cda",
+      "bounds_gltf": {
+        "min": [
+          -1.16,
+          -0.0,
+          -2.215
+        ],
+        "max": [
+          1.16,
+          1.586,
+          2.116
+        ]
+      }
+    },
+    {
+      "id": "rally",
+      "file": "rally.glb",
+      "bytes": 4356020,
+      "triangles": 26986,
+      "vertices": 15664,
+      "drawCalls": 36,
+      "sha256": "94b5363596cf20a8308ea52057dcca222fc113ef71c9b8c50a3caf808c08bed5",
+      "bounds_gltf": {
+        "min": [
+          -1.16,
+          -0.0,
+          -2.215
+        ],
+        "max": [
+          1.16,
+          1.76,
+          2.267
+        ]
+      }
+    },
+    {
+      "id": "suv",
+      "file": "suv.glb",
+      "bytes": 4199488,
+      "triangles": 23898,
+      "vertices": 14078,
+      "drawCalls": 36,
+      "sha256": "e9cb8e12cb6eb62d51cf21c690314f7686a26a4be0c5bffe3d8382bb106953e0",
+      "bounds_gltf": {
+        "min": [
+          -1.205,
+          0.0,
+          -2.315
+        ],
+        "max": [
+          1.205,
+          2.068,
+          2.237
+        ]
+      }
+    },
+    {
+      "id": "van",
+      "file": "van.glb",
+      "bytes": 4186796,
+      "triangles": 24210,
+      "vertices": 14248,
+      "drawCalls": 37,
+      "sha256": "8f91a4d54de79ececa852660afd92f3cb8f93291eeabedbffb208bb079aa6b82",
+      "bounds_gltf": {
+        "min": [
+          -1.2,
+          0.0,
+          -2.547
+        ],
+        "max": [
+          1.2,
+          2.285,
+          2.391
+        ]
+      }
+    }
+  ]
+}
