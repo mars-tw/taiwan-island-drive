@@ -26,7 +26,16 @@ export function createNativeRuntime({host=defaultHost(),loadPlugin=name=>loaders
  const games=()=>[...resolveGames(),...registeredGames];
  function pauseGames(){for(const entry of games()){const game=entry.game||entry;if(gameIsRunning(game.getState?.()||{}))game.pause?.();entry.tilt?.setActive(false);}}
  function closeTopDialog(){for(const overlay of [...overlays].reverse())if(overlay.isOpen?.()){overlay.close?.();return true;}if(closeDialog)return closeDialog();const dialogs=host.document?.querySelectorAll?.('dialog[open]');const dialog=dialogs?.[dialogs.length-1];if(dialog){dialog.close('back');return true;}return false;}
- async function stopSpeech(){speechSequence++;host.speechSynthesis?.cancel?.();if(plugins.has('TextToSpeech'))try{await (await plugin('TextToSpeech')).stop();}catch{}status.speech='idle';}
+ async function stopSpeech(){
+  const sequence=++speechSequence;host.speechSynthesis?.cancel?.();
+  if(plugins.has('TextToSpeech')){
+   // Audio cleanup must not hold navigation, back or disposal indefinitely.
+   const schedule=host.setTimeout?.bind(host)||globalThis.setTimeout.bind(globalThis),unschedule=host.clearTimeout?.bind(host)||globalThis.clearTimeout.bind(globalThis);let timer;
+   try{await Promise.race([plugin('TextToSpeech').then(tts=>sequence===speechSequence?tts.stop():undefined),new Promise(resolve=>{timer=schedule(resolve,350);})]);}catch{}
+   finally{if(timer!==undefined)unschedule(timer);}
+  }
+  if(sequence===speechSequence)status.speech='idle';
+ }
  function background(){active=false;status.lifecycle='background';for(const overlay of overlays)if(overlay.isOpen?.())overlay.close?.();const open=host.document?.querySelectorAll?.('dialog[open]')||[];for(const dialog of open){backgroundCloses.add(dialog);dialog.close();}pauseGames();for(const entry of games()){const audio=entry.audio||(entry.game||entry).audio,ctx=audio?.ctx||audio?.context;if(ctx){for(const field of ['gain','engineGain','windGain'])audio[field]?.gain?.setValueAtTime?.(0,ctx.currentTime);void ctx.suspend?.().catch?.(()=>{});}}void stopSpeech();}
  function foreground(){active=true;status.lifecycle='foreground-paused';/* Continue buttons own resumption; children never restart unexpectedly. */}
  async function handleBack(){if(closeTopDialog())return 'dialog';const entries=games();const running=entries.find(e=>gameIsRunning((e.game||e).getState?.()||{}));if(running){pauseGames();await stopSpeech();return 'paused';}if(host.document?.body?.dataset?.game||entries.length){navigateHome();return 'home';}if(status.native)try{await (await plugin('App')).minimizeApp();return 'minimized';}catch{}return 'home';}
