@@ -52,9 +52,11 @@ iOS 用 macOS／Xcode26 以上，開啟 `ios/App/App.xcodeproj`，選擇擁有�
 
 手動 workflow 有三個模式：
 
-- `build-only`：預設。使用穩定 Xcode 26.6，產出簽章 IPA，做本機簽章、Team、bundle ID、版本／build、profile、entitlements、隱私 manifest 與內嵌遊戲資源檢查；不向 Apple 驗證或上傳。SPM 套件建製可能仍會下載官方 dependencies。
+- `build-only`：預設。使用 runner 實際安裝並驗證的穩定 Xcode，產出簽章 IPA，做本機簽章、Team、bundle ID、版本／build、profile、entitlements、隱私 manifest 與內嵌遊戲資源檢查；不向 Apple 驗證或上傳。官方 runner manifest 查核及 SPM 套件建製可能使用網路。
 - `validate`：產生相同 IPA，重新核對簽章與檔案 SHA-256，再用 Xcode 內建的 Apple `iTMSTransporter -m verify -assetFile` 向 Apple 驗證；不執行 upload。
 - `upload-testflight`：必須明確選取。先完成上述驗證，再執行 `iTMSTransporter -m upload -assetFile`。選用一般 App Store Connect export，`testFlightInternalTestingOnly=false`，可供後續正式送審。
+
+工具選擇先檢查有效的 `DEVELOPER_DIR`，再檢查 runner 的 `xcode-select -p`；若不合格，才逐一檢查 `/Applications/Xcode*.app`。每個候選都要實際執行 `xcodebuild -version` 與 iPhoneOS SDK 查詢，Xcode 與 SDK 主版本均須至少 26，版本／build 配對須在官方穩定 runner 清單內；路徑、版本輸出或 App metadata 含 Beta／RC／preview 的候選拒絕使用。官方清單暫時無法取得時，使用 2026-10-06 已查核的穩定配對；未知 build 不會自行標為通過。選定工具以 `GITHUB_ENV` 傳給同 job 的 signer／uploader，報告記錄實際版本、build、SDK，IPA compiler build 也會核對。[Apple SDK 門檻](https://developer.apple.com/news/?id=6lxhtioi)、[官方 macOS runner manifest](https://github.com/actions/runner-images/blob/main/images/macos/macos-26-Readme.md)
 
 輸入 `marketing_version` 與正整數 `build_number`；預設 `1.0.0`／`1`，每次 Apple 已接受的上傳都要增加 build number。只修改 CI 暫存副本的 App target signing／版本，不改原工程或把 App profile 套到 SPM framework targets。這裡沒有啟用 automatic signing，也不讓 CI 自動建立憑證、profile 或 API key。
 

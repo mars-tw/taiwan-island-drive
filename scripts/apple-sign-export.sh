@@ -32,11 +32,102 @@ trap cleanup EXIT
 trap 'exit 130' INT
 trap 'exit 143' TERM
 
-case "$MODE" in build|verify-ipa) ;; *) fail 'supported modes: build, verify-ipa' ;; esac
-[ "$(uname -s)" = Darwin ] || fail 'requires macOS with Xcode 26.6'
-for cmd in python3 security codesign plutil ditto openssl xcodebuild; do command -v "$cmd" >/dev/null || fail "missing tool: $cmd"; done
-if [ -d '/Applications/Xcode_26.6.app/Contents/Developer' ]; then export DEVELOPER_DIR='/Applications/Xcode_26.6.app/Contents/Developer'; fi
-xcodebuild -version | head -n 1 | grep -qx 'Xcode 26.6' || fail 'select the stable Xcode 26.6 installation'
+case "$MODE" in build|verify-ipa|select-xcode) ;; *) fail 'supported modes: build, verify-ipa, select-xcode' ;; esac
+[ "$(uname -s)" = Darwin ] || fail 'requires macOS with stable Xcode and iPhoneOS SDK 26 or later'
+for cmd in python3 xcodebuild xcode-select xcrun; do command -v "$cmd" >/dev/null || fail "missing tool: $cmd"; done
+TASK_TMP="$(mktemp -d "${RUNNER_TEMP:-${TMPDIR:-/tmp}}/island-apple.XXXXXXXX")"
+STAGE='Xcode and SDK selection'
+python3 - "$TASK_TMP/xcode.json" <<'PY'
+import json,os,pathlib,plistlib,re,subprocess,sys,urllib.request
+# Audited stable pairs from the official macOS 26 runner manifest, 2026-10-06.
+# A renamed RC cannot pass by its app path or numeric version alone.
+MANIFEST_URL='https://raw.githubusercontent.com/actions/runner-images/main/images/macos/macos-26-Readme.md'
+AUDITED_STABLE={('26.6','17F113'),('26.5','17F42'),('26.4.1','17E202'),('26.3','17C529'),('26.2','17C52'),('26.1.1','17B100'),('26.0.1','17A400')}
+PRERELEASE=re.compile(r'beta|preview|release[ _.-]*candidate|(?:^|[ _./-])rc(?:[ _./0-9-]|$)',re.I)
+def approved_releases(text):
+    pairs=set()
+    for line in text.splitlines():
+        cells=[v.strip() for v in line.strip().split('|')]
+        if len(cells)<5 or PRERELEASE.search(line): continue
+        version=cells[1].replace('(default)','').strip(); build=cells[2]
+        if re.fullmatch(r'\d+(?:\.\d+)*',version) and re.fullmatch(r'\d+[A-Z]\d+',build) and '/Applications/Xcode' in cells[3]: pairs.add((version,build))
+    return pairs
+def validate_probe(path,version_text,sdk_text,metadata,approved):
+    if PRERELEASE.search(path+' '+version_text+' '+metadata): raise ValueError('pre-release marker')
+    match=re.fullmatch(r'Xcode (\d+(?:\.\d+)*)\s+Build version (\d+[A-Z]\d+)\s*',version_text.strip())
+    sdk=sdk_text.strip()
+    if not match or not re.fullmatch(r'\d+(?:\.\d+)*',sdk): raise ValueError('unrecognized tool output')
+    version,build=match.groups()
+    if int(version.split('.')[0])<26 or int(sdk.split('.')[0])<26: raise ValueError('Xcode/iPhoneOS SDK below 26')
+    if (version,build) not in approved: raise ValueError('build not in audited official stable release list')
+    return {'developerDir':path,'version':version,'build':build,'sdk':sdk}
+def choose(candidates,probe,approved):
+    seen=set()
+    for candidate in candidates:
+        if candidate in seen: continue
+        seen.add(candidate)
+        try:
+            version,sdk,metadata=probe(candidate)
+            v=re.search(r'^Xcode (\d+(?:\.\d+)*)',version); b=re.search(r'Build version (\d+[A-Z]\d+[a-z]?)',version)
+            safe_sdk=sdk.strip() if re.fullmatch(r'\d+(?:\.\d+)*',sdk.strip()) else 'unrecognized'
+            print('Probed Xcode '+(v.group(1) if v else 'unrecognized')+' / build '+(b.group(1) if b else 'unrecognized')+' / iPhoneOS SDK '+safe_sdk,file=sys.stderr)
+            result=validate_probe(candidate,version,sdk,metadata,approved)
+        except (ValueError,OSError,subprocess.SubprocessError) as error:
+            # Do not print raw tool stderr or environment values.
+            print('Xcode candidate rejected: '+(str(error) if isinstance(error,ValueError) else 'tool probe failed'),file=sys.stderr)
+            continue
+        print('Selected stable Xcode '+result['version']+' / build '+result['build']+' / iPhoneOS SDK '+result['sdk'],file=sys.stderr)
+        return result
+    raise SystemExit('No installed, verified stable Xcode with iPhoneOS SDK 26 or later')
+def normalize(value):
+    p=pathlib.Path(value)
+    if p.suffix=='.app': p=p/'Contents/Developer'
+    p=p.resolve()
+    if not p.is_dir() or p.name!='Developer' or p.parent.name!='Contents' or p.parent.parent.suffix!='.app': raise ValueError('not a full Xcode installation')
+    if '\n' in str(p) or '\r' in str(p): raise ValueError('unsafe tool path')
+    return str(p)
+def main():
+    approved=set(AUDITED_STABLE)
+    try:
+        with urllib.request.urlopen(MANIFEST_URL,timeout=10) as response: approved.update(approved_releases(response.read(512000).decode('utf8')))
+    except Exception: print('Official runner manifest unavailable; using audited stable release pairs.',file=sys.stderr)
+    # Tools never receive signing/upload secret environment variables.
+    tool_env={k:v for k,v in os.environ.items() if not k.startswith(('APPLE_','APP_STORE_CONNECT_'))}
+    candidates=[]
+    if os.environ.get('DEVELOPER_DIR'): candidates.append(os.environ['DEVELOPER_DIR'])
+    try:
+        selected=subprocess.run(['xcode-select','-p'],env=tool_env,capture_output=True,text=True,timeout=15)
+        if selected.returncode==0: candidates.append(selected.stdout.strip())
+    except subprocess.SubprocessError: print('Runner default Xcode probe failed; checking installed applications.',file=sys.stderr)
+    candidates.extend(str(p/'Contents/Developer') for p in sorted(pathlib.Path('/Applications').glob('Xcode*.app'),reverse=True))
+    def probe(value):
+        if PRERELEASE.search(value): raise ValueError('pre-release path')
+        path=normalize(value); env=dict(tool_env,DEVELOPER_DIR=path)
+        if PRERELEASE.search(path): raise ValueError('resolved pre-release path')
+        metadata=[]
+        for file in ['Info.plist','version.plist']:
+            with open(pathlib.Path(path).parent/file,'rb') as stream: data=plistlib.load(stream)
+            if file=='Info.plist' and data.get('CFBundleIdentifier')!='com.apple.dt.Xcode': raise ValueError('not the Xcode application')
+            # Do not reject stable Xcode for unrelated SwiftUI "Previews" permission text.
+            release_keys=['CFBundleShortVersionString','CFBundleGetInfoString','CFBundleVersion','ProductBuildVersion','ProductVersion','ReleaseType','ReleaseVersion']
+            metadata.append(json.dumps({k:data[k] for k in release_keys if k in data},default=str))
+        version=subprocess.run(['xcodebuild','-version'],env=env,capture_output=True,text=True,check=True,timeout=30).stdout
+        sdk=subprocess.run(['xcrun','--sdk','iphoneos','--show-sdk-version'],env=env,capture_output=True,text=True,check=True,timeout=30).stdout
+        return version,sdk,' '.join(metadata)
+    result=choose(candidates,probe,approved)
+    result['developerDir']=normalize(result['developerDir'])
+    pathlib.Path(sys.argv[1]).write_text(json.dumps(result)+'\n')
+if __name__=='__main__': main()
+PY
+export DEVELOPER_DIR="$(python3 -c 'import json,sys;print(json.load(open(sys.argv[1]))["developerDir"])' "$TASK_TMP/xcode.json")"
+export APPLE_XCODE_VERSION="$(python3 -c 'import json,sys;print(json.load(open(sys.argv[1]))["version"])' "$TASK_TMP/xcode.json")"
+export APPLE_XCODE_BUILD="$(python3 -c 'import json,sys;print(json.load(open(sys.argv[1]))["build"])' "$TASK_TMP/xcode.json")"
+export APPLE_IPHONEOS_SDK="$(python3 -c 'import json,sys;print(json.load(open(sys.argv[1]))["sdk"])' "$TASK_TMP/xcode.json")"
+if [ -n "${GITHUB_ENV:-}" ]; then
+  printf 'DEVELOPER_DIR=%s\nAPPLE_XCODE_VERSION=%s\nAPPLE_XCODE_BUILD=%s\nAPPLE_IPHONEOS_SDK=%s\n' "$DEVELOPER_DIR" "$APPLE_XCODE_VERSION" "$APPLE_XCODE_BUILD" "$APPLE_IPHONEOS_SDK" >>"$GITHUB_ENV"
+fi
+if [ "$MODE" = select-xcode ]; then cat "$TASK_TMP/xcode.json"; exit 0; fi
+for cmd in security codesign plutil ditto openssl; do command -v "$cmd" >/dev/null || fail "missing tool: $cmd"; done
 export APPLE_TEAM_ID="${APPLE_TEAM_ID:-}"
 export APPLE_MARKETING_VERSION="${APPLE_MARKETING_VERSION:-1.0.0}"
 export APPLE_BUILD_NUMBER="${APPLE_BUILD_NUMBER:-1}"
@@ -45,7 +136,6 @@ import os,re
 for key,pattern in [('APPLE_TEAM_ID',r'[A-Z0-9]{10}'),('APPLE_MARKETING_VERSION',r'[0-9]+\.[0-9]+\.[0-9]+'),('APPLE_BUILD_NUMBER',r'[1-9][0-9]*')]:
     if not re.fullmatch(pattern,os.environ[key]): raise SystemExit('Invalid '+key)
 PY
-TASK_TMP="$(mktemp -d "${RUNNER_TEMP:-${TMPDIR:-/tmp}}/island-apple.XXXXXXXX")"
 
 # Fail closed for development, ad-hoc, enterprise, wildcard and expired profiles.
 check_profile() {
@@ -95,6 +185,7 @@ checks={
  'device platform':'iPhoneOS' in info.get('CFBundleSupportedPlatforms',[]),
  'device families':set(info.get('UIDeviceFamily',[]))=={1,2},
  'SDK':bool(re.fullmatch(r'iphoneos(?:2[6-9]|[3-9][0-9])(?:\.[0-9]+)*',info.get('DTSDKName',''))),
+ 'compiler build':info.get('DTXcodeBuild')==os.environ['APPLE_XCODE_BUILD'],
  'distribution certificate':bool(re.search(r'(?:^|,|subject=\s*)CN=Apple Distribution:',subject)) and bool(re.search(r'(?:^|,|subject=\s*)OU='+team+r'(?:,|$)',subject)),
  'signing team':('TeamIdentifier='+team) in identity,
  'embedded profile certificate':hashlib.sha1((d/'cert0').read_bytes()).digest() in [hashlib.sha1(c).digest() for c in p['DeveloperCertificates']],
@@ -233,7 +324,7 @@ python3 - "$OUT" "$TASK_TMP/ExportOptions.plist" <<'PY'
 import datetime,hashlib,json,os,pathlib,plistlib,sys
 d=pathlib.Path(sys.argv[1]); options=plistlib.load(open(sys.argv[2],'rb'))
 if options['method']!='app-store-connect' or options['destination']!='export' or options['testFlightInternalTestingOnly'] is not False: raise SystemExit('Rejected export policy')
-report={'schemaVersion':1,'generatedAt':datetime.datetime.now(datetime.timezone.utc).isoformat(),'bundleId':'tw.mars.islandtransport','teamId':os.environ['APPLE_TEAM_ID'],'marketingVersion':os.environ['APPLE_MARKETING_VERSION'],'buildNumber':os.environ['APPLE_BUILD_NUMBER'],'xcode':'26.6','signed':True,'signatureVerified':True,'profileVerified':True,'entitlementsVerified':True,'bundledResourcesVerified':True,'exportMethod':'app-store-connect','internalOnly':False,'sha256':hashlib.sha256((d/'IslandTransport.ipa').read_bytes()).hexdigest(),'appleValidated':False,'uploaded':False,'appStoreApproved':False}
+report={'schemaVersion':1,'generatedAt':datetime.datetime.now(datetime.timezone.utc).isoformat(),'bundleId':'tw.mars.islandtransport','teamId':os.environ['APPLE_TEAM_ID'],'marketingVersion':os.environ['APPLE_MARKETING_VERSION'],'buildNumber':os.environ['APPLE_BUILD_NUMBER'],'xcode':os.environ['APPLE_XCODE_VERSION'],'xcodeBuild':os.environ['APPLE_XCODE_BUILD'],'sdk':os.environ['APPLE_IPHONEOS_SDK'],'signed':True,'signatureVerified':True,'profileVerified':True,'entitlementsVerified':True,'bundledResourcesVerified':True,'exportMethod':'app-store-connect','internalOnly':False,'sha256':hashlib.sha256((d/'IslandTransport.ipa').read_bytes()).hexdigest(),'appleValidated':False,'uploaded':False,'appStoreApproved':False}
 (d/'verification.json').write_text(json.dumps(report,indent=2)+'\n')
 PY
 printf 'Signed IPA exported and verified locally. No Apple validation or upload was performed.\n'

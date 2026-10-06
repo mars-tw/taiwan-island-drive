@@ -21,13 +21,18 @@ trap cleanup EXIT
 trap 'exit 130' INT
 trap 'exit 143' TERM
 case "$MODE" in build-only) printf 'Build-only: no connection to Apple.\n'; exit 0 ;; validate|upload-testflight) ;; *) fail 'choose build-only, validate or upload-testflight explicitly' ;; esac
-[ "$(uname -s)" = Darwin ] || fail 'requires macOS with stable Xcode 26.6'
+[ "$(uname -s)" = Darwin ] || fail 'requires macOS with stable Xcode and iPhoneOS SDK 26 or later'
+selection="$(bash "$ROOT/scripts/apple-sign-export.sh" select-xcode)"
+export DEVELOPER_DIR="$(printf '%s' "$selection" | python3 -c 'import json,sys; print(json.load(sys.stdin)["developerDir"])')"
+export APPLE_XCODE_VERSION="$(printf '%s' "$selection" | python3 -c 'import json,sys; print(json.load(sys.stdin)["version"])')"
+export APPLE_XCODE_BUILD="$(printf '%s' "$selection" | python3 -c 'import json,sys; print(json.load(sys.stdin)["build"])')"
+export APPLE_IPHONEOS_SDK="$(printf '%s' "$selection" | python3 -c 'import json,sys; print(json.load(sys.stdin)["sdk"])')"
 for name in APPLE_TEAM_ID APPLE_MARKETING_VERSION APPLE_BUILD_NUMBER APP_STORE_CONNECT_API_KEY_BASE64 APP_STORE_CONNECT_KEY_ID APP_STORE_CONNECT_ISSUER_ID; do [ -n "${!name:-}" ] || fail "missing setting: $name"; done
 [ ! -e "$OUT/platform-result.json" ] || fail 'platform result already exists; refusing to reuse a previous run'
 python3 - "$OUT" <<'PY'
 import hashlib,json,os,pathlib,re,sys
 d=pathlib.Path(sys.argv[1]); r=json.loads((d/'verification.json').read_text())
-expected={'bundleId':'tw.mars.islandtransport','teamId':os.environ['APPLE_TEAM_ID'],'marketingVersion':os.environ['APPLE_MARKETING_VERSION'],'buildNumber':os.environ['APPLE_BUILD_NUMBER'],'signed':True,'signatureVerified':True,'profileVerified':True,'entitlementsVerified':True,'bundledResourcesVerified':True,'exportMethod':'app-store-connect','internalOnly':False}
+expected={'bundleId':'tw.mars.islandtransport','teamId':os.environ['APPLE_TEAM_ID'],'marketingVersion':os.environ['APPLE_MARKETING_VERSION'],'buildNumber':os.environ['APPLE_BUILD_NUMBER'],'xcode':os.environ['APPLE_XCODE_VERSION'],'xcodeBuild':os.environ['APPLE_XCODE_BUILD'],'sdk':os.environ['APPLE_IPHONEOS_SDK'],'signed':True,'signatureVerified':True,'profileVerified':True,'entitlementsVerified':True,'bundledResourcesVerified':True,'exportMethod':'app-store-connect','internalOnly':False}
 if any(r.get(k)!=v for k,v in expected.items()) or r.get('sha256')!=hashlib.sha256((d/'IslandTransport.ipa').read_bytes()).hexdigest(): raise SystemExit('IPA provenance or digest mismatch')
 if not re.fullmatch(r'[A-Z0-9]{10}',os.environ['APP_STORE_CONNECT_KEY_ID']) or not re.fullmatch(r'[0-9a-fA-F]{8}(?:-[0-9a-fA-F]{4}){3}-[0-9a-fA-F]{12}',os.environ['APP_STORE_CONNECT_ISSUER_ID']): raise SystemExit('Invalid API key/issuer identifier')
 PY
@@ -44,9 +49,7 @@ if b'-----BEGIN PRIVATE KEY-----' not in data or b'-----END PRIVATE KEY-----' no
 PY
 unset APP_STORE_CONNECT_API_KEY_BASE64
 openssl pkey -in "$TASK_TMP/private_keys/AuthKey_$APP_STORE_CONNECT_KEY_ID.p8" -check -noout >"$TASK_TMP/key-check.log" 2>&1 || fail 'invalid API private key'
-XCODE_CONTENTS="$(cd "$(xcode-select -p)/.." && pwd)"
-if [ -n "${DEVELOPER_DIR:-}" ]; then XCODE_CONTENTS="$(cd "$DEVELOPER_DIR/.." && pwd)"; fi
-if [ -d '/Applications/Xcode_26.6.app/Contents' ]; then XCODE_CONTENTS='/Applications/Xcode_26.6.app/Contents'; fi
+XCODE_CONTENTS="$(cd "$DEVELOPER_DIR/.." && pwd)"
 TRANSPORTER=''
 while IFS= read -r candidate; do [ ! -x "$candidate" ] || { TRANSPORTER="$candidate"; break; }; done < <(find "$XCODE_CONTENTS/SharedFrameworks" -name iTMSTransporter -type f 2>/dev/null)
 [ -n "$TRANSPORTER" ] || fail 'Apple iTMSTransporter executable not found in Xcode; do not substitute third-party uploaders'
