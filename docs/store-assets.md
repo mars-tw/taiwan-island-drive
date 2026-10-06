@@ -10,6 +10,6 @@
 
 本包的截圖從 `dist-native` 網頁包實際運行的畫面擷取，使用 Chrome 的尺寸與觸控模擬。它們不是 iOS Simulator、Android Emulator 或實體手機擷取。manifest 會逐張記錄 CSS viewport、DPR、尺寸、SHA-256 與 `simulated: true`；正式原生裝置的安全區、狀態列與平台行為仍需由原生測試確認。
 
-完整清單與數值驗收見 `store/assets/manifest.json`。Apple Developer Program 已啟用，App Store Connect 已建立「島嶼交通學院」（Apple ID `6819605203`），免費、台灣地區、商店 metadata、身分與審查聯絡資料已儲存並經擁有者確認。[Apple signed run 37454940484](https://github.com/mars-tw/taiwan-island-drive/actions/runs/37454940484) 已產生並驗證 32,589,768 bytes 的 1.0.0／build 1 發佈簽章 IPA。上傳用 p8 尚未備妥，Apple 平台驗證、上傳與送審均未完成；「不收集資料」隱私聲明已獲擁有者最終確認，並已在 App Store Connect 發布。
+完整清單與數值驗收見 `store/assets/manifest.json`。Apple Developer Program 已啟用，App Store Connect 已建立「島嶼交通學院」（Apple ID `6819605203`），免費、台灣地區、商店 metadata、身分與審查聯絡資料已儲存並經擁有者確認。目前候選包來自 [Apple signed run 37465941274](https://github.com/mars-tw/taiwan-island-drive/actions/runs/37465941274)：32,592,399 bytes、1.0.0／build 1，已包含 UIKit 安全區約束及語音清理修正，下載後的 SHA-256 與報告相符，簽章及隨附資源驗證通過。上傳用 p8 尚未備妥，Apple 平台驗證、上傳與送審均未完成；「不收集資料」隱私聲明已獲擁有者最終確認，並已在 App Store Connect 發布。
 
-Google Play 身分審核已通過，電話與實體 Android 裝置驗證、商店問卷及審查聯絡資料仍待完成，尚未建立 App 或上傳。上述 Chrome 瀏覽器模擬截圖繼續保留 `simulated: true`，原生 UI 與原生媒體驗收尚未通過。
+Google Play 身分審核已通過，電話與實體 Android 裝置驗證、商店問卷及審查聯絡資料仍待完成，尚未建立 App 或上傳。上述 Chrome 瀏覽器模擬截圖繼續保留 `simulated: true`。含安全區修正的 [原生截圖 run 37465941350](https://github.com/mars-tw/taiwan-island-drive/actions/runs/37465941350) 尚在執行，本版原生 UI 與完整原生媒體驗收尚未通過。

@@ -57,7 +57,7 @@
     {
       "id": "ios_build",
       "status": "resolved",
-      "detail": "Apple signed run 37454940484 on macOS 15 successfully archived, signed, exported and locally verified the 32,589,768-byte App Store Connect IPA for 1.0.0/build 1, bundle tw.mars.islandtransport, internalOnly false. An independent download matched the CI report SHA-256. Signature, profile, entitlements and bundled resources passed; this is not Apple platform validation, upload, approval or native UI evidence."
+      "detail": "Current Apple signed candidate run 37465941274 on macOS 15 successfully archived, signed, exported and locally verified the 32,592,399-byte App Store Connect IPA for 1.0.0/build 1, bundle tw.mars.islandtransport, internalOnly false, source commit 7cd0d7517f1cb2e221a3c13b38a0131df5e32813. UIKit safe-area constraints are included. An independent download matched the CI report SHA-256. Signature, profile, entitlements and bundled resources passed; this is not Apple platform validation, upload, approval or native UI visual evidence."
     },
     {
       "id": "signing_and_upload",
@@ -77,7 +77,7 @@
     {
       "id": "store_forms_and_native_media",
       "status": "pending",
-      "detail": "Apple store metadata and questionnaires, free Taiwan distribution, identity and review contacts are saved and owner-confirmed. The Apple No Data Collected privacy declaration is owner-confirmed and published in App Store Connect. Remaining store identity/contact/questionnaire fields apply to Google Play, where no App exists. Existing screenshots are explicitly Chrome browser simulations; native UI captures and native media acceptance are not proven. Neither platform has an uploaded or approved build."
+      "detail": "Apple store metadata and questionnaires, free Taiwan distribution, identity and review contacts are saved and owner-confirmed. The Apple No Data Collected privacy declaration is owner-confirmed and published in App Store Connect. Remaining store identity/contact/questionnaire fields apply to Google Play, where no App exists. Existing store screenshots are explicitly Chrome browser simulations. The current safe-area native capture run 37465941350 is in progress; native UI visual verification and complete native media acceptance are not proven. Neither platform has an uploaded or approved build."
     },
     {
       "id": "owner_identity",
@@ -136,12 +136,17 @@
   ],
   "binaryBuildEvidence": "store/review/binary-build-verification.json",
   "appleSignedBuildEvidence": {
-    "runUrl": "https://github.com/mars-tw/taiwan-island-drive/actions/runs/37454940484",
-    "headCommit": "852b7617505f01e880f1231e2e6b12a8d6e9940d",
+    "runUrl": "https://github.com/mars-tw/taiwan-island-drive/actions/runs/37465941274",
+    "headCommit": "7cd0d7517f1cb2e221a3c13b38a0131df5e32813",
     "marketingVersion": "1.0.0",
     "buildNumber": 1,
     "bundleId": "tw.mars.islandtransport",
-    "ipaBytes": 32589768,
+    "ipaBytes": 32592399,
+    "uiKitSafeAreaCodeIncluded": true,
+    "speechCleanupTimeoutMs": 350,
+    "speechCleanupSequenceGuarded": true,
+    "nativeFocusedTestsPassed": 28,
+    "nativeFocusedTestsMethod": "mocks_only",
     "exportMethod": "app-store-connect",
     "internalOnly": false,
     "sha256MatchedCiReportByIndependentDownload": true,
@@ -156,6 +161,8 @@
   },
   "nativeMediaEvidence": {
     "browserCapturesSimulated": true,
+    "captureRunUrl": "https://github.com/mars-tw/taiwan-island-drive/actions/runs/37465941350",
+    "captureRunStatus": "in_progress_unverified",
     "nativeUiCaptureVerified": false,
     "nativeMediaAcceptancePassed": false
   }

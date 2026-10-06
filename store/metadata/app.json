@@ -111,12 +111,17 @@
   },
   "appleSignedBuildEvidence": {
     "status": "verified_signed_ipa_not_platform_validated_or_uploaded",
-    "runUrl": "https://github.com/mars-tw/taiwan-island-drive/actions/runs/37454940484",
-    "headCommit": "852b7617505f01e880f1231e2e6b12a8d6e9940d",
+    "runUrl": "https://github.com/mars-tw/taiwan-island-drive/actions/runs/37465941274",
+    "headCommit": "7cd0d7517f1cb2e221a3c13b38a0131df5e32813",
     "marketingVersion": "1.0.0",
     "buildNumber": 1,
     "bundleId": "tw.mars.islandtransport",
-    "ipaBytes": 32589768,
+    "ipaBytes": 32592399,
+    "uiKitSafeAreaCodeIncluded": true,
+    "speechCleanupTimeoutMs": 350,
+    "speechCleanupSequenceGuarded": true,
+    "nativeFocusedTestsPassed": 28,
+    "nativeFocusedTestsMethod": "mocks_only",
     "exportMethod": "app-store-connect",
     "internalOnly": false,
     "sha256MatchedCiReportByIndependentDownload": true,
@@ -135,6 +140,6 @@
     "ownerLegalConfirmationCompleted": true,
     "published": true
   },
-  "nativeMediaStatus": "browser_simulated_captures_only_native_ui_not_verified",
+  "nativeMediaStatus": "store_captures_browser_simulated_native_safe_area_visual_verification_pending",
   "automaticSignupOrPaymentAuthorized": false
 }
