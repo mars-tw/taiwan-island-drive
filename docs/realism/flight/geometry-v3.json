@@ -1,0 +1,49 @@
+{
+  "version": "curved-airframe-v3",
+  "atlasSha256": "3da59811320b72f19fbc9159603b328079897d788f02089dfa420effaa6d442b",
+  "atlasPixelsAndBytesUnchanged": true,
+  "assets": [
+    {
+      "file": "models/aircraft.glb",
+      "bytes": 4164940,
+      "drawCalls": 28,
+      "triangles": 49870,
+      "embeddedImages": 1,
+      "materials": 21,
+      "texturedMaterials": 16
+    },
+    {
+      "file": "models/aircraft-cab.glb",
+      "bytes": 3180796,
+      "drawCalls": 15,
+      "triangles": 13636,
+      "embeddedImages": 1,
+      "materials": 10,
+      "texturedMaterials": 9
+    }
+  ],
+  "geometryChanges": [
+    "Catmull-Rom fuselage stations and consistent outward smooth normals",
+    "Rounded tapered wing tips with real flap/aileron hinge cutouts",
+    "NACA section vertical fin and tapered rudder",
+    "Recessed formed cowling air inlets and 2.5mm door/service gaps",
+    "Flat spring main gear, oleo torque links and separate machined hub fasteners",
+    "Twisted tapered propeller with formed unstriped spinner",
+    "Curved 4mm laminated windshield and rear quarter glazing",
+    "Fine-grain interior surface UV cells and flat shoulder webbing"
+  ],
+  "preservedRuntimeNodes": [
+    "PropellerRoot",
+    "AileronLeft",
+    "AileronRight",
+    "FlapLeft",
+    "FlapRight",
+    "Elevator",
+    "Rudder",
+    "YokeLeft",
+    "YokeRight"
+  ],
+  "glassAlpha": 0.09,
+  "before": "docs/realism/flight/before-v3.png",
+  "after": "docs/realism/flight/after.png"
+}

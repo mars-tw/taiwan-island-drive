@@ -1,0 +1,204 @@
+{
+  "status": "VERIFIED_REOPEN",
+  "source": "blender/flight/models.blend",
+  "sourceBytes": 7555834,
+  "sourceSha256": "53ef70b1adb575ad55c5703c5d916d0a82258b21268efd72f550923b341a2865",
+  "blenderVersion": "5.2.0 LTS",
+  "privateHomePathCount": 0,
+  "privateUsernameCount": 0,
+  "meshes": 40,
+  "images": [
+    {
+      "name": "Flight 16 real IMG tiles",
+      "filepath": "//..\\..\\public\\textures\\flight-detail-atlas.png",
+      "packed": true,
+      "packedPath": [
+        "//../../public/textures/flight-detail-atlas.png"
+      ],
+      "sha256": "3da59811320b72f19fbc9159603b328079897d788f02089dfa420effaa6d442b",
+      "size": [
+        1254,
+        1254
+      ]
+    }
+  ],
+  "runtimeNodes": [
+    {
+      "name": "PropellerRoot",
+      "locationBlender": [
+        0.0,
+        -3.859999895095825,
+        1.340000033378601
+      ],
+      "rotation": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ]
+    },
+    {
+      "name": "AileronLeft",
+      "locationBlender": [
+        -3.680000066757202,
+        0.36000001430511475,
+        2.1700000762939453
+      ],
+      "rotation": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ]
+    },
+    {
+      "name": "AileronRight",
+      "locationBlender": [
+        3.680000066757202,
+        0.36000001430511475,
+        2.1700000762939453
+      ],
+      "rotation": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ]
+    },
+    {
+      "name": "FlapLeft",
+      "locationBlender": [
+        -1.7799999713897705,
+        0.3400000035762787,
+        2.1649999618530273
+      ],
+      "rotation": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ]
+    },
+    {
+      "name": "FlapRight",
+      "locationBlender": [
+        1.7799999713897705,
+        0.3400000035762787,
+        2.1649999618530273
+      ],
+      "rotation": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ]
+    },
+    {
+      "name": "Elevator",
+      "locationBlender": [
+        0.0,
+        3.5899999141693115,
+        1.7300000190734863
+      ],
+      "rotation": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ]
+    },
+    {
+      "name": "Rudder",
+      "locationBlender": [
+        0.0,
+        3.859999895095825,
+        2.200000047683716
+      ],
+      "rotation": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ]
+    },
+    {
+      "name": "YokeLeft",
+      "locationBlender": [
+        -0.3400000035762787,
+        -0.44999998807907104,
+        0.8849999904632568
+      ],
+      "rotation": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ]
+    },
+    {
+      "name": "YokeRight",
+      "locationBlender": [
+        0.3400000035762787,
+        -0.44999998807907104,
+        0.8849999904632568
+      ],
+      "rotation": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ]
+    }
+  ],
+  "propellerRegexpMatches": [
+    "PropellerRoot"
+  ],
+  "exteriorBoundsGltf": {
+    "min": [
+      -5.159999847412109,
+      0.0,
+      -4.130000114440918
+    ],
+    "max": [
+      5.159999847412109,
+      2.940000057220459,
+      4.159999847412109
+    ]
+  }
+}

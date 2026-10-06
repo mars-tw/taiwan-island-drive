@@ -8,9 +8,11 @@
 | --- | --- | --- |
 | 汽車 | 四款車、四張台灣主題地圖、觸控／手機方向盤、自由駕駛與計時挑戰 | `/car/` |
 | 火車 | 慣性、延遲煞車、車門與方向互鎖、號誌、停站接客；三課程與停車輔助 | `/train/` |
-| 飛機 | 升力、阻力、失速、襟翼、姿態、跑道起飛與降落；三課程及自由飛行 | `/flight/` |
+| 飛機 | 四個 36×36 km 風景地圖；尋寶、郵件投遞、景點巡航、起飛、導航、降落及自由飛行；單次點擊助飛與物理返航 | `/flight/` |
 
 火車與飛機預設 3～5 歲幼兒模式，有大按鈕、簡短中文語音及操作輔助。家長可改成完整手動模式。大廳的幼兒模式、聲音與畫質設定會同步到三種遊戲；汽車的車種、顏色等個別選擇仍會保存。
+
+2.2 版重整飛機的手機／平板介面：WebGL 使用獨立飛行視窗，任務列與控制列占自己的空間；幼兒只需點擊向左、主動作與向右，助飛會持續管理油門、轉彎與姿態。看儀表時重新量測可用視窗，家長仍可切換完整手動操作。新增尋寶、實際重力郵件投遞及景點巡航，詳細變更見 [介面](docs/flight-upgrade-ui.md)、[控制與玩法](docs/flight-upgrade-controls.md)、[世界與鏡頭](docs/flight-upgrade-world.md)。
 
 ## 手機遊玩
 
@@ -69,7 +71,7 @@ npm run build
 powershell -ExecutionPolicy Bypass -File scripts/package-source.ps1
 ```
 
-產出 `release/island-drive-source.zip`，包含三種遊戲程式、四頁入口、三份 Blender 來源、12 個 GLB、兩張 atlas、全部授權與正式版。排除依賴、憑證、工作暫存及遞迴 ZIP。
+產出 `release/island-drive-source.zip`，包含三種遊戲程式、四頁入口、三份 Blender 來源、12 個 GLB、三張現用 atlas 與兩張歷史 atlas、全部授權與正式版。排除依賴、憑證、工作暫存及遞迴 ZIP。
 
 推送 main 後，同一份 GitHub Actions 流程會跑全部測試、建置四頁、製作完整下載包並部署到同一個 GitHub Pages 網址。完整源碼授權為 MIT；Three.js 保留 MIT，Barlow 字型保留 OFL，授權原文在 [THIRD_PARTY_NOTICES](public/THIRD_PARTY_NOTICES.txt)。
 

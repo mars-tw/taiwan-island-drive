@@ -40,10 +40,10 @@ test('only pushing throttle never earns takeoff credit and stops at the runway e
  for(let i=0;i<120*150&&!m.retry&&!m.complete;i++){stepPhysics(s,{throttle:1,flaps:1,pitch:0},p,1/120,{assist:true,onRunway:Math.abs(s.position.x)<24&&s.position.z>=0&&s.position.z<=1800});updateMission(m,s,1/120);}
  assert.equal(s.rotationCommanded,false);assert.equal(m.complete,false);assert.equal(m.retry,true);assert.equal(m.score,0);assert.ok(s.position.z<1800);assert.match(m.message,/抬頭起飛/);
 });
-test('natural shallow liftoff keeps the child rotate button until the child actually pulls',()=>{
+test('natural shallow liftoff keeps the single child start action until assistance begins',()=>{
  const s=createState('takeoff');iterate(s,{throttle:1,flaps:1,pitch:0},30);assert.equal(s.grounded,false);assert.equal(s.rotationCommanded,false);
  const mission=newMission('takeoff'),school={state:s,mission,lesson:'takeoff',plane:'trainer',preschool:true,keys:new Set(),controls:{pitch:0,roll:0,rudder:0,throttle:1,flaps:1,brake:0},guidance:{rotate:false,navigate:false,land:false}};
- const view={...s,lesson:'takeoff',plane:'trainer',guidance:school.guidance,mission};assert.equal(childAction(view)[0],'抬頭起飛');assert.match(childMessage(view),/按抬頭起飛/);
+ const view={...s,lesson:'takeoff',plane:'trainer',guidance:school.guidance,mission};assert.equal(childAction(view)[0],'一起起飛');assert.match(childMessage(view),/點一下就出發/);
  FlightGame.prototype.childControl.call(school);assert.equal(school.guidance.rotate,true);
  for(let i=0;i<120*50&&!mission.complete&&!mission.retry;i++){const c=FlightGame.prototype.input.call(school,1/120);stepPhysics(s,c,p,1/120,{assist:true,onRunway:Math.abs(s.position.x)<24&&s.position.z>=0&&s.position.z<=1800});updateMission(mission,s,1/120);}
  assert.equal(s.rotationCommanded,true);assert.equal(mission.complete,true);assert.equal(mission.retry,false);assert.equal(childAction({...view,...s})[0],'機翼保持平穩');

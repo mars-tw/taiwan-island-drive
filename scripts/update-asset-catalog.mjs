@@ -21,7 +21,7 @@ for (const group of catalog.groups) {
     entry.texturedMaterials = (document.materials || []).filter(m => m.pbrMetallicRoughness?.baseColorTexture).length;
   }
 }
-catalog.schemaVersion = 2; catalog.visualVersion = '2.1.0';
+catalog.schemaVersion = 2; catalog.visualVersion = JSON.parse(await readFile(resolve(root, 'package.json'), 'utf8')).version;
 catalog.textures = catalog.groups.flatMap(group => group.textures.map(texture => ({
   id: group.id, ...texture, file: texture.repositoryPath, mapping: 'UV 4x4 per-face atlas'
 })));

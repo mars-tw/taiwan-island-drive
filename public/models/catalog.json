@@ -241,31 +241,31 @@
           "file": "aircraft.glb",
           "publicPath": "models/aircraft.glb",
           "repositoryPath": "public/models/aircraft.glb",
-          "bytes": 3514268,
-          "sha256": "f37fd5e4a7a961d7af67005a61eced19ae5e9b6ddc517a4848dff217fcac9caa",
-          "meshes": 23,
-          "nodes": 26,
+          "bytes": 4164940,
+          "sha256": "c3a6beb9d21776da5471ee6bc1beb637d2062f605f700408470736ddb4474064",
+          "meshes": 25,
+          "nodes": 28,
           "embeddedImages": 1,
           "source": "blender/flight/models.blend",
           "generator": "blender/flight/build_assets.py",
-          "drawCalls": 25,
-          "triangles": 24754,
-          "texturedMaterials": 14
+          "drawCalls": 28,
+          "triangles": 49870,
+          "texturedMaterials": 16
         },
         {
           "id": "aircraft-cab",
           "file": "aircraft-cab.glb",
           "publicPath": "models/aircraft-cab.glb",
           "repositoryPath": "public/models/aircraft-cab.glb",
-          "bytes": 3366512,
-          "sha256": "db422509a8c8c49c993e4eafb7799d613785a6015120336301c4e1c79708dd0e",
-          "meshes": 14,
-          "nodes": 17,
+          "bytes": 3180796,
+          "sha256": "207a647298d08b9b3e6ad09859f36d64079fec6e5dcd02b336a39b7f8bbecc21",
+          "meshes": 15,
+          "nodes": 18,
           "embeddedImages": 1,
           "source": "blender/flight/models.blend",
           "generator": "blender/flight/build_assets.py",
-          "drawCalls": 14,
-          "triangles": 15292,
+          "drawCalls": 15,
+          "triangles": 13636,
           "texturedMaterials": 9
         }
       ]
@@ -315,7 +315,7 @@
       "mapping": "UV 4x4 per-face atlas"
     }
   ],
-  "visualVersion": "2.1.0",
+  "visualVersion": "2.2.0",
   "historicalTextures": [
     "textures/train.png",
     "textures/aircraft.png"
