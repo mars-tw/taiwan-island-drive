@@ -1,0 +1,57 @@
+{
+  "date": "2026-10-06",
+  "marketingVersion": "1.0.0",
+  "sourceVersion": "2.3.0",
+  "applicationId": "tw.mars.islandtransport",
+  "android": {
+    "compiled": true,
+    "targetSdk": 36,
+    "uploadSignatureVerified": true,
+    "bundletoolValidated": true,
+    "uploadKeyRegisteredWithGoogle": false,
+    "certificateSubject": "C=TW\nCN=IslandTransportUpload",
+    "fingerprint256": "33:B9:0C:AE:EE:55:03:B3:AE:DF:2B:39:D4:3A:54:DA:BC:68:DB:61:0F:39:F6:F3:01:83:0D:5D:46:89:F4:A7",
+    "certificateExpires": "Feb 21 06:23:58 2054 GMT",
+    "privateKeyPackaged": false
+  },
+  "ios": {
+    "compiledSimulator": true,
+    "archivedDevice": true,
+    "codeSigningAllowed": false,
+    "ipaProduced": false,
+    "xcode": "26.6",
+    "sdk": "26.5",
+    "minimumVersion": "16.4",
+    "ciRun": "https://github.com/mars-tw/taiwan-island-drive/actions/runs/37424670515",
+    "sourceCommit": "37c9f6ae6255b22482a5c97bfc45bbb1767a8a60"
+  },
+  "tests": {
+    "deterministic": 96,
+    "nativePackageChecks": 22,
+    "parentDomGroups": 6,
+    "metadataChecks": 28
+  },
+  "artifacts": [
+    {
+      "file": "island-transport-test.apk",
+      "bytes": 37463724,
+      "sha256": "12540d9d4e3f89de2ce6368e4ce7428880bcb28fedcdbe5c3fc29020c9461e88"
+    },
+    {
+      "file": "island-transport-upload-signed.aab",
+      "bytes": 35453794,
+      "sha256": "64575aff26b03dbbcb629ea54723329a0e58431f345c29ca99f19fc06b455f41"
+    },
+    {
+      "file": "IslandTransport-simulator.app.zip",
+      "bytes": 33290296,
+      "sha256": "322bc5bb7112065be95fc1cb5416963187db796cf720e9136e436640cecc5345"
+    },
+    {
+      "file": "IslandTransport-unsigned.xcarchive.zip",
+      "bytes": 35447241,
+      "sha256": "a2b8d488e85116ca0b32d478d55602423e76beb4bc49e918a26348f16e862f2c"
+    }
+  ],
+  "submittedToStores": false
+}

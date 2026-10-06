@@ -24,13 +24,13 @@
     },
     {
       "id": "ios_build",
-      "status": "needs_mac_or_macos_ci",
-      "detail": "Current host is Windows. A final iOS 26+ SDK archive, code signing and device tests cannot be claimed from an unbuilt Xcode project."
+      "status": "resolved_unsigned_build",
+      "detail": "macOS26 CI with Xcode26.6/SDK26.5 compiled simulator App and unsigned device xcarchive; iOS signing and device tests remain pending."
     },
     {
       "id": "signing_and_upload",
       "status": "pending",
-      "detail": "No store credentials/signing identity has been created or verified for submission. A debug APK or unsigned archive is not a submitted store release."
+      "detail": "Local Android upload-signed AAB passes jarsigner and bundletool. Apple signing, registration of upload certificate and actual platform upload remain pending."
     },
     {
       "id": "new_personal_play_account_testing",
@@ -65,7 +65,7 @@
     "iosUploadSdk": "iOS 26 / iPadOS 26 or later"
   },
   "verifiedReleaseEvidence": {
-    "androidSignedRelease": false,
+    "androidSignedRelease": true,
     "iosSignedArchive": false,
     "nativePrivacyNetworkAudit": false,
     "offlineDeviceTest": false,
@@ -84,5 +84,6 @@
     "https://developer.apple.com/news/?id=6lxhtioi",
     "https://support.google.com/googleplay/android-developer/answer/11926878?hl=en-sg",
     "https://developer.apple.com/support/terms"
-  ]
+  ],
+  "binaryBuildEvidence": "store/review/binary-build-verification.json"
 }

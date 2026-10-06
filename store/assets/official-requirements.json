@@ -1,0 +1,40 @@
+{
+  "checkedDate": "2026-10-06",
+  "timezone": "Asia/Taipei",
+  "sources": [
+    {"id":"apple-screenshots","url":"https://developer.apple.com/help/app-store-connect/reference/app-information/screenshot-specifications/","publisher":"Apple Developer"},
+    {"id":"apple-icons","url":"https://developer.apple.com/help/app-store-connect/manage-app-information/add-an-app-icon/","publisher":"Apple Developer"},
+    {"id":"google-preview-assets","url":"https://support.google.com/googleplay/android-developer/answer/9866151?hl=en","publisher":"Google Play Console Help"},
+    {"id":"capacitor-v8-icons","url":"https://capacitorjs.com/docs/guides/splash-screens-and-icons","publisher":"Capacitor v8"},
+    {"id":"capacitor-assets-tool","url":"https://github.com/ionic-team/capacitor-assets","publisher":"Ionic team"}
+  ],
+  "apple": {
+    "requiredIphoneClassAtCheck": "Dynamic Island medium display",
+    "iphoneMediumPortraitPixels": [1206,2622],
+    "iphoneLargeOptionalPortraitPixels": [1320,2868],
+    "ipad13PortraitPixels": [2064,2752],
+    "ipadRequiredWhenSupported": true,
+    "screenshotFormats": ["png","jpeg"],
+    "screenshotAlphaAllowed": false,
+    "screenshotsPerDeviceSize": {"minimum":1,"maximum":10},
+    "appIconWorkflow": "Add icon to Xcode asset catalog / Icon Composer, then upload a build."
+  },
+  "googlePlay": {
+    "storeIconPixels": [512,512],
+    "storeIconFormat": "32-bit PNG with alpha",
+    "storeIconMaximumBytes": 1048576,
+    "featureGraphicPixels": [1024,500],
+    "featureGraphicFormat": "JPEG or 24-bit PNG without alpha",
+    "screenshotsMinimum": 2,
+    "screenshotDimensionRange": [320,3840],
+    "maximumLongToShortRatio": 2,
+    "gameRecommendationPortrait": {"minimumPixels":[1080,1920],"minimumGameplayScreenshots":3}
+  },
+  "capacitorSources": {
+    "assetPath":"resources",
+    "iconMinimumPixels":[1024,1024],
+    "splashMinimumPixels":[2732,2732],
+    "filenames":["icon-only.png","icon-foreground.png","icon-background.png","splash.png","splash-dark.png"],
+    "generationCommand":"npx capacitor-assets generate --assetPath resources --android --ios"
+  }
+}

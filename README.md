@@ -14,6 +14,12 @@
 
 2.2 版重整飛機的手機／平板介面：WebGL 使用獨立飛行視窗，任務列與控制列占自己的空間；幼兒只需點擊向左、主動作與向右，助飛會持續管理油門、轉彎與姿態。看儀表時重新量測可用視窗，家長仍可切換完整手動操作。新增尋寶、實際重力郵件投遞及景點巡航，詳細變更見 [介面](docs/flight-upgrade-ui.md)、[控制與玩法](docs/flight-upgrade-controls.md)、[世界與鏡頭](docs/flight-upgrade-world.md)。
 
+## iOS／Android 商店版準備包
+
+已建立 Capacitor 原生工程，全部遊戲與模型本機打包約 41 MB。Android 測試 APK、上傳簽章 AAB、iOS Simulator App 及未簽章裝置封存皆已建製，96 項測試通過。完整交付與重建見 [native-package](docs/native-package.md)，建置證據見 [native-build-verification](docs/native-build-verification.md)。
+
+兩個開發者帳號尚未建立，未在 App Store／Google Play 送審或上架。簽章私鑰與密碼不在開源專案或下載 ZIP 中。
+
 ## 手機遊玩
 
 用 Safari 或 Chrome 開啟大廳，選汽車、火車或飛機。汽車的「設定 → 手機方向盤 → 啟用」會要求瀏覽器正常的動作感測權限，握好手機後按「回正」，即可左右傾斜轉向；油門和煞車仍用觸控。

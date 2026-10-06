@@ -1,0 +1,266 @@
+{
+  "schemaVersion": 1,
+  "date": "2026-10-06",
+  "timezone": "Asia/Taipei",
+  "environment": {
+    "session": "nativeGateQA",
+    "url": "http://localhost:5192/",
+    "build": "dist-native 2.3.0",
+    "browser": "HeadlessChrome/154.0.0.0",
+    "os": "Windows",
+    "viewport": {
+      "width": 1280,
+      "height": 720
+    },
+    "nativeBuild": true,
+    "actualPlatform": "web",
+    "nativeHardwareTested": false
+  },
+  "scope": {
+    "sourceReadOnly": true,
+    "otherBrowserSessionsTouched": false,
+    "rootSessionFlight22Touched": false
+  },
+  "groups": [
+    {
+      "id": "home_parent_settings",
+      "passed": true
+    },
+    {
+      "id": "flight_parent_summary",
+      "passed": true
+    },
+    {
+      "id": "car_tilt_gate_and_gesture_chain",
+      "passed": true
+    },
+    {
+      "id": "native_external_and_download_info_only",
+      "passed": true
+    },
+    {
+      "id": "keyboard_auxclick_contextmenu_no_bypass",
+      "passed": true
+    },
+    {
+      "id": "game_pause_and_no_hidden_resume",
+      "passed": true
+    }
+  ],
+  "checks": [
+    {
+      "case": "home_settings_initial",
+      "pass": true,
+      "evidence": {
+        "gate": true,
+        "family": false,
+        "question": "52 ＋ 88",
+        "nativeBuild": true,
+        "installHidden": true
+      }
+    },
+    {
+      "case": "home_wrong_answer",
+      "pass": true,
+      "evidence": {
+        "gate": true,
+        "family": false,
+        "error": "答案不對，請家長再算一次。"
+      }
+    },
+    {
+      "case": "home_cancel",
+      "pass": true,
+      "evidence": {
+        "gate": false,
+        "family": false
+      }
+    },
+    {
+      "case": "home_correct_once",
+      "pass": true,
+      "evidence": {
+        "gate": false,
+        "family": true,
+        "approvedUsing": "actual DOM arithmetic + Enter"
+      }
+    },
+    {
+      "case": "home_reopen_requires_new_gate",
+      "pass": true,
+      "evidence": {
+        "gate": true,
+        "family": false
+      }
+    },
+    {
+      "case": "external_keyboard_enter_requires_gate",
+      "pass": true,
+      "evidence": {
+        "gate": true,
+        "infoHidden": true,
+        "url": "http://localhost:5192/",
+        "hrefRemoved": true
+      }
+    },
+    {
+      "case": "native_external_after_approval_info_only",
+      "pass": true,
+      "evidence": {
+        "gate": true,
+        "infoVisible": true,
+        "address": "https://github.com/mars-tw/taiwan-island-drive",
+        "url": "http://localhost:5192/",
+        "platform": "web",
+        "tabs": 1
+      }
+    },
+    {
+      "case": "middle_click_no_bypass",
+      "pass": true,
+      "evidence": {
+        "tabs": 1,
+        "url": "http://localhost:5192/",
+        "gate": false
+      }
+    },
+    {
+      "case": "contextmenu_no_bypass",
+      "pass": true,
+      "evidence": {
+        "tabs": 1,
+        "url": "http://localhost:5192/",
+        "prevented": true
+      }
+    },
+    {
+      "case": "native_download_after_approval_info_only",
+      "pass": true,
+      "evidence": {
+        "infoVisible": true,
+        "address": "https://github.com/mars-tw/taiwan-island-drive",
+        "url": "http://localhost:5192/",
+        "zipRequests": 0,
+        "tabs": 1
+      }
+    },
+    {
+      "case": "ios_minimum_recheck",
+      "pass": true,
+      "evidence": {
+        "pbxTargets": [
+          "16.4",
+          "16.4",
+          "16.4",
+          "16.4"
+        ],
+        "minimumIOSVersion": "16.4",
+        "previousFindingResolved": true
+      }
+    },
+    {
+      "case": "flight_parent_summary_gated",
+      "pass": true,
+      "evidence": {
+        "gate": true,
+        "detailsOpen": false,
+        "question": "83 ＋ 73"
+      }
+    },
+    {
+      "case": "flight_summary_correct_once",
+      "pass": true,
+      "evidence": {
+        "gate": false,
+        "detailsOpen": true
+      }
+    },
+    {
+      "case": "car_tilt_requires_gate_before_enable",
+      "pass": true,
+      "evidence": {
+        "gate": true,
+        "phase": "paused",
+        "elapsed": 44.549999999998754,
+        "tilt": {
+          "enabled": false,
+          "ready": false,
+          "pending": false,
+          "status": "off"
+        }
+      }
+    },
+    {
+      "case": "active_game_paused_during_gate",
+      "pass": true,
+      "evidence": {
+        "beforePhase": "running",
+        "afterPhase": "paused",
+        "elapsedDuring": 44.549999999998754,
+        "elapsedAfter400ms": 44.549999999998754
+      }
+    },
+    {
+      "case": "cancel_gate_does_not_resume_game",
+      "pass": true,
+      "evidence": {
+        "gate": false,
+        "phase": "paused",
+        "elapsed": 44.549999999998754,
+        "elapsedAfter400ms": 44.549999999998754,
+        "tiltEnabled": false
+      }
+    },
+    {
+      "case": "car_tilt_positive_gate_callback",
+      "pass": true,
+      "evidence": {
+        "gateClosed": true,
+        "phase": "paused",
+        "immediateTilt": {
+          "pending": true,
+          "status": "permission"
+        },
+        "eventualTilt": {
+          "status": "unavailable",
+          "ready": false
+        },
+        "platform": "web",
+        "hardwareConfirmed": false
+      }
+    },
+    {
+      "case": "car_tilt_user_activation_preserved",
+      "pass": true,
+      "evidence": {
+        "clicks": [
+          {
+            "id": "parent-gate-submit",
+            "trusted": true,
+            "active": true
+          },
+          {
+            "id": "tilt-toggle",
+            "trusted": false,
+            "active": true
+          }
+        ],
+        "gateClosed": true,
+        "tiltStatus": "permission",
+        "platform": "web"
+      }
+    }
+  ],
+  "consoleErrors": 0,
+  "screenshots": [
+    "output/playwright/nativeGateQA/native-external-info.png",
+    "output/playwright/nativeGateQA/flight-approved-settings.png",
+    "output/playwright/nativeGateQA/car-tilt-gate-paused.png"
+  ],
+  "limitations": [
+    "The actual platform is web; this is DOM verification of the native build preview, not WKWebView/Android hardware validation.",
+    "Desktop contextmenu/default-prevention and removal of href were verified. Physical iOS touch callout and long-press behavior still require device QA.",
+    "Test automation read the current visible arithmetic challenge to produce an approved test response; this does not claim children can solve it."
+  ],
+  "recordedAtUtc": "2026-10-06T06:41:20.508915+00:00"
+}

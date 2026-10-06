@@ -1,0 +1,29 @@
+{
+  "status":"VERIFIED_BROWSER_CAPTURE",
+  "sourceBundle":"dist-native",
+  "sourceVersion":"2.3.0",
+  "sourceFileCount":66,
+  "sourceTotalBytes":40749473,
+  "captureOrigin":"http://127.0.0.1:5192",
+  "capturedDate":"2026-10-06",
+  "timezone":"Asia/Taipei",
+  "method":"Chrome mobile viewport and touch emulation, device-pixel screenshot; lossless RGB PNG output",
+  "simulated":true,
+  "nativeDeviceCaptured":false,
+  "nativeSimulatorCaptured":false,
+  "screenshots":12,
+  "visualChecks":{"tool":"view_image","reviewedScreenshotCount":12,"reviewedGraphicsCount":8,"blankGameCanvasCount":0,"fakeDeviceFrameCount":0,"blenderRenderSubstitutedForGameplayCount":0},
+  "profiles":[
+    {"group":"apple-iphone-medium","cssViewport":[402,874],"deviceScaleFactor":3,"pngPixels":[1206,2622],"pagesChecked":["home","car","train","flight"],"javascriptErrors":0},
+    {"group":"apple-ipad-13","cssViewport":[1032,1376],"deviceScaleFactor":2,"pngPixels":[2064,2752],"pagesChecked":["home","car","train","flight"],"javascriptErrors":0},
+    {"group":"google-play-phone","cssViewport":[360,640],"deviceScaleFactor":3,"pngPixels":[1080,1920],"pagesChecked":["home","car","train","flight"],"javascriptErrors":0}
+  ],
+  "captureSteps":{
+    "home":["Open final index.html in a clean browser session","Wait for image and font loading","Capture the real visible viewport"],
+    "car":["Open car/index.html","Press 出發上路","Wait for countdown to disappear","Hold ArrowUp for 1600 ms","Capture gameplay during acceleration","Release ArrowUp"],
+    "train":["Open train/index.html","Press 準備出發","Press 開始前進","Wait 2000 ms","Capture the live cab and child controls"],
+    "flight":["Open flight/index.html","Keep 空中尋寶 and child flight assist selected","Press 出發","Wait 1800 ms","Capture the live flying scene and controls"]
+  },
+  "submissionStatus":"not_submitted",
+  "nativeRuntimeScreenshotVerification":"pending"
+}

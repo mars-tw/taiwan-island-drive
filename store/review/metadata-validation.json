@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-06T06:30:27.844Z",
+  "generatedAt": "2026-10-06T06:48:30.400Z",
   "lookupDate": "2026-10-06",
   "metadataValid": true,
   "submissionReady": false,
@@ -220,13 +220,13 @@
     },
     {
       "id": "ios_build",
-      "status": "needs_mac_or_macos_ci",
-      "detail": "Current host is Windows. A final iOS 26+ SDK archive, code signing and device tests cannot be claimed from an unbuilt Xcode project."
+      "status": "resolved_unsigned_build",
+      "detail": "macOS26 CI with Xcode26.6/SDK26.5 compiled simulator App and unsigned device xcarchive; iOS signing and device tests remain pending."
     },
     {
       "id": "signing_and_upload",
       "status": "pending",
-      "detail": "No store credentials/signing identity has been created or verified for submission. A debug APK or unsigned archive is not a submitted store release."
+      "detail": "Local Android upload-signed AAB passes jarsigner and bundletool. Apple signing, registration of upload certificate and actual platform upload remain pending."
     },
     {
       "id": "new_personal_play_account_testing",
