@@ -65,7 +65,7 @@
     "category": "Educational"
   },
   "platformAccountStatus": {
-    "appleDeveloper": "active_membership_and_app_record_verified_signing_and_upload_pending",
+    "appleDeveloper": "active_membership_app_record_and_signed_ipa_verified_upload_key_and_platform_upload_pending",
     "googlePlayDeveloper": "identity_approved_phone_and_physical_android_verification_pending"
   },
   "platformAccountVerificationStatus": {
@@ -80,9 +80,21 @@
       "appDraftCreated": true,
       "appStoreConnectAppleId": "6819605203",
       "appStoreConnectVersionState": "prepare_for_submission",
-      "codeSigningConfigured": false,
+      "storeMetadataSaved": true,
+      "freeDistributionSaved": true,
+      "distributionCountriesSaved": [
+        "TW"
+      ],
+      "ownerIdentityConfirmedAndSaved": true,
+      "appReviewContactConfirmedAndSaved": true,
+      "storeQuestionnairesSaved": true,
+      "codeSigningConfigured": true,
+      "signedIpaVerified": true,
+      "appStoreConnectApiUploadKeyAvailable": false,
+      "platformValidationPerformed": false,
       "platformUploadPerformed": false,
-      "submissionPerformed": false
+      "submissionPerformed": false,
+      "approved": false
     },
     "googlePlayDeveloper": {
       "accountExists": true,
@@ -97,5 +109,32 @@
       "platformUploadPerformed": false
     }
   },
+  "appleSignedBuildEvidence": {
+    "status": "verified_signed_ipa_not_platform_validated_or_uploaded",
+    "runUrl": "https://github.com/mars-tw/taiwan-island-drive/actions/runs/37454940484",
+    "headCommit": "852b7617505f01e880f1231e2e6b12a8d6e9940d",
+    "marketingVersion": "1.0.0",
+    "buildNumber": 1,
+    "bundleId": "tw.mars.islandtransport",
+    "ipaBytes": 32589768,
+    "exportMethod": "app-store-connect",
+    "internalOnly": false,
+    "sha256MatchedCiReportByIndependentDownload": true,
+    "signatureVerified": true,
+    "profileVerified": true,
+    "entitlementsVerified": true,
+    "bundledResourcesVerified": true,
+    "privateKeyFilesAbsentFromPackage": true,
+    "appleValidated": false,
+    "uploaded": false,
+    "approved": false
+  },
+  "applePrivacyDeclaration": {
+    "status": "published_no_data_collected",
+    "declaration": "no_data_collected",
+    "ownerLegalConfirmationCompleted": true,
+    "published": true
+  },
+  "nativeMediaStatus": "browser_simulated_captures_only_native_ui_not_verified",
   "automaticSignupOrPaymentAuthorized": false
 }
