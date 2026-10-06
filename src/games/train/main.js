@@ -57,4 +57,3 @@ let previous=performance.now(),accumulator=0,lastUI=0;
 function frame(now){const dt=Math.min((now-previous)/1000,.1);previous=now;accumulator+=dt;while(accumulator>=1/60){game.update(1/60);accumulator-=1/60;}world?.render();audio.update(game.physics.v*3.6,game.paused);if(now-lastUI>80){updateUI();lastUI=now;}requestAnimationFrame(frame);}
 document.querySelector('a[href*="github.com/mars-tw/"]').href=APP_REPOSITORY;
 applySharedSettings(readSettings(),true);subscribeSettings(applySharedSettings);requestAnimationFrame(frame);
-

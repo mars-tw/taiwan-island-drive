@@ -30,4 +30,3 @@ test('overrun beyond the course boundary can release protection and physically r
   assert.equal(reversed,true);assert.ok(Math.abs(g.distanceToStop())<=12);assert.ok(Math.abs(g.physics.v)<.15);
   const forward=new TrainGame();forward.prepare();forward.physics.s=forward.lesson.end+110;forward.throttle(1);forward.update(1/60);assert.equal(forward.controls.emergency,true,'new forward traction outside the course remains protected');
 });
-

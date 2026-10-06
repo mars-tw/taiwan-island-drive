@@ -314,4 +314,3 @@ subscribeSettings(value => {
   if (ready) { game.setMuted(muted); game.setQuality(quality); }
   syncSelection();
 });
-

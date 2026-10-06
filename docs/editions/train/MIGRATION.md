@@ -12,5 +12,3 @@
 遷移時執行 `node --test tests/train/*.test.js`，13 項通過。原 `audio.js`、`config.js`、`game.js`、`physics.js` 對照 SHA-256 完全相同。`styles.css` 只增加共同導覽高度的版面調整，保留手機 38dvh 駕駛視野與原 114×87 px 幼兒按鈕。
 
 在共用開發網站 `/train/` 實際驗證：兩個 GLB 由網站根目錄 `/models/` 載入且回報 ready；四個導覽連結皆留在同一網站；開源連結指向同一 canonical repository。共用設定更改幼兒模式後，主操作可切至進階面板；靜音時點擊準備按鈕不會重新啟動語音；低畫質回讀 renderer DPR 為 1。手機寬 390 px，文件無水平溢出，瀏覽器主控台 0 個錯誤。
-
-
