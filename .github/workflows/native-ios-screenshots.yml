@@ -1,0 +1,41 @@
+name: Native iOS simulator screenshots (manual)
+on:
+  workflow_dispatch:
+permissions:
+  contents: read
+concurrency:
+  group: native-ios-screenshots
+  cancel-in-progress: false
+jobs:
+  capture:
+    if: github.ref == 'refs/heads/main'
+    runs-on: macos-15
+    timeout-minutes: 60
+    steps:
+      - uses: actions/checkout@d23441a48e516b6c34aea4fa41551a30e30af803
+      - uses: actions/setup-node@820762786026740c76f36085b0efc47a31fe5020
+        with: { node-version: '24', cache: npm }
+      - name: Verify actual stable Xcode and SDK
+        run: bash scripts/apple-sign-export.sh select-xcode
+      - run: npm ci
+      - run: npm run native:build
+      - run: node scripts/verify-native-package.mjs
+      - run: npx cap sync ios
+      - name: Install pinned temporary-project helper
+        run: gem install --user-install xcodeproj --version 1.27.0 --no-document
+      - name: Install pinned read-only PNG decoder and check evidence policy
+        run: |
+          python3 -m venv "$RUNNER_TEMP/native-screenshot-python"
+          "$RUNNER_TEMP/native-screenshot-python/bin/python" -m pip install --only-binary=:all: Pillow==12.3.0
+          "$RUNNER_TEMP/native-screenshot-python/bin/python" tests/native-ios/test_screenshot_evidence.py
+          echo "NATIVE_SCREENSHOT_PYTHON=$RUNNER_TEMP/native-screenshot-python/bin/python" >> "$GITHUB_ENV"
+      - name: Boot simulators and capture actual native UI
+        run: bash scripts/capture-native-ios.sh
+      - name: Preserve original screens and execution evidence
+        if: always()
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        with:
+          name: native-ios-simulator-screenshots
+          path: output/native-ios-screenshots
+          retention-days: 14
+          if-no-files-found: ignore
