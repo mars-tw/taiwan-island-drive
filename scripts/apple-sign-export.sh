@@ -265,6 +265,12 @@ for env,file in [('APPLE_DISTRIBUTION_P12_BASE64','distribution.p12'),('APPLE_AP
     if not data: raise SystemExit('Empty decoded secret: '+env)
     (d/file).write_bytes(data)
 PY
+signing_stage 'OpenSSL decoded P12 verification'
+if openssl pkcs12 -in "$TASK_TMP/distribution.p12" -passin env:APPLE_DISTRIBUTION_P12_PASSWORD -noout >"$TASK_TMP/p12-verification.log" 2>&1; then
+  printf 'P12_OPENSSL_VERIFICATION=PASS\n'
+else
+  fail 'P12_OPENSSL_VERIFICATION=FAIL; keychain import was not attempted'
+fi
 signing_stage 'profile CMS decode'
 security cms -D -i "$TASK_TMP/distribution.mobileprovision" >"$TASK_TMP/profile.plist" 2>"$TASK_TMP/profile.log" || fail 'profile CMS decode failed'
 signing_stage 'profile policy verification'
@@ -286,7 +292,7 @@ security unlock-keychain -p "$KEYCHAIN_PASSWORD" "$KEYCHAIN" >"$TASK_TMP/keychai
 signing_stage 'keychain search list installation'
 security list-keychains -d user -s "$KEYCHAIN" ${PREVIOUS_KEYCHAINS[@]+"${PREVIOUS_KEYCHAINS[@]}"} >"$TASK_TMP/search-list-install.log" 2>&1 || fail 'keychain search list installation failed'
 signing_stage 'P12 identity import'
-if ! security import "$TASK_TMP/distribution.p12" -k "$KEYCHAIN" -P "$APPLE_DISTRIBUTION_P12_PASSWORD" -T /usr/bin/codesign -T /usr/bin/security >"$TASK_TMP/import.log" 2>&1; then
+if ! security import "$TASK_TMP/distribution.p12" -f pkcs12 -k "$KEYCHAIN" -P "$APPLE_DISTRIBUTION_P12_PASSWORD" -T /usr/bin/codesign -T /usr/bin/security >"$TASK_TMP/import.log" 2>&1; then
   p12_import_diagnostic "$TASK_TMP/import.log" || true
   fail 'P12 identity import failed; no cryptographic settings were changed'
 fi
