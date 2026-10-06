@@ -87,7 +87,23 @@ final class NativeScreenshotTests: XCTestCase {
 
     func home() {
         tap("回到交通學院", exact: true)
-        XCTAssertTrue(element("今天，想開").waitForExistence(timeout: 30))
+        let arrived = element("今天，想開").waitForExistence(timeout: 30)
+        if !arrived {
+            // Diagnostic originals only: do not append to successful capture records.
+            let screen = XCUIScreen.main.screenshot()
+            let shot = XCTAttachment(screenshot: screen)
+            shot.name = "failure-after-home-original"
+            shot.lifetime = .keepAlways
+            add(shot)
+            try? screen.pngRepresentation.write(to: output.appendingPathComponent("failure-after-home-original.png"), options: .atomic)
+            let description = app.debugDescription
+            let hierarchy = XCTAttachment(string: description)
+            hierarchy.name = "failure-after-home-accessibility"
+            hierarchy.lifetime = .keepAlways
+            add(hierarchy)
+            try? Data(description.utf8).write(to: output.appendingPathComponent("failure-after-home-accessibility.txt"), options: .atomic)
+        }
+        XCTAssertTrue(arrived)
         app.webViews.firstMatch.swipeDown()
     }
 

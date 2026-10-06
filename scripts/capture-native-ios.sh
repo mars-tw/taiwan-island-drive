@@ -66,6 +66,15 @@ PY
   xcrun simctl launch "$UDID" tw.mars.islandtransport >"$OUT/$FAMILY/launch.log"
   if ! xcodebuild -project "$PROJECT" -scheme NativeScreenshotProof -destination "platform=iOS Simulator,id=$UDID" -derivedDataPath "$TASK_TMP/derived" -resultBundlePath "$OUT/$FAMILY/capture.xcresult" -parallel-testing-enabled NO -only-testing:NativeScreenshotTests/NativeScreenshotTests/testCaptureNavigation test-without-building >"$OUT/$FAMILY/capture.log" 2>&1; then
     printf 'Native %s navigation/capture failed; inspect xcresult.\n' "$FAMILY" >&2
+    if CONTAINER="$(xcrun simctl get_app_container "$UDID" tw.mars.islandtransport.screenshottests.xctrunner data 2>/dev/null)" && [ -d "$CONTAINER/Documents/NativeScreens" ]; then
+      if ditto "$CONTAINER/Documents/NativeScreens" "$OUT/$FAMILY/partial-failure-evidence"; then
+        printf 'Preserved partial native originals and failure diagnostics; capture remains failed.\n' >&2
+      else
+        printf 'Could not copy partial RunnerDocuments; xcresult remains available.\n' >&2
+      fi
+    else
+      printf 'Partial RunnerDocuments unavailable; xcresult remains available.\n' >&2
+    fi
     exit 1
   fi
   CONTAINER="$(xcrun simctl get_app_container "$UDID" tw.mars.islandtransport.screenshottests.xctrunner data)"
