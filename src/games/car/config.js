@@ -15,4 +15,4 @@ export const VEHICLES = [
 export const COLORS = ['#3b9297', '#eece89', '#edeeee', '#cf725b', '#3c4351'];
 export const TRACK_LENGTH = 2400;
 export const ROAD_HALF_WIDTH = 6;
-export const APP_VERSION = '1.0.0';
+export const APP_VERSION = '2.0.0';

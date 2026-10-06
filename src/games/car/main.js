@@ -1,3 +1,6 @@
+import '../../shared/bootstrap.js';
+import { APP_BASE, appUrl } from '../../shared/paths.js';
+import { readSettings, updateSettings, subscribeSettings } from '../../shared/settings.js';
 import './styles.css';
 import '@fontsource/barlow-condensed/latin-500.css';
 import '@fontsource/barlow-condensed/latin-600.css';
@@ -10,7 +13,8 @@ import { TiltController, combineSteering } from './tilt.js';
 
 const $ = (s) => document.querySelector(s);
 const $$ = (s) => [...document.querySelectorAll(s)];
-const base = import.meta.env.BASE_URL;
+const base = APP_BASE;
+const familySettings = readSettings();
 const storage = {
   get(key, fallback) { try { return JSON.parse(localStorage.getItem(`island-drive:${key}`)) ?? fallback; } catch { return fallback; } },
   set(key, value) { try { localStorage.setItem(`island-drive:${key}`, JSON.stringify(value)); } catch { /* Private browsing can disable storage. */ } }
@@ -20,8 +24,8 @@ let mapId = MAPS.some(m => m.id === saved.map) ? saved.map : 'coast';
 let vehicleId = VEHICLES.some(v => v.id === saved.vehicle) ? saved.vehicle : 'coupe';
 let paint = COLORS.includes(saved.paint) ? saved.paint : COLORS[0];
 let mode = saved.mode === 'timeattack' ? 'timeattack' : 'cruise';
-let quality = saved.quality === 'low' ? 'low' : 'high';
-let muted = saved.muted !== false;
+let quality = familySettings.quality;
+let muted = familySettings.muted;
 let ready = false;
 let busy = false;
 let pending = Promise.resolve();
@@ -273,12 +277,12 @@ $('#back-button').addEventListener('click', returnToMenu);
 $('#again-button').addEventListener('click', start);
 $('#choose-button').addEventListener('click', returnToMenu);
 $('#camera-button').addEventListener('click', () => { game.setCamera(); toast('已切換駕駛視角'); });
-$('#sound-button').addEventListener('click', () => { muted = !muted; game.setMuted(muted); syncSelection(); });
+$('#sound-button').addEventListener('click', () => { muted = !muted; game.setMuted(muted); updateSettings({ muted }); syncSelection(); });
 $('#settings-button').addEventListener('click', () => $('#settings-dialog').showModal());
 $('#source-button').addEventListener('click', () => $('#source-dialog').showModal());
 $$('[data-close]').forEach(button => button.addEventListener('click', () => button.closest('dialog').close()));
 $$('dialog').forEach(dialog => dialog.addEventListener('click', event => { if (event.target === dialog) { const r = dialog.getBoundingClientRect(); if (event.clientX < r.left || event.clientX > r.right || event.clientY < r.top || event.clientY > r.bottom) dialog.close(); } }));
-$('#quality-select').addEventListener('change', event => { quality = event.target.value; game.setQuality(quality); persist(); });
+$('#quality-select').addEventListener('change', event => { quality = event.target.value; game.setQuality(quality); updateSettings({ quality }); persist(); });
 $('#fullscreen-button').addEventListener('click', async () => { try { if (document.fullscreenElement) await document.exitFullscreen(); else if (document.documentElement.requestFullscreen) await document.documentElement.requestFullscreen(); else toast('這個瀏覽器不支援全螢幕，可加入主畫面遊玩。'); } catch { toast('這個瀏覽器無法啟用全螢幕。'); } });
 $('.brand').addEventListener('click', event => { event.preventDefault(); if (ready) returnToMenu(); });
 addEventListener('blur', () => { releaseInput(); if (lastState.phase === 'running') game.pause(); });
@@ -305,6 +309,9 @@ try {
   const button = document.createElement('button'); button.className = 'primary-button'; button.textContent = '重新載入'; button.addEventListener('click', () => location.reload()); $('#loading-screen').append(button);
 }
 
-if ('serviceWorker' in navigator && import.meta.env.PROD) {
-  navigator.serviceWorker.register(new URL('sw.js', document.baseURI)).catch(error => console.warn('Offline cache unavailable:', error.message));
-}
+subscribeSettings(value => {
+  muted = value.muted; quality = value.quality;
+  if (ready) { game.setMuted(muted); game.setQuality(quality); }
+  syncSelection();
+});
+

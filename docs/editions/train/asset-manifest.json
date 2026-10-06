@@ -1,0 +1,34 @@
+{
+  "kind": "train",
+  "authoring": "Blender 5.2 original procedural geometry",
+  "coordinates": {
+    "up": "+Y",
+    "forward": "+Z",
+    "unit": "metre"
+  },
+  "texture": {
+    "file": "textures/train.png",
+    "source": "built-in image_gen",
+    "mapping": "Each mesh owns box projected UVs cropped to its atlas quadrant; Image Texture is connected to Principled Base Color"
+  },
+  "assets": [
+    {
+      "file": "train.glb",
+      "bytes": 4227956,
+      "nodes": 207,
+      "meshes": 204,
+      "embeddedImages": 1,
+      "texturedMaterials": 4,
+      "uvAccessors": 204
+    },
+    {
+      "file": "train-cab.glb",
+      "bytes": 3144940,
+      "nodes": 33,
+      "meshes": 30,
+      "embeddedImages": 1,
+      "texturedMaterials": 4,
+      "uvAccessors": 30
+    }
+  ]
+}

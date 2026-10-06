@@ -12,11 +12,11 @@ if ([IO.Path]::GetExtension($archivePath) -ne '.zip') { throw 'Output must be a 
 $allowed = @(
   'README.md', 'LICENSE', 'CONTRIBUTING.md', '.gitignore', '.gitattributes', '.github',
   'package.json', 'package-lock.json', 'index.html', 'vite.config.js',
-  'src', 'public', 'blender', 'docs', 'tests', 'scripts', 'dist'
+  'src', 'public', 'blender', 'docs', 'tests', 'scripts', 'car', 'train', 'flight', 'dist'
 )
 # Discover the localized launcher name without requiring a BOM for PowerShell 5.
 $allowed += @(Get-ChildItem -LiteralPath $projectRoot -Filter '*.cmd' -File | Select-Object -ExpandProperty Name)
-$required = @('README.md', 'LICENSE', 'package.json', 'package-lock.json', 'src', 'public', 'public/THIRD_PARTY_NOTICES.txt', 'blender', 'dist/index.html', 'dist/precache.json', 'dist/THIRD_PARTY_NOTICES.txt')
+$required = @('README.md', 'LICENSE', 'package.json', 'package-lock.json', 'src', 'public', 'public/THIRD_PARTY_NOTICES.txt', 'blender', 'car/index.html', 'train/index.html', 'flight/index.html', 'public/models/catalog.json', 'blender/train/models.blend', 'blender/flight/models.blend', 'dist/index.html', 'dist/car/index.html', 'dist/train/index.html', 'dist/flight/index.html', 'dist/precache.json', 'dist/THIRD_PARTY_NOTICES.txt')
 foreach ($name in $required) {
   if (-not (Test-Path -LiteralPath (Join-Path $projectRoot $name))) {
     throw "Required delivery file is missing: $name. Build assets and run npm run build first."

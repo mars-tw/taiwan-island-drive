@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="zh-Hant-TW">
+  <head>
+    <meta charset="UTF-8" /><meta name="island-app-root" content="../" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+    <meta name="theme-color" content="#e8f0ef" />
+    <meta name="description" content="島嶼公路：開著你喜歡的車，探索台灣的山海。四種車款、四條主題公路，手機也能玩的開源 3D 駕駛遊戲。" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <link rel="icon" type="image/svg+xml" href="../icon.svg" />
+    <link rel="apple-touch-icon" href="../icon-192.png" />
+    <link rel="manifest" href="../manifest.webmanifest" />
+    <title>島嶼公路｜ISLAND DRIVE</title>
+  </head>
+  <body data-game="car">
+    <canvas id="world" aria-label="台灣公路 3D 遊戲場景"></canvas>
+    <div class="vignette" aria-hidden="true"></div>
+    <header class="topbar" id="topbar">
+      <a class="brand" href="#" aria-label="島嶼公路首頁">
+        <svg viewBox="0 0 40 40" aria-hidden="true"><path d="M13 32 19 8h6l-1 8 4 16M20 11l-1 5m-1 4-1 5m-1 4-.7 3"/><path d="M5 32h30"/></svg>
+        <span>島嶼公路<small>ISLAND DRIVE</small></span>
+      </a>
+      <nav class="school-links" aria-label="交通學校"><a href="https://mars-tw.github.io/taiwan-train-school/" aria-label="玩火車版"><span aria-hidden="true">🚆</span><b>火車版</b></a><a href="https://mars-tw.github.io/island-flight-school/" aria-label="玩飛機版"><span aria-hidden="true">✈️</span><b>飛機版</b></a></nav>
+      <div class="top-actions">
+        <button class="source-button" id="source-button"><span class="open-dot"></span>開源計畫<svg class="icon"><use href="#i-arrow"/></svg></button>
+        <span class="header-divider"></span>
+        <button class="icon-button" id="sound-button" aria-label="開啟音效" aria-pressed="false"><svg class="icon"><use href="#i-muted"/></svg></button>
+        <button class="icon-button" id="settings-button" aria-label="遊戲設定"><svg class="icon"><use href="#i-settings"/></svg></button>
+      </div>
+    </header>
+
+    <main id="menu" class="menu">
+      <section class="intro">
+        <div class="eyebrow"><span></span>一段自己的公路旅行</div>
+        <h1>把日常，<br>留在<span class="title-outline">後照鏡。</span></h1>
+        <p class="intro-copy">選一條路，開一台喜歡的車。<br>下一個轉彎，就能看見台灣。</p>
+        <div class="route-note"><svg class="icon"><use href="#i-pin"/></svg><span id="location-label">花蓮・東海岸</span><span class="route-note-line"></span><span id="route-tag">海岸公路</span></div>
+        <p class="route-description" id="route-description"></p>
+        <div class="mode-selector" aria-label="遊戲模式"><button data-mode="cruise" class="selected" aria-pressed="true">自由駕駛</button><button data-mode="timeattack" aria-pressed="false">計時挑戰<svg class="icon"><use href="#i-timer"/></svg></button></div>
+        <div class="keyboard-tip"><kbd>W</kbd><kbd>A</kbd><kbd>S</kbd><kbd>D</kbd><span>駕駛</span><kbd>Shift</kbd><span>加速</span></div>
+      </section>
+
+      <section class="vehicle-panel" aria-label="選擇車輛">
+        <div class="vehicle-heading"><div><span class="small-label">YOUR RIDE</span><h2 id="vehicle-name">海風 GT</h2><p id="vehicle-category">雙門跑車</p></div><span class="vehicle-index" id="vehicle-index">01<span> / 04</span></span></div>
+        <div class="paint-options" id="paint-options" aria-label="車身顏色"></div>
+        <div class="vehicle-choices" id="vehicle-choices"></div>
+        <div class="vehicle-stats"><span>極速<strong><span id="car-maxspeed">180</span><small> km/h</small></strong></span><span>操控<div class="stat-track"><i id="handling-bar"></i></div></span><span>穩定<div class="stat-track"><i id="stability-bar"></i></div></span></div>
+      </section>
+
+      <section class="trip-panel" aria-label="選擇台灣地圖">
+        <div class="trip-heading"><h2>今天，想開去哪裡？</h2><span><span class="desktop-only">TAIWAN ROAD COLLECTION</span><b> 04</b></span></div>
+        <div class="trip-bottom"><div class="map-choices" id="map-choices"></div><div class="departure"><p><svg class="icon"><use href="#i-road"/></svg>全程 <strong>2.4</strong> km<span id="difficulty">輕鬆</span></p><button class="start-button" id="start-button" disabled><span>準備旅程中</span><svg class="icon"><use href="#i-arrow"/></svg></button><small id="start-hint">手機觸控 · 電腦鍵盤</small></div></div>
+      </section>
+      <footer class="menu-footer"><span>山海之間，自由上路。</span><span>© 2026 ISLAND DRIVE <span class="footer-dot">·</span> MIT OPEN SOURCE</span></footer>
+    </main>
+
+    <section id="hud" class="hud hidden" aria-label="駕駛儀表板">
+      <div class="hud-top"><div class="hud-route"><span class="small-label" id="hud-mode">自由駕駛</span><strong id="hud-map">花蓮・東海岸</strong><div class="progress-track"><i id="progress-bar"></i></div><span id="distance-label">0.00 / 2.40 km</span></div><div class="hud-clock"><span id="clock-label">旅程時間</span><strong id="clock">00:00.0</strong></div><button class="hud-button" id="pause-button" aria-label="暫停遊戲"><svg class="icon"><use href="#i-pause"/></svg></button></div>
+      <div class="drive-message" id="drive-message" aria-live="polite"></div><div class="tilt-toolbar" aria-label="手機方向盤"><button class="hud-button tilt-toggle" id="tilt-toggle" aria-label="啟用手機方向盤" aria-pressed="false"><svg class="icon"><use href="#i-wheel"/></svg><span>方向盤</span></button><button class="hud-button tilt-calibrate hidden" id="tilt-calibrate" aria-label="將目前手機角度設為直行"><svg class="icon"><use href="#i-recenter"/></svg><span>回正</span></button></div>
+      <div class="hud-bottom"><div class="mini-map"><canvas id="minimap" width="144" height="144" aria-label="路線進度"></canvas><span id="mini-map-label">東海岸</span></div><div class="speedometer"><span class="speed-number" id="speed">000</span><div class="speed-unit"><span>km/h</span><b id="gear">N</b></div><div class="boost-meter"><i id="boost-bar"></i></div><span class="boost-label">渦輪加速 <kbd>SHIFT</kbd></span></div><button class="hud-button camera-button" id="camera-button" aria-label="切換駕駛視角"><svg class="icon"><use href="#i-camera"/></svg><span>視角</span></button></div>
+      <div class="touch-controls" id="touch-controls"><div class="steering-controls"><button data-input="left" aria-label="向左轉"><svg class="icon"><use href="#i-left"/></svg></button><button data-input="right" aria-label="向右轉"><svg class="icon"><use href="#i-right"/></svg></button></div><button data-input="boost" class="touch-boost" aria-label="渦輪加速"><svg class="icon"><use href="#i-boost"/></svg></button><div class="pedal-controls"><button data-input="brake" class="brake" aria-label="煞車"><span>煞車</span><i></i><i></i></button><button data-input="throttle" class="throttle" aria-label="油門"><span>油門</span><i></i><i></i><i></i></button></div></div>
+    </section>
+    <div class="countdown hidden" id="countdown" aria-live="assertive"></div>
+
+    <section class="overlay hidden" id="pause-overlay" aria-label="暫停選單"><div class="overlay-card"><span class="small-label">TAKE A BREATH</span><h2>路一直都在。</h2><p>準備好了，就繼續這段旅程。</p><button class="primary-button" id="resume-button">繼續駕駛<svg class="icon"><use href="#i-arrow"/></svg></button><button class="secondary-button" id="restart-button">重新出發</button><button class="text-button" id="back-button">回到選車畫面</button></div></section>
+    <section class="overlay hidden" id="finish-overlay" aria-label="旅程結果"><div class="overlay-card result-card"><span class="small-label" id="finish-eyebrow">JOURNEY COMPLETE</span><h2 id="finish-title">這段風景，收下了。</h2><p id="finish-route"></p><div class="result-stats"><div><span>旅程時間</span><strong id="finish-time">00:00</strong></div><div><span>駕駛積分</span><strong id="finish-score">0</strong></div></div><p class="best-record" id="best-record"></p><button class="primary-button" id="again-button">再開一次<svg class="icon"><use href="#i-arrow"/></svg></button><button class="secondary-button" id="choose-button">選另一條路</button></div></section>
+
+    <dialog id="settings-dialog" aria-labelledby="settings-title"><button class="dialog-close icon-button" data-close aria-label="關閉設定"><svg class="icon"><use href="#i-close"/></svg></button><span class="small-label">MAKE IT YOURS</span><h2 id="settings-title">駕駛設定</h2><label class="setting-row"><span>畫面品質<small>手機發熱時可切換省電模式。</small></span><select id="quality-select"><option value="high">精緻</option><option value="low">省電</option></select></label><div class="setting-row tilt-setting"><span>手機方向盤<small>左右傾斜手機轉向，油門與煞車仍用觸控。</small><small id="tilt-status" role="status" aria-live="polite">觸控轉向</small></span><button class="tilt-settings-button" id="tilt-settings-toggle" aria-pressed="false">啟用</button></div><div class="controls-guide"><h3>怎麼開？</h3><p>手機：左側按鈕轉向，右側油門與煞車，中間閃電鍵加速。也可以啟用手機方向盤，左右傾斜手機轉向；握好後點「回正」。可以同時按住多個按鈕。</p><p>電腦：W／↑ 油門、S／↓ 煞車、A D／← → 轉向、Shift 加速、C 切換視角、Esc 暫停。</p><p>開出路面會減速，碰到護欄或路邊障礙也會影響速度。</p></div><button class="secondary-button" id="fullscreen-button">切換全螢幕</button><p class="dialog-note">自由駕駛沒有時間限制。計時挑戰要在倒數結束前抵達終點。</p></dialog>
+    <dialog id="source-dialog" aria-labelledby="source-title"><button class="dialog-close icon-button" data-close aria-label="關閉開源計畫"><svg class="icon"><use href="#i-close"/></svg></button><span class="small-label">BUILT TO BE SHARED</span><h2 id="source-title">公路，屬於每個人。</h2><p>島嶼公路以 MIT 授權開源。你可以修改遊戲、設計新地圖，或把車款換成自己的創作。</p><div class="source-detail"><span>完整遊戲原始碼</span><span>Blender 建模檔與匯出腳本</span><span>四張主題地圖・四種原創車款</span></div><a class="primary-button" id="download-source" download>下載開源專案<svg class="icon"><use href="#i-download"/></svg></a><p class="dialog-note">地圖取材自台灣風景，採原創遊戲路線。這些道路與車款並非真實道路或品牌車輛的精確重現。</p><span class="source-version">VERSION 2.0.0 · MIT LICENSE</span></dialog>
+    <div class="loading-screen" id="loading-screen"><div class="loading-mark"><svg viewBox="0 0 40 40"><path d="M13 32 19 8h6l-1 8 4 16M20 11l-1 5m-1 4-1 5m-1 4-.7 3"/></svg></div><span class="small-label">ISLAND DRIVE</span><p id="loading-text">把車準備好，把心留給風景。</p><div class="loading-track"><i></i></div></div>
+    <div id="toast" class="toast hidden" role="status"></div>
+    <svg class="svg-definitions" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><defs>
+      <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M4 12h15M13 5l7 7-7 7"/></symbol><symbol id="i-left" viewBox="0 0 24 24"><path d="m15 5-7 7 7 7"/></symbol><symbol id="i-right" viewBox="0 0 24 24"><path d="m9 5 7 7-7 7"/></symbol><symbol id="i-pin" viewBox="0 0 24 24"><path d="M19 10c0 5-7 11-7 11S5 15 5 10a7 7 0 0 1 14 0Z"/><circle cx="12" cy="10" r="2.2"/></symbol><symbol id="i-road" viewBox="0 0 24 24"><path d="m4 21 5-18m11 18L15 3M12 3v4m0 4v4m0 4v2"/></symbol><symbol id="i-timer" viewBox="0 0 24 24"><circle cx="12" cy="13" r="8"/><path d="M10 1h4m-2 0v4m0 5v4l3 2m3-12 2 2"/></symbol><symbol id="i-settings" viewBox="0 0 24 24"><path d="M4 7h16M4 17h16"/><circle cx="9" cy="7" r="3"/><circle cx="15" cy="17" r="3"/></symbol><symbol id="i-muted" viewBox="0 0 24 24"><path d="M10 4 5 9H2v6h3l5 5V4Zm5 5 6 6m0-6-6 6"/></symbol><symbol id="i-sound" viewBox="0 0 24 24"><path d="M10 4 5 9H2v6h3l5 5V4Zm5 4a6 6 0 0 1 0 8m3-11a10 10 0 0 1 0 14"/></symbol><symbol id="i-pause" viewBox="0 0 24 24"><path d="M8 5v14M16 5v14"/></symbol><symbol id="i-camera" viewBox="0 0 24 24"><path d="M3 7h4l2-3h6l2 3h4v13H3Z"/><circle cx="12" cy="13" r="4"/></symbol><symbol id="i-boost" viewBox="0 0 24 24"><path d="m14 2-9 12h6l-1 8 9-12h-6Z"/></symbol><symbol id="i-close" viewBox="0 0 24 24"><path d="m5 5 14 14M19 5 5 19"/></symbol><symbol id="i-wheel" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="2"/><path d="m4 8 6 3m10-3-6 3m-2 3v6"/></symbol><symbol id="i-recenter" viewBox="0 0 24 24"><path d="M4 9a8 8 0 1 1 0 6M4 3v6h6"/><circle cx="12" cy="12" r="2"/></symbol><symbol id="i-download" viewBox="0 0 24 24"><path d="M12 3v13m-5-5 5 5 5-5M4 17v4h16v-4"/></symbol>
+    </defs></svg>
+    <script type="module" src="/src/games/car/main.js"></script>
+  </body>
+</html>

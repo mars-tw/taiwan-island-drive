@@ -1,4 +1,4 @@
-name: Test and deploy Island Drive
+name: Test and deploy Island Transport Academy
 
 on:
   push:
@@ -30,7 +30,7 @@ jobs:
         uses: actions/configure-pages@983d7736d9b0ae728b81ab479565c72886d7745b # v5
       - name: Install locked dependencies
         run: npm ci
-      - name: Verify driving simulation
+      - name: Verify all games and shared integration
         run: npm test
       - name: Build game and offline cache
         run: npm run build

@@ -1,3 +1,4 @@
+import { APP_BASE } from '../../shared/paths.js';
 import * as THREE from 'three';
 import { GLTFLoader } from 'three/addons/loaders/GLTFLoader.js';
 import { RoomEnvironment } from 'three/addons/environments/RoomEnvironment.js';
@@ -57,7 +58,7 @@ export class Game {
       this.fillLight = new THREE.DirectionalLight('#c4e5ee', 0.75); this.fillLight.position.set(-20, 10, -25); this.scene.add(this.fillLight);
       const loader = new GLTFLoader();
       await Promise.all(MODEL_NAMES.map(async name => {
-        const model = await loader.loadAsync(`${import.meta.env.BASE_URL}models/${name}.glb`);
+        const model = await loader.loadAsync(`${APP_BASE}models/${name}.glb`);
         model.scene.traverse(object => {
           if (!object.isMesh) return;
           object.castShadow = true; object.receiveShadow = true; object.geometry.userData.importedAsset = true;

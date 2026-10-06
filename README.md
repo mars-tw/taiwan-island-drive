@@ -1,140 +1,79 @@
-# 島嶼公路｜ISLAND DRIVE
+# 島嶼交通學院｜Island Transport Academy
 
-一款可以用手機瀏覽器玩的 3D 台灣公路駕駛遊戲。挑選路線、車種與車色，玩自由駕駛或計時挑戰。車輛與道路旁的模型由 Blender 建模，匯出 GLB 後交給 Three.js 呈現；原始 `.blend`、建模腳本、遊戲程式與製作步驟都包含在專案內。
+汽車、火車與飛機已合併成同一個開源手機遊戲專案。從大廳選交通工具，共用一套 npm／Vite 建置、一個 GitHub 儲存庫、一份 PWA 與離線素材庫。手機只需加入主畫面一次。
 
-本專案採 MIT 授權，可以修改、再散布及商業使用。原始碼與 Blender 模型公開於 [GitHub](https://github.com/mars-tw/taiwan-island-drive)，遊戲使用 GitHub Pages 提供 HTTPS 手機版；目前尚未上架 App Store 或 Google Play。
+**[開啟交通學院](https://mars-tw.github.io/taiwan-island-drive/)** · [完整原始碼與模型下載](https://mars-tw.github.io/taiwan-island-drive/downloads/island-drive-source.zip)
 
-**[直接玩島嶼公路](https://mars-tw.github.io/taiwan-island-drive/)** · [下載完整開源專案](https://mars-tw.github.io/taiwan-island-drive/downloads/island-drive-source.zip)
-
-手機可直接開啟遊戲網址。Android 可選「安裝應用程式」，iPhone 可在 Safari 分享選單選擇「加入主畫面」。第一次連網完整載入後，即可使用離線功能。電腦不需要保持開機。
-
-![島嶼公路遊戲畫面](docs/game-desktop.png)
-
-## 親子學習版
-
-同系列還有 [島嶼鐵道學校](https://mars-tw.github.io/taiwan-train-school/) 與 [島嶼飛行學校](https://mars-tw.github.io/island-flight-school/)，預設提供 3～5 歲幼兒的大按鈕、中文語音及物理操作輔助。兩版皆提供 Blender 模型、真正 IMG UV 貼圖及公開原始碼，也能從汽車版頂端圖示直接開啟。
-
-## 遊戲內容
-
-| 路線 | 風景 | 距離 |
+| 模式 | 操作與學習 | 專案內入口 |
 | --- | --- | --- |
-| 花蓮・東海岸 | 海岸公路、山海交界 | 2.4 公里 |
-| 嘉義・阿里山 | 森林山道、薄霧 | 2.4 公里 |
-| 台北・夜未眠 | 城市建築、夜間燈光 | 2.4 公里 |
-| 屏東・墾丁 | 南國海線、椰子樹 | 2.4 公里 |
+| 汽車 | 四款車、四張台灣主題地圖、觸控／手機方向盤、自由駕駛與計時挑戰 | `/car/` |
+| 火車 | 慣性、延遲煞車、車門與方向互鎖、號誌、停站接客；三課程與停車輔助 | `/train/` |
+| 飛機 | 升力、阻力、失速、襟翼、姿態、跑道起飛與降落；三課程及自由飛行 | `/flight/` |
 
-| 車種 | 類型 | 最高速度設定 |
-| --- | --- | --- |
-| 海風 GT | 雙門跑車 | 180 km/h |
-| 山岳 RS | 拉力掀背 | 160 km/h |
-| 旅人 X | 越野休旅 | 140 km/h |
-| 漫遊號 | 經典露營車 | 120 km/h |
+火車與飛機預設 3～5 歲幼兒模式，有大按鈕、簡短中文語音及操作輔助。家長可改成完整手動模式。大廳的幼兒模式、聲音與畫質設定會同步到三種遊戲；汽車的車種、顏色等個別選擇仍會保存。
 
-最高速度是遊戲參數；轉向、路外減速、碰撞與加速會影響實際速度。四條路線都是依台灣風景創作的原創道路，沒有使用 GIS、衛星圖或真實道路測繪資料。
+## 手機遊玩
 
-## 直接玩交付版本
+用 Safari 或 Chrome 開啟大廳，選汽車、火車或飛機。汽車的「設定 → 手機方向盤 → 啟用」會要求瀏覽器正常的動作感測權限，握好手機後按「回正」，即可左右傾斜轉向；油門和煞車仍用觸控。
 
-下載包已包含建置好的 `dist/`。電腦有 Node.js 時，Windows 可以直接雙擊 `開始遊戲.cmd`，瀏覽器會開啟 `http://localhost:5178`，不需要先安裝 npm 依賴。
+Android 可從瀏覽器選單安裝，iPhone 可在 Safari 分享選單選「加入主畫面」。第一次完整連網載入後，共用 Worker 會快取四個入口與所有遊戲素材，可離線切換三種交通工具。離線能力需要 HTTPS 或 localhost；區網 HTTP 可玩，但不能啟用安全來源限定的安裝／感測功能。
 
-其他系統或偏好終端機的使用者，可在專案根目錄執行：
+語音由手機提供；沒有可用中文音色時，畫面保留相同提示。這是兒童操作學習的簡化物理模型，沒有宣稱取代實車／實機訓練。台灣地景、道路、機場與交通工具均為原創設定，沒有使用測繪資料或品牌認證參數。
+
+## 開發與建置
+
+需要 Node.js 22.12 以上版本，製作環境為 Node.js 24.15.0。
+
+```sh
+npm ci
+npm run dev
+npm test
+npm run build
+```
+
+開發網址為 `http://localhost:5178/`。正式版 `dist/` 同時含大廳、汽車、火車與飛機，三模式共用一份 Three.js chunk、字型、設定及模型路徑。沒有三份 node_modules 或三套獨立部署。
+
+下載包附建置好的 dist，有 Node.js 時可雙擊「開始遊戲.cmd」，或執行：
 
 ```sh
 node scripts/serve.mjs
 ```
 
-遊玩期間保留伺服器視窗，按 `Ctrl+C` 即可停止。這個伺服器也接受同一區域網路的手機連線。
+不要用 file:// 開 HTML，模型與模組需要 HTTP。網站採相對路徑，可放在 GitHub Pages 等網站子目錄；四頁的 `island-app-root` 與共用 paths 模組會解析同一個素材根目錄。
 
-## 開發專案
+## Blender 模型與 IMG 貼圖
 
-需要 Node.js 22.12 以上版本與 npm。交付環境使用 Node.js 24.15.0。下載包已包含 GLB，先玩遊戲不需要安裝 Blender。
-
-```sh
-cd taiwan-island-drive
-npm install
-npm run dev
-```
-
-開啟 `http://localhost:5178`。重現鎖定的依賴版本時，可以用 `npm ci` 取代 `npm install`。
-
-手機與電腦連上同一個區域網路後，用手機瀏覽器開啟 `http://電腦的區網IP:5178`，例如 `http://192.168.1.20:5178`。開發伺服器已綁定 `0.0.0.0`；電腦防火牆若擋住 Node.js 的私人網路連線，需要允許該連線。網址中的 `localhost` 只指向目前使用的裝置，手機上要改成電腦的 IP。
-
-```sh
-npm test
-npm run build
-npm run preview
-```
-
-`npm run build` 會產生 `dist/` 與離線預載清單 `dist/precache.json`。正式版可交給任何能提供靜態檔案的 HTTPS 伺服器；`npm run preview` 供本機驗收。不要直接用 `file://` 開啟 HTML，GLB 與模組需要透過 HTTP 載入。
-
-如果放在網站子目錄，可以在建置時指定 base，再產生離線清單：
-
-```sh
-npx vite build --base=/island-drive/
-node scripts/write-precache.mjs
-```
-
-將整個 `dist/` 放到 `/island-drive/`。模型、下載連結及 Service Worker 以應用程式的 base 路徑載入，不需要把專案放在網域根目錄。
-
-## 手機與離線使用
-
-遊戲提供觸控操作，建議將手機橫放。桌面也可用鍵盤操作；確切按鍵與操作說明顯示在遊戲內。
-
-手機也可以當方向盤：在「駕駛設定」啟用「手機方向盤」，允許方向感測後，左右傾斜手機轉向，右手按油門與煞車。開車時可用方向盤按鈕切換，點「回正」重新設定直行角度。此功能需要 HTTPS 與支援的手機感測器；未取得權限或沒有資料時會保留觸控操作。操作、實作及驗證範圍見 [docs/TILT.md](docs/TILT.md)。
-
-正式版附 PWA manifest 與 Service Worker。第一次完整載入後，Worker 會預載建置清單內的程式、介面與模型；安裝完成後，重新整理即可測試離線遊玩。原始碼 ZIP 不列入離線快取。
-
-Service Worker 和 PWA 安裝需要安全來源：公開網址使用 HTTPS，本機可使用 `localhost`。一般區域網路的 `http://192.168.x.x` 可玩遊戲，但不具備 HTTPS 的離線安裝能力。開發模式不註冊 Service Worker，避免開發檔案被舊快取覆蓋。
-
-支援的 Android 瀏覽器可從選單安裝應用程式；iPhone 可用 Safari 的「分享」→「加入主畫面」。安裝選項依瀏覽器與系統版本而異。這份交付沒有原生 App 封裝、簽章或商店上架流程。
-
-## Blender 原始模型與再生
-
-原始模型在 `blender/island-drive.blend`。建模腳本在 `blender/build_assets.py`，輸出位於 `public/models/`，包含四台車、椰子樹、杉木、城市建築及道路標誌。生成器使用專案相對路徑，不依賴交付電腦的帳號或磁碟位置。
-
-以下指令需先在專案根目錄執行，並讓 `blender` 位於 PATH：
+共用 `public/models/` 包含 12 個 GLB，`public/textures/` 保留兩張 ImageGen PNG atlas。火車與飛機的 UV 與 Image Texture 真正連到材質，圖片內嵌在 GLB；不是拿車輛照片當模型。
 
 ```sh
 blender --background --python blender/build_assets.py
+blender --background --factory-startup --python blender/train/build_assets.py
+blender --background --factory-startup --python blender/flight/build_assets.py
 npm run build
 ```
 
-Windows 若未設定 PATH，可直接指定安裝位置：
+原始檔在 `blender/island-drive.blend`、`blender/train/models.blend` 與 `blender/flight/models.blend`。更多再生與相對路徑驗證見 [MERGE_ASSETS](docs/MERGE_ASSETS.md)，素材目錄見 [catalog.json](public/models/catalog.json)。內建 ImageGen 的提示詞與 IMG 出處完整保存在 [火車](docs/editions/train/TEXTURES.md)及[飛機](docs/editions/flight/TEXTURES.md)製作文件。
 
-```powershell
-& 'C:\Program Files\Blender Foundation\Blender 5.2\blender.exe' --background --python blender/build_assets.py
-```
-
-本機製作使用 Blender 5.2.0 LTS。生成器會建立 `.blend`、匯出 GLB、寫入 `public/models/manifest.json`，並輸出 `docs/vehicles.png` 作為模型檢視圖。修改建模腳本後，重新執行生成器與前端建置，才能更新遊戲使用的模型。
-
-## 原始碼下載包
-
-Windows PowerShell 可在專案根目錄建立交付包：
+## 完整開源包與部署
 
 ```powershell
 powershell -ExecutionPolicy Bypass -File scripts/package-source.ps1
 ```
 
-輸出為 `release/island-drive-source.zip`，內容包括程式、MIT 授權、Blender 腳本與 `.blend`、GLB，以及可直接託管的 `dist/`。腳本會確認 Blender 原檔、GLB 與正式版存在；不打包 `node_modules`、`.audit-tmp`、下載包本身、密鑰檔或 Blender 備份。先執行 `npm run build` 再打包。
+產出 `release/island-drive-source.zip`，包含三種遊戲程式、四頁入口、三份 Blender 來源、12 個 GLB、兩張 atlas、全部授權與正式版。排除依賴、憑證、工作暫存及遞迴 ZIP。
 
-## 自動部署
-
-`.github/workflows/pages.yml` 會在 `main` 更新後安裝鎖定的依賴、執行測試、建置離線遊戲、製作完整開源下載包，再部署到 GitHub Pages。Blender 資產已隨原始碼提供，雲端建置不用另行安裝 Blender。
-
-自行 fork 後，請在 GitHub 儲存庫的 Settings → Pages 將來源選為 GitHub Actions，再執行工作流程。網站使用相對路徑，可部署在儲存庫子目錄；README 中的專案與遊戲網址需要改成自己的帳號。
-
-遊戲中的「下載原始碼」使用 `downloads/island-drive-source.zip`。若自己重製此按鈕的下載檔，打包後複製到 `public/downloads/` 與 `dist/downloads/`；ZIP 內容不包含這兩個下載目錄，可避免重複打包。
-
-## 專案結構
+推送 main 後，同一份 GitHub Actions 流程會跑全部測試、建置四頁、製作完整下載包並部署到同一個 GitHub Pages 網址。完整源碼授權為 MIT；Three.js 保留 MIT，Barlow 字型保留 OFL，授權原文在 [THIRD_PARTY_NOTICES](public/THIRD_PARTY_NOTICES.txt)。
 
 ```text
-src/                  選單、3D 場景、駕駛模擬、遊戲設定
-public/models/        Blender 匯出的 GLB 與資產清單
-public/sw.js          正式版離線快取
-blender/              原始 .blend 與模型再生腳本
-tests/physics.test.js 駕駛模擬與遊戲時鐘的確定性測試
-scripts/              離線清單與原始碼打包
-docs/                 製作紀錄、模型圖與驗收結果
-dist/                 npm run build 產出的靜態網站
+index.html             共用大廳
+car/ train/ flight/    同源模式入口
+src/games/            三種遊戲模組
+src/shared/           共用導航、設定、路徑及 PWA 啟用
+public/models/        共用 GLB 素材庫
+public/textures/      原始 IMG atlas
+blender/              三套可再生模型來源
+tests/                原有玩法與合併整合測試
+docs/editions/        各模式保留的製作與驗收紀錄
 ```
 
-驗收證據與尚未驗證的範圍見 [docs/QA.md](docs/QA.md)，參與方式見 [CONTRIBUTING.md](CONTRIBUTING.md)。專案自製程式與 Blender 資產皆採 [MIT](LICENSE)。Three.js 保留其 MIT 授權；遊戲內附的 Barlow Condensed 字型採 SIL Open Font License 1.1，完整著作權與授權原文在 [public/THIRD_PARTY_NOTICES.txt](public/THIRD_PARTY_NOTICES.txt)，正式版也包含這份文件。Vite 等開發依賴保留各自的授權。
+舊火車、飛機儲存庫與本機原資料夾保留作歷史來源，後續開發以此合併專案為準。驗收限制與合併紀錄見 [MERGE](docs/MERGE.md)。

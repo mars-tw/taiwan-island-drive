@@ -1,12 +1,12 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import { PerspectiveCamera, Vector3 } from 'three';
-import { MAPS, VEHICLES, TRACK_LENGTH, ROAD_HALF_WIDTH } from '../src/config.js';
+import { MAPS, VEHICLES, TRACK_LENGTH, ROAD_HALF_WIDTH } from '../../src/games/car/config.js';
 import {
   createPhysicsState, stepPhysics, calculateScore, timeAttackLimit,
   roadCenter, roadHeading, routeAltitude,
-} from '../src/physics.js';
-import { Game } from '../src/game.js';
+} from '../../src/games/car/physics.js';
+import { Game } from '../../src/games/car/game.js';
 
 const coupe = VEHICLES.find(vehicle => vehicle.id === 'coupe');
 const cruise = { steer: 0, throttle: 1, brake: 0, boost: false };

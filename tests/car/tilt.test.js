@@ -1,6 +1,6 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
-import { screenTilt, tiltSteering, smoothSteering, combineSteering, TiltController } from '../src/tilt.js';
+import { screenTilt, tiltSteering, smoothSteering, combineSteering, TiltController } from '../../src/games/car/tilt.js';
 
 test('screen rotation maps portrait gamma and landscape beta into consistent right/left steering', () => {
   assert.equal(screenTilt(20, 10, 0), 10);

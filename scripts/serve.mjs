@@ -16,7 +16,11 @@ const server = createServer(async (request, response) => {
     const name = decodeURIComponent(new URL(request.url, 'http://localhost').pathname);
     file = resolve(root, `.${name === '/' ? '/index.html' : name}`);
     if (!file.startsWith(root + sep)) throw new Error('Invalid path');
-    const info = await stat(file);
+    let info = await stat(file);
+    if (info.isDirectory()) {
+      if (!name.endsWith('/')) { response.writeHead(301, { Location: new URL(request.url, 'http://localhost').pathname + '/' + new URL(request.url, 'http://localhost').search }); response.end(); return; }
+      file = resolve(file, 'index.html'); info = await stat(file);
+    }
     if (!info.isFile()) throw new Error('Not a file');
     response.writeHead(200, { 'Content-Type': types[extname(file)] || 'application/octet-stream', 'Content-Length': info.size, 'Cache-Control': /(?:index\.html|sw\.js|precache\.json)$/.test(file) ? 'no-cache' : 'public, max-age=3600', 'X-Content-Type-Options': 'nosniff' });
     if (request.method === 'HEAD') response.end();
@@ -24,4 +28,4 @@ const server = createServer(async (request, response) => {
   } catch { response.writeHead(404, { 'Content-Type': 'text/plain; charset=utf-8' }); response.end('找不到這個檔案。'); }
 });
 server.on('error', error => { console.error(error.code === 'EADDRINUSE' ? `連接埠 ${port} 已使用，請開啟 http://localhost:${port}/ 或設定 ISLAND_DRIVE_PORT。` : error.message); process.exit(1); });
-server.listen(port, '0.0.0.0', () => console.log(`島嶼公路已啟動： http://localhost:${port}/\n手機請用同一個 Wi-Fi，開啟這台電腦的區網 IP 與連接埠 ${port}。\n按 Ctrl+C 停止。`));
+server.listen(port, '0.0.0.0', () => console.log(`島嶼交通學院已啟動： http://localhost:${port}/\n手機請用同一個 Wi-Fi，開啟這台電腦的區網 IP 與連接埠 ${port}。\n按 Ctrl+C 停止。`));

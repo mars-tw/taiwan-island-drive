@@ -1,0 +1,221 @@
+{
+  "schemaVersion": 1,
+  "license": "MIT",
+  "coordinates": {
+    "up": "+Y",
+    "forward": "+Z",
+    "units": "metres"
+  },
+  "modelCount": 12,
+  "textureCount": 2,
+  "groups": [
+    {
+      "id": "car",
+      "sourceFiles": [
+        "blender/island-drive.blend",
+        "blender/build_assets.py"
+      ],
+      "textures": [],
+      "models": [
+        {
+          "id": "coupe",
+          "file": "coupe.glb",
+          "publicPath": "models/coupe.glb",
+          "repositoryPath": "public/models/coupe.glb",
+          "bytes": 1118816,
+          "sha256": "e5dcff45d07e380149bd7e0e15c42f7b2951b41c050a24d7be342365b93a8b86",
+          "meshes": 25,
+          "nodes": 30,
+          "embeddedImages": 0,
+          "source": "blender/island-drive.blend",
+          "generator": "blender/build_assets.py"
+        },
+        {
+          "id": "rally",
+          "file": "rally.glb",
+          "publicPath": "models/rally.glb",
+          "repositoryPath": "public/models/rally.glb",
+          "bytes": 1360208,
+          "sha256": "327987e18fb4496585fe891ca85162b778ee8c828e35d01c041cb0abed8758c2",
+          "meshes": 25,
+          "nodes": 30,
+          "embeddedImages": 0,
+          "source": "blender/island-drive.blend",
+          "generator": "blender/build_assets.py"
+        },
+        {
+          "id": "suv",
+          "file": "suv.glb",
+          "publicPath": "models/suv.glb",
+          "repositoryPath": "public/models/suv.glb",
+          "bytes": 1199288,
+          "sha256": "f710e7cdc8bd93be2125e386cae0c43cfedf45dc621eafd0e2337b1e506556b4",
+          "meshes": 25,
+          "nodes": 30,
+          "embeddedImages": 0,
+          "source": "blender/island-drive.blend",
+          "generator": "blender/build_assets.py"
+        },
+        {
+          "id": "van",
+          "file": "van.glb",
+          "publicPath": "models/van.glb",
+          "repositoryPath": "public/models/van.glb",
+          "bytes": 1180092,
+          "sha256": "9cb13a4818dfd5f1cf9f4c0e016458a03766d84ff6120370feb53e3edd4f00fe",
+          "meshes": 26,
+          "nodes": 31,
+          "embeddedImages": 0,
+          "source": "blender/island-drive.blend",
+          "generator": "blender/build_assets.py"
+        },
+        {
+          "id": "palm",
+          "file": "palm.glb",
+          "publicPath": "models/palm.glb",
+          "repositoryPath": "public/models/palm.glb",
+          "bytes": 18928,
+          "sha256": "40f32b49a71ed3d1ae63d3fbf6e1131162c7d570c7f6c23efe4368c81004d22a",
+          "meshes": 2,
+          "nodes": 3,
+          "embeddedImages": 0,
+          "source": "blender/island-drive.blend",
+          "generator": "blender/build_assets.py"
+        },
+        {
+          "id": "pine",
+          "file": "pine.glb",
+          "publicPath": "models/pine.glb",
+          "repositoryPath": "public/models/pine.glb",
+          "bytes": 9296,
+          "sha256": "bf2f1ac4f458dd726e4be7fd5c4f7ff8917c933905748360869f5ad9dbd664fb",
+          "meshes": 3,
+          "nodes": 4,
+          "embeddedImages": 0,
+          "source": "blender/island-drive.blend",
+          "generator": "blender/build_assets.py"
+        },
+        {
+          "id": "city_tower",
+          "file": "city_tower.glb",
+          "publicPath": "models/city_tower.glb",
+          "repositoryPath": "public/models/city_tower.glb",
+          "bytes": 222532,
+          "sha256": "598f8fd9ad1e5b958d68e40be372f935c05fe8d3e203d16327c027c670f97e10",
+          "meshes": 4,
+          "nodes": 5,
+          "embeddedImages": 0,
+          "source": "blender/island-drive.blend",
+          "generator": "blender/build_assets.py"
+        },
+        {
+          "id": "road_sign",
+          "file": "road_sign.glb",
+          "publicPath": "models/road_sign.glb",
+          "repositoryPath": "public/models/road_sign.glb",
+          "bytes": 119124,
+          "sha256": "4a0d54d692f00fb19a942b048cdce1cfa06bed6fa3142098deb8cadedf17a899",
+          "meshes": 3,
+          "nodes": 4,
+          "embeddedImages": 0,
+          "source": "blender/island-drive.blend",
+          "generator": "blender/build_assets.py"
+        }
+      ]
+    },
+    {
+      "id": "train",
+      "sourceFiles": [
+        "blender/train/models.blend",
+        "blender/train/build_assets.py"
+      ],
+      "textures": [
+        "public/textures/train.png"
+      ],
+      "models": [
+        {
+          "id": "train",
+          "file": "train.glb",
+          "publicPath": "models/train.glb",
+          "repositoryPath": "public/models/train.glb",
+          "bytes": 4227956,
+          "sha256": "4ca9e1d3475c06efda7d22b17dfeb3f5d82db9a8015cd1dfe6eb8fc3dc27d6c7",
+          "meshes": 204,
+          "nodes": 207,
+          "embeddedImages": 1,
+          "source": "blender/train/models.blend",
+          "generator": "blender/train/build_assets.py"
+        },
+        {
+          "id": "train-cab",
+          "file": "train-cab.glb",
+          "publicPath": "models/train-cab.glb",
+          "repositoryPath": "public/models/train-cab.glb",
+          "bytes": 3144940,
+          "sha256": "bfe3b5501091d8658e06baa493d2adec730d72ea20db11e26c765459461ecb0c",
+          "meshes": 30,
+          "nodes": 33,
+          "embeddedImages": 1,
+          "source": "blender/train/models.blend",
+          "generator": "blender/train/build_assets.py"
+        }
+      ]
+    },
+    {
+      "id": "flight",
+      "sourceFiles": [
+        "blender/flight/models.blend",
+        "blender/flight/build_assets.py"
+      ],
+      "textures": [
+        "public/textures/aircraft.png"
+      ],
+      "models": [
+        {
+          "id": "aircraft",
+          "file": "aircraft.glb",
+          "publicPath": "models/aircraft.glb",
+          "repositoryPath": "public/models/aircraft.glb",
+          "bytes": 3071540,
+          "sha256": "8669dfdbc6c06acc67b406cc4fd4e92b52999ff9e6a4aa29fd2b4de6c677bd4b",
+          "meshes": 45,
+          "nodes": 48,
+          "embeddedImages": 1,
+          "source": "blender/flight/models.blend",
+          "generator": "blender/flight/build_assets.py"
+        },
+        {
+          "id": "aircraft-cab",
+          "file": "aircraft-cab.glb",
+          "publicPath": "models/aircraft-cab.glb",
+          "repositoryPath": "public/models/aircraft-cab.glb",
+          "bytes": 3039128,
+          "sha256": "2a968f8c41723c8427e569566cbd156b8a544c30b69365a44a21f3d514e64a3c",
+          "meshes": 39,
+          "nodes": 42,
+          "embeddedImages": 1,
+          "source": "blender/flight/models.blend",
+          "generator": "blender/flight/build_assets.py"
+        }
+      ]
+    }
+  ],
+  "textures": [
+    {
+      "id": "train",
+      "source": "built-in image_gen",
+      "publicPath": "textures/train.png",
+      "file": "public/textures/train.png",
+      "sha256": "dd40c889e7a3d195977fc9e701d0e1edb3c6a88915767bee662c95e051320921",
+      "mapping": "UV quadrant atlas"
+    },
+    {
+      "id": "aircraft",
+      "source": "built-in image_gen",
+      "publicPath": "textures/aircraft.png",
+      "file": "public/textures/aircraft.png",
+      "sha256": "426b94f8263b65c0b0ea80d66f98c948d1fa14bf2701567aea963876a0edeffd",
+      "mapping": "UV quadrant atlas"
+    }
+  ]
+}
