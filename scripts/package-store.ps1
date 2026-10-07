@@ -1,9 +1,11 @@
 param([string]$OutputPath='')
 $ErrorActionPreference='Stop'
 $taskRoot=[IO.Path]::GetFullPath((Join-Path $PSScriptRoot '..'))
-if([string]::IsNullOrWhiteSpace($OutputPath)){$OutputPath=Join-Path $taskRoot 'release/island-transport-store-1.0.0.zip'}
+if([string]::IsNullOrWhiteSpace($OutputPath)){$OutputPath=Join-Path $taskRoot 'release/island-transport-store-1.0.0-logo-v2.zip'}
 $taskZipPath=[IO.Path]::GetFullPath($OutputPath)
-$taskFiles=@('release/native/island-transport-test.apk','release/native/island-transport-upload-signed.aab','release/island-drive-source.zip')
+$taskAndroidApk='release/native/logo-v2/island-transport-logo-v2-test.apk'
+$taskAndroidAab='release/native/logo-v2/island-transport-logo-v2-upload-signed.aab'
+$taskFiles=@($taskAndroidApk,$taskAndroidAab,'release/island-drive-source.zip')
 foreach($taskFile in $taskFiles){if(-not(Test-Path -LiteralPath (Join-Path $taskRoot $taskFile))){throw "Missing package artifact: $taskFile"}}
 Add-Type -AssemblyName System.IO.Compression
 Add-Type -AssemblyName System.IO.Compression.FileSystem
@@ -13,8 +15,8 @@ $taskBoundary=$taskRoot.TrimEnd([IO.Path]::DirectorySeparatorChar)+[IO.Path]::Di
 $taskZip=[IO.Compression.ZipFile]::Open($taskZipPath,[IO.Compression.ZipArchiveMode]::Create)
 try{
  $taskEntries=@{}
- $taskEntries['release/native/island-transport-test.apk']='android/island-transport-test.apk'
- $taskEntries['release/native/island-transport-upload-signed.aab']='android/island-transport-upload-signed.aab'
+ $taskEntries[$taskAndroidApk]='android/island-transport-logo-v2-test.apk'
+ $taskEntries[$taskAndroidAab]='android/island-transport-logo-v2-upload-signed.aab'
  $taskEntries['release/island-drive-source.zip']='source/island-drive-source.zip'
  $taskReference=Join-Path $taskRoot 'APPLE_RELEASE_CREDENTIALS.md'
  if(Test-Path -LiteralPath $taskReference -PathType Leaf){
@@ -43,7 +45,7 @@ try{
   $taskWriter.WriteLine('Apple build evidence is not platform upload, submission or approval; Apple binary upload/submission/approval remain incomplete.')
   $taskWriter.WriteLine('The named unsigned iOS archive/simulator packages are build artifacts, not App Store release delivery.')
   $taskWriter.WriteLine('Native simulator screenshots and browser preparation media must be distinguished by their manifests; neither is physical-device testing.')
-  $taskWriter.WriteLine('Owner reports Android device verification completed; Console still requires contact-phone verification. Play App Signing, device gameplay QA and actual store submission need separate verified evidence.')
+  $taskWriter.WriteLine('Google signed logo-v2 AAB is accepted; Taiwan closed Alpha review was requested on 2026-10-07. Consult store/review/google-console-progress.json for checks, review and tester opt-in status. The16-address private whitelist is excluded; it does not prove12 continuous opt-ins for14 days. Android gameplay hardware QA remains pending.')
   $taskWriter.WriteLine('Private keys and passwords are excluded and remain in the owner central private vault. APPLE_RELEASE_CREDENTIALS.md contains non-secret references only.')
  }finally{$taskWriter.Dispose()}
 }finally{$taskZip.Dispose()}

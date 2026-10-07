@@ -10,7 +10,8 @@
 | App Store Connect App ID | `6819605203` |
 | 發佈憑證 | Apple Distribution，ID `Z84267GALZ`，2027-10-06 到期 |
 | 此 App 的 profile | `IslandTransport AppStore 2026`，ID `72BF4FK9YQ`，App Store 發行類型 |
-| 既有 API key | `IslandTransportCI`，Key ID `N5VT3WW79X`，Developer 角色 |
+| 共用 API key | `MARS Games Publisher`，Key ID `VF9WTT4UYT`，App Manager 角色，同團隊所有 App 可用 |
+| 舊 API key | `IslandTransportCI`，Key ID `N5VT3WW79X`，Developer 角色，原私鑰未取得、未撤銷 |
 | API Issuer ID | `fb4c067e-4edd-4625-a4f6-2f0147064981` |
 
 ## 現在可用的部分
@@ -23,13 +24,13 @@ Distribution 憑證、配對私鑰與此 App 的 profile 已核對。密碼保�
 | `APPLE_DISTRIBUTION_P12_BASE64` | 已設定 |
 | `APPLE_DISTRIBUTION_P12_PASSWORD` | 已設定 |
 | `APPLE_APP_STORE_PROFILE_BASE64` | 已設定 |
-| `APP_STORE_CONNECT_API_KEY_BASE64` | 尚未設定：缺少 `.p8` |
-| `APP_STORE_CONNECT_KEY_ID` | 尚未設定 |
-| `APP_STORE_CONNECT_ISSUER_ID` | 尚未設定 |
+| `APP_STORE_CONNECT_API_KEY_BASE64` | 已加密設定，來自中央共用金鑰 |
+| `APP_STORE_CONNECT_KEY_ID` | 已設定為共用 key 識別資料 |
+| `APP_STORE_CONNECT_ISSUER_ID` | 已設定為同團隊 issuer |
 
-Apple 已把既有 API key 標示為下載過，但實際 `.p8` 未取得，因此此 key 尚不能供 CI 上傳使用。擁有者已授權以 Chrome 建立替代 Developer key、下載並加密保存；目前仍待擁有者完成 Chrome 的 Apple 登入驗證。取得新 key 後，應更新這份索引及中央紀錄；保留必要的替代與撤銷紀錄。
+Apple 舊 key 的 `.p8` 未取得，因此保留為歷史紀錄。擁有者另已明確授權建立 `MARS Games Publisher`、授予 App Manager 角色，並保存中央供所有遊戲使用。共用私鑰已取得、核對為 P-256，並將本專案所需的三項上傳 Secrets 加密設定完成；舊 key 未撤銷。平台驗證及上傳結果另見上架紀錄。
 
-中央保存參照：`<owner-private-vault>/island-transport/apple`。本文件不含可用來簽章或登入的秘密。不要將 `.p8`、`.p12`、私鑰、密碼或中央憑證庫原文放進這個公開儲存庫或下載包。
+中央保存參照：簽章資料為 `<owner-private-vault>/island-transport/apple`，共用 API 私鑰為 `<owner-private-vault>/game-store-publisher/apple`。本文件不含可用來簽章或登入的秘密。不要將 `.p8`、`.p12`、私鑰、密碼或中央憑證庫原文放進這個公開儲存庫或下載包。
 
 ## 其他遊戲能否沿用
 

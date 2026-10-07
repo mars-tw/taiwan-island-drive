@@ -1,0 +1,363 @@
+{
+  "schemaVersion": 1,
+  "verifiedAtUtc": "2026-10-07T01:47:29Z",
+  "status": "locally-built-and-verified-not-uploaded",
+  "sourceCommit": "e580ef1e0b26d466d1c569cf5eda8ca1a5d43a0b",
+  "applicationId": "tw.mars.islandtransport",
+  "versionName": "1.0.0",
+  "versionCode": 1,
+  "minSdkVersion": 24,
+  "targetSdkVersion": 36,
+  "logoVersion": "v2",
+  "tools": {
+    "java": "21.0.12.1",
+    "androidBuildTools": "36.0.0",
+    "compileSdk": 36,
+    "bundletool": "1.18.3",
+    "pillow": "12.2.0",
+    "cryptography": "46.0.7"
+  },
+  "nativeIconSourcePngCount": 13,
+  "androidIconPackagedPngCount": 12,
+  "nativeIconSources": [
+    {
+      "path": "ios/App/App/Assets.xcassets/TransportIconV2.appiconset/TransportIconV2-1024.png",
+      "sha256": "b16a858862dde08964177f875feedea363d9ccb8bdcaed9c30219a1fcbde4fe5",
+      "bytes": 1581477,
+      "width": 1024,
+      "height": 1024,
+      "mode": "RGB"
+    },
+    {
+      "path": "android/app/src/main/res/mipmap-ldpi/ic_transport_v2.png",
+      "sha256": "041e30fb903f6b2fac88d99c5dc86d50a24e9cced0bfe59dc076bb5f17b9c8ae",
+      "bytes": 2961,
+      "width": 36,
+      "height": 36,
+      "mode": "RGB"
+    },
+    {
+      "path": "android/app/src/main/res/mipmap-ldpi/ic_transport_v2_foreground.png",
+      "sha256": "b04dc6166b9adf0550fb194e9f79a39ab4f57605e9392f7ca8de8aa5cbd064c9",
+      "bytes": 6139,
+      "width": 81,
+      "height": 81,
+      "mode": "RGBA"
+    },
+    {
+      "path": "android/app/src/main/res/mipmap-mdpi/ic_transport_v2.png",
+      "sha256": "4c7c765c0d5e55c103d02570ee3f4197a9447e423759a8274ece5fe726f5817f",
+      "bytes": 4950,
+      "width": 48,
+      "height": 48,
+      "mode": "RGB"
+    },
+    {
+      "path": "android/app/src/main/res/mipmap-mdpi/ic_transport_v2_foreground.png",
+      "sha256": "527923f2efd070c6802e15d4cd2ba611900a1b23f039f0f4e0697411c23eb848",
+      "bytes": 10162,
+      "width": 108,
+      "height": 108,
+      "mode": "RGBA"
+    },
+    {
+      "path": "android/app/src/main/res/mipmap-hdpi/ic_transport_v2.png",
+      "sha256": "53f9302b0181caba14096e6759f8510f129643578ae15defe204a58407298fa9",
+      "bytes": 10422,
+      "width": 72,
+      "height": 72,
+      "mode": "RGB"
+    },
+    {
+      "path": "android/app/src/main/res/mipmap-hdpi/ic_transport_v2_foreground.png",
+      "sha256": "c11abe99a89d48c6b6b1e31a5f2db0e46c2ce1f03dbe2c8ae8af81005ec92faf",
+      "bytes": 21488,
+      "width": 162,
+      "height": 162,
+      "mode": "RGBA"
+    },
+    {
+      "path": "android/app/src/main/res/mipmap-xhdpi/ic_transport_v2.png",
+      "sha256": "ec1602c38cceb7f6b75d66f8f7eecd9631d9b13a86a97aceb9cd4738282716ce",
+      "bytes": 17714,
+      "width": 96,
+      "height": 96,
+      "mode": "RGB"
+    },
+    {
+      "path": "android/app/src/main/res/mipmap-xhdpi/ic_transport_v2_foreground.png",
+      "sha256": "6427f5d2418c5b641396df41a670a933cdfee52c13c12b6cd64dbdb77fa09350",
+      "bytes": 36789,
+      "width": 216,
+      "height": 216,
+      "mode": "RGBA"
+    },
+    {
+      "path": "android/app/src/main/res/mipmap-xxhdpi/ic_transport_v2.png",
+      "sha256": "34520959193bf7449a2c2e01f59d061adf973cc6c686208e2d8561bf5cbd4a74",
+      "bytes": 37940,
+      "width": 144,
+      "height": 144,
+      "mode": "RGB"
+    },
+    {
+      "path": "android/app/src/main/res/mipmap-xxhdpi/ic_transport_v2_foreground.png",
+      "sha256": "764f3d349c7eafc1419cf793657fd5106d668c61a32f839687029f2db628f7c8",
+      "bytes": 77708,
+      "width": 324,
+      "height": 324,
+      "mode": "RGBA"
+    },
+    {
+      "path": "android/app/src/main/res/mipmap-xxxhdpi/ic_transport_v2.png",
+      "sha256": "32d146410e6d3b5f13208dd0958b59d3a4f848e374a52d0d214fa91c1859f902",
+      "bytes": 64141,
+      "width": 192,
+      "height": 192,
+      "mode": "RGB"
+    },
+    {
+      "path": "android/app/src/main/res/mipmap-xxxhdpi/ic_transport_v2_foreground.png",
+      "sha256": "3684ddcf96564f364d62cd65a9ee3c29c2982dc34ac0d70ef4958808e5e5abd9",
+      "bytes": 133483,
+      "width": 432,
+      "height": 432,
+      "mode": "RGBA"
+    }
+  ],
+  "iconReferences": {
+    "androidIcon": "@mipmap/ic_transport_v2",
+    "androidRoundIcon": "@mipmap/ic_transport_v2",
+    "iosIconSet": "TransportIconV2",
+    "iosBinaryRebuiltInThisTask": false
+  },
+  "nativeBundle": {
+    "fileCount": 69,
+    "totalBytes": 42130239,
+    "allPackagedHashesVerified": true
+  },
+  "uploadKeyVerification": {
+    "repositoryPublicCertificate": "store/review/android-upload-cert.pem",
+    "certificateSha256": "33b90caeee5503b3aedf2b39d43a54dabc68db610f39f6f301830d5d4689f4a7",
+    "publicKeySpkiSha256": "ce0604776232af718245cf6e6c1be7e2996557cb20af9610c30be75bb9740d44",
+    "candidateVerifiedBeforeBuild": true,
+    "aabSignerCertificateMatches": true,
+    "aabSignerPublicKeyMatches": true,
+    "newKeyGenerated": false
+  },
+  "artifacts": [
+    {
+      "file": "island-transport-logo-v2-test.apk",
+      "bytes": 39339054,
+      "sha256": "a9ef3e1e9224c0f4bc771698bfd422ad634afe43cfb68ce2c31a120261f6daad",
+      "zipCrcValid": true,
+      "sensitiveFilesPackaged": false,
+      "verifiedNativeBundleFiles": 69,
+      "verifiedNativeBundleBytes": 42130239,
+      "packagedPublicAssetFileCount": 72,
+      "androidIconPNGs": [
+        {
+          "entry": "res/mipmap-ldpi-v4/ic_transport_v2.png",
+          "sha256": "041e30fb903f6b2fac88d99c5dc86d50a24e9cced0bfe59dc076bb5f17b9c8ae",
+          "sourcePixelMatch": true,
+          "width": 36,
+          "height": 36
+        },
+        {
+          "entry": "res/mipmap-ldpi-v4/ic_transport_v2_foreground.png",
+          "sha256": "b04dc6166b9adf0550fb194e9f79a39ab4f57605e9392f7ca8de8aa5cbd064c9",
+          "sourcePixelMatch": true,
+          "width": 81,
+          "height": 81
+        },
+        {
+          "entry": "res/mipmap-mdpi-v4/ic_transport_v2.png",
+          "sha256": "4c7c765c0d5e55c103d02570ee3f4197a9447e423759a8274ece5fe726f5817f",
+          "sourcePixelMatch": true,
+          "width": 48,
+          "height": 48
+        },
+        {
+          "entry": "res/mipmap-mdpi-v4/ic_transport_v2_foreground.png",
+          "sha256": "527923f2efd070c6802e15d4cd2ba611900a1b23f039f0f4e0697411c23eb848",
+          "sourcePixelMatch": true,
+          "width": 108,
+          "height": 108
+        },
+        {
+          "entry": "res/mipmap-hdpi-v4/ic_transport_v2.png",
+          "sha256": "53f9302b0181caba14096e6759f8510f129643578ae15defe204a58407298fa9",
+          "sourcePixelMatch": true,
+          "width": 72,
+          "height": 72
+        },
+        {
+          "entry": "res/mipmap-hdpi-v4/ic_transport_v2_foreground.png",
+          "sha256": "c11abe99a89d48c6b6b1e31a5f2db0e46c2ce1f03dbe2c8ae8af81005ec92faf",
+          "sourcePixelMatch": true,
+          "width": 162,
+          "height": 162
+        },
+        {
+          "entry": "res/mipmap-xhdpi-v4/ic_transport_v2.png",
+          "sha256": "ec1602c38cceb7f6b75d66f8f7eecd9631d9b13a86a97aceb9cd4738282716ce",
+          "sourcePixelMatch": true,
+          "width": 96,
+          "height": 96
+        },
+        {
+          "entry": "res/mipmap-xhdpi-v4/ic_transport_v2_foreground.png",
+          "sha256": "6427f5d2418c5b641396df41a670a933cdfee52c13c12b6cd64dbdb77fa09350",
+          "sourcePixelMatch": true,
+          "width": 216,
+          "height": 216
+        },
+        {
+          "entry": "res/mipmap-xxhdpi-v4/ic_transport_v2.png",
+          "sha256": "34520959193bf7449a2c2e01f59d061adf973cc6c686208e2d8561bf5cbd4a74",
+          "sourcePixelMatch": true,
+          "width": 144,
+          "height": 144
+        },
+        {
+          "entry": "res/mipmap-xxhdpi-v4/ic_transport_v2_foreground.png",
+          "sha256": "764f3d349c7eafc1419cf793657fd5106d668c61a32f839687029f2db628f7c8",
+          "sourcePixelMatch": true,
+          "width": 324,
+          "height": 324
+        },
+        {
+          "entry": "res/mipmap-xxxhdpi-v4/ic_transport_v2.png",
+          "sha256": "32d146410e6d3b5f13208dd0958b59d3a4f848e374a52d0d214fa91c1859f902",
+          "sourcePixelMatch": true,
+          "width": 192,
+          "height": 192
+        },
+        {
+          "entry": "res/mipmap-xxxhdpi-v4/ic_transport_v2_foreground.png",
+          "sha256": "3684ddcf96564f364d62cd65a9ee3c29c2982dc34ac0d70ef4958808e5e5abd9",
+          "sourcePixelMatch": true,
+          "width": 432,
+          "height": 432
+        }
+      ],
+      "adaptiveIconPresent": true,
+      "apksignerVerified": true,
+      "signingPurpose": "debug-local-install"
+    },
+    {
+      "file": "island-transport-logo-v2-upload-signed.aab",
+      "bytes": 37141256,
+      "sha256": "94933395b3fe8fb2aaaeb4f8aadbd196a543ec1f263cf0d5bf3f4a148d1cfa3a",
+      "zipCrcValid": true,
+      "sensitiveFilesPackaged": false,
+      "verifiedNativeBundleFiles": 69,
+      "verifiedNativeBundleBytes": 42130239,
+      "packagedPublicAssetFileCount": 72,
+      "androidIconPNGs": [
+        {
+          "entry": "base/res/mipmap-ldpi-v4/ic_transport_v2.png",
+          "sha256": "70c585505132086bd6fa366c5bbb3c653740c571fdbaf25f02a0c5c505c1b480",
+          "sourcePixelMatch": true,
+          "width": 36,
+          "height": 36
+        },
+        {
+          "entry": "base/res/mipmap-ldpi-v4/ic_transport_v2_foreground.png",
+          "sha256": "d37e81157f1dd6baf800b4648d6d4ef8a89eaa15e81245f540bcb4df94148397",
+          "sourcePixelMatch": true,
+          "width": 81,
+          "height": 81
+        },
+        {
+          "entry": "base/res/mipmap-mdpi-v4/ic_transport_v2.png",
+          "sha256": "c44b332d86c44813b6e95e7b4bec0c8c8f142c0ffc0b21f26a19b3999b3cd7b5",
+          "sourcePixelMatch": true,
+          "width": 48,
+          "height": 48
+        },
+        {
+          "entry": "base/res/mipmap-mdpi-v4/ic_transport_v2_foreground.png",
+          "sha256": "cd8c204899879fba53f34a9e53fc196b62f8f11928c675da1e06841fd1b854c8",
+          "sourcePixelMatch": true,
+          "width": 108,
+          "height": 108
+        },
+        {
+          "entry": "base/res/mipmap-hdpi-v4/ic_transport_v2.png",
+          "sha256": "2bb5568443b107f4be5342268dc8e8e19cbfef7f5b46f65f3731722db4d2723c",
+          "sourcePixelMatch": true,
+          "width": 72,
+          "height": 72
+        },
+        {
+          "entry": "base/res/mipmap-hdpi-v4/ic_transport_v2_foreground.png",
+          "sha256": "54f40bf7892024ae427dc3fa5bae45ee051c56e4d9a7cb77c02931dece3e6f6a",
+          "sourcePixelMatch": true,
+          "width": 162,
+          "height": 162
+        },
+        {
+          "entry": "base/res/mipmap-xhdpi-v4/ic_transport_v2.png",
+          "sha256": "518f1ddc28f2cb037553787f6e361073d499efef7cf7e3e98e2031aa07bf2372",
+          "sourcePixelMatch": true,
+          "width": 96,
+          "height": 96
+        },
+        {
+          "entry": "base/res/mipmap-xhdpi-v4/ic_transport_v2_foreground.png",
+          "sha256": "08bc4a6ac0008edc6039eae5b6295a7580f62ab5083f955256d6685e68ce9c85",
+          "sourcePixelMatch": true,
+          "width": 216,
+          "height": 216
+        },
+        {
+          "entry": "base/res/mipmap-xxhdpi-v4/ic_transport_v2.png",
+          "sha256": "52c6896c9fa6939dc98541d9686641711461deac603dfc1831f183170a4395d7",
+          "sourcePixelMatch": true,
+          "width": 144,
+          "height": 144
+        },
+        {
+          "entry": "base/res/mipmap-xxhdpi-v4/ic_transport_v2_foreground.png",
+          "sha256": "f44193b5375d54da14caef679d0b4d8ea37bd439737646f3d0988814a88d7665",
+          "sourcePixelMatch": true,
+          "width": 324,
+          "height": 324
+        },
+        {
+          "entry": "base/res/mipmap-xxxhdpi-v4/ic_transport_v2.png",
+          "sha256": "9ea08e2f6dd917b5e1c581e2eff706fe0f921e8a07a4528c433a33a7208627f8",
+          "sourcePixelMatch": true,
+          "width": 192,
+          "height": 192
+        },
+        {
+          "entry": "base/res/mipmap-xxxhdpi-v4/ic_transport_v2_foreground.png",
+          "sha256": "dce86f1b6e72a208a271c8e5dc618a272891d6433c32b56f245152be562c266c",
+          "sourcePixelMatch": true,
+          "width": 432,
+          "height": 432
+        }
+      ],
+      "adaptiveIconPresent": true,
+      "jarsignerVerified": true,
+      "bundletoolValidated": true,
+      "uploadCertificateMatchesRepository": true,
+      "signerCertificateSha256": "33b90caeee5503b3aedf2b39d43a54dabc68db610f39f6f301830d5d4689f4a7",
+      "signerPublicKeySpkiSha256": "ce0604776232af718245cf6e6c1be7e2996557cb20af9610c30be75bb9740d44",
+      "uploadPublicKeyMatchesRepository": true
+    }
+  ],
+  "trackedAndroidChangesAfterCapSyncAndBuild": [],
+  "physicalDeviceQaPerformed": false,
+  "platformUploadPerformed": false,
+  "submissionPerformed": false,
+  "playAppSigningPlatformFinalArtifactVerified": false,
+  "limitations": [
+    "Local compilation and cryptographic/package verification only.",
+    "Debug APK uses debug signing; signed AAB uses the existing upload key.",
+    "No Android hardware install or runtime QA performed by this task.",
+    "No platform upload, submission, approval, or new tester invitation performed."
+  ]
+}

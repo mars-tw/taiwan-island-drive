@@ -16,9 +16,11 @@
 
 ## iOS／Android 商店版準備包
 
-已建立 Capacitor 原生工程，全部遊戲與模型本機打包。Android 測試 APK、上傳簽章 AAB、iOS Simulator App 與發佈簽章 IPA 皆已有建製證據，104 項程式測試通過。2026-10-07 新 [LOGO 與透明字標](docs/branding/README.md)已準備；舊原生包仍須重新建製才會包含新圖示。完整交付與重建見 [native-package](docs/native-package.md)，建置證據見 [native-build-verification](docs/native-build-verification.md)。
+已建立 Capacitor 原生工程，全部遊戲與模型本機打包。來源 `e580ef1` 的新 [LOGO 與透明字標](docs/branding/README.md)已納入 Android 測試 APK（39,339,054 bytes）、上傳簽章 AAB（37,141,256 bytes）及 iOS 發佈簽章 IPA（37,440,876 bytes）；簽章與隨附資源驗證通過，104 項程式測試通過。[公開 Android 測試版 rc.2](https://github.com/mars-tw/taiwan-island-drive/releases/tag/native-v1.0.0-rc.2)已發布，三個檔案 digest 已核對。完整交付與重建見 [native-package](docs/native-package.md)，最新包、舊證據與驗證限制見 [native-build-verification](docs/native-build-verification.md)。
 
-Apple 會員已啟用，App record 與簽章 IPA 已建立；Google Play 身分審核已通過，擁有者已完成裝置驗證，聯絡電話驗證仍待完成。目前未在 App Store／Google Play 送審或上架。簽章與上傳金鑰的非秘密索引在 [APPLE_RELEASE_CREDENTIALS.md](APPLE_RELEASE_CREDENTIALS.md)，私鑰與密碼保留於專案外。
+Apple 會員、App record 與新版簽章 IPA 已就緒；包內新首頁圖示與 `TransportIconV2` 引用已核對，iOS 編譯後圖示像素仍未驗證。來源 `e580ef1` 的 [新版原生截圖](store/screenshots/native-ios-logo-v2/provenance.json) 已完成四個實際 XCTest case、0 失敗，兩裝置的家長 gate 各三項取消斷言皆成立；八張圖片已經 Root 視覺覆核，並上傳及附加至 Apple 1.0.0 版本，iPhone、iPad 各四張縮圖已確認。舊 `7cd0d75` 截圖及原雜湊保留為歷史證據，上傳紀錄見 [Apple v2 媒體紀錄](store/review/apple-logo-v2-media-upload.json)。已取得擁有者授權的共用 App Store Connect API key，Apple 安裝包仍待上傳；平台驗證、送審與後續狀態以 [App metadata](store/metadata/app.json)及[readiness](store/review/submission-readiness.json)為準，實體硬體驗收仍未完成。
+
+Google 的 11 項 App 設定已完成，客服 email 與「廣告 ID＝否」已儲存，AAB code 1／version 1.0.0／min API 24／target API 36 已上傳並經處理接受：0 個錯誤，1 項缺少 deobfuscation 的資訊提示，建置使用 `minify=false`。Alpha 封閉測試已選台灣一國，並建立及選用 16 人白名單；15 項變更已正式送審，發布總覽顯示「變更項目正在審查中」。尚未核准，首個 release 還不可測試；16 人名單不代表已加入測試，12 人連續 14 天仍待實際加入與累計。Android 硬體遊玩 QA 也未完成，最新審查與可用狀態見 [Google Console 進度](store/review/google-console-progress.json)。簽章與上傳金鑰的非秘密索引在 [APPLE_RELEASE_CREDENTIALS.md](APPLE_RELEASE_CREDENTIALS.md)，私鑰與密碼保留於專案外。
 
 ## 手機遊玩
 

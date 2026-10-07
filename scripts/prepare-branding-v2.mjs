@@ -74,11 +74,14 @@ const manifest = {
   },
   nativeIntegrationPending: false,
   nativeIntegration: {
-    status: 'source_icons_integrated_binary_rebuild_pending', assetCatalogRegenerated: true,
+    status: 'source_icons_integrated_see_release_evidence', assetCatalogRegenerated: true,
     report: 'resources/branding/native-icons-v2-report.json',
-    signedIpaRegenerated: false, nativeScreenshotsRegenerated: false,
-    newStoreIconsUploaded: false, existingNativeAndStoreIconsPreserved: true
+    buildEvidence: 'store/review/apple-logo-v2-signing-verification.json',
+    androidBuildEvidence: 'store/review/android-logo-v2-verification.json',
+    nativeMediaEvidence: 'store/screenshots/native-ios-logo-v2/provenance.json',
+    storeUploadStatusReference: 'store/review/google-console-progress.json',
+    existingNativeAndStoreIconsPreserved: true
   }
 };
 await writeFile(resolve(project, 'resources/branding/manifest-v2.json'), JSON.stringify(manifest, null, 2) + '\n');
-console.log(JSON.stringify({ pngAssets: assets.length, rgbIcons: 4, transparentWordmarks: 2, nativeSourceIntegrated: true, signedBinaryRebuildPending: true }));
+console.log(JSON.stringify({ pngAssets: assets.length, rgbIcons: 4, transparentWordmarks: 2, nativeSourceIntegrated: true, releaseEvidenceReferenced: true }));

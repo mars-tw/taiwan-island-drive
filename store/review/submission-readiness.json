@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
-  "status": "prepared_package_not_ready_to_submit",
-  "lookupDate": "2026-10-06",
+  "status": "google_closed_alpha_in_review_apple_upload_pending_production_not_ready",
+  "lookupDate": "2026-10-07",
   "ownerConfirmed": {
     "appleDeveloperAccountExists": true,
     "appleMembershipOrderPaid": true,
@@ -24,9 +24,9 @@
     "appleScreenshotAssetCount": 8,
     "appleUploadApiKeyCreationAuthorized": true,
     "appleUploadApiKeyEncryptedStorageAuthorized": true,
-    "ownerAppleLoginInChromeRequired": true,
-    "appleUploadApiKeyCreationStatus": "authorized_pending_owner_apple_login_in_chrome_no_p8_created",
-    "appleUploadApiKeyAvailable": false,
+    "ownerAppleLoginInChromeRequired": false,
+    "appleUploadApiKeyCreationStatus": "shared_owner_authorized_app_manager_key_available_encrypted_ci_secrets_configured",
+    "appleUploadApiKeyAvailable": true,
     "applePlatformValidationPerformed": false,
     "applePlatformUploadPerformed": false,
     "appleSubmissionPerformed": false,
@@ -38,19 +38,45 @@
     "googlePlayRegistrationFeePaid": true,
     "googleIdentityDocumentsSubmitted": true,
     "googleIdentityReview": "approved",
-    "googlePhoneVerified": false,
+    "googlePhoneVerified": true,
     "googlePhysicalAndroidDeviceVerified": true,
-    "googleAppCreationEnabled": false,
-    "googleAppDraftCreated": false,
-    "googlePlatformUploadPerformed": false,
-    "googleDeviceVerificationEvidence": "owner_reported_2026-10-07_console_home_only_phone_verification_remaining",
-    "googleConsoleStatusCheckedDate": "2026-10-07"
+    "googleAppCreationEnabled": true,
+    "googleAppDraftCreated": true,
+    "googlePlatformUploadPerformed": true,
+    "googleSubmissionPerformed": true,
+    "googleDeviceVerificationEvidence": "owner_reported_2026-10-07_device_verified_console_initially_only_phone_pending_then_phone_verified_home_warnings_cleared_create_app_enabled",
+    "googleConsoleStatusCheckedDate": "2026-10-07",
+    "googlePlayConsoleAppId": "4975824716105626310",
+    "googleAppCreationTermsOwnerApproved": true,
+    "googleAppCreationTermsAccepted": true,
+    "googleStoreListingSaved": true,
+    "googleStoreListingStatus": "closed_alpha_in_review",
+    "googleStoreIconV2Uploaded": true,
+    "googleIarcTermsOwnerApproved": true,
+    "googleIarcCompleted": true,
+    "googleChildComplianceOwnerApproved": true,
+    "googleNoCollectionSharingOwnerApproved": true,
+    "googleStoreQuestionnairesSaved": true,
+    "googleUnderFiveAudienceSaved": true,
+    "googlePrivacyNoCollectionSharingSaved": true,
+    "googleFamilyPolicyCommitmentSaved": true,
+    "googleSubmissionScope": "closed_alpha_in_review",
+    "googleApproved": false,
+    "googleAdvertisingIdNoUsageSaved": true,
+    "googleClosedTesterListSaved": true,
+    "googleClosedTesterListCount": 16,
+    "googleClosedReleaseSaved": true,
+    "appleLogoV2NativeUiReplayVerified": true,
+    "appleVersionScreenshotsAttached": true,
+    "appleVersionScreenshotCount": 8,
+    "appleLatestScreenshotSourceCommit": "e580ef1e0b26d466d1c569cf5eda8ca1a5d43a0b",
+    "appleUploadSecretsConfigured": true
   },
   "blockers": [
     {
       "id": "developer_accounts",
-      "status": "pending_google_phone_verification_device_verified_by_owner",
-      "detail": "Apple Developer membership and App record are verified. Google Play identity verification is approved. On 2026-10-07 the owner reported successful physical Android device verification; Console Home corroborates that only contact-phone verification remains listed. Create app is still disabled and the existing contact-phone page is awaiting SMS verification. No Google app draft or platform upload exists."
+      "status": "resolved",
+      "detail": "Apple membership/App record verified. Google identity, phone and physical Android device account verification are complete; App4975824716105626310 exists and its first signed AAB is accepted. Account-device verification does not prove game hardware QA."
     },
     {
       "id": "public_contact",
@@ -59,47 +85,40 @@
     },
     {
       "id": "identifier",
-      "status": "apple_registered_google_registration_pending",
-      "detail": "Apple explicit App ID tw.mars.islandtransport is registered, and the App Store Connect record for 島嶼交通學院 is created with public Apple app ID 6819605203; iOS 1.0.0 is in Prepare for Submission. The Apple 1.0.0/build 1 signed IPA is verified. Google app creation remains disabled, with no Google app draft, package registration or platform upload. Apple platform validation, upload and review submission have not been completed."
+      "status": "resolved",
+      "detail": "Apple explicit App ID and App record registered. Google App4975824716105626310 has accepted signed AAB package tw.mars.islandtransport, version1.0.0/code1, min24/target36."
     },
     {
       "id": "ios_build",
-      "status": "previous_signed_build_verified_logo_v2_rebuild_pending",
-      "detail": "Previous Apple signed candidate run 37465941274 on macOS 15 successfully archived, signed, exported and locally verified the 32,592,399-byte App Store Connect IPA for 1.0.0/build 1, bundle tw.mars.islandtransport, internalOnly false, source commit 7cd0d7517f1cb2e221a3c13b38a0131df5e32813. UIKit safe-area constraints are included. An independent download matched the CI report SHA-256. Signature, profile, entitlements and bundled resources passed. Logo v2 was added to source on 2026-10-07 and is not in that IPA; a fresh signed build is required. This is not Apple platform validation, upload, approval or native UI visual evidence."
+      "status": "resolved",
+      "detail": "Fresh logo-v2 signed IPA from run37559519552/sourcee580ef1: 37,440,876 bytes, 1.0.0/build1, app-store-connect export, internalOnlyfalse. Actual Home logo PNG matches Git source and code-signing sealed hash; Info.plist icon name TransportIconV2, Assets.car present. CI signature/profile/entitlements/resources passed and Root/worker hashes match. Windows compiled-icon-pixel inspection was not performed; new native UI replay run37561855895 passed4 actual XCTest cases with0 failures and8 native Simulator PNGs were visually reviewed; this is not Apple platform validation, upload, submission or approval."
     },
     {
       "id": "signing_and_upload",
-      "status": "signed_binaries_verified_upload_key_and_platform_upload_pending",
-      "detail": "Local Android upload-signed AAB passes jarsigner and bundletool; its upload certificate is not registered with Google Play. The Apple signed IPA is verified. The owner authorized Chrome use, Developer API key creation and encrypted key storage; owner Apple login in Chrome is still required and no p8 exists. Eight screenshots are uploaded to Apple's Asset Library; Apple binary platform validation, upload, review submission and approval are not performed. No Google platform upload exists."
+      "status": "upload_credentials_configured_apple_platform_upload_pending_google_closed_review_in_progress",
+      "detail": "Owner-authorized shared Apple App Manager key VF9WTT4UYT is available in the central private vault and three encrypted API secrets are configured for this repo apple-release environment. Existing Distribution/profile/signing secrets are preserved; old N5VT3WW79X key is not revoked. Logo-v2 signed IPA verified; Apple platform validation/upload still pending. Google logo-v2 AAB accepted and closed Alpha is in review."
     },
     {
       "id": "new_personal_play_account_testing",
-      "status": "pending_closed_testing_after_account_verification",
-      "detail": "The newly created Google Play account is personal, so the new-personal-account requirement applies: at least 12 opted-in testers continuously for at least 14 days before a production-access request. App creation is still disabled while account verification remains incomplete; no closed test, testers or elapsed testing period are claimed."
+      "status": "closed_release_review_requested_actual_opt_ins_and_continuous_testing_pending",
+      "detail": "Owner provided17 private records;16 Google-accepted addresses are saved and selected in Alpha, with1 excluded at owner request. Taiwan closed release and15 changes have been submitted; Console section is 審查中的變更 while Console confirms changes are now under review. Test participation is not yet available. Last dashboard opt-in count0; listing16 eligible addresses does not start14 days. Production access requires at least12 actual continuously opted-in testers for14 days and subsequent application; production access remains disabled."
     },
     {
       "id": "final_binary_privacy_and_gates",
       "status": "pending_final_release_audit",
-      "detail": "Previous Apple signed-binary profile, entitlements, required manifests and bundled models passed CI and independent package verification; private key files are absent from the IPA. Test-only replay 37489663357 at capture commit 11ebddb passed four actual XCTest cases with zero failures; iPhone and iPad parent-gate final results each prove three cancellation assertions, with matching evidence SHA. Production runtime at that replay was unchanged from signed source 7cd0d75. The current source adds logo v2, so existing binary and media evidence remain scoped to the previous branding. Parent-gate Simulator verification is complete for that source; physical-hardware verification, privacy/network behavior, local speech and offline use remain pending. The owner-confirmed Apple No Data Collected declaration is published in App Store Connect."
+      "detail": "Current logo-v2 signed IPA/sourcee580 passes signature/profile/entitlements/resources verification. New native Simulator replay37561855895 at the same source passes4 actual XCTest cases with0 failures; both parent-gate results strictly prove cancelDenied/settingsStayedClosed/secondRequestStillRequiresGate. Eight RGB PNGs retain CI hashes, Root visual review passed and8 were uploaded/attached to Apple version1.0.0 (4 iPhone medium,4 iPad13). This is Simulator evidence; physical hardware, privacy/network behavior, local speech and offline use remain pending. Prior7cd/11eb evidence remains unchanged. Apple binary validation/upload/review remain pending."
     },
     {
       "id": "store_forms_and_native_media",
-      "status": "apple_native_simulator_media_uploaded_google_forms_pending",
-      "detail": "Apple store metadata and questionnaires, free Taiwan distribution, identity and review contacts are saved and owner-confirmed; No Data Collected is published. Capture run 37465941350 produced eight genuine Simulator PNGs, hash/dimensions/RGB decode verified and Root visually approved. All eight are uploaded to Apple Asset Library, recognized as four Dynamic Island medium and four iPad 13-inch assets. Uploaded image paths, source 7cd0d75 and hashes are retained. Separate test-only replay 37489663357 proves both Simulator parent gates passed. Existing Chrome captures retain simulated=true. Remaining store identity/contact/questionnaire fields apply to Google Play; physical-hardware audit and binary upload remain pending. Neither platform has an uploaded or approved binary."
+      "status": "google_closed_alpha_in_review_apple_media_attached_hardware_qa_pending",
+      "detail": "Google11of11 initial tasks and no advertising ID declaration saved; signed AAB accepted and closed Alpha review requested. Google3 gameplay screenshots are browser-emulated, not hardware captures. New sourcee580 native iOS Simulator media run37561855895 passed4 actual cases and8 Root-reviewed screenshots were uploaded/attached to Apple version1.0.0. Prior media hashes remain unchanged. Hardware gameplay QA and Apple binary upload remains pending; shared API credentials are now configured."
     },
     {
       "id": "owner_identity",
-      "status": "pending_google_store_identity_and_review_contact_confirmation",
-      "detail": "Apple identity and App Review contacts are saved and owner-approved in App Store Connect; private values are deliberately absent from this public repository. Remaining Google store identity and review-contact fields require confirmation after App creation is enabled. Google account identity verification is already approved; no private identity or contact values are inferred or invented."
+      "status": "resolved",
+      "detail": "Apple private identity/review contacts were owner-approved and saved. Google uses the owner-authorized public support email a820628a@gmail.com and support URL; optional public phone was omitted. No private values are exposed in this repository."
     }
   ],
-  "releaseDefaultsPendingFinalOwnerConfirmation": {
-    "free": true,
-    "ads": false,
-    "iap": false,
-    "analytics": false,
-    "account": false
-  },
   "platformMinimumsChecked": {
     "androidNewAppTargetSdk": 36,
     "iosUploadSdk": "iOS 26 / iPadOS 26 or later"
@@ -149,6 +168,85 @@
   ],
   "binaryBuildEvidence": "store/review/binary-build-verification.json",
   "appleSignedBuildEvidence": {
+    "status": "verified_logo_v2_signed_ipa_not_platform_validated_or_uploaded",
+    "runUrl": "https://github.com/mars-tw/taiwan-island-drive/actions/runs/37559519552",
+    "headCommit": "e580ef1e0b26d466d1c569cf5eda8ca1a5d43a0b",
+    "marketingVersion": "1.0.0",
+    "buildNumber": 1,
+    "bundleId": "tw.mars.islandtransport",
+    "ipaBytes": 37440876,
+    "sha256": "916a92bc35fad14934a74694e567642b42ef21a62d5a1c58b73e6aea85637bf5",
+    "signatureVerified": true,
+    "profileVerified": true,
+    "entitlementsVerified": true,
+    "bundledResourcesVerified": true,
+    "exportMethod": "app-store-connect",
+    "internalOnly": false,
+    "xcode": "26.3",
+    "xcodeBuild": "17C529",
+    "sdk": "26.2",
+    "logoVersion": 2,
+    "homeLogoMatchesSource": true,
+    "nativeIconName": "TransportIconV2",
+    "compiledIconPixelsVerified": false,
+    "newNativeUiReplayPerformed": true,
+    "privateKeyFilesAbsentFromPackage": true,
+    "appleValidated": false,
+    "uploaded": false,
+    "approved": false
+  },
+  "brandingV2": {
+    "date": "2026-10-07",
+    "manifest": "resources/branding/manifest-v2.json",
+    "documentation": "docs/branding/README.md",
+    "appleStoreIcon": "store/assets/app-store-icon-v2-1024.png",
+    "googlePlayStoreIcon": "store/assets/google-play-icon-v2-512.png",
+    "existingSignedIpaIncludesV2": true,
+    "existingUploadedScreenshotsIncludeV2": true,
+    "newIconsUploaded": true,
+    "signedRebuildRequired": false,
+    "nativeSourceIntegrated": true,
+    "nativeIconReport": "resources/branding/native-icons-v2-report.json",
+    "newIconUploadPlatforms": [
+      "googlePlay"
+    ],
+    "appleNewIconUploaded": false,
+    "googleNewIconUploaded": true,
+    "latestAppleMediaUpload": "store/review/apple-logo-v2-media-upload.json"
+  },
+  "nativeMediaEvidence": {
+    "manifest": "store/screenshots/native-ios-logo-v2/manifest.json",
+    "provenance": "store/screenshots/native-ios-logo-v2/provenance.json",
+    "uploadEvidence": "store/review/apple-logo-v2-media-upload.json",
+    "captureRunUrl": "https://github.com/mars-tw/taiwan-island-drive/actions/runs/37561855895",
+    "captureRunStatus": "completed_success",
+    "gameSourceCommit": "e580ef1e0b26d466d1c569cf5eda8ca1a5d43a0b",
+    "captureCommit": "e580ef1e0b26d466d1c569cf5eda8ca1a5d43a0b",
+    "screenshotCount": 8,
+    "nativeSimulator": true,
+    "browserSimulated": false,
+    "hardwareTest": false,
+    "rootVisualApproved": true,
+    "storeScreenshotsUploaded": true,
+    "versionScreenshotsAttached": true,
+    "iphoneMediumScreenshotCount": 4,
+    "ipad13ScreenshotCount": 4,
+    "binaryUploaded": false,
+    "submitted": false,
+    "approved": false,
+    "nativeUiCaptureVerified": true,
+    "nativeMediaAcceptancePassed": true,
+    "actualXCTestCases": 4,
+    "failedXCTestCases": 0,
+    "parentGateTests": {
+      "iphone": "passed",
+      "ipad": "passed"
+    },
+    "parentGateSimulatorVerified": true,
+    "parentGateReplayRunUrl": "https://github.com/mars-tw/taiwan-island-drive/actions/runs/37561855895",
+    "parentGateReplayStatus": "completed_success_verified"
+  },
+  "applePriorSignedBuildEvidence": {
     "runUrl": "https://github.com/mars-tw/taiwan-island-drive/actions/runs/37465941274",
     "headCommit": "7cd0d7517f1cb2e221a3c13b38a0131df5e32813",
     "marketingVersion": "1.0.0",
@@ -172,20 +270,7 @@
     "uploaded": false,
     "approved": false
   },
-  "brandingV2": {
-    "date": "2026-10-07",
-    "manifest": "resources/branding/manifest-v2.json",
-    "documentation": "docs/branding/README.md",
-    "appleStoreIcon": "store/assets/app-store-icon-v2-1024.png",
-    "googlePlayStoreIcon": "store/assets/google-play-icon-v2-512.png",
-    "existingSignedIpaIncludesV2": false,
-    "existingUploadedScreenshotsIncludeV2": false,
-    "newIconsUploaded": false,
-    "signedRebuildRequired": true,
-    "nativeSourceIntegrated": true,
-    "nativeIconReport": "resources/branding/native-icons-v2-report.json"
-  },
-  "nativeMediaEvidence": {
+  "priorNativeMediaEvidence": {
     "browserCapturesSimulated": true,
     "manifest": "store/screenshots/native-ios/manifest.json",
     "captureRunUrl": "https://github.com/mars-tw/taiwan-island-drive/actions/runs/37465941350",
@@ -210,5 +295,27 @@
     "parentGateProofManifest": "store/review/native-ios-parent-gate/manifest.json",
     "parentGateReplayRunUrl": "https://github.com/mars-tw/taiwan-island-drive/actions/runs/37489663357",
     "parentGateReplayStatus": "completed_success_verified"
+  },
+  "releaseDefaultsOwnerAccepted": {
+    "free": true,
+    "ads": false,
+    "iap": false,
+    "analytics": false,
+    "account": false
+  },
+  "appleUploadCredentials": {
+    "keyName": "MARS Games Publisher",
+    "keyId": "VF9WTT4UYT",
+    "issuerId": "fb4c067e-4edd-4625-a4f6-2f0147064981",
+    "teamId": "93L76Q5PT8",
+    "role": "App Manager",
+    "ownerCreationAndSharedUseApproved": true,
+    "privateKeyAvailable": true,
+    "privateKeyTypeVerified": "EC P-256",
+    "encryptedUploadSecretsConfigured": true,
+    "githubEnvironment": "apple-release",
+    "priorKeyId": "N5VT3WW79X",
+    "priorKeyRevoked": false,
+    "privateKeyCommitted": false
   }
 }

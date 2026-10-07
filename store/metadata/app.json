@@ -1,13 +1,13 @@
 {
   "schemaVersion": 1,
-  "status": "prepared_not_submitted",
-  "lookupDate": "2026-10-06",
+  "status": "apple_prepared_google_closed_alpha_in_review",
+  "lookupDate": "2026-10-07",
   "displayName": "島嶼交通學院",
   "bundleId": "tw.mars.islandtransport",
-  "bundleIdStatus": "apple_explicit_app_id_registered_google_registration_and_upload_pending",
+  "bundleIdStatus": "apple_registered_google_signed_bundle_accepted_closed_review_requested",
   "bundleIdPlatformStatus": {
     "apple": "registered_explicit_app_id",
-    "googlePlay": "not_registered_no_app_draft_or_upload"
+    "googlePlay": "signed_bundle_package_accepted"
   },
   "appleAppId": "6819605203",
   "marketingVersion": "1.0.0",
@@ -37,7 +37,7 @@
     "subscriptions": false,
     "analytics": false,
     "accounts": false,
-    "ownerMonetizationConfirmation": "pending"
+    "ownerMonetizationConfirmation": "free_configuration_accepted_in_apple_taiwan_and_google_app_creation"
   },
   "distributionCountries": null,
   "privacyPolicyUrl": "https://mars-tw.github.io/taiwan-island-drive/privacy.html",
@@ -65,8 +65,8 @@
     "category": "Educational"
   },
   "platformAccountStatus": {
-    "appleDeveloper": "active_membership_app_record_and_signed_ipa_verified_upload_key_and_platform_upload_pending",
-    "googlePlayDeveloper": "identity_approved_phone_and_physical_android_verification_pending"
+    "appleDeveloper": "active_membership_app_record_signed_ipa_verified_upload_credentials_configured_platform_upload_pending",
+    "googlePlayDeveloper": "verification_complete_signed_bundle_accepted_closed_review_requested"
   },
   "platformAccountVerificationStatus": {
     "appleDeveloper": {
@@ -94,13 +94,31 @@
       "storeScreenshotAssetCount": 8,
       "appStoreConnectApiKeyCreationAuthorized": true,
       "appStoreConnectApiKeyEncryptedStorageAuthorized": true,
-      "ownerAppleLoginInChromeRequired": true,
-      "appStoreConnectApiKeyCreationStatus": "authorized_pending_owner_apple_login_in_chrome_no_p8_created",
-      "appStoreConnectApiUploadKeyAvailable": false,
+      "ownerAppleLoginInChromeRequired": false,
+      "appStoreConnectApiKeyCreationStatus": "shared_owner_authorized_app_manager_key_available_encrypted_ci_secrets_configured",
+      "appStoreConnectApiUploadKeyAvailable": true,
       "platformValidationPerformed": false,
       "platformUploadPerformed": false,
       "submissionPerformed": false,
-      "approved": false
+      "approved": false,
+      "versionScreenshotsAttached": true,
+      "versionScreenshotCount": 8,
+      "latestScreenshotSourceCommit": "e580ef1e0b26d466d1c569cf5eda8ca1a5d43a0b",
+      "uploadCredentialEvidence": {
+        "keyName": "MARS Games Publisher",
+        "keyId": "VF9WTT4UYT",
+        "issuerId": "fb4c067e-4edd-4625-a4f6-2f0147064981",
+        "teamId": "93L76Q5PT8",
+        "role": "App Manager",
+        "ownerCreationAndSharedUseApproved": true,
+        "privateKeyAvailable": true,
+        "privateKeyTypeVerified": "EC P-256",
+        "encryptedUploadSecretsConfigured": true,
+        "githubEnvironment": "apple-release",
+        "priorKeyId": "N5VT3WW79X",
+        "priorKeyRevoked": false,
+        "privateKeyCommitted": false
+      }
     },
     "googlePlayDeveloper": {
       "accountExists": true,
@@ -108,14 +126,139 @@
       "registrationFeePaidByOwner": true,
       "identityDocumentsSubmittedByOwner": true,
       "identityReview": "approved",
-      "phoneVerified": false,
-      "physicalAndroidDeviceVerified": false,
-      "appCreationEnabled": false,
-      "appDraftCreated": false,
-      "platformUploadPerformed": false
+      "phoneVerified": true,
+      "physicalAndroidDeviceVerified": true,
+      "appCreationEnabled": true,
+      "appDraftCreated": true,
+      "platformUploadPerformed": true,
+      "accountVerificationCompleted": true,
+      "googlePlayAppId": "4975824716105626310",
+      "appDashboardPath": "app/4975824716105626310/app-dashboard",
+      "packageName": "tw.mars.islandtransport",
+      "packageNameAvailabilityConfirmed": true,
+      "packageRegistrationStatus": "signed_bundle_package_accepted",
+      "defaultLocale": "zh-TW",
+      "appType": "Game",
+      "price": "free",
+      "creationTermsOwnerApproved": true,
+      "creationTermsAccepted": true,
+      "creationTerms": {
+        "developerProgramPoliciesAccepted": true,
+        "playAppSigningTermsAccepted": true,
+        "googleManagedSigningAcknowledged": true,
+        "signingKeyNotRetrievableAcknowledged": true,
+        "usExportDeclarationAccepted": true
+      },
+      "submissionPerformed": true,
+      "approved": false,
+      "closedTesting": {
+        "requiredTesters": 12,
+        "requiredContinuousDays": 14,
+        "currentTesters": 0,
+        "status": "closed_alpha_in_review",
+        "eligibleTesterListCount": 16,
+        "ownerProvidedRecordCount": 17,
+        "ownerSkippedRecordCount": 1,
+        "testerRosterPrivate": true,
+        "countries": [
+          "TW"
+        ],
+        "testingAvailable": false,
+        "reviewRequestSubmitted": true,
+        "optInUrl": "https://play.google.com/apps/testing/tw.mars.islandtransport"
+      },
+      "submissionScope": "closed_alpha_review_request",
+      "advertisingIdNoUsageSaved": true,
+      "progressEvidence": "store/review/google-console-progress.json"
     }
   },
   "appleSignedBuildEvidence": {
+    "status": "verified_logo_v2_signed_ipa_not_platform_validated_or_uploaded",
+    "runUrl": "https://github.com/mars-tw/taiwan-island-drive/actions/runs/37559519552",
+    "headCommit": "e580ef1e0b26d466d1c569cf5eda8ca1a5d43a0b",
+    "marketingVersion": "1.0.0",
+    "buildNumber": 1,
+    "bundleId": "tw.mars.islandtransport",
+    "ipaBytes": 37440876,
+    "sha256": "916a92bc35fad14934a74694e567642b42ef21a62d5a1c58b73e6aea85637bf5",
+    "signatureVerified": true,
+    "profileVerified": true,
+    "entitlementsVerified": true,
+    "bundledResourcesVerified": true,
+    "exportMethod": "app-store-connect",
+    "internalOnly": false,
+    "xcode": "26.3",
+    "xcodeBuild": "17C529",
+    "sdk": "26.2",
+    "logoVersion": 2,
+    "homeLogoMatchesSource": true,
+    "nativeIconName": "TransportIconV2",
+    "compiledIconPixelsVerified": false,
+    "newNativeUiReplayPerformed": true,
+    "privateKeyFilesAbsentFromPackage": true,
+    "appleValidated": false,
+    "uploaded": false,
+    "approved": false
+  },
+  "applePrivacyDeclaration": {
+    "status": "published_no_data_collected",
+    "declaration": "no_data_collected",
+    "ownerLegalConfirmationCompleted": true,
+    "published": true
+  },
+  "nativeMediaStatus": "logo_v2_native_simulator_media_and_parent_gate_verified_version_screenshots_attached_apple_binary_upload_pending",
+  "appleNativeMediaEvidence": {
+    "manifest": "store/screenshots/native-ios-logo-v2/manifest.json",
+    "provenance": "store/screenshots/native-ios-logo-v2/provenance.json",
+    "uploadEvidence": "store/review/apple-logo-v2-media-upload.json",
+    "captureRunUrl": "https://github.com/mars-tw/taiwan-island-drive/actions/runs/37561855895",
+    "captureRunStatus": "completed_success",
+    "gameSourceCommit": "e580ef1e0b26d466d1c569cf5eda8ca1a5d43a0b",
+    "captureCommit": "e580ef1e0b26d466d1c569cf5eda8ca1a5d43a0b",
+    "screenshotCount": 8,
+    "nativeSimulator": true,
+    "browserSimulated": false,
+    "hardwareTest": false,
+    "rootVisualApproved": true,
+    "storeScreenshotsUploaded": true,
+    "versionScreenshotsAttached": true,
+    "iphoneMediumScreenshotCount": 4,
+    "ipad13ScreenshotCount": 4,
+    "binaryUploaded": false,
+    "submitted": false,
+    "approved": false,
+    "nativeUiCaptureVerified": true,
+    "nativeMediaAcceptancePassed": true,
+    "actualXCTestCases": 4,
+    "failedXCTestCases": 0,
+    "parentGateTests": {
+      "iphone": "passed",
+      "ipad": "passed"
+    },
+    "parentGateSimulatorVerified": true,
+    "parentGateReplayRunUrl": "https://github.com/mars-tw/taiwan-island-drive/actions/runs/37561855895",
+    "parentGateReplayStatus": "completed_success_verified"
+  },
+  "automaticSignupOrPaymentAuthorized": false,
+  "googleAppId": "4975824716105626310",
+  "brandingV2": {
+    "status": "signed_logo_v2_ipa_verified_platform_upload_pending",
+    "sourceCommit": "e580ef1",
+    "brandManifest": "resources/branding/manifest-v2.json",
+    "newIconsInSource": true,
+    "existingSignedIpaContainsV2": true,
+    "existingUploadedScreenshotsContainV2": true,
+    "signedBinaryRebuildRequired": false,
+    "existingSignedIpaSourceCommit": "e580ef1e0b26d466d1c569cf5eda8ca1a5d43a0b",
+    "existingUploadedScreenshotSourceCommit": "e580ef1e0b26d466d1c569cf5eda8ca1a5d43a0b",
+    "existingSignedIpaIncludesV2": true,
+    "signedRebuildRequired": false,
+    "latestSignedIpa": "store/review/apple-logo-v2-signing-verification.json",
+    "priorSignedIpaSourceCommit": "7cd0d7517f1cb2e221a3c13b38a0131df5e32813",
+    "latestNativeMedia": "store/screenshots/native-ios-logo-v2/provenance.json",
+    "latestAppleMediaUpload": "store/review/apple-logo-v2-media-upload.json"
+  },
+  "applePriorSignedBuildEvidence": {
     "status": "verified_signed_ipa_not_platform_validated_or_uploaded",
     "runUrl": "https://github.com/mars-tw/taiwan-island-drive/actions/runs/37465941274",
     "headCommit": "7cd0d7517f1cb2e221a3c13b38a0131df5e32813",
@@ -140,14 +283,7 @@
     "uploaded": false,
     "approved": false
   },
-  "applePrivacyDeclaration": {
-    "status": "published_no_data_collected",
-    "declaration": "no_data_collected",
-    "ownerLegalConfirmationCompleted": true,
-    "published": true
-  },
-  "nativeMediaStatus": "apple_native_simulator_media_and_parent_gate_verified_asset_library_uploaded_binary_upload_pending",
-  "appleNativeMediaEvidence": {
+  "applePriorNativeMediaEvidence": {
     "manifest": "store/screenshots/native-ios/manifest.json",
     "captureRunUrl": "https://github.com/mars-tw/taiwan-island-drive/actions/runs/37465941350",
     "captureRunStatus": "completed_success",
@@ -169,6 +305,5 @@
     "parentGateProofManifest": "store/review/native-ios-parent-gate/manifest.json",
     "parentGateReplayRunUrl": "https://github.com/mars-tw/taiwan-island-drive/actions/runs/37489663357",
     "parentGateReplayStatus": "completed_success_verified"
-  },
-  "automaticSignupOrPaymentAuthorized": false
+  }
 }

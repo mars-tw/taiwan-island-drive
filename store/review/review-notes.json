@@ -1,8 +1,8 @@
 {
   "schemaVersion": 1,
-  "status": "prepared_for_owner_review_not_submitted",
+  "status": "apple_prepared_google_closed_alpha_in_review",
   "demoAccountRequired": false,
-  "appReviewContact": "Owner-provided email: a820628a@gmail.com. Legal contact name and phone are still required from the owner.",
+  "appReviewContact": "Apple review contact is owner-confirmed and saved in App Store Connect; private name and phone remain outside this public repository. Public support email: a820628a@gmail.com.",
   "en-US": "No login, subscription or purchase is required. The initial release is free, with no ads or analytics SDK. This is an interactive 3D game with three locally bundled modes, not a remote website or link collection. The interface and instructional speech are in Traditional Chinese. Voice uses a suitable installed local device voice; full visual guidance works if no voice is available.\n\nReview steps:\n1. Launch the app, then choose Cars, Trains or Planes in the lobby.\n2. Cars: select a route and vehicle, start driving, and use touch steering, throttle and brake. Optional tilt controls are behind the parent permission flow; denying motion leaves touch controls available.\n3. Trains: select Lesson 1. Tap Prepare, Start, then Help Stop. The train moves through inertia and air-brake simulation. At the station, open the doors, wait for passengers, then close the doors to finish.\n4. Planes: choose Treasure and Depart. Tap the main action once for assisted flight; left/right are tap controls. Stars are collected through continuous flight. Mail, sightseeing and return-home use the same local simulation.\n5. Parent settings offer mute and graphics quality. Try turning on Airplane Mode after installation: bundled gameplay should remain available.\n6. Inspect privacy/support locally. Parent settings and optional motion require the parent gate. Native external-site/download requests only display an address; no browser opens even after approval. Web external links require a parent challenge. Cancel or give an incorrect answer: no access should be granted.\n\nThere is no backend to enable and no demo credential. The owner must confirm the final signed build, native voice behavior, store privacy answers and parent gate before these notes are uploaded.",
   "zh-TW": "不需要登入、訂閱或購買。第一版免費，沒有廣告或分析 SDK。三個 3D 模式與素材都在安裝包中，並非載入遠端網站的外殼。介面與提示使用繁體中文；語音採已安裝的合適本機音色，缺少音色時仍有完整圖文提示。\n\n驗收步驟：啟動後從大廳選汽車、火車或飛機。汽車可用觸控完成駕駛，拒絕動作感測權限仍可玩。火車第一課：準備、前進、幫我停好、開門等上下客，再關門完成。飛機尋寶：出發後點一下主動作持續助飛，左右用點按；星星須經實際飛行取得。郵件、觀光與返航也走同一套本機模擬。家長可調整靜音與畫質。安裝後切至飛航模式應可繼續遊戲。隱私與支援頁可在本機閱讀；家長設定與動作權限需家長關卡；原生外站及下載只顯示地址，不開啟外部瀏覽器。網頁版外連才在家長確認後開啟。取消或答錯不得取得權限。\n\n沒有需要啟用的後端，也沒有測試帳密。上傳本說明前，應核對最終簽章版本、語音、隱私申報及家長關卡。",
   "evidenceToAttach": [
@@ -14,5 +14,47 @@
     "Local voice unavailable text fallback",
     "Three-mode playthrough and app resume test"
   ],
-  "evidenceStatus": "native_device_capture_pending; existing web screenshots are reference evidence, not falsely labelled native captures"
+  "evidenceStatus": "logo_v2_native_ios_simulator_4_cases_passed_8_screenshots_attached; physical_device_capture_and_gameplay_audit_pending",
+  "googleAppAccess": {
+    "saved": true,
+    "appId": "4975824716105626310",
+    "name": "Parent settings arithmetic gate - no account",
+    "usernameRequired": false,
+    "passwordRequired": false,
+    "instructions": "All gameplay is free and needs no account or password. To open Parent Settings (家長設定), advanced controls or optional tilt settings, solve the addition shown in the parent dialog. Add the two displayed numbers and enter the 3-digit sum within 90 seconds, then tap 驗證並繼續. Example: 55 + 66 = 121. After timeout or 3 wrong attempts, close and reopen for a new question. This is a child-safety gate, not account authentication. Touch controls work without motion permission.",
+    "submittedForReview": true,
+    "submissionState": "closed_alpha_in_review"
+  },
+  "nativeIosMedia": {
+    "manifest": "store/screenshots/native-ios-logo-v2/manifest.json",
+    "provenance": "store/screenshots/native-ios-logo-v2/provenance.json",
+    "uploadEvidence": "store/review/apple-logo-v2-media-upload.json",
+    "captureRunUrl": "https://github.com/mars-tw/taiwan-island-drive/actions/runs/37561855895",
+    "captureRunStatus": "completed_success",
+    "gameSourceCommit": "e580ef1e0b26d466d1c569cf5eda8ca1a5d43a0b",
+    "captureCommit": "e580ef1e0b26d466d1c569cf5eda8ca1a5d43a0b",
+    "screenshotCount": 8,
+    "nativeSimulator": true,
+    "browserSimulated": false,
+    "hardwareTest": false,
+    "rootVisualApproved": true,
+    "storeScreenshotsUploaded": true,
+    "versionScreenshotsAttached": true,
+    "iphoneMediumScreenshotCount": 4,
+    "ipad13ScreenshotCount": 4,
+    "binaryUploaded": false,
+    "submitted": false,
+    "approved": false,
+    "nativeUiCaptureVerified": true,
+    "nativeMediaAcceptancePassed": true,
+    "actualXCTestCases": 4,
+    "failedXCTestCases": 0,
+    "parentGateTests": {
+      "iphone": "passed",
+      "ipad": "passed"
+    },
+    "parentGateSimulatorVerified": true,
+    "parentGateReplayRunUrl": "https://github.com/mars-tw/taiwan-island-drive/actions/runs/37561855895",
+    "parentGateReplayStatus": "completed_success_verified"
+  }
 }
