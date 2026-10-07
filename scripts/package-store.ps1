@@ -16,12 +16,19 @@ try{
  $taskEntries['release/native/island-transport-test.apk']='android/island-transport-test.apk'
  $taskEntries['release/native/island-transport-upload-signed.aab']='android/island-transport-upload-signed.aab'
  $taskEntries['release/island-drive-source.zip']='source/island-drive-source.zip'
+ $taskReference=Join-Path $taskRoot 'APPLE_RELEASE_CREDENTIALS.md'
+ if(Test-Path -LiteralPath $taskReference -PathType Leaf){
+  $taskReferenceItem=Get-Item -LiteralPath $taskReference -Force
+  if(-not ($taskReferenceItem.Attributes -band [IO.FileAttributes]::ReparsePoint)){$taskEntries['APPLE_RELEASE_CREDENTIALS.md']='APPLE_RELEASE_CREDENTIALS.md'}
+ }
  foreach($taskDir in @('store','docs')){
   foreach($taskFile in (Get-ChildItem -LiteralPath (Join-Path $taskRoot $taskDir) -Recurse -File -Force)){
    $taskFull=[IO.Path]::GetFullPath($taskFile.FullName)
    if(-not$taskFull.StartsWith($taskBoundary,[StringComparison]::OrdinalIgnoreCase)){throw 'Store artifact outside project'}
    $taskRelative=$taskFull.Substring($taskBoundary.Length).Replace('\','/')
-   if($taskRelative-match'(^|/)(\.capture-audit|\.audit-tmp|__pycache__)(/|$)' -or $taskRelative-match'\.(log|pyc|jks|keystore|p12|mobileprovision)$'){continue}
+   if($taskRelative -match '(^|/)(\.capture-audit|\.audit-tmp|__pycache__|\.secrets|private_keys|\.appstoreconnect)(/|$)' -or $taskFile.Name -like '.env*'){continue}
+   $taskPublicCertificate=$taskRelative -eq 'store/review/android-upload-cert.pem'
+   if($taskRelative -match '\.(log|pyc|jks|keystore|p12|p8|pfx|pem|key|keychain|keychain-db|csr|mobileprovision)$' -and -not $taskPublicCertificate){continue}
    if($taskDir-eq'docs'-and$taskFile.Name-notmatch'^(store|native)'){continue}
    $taskEntries[$taskRelative]=$taskRelative
   }
@@ -30,6 +37,14 @@ try{
  foreach($taskEntry in $taskEntries.GetEnumerator()){
   [IO.Compression.ZipFileExtensions]::CreateEntryFromFile($taskZip,(Join-Path $taskRoot $taskEntry.Key),$taskEntry.Value,[IO.Compression.CompressionLevel]::Optimal)|Out-Null
  }
- $taskNote=$taskZip.CreateEntry('READ-ME-FIRST.txt');$taskWriter=[IO.StreamWriter]::new($taskNote.Open(),[Text.UTF8Encoding]::new($false));try{$taskWriter.WriteLine('Island Transport Academy: prepared application and submission package.');$taskWriter.WriteLine('Android test APK is installable. Upload-signed AAB still requires a Google Play account and App Signing setup.');$taskWriter.WriteLine('iOS device archive and simulator application are unsigned; no IPA or App Store submission is claimed.');$taskWriter.WriteLine('Both developer accounts are not enrolled. Seller identity and platform forms remain owner tasks.');$taskWriter.WriteLine('Store screenshots are actual gameplay browser captures with explicit simulated metadata, not native-device captures.');$taskWriter.WriteLine('Private keys and passwords are excluded. They remain only in the owner credential store.')}finally{$taskWriter.Dispose()}
+ $taskNote=$taskZip.CreateEntry('READ-ME-FIRST.txt');$taskWriter=[IO.StreamWriter]::new($taskNote.Open(),[Text.UTF8Encoding]::new($false));try{
+  $taskWriter.WriteLine('Island Transport Academy: prepared application and submission package.')
+  $taskWriter.WriteLine('Account, binary and native simulator screenshot evidence: see docs/native-build-verification.md in this package.')
+  $taskWriter.WriteLine('Apple build evidence is not platform upload, submission or approval; Apple binary upload/submission/approval remain incomplete.')
+  $taskWriter.WriteLine('The named unsigned iOS archive/simulator packages are build artifacts, not App Store release delivery.')
+  $taskWriter.WriteLine('Native simulator screenshots and browser preparation media must be distinguished by their manifests; neither is physical-device testing.')
+  $taskWriter.WriteLine('Owner reports Android device verification completed; Console still requires contact-phone verification. Play App Signing, device gameplay QA and actual store submission need separate verified evidence.')
+  $taskWriter.WriteLine('Private keys and passwords are excluded and remain in the owner central private vault. APPLE_RELEASE_CREDENTIALS.md contains non-secret references only.')
+ }finally{$taskWriter.Dispose()}
 }finally{$taskZip.Dispose()}
 Get-Item -LiteralPath $taskZipPath | Select-Object FullName,Length

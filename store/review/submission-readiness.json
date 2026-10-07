@@ -39,16 +39,18 @@
     "googleIdentityDocumentsSubmitted": true,
     "googleIdentityReview": "approved",
     "googlePhoneVerified": false,
-    "googlePhysicalAndroidDeviceVerified": false,
+    "googlePhysicalAndroidDeviceVerified": true,
     "googleAppCreationEnabled": false,
     "googleAppDraftCreated": false,
-    "googlePlatformUploadPerformed": false
+    "googlePlatformUploadPerformed": false,
+    "googleDeviceVerificationEvidence": "owner_reported_2026-10-07_console_home_only_phone_verification_remaining",
+    "googleConsoleStatusCheckedDate": "2026-10-07"
   },
   "blockers": [
     {
       "id": "developer_accounts",
-      "status": "pending_google_phone_and_physical_android_verification",
-      "detail": "Apple Developer Program activation and active membership were verified in the official membership page, and access to App Store Connect Apps was confirmed. Program terms were accepted with explicit owner authorization. Google Play identity verification is approved, confirmed by the official Console and the owner's approval notification; phone and physical Android device verification remain incomplete. Google Create app remains disabled, so no Google app draft or platform upload exists."
+      "status": "pending_google_phone_verification_device_verified_by_owner",
+      "detail": "Apple Developer membership and App record are verified. Google Play identity verification is approved. On 2026-10-07 the owner reported successful physical Android device verification; Console Home corroborates that only contact-phone verification remains listed. Create app is still disabled and the existing contact-phone page is awaiting SMS verification. No Google app draft or platform upload exists."
     },
     {
       "id": "public_contact",
@@ -62,8 +64,8 @@
     },
     {
       "id": "ios_build",
-      "status": "resolved",
-      "detail": "Current Apple signed candidate run 37465941274 on macOS 15 successfully archived, signed, exported and locally verified the 32,592,399-byte App Store Connect IPA for 1.0.0/build 1, bundle tw.mars.islandtransport, internalOnly false, source commit 7cd0d7517f1cb2e221a3c13b38a0131df5e32813. UIKit safe-area constraints are included. An independent download matched the CI report SHA-256. Signature, profile, entitlements and bundled resources passed; this is not Apple platform validation, upload, approval or native UI visual evidence."
+      "status": "previous_signed_build_verified_logo_v2_rebuild_pending",
+      "detail": "Previous Apple signed candidate run 37465941274 on macOS 15 successfully archived, signed, exported and locally verified the 32,592,399-byte App Store Connect IPA for 1.0.0/build 1, bundle tw.mars.islandtransport, internalOnly false, source commit 7cd0d7517f1cb2e221a3c13b38a0131df5e32813. UIKit safe-area constraints are included. An independent download matched the CI report SHA-256. Signature, profile, entitlements and bundled resources passed. Logo v2 was added to source on 2026-10-07 and is not in that IPA; a fresh signed build is required. This is not Apple platform validation, upload, approval or native UI visual evidence."
     },
     {
       "id": "signing_and_upload",
@@ -78,7 +80,7 @@
     {
       "id": "final_binary_privacy_and_gates",
       "status": "pending_final_release_audit",
-      "detail": "Apple signed-binary profile, entitlements, required manifests and bundled models passed CI and independent package verification; private key files are absent from the IPA. Test-only replay 37489663357 at capture commit 11ebddb passed four actual XCTest cases with zero failures; iPhone and iPad parent-gate final results each prove three cancellation assertions, with matching evidence SHA. Production runtime is unchanged from signed source 7cd0d75. Parent-gate Simulator verification is complete; physical-hardware verification, privacy/network behavior, local speech and offline use remain pending. The owner-confirmed Apple No Data Collected declaration is published in App Store Connect."
+      "detail": "Previous Apple signed-binary profile, entitlements, required manifests and bundled models passed CI and independent package verification; private key files are absent from the IPA. Test-only replay 37489663357 at capture commit 11ebddb passed four actual XCTest cases with zero failures; iPhone and iPad parent-gate final results each prove three cancellation assertions, with matching evidence SHA. Production runtime at that replay was unchanged from signed source 7cd0d75. The current source adds logo v2, so existing binary and media evidence remain scoped to the previous branding. Parent-gate Simulator verification is complete for that source; physical-hardware verification, privacy/network behavior, local speech and offline use remain pending. The owner-confirmed Apple No Data Collected declaration is published in App Store Connect."
     },
     {
       "id": "store_forms_and_native_media",
@@ -169,6 +171,19 @@
     "appleValidated": false,
     "uploaded": false,
     "approved": false
+  },
+  "brandingV2": {
+    "date": "2026-10-07",
+    "manifest": "resources/branding/manifest-v2.json",
+    "documentation": "docs/branding/README.md",
+    "appleStoreIcon": "store/assets/app-store-icon-v2-1024.png",
+    "googlePlayStoreIcon": "store/assets/google-play-icon-v2-512.png",
+    "existingSignedIpaIncludesV2": false,
+    "existingUploadedScreenshotsIncludeV2": false,
+    "newIconsUploaded": false,
+    "signedRebuildRequired": true,
+    "nativeSourceIntegrated": true,
+    "nativeIconReport": "resources/branding/native-icons-v2-report.json"
   },
   "nativeMediaEvidence": {
     "browserCapturesSimulated": true,

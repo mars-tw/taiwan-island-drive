@@ -1,6 +1,6 @@
 # 原生 App 建置驗收
 
-2026 年 10 月 6 日，App 1.0.0／build 1，遊戲原始碼 2.3.0。
+2026 年 10 月 6 日，App 1.0.0／build 1，遊戲原始碼 2.3.0。2026-10-07 新增 LOGO v2；下列原生包與已上傳截圖屬先前圖示版本。新圖示已準備於原生工程，重新簽章建製前不可把舊 IPA 當作已包含 v2。詳見 [品牌素材](branding/README.md)。
 
 Android 測試 APK 與上傳簽章 AAB 已在 Windows 實際編譯。官方 bundletool 1.18.3 的下載雜湊已核對，`validate` 通過，包名為 `tw.mars.islandtransport`，target API 36。JDK jarsigner 驗證上傳包簽章成功；APK 另由 apksigner 驗證。AAB 使用本機新建的 3072-bit RSA 上傳金鑰；私鑰與密碼只存於擁有者的憑證資料夾，完整包及 Git 均不包含它們。這個金鑰尚未向 Play 登記。
 
@@ -32,4 +32,4 @@ Android 測試 APK 與上傳簽章 AAB 已在 Windows 實際編譯。官方 bund
 
 Apple Developer Program 已啟用，App Store Connect 已建立「島嶼交通學院」（Apple ID `6819605203`），免費、台灣地區、商店 metadata、身分與審查聯絡資料已儲存並經擁有者確認。發佈簽章 IPA 已驗證；八張原生截圖已上傳素材庫。擁有者已授權使用 Chrome 建立 Developer API key 及加密儲存新金鑰，目前仍待擁有者在 Chrome 登入 Apple，尚未產生 p8，App build 尚未完成平台驗證、上傳或送審。「不收集資料」隱私聲明已獲擁有者最終確認，並已在 App Store Connect 發布。
 
-Google Play 身分審核已通過，電話與實體 Android 裝置驗證仍待完成；尚未建立 Google App 或上傳。Google 商店問卷、商店身分與審查聯絡欄位，以及適用的新個人 Play 帳號封閉測試仍待完成。Android 原生媒體、裝置網路行為、離線與完整家長 gate 的裝置驗收也尚未通過。
+Google Play 身分審核已通過。2026-10-07 擁有者回報實體 Android 裝置驗證已完成；同日 Play 管理中心首頁只列聯絡電話驗證待完成，建立 App 按鈕仍停用。電話驗證頁正等簡訊碼；尚未建立 Google App 或上傳。Google 商店問卷、商店身分與審查聯絡欄位，以及適用的新個人 Play 帳號封閉測試仍待完成。Android 原生媒體、裝置網路行為、離線與完整家長 gate 的裝置驗收也尚未通過。

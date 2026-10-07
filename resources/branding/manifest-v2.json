@@ -1,0 +1,119 @@
+{
+  "schemaVersion": 1,
+  "brandVersion": 2,
+  "generationDate": "2026-10-07",
+  "generator": "OpenAI built-in image_gen",
+  "builtInImagegen": true,
+  "originalsCopiedUnchanged": true,
+  "creativeEditsPerformed": false,
+  "technicalResizeLibrary": "project sharp",
+  "preparationScript": "scripts/prepare-branding-v2.mjs",
+  "promptProvenance": "docs/branding/imagegen-prompts-v2.md",
+  "rootStyleAndWordmarkTextApproved": true,
+  "assets": [
+    {
+      "path": "resources/branding/game-logo-v2-master.png",
+      "width": 1254,
+      "height": 1254,
+      "mode": "RGB",
+      "channels": 3,
+      "alpha": false,
+      "bytes": 1706949,
+      "sha256": "6ae5e2390d99983bcb7db32a5a4755e42f289f22ce0cb10614e2d509a31d7286",
+      "method": "unchanged_generated_original",
+      "generatedSource": "exec-63f49355-78d1-4f18-9b7d-dfd3d84e3f06.png"
+    },
+    {
+      "path": "resources/branding/game-wordmark-v2.png",
+      "width": 1983,
+      "height": 793,
+      "mode": "RGBA",
+      "channels": 4,
+      "alpha": true,
+      "bytes": 1018252,
+      "sha256": "7f24770f8317f2c69ba3f686092804c19e50082ae517a77210d8e1ba556e6362",
+      "method": "unchanged_generated_original",
+      "generatedSource": "exec-d7fa7524-ea6f-4354-bb65-3653b8f83433.png"
+    },
+    {
+      "path": "store/assets/app-store-icon-v2-1024.png",
+      "width": 1024,
+      "height": 1024,
+      "mode": "RGB",
+      "channels": 3,
+      "alpha": false,
+      "bytes": 1067763,
+      "sha256": "5e63b18a33980378608a60b2f424213fd2e09f43797ba3715d447cd0ab7ff2c5",
+      "method": "technical_resize_lanczos3_rgb",
+      "source": "resources/branding/game-logo-v2-master.png"
+    },
+    {
+      "path": "store/assets/google-play-icon-v2-512.png",
+      "width": 512,
+      "height": 512,
+      "mode": "RGB",
+      "channels": 3,
+      "alpha": false,
+      "bytes": 309460,
+      "sha256": "590f9ccef491aac6200a5223d01e360b46d7d19523134855bc637ecf8c52418b",
+      "method": "technical_resize_lanczos3_rgb",
+      "source": "resources/branding/game-logo-v2-master.png"
+    },
+    {
+      "path": "public/branding/icon-v2-192.png",
+      "width": 192,
+      "height": 192,
+      "mode": "RGB",
+      "channels": 3,
+      "alpha": false,
+      "bytes": 52595,
+      "sha256": "23ac5746bf18ba70c967ade06b14ad4d74a09cc7ede33a9c8f926d95f1c11c22",
+      "method": "technical_resize_lanczos3_rgb",
+      "source": "resources/branding/game-logo-v2-master.png"
+    },
+    {
+      "path": "public/branding/icon-v2-512.png",
+      "width": 512,
+      "height": 512,
+      "mode": "RGB",
+      "channels": 3,
+      "alpha": false,
+      "bytes": 309460,
+      "sha256": "590f9ccef491aac6200a5223d01e360b46d7d19523134855bc637ecf8c52418b",
+      "method": "technical_resize_lanczos3_rgb",
+      "source": "resources/branding/game-logo-v2-master.png"
+    },
+    {
+      "path": "public/branding/wordmark-v2.png",
+      "width": 1983,
+      "height": 793,
+      "mode": "RGBA",
+      "channels": 4,
+      "alpha": true,
+      "bytes": 1018252,
+      "sha256": "7f24770f8317f2c69ba3f686092804c19e50082ae517a77210d8e1ba556e6362",
+      "method": "unchanged_copy_alpha_preserved",
+      "source": "resources/branding/game-wordmark-v2.png"
+    }
+  ],
+  "webIntegration": {
+    "status": "versioned_icon_and_header_references_updated",
+    "manifest": "public/manifest.webmanifest",
+    "header": "index.html",
+    "gameIconReferences": [
+      "car/index.html",
+      "train/index.html",
+      "flight/index.html"
+    ]
+  },
+  "nativeIntegrationPending": false,
+  "nativeIntegration": {
+    "status": "source_icons_integrated_binary_rebuild_pending",
+    "assetCatalogRegenerated": true,
+    "report": "resources/branding/native-icons-v2-report.json",
+    "signedIpaRegenerated": false,
+    "nativeScreenshotsRegenerated": false,
+    "newStoreIconsUploaded": false,
+    "existingNativeAndStoreIconsPreserved": true
+  }
+}

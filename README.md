@@ -16,9 +16,9 @@
 
 ## iOS／Android 商店版準備包
 
-已建立 Capacitor 原生工程，全部遊戲與模型本機打包約 41 MB。Android 測試 APK、上傳簽章 AAB、iOS Simulator App 及未簽章裝置封存皆已建製，96 項測試通過。完整交付與重建見 [native-package](docs/native-package.md)，建置證據見 [native-build-verification](docs/native-build-verification.md)。
+已建立 Capacitor 原生工程，全部遊戲與模型本機打包。Android 測試 APK、上傳簽章 AAB、iOS Simulator App 與發佈簽章 IPA 皆已有建製證據，104 項程式測試通過。2026-10-07 新 [LOGO 與透明字標](docs/branding/README.md)已準備；舊原生包仍須重新建製才會包含新圖示。完整交付與重建見 [native-package](docs/native-package.md)，建置證據見 [native-build-verification](docs/native-build-verification.md)。
 
-兩個開發者帳號尚未建立，未在 App Store／Google Play 送審或上架。簽章私鑰與密碼不在開源專案或下載 ZIP 中。
+Apple 會員已啟用，App record 與簽章 IPA 已建立；Google Play 身分審核已通過，擁有者已完成裝置驗證，聯絡電話驗證仍待完成。目前未在 App Store／Google Play 送審或上架。簽章與上傳金鑰的非秘密索引在 [APPLE_RELEASE_CREDENTIALS.md](APPLE_RELEASE_CREDENTIALS.md)，私鑰與密碼保留於專案外。
 
 ## 手機遊玩
 

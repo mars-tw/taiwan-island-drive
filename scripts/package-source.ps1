@@ -10,7 +10,7 @@ if ([string]::IsNullOrWhiteSpace($OutputPath)) {
 $archivePath = [IO.Path]::GetFullPath($OutputPath)
 if ([IO.Path]::GetExtension($archivePath) -ne '.zip') { throw 'Output must be a .zip file.' }
 $allowed = @(
-  'README.md', 'LICENSE', 'CONTRIBUTING.md', '.gitignore', '.gitattributes', '.github',
+  'README.md', 'LICENSE', 'CONTRIBUTING.md', 'APPLE_RELEASE_CREDENTIALS.md', '.gitignore', '.gitattributes', '.github',
   'package.json', 'package-lock.json', 'index.html', 'vite.config.js',
   'src', 'public', 'blender', 'docs', 'tests', 'scripts', 'car', 'train', 'flight', 'dist',
   'capacitor.config.json', 'android', 'ios', 'resources', 'store'
@@ -53,9 +53,11 @@ try {
       }
       if ($file.Attributes -band [IO.FileAttributes]::ReparsePoint) { continue }
       $entry = $fullPath.Substring($boundary.Length).Replace('\', '/')
-      if ($entry -match '(^|/)(node_modules|\.audit-tmp|downloads|release|\.git|__pycache__)(/|$)') { continue }
+      if ($entry -match '(^|/)(node_modules|\.audit-tmp|downloads|release|\.git|__pycache__|\.secrets|private_keys|\.appstoreconnect)(/|$)') { continue }
       if ($entry -match '^android/(\.gradle|build|app/build|app/src/main/assets/public)(/|$)' -or $entry -match '^ios/App/(App/public|DerivedData|build)(/|$)' -or $entry -match '(^|/)(xcuserdata|\.capture-audit)(/|$)') { continue }
-      if ($file.Name -eq 'local.properties' -or $entry -match '\.(jks|keystore|p12|mobileprovision|apk|aab|ipa)$') { continue }
+      # Deliberately public certificate only; no other PEM/key container is shipped.
+      $publicCertificate = $entry -eq 'store/review/android-upload-cert.pem'
+      if ($file.Name -eq 'local.properties' -or ($entry -match '\.(jks|keystore|p12|p8|pfx|pem|key|keychain|keychain-db|csr|mobileprovision|apk|aab|ipa)$' -and -not $publicCertificate)) { continue }
       if ($entry -match '\.(zip|blend[0-9]+|log|pyc)$' -or $file.Name -like '.env*') { continue }
       if ($fullPath -eq $archivePath) { continue }
       [IO.Compression.ZipFileExtensions]::CreateEntryFromFile($zip, $fullPath, $entry, [IO.Compression.CompressionLevel]::Optimal) | Out-Null

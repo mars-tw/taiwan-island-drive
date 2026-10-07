@@ -17,6 +17,17 @@ ios/App/App.xcodeproj/xcuserdata/
 *.jks
 *.keystore
 *.p12
+*.p8
+*.pfx
+*.pem
+*.key
+*.keychain
+*.keychain-db
+*.csr
+!store/review/android-upload-cert.pem
+.secrets/
+private_keys/
+.appstoreconnect/
 *.mobileprovision
 *.ipa
 *.apk

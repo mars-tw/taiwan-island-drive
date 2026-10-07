@@ -34,9 +34,9 @@ iOS 用 macOS／Xcode26 以上，開啟 `ios/App/App.xcodeproj`，選擇擁有�
 
 ## Apple 簽章與手動上傳
 
-2026-10-06 已在 Apple 官方會員頁核實會員啟用，Team ID 為 `93L76Q5PT8`。Bundle ID 與 App Store Connect App record 已註冊；Apple Distribution 憑證及此 App 的 App Store profile 已建立，`.p12` 已匯出至專案外的受保護資料夾。憑證／私鑰配對，以及 profile 的 App ID、Team、憑證與發行類型均已驗證。API 存取申請仍待使用者接受 Apple 的內部使用承諾，尚未建立 API key、建製簽章 IPA 或上傳平台。原本 `native.yml` 保留未簽章 CI；新增 `apple-release.yml` 只接受 main 分支的 `workflow_dispatch`。
+2026-10-06 已在 Apple 官方會員頁核實會員啟用，Team ID 為 `93L76Q5PT8`。Bundle ID 與 App Store Connect App record 已註冊；Apple Distribution 憑證及此 App 的 App Store profile 已建立，`.p12` 已匯出至專案外的受保護資料夾。憑證／私鑰配對，以及 profile 的 App ID、Team、憑證與發行類型均已驗證。API 存取承諾已接受，發佈簽章 IPA 已建製並驗證；既有 API key 的 .p8 未取得，替代金鑰仍待擁有者完成 Chrome 登入，因此尚未完成 Apple 平台驗證或上傳。最新狀態見 [建製驗收](native-build-verification.md)與根目錄 [憑證索引](../APPLE_RELEASE_CREDENTIALS.md)。原本 `native.yml` 保留未簽章 CI；新增 `apple-release.yml` 只接受 main 分支的 `workflow_dispatch`。
 
-目前正在建立只允許 main 分支、手動執行的 `apple-release` environment；本 repo 此前沒有該 environment 的保護設定，這次不涉及移除既有保護。把下列資料加入該 environment 的 encrypted secrets，不要把值寫進 repository、對話、workflow input 或 build log。
+`apple-release` environment 已建立，限定 main 分支與手動 workflow；前四項簽章 Secrets 已設定，後三項 API Secrets 仍缺 .p8。重設或新增時，只加入該 environment 的 encrypted secrets，不把值寫進 repository、對話、workflow input 或 build log。
 
 | Secret | 用途 |
 | --- | --- |
