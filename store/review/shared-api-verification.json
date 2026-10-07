@@ -44,7 +44,13 @@
     "existingSessionAssetReservePutCommitVerified": true,
     "appStoreVersionState": "WAITING_FOR_REVIEW",
     "appStoreSubmissionVerified": true,
-    "submissionEvidence": "store/review/apple-api-submission-verification.json"
+    "submissionEvidence": "store/review/apple-api-submission-verification.json",
+    "latestReadOnlyStatusEvidence": {
+      "checkedAt": "2026-10-07T17:49:54.674068+08:00",
+      "state": "WAITING_FOR_REVIEW",
+      "source": "owner-local game-store-publisher/output/apple-existing-review-live-readback.json",
+      "remoteMutations": 0
+    }
   },
   "google": {
     "oauthAuthenticated": true,
@@ -67,7 +73,7 @@
     "actualTesterWhitelistCount": 16,
     "testerRosterPrivate": true,
     "sharedDraftValidationCommitVerified": true,
-    "sharedPermissionValidationBoundary": "The shared service account subsequently validated and committed twelve peer internal test tracks without permission expansion. This in-review App is not re-edited or re-tested; production permission is not inferred.",
+    "sharedPermissionValidationBoundary": "Testing-release edits validated/committed on twelve peer apps. Separate pure listing/contact/icon edits returned403 during validation, with no commit. Draft-management permission remains unconfirmed; the error does not prove its cause. This App remains in review with no new edit or track change.",
     "priorSharedDraftValidationFailure": {
       "httpStatus": 403,
       "observedOnPeerPackage": true,
@@ -84,7 +90,22 @@
       "thisAppTrackChanged": false,
       "productionPublicationVerified": false
     },
-    "futureDefaultTesterRosterCount": 20
+    "futureDefaultTesterRosterCount": 20,
+    "sharedDraftValidationCommitScope": "testing release edits on peer projects only",
+    "sharedTestingReleaseValidationCommitVerified": true,
+    "sharedPureMetadataValidationVerified": false,
+    "sharedPureMetadataCommitVerified": false,
+    "sharedPureMetadataValidationEvidence": {
+      "source": "owner-local game-store-publisher/output/google-new-games-metadata.json",
+      "scope": "listing/contact/icon edits without track operations",
+      "peerApps": 12,
+      "metadataPutAndReadbackVerified": true,
+      "validationHttpStatus": 403,
+      "commitAttempted": false,
+      "noNewPermissionsGranted": true,
+      "draftAppManagementPermissionConfirmed": false,
+      "permissionCauseProven": false
+    }
   },
   "credentialsCommitted": false,
   "privateCredentialReference": "<owner-private-vault>/game-store-publisher/credentials.json",

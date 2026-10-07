@@ -46,4 +46,6 @@ Apple API key 不適用於 Google Play。其他遊戲需自行設定該儲存庫
 
 共用 Google API 也已實測能讀取 `tw.mars.islandtransport`，目前授權包含資訊、測試發佈及商店資料，沒有管理員、財務或正式發佈權限。此 App 的封閉 Alpha 已送審，16 人白名單仍須實際加入並滿足連續測試要求。[兩平台 API 核對](store/review/shared-api-verification.json)記錄實際能力；私鑰與 service-account 檔案保留中央。新 LOGO 的原生套用見 [LOGO 文件](docs/branding/README.md)。
 
-共用工作後續已使用同一 Google 服務帳戶，完成另外 12 款遊戲的內部測試 validate／commit，沒有擴權。先前一次 403 保留為歷史紀錄；不能再據此判定共用服務帳戶缺少驗證或提交能力。島嶼已送審的封閉測試未因此新增 edit、重傳或更換名單；共用 20 人預設留待後續測試版本使用，正式發布權限仍另行確認。
+共用工作已使用同一 Google 服務帳戶，完成另外 12 款遊戲的內部測試版本 validate／commit，沒有擴權。這項驗證只涵蓋測試版本 edit。另一批僅修改商店文字、聯絡欄位及圖示的 edit，寫入及讀回成功，但 validate 返回 403，未執行 commit；草稿管理權限仍待確認，不能將該錯誤單獨視為已證明的權限原因。
+
+島嶼已送審的封閉測試未因此新增 edit、重傳或更換名單；共用 20 人預設留待後續測試版本使用，正式發布權限仍另行確認。
