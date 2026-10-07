@@ -66,8 +66,25 @@
     "closedTestConsoleReviewState": "in_review",
     "actualTesterWhitelistCount": 16,
     "testerRosterPrivate": true,
-    "sharedDraftValidationCommitVerified": false,
-    "sharedPermissionValidationBoundary": "Peer package edit validation returned403; no validation/commit is attempted on this in-review App."
+    "sharedDraftValidationCommitVerified": true,
+    "sharedPermissionValidationBoundary": "The shared service account subsequently validated and committed twelve peer internal test tracks without permission expansion. This in-review App is not re-edited or re-tested; production permission is not inferred.",
+    "priorSharedDraftValidationFailure": {
+      "httpStatus": 403,
+      "observedOnPeerPackage": true,
+      "rootCauseVerified": false,
+      "preservedAsHistory": true
+    },
+    "sharedDraftValidationCommitEvidence": {
+      "source": "owner-local game-store-publisher/output/all-games-release-progress.json",
+      "sourceUpdatedAt": "2026-10-07T16:20:24.027848+08:00",
+      "internalTracksVerified": 12,
+      "newInternalTracksVerified": 11,
+      "permissionExpansionPerformed": false,
+      "thisAppNewEditCreated": false,
+      "thisAppTrackChanged": false,
+      "productionPublicationVerified": false
+    },
+    "futureDefaultTesterRosterCount": 20
   },
   "credentialsCommitted": false,
   "privateCredentialReference": "<owner-private-vault>/game-store-publisher/credentials.json",
