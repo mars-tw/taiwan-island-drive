@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-# Uses only Apple's Transporter bundled in Xcode. No Apple ID password is accepted.
+# Uses only Apple's upload tools from the selected Xcode. No Apple ID password is accepted.
 set +x
 set -euo pipefail
 umask 077
@@ -50,14 +50,48 @@ PY
 unset APP_STORE_CONNECT_API_KEY_BASE64
 openssl pkey -in "$TASK_TMP/private_keys/AuthKey_$APP_STORE_CONNECT_KEY_ID.p8" -check -noout >"$TASK_TMP/key-check.log" 2>&1 || fail 'invalid API private key'
 XCODE_CONTENTS="$(cd "$DEVELOPER_DIR/.." && pwd)"
+STAGE='Apple upload tool discovery'
 TRANSPORTER=''
-while IFS= read -r candidate; do [ ! -x "$candidate" ] || { TRANSPORTER="$candidate"; break; }; done < <(find "$XCODE_CONTENTS/SharedFrameworks" -name iTMSTransporter -type f 2>/dev/null)
-[ -n "$TRANSPORTER" ] || fail 'Apple iTMSTransporter executable not found in Xcode; do not substitute third-party uploaders'
+while IFS= read -r candidate; do [ ! -x "$candidate" ] || { TRANSPORTER="$candidate"; break; }; done < <(find "$XCODE_CONTENTS/SharedFrameworks" -name iTMSTransporter \( -type f -o -type l \) 2>/dev/null)
+UPLOAD_TOOL="$TRANSPORTER"
+UPLOAD_TOOL_KIND='transporter'
+if [ -z "$UPLOAD_TOOL" ]; then
+  UPLOAD_TOOL="$(/usr/bin/xcrun --find altool 2>/dev/null || true)"
+  UPLOAD_TOOL_KIND='altool'
+fi
+[ -n "$UPLOAD_TOOL" ] && [ -x "$UPLOAD_TOOL" ] || fail 'No official upload tool found in the selected Xcode'
+UPLOAD_TOOL="$(python3 - "$UPLOAD_TOOL" "$XCODE_CONTENTS" <<'PY'
+import pathlib,sys
+tool=pathlib.Path(sys.argv[1]).resolve(); root=pathlib.Path(sys.argv[2]).resolve()
+if not tool.is_relative_to(root): raise SystemExit('Upload tool is outside the selected Xcode')
+print(tool)
+PY
+)"
+export APPLE_UPLOAD_TOOL_KIND="$UPLOAD_TOOL_KIND"
+printf 'Selected Apple upload tool: %s\n' "$UPLOAD_TOOL_KIND"
+if [ "$UPLOAD_TOOL_KIND" = altool ]; then
+  "$UPLOAD_TOOL" --help >"$TASK_TMP/altool-help.log" 2>&1 || true
+  python3 - "$TASK_TMP/altool-help.log" <<'PY'
+import pathlib,sys
+help_text=pathlib.Path(sys.argv[1]).read_text(errors='replace')
+required=('--validate-app','--upload-app','--apiKey','--apiIssuer')
+if not all(flag in help_text for flag in required): raise SystemExit('Selected altool lacks required App Store API-key commands')
+PY
+fi
 cd "$TASK_TMP"
-# Current working directory/private_keys is Apple's documented API key lookup location.
-run_transporter() {
+# Apple's altool guide documents API_PRIVATE_KEYS_DIR; no home-directory key is used.
+export API_PRIVATE_KEYS_DIR="$TASK_TMP/private_keys"
+run_apple_tool() {
   local operation="$1"
-  if "$TRANSPORTER" -m "$operation" -assetFile "$IPA" -apiKey "$APP_STORE_CONNECT_KEY_ID" -apiIssuer "$APP_STORE_CONNECT_ISSUER_ID" -v informational >"$TASK_TMP/$operation.log" 2>&1; then return 0; fi
+  local action='--validate-app'
+  local -a command
+  if [ "$UPLOAD_TOOL_KIND" = transporter ]; then
+    command=("$UPLOAD_TOOL" -m "$operation" -assetFile "$IPA" -apiKey "$APP_STORE_CONNECT_KEY_ID" -apiIssuer "$APP_STORE_CONNECT_ISSUER_ID" -v informational)
+  else
+    [ "$operation" != upload ] || action='--upload-app'
+    command=("$UPLOAD_TOOL" "$action" -f "$IPA" -t ios --apiKey "$APP_STORE_CONNECT_KEY_ID" --apiIssuer "$APP_STORE_CONNECT_ISSUER_ID" --output-format json)
+  fi
+  if "${command[@]}" >"$TASK_TMP/$operation.log" 2>&1; then return 0; fi
   python3 - "$TASK_TMP/$operation.log" <<'PY'
 import pathlib,re,sys
 codes=sorted(set(re.findall(r'\bITMS-[0-9]+\b',pathlib.Path(sys.argv[1]).read_text(errors='replace'))))
@@ -66,15 +100,15 @@ PY
   return 1
 }
 STAGE='Apple validation'
-run_transporter verify || fail 'Apple validation failed; upload was not attempted'
+run_apple_tool verify || fail 'Apple validation failed; upload was not attempted'
 if [ "$MODE" = upload-testflight ]; then
   STAGE='Apple upload'
-  run_transporter upload || fail 'Apple upload failed; no acceptance is claimed'
+  run_apple_tool upload || fail 'Apple upload failed; no acceptance is claimed'
 fi
 python3 - "$OUT" "$MODE" <<'PY'
-import datetime,hashlib,json,pathlib,sys
+import datetime,hashlib,json,os,pathlib,sys
 d=pathlib.Path(sys.argv[1]); uploaded=sys.argv[2]=='upload-testflight'
-report={'generatedAt':datetime.datetime.now(datetime.timezone.utc).isoformat(),'mode':sys.argv[2],'sha256':hashlib.sha256((d/'IslandTransport.ipa').read_bytes()).hexdigest(),'appleValidated':True,'uploadCommandAccepted':uploaded,'status':'upload_accepted_processing_unverified' if uploaded else 'apple_validation_passed_no_upload','appleProcessingVerified':False,'testFlightAvailableVerified':False,'appStoreApproved':False}
+report={'generatedAt':datetime.datetime.now(datetime.timezone.utc).isoformat(),'mode':sys.argv[2],'uploadTool':os.environ['APPLE_UPLOAD_TOOL_KIND'],'sha256':hashlib.sha256((d/'IslandTransport.ipa').read_bytes()).hexdigest(),'appleValidated':True,'uploadCommandAccepted':uploaded,'status':'upload_accepted_processing_unverified' if uploaded else 'apple_validation_passed_no_upload','appleProcessingVerified':False,'testFlightAvailableVerified':False,'appStoreApproved':False}
 (d/'platform-result.json').write_text(json.dumps(report,indent=2)+'\n')
 PY
 if [ "$MODE" = upload-testflight ]; then printf 'Apple accepted the upload command. Processing/TestFlight availability and App Store review remain unverified.\n'; else printf 'Apple validation passed. No upload was performed.\n'; fi

@@ -2,6 +2,7 @@
 *.js text eol=lf
 *.mjs text eol=lf
 *.py text eol=lf
+*.sh text eol=lf
 *.yml text eol=lf
 *.cmd text eol=crlf
 *.png binary
@@ -13,3 +14,4 @@ store/review/android-logo-v2-verification.json -text whitespace=cr-at-eol
 store/screenshots/native-ios-logo-v2/manifest.json -text whitespace=cr-at-eol
 store/screenshots/native-ios-logo-v2/iphone/parent-gate-evidence/parent-gate-result.json -text whitespace=cr-at-eol
 store/screenshots/native-ios-logo-v2/ipad/parent-gate-evidence/parent-gate-result.json -text whitespace=cr-at-eol
+store/review/apple-upload-7c69f01-verification.json -text whitespace=cr-at-eol
