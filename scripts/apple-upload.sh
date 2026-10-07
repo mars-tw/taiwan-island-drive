@@ -70,6 +70,7 @@ PY
 export APPLE_UPLOAD_TOOL_KIND="$UPLOAD_TOOL_KIND"
 printf 'Selected Apple upload tool: %s\n' "$UPLOAD_TOOL_KIND"
 if [ "$UPLOAD_TOOL_KIND" = altool ]; then
+  printf 'Checking official altool command support.\n'
   "$UPLOAD_TOOL" --help >"$TASK_TMP/altool-help.log" 2>&1 || true
   python3 - "$TASK_TMP/altool-help.log" <<'PY'
 import pathlib,sys
@@ -77,6 +78,7 @@ help_text=pathlib.Path(sys.argv[1]).read_text(errors='replace')
 required=('--validate-app','--upload-app','--apiKey','--apiIssuer')
 if not all(flag in help_text for flag in required): raise SystemExit('Selected altool lacks required App Store API-key commands')
 PY
+  printf 'Official altool command support verified.\n'
 fi
 cd "$TASK_TMP"
 # Apple's altool guide documents API_PRIVATE_KEYS_DIR; no home-directory key is used.
@@ -100,9 +102,12 @@ PY
   return 1
 }
 STAGE='Apple validation'
+printf 'Starting Apple platform validation.\n'
 run_apple_tool verify || fail 'Apple validation failed; upload was not attempted'
+printf 'Apple platform validation passed.\n'
 if [ "$MODE" = upload-testflight ]; then
   STAGE='Apple upload'
+  printf 'Starting Apple platform upload.\n'
   run_apple_tool upload || fail 'Apple upload failed; no acceptance is claimed'
 fi
 python3 - "$OUT" "$MODE" <<'PY'

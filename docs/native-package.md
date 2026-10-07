@@ -53,8 +53,8 @@ iOS 用 macOS／Xcode26 以上，開啟 `ios/App/App.xcodeproj`，選擇擁有�
 手動 workflow 有三個模式：
 
 - `build-only`：預設。使用 runner 實際安裝並驗證的穩定 Xcode，產出簽章 IPA，做本機簽章、Team、bundle ID、版本／build、profile、entitlements、隱私 manifest 與內嵌遊戲資源檢查；不向 Apple 驗證或上傳。官方 runner manifest 查核及 SPM 套件建製可能使用網路。
-- `validate`：產生相同 IPA，重新核對簽章與檔案 SHA-256，再用 Xcode 內建的 Apple `iTMSTransporter -m verify -assetFile` 向 Apple 驗證；不執行 upload。
-- `upload-testflight`：必須明確選取。先完成上述驗證，再執行 `iTMSTransporter -m upload -assetFile`。選用一般 App Store Connect export，`testFlightInternalTestingOnly=false`，可供後續正式送審。
+- `validate`：產生 IPA，重新核對簽章與檔案 SHA-256，再用已選 Xcode 的官方工具向 Apple 驗證。優先使用 `iTMSTransporter -m verify -assetFile`；找不到時，由 `/usr/bin/xcrun --find altool` 選取官方 `altool --validate-app`。不執行 upload。
+- `upload-testflight`：必須明確選取。先完成上述驗證，再用同一官方工具執行 `iTMSTransporter -m upload -assetFile` 或 `altool --upload-app`。兩種工具都使用暫存 API 私鑰；altool 明確指定 `API_PRIVATE_KEYS_DIR`，執行檔解析後必須位於已選 Xcode 內。選用一般 App Store Connect export，`testFlightInternalTestingOnly=false`，可供後續正式送審。
 
 工具選擇先檢查有效的 `DEVELOPER_DIR`，再檢查 runner 的 `xcode-select -p`；若不合格，才逐一檢查 `/Applications/Xcode*.app`。每個候選都要實際執行 `xcodebuild -version` 與 iPhoneOS SDK 查詢，Xcode 與 SDK 主版本均須至少 26，版本／build 配對須在官方穩定 runner 清單內；路徑、版本輸出或 App metadata 含 Beta／RC／preview 的候選拒絕使用。官方清單暫時無法取得時，使用 2026-10-06 已查核的穩定配對；未知 build 不會自行標為通過。選定工具以 `GITHUB_ENV` 傳給同 job 的 signer／uploader，報告記錄實際版本、build、SDK，IPA compiler build 也會核對。[Apple SDK 門檻](https://developer.apple.com/news/?id=6lxhtioi)、[官方 macOS runner manifest](https://github.com/actions/runner-images/blob/main/images/macos/macos-26-Readme.md)
 
@@ -64,7 +64,7 @@ iOS 用 macOS／Xcode26 以上，開啟 `ios/App/App.xcodeproj`，選擇擁有�
 
 成功簽章後的 artifact 只含 `IslandTransport.ipa`、`verification.json`，以及實際平台操作成功才產出的 `platform-result.json`。IPA 依法定發行格式含 `embedded.mobileprovision`；**不額外發布 profile 檔、`.p12`、`.p8`、keychain、archive、ExportOptions 或原始私密 log**。腳本用 `umask 077`、停用 shell tracing、temporary keychain／profile 與 EXIT／INT／TERM trap 清除。強制終止 runner 時依 GitHub 臨時 runner 的生命週期銷毀；禁止自行公開 runner diagnostics 或原始私密 log。
 
-`platform-result.json` 的 `upload_accepted_processing_unverified` 只代表 Apple 上傳命令回傳成功。要在 App Store Connect 核實 processing 完成、TestFlight build 可用及實機測試，再選取該 build 送 App Review；腳本不會自動送審、公開發佈、改 metadata 為成功，也不會建立測試者或寄邀請。[Apple 上傳／處理流程](https://developer.apple.com/help/app-store-connect/manage-builds/upload-builds/)、[Transporter 官方參數](https://help.apple.com/itc/transporteruserguide/en.lproj/static.html)、[Internal Only 的限制](https://developer.apple.com/help/app-store-connect/test-a-beta-version/add-internal-testers/)
+`platform-result.json` 的 `upload_accepted_processing_unverified` 只代表 Apple 上傳命令回傳成功，`uploadTool` 記錄實際使用的工具。要在 App Store Connect 核實 processing 完成、TestFlight build 可用及實機測試，再選取該 build 送 App Review；腳本不會自動送審、公開發佈、改 metadata 為成功，也不會建立測試者或寄邀請。[Apple 上傳／處理流程](https://developer.apple.com/help/app-store-connect/manage-builds/upload-builds/)、[altool 官方參數](https://help.apple.com/asc/appsaltool/#/apdATD1E53-D1E1A1303-D1E53A1126)、[Transporter 官方參數](https://help.apple.com/itc/transporteruserguide/en.lproj/static.html)、[Internal Only 的限制](https://developer.apple.com/help/app-store-connect/test-a-beta-version/add-internal-testers/)
 
 ### CSR 與憑證來源
 

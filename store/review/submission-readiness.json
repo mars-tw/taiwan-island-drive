@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "status": "google_closed_alpha_in_review_apple_upload_pending_production_not_ready",
+  "status": "apple_app_store_waiting_for_review_google_closed_alpha_in_review_production_testing_pending",
   "lookupDate": "2026-10-07",
   "ownerConfirmed": {
     "appleDeveloperAccountExists": true,
@@ -12,7 +12,7 @@
     "appleAppRecordCreated": true,
     "appleAppDraftCreated": true,
     "appleAppStoreConnectAppleId": "6819605203",
-    "appleAppStoreConnectVersionState": "prepare_for_submission",
+    "appleAppStoreConnectVersionState": "WAITING_FOR_REVIEW",
     "appleStoreMetadataSaved": true,
     "appleFreeTaiwanDistributionSaved": true,
     "appleIdentityConfirmedAndSaved": true,
@@ -27,9 +27,9 @@
     "ownerAppleLoginInChromeRequired": false,
     "appleUploadApiKeyCreationStatus": "shared_owner_authorized_app_manager_key_available_encrypted_ci_secrets_configured",
     "appleUploadApiKeyAvailable": true,
-    "applePlatformValidationPerformed": false,
-    "applePlatformUploadPerformed": false,
-    "appleSubmissionPerformed": false,
+    "applePlatformValidationPerformed": true,
+    "applePlatformUploadPerformed": true,
+    "appleSubmissionPerformed": true,
     "appleApproved": false,
     "applePrivacyNoCollectionNewLegalConfirmationCompleted": true,
     "applePrivacyDeclarationPublished": true,
@@ -70,7 +70,8 @@
     "appleVersionScreenshotsAttached": true,
     "appleVersionScreenshotCount": 8,
     "appleLatestScreenshotSourceCommit": "e580ef1e0b26d466d1c569cf5eda8ca1a5d43a0b",
-    "appleUploadSecretsConfigured": true
+    "appleUploadSecretsConfigured": true,
+    "applePlatformValidationMethod": "official_API_build_VALID"
   },
   "blockers": [
     {
@@ -91,12 +92,12 @@
     {
       "id": "ios_build",
       "status": "resolved",
-      "detail": "Fresh logo-v2 signed IPA from run37559519552/sourcee580ef1: 37,440,876 bytes, 1.0.0/build1, app-store-connect export, internalOnlyfalse. Actual Home logo PNG matches Git source and code-signing sealed hash; Info.plist icon name TransportIconV2, Assets.car present. CI signature/profile/entitlements/resources passed and Root/worker hashes match. Windows compiled-icon-pixel inspection was not performed; new native UI replay run37561855895 passed4 actual XCTest cases with0 failures and8 native Simulator PNGs were visually reviewed; this is not Apple platform validation, upload, submission or approval."
+      "detail": "Latest signed source01c0753 IPA37440871B retains locally/CI verified profile, entitlements, resources and sealed new logo. Runtime matches the e580 native Simulator capture/four actual XCTest cases. Official API parent COMPLETE/Build VALID; App Store version WAITING_FOR_REVIEW. Compiled icon pixel inspection and physical hardware QA remain unverified."
     },
     {
       "id": "signing_and_upload",
-      "status": "upload_credentials_configured_apple_platform_upload_pending_google_closed_review_in_progress",
-      "detail": "Owner-authorized shared Apple App Manager key VF9WTT4UYT is available in the central private vault and three encrypted API secrets are configured for this repo apple-release environment. Existing Distribution/profile/signing secrets are preserved; old N5VT3WW79X key is not revoked. Logo-v2 signed IPA verified; Apple platform validation/upload still pending. Google logo-v2 AAB accepted and closed Alpha is in review."
+      "status": "resolved_api_upload_and_app_store_review_submitted",
+      "detail": "Shared credentials remain in the central vault and encrypted CI Secrets. CLI37567820714 timed out; Root resumed the same upload session through official API with the exact signed IPA,8 raw-byte PUTs and documented MD5 commitment. Parent COMPLETE, Build VALID, linked1.0.0 and submitted one App Store review. WAITING_FOR_REVIEW; not approved. See apple-api-submission-verification.json."
     },
     {
       "id": "new_personal_play_account_testing",
@@ -106,12 +107,12 @@
     {
       "id": "final_binary_privacy_and_gates",
       "status": "pending_final_release_audit",
-      "detail": "Current logo-v2 signed IPA/sourcee580 passes signature/profile/entitlements/resources verification. New native Simulator replay37561855895 at the same source passes4 actual XCTest cases with0 failures; both parent-gate results strictly prove cancelDenied/settingsStayedClosed/secondRequestStillRequiresGate. Eight RGB PNGs retain CI hashes, Root visual review passed and8 were uploaded/attached to Apple version1.0.0 (4 iPhone medium,4 iPad13). This is Simulator evidence; physical hardware, privacy/network behavior, local speech and offline use remain pending. Prior7cd/11eb evidence remains unchanged. Apple binary validation/upload/review remain pending."
+      "detail": "Current logo-v2 signed IPA/sourcee580 passes signature/profile/entitlements/resources verification. New native Simulator replay37561855895 at the same source passes4 actual XCTest cases with0 failures; both parent-gate results strictly prove cancelDenied/settingsStayedClosed/secondRequestStillRequiresGate. Eight RGB PNGs retain CI hashes, Root visual review passed and8 were uploaded/attached to Apple version1.0.0 (4 iPhone medium,4 iPad13). This is Simulator evidence; physical hardware, privacy/network behavior, local speech and offline use remain pending. Prior7cd/11eb evidence remains unchanged. Apple binary API processing is VALID and App Store review submitted/WAITING_FOR_REVIEW; approval remains pending."
     },
     {
       "id": "store_forms_and_native_media",
-      "status": "google_closed_alpha_in_review_apple_media_attached_hardware_qa_pending",
-      "detail": "Google11of11 initial tasks and no advertising ID declaration saved; signed AAB accepted and closed Alpha review requested. Google3 gameplay screenshots are browser-emulated, not hardware captures. New sourcee580 native iOS Simulator media run37561855895 passed4 actual cases and8 Root-reviewed screenshots were uploaded/attached to Apple version1.0.0. Prior media hashes remain unchanged. Hardware gameplay QA and Apple binary upload remains pending; shared API credentials are now configured."
+      "status": "apple_and_google_submitted_hardware_qa_pending",
+      "detail": "Apple zh-Hant4 iPhone medium and4 iPad13 native Simulator images confirmed COMPLETE by API, contact fields present, signed Build VALID linked, review WAITING_FOR_REVIEW. Google first signed AAB and closed Alpha16-person whitelist remain in review. Android screenshots are browser-emulated; physical gameplay QA remains pending."
     },
     {
       "id": "owner_identity",
@@ -168,14 +169,14 @@
   ],
   "binaryBuildEvidence": "store/review/binary-build-verification.json",
   "appleSignedBuildEvidence": {
-    "status": "verified_logo_v2_signed_ipa_not_platform_validated_or_uploaded",
-    "runUrl": "https://github.com/mars-tw/taiwan-island-drive/actions/runs/37559519552",
-    "headCommit": "e580ef1e0b26d466d1c569cf5eda8ca1a5d43a0b",
+    "status": "signed_ipa_api_uploaded_processed_valid_app_store_review_submitted",
+    "runUrl": "https://github.com/mars-tw/taiwan-island-drive/actions/runs/37567820714",
+    "headCommit": "01c0753db496e96acc401fbedf8803ad1e87e7ad",
     "marketingVersion": "1.0.0",
     "buildNumber": 1,
     "bundleId": "tw.mars.islandtransport",
-    "ipaBytes": 37440876,
-    "sha256": "916a92bc35fad14934a74694e567642b42ef21a62d5a1c58b73e6aea85637bf5",
+    "ipaBytes": 37440871,
+    "sha256": "5b472367d55a99ff8b57f9a4f04d7820b49bd01f07d1a2e054de024ad1559480",
     "signatureVerified": true,
     "profileVerified": true,
     "entitlementsVerified": true,
@@ -190,10 +191,17 @@
     "nativeIconName": "TransportIconV2",
     "compiledIconPixelsVerified": false,
     "newNativeUiReplayPerformed": true,
+    "nativeReplayRuntimeSource": "e580ef1e0b26d466d1c569cf5eda8ca1a5d43a0b",
+    "runtimeEquivalentToReplay": true,
     "privateKeyFilesAbsentFromPackage": true,
-    "appleValidated": false,
-    "uploaded": false,
-    "approved": false
+    "appleValidated": true,
+    "appleValidationMethod": "official_API_build_processingState_VALID",
+    "cliValidationPassed": false,
+    "uploaded": true,
+    "submissionPerformed": true,
+    "appStoreReviewState": "WAITING_FOR_REVIEW",
+    "approved": false,
+    "apiSubmissionEvidence": "store/review/apple-api-submission-verification.json"
   },
   "brandingV2": {
     "date": "2026-10-07",
@@ -231,8 +239,8 @@
     "versionScreenshotsAttached": true,
     "iphoneMediumScreenshotCount": 4,
     "ipad13ScreenshotCount": 4,
-    "binaryUploaded": false,
-    "submitted": false,
+    "binaryUploaded": true,
+    "submitted": true,
     "approved": false,
     "nativeUiCaptureVerified": true,
     "nativeMediaAcceptancePassed": true,
@@ -244,7 +252,9 @@
     },
     "parentGateSimulatorVerified": true,
     "parentGateReplayRunUrl": "https://github.com/mars-tw/taiwan-island-drive/actions/runs/37561855895",
-    "parentGateReplayStatus": "completed_success_verified"
+    "parentGateReplayStatus": "completed_success_verified",
+    "latestBinarySourceCommit": "01c0753db496e96acc401fbedf8803ad1e87e7ad",
+    "runtimeEquivalentToScreenshotSource": true
   },
   "applePriorSignedBuildEvidence": {
     "runUrl": "https://github.com/mars-tw/taiwan-island-drive/actions/runs/37465941274",
@@ -317,5 +327,43 @@
     "priorKeyId": "N5VT3WW79X",
     "priorKeyRevoked": false,
     "privateKeyCommitted": false
-  }
+  },
+  "appleSignedBuildHistory": [
+    {
+      "status": "verified_logo_v2_signed_ipa_not_platform_validated_or_uploaded",
+      "runUrl": "https://github.com/mars-tw/taiwan-island-drive/actions/runs/37559519552",
+      "headCommit": "e580ef1e0b26d466d1c569cf5eda8ca1a5d43a0b",
+      "marketingVersion": "1.0.0",
+      "buildNumber": 1,
+      "bundleId": "tw.mars.islandtransport",
+      "ipaBytes": 37440876,
+      "sha256": "916a92bc35fad14934a74694e567642b42ef21a62d5a1c58b73e6aea85637bf5",
+      "signatureVerified": true,
+      "profileVerified": true,
+      "entitlementsVerified": true,
+      "bundledResourcesVerified": true,
+      "exportMethod": "app-store-connect",
+      "internalOnly": false,
+      "xcode": "26.3",
+      "xcodeBuild": "17C529",
+      "sdk": "26.2",
+      "logoVersion": 2,
+      "homeLogoMatchesSource": true,
+      "nativeIconName": "TransportIconV2",
+      "compiledIconPixelsVerified": false,
+      "newNativeUiReplayPerformed": true,
+      "privateKeyFilesAbsentFromPackage": true,
+      "appleValidated": false,
+      "uploaded": false,
+      "approved": false
+    },
+    {
+      "sourceCommit": "7c69f01d40e45f722cb1865b31544f05895223fd",
+      "runUrl": "https://github.com/mars-tw/taiwan-island-drive/actions/runs/37566768798",
+      "ipaBytes": 37440879,
+      "sha256": "40809f8b287753b2ae880084dc4b2d842dcf728fc2b6072b20ed90b2e19fe6c5",
+      "platformUploaded": false,
+      "report": "store/review/apple-upload-7c69f01-verification.json"
+    }
+  ]
 }

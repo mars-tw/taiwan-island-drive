@@ -1,4 +1,4 @@
-param([string]$OutputPath='')
+param([string]$OutputPath='', [string]$AppleIpaPath='')
 $ErrorActionPreference='Stop'
 $taskRoot=[IO.Path]::GetFullPath((Join-Path $PSScriptRoot '..'))
 if([string]::IsNullOrWhiteSpace($OutputPath)){$OutputPath=Join-Path $taskRoot 'release/island-transport-store-1.0.0-logo-v2.zip'}
@@ -18,6 +18,11 @@ try{
  $taskEntries[$taskAndroidApk]='android/island-transport-logo-v2-test.apk'
  $taskEntries[$taskAndroidAab]='android/island-transport-logo-v2-upload-signed.aab'
  $taskEntries['release/island-drive-source.zip']='source/island-drive-source.zip'
+ if(-not [string]::IsNullOrWhiteSpace($AppleIpaPath)){
+  $taskIpaFull=[IO.Path]::GetFullPath($AppleIpaPath)
+  if([IO.Path]::GetExtension($taskIpaFull) -ne '.ipa' -or -not(Test-Path -LiteralPath $taskIpaFull -PathType Leaf)){throw 'AppleIpaPath must reference a saved signed IPA'}
+  [IO.Compression.ZipFileExtensions]::CreateEntryFromFile($taskZip,$taskIpaFull,'ios/IslandTransport-app-store-1.0.0-1.ipa',[IO.Compression.CompressionLevel]::Optimal)|Out-Null
+ }
  $taskReference=Join-Path $taskRoot 'APPLE_RELEASE_CREDENTIALS.md'
  if(Test-Path -LiteralPath $taskReference -PathType Leaf){
   $taskReferenceItem=Get-Item -LiteralPath $taskReference -Force
@@ -42,7 +47,8 @@ try{
  $taskNote=$taskZip.CreateEntry('READ-ME-FIRST.txt');$taskWriter=[IO.StreamWriter]::new($taskNote.Open(),[Text.UTF8Encoding]::new($false));try{
   $taskWriter.WriteLine('Island Transport Academy: prepared application and submission package.')
   $taskWriter.WriteLine('Account, binary and native simulator screenshot evidence: see docs/native-build-verification.md in this package.')
-  $taskWriter.WriteLine('Apple build evidence is not platform upload, submission or approval; Apple binary upload/submission/approval remain incomplete.')
+  $taskWriter.WriteLine('Apple1.0.0/build1 API upload is COMPLETE and Build VALID; App Store review is WAITING_FOR_REVIEW. Approval is not claimed. See store/review/apple-api-submission-verification.json.')
+  $taskWriter.WriteLine('An optional signed App Store IPA is a release artifact for this App; install on iPhone through an authorized TestFlight or App Store distribution, not directly from this ZIP.')
   $taskWriter.WriteLine('The named unsigned iOS archive/simulator packages are build artifacts, not App Store release delivery.')
   $taskWriter.WriteLine('Native simulator screenshots and browser preparation media must be distinguished by their manifests; neither is physical-device testing.')
   $taskWriter.WriteLine('Google signed logo-v2 AAB is accepted; Taiwan closed Alpha review was requested on 2026-10-07. Consult store/review/google-console-progress.json for checks, review and tester opt-in status. The16-address private whitelist is excluded; it does not prove12 continuous opt-ins for14 days. Android gameplay hardware QA remains pending.')

@@ -181,12 +181,15 @@
     "platformUpload": true
   },
   "appleLogoV2SignedBuild": {
-    "runUrl": "https://github.com/mars-tw/taiwan-island-drive/actions/runs/37559519552",
-    "sourceCommit": "e580ef1e0b26d466d1c569cf5eda8ca1a5d43a0b",
-    "ipaBytes": 37440876,
-    "sha256": "916a92bc35fad14934a74694e567642b42ef21a62d5a1c58b73e6aea85637bf5",
+    "runUrl": "https://github.com/mars-tw/taiwan-island-drive/actions/runs/37567820714",
+    "sourceCommit": "01c0753db496e96acc401fbedf8803ad1e87e7ad",
+    "ipaBytes": 37440871,
+    "sha256": "5b472367d55a99ff8b57f9a4f04d7820b49bd01f07d1a2e054de024ad1559480",
     "verified": true,
-    "uploaded": false
+    "uploaded": true,
+    "buildProcessingState": "VALID",
+    "appStoreReviewState": "WAITING_FOR_REVIEW",
+    "submissionEvidence": "store/review/apple-api-submission-verification.json"
   },
   "publishing": {
     "requestSubmitted": true,
@@ -207,7 +210,7 @@
     "failures": 0,
     "screenshotsUploadedAndAttached": 8,
     "hardwareTest": false,
-    "appleBinaryUploaded": false
+    "appleBinaryUploaded": true
   },
   "appleUploadCredentials": {
     "keyName": "MARS Games Publisher",

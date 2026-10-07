@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "status": "apple_prepared_google_closed_alpha_in_review",
+  "status": "apple_app_store_waiting_for_review_google_closed_alpha_in_review",
   "demoAccountRequired": false,
   "appReviewContact": "Apple review contact is owner-confirmed and saved in App Store Connect; private name and phone remain outside this public repository. Public support email: a820628a@gmail.com.",
   "en-US": "No login, subscription or purchase is required. The initial release is free, with no ads or analytics SDK. This is an interactive 3D game with three locally bundled modes, not a remote website or link collection. The interface and instructional speech are in Traditional Chinese. Voice uses a suitable installed local device voice; full visual guidance works if no voice is available.\n\nReview steps:\n1. Launch the app, then choose Cars, Trains or Planes in the lobby.\n2. Cars: select a route and vehicle, start driving, and use touch steering, throttle and brake. Optional tilt controls are behind the parent permission flow; denying motion leaves touch controls available.\n3. Trains: select Lesson 1. Tap Prepare, Start, then Help Stop. The train moves through inertia and air-brake simulation. At the station, open the doors, wait for passengers, then close the doors to finish.\n4. Planes: choose Treasure and Depart. Tap the main action once for assisted flight; left/right are tap controls. Stars are collected through continuous flight. Mail, sightseeing and return-home use the same local simulation.\n5. Parent settings offer mute and graphics quality. Try turning on Airplane Mode after installation: bundled gameplay should remain available.\n6. Inspect privacy/support locally. Parent settings and optional motion require the parent gate. Native external-site/download requests only display an address; no browser opens even after approval. Web external links require a parent challenge. Cancel or give an incorrect answer: no access should be granted.\n\nThere is no backend to enable and no demo credential. The owner must confirm the final signed build, native voice behavior, store privacy answers and parent gate before these notes are uploaded.",
@@ -42,8 +42,8 @@
     "versionScreenshotsAttached": true,
     "iphoneMediumScreenshotCount": 4,
     "ipad13ScreenshotCount": 4,
-    "binaryUploaded": false,
-    "submitted": false,
+    "binaryUploaded": true,
+    "submitted": true,
     "approved": false,
     "nativeUiCaptureVerified": true,
     "nativeMediaAcceptancePassed": true,
@@ -56,5 +56,6 @@
     "parentGateSimulatorVerified": true,
     "parentGateReplayRunUrl": "https://github.com/mars-tw/taiwan-island-drive/actions/runs/37561855895",
     "parentGateReplayStatus": "completed_success_verified"
-  }
+  },
+  "appleSubmissionEvidence": "store/review/apple-api-submission-verification.json"
 }
