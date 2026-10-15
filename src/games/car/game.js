@@ -5,6 +5,7 @@ import { RoomEnvironment } from 'three/addons/environments/RoomEnvironment.js';
 import { MAPS, VEHICLES, TRACK_LENGTH } from './config.js';
 import { IslandWorld, ENVIRONMENTS } from './world.js';
 import { DriveAudio } from './audio.js';
+import { STAR_COUNT, starLayout, touchedStars } from './collectibles.js';
 import { createPhysicsState, stepPhysics, roadCenter, roadHeading, routeAltitude, calculateScore, timeAttackLimit, clamp } from './physics.js';
 
 const MODEL_NAMES = ['coupe', 'rally', 'suv', 'van', 'palm', 'pine', 'city_tower', 'road_sign'];
@@ -18,9 +19,20 @@ function contactTexture() {
   return new THREE.CanvasTexture(canvas);
 }
 
+function starGeometry() {
+  const shape = new THREE.Shape();
+  for (let i = 0; i < 10; i++) {
+    const radius = i % 2 ? 0.34 : 0.78, angle = Math.PI / 2 + i * Math.PI / 5;
+    const x = Math.cos(angle) * radius, y = Math.sin(angle) * radius;
+    if (i) shape.lineTo(x, y); else shape.moveTo(x, y);
+  }
+  const geometry = new THREE.ExtrudeGeometry(shape, { depth: 0.2, bevelEnabled: true, bevelThickness: 0.08, bevelSize: 0.07, bevelSegments: 2 });
+  geometry.center(); return geometry;
+}
+
 export class Game {
-  constructor({ canvas, onUpdate = () => {}, onFinish = () => {}, onReady = () => {}, onError = () => {} }) {
-    this.canvas = canvas; this.onUpdate = onUpdate; this.onFinish = onFinish; this.onReady = onReady; this.onError = onError;
+  constructor({ canvas, onUpdate = () => {}, onFinish = () => {}, onReady = () => {}, onError = () => {}, onCollect = () => {} }) {
+    this.canvas = canvas; this.onCollect = onCollect; this.collected = new Set(); this.starMeshes = []; this.onUpdate = onUpdate; this.onFinish = onFinish; this.onReady = onReady; this.onError = onError;
     this.input = { steer: 0, throttle: 0, brake: 0, boost: false };
     this.phase = 'menu'; this.mode = 'cruise'; this.mapId = 'coast'; this.vehicleId = 'coupe';
     this.color = VEHICLES[0].color; this.cameraMode = 'chase'; this.quality = 'high'; this.muted = false;
@@ -71,6 +83,10 @@ export class Game {
       if (this.disposed) return;
       this.world = new IslandWorld(this.scene, this.assets); this.world.build(this.mapId);
       this.vehicleRoot = new THREE.Group(); this.scene.add(this.vehicleRoot);
+      this.starGroup = new THREE.Group(); this.starGroup.name = 'RoadStars'; this.scene.add(this.starGroup);
+      this.starGeometry = starGeometry();
+      this.starMaterial = new THREE.MeshStandardMaterial({ color: '#ffc61a', emissive: '#ff9a00', emissiveIntensity: 0.6, metalness: 0.25, roughness: 0.32 });
+      this.buildStars();
       this.contactMap = contactTexture();
       this.contactShadow = new THREE.Mesh(new THREE.PlaneGeometry(3.5, 5.8),
         new THREE.MeshBasicMaterial({ map: this.contactMap, transparent: true, depthWrite: false, opacity: 0.72 }));
@@ -113,7 +129,7 @@ export class Game {
     if (!MAPS.some(m => m.id === id)) throw new Error(`Unknown map: ${id}`);
     this.mapId = id; this.physics = createPhysicsState(); this.returnToMenu();
     if (!this.world) return;
-    this.world.build(id); this.world.setQuality(this.quality); this.applyEnvironment();
+    this.world.build(id); this.world.setQuality(this.quality); this.applyEnvironment(); this.buildStars();
     this.placeVehicle(30, -2.7, 0); this.updateCamera(1, true); this.onUpdate(this.getState());
   }
 
@@ -157,6 +173,42 @@ export class Game {
     this.car = car; this.vehicleRoot.add(car); this.onUpdate(this.getState());
   }
 
+  buildStars() {
+    if (!this.starGroup) return;
+    this.starGroup.clear(); this.collected = new Set();
+    this.starLayout = starLayout(this.mapId, this.world?.obstacles || []);
+    this.starMeshes = this.starLayout.map(star => {
+      const mesh = new THREE.Mesh(this.starGeometry, this.starMaterial);
+      const heading = roadHeading(star.z, this.mapId);
+      mesh.position.set(roadCenter(star.z, this.mapId) + star.lateral * Math.cos(heading), routeAltitude(star.z, this.mapId) + 1.3, star.z - star.lateral * Math.sin(heading));
+      mesh.castShadow = this.quality === 'high'; mesh.userData = { baseY: mesh.position.y, pop: 0, id: star.id };
+      this.starGroup.add(mesh); return mesh;
+    });
+  }
+  resetStars() {
+    this.collected = new Set();
+    for (const mesh of this.starMeshes) { mesh.visible = true; mesh.scale.setScalar(1); mesh.userData.pop = 0; }
+  }
+  collectStars() {
+    for (const id of touchedStars(this.physics, this.starLayout || [], this.collected)) {
+      this.collected.add(id); const mesh = this.starMeshes[id]; if (mesh) mesh.userData.pop = 0.0001;
+      this.audio.beep(988, 0.09, 'triangle', 0.15); setTimeout(() => this.audio.beep(1319, 0.16, 'triangle', 0.15), 70);
+      this.onCollect({ collected: this.collected.size, total: STAR_COUNT, id });
+    }
+  }
+  animateStars(dt) {
+    for (const mesh of this.starMeshes) {
+      if (!mesh.visible) continue;
+      const data = mesh.userData;
+      mesh.rotation.y = this.clockTime * 2.4 + data.id;
+      if (data.pop > 0) {
+        data.pop += dt; const t = Math.min(1, data.pop / 0.35);
+        mesh.scale.setScalar(Math.max(0.001, (1 - t) * (1 + Math.sin(t * Math.PI) * 0.5))); mesh.position.y = data.baseY + t * 3.4; mesh.rotation.y += dt * 18;
+        if (t >= 1) mesh.visible = false;
+      } else mesh.position.y = data.baseY + Math.sin(this.clockTime * 3 + data.id) * 0.18;
+    }
+  }
+
   setColor(hex) {
     if (!/^#[0-9a-f]{6}$/i.test(hex)) return;
     this.color = hex; this.paintMaterials?.forEach(material => material.color.set(hex));
@@ -177,7 +229,7 @@ export class Game {
     if (!this.initialized) return;
     this.mode = mode === 'timeattack' ? 'timeattack' : 'cruise'; this.physics = createPhysicsState();
     this.countdownRemaining = 3; this.lastCountdown = 4; this.phase = 'countdown'; this.accumulator = 0;
-    this.resetInput(); this.audio.unlock().catch(() => {}); this.placeVehicle(0, this.physics.lateral, 0);
+    this.resetInput(); this.resetStars(); this.audio.unlock().catch(() => {}); this.placeVehicle(0, this.physics.lateral, 0);
     this.updateCamera(1, true); this.onUpdate(this.getState());
   }
   pause() {
@@ -212,14 +264,15 @@ export class Game {
       timeLeft: this.mode === 'timeattack' ? Math.max(0, timeAttackLimit(this.vehicleSpec, this.mapId) - s.elapsed) : null,
       score: calculateScore(s), offRoad: s.offRoad, boost: s.boost, phase: this.phase,
       countdown: Math.max(0, Math.ceil(this.countdownRemaining)), mapId: this.mapId, vehicleId: this.vehicleId,
-      mode: this.mode, camera: this.cameraMode, quality: this.quality, muted: this.muted, collisions: s.collisions };
+      mode: this.mode, camera: this.cameraMode, quality: this.quality, muted: this.muted, collisions: s.collisions,
+      stars: this.collected.size, starTotal: STAR_COUNT };
   }
 
   finish(completed) {
     if (this.phase === 'finished') return;
     this.phase = 'finished'; this.resetInput(); this.audio.beep(completed ? 880 : 180, 0.36);
     const result = { elapsed: this.physics.elapsed, score: calculateScore(this.physics), distance: this.physics.distance,
-      mode: this.mode, completed, mapId: this.mapId, vehicleId: this.vehicleId };
+      mode: this.mode, completed, mapId: this.mapId, vehicleId: this.vehicleId, stars: this.collected.size, starTotal: STAR_COUNT };
     this.onUpdate(this.getState()); this.onFinish(result);
   }
 
@@ -296,7 +349,7 @@ export class Game {
       this.accumulator += dt;
       while (this.accumulator >= 1 / 60) {
         this.physics = stepPhysics(this.physics, this.input, this.vehicleSpec, this.mapId, 1 / 60, this.world.obstacles);
-        this.accumulator -= 1 / 60;
+        this.accumulator -= 1 / 60; this.collectStars();
         if (this.physics.completed) { this.finish(true); break; }
         if (this.mode === 'timeattack' && this.physics.elapsed >= timeAttackLimit(this.vehicleSpec, this.mapId)) { this.finish(false); break; }
       }
@@ -305,7 +358,7 @@ export class Game {
     if (preview) this.menuTime += dt;
     const distance = preview ? 30 : this.physics.distance;
     this.placeVehicle(distance, preview ? -2.7 : this.physics.lateral, preview ? 0 : this.physics.yaw);
-    this.updateCamera(dt); this.world.update(distance, this.clockTime, this.camera);
+    this.updateCamera(dt); this.world.update(distance, this.clockTime, this.camera); this.animateStars(dt);
     this.audio.update(this.physics, this.input, this.phase === 'running');
     this.renderer.render(this.scene, this.camera);
     if (timestamp - this.lastUpdate > 45) { this.lastUpdate = timestamp; this.onUpdate(this.getState()); }
@@ -324,6 +377,7 @@ export class Game {
       (Array.isArray(object.material) ? object.material : [object.material]).forEach(m => materials.add(m));
     }));
     geometries.forEach(g => g.dispose()); materials.forEach(m => m.dispose());
+    this.starGeometry?.dispose(); this.starMaterial?.dispose();
     this.contactShadow?.geometry.dispose(); this.contactShadow?.material.dispose(); this.contactMap?.dispose();
     this.environmentTarget?.dispose(); this.renderer?.dispose();
   }

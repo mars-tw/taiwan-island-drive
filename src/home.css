@@ -1,4 +1,149 @@
-:root{font-family:'Microsoft JhengHei',sans-serif;color:#173d47;background:#edf4ec;font-synthesis:none}*{box-sizing:border-box}body{margin:0}a{color:inherit;text-decoration:none}button,input,select{font:inherit}button{cursor:pointer;border:0;min-height:44px}button:focus-visible,a:focus-visible,input:focus-visible,select:focus-visible{outline:3px solid #518279;outline-offset:4px}[hidden]{display:none!important}.academy-home{max-width:1360px;margin:0 auto;padding:0 42px;min-height:100dvh}.home-header{height:105px;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid #b5ccbf80}.academy-brand{display:flex;align-items:center;gap:14px;font-size:21px;font-weight:800;letter-spacing:1px}.academy-brand small{display:block;font:600 11px 'Barlow Condensed',sans-serif;letter-spacing:2.5px;margin-top:6px;color:#61867a}.academy-mark{height:48px;width:48px;display:grid;place-items:center;background:#173d47;color:#e4eeaf;border-radius:14px;font-size:31px;font-weight:600}.utility-button{padding:0 16px;border-radius:7px;background:#dbe9de;color:#325b55;font-size:12px;font-weight:600}.utility-button:hover{background:#caddcf}.welcome{padding:37px 0 32px;display:flex;justify-content:space-between;align-items:center;gap:20px}.welcome-label{font-size:12px;letter-spacing:2px;color:#668071;margin:0 0 11px}.welcome h1{font-size:38px;line-height:1.3;letter-spacing:-1px;margin:0 0 13px}.welcome-description{font-size:13px;color:#57786c;line-height:1.85;margin:0}.mobile-break{display:none}.family-badge{font-size:11px;border:1px solid #b4cdb5;border-radius:24px;padding:11px 16px;color:#52745e;white-space:nowrap}.vehicle-gallery{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:21px}.academy-card{border-radius:14px;overflow:hidden;border:1px solid #afc7bd80;background:#f5f8ee;box-shadow:0 5px 0 #ccdacf66;transition:transform .2s,box-shadow .2s}.academy-card:hover{transform:translateY(-5px);box-shadow:0 10px 24px #335b4919}.card-image{aspect-ratio:1.4;background:#283b43;position:relative;overflow:hidden}.card-image img{display:block;width:100%;height:100%;object-fit:cover}.car-card .card-image img{object-position:center 61%}.vehicle-symbol{position:absolute;top:14px;left:14px;width:43px;height:43px;background:#e7f2e2ee;display:grid;place-items:center;border-radius:12px;font-size:25px}.card-copy{padding:21px 22px 22px}.card-english{font:600 11px 'Barlow Condensed',sans-serif;letter-spacing:2px;color:#6d8478}.card-copy h2{font-size:28px;margin:6px 0 10px;letter-spacing:1px}.card-copy p{font-size:12px;line-height:1.8;color:#5b796b;margin:0 0 20px}.card-action{display:flex;align-items:center;justify-content:space-between;padding:14px 16px;border-radius:7px;font-size:15px;font-weight:800;background:#cce6a8;min-height:52px}.card-action b{font-size:22px;font-weight:400}.train-card .card-action{background:#a6dccb}.flight-card .card-action{background:#ecd099}.family-note{display:flex;align-items:center;gap:15px;margin:28px 0 20px;padding:17px 22px;background:#dfebdb;border:1px solid #d0e0c8;border-radius:11px}.family-note>span{font-size:24px}.family-note p{font-size:12px;color:#6c8167;margin:0;line-height:1.7}.family-note strong{display:block;color:#45624c;font-size:13px}.family-note button{margin-left:auto;background:#bcd7b3}.home-footer{display:flex;align-items:center;gap:20px;padding:0 2px 30px;font-size:10px;color:#708274;line-height:1.7}.home-footer>span{flex:1}.home-footer a:hover{text-decoration:underline}dialog{width:min(430px,calc(100vw - 32px));padding:33px 27px;border:1px solid #c4d6c6;border-radius:15px;background:#f2f7eb;color:#1e4a4f}dialog::backdrop{background:#173d4777;backdrop-filter:blur(5px)}.close-dialog{position:absolute;right:10px;top:9px;border-radius:50%;width:42px;min-height:42px;background:transparent;font-size:27px;color:#50726d}.dialog-eyebrow{font-size:11px;color:#789073;letter-spacing:2px}dialog h2{font-size:26px;margin:12px 0 10px}.family-row{display:flex;align-items:center;justify-content:space-between;gap:15px;border-bottom:1px solid #c8d8c8;padding:20px 0;font-size:13px;font-weight:700}.family-row small{display:block;margin-top:7px;font-size:10px;color:#738b72;font-weight:400;line-height:1.7}.family-row input{width:26px;height:26px;accent-color:#4c8974;flex-shrink:0}.family-row select{min-height:44px;border-radius:5px;padding:5px 10px;background:#e1ecd8;border:1px solid #bdd2b6;color:#315c4f;font-size:12px}.family-dialog-note{font-size:11px;color:#6c8269;line-height:1.85;margin:21px 0}.done-button{width:100%;border-radius:6px;background:#a2d3b0;color:#2e5541;font-size:14px;font-weight:700;min-height:49px}
-@media(max-width:850px){.academy-home{padding:0 24px}.home-header{height:83px}.academy-brand{font-size:18px}.academy-brand small{font-size:9px}.academy-mark{width:42px;height:42px;font-size:28px}.welcome{padding:27px 0}.welcome h1{font-size:30px}.vehicle-gallery{gap:12px}.card-copy{padding:15px}.card-copy h2{font-size:22px}.card-copy p{font-size:11px}.card-action{padding:12px;font-size:13px}.family-badge{font-size:9px;padding:9px 11px}.card-english{font-size:9px;letter-spacing:1.2px}.home-footer{gap:12px;font-size:9px}}
-@media(max-width:600px){.academy-home{padding:0 18px}.home-header{height:79px}.academy-brand{gap:9px;font-size:16px;letter-spacing:0}.academy-brand small{font-size:8px;letter-spacing:1.4px}.academy-mark{width:38px;height:38px;border-radius:11px;font-size:25px}.utility-button{padding:0 11px;font-size:10px}.welcome{padding:26px 0 22px;align-items:flex-start}.welcome h1{font-size:27px;margin-bottom:10px}.welcome-label{font-size:10px;letter-spacing:1px}.welcome-description{font-size:11px}.family-badge{font-size:8px;padding:8px;line-height:1.5;max-width:81px;white-space:normal;margin-top:31px}.vehicle-gallery{grid-template-columns:1fr;gap:15px}.academy-card{display:grid;grid-template-columns:47% 53%;border-radius:12px;min-height:184px}.card-image{aspect-ratio:auto;height:100%;min-height:184px}.card-image img{object-fit:cover}.car-card .card-image img{object-position:41% 61%}.train-card .card-image img{object-position:42% center}.flight-card .card-image img{object-position:40% center}.vehicle-symbol{width:34px;height:34px;font-size:20px;top:10px;left:10px;border-radius:9px}.card-copy{padding:15px 14px}.card-copy h2{font-size:24px;margin:5px 0 9px}.card-copy p{font-size:10px;margin-bottom:11px;line-height:1.7}.card-action{font-size:13px;min-height:45px;padding:9px 11px}.card-action b{font-size:19px}.card-english{font-size:8px;letter-spacing:1.1px}.family-note{margin:21px 0 17px;padding:14px;gap:10px}.family-note p{font-size:10px}.family-note strong{font-size:11px}.family-note button{font-size:9px;padding:0 8px;flex-shrink:0}.home-footer{flex-wrap:wrap;gap:10px 18px;padding-bottom:22px;font-size:9px}.home-footer>span{flex-basis:100%}.mobile-break{display:block}}
-@media(prefers-reduced-motion:reduce){.academy-card{transition:none}.academy-card:hover{transform:none}}
+/* R1 大廳：明亮天空、三色大卡片、星星貼紙架。三個視口不用捲動就看得到三張卡片的出發鈕。 */
+:root{font-family:'Microsoft JhengHei','PingFang TC',sans-serif;color:#173d47;background:#bfe8ff;font-synthesis:none;--ink:#173d47;--car:#ff6b5b;--car-dark:#d9473a;--train:#2fbf8f;--train-dark:#1d9670;--flight:#ffb72b;--flight-dark:#d98b00}
+*{box-sizing:border-box}
+body{margin:0;min-height:100dvh;background:linear-gradient(#7fd0ff 0%,#bfe8ff 55%,#e9f8ff 100%);overflow-x:hidden}
+a{color:inherit;text-decoration:none}
+button,input,select{font:inherit}
+button{cursor:pointer;border:0;min-height:44px}
+button:focus-visible,a:focus-visible,input:focus-visible,select:focus-visible{outline:4px solid #ffd23f;outline-offset:4px}
+[hidden]{display:none!important}
+
+.sky-decor{position:fixed;inset:0;pointer-events:none;z-index:0;overflow:hidden}
+.sky-decor .sun{position:absolute;right:8%;top:6%;width:120px;height:120px;border-radius:50%;background:radial-gradient(circle,#fff6b0 0 45%,#ffe066 46% 62%,rgba(255,224,102,0) 63%);animation:sun-spin 30s linear infinite}
+.sky-decor .cloud{position:absolute;width:180px;height:56px;border-radius:40px;background:#fff;opacity:.92;box-shadow:0 6px 0 rgba(120,180,220,.25)}
+.sky-decor .cloud:before,.sky-decor .cloud:after{content:'';position:absolute;background:#fff;border-radius:50%}
+.sky-decor .cloud:before{width:80px;height:80px;left:26px;top:-38px}.sky-decor .cloud:after{width:62px;height:62px;left:92px;top:-26px}
+.sky-decor .c1{left:6%;top:20%;animation:cloud-drift 38s linear infinite}
+.sky-decor .c2{left:55%;top:11%;transform:scale(.75);animation:cloud-drift 46s linear infinite reverse}
+.sky-decor .c3{left:30%;top:58%;transform:scale(.6);opacity:.7;animation:cloud-drift 52s linear infinite}
+.sky-decor .hill{position:absolute;bottom:-120px;border-radius:50%;background:#8fd46b}
+.sky-decor .h1{left:-10%;width:70%;height:260px;background:#9adb74}.sky-decor .h2{right:-15%;width:75%;height:300px;background:#7cc95f}
+@keyframes cloud-drift{0%{translate:0 0}50%{translate:40px 0}100%{translate:0 0}}
+@keyframes sun-spin{to{rotate:360deg}}
+
+.academy-home{position:relative;z-index:1;max-width:1360px;margin:0 auto;padding:0 32px;min-height:100dvh}
+.home-header{height:84px;display:flex;align-items:center;justify-content:space-between;gap:12px}
+.academy-brand{display:flex;align-items:center;gap:12px;font-size:21px;font-weight:900;letter-spacing:1px;min-height:44px}
+.academy-brand small{display:block;font:700 11px 'Barlow Condensed',sans-serif;letter-spacing:2.5px;margin-top:4px;color:#2c6e8a}
+.academy-mark{height:52px;width:52px;display:grid;place-items:center;border-radius:16px;box-shadow:0 4px 0 rgba(23,61,71,.25)}
+.header-tools{display:flex;align-items:center;gap:10px}
+.star-shelf{display:flex;align-items:center;gap:6px;min-height:44px;padding:0 16px 0 10px;border-radius:999px;background:#fff8d6;border:3px solid #ffc61a;color:#5a3b00;font-weight:900;box-shadow:0 4px 0 rgba(120,70,0,.18)}
+.star-shelf b{font-size:24px;line-height:1}.star-shelf strong{font:800 26px/1 'Barlow Condensed',sans-serif}.star-shelf span{font-size:12px}
+.star-shelf.bump{animation:shelf-bump .5s cubic-bezier(.2,1.6,.4,1)}
+@keyframes shelf-bump{40%{scale:1.2}}
+.utility-button{padding:0 16px;border-radius:14px;background:#ffffffd9;color:#21566a;font-size:13px;font-weight:800;box-shadow:0 4px 0 rgba(23,61,71,.15)}
+.utility-button:hover{background:#fff}
+.music-toggle{min-width:44px;font-size:20px;padding:0}
+.music-toggle[aria-pressed=true]{background:#ffd23f;color:#5a3b00}
+
+.welcome{padding:6px 0 18px;display:flex;justify-content:space-between;align-items:flex-end;gap:20px}
+.welcome-label{font-size:13px;letter-spacing:2px;color:#2c6e8a;margin:0 0 6px;font-weight:700}
+.welcome h1{font-size:44px;line-height:1.2;letter-spacing:-1px;margin:0 0 8px;color:#123b52;text-shadow:0 3px 0 #ffffffb3}
+.welcome-description{font-size:15px;color:#24597a;line-height:1.7;margin:0;font-weight:700}
+.mobile-break{display:none}
+.family-badge{font-size:12px;border-radius:24px;padding:10px 16px;color:#1d6b55;background:#e8fff4cc;border:2px solid #7fd8b3;white-space:nowrap;font-weight:800}
+
+.vehicle-gallery{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:22px;height:calc(100dvh - 84px - 128px - 18px);min-height:330px;max-height:560px}
+.academy-card{--tone:var(--car);--tone-dark:var(--car-dark);display:flex;flex-direction:column;border-radius:28px;overflow:hidden;background:#fff;border:5px solid var(--tone);box-shadow:0 8px 0 var(--tone-dark),0 18px 30px rgba(23,61,71,.18);transition:transform .18s,box-shadow .18s;min-height:0}
+.train-card{--tone:var(--train);--tone-dark:var(--train-dark)}
+.flight-card{--tone:var(--flight);--tone-dark:var(--flight-dark)}
+.academy-card:hover{transform:translateY(-4px)}
+.academy-card:active{transform:translateY(6px);box-shadow:0 2px 0 var(--tone-dark),0 8px 16px rgba(23,61,71,.18)}
+.card-image{flex:1;min-height:0;position:relative;overflow:hidden;background:radial-gradient(circle at 50% 120%,color-mix(in srgb,var(--tone) 55%,#fff) 0 45%,color-mix(in srgb,var(--tone) 30%,#fff) 46% 100%)}
+.card-image img{display:block;width:100%;height:100%;object-fit:cover;filter:brightness(1.12) saturate(1.15) contrast(1.02)}
+.card-image:after{content:'';position:absolute;inset:0;pointer-events:none;background:linear-gradient(170deg,color-mix(in srgb,var(--tone) 55%,#7fd0ff) 0%,transparent 70%);mix-blend-mode:screen;opacity:.55}
+.car-card .card-image img{object-position:center 61%}
+.vehicle-symbol{position:absolute;top:12px;left:12px;width:52px;height:52px;background:#fff;display:grid;place-items:center;border-radius:16px;font-size:30px;box-shadow:0 4px 0 rgba(0,0,0,.15);animation:symbol-wiggle 2.8s ease-in-out infinite}
+.train-card .vehicle-symbol{animation-delay:.4s}.flight-card .vehicle-symbol{animation-delay:.8s}
+@keyframes symbol-wiggle{0%,70%,100%{rotate:0deg;translate:0 0}78%{rotate:-10deg;translate:0 -4px}86%{rotate:8deg;translate:0 -2px}}
+.card-stars{position:absolute;top:14px;right:14px;padding:6px 12px;border-radius:999px;background:#fff8d6;border:3px solid #ffc61a;color:#5a3b00;font-weight:900;font-size:16px;box-shadow:0 3px 0 rgba(120,70,0,.18)}
+.card-copy{padding:14px 18px 18px;background:#fff;display:grid;grid-template-columns:1fr auto;grid-template-areas:'eng eng' 'title title' 'desc desc' 'action action';align-items:center}
+.card-english{grid-area:eng;font:700 11px 'Barlow Condensed',sans-serif;letter-spacing:2px;color:var(--tone-dark)}
+.card-copy h2{grid-area:title;font-size:30px;margin:2px 0 4px;letter-spacing:1px;color:#123b52}
+.card-copy p{grid-area:desc;font-size:13px;line-height:1.6;color:#3f6a7a;margin:0 0 12px;font-weight:700}
+.card-action{grid-area:action;display:flex;align-items:center;justify-content:space-between;padding:0 20px;border-radius:18px;font-size:19px;font-weight:900;color:#fff;background:var(--tone);min-height:56px;box-shadow:0 5px 0 var(--tone-dark);text-shadow:0 2px 0 rgba(0,0,0,.18)}
+.flight-card .card-action{color:#4a2f00;text-shadow:none}
+.card-action b{font-size:26px}
+
+.family-note{display:flex;align-items:center;gap:15px;margin:30px 0 18px;padding:16px 22px;background:#ffffffd9;border-radius:18px}
+.family-note>span{font-size:24px}
+.family-note p{font-size:13px;color:#3f6a7a;margin:0;line-height:1.7}
+.family-note strong{display:block;color:#123b52;font-size:14px}
+.family-note button{margin-left:auto;background:#d6f5e6}
+.home-footer{display:flex;align-items:center;gap:20px;padding:0 2px 30px;font-size:11px;color:#2c5a6a;line-height:1.7}
+.home-footer>span{flex:1}
+.home-footer a{min-height:44px;display:inline-flex;align-items:center}
+.home-footer a:hover{text-decoration:underline}
+
+dialog{width:min(430px,calc(100vw - 32px));padding:33px 27px;border:0;border-radius:22px;background:#f6fbff;color:#1e4a4f;box-shadow:0 20px 50px rgba(0,0,0,.25)}
+dialog::backdrop{background:#173d4777;backdrop-filter:blur(5px)}
+.close-dialog{position:absolute;right:10px;top:9px;border-radius:50%;width:44px;min-height:44px;background:transparent;font-size:27px;color:#50726d}
+.dialog-eyebrow{font-size:11px;color:#2c6e8a;letter-spacing:2px}
+dialog h2{font-size:26px;margin:12px 0 10px}
+.family-row{display:flex;align-items:center;justify-content:space-between;gap:15px;border-bottom:1px solid #cfe2ea;padding:20px 0;font-size:13px;font-weight:700}
+.family-row small{display:block;margin-top:7px;font-size:10px;color:#5b7f8a;font-weight:400;line-height:1.7}
+.family-row input{width:28px;height:28px;accent-color:#2fbf8f;flex-shrink:0}
+.family-row select{min-height:44px;border-radius:10px;padding:5px 10px;background:#e4f3fb;border:1px solid #b7d6e3;color:#21566a;font-size:13px}
+.family-dialog-note{font-size:11px;color:#5b7f8a;line-height:1.85;margin:21px 0}
+.done-button{width:100%;border-radius:14px;background:#2fbf8f;color:#fff;font-size:15px;font-weight:800;min-height:52px;box-shadow:0 4px 0 #1d9670}
+
+@media(max-width:850px) and (min-width:601px){.academy-home{padding:0 20px}.vehicle-gallery{gap:14px}.card-copy h2{font-size:24px}.card-action{font-size:16px;padding:0 14px}.welcome h1{font-size:34px}}
+
+/* 手機直式：三張橫向卡片，一次全看到。 */
+@media(max-width:600px){
+ .academy-home{padding:0 14px}
+ .home-header{height:66px}
+ .academy-brand{gap:8px;font-size:15px;letter-spacing:0}.academy-brand small{display:none}
+ .academy-mark{width:42px;height:42px;border-radius:13px}
+ .star-shelf{padding:0 10px 0 7px;border-width:2px}.star-shelf b{font-size:19px}.star-shelf strong{font-size:21px}.star-shelf span{display:none}
+ .utility-button{padding:0 10px;font-size:12px}
+ .header-tools{gap:6px}
+ .welcome{padding:2px 0 10px;align-items:flex-end}
+ .welcome-label{display:none}
+ .welcome h1{font-size:28px;margin-bottom:4px}
+ .welcome-description{font-size:12px}
+ .family-badge{display:none}
+ .vehicle-gallery{grid-template-columns:1fr;grid-template-rows:repeat(3,minmax(0,1fr));gap:14px;height:calc(100dvh - 66px - 82px - 16px);min-height:520px;max-height:none}
+ .academy-card{flex-direction:row;border-radius:24px;border-width:4px}
+ .card-image{flex:0 0 44%}
+ .card-image img{object-fit:cover}
+ .car-card .card-image img{object-position:41% 61%}
+ .vehicle-symbol{width:40px;height:40px;font-size:23px;top:8px;left:8px;border-radius:12px}
+ .card-stars{top:auto;bottom:8px;left:8px;right:auto;font-size:13px;padding:3px 9px;border-width:2px}
+ .card-copy{flex:1;padding:10px 12px;grid-template-areas:'eng' 'title' 'desc' 'action';grid-template-columns:1fr;align-content:center}
+ .card-english{font-size:9px;letter-spacing:1.2px}
+ .card-copy h2{font-size:24px;margin:0 0 2px}
+ .card-copy p{font-size:11px;margin-bottom:8px;line-height:1.5}
+ .card-action{font-size:16px;min-height:48px;padding:0 14px;border-radius:14px}
+ .card-action b{font-size:20px}
+ .family-note{margin:22px 0 16px;padding:14px;gap:10px}
+ .family-note p{font-size:11px}
+ .home-footer{flex-wrap:wrap;gap:4px 18px;padding-bottom:22px}
+ .home-footer>span{flex-basis:100%}
+ .mobile-break{display:block}
+ .sky-decor .sun{width:80px;height:80px;right:4%;top:3%}
+}
+
+/* 手機橫式：三欄卡片塞進一個畫面。 */
+@media(max-height:520px) and (orientation:landscape){
+ .academy-home{padding:0 18px}
+ .home-header{height:54px}
+ .academy-brand small{display:none}
+ .academy-mark{width:38px;height:38px;border-radius:12px}
+ .academy-brand{font-size:16px}
+ .welcome{position:absolute;left:50%;top:0;height:54px;padding:0;transform:translateX(-50%);align-items:center;pointer-events:none}
+ .welcome-label,.welcome-description,.family-badge{display:none}
+ .welcome h1{font-size:20px;margin:0;white-space:nowrap}
+ .vehicle-gallery{gap:12px;height:calc(100dvh - 54px - 14px);min-height:300px;max-height:none}
+ .academy-card{border-radius:20px;border-width:4px}
+ .vehicle-symbol{width:36px;height:36px;font-size:21px;top:6px;left:6px;border-radius:11px}
+ .card-stars{top:6px;right:6px;font-size:12px;padding:2px 8px;border-width:2px}
+ .card-copy{padding:6px 10px 10px;grid-template-areas:'title action';grid-template-columns:1fr auto;column-gap:8px}
+ .card-english,.card-copy p{display:none}
+ .card-copy h2{font-size:19px;margin:0}
+ .card-action{font-size:14px;min-height:46px;padding:0 12px;border-radius:14px;gap:6px}
+ .card-action b{font-size:18px}
+ .sky-decor .sun{width:70px;height:70px;top:2%}
+}
+@media(max-width:860px) and (max-height:520px) and (orientation:landscape){.welcome{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);clip-path:inset(50%);white-space:nowrap}}
+@media(prefers-reduced-motion:reduce){.academy-card{transition:none}.academy-card:hover{transform:none}.sky-decor *,.vehicle-symbol{animation:none!important}}

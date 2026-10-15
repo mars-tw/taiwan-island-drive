@@ -18,3 +18,19 @@ body[data-game=flight].academy-game{--academy-nav-height:calc(46px + env(safe-ar
 @media(max-height:520px) and (orientation:landscape){body[data-game=flight].academy-game #app .hud:not(.preschool){grid-template-columns:minmax(0,1fr) 228px;grid-template-rows:auto auto minmax(0,1fr)}.hud:not(.preschool) .flight-top,.hud:not(.preschool) .lesson-prompt{grid-column:1/-1}.hud:not(.preschool) .lesson-prompt{min-height:31px}.hud:not(.preschool) .flight-window{grid-column:1;grid-row:3}.hud:not(.preschool) .flight-controls{grid-column:2;grid-row:3;grid-template-columns:76px minmax(0,1fr);align-content:start;gap:7px 8px;max-height:none;min-height:0;height:100%;padding:7px;border-top:0;border-left:1px solid #83a5ad;overflow-y:auto}.hud:not(.preschool) .telemetry{font-size:10px;flex-wrap:wrap;gap:3px}.hud:not(.preschool) .flight-status{white-space:normal;font-size:11px}.hud:not(.preschool) .instrument-panel{height:82px;width:100%}.hud:not(.preschool) .joystick-area{width:76px}.hud:not(.preschool) #joystick{width:70px;height:70px}.hud:not(.preschool) .power-area{grid-column:2;grid-template-columns:1fr 1fr;gap:4px}.hud:not(.preschool) .power-area label,.hud:not(.preschool) .power-area input{grid-column:1/-1;grid-row:auto}.hud:not(.preschool) .power-area label{font-size:10px}.hud:not(.preschool) .power-area input{height:26px}.hud:not(.preschool) .power-area button{grid-row:auto;min-height:42px;font-size:10px}.hud:not(.preschool) .rudder-area{grid-column:1/-1}.hud:not(.preschool) .rudder-area button{min-height:42px}.hud:not(.preschool) .instrument-panel canvas{height:100%}}
 @media(max-height:520px) and (orientation:landscape){.preschool .flight-controls{overflow-y:auto}.preschool .child-panel{flex-shrink:0}}
 @media(max-height:360px) and (orientation:landscape){.preschool .flight-controls{padding:6px;gap:5px}.preschool .child-panel .child-action,.preschool .child-panel>button:not(.child-action){min-height:62px}.preschool .telemetry{gap:3px}.preschool .telemetry button{min-height:22px}}
+
+/* R1 好玩＋美觀：選單更亮、幼兒卡片精簡、出發鈕不遮擋下拉選單。 */
+.dispatch-card{background:linear-gradient(160deg,#1d5b7aef,#173c4eef)}
+.lesson-card .lesson-number{font-size:26px;color:#ffd24a;text-shadow:0 2px 0 #00000033}
+.lesson-card.selected{background:#ffd76a;color:#3b2a00;border-color:#fff3b0}
+.lesson-card.selected small{color:#5a4300}.lesson-card.selected .lesson-number{color:#c25e00;text-shadow:none}
+.dispatch-card .primary{background:linear-gradient(#ffdd55,#ffc21a);box-shadow:0 5px 0 #d99a00;border-radius:16px}
+.dispatch-card footer a{min-height:44px}
+.assist input{width:28px;height:28px}
+@media(max-width:720px),(max-height:520px) and (orientation:landscape){
+ .lesson-card{min-height:64px}
+ .lesson-card small{display:none}
+ .lesson-card strong{font-size:15px;margin:0}
+ .dispatch-card .select-row{margin-top:12px}
+}
+.flight-top .top-actions button{min-width:44px;min-height:44px}

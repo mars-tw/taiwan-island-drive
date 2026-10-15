@@ -8,10 +8,10 @@ const gaussian=(x,z,cx,cz,sx,sz,h)=>h*Math.exp(-((x-cx)**2/(sx*sx)+(z-cz)**2/(sz
 const material=(color,roughness=.9)=>new THREE.MeshStandardMaterial({color,roughness});
 const EXTENT=Object.freeze({xMin:-18000,xMax:18000,zMin:-18000,zMax:18000,width:36000,depth:36000,unit:'metre'});
 const PALETTES={
- coast:{sky:0xbfcdd3,water:0x3b6d7b,low:0x7d8b69,forest:0x536657,rock:0x7b817b,sand:0xc1b698},
- valley:{sky:0xc7d0d0,water:0x51757b,low:0x83916d,forest:0x4e6353,rock:0x81877c,sand:0xb6ac8c},
- island:{sky:0xc0d5da,water:0x347c8b,low:0x999d77,forest:0x687c67,rock:0x747872,sand:0xd2c4a4},
- metro:{sky:0xbdcbd1,water:0x476e7c,low:0x7d8b70,forest:0x526755,rock:0x808782,sand:0xbdb394}
+ coast:{sky:0x92cdee,water:0x2588ab,low:0x79ad5f,forest:0x4a8450,rock:0x8a8f86,sand:0xe0cf9a},
+ valley:{sky:0x9fd2ea,water:0x3f8f9a,low:0x84b263,forest:0x447d4c,rock:0x8f9384,sand:0xd2c28e},
+ island:{sky:0x8fd3ef,water:0x1c9fb5,low:0x9fb36a,forest:0x5c8f5a,rock:0x86887f,sand:0xeedcae},
+ metro:{sky:0x98c8ec,water:0x3383a6,low:0x7fa968,forest:0x4a7f50,rock:0x8f948f,sand:0xd6c99c}
 };
 
 export class FlightScenery {

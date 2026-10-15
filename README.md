@@ -14,6 +14,8 @@
 
 2.2 版重整飛機的手機／平板介面：WebGL 使用獨立飛行視窗，任務列與控制列占自己的空間；幼兒只需點擊向左、主動作與向右，助飛會持續管理油門、轉彎與姿態。看儀表時重新量測可用視窗，家長仍可切換完整手動操作。新增尋寶、實際重力郵件投遞及景點巡航，詳細變更見 [介面](docs/flight-upgrade-ui.md)、[控制與玩法](docs/flight-upgrade-controls.md)、[世界與鏡頭](docs/flight-upgrade-world.md)。
 
+2.4 版讓幼兒更好上手，也更有獎勵感。大廳換成明亮的天空配色，三張大卡片在手機直式、橫式都不用捲動。汽車路上有 12 顆金色星星可以收集，火車每接到一站乘客就會慶祝，飛機找到星星、送到郵件也會。三種模式收集到的星星都會顯示在大廳的星星架上。大廳另有一段可關閉的背景音樂，來源記在 [CREDITS](CREDITS.md)。改動與驗收紀錄見 [R1 報告](docs/R1_FUN_AND_POLISH_REPORT.md)。這一版只更新網頁原始碼，商店上的原生包仍是 2.3.0。
+
 ## iOS／Android 商店版準備包
 
 已建立 Capacitor 原生工程，全部遊戲與模型本機打包。新 [LOGO 與透明字標](docs/branding/README.md)已納入 Android 測試 APK（39,339,054 bytes）、上傳簽章 AAB（37,141,256 bytes）及實際上傳的 iOS 簽章 IPA（37,440,871 bytes）；簽章與隨附資源驗證通過，104 項程式測試通過。[公開 Android 測試版 rc.2](https://github.com/mars-tw/taiwan-island-drive/releases/tag/native-v1.0.0-rc.2)已發布，三個檔案 digest 已核對。完整交付與重建見 [native-package](docs/native-package.md)，最新包、舊 `e580ef1`／`7cd0d75` 證據與驗證限制見 [native-build-verification](docs/native-build-verification.md)。

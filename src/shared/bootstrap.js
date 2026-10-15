@@ -3,6 +3,7 @@ import './parent-gate.css';
 import { APP_BASE, APP_REPOSITORY, appUrl } from './paths.js';
 import { readSettings, updateSettings,subscribeSettings,SETTINGS_KEY } from './settings.js';
 import { installParentGate } from './parent-gate.js';
+import { unlockCelebrationAudio } from './celebrate.js';
 import { isNativeBuild,initNativeRuntime,nativeLocalHref,syncNativePreferences,disposeNativeRuntime,stopNativeSpeech } from './native.js';
 
 if (typeof document !== 'undefined') {
@@ -17,6 +18,8 @@ if (typeof document !== 'undefined') {
   document.querySelectorAll('[data-app-url]').forEach(link => link.href = appUrl(link.dataset.appUrl));
   document.querySelectorAll('[data-repository]').forEach(link => link.href = APP_REPOSITORY);
   if(isNativeBuild()){document.body.classList.add('is-native-app');document.querySelectorAll('a[href]').forEach(link=>{try{const url=new URL(link.href,document.baseURI);if(url.protocol===location.protocol&&url.host===location.host)link.href=nativeLocalHref(url.href,document.baseURI);}catch{}});}
+  addEventListener('pointerdown',unlockCelebrationAudio,{passive:true});addEventListener('keydown',unlockCelebrationAudio);
+  addEventListener('pointerdown',unlockCelebrationAudio,{passive:true});addEventListener('keydown',unlockCelebrationAudio);
   installParentGate();void initNativeRuntime();
   if(isNativeBuild())void syncNativePreferences({key:SETTINGS_KEY,read:readSettings,update:updateSettings,subscribe:subscribeSettings});
   addEventListener('pagehide',()=>{void disposeNativeRuntime();});

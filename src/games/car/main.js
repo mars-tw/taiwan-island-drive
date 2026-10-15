@@ -10,6 +10,8 @@ import { MAPS, VEHICLES, COLORS, TRACK_LENGTH } from './config.js';
 import { Game } from './game.js';
 import { roadCenter } from './physics.js';
 import { TiltController, combineSteering } from './tilt.js';
+import { celebrate } from '../../shared/celebrate.js';
+import { addStars, recordBest, starRating } from '../../shared/rewards.js';
 
 const $ = (s) => document.querySelector(s);
 const $$ = (s) => [...document.querySelectorAll(s)];
@@ -144,6 +146,7 @@ function updateHUD(state) {
   $('#drive-message').textContent = state.offRoad ? '回到路面，繼續前進' : '';
   $('#drive-message').classList.toggle('visible', Boolean(state.offRoad));
   drawMinimap(state.progress || 0);
+  if (state.starTotal) { $('#star-count').textContent = state.stars; $('#star-total').textContent = `/${state.starTotal}`; }
   const counting = state.phase === 'countdown';
   $('#countdown').classList.toggle('hidden', !counting);
   if (counting) $('#countdown').textContent = state.countdown > 0 ? Math.ceil(state.countdown) : '出發';
@@ -156,7 +159,12 @@ function finish(result) {
   $('#countdown').classList.add('hidden');
   $('#finish-overlay').classList.remove('hidden');
   const completed = result.completed !== false;
-  $('#finish-title').textContent = completed ? '這段風景，收下了。' : '再給自己一個彎。';
+  const stars = result.stars || 0, rating = completed ? starRating(stars, result.starTotal || 12) : 0;
+  if (stars) addStars('car', stars);
+  if (completed) recordBest(`car:${mapId}`, rating);
+  $('#finish-stars').innerHTML = `<span class="rating" aria-label="${rating} 顆星評等">${[1, 2, 3].map(i => `<i class="${i <= rating ? 'on' : ''}">★</i>`).join('')}</span><span class="haul">收集到 <b>${stars}</b> / ${result.starTotal || 12} 顆星星</span>`;
+  if (completed) celebrate({ text: rating === 3 ? '超級司機！' : '到終點了！', kind: 'finish', y: 0.3, pieces: 40, big: true, sound: !muted });
+  $('#finish-title').textContent = completed ? (rating === 3 ? '星星全都帶回家！' : '到終點囉，好棒！') : '時間到，再試一次！';
   $('#finish-eyebrow').textContent = completed ? 'JOURNEY COMPLETE' : 'TRY ANOTHER RUN';
   $('#finish-route').textContent = `${currentMap().name} · ${currentVehicle().name} · ${completed ? '2.40' : (result.distance / 1000).toFixed(2)} km`;
   $('#finish-time').textContent = timeFormat(result.elapsed, true);
@@ -229,8 +237,13 @@ function releaseInput() {
   $$('[data-input]').forEach(el => el.classList.remove('held'));
 }
 
+function collected({ collected: count, total }) {
+  const badge = $('#hud-stars'); badge.classList.remove('bump'); void badge.offsetWidth; badge.classList.add('bump');
+  celebrate({ text: count === total ? '全部找到了！' : `${count} 顆星星`, kind: 'star', x: 0.5, y: 0.36, pieces: count === total ? 34 : 14, sound: false, big: count === total });
+}
+
 const game = new Game({
-  canvas: $('#world'), onUpdate: updateHUD, onFinish: finish,
+  canvas: $('#world'), onUpdate: updateHUD, onFinish: finish, onCollect: collected,
   onReady: () => {},
   onError: error => { console.error(error); toast('3D 場景載入遇到問題，請重新整理。'); }
 });

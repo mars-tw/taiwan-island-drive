@@ -1,7 +1,7 @@
 export const ROUTES = {
-  coast: {id:'coast',name:'花東海岸',tag:'海風與山巒',stationNames:['海風','藍灣','山海'],sky:0xbad7df,ground:0x7f9a67,rail:0x69716c,fog:0xc4dbdd,curve:20,hill:1.4,grade:0.003,theme:'coast'},
-  city: {id:'city',name:'台北城市',tag:'高架與市街',stationNames:['河畔','星光','城市'],sky:0xbbcbd9,ground:0x899b87,rail:0x707b84,fog:0xc5d3df,curve:12,hill:1,grade:0.002,theme:'city'},
-  forest: {id:'forest',name:'阿里山森林',tag:'林間與緩坡',stationNames:['杉林','雲霧','森林'],sky:0xc2dbcc,ground:0x73875b,rail:0x6c6b60,fog:0xd1ddcd,curve:24,hill:3,grade:0.007,theme:'forest'},
+  coast: {id:'coast',name:'花東海岸',tag:'海風與山巒',stationNames:['海風','藍灣','山海'],sky:0x8ccff0,ground:0x78b65c,rail:0x69716c,fog:0xbfe3f0,curve:20,hill:1.4,grade:0.003,theme:'coast'},
+  city: {id:'city',name:'台北城市',tag:'高架與市街',stationNames:['河畔','星光','城市'],sky:0x9cc9ef,ground:0x86ad78,rail:0x707b84,fog:0xc6dcef,curve:12,hill:1,grade:0.002,theme:'city'},
+  forest: {id:'forest',name:'阿里山森林',tag:'林間與緩坡',stationNames:['杉林','雲霧','森林'],sky:0xa3d8e6,ground:0x6aa052,rail:0x6c6b60,fog:0xcbe6dc,curve:24,hill:3,grade:0.007,theme:'forest'},
 };
 export const LESSONS = {
   lesson1:{id:'lesson1',name:'第一課・起步與停車',short:'起步與停車',description:'開電源、關門、選前進；練習提早減速，在海風站停好並接客。',stops:[420],limit:40,signals:[{at:160,type:'green'}],end:460},

@@ -16,7 +16,7 @@ async function collect(directory) {
     else if (item.isFile()) {
       const name = relative(build, file).split(sep).join('/');
       if (name === 'sw.js' || name === 'precache.json' || name.endsWith('.map')) continue;
-      if (/\.(?:html|js|css|json|txt|webmanifest|svg|png|jpe?g|webp|glb|woff2?|mp3|ogg|wav)$/i.test(name)) {
+      if (/\.(?:html|js|css|json|txt|webmanifest|svg|png|jpe?g|webp|glb|woff2?|mp3|m4a|ogg|wav)$/i.test(name)) {
         precache.push(`./${name}`);
       }
     }
