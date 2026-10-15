@@ -2,7 +2,7 @@
 // Samples requestAnimationFrame intervals while each mode is actively playing,
 // three runs per mode/viewport, and reports the median p95. Headless Chromium is
 // capped at the display refresh rate (60 Hz => 16.7 ms), so values near 16.7 ms
-// mean the frame budget was met; software rendering (SwiftShader) is not valid.
+// describe only this run; software rendering (SwiftShader) is not a device gate.
 import { pathToFileURL } from 'node:url';
 
 const moduleUrl = process.env.PLAYWRIGHT_MODULE ? pathToFileURL(process.env.PLAYWRIGHT_MODULE).href : 'playwright';
@@ -21,6 +21,7 @@ const MODES = {
 };
 const browser = await chromium.launch({ headless: true, args: ['--use-angle=d3d11', '--enable-gpu', '--ignore-gpu-blocklist'] });
 const renderer = await (async () => { const page = await browser.newPage(); const name = await page.evaluate(() => { const gl = document.createElement('canvas').getContext('webgl2'); const info = gl?.getExtension('WEBGL_debug_renderer_info'); return info ? gl.getParameter(info.UNMASKED_RENDERER_WEBGL) : 'unknown'; }); await page.close(); return name; })();
+console.log('並發載量測，僅供參考；不代表通過出貨效能閘。');
 console.log(`renderer: ${renderer}`);
 const rows = [];
 for (const [vp, options] of Object.entries(VIEWPORTS)) for (const [mode, spec] of Object.entries(MODES)) {

@@ -1,6 +1,6 @@
 import './styles.css';
+import '../../shared/mobile-controls.css';
 import '../../shared/bootstrap.js';
-import {APP_REPOSITORY} from '../../shared/paths.js';
 import {readSettings,updateSettings,subscribeSettings} from '../../shared/settings.js';
 import {speakNative,stopNativeSpeech} from '../../shared/native.js';
 import {TrainGame} from './game.js';
@@ -10,7 +10,11 @@ import {ROUTES,LESSONS,VEHICLES,clamp} from './config.js';
 import {celebrate} from '../../shared/celebrate.js';
 import {addStars,recordBest} from '../../shared/rewards.js';
 import {stationReward,lessonRating,LESSON_BONUS} from './rewards.js';
+import {requestedJourney} from '../../shared/journeys.js';
+import {journeyResult} from '../../shared/passport.js';
 const $=id=>document.getElementById(id),game=new TrainGame(),audio=new TrainAudio();let world;
+let journey=requestedJourney('train');
+if(journey)game.start(journey.lesson,{route:journey.route});
 const initialSettings=readSettings();game.childMode=initialSettings.childMode;
 try{world=new TrainWorld($('world'),game);}catch(error){$('asset-loading').innerHTML='<b>這台瀏覽器無法啟動 3D 畫面</b><span>請在 Safari 或 Chrome 重新開啟。</span>';console.error(error);}
 window.__trainSchool={game,audio,getState:()=>game.getState(),getAssets:()=>world?.assetStatus,world};
@@ -34,15 +38,15 @@ for(const [id,field,sign] of [['throttle-up','throttle',1],['throttle-down','thr
 $('emergency').onclick=run(()=>game.controls.emergency?game.releaseEmergency():game.emergency());$('horn').onclick=()=>{voiceActivated=true;if(voiceEnabled){activateAudio();audio.horn();}};$('sound').onclick=()=>{voiceActivated=true;updateSettings({muted:!readSettings().muted});if(voiceEnabled){activateAudio();speak(game.childHint().text,true);}};
 $('view').onclick=()=>{world.view=world.view==='cab'?'outside':'cab';$('view').textContent=world.view==='cab'?'外部視角 ↗':'駕駛艙 ↙';};
 function pause(){if(game.paused){activateAudio();game.resume();}else game.pause();updateUI();}
-$('pause').onclick=pause;$('resume').onclick=()=>{activateAudio();game.resume();updateUI();};$('restart-pause').onclick=()=>{game.reset();updateUI();};
+$('pause').onclick=pause;$('resume').onclick=()=>{activateAudio();game.resume();updateUI();};$('restart-pause').onclick=()=>{servedStops=0;celebratedLesson='';game.reset();updateUI();};
 let selectedRoute='coast',selectedLesson='lesson1',wasPaused=false;
 function selectOptions(){document.querySelectorAll('[data-route]').forEach(b=>b.classList.toggle('selected',b.dataset.route===selectedRoute));document.querySelectorAll('[data-lesson]').forEach(b=>b.classList.toggle('selected',b.dataset.lesson===selectedLesson));}
 function openSettings(){wasPaused=game.paused;game.pause();selectedRoute=game.routeId;selectedLesson=game.lessonId;selectOptions();$('vehicle-select').value=game.vehicleId;$('assisted').checked=game.assisted;$('child-mode').checked=game.childMode;$('settings-dialog').showModal();}
 $('settings').onclick=openSettings;document.querySelectorAll('[data-route]').forEach(b=>b.onclick=()=>{selectedRoute=b.dataset.route;selectOptions();});document.querySelectorAll('[data-lesson]').forEach(b=>b.onclick=()=>{selectedLesson=b.dataset.lesson;selectOptions();});
 $('settings-dialog').addEventListener('close',()=>{if(!wasPaused&&!game.completed)game.resume();});
-$('start-lesson').onclick=()=>{activateAudio();voiceActivated=true;game.start(selectedLesson,{route:selectedRoute,vehicle:$('vehicle-select').value});game.assisted=$('assisted').checked;updateSettings({childMode:$('child-mode').checked});wasPaused=false;$('settings-dialog').close();updateUI();speak(game.childMode?game.childHint().text:game.hint,true);};
+$('start-lesson').onclick=()=>{activateAudio();voiceActivated=true;journey=null;servedStops=0;game.start(selectedLesson,{route:selectedRoute,vehicle:$('vehicle-select').value});game.assisted=$('assisted').checked;updateSettings({childMode:$('child-mode').checked});wasPaused=false;$('settings-dialog').close();updateUI();speak(game.childMode?game.childHint().text:game.hint,true);};
 $('help').onclick=()=>{wasPaused=game.paused;game.pause();$('help-dialog').showModal();};$('help-dialog').addEventListener('close',()=>{if(!wasPaused&&!game.completed)game.resume();});
-$('replay').onclick=()=>{$('result-dialog').close();game.reset();updateUI();};$('next-lesson').onclick=()=>{$('result-dialog').close();const n=Object.keys(LESSONS),i=n.indexOf(game.lessonId);game.start(n[(i+1)%n.length]);updateUI();};
+$('replay').onclick=()=>{$('result-dialog').close();servedStops=0;celebratedLesson='';game.reset();updateUI();};$('next-lesson').onclick=()=>{$('result-dialog').close();journey=null;servedStops=0;const n=['lesson1','lesson2','lesson3'],i=n.indexOf(game.lessonId);game.start(n[(i+1)%n.length]);updateUI();};
 document.addEventListener('keydown',e=>{if(document.querySelector('dialog[open]')||/^(INPUT|SELECT|TEXTAREA)$/.test(e.target.tagName))return;const handlers={ArrowUp:()=>game.throttle(game.controls.throttle+1),ArrowDown:()=>game.throttle(game.controls.throttle-1),ArrowLeft:()=>game.brake(game.controls.brake-1),ArrowRight:()=>game.brake(game.controls.brake+1),' ':()=>game.emergency(),p:()=>game.togglePower(),d:()=>game.toggleDoors(),f:()=>game.direction(1),r:()=>game.direction(-1),n:()=>game.direction(0),Escape:pause};const fn=handlers[e.key]||handlers[e.key.toLowerCase()];if(fn){e.preventDefault();activateAudio();fn();updateUI();}});
 document.addEventListener('visibilitychange',()=>{if(document.hidden)game.pause();});
 let resultShown=false,servedStops=0,celebratedLesson='';
@@ -55,10 +59,9 @@ function updateUI(){
  document.querySelectorAll('[data-direction]').forEach(b=>b.classList.toggle('active',Number(b.dataset.direction)===c.direction));$('throttle').value=c.throttle;$('brake').value=c.brake;$('throttle-value').textContent=c.throttle;$('brake-value').textContent=c.brake;$('traction').textContent=(s.traction/1000).toFixed(0);$('pressure').textContent=s.pressure.toFixed(0);$('traction-bar').style.width=`${s.traction/game.vehicle.maxTraction*100}%`;$('pressure-bar').style.width=`${s.pressure/360*100}%`;
  $('emergency').classList.toggle('engaged',c.emergency);$('emergency').querySelector('span').textContent=c.emergency?'解除緊急煞車':'緊急煞車';$('pause-overlay').hidden=!s.paused||s.completed||!!document.querySelector('dialog[open]');$('pause').textContent=s.paused?'▶':'Ⅱ';$('pause').setAttribute('aria-label',s.paused?'繼續課程':'暫停課程');$('toast').hidden=!s.toast;$('toast').textContent=s.toast;
  const earned=stationReward(servedStops,s.stops.length);if(s.stops.length<servedStops)servedStops=s.stops.length;if(earned){servedStops=s.stops.length;addStars('train',earned);const stop=s.stops.at(-1);celebrate({text:`${stop.station}站 接到乘客！`,kind:'station',y:.32,pieces:24,sound:voiceEnabled});}
- if(s.completed&&!resultShown){resultShown=true;const rating=lessonRating(s.score);const key=`${s.route}:${s.lesson}:${s.elapsed.toFixed(1)}`;if(celebratedLesson!==key){celebratedLesson=key;addStars('train',LESSON_BONUS);recordBest(`train:${s.lesson}`,rating);setTimeout(()=>celebrate({text:'全部送到站了！',kind:'finish',y:.22,pieces:40,big:true,sound:voiceEnabled}),300);}$('result-stars').innerHTML=[1,2,3].map(i=>`<i class="${i<=rating?'on':''}">★</i>`).join('');$('result-stars').setAttribute('aria-label',`${rating} 顆星評等`);speak('乘客都到站了！你完成這一課啦。',true);$('score').textContent=s.score;$('stop-results').innerHTML=s.stops.map(v=>`<div class="stop-result"><b>${v.station}站</b><span>停車誤差 ${v.error.toFixed(1)} m</span></div>`).join('');$('result-feedback').textContent=s.infractions.length?'再試一次，在紅燈前提早煞車。完成停站的步驟已經學會了。':s.overspeedTime>3?'停站流程完成了。下一次提早收動力，試著全程留在限速內。':'你會確認車門、平順起步，也會在停車標附近接客了。下一課再練習新任務！';$('result-dialog').showModal();}
+ if(s.completed&&!resultShown){resultShown=true;const rating=lessonRating(s.score);const key=`${s.route}:${s.lesson}:${s.elapsed.toFixed(1)}`;if(celebratedLesson!==key){celebratedLesson=key;addStars('train',LESSON_BONUS);recordBest(`train:${s.lesson}`,rating);setTimeout(()=>celebrate({text:'全部送到站了！',kind:'finish',y:.22,pieces:40,big:true,sound:voiceEnabled}),300);}$('result-stars').innerHTML=[1,2,3].map(i=>`<i class="${i<=rating?'on':''}">★</i>`).join('');$('result-stars').setAttribute('aria-label',`${rating} 顆星評等`);speak('乘客都到站了！你完成這一課啦。',true);$('score').textContent=s.score;$('stop-results').innerHTML=s.stops.map(v=>`<div class="stop-result"><b>${v.station}站</b><span>停車誤差 ${v.error.toFixed(1)} m</span></div>`).join('');$('result-feedback').textContent=s.infractions.length?'再試一次，在紅燈前提早煞車。完成停站的步驟已經學會了。':s.overspeedTime>3?'停站流程完成了。下一次提早收動力，試著全程留在限速內。':'你會確認車門、平順起步，也會在停車標附近接客了。下一課再練習新任務！';document.querySelector('#result-dialog .journey-result')?.remove();journeyResult($('result-dialog'),journey,rating);$('next-lesson').hidden=!!journey;$('result-dialog').showModal();}
  if(!s.completed)resultShown=false;
 }
 let previous=performance.now(),accumulator=0,lastUI=0;
 function frame(now){const dt=Math.min((now-previous)/1000,.1);previous=now;accumulator+=dt;while(accumulator>=1/60){game.update(1/60);accumulator-=1/60;}world?.render();audio.update(game.physics.v*3.6,game.paused);if(now-lastUI>80){updateUI();lastUI=now;}requestAnimationFrame(frame);}
-const repositoryLink=document.querySelector('a[href*="github.com/mars-tw/"],a[data-parent-url*="github.com/mars-tw/"]');if(repositoryLink)repositoryLink.href=APP_REPOSITORY;
 applySharedSettings(readSettings(),true);subscribeSettings(applySharedSettings);requestAnimationFrame(frame);

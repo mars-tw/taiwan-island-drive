@@ -29,10 +29,10 @@ export class FlightGame {
  start(lesson=this.lesson,options={}){
   if(typeof lesson==='object'){options=lesson;lesson=options.lesson||'takeoff';}
   this.lesson=LESSONS[lesson]?lesson:'takeoff';this.plane=options.plane||this.plane;this.assist=options.assist??this.assist;this.preschool=options.preschool??this.preschool;this.map=options.map||this.map;
-  this.world.setMap(this.map);this.state=createFlightInitialState(this.lesson,this.preschool);this.guidance={rotate:false,navigate:false,land:false,pilot:createChildPilot(this.state)};this.mission=newMission(this.lesson,this.map);
+  this.missionOptions={targets:options.targets};this.world.setMap(this.map);this.state=createFlightInitialState(this.lesson,this.preschool);this.guidance={rotate:false,navigate:false,land:false,pilot:createChildPilot(this.state)};this.mission=newMission(this.lesson,this.map,this.missionOptions);
   Object.assign(this.controls,{pitch:0,roll:0,rudder:0,throttle:this.state.throttle,flaps:this.state.flaps,brake:0});this.effectiveControls={...this.controls};this.keys.clear();this.mode='playing';this.accumulator=0;this.world.setView(this.world.view);this.audio.start();return this.getState();
  }
- reset(){return this.start(this.lesson);}
+ reset(){return this.start(this.lesson,this.missionOptions);}
  pause(){if(this.mode==='playing')this.mode='paused';this.audio.update(this.state,false);return this.getState();}
  resume(){if(this.mode==='paused')this.mode='playing';this.keys.clear();this.audio.start();return this.getState();}
  menu(){this.mode='menu';this.keys.clear();this.state=createState();this.guidance={rotate:false,navigate:false,land:false,pilot:createChildPilot(this.state)};this.controls.throttle=0;this.audio.update(this.state,false);}

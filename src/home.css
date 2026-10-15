@@ -147,3 +147,7 @@ dialog h2{font-size:26px;margin:12px 0 10px}
 }
 @media(max-width:860px) and (max-height:520px) and (orientation:landscape){.welcome{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);clip-path:inset(50%);white-space:nowrap}}
 @media(prefers-reduced-motion:reduce){.academy-card{transition:none}.academy-card:hover{transform:none}.sky-decor *,.vehicle-symbol{animation:none!important}}
+/* R2: dedicated passport row, without hiding a play button below the fold. */
+.home-header .passport-open{box-shadow:0 4px 0 #c39517}.card-action{min-height:60px}.home-header{min-height:64px}.header-tools button{min-height:60px}.music-toggle{min-width:60px}
+@media(max-width:600px){.home-header{height:138px;position:relative;align-items:flex-start}.academy-brand{height:66px;min-height:60px}.header-tools{display:flex;position:absolute;left:0;right:0;top:72px;gap:8px}.header-tools #home-settings{position:absolute;right:0;top:-68px;min-height:60px}.header-tools .star-shelf{min-height:60px}.header-tools .passport-open{flex:1;margin-left:auto}.vehicle-gallery{height:calc(100dvh - 138px - 82px - 16px);min-height:480px}.card-action{min-height:60px}.header-tools .music-toggle{min-width:60px}.card-copy p{font-size:12px}}
+@media(max-height:520px) and (orientation:landscape){.home-header{height:66px}.vehicle-gallery{height:calc(100dvh - 66px - 14px);min-height:0}.card-action{min-height:60px}.header-tools{gap:6px}.academy-brand{font-size:16px}.home-header .star-shelf span{display:none}}

@@ -11,6 +11,13 @@ async (page) => {
   const menu=await page.evaluate(()=>({frame:window.__flightSchool.game.world.getFraming(),card:document.querySelector('.dispatch-card').getBoundingClientRect().toJSON(),start:document.querySelector('#start').getBoundingClientRect().toJSON()}));
   if(!menu.frame.contained||intersects(menu.frame.absoluteBBox,menu.card)||menu.start.bottom>height||menu.start.top<0)throw new Error('Menu framing '+JSON.stringify({width,height,pilot,menu}));
   await page.locator('.parent-settings>summary').click();
+  // Family settings remain protected; follow the real gate before selecting.
+  if(await page.locator('#parent-gate[open]').count()){
+   const question=await page.locator('#parent-gate-question').textContent();
+   const numbers=question.match(/\d+/g).map(Number);
+   await page.locator('#parent-gate-answer').fill(String(numbers[0]+numbers[1]));
+   await page.locator('#parent-gate-submit').click();
+  }
   await page.locator('#pilot-choice').selectOption(pilot);
   await page.getByRole('button',{name:'出發 ✈',exact:true}).click();
   await page.waitForFunction(()=>window.__flightSchool.getState().mode==='playing'&&window.__flightSchool.game.world.getFraming().contained);

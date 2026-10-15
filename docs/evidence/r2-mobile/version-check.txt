@@ -1,0 +1,9 @@
+﻿VERIFIED: previous application version absent from live application sources and package.json
+docs/R1_FUN_AND_POLISH_REPORT.md:3:日期：2026-10-15　版本：2.3.0 → **2.4.0**　執行者：Claude（全程沒有使用 Codex）
+docs/R1_FUN_AND_POLISH_REPORT.md:49:| 版本 | `package.json`、`package-lock.json`、`src/games/car/config.js`、`car/index.html` 都改成 2.4.0；這些現行原始碼裡已經沒有 2.3.0／2.2.0 | grep |
+docs/OPTIM_PLAN_R2.md:3:日期：2026-10-15。狀態：PREPARED。版本：2.4.0 → 2.5.0。分支：`r1-fun-polish`。
+docs/OPTIM_PLAN_R1.md:3:日期：2026-10-15　版本：2.3.0 → 2.4.0　執行者：Claude（本輪不使用 Codex）
+docs/OPTIM_PLAN_R1.md:84:- [x] 版本 bump 到 2.4.0：`package.json`、`package-lock.json`、`src/games/car/config.js`、`car/index.html`。原生包、商店與歷史證據檔記錄的是已上架的 2.3.0，保持原值不改。
+package-lock.json:105:        "tslib": "^2.4.0",
+package-lock.json:474:        "tslib": "^2.4.0"
+package-lock.json:1240:        "prettier": ">=2.4.0"

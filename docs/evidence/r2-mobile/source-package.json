@@ -1,0 +1,22 @@
+{
+  "status": "VERIFIED",
+  "path": "release/island-drive-r2-mobile-source.zip",
+  "version": "2.5.0",
+  "bytes": 203458001,
+  "sha256": "614eb6ebadd4bb0a7151f8fa3e338b9961c34a9926886bee130d677e0b4c7f90",
+  "entries": 750,
+  "crc": "all entries passed",
+  "requiredFiles": [
+    "src/shared/journeys.js",
+    "src/shared/passport.js",
+    "src/shared/mobile-controls.css",
+    "tests/shared/journeys.test.js",
+    "scripts/check-mobile.mjs",
+    "docs/CODEX_RESPONSE_R2_MOBILE.md",
+    "dist/index.html",
+    "dist/precache.json",
+    "LICENSE"
+  ],
+  "sourceReadback": "selected files byte-identical",
+  "excluded": "no .secrets, .audit-tmp, node_modules or recursive release entries"
+}

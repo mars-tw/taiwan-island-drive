@@ -1,7 +1,7 @@
 import '../../shared/bootstrap.js';
-import { APP_BASE, appUrl } from '../../shared/paths.js';
 import { readSettings, updateSettings, subscribeSettings } from '../../shared/settings.js';
 import './styles.css';
+import '../../shared/mobile-controls.css';
 import '@fontsource/barlow-condensed/latin-500.css';
 import '@fontsource/barlow-condensed/latin-600.css';
 import '@fontsource/barlow-condensed/latin-700.css';
@@ -12,10 +12,11 @@ import { roadCenter } from './physics.js';
 import { TiltController, combineSteering } from './tilt.js';
 import { celebrate } from '../../shared/celebrate.js';
 import { addStars, recordBest, starRating } from '../../shared/rewards.js';
+import { requestedJourney } from '../../shared/journeys.js';
+import { journeyResult } from '../../shared/passport.js';
 
 const $ = (s) => document.querySelector(s);
 const $$ = (s) => [...document.querySelectorAll(s)];
-const base = APP_BASE;
 const familySettings = readSettings();
 const storage = {
   get(key, fallback) { try { return JSON.parse(localStorage.getItem(`island-drive:${key}`)) ?? fallback; } catch { return fallback; } },
@@ -26,6 +27,9 @@ let mapId = MAPS.some(m => m.id === saved.map) ? saved.map : 'coast';
 let vehicleId = VEHICLES.some(v => v.id === saved.vehicle) ? saved.vehicle : 'coupe';
 let paint = COLORS.includes(saved.paint) ? saved.paint : COLORS[0];
 let mode = saved.mode === 'timeattack' ? 'timeattack' : 'cruise';
+let journey = requestedJourney('car');
+let autoThrottle = false;
+if (journey) { mapId = journey.map; mode = 'cruise'; }
 let quality = familySettings.quality;
 let muted = familySettings.muted;
 let ready = false;
@@ -62,7 +66,6 @@ function carArt(id) {
 $('#map-choices').innerHTML = MAPS.map((m, i) => `<button class="map-card" data-map="${m.id}" aria-pressed="false" aria-label="選擇${m.name}"><div class="map-art">${mapArt(m.id)}<span class="map-number">0${i + 1}</span><span class="selected-check">✓</span></div><div class="map-caption"><strong>${m.name}</strong><span>${m.english}</span></div></button>`).join('');
 $('#vehicle-choices').innerHTML = VEHICLES.map(v => `<button class="vehicle-choice" data-vehicle="${v.id}" aria-pressed="false" aria-label="選擇${v.category} ${v.name}" style="--car-color:${v.color}">${carArt(v.id)}<span>${v.category}</span></button>`).join('');
 $('#paint-options').innerHTML = COLORS.map((c, i) => `<button class="paint-dot" data-paint="${c}" style="--paint:${c}" aria-label="${['海洋青','奶油黃','雲霧白','夕陽紅','石墨灰'][i]}車身" aria-pressed="false"></button>`).join('');
-$('#download-source').href = `${base}downloads/island-drive-source.zip`;
 
 function syncSelection() {
   const map = currentMap();
@@ -134,13 +137,15 @@ function drawMinimap(progress) {
 
 function updateHUD(state) {
   lastState = state;
+  if (state.phase === 'paused' && autoThrottle) { autoThrottle = false; $('#auto-throttle').setAttribute('aria-pressed','false'); }
   tilt.setActive(state.phase === 'running');
   updateInput();
   $('#speed').textContent = String(Math.round(state.speed || 0)).padStart(3, '0');
   $('#gear').textContent = state.speed < 1 ? 'N' : Math.min(6, 1 + Math.floor(state.speed / 34));
-  $('#progress-bar').style.width = `${Math.min(100, state.progress * 100)}%`;
   $('#boost-bar').style.width = `${Math.max(0, state.boost ?? 1) * 100}%`;
-  $('#distance-label').textContent = `${((state.distance || 0) / 1000).toFixed(2)} / 2.40 km`;
+  const length = journey?.distance || TRACK_LENGTH;
+  $('#progress-bar').style.width = `${Math.min(100,(state.distance || 0)/length*100)}%`;
+  $('#distance-label').textContent = `${((state.distance || 0) / 1000).toFixed(2)} / ${(length/1000).toFixed(2)} km`;
   $('#clock').textContent = timeFormat(mode === 'timeattack' ? state.timeLeft : state.elapsed, true);
   $('#clock').classList.toggle('urgent', mode === 'timeattack' && state.timeLeft < 20);
   $('#drive-message').textContent = state.offRoad ? '回到路面，繼續前進' : '';
@@ -161,15 +166,17 @@ function finish(result) {
   const completed = result.completed !== false;
   const stars = result.stars || 0, rating = completed ? starRating(stars, result.starTotal || 12) : 0;
   if (stars) addStars('car', stars);
-  if (completed) recordBest(`car:${mapId}`, rating);
+  if (completed) recordBest(journey ? `car:${journey.id}` : `car:${mapId}`, rating);
+  $('#finish-overlay .journey-result')?.remove();
+  if (completed) journeyResult($('#finish-overlay .result-card'), journey, rating);
   $('#finish-stars').innerHTML = `<span class="rating" aria-label="${rating} 顆星評等">${[1, 2, 3].map(i => `<i class="${i <= rating ? 'on' : ''}">★</i>`).join('')}</span><span class="haul">收集到 <b>${stars}</b> / ${result.starTotal || 12} 顆星星</span>`;
   if (completed) celebrate({ text: rating === 3 ? '超級司機！' : '到終點了！', kind: 'finish', y: 0.3, pieces: 40, big: true, sound: !muted });
-  $('#finish-title').textContent = completed ? (rating === 3 ? '星星全都帶回家！' : '到終點囉，好棒！') : '時間到，再試一次！';
+  $('#finish-title').textContent = completed ? (stars === result.starTotal ? '星星全都帶回家！' : '到終點囉，好棒！') : '時間到，再試一次！';
   $('#finish-eyebrow').textContent = completed ? 'JOURNEY COMPLETE' : 'TRY ANOTHER RUN';
-  $('#finish-route').textContent = `${currentMap().name} · ${currentVehicle().name} · ${completed ? '2.40' : (result.distance / 1000).toFixed(2)} km`;
+  $('#finish-route').textContent = `${currentMap().name} · ${currentVehicle().name} · ${(Math.min(result.distance,journey?.distance||TRACK_LENGTH) / 1000).toFixed(2)} km`;
   $('#finish-time').textContent = timeFormat(result.elapsed, true);
   $('#finish-score').textContent = Math.round(result.score || 0).toLocaleString('zh-TW');
-  const key = `${mapId}:${vehicleId}:${mode}`;
+  const key = `${mapId}:${vehicleId}:${mode}${journey ? `:${journey.id}` : ''}`;
   const previous = records[key];
   if (completed && (!previous || result.elapsed < previous.elapsed)) {
     records[key] = { elapsed: result.elapsed, score: result.score };
@@ -189,11 +196,13 @@ function showDriving() {
   $('#mini-map-label').textContent = currentMap().tag;
   $('#hud-mode').textContent = mode === 'cruise' ? '自由駕駛' : '計時挑戰';
   $('#clock-label').textContent = mode === 'cruise' ? '旅程時間' : '剩餘時間';
+  $('#drive-guide').textContent = journey ? `${journey.name}：${journey.tip}` : '按住右下油門前進；左下按鈕轉向。也可點「自動油門」。';
+  $('#auto-throttle').setAttribute('aria-pressed','false');
 }
 
-function start() { if (!ready || busy) return; releaseInput(); showDriving(); game.start(mode); }
+function start() { if (!ready || busy) return; releaseInput(); showDriving(); game.start(mode, {distance:journey?.distance}); }
 function returnToMenu() {
-  releaseInput(); game.returnToMenu();
+  releaseInput(); journey=null; game.returnToMenu();
   document.body.classList.remove('driving');
   $('#menu').classList.remove('hidden'); $('#topbar').classList.remove('hidden'); $('#hud').classList.add('hidden');
   $$('.overlay, #countdown').forEach(el => el.classList.add('hidden'));
@@ -204,9 +213,10 @@ function updateInput() {
     const active = (...keys) => keys.some(k => pressedKeys.has(k));
     const left = active('a', 'arrowleft') || touches.has('left');
     const right = active('d', 'arrowright') || touches.has('right');
+    const braking = active('s', 'arrowdown') || touches.has('brake');
     game.input.steer = game.phase === 'running' ? combineSteering(left, right, tilt.enabled, tilt.steer) : 0;
-    game.input.throttle = active('w', 'arrowup') || touches.has('throttle') ? 1 : 0;
-    game.input.brake = active('s', 'arrowdown') || touches.has('brake') ? 1 : 0;
+    game.input.throttle = game.phase === 'running' && !braking && (autoThrottle || active('w', 'arrowup') || touches.has('throttle')) ? 1 : 0;
+    game.input.brake = game.phase === 'running' && braking ? 1 : 0;
     game.input.boost = active('shift') || touches.has('boost');
     $$('[data-input]').forEach(el => el.classList.toggle('held', touches.has(el.dataset.input)));
 }
@@ -231,6 +241,8 @@ function bindControls() {
 }
 
 function releaseInput() {
+  autoThrottle = false;
+  $('#auto-throttle').setAttribute('aria-pressed','false');
   pressedKeys.clear(); pointers.clear();
   tilt.resetSteer();
   if (typeof game !== 'undefined') Object.assign(game.input, { steer: 0, throttle: 0, brake: 0, boost: false });
@@ -283,6 +295,7 @@ $$('[data-vehicle]').forEach(button => button.addEventListener('click', () => { 
 $$('[data-paint]').forEach(button => button.addEventListener('click', () => { paint = button.dataset.paint; game.setColor(paint); syncSelection(); }));
 $$('[data-mode]').forEach(button => button.addEventListener('click', () => { mode = button.dataset.mode; syncSelection(); }));
 $('#start-button').addEventListener('click', start);
+$('#auto-throttle').addEventListener('click', () => { autoThrottle = !autoThrottle; $('#auto-throttle').setAttribute('aria-pressed',String(autoThrottle)); updateInput(); });
 $('#pause-button').addEventListener('click', () => { releaseInput(); game.pause(); });
 $('#resume-button').addEventListener('click', () => game.resume());
 $('#restart-button').addEventListener('click', start);
@@ -315,6 +328,7 @@ try {
   $('#start-button span').textContent = '出發上路';
   $('#loading-screen').classList.add('loaded');
   setTimeout(() => $('#loading-screen').remove(), 550);
+  if (journey) start();
 } catch (error) {
   console.error(error);
   $('#loading-text').textContent = '無法載入 3D 場景。請確認瀏覽器支援 WebGL，再重新整理。';

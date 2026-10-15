@@ -9,9 +9,9 @@ const LANE_PATTERN = [-2.7, -2.7, -1.4, 0, 1.4, 2.7, 2.7, 1.4, 0, -1.4, -2.7, -2
 const blocked = (z, lateral, obstacles) => obstacles.some(o => Math.abs(o.z - z) < (o.radius || 1) + 6 && Math.abs(o.lateral - lateral) < (o.radius || 1) + 2.4);
 
 /** Deterministic star positions; a star never sits on top of a roadside obstacle. */
-export function starLayout(mapId = 'coast', obstacles = []) {
+export function starLayout(mapId = 'coast', obstacles = [], length = TRACK_LENGTH) {
   const shift = { coast: 0, alishan: 3, taipei: 6, kenting: 9 }[mapId] ?? 0;
-  const first = 150, last = TRACK_LENGTH - 130, gap = (last - first) / (STAR_COUNT - 1);
+  const first = Math.min(150, length * .12), last = length - Math.min(130, length * .12), gap = (last - first) / (STAR_COUNT - 1);
   return Array.from({ length: STAR_COUNT }, (_, i) => {
     const z = Math.round(first + gap * i);
     let lateral = LANE_PATTERN[(i + shift) % LANE_PATTERN.length];

@@ -176,7 +176,7 @@ export class Game {
   buildStars() {
     if (!this.starGroup) return;
     this.starGroup.clear(); this.collected = new Set();
-    this.starLayout = starLayout(this.mapId, this.world?.obstacles || []);
+    this.starLayout = starLayout(this.mapId, this.world?.obstacles || [], this.journeyDistance || TRACK_LENGTH);
     this.starMeshes = this.starLayout.map(star => {
       const mesh = new THREE.Mesh(this.starGeometry, this.starMaterial);
       const heading = roadHeading(star.z, this.mapId);
@@ -225,11 +225,12 @@ export class Game {
     if (this.roadGlow) this.roadGlow.intensity = this.mapId === 'taipei' ? 9 : 0;
   }
 
-  start(mode = 'cruise') {
+  start(mode = 'cruise', options = {}) {
     if (!this.initialized) return;
+    this.journeyDistance = [360, 600, 850, 1100].includes(options.distance) ? options.distance : TRACK_LENGTH;
     this.mode = mode === 'timeattack' ? 'timeattack' : 'cruise'; this.physics = createPhysicsState();
     this.countdownRemaining = 3; this.lastCountdown = 4; this.phase = 'countdown'; this.accumulator = 0;
-    this.resetInput(); this.resetStars(); this.audio.unlock().catch(() => {}); this.placeVehicle(0, this.physics.lateral, 0);
+    this.resetInput(); this.buildStars(); this.resetStars(); this.audio.unlock().catch(() => {}); this.placeVehicle(0, this.physics.lateral, 0);
     this.updateCamera(1, true); this.onUpdate(this.getState());
   }
   pause() {
@@ -240,7 +241,7 @@ export class Game {
     if (this.phase !== 'paused') return;
     this.phase = this.resumePhase || 'running'; this.lastTime = 0; this.audio.unlock().catch(() => {}); this.onUpdate(this.getState());
   }
-  reset() { this.start(this.mode); }
+  reset() { this.start(this.mode, {distance:this.journeyDistance}); }
   returnToMenu() {
     this.phase = 'menu'; this.physics = createPhysicsState(); this.countdownRemaining = 0;
     this.resetInput(); this.onUpdate(this.getState());
@@ -260,7 +261,7 @@ export class Game {
 
   getState() {
     const s = this.physics;
-    return { speed: s.speed * 3.6, distance: s.distance, elapsed: s.elapsed, progress: s.distance / TRACK_LENGTH,
+    return { speed: s.speed * 3.6, distance: s.distance, elapsed: s.elapsed, progress: s.distance / (this.journeyDistance || TRACK_LENGTH),
       timeLeft: this.mode === 'timeattack' ? Math.max(0, timeAttackLimit(this.vehicleSpec, this.mapId) - s.elapsed) : null,
       score: calculateScore(s), offRoad: s.offRoad, boost: s.boost, phase: this.phase,
       countdown: Math.max(0, Math.ceil(this.countdownRemaining)), mapId: this.mapId, vehicleId: this.vehicleId,
@@ -350,7 +351,7 @@ export class Game {
       while (this.accumulator >= 1 / 60) {
         this.physics = stepPhysics(this.physics, this.input, this.vehicleSpec, this.mapId, 1 / 60, this.world.obstacles);
         this.accumulator -= 1 / 60; this.collectStars();
-        if (this.physics.completed) { this.finish(true); break; }
+        if (this.physics.completed || this.physics.distance >= (this.journeyDistance || TRACK_LENGTH)) { this.finish(true); break; }
         if (this.mode === 'timeattack' && this.physics.elapsed >= timeAttackLimit(this.vehicleSpec, this.mapId)) { this.finish(false); break; }
       }
     }
