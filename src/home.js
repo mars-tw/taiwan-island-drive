@@ -5,6 +5,8 @@ import { readSettings, updateSettings, subscribeSettings } from './shared/settin
 import { readRewards, subscribeRewards, totalStars } from './shared/rewards.js';
 import { isNativeBuild } from './shared/native.js';
 import { LobbyMusic } from './shared/lobby-music.js';
+import { installSafetyLesson } from './shared/safety-ui.js';
+installSafetyLesson();
 const $ = id => document.getElementById(id);
 function showSettings(value = readSettings()) {
   $('child-mode').checked = value.childMode;

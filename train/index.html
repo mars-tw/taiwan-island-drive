@@ -1,13 +1,13 @@
 <!doctype html>
-<html lang="zh-Hant"><head><meta charset="utf-8"><meta name="island-app-root" content="../"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"><meta name="theme-color" content="#153d4b"><meta name="description" content="在台灣山海間學習火車駕駛：慣性、動力、空氣煞車、號誌與精準停靠。免費開源的手機 3D 鐵道學校。"><link rel="icon" type="image/png" href="../branding/icon-v2-192.png"><link rel="apple-touch-icon" href="../branding/icon-v2-192.png"><link rel="manifest" href="../manifest.webmanifest"><title>島嶼鐵道學校｜學會平穩開車</title></head>
+<html lang="zh-Hant"><head><meta charset="utf-8"><meta name="island-app-root" content="../"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"><meta name="theme-color" content="#153d4b"><meta name="description" content="在台灣山海間學習火車駕駛：慣性、動力、空氣煞車、號誌與精準停靠。免費開源的手機 3D 鐵道學校。"><link rel="icon" type="image/png" href="../branding/icon-v2-192.png"><link rel="apple-touch-icon" href="../branding/icon-v2-192.png"><link rel="manifest" href="../manifest.webmanifest"><title>交通學院・火車課｜學會平穩開車</title></head>
 <body data-game="train">
 <main id="app">
-  <header class="masthead"><div class="brand"><span class="rail-mark" aria-hidden="true">▥</span><div><h1>島嶼鐵道學校</h1><span>ISLAND RAIL · TRAIN SCHOOL</span></div></div><div class="top-actions"><button id="settings" class="light">路線／課程</button><button id="pause" class="icon-button" aria-label="暫停課程">Ⅱ</button><button id="sound" class="icon-button" aria-label="關閉語音教練">♪</button></div></header>
+  <header class="masthead"><div class="brand"><span class="rail-mark" aria-hidden="true">▥</span><div><h1>交通學院・火車課</h1><span>停穩・開門・等朋友</span></div></div><div class="top-actions"><button id="settings" class="light">路線／課程</button><button id="pause" class="icon-button" aria-label="暫停課程">Ⅱ</button><button id="sound" class="icon-button" aria-label="關閉語音教練">♪</button></div></header>
   <section class="scene" aria-label="3D 火車駕駛視野"><canvas id="world"></canvas><div class="view-tools"><span id="route-name">花東海岸</span><span class="view-divider">／</span><span id="lesson-name">起步與停車</span><button id="view">外部視角 ↗</button></div>
     <div class="speed-instrument"><span>行車速度</span><div><strong id="speed">0</strong><em>km/h</em></div><p>路段限速 <b id="limit">40</b></p></div>
     <div class="next-station"><small>下一站</small><b id="station">海風站</b><span><strong id="distance">420</strong> m</span><div class="route-progress"><i id="progress"></i></div></div>
     <div class="signal-instrument"><div id="signal-lamp" class="lamp green"></div><div><small>前方號誌</small><b id="signal-name">綠燈・可前進</b><span id="signal-distance">160 m</span></div></div>
-    <div id="asset-loading" class="asset-loading"><div class="spinner"></div><b>正在準備駕駛艙</b><span>載入 Blender 模型與貼圖</span></div>
+    <div id="asset-loading" class="asset-loading"><div class="spinner"></div><b>正在準備駕駛艙</b><span>正在準備列車與風景</span></div>
     <div id="pause-overlay" class="pause-overlay" hidden><b>課程暫停</b><button id="resume">繼續駕駛 ▶</button><button id="restart-pause" class="outline">重新開始這一課</button></div>
     <div class="view-footer"><span id="vehicle-name">海島通勤電車</span><span id="elapsed">00:00</span></div>
   </section>

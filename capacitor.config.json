@@ -2,7 +2,7 @@
   "appId": "tw.mars.islandtransport",
   "appName": "島嶼交通學院",
   "webDir": "dist-native",
-  "loggingBehavior": "debug",
+  "loggingBehavior": "none",
   "android": { "allowMixedContent": false, "backgroundColor": "#edf4ec", "captureInput": true, "webContentsDebuggingEnabled": false },
   "ios": { "contentInset": "automatic", "backgroundColor": "#edf4ec", "preferredContentMode": "mobile", "limitsNavigationsToAppBoundDomains": true },
   "server": { "hostname": "localhost", "androidScheme": "https" }

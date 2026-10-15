@@ -22,7 +22,7 @@ const app=document.querySelector('#app');
 const stage=document.createElement('div');stage.id='flight-stage';const scene=document.querySelector('#scene');scene.before(stage);stage.append(scene);
 app.innerHTML=`
  <section id="menu" class="menu">
-  <header class="brand"><p class="eyebrow">ISLAND FLIGHT SCHOOL</p><h1>今天，飛去哪裡？</h1><p class="intro">選一趟旅程，按出發。<br>一起飛過台灣的山、海與城市。</p><div class="model-badge"><span class="dot"></span><span id="asset-state">飛機正在準備中…</span></div></header>
+  <header class="brand"><p class="eyebrow">交通學院・飛機課</p><h1>今天，飛去哪裡？</h1><p class="intro">選一趟旅程，按出發。<br>一起飛過台灣的山、海與城市。</p><div class="model-badge"><span class="dot"></span><span id="asset-state">飛機正在準備中…</span></div></header>
   <div class="dispatch-card">
    <div class="dispatch-title"><span>小小飛行員</span><span class="tag">3～5 歲・親子一起玩</span></div>
    <div class="select-row"><label>台灣練習場<select id="map-choice">${Object.values(MAPS).map(m=>`<option value="${m.id}">${m.name}</option>`).join('')}</select></label><label>你的飛機<select id="plane-choice">${Object.values(AIRCRAFT).map(p=>`<option value="${p.id}">${p.name}</option>`).join('')}</select></label></div>
@@ -47,7 +47,7 @@ app.innerHTML=`
   <div id="child-panel" class="child-panel"><button id="child-left" aria-label="向左轉"><span>↶</span><strong>向左</strong></button><button id="child-action" class="child-action"><span id="child-icon">✈</span><strong id="child-action-text">出發</strong></button><button id="child-right" aria-label="向右轉"><span>↷</span><strong>向右</strong></button></div>
   <p class="keyboard-help">↑↓ 推拉桿　←→ 傾斜　Q/E 方向舵　Shift/Ctrl 油門　F 襟翼　Space 煞車</p></div>
  </section>
- <section id="overlay" class="overlay" hidden><div class="result-card"><span class="eyebrow" id="result-tag">FLIGHT PAUSED</span><h2 id="result-title">休息一下。</h2><p id="result-text"></p><div id="result-data" class="result-data"></div><button id="continue" class="primary">繼續飛行</button><button id="replay">再練一次</button><button id="home">回到飛行計畫</button></div></section>
+ <section id="overlay" class="overlay" hidden><div class="result-card"><span class="eyebrow" id="result-tag">飛行暫停</span><h2 id="result-title">休息一下。</h2><p id="result-text"></p><div id="result-data" class="result-data"></div><button id="continue" class="primary">繼續飛行</button><button id="replay">再練一次</button><button id="home">回到飛行計畫</button></div></section>
  <div id="boot-error" class="boot-error" hidden></div>
 `;
 const $=id=>document.getElementById(id);let selected=LESSONS.treasure?'treasure':'takeoff',lastMode='menu',lastUpdate=0,lastEventId=0,rewardUntil=0,rewardText='',updateReady=false;
@@ -84,8 +84,8 @@ function showMode(s){
  $('lesson-name').textContent=LESSONS[s.lesson].name;$('map-name').textContent=MAPS[s.map].name;
  $('drop-mail').hidden=s.preschool||s.lesson!=='mail';
  if(s.mode!=='playing')voice.stop();
- if(s.mode==='paused'){$('result-tag').textContent='FLIGHT PAUSED';$('result-title').textContent='休息一下。';$('result-text').textContent='準備好了，再繼續飛。';$('result-data').textContent='';$('continue').hidden=false;$('replay').classList.remove('primary');}
- if(s.mode==='result'){$('result-tag').textContent=s.mission.complete?'JOURNEY COMPLETE':'TRY AGAIN';$('result-title').textContent=s.mission.complete?'這趟旅程，完成了！':'再試一次就好。';$('result-text').textContent=s.mission.message;$('result-data').textContent=s.mission.complete?`得到 ${s.mission.score} 分・飛行 ${Math.round(s.time)} 秒`:'';$('continue').hidden=true;$('replay').classList.add('primary');if(s.mission.complete&&!runAwarded){runAwarded=true;journeyResult(document.querySelector('.result-card'),journey,s.mission.score>=85?3:s.mission.score>=60?2:1);addStars('flight',2);recordBest(`flight:${s.lesson}`,3);celebrate({text:'飛行任務完成！',kind:'finish',y:.25,pieces:40,big:true,sound:!readSettings().muted});}try{if(s.mission.complete){const record=JSON.parse(localStorage.getItem('island-flight-school-record')||'{}');record[s.lesson]=Math.max(record[s.lesson]||0,s.mission.score);localStorage.setItem('island-flight-school-record',JSON.stringify(record));}}catch{}}
+ if(s.mode==='paused'){$('result-tag').textContent='飛行暫停';$('result-title').textContent='休息一下。';$('result-text').textContent='準備好了，再繼續飛。';$('result-data').textContent='';$('continue').hidden=false;$('replay').classList.remove('primary');}
+ if(s.mode==='result'){$('result-tag').textContent=s.mission.complete?'旅程完成':'再試一次';$('result-title').textContent=s.mission.complete?'這趟旅程，完成了！':'再試一次就好。';$('result-text').textContent=s.mission.message;$('result-data').textContent=s.mission.complete?`得到 ${s.mission.score} 分・飛行 ${Math.round(s.time)} 秒`:'';$('continue').hidden=true;$('replay').classList.add('primary');if(s.mission.complete&&!runAwarded){runAwarded=true;journeyResult(document.querySelector('.result-card'),journey,s.mission.score>=85?3:s.mission.score>=60?2:1);addStars('flight',2);recordBest(`flight:${s.lesson}`,3);celebrate({text:'飛行任務完成！',kind:'finish',y:.25,pieces:40,big:true,sound:!readSettings().muted});}try{if(s.mission.complete){const record=JSON.parse(localStorage.getItem('island-flight-school-record')||'{}');record[s.lesson]=Math.max(record[s.lesson]||0,s.mission.score);localStorage.setItem('island-flight-school-record',JSON.stringify(record));}}catch{}}
  if(s.mode==='result'&&s.preschool)voice.say(s.mission.message,`result:${s.lesson}:${s.mission.score}`,true);
  syncViewport();
 }

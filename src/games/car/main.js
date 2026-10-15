@@ -63,7 +63,7 @@ function carArt(id) {
   return `<svg viewBox="0 0 104 48" aria-hidden="true"><path d="${bodies[id]}" fill="currentColor"/><path d="m${id === 'van' ? '22 14h47l10 10H21' : '35 12h25l15 11H24'}Z" fill="#e5eded" opacity=".78"/><path d="M49 13v11" stroke="currentColor" stroke-width="3"/><circle cx="25" cy="36" r="8" fill="#23383d"/><circle cx="79" cy="36" r="8" fill="#23383d"/><circle cx="25" cy="36" r="3" fill="#cddcdb"/><circle cx="79" cy="36" r="3" fill="#cddcdb"/><path d="M89 28h6" stroke="#f9e8bc" stroke-width="3"/></svg>`;
 }
 
-$('#map-choices').innerHTML = MAPS.map((m, i) => `<button class="map-card" data-map="${m.id}" aria-pressed="false" aria-label="選擇${m.name}"><div class="map-art">${mapArt(m.id)}<span class="map-number">0${i + 1}</span><span class="selected-check">✓</span></div><div class="map-caption"><strong>${m.name}</strong><span>${m.english}</span></div></button>`).join('');
+$('#map-choices').innerHTML = MAPS.map((m, i) => `<button class="map-card" data-map="${m.id}" aria-pressed="false" aria-label="選擇${m.name}"><div class="map-art">${mapArt(m.id)}<span class="map-number">0${i + 1}</span><span class="selected-check">✓</span></div><div class="map-caption"><strong>${m.name}</strong><span>${m.tag}</span></div></button>`).join('');
 $('#vehicle-choices').innerHTML = VEHICLES.map(v => `<button class="vehicle-choice" data-vehicle="${v.id}" aria-pressed="false" aria-label="選擇${v.category} ${v.name}" style="--car-color:${v.color}">${carArt(v.id)}<span>${v.category}</span></button>`).join('');
 $('#paint-options').innerHTML = COLORS.map((c, i) => `<button class="paint-dot" data-paint="${c}" style="--paint:${c}" aria-label="${['海洋青','奶油黃','雲霧白','夕陽紅','石墨灰'][i]}車身" aria-pressed="false"></button>`).join('');
 
@@ -172,7 +172,7 @@ function finish(result) {
   $('#finish-stars').innerHTML = `<span class="rating" aria-label="${rating} 顆星評等">${[1, 2, 3].map(i => `<i class="${i <= rating ? 'on' : ''}">★</i>`).join('')}</span><span class="haul">收集到 <b>${stars}</b> / ${result.starTotal || 12} 顆星星</span>`;
   if (completed) celebrate({ text: rating === 3 ? '超級司機！' : '到終點了！', kind: 'finish', y: 0.3, pieces: 40, big: true, sound: !muted });
   $('#finish-title').textContent = completed ? (stars === result.starTotal ? '星星全都帶回家！' : '到終點囉，好棒！') : '時間到，再試一次！';
-  $('#finish-eyebrow').textContent = completed ? 'JOURNEY COMPLETE' : 'TRY ANOTHER RUN';
+  $('#finish-eyebrow').textContent = completed ? '旅程完成' : '再試一趟';
   $('#finish-route').textContent = `${currentMap().name} · ${currentVehicle().name} · ${(Math.min(result.distance,journey?.distance||TRACK_LENGTH) / 1000).toFixed(2)} km`;
   $('#finish-time').textContent = timeFormat(result.elapsed, true);
   $('#finish-score').textContent = Math.round(result.score || 0).toLocaleString('zh-TW');

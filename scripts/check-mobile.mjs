@@ -4,7 +4,7 @@ import {pathToFileURL} from 'node:url';
 import {mkdir,writeFile,readFile} from 'node:fs/promises';
 const {chromium}=await import(process.env.PLAYWRIGHT_MODULE?pathToFileURL(process.env.PLAYWRIGHT_MODULE).href:'playwright');
 const base=process.env.BASE_URL||'http://127.0.0.1:5109/';
-const folder='docs/evidence/r2-mobile';await mkdir(folder,{recursive:true});
+const folder=process.env.EVIDENCE_FOLDER||'docs/evidence/r2-mobile';await mkdir(`${folder}/after`,{recursive:true});
 const browser=await chromium.launch({headless:true,args:['--use-angle=d3d11','--enable-gpu','--ignore-gpu-blocklist']});
 const rows=[],errors=[],requests=[];
 async function check(page,name,selectors,min=60){

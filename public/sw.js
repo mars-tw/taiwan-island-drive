@@ -2,7 +2,7 @@ const ROOT = new URL('./', self.registration.scope);
 const CACHE_PREFIX = `island-transport-${encodeURIComponent(ROOT.pathname)}-`;
 const CACHE_NAME = `${CACHE_PREFIX}v2`;
 const MANIFEST = new URL('./precache.json', ROOT).href;
-const ASSET = /\.(?:html|js|css|json|txt|webmanifest|svg|png|jpe?g|webp|glb|woff2?)$/i;
+const ASSET = /\.(?:html|js|css|json|txt|webmanifest|svg|png|jpe?g|webp|glb|woff2?|mp3|m4a|ogg|wav)$/i;
 const PAGE_PATHS = new Map([['','index.html'], ['index.html','index.html'], ['car/','car/index.html'], ['car/index.html','car/index.html'], ['train/','train/index.html'], ['train/index.html','train/index.html'], ['flight/','flight/index.html'], ['flight/index.html','flight/index.html']]);
 function localAsset(url) { return url.origin === ROOT.origin && url.pathname.startsWith(ROOT.pathname) && !url.pathname.includes('/downloads/') && ASSET.test(url.pathname); }
 self.addEventListener('install', event => event.waitUntil((async () => {
@@ -48,7 +48,10 @@ self.addEventListener('fetch', event => {
   if (!localAsset(url)) return;
   event.respondWith((async () => {
     const cache = await caches.open(CACHE_NAME);
-    const cached = await cache.match(request);
+    // Static same-origin bundles have identical bytes for every request origin.
+    // Preview/CDN servers may add Vary: Origin; anonymous module preloads then
+    // differ from install-time requests even though this file is precached.
+    const cached = await cache.match(request, { ignoreVary: true });
     if (cached) return cached;
     const response = await fetch(request);
     if (response.ok && response.type !== 'opaque') await cache.put(request, response.clone());
