@@ -10,6 +10,8 @@ export class TrainWorld {
     this.renderer=new THREE.WebGLRenderer({canvas,antialias:true,powerPreference:'high-performance'});this.applyQuality(readSettings().quality);this.renderer.outputColorSpace=THREE.SRGBColorSpace;this.renderer.toneMapping=THREE.ACESFilmicToneMapping;this.renderer.toneMappingExposure=1.2;
     const environment=new RoomEnvironment();const pmrem=new THREE.PMREMGenerator(this.renderer);this.environmentTarget=pmrem.fromScene(environment,.04);this.scene.environment=this.environmentTarget.texture;this.scene.environmentIntensity=.75;environment.dispose();pmrem.dispose();
     this.camera=new THREE.PerspectiveCamera(67,1,.07,1300);this.scene.add(new THREE.HemisphereLight(0xd6edf2,0x56624d,1.65));const sun=new THREE.DirectionalLight(0xffe0b4,2.6);sun.position.set(-80,140,100);this.scene.add(sun);
+    // Decorative distant painted sky only: track, train, stops and signals stay live 3D.
+    this.pictureSky=new THREE.TextureLoader().load(assetUrl('art/r5/sky.webp'));this.pictureSky.colorSpace=THREE.SRGBColorSpace;
     this.trainRoot=new THREE.Group();this.cabRoot=new THREE.Group();this.scene.add(this.trainRoot,this.cabRoot);this.trainRoot.visible=false;
     this.environment=new THREE.Group();this.scene.add(this.environment);this.assetStatus={train:'loading',cab:'loading'};this.assetsReady=false;
     this.addLiveInstruments();this.loadAssets();this.rebuild();this.resize();this.resizeObserver=new ResizeObserver(()=>this.resize());this.resizeObserver.observe(canvas.parentElement);
@@ -19,7 +21,7 @@ export class TrainWorld {
   }}
   applyQuality(quality){if(this.quality===quality)return;this.quality=quality;this.renderer.setPixelRatio(Math.min(devicePixelRatio,quality==='low'?1:1.6));if(this.resizeObserver)this.resize();}
   addLiveInstruments(){this.instrumentCanvas=document.createElement('canvas');this.instrumentCanvas.width=1024;this.instrumentCanvas.height=180;this.instrumentTexture=new THREE.CanvasTexture(this.instrumentCanvas);this.instrumentTexture.colorSpace=THREE.SRGBColorSpace;const screen=new THREE.Mesh(new THREE.PlaneGeometry(1.48,.26),new THREE.MeshBasicMaterial({map:this.instrumentTexture}));screen.rotation.y=Math.PI;screen.position.set(0,.83,.452);this.cabRoot.add(screen);this.instrumentLast=0;}
-  paintInstruments(){const s=this.game.getState(),ctx=this.instrumentCanvas.getContext('2d');ctx.fillStyle='#143844';ctx.fillRect(0,0,1024,180);ctx.strokeStyle='#649689';ctx.lineWidth=3;ctx.strokeRect(8,8,1008,164);const labels=['SPEED km/h','POWER','BRAKE kPa','SIGNAL'],values=[Math.abs(s.speed).toFixed(0),String(s.controls.throttle),s.pressure.toFixed(0),s.signal.toUpperCase()];for(let i=0;i<4;i++){const x=45+i*250;ctx.fillStyle='#9cbbb1';ctx.font='22px monospace';ctx.fillText(labels[i],x,45);ctx.fillStyle=i===3?{red:'#ff7765',yellow:'#ffd075',green:'#7bebbc'}[s.signal]:'#e4f3d5';ctx.font=i===3?'bold 40px monospace':'bold 72px monospace';ctx.fillText(values[i],x,130);}this.instrumentTexture.needsUpdate=true;}
+  paintInstruments(){const s=this.game.getState(),ctx=this.instrumentCanvas.getContext('2d');ctx.fillStyle='#fff6e5';ctx.fillRect(0,0,1024,180);ctx.strokeStyle='#1479b8';ctx.lineWidth=5;ctx.strokeRect(8,8,1008,164);const labels=['速度','動力','煞車','號誌'],values=[Math.abs(s.speed).toFixed(0),String(s.controls.throttle),s.pressure.toFixed(0),{red:'停',yellow:'慢',green:'行'}[s.signal]];for(let i=0;i<4;i++){const x=45+i*250;ctx.fillStyle='#143b61';ctx.font='bold 28px sans-serif';ctx.fillText(labels[i],x,45);ctx.fillStyle=i===3?{red:'#b73a29',yellow:'#875400',green:'#176844'}[s.signal]:'#143b61';ctx.font='bold 72px sans-serif';ctx.fillText(values[i],x,130);}this.instrumentTexture.needsUpdate=true;}
   point(s){const r=this.game.route;return new THREE.Vector3(Math.sin(s/200)*r.curve,Math.sin(s/140)*r.grade*140+1.0,s);}
   tangent(s){return this.point(s+1).sub(this.point(s-1)).normalize();}
   rotation(s){const t=this.tangent(s);return Math.atan2(t.x,t.z);}
@@ -48,7 +50,8 @@ export class TrainWorld {
   resize(){const rect=this.canvas.parentElement.getBoundingClientRect();if(rect.width<1||rect.height<1)return;this.renderer.setSize(rect.width,rect.height,false);this.camera.aspect=rect.width/rect.height;this.camera.updateProjectionMatrix();}
   render(){if(this.routeId!==this.game.routeId||this.lessonId!==this.game.lessonId)this.rebuild();const p=this.point(this.game.physics.s),yaw=this.rotation(this.game.physics.s);this.trainRoot.position.copy(p);this.trainRoot.rotation.y=yaw;
     const driver=new THREE.Vector3(0,2.3,8).applyAxisAngle(new THREE.Vector3(0,1,0),yaw).add(p);this.cabRoot.position.copy(driver);this.cabRoot.rotation.y=yaw;
-    const cab=this.view==='cab';this.cabRoot.visible=cab;this.trainRoot.visible=!cab;
+    const cab=this.view==='cab';this.cabRoot.visible=cab&&!this.game.childMode;this.trainRoot.visible=!cab;
+    this.scene.background=this.game.childMode&&this.game.route.theme==='coast'?this.pictureSky:new THREE.Color(this.game.route.sky);
     if(this.tractionLever)this.tractionLever.rotation.x=this.game.controls.throttle*.08;if(this.brakeLever)this.brakeLever.rotation.x=this.game.controls.brake*.055;
     if(performance.now()-this.instrumentLast>120){this.paintInstruments();this.instrumentLast=performance.now();}
     const location=(cab?new THREE.Vector3(0,1.35,-1):new THREE.Vector3(9,7,-30)).applyAxisAngle(new THREE.Vector3(0,1,0),yaw).add(cab?driver:p);

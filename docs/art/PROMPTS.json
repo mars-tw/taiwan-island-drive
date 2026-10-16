@@ -75,5 +75,125 @@
       "reference_asset": "docs/art/source/passengers.png",
       "intent": "Targeted saturation correction; preserves six identities and layout."
     }
-  ]
+  ],
+  "round_5": {
+    "file": "PROMPTS_R5.json",
+    "style_prefix": "Island Transport Academy — sunny Taiwan coastal picture-book, premium preschool game art for ages 3–8. Rounded hand-painted gouache shapes with subtle paper texture, confident midnight-blue contours, toy-like proportions, warm sunlight from upper left 45 degrees. Palette sea blue #1479B8, ink #143B61, vivid orange #F46B27, signal yellow #FFD344, leaf green #58B85B. Cheerful clean composition, readable large silhouettes, no generic dark teal UI, no photorealism, no watermark.",
+    "records": [
+      {
+        "id": "passenger",
+        "prompt": "Island Transport Academy — sunny Taiwan coastal picture-book, premium preschool game art for ages 3–8. Rounded hand-painted gouache shapes with subtle paper texture, confident midnight-blue contours, toy-like proportions, warm sunlight from upper left 45 degrees. Palette sea blue #1479B8, ink #143B61, vivid orange #F46B27, signal yellow #FFD344, leaf green #58B85B. Cheerful clean composition, readable large silhouettes, no generic dark teal UI, no photorealism, no watermark.\nA production sprite atlas: SIX full-body diverse preschool child passengers, arranged precisely 3 columns by 2 rows on transparent background, generous equal gutters. Each child occupies one cell entirely, feet and heads never clipped. 2.5 head proportions, warm medium and brown skin, bright saturated red/blue/yellow/green clothing, small backpacks, expressive eyes. Each cell contains TWO side-by-side walking poses of THE SAME CHILD, alternating forward leg and opposite forward arm, the second pose visibly different limbs. 12 full bodies total. No text, no frame, no ground, no accessories separate from bodies. Every face warm and readable, navy outlines consistent. Full transparent RGBA.",
+        "path": "C:\\Users\\digimkt\\.codex\\generated_images\\01a14476-9264-71e2-9e5e-371c9fcb56f2\\exec-494557ee-4c32-4a41-95bd-cb79bdd21a83.png",
+        "tool": "image_gen.imagegen",
+        "model_slug": null,
+        "model_note": "Actual model slug not exposed by the built-in tool.",
+        "transparent_background": true,
+        "workspace_master": "docs/art/source/r5/passenger.png"
+      },
+      {
+        "id": "vehicles",
+        "prompt": "Island Transport Academy — sunny Taiwan coastal picture-book, premium preschool game art for ages 3–8. Rounded hand-painted gouache shapes with subtle paper texture, confident midnight-blue contours, toy-like proportions, warm sunlight from upper left 45 degrees. Palette sea blue #1479B8, ink #143B61, vivid orange #F46B27, signal yellow #FFD344, leaf green #58B85B. Cheerful clean composition, readable large silhouettes, no generic dark teal UI, no photorealism, no watermark.\nProduction vehicle illustration atlas, 3 equal columns, one object per column, all 3/4 view facing left-front, identical top-left light and navy contour weight. LEFT: exactly ONE cheerful orange island compact taxi with large blue windows, four visible wheels maximum. CENTER: ONE blue and cream friendly commuter train engine, yellow roof band, rounded face-like front windows. RIGHT: ONE yellow and white high-wing propeller training airplane with blue details. Rich charming toy designs, no people, no background or floor, plenty of transparent space between objects, each object fully contained in its column. No text, no labels. Genuine transparent RGBA.",
+        "path": "C:\\Users\\digimkt\\.codex\\generated_images\\01a14476-9264-71e2-9e5e-371c9fcb56f2\\exec-3d68a586-0b2b-47f0-8ab5-643b584f4a43.png",
+        "tool": "image_gen.imagegen",
+        "model_slug": null,
+        "model_note": "Actual model slug not exposed by the built-in tool.",
+        "transparent_background": true,
+        "workspace_master": "docs/art/source/r5/vehicles.png"
+      },
+      {
+        "id": "coach",
+        "prompt": "Island Transport Academy — sunny Taiwan coastal picture-book, premium preschool game art for ages 3–8. Rounded hand-painted gouache shapes with subtle paper texture, confident midnight-blue contours, toy-like proportions, warm sunlight from upper left 45 degrees. Palette sea blue #1479B8, ink #143B61, vivid orange #F46B27, signal yellow #FFD344, leaf green #58B85B. Cheerful clean composition, readable large silhouettes, no generic dark teal UI, no photorealism, no watermark.\nEdit reference mascot only: preserve EXACT A-Lu leopard cat face, yellow cap, orange reflective vest, blue overalls, orange sneakers and navy outlines. Replace round paddle with a small green railway dispatch flag on a wooden stick. Production two-pose sprite atlas, two equal columns: left full body cheerful with green flag down, right SAME character full body beaming with green flag raised high, different arm and ear gesture, not rotated duplicate. All feet and flag inside each cell, transparent background with large gutters. No words, no magnifying glass, no additional characters.",
+        "path": "C:\\Users\\digimkt\\.codex\\generated_images\\01a14476-9264-71e2-9e5e-371c9fcb56f2\\exec-091db25d-b15e-460d-b589-50b7dc92fd25.png",
+        "tool": "image_gen.imagegen",
+        "model_slug": null,
+        "model_note": "Actual model slug not exposed by the built-in tool.",
+        "transparent_background": true,
+        "workspace_master": "docs/art/source/r5/coach.png",
+        "reference_images": [
+          {
+            "path": "public/art/r4/coach.png",
+            "sha256": "2d3807fa5fcc11cfd4e0f7229e9ef783af40f63ae2423bd401520b70fb54939a",
+            "role": "project-owned mascot identity reference"
+          }
+        ]
+      },
+      {
+        "id": "background",
+        "prompt": "Island Transport Academy — sunny Taiwan coastal picture-book, premium preschool game art for ages 3–8. Rounded hand-painted gouache shapes with subtle paper texture, confident midnight-blue contours, toy-like proportions, warm sunlight from upper left 45 degrees. Palette sea blue #1479B8, ink #143B61, vivid orange #F46B27, signal yellow #FFD344, leaf green #58B85B. Cheerful clean composition, readable large silhouettes, no generic dark teal UI, no photorealism, no watermark.\nMain background, horizontal 3:2 composition. Beautiful seaside island railway platform viewed from side at child eye level, paper-cut gouache diorama with textured foliage. Bright turquoise sea, layered green coastal hills, friendly lighthouse in distance, fluffy cream clouds and azure sky. Foreground platform runs horizontally across lower third, simple long railway track along bottom edge, empty platform with two benches at far edges, flower beds and palms. Large calm central space for live train carriages and passengers. NO people, NO vehicles, NO text, NO interface panels, no photorealism. Rich lively warm daylight, opaque finished painting.",
+        "path": "C:\\Users\\digimkt\\.codex\\generated_images\\01a14476-9264-71e2-9e5e-371c9fcb56f2\\exec-109c247d-f395-437e-a0af-f7687d353acd.png",
+        "tool": "image_gen.imagegen",
+        "model_slug": null,
+        "model_note": "Actual model slug not exposed by the built-in tool.",
+        "transparent_background": false,
+        "workspace_master": "docs/art/source/r5/background.png"
+      },
+      {
+        "id": "carriages",
+        "prompt": "Island Transport Academy — sunny Taiwan coastal picture-book, premium preschool game art for ages 3–8. Rounded hand-painted gouache shapes with subtle paper texture, confident midnight-blue contours, toy-like proportions, warm sunlight from upper left 45 degrees. Palette sea blue #1479B8, ink #143B61, vivid orange #F46B27, signal yellow #FFD344, leaf green #58B85B. Cheerful clean composition, readable large silhouettes, no generic dark teal UI, no photorealism, no watermark.\nProduction educational train carriage atlas: TWO separate SIDE VIEW passenger carriages arranged one above the other, equal size, each wide 3:1 rectangle, large transparent gutters. Top blue carriage, bottom golden orange carriage. Each carriage has five BIG OPEN windows with transparent interiors so live child passengers can appear behind, a rounded roof with cream stripe, friendly door at right, four detailed blue wheels and visible metal couplers on both ends. Transparent background and transparent window openings. No passenger, no numbers, no writing. Toy storybook enamel train, thick navy contours and subtle gouache paper texture. Each carriage entirely visible.",
+        "path": "C:\\Users\\digimkt\\.codex\\generated_images\\01a14476-9264-71e2-9e5e-371c9fcb56f2\\exec-0730df83-a221-461e-847b-07bafccea5e1.png",
+        "tool": "image_gen.imagegen",
+        "model_slug": null,
+        "model_note": "Actual model slug not exposed by the built-in tool.",
+        "transparent_background": true,
+        "workspace_master": "docs/art/source/r5/carriages.png"
+      },
+      {
+        "id": "ui",
+        "prompt": "Island Transport Academy — sunny Taiwan coastal picture-book, premium preschool game art for ages 3–8. Rounded hand-painted gouache shapes with subtle paper texture, confident midnight-blue contours, toy-like proportions, warm sunlight from upper left 45 degrees. Palette sea blue #1479B8, ink #143B61, vivid orange #F46B27, signal yellow #FFD344, leaf green #58B85B. Cheerful clean composition, readable large silhouettes, no generic dark teal UI, no photorealism, no watermark.\nProduction UI atlas, two rows separated by large transparent gutter. TOP: one wide blank cream railway boarding ticket with thick blue outline, orange diagonal stripe on top edge, scalloped circular side notches and perforated tear line at right, broad empty center for live typography. BOTTOM: three separate large reward stickers, left a gold star railway merit medal with blue ribbon, center a green dispatch flag on wooden handle, right a blue rounded station sign on small post with a tiny palm symbol but NO letters. Confident saturated flat gouache, thick ink outlines, truly transparent background, no text, no numbers, no UI mockup.",
+        "path": "C:\\Users\\digimkt\\.codex\\generated_images\\01a14476-9264-71e2-9e5e-371c9fcb56f2\\exec-b21d5fae-de34-41a1-83b4-3d1a68a2a8f0.png",
+        "tool": "image_gen.imagegen",
+        "model_slug": null,
+        "model_note": "Actual model slug not exposed by the built-in tool.",
+        "transparent_background": true,
+        "workspace_master": "docs/art/source/r5/ui.png"
+      },
+      {
+        "id": "logo",
+        "prompt": "Island Transport Academy — sunny Taiwan coastal picture-book, premium preschool game art for ages 3–8. Rounded hand-painted gouache shapes with subtle paper texture, confident midnight-blue contours, toy-like proportions, warm sunlight from upper left 45 degrees. Palette sea blue #1479B8, ink #143B61, vivid orange #F46B27, signal yellow #FFD344, leaf green #58B85B. Cheerful clean composition, readable large silhouettes, no generic dark teal UI, no photorealism, no watermark.\nGame title logo on genuine transparent background. Exact Traditional Chinese text ONLY: 「島嶼交通學院」. Stack in two balanced rows, top 島嶼, bottom 交通學院. Beautiful chunky rounded hand-lettered blue characters with thick cream-white sticker edge and navy outside stroke; a small yellow station cap on first character, tiny green flag and blue rail wheels integrated subtly. Professional joyful preschool railway lettering, readable at 180px wide. No other text or mascots. Entire mark inside 8% margins.",
+        "path": "C:\\Users\\digimkt\\.codex\\generated_images\\01a14476-9264-71e2-9e5e-371c9fcb56f2\\exec-84f1ae5e-8b67-457a-82c4-9438b42ebf24.png",
+        "tool": "image_gen.imagegen",
+        "model_slug": null,
+        "model_note": "Actual model slug not exposed by the built-in tool.",
+        "transparent_background": true,
+        "workspace_master": "docs/art/source/r5/logo.png"
+      },
+      {
+        "id": "icon",
+        "prompt": "Island Transport Academy — sunny Taiwan coastal picture-book, premium preschool game art for ages 3–8. Rounded hand-painted gouache shapes with subtle paper texture, confident midnight-blue contours, toy-like proportions, warm sunlight from upper left 45 degrees. Palette sea blue #1479B8, ink #143B61, vivid orange #F46B27, signal yellow #FFD344, leaf green #58B85B. Cheerful clean composition, readable large silhouettes, no generic dark teal UI, no photorealism, no watermark.\nApp icon proposal, square full bleed opaque, no rounded outer corner mask. Preserve reference A-Lu leopard cat yellow cap, orange vest, expressive spotted face. Close-up friendly happy coach at left foreground holding green dispatch flag, ONE blue cream toy commuter train at lower right, bright blue sky and tiny yellow sun. Face and yellow hat occupy 60% square, train occupies 30%. Same hand-painted gouache and thick navy contour. High-contrast bold silhouette designed for 64px, no small details, NO text or logo, no magnifying glass or orange paddle. Full opaque background.",
+        "path": "C:\\Users\\digimkt\\.codex\\generated_images\\01a14476-9264-71e2-9e5e-371c9fcb56f2\\exec-67764054-7897-4da9-b0a1-3d4385be08b6.png",
+        "tool": "image_gen.imagegen",
+        "model_slug": null,
+        "model_note": "Actual model slug not exposed by the built-in tool.",
+        "transparent_background": false,
+        "workspace_master": "docs/art/source/r5/icon.png",
+        "reference_images": [
+          {
+            "path": "public/art/r4/coach.png",
+            "sha256": "2d3807fa5fcc11cfd4e0f7229e9ef783af40f63ae2423bd401520b70fb54939a",
+            "role": "project-owned mascot identity reference"
+          }
+        ]
+      },
+      {
+        "id": "sky",
+        "prompt": "Island Transport Academy — sunny Taiwan coastal picture-book, premium preschool game art for ages 3–8. Rounded hand-painted gouache shapes with subtle paper texture, confident midnight-blue contours, toy-like proportions, warm sunlight from upper left 45 degrees. Palette sea blue #1479B8, ink #143B61, vivid orange #F46B27, signal yellow #FFD344, leaf green #58B85B. Cheerful clean composition, readable large silhouettes, no generic dark teal UI, no photorealism, no watermark.\nDecorative distant scenery background for a LIVE 3D railway game. Wide panorama in paper-cut layered gouache style. Top 70% luminous azure sky with joyful sculpted cream-white clouds, one warm sun at upper left; bottom 30% distant green tropical island hills and sparkling turquoise ocean with white waves, tiny lighthouse on the right cliff, faraway palm silhouettes at right edge. Horizon at 70% image height, entire lower area distant scenery only. Do NOT include foreground ground, railway tracks, trains, people, roads, controls, signs, panels, lettering. Clear central vanishing point. This will be sky scenery BEHIND real interactive railway geometry, no fake gameplay. Bright saturated hand-painted preschool art, clean large forms and layered paper edges, opaque RGB.",
+        "path": "C:\\Users\\digimkt\\.codex\\generated_images\\01a14476-9264-71e2-9e5e-371c9fcb56f2\\exec-a1339357-9ec4-47f1-bb49-b2a9ebb7cdf2.png",
+        "tool": "image_gen.imagegen",
+        "model_slug": null,
+        "model_note": "Actual model slug not exposed.",
+        "transparent_background": false,
+        "workspace_master": "docs/art/source/r5/sky.png"
+      },
+      {
+        "id": "carriages-v2",
+        "prompt": "Island Transport Academy — sunny Taiwan coastal picture-book, premium preschool game art for ages 3–8. Rounded hand-painted gouache shapes with subtle paper texture, confident midnight-blue contours, toy-like proportions, warm sunlight from upper left 45 degrees. Palette sea blue #1479B8, ink #143B61, vivid orange #F46B27, signal yellow #FFD344, leaf green #58B85B. Cheerful clean composition, readable large silhouettes, no generic dark teal UI, no photorealism, no watermark.\nEducational CUTAWAY DOLLHOUSE train carriage sprite atlas. TWO side-view train carriages, one above the other, blue on top and orange below. Each carriage is a wide 2.7:1 shape, with VERY TALL open rectangular window cutouts covering 75% of side height; extremely low sill at the floor. Five big continuous arched openings, completely transparent, intended for FULL BODY 2.5-head child sprites to be visible standing INSIDE the carriage from head to shoes. Only thin roof, four thin vertical pillars, a low floor/sill, detailed small wheels, door on right and couplers at ends. Not a normal low-window train; a preschool dollhouse cutaway so ALL of the children's bodies will be seen through clear openings. Empty carriages, no passengers, no text. Two separate rows, 10% margin, no clipping, no floor outside the carriage. Transparent RGBA background and window openings.",
+        "path": "C:\\Users\\digimkt\\.codex\\generated_images\\01a14476-9264-71e2-9e5e-371c9fcb56f2\\exec-2d02361a-23d3-4437-a832-e7f9adda2f43.png",
+        "tool": "image_gen.imagegen",
+        "model_slug": null,
+        "model_note": "Actual model slug not exposed.",
+        "transparent_background": true,
+        "workspace_master": "docs/art/source/r5/carriages-v2.png"
+      }
+    ]
+  }
 }

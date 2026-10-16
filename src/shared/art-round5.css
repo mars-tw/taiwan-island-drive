@@ -1,0 +1,202 @@
+/* R5 retains the coastal picture-book identity; specificity keeps layout contracts intact. */
+html.art-r4.art-r5 .sky-decor{background-image:url('/art/r5/platform.webp');background-position:center}
+html.art-r4.art-r5 .card-image{background:#d8f4ff;border-right:2px dashed #1479b8}
+html.art-r4.art-r5 .card-image>img{object-fit:contain!important;padding:8px;object-position:center!important;width:100%;height:100%}
+html.art-r4.art-r5 .card-image .vehicle-symbol{display:none}
+html.art-r4.art-r5 .card-action{background:#fff!important;border:2px solid #1479b8!important;color:#143b61!important;box-shadow:0 3px 0 #1479b8!important}
+html.art-r4.art-r5 .header-tools .passport-open{display:grid;grid-template-columns:48px 1fr;grid-template-rows:1fr 1fr;column-gap:6px;align-items:center;text-align:left;padding:3px 10px;line-height:1.2}
+html.art-r4.art-r5 .header-tools .passport-open>img{grid-row:1/3;width:44px;height:54px;object-fit:contain}
+html.art-r4.art-r5 .student-card-name{font-size:10px;grid-column:2;display:block}
+html.art-r4.art-r5 .coach-stage>img{max-height:100%;object-fit:contain}
+html.art-r4.art-r5 #math-lesson{background:#bfeaff url('/art/r5/platform.webp') center/cover}
+html.art-r4.art-r5 #math-lesson .dispatch-body{display:flex;flex-direction:column;align-items:stretch;justify-content:flex-start;position:relative;background:transparent;padding:12px 22px}
+html.art-r4.art-r5 #math-lesson .dispatch-body>*{flex-shrink:0}
+html.art-r4.art-r5 #math-lesson:is([data-phase=split],[data-phase=subtract]) .dispatch-instruction,html.art-r4.art-r5 #math-lesson[data-phase=intro] .dispatch-equation{display:none}
+html.art-r4.art-r5 #math-lesson #dispatch-title{color:#143b61;text-shadow:0 2px #fff;font-size:clamp(24px,3vw,38px);margin:8px 0}
+html.art-r4.art-r5 #math-lesson .dispatch-route{align-self:center;background:#fff;border:2px solid #1479b8;border-radius:20px;padding:7px 15px;gap:18px}
+html.art-r4.art-r5 #math-lesson .dispatch-instruction{align-self:center;max-width:620px;background:#fffffff2;padding:7px 14px;border-radius:14px;color:#143b61;margin:5px 0;font-size:15px}
+html.art-r4.art-r5 #math-lesson .dispatch-train{width:100%;max-width:900px;gap:12px;margin:12px auto;align-items:center;min-height:166px}
+html.art-r4.art-r5 #math-lesson .dispatch-carriage{position:relative;border:0;border-radius:0;box-shadow:none;background:none;padding:0 8px 35px;min-height:160px;max-width:430px;isolation:isolate}
+html.art-r4.art-r5 #math-lesson .dispatch-carriage h2{border-radius:16px;background:#fff;border:2px solid #1479b8;padding:4px 12px;position:relative;z-index:2;margin:0 0 8px;font-size:15px}
+html.art-r4.art-r5 #math-lesson .dispatch-carriage strong{font-size:30px;line-height:1}
+html.art-r4.art-r5 #math-lesson .carriage-shell{position:absolute;left:-2%;bottom:0;width:104%;height:145px;object-fit:fill;z-index:3;pointer-events:none}
+html.art-r4.art-r5 #math-lesson .dispatch-seats{display:grid;grid-template-columns:repeat(5,minmax(40px,1fr));gap:0;align-items:end;position:relative;z-index:2;padding:0 18% 0 5%;margin-top:16px}
+html.art-r4.art-r5 #math-lesson .dispatch-seats>span{border:0;background:transparent;min-height:72px;line-height:1;overflow:visible}
+html.art-r4.art-r5 #math-lesson .dispatch-seats .empty{visibility:hidden}
+html.art-r4.art-r5 #math-lesson .passenger-figure{position:relative;display:block;width:48px;height:76px;border:0;background:transparent;overflow:visible;flex:none}
+html.art-r4.art-r5 #math-lesson .passenger-figure>img{position:absolute;inset:0;width:48px;height:76px;max-height:none;object-fit:contain;display:block}
+html.art-r4.art-r5 #math-lesson .passenger-step{opacity:0}
+html.art-r4.art-r5 #math-lesson .is-walking>img:first-child{animation:walk-first .24s steps(1) infinite}
+html.art-r4.art-r5 #math-lesson .is-walking>.passenger-step{animation:walk-second .24s steps(1) infinite}
+@keyframes walk-first{0%,100%{opacity:1}50%{opacity:0}}
+@keyframes walk-second{0%,100%{opacity:0}50%{opacity:1}}
+html.art-r4.art-r5 #math-lesson .dispatch-wheels{display:none}
+html.art-r4.art-r5 #math-lesson .dispatch-coupler{height:14px;width:32px;background:#143b61;border:3px solid #fff;border-radius:8px;font-size:0;writing-mode:initial;flex:none}
+html.art-r4.art-r5 #math-lesson .uncoupled .dispatch-coupler{background:transparent;border:2px dashed #1479b8;width:54px}
+html.art-r4.art-r5 #math-lesson .stay-sign{position:absolute;bottom:-18px;right:4px;font-weight:900;font-size:13px;background:#fff6ce;border:2px solid #1479b8;padding:4px 10px;border-radius:10px;z-index:3}
+html.art-r4.art-r5 #math-lesson .platform-queue{display:flex;justify-content:center;gap:7px;min-height:80px;align-items:flex-end;background:linear-gradient(transparent 90%,#1479b8 90%);margin:5px auto;width:fit-content;max-width:100%;padding:0 10px;flex-wrap:wrap}
+html.art-r4.art-r5 #math-lesson .platform-queue:empty{display:none}
+html.art-r4.art-r5 #math-lesson .dispatch-equation{font-size:clamp(28px,4vw,46px);line-height:1.25;border:3px solid #1479b8;border-radius:22px;background:#fff6d4;box-shadow:0 4px 0 #1479b8;align-self:center;padding:12px 24px;margin:9px 0}
+html.art-r4.art-r5 #math-lesson[data-phase=subtract] .dispatch-equation{background:#fff;animation:question-flip .5s ease-out}
+@keyframes question-flip{from{transform:perspective(600px) rotateY(70deg)}to{transform:perspective(600px) rotateY(0)}}
+html.art-r4.art-r5 #math-lesson .dispatch-feedback{background:#fff;border-radius:12px;color:#143b61;padding:6px 12px;align-self:center;font-weight:700}
+html.art-r4.art-r5 #math-lesson .dispatch-coach{position:relative;min-height:104px;max-width:600px;width:100%;margin:auto auto 4px;background:#fff;border:3px solid #1479b8;border-radius:24px;text-align:left;padding:8px 18px 8px 105px;font-size:16px}
+html.art-r4.art-r5 #math-lesson .dispatch-coach>img{position:absolute;bottom:0;left:8px;width:84px;height:116px;object-fit:contain}
+html.art-r4.art-r5 #math-lesson .coach-cheer{opacity:0}
+html.art-r4.art-r5 #math-lesson[data-phase=done] .dispatch-coach>img:first-child{animation:flag-first .55s steps(1) 3}
+html.art-r4.art-r5 #math-lesson[data-phase=done] .coach-cheer{animation:flag-second .55s steps(1) 3}
+@keyframes flag-first{50%{opacity:0}}
+@keyframes flag-second{50%{opacity:1}}
+html.art-r4.art-r5 #math-lesson .math-save{background:#fff;padding:4px 12px}
+html.art-r4.art-r5 #math-lesson:is([data-phase=intro],[data-phase=load]) .dispatch-carriage.rear,html.art-r4.art-r5 #math-lesson:is([data-phase=intro],[data-phase=load]) .dispatch-coupler{display:none}
+html.art-r4.art-r5 #math-lesson .dispatch-awards{display:grid;grid-template-columns:1fr 1fr;gap:15px;width:min(760px,100%);margin:12px auto}
+html.art-r4.art-r5 #math-lesson .math-award{position:relative;background:#fff6e5 url('/art/r5/ticket.png') center/100% 100% no-repeat;border-radius:20px;padding:25px 12px;display:flex;flex-direction:column;align-items:center;gap:4px;color:#143b61}
+html.art-r4.art-r5 #math-lesson .math-award img{width:72px;height:72px;object-fit:contain}
+html.art-r4.art-r5 #math-lesson .math-award strong{font-size:22px}
+html.art-r4.art-r5 #math-lesson .math-award b{font-size:clamp(20px,3vw,32px);white-space:nowrap}
+html.art-r4.art-r5 #math-lesson .departure-train{width:100%;height:140px;object-fit:contain;animation:train-farewell 1.6s ease-out}
+@keyframes train-farewell{0%{transform:translateX(30%)}100%{transform:translateX(-6%)}}
+html.art-r4.art-r5 #math-lesson[data-phase=done] .dispatch-completed{background:#fff;align-self:center;padding:6px 15px;border-radius:12px}
+/* A child sees daylight through the actual live 3D world, without the dark adult cab. */
+html.art-r4.art-r5 body[data-game=train]{background:#c7eeff}
+html.art-r4.art-r5 body[data-game=train] .masthead{border:0;background:#fff9e9}
+html.art-r4.art-r5 body[data-game=train] .icon-button,html.art-r4.art-r5 body[data-game=train] .light{background:#e1f4ff;color:#143b61;border:2px solid #1479b8}
+html.art-r4.art-r5 body[data-game=train] .brand>div>span{letter-spacing:0;font-size:12px}
+html.art-r4.art-r5 body[data-game=train] .view-tools{top:8px;left:12px;right:12px;color:#143b61;text-shadow:none;font-weight:900}
+html.art-r4.art-r5 body[data-game=train] .view-tools>span{background:#fff;padding:6px;border-radius:10px}
+html.art-r4.art-r5 body[data-game=train] #view{background:#fff;color:#143b61;border:2px solid #1479b8;min-height:60px}
+html.art-r4.art-r5 body[data-game=train] .speed-instrument{top:84px;left:12px;width:112px;height:112px;border-radius:50%;border:4px solid #1479b8;background:#fffef3;padding:10px;text-align:center;box-shadow:0 5px 0 #105781}
+html.art-r4.art-r5 body[data-game=train] .speed-instrument>div{justify-content:center;gap:3px}
+html.art-r4.art-r5 body[data-game=train] .speed-instrument strong{font-size:52px}
+html.art-r4.art-r5 body[data-game=train] .speed-instrument p{font-size:10px;padding:2px;margin:2px 0;border:0}
+html.art-r4.art-r5 body[data-game=train] .speed-instrument b{float:none}
+html.art-r4.art-r5 body[data-game=train] .next-station{top:84px;right:12px;width:112px;min-height:112px;border:4px solid #1479b8;background:#fffef3;border-radius:28px;color:#143b61;text-align:center;padding:9px 4px;box-shadow:0 5px 0 #105781}
+html.art-r4.art-r5 body[data-game=train] .next-station :is(small,strong,span){color:#143b61}
+html.art-r4.art-r5 body[data-game=train] .next-station b{font-size:18px;margin:1px}
+html.art-r4.art-r5 body[data-game=train] .next-station:before{content:'';position:absolute;width:30px;height:30px;top:-22px;left:calc(50% - 15px);background:url('/art/r5/station.png') center/contain no-repeat;pointer-events:none}
+html.art-r4.art-r5 #math-lesson .dispatch-route [aria-current]:before{content:'';display:inline-block;vertical-align:middle;width:22px;height:22px;background:url('/art/r5/flag.png') center/contain no-repeat}
+html.art-r4.art-r5 body[data-game=train] .next-station strong{font-size:30px}
+html.art-r4.art-r5 body[data-game=train] .route-progress{background:#b9e3fa;height:5px;margin:4px 8px}
+html.art-r4.art-r5 body[data-game=train] .route-progress i{background:#f46b27;height:5px}
+html.art-r4.art-r5 body[data-game=train] .signal-instrument{top:auto;bottom:34px;right:12px;background:#fff;color:#143b61;border:2px solid #1479b8;width:auto;border-radius:18px;padding:7px 10px}
+html.art-r4.art-r5 body[data-game=train] .signal-instrument :is(small,span){color:#143b61}
+html.art-r4.art-r5 body[data-game=train] .signal-instrument small{display:none}
+html.art-r4.art-r5 body[data-game=train] .view-footer{color:#143b61;background:#ffffffe0;text-shadow:none;padding:4px 10px;left:0;right:0;bottom:0}
+html.art-r4.art-r5 body[data-game=train] .coach{min-height:72px;padding:4px 15px;border-top:3px solid #1479b8}
+html.art-r4.art-r5 body[data-game=train] .coach-avatar{width:48px;height:64px;display:block}
+html.art-r4.art-r5 body[data-game=train] .coach-label{gap:6px}
+html.art-r4.art-r5 body[data-game=train] .coach-label>b{display:none}
+html.art-r4.art-r5 body[data-game=train] .child-console{background:#fff6df;grid-template-columns:repeat(6,minmax(60px,1fr));padding:8px 12px;gap:8px}
+html.art-r4.art-r5 body[data-game=train] .child-console>button{font-size:15px;min-height:72px;gap:3px;box-shadow:0 3px 0 #1479b8;color:#143b61}
+html.art-r4.art-r5 body[data-game=train] .child-console>button>span{font-size:22px}
+html.art-r4.art-r5 body[data-game=train] #child-prepare{order:0;background:#fff}
+html.art-r4.art-r5 body[data-game=train] #child-go{order:1;background:#fff}
+html.art-r4.art-r5 body[data-game=train] #child-help-stop{order:2;background:#fff}
+html.art-r4.art-r5 body[data-game=train] #child-doors{order:3;background:#e4f3ff}
+html.art-r4.art-r5 body[data-game=train] #child-stop{order:4;background:#e4f3ff}
+html.art-r4.art-r5 body[data-game=train] #child-emergency{order:5;max-width:90px;background:#fff;color:#143b61;border:3px solid #ce6947!important;border-top-width:8px!important;font-size:12px}
+html.art-r4.art-r5 body[data-game=train] .child-console .coach-next{background:#ffd344!important;outline:0!important;border:3px solid #b76b00;opacity:1;box-shadow:0 4px 0 #b76b00}
+html.art-r4.art-r5 body[data-game=train] .child-console .coach-dim{opacity:1;filter:none}
+html.art-r4.art-r5 body[data-game=train] .child-note{order:6;display:none}
+html.art-r4.art-r5 body[data-game=train] .console{background:#fff6e5;color:#143b61}
+html.art-r4.art-r5 body[data-game=train] .console :is(button,.direction){background:#d4eeff;color:#143b61}
+html.art-r4.art-r5 body[data-game=train] .console :is(small,span,strong){color:#143b61}
+html.art-r4.art-r5 .key-help{display:none}
+@media(max-width:650px) and (orientation:portrait){
+ html.art-r4.art-r5 .card-image>img{padding:3px}
+ html.art-r4.art-r5 #math-lesson .dispatch-body{padding:6px 12px}
+ html.art-r4.art-r5 #math-lesson:is([data-phase=split],[data-phase=subtract]) .dispatch-route{padding:4px 12px}
+ html.art-r4.art-r5 #math-lesson:is([data-phase=split],[data-phase=subtract]) #dispatch-title{font-size:24px;margin:4px 0}
+ html.art-r4.art-r5 #math-lesson .dispatch-train{flex-direction:column;gap:5px;min-height:0;margin:6px auto}
+ html.art-r4.art-r5 #math-lesson .dispatch-carriage{width:100%;min-height:166px;padding:0 7px 29px;flex:none}
+ html.art-r4.art-r5 #math-lesson .dispatch-carriage h2{padding:3px 10px;margin:0 0 3px;font-size:13px}
+ html.art-r4.art-r5 #math-lesson .dispatch-carriage strong{font-size:25px}
+ html.art-r4.art-r5 #math-lesson .carriage-shell{height:144px}
+ html.art-r4.art-r5 #math-lesson .dispatch-coupler{height:8px;width:18px}
+ html.art-r4.art-r5 #math-lesson .uncoupled .dispatch-coupler{height:14px;width:18px;margin:0}
+ html.art-r4.art-r5 #math-lesson .uncoupled .rear{width:88%;align-self:flex-end}
+ html.art-r4.art-r5 #math-lesson .dispatch-coach{min-height:90px;padding:8px 10px 8px 83px;font-size:13px;flex-shrink:0}
+ html.art-r4.art-r5 #math-lesson .dispatch-coach>img{width:68px;height:94px}
+ html.art-r4.art-r5 #math-lesson .dispatch-equation{font-size:30px;padding:8px 16px;margin:5px 0}
+ html.art-r4.art-r5 #math-lesson .dispatch-instruction{font-size:13px;padding:5px 9px}
+ html.art-r4.art-r5 #math-lesson .dispatch-feedback{font-size:12px;padding:5px 8px;margin:4px 0}
+ html.art-r4.art-r5 #math-lesson .dispatch-awards{gap:8px;margin:6px auto}
+ html.art-r4.art-r5 #math-lesson .math-award{padding:18px 5px;gap:3px}
+ html.art-r4.art-r5 #math-lesson .math-award img{width:52px;height:52px}
+ html.art-r4.art-r5 #math-lesson .math-award strong{font-size:18px}
+ html.art-r4.art-r5 #math-lesson .math-award b{font-size:18px}
+ html.art-r4.art-r5 #math-lesson .departure-train{height:120px}
+ html.art-r4.art-r5 body[data-game=train] .brand h1{font-size:16px}
+ html.art-r4.art-r5 body[data-game=train] .brand>div>span{display:none}
+ html.art-r4.art-r5 body[data-game=train] .child-console{grid-template-columns:repeat(3,1fr);gap:7px;padding:7px 10px}
+ html.art-r4.art-r5 body[data-game=train] .child-console>button{min-height:60px;font-size:13px;flex-direction:row}
+ html.art-r4.art-r5 body[data-game=train] #child-emergency{max-width:none}
+ html.art-r4.art-r5 body[data-game=train] .coach{min-height:64px;gap:10px;padding:2px 10px}
+ html.art-r4.art-r5 body[data-game=train] .coach p{font-size:14px}
+ html.art-r4.art-r5 body[data-game=train] .coach-label>span{display:none}
+}
+@media(max-height:700px) and (orientation:portrait){
+ html.art-r4.art-r5 #math-lesson .dispatch-body{padding:3px 8px}
+ html.art-r4.art-r5 #math-lesson .dispatch-instruction,html.art-r4.art-r5 #math-lesson .dispatch-feedback,html.art-r4.art-r5 #math-lesson .math-save{display:none}
+ html.art-r4.art-r5 #math-lesson .dispatch-coach{min-height:75px}
+ html.art-r4.art-r5 #math-lesson .dispatch-carriage{min-height:146px}
+ html.art-r4.art-r5 #math-lesson .carriage-shell{height:126px}
+ html.art-r4.art-r5 #math-lesson[data-phase=split] .dispatch-coach,html.art-r4.art-r5 #math-lesson[data-phase=subtract] .dispatch-coach{display:none}
+}
+@media(max-height:520px) and (orientation:landscape){
+ html.art-r4.art-r5 #math-lesson .dispatch-body{padding:0 10px}
+ html.art-r4.art-r5 #math-lesson #dispatch-title{font-size:18px;margin:2px}
+ html.art-r4.art-r5 #math-lesson .dispatch-route,html.art-r4.art-r5 #math-lesson .dispatch-instruction,html.art-r4.art-r5 #math-lesson .dispatch-feedback,html.art-r4.art-r5 #math-lesson .dispatch-coach,html.art-r4.art-r5 #math-lesson .math-save{display:none}
+ html.art-r4.art-r5 #math-lesson .dispatch-train{min-height:100px;margin:0;gap:6px}
+ html.art-r4.art-r5 #math-lesson .dispatch-carriage{min-height:100px;padding:0 4px 13px;max-width:430px}
+ html.art-r4.art-r5 #math-lesson .dispatch-carriage h2{padding:2px 8px;margin:0;font-size:11px}
+ html.art-r4.art-r5 #math-lesson .dispatch-carriage strong{font-size:20px}
+ html.art-r4.art-r5 #math-lesson .dispatch-seats{gap:0;padding:0;margin-top:0;grid-template-columns:repeat(5,minmax(40px,1fr))}
+ html.art-r4.art-r5 #math-lesson .dispatch-seats>span{min-height:60px}
+ html.art-r4.art-r5 #math-lesson .passenger-figure,html.art-r4.art-r5 #math-lesson .passenger-figure>img{width:40px;height:60px}
+ html.art-r4.art-r5 #math-lesson .carriage-shell{height:85px}
+ html.art-r4.art-r5 #math-lesson .dispatch-coupler{width:16px}
+ html.art-r4.art-r5 #math-lesson .uncoupled .dispatch-coupler{width:26px;margin:0}
+ html.art-r4.art-r5 #math-lesson .stay-sign{font-size:10px;padding:2px 6px;bottom:-4px}
+ html.art-r4.art-r5 #math-lesson .dispatch-equation{font-size:25px;line-height:1;padding:4px 18px;margin:3px 0}
+ html.art-r4.art-r5 #math-lesson .platform-queue{position:absolute;top:50px;right:20px;min-height:60px;gap:2px;margin:0}
+ html.art-r4.art-r5 #math-lesson:is([data-phase=intro],[data-phase=load]) .dispatch-train{width:55%;margin-top:6px}
+ html.art-r4.art-r5 #math-lesson .dispatch-awards{max-width:500px;margin:3px auto;gap:8px}
+ html.art-r4.art-r5 #math-lesson .math-award{padding:9px 5px;display:grid;grid-template-columns:40px 1fr;gap:2px}
+ html.art-r4.art-r5 #math-lesson .math-award img{width:40px;height:48px;grid-row:1/3}
+ html.art-r4.art-r5 #math-lesson .math-award strong{font-size:14px}
+ html.art-r4.art-r5 #math-lesson .math-award b{font-size:17px}
+ html.art-r4.art-r5 #math-lesson .departure-train{height:55px}
+ html.art-r4.art-r5 #math-lesson[data-phase=done] .dispatch-completed{display:none}
+ html.art-r4.art-r5 body[data-game=train] #app{display:grid;grid-template-columns:minmax(0,1fr) 242px;grid-template-rows:60px minmax(0,1fr) 60px;gap:0}
+ html.art-r4.art-r5 body[data-game=train] .masthead{grid-column:1/3;grid-row:1}
+ html.art-r4.art-r5 body[data-game=train] .scene{grid-column:1;grid-row:2/4;min-height:0}
+ html.art-r4.art-r5 body[data-game=train] .coach{grid-column:2;grid-row:3;padding:2px 8px;min-height:60px;gap:6px}
+ html.art-r4.art-r5 body[data-game=train] .coach-avatar{width:40px;height:56px}
+ html.art-r4.art-r5 body[data-game=train] .coach-label>span{display:none}
+ html.art-r4.art-r5 body[data-game=train] .coach p{font-size:11px}
+ html.art-r4.art-r5 body[data-game=train] .child-console{grid-column:2;grid-row:2;grid-template-columns:repeat(3,minmax(60px,1fr));grid-template-rows:repeat(2,minmax(60px,1fr));padding:6px;gap:6px}
+ html.art-r4.art-r5 body[data-game=train] .child-console>button{font-size:10px;min-height:60px}
+ html.art-r4.art-r5 body[data-game=train] #child-emergency{font-size:9px}
+ html.art-r4.art-r5 body[data-game=train] .view-tools{top:4px}
+ html.art-r4.art-r5 body[data-game=train] .view-tools>span{display:none}
+ html.art-r4.art-r5 body[data-game=train] #view{min-height:60px;margin-left:auto;position:relative;z-index:3;font-size:10px}
+ html.art-r4.art-r5 body[data-game=train] .speed-instrument,html.art-r4.art-r5 body[data-game=train] .next-station{top:8px;width:96px;min-height:96px;height:96px;border-width:3px}
+ html.art-r4.art-r5 body[data-game=train] .next-station{top:auto;bottom:27px;right:6px}
+ html.art-r4.art-r5 body[data-game=train] .speed-instrument strong{font-size:44px}
+ html.art-r4.art-r5 body[data-game=train] .signal-instrument{right:110px;bottom:27px;padding:4px}
+ html.art-r4.art-r5 body[data-game=train] .signal-instrument span{display:none}
+}
+@media(prefers-reduced-motion:reduce){html.art-r4.art-r5 #math-lesson *{animation:none!important;transition:none!important}}
+/* SE portrait keeps both countable carriages above the fixed 60px controls. */
+@media(max-width:360px) and (max-height:700px) and (orientation:portrait){
+ html.art-r4.art-r5 #math-lesson:is([data-phase=split],[data-phase=subtract]) .dispatch-carriage{min-height:100px;padding:0 4px 13px}
+ html.art-r4.art-r5 #math-lesson:is([data-phase=split],[data-phase=subtract]) .dispatch-carriage h2{padding:2px 8px;font-size:11px;margin:0}
+ html.art-r4.art-r5 #math-lesson:is([data-phase=split],[data-phase=subtract]) .dispatch-carriage strong{font-size:20px}
+ html.art-r4.art-r5 #math-lesson:is([data-phase=split],[data-phase=subtract]) .dispatch-seats{margin-top:0;padding:0 12% 0 3%;grid-template-columns:repeat(5,minmax(40px,1fr))}
+ html.art-r4.art-r5 #math-lesson:is([data-phase=split],[data-phase=subtract]) .dispatch-seats>span{min-height:60px}
+ html.art-r4.art-r5 #math-lesson:is([data-phase=split],[data-phase=subtract]) .passenger-figure,html.art-r4.art-r5 #math-lesson:is([data-phase=split],[data-phase=subtract]) .passenger-figure>img{width:40px;height:60px}
+ html.art-r4.art-r5 #math-lesson:is([data-phase=split],[data-phase=subtract]) .carriage-shell{height:85px}
+ html.art-r4.art-r5 #math-lesson:is([data-phase=split],[data-phase=subtract]) .dispatch-equation{font-size:28px;padding:5px 15px;margin:3px 0}
+ html.art-r4.art-r5 #math-lesson:is([data-phase=split],[data-phase=subtract]) #dispatch-title{font-size:20px;margin:4px 0}
+}
