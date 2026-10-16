@@ -27,7 +27,7 @@ const SCENARIOS = [
       await page.waitForFunction(() => window.__islandDrive.game.phase === 'finished'); await page.waitForTimeout(900); },
     controls: () => ['#again-button', '#choose-button'] },
   { name: 'train', path: 'train/', ready: '#child-prepare', noScroll: true, controls: () => ['#child-prepare', '#child-go', '#child-stop', '#child-help-stop', '#child-doors', '#child-emergency', '#pause'] },
-  { name: 'flight-menu', path: 'flight/', ready: '#start:not([disabled])', controls: () => ['#start', '#map-choice', '#plane-choice', '[data-lesson="treasure"]'] },
+  { name: 'flight-menu', path: 'flight/', ready: '#start:not([disabled])', controls: () => ['#start', '[data-flight-map]', '[data-flight-plane]', '[data-lesson="treasure"]'] },
   { name: 'flight-play', path: 'flight/', ready: '#start:not([disabled])', act: async page => { await page.click('#start'); await page.waitForTimeout(1500); },
     controls: () => ['#child-left', '#child-action', '#child-right', '#pause'] }
 ];

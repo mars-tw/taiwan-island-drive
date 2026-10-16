@@ -1,0 +1,20 @@
+{
+  "status": "VERIFIED",
+  "baseline_commit": "9f6463ea58d80c00e3c24164540c03e261721015",
+  "runtime_art_files": 39,
+  "runtime_art_bytes": 4265513,
+  "native_icon_pngs": 13,
+  "native_icon_bytes": 2931347,
+  "native_icon_delta_bytes": 925973,
+  "native_web_bundle_bytes": 51606635,
+  "native_web_bundle_files": 158,
+  "public_before_bytes": 59880137,
+  "public_after_bytes": 64145880,
+  "public_delta_bytes": 4265743,
+  "source_and_evidence_bundled": false,
+  "pairs": 25,
+  "store_screenshots": 12,
+  "visual_checks": 125,
+  "native_originals_preserved": 73,
+  "public_delta_scope": "Tracked public files plus new R6 runtime art; excludes pre-existing ignored source archives and generated downloads."
+}

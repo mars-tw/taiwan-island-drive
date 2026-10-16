@@ -15,6 +15,7 @@ import { addStars,recordBest } from '../../shared/rewards.js';
 import { rewardForEvent } from './rewards.js';
 import {requestedJourney} from '../../shared/journeys.js';
 import {journeyResult} from '../../shared/passport.js';
+import {appUrl} from '../../shared/paths.js';
 let journey=requestedJourney('flight'),runAwarded=false;
 let lastRewardEventId=0;
 const activityOrder=['treasure','mail','tour','takeoff','navigation','landing','free'];
@@ -26,9 +27,11 @@ app.innerHTML=`
   <header class="brand"><p class="eyebrow">交通學院・飛機課</p><h1>今天，飛去哪裡？</h1><p class="intro">選一趟旅程，按出發。<br>一起飛過台灣的山、海與城市。</p><div class="model-badge"><span class="dot"></span><span id="asset-state">飛機正在準備中…</span></div></header>
   <div class="dispatch-card">
    <div class="dispatch-title"><span>小小飛行員</span><span class="tag">3～5 歲・親子一起玩</span></div>
-   <div class="select-row"><label>台灣練習場<select id="map-choice">${Object.values(MAPS).map(m=>`<option value="${m.id}">${m.name}</option>`).join('')}</select></label><label>你的飛機<select id="plane-choice">${Object.values(AIRCRAFT).map(p=>`<option value="${p.id}">${p.name}</option>`).join('')}</select></label></div>
-   <fieldset><legend>想玩什麼？</legend><div class="lesson-grid">${Object.values(LESSONS).sort((a,b)=>activityOrder.indexOf(a.id)-activityOrder.indexOf(b.id)).map((l,i)=>`<button class="lesson-card ${i===0?'selected':''}" data-lesson="${l.id}" aria-pressed="${i===0}"><span class="lesson-number">${({takeoff:'↗',navigation:'◎',landing:'↓',free:'∞',treasure:'★',mail:'✉',tour:'⌖'})[l.id]||'✈'}</span><span><strong>${l.name}</strong><small>${l.description}</small></span></button>`).join('')}</div></fieldset><div class="lesson-pages"><button id="lesson-prev" aria-label="上一頁活動">← 上一頁</button><span id="lesson-page" role="status"></span><button id="lesson-next" aria-label="下一頁活動">下一頁 →</button></div>
+   <fieldset class="picture-picker"><legend>想看哪裡的風景？</legend><div class="flight-map-cards">${Object.values(MAPS).map((m,i)=>`<button type="button" data-flight-map="${m.id}" aria-pressed="${i===0}" class="${i===0?'selected':''}"><img src="${appUrl(`art/r6/route-${m.id}.webp`)}" alt=""><strong>${m.name}</strong></button>`).join('')}</div></fieldset>
+   <fieldset class="picture-picker"><legend>選你的飛機</legend><div class="flight-plane-cards">${Object.values(AIRCRAFT).map((p,i)=>`<button type="button" data-flight-plane="${p.id}" aria-pressed="${i===0}" class="${i===0?'selected':''}"><img src="${appUrl('art/r6/flight.png')}" alt=""><strong>${p.name}</strong></button>`).join('')}</div></fieldset>
+   <fieldset><legend>想玩什麼？</legend><div class="lesson-grid">${Object.values(LESSONS).sort((a,b)=>activityOrder.indexOf(a.id)-activityOrder.indexOf(b.id)).map((l,i)=>`${i===3?'</div><details class="extra-activities"><summary>更多飛行練習</summary><div class="lesson-grid">':''}<button class="lesson-card ${i===0?'selected':''}" data-lesson="${l.id}" aria-pressed="${i===0}"><img class="lesson-picture" src="${appUrl(`art/r6/${({treasure:'badge',mail:'mail-badge',tour:'route-badge'})[l.id]||'flight'}.png`)}" alt=""><span><strong>${l.name}</strong><small>${l.description}</small></span></button>`).join('')}</div></details></fieldset>
    <details class="parent-settings"><summary>家長設定與儀表說明</summary><div class="pilot-mode"><label>操作方式<select id="pilot-choice"><option value="child">孩子點一下・自動助飛</option><option value="parent">家長手動・完整操控</option></select></label></div>
+   <div class="select-row"><label>台灣練習場<select id="map-choice">${Object.values(MAPS).map(m=>`<option value="${m.id}">${m.name}</option>`).join('')}</select></label><label>你的飛機<select id="plane-choice">${Object.values(AIRCRAFT).map(p=>`<option value="${p.id}">${p.name}</option>`).join('')}</select></label></div>
    <label class="assist"><input id="assist-choice" type="checkbox" checked><span>穩定輔助<small>幫忙回正機翼，大人陪孩子一起練習。</small></span></label>
    <details class="instrument-guide"><summary>第一次飛？先認識儀表</summary><p>空速是飛機相對空氣的速度，KT 是「節」。姿態儀讓你看見機頭高低、機翼傾斜；高度用 FT（呎），升降率是每分鐘升降幾呎。航向 000° 向北、090° 向東。襟翼能增加低速升力，也會增加阻力。</p></details>
    <p class="learning-note">教學遊戲採簡化飛行模型。真實操作請由合格教練指導。</p></details>
@@ -52,14 +55,13 @@ app.innerHTML=`
  <div id="boot-error" class="boot-error" hidden></div>
 `;
 const $=id=>document.getElementById(id);let selected=LESSONS.treasure?'treasure':'takeoff',lastMode='menu',lastUpdate=0,lastEventId=0,rewardUntil=0,rewardText='',updateReady=false;
-let activityPage=0;
-function showActivities(){
- const cards=[...document.querySelectorAll('[data-lesson]')];
- cards.forEach((card,index)=>card.hidden=Math.floor(index/3)!==activityPage);
- $('lesson-page').textContent=`${activityPage+1}／${Math.ceil(cards.length/3)}`;
- $('lesson-prev').disabled=activityPage===0;$('lesson-next').disabled=activityPage===Math.ceil(cards.length/3)-1;
+function syncPictureChoices(){
+ for(const [attribute,id] of [['flight-map','map-choice'],['flight-plane','plane-choice']])document.querySelectorAll(`[data-${attribute}]`).forEach(button=>{const active=button.getAttribute(`data-${attribute}`)===$(id).value;button.classList.toggle('selected',active);button.setAttribute('aria-pressed',String(active));});
 }
-$('lesson-prev').onclick=()=>{activityPage--;showActivities();};$('lesson-next').onclick=()=>{activityPage++;showActivities();};showActivities();
+for(const [attribute,id] of [['flight-map','map-choice'],['flight-plane','plane-choice']]){
+ document.querySelectorAll(`[data-${attribute}]`).forEach(button=>button.onclick=()=>{$(id).value=button.getAttribute(`data-${attribute}`);$(id).dispatchEvent(new Event('change'));syncPictureChoices();});$(id).addEventListener('change',syncPictureChoices);
+}
+syncPictureChoices();
 const hadWorkerAtBoot=!!navigator.serviceWorker?.controller;
 let layoutFrame=0;function syncViewport(){cancelAnimationFrame(layoutFrame);layoutFrame=requestAnimationFrame(()=>{const r=$('hud').hidden?document.querySelector('#menu .brand').getBoundingClientRect():$('flight-window').getBoundingClientRect();Object.assign(stage.style,{left:`${r.left}px`,top:`${r.top}px`,width:`${Math.max(1,r.width)}px`,height:`${Math.max(1,r.height)}px`});game.world.resize();});}
 const viewportObserver=new ResizeObserver(syncViewport);viewportObserver.observe($('flight-window'));viewportObserver.observe($('flight-controls'));addEventListener('resize',syncViewport);window.visualViewport?.addEventListener('resize',syncViewport);

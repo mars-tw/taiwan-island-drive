@@ -1,0 +1,50 @@
+{
+  "1-gameplay": {
+    "status": "VERIFIED",
+    "images": [
+      "docs/store/screenshots/art-r6/iphone-store-02-car-driving.png",
+      "docs/store/screenshots/art-r6/iphone-store-03-flight-playing.png",
+      "docs/store/screenshots/art-r6/ipad-store-02-car-driving.png",
+      "docs/store/screenshots/art-r6/ipad-store-03-flight-playing.png"
+    ],
+    "criterion": "Live steering/pedals and golden road stars; live aircraft, treasure rings and child controls. Text masking is a self-review, not a human study."
+  },
+  "2-vehicles": {
+    "status": "VERIFIED",
+    "images": [
+      "docs/art/evidence/r6/phone-01-home.png",
+      "docs/art/evidence/r6/phone-car-menu.png",
+      "docs/art/thumbnail-64-r6.png"
+    ],
+    "criterion": "Four vehicle shapes x five paints verified through 20 real UI selections. Three vehicle thumbnails self-reviewed at 64px."
+  },
+  "3-movement": {
+    "status": "VERIFIED",
+    "images": [
+      "docs/art/evidence/r6/phone-04-load.png",
+      "docs/art/evidence/r6/phone-05-split.png",
+      "docs/art/evidence/r6/phone-subtract.png"
+    ],
+    "motion_receipt": "docs/art/visual-r6.json",
+    "criterion": "700ms transit with two limb poses; stable child ID on both directions; carriage doors/windows/coupler; rear carriage 650ms retreat and stay sign."
+  },
+  "4-celebration": {
+    "status": "VERIFIED",
+    "images": [
+      "docs/art/evidence/r6/phone-06-celebration.png",
+      "docs/store/screenshots/art-r6/ipad-store-06-celebration.png"
+    ],
+    "criterion": "Full viewport, no task progression strip; departure, two flag poses, ribbons, separate sum/subtraction medals."
+  },
+  "5-brand-navigation": {
+    "status": "EXECUTED",
+    "images": [
+      "docs/art/evidence/r6/phone-car-menu.png",
+      "docs/art/evidence/r6/phone-flight-menu.png",
+      "docs/art/thumbnail-64-r6.png",
+      "store/assets/app-store-icon-r6-1024.png"
+    ],
+    "native_receipt": "resources/branding/native-icons-r6-report.json",
+    "human_test": "BLOCKED: no three unfamiliar participants; no 3-second recognition claim."
+  }
+}

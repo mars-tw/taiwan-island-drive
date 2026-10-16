@@ -1,5 +1,13 @@
 # CREDITS
 
+## 2.10.0 R6 海岸圖卡與全屏綠旗慶祝
+
+- 九次實際生成／編修，工具 `image_gen.imagegen`。工具沒有提供模型 slug，manifest 記 `null` 與工具名。完整共用風格前綴、提示、來源路徑與參考圖見 `docs/art/PROMPTS_R6.json`；角色／App 圖示使用本專案 R5 阿路作身份參考，台北夜景以本輪自製城市原圖編修。
+- 39 個 Web runtime 檔案：海岸背景、五張台灣風景（汽車台北夜駕與飛機都會日景各自對應）、四車各五色、三交通工具、阿路兩種不同手臂／旗幟姿勢、空白票框、三枚獎章、星星彩帶、Logo、同一 App 圖示的 192／512 版本。原圖、opaque master、原 alpha mask 與來源 SHA-256 留在 `docs/art/source/r6/`，後製與檔案 hash 見 `asset-manifest-r6.json`。
+- 既有 R5 六位全身乘客各兩姿勢、藍橘車廂與調度旗／站牌延用；本輪固定乘客身份並補沿通道路徑。700ms 位置補間搭配兩張真肢體姿勢，並非完整骨架走路循環。阿路採兩張不同手臂／旗幟姿勢，減少動態時不播放。
+- 本機 iOS 與 Android 已啟用的 icon catalog 同步本輪綠旗石虎，共 13 個 PNG 匯出；保留舊創作 master、原始 launcher／splash 與 v2 歷史報告。當次 hash、13 檔尺寸／RGB／RGBA、73 個其他原生資源未變的證據在 `resources/branding/native-icons-r6-report.json`。`store/assets/app-store-icon-r6-1024.png` 是同圖本機提案，沒有上傳、簽署或原生實機驗證。
+- 後製只做原生 alpha 清理、連通元件分離、裁切、抗鋸齒縮圖、透明 RGB 清零與 WebP q84 壓縮。OpenAI 生成圖片的權利依適用條款與法律判斷，不因程式碼 MIT 自動將圖像重授 MIT。所有既有第三方模型、字型、音樂、移植教材及完整 NOTICE 保留。
+
 ## 2.9.0 R5 阿路綠旗與登車票
 
 - 本輪十次生成／編修實際工具為 `image_gen.imagegen`；工具沒有提供模型 slug，記 `model_slug: null`，不以規劃中的模型名稱冒充。提示見 `docs/art/PROMPTS_R5.json`，共用前綴與R4一致，固定左上45度光源與墨藍輪廓。

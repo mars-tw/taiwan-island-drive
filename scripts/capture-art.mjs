@@ -13,7 +13,7 @@ try{for(const [name,width,height,dpr] of [['phone',390,844,1],['landscape',844,3
  await page.locator('#academy-start').click();await shot('math');await page.locator('#math-back').click();
  await page.locator('.passport-open').first().click();await shot('passport');await page.locator('#passport-close').click();
  await page.locator('#safety-start').click();await shot('safety');await page.locator('#safety-back').click();
- if(['phone','desktop','iphone-store','ipad-store'].includes(name))for(const mode of ['car','train','flight']){await page.goto(base+mode+'/');await page.locator({car:'#start-button:not([disabled])',train:'#child-prepare',flight:'#start:not([disabled])'}[mode]).waitFor({timeout:60000});await shot(mode);}
+ if(['phone','desktop','iphone-store','ipad-store'].includes(name))for(const mode of ['car','train','flight']){await page.goto(base+mode+'/');await page.locator({car:'#start-button:not([disabled])',train:'#child-prepare',flight:'#start:not([disabled])'}[mode]).waitFor({timeout:60000});if(mode==='car')await page.waitForFunction(()=>!document.querySelector('#loading-screen'));await shot(mode);}
  await context.close();console.log(`${phase} ${name} captured`);
 }}finally{await browser.close();await writeFile(`${out}/manifest.json`,JSON.stringify({phase,status:errors.length?'BLOCKED':'VERIFIED',method:'Unmodified headless Chromium runtime; cold local student record',errors,shots},null,2));}
 if(errors.length)throw Error(errors.join('\n'));
