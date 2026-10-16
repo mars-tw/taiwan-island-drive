@@ -2,10 +2,12 @@ import './passport.css';
 import {appUrl} from './paths.js';
 import {pauseNativeGames,isNativeBuild,nativeLocalHref,stopNativeSpeech} from './native.js';
 import {MODE_NAMES,journeysFor,readPassport,isJourneyOpen,completeJourney,passportSummary,nextJourney,subscribePassport} from './journeys.js';
+import {academySummary} from './academy.js';
 
-export function launchJourney(journey){
+export function launchJourney(journey,{academy=false}={}){
   if(!journey||!isJourneyOpen(journey.id))return;
-  const url=appUrl(`${journey.mode}/?journey=${encodeURIComponent(journey.id)}`);
+  if(academy&&academySummary().next?.id!==journey.id)return;
+  const url=appUrl(`${journey.mode}/?journey=${encodeURIComponent(journey.id)}${academy?'&academy=1':''}`);
   void stopNativeSpeech().finally(()=>location.assign(isNativeBuild()?nativeLocalHref(url,document.baseURI):url));
 }
 export function journeyResult(container,journey,rating){
@@ -13,17 +15,18 @@ export function journeyResult(container,journey,rating){
   completeJourney(journey.id,rating);
   container.querySelector('.journey-result')?.remove();
   const panel=document.createElement('div');panel.className='journey-result';
-  const next=nextJourney(journey.id),summary=passportSummary();
+  const inAcademy=new URLSearchParams(location.search).get('academy')==='1',campaign=academySummary();
+  const next=inAcademy?(campaign.next?{...campaign.next,mode:campaign.next.id.split('-')[0]}:null):nextJourney(journey.id),summary=passportSummary();
   const text=document.createElement('p');text.textContent=`${journey.story} 護照 ${summary.completed}／12 關。`;panel.append(text);
   const button=document.createElement('button');button.type='button';button.id='journey-next';
-  button.textContent=next?`下一關：${next.name}`:'四關完成！看看護照';
-  button.onclick=()=>next?launchJourney(next):document.querySelector('[data-open-passport]').click();panel.append(button);container.append(panel);
+  button.textContent=next?`${inAcademy?'下一章':'下一關'}：${next.name}`:inAcademy?'山海同行章！回學院':'四關完成！看看護照';
+  button.onclick=()=>next?launchJourney(next,{academy:inAcademy}):inAcademy?location.assign(appUrl()):document.querySelector('[data-open-passport]').click();panel.append(button);container.append(panel);
 }
 let installed=false;
 export function installPassport(){
   if(installed)return;installed=true;
   const current=document.body.dataset.game||'car';let mode=current;
-  const opener=document.createElement('button');opener.type='button';opener.dataset.openPassport='';opener.className='passport-open';opener.textContent='星星護照';
+  const opener=document.createElement('button');opener.type='button';opener.dataset.openPassport='';opener.className='passport-open';opener.textContent='學生證';
   const host=document.querySelector('.academy-nav,.header-tools');if(!host)return;host.append(opener);
   const dialog=document.createElement('dialog');dialog.id='passport-dialog';dialog.setAttribute('aria-labelledby','passport-title');
   dialog.innerHTML='<header class="passport-header"><div><h2 id="passport-title">我的星星護照</h2><p id="passport-summary"></p></div><button id="passport-close" aria-label="關閉星星護照">×</button></header><div class="passport-tabs" role="group" aria-label="選擇交通工具"></div><div id="passport-chapters"></div><p id="passport-note">完成一關，就能開下一關。星等會記在這台裝置。</p>';
@@ -49,5 +52,9 @@ export function installPassport(){
   opener.onclick=()=>{pauseNativeGames();mode=current;render();dialog.showModal();};
   dialog.querySelector('#passport-close').onclick=()=>dialog.close();
   document.body.append(dialog);subscribePassport(()=>{if(dialog.open)render();});
+  dialog.querySelector('#passport-title').textContent='我的學院學生證';
+  dialog.addEventListener('close',()=>{document.querySelector('#passport-note').textContent='完成一關，就能開下一關。星等會記在這台裝置。';});
+  const renderStudent=()=>{if(!dialog.open)return;const s=academySummary();dialog.querySelector('#passport-note').textContent=`山海同行 ${s.done.filter(Boolean).length}／4 章 · ${s.mathBadge?'數學調度章已取得':'列車數學課等你來'}${s.badge?' · 山海同行章已取得':''}。各課共用星星與本機進度。`;};
+  opener.addEventListener('click',renderStudent);addEventListener('studentchange',renderStudent);
   addEventListener('pageshow',()=>{if(dialog.open)render();});
 }

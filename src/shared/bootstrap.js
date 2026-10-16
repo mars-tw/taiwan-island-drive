@@ -1,10 +1,12 @@
 import './navigation.css';
 import './parent-gate.css';
 import { APP_BASE, APP_REPOSITORY, appUrl } from './paths.js';
-import { readSettings, updateSettings,subscribeSettings,SETTINGS_KEY } from './settings.js';
+import { readSettings, updateSettings,subscribeSettings,restoreLegacySettings,SETTINGS_KEY } from './settings.js';
 import { installParentGate } from './parent-gate.js';
 import { unlockCelebrationAudio } from './celebrate.js';
 import { installPassport } from './passport.js';
+import {academySummary} from './academy.js';
+import {STUDENT_KEY,readStudent,restoreStudentIfMissing,subscribeStudent} from './student-save.js';
 import { isNativeBuild,initNativeRuntime,nativeLocalHref,syncNativePreferences,disposeNativeRuntime,stopNativeSpeech } from './native.js';
 
 if (typeof document !== 'undefined') {
@@ -20,9 +22,12 @@ if (typeof document !== 'undefined') {
   document.querySelectorAll('[data-repository]').forEach(link => link.href = APP_REPOSITORY);
   if(isNativeBuild()){document.body.classList.add('is-native-app');document.querySelectorAll('a[href]').forEach(link=>{try{const url=new URL(link.href,document.baseURI);if(url.protocol===location.protocol&&url.host===location.host)link.href=nativeLocalHref(url.href,document.baseURI);}catch{}});}
   addEventListener('pointerdown',unlockCelebrationAudio,{passive:true});addEventListener('keydown',unlockCelebrationAudio);
-  installParentGate();void initNativeRuntime();
+  installParentGate();void initNativeRuntime().then(async()=>{if(!isNativeBuild())return;await syncNativePreferences({key:STUDENT_KEY,read:readStudent,update:restoreStudentIfMissing,subscribe:subscribeStudent});await syncNativePreferences({key:SETTINGS_KEY,read:readSettings,update:restoreLegacySettings,subscribe:()=>()=>{}});});
   installPassport();
-  if(isNativeBuild())void syncNativePreferences({key:SETTINGS_KEY,read:readSettings,update:updateSettings,subscribe:subscribeSettings});
+  if(mode&&new URLSearchParams(location.search).get('academy')==='1'){
+    const s=academySummary(),card=document.querySelector('.academy-nav [aria-current]');
+    if(card){card.querySelector('span').textContent=mode==='train'?`調度 ${s.passengers} 人`:mode==='car'?'補給運送':'空中路標';card.setAttribute('aria-label',`山海同行任務 · ${mode==='train'?`調度單：前車帶走 ${s.passengers} 人，停穩接朋友。`:mode==='car'?'列車朋友已到站，沿海岸送補給。':'補給已送達，找兩顆空中路標。'}`);}
+  }
   addEventListener('pagehide',()=>{void disposeNativeRuntime();});
   document.addEventListener('click',event=>{const link=event.target?.closest?.('a[href]');if(!link||!isNativeBuild())return;try{const url=new URL(link.href,document.baseURI);if(url.protocol===location.protocol&&url.host===location.host){event.preventDefault();void stopNativeSpeech().finally(()=>location.assign(nativeLocalHref(url.href,document.baseURI)));}}catch{}},true);
   if ('serviceWorker' in navigator && import.meta.env.PROD&&!isNativeBuild()) {

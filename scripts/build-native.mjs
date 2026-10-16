@@ -25,7 +25,7 @@ async function collect(dir){
  }
 }
 await collect(out);
-for(const required of ['index.html','car/index.html','train/index.html','flight/index.html','models/aircraft.glb','models/train.glb','models/coupe.glb'])if(!manifest.some(e=>e.path===required))throw new Error('Missing native game asset: '+required);
+for(const required of ['index.html','car/index.html','train/index.html','flight/index.html','models/aircraft.glb','models/train.glb','models/coupe.glb','licenses/taiwan-train-math/LICENSE.txt','licenses/taiwan-train-math/NOTICE.txt'])if(!manifest.some(e=>e.path===required))throw new Error('Missing native game asset: '+required);
 const report={schemaVersion:1,applicationId:JSON.parse(await readFile(join(root,'capacitor.config.json'),'utf8')).appId,sourceVersion:JSON.parse(await readFile(join(root,'package.json'),'utf8')).version,files:manifest.sort((a,b)=>a.path.localeCompare(b.path)),fileCount:manifest.length,totalBytes:manifest.reduce((n,f)=>n+f.bytes,0),remoteServer:false,rawSourceDownloadIncluded:false,imagesEmbeddedInModels:true};
 await mkdir(join(root,'output/native'),{recursive:true});
 await writeFile(join(root,'output/native/bundle-manifest.json'),JSON.stringify(report,null,2)+'\n');

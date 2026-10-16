@@ -1,0 +1,23 @@
+import assert from 'node:assert/strict';
+import {readFile,writeFile,readdir} from 'node:fs/promises';
+import {createHash} from 'node:crypto';
+import {execFileSync} from 'node:child_process';
+const folder='docs/evidence/merge',hash=b=>createHash('sha256').update(b).digest('hex');
+const version=JSON.parse(await readFile('package.json','utf8')).version;
+const source=process.env.TRAIN_MATH_SOURCE;
+if(!source)throw Error('Set TRAIN_MATH_SOURCE to the read-only provenance checkout');
+const mappings=[['src/dispatch.js','src/games/math/dispatch.js','Apache-2.0 code; CC-BY-4.0 educational text'],['tests/dispatch.test.mjs','tests/shared/dispatch-ported.test.js','Apache-2.0, full first test retained'],['LICENSE','public/licenses/taiwan-train-math/LICENSE.txt','Apache-2.0 full license'],['NOTICE','public/licenses/taiwan-train-math/NOTICE.txt','Original NOTICE verbatim']];
+const files=[];
+for(const [from,to,license] of mappings){const original=await readFile(`${source}/${from}`),dest=await readFile(to);if(['LICENSE','NOTICE'].includes(from))assert.deepEqual(dest,original);if(from==='src/dispatch.js')assert.ok(dest.toString().endsWith(original.toString().replaceAll('\r\n','\n')));files.push({source:from,destination:to,license,sourceSha256:hash(original),destinationSha256:hash(dest),modifications:from==='src/dispatch.js'?'Attribution header only; model and original markup unchanged':from==='tests/dispatch.test.mjs'?'First test copied with unchanged assertions; new import paths; source engine-specific tests replaced by additional integration coverage':'none'});}
+const sourceHead=execFileSync('git',['-C',source,'rev-parse','HEAD'],{encoding:'utf8'}).trim();assert.equal(sourceHead,'7e25c749f073de321dabc25f982ee41ecac62dca');
+const sourceStatus=execFileSync('git',['-C',source,'status','--porcelain'],{encoding:'utf8'}).trim();
+const baseline=['M store-listing/zh-TW/apple-review-notes-submit.txt','?? store-listing/zh-TW/apple-review-notes-build2-draft.txt','?? store-listing/zh-TW/apple-review-notes-build3-draft.txt'];assert.deepEqual(sourceStatus.split(/\r?\n/).map(s=>s.trim()),baseline);
+await writeFile('docs/merge-assets.json',JSON.stringify({status:'VERIFIED',version,sourceProject:'Taiwan Train Math / 小小列車長',sourceCommit:sourceHead,sourceStatusMatchesInitialInventory:true,sourceStatusBaseline:baseline,sourceWritesPerformed:false,files,newRasterAssets:[],imageModelSlug:null,notes:'No photographs, raster artwork, music or other source assets imported. Original NOTICE also describes source content outside this reuse scope. Existing main-repo CREDITS and THIRD_PARTY_NOTICES continue to apply.'},null,2)+'\n');
+const path=JSON.parse(await readFile(`${folder}/merge-path.json`,'utf8'));assert.deepEqual(path.errors,[]);assert.deepEqual(path.externalRequests,[]);assert.equal(path.rows.filter(r=>r.label.endsWith('complete-mainline-save-reopen')).length,11);for(const r of path.rows)assert.deepEqual(r.problems,[]);
+const manifestPath='docs/store/screenshots/merge/manifest.json',manifest=JSON.parse(await readFile(manifestPath,'utf8'));assert.equal(manifest.sourceVersion,version);
+for(const [prefix,w,h] of [['iphone-store',1290,2796],['ipad13-store',2064,2752]]){const shots=manifest.shots.filter(s=>s.path.includes(prefix));assert.equal(shots.length,8);for(const shot of shots){const b=await readFile(shot.path);assert.equal(hash(b),shot.sha256);assert.equal(b.readUInt32BE(16),w);assert.equal(b.readUInt32BE(20),h);assert.equal(shot.native,false);}}
+manifest.status='VERIFIED';await writeFile(manifestPath,JSON.stringify(manifest,null,2)+'\n');path.status='VERIFIED';await writeFile(`${folder}/merge-path.json`,JSON.stringify(path,null,2)+'\n');
+const images=[];for(const phase of ['before','after'])for(const file of await readdir(`${folder}/${phase}`)){if(!file.endsWith('.png'))continue;const p=`${folder}/${phase}/${file}`,b=await readFile(p);images.push({path:p,phase,sourceVersion:phase==='before'?'2.6.0':version,sha256:hash(b),width:b.readUInt32BE(16),height:b.readUInt32BE(20)});}
+await writeFile(`${folder}/merge-evidence-manifest.json`,JSON.stringify({status:'VERIFIED',version,images,storeImages:manifestPath,sourceAssets:'docs/merge-assets.json'},null,2)+'\n');
+const timings=path.rows.filter(r=>r.label.endsWith('complete-mainline-save-reopen'));
+console.log(JSON.stringify({status:'VERIFIED',version,integrationChecks:path.rows.length,viewports:timings.length,firstMathMs:[Math.min(...timings.map(r=>r.firstMathMs)),Math.max(...timings.map(r=>r.firstMathMs))],secondModeMs:[Math.min(...timings.map(r=>r.secondModeMs)),Math.max(...timings.map(r=>r.secondModeMs))],screenshots:16,sourceHead,sourceStatusMatchesInitialInventory:true}));

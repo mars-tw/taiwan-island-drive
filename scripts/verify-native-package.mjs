@@ -30,6 +30,7 @@ check('support-never-opens-external-app',!support.includes('window.open(')&&!sup
 const build=join(root,'dist-native');
 for(const file of ['index.html','car/index.html','train/index.html','flight/index.html','privacy.html','support.html','models/aircraft.glb','models/train.glb','models/coupe.glb'])check('bundled-'+file,(await stat(join(build,file))).size>0);
 const top=await readdir(build);check('no-web-worker-or-source-archive',!top.some(x=>['sw.js','precache.json','downloads','textures'].includes(x)));
+for(const file of ['licenses/taiwan-train-math/LICENSE.txt','licenses/taiwan-train-math/NOTICE.txt'])check('math-attribution-'+file,(await readFile(join(build,file),'utf8'))===(await readFile(join(root,'public',file),'utf8')));
 const native=await readFile(join(root,'src/shared/native.js'),'utf8');
 check('local-only-voices',native.includes('localService===true')&&!native.includes('.openInstall('));
 const guard=await readFile(join(root,'src/shared/parent-gate.js'),'utf8');

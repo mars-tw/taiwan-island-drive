@@ -1,4 +1,5 @@
 import '../../shared/bootstrap.js';
+import {progressStorage} from '../../shared/student-save.js';
 import { readSettings, updateSettings, subscribeSettings } from '../../shared/settings.js';
 import './styles.css';
 import '../../shared/mobile-controls.css';
@@ -19,8 +20,8 @@ const $ = (s) => document.querySelector(s);
 const $$ = (s) => [...document.querySelectorAll(s)];
 const familySettings = readSettings();
 const storage = {
-  get(key, fallback) { try { return JSON.parse(localStorage.getItem(`island-drive:${key}`)) ?? fallback; } catch { return fallback; } },
-  set(key, value) { try { localStorage.setItem(`island-drive:${key}`, JSON.stringify(value)); } catch { /* Private browsing can disable storage. */ } }
+  get(key, fallback) { try { return JSON.parse(progressStorage.getItem(`island-drive:${key}`)) ?? fallback; } catch { return fallback; } },
+  set(key, value) { try { progressStorage.setItem(`island-drive:${key}`, JSON.stringify(value)); } catch { /* Private browsing can disable storage. */ } }
 };
 const saved = storage.get('preferences', {});
 let mapId = MAPS.some(m => m.id === saved.map) ? saved.map : 'coast';

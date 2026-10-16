@@ -5,7 +5,7 @@ import {mkdir,writeFile,readFile} from 'node:fs/promises';
 import {createHash} from 'node:crypto';
 const {chromium}=await import(process.env.PLAYWRIGHT_MODULE?pathToFileURL(process.env.PLAYWRIGHT_MODULE).href:'playwright');
 const base=process.env.BASE_URL||'http://127.0.0.1:5113/';
-const out='docs/evidence/r3-store',screens='docs/store/screenshots';
+const out=process.env.EVIDENCE_FOLDER||'docs/evidence/merge',screens='docs/store/screenshots';
 await mkdir(`${out}/after`,{recursive:true});await mkdir(screens,{recursive:true});
 const browser=await chromium.launch({headless:true,args:['--use-angle=d3d11','--enable-gpu','--ignore-gpu-blocklist']});
 const rows=[],errors=[],external=[],shots=[];
@@ -21,7 +21,7 @@ async function reachable(page,label,selector,min=60){
  assert.ok(result.length,`${label}: missing controls`);rows.push({label,controls:result.length,problems:result.filter(x=>x.problems.length)});
  assert.deepEqual(rows.at(-1).problems,[],label);
 }
-async function capture(page,name,store=false){const path=`${store?screens:out+'/after'}/${name}.png`;await page.screenshot({path});const b=await readFile(path);shots.push({path,width:b.readUInt32BE(16),height:b.readUInt32BE(20),sha256:createHash('sha256').update(b).digest('hex'),kind:'unmodified_headless_chromium_runtime_capture',native:false});}
+async function capture(page,name,store=false){const path=`${store?screens:out+'/after'}/${name}.png`;await page.evaluate(()=>new Promise(resolve=>requestAnimationFrame(()=>requestAnimationFrame(resolve))));await page.screenshot({path});const b=await readFile(path);shots.push({path,width:b.readUInt32BE(16),height:b.readUInt32BE(20),sha256:createHash('sha256').update(b).digest('hex'),kind:'unmodified_headless_chromium_runtime_capture',native:false});}
 async function holdBrake(page){const r=await page.locator('#safety-brake').boundingBox();await page.mouse.move(r.x+r.width/2,r.y+r.height/2);await page.mouse.down();await page.waitForFunction(()=>document.querySelector('#safety-detail').textContent.includes('速度 0'));await page.mouse.up();}
 async function gate(page){await page.locator('#home-settings').click();await page.locator('#parent-gate-answer').fill('0');await page.locator('#parent-gate-submit').click();assert.equal(await page.locator('#family-dialog').isVisible(),false);await page.locator('#parent-gate-cancel').click();assert.equal(await page.locator('#family-dialog').isVisible(),false);
  await page.locator('#home-settings').click();const n=(await page.locator('#parent-gate-question').innerText()).match(/\d+/g).map(Number);await page.locator('#parent-gate-answer').fill(String(n[0]+n[1]));await page.locator('#parent-gate-submit').click();assert.equal(await page.locator('#family-dialog').isVisible(),true);await page.locator('.done-button').click();}
@@ -69,6 +69,6 @@ try{
  }
  const context=await browser.newContext();await context.addInitScript(()=>Object.defineProperty(window,'localStorage',{get(){throw new Error('blocked by test');}}));const page=await context.newPage();watch(page);await page.goto(base);await page.locator('#safety-start').click();await page.locator('#safety-begin').click();await holdBrake(page);await page.waitForFunction(()=>document.querySelector('#safety-signal').textContent.includes('綠燈'));await page.locator('#safety-depart').click();assert.match(await page.locator('#safety-save').innerText(),/無法儲存/);rows.push({label:'storage failure stays playable and warns',problems:[]});await context.close();
  assert.deepEqual(errors,[]);assert.deepEqual(external,[]);
-}finally{await browser.close();await writeFile(`${out}/review-path.json`,JSON.stringify({rows,errors,externalRequests:external},null,2));await writeFile(`${screens}/manifest.json`,JSON.stringify({sourceVersion:'2.6.0',status:'EXECUTED',native:false,buildWorkerSha256:createHash('sha256').update(await readFile('dist/sw.js')).digest('hex'),method:'headless Chromium; UI actions and wall-clock waits; no modified progress or completion flags; offline 3D captures after SW install',shots},null,2));}
+}finally{await browser.close();await writeFile(`${out}/review-path.json`,JSON.stringify({rows,errors,externalRequests:external},null,2));await writeFile(`${screens}/manifest.json`,JSON.stringify({sourceVersion:JSON.parse(await readFile('package.json','utf8')).version,status:'EXECUTED',native:false,buildWorkerSha256:createHash('sha256').update(await readFile('dist/sw.js')).digest('hex'),method:'headless Chromium; UI actions and wall-clock waits; no modified progress or completion flags; offline 3D captures after SW install',shots},null,2));}
 const manifest=JSON.parse(await readFile(`${screens}/manifest.json`,'utf8'));manifest.status='VERIFIED';await writeFile(`${screens}/manifest.json`,JSON.stringify(manifest,null,2));
 console.log(`PASS ${rows.length} checks; ${shots.length} unmodified screenshots; zero runtime errors and external requests`);

@@ -1,6 +1,6 @@
 const ROOT = new URL('./', self.registration.scope);
 const CACHE_PREFIX = `island-transport-${encodeURIComponent(ROOT.pathname)}-`;
-const CACHE_NAME = `${CACHE_PREFIX}v2`;
+const CACHE_NAME = `${CACHE_PREFIX}v3-2.7.0`;
 const MANIFEST = new URL('./precache.json', ROOT).href;
 const ASSET = /\.(?:html|js|css|json|txt|webmanifest|svg|png|jpe?g|webp|glb|woff2?|mp3|m4a|ogg|wav)$/i;
 const PAGE_PATHS = new Map([['','index.html'], ['index.html','index.html'], ['car/','car/index.html'], ['car/index.html','car/index.html'], ['train/','train/index.html'], ['train/index.html','train/index.html'], ['flight/','flight/index.html'], ['flight/index.html','flight/index.html']]);

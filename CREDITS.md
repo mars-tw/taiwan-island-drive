@@ -1,5 +1,14 @@
 # CREDITS
 
+## 2.7.0 列車數學課
+
+- 來源：小小列車長／Taiwan Train Math，Copyright 2026 mars-tw，repo `taiwan-train-math`，來源 commit `7e25c749f073de321dabc25f982ee41ecac62dca`。
+- `src/games/math/dispatch.js`：移植 `src/dispatch.js`，程式 Apache-2.0；原教育文字 CC BY 4.0。保留原教材與守恆模型，檔頭新增署名，學院外殼改標題、任務交接、返回與暫停；新 glue code 依主 repo MIT。
+- `tests/shared/dispatch-ported.test.js`：移植來源 `tests/dispatch.test.mjs` 的完整第一個測試，保留三年齡 × 12 班、守恆／錯答／重複發獎與序列化斷言；改 import 路徑並移除該檔未移植模組的 imports，其餘存檔橋接由新整合測試覆蓋。Apache-2.0。
+- 原 Apache 完整授權與原 NOTICE 原文位於 `public/licenses/taiwan-train-math/`，會隨 Web／native payload 打包。原教材文字 CC BY 4.0 條款：<https://creativecommons.org/licenses/by/4.0/>。此為文件中的授權地址，遊戲 UI 沒有外連。
+- 本輪沒有複製來源照片、品牌圖、生成原畫或音檔，沒有假報 `gpt-image-2` slug。車廂／座位用 DOM/CSS 呈現，沿用主 repo 系統字型、既有交通圖與 WebAudio 三和弦。
+- 精確檔案、雜湊與變更說明見 `docs/merge-assets.json`。來源 NOTICE 提到的圖鑑／照片授權檔不屬本輪使用範圍，沒有把整個來源素材庫重新授為 MIT。
+
 本檔記錄 R1 起新增的素材來源。既有模型、貼圖與字型的授權見 `public/THIRD_PARTY_NOTICES.txt`、`docs/realism/README.md`，以及各模式在 `docs/editions/` 的製作文件。
 
 ## 音樂

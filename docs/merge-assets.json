@@ -1,0 +1,50 @@
+{
+  "status": "VERIFIED",
+  "version": "2.7.0",
+  "sourceProject": "Taiwan Train Math / 小小列車長",
+  "sourceCommit": "7e25c749f073de321dabc25f982ee41ecac62dca",
+  "sourceStatusMatchesInitialInventory": true,
+  "sourceStatusBaseline": [
+    "M store-listing/zh-TW/apple-review-notes-submit.txt",
+    "?? store-listing/zh-TW/apple-review-notes-build2-draft.txt",
+    "?? store-listing/zh-TW/apple-review-notes-build3-draft.txt"
+  ],
+  "sourceWritesPerformed": false,
+  "files": [
+    {
+      "source": "src/dispatch.js",
+      "destination": "src/games/math/dispatch.js",
+      "license": "Apache-2.0 code; CC-BY-4.0 educational text",
+      "sourceSha256": "bc076271f8a93ccda0fbb4eac5ddf58b7d735809e0782bb5dec641d91b5b16c0",
+      "destinationSha256": "969b3c0618b0a97ce34de77c22932a27a13bb794fc3b1a71fd61931d0469f10f",
+      "modifications": "Attribution header only; model and original markup unchanged"
+    },
+    {
+      "source": "tests/dispatch.test.mjs",
+      "destination": "tests/shared/dispatch-ported.test.js",
+      "license": "Apache-2.0, full first test retained",
+      "sourceSha256": "5d786bef399236b219fb5134cde313a2bdd25194e8fd746e4dd12017b9367ae3",
+      "destinationSha256": "73f0dda2d069523dd06a9d100dbd7d7e26d418021f70fe8ef8c0c39aee3bc81c",
+      "modifications": "First test copied with unchanged assertions; new import paths; source engine-specific tests replaced by additional integration coverage"
+    },
+    {
+      "source": "LICENSE",
+      "destination": "public/licenses/taiwan-train-math/LICENSE.txt",
+      "license": "Apache-2.0 full license",
+      "sourceSha256": "1eb85fc97224598dad1852b5d6483bbcf0aa8608790dcc657a5a2a761ae9c8c6",
+      "destinationSha256": "1eb85fc97224598dad1852b5d6483bbcf0aa8608790dcc657a5a2a761ae9c8c6",
+      "modifications": "none"
+    },
+    {
+      "source": "NOTICE",
+      "destination": "public/licenses/taiwan-train-math/NOTICE.txt",
+      "license": "Original NOTICE verbatim",
+      "sourceSha256": "2cb201d5c7aed11479b3b79ae1bea718f487e420eceb9b1d3b91a32f87709709",
+      "destinationSha256": "2cb201d5c7aed11479b3b79ae1bea718f487e420eceb9b1d3b91a32f87709709",
+      "modifications": "none"
+    }
+  ],
+  "newRasterAssets": [],
+  "imageModelSlug": null,
+  "notes": "No photographs, raster artwork, music or other source assets imported. Original NOTICE also describes source content outside this reuse scope. Existing main-repo CREDITS and THIRD_PARTY_NOTICES continue to apply."
+}

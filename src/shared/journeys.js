@@ -1,4 +1,5 @@
 // Playable short outings. Progress is separate from R1's collected-star wallet.
+import {progressStorage} from './student-save.js';
 export const PASSPORT_KEY = 'island-transport:passport:v1';
 export const MODE_NAMES = Object.freeze({car:'汽車',train:'火車',flight:'飛機'});
 export const JOURNEYS = Object.freeze([
@@ -20,14 +21,14 @@ export const journeysFor = mode => JOURNEYS.filter(journey=>journey.mode===mode)
 const fresh = () => ({ratings:{}});
 let memory = fresh(), unsaved = false;
 const listeners = new Set();
-function storage(){try{return globalThis.localStorage;}catch{return null;}}
+function storage(){return progressStorage;}
 export function normalizePassport(value){
   const result=fresh();
   for(const journey of JOURNEYS){const n=value?.ratings?.[journey.id];if(Number.isInteger(n)&&n>=1&&n<=3)result.ratings[journey.id]=n;}
   return result;
 }
 export function readPassport(){
-  if(!unsaved)try{const saved=storage()?.getItem(PASSPORT_KEY);if(saved)memory=normalizePassport(JSON.parse(saved));}catch{ /* Retain this session's progress. */ }
+  try{const saved=storage()?.getItem(PASSPORT_KEY);memory=normalizePassport(saved?JSON.parse(saved):{});}catch{ /* Retain this session's progress. */ }
   return {ratings:{...memory.ratings}};
 }
 export function isJourneyOpen(id,passport=readPassport()){

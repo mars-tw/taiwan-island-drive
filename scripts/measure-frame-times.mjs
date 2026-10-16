@@ -15,6 +15,7 @@ const VIEWPORTS = {
   landscape: { viewport: { width: 844, height: 390 }, isMobile: true, hasTouch: true, deviceScaleFactor: 2 }
 };
 const MODES = {
+  math: { path: '', start: async page => { await page.locator('#academy-start').click(); await page.locator('[data-dispatch=learn]').click(); await page.locator('[data-dispatch=add]').click(); } },
   car: { path: 'car/', start: async page => { await page.waitForSelector('#start-button:not([disabled])', { timeout: 60000 }); await page.click('#start-button'); await page.waitForTimeout(3300); await page.evaluate(() => { const g = window.__islandDrive.game; setInterval(() => { g.input.throttle = 1; }, 16); }); await page.waitForTimeout(1500); } },
   train: { path: 'train/', start: async page => { await page.waitForSelector('#child-prepare'); await page.waitForTimeout(3000); await page.click('#child-prepare'); await page.click('#child-go'); await page.waitForTimeout(1500); } },
   flight: { path: 'flight/', start: async page => { await page.waitForSelector('#start:not([disabled])', { timeout: 60000 }); await page.click('#start'); await page.waitForTimeout(1500); await page.click('#child-action'); await page.waitForTimeout(2500); } }

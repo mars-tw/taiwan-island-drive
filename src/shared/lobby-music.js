@@ -3,6 +3,7 @@
 // toggle stays hidden and the lobby works silently.
 import { appUrl } from './paths.js';
 import { readSettings } from './settings.js';
+import { progressStorage } from './student-save.js';
 
 export const LOBBY_TRACK = 'audio/lobby-theme.m4a';
 export const MUSIC_PREFERENCE_KEY = 'island-transport:lobby-music:v1';
@@ -14,8 +15,8 @@ export function shouldPlayMusic({ muted = false, preference = 'on' } = {}) { ret
 /** Dev servers answer missing files with index.html, so require a real audio type. */
 export function isAudioResponse(response) { return !!response?.ok && /^audio\//i.test(response.headers?.get?.('content-type') || ''); }
 
-function readPreference() { try { return globalThis.localStorage?.getItem(MUSIC_PREFERENCE_KEY) === 'off' ? 'off' : 'on'; } catch { return 'on'; } }
-function writePreference(value) { try { globalThis.localStorage?.setItem(MUSIC_PREFERENCE_KEY, value); } catch { /* ignore */ } }
+function readPreference() { try { return progressStorage.getItem(MUSIC_PREFERENCE_KEY) === 'off' ? 'off' : 'on'; } catch { return 'on'; } }
+function writePreference(value) { try { progressStorage.setItem(MUSIC_PREFERENCE_KEY, value); } catch { /* ignore */ } }
 
 export class LobbyMusic {
   constructor(button) { this.button = button; this.audio = null; this.preference = readPreference(); this.muted = readSettings().muted; this.started = false; }

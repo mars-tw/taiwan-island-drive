@@ -1,7 +1,7 @@
 import assert from 'node:assert/strict';
 import {readFile,writeFile,readdir} from 'node:fs/promises';
 import {createHash} from 'node:crypto';
-const folder='docs/evidence/r3-store';
+const folder=process.env.EVIDENCE_FOLDER||'docs/evidence/merge';
 const pkg=JSON.parse(await readFile('package.json','utf8'));
 const manifest=JSON.parse(await readFile('docs/store/screenshots/manifest.json','utf8'));
 assert.equal(manifest.status,'VERIFIED');assert.equal(manifest.sourceVersion,pkg.version);
@@ -19,6 +19,6 @@ assert.ok(counts.name<=30);assert.ok(counts.subtitle<=30);assert.ok(counts.keywo
 for(const file of ['package-lock.json','src/games/car/config.js','car/index.html'])assert.ok(!(await readFile(file,'utf8')).includes('2.5.0'),file);
 const result={status:'VERIFIED',sourceVersion:pkg.version,screenshots:manifest.shots.length,storeDraftScreenshots:16,reviewPathChecks:path.rows.length,completedViewports:completions.length,rangeSeconds:[Math.min(...completions.map(r=>r.durationMs))/1000,Math.max(...completions.map(r=>r.durationMs))/1000],metadataCounts:counts,nativeScreenshots:false};
 const evidence=[];
-for(const phase of ['before','after'])for(const file of await readdir(`${folder}/${phase}`)){if(!file.endsWith('.png'))continue;const name=`${folder}/${phase}/${file}`,b=await readFile(name);evidence.push({path:name,phase,sourceVersion:phase==='before'?'2.5.0':pkg.version,width:b.readUInt32BE(16),height:b.readUInt32BE(20),sha256:createHash('sha256').update(b).digest('hex')});}
+for(const phase of ['before','after'])for(const file of await readdir(`${folder}/${phase}`)){if(!file.endsWith('.png'))continue;const name=`${folder}/${phase}/${file}`,b=await readFile(name);evidence.push({path:name,phase,sourceVersion:phase==='before'?(process.env.BEFORE_VERSION||'2.6.0'):pkg.version,width:b.readUInt32BE(16),height:b.readUInt32BE(20),sha256:createHash('sha256').update(b).digest('hex')});}
 await writeFile(`${folder}/evidence-manifest.json`,JSON.stringify({status:'VERIFIED',native:false,images:evidence,storeImagesManifest:'docs/store/screenshots/manifest.json'},null,2));
 await writeFile(`${folder}/evidence-check.json`,JSON.stringify(result,null,2));console.log(JSON.stringify(result));

@@ -1,4 +1,4 @@
-.passport-open{font:800 14px 'Microsoft JhengHei',sans-serif;min-width:76px;min-height:60px;border:2px solid #f4be37;border-radius:14px;background:#fff4c4;color:#513500;padding:0 10px;cursor:pointer;touch-action:manipulation;flex-shrink:0}
+.passport-open{font:800 14px 'Microsoft JhengHei',sans-serif;min-width:76px;min-height:60px;border:2px solid #f4be37;border-radius:8px;background:#fff4c4;color:#513500;padding:0 10px;cursor:pointer;touch-action:manipulation;flex-shrink:0}
 #passport-dialog{box-sizing:border-box;position:fixed;inset:0;width:min(660px,calc(100vw - 20px));max-height:calc(100dvh - 20px);margin:auto;padding:16px;border:3px solid #edba31;border-radius:24px;background:#fffaf0;color:#173d47;overflow:auto;box-shadow:0 18px 65px #153d4b66;font-family:'Microsoft JhengHei',sans-serif}
 #passport-dialog::backdrop{background:#163d4fb8}
 #passport-dialog .passport-header{display:flex;align-items:center;justify-content:space-between;gap:8px;margin-bottom:10px}
@@ -14,5 +14,5 @@
 .passport-chapter:disabled{cursor:default;background:#edf1ed;color:#536665;opacity:1}.passport-chapter:disabled .passport-rating{font-size:12px;color:#536665}
 #passport-note{font-size:12px;line-height:1.5;margin:10px 0 0}
 #passport-dialog button:focus-visible,.passport-open:focus-visible{outline:3px solid #db5e29;outline-offset:2px}
-.journey-result p{font-size:14px;line-height:1.5;margin:8px 0;color:inherit}.journey-result button{min-height:60px;width:100%;font-size:15px;font-weight:800;background:#ffdb68;color:#173d47;border:2px solid #dba934;border-radius:14px;margin:4px 0}
+.journey-result p{font-size:14px;line-height:1.5;margin:8px 0;color:inherit}.journey-result button{min-height:60px;width:100%;font-size:15px;font-weight:800;background:#ffdb68;color:#173d47;border:2px solid #dba934;border-radius:8px;margin:4px 0}
 @media(max-height:520px) and (orientation:landscape){#passport-dialog{padding:10px 14px;border-radius:18px}.passport-header{margin-bottom:6px!important}#passport-title{font-size:20px}#passport-chapters{grid-template-columns:1fr 1fr;gap:6px}.passport-chapter{min-height:76px;padding:8px 10px}.passport-tabs{margin-bottom:6px;gap:6px}#passport-note{margin-top:6px}.journey-result p{font-size:12px;line-height:1.4;margin:4px 0}}

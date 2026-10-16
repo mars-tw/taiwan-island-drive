@@ -6,7 +6,9 @@ import { readRewards, subscribeRewards, totalStars } from './shared/rewards.js';
 import { isNativeBuild } from './shared/native.js';
 import { LobbyMusic } from './shared/lobby-music.js';
 import { installSafetyLesson } from './shared/safety-ui.js';
+import { installAcademy } from './shared/academy-ui.js';
 installSafetyLesson();
+installAcademy();
 const $ = id => document.getElementById(id);
 function showSettings(value = readSettings()) {
   $('child-mode').checked = value.childMode;
@@ -30,6 +32,7 @@ $('family-quality').onchange = event => updateSettings({ quality: event.target.v
 subscribeSettings(showSettings); showSettings();
 subscribeRewards(showRewards); showRewards();
 addEventListener('pageshow', () => showRewards());
+addEventListener('studentchange', () => showRewards());
 
 const music = new LobbyMusic($('music-toggle'));
 void music.init();

@@ -8,6 +8,10 @@
 *.png binary
 *.glb binary
 *.blend binary
+docs/evidence/merge/** -text whitespace=cr-at-eol
+docs/merge-assets.json -text
+docs/store/screenshots/merge/manifest.json -text
+public/licenses/taiwan-train-math/* -text whitespace=cr-at-eol
 # Keep copied CI evidence byte-identical for its recorded SHA-256.
 store/review/apple-logo-v2-signing-verification.json -text whitespace=cr-at-eol
 store/review/android-logo-v2-verification.json -text whitespace=cr-at-eol

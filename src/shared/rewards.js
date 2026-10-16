@@ -1,5 +1,6 @@
 // Shared sticker/star collection for the three transport modes.
 // Kept as plain data so it works in node tests and in private browsing.
+import {progressStorage} from './student-save.js';
 export const REWARDS_KEY = 'island-transport:rewards:v1';
 export const REWARD_MODES = Object.freeze(['car', 'train', 'flight']);
 const subscribers = new Set();
@@ -17,10 +18,10 @@ export function normalizeRewards(value = {}) {
   return result;
 }
 
-function storage() { try { return globalThis.localStorage || null; } catch { return null; } }
+function storage() { return progressStorage; }
 
 export function readRewards() {
-  try { const saved = storage()?.getItem(REWARDS_KEY); if (saved) memory = normalizeRewards(JSON.parse(saved)); }
+  try { const saved = storage()?.getItem(REWARDS_KEY); memory = normalizeRewards(saved ? JSON.parse(saved) : {}); }
   catch { /* Keep the last usable in-memory rewards. */ }
   return { ...memory, best: { ...memory.best } };
 }

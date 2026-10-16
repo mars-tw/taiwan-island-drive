@@ -1,4 +1,5 @@
 import '../../shared/bootstrap.js';
+import {progressStorage} from '../../shared/student-save.js';
 import { readSettings,updateSettings,subscribeSettings } from '../../shared/settings.js';
 import '@fontsource/barlow-condensed/600.css';
 import '@fontsource/barlow-condensed/700.css';
@@ -85,7 +86,7 @@ function showMode(s){
  $('drop-mail').hidden=s.preschool||s.lesson!=='mail';
  if(s.mode!=='playing')voice.stop();
  if(s.mode==='paused'){$('result-tag').textContent='飛行暫停';$('result-title').textContent='休息一下。';$('result-text').textContent='準備好了，再繼續飛。';$('result-data').textContent='';$('continue').hidden=false;$('replay').classList.remove('primary');}
- if(s.mode==='result'){$('result-tag').textContent=s.mission.complete?'旅程完成':'再試一次';$('result-title').textContent=s.mission.complete?'這趟旅程，完成了！':'再試一次就好。';$('result-text').textContent=s.mission.message;$('result-data').textContent=s.mission.complete?`得到 ${s.mission.score} 分・飛行 ${Math.round(s.time)} 秒`:'';$('continue').hidden=true;$('replay').classList.add('primary');if(s.mission.complete&&!runAwarded){runAwarded=true;journeyResult(document.querySelector('.result-card'),journey,s.mission.score>=85?3:s.mission.score>=60?2:1);addStars('flight',2);recordBest(`flight:${s.lesson}`,3);celebrate({text:'飛行任務完成！',kind:'finish',y:.25,pieces:40,big:true,sound:!readSettings().muted});}try{if(s.mission.complete){const record=JSON.parse(localStorage.getItem('island-flight-school-record')||'{}');record[s.lesson]=Math.max(record[s.lesson]||0,s.mission.score);localStorage.setItem('island-flight-school-record',JSON.stringify(record));}}catch{}}
+ if(s.mode==='result'){$('result-tag').textContent=s.mission.complete?'旅程完成':'再試一次';$('result-title').textContent=s.mission.complete?'這趟旅程，完成了！':'再試一次就好。';$('result-text').textContent=s.mission.message;$('result-data').textContent=s.mission.complete?`得到 ${s.mission.score} 分・飛行 ${Math.round(s.time)} 秒`:'';$('continue').hidden=true;$('replay').classList.add('primary');if(s.mission.complete&&!runAwarded){runAwarded=true;journeyResult(document.querySelector('.result-card'),journey,s.mission.score>=85?3:s.mission.score>=60?2:1);addStars('flight',2);recordBest(`flight:${s.lesson}`,3);celebrate({text:'飛行任務完成！',kind:'finish',y:.25,pieces:40,big:true,sound:!readSettings().muted});}try{if(s.mission.complete){const record=JSON.parse(progressStorage.getItem('island-flight-school-record')||'{}');record[s.lesson]=Math.max(record[s.lesson]||0,s.mission.score);progressStorage.setItem('island-flight-school-record',JSON.stringify(record));}}catch{}}
  if(s.mode==='result'&&s.preschool)voice.say(s.mission.message,`result:${s.lesson}:${s.mission.score}`,true);
  syncViewport();
 }

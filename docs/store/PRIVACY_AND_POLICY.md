@@ -1,6 +1,6 @@
 # 兒童類與隱私檢查
 
-2026-10-15；2.6.0；來源層：EXECUTED／VERIFIED，最終原生簽章包：BLOCKED。這不是已填入 App Store Connect／Play Console 的宣告證明。
+2026-10-15；2.7.0；來源層：EXECUTED／VERIFIED，最終原生簽章包：BLOCKED。這不是已填入 App Store Connect／Play Console 的宣告證明。
 
 ## 實際資料與網路
 
@@ -36,10 +36,14 @@
 
 ## 原生送審前缺件
 
-- BLOCKED：2.6.0 新簽章 IPA／AAB、合併清單與依賴隱私資源稽核；本機只驗證 web/native web payload。
+- BLOCKED：2.7.0 新簽章 IPA／AAB、合併清單與依賴隱私資源稽核；本機只驗證 web/native web payload。
 - BLOCKED：iPhone／iPad／Android 實機離線、背景恢復、語音引擎與網路封包驗證。
 - BLOCKED：App Privacy／Data safety／年齡與 Families 表單的最終實填讀回；本輪禁止操作商店。
 - BLOCKED：新安全課親子實測，確認不識字兒童在家長陪讀下的理解程度；不捏造 beta 意見。
 - BLOCKED：既有音樂權利歸屬確認。沒有新生成素材，也沒有新素材模型 slug 證據。
 
 核對依據：[Apple Kids Category 與隱私](https://developer.apple.com/app-store/review/guidelines/#kids-category)、[Google Families](https://support.google.com/googleplay/android-developer/answer/9893335?hl=en)、[Google Data safety](https://support.google.com/googleplay/android-developer/answer/10787469?hl=en-en)。這些政策要求最終行為與申報一致；來源通過不代表商店或法律審查已通過。
+
+## 整合更新補充（2026-10-16）
+
+數學階段、人數、主線章與家長選擇的來源備份原文新增於本機學生證，不上傳。沒有新增第三方 SDK、分析、廣告、內購或評分要求；本輪選取的是本機檔案，不是連另一 App 或外站。來源層已更新公開隱私頁。最終簽章包仍 BLOCKED，前輪稽核屬歷史證據。

@@ -1,11 +1,18 @@
 # 島嶼交通學院｜Island Transport Academy
 
-汽車、火車與飛機已合併成同一個開源手機遊戲專案。從大廳選交通工具，共用一套 npm／Vite 建置、一個 GitHub 儲存庫、一份 PWA 與離線素材庫。手機只需加入主畫面一次。
+**目前本機整合版：2.7.0／原生來源 build 3。** 這是既有《島嶼交通學院》的更新準備，沒有上傳商店或部署；以下原生上傳紀錄是歷史快照。
+
+你是島嶼交通學院的新學員，要陪海風站的朋友到山海教室。先上「列車數學課」，把同一班乘客裝滿、分車、算剩下；再拿調度單接火車乘客、沿公路送補給、開飛機找路標。四章共用學生證、星星與徽章，首頁只有一個主線繼續入口，原三交通工具與 12 關仍可自由練習。
+
+本作整合汽車、島嶼鐵道／飛行內容，這輪再移植 Apache-2.0 開源專案「小小列車長」（`taiwan-train-math`）的拆合教材，沒有帶入另一套首頁或 iframe。主 repo 保留 MIT；移植程式、教材文字及其他素材各依原授權，見 [CREDITS](CREDITS.md)、[來源清單](docs/merge-assets.json)與[完整 Apache 授權／NOTICE](public/licenses/taiwan-train-math/NOTICE.txt)。免費、非營利提供遊玩，歡迎在各素材授權條件下改作自己的遊戲；MIT 本身也允許商業使用。
+
+升級會保留原星星、護照與觀察章，整合到同一份學生證。家長通過關卡後，可選來源 App 匯出的 JSON：可接續拆合進度，其他玩法的歷史原文保留，沒有把未移植玩法說成可續玩。詳見[整合設計與限制](docs/MERGE_DESIGN.md)。不讀另一個 App 的沙盒、不改來源 App、不上傳兒童資料。沒有廣告或第三方分析 SDK。
 
 **[開啟交通學院](https://mars-tw.github.io/taiwan-island-drive/)** · [完整原始碼與模型下載](https://mars-tw.github.io/taiwan-island-drive/downloads/island-drive-source.zip)
 
 | 模式 | 操作與學習 | 專案內入口 |
 | --- | --- | --- |
+| 列車數學課 | 主線第一章：裝滿、可逆分車、算前車帶走的人數；每個動作保存在學生證 | 大廳主線／數學練習 |
 | 汽車 | 四款車、四張台灣主題地圖、觸控／手機方向盤、自由駕駛與計時挑戰 | `/car/` |
 | 火車 | 慣性、延遲煞車、車門與方向互鎖、號誌、停站接客；三課程與停車輔助 | `/train/` |
 | 飛機 | 四個 36×36 km 風景地圖；尋寶、郵件投遞、景點巡航、起飛、導航、降落及自由飛行；單次點擊助飛與物理返航 | `/flight/` |
@@ -42,6 +49,8 @@ npm run dev
 npm test
 npm run build
 ```
+
+整合驗證另跑 `npm run test:merge`、`npm run test:store` 與 `node scripts/check-mobile.mjs`。這些無頭瀏覽器檢查需要本機 Playwright／Chromium；設定 `PLAYWRIGHT_MODULE` 指向已有套件的 `index.mjs`，`BASE_URL` 指向已建置的本機 HTTP 服務，`EVIDENCE_FOLDER=docs/evidence/merge`。來源比對器另需 `TRAIN_MATH_SOURCE` 指向唯讀的小小列車長 checkout。證據與確切限制見 [本輪報告](docs/CODEX_RESPONSE_MERGE.md)。
 
 開發網址為 `http://localhost:5178/`。正式版 `dist/` 同時含大廳、汽車、火車與飛機，三模式共用一份 Three.js chunk、字型、設定及模型路徑。沒有三份 node_modules 或三套獨立部署。
 

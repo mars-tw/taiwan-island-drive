@@ -1,4 +1,5 @@
 // Three transport systems, judged by simulated time and deliberate controls.
+import {progressStorage} from './student-save.js';
 export const SAFETY_KEY = 'island-transport:safety:v1';
 export const SAFETY_STOPS = Object.freeze([
   {mode:'car', name:'路口停看走', rule:'停穩後等綠燈，路口空了再走。'},
@@ -8,7 +9,7 @@ export const SAFETY_STOPS = Object.freeze([
 export function normalizeSafety(value) {
   return {completed:Number.isInteger(value?.completed) && value.completed >= 0 && value.completed <= 3 ? value.completed : 0};
 }
-export function createSafetyStorage(target = () => globalThis.localStorage) {
+export function createSafetyStorage(target = () => progressStorage) {
   let memory = {completed:0}, unsaved = false;
   return {
     read() { if(!unsaved)try { const value=target()?.getItem(SAFETY_KEY); if(value)memory=normalizeSafety(JSON.parse(value)); }catch{} return {...memory}; },

@@ -16,3 +16,6 @@
 | `06-flight-offline.png` | 斷網後開啟的 3D 飛機活動 | 開飛機，沿山海找星星。 |
 
 擷取腳本：`scripts/check-store-review.mjs`；新觀察課只走正常 UI 與真實等候，沒有直接寫入完成旗標、瞬移或修改存檔。既有 3D 截圖在離線模式用 UI 啟動後擷取，不冒稱完成整關。before 圖在 `docs/evidence/r3-store/before/`，其餘尺寸的首頁與矩陣證據在 `after/`。
+# 2.7.0 整合版入口
+
+新增山海同行主線、拆合教材與學生證的 16 張實際畫面見 [SCREENSHOTS_MERGE.md](SCREENSHOTS_MERGE.md)及 `screenshots/merge/manifest.json`。下方觀察課清單保留作既有功能回歸，本輪另重擷取為 2.7.0；全部仍是無頭 Chromium，不能當作原生實機截圖。
