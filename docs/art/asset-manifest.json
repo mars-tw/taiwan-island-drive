@@ -1,0 +1,616 @@
+{
+  "status": "VERIFIED",
+  "date": "2026-10-16",
+  "tool": "image_gen.imagegen",
+  "model_slug": null,
+  "model_note": "The actual built-in model slug is not exposed. Do not infer gpt-image-2 from a planning document.",
+  "generation_calls": 8,
+  "runtime_files": 18,
+  "runtime_bytes": 1638592,
+  "postprocess": "Pillow 12.2.0; native-alpha preserve; alpha <12 cleared, >240 opaque; transparent RGB zeroed; trim/padding; LANCZOS runtime resize; background WebP q83. No fabricated drawings.",
+  "style_prefix": "Island Transport Academy — sunny Taiwan coastal picture-book, premium preschool game art for ages 3–8. Rounded hand-painted gouache shapes with subtle paper texture, confident midnight-blue contours, toy-like proportions, warm sunlight. Palette sea blue #1479B8, ink #143B61, vivid orange #F46B27, signal yellow #FFD344, leaf green #58B85B. Cheerful clean composition, readable large silhouettes, no generic dark teal UI, no photorealism, no watermark.",
+  "license": "AI-generated for this project through the built-in OpenAI image tool; no third-party reference artwork supplied. Generated content is not automatically covered by the source-code MIT license.",
+  "sources": [
+    {
+      "id": "background",
+      "path": "docs/art/source/background.png",
+      "sha256": "fc347394d39ccdf9d7d4c06c7bc975b6694ae963ea2e1daeca4b1b5720ef0e5b",
+      "size": [
+        1536,
+        1024
+      ],
+      "mode": "RGB",
+      "tool": "image_gen.imagegen",
+      "model_slug": null
+    },
+    {
+      "id": "coach",
+      "path": "docs/art/source/coach.png",
+      "sha256": "e4df3a8bc985ed8b4de1f62d4b3e0b046fb42fa614e256a2edd4dc974f94a004",
+      "size": [
+        1024,
+        1536
+      ],
+      "mode": "RGBA",
+      "tool": "image_gen.imagegen",
+      "model_slug": null,
+      "alpha_mask": {
+        "path": "docs/art/source/coach-mask.png",
+        "sha256": "b0ff2399181cd425aa5f0c6caea69c827c4a3b1a877184ad5571a984d0985bf9"
+      },
+      "opaque_rgb": {
+        "path": "docs/art/source/coach-opaque.png",
+        "sha256": "1372920993aefd03f1e4f49bbdf19d64051ae1b0372a957761af293d227bfaad"
+      }
+    },
+    {
+      "id": "traffic-kit",
+      "path": "docs/art/source/traffic-kit.png",
+      "sha256": "b080d1975083feb3b76a876f2c1291a6386f50ad3fc20522831035e86fa1262b",
+      "size": [
+        1254,
+        1254
+      ],
+      "mode": "RGBA",
+      "tool": "image_gen.imagegen",
+      "model_slug": null,
+      "alpha_mask": {
+        "path": "docs/art/source/traffic-kit-mask.png",
+        "sha256": "3a90f9c5d9edb4988fdabd37a0bc96390f64beacc87bcfd0eec7380aaf355ee4"
+      },
+      "opaque_rgb": {
+        "path": "docs/art/source/traffic-kit-opaque.png",
+        "sha256": "be7862c32034e49881add932dc9608d9514e993d0ea086ae8ce90efcd9420935"
+      }
+    },
+    {
+      "id": "panel",
+      "path": "docs/art/source/panel.png",
+      "sha256": "627ddb2f9614d61d1a5304bda8bc8d0f933593afa158a40e937bd37956417d43",
+      "size": [
+        1536,
+        1024
+      ],
+      "mode": "RGBA",
+      "tool": "image_gen.imagegen",
+      "model_slug": null,
+      "alpha_mask": {
+        "path": "docs/art/source/panel-mask.png",
+        "sha256": "538e81abe68d859807148474538dd370edcc1db2b49629dce4dbc889e105bb9d"
+      },
+      "opaque_rgb": {
+        "path": "docs/art/source/panel-opaque.png",
+        "sha256": "34fd61c237ce5a6a4e1d71ca2da4466c5acabfe44f303d9bfbd85c0096e3cfc0"
+      }
+    },
+    {
+      "id": "logo",
+      "path": "docs/art/source/logo.png",
+      "sha256": "5b4cb1bf54052e10a74be053e1dfe834ed6ed24b355c768656b84e0f9a5aa08b",
+      "size": [
+        1774,
+        887
+      ],
+      "mode": "RGBA",
+      "tool": "image_gen.imagegen",
+      "model_slug": null,
+      "alpha_mask": {
+        "path": "docs/art/source/logo-mask.png",
+        "sha256": "54753bc5e034615865ac058f8b71b00cdc297606fbc6735bd9950cec91c30deb"
+      },
+      "opaque_rgb": {
+        "path": "docs/art/source/logo-opaque.png",
+        "sha256": "672b0e7256296537e5764da1a8586e6a45aa39a9e700ab1420a73241182ae333"
+      }
+    },
+    {
+      "id": "app-icon",
+      "path": "docs/art/source/app-icon.png",
+      "sha256": "6e29fcea3f81c86ab68a2c4488abfbc80f95e62c04521b46ab71fecdade9261a",
+      "size": [
+        1254,
+        1254
+      ],
+      "mode": "RGB",
+      "tool": "image_gen.imagegen",
+      "model_slug": null
+    },
+    {
+      "id": "passengers",
+      "path": "docs/art/source/passengers.png",
+      "sha256": "255444bc55ffce49e8b8a6d3894e6cc051d631e94103db47022b07caef0428de",
+      "size": [
+        1536,
+        1024
+      ],
+      "mode": "RGBA",
+      "tool": "image_gen.imagegen",
+      "model_slug": null,
+      "alpha_mask": {
+        "path": "docs/art/source/passengers-mask.png",
+        "sha256": "8806a1967620a7f3d94e12a4691fc7857824470f6967426b833f730336e1aded"
+      },
+      "opaque_rgb": {
+        "path": "docs/art/source/passengers-opaque.png",
+        "sha256": "76827801d8253caabb5dbd044287c6cc9ffaaf4a55f919d367879549580f8afd"
+      }
+    },
+    {
+      "id": "passengers-v2",
+      "path": "docs/art/source/passengers-v2.png",
+      "sha256": "1bd87fb37cfae41128b345a24da593c1e3d6b14bdf84bc4566b06739fdaed5b8",
+      "size": [
+        1536,
+        1024
+      ],
+      "mode": "RGBA",
+      "tool": "image_gen.imagegen",
+      "model_slug": null,
+      "alpha_mask": {
+        "path": "docs/art/source/passengers-v2-mask.png",
+        "sha256": "0d51c8db2cb58aed066b99cf59e7d970009a43e7f5c915a7d74cfa09535c2ec1"
+      },
+      "opaque_rgb": {
+        "path": "docs/art/source/passengers-v2-opaque.png",
+        "sha256": "9b1913a16b794a40fe7b5d872db9a3d0a748da13e31f9007d1e3a2b2d2dff8cc"
+      }
+    }
+  ],
+  "outputs": [
+    {
+      "path": "public/art/r4/coast.webp",
+      "sha256": "50c94366f02da986ccbdd8f03faacde423618f32390054540dee383092d629ce",
+      "bytes": 372260,
+      "size": [
+        1536,
+        1024
+      ],
+      "mode": "RGB"
+    },
+    {
+      "path": "public/art/r4/coach.png",
+      "sha256": "2d3807fa5fcc11cfd4e0f7229e9ef783af40f63ae2423bd401520b70fb54939a",
+      "bytes": 274855,
+      "size": [
+        384,
+        558
+      ],
+      "mode": "RGBA",
+      "alpha_occupancy": 0.5316,
+      "corner_alpha": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "visible_bbox": [
+        11,
+        10,
+        373,
+        547
+      ],
+      "mean_luminance": 0.5043,
+      "near_black": 0.0673,
+      "mean_saturation": 0.7108,
+      "low_saturation": 0.1
+    },
+    {
+      "path": "public/art/r4/logo.png",
+      "sha256": "154169a552cae5e5954091734678b041e40af138d52cfd2689f67e2208e9ca93",
+      "bytes": 141775,
+      "size": [
+        480,
+        225
+      ],
+      "mode": "RGBA",
+      "alpha_occupancy": 0.6056,
+      "corner_alpha": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "visible_bbox": [
+        9,
+        9,
+        471,
+        216
+      ],
+      "mean_luminance": 0.532,
+      "near_black": 0.0026,
+      "mean_saturation": 0.7208,
+      "low_saturation": 0.2247
+    },
+    {
+      "path": "public/art/r4/panel.png",
+      "sha256": "61c4b10129f1b21797436bf7747aa4a8d8a90aa4b42c647a2e85b175c59c02c1",
+      "bytes": 27554,
+      "size": [
+        768,
+        31
+      ],
+      "mode": "RGB"
+    },
+    {
+      "path": "public/art/r4/car.png",
+      "sha256": "75a3504ec9ad07483a7db8eb512319f9f01e92fbc08419f620db8580d1810357",
+      "bytes": 29973,
+      "size": [
+        144,
+        119
+      ],
+      "mode": "RGBA",
+      "alpha_occupancy": 0.6701,
+      "corner_alpha": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "visible_bbox": [
+        1,
+        1,
+        143,
+        118
+      ],
+      "mean_luminance": 0.4621,
+      "near_black": 0.056,
+      "mean_saturation": 0.7139,
+      "low_saturation": 0.0982
+    },
+    {
+      "path": "public/art/r4/train.png",
+      "sha256": "d1b9432bf8761676d54584eeb58dedb5902f9a6ef08a72465a0837ef9fd7ed28",
+      "bytes": 36756,
+      "size": [
+        140,
+        144
+      ],
+      "mode": "RGBA",
+      "alpha_occupancy": 0.7274,
+      "corner_alpha": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "visible_bbox": [
+        1,
+        1,
+        139,
+        143
+      ],
+      "mean_luminance": 0.4404,
+      "near_black": 0.0381,
+      "mean_saturation": 0.6065,
+      "low_saturation": 0.259
+    },
+    {
+      "path": "public/art/r4/flight.png",
+      "sha256": "86383110bd3908e48dcb65fd1fc1821d91dee5731fa3ee5bcd8a5f18baa6969a",
+      "bytes": 28627,
+      "size": [
+        144,
+        114
+      ],
+      "mode": "RGBA",
+      "alpha_occupancy": 0.562,
+      "corner_alpha": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "visible_bbox": [
+        1,
+        1,
+        143,
+        113
+      ],
+      "mean_luminance": 0.5008,
+      "near_black": 0.0679,
+      "mean_saturation": 0.7312,
+      "low_saturation": 0.1384
+    },
+    {
+      "path": "public/art/r4/badge.png",
+      "sha256": "f897a6d3254673f7d7b9c79148db19e9c993d919afebed64380c9323b92f09a0",
+      "bytes": 31163,
+      "size": [
+        123,
+        144
+      ],
+      "mode": "RGBA",
+      "alpha_occupancy": 0.6607,
+      "corner_alpha": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "visible_bbox": [
+        1,
+        1,
+        122,
+        143
+      ],
+      "mean_luminance": 0.4481,
+      "near_black": 0.0358,
+      "mean_saturation": 0.9046,
+      "low_saturation": 0.0049
+    },
+    {
+      "path": "public/art/r4/signal.png",
+      "sha256": "55c2ef08b2add22ea2e494ab08a11ee0a99fed3128f3454f7df9931fd9881b8f",
+      "bytes": 23591,
+      "size": [
+        96,
+        144
+      ],
+      "mode": "RGBA",
+      "alpha_occupancy": 0.6581,
+      "corner_alpha": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "visible_bbox": [
+        1,
+        1,
+        95,
+        143
+      ],
+      "mean_luminance": 0.3809,
+      "near_black": 0.0516,
+      "mean_saturation": 0.8359,
+      "low_saturation": 0.0099
+    },
+    {
+      "path": "public/art/r4/bag.png",
+      "sha256": "10188eebe2c772b82fef7da43df4be5c81222fd43791e1db1a35eaa188192cd7",
+      "bytes": 32733,
+      "size": [
+        131,
+        144
+      ],
+      "mode": "RGBA",
+      "alpha_occupancy": 0.7188,
+      "corner_alpha": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "visible_bbox": [
+        1,
+        1,
+        130,
+        143
+      ],
+      "mean_luminance": 0.3727,
+      "near_black": 0.0283,
+      "mean_saturation": 0.9138,
+      "low_saturation": 0.0017
+    },
+    {
+      "path": "public/art/r4/app-icon-512.png",
+      "sha256": "f390fcc18cd51294160ef2c67c929b1b80777844055d0a3693d5dac83266139b",
+      "bytes": 457418,
+      "size": [
+        512,
+        512
+      ],
+      "mode": "RGB"
+    },
+    {
+      "path": "public/art/r4/app-icon-192.png",
+      "sha256": "b913ac7e06bacb33ff6e9261b94ddea959660c74fdfee845831b714c73a0e142",
+      "bytes": 75801,
+      "size": [
+        192,
+        192
+      ],
+      "mode": "RGB"
+    },
+    {
+      "path": "public/art/r4/passenger-1.png",
+      "sha256": "3fd9d86bda22358c6046f3935de8ebe00402e04aeb1f88fb38ed759ae904310c",
+      "bytes": 17173,
+      "size": [
+        84,
+        96
+      ],
+      "mode": "RGBA",
+      "alpha_occupancy": 0.6598,
+      "corner_alpha": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "visible_bbox": [
+        0,
+        0,
+        84,
+        96
+      ],
+      "mean_luminance": 0.4114,
+      "near_black": 0.0498,
+      "mean_saturation": 0.7264,
+      "low_saturation": 0.0244
+    },
+    {
+      "path": "public/art/r4/passenger-2.png",
+      "sha256": "a2444a61981e37093f54d5884177efbf763d5a5253fb66b793375dee8538b8dc",
+      "bytes": 17188,
+      "size": [
+        96,
+        89
+      ],
+      "mode": "RGBA",
+      "alpha_occupancy": 0.6277,
+      "corner_alpha": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "visible_bbox": [
+        0,
+        0,
+        96,
+        89
+      ],
+      "mean_luminance": 0.396,
+      "near_black": 0.0604,
+      "mean_saturation": 0.6912,
+      "low_saturation": 0.0222
+    },
+    {
+      "path": "public/art/r4/passenger-3.png",
+      "sha256": "f42e44bba999bcc343d32d5a9639eadaedef5aab0886a9ecffb0193021a89d41",
+      "bytes": 16925,
+      "size": [
+        91,
+        96
+      ],
+      "mode": "RGBA",
+      "alpha_occupancy": 0.6038,
+      "corner_alpha": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "visible_bbox": [
+        1,
+        0,
+        91,
+        96
+      ],
+      "mean_luminance": 0.4768,
+      "near_black": 0.0686,
+      "mean_saturation": 0.7572,
+      "low_saturation": 0.0281
+    },
+    {
+      "path": "public/art/r4/passenger-4.png",
+      "sha256": "d3774a1be522d63710707dadf016b68ae3672df7200101c9cf1a1ad4c580b7dd",
+      "bytes": 18424,
+      "size": [
+        96,
+        90
+      ],
+      "mode": "RGBA",
+      "alpha_occupancy": 0.6479,
+      "corner_alpha": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "visible_bbox": [
+        0,
+        0,
+        96,
+        90
+      ],
+      "mean_luminance": 0.4037,
+      "near_black": 0.052,
+      "mean_saturation": 0.7001,
+      "low_saturation": 0.0297
+    },
+    {
+      "path": "public/art/r4/passenger-5.png",
+      "sha256": "640cce3c227aa10eb45cc0cead50ec17bde651da1601686a05e71317bd77edaf",
+      "bytes": 19175,
+      "size": [
+        95,
+        96
+      ],
+      "mode": "RGBA",
+      "alpha_occupancy": 0.6344,
+      "corner_alpha": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "visible_bbox": [
+        0,
+        0,
+        95,
+        96
+      ],
+      "mean_luminance": 0.4003,
+      "near_black": 0.0499,
+      "mean_saturation": 0.7266,
+      "low_saturation": 0.0296
+    },
+    {
+      "path": "public/art/r4/passenger-6.png",
+      "sha256": "0df20f489b3d189797c837e44128da2ef8ee8e34d751f93e5b372f729071a1da",
+      "bytes": 17201,
+      "size": [
+        80,
+        96
+      ],
+      "mode": "RGBA",
+      "alpha_occupancy": 0.6908,
+      "corner_alpha": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "visible_bbox": [
+        0,
+        0,
+        80,
+        96
+      ],
+      "mean_luminance": 0.4195,
+      "near_black": 0.053,
+      "mean_saturation": 0.7049,
+      "low_saturation": 0.0277
+    }
+  ],
+  "coach_dual_gate": true,
+  "thumbnail_proof": "docs/art/thumbnail-64.png",
+  "limitations": [
+    "Static front three-quarter coach only; no character animation or three-view turnaround.",
+    "Native icon catalogs not replaced; app icon is a web-integrated proposal."
+  ],
+  "original_visual_designs": 17,
+  "character_gates": [
+    {
+      "path": "public/art/r4/coach.png",
+      "pass": true
+    },
+    {
+      "path": "public/art/r4/passenger-1.png",
+      "pass": true
+    },
+    {
+      "path": "public/art/r4/passenger-2.png",
+      "pass": true
+    },
+    {
+      "path": "public/art/r4/passenger-3.png",
+      "pass": true
+    },
+    {
+      "path": "public/art/r4/passenger-4.png",
+      "pass": true
+    },
+    {
+      "path": "public/art/r4/passenger-5.png",
+      "pass": true
+    },
+    {
+      "path": "public/art/r4/passenger-6.png",
+      "pass": true
+    }
+  ]
+}

@@ -18,6 +18,8 @@ import { journeyResult } from '../../shared/passport.js';
 
 const $ = (s) => document.querySelector(s);
 const $$ = (s) => [...document.querySelectorAll(s)];
+const drivingInputHint = () => matchMedia('(pointer:coarse), (max-width:1100px)').matches ? '點方向與油門按鈕出發' : '手機觸控 · 電腦鍵盤';
+addEventListener('resize',()=>{if(!document.body.classList.contains('tilt-enabled'))$('#start-hint').textContent=mode==='cruise'?drivingInputHint():'倒數結束前，跑完 2.4 公里';});
 const familySettings = readSettings();
 const storage = {
   get(key, fallback) { try { return JSON.parse(progressStorage.getItem(`island-drive:${key}`)) ?? fallback; } catch { return fallback; } },
@@ -90,7 +92,7 @@ function syncSelection() {
   $('#sound-button').setAttribute('aria-label', muted ? '開啟音效' : '關閉音效');
   $('#sound-button').setAttribute('aria-pressed', !muted);
   $('#sound-button use').setAttribute('href', muted ? '#i-muted' : '#i-sound');
-  $('#start-hint').textContent = mode === 'cruise' ? '手機觸控 · 電腦鍵盤' : '倒數結束前，跑完 2.4 公里';
+  $('#start-hint').textContent = mode === 'cruise' ? drivingInputHint() : '倒數結束前，跑完 2.4 公里';
   drawMinimap(0);
   persist();
 }
@@ -278,7 +280,7 @@ function syncTiltUI(state = tilt.getState()) {
   $('#tilt-calibrate').classList.toggle('hidden', !state.enabled);
   $('#tilt-calibrate').disabled = !state.ready;
   document.body.classList.toggle('tilt-enabled', state.enabled);
-  if (ready) $('#start-hint').textContent = state.enabled ? '傾斜手機轉向 · 右手按油門' : mode === 'cruise' ? '手機觸控 · 電腦鍵盤' : '倒數結束前，跑完 2.4 公里';
+  if (ready) $('#start-hint').textContent = state.enabled ? '傾斜手機轉向 · 右手按油門' : mode === 'cruise' ? drivingInputHint() : '倒數結束前，跑完 2.4 公里';
 }
 
 const tilt = new TiltController({ onSteer: updateInput, onStatus: syncTiltUI, onNotice: toast });
@@ -342,3 +344,7 @@ subscribeSettings(value => {
   if (ready) { game.setMuted(muted); game.setQuality(quality); }
   syncSelection();
 });
+
+import {installArt} from "../../shared/art-refresh.js";
+installArt();
+import '../../shared/art-refresh.css';

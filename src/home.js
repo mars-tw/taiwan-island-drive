@@ -42,3 +42,7 @@ subscribeSettings(value => music.setMuted(value.muted));
 let installation;
 if(!isNativeBuild())addEventListener('beforeinstallprompt', event => { event.preventDefault(); installation = event; $('install-app').hidden = false; });
 $('install-app').hidden=true;$('install-app').onclick = async () => { if(!isNativeBuild())await installation?.prompt(); $('install-app').hidden = true; };
+
+import {installArt} from "./shared/art-refresh.js";
+installArt();
+import './shared/art-refresh.css';

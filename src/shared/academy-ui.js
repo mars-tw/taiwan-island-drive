@@ -1,4 +1,5 @@
 import './academy.css';
+import {artImage} from './art-refresh.js';
 import {ACADEMY_CHAPTERS,academySummary,readAcademy,performDispatch,importTrainBackup} from './academy.js';
 import {dispatchMarkup} from '../games/math/dispatch.js';
 import {launchJourney} from './passport.js';
@@ -22,14 +23,20 @@ export function installAcademy(){
   function render(message=''){
     const a=readAcademy();dialog.innerHTML=dispatchMarkup(a.dispatch,message);
     dialog.querySelectorAll('.dispatch-wheels').forEach(wheels=>{wheels.replaceChildren();for(let i=0;i<2;i++){const wheel=document.createElement('span');wheel.textContent='●';wheels.append(wheel);}});
-    if(a.dispatch.active?.phase==='intro')dialog.querySelector('.dispatch-instruction').textContent='海風站的朋友要去山海教室。每個圓點是一位乘客，先裝滿，再分車。';
+    if(a.dispatch.active?.phase==='intro')dialog.querySelector('.dispatch-instruction').textContent='海風站的朋友要去山海教室。每張小臉是一位乘客，先裝滿，再分車。';
     dialog.dataset.phase=a.dispatch.active?.phase;
+    let passengerIndex=0;
+    dialog.querySelectorAll('.dispatch-seats .occupied').forEach(seat=>{
+      seat.replaceChildren(artImage(`passenger-${passengerIndex++%6+1}`,'','passenger-face'));
+    });
+    dialog.querySelector('.dispatch-coupler').textContent=['subtract','done'].includes(a.dispatch.active?.phase)?'分開':'相連';
     const top=dialog.querySelector('.dispatch-top');top.innerHTML='<button id="math-back">回學院</button><span>列車數學課</span><button id="math-pause">暫停</button>';
     top.querySelector('#math-back').onclick=close;top.querySelector('#math-pause').onclick=pause;
     if(a.dispatch.active?.phase==='done'){
-      const next=document.createElement('button');next.id='math-next';next.textContent=`交接 ${a.delivered} 人調度單，去接朋友 →`;next.onclick=()=>{close();launchJourney(journeyById('train-1'),{academy:true});};
+      const next=document.createElement('button');next.id='math-next';next.textContent='去接朋友 →';next.onclick=()=>{close();launchJourney(journeyById('train-1'),{academy:true});};
       dialog.querySelector('.dispatch-controls').prepend(next);
     }
+    const coach=document.createElement('div');coach.className='dispatch-coach';coach.append(artImage('coach','阿路教練'));const cue=document.createElement('span');cue.textContent='每位朋友都有座位。一起數一數！';coach.append(cue);dialog.querySelector('.dispatch-body').append(coach);
     const note=document.createElement('p');note.className='math-save';note.setAttribute('role','status');note.textContent=studentSaved()?'學生證已存在這台裝置。':'這次無法儲存，關閉後可能不會保留。';dialog.querySelector('.dispatch-body').append(note);
     if(!studentSaved()){note.classList.add('save-failed');const completed=dialog.querySelector('.dispatch-completed');if(completed)completed.textContent=`已完成 ${a.dispatch.completed} 班調度；本次尚未儲存。`;}
     dialog.querySelectorAll('[data-dispatch]').forEach(button=>button.onclick=()=>{if(paused)return;const action=button.dataset.dispatch,before=readAcademy().dispatch.completed;const r=performDispatch(action,readSettings().childMode?'small':'medium');render(r.message);(dialog.querySelector(`[data-dispatch="${action}"]:not(:disabled)`)||dialog.querySelector('[data-dispatch]:not(:disabled)'))?.focus();if(r.state.completed>before)celebrate({text:'數學調度章 · 共用星星＋1',kind:'station',sound:!readSettings().muted});update();});

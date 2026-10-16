@@ -1,0 +1,51 @@
+{
+  "status": "VERIFIED",
+  "asset_errors": [],
+  "character_gates": [
+    {
+      "path": "public/art/r4/coach.png",
+      "pass": true
+    },
+    {
+      "path": "public/art/r4/passenger-1.png",
+      "pass": true
+    },
+    {
+      "path": "public/art/r4/passenger-2.png",
+      "pass": true
+    },
+    {
+      "path": "public/art/r4/passenger-3.png",
+      "pass": true
+    },
+    {
+      "path": "public/art/r4/passenger-4.png",
+      "pass": true
+    },
+    {
+      "path": "public/art/r4/passenger-5.png",
+      "pass": true
+    },
+    {
+      "path": "public/art/r4/passenger-6.png",
+      "pass": true
+    }
+  ],
+  "secret_format_scan": {
+    "files": 3021,
+    "hit_count": 0,
+    "paths": [],
+    "excluded": [
+      ".git",
+      ".secrets",
+      "node_modules"
+    ],
+    "no_secret_values_logged": true
+  },
+  "old_app_version_paths": [],
+  "runtime_image_bytes": 1638592,
+  "runtime_image_files": 18,
+  "original_visual_designs": 17,
+  "model_slug": null,
+  "tool": "image_gen.imagegen"
+}

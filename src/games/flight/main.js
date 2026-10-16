@@ -115,3 +115,7 @@ $('assist-choice').onchange=e=>game.assist=e.target.checked;
 applySharedSettings(readSettings());subscribeSettings(applySharedSettings);
 syncViewport();
 navigator.serviceWorker?.addEventListener('controllerchange',()=>{if(!hadWorkerAtBoot)return;updateReady=true;if(game.mode==='menu')location.reload();});
+
+import {installArt} from "../../shared/art-refresh.js";
+installArt();
+import '../../shared/art-refresh.css';

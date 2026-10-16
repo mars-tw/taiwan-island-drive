@@ -1,4 +1,5 @@
 import './safety.css';
+import {artImage} from './art-refresh.js';
 import {SafetyLesson,SAFETY_STOPS,createSafetyStorage} from './safety-lesson.js';
 import {appUrl} from './paths.js';
 import {registerGameLifecycle,registerNativeOverlay} from './native.js';
@@ -16,6 +17,7 @@ export function installSafetyLesson() {
     <p id="safety-save"></p></div></section>
     <section id="safety-paused" hidden><h2>休息一下</h2><p>號誌與等候時間都停下來了。</p><button id="safety-resume">繼續觀察</button><button id="safety-leave">回大廳</button></section>`;
   document.body.append(dialog);
+  dialog.querySelector('.safety-work').prepend(artImage('coach','阿路教練','safety-coach'));
   const $=id=>dialog.querySelector(`#safety-${id}`);
   function updateOpener(){const n=store.read().completed;opener.textContent=n===3?'安全觀察章：再練一次':n?`接著觀察：第 ${n+1} 站`:'第一課：停、看、再出發';}
   function render(){
