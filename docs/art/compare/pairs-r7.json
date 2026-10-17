@@ -1,0 +1,236 @@
+[
+  {
+    "device": "phone",
+    "scene": "01-home",
+    "size": [
+      390,
+      844
+    ],
+    "before": "docs/art/compare/r7-before/phone-01-home.png",
+    "after": "docs/art/compare/r7-after/phone-01-home.png",
+    "before_sha256": "7bfce041d0321a28b097ee256a9d6b0676f759b47627453f5b6f25682c9cdac1",
+    "after_sha256": "db3f0699f8d6ca12766a7f1211dce44880e6b8cc9d115dcbe872193ad5f006c8",
+    "method": "Same screen and viewport, real UI and matched capture timing; no screenshot edits."
+  },
+  {
+    "device": "phone",
+    "scene": "02-car-driving",
+    "size": [
+      390,
+      844
+    ],
+    "before": "docs/art/compare/r7-before/phone-02-car-driving.png",
+    "after": "docs/art/compare/r7-after/phone-02-car-driving.png",
+    "before_sha256": "fcc80315f95609faefdd2eaeeb2d35e7ccc7ec0ca169092eb9f3132f9ab6bd21",
+    "after_sha256": "16daf543f7eb49248cc70ddcba1dae6e6a74828aca69809fbeb50b899124ea91",
+    "method": "Same screen and viewport, real UI and matched capture timing; no screenshot edits."
+  },
+  {
+    "device": "phone",
+    "scene": "03-flight-playing",
+    "size": [
+      390,
+      844
+    ],
+    "before": "docs/art/compare/r7-before/phone-03-flight-playing.png",
+    "after": "docs/art/compare/r7-after/phone-03-flight-playing.png",
+    "before_sha256": "2d1dfc16b4166c68557245636de629bbd6bcc3f29649c1aef0e20a92aefda141",
+    "after_sha256": "b231d7b10c6946e7887f801171e574deefd8adfa3bd85ad65e5a5ffc73ad99ac",
+    "method": "Same screen and viewport, real UI and matched capture timing; no screenshot edits."
+  },
+  {
+    "device": "phone",
+    "scene": "04-load",
+    "size": [
+      390,
+      844
+    ],
+    "before": "docs/art/compare/r7-before/phone-04-load.png",
+    "after": "docs/art/compare/r7-after/phone-04-load.png",
+    "before_sha256": "c4e69a1d176241edda83f139f2c6ce7d6bc66724d4468f28a22be816e15c264b",
+    "after_sha256": "207ee5825e4833a1c2a02b4bba2a29e6a072a8504f4883d93d8b29e8b1920685",
+    "method": "Same screen and viewport, real UI and matched capture timing; no screenshot edits."
+  },
+  {
+    "device": "phone",
+    "scene": "05-split",
+    "size": [
+      390,
+      844
+    ],
+    "before": "docs/art/compare/r7-before/phone-05-split.png",
+    "after": "docs/art/compare/r7-after/phone-05-split.png",
+    "before_sha256": "654d03b24fbdfcc6cc769b03cfc3bf6668c3ae4967926b671c01f2485d91e784",
+    "after_sha256": "997448ab5b7008e77c1f53e16b9a211972b49703b51befd6f7c06c90f4b09c76",
+    "method": "Same screen and viewport, real UI and matched capture timing; no screenshot edits."
+  },
+  {
+    "device": "phone",
+    "scene": "06-celebration",
+    "size": [
+      390,
+      844
+    ],
+    "before": "docs/art/compare/r7-before/phone-06-celebration.png",
+    "after": "docs/art/compare/r7-after/phone-06-celebration.png",
+    "before_sha256": "27ae73f777bc7e944a080de74ff0a068be38582ab24646ce5b28290efb799d7a",
+    "after_sha256": "42fefc3f0c62d9ec6fcbe1e24aca057b4b6bebb6c9806862ffddd6d4ad62b8fa",
+    "method": "Same screen and viewport, real UI and matched capture timing; no screenshot edits."
+  },
+  {
+    "device": "iphone-store",
+    "scene": "01-home",
+    "size": [
+      1290,
+      2796
+    ],
+    "before": "docs/art/compare/r7-before/iphone-store-01-home.png",
+    "after": "docs/art/compare/r7-after/iphone-store-01-home.png",
+    "before_sha256": "4dbebb9d334e33ed94fad65fe34a8e6b9f973bb0aed707c764243a9e07ad7e9e",
+    "after_sha256": "f6efb32a71b62eb42e2148697dd41459967b75afa01c9a837809995284f43d79",
+    "method": "Same screen and viewport, real UI and matched capture timing; no screenshot edits."
+  },
+  {
+    "device": "iphone-store",
+    "scene": "02-car-driving",
+    "size": [
+      1290,
+      2796
+    ],
+    "before": "docs/art/compare/r7-before/iphone-store-02-car-driving.png",
+    "after": "docs/art/compare/r7-after/iphone-store-02-car-driving.png",
+    "before_sha256": "0250f9c586ab6d500bbd1a9cca587f0825ab4f398c3db0dc85a1527d22af04fe",
+    "after_sha256": "24ad6afb560da6acdf2751fbf7f1469a61859f4e74028d911d5c59584ec812bb",
+    "method": "Same screen and viewport, real UI and matched capture timing; no screenshot edits."
+  },
+  {
+    "device": "iphone-store",
+    "scene": "03-flight-playing",
+    "size": [
+      1290,
+      2796
+    ],
+    "before": "docs/art/compare/r7-before/iphone-store-03-flight-playing.png",
+    "after": "docs/art/compare/r7-after/iphone-store-03-flight-playing.png",
+    "before_sha256": "32535aee6cd669bcf3ac9c2fd282e7a2bdda85ad5844ba4d793c06b88ce78b82",
+    "after_sha256": "73f3e9bee0639029c55e2ba179add215378314e4b766c0fd2bbf7fcbb6db4daa",
+    "method": "Same screen and viewport, real UI and matched capture timing; no screenshot edits."
+  },
+  {
+    "device": "iphone-store",
+    "scene": "04-load",
+    "size": [
+      1290,
+      2796
+    ],
+    "before": "docs/art/compare/r7-before/iphone-store-04-load.png",
+    "after": "docs/art/compare/r7-after/iphone-store-04-load.png",
+    "before_sha256": "478168e7a296e2b9cfc603bc24545d4fe7b3db52631c25d0043d276882244dc9",
+    "after_sha256": "5542be1fd1ad3f497b71db29d0cb30b57410f2bc3e6093a237b58e805b99300e",
+    "method": "Same screen and viewport, real UI and matched capture timing; no screenshot edits."
+  },
+  {
+    "device": "iphone-store",
+    "scene": "05-split",
+    "size": [
+      1290,
+      2796
+    ],
+    "before": "docs/art/compare/r7-before/iphone-store-05-split.png",
+    "after": "docs/art/compare/r7-after/iphone-store-05-split.png",
+    "before_sha256": "7d8628e1ffb11e5162efbc294ad362f9a7928b0e78d9c876366c125626aa485f",
+    "after_sha256": "16cbefb124baa020cc695ce605418440d9faedc1e705270ff41d2cceed369561",
+    "method": "Same screen and viewport, real UI and matched capture timing; no screenshot edits."
+  },
+  {
+    "device": "iphone-store",
+    "scene": "06-celebration",
+    "size": [
+      1290,
+      2796
+    ],
+    "before": "docs/art/compare/r7-before/iphone-store-06-celebration.png",
+    "after": "docs/art/compare/r7-after/iphone-store-06-celebration.png",
+    "before_sha256": "ad9f3c7c438c839652f20c949c39f77804e459bedef9a94c2824d630b842bbc6",
+    "after_sha256": "6249232182aa4c471dfa62bd595b188f0519fb5b7013a549aca5555b2120fc79",
+    "method": "Same screen and viewport, real UI and matched capture timing; no screenshot edits."
+  },
+  {
+    "device": "ipad-store",
+    "scene": "01-home",
+    "size": [
+      2064,
+      2752
+    ],
+    "before": "docs/art/compare/r7-before/ipad-store-01-home.png",
+    "after": "docs/art/compare/r7-after/ipad-store-01-home.png",
+    "before_sha256": "9f95f9482bb2b03bc95e7544f6772c22c58640db493dbcda8c90d9304bf5348a",
+    "after_sha256": "dd65b6989fc944479fac4ea3d6703980e007fd6c4dfcb9d04ec714424f1f8d14",
+    "method": "Same screen and viewport, real UI and matched capture timing; no screenshot edits."
+  },
+  {
+    "device": "ipad-store",
+    "scene": "02-car-driving",
+    "size": [
+      2064,
+      2752
+    ],
+    "before": "docs/art/compare/r7-before/ipad-store-02-car-driving.png",
+    "after": "docs/art/compare/r7-after/ipad-store-02-car-driving.png",
+    "before_sha256": "86f447ee8759c22fc7b0e5dae5beedb5251f45f662de666342906d079c8f857f",
+    "after_sha256": "c93e6c0a20e3044abe071ba51b42fa405d5e408a39e7351e12e729c919f7bffd",
+    "method": "Same screen and viewport, real UI and matched capture timing; no screenshot edits."
+  },
+  {
+    "device": "ipad-store",
+    "scene": "03-flight-playing",
+    "size": [
+      2064,
+      2752
+    ],
+    "before": "docs/art/compare/r7-before/ipad-store-03-flight-playing.png",
+    "after": "docs/art/compare/r7-after/ipad-store-03-flight-playing.png",
+    "before_sha256": "831761608c463e3965df1a315ec6a9c6568092fe93668094941ca78635fa4c37",
+    "after_sha256": "cdee5e8bac9905c3d184998ee9428d8cb8bb48bbef969d4c6de393e81b9355b9",
+    "method": "Same screen and viewport, real UI and matched capture timing; no screenshot edits."
+  },
+  {
+    "device": "ipad-store",
+    "scene": "04-load",
+    "size": [
+      2064,
+      2752
+    ],
+    "before": "docs/art/compare/r7-before/ipad-store-04-load.png",
+    "after": "docs/art/compare/r7-after/ipad-store-04-load.png",
+    "before_sha256": "0e6de21fb772cf19953347b769f62d15e86d9a90b7c3c3cc9e8be4ba6695c67f",
+    "after_sha256": "b81d6fdac5fdbba9d882f10e4d2abc6674a6e1e3b47815878d117413997d5af1",
+    "method": "Same screen and viewport, real UI and matched capture timing; no screenshot edits."
+  },
+  {
+    "device": "ipad-store",
+    "scene": "05-split",
+    "size": [
+      2064,
+      2752
+    ],
+    "before": "docs/art/compare/r7-before/ipad-store-05-split.png",
+    "after": "docs/art/compare/r7-after/ipad-store-05-split.png",
+    "before_sha256": "bb364beb0152525ea67097591130a365fef87aa47b6c73446a2845bfe076f5f4",
+    "after_sha256": "3be70bf6f9e199380e3de920fe6160dbe452eb9e9033d13fbf0834604c42cf4d",
+    "method": "Same screen and viewport, real UI and matched capture timing; no screenshot edits."
+  },
+  {
+    "device": "ipad-store",
+    "scene": "06-celebration",
+    "size": [
+      2064,
+      2752
+    ],
+    "before": "docs/art/compare/r7-before/ipad-store-06-celebration.png",
+    "after": "docs/art/compare/r7-after/ipad-store-06-celebration.png",
+    "before_sha256": "05b8d3bd2764f5a2d488914fe3799e1d7ef767fd83638bda7f230b92034cc893",
+    "after_sha256": "98539b7cd361a6942b63154ef12da917c1cb358ab2df37cf86b989b604f4c5b7",
+    "method": "Same screen and viewport, real UI and matched capture timing; no screenshot edits."
+  }
+]

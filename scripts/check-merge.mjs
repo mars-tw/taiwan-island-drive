@@ -5,7 +5,7 @@ import {mkdir,readFile,writeFile} from 'node:fs/promises';
 import {createHash} from 'node:crypto';
 const {chromium}=await import(process.env.PLAYWRIGHT_MODULE?pathToFileURL(process.env.PLAYWRIGHT_MODULE).href:'playwright');
 const base=process.env.BASE_URL||'http://127.0.0.1:5286/';
-const folder='docs/evidence/merge',screens='docs/store/screenshots/merge';
+const folder=process.env.EVIDENCE_FOLDER||'docs/evidence/merge',screens=process.env.SCREENSHOT_FOLDER||'docs/store/screenshots/merge';
 await mkdir(`${folder}/after`,{recursive:true});await mkdir(screens,{recursive:true});
 const rows=[],shots=[],errors=[],external=[];
 const browser=await chromium.launch({headless:true,args:['--use-angle=d3d11','--enable-gpu','--ignore-gpu-blocklist']});

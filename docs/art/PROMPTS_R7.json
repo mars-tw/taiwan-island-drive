@@ -1,0 +1,57 @@
+{
+  "round": 7,
+  "work_order": "美術第四輪",
+  "tool": "image_gen.imagegen",
+  "model_slug": null,
+  "model_note": "實際工具未揭露模型slug，未自行推定。",
+  "style_prefix": "Island Traffic Academy sunny Taiwan coastal storybook, chunky ink-navy outlines, rounded toy proportions, warm upper-left light, saturated sea blue sunflower yellow coral orange, gentle paper texture, clean silhouette readable at 64px.",
+  "records": [
+    {
+      "id": "coach-sheet",
+      "prompt": "Island Traffic Academy sunny Taiwan coastal storybook, chunky ink-navy outlines, rounded toy proportions, warm upper-left light, saturated sea blue sunflower yellow coral orange, gentle paper texture, clean silhouette readable at 64px. Create a professional CHARACTER TURNAROUND SHEET of the exact reference leopard-cat traffic coach A-Lu: yellow cap, orange reflective vest with two yellow-white reflective bars, blue denim overalls, orange sneakers, spotted golden fur, big dark eyes, green dispatch flag. Preserve identity precisely. White sheet, three separated full-body views in top row FRONT SIDE BACK, three separated waist-up acting poses in bottom row: seated co-driver in a blue convertible holding a green curved right-turn route card and pointing right; radio headset portrait looking toward a yellow star; delighted raising both arms holding green flag. Grid 3 columns 2 rows, generous margins, NO labels or letters. Every view fully within own cell. Child friendly 3-8. Reference is identity and style only. Deliver opaque white character sheet.",
+      "output_hint": "Generated images are saved to C:\\Users\\digimkt\\.codex\\generated_images\\01a14acf-405b-7990-8494-b60dd3ed72b3 as C:\\Users\\digimkt\\.codex\\generated_images\\01a14acf-405b-7990-8494-b60dd3ed72b3\\exec-fa2b3209-f7fa-47da-8d2b-7b9cfdd34f2f.png by default.\nIf you need to use a generated image at another path, copy it and leave the original in place unless the user explicitly asks you to delete it.\nThe generated image is already displayed to the user. There is no need to render it in the final response as a Markdown image or file link.",
+      "reference_images": [
+        "public/art/r6/coach.png"
+      ]
+    },
+    {
+      "id": "qingshui-coast",
+      "prompt": "Island Traffic Academy sunny Taiwan coastal storybook, chunky ink-navy outlines, rounded toy proportions, warm upper-left light, saturated sea blue sunflower yellow coral orange, gentle paper texture, clean silhouette readable at 64px. Panoramic environment background for an actual 3D coastal driving game, Taiwan Qingshui Cliffs: soaring marble striated grey-white cliffs with emerald tropical vegetation on LEFT and center-left, turquoise Pacific Ocean and a narrow curving coastal road with white blue guardrails at cliff foot on RIGHT. Dramatic recognizable steep coastal geography, sunny vivid blue sky puffy clouds. Frontal eye-height horizon composition, empty foreground road area for live 3D scene, horizon around 45 percent height. No cars people text labels borders. Rich illustration matching the reference character's storybook world, not photorealism. Wide landscape 3:2.",
+      "output_hint": "Generated images are saved to C:\\Users\\digimkt\\.codex\\generated_images\\01a14acf-405b-7990-8494-b60dd3ed72b3 as C:\\Users\\digimkt\\.codex\\generated_images\\01a14acf-405b-7990-8494-b60dd3ed72b3\\exec-be929b29-427d-4a6b-b044-4a990af94899.png by default.\nIf you need to use a generated image at another path, copy it and leave the original in place unless the user explicitly asks you to delete it.\nThe generated image is already displayed to the user. There is no need to render it in the final response as a Markdown image or file link.",
+      "reference_images": []
+    },
+    {
+      "id": "ui-objects",
+      "prompt": "Island Traffic Academy sunny Taiwan coastal storybook, chunky ink-navy outlines, rounded toy proportions, warm upper-left light, saturated sea blue sunflower yellow coral orange, gentle paper texture, clean silhouette readable at 64px. Create one transparent game UI asset sheet in a strict 3-column by 2-row grid, each isolated with generous transparent gutters. TOP LEFT a broad white reading panel with thick sea-blue rounded frame, orange and white traffic stripe top edge and yellow corner bolts, empty interior; TOP MIDDLE gold five-point reward star medal on blue ribbon; TOP RIGHT green curved right-turn roadside sign on navy post; BOTTOM LEFT a large friendly sea-blue rounded two-door SPORTS COUPE seen from rear three-quarter, closed cabin, dark navy rear window and orange tail lights, same silhouette as reference car, body fully opaque; BOTTOM MIDDLE bright sunflower yellow HIGH-WING training airplane seen rear three-quarter, blue cabin, navy outline, yellow wings fully spread, tail and propeller; BOTTOM RIGHT green finish flag on pole with small navy base. No text letters numbers. 1536x1024 landscape. All six motifs complete and separate, not touching cell edges. These are functional game art, not a mockup.",
+      "output_hint": "Generated images are saved to C:\\Users\\digimkt\\.codex\\generated_images\\01a14acf-405b-7990-8494-b60dd3ed72b3 as C:\\Users\\digimkt\\.codex\\generated_images\\01a14acf-405b-7990-8494-b60dd3ed72b3\\exec-8f8e49ae-ff9f-46e0-9e00-302edda21220.png by default.\nIf you need to use a generated image at another path, copy it and leave the original in place unless the user explicitly asks you to delete it.\nThe generated image is already displayed to the user. There is no need to render it in the final response as a Markdown image or file link.",
+      "transparent_background": true,
+      "reference_images": [
+        "public/art/r6/car.png"
+      ]
+    },
+    {
+      "id": "logo",
+      "prompt": "Island Traffic Academy sunny Taiwan coastal storybook, chunky ink-navy outlines, rounded toy proportions, warm upper-left light, saturated sea blue sunflower yellow coral orange, gentle paper texture, clean silhouette readable at 64px. A clean transparent TITLE LOGO for Taiwan children's driving game. Exact Traditional Chinese title in two rows: 島嶼 then 交通學院. Rounded bold playful sea-blue and orange letters, thick white keyline then navy silhouette, tiny island silhouette with a winding coastal route and green dispatch flag behind title. No extra text. Wide horizontal compact composition, highly readable at 220px, no characters cars background or watermark. Preserve the exact Traditional Chinese characters.",
+      "output_hint": "Generated images are saved to C:\\Users\\digimkt\\.codex\\generated_images\\01a14acf-405b-7990-8494-b60dd3ed72b3 as C:\\Users\\digimkt\\.codex\\generated_images\\01a14acf-405b-7990-8494-b60dd3ed72b3\\exec-92876408-a9c9-49ab-a750-9a384784d566.png by default.\nIf you need to use a generated image at another path, copy it and leave the original in place unless the user explicitly asks you to delete it.\nThe generated image is already displayed to the user. There is no need to render it in the final response as a Markdown image or file link.",
+      "transparent_background": true,
+      "reference_images": []
+    },
+    {
+      "id": "app-icon-proposal",
+      "prompt": "Island Traffic Academy sunny Taiwan coastal storybook, chunky ink-navy outlines, rounded toy proportions, warm upper-left light, saturated sea blue sunflower yellow coral orange, gentle paper texture, clean silhouette readable at 64px. Square APP ICON PROPOSAL for Island Traffic Academy. The identical reference leopard-cat A-Lu wearing yellow cap orange reflective vest blue overalls, friendly smiling face large and centered, holding GREEN DISPATCH FLAG beside his cheek. Behind him one bold curving blue coastal route on a green Taiwan island silhouette and sunny blue sky, tiny orange road stripe at bottom. Chunky readable silhouette at 64px, generous safe margins, no letters numbers magnifying glass or logo. Opaque edge-to-edge rounded friendly illustration, square composition without pre-rounded app corners.",
+      "output_hint": "Generated images are saved to C:\\Users\\digimkt\\.codex\\generated_images\\01a14acf-405b-7990-8494-b60dd3ed72b3 as C:\\Users\\digimkt\\.codex\\generated_images\\01a14acf-405b-7990-8494-b60dd3ed72b3\\exec-063ab95b-fe64-49c6-a99f-a24f205c1793.png by default.\nIf you need to use a generated image at another path, copy it and leave the original in place unless the user explicitly asks you to delete it.\nThe generated image is already displayed to the user. There is no need to render it in the final response as a Markdown image or file link.",
+      "reference_images": [
+        "public/art/r6/coach.png"
+      ]
+    },
+    {
+      "id": "coach-acting",
+      "prompt": "Island Traffic Academy sunny Taiwan coastal storybook, chunky ink-navy outlines, rounded toy proportions, warm upper-left light, saturated sea blue sunflower yellow coral orange, gentle paper texture, clean silhouette readable at 64px. From the supplied character sheet preserve the EXACT A-Lu identity and costume. Create a TRANSPARENT isolated ACTING SPRITE SHEET, 3 equal columns horizontal with broad transparent gutters. LEFT: waist-up coach seated safely in blue passenger seat, shoulder seatbelt, smiling, holding a small green STRAIGHT AHEAD arrow card pointing upward. CENTER: same waist-up coach, same blue seat, seatbelt, head looking to his right, holding a green CURVED RIGHT ARROW card and arm pointing right. RIGHT: same waist-up coach in blue seat and belt with BOTH hands raised happily holding a gold STAR reward. Same scale, same baseline, no vehicle body or dashboard, NO ground shadows no background no letters. Full silhouette and ears entirely inside each cell, generous transparent margins. This is the final game sprite sheet implementing the approved turnaround.",
+      "output_hint": "Generated images are saved to C:\\Users\\digimkt\\.codex\\generated_images\\01a14acf-405b-7990-8494-b60dd3ed72b3 as C:\\Users\\digimkt\\.codex\\generated_images\\01a14acf-405b-7990-8494-b60dd3ed72b3\\exec-d2cbedb3-29b3-4ab9-9c52-a538d508de9b.png by default.\nIf you need to use a generated image at another path, copy it and leave the original in place unless the user explicitly asks you to delete it.\nThe generated image is already displayed to the user. There is no need to render it in the final response as a Markdown image or file link.",
+      "transparent_background": true,
+      "reference_images": [
+        "docs/art/source/r7/coach-sheet.png"
+      ]
+    }
+  ]
+}

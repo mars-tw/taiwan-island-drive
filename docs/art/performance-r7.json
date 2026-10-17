@@ -1,0 +1,143 @@
+{
+  "renderer": "ANGLE (Intel, Intel(R) Graphics (0x00007D67) Direct3D11 vs_5_0 ps_5_0, D3D11)",
+  "rows": [
+    {
+      "viewport": "desktop",
+      "mode": "math",
+      "p50": 16.7,
+      "p95": 16.7,
+      "runs": [
+        16.7,
+        16.8,
+        16.7
+      ]
+    },
+    {
+      "viewport": "desktop",
+      "mode": "car",
+      "p50": 16.7,
+      "p95": 16.8,
+      "runs": [
+        16.7,
+        16.8,
+        16.8
+      ],
+      "source": "car-frame-times-r7.txt after final rounded model and camera"
+    },
+    {
+      "viewport": "desktop",
+      "mode": "train",
+      "p50": 16.7,
+      "p95": 16.8,
+      "runs": [
+        16.8,
+        16.8,
+        16.8
+      ]
+    },
+    {
+      "viewport": "desktop",
+      "mode": "flight",
+      "p50": 16.7,
+      "p95": 16.8,
+      "runs": [
+        16.8,
+        16.8,
+        16.7
+      ]
+    },
+    {
+      "viewport": "portrait",
+      "mode": "math",
+      "p50": 16.7,
+      "p95": 16.7,
+      "runs": [
+        16.8,
+        16.7,
+        16.7
+      ]
+    },
+    {
+      "viewport": "portrait",
+      "mode": "car",
+      "p50": 16.7,
+      "p95": 16.7,
+      "runs": [
+        16.8,
+        16.7,
+        16.7
+      ],
+      "source": "car-frame-times-r7.txt after final rounded model and camera"
+    },
+    {
+      "viewport": "portrait",
+      "mode": "train",
+      "p50": 16.7,
+      "p95": 16.8,
+      "runs": [
+        16.8,
+        16.8,
+        16.7
+      ]
+    },
+    {
+      "viewport": "portrait",
+      "mode": "flight",
+      "p50": 16.7,
+      "p95": 16.8,
+      "runs": [
+        16.7,
+        16.8,
+        16.8
+      ]
+    },
+    {
+      "viewport": "landscape",
+      "mode": "math",
+      "p50": 16.7,
+      "p95": 16.8,
+      "runs": [
+        16.8,
+        16.8,
+        16.7
+      ]
+    },
+    {
+      "viewport": "landscape",
+      "mode": "car",
+      "p50": 16.7,
+      "p95": 16.8,
+      "runs": [
+        16.8,
+        16.8,
+        16.7
+      ],
+      "source": "car-frame-times-r7.txt after final rounded model and camera"
+    },
+    {
+      "viewport": "landscape",
+      "mode": "train",
+      "p50": 16.7,
+      "p95": 16.7,
+      "runs": [
+        16.7,
+        16.8,
+        16.7
+      ]
+    },
+    {
+      "viewport": "landscape",
+      "mode": "flight",
+      "p50": 16.7,
+      "p95": 16.7,
+      "runs": [
+        16.7,
+        16.7,
+        16.7
+      ]
+    }
+  ],
+  "status": "EXECUTED",
+  "method": "Three runs per mode and viewport; median p95 of 2-second requestAnimationFrame samples. Concurrent load, 60Hz headless browser, reference only.",
+  "limitation": "Car remeasured after final model and camera in three viewports. Other three modes retain their unchanged render-path samples. All are concurrent-load 60Hz rAF samples, not native/clean-machine shipping proof."
+}

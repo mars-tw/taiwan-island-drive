@@ -9,7 +9,7 @@ import '@fontsource/barlow-condensed/latin-700.css';
 import '@fontsource/barlow-condensed/latin-800.css';
 import { MAPS, VEHICLES, COLORS, TRACK_LENGTH } from './config.js';
 import { Game } from './game.js';
-import { roadCenter } from './physics.js';
+import { roadCenter, roadHeading } from './physics.js';
 import { TiltController, combineSteering } from './tilt.js';
 import { celebrate } from '../../shared/celebrate.js';
 import { addStars, recordBest, starRating } from '../../shared/rewards.js';
@@ -104,6 +104,8 @@ function queueChange(fn) {
 }
 
 const minimap = $('#minimap').getContext('2d');
+const finishFlag=new Image();finishFlag.src=appUrl('art/r7/finish-flag.png');
+let coachRewardUntil=0;
 let routePoints = [];
 let routeMap;
 function drawMinimap(progress) {
@@ -117,11 +119,11 @@ function drawMinimap(progress) {
   minimap.lineWidth = 5;
   minimap.lineCap = 'round';
   const path = (until, color) => { minimap.beginPath(); routePoints.slice(0, until).forEach((p, i) => i ? minimap.lineTo(p.x, p.y) : minimap.moveTo(p.x, p.y)); minimap.strokeStyle = color; minimap.stroke(); };
-  path(81, 'rgba(230,244,236,.26)');
-  path(Math.floor(progress * 80) + 1, '#dff395');
+  minimap.lineWidth=10;path(81,'#143b61');minimap.lineWidth=5;path(81,'#80d6fa');
+  path(Math.floor(progress * 80) + 1, '#f46b27');
   const p = routePoints[Math.min(80, Math.max(0, Math.round(progress * 80)))];
-  minimap.beginPath(); minimap.arc(p.x, p.y, 5.5, 0, Math.PI * 2); minimap.fillStyle = '#e4f69c'; minimap.fill();
-  const end = routePoints[80]; minimap.fillStyle = '#f3f5ef'; minimap.fillRect(end.x - 3, end.y - 3, 6, 6);
+  minimap.beginPath(); minimap.arc(p.x, p.y, 7, 0, Math.PI * 2); minimap.fillStyle = '#f46b27'; minimap.fill();minimap.strokeStyle='#fff';minimap.lineWidth=2;minimap.stroke();
+  const end = routePoints[80];if(finishFlag.complete&&finishFlag.naturalWidth)minimap.drawImage(finishFlag,end.x-10,end.y-15,22,32);
 }
 
 function updateHUD(state) {
@@ -130,6 +132,8 @@ function updateHUD(state) {
   tilt.setActive(state.phase === 'running');
   updateInput();
   $('#speed').textContent = String(Math.round(state.speed || 0)).padStart(3, '0');
+  const steps=$('.speed-steps');if(steps){const value=state.speed<1?0:Math.min(5,Math.ceil(state.speed/30));steps.setAttribute('aria-valuenow',value);steps.querySelectorAll('i').forEach((e,i)=>e.classList.toggle('lit',i<value));}
+  const coach=$('.drive-coach');if(coach){const bend=roadHeading((state.distance||0)+55,mapId)-roadHeading(state.distance||0,mapId);const pose=performance.now()<coachRewardUntil?'reward':Math.abs(bend)>.018?'turn':'straight';const left=pose==='turn'&&bend>0;if(coach.dataset.pose!==pose){coach.dataset.pose=pose;coach.querySelector('img').src=appUrl(`art/r7/coach-${pose}.png`);}game.setCoachPose(pose,left);coach.classList.toggle('turn-left',left);coach.querySelector('span').textContent=pose==='reward'?'星星收好了！':pose==='turn'?(left?'前面往左彎':'前面往右彎'):'沿著海岸慢慢開';coach.querySelector('img').alt=pose==='reward'?'副駕阿路舉起剛找到的星星':pose==='turn'?`副駕阿路舉${left?'左':'右'}彎牌指路`:'副駕阿路繫好安全帶舉直行牌';}
   $('#gear').textContent = state.speed < 1 ? 'N' : Math.min(6, 1 + Math.floor(state.speed / 34));
   $('#boost-bar').style.width = `${Math.max(0, state.boost ?? 1) * 100}%`;
   const length = journey?.distance || TRACK_LENGTH;
@@ -239,6 +243,7 @@ function releaseInput() {
 }
 
 function collected({ collected: count, total }) {
+  coachRewardUntil=performance.now()+1600;
   const badge = $('#hud-stars'); badge.classList.remove('bump'); void badge.offsetWidth; badge.classList.add('bump');
   celebrate({ text: count === total ? '全部找到了！' : `${count} 顆星星`, kind: 'star', x: 0.5, y: 0.36, pieces: count === total ? 34 : 14, sound: false, big: count === total });
 }

@@ -1,0 +1,19 @@
+python : test_blank_white_and_black (test_screenshot_evidence.ScreenshotEvidenceTests.test_blank_white_and_black) ... o
+k
+位於 線路:2 字元:109
++ ... -art-r7.py; python -m unittest discover -s tests/native-ios -v *> doc ...
++                 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (test_blank_whit...d_black) ... ok:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+
+test_corrupt_idat_with_valid_crc (test_screenshot_evidence.ScreenshotEvidenceTests.test_corrupt_idat_with_valid_crc) ..
+. ok
+test_gate_final_booleans (test_screenshot_evidence.ScreenshotEvidenceTests.test_gate_final_booleans) ... ok
+test_passed_gate_requires_file (test_screenshot_evidence.ScreenshotEvidenceTests.test_passed_gate_requires_file) ... ok
+test_real_rgb_decode (test_screenshot_evidence.ScreenshotEvidenceTests.test_real_rgb_decode) ... ok
+test_truncated_png (test_screenshot_evidence.ScreenshotEvidenceTests.test_truncated_png) ... ok
+
+----------------------------------------------------------------------
+Ran 6 tests in 0.114s
+
+OK

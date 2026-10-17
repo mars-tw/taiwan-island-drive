@@ -44,7 +44,7 @@ export function installSafetyLesson() {
   function pause(){if(!visible||!lesson||lesson.phase!=='playing')return;lesson.pause();render();$('resume').focus();}
   function close(){lesson?.pause();visible=false;cancelAnimationFrame(raf);dialog.close();updateOpener();opener.focus();}
   function frame(now){if(!visible)return;lesson.tick(previous?(now-previous)/1000:0);previous=now;if(now-lastDraw>80){render();lastDraw=now;}raf=requestAnimationFrame(frame);}
-  opener.onclick=()=>{lesson=new SafetyLesson({...store.read(),checkpoint:value=>{store.save(value);updateOpener();}});visible=true;previous=0;render();dialog.showModal();raf=requestAnimationFrame(frame);$('begin').hidden?$('replay').focus():$('begin').focus();};
+  opener.onclick=()=>{const header=dialog.querySelector('.safety-header');if(!header.classList.contains('academy-nav')){const pauseButton=$('pause');header.classList.add('academy-nav');header.replaceChildren(...[...document.querySelectorAll('body>.academy-nav>a')].map(e=>e.cloneNode(true)),pauseButton);header.querySelector('a').id='safety-back';header.querySelector('a').onclick=e=>{e.preventDefault();close();};}lesson=new SafetyLesson({...store.read(),checkpoint:value=>{store.save(value);updateOpener();}});visible=true;previous=0;render();dialog.showModal();raf=requestAnimationFrame(frame);$('begin').hidden?$('replay').focus():$('begin').focus();};
   for(const [id,action] of Object.entries({begin:'begin',next:'next',replay:'replay',wait:'wait',depart:'depart'}))$(id).onclick=()=>{lesson.act(action);render();if(action==='next'||action==='replay')$('begin').focus();};
   $('door').onclick=()=>{lesson.act(lesson.doors?'close':'open');render();};
   const brake=$('brake');

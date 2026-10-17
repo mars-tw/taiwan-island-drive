@@ -1,0 +1,39 @@
+{
+  "status": "VERIFIED",
+  "version": "2.11.0",
+  "native_source_build": 7,
+  "branch": "r1-fun-polish",
+  "generation_calls": 6,
+  "web_asset_files": 14,
+  "integrated_web_files": 13,
+  "runtime_image_bytes": 2480864,
+  "coupe_model_delta_bytes": 112356,
+  "native_icon_delta_bytes": 211502,
+  "comparison_pairs": 18,
+  "store_selected": 12,
+  "new_sdk_dependencies": 0,
+  "existing_tests_modified": false,
+  "existing_glb_modified": [
+    "coupe.glb"
+  ],
+  "native_binary_built": false,
+  "new_model_slug": null,
+  "tool": "image_gen.imagegen",
+  "dist_index_sha256": "e4f596805eb0ba4edc88395fde8e4d8445d4a0c63c2500d7d51bb7dc7b2cb131",
+  "source_master_bytes": 17240894,
+  "limits": [
+    "3D base and 2D illustration remain different media; child recognition not tested",
+    "No independent 8 point rescore",
+    "No native device run",
+    "Frame timing under concurrent load is only a reference"
+  ],
+  "source_audit_sha256": "4c07c300197af825003ae025619f5d5fe9a304554772e5589364966014a973c6",
+  "dist_entries": {
+    "index.html": "e4f596805eb0ba4edc88395fde8e4d8445d4a0c63c2500d7d51bb7dc7b2cb131",
+    "car/index.html": "4c57a3ae724685b57c44407f9be802b8f6508e7f9eb3a15a59b431caab424964",
+    "train/index.html": "97cdb85dfb4c9fa63938e8e721b3022d245c1c71c24022dd37c9d53eb51bb6c8",
+    "flight/index.html": "d4e1bb1f5fe8fc146e03916fd8328c53c19e1049d16fa195f1fccbf22c688cb1"
+  },
+  "secret_matches": 0,
+  "car_projection_viewports": 12
+}

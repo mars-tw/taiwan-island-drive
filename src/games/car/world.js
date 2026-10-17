@@ -1,6 +1,7 @@
 import * as THREE from 'three';
 import { mergeGeometries } from 'three/addons/utils/BufferGeometryUtils.js';
 import { roadCenter, roadHeading, routeAltitude } from './physics.js';
+import {appUrl} from '../../shared/paths.js';
 
 export const ENVIRONMENTS = {
   coast: { skyTop: '#2f8fd8', skyBottom: '#bfe6f5', fog: '#b9e0ee', fogNear: 230, fogFar: 680,
@@ -202,6 +203,7 @@ export class IslandWorld {
       neon: standard('#9edcdd', { emissive: '#66cad4', emissiveIntensity: 2.4 }),
     };
     this.createSky(); this.createWater(); this.createClouds(); this.createFinishGate();
+    this.coastBackdrop=new THREE.TextureLoader().load(appUrl('art/r7/coast.webp'),()=>{if(this.mapId==='coast')this.scene.background=this.coastBackdrop;});this.coastBackdrop.colorSpace=THREE.SRGBColorSpace;this.coastBackdrop.wrapS=THREE.RepeatWrapping;this.coastBackdrop.repeat.x=-1;this.coastBackdrop.offset.x=1;
   }
 
   createSky() {
@@ -277,6 +279,9 @@ export class IslandWorld {
     }
     this.chunks = [];
     const e = ENVIRONMENTS[mapId];
+    this.sky.visible=mapId!=='coast';this.scene.background=mapId==='coast'?this.coastBackdrop:null;
+    this.materials.steel.color.set(mapId==='coast'?'#1479b8':'#c1c5bd');this.materials.steel.metalness=mapId==='coast'?0:.6;
+    this.materials.post.color.set(mapId==='coast'?'#fff7df':'#747a73');
     this.scene.fog = new THREE.Fog(e.fog, e.fogNear, e.fogFar);
     this.skyMaterial.uniforms.top.value.set(e.skyTop); this.skyMaterial.uniforms.bottom.value.set(e.skyBottom);
     this.skyMaterial.uniforms.sun.value.set(e.sun); this.skyMaterial.uniforms.sunDirection.value.fromArray(e.sunDirection);
@@ -423,6 +428,7 @@ export class IslandWorld {
   }
 
   update(distance, time, camera) {
+    if(camera&&this.coastBackdrop){const x=Math.min(1,camera.aspect/1.5),y=Math.min(1,1.5/camera.aspect);this.coastBackdrop.repeat.set(-x,y);this.coastBackdrop.offset.set((1+x)/2,(1-y)/2);}
     const visible = ENVIRONMENTS[this.mapId].fogFar + 90;
     for (const chunk of this.chunks) chunk.group.visible = chunk.end > distance - 240 && chunk.start < distance + visible;
     this.sky.position.set(roadCenter(distance, this.mapId), 0, distance);

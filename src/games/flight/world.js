@@ -17,19 +17,20 @@ export class FlightWorld{
   const sun=new THREE.DirectionalLight(0xfff0d8,2.6);sun.castShadow=true;sun.shadow.mapSize.set(1024,1024);sun.shadow.camera.left=-95;sun.shadow.camera.right=95;sun.shadow.camera.top=95;sun.shadow.camera.bottom=-95;sun.shadow.camera.near=1;sun.shadow.camera.far=1700;sun.shadow.bias=-.00015;this.scene.add(sun,sun.target);this.sun=sun;
   this.aircraft=new THREE.Group();this.cab=new THREE.Group();this.scene.add(this.aircraft,this.cab);this.aircraft.name='PlayerAircraft';this.cab.name='PlayerCockpit';this.props=[];this.surfaces=[];this.loaded=false;this.view='chase';this.gates=[];this.markerRoot=new THREE.Group();this.scene.add(this.markerRoot);this.markerSignature='';this.viewport={width:1,height:1};this.lastAircraftPosition=new THREE.Vector3(1e9,1e9,1e9);this.modelBounds=new THREE.Box3(new THREE.Vector3(-5.8,0,-4.3),new THREE.Vector3(5.8,3.3,4.3));this.cameraNeedsSnap=true;this.time=0;
   this.parcel=new THREE.Group();this.parcel.name='PhysicalFallingParcel';const parcel=new THREE.Mesh(new THREE.BoxGeometry(2.2,1.6,1.7),new THREE.MeshStandardMaterial({color:0xbfa574,roughness:.85}));this.parcel.add(parcel);const tape=new THREE.Mesh(new THREE.BoxGeometry(.35,1.64,1.74),new THREE.MeshStandardMaterial({color:0xe8dcc0,roughness:.8}));this.parcel.add(tape);this.parcelLabel=this.markerLabel('郵件');this.parcelLabel.scale.set(18,3.4,1);this.parcelLabel.position.y=4;this.parcel.add(this.parcelLabel);this.parcel.visible=false;this.scene.add(this.parcel);
-  this.setMap('coast');this.observeStage();this.resize();this.loadAssets();
+  this.coastBackdrop=new THREE.TextureLoader().load(assetUrl('art/r7/coast.webp'));this.coastBackdrop.colorSpace=THREE.SRGBColorSpace;this.coastBackdrop.wrapS=THREE.RepeatWrapping;this.setMap('coast');this.observeStage();this.resize();this.loadAssets();
  }
  async loadAssets(){
   const loader=new GLTFLoader();try{
    const [model,cab]=await Promise.all([loader.loadAsync(assetUrl('models/aircraft.glb')),loader.loadAsync(assetUrl('models/aircraft-cab.glb'))]);model.scene.updateMatrixWorld(true);this.modelBounds.setFromObject(model.scene,true).expandByScalar(.22);this.aircraft.add(model.scene);this.cab.add(cab.scene);
-   model.scene.traverse(n=>{if(n.isMesh){n.castShadow=true;n.receiveShadow=true;}if(/PropellerRoot|^Propeller$/.test(n.name))this.props.push(n);if(/^(AileronLeft|AileronRight|FlapLeft|FlapRight|Elevator|Rudder)$/.test(n.name)){n.userData.rest=n.rotation.clone();this.surfaces.push(n);}});
+   const ink=[];model.scene.traverse(n=>{if(n.isMesh){n.castShadow=true;n.receiveShadow=true;const recolor=m=>{const name=m.name;let color=/glass/i.test(name)?'#1479b8':/Rubber|charcoal|plastic|Antislip/i.test(name)?'#143b61':/red|orange/i.test(name)?'#f46b27':'#ffd344';const toon=new THREE.MeshToonMaterial({color});toon.name=name;return toon;};n.material=Array.isArray(n.material)?n.material.map(recolor):recolor(n.material);if(!/Propeller|tyre|hinge/i.test(n.name))ink.push(n);}if(/PropellerRoot|^Propeller$/.test(n.name))this.props.push(n);if(/^(AileronLeft|AileronRight|FlapLeft|FlapRight|Elevator|Rudder)$/.test(n.name)){n.userData.rest=n.rotation.clone();this.surfaces.push(n);}});
+   for(const n of ink)n.add(new THREE.LineSegments(new THREE.EdgesGeometry(n.geometry,45),new THREE.LineBasicMaterial({color:'#143b61'})));
    cab.scene.traverse(n=>{if(n.isMesh&&n.material?.transparent){n.material.opacity=Math.min(n.material.opacity,.06);n.material.depthWrite=false;}});this.cab.visible=false;this.loaded=true;this.cameraNeedsSnap=true;document.dispatchEvent(new CustomEvent('flight-assets',{detail:{ok:true}}));
   }catch(error){console.error('Aircraft assets unavailable',error);document.dispatchEvent(new CustomEvent('flight-assets',{detail:{ok:false}}));}
  }
  setMap(id){
   if(this.scenery?.id===id)return;
   if(this.scenery){this.group.remove(this.scenery.root);this.scenery.dispose();}
-  this.map=MAPS[id]||{...MAPS.coast,id};this.scenery=new FlightScenery(id,this.quality);this.group.add(this.scenery.root);this.extent=this.scenery.extent;this.landmarks=this.scenery.landmarks;this.papi=this.scenery.papi;this.scene.background=new THREE.Color(this.scenery.palette.sky);this.scene.fog=new THREE.Fog(this.scenery.palette.sky,4500,38000);this.markerSignature='';this.cameraNeedsSnap=true;
+  this.map=MAPS[id]||{...MAPS.coast,id};this.scenery=new FlightScenery(id,this.quality);this.group.add(this.scenery.root);this.extent=this.scenery.extent;this.landmarks=this.scenery.landmarks;this.papi=this.scenery.papi;this.scene.background=id==='coast'?this.coastBackdrop:new THREE.Color(this.scenery.palette.sky);this.scene.fog=new THREE.Fog(this.scenery.palette.sky,4500,38000);this.markerSignature='';this.cameraNeedsSnap=true;
  }
  terrainHeight(x,z){return this.scenery?.terrainHeight(x,z)||0;}
  onRunway(p){return this.landmarks.filter(l=>l.kind==='airport').some(l=>Math.abs(p.x-l.x)<RUNWAY.halfWidth&&p.z>=l.z-l.runwayLength/2&&p.z<=l.z+l.runwayLength/2);}
@@ -51,17 +52,25 @@ export class FlightWorld{
     if(t.kind==='star'||t.kind==='treasure'||!t.kind&&mission?.mode==='treasure'){marker=new THREE.Mesh(this.starGeometry(radius*.34),mat);g.add(marker);const ringMat=mat.clone();ringMat.color.setHex(0xfff0a0);ringMat.opacity=.8;const ring=new THREE.Mesh(new THREE.TorusGeometry(radius,2.4,6,48),ringMat);g.add(ring);}
     else if(t.kind==='delivery'||t.kind==='mail'||!t.kind&&mission?.mode==='mail'){marker=new THREE.Mesh(new THREE.TorusGeometry(Math.min(radius,75),2.6,5,40),mat);marker.rotation.x=-Math.PI/2;marker.position.y=1.2;g.add(marker);const pole=new THREE.Mesh(new THREE.CylinderGeometry(1.5,1.5,105,6),new THREE.MeshBasicMaterial({color:0x95bdc6,transparent:true,opacity:.34}));pole.position.y=52;g.add(pole);}
     else{marker=new THREE.Mesh(new THREE.TorusGeometry(radius,2.5,6,44),mat);g.add(marker);}
-    const label=this.markerLabel(t.label||`目的地 ${i+1}`);label.position.y=radius+25;g.add(label);this.markerRoot.add(g);this.gates.push(g);g.userData={targetIndex:i,marker,label,kind:t.kind};
+    const label=this.markerLabel(t.label||`目的地 ${i+1}`);label.position.y=radius+25;g.add(label);this.markerRoot.add(g);this.gates.push(g);g.userData={targetIndex:i,marker,label,kind:t.kind,radius};
    }this.markerSignature=signature;
   }
   this.markerRoot.visible=!menu;
   this.parcel.visible=!!mission?.activeParcel&&!menu;if(this.parcel.visible){const p=mission.activeParcel.position;this.parcel.position.set(p.x,p.y,p.z);this.parcel.rotation.y=this.time*.65;}
-  this.gates.forEach((g,i)=>{const t=targets[i],visited=t?.visited||i<(mission?.passed||0);g.visible=!visited;const current=mission?.target?.id===t?.id||i===(mission?.passed||0);g.userData.marker.material.color.setHex(current?0xffc61a:0x9fd8ff);g.userData.label.material.opacity=current ? 1 : .55;g.userData.marker.scale.setScalar(current?1+.1*Math.sin(this.time*4.2):1);if(g.userData.kind==='treasure'||g.userData.kind==='star')g.userData.marker.rotation.y=this.time*.9;});
+  this.gates.forEach((g,i)=>{const t=targets[i],visited=t?.visited||i<(mission?.passed||0);g.visible=!visited;const current=mission?.target?.id===t?.id||i===(mission?.passed||0);g.userData.marker.material.color.setHex(current?0xffc61a:0x9fd8ff);g.userData.label.material.opacity=current?1:.55;
+   if(['treasure','star'].includes(g.userData.kind)){
+    // Collision remains at the authored target. Its visual beacon sits beside it,
+    // capped in CSS pixels and facing the camera, never edge-on over the aircraft.
+    const distance=this.camera.position.distanceTo(new THREE.Vector3(t.x,t.y,t.z));const unit=2*distance*Math.tan(THREE.MathUtils.degToRad(this.camera.fov/2))/Math.max(1,this.viewport.height);
+    const right=new THREE.Vector3(1,0,0).applyQuaternion(this.camera.quaternion),up=new THREE.Vector3(0,1,0).applyQuaternion(this.camera.quaternion);
+    g.position.set(t.x,t.y,t.z).addScaledVector(right,unit*(current?65:30)).addScaledVector(up,unit*(current?62:34));g.quaternion.copy(this.camera.quaternion);g.scale.setScalar(unit*(current?62:16)/(g.userData.radius*2));g.userData.marker.rotation.y=0;g.userData.marker.scale.setScalar(current?2.1+.08*Math.sin(this.time*4.2):.7);g.userData.label.visible=false;for(const child of g.children)if(child!==g.userData.marker&&child!==g.userData.label)child.visible=current;g.userData.current=current;
+   }else{g.scale.setScalar(1);g.userData.label.visible=current;g.userData.marker.scale.setScalar(1);}
+  });
  }
  menuDisplayRect(){const {width,height}=this.viewport;return {left:12,top:Math.min(60,height*.25),width:Math.max(40,width-24),height:Math.max(38,height-Math.min(60,height*.25)-20)};}
  chaseDistance(){const size=this.modelBounds.getSize(new THREE.Vector3()),radius=size.length()/2,halfV=THREE.MathUtils.degToRad(this.camera.fov/2),halfH=Math.atan(Math.tan(halfV)*this.camera.aspect);return Math.max(22,radius/Math.sin(Math.min(halfV,halfH)*.77));}
  render(s,mission,dt=0,menu=false,controls={}){
-  this.resize();this.time+=Math.max(0,Math.min(dt,.1));this.lastMenu=menu;const q=aircraftQuaternion(s);this.aircraft.position.set(s.position.x,s.position.y,s.position.z);this.aircraft.quaternion.copy(q);this.cab.position.copy(this.aircraft.position);this.cab.quaternion.copy(q);
+  this.resize();const bgx=Math.min(1,this.camera.aspect/1.5),bgy=Math.min(1,1.5/this.camera.aspect);this.coastBackdrop.repeat.set(-bgx,bgy);this.coastBackdrop.offset.set((1+bgx)/2,(1-bgy)/2);this.time+=Math.max(0,Math.min(dt,.1));this.lastMenu=menu;const q=aircraftQuaternion(s);this.aircraft.position.set(s.position.x,s.position.y,s.position.z);this.aircraft.quaternion.copy(q);this.cab.position.copy(this.aircraft.position);this.cab.quaternion.copy(q);
   for(const prop of this.props)prop.rotation.z+=dt*s.rpm*.105;
   for(const n of this.surfaces){const r=n.userData.rest;if(n.name==='Rudder')n.rotation.y=r.y+(controls.rudder||0)*.3;else n.rotation.x=r.x+(n.name==='FlapLeft'||n.name==='FlapRight'?-s.flaps*Math.PI/18:n.name==='AileronRight'?-(controls.roll||0)*.27:n.name==='AileronLeft'?(controls.roll||0)*.27:(controls.pitch||0)*.3);}
   const groundShadows=this.quality!=='low'&&s.position.y<15;this.sun.castShadow=groundShadows;this.renderer.shadowMap.enabled=groundShadows;this.sun.position.set(s.position.x-310,s.position.y+750,s.position.z+280);this.sun.target.position.copy(this.aircraft.position);this.sun.target.updateMatrixWorld();

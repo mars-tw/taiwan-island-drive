@@ -1,5 +1,12 @@
 # CREDITS
 
+## 2.11.0 R7／美術第四輪
+
+- 六次實際生成，工具 `image_gen.imagegen`；工具未提供模型slug，記錄為null並註明，沒有假填gpt-image版本。角色沿用本專案阿路圖作身份參考；完整提示、共同前綴、來源路徑見 `docs/art/PROMPTS_R7.json`，三視圖見 `docs/art/character-sheets/`。
+- 14個Web素材：清水斷崖式海岸背景、Logo、App圖示192／512、直行／轉彎／收星三姿勢、無線電頭像、交通面板、星章、彎路牌、跑車背面、飛機背面、終點旗。母版、opaque master、alpha mask、輸出hash與後製見 `docs/art/asset-manifest-r7.json`、`scripts/prepare-art-r7.py`。
+- 13個本機原生圖示匯出與來源同步，未建簽署包、未上傳；73個其他原生資源保留，見 `resources/branding/native-icons-r7-report.json`。
+- 新圖為本專案AI生成作品，未摻入第三方下載素材；不主張平台未授予的排他權。既有Blender網格、R5乘客、R6教練旗姿與車圖及下方舊授權、音樂與NOTICE仍保留。跑車以既有Blender模型為底，在Blender 5.2無頭CLI做圓角及法線重工；原GLB與新.blend都保存在 `docs/art/source/r7/`，語意材質／UV／車輪階層通過原有表面守門。其他車模未改。
+
 ## 2.10.0 R6 海岸圖卡與全屏綠旗慶祝
 
 - 九次實際生成／編修，工具 `image_gen.imagegen`。工具沒有提供模型 slug，manifest 記 `null` 與工具名。完整共用風格前綴、提示、來源路徑與參考圖見 `docs/art/PROMPTS_R6.json`；角色／App 圖示使用本專案 R5 阿路作身份參考，台北夜景以本輪自製城市原圖編修。

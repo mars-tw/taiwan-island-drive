@@ -83,6 +83,9 @@ export class Game {
       if (this.disposed) return;
       this.world = new IslandWorld(this.scene, this.assets); this.world.build(this.mapId);
       this.vehicleRoot = new THREE.Group(); this.scene.add(this.vehicleRoot);
+      this.coachTextures=Object.fromEntries(['straight','turn','reward'].map(pose=>{const texture=new THREE.TextureLoader().load(`${APP_BASE}art/r7/coach-${pose}.png`);texture.colorSpace=THREE.SRGBColorSpace;return [pose,texture];}));
+      // +Z is forward; the right passenger seat is local -X (same as steering).
+      this.coachSprite=new THREE.Sprite(new THREE.SpriteMaterial({map:this.coachTextures.straight,transparent:true,depthTest:true,depthWrite:false,toneMapped:false}));this.coachSprite.name='AluInPassengerSeat';this.coachSprite.position.set(-.68,1.7,.15);this.coachSprite.scale.set(1.9,1.9,1);this.vehicleRoot.add(this.coachSprite);
       this.starGroup = new THREE.Group(); this.starGroup.name = 'RoadStars'; this.scene.add(this.starGroup);
       this.starGeometry = starGeometry();
       this.starMaterial = new THREE.MeshStandardMaterial({ color: '#ffc61a', emissive: '#ff9a00', emissiveIntensity: 0.6, metalness: 0.25, roughness: 0.32 });
@@ -147,28 +150,26 @@ export class Game {
       const cloneMaterial = material => {
         let cloned;
         if (material.name.startsWith('BodyPaint')) {
-          cloned = new THREE.MeshPhysicalMaterial({ color: this.color,
-            map: material.map, normalMap: material.normalMap, normalScale: material.normalScale?.clone(),
-            roughnessMap: material.roughnessMap, metalnessMap: material.metalnessMap,
-            bumpMap: material.bumpMap, bumpScale: material.bumpScale,
-            aoMap: material.aoMap, aoMapIntensity: material.aoMapIntensity,
-            metalness: material.metalness ?? 0.42, roughness: material.roughness ?? 0.27,
-            clearcoat: 0.9, clearcoatRoughness: 0.19, envMapIntensity: 1.2 });
+          cloned = new THREE.MeshToonMaterial({color:this.color});
           cloned.name = material.name; this.paintMaterials.push(cloned);
         } else {
           cloned = material.clone(); cloned.userData = { ...cloned.userData, importedAsset: false };
           cloned.envMapIntensity = 1.1;
-          if (/glass/i.test(material.name)) { cloned.roughness = 0.11; cloned.metalness = 0.24; }
+          if (/glass/i.test(material.name)) { cloned = new THREE.MeshToonMaterial({color:'#143b61'}); }
+          else if (/Alloy|Chrome|Polished|GraphiteTrim/i.test(material.name)) cloned = new THREE.MeshToonMaterial({color:'#1b4f78'});
         }
         return cloned;
       };
       object.material = Array.isArray(object.material) ? object.material.map(cloneMaterial) : cloneMaterial(object.material);
       object.castShadow = true; object.receiveShadow = true;
     });
+    if(id==='coupe')car.scale.set(1,.82,1.14);
+    // Retain the authored Blender body and wheel articulation; ink the body edges.
+    const ink=[];car.traverse(o=>{if(o.isMesh&&!/Tire|Tread|Seat|Dashboard/.test(o.name)){const line=new THREE.LineSegments(new THREE.EdgesGeometry(o.geometry,42),new THREE.LineBasicMaterial({color:'#143b61'}));line.name='StorybookInk';ink.push([o,line]);}});for(const [o,line] of ink)o.add(line);
     if (request !== this.vehicleRequest) return;
     if (this.car) {
       this.vehicleRoot.remove(this.car);
-      this.car.traverse(object => { if (object.isMesh) (Array.isArray(object.material) ? object.material : [object.material]).forEach(m => m.dispose()); });
+      this.car.traverse(object => { if (object.isLineSegments){object.geometry.dispose();object.material.dispose();}else if (object.isMesh) (Array.isArray(object.material) ? object.material : [object.material]).forEach(m => m.dispose()); });
     }
     this.car = car; this.vehicleRoot.add(car); this.onUpdate(this.getState());
   }
@@ -211,8 +212,10 @@ export class Game {
 
   setColor(hex) {
     if (!/^#[0-9a-f]{6}$/i.test(hex)) return;
-    this.color = hex; this.paintMaterials?.forEach(material => material.color.set(hex));
+    this.color = hex; this.paintMaterials?.forEach(material => material.color.set(hex==='#3b9297'?'#108ed0':hex));
   }
+
+  setCoachPose(pose,left=false){if(!this.coachSprite)return;const map=this.coachTextures[pose]||this.coachTextures.straight;this.coachSprite.material.map=map;map.repeat.x=left?-1:1;map.offset.x=left?1:0;this.coachSprite.userData.pose=pose;}
 
   applyEnvironment() {
     const env = ENVIRONMENTS[this.mapId];
@@ -325,8 +328,9 @@ export class Game {
         routeAltitude(this.physics.distance + 42, this.mapId) + 1.0, this.physics.distance + 42);
       fov = 64;
     } else {
-      const distance = 9.2 + this.physics.speed * 0.024;
-      targetPosition.copy(position).add(offset.set(-Math.sin(heading) * distance, 4.2, -Math.cos(heading) * distance));
+      const portrait=this.camera.aspect<1,side=portrait?0.7:2.1;
+      const distance = (portrait?12.2:9.2) + this.physics.speed * 0.024;
+      targetPosition.copy(position).add(offset.set(-Math.sin(heading) * distance+Math.cos(heading)*side, 4.2, -Math.cos(heading) * distance-Math.sin(heading)*side));
       targetLook.set(roadCenter(this.physics.distance + 15, this.mapId) + this.physics.lateral * 0.7,
         routeAltitude(this.physics.distance + 15, this.mapId) + 1.15, this.physics.distance + 15);
       fov = (this.mobile ? 59 : 55) + (this.input.boost && this.physics.boost > 0.02 ? 5 : 0);
@@ -335,6 +339,7 @@ export class Game {
     this.camera.position.lerp(targetPosition, lerp); this.cameraLook.lerp(targetLook, lerp); this.camera.lookAt(this.cameraLook);
     if (Math.abs(this.camera.fov - fov) > 0.02) { this.camera.fov += (fov - this.camera.fov) * (snap ? 1 : 0.08); this.camera.updateProjectionMatrix(); }
     this.car.visible = this.phase === 'menu' || this.cameraMode !== 'hood';
+    if(this.coachSprite){this.coachSprite.visible=this.phase!=='menu'&&this.cameraMode!=='hood';const distance=this.camera.position.distanceTo(this.vehicleRoot.position),unit=2*distance*Math.tan(THREE.MathUtils.degToRad(this.camera.fov/2))/Math.max(1,this.canvas.clientHeight);this.coachSprite.scale.setScalar(Math.max(1.9,unit*62));}
   }
 
   frame(timestamp) {
@@ -371,7 +376,7 @@ export class Game {
     document.removeEventListener('visibilitychange', this.visibilityHandler);
     this.canvas.removeEventListener('webglcontextlost', this.contextLostHandler);
     this.audio.dispose(); this.world?.dispose();
-    this.car?.traverse(object => { if (object.isMesh) (Array.isArray(object.material) ? object.material : [object.material]).forEach(m => m.dispose()); });
+    this.car?.traverse(object => { if(object.isLineSegments){object.geometry.dispose();object.material.dispose();}else if (object.isMesh) (Array.isArray(object.material) ? object.material : [object.material]).forEach(m => m.dispose()); });
     const geometries = new Set(), materials = new Set();
     Object.values(this.assets).forEach(asset => asset.traverse(object => {
       if (!object.isMesh) return; geometries.add(object.geometry);
@@ -380,6 +385,7 @@ export class Game {
     geometries.forEach(g => g.dispose()); materials.forEach(m => m.dispose());
     this.starGeometry?.dispose(); this.starMaterial?.dispose();
     this.contactShadow?.geometry.dispose(); this.contactShadow?.material.dispose(); this.contactMap?.dispose();
+    this.coachSprite?.material.dispose();Object.values(this.coachTextures||{}).forEach(t=>t.dispose());
     this.environmentTarget?.dispose(); this.renderer?.dispose();
   }
 }

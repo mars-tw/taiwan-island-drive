@@ -1,0 +1,188 @@
+{
+  "status": "EXECUTED",
+  "rows": [
+    {
+      "label": "ipad-store home",
+      "controls": 7,
+      "problems": []
+    },
+    {
+      "label": "ipad-store loaded",
+      "controls": 4,
+      "problems": []
+    },
+    {
+      "label": "ipad-store split",
+      "controls": 5,
+      "problems": []
+    },
+    {
+      "label": "ipad-store awards",
+      "controls": 4,
+      "problems": []
+    },
+    {
+      "label": "ipad-store car menu",
+      "controls": 23,
+      "problems": []
+    },
+    {
+      "label": "ipad-store car drive",
+      "controls": 8,
+      "problems": []
+    },
+    {
+      "label": "ipad-store flight menu",
+      "controls": 17,
+      "problems": []
+    },
+    {
+      "label": "ipad-store more flight activities",
+      "controls": 7,
+      "problems": []
+    },
+    {
+      "label": "ipad-store flight play",
+      "controls": 8,
+      "problems": []
+    },
+    {
+      "label": "ipad-store complete",
+      "status": "VERIFIED",
+      "characters": [
+        {
+          "id": "0",
+          "w": 48,
+          "h": 76,
+          "images": [
+            "http://127.0.0.1:5286/art/r5/passenger-1-0.png",
+            "http://127.0.0.1:5286/art/r5/passenger-1-1.png"
+          ]
+        },
+        {
+          "id": "1",
+          "w": 48,
+          "h": 76,
+          "images": [
+            "http://127.0.0.1:5286/art/r5/passenger-2-0.png",
+            "http://127.0.0.1:5286/art/r5/passenger-2-1.png"
+          ]
+        },
+        {
+          "id": "2",
+          "w": 48,
+          "h": 76,
+          "images": [
+            "http://127.0.0.1:5286/art/r5/passenger-3-0.png",
+            "http://127.0.0.1:5286/art/r5/passenger-3-1.png"
+          ]
+        },
+        {
+          "id": "3",
+          "w": 48,
+          "h": 76,
+          "images": [
+            "http://127.0.0.1:5286/art/r5/passenger-4-0.png",
+            "http://127.0.0.1:5286/art/r5/passenger-4-1.png"
+          ]
+        },
+        {
+          "id": "4",
+          "w": 48,
+          "h": 76,
+          "images": [
+            "http://127.0.0.1:5286/art/r5/passenger-5-0.png",
+            "http://127.0.0.1:5286/art/r5/passenger-5-1.png"
+          ]
+        }
+      ]
+    }
+  ],
+  "failures": [],
+  "errors": [],
+  "external": [],
+  "shots": [
+    {
+      "path": "docs/art/compare/r7-before/ipad-store-01-home.png",
+      "width": 2064,
+      "height": 2752,
+      "sha256": "9f95f9482bb2b03bc95e7544f6772c22c58640db493dbcda8c90d9304bf5348a",
+      "native": false,
+      "kind": "unmodified_headless_chromium_runtime"
+    },
+    {
+      "path": "docs/art/compare/r7-before/ipad-store-04-load.png",
+      "width": 2064,
+      "height": 2752,
+      "sha256": "0e6de21fb772cf19953347b769f62d15e86d9a90b7c3c3cc9e8be4ba6695c67f",
+      "native": false,
+      "kind": "unmodified_headless_chromium_runtime"
+    },
+    {
+      "path": "docs/art/compare/r7-before/ipad-store-05-split.png",
+      "width": 2064,
+      "height": 2752,
+      "sha256": "bb364beb0152525ea67097591130a365fef87aa47b6c73446a2845bfe076f5f4",
+      "native": false,
+      "kind": "unmodified_headless_chromium_runtime"
+    },
+    {
+      "path": "docs/art/compare/r7-before/ipad-store-subtract.png",
+      "width": 2064,
+      "height": 2752,
+      "sha256": "6b585ced8bb2182cdd5d412a0490151707324079dd602f88cf750be4417ca1eb",
+      "native": false,
+      "kind": "unmodified_headless_chromium_runtime"
+    },
+    {
+      "path": "docs/art/compare/r7-before/ipad-store-06-celebration.png",
+      "width": 2064,
+      "height": 2752,
+      "sha256": "05b8d3bd2764f5a2d488914fe3799e1d7ef767fd83638bda7f230b92034cc893",
+      "native": false,
+      "kind": "unmodified_headless_chromium_runtime"
+    },
+    {
+      "path": "docs/art/compare/r7-before/ipad-store-car-menu.png",
+      "width": 2064,
+      "height": 2752,
+      "sha256": "068e29cea44f0ee59484eeefbf792388de9e0d7073f3509999f273c7c4f6b0a4",
+      "native": false,
+      "kind": "unmodified_headless_chromium_runtime"
+    },
+    {
+      "path": "docs/art/compare/r7-before/ipad-store-02-car-driving.png",
+      "width": 2064,
+      "height": 2752,
+      "sha256": "86f447ee8759c22fc7b0e5dae5beedb5251f45f662de666342906d079c8f857f",
+      "native": false,
+      "kind": "unmodified_headless_chromium_runtime"
+    },
+    {
+      "path": "docs/art/compare/r7-before/ipad-store-flight-menu.png",
+      "width": 2064,
+      "height": 2752,
+      "sha256": "ffe9b64b564f427505273a80ea1b9f0c179053127df6675b48c4c6b78b6699d8",
+      "native": false,
+      "kind": "unmodified_headless_chromium_runtime"
+    },
+    {
+      "path": "docs/art/compare/r7-before/ipad-store-flight-more.png",
+      "width": 2064,
+      "height": 2752,
+      "sha256": "bbb1dbf3eb7dd160960fa292e149817627742ff159e96bd617fb3f8f0e30a031",
+      "native": false,
+      "kind": "unmodified_headless_chromium_runtime"
+    },
+    {
+      "path": "docs/art/compare/r7-before/ipad-store-03-flight-playing.png",
+      "width": 2064,
+      "height": 2752,
+      "sha256": "831761608c463e3965df1a315ec6a9c6568092fe93668094941ca78635fa4c37",
+      "native": false,
+      "kind": "unmodified_headless_chromium_runtime"
+    }
+  ],
+  "method": "Real UI actions and wall-clock waits; unchanged completion state; web captures, no native or human-study claim.",
+  "scope": "Captured baseline screenshots only. Supplemental final reduced-motion check timed out after rebuild."
+}

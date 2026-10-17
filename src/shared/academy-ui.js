@@ -38,8 +38,11 @@ export function installAcademy(){
     if(['intro','load'].includes(phase)){const queue=document.createElement('div');queue.className='platform-queue';queue.setAttribute('aria-label','月台等車的朋友');for(const id of cast.queue)queue.append(passenger(id,false));body.insertBefore(queue,train);}
     if(['subtract','done'].includes(phase)){const sign=document.createElement('span');sign.className='stay-sign';sign.textContent='留在海風站';dialog.querySelector('.dispatch-carriage.rear').append(sign);}
     dialog.querySelector('.dispatch-coupler').textContent=['subtract','done'].includes(a.dispatch.active?.phase)?'分開':'相連';
-    const top=dialog.querySelector('.dispatch-top');top.innerHTML='<button id="math-back">回學院</button><span>列車數學課</span><button id="math-pause">暫停</button>';
-    top.querySelector('#math-back').onclick=close;top.querySelector('#math-pause').onclick=pause;
+    const top=dialog.querySelector('.dispatch-top');top.classList.add('academy-nav');
+    // Rebuild from the same global navigation, at the same x/y positions.
+    top.replaceChildren(...[...document.querySelectorAll('body>.academy-nav>a')].map(e=>e.cloneNode(true)));
+    top.querySelector('a').id='math-back';top.querySelector('a').onclick=e=>{e.preventDefault();close();};
+    const pauseButton=document.createElement('button');pauseButton.id='math-pause';pauseButton.textContent='暫停';pauseButton.setAttribute('aria-label','暫停列車數學課');pauseButton.onclick=pause;top.append(pauseButton);
     if(a.dispatch.active?.phase==='done'){
       const next=document.createElement('button');next.id='math-next';next.textContent='去接朋友 →';next.onclick=()=>{close();launchJourney(journeyById('train-1'),{academy:true});};
       dialog.querySelector('.dispatch-controls').prepend(next);
