@@ -2,7 +2,8 @@ const clamp01=v=>Math.max(0,Math.min(1,v));
 export const PLATFORM_X=[15,50,85];
 export const TRAIN_WIDTH=64;
 export function boardingPose(time,index,seated=false){
- const progress=clamp01((time-index*.24)/.48);
+ // Door opens before the first step; the arrival/seat boundaries stay unchanged.
+ const progress=clamp01((time-index*.24-.10)/.38);
  return {progress,seated:seated||progress>=1,pose:Math.floor(time*5)%2};
 }
 export function ticketGeometry(lesson){

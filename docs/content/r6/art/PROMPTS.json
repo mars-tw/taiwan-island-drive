@@ -1,0 +1,13 @@
+{
+  "tool": "image_gen.imagegen",
+  "model_slug": null,
+  "style_prefix": "Island Traffic Academy sunny Taiwan coastal storybook, chunky ink-navy outlines, rounded toy proportions, warm upper-left light, saturated sea blue sunflower yellow coral orange, gentle paper texture, clean silhouette readable at 64px. ",
+  "records": [{
+    "id": "grandma-sheet",
+    "reference": "public/art/content-r1/grandma-0.png",
+    "transparent_background": true,
+    "prompt": "Island Traffic Academy sunny Taiwan coastal storybook, chunky ink-navy outlines, rounded toy proportions, warm upper-left light, saturated sea blue sunflower yellow coral orange, gentle paper texture, clean silhouette readable at 64px. Use case: identity-preserve illustration-story. Create ONE transparent game animation sprite sheet with TWO equally sized square cells side by side, each cell contains one FULL BODY grandmother and her grocery trolley, ample transparent gutter and margin, no background or ground shadows, no text. Keep exact same cheerful grandmother identity as reference: gray bun, green cardigan, yellow floral skirt, brown shoes, orange shoulder bag, blue plaid grocery trolley with leeks and carrots. Both face RIGHT. LEFT CELL pose A is an unmistakable strong walking push: torso leaning FORWARD 22 degrees, LEFT foot far forward planted and RIGHT leg stretched far backward, BOTH hands pushing trolley handle, trolley leaning forward visibly 12 degrees. RIGHT CELL pose B is distinct recovery step: torso upright, RIGHT knee visibly raised and forward, LEFT foot behind, elbows bent as trolley tilts back 12 degrees with wheels down. Make leg silhouettes and body lean VERY different, easy to tell apart at 90 pixels tall. Maintain safe cheerful expression, large wheels, physically connected trolley handle and hands. No extra people or objects. Do not repeat the nearly identical feet of reference. This is a polished finished sprite sheet with true transparent alpha.",
+    "original": "docs/content/r6/art/grandma-sheet-original.png",
+    "runtime": ["public/art/content-r6/grandma-0.png", "public/art/content-r6/grandma-1.png"]
+  }]
+}

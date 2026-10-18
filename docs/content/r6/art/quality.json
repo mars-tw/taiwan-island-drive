@@ -1,0 +1,22 @@
+{
+  "status": "VERIFIED",
+  "method": "Existing art gate: alpha>128; RGB-weighted luminance, HSV saturation; no pixel modifications",
+  "rows": [
+    {
+      "path": "public/art/content-r6/grandma-0.png",
+      "mean_luminance": 0.48551008640399396,
+      "mean_saturation": 0.6142731904209547,
+      "near_black": 0.20812535540532,
+      "low_saturation": 0.1792717086834734,
+      "status": "VERIFIED"
+    },
+    {
+      "path": "public/art/content-r6/grandma-1.png",
+      "mean_luminance": 0.4567802490006259,
+      "mean_saturation": 0.596405727334379,
+      "near_black": 0.23037097990811217,
+      "low_saturation": 0.19402729205238978,
+      "status": "VERIFIED"
+    }
+  ]
+}
