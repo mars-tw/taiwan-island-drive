@@ -1,0 +1,17 @@
+{
+  "status": "VERIFIED",
+  "manifest": "docs/content/r7/browser-play.json",
+  "policy": "Repeated filename observations retain the final original capture. Only superseded index rows are removed; no screenshots are modified.",
+  "superseded": [
+    {
+      "path": "docs/content/r7/phone-cake-double-bend.png",
+      "sha256": "50b592a2800e0e9a7d263c25422b9c4e03dedd379d0a326a73b9942388284724"
+    },
+    {
+      "path": "docs/content/r7/phone-cake-double-bend.png",
+      "sha256": "ba11c8eb6f134c0ee1b2dd7836a80effae008333df60680a4f5ee907157596ca"
+    }
+  ],
+  "retained": 71,
+  "pixelEdits": false
+}

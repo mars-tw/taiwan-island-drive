@@ -1,3 +1,4 @@
+import {finishCrossing} from '../helpers/crossing-actions.js';
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import {ContentLesson,CROSSING_ORDERS} from '../../src/shared/content-r1.js';
@@ -12,10 +13,10 @@ test('R6 cream, fruit and flag have distinct delayed force responses and settle'
 });
 test('R6 previous crossing order cannot override the current first friend',()=>{
  for(const stage of [1,2]){const g=new ContentLesson('crossing',{stage});g.begin();g.input.brake=true;tick(g,2);g.look('left');g.look('right');
- assert.equal(g.requestFriend(CROSSING_ORDERS[stage-1][0]),false);assert.equal(g.crossed,0);assert.equal(g.crossingPerson,CROSSING_ORDERS[stage][0]);assert.ok(g.orderHint);assert.equal(g.requestFriend(g.crossingPerson),true);assert.equal(g.orderHint,'');tick(g,8);assert.equal(g.canDepart,true);}
+ assert.equal(g.requestFriend(CROSSING_ORDERS[stage-1][0]),false);assert.equal(g.crossed,0);assert.equal(g.crossingPerson,CROSSING_ORDERS[stage][0]);assert.ok(g.orderHint);assert.equal(g.requestFriend(g.crossingPerson),true);assert.equal(g.orderHint,'');finishCrossing(g);assert.equal(g.canDepart,true);}
 });
 test('R6 early departure is factual feedback, survives save and differs from patient waiting',()=>{
- function run(early){const g=new ContentLesson('crossing');g.begin();for(let s=0;s<3;s++){g.input.brake=true;tick(g,2);g.look('left');if(early)assert.equal(g.depart(),false);g.look('right');tick(g,8);assert.equal(g.depart(),true);if(s<2)g.next();}return new ContentLesson('crossing',JSON.parse(JSON.stringify(g.snapshot())));}
+ function run(early){const g=new ContentLesson('crossing');g.begin();for(let s=0;s<3;s++){g.input.brake=true;tick(g,2);g.look('left');if(early)assert.equal(g.depart(),false);g.look('right');finishCrossing(g);assert.equal(g.depart(),true);if(s<2)g.next();}return new ContentLesson('crossing',JSON.parse(JSON.stringify(g.snapshot())));}
  const patient=run(false),reminded=run(true);assert.equal(patient.completed,true);assert.equal(reminded.facts.waited,9);assert.equal(reminded.facts.blockedStarts,3);assert.notDeepEqual(lessonFacts(patient),lessonFacts(reminded));
 });
 test('R6 boarding has a visible open-door waiting interval and conserves people',()=>{

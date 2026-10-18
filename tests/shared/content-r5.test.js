@@ -1,3 +1,4 @@
+import {finishCrossing} from '../helpers/crossing-actions.js';
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import {ContentLesson} from '../../src/shared/content-r1.js';
@@ -20,7 +21,7 @@ test('R5 each ticket stage requires both independent clues and changes the physi
 });
 test('R5 observations and full crossings are factual, not awarded by repeated taps or elapsed time alone',()=>{
  const g=new ContentLesson('crossing');g.begin();tick(g,20);assert.equal(g.facts.waited,0);g.input.brake=true;tick(g,2);g.look('left');g.look('left');assert.equal(g.facts.leftViews,1);tick(g,10);assert.equal(g.canDepart,false);assert.equal(g.facts.waited,0);
- g.look('right');tick(g,.5);assert.equal(g.canDepart,false);tick(g,7);assert.equal(g.canDepart,true);assert.equal(g.facts.waited,3);g.depart();g.next();assert.equal(g.facts.leftViews,1);assert.equal(g.looked.left,false);
+ g.look('right');tick(g,.5);assert.equal(g.canDepart,false);finishCrossing(g);assert.equal(g.canDepart,true);assert.equal(g.facts.waited,3);g.depart();g.next();assert.equal(g.facts.leftViews,1);assert.equal(g.looked.left,false);
 });
 test('R5 wrong stop counted once; reselection preserves train coordinates and records only real correction',()=>{
  const g=new ContentLesson('tickets');g.begin();g.select(1);g.input.go=true;tick(g,6);g.release();g.input.brake=true;tick(g,3);assert.equal(g.facts.wrongStops,1);tick(g,10);assert.equal(g.facts.wrongStops,1);assert.equal(g.door(),false);const x=g.trainX;

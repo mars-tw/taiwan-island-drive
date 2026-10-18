@@ -1,3 +1,4 @@
+import {finishCrossing} from '../helpers/crossing-actions.js';
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import {ContentLesson,CROSSING_ORDERS} from '../../src/shared/content-r1.js';
@@ -23,7 +24,7 @@ test('crossings: moving observation, incomplete observation and occupied crossin
  const g=new ContentLesson('crossing');g.begin();g.look('left');assert.equal(g.looked.left,false);assert.equal(g.depart(),false);
  for(let stage=0;stage<3;stage++){
   g.input.brake=true;tick(g,2);g.look('left');tick(g,8);assert.equal(g.crossed,0);assert.equal(g.depart(),false);
-  g.look('right');tick(g,1);assert.equal(g.depart(),false);g.pause();const before=g.crossTime;tick(g,3);assert.equal(g.crossTime,before);g.paused=false;tick(g,7);assert.equal(g.crossed,3);assert.equal(g.depart(),true);
+  g.look('right');tick(g,1);assert.equal(g.depart(),false);g.pause();const before=g.crossTime;tick(g,3);assert.equal(g.crossTime,before);g.paused=false;finishCrossing(g);assert.equal(g.crossed,3);assert.equal(g.depart(),true);
   if(stage<2)g.next();
  }
  assert.equal(g.completed,true);assert.equal(new Set(CROSSING_ORDERS.map(a=>a.join())).size,3);assert.equal(new ContentLesson('crossing',g.snapshot()).completed,true);

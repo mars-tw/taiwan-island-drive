@@ -4,6 +4,8 @@ import './content-r3.css';
 import './content-r4.css';
 import './content-r5.css';
 import './content-r6.css';
+import './content-r7.css';
+import {closeupPose} from './content-r7-scene.js';
 import {lessonFacts} from './content-r5-feedback.js';
 import {cakePose,sideWatch,cakeTask} from './content-r4-scene.js';
 import {ContentLesson,CONTENT_LESSONS,CAKE_ROUTES,CROSSING_ORDERS} from './content-r1.js';
@@ -16,7 +18,7 @@ import {appUrl} from './paths.js';
 
 const image=(path,alt='',cls='')=>`<img class="${cls}" src="${appUrl(path)}" alt="${alt}" draggable="false">`;
 const icon=(name)=>{const paths={go:'M8 4L22 16 8 28Z',brake:'M7 5h6v22H7zM19 5h6v22h-6z',left:'M21 5L9 16l12 11M10 16h17',right:'M11 5l12 11-12 11M22 16H5',eye:'M2 16Q16 0 30 16Q16 32 2 16ZM20 16a4 4 0 1 1-8 0 4 4 0 1 1 8 0',door:'M5 4h22v24H5zM16 4v24M11 14v4m10-4v4',sound:'M3 12h6l7-7v22l-7-7H3zM21 10q9 6 0 12'};return `<svg viewBox="0 0 32 32" aria-hidden="true"><path d="${paths[name]||paths.go}" fill="none" stroke="currentColor" stroke-width="3" stroke-linejoin="round"/></svg>`;};
-const friendArt=(who,pose=0)=>who==='grandma'?`art/content-r6/grandma-${pose}.png`:`art/content-r1/${who}-${pose}.png`;
+const friendArt=(who,pose=0)=>who==='bike'?`art/content-r1/bike-${pose}.png`:`art/content-r7/${who}-${pose}.png`;
 const friendName=who=>({child:'小朋友',bike:'腳踏車',grandma:'奶奶'}[who]);
 const shape=t=>`<svg class="ticket-shape" viewBox="0 0 64 64" aria-hidden="true"><g fill="${{blue:'#1479b8',orange:'#f46b27',green:'#58b85b'}[t.color]}" stroke="#143b61" stroke-width="4">${t.shape==='circle'?'<circle cx="32" cy="32" r="25"/>':t.shape==='triangle'?'<path d="M32 5L60 58H4Z"/>':'<rect x="8" y="8" width="48" height="48" rx="5"/>'}</g></svg>`;
 
@@ -53,6 +55,10 @@ export function installContentLessons(){
  const comparison=document.createElement('div');comparison.className='ticket-comparison';scene.append(comparison);
  const bay=document.createElementNS('http://www.w3.org/2000/svg','svg');bay.classList.add('cake-bay-mark');bay.setAttribute('viewBox','0 0 160 75');bay.innerHTML='<path d="M10 65L38 8H135L151 65Z" fill="#ffffff35" stroke="#1479b8" stroke-width="5" stroke-dasharray="12 5"/><path d="M70 23v26m20-26v26" stroke="#1479b8" stroke-width="8"/>';bay.setAttribute('aria-label','路面臨停灣位');scene.append(bay);
  const facts=document.createElement('div');facts.className='content-facts';$('hint').after(facts);
+ const closeup=document.createElement('div');closeup.className='cake-closeup';closeup.setAttribute('aria-label','放大蛋糕：三層隨起步、轉彎、煞車晃動');closeup.innerHTML='<div class="cake-stack">'+['base','middle','top','pick'].map(k=>image(`art/content-r7/cake-${k}.png`,'',`cake-layer cake-${k}`)).join('')+'<svg class="flag-trail" viewBox="0 0 80 55"><path d="M5 45Q35 -5 70 20M15 50Q40 5 75 30"/></svg></div>';scene.append(closeup);
+ const miniature=closeup.firstElementChild.cloneNode(true);miniature.classList.add('cake-miniature');cake.append(miniature);
+ const decision=document.createElement('div');decision.className='crossing-decision';scene.append(decision);
+ const routeProof=document.createElement('div');routeProof.className='lesson-route-proof';scene.append(routeProof);
  opener.innerHTML=image('art/content-r1/cake.png')+'<span>海岸實作課<small id="content-home-progress"></small></span>';
  const records=()=>readStudent().sections.contentR1||{};
  function homeProgress(){const n=Object.values(records()).filter(r=>r?.completed).length;document.getElementById('content-home-progress').textContent=`已完成 ${n}／3 課`;opener.dataset.completed=String(n);}
@@ -66,7 +72,7 @@ export function installContentLessons(){
   facts.hidden=!(done||checkpoint);facts.innerHTML=done||checkpoint?lessonFacts(lesson).map(f=>`<span>${icon(f.glyph)}<b>${f.text}</b></span>`).join(''):'';
   scene.dataset.assisting=String(!!lesson.assisting);scene.dataset.crossed=String(lesson.crossed);scene.dataset.lookedLeft=String(lesson.looked.left);scene.dataset.lookedRight=String(lesson.looked.right);
   intro.hidden=!ready;
-  const hints={cake:lesson.distance>=55?'到了！按住煞車，慢慢停。':lesson.distance>15&&lesson.distance<40?`前面${lesson.bend>0?'右':'左'}彎，輕輕轉。`:'按住踏板起步，放開放慢。',crossing:lesson.speed>0?'按住煞車，停在線前。':!lesson.looked.left||!lesson.looked.right?'停穩了，看左邊、看右邊。':lesson.crossed<3?'停一停，看一看，等朋友過完。':'路口空了，可以出發。',tickets:lesson.phase==='boarding'?'朋友慢慢上車，等一等。':!lesson.matched?'看車票，找一樣的月台。':lesson.distance<28?'按住前進，去月台。':lesson.speed>0?'到站了，按住煞車。':'停穩了，開門接朋友。'};
+  const hints={cake:lesson.distance>=55?'到了！按住煞車，慢慢停。':lesson.distance>15&&lesson.distance<40?`前面${lesson.bend>0?'右':'左'}彎，輕輕轉。`:'按住踏板起步，放開放慢。',crossing:lesson.speed>0?'按住煞車，停在線前。':!lesson.looked.left||!lesson.looked.right?'停穩了，看左邊、看右邊。':lesson.needsDecision?`朋友在${lesson.decisionSide==='left'?'左':'右'}邊，再看一次。`:lesson.crossed<3?'停一停，看一看，等朋友過完。':'路口空了，可以出發。',tickets:lesson.phase==='boarding'?'朋友慢慢上車，等一等。':!lesson.matched?'看車票，找一樣的月台。':lesson.distance<28?'按住前進，去月台。':lesson.speed>0?'到站了，按住煞車。':'停穩了，開門接朋友。'};
   const ending={cake:'蛋糕送到了！一起分享。',crossing:'謝謝你等我們！朋友揮揮手。',tickets:'大家坐好了！一起去旅行。'};
   const routeHint=lesson.kind==='cake'&&lesson.stage===2&&lesson.distance>=42&&!lesson.bayStopped?'臨停灣到了，按住煞車。':lesson.kind==='cake'&&lesson.bayStopped&&!lesson.bayRestarted?'停穩了！按住踏板再起步。':'';
   const hint=done?ending[lesson.kind]:checkpoint?{cake:'這段路練好了，去下一站。',crossing:'朋友都過街了，去下個路口。',tickets:'朋友坐好了，去下一站。'}[lesson.kind]:ready?{cake:['按住起步，放開放慢。','先左彎，再右彎。','到臨停灣，停穩再起步。'][lesson.stage],crossing:'停下看左右，等朋友都過完。',tickets:'點月台站牌，停穩再開門。'}[lesson.kind]:lesson.hint||routeHint||(lesson.kind==='cake'&&lesson.rough?'小旗歪了，鬆開踏板、輕輕轉。':hints[lesson.kind]);
@@ -84,6 +90,12 @@ export function installContentLessons(){
    $('controls').innerHTML=controls+button('listen','再聽一次','sound');bindHolds();
   }
   const pose=cakePose(lesson),reducedMotion=readSettings().reducedMotion||matchMedia('(prefers-reduced-motion:reduce)').matches;
+  const magnified=closeupPose(lesson);closeup.dataset.warning=String(magnified.warning);closeup.dataset.offset=magnified.top.toFixed(2);
+  for(const [part,x,angle] of [['base',magnified.base,magnified.lean*.2],['middle',magnified.middle,magnified.lean*.6],['top',magnified.top,magnified.lean],['pick',magnified.top,magnified.flag]])for(const stack of [closeup,miniature])stack.querySelector(`.cake-${part}`).style.transform=`translate(${x}px,${reducedMotion?0:magnified.bounce}px) rotate(${angle}deg)`;
+  scene.dataset.decision=String(lesson.needsDecision);scene.dataset.confirmed=String(!!lesson.friendConfirmed);scene.dataset.confirmDelay=String(lesson.confirmDelay);scene.dataset.person=lesson.crossingPerson||'';
+  decision.textContent=lesson.kind==='crossing'&&lesson.crossed<3&&lesson.looked.left&&lesson.looked.right?(lesson.needsDecision?`${lesson.decisionSide==='left'?'←':'→'} ${friendName(lesson.crossingPerson)}在${lesson.decisionSide==='left'?'左':'右'}邊，再看一次` :lesson.confirmDelay>0?'看清楚了，請朋友過街':'請朋友慢慢過') :'';
+  for(const side of ['left','right']){const b=dialog.querySelector(`[data-action="look-${side}"]`);if(b)b.dataset.needed=String(lesson.needsDecision&&lesson.decisionSide===side);}
+  routeProof.innerHTML=done?(lesson.kind==='cake'?['slope','bends','bay'].map((road,i)=>`<div>${image(`art/content-r3/cake-${road}.webp`,'第'+(i+1)+'站道路','road-thumbnail')}<svg viewBox="0 0 60 40"><path d="${['M5 35L50 5','M5 35Q5 5 30 20T50 5','M5 30H45V5'][i]}" fill="none" stroke="#1479b8" stroke-width="6"/></svg></div>`).join(''):lesson.kind==='crossing'?CROSSING_ORDERS.map(order=>`<div>${order.map(w=>image(friendArt(w),friendName(w))).join('')}</div>`).join(''):['circle','triangle','square'].map((s,i)=>`<div>${shape({shape:s,color:['blue','orange','green'][i]})}</div>`).join('')):'';
   dialog.querySelector('.cake-flag').style.transform=`translateX(${pose.fruit*.4}px) rotate(${pose.flag}deg) skewX(${pose.bend}deg)`;
   cake.style.transform=`rotate(${pose.cake}deg)`;
   cream.style.transform=`translateX(${pose.cream}px) rotate(${lesson.sway*.6}deg)`;fruit.style.transform=`translateX(${pose.fruit}px) rotate(${lesson.fruitSway*1.1}deg)`;

@@ -1,3 +1,4 @@
+import {finishCrossing} from '../helpers/crossing-actions.js';
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import {ContentLesson} from '../../src/shared/content-r1.js';
@@ -20,7 +21,7 @@ test('R4 cake, cream, body pitch and road-relative coordinates follow actual mot
 });
 test('R4 side observations show real pending people and reject invalid/moving/paused looks',()=>{
  const g=new ContentLesson('crossing');g.begin();g.look('left');assert.equal(g.focus,'center');g.input.brake=true;tick(g,2);g.look('bad');assert.equal(g.focus,'center');g.look('left');assert.equal(g.focus,'left');assert.deepEqual(sideWatch(g,'left').people,['child','grandma']);assert.deepEqual(sideWatch(g,'right').people,['bike']);assert.equal(g.depart(),false);
- g.pause();g.look('right');assert.equal(g.focus,'left');g.paused=false;g.look('right');assert.equal(g.focus,'right');tick(g,7);assert.equal(sideWatch(g,'left').clear,true);assert.equal(sideWatch(g,'right').clear,true);assert.equal(g.depart(),true);assert.equal(new ContentLesson('crossing',g.snapshot()).stage,1);
+ g.pause();g.look('right');assert.equal(g.focus,'left');g.paused=false;g.look('right');assert.equal(g.focus,'right');finishCrossing(g);assert.equal(sideWatch(g,'left').clear,true);assert.equal(sideWatch(g,'right').clear,true);assert.equal(g.depart(),true);assert.equal(new ContentLesson('crossing',g.snapshot()).stage,1);
 });
 test('R4 tickets keep all three physical seats and selected station through persisted completion',()=>{
  const g=new ContentLesson('tickets');g.begin();for(let i=0;i<3;i++){g.select(g.platforms.findIndex(p=>p.name===g.target.name));g.input.go=true;tick(g,6);assert.equal(g.door(),false);g.release();g.input.brake=true;tick(g,2);assert.equal(g.door(),true);tick(g,1.3);assert.equal(g.selected,g.platforms.findIndex(p=>p.name===g.target.name));if(i<2)g.next();}

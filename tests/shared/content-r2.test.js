@@ -11,7 +11,7 @@ test('R2 cake: acceleration, side force and braking have distinguishable flag an
 test('R2 crossing: honest name, three real speeds, all observations and all three friends gate departure',()=>{
  assert.equal(CONTENT_LESSONS.crossing,'路口停看聽');assert.ok(CROSSING_SECONDS.bike<CROSSING_SECONDS.child);assert.ok(CROSSING_SECONDS.grandma>CROSSING_SECONDS.child);
  const g=new ContentLesson('crossing');g.begin();g.input.brake=true;tick(g,2);g.look('left');g.look('right');assert.equal(g.canDepart,false);
- const people=[];for(let i=0;i<3;i++){people.push(g.crossingPerson);tick(g,g.crossingDuration+.05);assert.equal(g.canDepart,i===2);}
+ const people=[];for(let i=0;i<3;i++){people.push(g.crossingPerson);g.look(g.decisionSide);assert.equal(g.friendConfirmed,true);tick(g,g.crossingDuration+.7);assert.equal(g.canDepart,i===2);}
  assert.deepEqual(people,['child','bike','grandma']);assert.equal(g.depart(),true);assert.equal(new ContentLesson('crossing',g.snapshot()).stage,1);
 });
 test('R2 cake routes: uphill resists launch, double bend reverses, final approach gently slows for stopping',()=>{
