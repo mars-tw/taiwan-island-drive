@@ -1,0 +1,94 @@
+{
+  "status": "VERIFIED",
+  "branch": "r1-fun-polish",
+  "version": "2.13.0",
+  "nativeSourceBuild": 9,
+  "newDependencies": 0,
+  "existingTestsChanged": false,
+  "secretScan": {
+    "scanned": 721,
+    "matches": []
+  },
+  "generationCalls": 3,
+  "newDesigns": 6,
+  "runtimeImages": 9,
+  "runtimeImageBytes": 2026950,
+  "storeShots": [
+    {
+      "path": "docs/store/screenshots/content-r1/iphone-cake.png",
+      "width": 1290,
+      "height": 2796,
+      "sha256": "07089369921cfd0257bea2ed4de21604ed902bf62455824f6cf4b610d37436f4",
+      "method": "unmodified headless Chromium screenshot",
+      "native": false
+    },
+    {
+      "path": "docs/store/screenshots/content-r1/iphone-crossing.png",
+      "width": 1290,
+      "height": 2796,
+      "sha256": "1a84bcbda082f9b321d0c44f70e2542eb9fd4c3cf2717543048d5314a123ac2b",
+      "method": "unmodified headless Chromium screenshot",
+      "native": false
+    },
+    {
+      "path": "docs/store/screenshots/content-r1/iphone-tickets.png",
+      "width": 1290,
+      "height": 2796,
+      "sha256": "799c728659fe98a9f1cb91663569d32358e2196de86bf3d75c223a7c2f3f1ee2",
+      "method": "unmodified headless Chromium screenshot",
+      "native": false
+    },
+    {
+      "path": "docs/store/screenshots/content-r1/ipad-store-cake.png",
+      "width": 2064,
+      "height": 2752,
+      "sha256": "90b85b4bf13f6b2ff1428f73ef0689e1cac7a88cec685b9a3e3bf18a2bf3152a",
+      "method": "unmodified headless Chromium screenshot",
+      "native": false
+    },
+    {
+      "path": "docs/store/screenshots/content-r1/ipad-store-crossing.png",
+      "width": 2064,
+      "height": 2752,
+      "sha256": "ffa2467bfe9b333ba48de7a5ada1ecc924e95e6e2d19c0ae853b4b2aa6679835",
+      "method": "unmodified headless Chromium screenshot",
+      "native": false
+    },
+    {
+      "path": "docs/store/screenshots/content-r1/ipad-store-tickets.png",
+      "width": 2064,
+      "height": 2752,
+      "sha256": "17b0dccf8bc8b56960844e218b9e2adbb0cb78500e092e614cad05bd112ec2f0",
+      "method": "unmodified headless Chromium screenshot",
+      "native": false
+    }
+  ],
+  "retainedUntrackedMuse": [
+    {
+      "path": "docs/art/ART_RESCORE_MUSE.md",
+      "sha256": "5bacc02d4cc4f4719b15a9c1b9f0eaff6f914d5bf753dd0dce2516c52164a8d8"
+    },
+    {
+      "path": "docs/art/ART_RESCORE2_MUSE.md",
+      "sha256": "62ae54980aca3c67086b28acef6fdcdb62142e177865152301898e8b8bd2dd5c"
+    },
+    {
+      "path": "docs/art/ART_RESCORE3_MUSE.md",
+      "sha256": "67cfbb87e4c55522fd465053299777011a6654981dedd8a93ae96f0b8ec2b918"
+    },
+    {
+      "path": "docs/art/ART_RESCORE4_MUSE.md",
+      "sha256": "f9de7a05c119356a0c75a55685c8cdf3e4401cd59f17afda20aa63d5a9e659e4"
+    },
+    {
+      "path": "docs/art/ART_RESCORE5_MUSE.md",
+      "sha256": "fced21608715c10fdcb61e04f48876adce277f925474e2532bf582aa7fc104ea"
+    }
+  ],
+  "limits": [
+    "Headless Chromium only; not native hardware or WebKit",
+    "Concurrent host load; performance is reference only",
+    "No child or parent playtest or Apple acceptance",
+    "No push, deployment, store action or delegated work"
+  ]
+}

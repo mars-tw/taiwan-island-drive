@@ -12,10 +12,15 @@ import {addStars,recordBest} from '../../shared/rewards.js';
 import {stationReward,lessonRating,LESSON_BONUS} from './rewards.js';
 import {requestedJourney} from '../../shared/journeys.js';
 import {journeyResult} from '../../shared/passport.js';
+import {appUrl} from '../../shared/paths.js';
+import '../../shared/content-r1-driving.css';
 const $=id=>document.getElementById(id),game=new TrainGame(),audio=new TrainAudio();let world;
 let journey=requestedJourney('train');
 if(journey)game.start(journey.lesson,{route:journey.route});
 const initialSettings=readSettings();game.childMode=initialSettings.childMode;
+const childMeters=document.createElement('div');childMeters.className='train-child-meters';childMeters.innerHTML='<b>停穩了</b><span aria-label="速度格">'+Array.from({length:5},()=>'<i></i>').join('')+'</span><strong>慢慢到站</strong>';
+document.querySelector('.scene').append(childMeters);
+const cabCoach=document.createElement('div');cabCoach.className='train-cab-coach';cabCoach.innerHTML=`<img src="${appUrl('art/r8/coach-safe-window.png')}" alt="阿路教練在列車車窗內陪你駕駛"><span>阿路陪你慢慢開</span>`;document.querySelector('.scene').append(cabCoach);
 try{world=new TrainWorld($('world'),game);}catch(error){$('asset-loading').innerHTML='<b>這台瀏覽器無法啟動 3D 畫面</b><span>請在 Safari 或 Chrome 重新開啟。</span>';console.error(error);}
 window.__trainSchool={game,audio,getState:()=>game.getState(),getAssets:()=>world?.assetStatus,world};
 window.addEventListener('train-assets',()=>{const status=world.assetStatus;if(Object.values(status).every(v=>v==='ready'))$('asset-loading').hidden=true;else if(Object.values(status).includes('error'))$('asset-loading').innerHTML='<b>模型載入未完成</b><span>請重新整理，或確認網路連線後再試。</span>';});
@@ -23,6 +28,7 @@ let voiceEnabled=!initialSettings.muted,voiceActivated=false,lastSpoken='',lastS
 function activateAudio(){audio.unlock();audio.enabled=voiceEnabled;}
 function applySharedSettings(settings,force=false){
  const modeChanged=game.childMode!==settings.childMode;game.childMode=settings.childMode;voiceEnabled=!settings.muted;audio.enabled=voiceEnabled;
+ document.body.classList.toggle('content-child-driving',game.childMode);
  if(!voiceEnabled)void stopNativeSpeech();
  $('child-mode').checked=game.childMode;$('sound').setAttribute('aria-label',voiceEnabled?'關閉語音教練':'開啟語音教練');$('sound').textContent=voiceEnabled?'♪':'♩';
  if(modeChanged||force){$('child-console').hidden=!game.childMode;$('advanced-console').hidden=game.childMode;$('advanced-toggle').textContent='家長／進階操作 ⌄';}
@@ -51,13 +57,14 @@ document.addEventListener('keydown',e=>{if(document.querySelector('dialog[open]'
 document.addEventListener('visibilitychange',()=>{if(document.hidden)game.pause();});
 let resultShown=false,servedStops=0,celebratedLesson='';
 function updateUI(){
+ const childState=game.getState(),bars=Math.min(5,Math.ceil(Math.abs(childState.speed)/12));childMeters.querySelector('b').textContent=bars?'慢慢開':'停穩了';childMeters.querySelectorAll('i').forEach((el,i)=>el.classList.toggle('lit',i<bars));childMeters.querySelector('strong').textContent=Math.abs(childState.distance)<12?'到站了，停好接客':Math.abs(childState.distance)<100?'快到站了':'沿海岸去接朋友';
  const s=game.getState(),c=s.controls,speed=Math.abs(s.speed);$('speed').textContent=speed.toFixed(0);$('limit').textContent=s.limit;$('speed').closest('.speed-instrument').classList.toggle('speeding',speed>s.limit+1);$('station').textContent=`${s.station||'終點'}站`;$('distance').textContent=Math.abs(s.distance).toFixed(0);$('progress').style.width=`${clamp(s.s/(game.lesson.stops.at(-1))*100,0,100)}%`;
  $('signal-lamp').className=`lamp ${s.signal}`;$('signal-name').textContent={red:'紅燈・停車',yellow:'黃燈・減速',green:'綠燈・可前進'}[s.signal];$('signal-distance').textContent=s.signalDistance===null?'路線暢通':`${Math.max(0,s.signalDistance).toFixed(0)} m`;
  $('route-name').textContent=ROUTES[s.route].name;$('lesson-name').textContent=LESSONS[s.lesson].short;$('vehicle-name').textContent=VEHICLES[s.vehicle].name;$('elapsed').textContent=`${String(Math.floor(s.elapsed/60)).padStart(2,'0')}:${String(Math.floor(s.elapsed%60)).padStart(2,'0')}`;
  const child=game.childHint();$('hint').textContent=s.childMode?child.text:s.hint;$('stopping').textContent=`建議提早煞車距離 ${s.stoppingDistance.toFixed(0)} m`;$('stopping').hidden=!s.assisted||s.childMode;$('mode-label').textContent=s.childMode?'幼兒模式':s.assisted?'輔助模式':'進階模式';document.querySelectorAll('.child-console>button').forEach(b=>{b.classList.toggle('coach-next',b.id===child.action);b.classList.toggle('coach-dim',!!child.action&&b.id!==child.action&&b.id!=='child-emergency');});$('child-doors').innerHTML=`<span>▥</span>${s.controls.doors?'關門出發':'開門接客'}`;$('child-emergency').innerHTML=`<span>▰</span>${s.controls.emergency?'解除煞車':'安全煞車'}`;if(!s.paused&&!s.completed&&s.childMode)speak(child.text);
  $('power').classList.toggle('ready',c.power);$('power-state').textContent=c.power?'已開啟':'關閉';$('doors').classList.toggle('ready',!c.doors);$('doors-label').textContent=c.doors?'關門確認':'開門接客';$('doors-state').textContent=c.doors?'車門開啟':'車門鎖定';$('readiness').textContent=`${[c.power,!c.doors,c.direction!==0,c.brake===0].filter(Boolean).length} / 4 就緒`;
  document.querySelectorAll('[data-direction]').forEach(b=>b.classList.toggle('active',Number(b.dataset.direction)===c.direction));$('throttle').value=c.throttle;$('brake').value=c.brake;$('throttle-value').textContent=c.throttle;$('brake-value').textContent=c.brake;$('traction').textContent=(s.traction/1000).toFixed(0);$('pressure').textContent=s.pressure.toFixed(0);$('traction-bar').style.width=`${s.traction/game.vehicle.maxTraction*100}%`;$('pressure-bar').style.width=`${s.pressure/360*100}%`;
- $('emergency').classList.toggle('engaged',c.emergency);$('emergency').querySelector('span').textContent=c.emergency?'解除緊急煞車':'緊急煞車';$('pause-overlay').hidden=!s.paused||s.completed||!!document.querySelector('dialog[open]');$('pause').textContent=s.paused?'▶':'Ⅱ';$('pause').setAttribute('aria-label',s.paused?'繼續課程':'暫停課程');$('toast').hidden=!s.toast;$('toast').textContent=s.toast;
+ $('emergency').classList.toggle('engaged',c.emergency);$('emergency').querySelector('span').textContent=c.emergency?'解除緊急煞車':'緊急煞車';$('pause-overlay').hidden=!s.paused||s.completed||!!document.querySelector('dialog[open]');$('pause').textContent=s.paused?'▶':'Ⅱ';$('pause').setAttribute('aria-label',s.paused?'繼續課程':'暫停課程');$('toast').hidden=!s.toast;$('toast').textContent=s.childMode&&s.toast?child.text:s.toast;
  const earned=stationReward(servedStops,s.stops.length);if(s.stops.length<servedStops)servedStops=s.stops.length;if(earned){servedStops=s.stops.length;addStars('train',earned);const stop=s.stops.at(-1);celebrate({text:`${stop.station}站 接到乘客！`,kind:'station',y:.32,pieces:24,sound:voiceEnabled});}
  if(s.completed&&!resultShown){resultShown=true;const rating=lessonRating(s.score);const key=`${s.route}:${s.lesson}:${s.elapsed.toFixed(1)}`;if(celebratedLesson!==key){celebratedLesson=key;addStars('train',LESSON_BONUS);recordBest(`train:${s.lesson}`,rating);setTimeout(()=>celebrate({text:'全部送到站了！',kind:'finish',y:.22,pieces:40,big:true,sound:voiceEnabled}),300);}$('result-stars').innerHTML=[1,2,3].map(i=>`<i class="${i<=rating?'on':''}">★</i>`).join('');$('result-stars').setAttribute('aria-label',`${rating} 顆星評等`);speak('乘客都到站了！你完成這一課啦。',true);$('score').textContent=s.score;$('stop-results').innerHTML=s.stops.map(v=>`<div class="stop-result"><b>${v.station}站</b><span>停車誤差 ${v.error.toFixed(1)} m</span></div>`).join('');$('result-feedback').textContent=s.infractions.length?'再試一次，在紅燈前提早煞車。完成停站的步驟已經學會了。':s.overspeedTime>3?'停站流程完成了。下一次提早收動力，試著全程留在限速內。':'你會確認車門、平順起步，也會在停車標附近接客了。下一課再練習新任務！';document.querySelector('#result-dialog .journey-result')?.remove();journeyResult($('result-dialog'),journey,rating);$('next-lesson').hidden=!!journey;$('result-dialog').showModal();}
  if(!s.completed)resultShown=false;

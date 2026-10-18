@@ -1,0 +1,78 @@
+{
+  "status": "EXECUTED",
+  "method": "alpha > 128; Rec709 luminance; near black < .1; HSV saturation; low saturation < .2",
+  "rows": [
+    {
+      "path": "public/art/content-r1/bike-0.png",
+      "mean_luminance": 0.33379703704018543,
+      "near_black": 0.30304563026120884,
+      "mean_saturation": 0.6704888579898943,
+      "low_saturation": 0.09355468044365765,
+      "alpha_corners": true,
+      "color_gate": true
+    },
+    {
+      "path": "public/art/content-r1/bike-1.png",
+      "mean_luminance": 0.33056100735281757,
+      "near_black": 0.3093945860568279,
+      "mean_saturation": 0.6700305335483018,
+      "low_saturation": 0.09186228219044579,
+      "alpha_corners": true,
+      "color_gate": true
+    },
+    {
+      "path": "public/art/content-r1/cake.png",
+      "mean_luminance": 0.5296452009779522,
+      "near_black": 0.08998210850585846,
+      "mean_saturation": 0.6415106937642613,
+      "low_saturation": 0.18925972261457955,
+      "alpha_corners": true,
+      "color_gate": true
+    },
+    {
+      "path": "public/art/content-r1/child-0.png",
+      "mean_luminance": 0.3617250776590402,
+      "near_black": 0.23126297096643061,
+      "mean_saturation": 0.628843893634168,
+      "low_saturation": 0.048781531483343674,
+      "alpha_corners": false,
+      "color_gate": true
+    },
+    {
+      "path": "public/art/content-r1/child-1.png",
+      "mean_luminance": 0.35705114438873614,
+      "near_black": 0.23153125812884764,
+      "mean_saturation": 0.6222113176518524,
+      "low_saturation": 0.047060608688112376,
+      "alpha_corners": false,
+      "color_gate": true
+    },
+    {
+      "path": "public/art/content-r1/flag.png",
+      "mean_luminance": 0.4139402704409712,
+      "near_black": 0.257624212851538,
+      "mean_saturation": 0.7814706338760196,
+      "low_saturation": 0.005967492004879497,
+      "alpha_corners": true,
+      "color_gate": true
+    },
+    {
+      "path": "public/art/content-r1/grandma-0.png",
+      "mean_luminance": 0.47332620048742796,
+      "near_black": 0.1875832751728951,
+      "mean_saturation": 0.5699177784325162,
+      "low_saturation": 0.17817714612017005,
+      "alpha_corners": true,
+      "color_gate": true
+    },
+    {
+      "path": "public/art/content-r1/grandma-1.png",
+      "mean_luminance": 0.4754134165794168,
+      "near_black": 0.1839007057359467,
+      "mean_saturation": 0.5799926000983479,
+      "low_saturation": 0.17453455813725008,
+      "alpha_corners": true,
+      "color_gate": true
+    }
+  ]
+}

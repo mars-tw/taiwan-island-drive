@@ -9,6 +9,8 @@ import { installSafetyLesson } from './shared/safety-ui.js';
 import { installAcademy } from './shared/academy-ui.js';
 installSafetyLesson();
 installAcademy();
+import {installContentLessons} from './shared/content-r1-ui.js';
+installContentLessons();
 const $ = id => document.getElementById(id);
 function showSettings(value = readSettings()) {
   $('child-mode').checked = value.childMode;

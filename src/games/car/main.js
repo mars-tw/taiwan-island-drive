@@ -17,6 +17,9 @@ import { requestedJourney } from '../../shared/journeys.js';
 import { journeyResult } from '../../shared/passport.js';
 import { appUrl } from '../../shared/paths.js';
 import {roadSpeedDisplay} from '../../shared/child-display.js';
+import '../../shared/content-r1-driving.css';
+document.body.classList.toggle('content-child-driving',readSettings().childMode);
+subscribeSettings(s=>document.body.classList.toggle('content-child-driving',s.childMode));
 
 const $ = (s) => document.querySelector(s);
 const $$ = (s) => [...document.querySelectorAll(s)];
@@ -31,7 +34,7 @@ const saved = storage.get('preferences', {});
 let mapId = MAPS.some(m => m.id === saved.map) ? saved.map : 'coast';
 let vehicleId = VEHICLES.some(v => v.id === saved.vehicle) ? saved.vehicle : 'coupe';
 let paint = COLORS.includes(saved.paint) ? saved.paint : COLORS[0];
-let mode = saved.mode === 'timeattack' ? 'timeattack' : 'cruise';
+let mode = !readSettings().childMode && saved.mode === 'timeattack' ? 'timeattack' : 'cruise';
 let journey = requestedJourney('car');
 let autoThrottle = false;
 if (journey) { mapId = journey.map; mode = 'cruise'; }
@@ -168,7 +171,7 @@ function finish(result) {
   if (completed) celebrate({ text: rating === 3 ? '超級司機！' : '到終點了！', kind: 'finish', y: 0.3, pieces: 40, big: true, sound: !muted });
   $('#finish-title').textContent = completed ? (stars === result.starTotal ? '星星全都帶回家！' : '到終點囉，好棒！') : '時間到，再試一次！';
   $('#finish-eyebrow').textContent = completed ? '旅程完成' : '再試一趟';
-  $('#finish-route').textContent = `${currentMap().name} · ${currentVehicle().name} · ${(Math.min(result.distance,journey?.distance||TRACK_LENGTH) / 1000).toFixed(2)} km`;
+  $('#finish-route').textContent = readSettings().childMode ? `${currentMap().name} · 大家一起到站了` : `${currentMap().name} · ${currentVehicle().name} · ${(Math.min(result.distance,journey?.distance||TRACK_LENGTH) / 1000).toFixed(2)} km`;
   $('#finish-time').textContent = timeFormat(result.elapsed, true);
   $('#finish-score').textContent = Math.round(result.score || 0).toLocaleString('zh-TW');
   const key = `${mapId}:${vehicleId}:${mode}${journey ? `:${journey.id}` : ''}`;
@@ -178,6 +181,7 @@ function finish(result) {
     storage.set('records', records);
     $('#best-record').textContent = previous ? '刷新了你的最佳紀錄。' : '第一段旅程，已經記住了。';
   } else $('#best-record').textContent = previous ? `個人最快紀錄 ${timeFormat(previous.elapsed, true)}` : '換一台車，再試一次。';
+  if(readSettings().childMode)$('#best-record').textContent='這段風景記住了，再一起出發吧。';
 }
 
 function showDriving() {
@@ -195,7 +199,7 @@ function showDriving() {
   $('#auto-throttle').setAttribute('aria-pressed','false');
 }
 
-function start() { if (!ready || busy) return; releaseInput(); showDriving(); game.start(mode, {distance:journey?.distance}); }
+function start() { if (!ready || busy) return; if(readSettings().childMode)mode='cruise'; releaseInput(); showDriving(); game.start(mode, {distance:journey?.distance}); }
 function returnToMenu() {
   releaseInput(); journey=null; game.returnToMenu();
   document.body.classList.remove('driving');

@@ -1,0 +1,63 @@
+{
+  "status": "VERIFIED",
+  "note": "Before images are retained historical store evidence, sourceVersion 2.10.0, not fresh captures of the 2.12.0 baseline; after images are this round, unmodified 1290x2796 Chromium captures.",
+  "pairs": [
+    {
+      "kind": "train",
+      "historical_before": {
+        "path": "docs/store/screenshots/merge/iphone-store-06-train.png",
+        "sha256": "5992672c52efbbff5c00e3687be82dd2de4a8351dda523afbc9b301905b2e8b8",
+        "size": [
+          1290,
+          2796
+        ]
+      },
+      "current_after": {
+        "path": "docs/store/screenshots/content-r1/store/iphone-store-06-train-offline.png",
+        "sha256": "34c50a4ade10c631731f6721d77a83f61e71680034febcbe3ecfd59b3de0398e",
+        "size": [
+          1290,
+          2796
+        ]
+      }
+    },
+    {
+      "kind": "car-result",
+      "historical_before": {
+        "path": "docs/store/screenshots/merge/iphone-store-07-road-result.png",
+        "sha256": "515848b46229c6da652f93a1b578d13eadcdcf28f29ac2fc3299c4662cc605f4",
+        "size": [
+          1290,
+          2796
+        ]
+      },
+      "current_after": {
+        "path": "docs/store/screenshots/content-r1/merge/iphone-store-07-road-result.png",
+        "sha256": "01e6c60d534b6627f20dc919c74cbafae2097d903db61ef3962577e26154cc42",
+        "size": [
+          1290,
+          2796
+        ]
+      }
+    },
+    {
+      "kind": "home",
+      "historical_before": {
+        "path": "docs/store/screenshots/merge/iphone-store-01-mainline.png",
+        "sha256": "a451529eaf5aab902c2d12adb96b446299e893fa7887a711406a8e5e649dad39",
+        "size": [
+          1290,
+          2796
+        ]
+      },
+      "current_after": {
+        "path": "docs/store/screenshots/content-r1/store/iphone-store-01-home.png",
+        "sha256": "e478e8f90b54ea6461b07f02d3f7edee34dc2f8552e4ae9c9d11244aff3ba465",
+        "size": [
+          1290,
+          2796
+        ]
+      }
+    }
+  ]
+}

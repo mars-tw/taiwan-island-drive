@@ -60,3 +60,6 @@
 - 星星、彩紙、貼紙彈出與三和弦音效：`src/shared/celebrate.js`，全部由程式產生（CSS 與 WebAudio 振盪器）。
 - 汽車路上的金色星星：`src/games/car/game.js` 用 Three.js `ExtrudeGeometry` 產生。
 - 飛機目標的星形與標籤：`src/games/flight/world.js` 用程式繪製。
+# 新內容第一輪（2026-10-18）
+
+海岸實作課新增生日蛋糕、小綠旗、行人／腳踏車／菜籃奶奶雙姿勢及海岸路口背景。實際工具 `image_gen.imagegen`，三次生成（含一張文件區三視圖），六個設計、九個遊戲用檔；模型 slug 未揭露。沿用 PROMPTS_R8 的完整風格前綴。原畫、提示、格子裁切及 SHA-256：`docs/content/r1/art/`；遊戲檔 `public/art/content-r1/`。由專案為本作生成，隨本 MIT 專案提供；不含外部下載圖庫。角色移動使用兩張不同腿部／踩踏姿勢，不宣稱骨架動畫。
