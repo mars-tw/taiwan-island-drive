@@ -1,0 +1,15 @@
+import {pathToFileURL} from 'node:url';
+import {writeFile} from 'node:fs/promises';
+const {chromium}=await import(pathToFileURL(process.env.PLAYWRIGHT_MODULE||'C:/Users/digimkt/Desktop/遊戲/storm-apocalypse/node_modules/playwright/index.mjs').href);
+const base=process.env.BASE_URL||'http://127.0.0.1:5286/',browser=await chromium.launch({headless:true,args:['--use-angle=d3d11','--enable-gpu','--ignore-gpu-blocklist']}),rows=[];
+async function down(p,selector){const b=await p.locator(selector).boundingBox();await p.mouse.move(b.x+b.width/2,b.y+b.height/2);await p.mouse.down();}
+try{for(const [viewport,width,height] of [['desktop',1366,768],['portrait',390,844],['landscape',844,390]])for(const kind of (process.env.PERF_MODES||'cake,crossing,tickets,car,train,flight').split(',')){
+ const runs=[];for(let i=0;i<3;i++){const context=await browser.newContext({viewport:{width,height},hasTouch:true}),p=await context.newPage();await p.goto(base+(['car','train','flight'].includes(kind)?`${kind}/`:''));
+ if(['cake','crossing','tickets'].includes(kind)){await p.locator('#content-start').click();await p.locator(`[data-content=${kind}]`).click();await p.locator('[data-action=begin]').click();if(kind==='crossing'){await down(p,'[data-action=brake]');await p.waitForTimeout(1400);await p.mouse.up();await p.locator('[data-action=look-left]').click();await p.locator('[data-action=look-right]').click();await p.locator('[data-action=look-left]').click();}else{if(kind==='tickets')await p.getByRole('button',{name:'藍圓形月台',exact:true}).click();await down(p,'[data-action=go]');}}
+ else if(kind==='car'){await p.locator('#start-button:not([disabled])').click();await p.waitForTimeout(3500);await p.locator('#auto-throttle').click();}
+ else if(kind==='train'){await p.locator('#asset-loading').waitFor({state:'hidden',timeout:60000});await p.locator('#child-prepare').click();await p.locator('#child-go').click();}
+ else{await p.locator('#start:not([disabled])').click();await p.waitForTimeout(500);await p.locator('#child-action').click();}
+ const v=await p.evaluate(()=>new Promise(resolve=>{const d=[];let last=0,start=0;function f(t){if(last)d.push(t-last);last=t;start||=t;if(t-start<2000)requestAnimationFrame(f);else{d.sort((a,b)=>a-b);resolve(+d[Math.floor(d.length*.95)].toFixed(1));}}requestAnimationFrame(f);}));runs.push(v);await context.close();}
+ const p95=[...runs].sort((a,b)=>a-b)[1];rows.push({viewport,kind,runs,p95});console.log(`${viewport} ${kind}: median p95 ${p95}ms`);
+ }}finally{await browser.close();await writeFile(process.env.PERF_OUT||'docs/content/r8/performance.json',JSON.stringify({status:'EXECUTED',method:'Three real-time rAF samples of 2000ms per mode and viewport; median p95; one headless browser; concurrent host load; reference only, not native frame time',rows,limitMs:18,withinReferenceLimit:rows.length===(process.env.PERF_MODES?process.env.PERF_MODES.split(',').length*3:18)&&rows.every(r=>r.p95<=18)},null,2));}
+if(rows.length!==(process.env.PERF_MODES?process.env.PERF_MODES.split(',').length*3:18)||rows.some(r=>r.p95>18))process.exitCode=1;

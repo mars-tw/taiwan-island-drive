@@ -1,0 +1,100 @@
+{
+  "status": "VERIFIED",
+  "rows": [
+    {
+      "label": "store 1290x2796 original runtime",
+      "status": "VERIFIED"
+    },
+    {
+      "label": "store 2064x2752 original runtime",
+      "status": "VERIFIED"
+    }
+  ],
+  "shots": [
+    {
+      "path": "docs/store/screenshots/content-r8/cake-closeup-1290x2796.png",
+      "width": 1290,
+      "height": 2796,
+      "sha256": "3f702a4a07798149f8f2788ac61217e0b470f5ebd47375381c59fb61f93fb2da",
+      "state": {
+        "settled": "false",
+        "correction": "left",
+        "distance": "14.69",
+        "speed": "6.45",
+        "bend": "1",
+        "tilt": "20.18",
+        "sway": "7.85",
+        "acceleration": "0.18",
+        "bayStopped": "false",
+        "bayRestarted": "false",
+        "leftTurn": "false",
+        "rightTurn": "false",
+        "focus": "center",
+        "crossTime": "0.000",
+        "crossDuration": "2.1",
+        "orderHint": "",
+        "fruitSway": "4.78",
+        "flagSway": "9.92",
+        "assisting": "false",
+        "crossed": "0",
+        "lookedLeft": "false",
+        "lookedRight": "false",
+        "decision": "false",
+        "confirmed": "false",
+        "confirmDelay": "0",
+        "person": "child",
+        "doorState": "closed"
+      },
+      "phase": "playing",
+      "seats": 0,
+      "offset": "33.86",
+      "summary": "",
+      "native": false,
+      "method": "Original headless runtime PNG; RAF suspended during capture only; no gameplay assignments or pixel edits"
+    },
+    {
+      "path": "docs/store/screenshots/content-r8/cake-closeup-2064x2752.png",
+      "width": 2064,
+      "height": 2752,
+      "sha256": "3393d882bc5e70f24d09a8f8e7408d9d8190ba4e210de5af8428c0f47923d63b",
+      "state": {
+        "settled": "false",
+        "correction": "left",
+        "distance": "14.78",
+        "speed": "6.45",
+        "bend": "1",
+        "tilt": "20.22",
+        "sway": "7.87",
+        "acceleration": "0.17",
+        "bayStopped": "false",
+        "bayRestarted": "false",
+        "leftTurn": "false",
+        "rightTurn": "false",
+        "focus": "center",
+        "crossTime": "0.000",
+        "crossDuration": "2.1",
+        "orderHint": "",
+        "fruitSway": "4.81",
+        "flagSway": "9.99",
+        "assisting": "false",
+        "crossed": "0",
+        "lookedLeft": "false",
+        "lookedRight": "false",
+        "decision": "false",
+        "confirmed": "false",
+        "confirmDelay": "0",
+        "person": "child",
+        "doorState": "closed"
+      },
+      "phase": "playing",
+      "seats": 0,
+      "offset": "33.96",
+      "summary": "",
+      "native": false,
+      "method": "Original headless runtime PNG; RAF suspended during capture only; no gameplay assignments or pixel edits"
+    }
+  ],
+  "errors": [],
+  "external": [],
+  "responses": []
+}

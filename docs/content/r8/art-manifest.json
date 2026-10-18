@@ -1,0 +1,9 @@
+{
+  "status": "VERIFIED",
+  "newArtCount": 0,
+  "generationCalls": 0,
+  "tool": null,
+  "reason": "R8 only adjusts feedback, layout, existing two-pose gait scale, boarding layers and door timing; all managed images remain unchanged.",
+  "sources": ["docs/content/r7/art/manifest.json", "docs/content/r3/art/", "docs/art/ART_DIRECTION.md"],
+  "scope": "No new raster art, SVG characters, generated backgrounds or dependencies. Curved arrows, meters and station numbers are instructional symbols."
+}

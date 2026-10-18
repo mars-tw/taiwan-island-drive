@@ -10,7 +10,7 @@ export function sideWatch(g,side){
  return {people,clear:people.length===0,label:side==='left'?'左邊':'右邊'};
 }
 export function cakeTask(g){
- if(g.stage===1)return g.distance<=29&&g.turns.left<.2?'← 先練左彎':g.distance<=40&&g.turns.right<.2?'再練右彎 →':'左右都練好了';
+ if(g.stage===1)return g.distance<=29?'← 先練左彎':g.distance<=40?'再練右彎 →':'左右都練好了';
  if(g.stage===2)return !g.bayStopped?'臨停灣：先停穩':!g.bayRestarted?'停穩了：再起步':'再起步，送到桌邊';
  return g.distance<15?'按住起步・放開放慢':'起步坡：慢慢前進';
 }
