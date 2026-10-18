@@ -6,7 +6,13 @@ test('cake: continuous pedals, inertia flag, bend and brake accumulate skills; a
  const g=new ContentLesson('cake');g.begin();
  for(let stage=0;stage<3;stage++){
   g.input.go=true;tick(g,2);assert.ok(g.speed>1);assert.ok(Math.abs(g.tilt)>0);g.input[g.bend>0?'right':'left']=true;
-  for(let i=0;i<1000&&g.distance<55;i++){g.input.go=g.speed<5;g.update(1/60);}
+  for(let i=0;i<1000&&g.distance<55;i++){
+   g.input.left=g.bend<0;g.input.right=g.bend>0;
+   g.input.brake=stage===2&&g.distance>=42&&!g.bayStopped;
+   g.input.go=!g.input.brake&&g.speed<5;g.update(1/60);
+  }
+  if(stage===1){assert.ok(g.turns.left>=.2);assert.ok(g.turns.right>=.2);}
+  if(stage===2){assert.equal(g.bayStopped,true);assert.equal(g.bayRestarted,true);}
   assert.equal(g.distance,55);g.input.go=false;g.input.brake=true;tick(g,3);assert.ok(['checkpoint','done'].includes(g.phase));
   const saved=JSON.parse(JSON.stringify(g.snapshot()));assert.equal(new ContentLesson('cake',saved).stage,Math.min(stage+1,2));
   if(stage<2)g.next();

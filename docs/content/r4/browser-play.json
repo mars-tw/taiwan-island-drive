@@ -1,0 +1,893 @@
+{
+  "status": "VERIFIED",
+  "rows": [
+    {
+      "label": "same station five monotonic flag/whole-cake/cream/body/road-relative recovery frames",
+      "status": "VERIFIED",
+      "recovery": [
+        {
+          "path": "docs/content/r4/phone-cake-recovery-1.png",
+          "sample": {
+            "distance": "17.84",
+            "speed": "6.71",
+            "bend": "1",
+            "tilt": "-21.74",
+            "sway": "-9.74",
+            "acceleration": "0.42",
+            "bayStopped": "false",
+            "bayRestarted": "false",
+            "leftTurn": "false",
+            "rightTurn": "false",
+            "focus": "center"
+          },
+          "car": {
+            "x": 73.93235778808594,
+            "y": 227.4849853515625,
+            "width": 254.1913299560547,
+            "height": 267.15179443359375
+          },
+          "cakeTransform": "rotate(-14.7822deg)",
+          "creamTransform": "translateX(-15.5919px) rotate(-5.43463deg)"
+        },
+        {
+          "path": "docs/content/r4/phone-cake-recovery-2.png",
+          "sample": {
+            "distance": "19.42",
+            "speed": "6.79",
+            "bend": "1",
+            "tilt": "-14.69",
+            "sway": "-7.24",
+            "acceleration": "0.30",
+            "bayStopped": "false",
+            "bayRestarted": "false",
+            "leftTurn": "false",
+            "rightTurn": "false",
+            "focus": "center"
+          },
+          "car": {
+            "x": 72.90818786621094,
+            "y": 222.79344177246094,
+            "width": 250.56629943847656,
+            "height": 263.5176239013672
+          },
+          "cakeTransform": "rotate(-9.98917deg)",
+          "creamTransform": "translateX(-11.5797px) rotate(-3.67249deg)"
+        },
+        {
+          "path": "docs/content/r4/phone-cake-recovery-3.png",
+          "sample": {
+            "distance": "20.20",
+            "speed": "6.86",
+            "bend": "1",
+            "tilt": "-8.52",
+            "sway": "-4.39",
+            "acceleration": "0.20",
+            "bayStopped": "false",
+            "bayRestarted": "false",
+            "leftTurn": "false",
+            "rightTurn": "false",
+            "focus": "center"
+          },
+          "car": {
+            "x": 72.18632507324219,
+            "y": 220.5062713623047,
+            "width": 248.67286682128906,
+            "height": 261.6238250732422
+          },
+          "cakeTransform": "rotate(-5.79381deg)",
+          "creamTransform": "translateX(-7.02438px) rotate(-2.13008deg)"
+        },
+        {
+          "path": "docs/content/r4/phone-cake-recovery-4.png",
+          "sample": {
+            "distance": "20.72",
+            "speed": "6.90",
+            "bend": "1",
+            "tilt": "-4.95",
+            "sway": "-2.59",
+            "acceleration": "0.14",
+            "bayStopped": "false",
+            "bayRestarted": "false",
+            "leftTurn": "false",
+            "rightTurn": "false",
+            "focus": "center"
+          },
+          "car": {
+            "x": 71.91580200195312,
+            "y": 218.8916015625,
+            "width": 247.6551513671875,
+            "height": 260.59423828125
+          },
+          "cakeTransform": "rotate(-3.36275deg)",
+          "creamTransform": "translateX(-4.13893px) rotate(-1.23631deg)"
+        },
+        {
+          "path": "docs/content/r4/phone-cake-recovery-5.png",
+          "sample": {
+            "distance": "21.23",
+            "speed": "6.93",
+            "bend": "1",
+            "tilt": "-2.85",
+            "sway": "-1.50",
+            "acceleration": "0.10",
+            "bayStopped": "false",
+            "bayRestarted": "false",
+            "leftTurn": "false",
+            "rightTurn": "false",
+            "focus": "center"
+          },
+          "car": {
+            "x": 71.91578674316406,
+            "y": 217.15635681152344,
+            "width": 246.8684539794922,
+            "height": 259.78379821777344
+          },
+          "cakeTransform": "rotate(-1.94053deg)",
+          "creamTransform": "translateX(-2.39658px) rotate(-0.71343deg)"
+        }
+      ]
+    },
+    {
+      "label": "cake station 1 distinct operation, completion and persisted checkpoint",
+      "status": "VERIFIED"
+    },
+    {
+      "label": "cake station 2 distinct operation, completion and persisted checkpoint",
+      "status": "VERIFIED"
+    },
+    {
+      "label": "cake station 3 distinct operation, completion and persisted checkpoint",
+      "status": "VERIFIED"
+    },
+    {
+      "label": "crossing station 1 side view, side information, both real poses and save",
+      "status": "VERIFIED"
+    },
+    {
+      "label": "crossing station 2 side view, side information, both real poses and save",
+      "status": "VERIFIED"
+    },
+    {
+      "label": "crossing station 3 side view, side information, both real poses and save",
+      "status": "VERIFIED"
+    },
+    {
+      "label": "tickets station 1 wrong, blocked door, continuous rail motion, lit real sign, ordered boarding and seats",
+      "status": "VERIFIED",
+      "boarding": [
+        {
+          "path": "docs/content/r4/phone-tickets-stage-1-boarding-1.png",
+          "seats": 0,
+          "walking": 3
+        },
+        {
+          "path": "docs/content/r4/phone-tickets-stage-1-boarding-2.png",
+          "seats": 0,
+          "walking": 3
+        },
+        {
+          "path": "docs/content/r4/phone-tickets-stage-1-boarding-3.png",
+          "seats": 1,
+          "walking": 2
+        }
+      ],
+      "wrongX": "18.00",
+      "midX": "12.10"
+    },
+    {
+      "label": "tickets station 2 wrong, blocked door, continuous rail motion, lit real sign, ordered boarding and seats",
+      "status": "VERIFIED",
+      "boarding": [
+        {
+          "path": "docs/content/r4/phone-tickets-stage-2-boarding-1.png",
+          "seats": 0,
+          "walking": 3
+        },
+        {
+          "path": "docs/content/r4/phone-tickets-stage-2-boarding-2.png",
+          "seats": 0,
+          "walking": 3
+        },
+        {
+          "path": "docs/content/r4/phone-tickets-stage-2-boarding-3.png",
+          "seats": 1,
+          "walking": 2
+        }
+      ],
+      "wrongX": "2.00",
+      "midX": "13.33"
+    },
+    {
+      "label": "tickets station 3 wrong, blocked door, continuous rail motion, lit real sign, ordered boarding and seats",
+      "status": "VERIFIED",
+      "boarding": [
+        {
+          "path": "docs/content/r4/phone-tickets-stage-3-boarding-1.png",
+          "seats": 0,
+          "walking": 3
+        },
+        {
+          "path": "docs/content/r4/phone-tickets-stage-3-boarding-2.png",
+          "seats": 0,
+          "walking": 3
+        },
+        {
+          "path": "docs/content/r4/phone-tickets-stage-3-boarding-3.png",
+          "seats": 1,
+          "walking": 2
+        }
+      ],
+      "wrongX": "2.00",
+      "midX": "7.72"
+    },
+    {
+      "label": "offline reload and three-station lesson completes; all three records persist",
+      "status": "VERIFIED"
+    },
+    {
+      "label": "storage rejection, reduced motion and frozen pause remain playable",
+      "status": "VERIFIED"
+    }
+  ],
+  "shots": [
+    {
+      "path": "docs/content/r4/phone-home.png",
+      "width": 390,
+      "height": 844,
+      "sha256": "89519dff356fdf2ebb46ea29ffce266a7ae118389acc409c7d0a2c1b46fd064e",
+      "native": false,
+      "method": "Original headless runtime capture; no resizing, annotation or gameplay-state assignment"
+    },
+    {
+      "path": "docs/content/r4/phone-cake-intro.png",
+      "width": 390,
+      "height": 844,
+      "sha256": "1ff3a2484c93227c4599d05a6190a261f570e44061d6500cb5cadde229e30118",
+      "native": false,
+      "method": "Original headless runtime capture; no resizing, annotation or gameplay-state assignment"
+    },
+    {
+      "path": "docs/content/r4/phone-cake-force-turn.png",
+      "width": 390,
+      "height": 844,
+      "sha256": "482aa08835dc2948259371838c44bd7f507fea452aed0f96b6d0296872fc7c60",
+      "native": false,
+      "method": "Original headless runtime capture; no resizing, annotation or gameplay-state assignment"
+    },
+    {
+      "path": "docs/content/r4/phone-cake-recovery-1.png",
+      "width": 390,
+      "height": 844,
+      "sha256": "b1f58095feb660e34259bb45dfb7639a72bcb81f13ceb53c5e5008f7131c19fe",
+      "native": false,
+      "method": "Original headless runtime capture; no resizing, annotation or gameplay-state assignment"
+    },
+    {
+      "path": "docs/content/r4/phone-cake-recovery-2.png",
+      "width": 390,
+      "height": 844,
+      "sha256": "7b897b94347e7397d83d7f96e6785463f50a82cb8ee909602b6370b6ea80c85e",
+      "native": false,
+      "method": "Original headless runtime capture; no resizing, annotation or gameplay-state assignment"
+    },
+    {
+      "path": "docs/content/r4/phone-cake-recovery-3.png",
+      "width": 390,
+      "height": 844,
+      "sha256": "4d47e29c9d2d7b683c96f08a02dfa1dd6444dc4c4430313e85a839040dd9e3d3",
+      "native": false,
+      "method": "Original headless runtime capture; no resizing, annotation or gameplay-state assignment"
+    },
+    {
+      "path": "docs/content/r4/phone-cake-recovery-4.png",
+      "width": 390,
+      "height": 844,
+      "sha256": "8003077bfdce6d1968e0a81f3a31b6218ce5528f4ace567e3430e80277d4f549",
+      "native": false,
+      "method": "Original headless runtime capture; no resizing, annotation or gameplay-state assignment"
+    },
+    {
+      "path": "docs/content/r4/phone-cake-recovery-5.png",
+      "width": 390,
+      "height": 844,
+      "sha256": "25c6b09951a176920fe2bb2d8c3d1cab73bcb7a92c4c8a16da6b3b7fb8002238",
+      "native": false,
+      "method": "Original headless runtime capture; no resizing, annotation or gameplay-state assignment"
+    },
+    {
+      "path": "docs/content/r4/phone-picker-progress.png",
+      "width": 390,
+      "height": 844,
+      "sha256": "659bebbb869aa85eeb1670d6335532fd1a96f1bea37ce91a2f9f139124c88da4",
+      "native": false,
+      "method": "Original headless runtime capture; no resizing, annotation or gameplay-state assignment"
+    },
+    {
+      "path": "docs/content/r4/phone-cake-stage-1-intro.png",
+      "width": 390,
+      "height": 844,
+      "sha256": "5d91df3d83a3f373affd22cd4f5f35dd255b8b03be3605c4eb80b4bf6ac3e225",
+      "native": false,
+      "method": "Original headless runtime capture; no resizing, annotation or gameplay-state assignment"
+    },
+    {
+      "path": "docs/content/r4/phone-cake-stage-1-process.png",
+      "width": 390,
+      "height": 844,
+      "sha256": "d6adc2fd19a522f2091b38920599c62dedaa2dbe8d41eb031787ccbbe9aa4e49",
+      "native": false,
+      "method": "Original headless runtime capture; no resizing, annotation or gameplay-state assignment"
+    },
+    {
+      "path": "docs/content/r4/phone-cake-stage-1-complete.png",
+      "width": 390,
+      "height": 844,
+      "sha256": "81dd8b8dedf7c4e463147faabb49802b9633dad7604a2c86725b83ba96c0229a",
+      "native": false,
+      "method": "Original headless runtime capture; no resizing, annotation or gameplay-state assignment"
+    },
+    {
+      "path": "docs/content/r4/phone-cake-stage-2-intro.png",
+      "width": 390,
+      "height": 844,
+      "sha256": "1b75154836a6695846d647fbbc80f5d41369cdfbbd3139acaf7815f1b6101431",
+      "native": false,
+      "method": "Original headless runtime capture; no resizing, annotation or gameplay-state assignment"
+    },
+    {
+      "path": "docs/content/r4/phone-cake-stage-2-left.png",
+      "width": 390,
+      "height": 844,
+      "sha256": "6c6ba6ceeed5bc75f7fdd602239d9f02655f0e8fde0d762df0a0194f66841852",
+      "native": false,
+      "method": "Original headless runtime capture; no resizing, annotation or gameplay-state assignment"
+    },
+    {
+      "path": "docs/content/r4/phone-cake-stage-2-process.png",
+      "width": 390,
+      "height": 844,
+      "sha256": "9b63dd17692265fe150a5fcc5a5fdcc34ae413df7890746968d558563f205bf2",
+      "native": false,
+      "method": "Original headless runtime capture; no resizing, annotation or gameplay-state assignment"
+    },
+    {
+      "path": "docs/content/r4/phone-cake-stage-2-right.png",
+      "width": 390,
+      "height": 844,
+      "sha256": "436ef7f94f271394bf24b3393019bfd188ebff033b6bf34344c66e38324e6392",
+      "native": false,
+      "method": "Original headless runtime capture; no resizing, annotation or gameplay-state assignment"
+    },
+    {
+      "path": "docs/content/r4/phone-cake-stage-2-complete.png",
+      "width": 390,
+      "height": 844,
+      "sha256": "cfc193bb6164f40f87efaf1513061b026a183a534b7aef8b2fde5a57db515fe5",
+      "native": false,
+      "method": "Original headless runtime capture; no resizing, annotation or gameplay-state assignment"
+    },
+    {
+      "path": "docs/content/r4/phone-cake-stage-3-intro.png",
+      "width": 390,
+      "height": 844,
+      "sha256": "b31bb6fb04c63eb6248d741e7a53e5495ca068d572bd36d1b7b20dc0b71f9784",
+      "native": false,
+      "method": "Original headless runtime capture; no resizing, annotation or gameplay-state assignment"
+    },
+    {
+      "path": "docs/content/r4/phone-cake-stage-3-process.png",
+      "width": 390,
+      "height": 844,
+      "sha256": "74354db10e4af6c697034b8fc98efca5c381228a5ba74fc857acd18bad8879b8",
+      "native": false,
+      "method": "Original headless runtime capture; no resizing, annotation or gameplay-state assignment"
+    },
+    {
+      "path": "docs/content/r4/phone-cake-stage-3-stopped.png",
+      "width": 390,
+      "height": 844,
+      "sha256": "b1fcfe18fc723e7ae5040708ac06f7eed8b5fe9bfe6d538a73f7394f2541dcac",
+      "native": false,
+      "method": "Original headless runtime capture; no resizing, annotation or gameplay-state assignment"
+    },
+    {
+      "path": "docs/content/r4/phone-cake-stage-3-restarting.png",
+      "width": 390,
+      "height": 844,
+      "sha256": "1ceabb98e9a03212017d2f8843cda8280c5c787d1d0ac5d099b87fd119c654e9",
+      "native": false,
+      "method": "Original headless runtime capture; no resizing, annotation or gameplay-state assignment"
+    },
+    {
+      "path": "docs/content/r4/phone-cake-stage-3-complete.png",
+      "width": 390,
+      "height": 844,
+      "sha256": "f8e48492eee8c49c40c02b75d5e4cb8ec410adc91fdcbd5e67d1c69b86f5f7e0",
+      "native": false,
+      "method": "Original headless runtime capture; no resizing, annotation or gameplay-state assignment"
+    },
+    {
+      "path": "docs/content/r4/phone-cake-complete.png",
+      "width": 390,
+      "height": 844,
+      "sha256": "f8e48492eee8c49c40c02b75d5e4cb8ec410adc91fdcbd5e67d1c69b86f5f7e0",
+      "native": false,
+      "method": "Original headless runtime capture; no resizing, annotation or gameplay-state assignment"
+    },
+    {
+      "path": "docs/content/r4/phone-crossing-intro.png",
+      "width": 390,
+      "height": 844,
+      "sha256": "57f0d80e54b47c127c5e4dd0e8fb3f8e9910bdcfceda9bc0f73cec7f89425a61",
+      "native": false,
+      "method": "Original headless runtime capture; no resizing, annotation or gameplay-state assignment"
+    },
+    {
+      "path": "docs/content/r4/phone-crossing-stage-1-look-left.png",
+      "width": 390,
+      "height": 844,
+      "sha256": "e9af3582b6451c2a02c4509d047df141e61cbc131d68195232848ede38287ee1",
+      "native": false,
+      "method": "Original headless runtime capture; no resizing, annotation or gameplay-state assignment"
+    },
+    {
+      "path": "docs/content/r4/phone-crossing-stage-1-look-right.png",
+      "width": 390,
+      "height": 844,
+      "sha256": "2738df518edad6ae6f26a5b414fd7a69ec88fabed7d53219bba482050d992b32",
+      "native": false,
+      "method": "Original headless runtime capture; no resizing, annotation or gameplay-state assignment"
+    },
+    {
+      "path": "docs/content/r4/phone-crossing-stage-1-child-pose-0.png",
+      "width": 390,
+      "height": 844,
+      "sha256": "c271494fe6746bcc473eea1d9d62bb1d4eca70e1d22dbe9b2681ba43ce493893",
+      "native": false,
+      "method": "Original headless runtime capture; no resizing, annotation or gameplay-state assignment"
+    },
+    {
+      "path": "docs/content/r4/phone-crossing-stage-1-child-pose-1.png",
+      "width": 390,
+      "height": 844,
+      "sha256": "8a0d377b437bd8aabf67c1515c9566104e4063a55a60d766fc3cbae9e1d97407",
+      "native": false,
+      "method": "Original headless runtime capture; no resizing, annotation or gameplay-state assignment"
+    },
+    {
+      "path": "docs/content/r4/phone-crossing-stage-1-bike-pose-0.png",
+      "width": 390,
+      "height": 844,
+      "sha256": "a3a8736b0e298937265cc5ce3eb347210856a3b211354696250d0865d4da22a2",
+      "native": false,
+      "method": "Original headless runtime capture; no resizing, annotation or gameplay-state assignment"
+    },
+    {
+      "path": "docs/content/r4/phone-crossing-stage-1-bike-pose-1.png",
+      "width": 390,
+      "height": 844,
+      "sha256": "a5e9af91d8c0edae62c3fcb1124cfb743b1aef9094fe7ef815d94903bd7f3e58",
+      "native": false,
+      "method": "Original headless runtime capture; no resizing, annotation or gameplay-state assignment"
+    },
+    {
+      "path": "docs/content/r4/phone-crossing-stage-1-grandma-pose-0.png",
+      "width": 390,
+      "height": 844,
+      "sha256": "2ca16433c65feebc69eb4b9824ccd8a89eeaa9ac231e62c2a69730e5254d409d",
+      "native": false,
+      "method": "Original headless runtime capture; no resizing, annotation or gameplay-state assignment"
+    },
+    {
+      "path": "docs/content/r4/phone-crossing-stage-1-grandma-pose-1.png",
+      "width": 390,
+      "height": 844,
+      "sha256": "abdb60e696ca31d8c5d48ccf8e0ff78c3cb0a0b07e39eb6d7a9be19bc4513003",
+      "native": false,
+      "method": "Original headless runtime capture; no resizing, annotation or gameplay-state assignment"
+    },
+    {
+      "path": "docs/content/r4/phone-crossing-stage-1-clear.png",
+      "width": 390,
+      "height": 844,
+      "sha256": "f0355542267d68730a31c096eeb416837f60542ce64ef0776182e8d6bcc6a500",
+      "native": false,
+      "method": "Original headless runtime capture; no resizing, annotation or gameplay-state assignment"
+    },
+    {
+      "path": "docs/content/r4/phone-crossing-stage-1-complete.png",
+      "width": 390,
+      "height": 844,
+      "sha256": "07029bb23b13fe0461673e03bba403fb370b9c45bdce0ee04848b52a4148fbfc",
+      "native": false,
+      "method": "Original headless runtime capture; no resizing, annotation or gameplay-state assignment"
+    },
+    {
+      "path": "docs/content/r4/phone-crossing-stage-2-look-left.png",
+      "width": 390,
+      "height": 844,
+      "sha256": "4c75b0d3f149648a00ca99adc4416f2a3d977113d8d211fd65336651b4ac914e",
+      "native": false,
+      "method": "Original headless runtime capture; no resizing, annotation or gameplay-state assignment"
+    },
+    {
+      "path": "docs/content/r4/phone-crossing-stage-2-look-right.png",
+      "width": 390,
+      "height": 844,
+      "sha256": "24018826d572088db8e22883dadc8afd173a99c622224670e5ab206ee5b4a0e7",
+      "native": false,
+      "method": "Original headless runtime capture; no resizing, annotation or gameplay-state assignment"
+    },
+    {
+      "path": "docs/content/r4/phone-crossing-stage-2-grandma-pose-0.png",
+      "width": 390,
+      "height": 844,
+      "sha256": "c70f2a3024b344674c0bee6740e20582119250fab911c7efe197867a56fa5e6c",
+      "native": false,
+      "method": "Original headless runtime capture; no resizing, annotation or gameplay-state assignment"
+    },
+    {
+      "path": "docs/content/r4/phone-crossing-stage-2-grandma-pose-1.png",
+      "width": 390,
+      "height": 844,
+      "sha256": "1ab83a89e33bee65a2fcebb2fb4d0ff497a4f9fd40b2765bb1511bc57e4bd4fd",
+      "native": false,
+      "method": "Original headless runtime capture; no resizing, annotation or gameplay-state assignment"
+    },
+    {
+      "path": "docs/content/r4/phone-crossing-stage-2-child-pose-0.png",
+      "width": 390,
+      "height": 844,
+      "sha256": "59f7d733c53d337ac3d4134c62c37793375277d301215efece57372c9c5c71c6",
+      "native": false,
+      "method": "Original headless runtime capture; no resizing, annotation or gameplay-state assignment"
+    },
+    {
+      "path": "docs/content/r4/phone-crossing-stage-2-child-pose-1.png",
+      "width": 390,
+      "height": 844,
+      "sha256": "7c59e8bda4865b3dfb713a2f43dd1ed9a3c15d8356ec801e4b0405123f40eda6",
+      "native": false,
+      "method": "Original headless runtime capture; no resizing, annotation or gameplay-state assignment"
+    },
+    {
+      "path": "docs/content/r4/phone-crossing-stage-2-bike-pose-0.png",
+      "width": 390,
+      "height": 844,
+      "sha256": "8d6aef8fd252a50ed59f7f17b23094efcdf0a6632e6de82ce9a1d5ef1f345ee3",
+      "native": false,
+      "method": "Original headless runtime capture; no resizing, annotation or gameplay-state assignment"
+    },
+    {
+      "path": "docs/content/r4/phone-crossing-stage-2-bike-pose-1.png",
+      "width": 390,
+      "height": 844,
+      "sha256": "795e5ab4bcb2f9afdce2536ff8b70a78d4ba910f6c0e0d6209ca51f32a7bb161",
+      "native": false,
+      "method": "Original headless runtime capture; no resizing, annotation or gameplay-state assignment"
+    },
+    {
+      "path": "docs/content/r4/phone-crossing-stage-2-clear.png",
+      "width": 390,
+      "height": 844,
+      "sha256": "849f254b8ee8c8c30e490920f6c4cd00582d695a2b5fba6e82eeb692920be503",
+      "native": false,
+      "method": "Original headless runtime capture; no resizing, annotation or gameplay-state assignment"
+    },
+    {
+      "path": "docs/content/r4/phone-crossing-stage-2-complete.png",
+      "width": 390,
+      "height": 844,
+      "sha256": "89feb3136eb684d1d70023524c3b2736ecd1ae7bb503ee410f1545a95b850a81",
+      "native": false,
+      "method": "Original headless runtime capture; no resizing, annotation or gameplay-state assignment"
+    },
+    {
+      "path": "docs/content/r4/phone-crossing-stage-3-look-left.png",
+      "width": 390,
+      "height": 844,
+      "sha256": "73eb40ec98136cc65bfa53de6d5a20a82f475a17a40098b6a1128334400ff60c",
+      "native": false,
+      "method": "Original headless runtime capture; no resizing, annotation or gameplay-state assignment"
+    },
+    {
+      "path": "docs/content/r4/phone-crossing-stage-3-look-right.png",
+      "width": 390,
+      "height": 844,
+      "sha256": "89007257acedb827cb3da90f1528d22a3bcb717e34f013cce908130cc82a81d1",
+      "native": false,
+      "method": "Original headless runtime capture; no resizing, annotation or gameplay-state assignment"
+    },
+    {
+      "path": "docs/content/r4/phone-crossing-stage-3-bike-pose-0.png",
+      "width": 390,
+      "height": 844,
+      "sha256": "a152d6f55e0a40369cfb862ccbba95d63186b0f7b84caece7c1b4e247e79e2ae",
+      "native": false,
+      "method": "Original headless runtime capture; no resizing, annotation or gameplay-state assignment"
+    },
+    {
+      "path": "docs/content/r4/phone-crossing-stage-3-bike-pose-1.png",
+      "width": 390,
+      "height": 844,
+      "sha256": "32e6f15a91c0681973b43ab615e411ff1d593c176b47c8c01aa3a7858f6ecf30",
+      "native": false,
+      "method": "Original headless runtime capture; no resizing, annotation or gameplay-state assignment"
+    },
+    {
+      "path": "docs/content/r4/phone-crossing-stage-3-grandma-pose-0.png",
+      "width": 390,
+      "height": 844,
+      "sha256": "0c6b45f9199c787ff0ac1bb431b3ae3dd3e86ca38ad18f16cb9aeb98c37b7db0",
+      "native": false,
+      "method": "Original headless runtime capture; no resizing, annotation or gameplay-state assignment"
+    },
+    {
+      "path": "docs/content/r4/phone-crossing-stage-3-grandma-pose-1.png",
+      "width": 390,
+      "height": 844,
+      "sha256": "c452ef3b7bf1ca112ee5681b65e6778c073d86a8f79c6d15dcc22dbb1ecf150f",
+      "native": false,
+      "method": "Original headless runtime capture; no resizing, annotation or gameplay-state assignment"
+    },
+    {
+      "path": "docs/content/r4/phone-crossing-stage-3-child-pose-0.png",
+      "width": 390,
+      "height": 844,
+      "sha256": "4dd896adc350342cac38e13e8fbe226d3b4a1be4e3cd54d3ae0a7111ead2c6e7",
+      "native": false,
+      "method": "Original headless runtime capture; no resizing, annotation or gameplay-state assignment"
+    },
+    {
+      "path": "docs/content/r4/phone-crossing-stage-3-child-pose-1.png",
+      "width": 390,
+      "height": 844,
+      "sha256": "e595e925c1a5d7c8a9ff925e9c9e50ac926dfaded75f411b6f17ae2849b06551",
+      "native": false,
+      "method": "Original headless runtime capture; no resizing, annotation or gameplay-state assignment"
+    },
+    {
+      "path": "docs/content/r4/phone-crossing-stage-3-clear.png",
+      "width": 390,
+      "height": 844,
+      "sha256": "d1975d4efaa6d717efc24f004eb419cab33a4904f688257bb4c60a42492c4e02",
+      "native": false,
+      "method": "Original headless runtime capture; no resizing, annotation or gameplay-state assignment"
+    },
+    {
+      "path": "docs/content/r4/phone-crossing-stage-3-complete.png",
+      "width": 390,
+      "height": 844,
+      "sha256": "3ddae2174c0718f4d7d7f79ca0137a4da07e172913fa4ebbf46e24f5433133b7",
+      "native": false,
+      "method": "Original headless runtime capture; no resizing, annotation or gameplay-state assignment"
+    },
+    {
+      "path": "docs/content/r4/phone-crossing-complete.png",
+      "width": 390,
+      "height": 844,
+      "sha256": "683dc2a9bdb4a6072b60d8c5d2dad79fea087e17f9f5989f5c8700d1287909e5",
+      "native": false,
+      "method": "Original headless runtime capture; no resizing, annotation or gameplay-state assignment"
+    },
+    {
+      "path": "docs/content/r4/phone-tickets-intro.png",
+      "width": 390,
+      "height": 844,
+      "sha256": "6716190b22e13f925815ab3f8d79f33dd5d90910b666c744084d01506652b75d",
+      "native": false,
+      "method": "Original headless runtime capture; no resizing, annotation or gameplay-state assignment"
+    },
+    {
+      "path": "docs/content/r4/phone-tickets-stage-1-wrong.png",
+      "width": 390,
+      "height": 844,
+      "sha256": "8f5c15b6d59ae9fc1cb3abc17223ab9bf384cc0995a5517760fa79e853d35e43",
+      "native": false,
+      "method": "Original headless runtime capture; no resizing, annotation or gameplay-state assignment"
+    },
+    {
+      "path": "docs/content/r4/phone-tickets-stage-1-moving.png",
+      "width": 390,
+      "height": 844,
+      "sha256": "2811e73383f58d8ef6581c33c72b4beb766cc4c7f27c93bb235aad656da86292",
+      "native": false,
+      "method": "Original headless runtime capture; no resizing, annotation or gameplay-state assignment"
+    },
+    {
+      "path": "docs/content/r4/phone-tickets-stage-1-right.png",
+      "width": 390,
+      "height": 844,
+      "sha256": "514a941199d10525d039e6016bc3907441a1c0a0cd5d53314b8627705e276390",
+      "native": false,
+      "method": "Original headless runtime capture; no resizing, annotation or gameplay-state assignment"
+    },
+    {
+      "path": "docs/content/r4/phone-tickets-stage-1-boarding-1.png",
+      "width": 390,
+      "height": 844,
+      "sha256": "04e9f09f2ea37cd32a39e74aa272e4307d87fa7eac9a52055aaec9cb2bcd91ad",
+      "native": false,
+      "method": "Original headless runtime capture; no resizing, annotation or gameplay-state assignment"
+    },
+    {
+      "path": "docs/content/r4/phone-tickets-stage-1-boarding-2.png",
+      "width": 390,
+      "height": 844,
+      "sha256": "e8ce73a7fc4831057b826c8250e292f2ce569c67fb302265405d7b9de81a3948",
+      "native": false,
+      "method": "Original headless runtime capture; no resizing, annotation or gameplay-state assignment"
+    },
+    {
+      "path": "docs/content/r4/phone-tickets-stage-1-boarding-3.png",
+      "width": 390,
+      "height": 844,
+      "sha256": "cf490d6743688528d4959b9bd2e3e2cc225ac2c198e3f3408ec752ec5735508e",
+      "native": false,
+      "method": "Original headless runtime capture; no resizing, annotation or gameplay-state assignment"
+    },
+    {
+      "path": "docs/content/r4/phone-tickets-stage-1-seated.png",
+      "width": 390,
+      "height": 844,
+      "sha256": "cfc8a86f9f5c653a440b868e670b7c293d9d98231bd3c9f422bb0c18c32c16de",
+      "native": false,
+      "method": "Original headless runtime capture; no resizing, annotation or gameplay-state assignment"
+    },
+    {
+      "path": "docs/content/r4/phone-tickets-stage-2-wrong.png",
+      "width": 390,
+      "height": 844,
+      "sha256": "95ec14fb72a5baa85eba2eb3db70df71971fc6e6cf5f54e2b2c26e118bd556e4",
+      "native": false,
+      "method": "Original headless runtime capture; no resizing, annotation or gameplay-state assignment"
+    },
+    {
+      "path": "docs/content/r4/phone-tickets-stage-2-moving.png",
+      "width": 390,
+      "height": 844,
+      "sha256": "4062e714b6684b5d05c1e18602324bf2aa0a6db533e42834fd0137c638871204",
+      "native": false,
+      "method": "Original headless runtime capture; no resizing, annotation or gameplay-state assignment"
+    },
+    {
+      "path": "docs/content/r4/phone-tickets-stage-2-right.png",
+      "width": 390,
+      "height": 844,
+      "sha256": "972e8ebf7ca0d2e46597aa0fd01beb30f976e57d9af114bd2d4738ad2931b3ff",
+      "native": false,
+      "method": "Original headless runtime capture; no resizing, annotation or gameplay-state assignment"
+    },
+    {
+      "path": "docs/content/r4/phone-tickets-stage-2-boarding-1.png",
+      "width": 390,
+      "height": 844,
+      "sha256": "2b4ee94c173eddfe114392fc01daa21e92c1c9e6f158f8a85f6c403cf5006f3a",
+      "native": false,
+      "method": "Original headless runtime capture; no resizing, annotation or gameplay-state assignment"
+    },
+    {
+      "path": "docs/content/r4/phone-tickets-stage-2-boarding-2.png",
+      "width": 390,
+      "height": 844,
+      "sha256": "49e226e7ae94e7ce4e379d6ac7eccccaf7e9708366441f74e24126f17ee3b2bd",
+      "native": false,
+      "method": "Original headless runtime capture; no resizing, annotation or gameplay-state assignment"
+    },
+    {
+      "path": "docs/content/r4/phone-tickets-stage-2-boarding-3.png",
+      "width": 390,
+      "height": 844,
+      "sha256": "42a2363b87577b7c3764f71a95554a41ec25ade61556f119510e1f9800ff67fa",
+      "native": false,
+      "method": "Original headless runtime capture; no resizing, annotation or gameplay-state assignment"
+    },
+    {
+      "path": "docs/content/r4/phone-tickets-stage-2-seated.png",
+      "width": 390,
+      "height": 844,
+      "sha256": "3d010ecbd4519b669b61e8eecd52f0a1d47cc14a65aa394c09d9bd826ba2cac6",
+      "native": false,
+      "method": "Original headless runtime capture; no resizing, annotation or gameplay-state assignment"
+    },
+    {
+      "path": "docs/content/r4/phone-tickets-stage-3-wrong.png",
+      "width": 390,
+      "height": 844,
+      "sha256": "39a81d80b897e9301a431b33fb41f9b56bb938139c022aa510c711bb22768e5e",
+      "native": false,
+      "method": "Original headless runtime capture; no resizing, annotation or gameplay-state assignment"
+    },
+    {
+      "path": "docs/content/r4/phone-tickets-stage-3-moving.png",
+      "width": 390,
+      "height": 844,
+      "sha256": "229c1782fe27529084b0a6fa8b736f1d4fb1e0ae11a79efff47d2752fafe5e6f",
+      "native": false,
+      "method": "Original headless runtime capture; no resizing, annotation or gameplay-state assignment"
+    },
+    {
+      "path": "docs/content/r4/phone-tickets-stage-3-right.png",
+      "width": 390,
+      "height": 844,
+      "sha256": "b332e0a13cb4df5fbcd0ff078de88c7b571cf395d9f915c07a2be84dfb7aa2dd",
+      "native": false,
+      "method": "Original headless runtime capture; no resizing, annotation or gameplay-state assignment"
+    },
+    {
+      "path": "docs/content/r4/phone-tickets-stage-3-boarding-1.png",
+      "width": 390,
+      "height": 844,
+      "sha256": "e9570a218d1443899a76ea9fcdf58be77cac39ac423d6efe7da8d50bb2134f0e",
+      "native": false,
+      "method": "Original headless runtime capture; no resizing, annotation or gameplay-state assignment"
+    },
+    {
+      "path": "docs/content/r4/phone-tickets-stage-3-boarding-2.png",
+      "width": 390,
+      "height": 844,
+      "sha256": "5ddc4cbf7718a64e5df5fe573d5c5c9a2106fb22b02272265d72094d678dc778",
+      "native": false,
+      "method": "Original headless runtime capture; no resizing, annotation or gameplay-state assignment"
+    },
+    {
+      "path": "docs/content/r4/phone-tickets-stage-3-boarding-3.png",
+      "width": 390,
+      "height": 844,
+      "sha256": "516e1056da13b075607414c18119a89f585e2d92baeff48d004ad0cd24b92752",
+      "native": false,
+      "method": "Original headless runtime capture; no resizing, annotation or gameplay-state assignment"
+    },
+    {
+      "path": "docs/content/r4/phone-tickets-stage-3-seated.png",
+      "width": 390,
+      "height": 844,
+      "sha256": "824cbfe10421d437aed3154742d915d01204ef4e72148dea7694003cb1362000",
+      "native": false,
+      "method": "Original headless runtime capture; no resizing, annotation or gameplay-state assignment"
+    },
+    {
+      "path": "docs/content/r4/phone-tickets-complete.png",
+      "width": 390,
+      "height": 844,
+      "sha256": "62720c3f9ffae1d0a98c25c5f426f16970038eb66f5a2060b47e9e7affa042bc",
+      "native": false,
+      "method": "Original headless runtime capture; no resizing, annotation or gameplay-state assignment"
+    },
+    {
+      "path": "docs/content/r4/phone-tickets-saved-complete.png",
+      "width": 390,
+      "height": 844,
+      "sha256": "9464660aa43b20661c2e39284950e81873cdebd8ebab5fdd2a0b1fde1a3d1bd9",
+      "native": false,
+      "method": "Original headless runtime capture; no resizing, annotation or gameplay-state assignment"
+    },
+    {
+      "path": "docs/content/r4/phone-picker-complete.png",
+      "width": 390,
+      "height": 844,
+      "sha256": "435d22459cf9b56e8c2284d99f72d6558ba0b94728317acd78e144fa9bd36961",
+      "native": false,
+      "method": "Original headless runtime capture; no resizing, annotation or gameplay-state assignment"
+    },
+    {
+      "path": "docs/content/r4/phone-crossing-offline-complete.png",
+      "width": 390,
+      "height": 844,
+      "sha256": "cd012e5f6d6176178416375ac87885113d3c1e95e63875f33fbbcb3884a141d4",
+      "native": false,
+      "method": "Original headless runtime capture; no resizing, annotation or gameplay-state assignment"
+    },
+    {
+      "path": "docs/content/r4/phone-storage-denied.png",
+      "width": 390,
+      "height": 844,
+      "sha256": "d488f853e9d2e47bca92e0a710f2b0b318513a902eb2d724229ffcaab47988b4",
+      "native": false,
+      "method": "Original headless runtime capture; no resizing, annotation or gameplay-state assignment"
+    }
+  ],
+  "errors": [],
+  "external": [],
+  "responses": []
+}

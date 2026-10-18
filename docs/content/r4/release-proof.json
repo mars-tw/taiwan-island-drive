@@ -1,0 +1,31 @@
+{
+  "status": "VERIFIED",
+  "version": "2.16.0",
+  "nativeSourceBuild": 12,
+  "branch": "r1-fun-polish",
+  "baseline": "e974bda",
+  "unitTests": 182,
+  "originalTests": 23,
+  "changedTests": [
+    "tests/shared/content-r1.test.js"
+  ],
+  "assertionPolicy": "All original assertions retained verbatim; only driver inputs adapted and four gate assertions added",
+  "checks": 97,
+  "screenshots": 93,
+  "regression": {
+    "merge": {
+      "checks": 132,
+      "screenshots": 25
+    },
+    "store": {
+      "checks": 101,
+      "screenshots": 26
+    }
+  },
+  "secretScan": {
+    "textFiles": 831,
+    "hits": 0
+  },
+  "performanceMaxMedianP95": 16.8,
+  "artworkGeneration": 0
+}
