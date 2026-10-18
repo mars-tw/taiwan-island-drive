@@ -1,0 +1,13 @@
+node : warning: in the working copy of 'src/games/car/config.js', CRLF will be replaced by LF the next time Git touches
+ it
+位於 線路:2 字元:1
++ node scripts/verify-content-r2-release.mjs *> docs/content/r2/release ...
++ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (warning: in the... Git touches it:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+
+warning: in the working copy of 'src/games/train/main.js', CRLF will be replaced by LF the next time Git touches it
+warning: in the working copy of 'src/shared/content-r1-driving.css', LF will be replaced by CRLF the next time Git touc
+hes it
+warning: in the working copy of 'src/shared/content-r1-ui.js', CRLF will be replaced by LF the next time Git touches it
+VERIFIED 2.14.0 build10; 764 text files zero secret matches; 6 store screenshots

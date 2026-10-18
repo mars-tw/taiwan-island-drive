@@ -1,0 +1,126 @@
+{
+  "status": "VERIFIED",
+  "rows": [
+    {
+      "label": "phone train floating panels <=3",
+      "status": "VERIFIED",
+      "panels": [
+        "train-child-dashboard"
+      ],
+      "dashboardHeight": 75,
+      "controls60px": true
+    },
+    {
+      "label": "landscape train floating panels <=3",
+      "status": "VERIFIED",
+      "panels": [
+        "train-child-dashboard"
+      ],
+      "dashboardHeight": 58,
+      "controls60px": true
+    },
+    {
+      "label": "ipad train floating panels <=3",
+      "status": "VERIFIED",
+      "panels": [
+        "train-child-dashboard"
+      ],
+      "dashboardHeight": 75,
+      "controls60px": true
+    },
+    {
+      "label": "se train floating panels <=3",
+      "status": "VERIFIED",
+      "panels": [
+        "train-child-dashboard"
+      ],
+      "dashboardHeight": 75,
+      "controls60px": true
+    },
+    {
+      "label": "small-landscape train floating panels <=3",
+      "status": "VERIFIED",
+      "panels": [
+        "train-child-dashboard"
+      ],
+      "dashboardHeight": 48,
+      "controls60px": true
+    },
+    {
+      "label": "ipad-landscape train floating panels <=3",
+      "status": "VERIFIED",
+      "panels": [
+        "train-child-dashboard"
+      ],
+      "dashboardHeight": 75,
+      "controls60px": true
+    },
+    {
+      "label": "short-laptop train floating panels <=3",
+      "status": "VERIFIED",
+      "panels": [
+        "train-child-dashboard"
+      ],
+      "dashboardHeight": 75,
+      "controls60px": true
+    }
+  ],
+  "shots": [
+    {
+      "path": "docs/content/r2/phone-train-driving.png",
+      "width": 390,
+      "height": 844,
+      "sha256": "12711af5ab644c913a565115e8b2ebe01a9036c6b89ee626c8386c55f51be833",
+      "native": false,
+      "method": "unmodified headless Chromium runtime screenshot"
+    },
+    {
+      "path": "docs/content/r2/landscape-train-driving.png",
+      "width": 844,
+      "height": 390,
+      "sha256": "c8b660839d5c24f5006aa551cf61d8421c1fa8cf0de4e20c2db8205e5ea90d56",
+      "native": false,
+      "method": "unmodified headless Chromium runtime screenshot"
+    },
+    {
+      "path": "docs/content/r2/ipad-train-driving.png",
+      "width": 768,
+      "height": 1024,
+      "sha256": "089f97d24eeec6593e1e06a6ce02ef040f8f577f7fc6b5ef2e7236a3e80bcb74",
+      "native": false,
+      "method": "unmodified headless Chromium runtime screenshot"
+    },
+    {
+      "path": "docs/content/r2/se-train-driving.png",
+      "width": 320,
+      "height": 568,
+      "sha256": "9bb1de9c92f59c986e4d1a5e554d175bfab35a2f98c7e1c7b09038d60fa6137d",
+      "native": false,
+      "method": "unmodified headless Chromium runtime screenshot"
+    },
+    {
+      "path": "docs/content/r2/small-landscape-train-driving.png",
+      "width": 568,
+      "height": 320,
+      "sha256": "77f555e5df49b8d116bad5c73bce134e2a55d46ee71b5e6ae9624425a4ffccc2",
+      "native": false,
+      "method": "unmodified headless Chromium runtime screenshot"
+    },
+    {
+      "path": "docs/content/r2/ipad-landscape-train-driving.png",
+      "width": 1024,
+      "height": 768,
+      "sha256": "f35ea9dbe6424f4c3355b09f097e0b6c66dd3cab418ac33b4555643c9e884d6d",
+      "native": false,
+      "method": "unmodified headless Chromium runtime screenshot"
+    },
+    {
+      "path": "docs/content/r2/short-laptop-train-driving.png",
+      "width": 1366,
+      "height": 600,
+      "sha256": "45243e7a5abfb4964f5b1c4c36da8866eced88da4c24fc3b1260d2fc3e083598",
+      "native": false,
+      "method": "unmodified headless Chromium runtime screenshot"
+    }
+  ]
+}

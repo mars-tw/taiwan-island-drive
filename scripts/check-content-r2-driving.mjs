@@ -1,0 +1,15 @@
+import assert from 'node:assert/strict';
+import {pathToFileURL} from 'node:url';
+import {readFile,writeFile} from 'node:fs/promises';
+import {createHash} from 'node:crypto';
+const {chromium}=await import(pathToFileURL(process.env.PLAYWRIGHT_MODULE||'C:/Users/digimkt/Desktop/遊戲/storm-apocalypse/node_modules/playwright/index.mjs').href);
+const browser=await chromium.launch({headless:true,args:['--use-angle=d3d11','--enable-gpu','--ignore-gpu-blocklist']}),rows=[],shots=[];
+const base=process.env.BASE_URL||'http://127.0.0.1:5286/';
+try{for(const [name,width,height] of [['phone',390,844],['landscape',844,390],['ipad',768,1024],['se',320,568],['small-landscape',568,320],['ipad-landscape',1024,768],['short-laptop',1366,600]]){
+ const ctx=await browser.newContext({viewport:{width,height},hasTouch:true}),p=await ctx.newPage(),errors=[];p.on('pageerror',e=>errors.push(e.message));await p.goto(base+'train/');await p.locator('#asset-loading').waitFor({state:'hidden',timeout:60000});await p.locator('#child-prepare').click();await p.locator('#child-go').click();await p.waitForTimeout(600);
+ const panels=await p.locator('.scene').evaluate(e=>[...e.children].filter(x=>x.tagName!=='CANVAS'&&x.getClientRects().length&&getComputedStyle(x).display!=='contents').map(x=>x.className));assert.deepEqual(panels,['train-child-dashboard']);
+ const board=await p.locator('.train-child-dashboard').boundingBox();assert.ok(board.height<90,`oversized dashboard: ${board.height}`);assert.equal(await p.locator('#toast').isVisible(),false);assert.equal(await p.locator('.train-cab-coach').isVisible(),true);
+ const controls=await p.locator('.child-console>button').evaluateAll(es=>es.map(e=>{const r=e.getBoundingClientRect(),h=document.elementFromPoint(r.x+r.width/2,r.y+r.height/2);return {id:e.id,bad:r.width<59.8||r.height<59.8||r.x<0||r.y<0||r.right>innerWidth+.5||r.bottom>innerHeight+.5||(h!==e&&!e.contains(h))};}).filter(x=>x.bad));assert.deepEqual(controls,[]);assert.deepEqual(errors,[]);
+ const path=`docs/content/r2/${name}-train-driving.png`;await p.screenshot({path});const b=await readFile(path);shots.push({path,width:b.readUInt32BE(16),height:b.readUInt32BE(20),sha256:createHash('sha256').update(b).digest('hex'),native:false,method:'unmodified headless Chromium runtime screenshot'});rows.push({label:`${name} train floating panels <=3`,status:'VERIFIED',panels,dashboardHeight:board.height,controls60px:true});await ctx.close();console.log(`VERIFIED ${name}: 1 floating panel, ${board.height}px`);
+}}finally{await browser.close();await writeFile('docs/content/r2/driving.json',JSON.stringify({status:rows.length===7?'VERIFIED':'EXECUTED',rows,shots},null,2));}
+assert.equal(rows.length,7);const manifest=JSON.parse(await readFile('docs/content/r2/browser.json','utf8'));manifest.rows=manifest.rows.filter(r=>!r.label.includes('train floating panels'));manifest.rows.push(...rows);for(const s of shots){const i=manifest.shots.findIndex(x=>x.path===s.path);if(i>=0)manifest.shots[i]=s;else manifest.shots.push(s);}await writeFile('docs/content/r2/browser.json',JSON.stringify(manifest,null,2));

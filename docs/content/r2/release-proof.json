@@ -1,0 +1,157 @@
+{
+  "status": "VERIFIED",
+  "branch": "r1-fun-polish",
+  "baselineCommit": "881dd1f6df8cd24b9e2989471b16f6852c97670c",
+  "version": "2.14.0",
+  "nativeSourceBuild": 10,
+  "newDependencies": 0,
+  "existingTestsChanged": false,
+  "secretScan": {
+    "files": 764,
+    "matches": []
+  },
+  "regressions": {
+    "merge": 132,
+    "store": 101,
+    "mergeScreenshots": 25,
+    "storeScreenshots": 26
+  },
+  "runtimeImageBytes": 3314106,
+  "artwork": [
+    {
+      "id": "station",
+      "path": "public/art/content-r2/station.webp",
+      "bytes": 628770,
+      "sha256": "96828325cbe370cab907afa22eb5e376240292d19ff8169b7539a67d995ec007",
+      "master": "docs/content/r2/art/station-master.png",
+      "masterSha256": "922586f73d3a5bcd1c3bfb910edba7698e267e9726c7bd263153cbe3eb617b6c"
+    },
+    {
+      "id": "cake",
+      "path": "public/art/content-r2/cake-complete.webp",
+      "bytes": 508188,
+      "sha256": "6e651ddb12724204a8cd0acf7cc39389d17f455942f3faf0557252df468c8658",
+      "master": "docs/content/r2/art/cake-master.png",
+      "masterSha256": "736bb82526e4959b26bf754720b36d9449420444da7a33d7298097781a6e4e72"
+    },
+    {
+      "id": "crossing",
+      "path": "public/art/content-r2/crossing-complete.webp",
+      "bytes": 558424,
+      "sha256": "04524382b1614f5f2f3963e05f7a93d3994dfa6cbcef0ad4a9e3987ba732932a",
+      "master": "docs/content/r2/art/crossing-master.png",
+      "masterSha256": "1ab93863d51325801720fb0d6be7f53aa8b184f6976996201d5cd89e4ac69521"
+    },
+    {
+      "id": "tickets",
+      "path": "public/art/content-r2/tickets-complete.webp",
+      "bytes": 462904,
+      "sha256": "e344d0ebff04d66a14e7f6965d34b273fd167cb8fa18d9a0fe168bcd6bc902b6",
+      "master": "docs/content/r2/art/tickets-master.png",
+      "masterSha256": "167c9923c4ee91e4e33c734fadcfe774071a1478eca6f28935ea7277ed6f8bf1"
+    },
+    {
+      "id": "crossing-banyan",
+      "path": "public/art/content-r2/crossing-banyan.webp",
+      "bytes": 604346,
+      "sha256": "3b2e0d969f37853ede91b29c65cde48b36ca17f4cc10317d011d9f4f5bb3dcfe",
+      "master": "docs/content/r2/art/crossing-banyan-master.png",
+      "masterSha256": "7fb8734b2d807c18702f769786a2a3b22099dcea8599dc0318bc8a086b6acf32"
+    },
+    {
+      "id": "crossing-lighthouse",
+      "path": "public/art/content-r2/crossing-lighthouse.webp",
+      "bytes": 551474,
+      "sha256": "fc23cd540292e60a7bb956897bc53c52d5814779d3a4a132ddff373f2cc0f778",
+      "master": "docs/content/r2/art/crossing-lighthouse-master.png",
+      "masterSha256": "5cd95897b9ecdd14ea4466805487a878be4936d3a50003ac41ba81accd88a610"
+    }
+  ],
+  "storeShots": [
+    {
+      "path": "docs/store/screenshots/content-r2/iphone-cake.png",
+      "width": 1290,
+      "height": 2796,
+      "sha256": "577f25578258107f34ea3280516e65560973c6fd71cafd993ea241b73ccd92ff",
+      "native": false,
+      "method": "unmodified headless Chromium runtime screenshot"
+    },
+    {
+      "path": "docs/store/screenshots/content-r2/iphone-crossing.png",
+      "width": 1290,
+      "height": 2796,
+      "sha256": "7e5ef2fe8f62d56b0656a2d0cd3c422b27e023b2f8de87a60388ce960159f6ae",
+      "native": false,
+      "method": "unmodified headless Chromium runtime screenshot"
+    },
+    {
+      "path": "docs/store/screenshots/content-r2/iphone-tickets.png",
+      "width": 1290,
+      "height": 2796,
+      "sha256": "206df6bad7e1b8d137d964493cadbb1b44e8d11f63d1b28bc5f5b160b709a11c",
+      "native": false,
+      "method": "unmodified headless Chromium runtime screenshot"
+    },
+    {
+      "path": "docs/store/screenshots/content-r2/ipad-cake.png",
+      "width": 2064,
+      "height": 2752,
+      "sha256": "b4b3e42aa291a8ed5b14f21918b033004fe1b0e51c056a2ced23cc06a4a1e58e",
+      "native": false,
+      "method": "unmodified headless Chromium runtime screenshot"
+    },
+    {
+      "path": "docs/store/screenshots/content-r2/ipad-crossing.png",
+      "width": 2064,
+      "height": 2752,
+      "sha256": "d3ac4a75ad206b63aa91ccdbdb39b6ac1d82025e2e463071bc7c7d207ebf7f7a",
+      "native": false,
+      "method": "unmodified headless Chromium runtime screenshot"
+    },
+    {
+      "path": "docs/store/screenshots/content-r2/ipad-tickets.png",
+      "width": 2064,
+      "height": 2752,
+      "sha256": "60bad2a90d4b9051edfe24a0b437c51afd1ac28d94125be04b061f77b6fec12b",
+      "native": false,
+      "method": "unmodified headless Chromium runtime screenshot"
+    }
+  ],
+  "retainedUntrackedMuse": [
+    {
+      "path": "docs/art/ART_RESCORE_MUSE.md",
+      "sha256": "5bacc02d4cc4f4719b15a9c1b9f0eaff6f914d5bf753dd0dce2516c52164a8d8"
+    },
+    {
+      "path": "docs/art/ART_RESCORE2_MUSE.md",
+      "sha256": "62ae54980aca3c67086b28acef6fdcdb62142e177865152301898e8b8bd2dd5c"
+    },
+    {
+      "path": "docs/art/ART_RESCORE3_MUSE.md",
+      "sha256": "67cfbb87e4c55522fd465053299777011a6654981dedd8a93ae96f0b8ec2b918"
+    },
+    {
+      "path": "docs/art/ART_RESCORE4_MUSE.md",
+      "sha256": "f9de7a05c119356a0c75a55685c8cdf3e4401cd59f17afda20aa63d5a9e659e4"
+    },
+    {
+      "path": "docs/art/ART_RESCORE5_MUSE.md",
+      "sha256": "fced21608715c10fdcb61e04f48876adce277f925474e2532bf582aa7fc104ea"
+    },
+    {
+      "path": "docs/art/ART_RESCORE6_MUSE.md",
+      "sha256": "262f0188255247989bbea6b191b8e3124c7a2ec6f275da0029aa8e5c4debc9fc"
+    },
+    {
+      "path": "docs/content/CONTENT_REVIEW_R1_MUSE.md",
+      "sha256": "8583b33aca05fb2072163c14871cf613a23d8ecbb58bd5040e1085104712ce17"
+    }
+  ],
+  "limits": [
+    "Native iPhone/iPad and child/parent playtests BLOCKED",
+    "Five-person completion blind test BLOCKED",
+    "No independent Muse R2 score yet",
+    "Concurrent host load: performance is reference only",
+    "Local commit only; no publishing, external messages or delegation"
+  ]
+}

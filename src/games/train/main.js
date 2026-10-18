@@ -20,7 +20,8 @@ if(journey)game.start(journey.lesson,{route:journey.route});
 const initialSettings=readSettings();game.childMode=initialSettings.childMode;
 const childMeters=document.createElement('div');childMeters.className='train-child-meters';childMeters.innerHTML='<b>停穩了</b><span aria-label="速度格">'+Array.from({length:5},()=>'<i></i>').join('')+'</span><strong>慢慢到站</strong>';
 document.querySelector('.scene').append(childMeters);
-const cabCoach=document.createElement('div');cabCoach.className='train-cab-coach';cabCoach.innerHTML=`<img src="${appUrl('art/r8/coach-safe-window.png')}" alt="阿路教練在列車車窗內陪你駕駛"><span>阿路陪你慢慢開</span>`;document.querySelector('.scene').append(cabCoach);
+const dashboard=document.createElement('div');dashboard.className='train-child-dashboard';dashboard.setAttribute('aria-label','行車路牌');childMeters.before(dashboard);dashboard.append(childMeters,document.querySelector('.next-station'),document.querySelector('.signal-instrument'));
+const cabCoach=document.createElement('div');cabCoach.className='train-cab-coach';cabCoach.innerHTML=`<img src="${appUrl('art/r8/coach-safe-window.png')}" alt="阿路教練在列車車窗內陪你駕駛"><span>阿路陪你慢慢開</span>`;document.querySelector('.coach').append(cabCoach);
 try{world=new TrainWorld($('world'),game);}catch(error){$('asset-loading').innerHTML='<b>這台瀏覽器無法啟動 3D 畫面</b><span>請在 Safari 或 Chrome 重新開啟。</span>';console.error(error);}
 window.__trainSchool={game,audio,getState:()=>game.getState(),getAssets:()=>world?.assetStatus,world};
 window.addEventListener('train-assets',()=>{const status=world.assetStatus;if(Object.values(status).every(v=>v==='ready'))$('asset-loading').hidden=true;else if(Object.values(status).includes('error'))$('asset-loading').innerHTML='<b>模型載入未完成</b><span>請重新整理，或確認網路連線後再試。</span>';});
