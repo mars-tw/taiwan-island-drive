@@ -1,0 +1,142 @@
+{
+  "status": "VERIFIED",
+  "tool": "image_gen.imagegen",
+  "model_slug": null,
+  "newGenerationCalls": 1,
+  "newDesigns": 1,
+  "newRuntimeImages": 1,
+  "prompts": "docs/content/r5/art/PROMPTS.json",
+  "reusedManifest": "docs/content/r4/art/manifest.json",
+  "reused": [
+    {
+      "path": "public/art/r4/coast.webp",
+      "sha256": "50c94366f02da986ccbdd8f03faacde423618f32390054540dee383092d629ce"
+    },
+    {
+      "path": "public/art/r6/train.png",
+      "sha256": "53878585ac4ebd94a79d8680bc3fc8a43ff3230bae4ea74aba8b6e555eead047"
+    },
+    {
+      "path": "public/art/r8/ocean-ticket.png",
+      "sha256": "bbee7fafca059026638dd7fceb9675f403eebb9a946ff71a6838412842ce762d"
+    },
+    {
+      "path": "public/art/r8/coach-safe-window.png",
+      "sha256": "4e85dce5116d019f8b75e381821426539d63fbc4e3489a85da010a26d7df73b0"
+    },
+    {
+      "path": "public/art/r6/car.png",
+      "sha256": "349eee11b482ed37dd3538de2dec067a3f919c4da08f8f19e7bca19900429567"
+    },
+    {
+      "path": "public/art/content-r1/cake.png",
+      "sha256": "87fa87c867227157a5de69c71350b45fda27e143375107ddf9f982d7edc34090"
+    },
+    {
+      "path": "public/art/content-r1/flag.png",
+      "sha256": "f90565b2d5d5679335d3d39f697c757f3982ea0e834d30d56a101902861569ae"
+    },
+    {
+      "path": "public/art/content-r1/crossing.webp",
+      "sha256": "32625e00c1457064d2dc5b7a9e2fa7b0d5bc8094e9b8db09b46ea4a49413bf9e"
+    },
+    {
+      "path": "public/art/content-r2/crossing-banyan.webp",
+      "sha256": "3b2e0d969f37853ede91b29c65cde48b36ca17f4cc10317d011d9f4f5bb3dcfe"
+    },
+    {
+      "path": "public/art/content-r2/crossing-lighthouse.webp",
+      "sha256": "fc23cd540292e60a7bb956897bc53c52d5814779d3a4a132ddff373f2cc0f778"
+    },
+    {
+      "path": "public/art/content-r2/cake-complete.webp",
+      "sha256": "6e651ddb12724204a8cd0acf7cc39389d17f455942f3faf0557252df468c8658"
+    },
+    {
+      "path": "public/art/content-r2/crossing-complete.webp",
+      "sha256": "04524382b1614f5f2f3963e05f7a93d3994dfa6cbcef0ad4a9e3987ba732932a"
+    },
+    {
+      "path": "public/art/content-r3/cake-slope.webp",
+      "sha256": "559f4d30a61c63ce9c32fc2509dd9d2da9ebf84ec3da537d48644b8229555ffb"
+    },
+    {
+      "path": "public/art/content-r3/cake-bends.webp",
+      "sha256": "41e7cd4614a32a954ba00c22b0eb5d6c7015c0c610d327798930165b9eaf0462"
+    },
+    {
+      "path": "public/art/content-r3/cake-bay.webp",
+      "sha256": "e59ead97a1ff0ff771e46dd11052649e6d72e9da27f6204605dcc503e242e188"
+    },
+    {
+      "path": "public/art/content-r3/station-horizontal.webp",
+      "sha256": "f341af18b3c892f5f943747b3a9c23af0a7d19eb2c6b9755f822c78379ebf219"
+    },
+    {
+      "path": "public/art/content-r3/train-side.webp",
+      "sha256": "3342fe060254debded56d8a6410d9a7c03b38ecc781f38344b42c06dc1db4d6f"
+    },
+    {
+      "path": "public/art/content-r1/child-0.png",
+      "sha256": "96240dc7d9c64986194823bc8f518fc7fd67f590295a03a12b0e93092085cbb2"
+    },
+    {
+      "path": "public/art/content-r1/child-1.png",
+      "sha256": "9aaa95d5097253dbe5eb54b92627c949211d8ea7e62d695181ad58f924aa0f2d"
+    },
+    {
+      "path": "public/art/content-r1/bike-0.png",
+      "sha256": "e0eaec4851544486a9d0618692f676316fb44c14b436fc05a37bdaa307b362ea"
+    },
+    {
+      "path": "public/art/content-r1/bike-1.png",
+      "sha256": "310ec0b57b212fec13477e5b15cdd5cc3fd3d9f9b038021f0af041817e0de634"
+    },
+    {
+      "path": "public/art/content-r1/grandma-0.png",
+      "sha256": "af720ec495e59cf0375778246523fa57d74af4b76b8c7842ddc93b1bb769e9bf"
+    },
+    {
+      "path": "public/art/content-r1/grandma-1.png",
+      "sha256": "b53d613c078187d8f59bb7dfadfe4903a79f847dadbcf305ed493607cac2a725"
+    },
+    {
+      "path": "public/art/r5/passenger-1-0.png",
+      "sha256": "35193f9b422366a80bfbb6ce9c5b6f41a0c72dbe91fdf6c2f48519f08cb01937"
+    },
+    {
+      "path": "public/art/r5/passenger-1-1.png",
+      "sha256": "43febb4c3437bc80d9a7be743e745e4b92a14e705d5fd54ef2992eb97d2af8b2"
+    },
+    {
+      "path": "public/art/r5/passenger-2-0.png",
+      "sha256": "7867d3eb0a508a5bb8c12ff971e379b43680d4d436c81815d52c179c88a98134"
+    },
+    {
+      "path": "public/art/r5/passenger-2-1.png",
+      "sha256": "b4eebc0807a6e3538df7f963db92745dd8cbe242fdf7b3d51d3fc740c5a93619"
+    },
+    {
+      "path": "public/art/r5/passenger-3-0.png",
+      "sha256": "0fe3e06db88c87b275566329dd6d2163ec40ae284c16d3015eb80c17def799b4"
+    },
+    {
+      "path": "public/art/r5/passenger-3-1.png",
+      "sha256": "40dccb2bfcefaca1d023788a9056056aa22113f3744f96e65297274dc74e99bc"
+    }
+  ],
+  "assets": [
+    {
+      "path": "docs/content/r5/art/coach-reminder-original.png",
+      "width": 1254,
+      "height": 1254,
+      "sha256": "c51bd1b88efc1ab29bd5584a20fd4eed391201acecd7e6d5753b5c9b55eaebd1"
+    },
+    {
+      "path": "public/art/content-r5/coach-reminder.png",
+      "width": 280,
+      "height": 280,
+      "sha256": "b8a7835462829bf67713738e75c24e540bbd97957fa8671ea8b73c4b643294c6"
+    }
+  ]
+}

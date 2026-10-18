@@ -1,0 +1,15 @@
+{
+  "tool": "image_gen.imagegen",
+  "model_slug": null,
+  "style_prefix": "Island Traffic Academy sunny Taiwan coastal storybook, chunky ink-navy outlines, rounded toy proportions, warm upper-left light, saturated sea blue sunflower yellow coral orange, gentle paper texture, clean silhouette readable at 64px. ",
+  "records": [
+    {
+      "id": "coach-reminder",
+      "prompt": "Island Traffic Academy sunny Taiwan coastal storybook, chunky ink-navy outlines, rounded toy proportions, warm upper-left light, saturated sea blue sunflower yellow coral orange, gentle paper texture, clean silhouette readable at 64px. Use case: identity-preserve illustration-story. Reference image is the existing Alu coach. Generate ONE new transparent game sprite, same front-facing passenger window composition and same character identity: adorable Taiwan leopard-cat coach, spotted golden fur, round ears, yellow safety cap, orange vest, blue overalls, securely fastened diagonal navy safety belt, both paws fully INSIDE the CLOSED blue car door window frame. Expression is gently concerned and kindly attentive, slightly raised inner eyebrows, small rounded open mouth, never scared or angry; gaze toward child's wobbling cake. He holds a small WHITE square sign with a simple navy curved U-turn/recovery arrow pointing left, green border, no letters, no digits. Keep blue car window shape, mirror and seat, all anatomy and paws inside frame. Fully finished thick ink-navy outlines and paper texture consistent with reference; readable in 80px thumbnail. No text, logo, watermark, background scenery or drop shadows outside cutout. Save as a transparent PNG with ample 3% margin all around. Only this sprite, no multi-panel sheet.",
+      "reference": "public/art/r8/coach-safe-window.png",
+      "original": "docs/content/r5/art/coach-reminder-original.png",
+      "runtime": "public/art/content-r5/coach-reminder.png",
+      "preparation": "Proportional resize to 280px, alpha preserved; no repainting"
+    }
+  ]
+}

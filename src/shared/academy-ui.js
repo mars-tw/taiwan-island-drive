@@ -4,7 +4,7 @@ import {ACADEMY_CHAPTERS,academySummary,readAcademy,performDispatch,importTrainB
 import {dispatchMarkup,dispatchLesson} from '../games/math/dispatch.js';
 import {launchJourney} from './passport.js';
 import {journeyById} from './journeys.js';
-import {studentSaved} from './student-save.js';
+import {studentSaved,readStudent} from './student-save.js';
 import {celebrate,playChime} from './celebrate.js';
 import {readSettings} from './settings.js';
 import {pauseNativeGames,registerGameLifecycle,registerNativeOverlay} from './native.js';
@@ -18,7 +18,8 @@ export function installAcademy(){
     document.getElementById('academy-story').textContent=s.badge?'學員證收齊調度、接客、運送與找路紀錄。再跑一趟，或選交通工具練習。':s.next.story;
     start.textContent=s.badge?'再上列車數學課':s.index===0?(a.dispatch.active&&a.dispatch.active.phase!=='done'?'繼續列車數學課':'接下第一份調度單'):`繼續：${s.next.name}`;
     document.getElementById('academy-route').textContent=ACADEMY_CHAPTERS.map((c,i)=>`${s.done[i]?'✓':'○'} ${c.name}`).join(' → ');
-    document.getElementById('academy-record').textContent=`學生證 · ${s.done.filter(Boolean).length}／4 章${s.mathBadge?' · 數學調度章':''}${s.badge?' · 山海同行章':''}${a.imported?' · 已保留小小列車長紀錄':''}`;
+    const coastal=Object.values(readStudent().sections.contentR1||{}).filter(r=>r?.completed).length;
+    document.getElementById('academy-record').textContent=`學生證 · ${s.done.filter(Boolean).length}／4 章 · 海岸 ${coastal}／3 課${s.mathBadge?' · 數學調度章':''}${s.badge?' · 山海同行章':''}${a.imported?' · 已保留小小列車長紀錄':''}`;
   }
   function render(message='',previous=new Map(),action=''){
     const a=readAcademy();delete dialog.dataset.inTransit;dialog.innerHTML=dispatchMarkup(a.dispatch,message);

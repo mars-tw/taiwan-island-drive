@@ -71,3 +71,7 @@
 # 新內容第三輪（2026-10-19）
 
 新增五張 `image_gen.imagegen` 美術：海風起步坡、燈塔連續彎、榕樹臨停灣、單一橫向月台、藍黃側面列車。沿用同一完整風格前綴；模型 slug 未揭露。原畫與實際提示／雜湊：`docs/content/r3/art/`，遊戲用 WebP：`public/art/content-r3/`。只做 PNG 至 WebP 轉格式並保留透明度；由本專案生成，隨 MIT 專案提供。人物、蛋糕、小旗、教練及結局沿用前輪受管美術。沒有新增外部下載素材、字型、SDK 或依賴。
+
+# 新內容第五輪（2026-10-19）
+
+新增一張阿路提醒表情，實際工具 `image_gen.imagegen`，模型 slug 未揭露。參考本專案 `public/art/r8/coach-safe-window.png`，沿用相同完整風格前綴、黃帽石虎、藍窗與安全帶；只做透明等比縮圖。提示、原畫及 SHA-256 在 `docs/content/r5/art/`，遊戲圖為 `public/art/content-r5/coach-reminder.png`。由本專案生成，隨本 MIT 專案提供；沒有外部下載素材、依賴或 SDK。安心與提醒使用不同靜態表情，不宣稱骨架動畫。
