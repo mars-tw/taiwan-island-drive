@@ -1,0 +1,70 @@
+{
+  "round": 8,
+  "work_order": "送審前深度優化第一輪",
+  "tool": "image_gen.imagegen",
+  "model_slug": null,
+  "model_note": "工具未揭露模型 slug；不以 gpt-image-2 計畫名冒充實際模型證據。",
+  "style_prefix": "Island Traffic Academy sunny Taiwan coastal storybook, chunky ink-navy outlines, rounded toy proportions, warm upper-left light, saturated sea blue sunflower yellow coral orange, gentle paper texture, clean silhouette readable at 64px. ",
+  "records": [
+    {
+      "id": "airborne-coast",
+      "prompt": "Island Traffic Academy sunny Taiwan coastal storybook, chunky ink-navy outlines, rounded toy proportions, warm upper-left light, saturated sea blue sunflower yellow coral orange, gentle paper texture, clean silhouette readable at 64px. Use case illustration-story. Wide panoramic GAME BACKGROUND. Airborne view above the eastern Taiwan Pacific coast: 78 percent open bright blue sky with soft round white cumulus clouds framing far left and right, lower 22 percent distant turquoise ocean with two rounded green offshore islands and small white lighthouse, coastal cliffs tiny and far on bottom-left. Clear empty sky corridor center and upper right for live yellow airplane and golden target star. Horizon near bottom fifth. FLAT hand-painted gouache storybook with thick simplified outlines, no photoreal texture, no road or runway, no vehicles, no people, no stars, no text. Horizontal 3:2.",
+      "transparent_background": false,
+      "output_hint": "Generated images are saved to C:\\Users\\digimkt\\.codex\\generated_images\\01a14db6-957c-7be0-8494-fc0bfe715275 as C:\\Users\\digimkt\\.codex\\generated_images\\01a14db6-957c-7be0-8494-fc0bfe715275\\exec-334346d0-33f3-41c3-9cb5-7926f062fbd7.png by default.\nIf you need to use a generated image at another path, copy it and leave the original in place unless the user explicitly asks you to delete it.\nThe generated image is already displayed to the user. There is no need to render it in the final response as a Markdown image or file link."
+    },
+    {
+      "id": "coach-safe-window",
+      "prompt": "Island Traffic Academy sunny Taiwan coastal storybook, chunky ink-navy outlines, rounded toy proportions, warm upper-left light, saturated sea blue sunflower yellow coral orange, gentle paper texture, clean silhouette readable at 64px. Use case identity-preserve. Reference image is character identity only. Create one large friendly portrait of A-Lu the leopard-cat traffic coach, same round eyes golden spotted fur yellow cap orange reflective vest blue overalls. He is seated safely INSIDE a blue car passenger window, upper body behind closed blue door sill, diagonal charcoal seatbelt crossing chest, both elbows and hands entirely inside window frame. One hand gently points to a green straight-ahead arrow card held inside the cabin. Entire head and ears contained within the round navy window frame; roof visible above hat, fully closed frame all sides. Clear joyful face, no leaning out, no arms out, no flag protruding. Flat saturated storybook gouache with thick navy ink not a realistic render. Transparent background outside the complete closed car-window frame, centered fully visible square composition.",
+      "transparent_background": true,
+      "reference_images": [
+        "public/art/r6/coach.png"
+      ],
+      "output_hint": "Generated images are saved to C:\\Users\\digimkt\\.codex\\generated_images\\01a14db6-957c-7be0-8494-fc0bfe715275 as C:\\Users\\digimkt\\.codex\\generated_images\\01a14db6-957c-7be0-8494-fc0bfe715275\\exec-db5bcc31-b2d1-488c-b8d5-396f5e8f782c.png by default.\nIf you need to use a generated image at another path, copy it and leave the original in place unless the user explicitly asks you to delete it.\nThe generated image is already displayed to the user. There is no need to render it in the final response as a Markdown image or file link."
+    },
+    {
+      "id": "train-platform",
+      "prompt": "Island Traffic Academy sunny Taiwan coastal storybook, chunky ink-navy outlines, rounded toy proportions, warm upper-left light, saturated sea blue sunflower yellow coral orange, gentle paper texture, clean silhouette readable at 64px. Use case illustration-story. Key game object: a complete cheerful BLUE AND YELLOW small island passenger train matching reference design, front three-quarter view facing lower left, STOPPED with every wheel touching the two steel rails, rails visibly continuous under all wheels, wooden sleepers and gravel contact shadows. Train has big friendly windshield eyes, rounded blue cab yellow side stripe four windows. Include a small curved coastal station platform beside it with white and blue safety railing and a warm peach tiled boarding edge. No people. No scenery outside this isolated mini-diorama, fully transparent around train AND the supporting track/platform base. Train fills 70 percent composition, all wheels and short track fully in frame, generous edge padding. Not floating; strong physical contact. Wide landscape 3:2.",
+      "transparent_background": true,
+      "reference_images": [
+        "public/art/r6/train.png"
+      ],
+      "output_hint": "Generated images are saved to C:\\Users\\digimkt\\.codex\\generated_images\\01a14db6-957c-7be0-8494-fc0bfe715275 as C:\\Users\\digimkt\\.codex\\generated_images\\01a14db6-957c-7be0-8494-fc0bfe715275\\exec-b493ad5a-9e98-45e6-a43f-f928161bf535.png by default.\nIf you need to use a generated image at another path, copy it and leave the original in place unless the user explicitly asks you to delete it.\nThe generated image is already displayed to the user. There is no need to render it in the final response as a Markdown image or file link."
+    },
+    {
+      "id": "ocean-ticket",
+      "prompt": "Island Traffic Academy sunny Taiwan coastal storybook, chunky ink-navy outlines, rounded toy proportions, warm upper-left light, saturated sea blue sunflower yellow coral orange, gentle paper texture, clean silhouette readable at 64px. Use case ui-mockup. One premium children game UI PANEL FRAME: a large horizontal white traffic-school ticket with deep blue rounded chunky border, small sunflower-yellow screw caps at four corners, coral-orange and white safety stripe very thin along top, tiny ocean-wave curl embossing along bottom. Blank white center 80 percent area perfectly clean for live Chinese text. Thick blue rim and offset hard paper shadow, short perforated ticket notch on left and right edges. Frame alone, transparent outside, no text, no symbols in central reading area, no hands. Wide landscape 3:2. Match storybook brushwork and navy ink of reference coach.",
+      "transparent_background": true,
+      "reference_images": [
+        "public/art/r6/coach.png"
+      ],
+      "output_hint": "Generated images are saved to C:\\Users\\digimkt\\.codex\\generated_images\\01a14db6-957c-7be0-8494-fc0bfe715275 as C:\\Users\\digimkt\\.codex\\generated_images\\01a14db6-957c-7be0-8494-fc0bfe715275\\exec-459b40b0-11e2-4a4d-bfbf-da1c70522750.png by default.\nIf you need to use a generated image at another path, copy it and leave the original in place unless the user explicitly asks you to delete it.\nThe generated image is already displayed to the user. There is no need to render it in the final response as a Markdown image or file link."
+    },
+    {
+      "id": "coast-star",
+      "prompt": "Island Traffic Academy sunny Taiwan coastal storybook, chunky ink-navy outlines, rounded toy proportions, warm upper-left light, saturated sea blue sunflower yellow coral orange, gentle paper texture, clean silhouette readable at 64px. Use case logo-brand. One collectible traffic-school ACHIEVEMENT BADGE icon: golden five-point star with deep ink-blue outline in center, under star small curved turquoise ocean-wave ribbon, blue side ribbons and a tiny GREEN dispatch flag behind. Bold simple high-contrast silhouette readable at native64px, playful premium enamel sticker illustration not shiny 3D. No letters, no numerals, no border square, no surrounding scene. Centered on genuinely transparent background, generous padding, square.",
+      "transparent_background": true,
+      "output_hint": "Generated images are saved to C:\\Users\\digimkt\\.codex\\generated_images\\01a14db6-957c-7be0-8494-fc0bfe715275 as C:\\Users\\digimkt\\.codex\\generated_images\\01a14db6-957c-7be0-8494-fc0bfe715275\\exec-ee01c6f0-ac29-4e45-9eb9-8ddd3ecd4d9b.png by default.\nIf you need to use a generated image at another path, copy it and leave the original in place unless the user explicitly asks you to delete it.\nThe generated image is already displayed to the user. There is no need to render it in the final response as a Markdown image or file link."
+    },
+    {
+      "id": "coast-sign",
+      "prompt": "Island Traffic Academy sunny Taiwan coastal storybook, chunky ink-navy outlines, rounded toy proportions, warm upper-left light, saturated sea blue sunflower yellow coral orange, gentle paper texture, clean silhouette readable at 64px. Use case logo-brand. One island coastal ROUTE SIGN icon for a children traffic school: a cheerful illustrated white lighthouse on a small green island over two turquoise waves, with a tiny green dispatch flag at top, on a chunky rounded blue-bordered white road-sign shield. No words no letters no numbers, no pole, no scenery outside the shield. Thick dark navy contours, flat saturated colors and gentle paper texture, visual clarity at64px. Transparent outside shield, square image with ample margin.",
+      "transparent_background": true,
+      "output_hint": "Generated images are saved to C:\\Users\\digimkt\\.codex\\generated_images\\01a14db6-957c-7be0-8494-fc0bfe715275 as C:\\Users\\digimkt\\.codex\\generated_images\\01a14db6-957c-7be0-8494-fc0bfe715275\\exec-c1034993-d9b0-4f25-a706-833ad8b4aeea.png by default.\nIf you need to use a generated image at another path, copy it and leave the original in place unless the user explicitly asks you to delete it.\nThe generated image is already displayed to the user. There is no need to render it in the final response as a Markdown image or file link."
+    },
+    {
+      "id": "logo",
+      "prompt": "Island Traffic Academy sunny Taiwan coastal storybook, chunky ink-navy outlines, rounded toy proportions, warm upper-left light, saturated sea blue sunflower yellow coral orange, gentle paper texture, clean silhouette readable at 64px. Use case logo-brand. Redesign a finished game TITLE LOGO with exact Traditional Chinese text in two lines: top「島嶼」bottom「交通學院」. EXACT six Chinese characters, no additional text. Rounded bold hand-lettered characters: top sky-blue with white highlights, bottom sunflower-yellow/orange, thick navy and white sticker outline. Incorporate a small Taiwan island silhouette with winding coastal route and a green dispatch flag on right side, a subtle turquoise wave below, miniature lighthouse left. Compact high contrast landscape 2:1 lockup. Bright cheerful preschool traffic-school premium brand. Transparent outside the entire logo; no square background. Must read correctly even when small.",
+      "transparent_background": true,
+      "output_hint": "Generated images are saved to C:\\Users\\digimkt\\.codex\\generated_images\\01a14db6-957c-7be0-8494-fc0bfe715275 as C:\\Users\\digimkt\\.codex\\generated_images\\01a14db6-957c-7be0-8494-fc0bfe715275\\exec-1e027eb4-8a6e-4e43-97ac-b97cf1e489b0.png by default.\nIf you need to use a generated image at another path, copy it and leave the original in place unless the user explicitly asks you to delete it.\nThe generated image is already displayed to the user. There is no need to render it in the final response as a Markdown image or file link."
+    },
+    {
+      "id": "app-icon-proposal",
+      "prompt": "Island Traffic Academy sunny Taiwan coastal storybook, chunky ink-navy outlines, rounded toy proportions, warm upper-left light, saturated sea blue sunflower yellow coral orange, gentle paper texture, clean silhouette readable at 64px. Use case logo-brand. Finished APP ICON proposal for the Island Traffic Academy preschool game. Use exact A-Lu identity from reference: adorable golden leopard-cat face big warm brown eyes spotted cheeks round ears YELLOW safety cap, orange vest blue overall collar. Face fills central65 percent with hat fully visible. A small green dispatch flag on one side, recognizable rounded blue-and-yellow smiling train front tucked at bottom-right, two turquoise ocean waves at bottom. Bright SKY BLUE fully opaque square background with soft white cloud corners. Chunky navy contours, simple saturated shapes readable64px. No text, no letters, no transparent pixels, no outer rounded app mask (OS adds it). Square.",
+      "transparent_background": false,
+      "reference_images": [
+        "public/art/r6/coach.png"
+      ],
+      "output_hint": "Generated images are saved to C:\\Users\\digimkt\\.codex\\generated_images\\01a14db6-957c-7be0-8494-fc0bfe715275 as C:\\Users\\digimkt\\.codex\\generated_images\\01a14db6-957c-7be0-8494-fc0bfe715275\\exec-268633ea-3eee-43f9-bd48-32ab99404dcc.png by default.\nIf you need to use a generated image at another path, copy it and leave the original in place unless the user explicitly asks you to delete it.\nThe generated image is already displayed to the user. There is no need to render it in the final response as a Markdown image or file link."
+    }
+  ]
+}

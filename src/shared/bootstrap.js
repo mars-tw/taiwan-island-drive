@@ -3,7 +3,7 @@ import './parent-gate.css';
 import { APP_BASE, APP_REPOSITORY, appUrl } from './paths.js';
 import { readSettings, updateSettings,subscribeSettings,restoreLegacySettings,SETTINGS_KEY } from './settings.js';
 import { installParentGate } from './parent-gate.js';
-import { unlockCelebrationAudio } from './celebrate.js';
+import { unlockCelebrationAudio,playChime } from './celebrate.js';
 import { installPassport } from './passport.js';
 import {academySummary} from './academy.js';
 import {STUDENT_KEY,readStudent,restoreStudentIfMissing,subscribeStudent} from './student-save.js';
@@ -22,6 +22,7 @@ if (typeof document !== 'undefined') {
   document.querySelectorAll('[data-repository]').forEach(link => link.href = APP_REPOSITORY);
   if(isNativeBuild()){document.body.classList.add('is-native-app');document.querySelectorAll('a[href]').forEach(link=>{try{const url=new URL(link.href,document.baseURI);if(url.protocol===location.protocol&&url.host===location.host)link.href=nativeLocalHref(url.href,document.baseURI);}catch{}});}
   addEventListener('pointerdown',unlockCelebrationAudio,{passive:true});addEventListener('keydown',unlockCelebrationAudio);
+  document.addEventListener('click',event=>{const control=event.target?.closest?.('button,summary,a');if(control&&!control.disabled&&!control.closest('.dispatch-controls'))playChime('tap',{volume:.05});});
   installParentGate();void initNativeRuntime().then(async()=>{if(!isNativeBuild())return;await syncNativePreferences({key:STUDENT_KEY,read:readStudent,update:restoreStudentIfMissing,subscribe:subscribeStudent});await syncNativePreferences({key:SETTINGS_KEY,read:readSettings,update:restoreLegacySettings,subscribe:()=>()=>{}});});
   installPassport();
   if(mode&&new URLSearchParams(location.search).get('academy')==='1'){

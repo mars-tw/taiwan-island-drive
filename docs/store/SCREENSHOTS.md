@@ -1,5 +1,23 @@
 # 真實畫面截圖清單
 
+## 2.12.0／R8 現行美術送審準備圖
+
+現行選圖以 [`screenshots/art-r8/SELECTED.json`](screenshots/art-r8/SELECTED.json) 為準：每裝置七張不同階段，共14張。原尺寸為iPhone1290×2796、iPad2064×2752，全部無合成Web實載，不冒充原生截圖；尚未上傳。
+
+| 階段 | iPhone原圖 | iPad原圖 |
+|---|---|---|
+| 學院首頁 | [01-home](screenshots/art-r8/iphone-01-home.png) | [01-home](screenshots/art-r8/ipad-01-home.png) |
+| 海岸駕駛 | [02-driving](screenshots/art-r8/iphone-02-driving.png) | [02-driving](screenshots/art-r8/ipad-02-driving.png) |
+| 自然碰撞得星 | [03-car-star](screenshots/art-r8/iphone-03-car-star.png) | [03-car-star](screenshots/art-r8/ipad-03-car-star.png) |
+| 真正離地起飛 | [04-takeoff](screenshots/art-r8/iphone-04-takeoff.png) | [04-takeoff](screenshots/art-r8/ipad-04-takeoff.png) |
+| 空中找到星星 | [05-flight-star](screenshots/art-r8/iphone-05-flight-star.png) | [05-flight-star](screenshots/art-r8/ipad-05-flight-star.png) |
+| 前四後一分車 | [06-split](screenshots/art-r8/iphone-06-split.png) | [06-split](screenshots/art-r8/ipad-06-split.png) |
+| 月台停靠結算 | [07-complete](screenshots/art-r8/iphone-07-complete.png) | [07-complete](screenshots/art-r8/ipad-07-complete.png) |
+
+另外的裝載／同狀態前後圖在 `docs/art/compare/r8-after/`，工程與離線流程證據在 `docs/evidence/deep-r1/`。`scripts/check-deep-r1.mjs`使用UI與自然事件拍攝；舊八場景回歸圖組與歷史manifest保留在下方紀錄，不混進本輪七張選圖。
+
+## 歷史觀察課圖組
+
 狀態：PREPARED／EXECUTED；最終尺寸與 SHA-256 以 `screenshots/manifest.json` 為準。沒有疊字、拼接、替換模型或生成宣傳圖。全部來自本機 production web build 的真實操作畫面，**不是 iOS 模擬器／實機截圖**，上傳商店前要從相同版本的原生包重擷取。
 
 兩組尺寸：iPhone CSS 430×932、DPR 3 → 1290×2796；iPad CSS 1032×1376、DPR 2 → 2064×2752。檔名前綴分別為 `iphone-store`、`ipad13-store`。

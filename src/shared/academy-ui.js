@@ -5,7 +5,7 @@ import {dispatchMarkup,dispatchLesson} from '../games/math/dispatch.js';
 import {launchJourney} from './passport.js';
 import {journeyById} from './journeys.js';
 import {studentSaved} from './student-save.js';
-import {celebrate} from './celebrate.js';
+import {celebrate,playChime} from './celebrate.js';
 import {readSettings} from './settings.js';
 import {pauseNativeGames,registerGameLifecycle,registerNativeOverlay} from './native.js';
 
@@ -21,7 +21,7 @@ export function installAcademy(){
     document.getElementById('academy-record').textContent=`學生證 · ${s.done.filter(Boolean).length}／4 章${s.mathBadge?' · 數學調度章':''}${s.badge?' · 山海同行章':''}${a.imported?' · 已保留小小列車長紀錄':''}`;
   }
   function render(message='',previous=new Map(),action=''){
-    const a=readAcademy();dialog.innerHTML=dispatchMarkup(a.dispatch,message);
+    const a=readAcademy();delete dialog.dataset.inTransit;dialog.innerHTML=dispatchMarkup(a.dispatch,message);
     dialog.querySelectorAll('.dispatch-wheels').forEach(wheels=>{wheels.replaceChildren();for(let i=0;i<2;i++){const wheel=document.createElement('span');wheel.textContent='●';wheels.append(wheel);}});
     if(a.dispatch.active?.phase==='intro')dialog.querySelector('.dispatch-instruction').textContent='海風站的朋友要去山海教室。一起請朋友上車，再分成兩車。';
     dialog.dataset.phase=a.dispatch.active?.phase;
@@ -42,6 +42,8 @@ export function installAcademy(){
     // Rebuild from the same global navigation, at the same x/y positions.
     top.replaceChildren(...[...document.querySelectorAll('body>.academy-nav>a')].map(e=>e.cloneNode(true)));
     top.querySelector('a').id='math-back';top.querySelector('a').onclick=e=>{e.preventDefault();close();};
+    const passport=document.querySelector('body>.academy-nav [data-open-passport]');
+    const studentButton=passport.cloneNode(true);studentButton.onclick=()=>{pause();passport.click();};top.append(studentButton);
     const pauseButton=document.createElement('button');pauseButton.id='math-pause';pauseButton.textContent='暫停';pauseButton.setAttribute('aria-label','暫停列車數學課');pauseButton.onclick=pause;top.append(pauseButton);
     if(a.dispatch.active?.phase==='done'){
       const next=document.createElement('button');next.id='math-next';next.textContent='去接朋友 →';next.onclick=()=>{close();launchJourney(journeyById('train-1'),{academy:true});};
@@ -50,7 +52,7 @@ export function installAcademy(){
       dialog.querySelector('#dispatch-title').textContent='調度完成！';
       const awards=document.createElement('div');awards.className='dispatch-awards';const total=q.front+q.rear;
       for(const [title,formula,icon] of [['合起來',`${q.front} ＋ ${q.rear} ＝ ${total}`,'badge'],['分開算',`${total} − ${q.rear} ＝ ${q.front}`,'route-badge']]){const card=document.createElement('section');card.className='math-award';card.append(artImage(icon));const label=document.createElement('strong');label.textContent=title;const number=document.createElement('b');number.textContent=formula;card.append(label,number);awards.append(card);}equation.replaceWith(awards);
-      const stage=document.createElement('div');stage.className='celebration-stage';stage.append(artImage('confetti','','celebration-confetti'),artImage('train','','departure-train'));body.insertBefore(stage,awards);train.hidden=true;
+      const stage=document.createElement('div');stage.className='celebration-stage';stage.append(artImage('confetti','','celebration-confetti'),artImage('train-platform','列車停靠海風站，車輪接觸鐵軌','departure-train'));body.insertBefore(stage,awards);train.hidden=true;
     }
     const coach=document.createElement('div');coach.className='dispatch-coach';coach.append(artImage('coach','阿路教練'),artImage('coach-cheer','','coach-cheer'));const cue=document.createElement('span');cue.textContent={intro:'我是阿路！一起接朋友去山海教室。',load:'月台的朋友在等你，請他們上車吧！',split:'朋友換車廂，總人數一樣多。',subtract:'橘色車廂留下來，藍色車廂帶走幾人？',done:'你會合起來，也會分開算。綠旗出發！'}[phase];coach.append(cue);body.append(coach);
     if(phase==='done')body.querySelector('.celebration-stage').append(coach);
@@ -72,7 +74,15 @@ export function installAcademy(){
       });
       if(phase==='subtract'&&action==='check')dialog.querySelector('.dispatch-carriage.rear').animate([{transform:'translateX(-24px)'},{transform:'translateX(0)'}],{duration:650,easing:'ease-out'});
     }
-    dialog.querySelectorAll('[data-dispatch]').forEach(button=>button.onclick=()=>{if(paused)return;const action=button.dataset.dispatch,before=readAcademy().dispatch;const rects=new Map([...dialog.querySelectorAll('[data-passenger]')].map(e=>[e.dataset.passenger,e.getBoundingClientRect()]));const r=performDispatch(action,readSettings().childMode?'small':'medium');
+    const moving=[...dialog.querySelectorAll('.passenger-transit')];
+    if(moving.length){
+      const settledText=equation.textContent;equation.textContent='朋友正在上車／換車廂…';dialog.dataset.inTransit='true';
+      const active=[...dialog.querySelectorAll('[data-dispatch]:not(:disabled)')];active.forEach(b=>b.disabled=true);
+      Promise.all(moving.flatMap(e=>e.getAnimations().map(a=>a.finished.catch(()=>{})))).then(()=>{if(!equation.isConnected)return;equation.textContent=settledText;delete dialog.dataset.inTransit;active.forEach(b=>b.disabled=false);});
+    }
+    if(['add','remove','to-front','to-rear'].includes(action))playChime('tap',{volume:.08});
+    if(phase==='load'&&q.front===total){const ready=dialog.querySelector('[data-dispatch=check]');ready.textContent='坐好了，去分車 →';ready.classList.add('next-ready');cue.textContent='朋友坐好了！按橘色車票去分車。';}
+    dialog.querySelectorAll('[data-dispatch]').forEach(button=>button.onclick=()=>{if(paused||dialog.dataset.inTransit==='true')return;const action=button.dataset.dispatch,before=readAcademy().dispatch;const rects=new Map([...dialog.querySelectorAll('[data-passenger]')].map(e=>[e.dataset.passenger,e.getBoundingClientRect()]));const r=performDispatch(action,readSettings().childMode?'small':'medium');
       if(cast&&before.active&&r.state.active){const next=r.state.active;
         if(action==='add'&&next.front>before.active.front)cast.front.push(cast.queue.shift());
         if(action==='remove'&&next.front<before.active.front)cast.queue.unshift(cast.front.pop());

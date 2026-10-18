@@ -1,5 +1,12 @@
 # CREDITS
 
+## 2.12.0 R8／送審前深度優化第一輪
+
+- 八次實際生成、八個新設計，工具 `image_gen.imagegen`；實際模型 slug 未揭露，manifest 記錄 null。沒有把計畫中的 gpt-image 型號當成模型證據。
+- 空中海岸背景、安全車窗內阿路、停靠鐵軌列車、海浪交通票框、海岸星章、燈塔路牌、新 Logo、App 圖示提案。含兩個沿用R5月台的細節裁圖，共11個 Web 輸出、2,246,041 bytes；1024圖示提案留文件區，不進包。原圖、opaque master、alpha mask、清邊、縮圖與 hash 見 `docs/art/PROMPTS_R8.json`、`docs/art/asset-manifest-r8.json`、`scripts/prepare-art-r8.py`。
+- 阿路與列車使用本專案受管角色圖作身份參考，沒有新增第三方下載素材；AI生成權利與程式碼MIT授權分開記載，不宣稱平台未授予的排他權。原生圖示catalog沿用R7，本輪只更換Web圖示並交付提案。
+- 既有Blender車輛、角色三視圖、乘客步態、字型、音樂、Apache-2.0／CC BY 4.0移植、LICENSE與NOTICE完整保留。沒有新增外部連結或第三方SDK。
+
 ## 2.11.0 R7／美術第四輪
 
 - 六次實際生成，工具 `image_gen.imagegen`；工具未提供模型slug，記錄為null並註明，沒有假填gpt-image版本。角色沿用本專案阿路圖作身份參考；完整提示、共同前綴、來源路徑見 `docs/art/PROMPTS_R7.json`，三視圖見 `docs/art/character-sheets/`。

@@ -2,15 +2,17 @@
 import './art-round5.css';
 import './art-round6.css';
 import './art-round7.css';
+import './art-round8.css';
 import {appUrl} from './paths.js';
 export function artImage(name,alt='',className=''){
+  const r8={logo:'logo',badge:'coast-star','coast-sign':'coast-sign',panel:'ocean-ticket','train-platform':'train-platform','coach-safe-window':'coach-safe-window'};
   const newest=['coach-straight','coach-turn','coach-reward','coach-radio','panel','turn-sign','car-rear','flight-rear','finish-flag','badge','logo'].includes(name);
   const latest=['coach','coach-cheer','car','train','flight','badge','route-badge','mail-badge','confetti','ticket','logo'].includes(name)||/^(coupe|rally|suv|van)-[0-4]$/.test(name);
   const current=['coach','coach-cheer','car','train','flight','badge','flag','station','ticket','logo','carriage-blue','carriage-orange'].includes(name)||/^passenger-\d-\d$/.test(name);
-  const img=document.createElement('img');img.src=appUrl(`art/${newest?'r7':latest?'r6':current?'r5':'r4'}/${name}.png`);img.alt=alt;img.className=className;img.decoding='async';return img;
+  const img=document.createElement('img');img.src=appUrl(r8[name]?`art/r8/${r8[name]}.png`:`art/${newest?'r7':latest?'r6':current?'r5':'r4'}/${name}.png`);img.alt=alt;img.className=className;img.decoding='async';return img;
 }
 export function installArt(){
-  document.documentElement.classList.add('art-r5','art-r6','art-r7');
+  document.documentElement.classList.add('art-r5','art-r6','art-r7','art-r8');
   const nav=document.querySelector('.academy-nav');
   if(nav)for(const [i,link] of [...nav.querySelectorAll('a')].entries()){
     const label=link.querySelector('span');if(i===0)label.textContent='回學院';link.replaceChildren(artImage(['route-badge','car-rear','train','flight-rear'][i]),label);
@@ -26,7 +28,7 @@ export function installArt(){
     const picture=artImage('coupe-0','海風 GT 雙門跑車','car-preview-image');picture.id='car-preview-image';hero.append(picture,artImage('coach','阿路教練陪你開車','car-menu-coach'));
     const label=document.createElement('div');label.className='car-hero-label';label.append(document.querySelector('#vehicle-name'),document.querySelector('#vehicle-category'));hero.append(label);intro.append(hero);
     const settings=document.querySelector('#settings-button');settings.setAttribute('aria-label','家長駕駛設定');hero.append(settings);
-    const hudCoach=document.createElement('div');hudCoach.className='drive-coach';hudCoach.dataset.pose='straight';hudCoach.append(artImage('coach-straight','阿路教練坐副駕，繫好安全帶，舉直行牌'));const cue=document.createElement('span');cue.textContent='一起沿海岸前進';hudCoach.append(cue);document.querySelector('#hud').append(hudCoach);
+    const hudCoach=document.createElement('div');hudCoach.className='drive-coach';hudCoach.dataset.pose='straight';hudCoach.append(artImage('coach-safe-window','阿路教練在完整車窗內繫好安全帶'));const cue=document.createElement('span');cue.textContent='一起沿海岸前進';hudCoach.append(cue);document.querySelector('#hud').append(hudCoach);
     const speed=document.createElement('div');speed.className='speed-steps';speed.setAttribute('role','meter');speed.setAttribute('aria-label','行車速度');speed.setAttribute('aria-valuemin','0');speed.setAttribute('aria-valuemax','5');speed.innerHTML='<span>慢慢開</span><div>'+Array.from({length:5},()=>'<i></i>').join('')+'</div>';document.querySelector('.speedometer').append(speed);
     // Secondary equipment stays available in the existing pause surface.
     const equipment=document.createElement('div');equipment.className='pause-equipment';document.querySelector('#pause-overlay .overlay-card').append(equipment);equipment.append(document.querySelector('.tilt-toolbar'),document.querySelector('#camera-button'));

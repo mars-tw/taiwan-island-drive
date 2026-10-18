@@ -1,0 +1,372 @@
+{
+  "status": "VERIFIED",
+  "version": "2.12.0",
+  "rows": [
+    {
+      "device": "iphone",
+      "measurement": "cold-home-ready-ms",
+      "ms": 214
+    },
+    {
+      "device": "iphone",
+      "passengerInsideRear": {
+        "visible": "visible",
+        "width": 48,
+        "height": 76,
+        "src": "http://127.0.0.1:5286/art/r5/passenger-5-0.png"
+      }
+    },
+    {
+      "device": "iphone",
+      "measurement": "first-car-entry-ready-ms",
+      "ms": 1712
+    },
+    {
+      "device": "iphone",
+      "autoCruiseAndSafeCoach": {
+        "state": {
+          "speed": 66.65341658903851,
+          "distance": 156.1639935655125,
+          "elapsed": 9.866666666666736,
+          "progress": 0.06506833065229688,
+          "timeLeft": null,
+          "score": 1620,
+          "offRoad": false,
+          "boost": 1,
+          "phase": "running",
+          "countdown": 0,
+          "mapId": "coast",
+          "vehicleId": "coupe",
+          "mode": "cruise",
+          "camera": "chase",
+          "quality": "high",
+          "muted": false,
+          "collisions": 0,
+          "stars": 1,
+          "starTotal": 12
+        },
+        "speedLabel": "前進中，速度 3 格",
+        "coachTexture": "http://127.0.0.1:5286/art/r8/coach-safe-window.png",
+        "coastalSigns": 12
+      }
+    },
+    {
+      "device": "iphone",
+      "trueTakeoff": {
+        "y": 12.416771774910053,
+        "grounded": false,
+        "status": "離地飛行"
+      }
+    },
+    {
+      "device": "iphone",
+      "airborneProjection": {
+        "target": {
+          "x": 0.5999999999999996,
+          "y": 0.2999999999999999
+        },
+        "altitude": 143.74556152757168,
+        "background": "http://127.0.0.1:5286/art/r8/airborne-coast.webp"
+      }
+    },
+    {
+      "device": "iphone",
+      "sharedPause": {
+        "x": 358,
+        "y": 76,
+        "width": 60,
+        "height": 60
+      }
+    },
+    {
+      "device": "ipad",
+      "measurement": "cold-home-ready-ms",
+      "ms": 104
+    },
+    {
+      "device": "ipad",
+      "passengerInsideRear": {
+        "visible": "visible",
+        "width": 48,
+        "height": 76,
+        "src": "http://127.0.0.1:5286/art/r5/passenger-5-0.png"
+      }
+    },
+    {
+      "device": "ipad",
+      "measurement": "first-car-entry-ready-ms",
+      "ms": 593
+    },
+    {
+      "device": "ipad",
+      "autoCruiseAndSafeCoach": {
+        "state": {
+          "speed": 66.65343334562229,
+          "distance": 157.39420634593,
+          "elapsed": 9.916666666666739,
+          "progress": 0.06558091931080416,
+          "timeLeft": null,
+          "score": 1633,
+          "offRoad": false,
+          "boost": 1,
+          "phase": "running",
+          "countdown": 0,
+          "mapId": "coast",
+          "vehicleId": "coupe",
+          "mode": "cruise",
+          "camera": "chase",
+          "quality": "high",
+          "muted": false,
+          "collisions": 0,
+          "stars": 1,
+          "starTotal": 12
+        },
+        "speedLabel": "前進中，速度 3 格",
+        "coachTexture": "http://127.0.0.1:5286/art/r8/coach-safe-window.png",
+        "coastalSigns": 12
+      }
+    },
+    {
+      "device": "ipad",
+      "trueTakeoff": {
+        "y": 12.512324018458147,
+        "grounded": false,
+        "status": "離地飛行"
+      }
+    },
+    {
+      "device": "ipad",
+      "airborneProjection": {
+        "target": {
+          "x": 0.6,
+          "y": 0.30000000000000004
+        },
+        "altitude": 143.74246952775235,
+        "background": "http://127.0.0.1:5286/art/r8/airborne-coast.webp"
+      }
+    },
+    {
+      "device": "ipad",
+      "sharedPause": {
+        "x": 960,
+        "y": 76,
+        "width": 60,
+        "height": 60
+      }
+    }
+  ],
+  "errors": [],
+  "externalRequests": [],
+  "loadedAssets": [
+    "/art/r8/app-icon-192.png",
+    "/art/r8/logo.png",
+    "/art/r8/rail-strip.webp",
+    "/art/r8/platform-floor.webp",
+    "/art/r8/ocean-ticket.png",
+    "/art/r8/coast-star.png",
+    "/art/r8/train-platform.png",
+    "/art/r8/coast-sign.png",
+    "/art/r8/coach-safe-window.png",
+    "/art/r8/airborne-coast.webp"
+  ],
+  "shots": [
+    {
+      "path": "docs/store/screenshots/art-r8/iphone-01-home.png",
+      "device": "iphone",
+      "scene": "01-home",
+      "selected": true,
+      "width": 1290,
+      "height": 2796,
+      "sha256": "27292c7b51c07ff0fe0e20d1f05e39f668cefdf9339ee3f823e89fa10bb64988",
+      "native": false,
+      "method": "Unmodified headless Chromium, real UI, natural reward event; no progress writes"
+    },
+    {
+      "path": "docs/art/compare/r8-after/iphone-08-load.png",
+      "device": "iphone",
+      "scene": "08-load",
+      "selected": false,
+      "width": 1290,
+      "height": 2796,
+      "sha256": "d51daa84aff0d0eef4cf313d5a8f16cc4fca993a2b87515bfd040c584abec111",
+      "native": false,
+      "method": "Unmodified headless Chromium, real UI, natural reward event; no progress writes"
+    },
+    {
+      "path": "docs/store/screenshots/art-r8/iphone-06-split.png",
+      "device": "iphone",
+      "scene": "06-split",
+      "selected": true,
+      "width": 1290,
+      "height": 2796,
+      "sha256": "03bbd611c43ded83719d6f45d85b1a9e31edba0dcc3fa738a5303e83641561a3",
+      "native": false,
+      "method": "Unmodified headless Chromium, real UI, natural reward event; no progress writes"
+    },
+    {
+      "path": "docs/store/screenshots/art-r8/iphone-07-complete.png",
+      "device": "iphone",
+      "scene": "07-complete",
+      "selected": true,
+      "width": 1290,
+      "height": 2796,
+      "sha256": "9e1556e69998f5fda76518cd42b94a547fdd56bf0194d41ea43a91f3ac296eaf",
+      "native": false,
+      "method": "Unmodified headless Chromium, real UI, natural reward event; no progress writes"
+    },
+    {
+      "path": "docs/store/screenshots/art-r8/iphone-02-driving.png",
+      "device": "iphone",
+      "scene": "02-driving",
+      "selected": true,
+      "width": 1290,
+      "height": 2796,
+      "sha256": "4a6a0acb85fa3896a130fb6394e4451082a63e66e0e12f03e413fbaa9a0f00d9",
+      "native": false,
+      "method": "Unmodified headless Chromium, real UI, natural reward event; no progress writes"
+    },
+    {
+      "path": "docs/store/screenshots/art-r8/iphone-03-car-star.png",
+      "device": "iphone",
+      "scene": "03-car-star",
+      "selected": true,
+      "width": 1290,
+      "height": 2796,
+      "sha256": "a5470fb2425c92a949cd4370acd1b929a09a957ea8f14fbcb405ff337a6ce816",
+      "native": false,
+      "method": "Unmodified headless Chromium, real UI, natural reward event; no progress writes"
+    },
+    {
+      "path": "docs/store/screenshots/art-r8/iphone-04-takeoff.png",
+      "device": "iphone",
+      "scene": "04-takeoff",
+      "selected": true,
+      "width": 1290,
+      "height": 2796,
+      "sha256": "f7df4bdcbb6ea3bd2774c3cb697b5914770c09e85fba6e5f00bbcfdc7a74ed84",
+      "native": false,
+      "method": "Unmodified headless Chromium, real UI, natural reward event; no progress writes"
+    },
+    {
+      "path": "docs/art/compare/r8-after/iphone-09-flight-baseline-match.png",
+      "device": "iphone",
+      "scene": "09-flight-baseline-match",
+      "selected": false,
+      "width": 1290,
+      "height": 2796,
+      "sha256": "ada31535bdecffb30bd37f4a251099c1b6b2638fbd28ed4a91da9f7ec38d86f8",
+      "native": false,
+      "method": "Unmodified headless Chromium, real UI, natural reward event; no progress writes"
+    },
+    {
+      "path": "docs/store/screenshots/art-r8/iphone-05-flight-star.png",
+      "device": "iphone",
+      "scene": "05-flight-star",
+      "selected": true,
+      "width": 1290,
+      "height": 2796,
+      "sha256": "d8784bd3a38390bb67d04e178e6ad3a9aa8166f3636d7cb9cbeb7fa6c1c0b540",
+      "native": false,
+      "method": "Unmodified headless Chromium, real UI, natural reward event; no progress writes"
+    },
+    {
+      "path": "docs/store/screenshots/art-r8/ipad-01-home.png",
+      "device": "ipad",
+      "scene": "01-home",
+      "selected": true,
+      "width": 2064,
+      "height": 2752,
+      "sha256": "660e5d439c23c911eb5a75e110878d9d7b81f033c9e1bce06e99fabad1da1611",
+      "native": false,
+      "method": "Unmodified headless Chromium, real UI, natural reward event; no progress writes"
+    },
+    {
+      "path": "docs/art/compare/r8-after/ipad-08-load.png",
+      "device": "ipad",
+      "scene": "08-load",
+      "selected": false,
+      "width": 2064,
+      "height": 2752,
+      "sha256": "f11b4f21d187112790c9649cceb28b2253917d02fac2a59738ddd8386a00e5a3",
+      "native": false,
+      "method": "Unmodified headless Chromium, real UI, natural reward event; no progress writes"
+    },
+    {
+      "path": "docs/store/screenshots/art-r8/ipad-06-split.png",
+      "device": "ipad",
+      "scene": "06-split",
+      "selected": true,
+      "width": 2064,
+      "height": 2752,
+      "sha256": "c7f738f4b497473854e85611bf532c55571576b93e5758f0dba948537256f153",
+      "native": false,
+      "method": "Unmodified headless Chromium, real UI, natural reward event; no progress writes"
+    },
+    {
+      "path": "docs/store/screenshots/art-r8/ipad-07-complete.png",
+      "device": "ipad",
+      "scene": "07-complete",
+      "selected": true,
+      "width": 2064,
+      "height": 2752,
+      "sha256": "078ecfffa2ea3022717b94fba3aacdf12672395f48c75ba4464222380454f758",
+      "native": false,
+      "method": "Unmodified headless Chromium, real UI, natural reward event; no progress writes"
+    },
+    {
+      "path": "docs/store/screenshots/art-r8/ipad-02-driving.png",
+      "device": "ipad",
+      "scene": "02-driving",
+      "selected": true,
+      "width": 2064,
+      "height": 2752,
+      "sha256": "23f453b3fdddb7b624af1feb3369712fa8297e787a3bb2832f377fd983a71d16",
+      "native": false,
+      "method": "Unmodified headless Chromium, real UI, natural reward event; no progress writes"
+    },
+    {
+      "path": "docs/store/screenshots/art-r8/ipad-03-car-star.png",
+      "device": "ipad",
+      "scene": "03-car-star",
+      "selected": true,
+      "width": 2064,
+      "height": 2752,
+      "sha256": "e456c205da12c27ad492b609cd3d66fba02a5515a616d49719a2aed7eb24f58e",
+      "native": false,
+      "method": "Unmodified headless Chromium, real UI, natural reward event; no progress writes"
+    },
+    {
+      "path": "docs/store/screenshots/art-r8/ipad-04-takeoff.png",
+      "device": "ipad",
+      "scene": "04-takeoff",
+      "selected": true,
+      "width": 2064,
+      "height": 2752,
+      "sha256": "d49771b2374fec44a5410aadc7163aa9439251247b62ab1bb31504913924ce13",
+      "native": false,
+      "method": "Unmodified headless Chromium, real UI, natural reward event; no progress writes"
+    },
+    {
+      "path": "docs/art/compare/r8-after/ipad-09-flight-baseline-match.png",
+      "device": "ipad",
+      "scene": "09-flight-baseline-match",
+      "selected": false,
+      "width": 2064,
+      "height": 2752,
+      "sha256": "3a523d4ad3dfd6adbd32285b3e1f8040a62fea9338829e52d848a7db8ff9027b",
+      "native": false,
+      "method": "Unmodified headless Chromium, real UI, natural reward event; no progress writes"
+    },
+    {
+      "path": "docs/store/screenshots/art-r8/ipad-05-flight-star.png",
+      "device": "ipad",
+      "scene": "05-flight-star",
+      "selected": true,
+      "width": 2064,
+      "height": 2752,
+      "sha256": "b607984eb156eb4fe454ce3df3c40dc1c9e44ac5ab7ab72f47c221fae6b75400",
+      "native": false,
+      "method": "Unmodified headless Chromium, real UI, natural reward event; no progress writes"
+    }
+  ]
+}

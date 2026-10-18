@@ -187,6 +187,8 @@ export class IslandWorld {
     this.scene = scene; this.assets = assets; this.root = new THREE.Group(); scene.add(this.root);
     this.chunks = []; this.clouds = []; this.obstacles = []; this.mapId = 'coast';
     this.textures = { asphalt: noiseTexture(), gravel: noiseTexture('gravel'), windows: windowTexture(), cloud: cloudTexture() };
+    this.textures.coastSign=new THREE.TextureLoader().load(appUrl('art/r8/coast-sign.png'));this.textures.coastSign.colorSpace=THREE.SRGBColorSpace;
+    this.coastSignMaterial=new THREE.MeshBasicMaterial({map:this.textures.coastSign,transparent:true,depthWrite:false,side:THREE.DoubleSide});
     this.geometry = {
       box: new THREE.BoxGeometry(1, 1, 1), pole: new THREE.CylinderGeometry(0.09, 0.13, 1, 6),
       rock: new THREE.DodecahedronGeometry(1, 0), grass: new THREE.ConeGeometry(0.4, 1.2, 3),
@@ -337,6 +339,9 @@ export class IslandWorld {
       instanceAsset(this.assets.road_sign, [{ x: roadCenter(z, map) + offset, y: routeAltitude(z, map), z,
         rotation: Math.PI + roadHeading(z, map), scale: 1 }], group);
       this.obstacles.push({ z, lateral: offset, radius: 0.65 });
+      if(map==='coast'){
+        const sign=new THREE.Mesh(new THREE.PlaneGeometry(3.8,3.8),this.coastSignMaterial);sign.name='PacificCoastRouteSign';sign.userData.ownedGeometry=true;sign.position.set(roadCenter(z,map)+offset,routeAltitude(z,map)+3.1,z-.12);sign.rotation.y=Math.PI+roadHeading(z,map);group.add(sign);
+      }
     }
   }
 
@@ -462,6 +467,7 @@ export class IslandWorld {
     });
     // Imported Blender geometry belongs to the asset cache and is disposed by Game.
     Object.values(this.geometry).forEach(g => geometries.add(g));
+    materials.add(this.coastSignMaterial);
     geometries.forEach(g => { if (!g.userData.importedAsset) g.dispose(); });
     materials.forEach(m => { if (!m.userData.importedAsset) m.dispose(); });
     Object.values(this.textures).forEach(t => t.dispose());

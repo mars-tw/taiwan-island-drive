@@ -16,6 +16,7 @@ import { addStars, recordBest, starRating } from '../../shared/rewards.js';
 import { requestedJourney } from '../../shared/journeys.js';
 import { journeyResult } from '../../shared/passport.js';
 import { appUrl } from '../../shared/paths.js';
+import {roadSpeedDisplay} from '../../shared/child-display.js';
 
 const $ = (s) => document.querySelector(s);
 const $$ = (s) => [...document.querySelectorAll(s)];
@@ -132,8 +133,9 @@ function updateHUD(state) {
   tilt.setActive(state.phase === 'running');
   updateInput();
   $('#speed').textContent = String(Math.round(state.speed || 0)).padStart(3, '0');
-  const steps=$('.speed-steps');if(steps){const value=state.speed<1?0:Math.min(5,Math.ceil(state.speed/30));steps.setAttribute('aria-valuenow',value);steps.querySelectorAll('i').forEach((e,i)=>e.classList.toggle('lit',i<value));}
-  const coach=$('.drive-coach');if(coach){const bend=roadHeading((state.distance||0)+55,mapId)-roadHeading(state.distance||0,mapId);const pose=performance.now()<coachRewardUntil?'reward':Math.abs(bend)>.018?'turn':'straight';const left=pose==='turn'&&bend>0;if(coach.dataset.pose!==pose){coach.dataset.pose=pose;coach.querySelector('img').src=appUrl(`art/r7/coach-${pose}.png`);}game.setCoachPose(pose,left);coach.classList.toggle('turn-left',left);coach.querySelector('span').textContent=pose==='reward'?'星星收好了！':pose==='turn'?(left?'前面往左彎':'前面往右彎'):'沿著海岸慢慢開';coach.querySelector('img').alt=pose==='reward'?'副駕阿路舉起剛找到的星星':pose==='turn'?`副駕阿路舉${left?'左':'右'}彎牌指路`:'副駕阿路繫好安全帶舉直行牌';}
+  const steps=$('.speed-steps');if(steps){const {bars,label}=roadSpeedDisplay(state.speed);steps.setAttribute('aria-valuenow',bars);steps.setAttribute('aria-valuetext',`${label}，速度 ${bars} 格`);steps.querySelector('span').textContent=label;steps.querySelectorAll('i').forEach((e,i)=>e.classList.toggle('lit',i<bars));}
+  const coach=$('.drive-coach');if(coach){const bend=roadHeading((state.distance||0)+55,mapId)-roadHeading(state.distance||0,mapId);const pose=performance.now()<coachRewardUntil?'reward':Math.abs(bend)>.018?'turn':'straight';const left=pose==='turn'&&bend>0;if(coach.dataset.pose!==pose){coach.dataset.pose=pose;coach.querySelector('img').src=appUrl(`art/r8/coach-safe-window.png`);}game.setCoachPose(pose,left);coach.classList.toggle('turn-left',left);coach.querySelector('span').textContent=pose==='reward'?'星星收好了！':pose==='turn'?(left?'前面往左彎':'前面往右彎'):'沿著海岸慢慢開';coach.querySelector('img').alt=pose==='reward'?'副駕阿路舉起剛找到的星星':pose==='turn'?`副駕阿路舉${left?'左':'右'}彎牌指路`:'副駕阿路繫好安全帶舉直行牌';}
+  if(coach)coach.querySelector('img').alt='阿路教練坐在閉合車窗內，繫好安全帶；'+coach.querySelector('span').textContent;
   $('#gear').textContent = state.speed < 1 ? 'N' : Math.min(6, 1 + Math.floor(state.speed / 34));
   $('#boost-bar').style.width = `${Math.max(0, state.boost ?? 1) * 100}%`;
   const length = journey?.distance || TRACK_LENGTH;
@@ -209,6 +211,8 @@ function updateInput() {
     const braking = active('s', 'arrowdown') || touches.has('brake');
     game.input.steer = game.phase === 'running' ? combineSteering(left, right, tilt.enabled, tilt.steer) : 0;
     game.input.throttle = game.phase === 'running' && !braking && (autoThrottle || active('w', 'arrowup') || touches.has('throttle')) ? 1 : 0;
+    // Child auto-cruise gives time to read the coast and steer; manual pedal stays manual.
+    if(autoThrottle&&readSettings().childMode&&game.input.throttle)game.input.throttle=Math.max(0,Math.min(1,.2+(65-lastState.speed)/18));
     game.input.brake = game.phase === 'running' && braking ? 1 : 0;
     game.input.boost = active('shift') || touches.has('boost');
     $$('[data-input]').forEach(el => el.classList.toggle('held', touches.has(el.dataset.input)));

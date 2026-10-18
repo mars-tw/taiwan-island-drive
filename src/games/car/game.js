@@ -83,9 +83,9 @@ export class Game {
       if (this.disposed) return;
       this.world = new IslandWorld(this.scene, this.assets); this.world.build(this.mapId);
       this.vehicleRoot = new THREE.Group(); this.scene.add(this.vehicleRoot);
-      this.coachTextures=Object.fromEntries(['straight','turn','reward'].map(pose=>{const texture=new THREE.TextureLoader().load(`${APP_BASE}art/r7/coach-${pose}.png`);texture.colorSpace=THREE.SRGBColorSpace;return [pose,texture];}));
+      this.coachTextures=Object.fromEntries(['straight','turn','reward'].map(pose=>{const texture=new THREE.TextureLoader().load(`${APP_BASE}art/r8/coach-safe-window.png`);texture.colorSpace=THREE.SRGBColorSpace;return [pose,texture];}));
       // +Z is forward; the right passenger seat is local -X (same as steering).
-      this.coachSprite=new THREE.Sprite(new THREE.SpriteMaterial({map:this.coachTextures.straight,transparent:true,depthTest:true,depthWrite:false,toneMapped:false}));this.coachSprite.name='AluInPassengerSeat';this.coachSprite.position.set(-.68,1.7,.15);this.coachSprite.scale.set(1.9,1.9,1);this.vehicleRoot.add(this.coachSprite);
+      this.coachSprite=new THREE.Sprite(new THREE.SpriteMaterial({map:this.coachTextures.straight,transparent:true,depthTest:true,depthWrite:false,toneMapped:false}));this.coachSprite.name='AluInPassengerSeat';this.coachSprite.position.set(0,.66,-1.65);this.coachSprite.scale.set(1.9,1.9,1);this.vehicleRoot.add(this.coachSprite);
       this.starGroup = new THREE.Group(); this.starGroup.name = 'RoadStars'; this.scene.add(this.starGroup);
       this.starGeometry = starGeometry();
       this.starMaterial = new THREE.MeshStandardMaterial({ color: '#ffc61a', emissive: '#ff9a00', emissiveIntensity: 0.6, metalness: 0.25, roughness: 0.32 });
@@ -150,13 +150,13 @@ export class Game {
       const cloneMaterial = material => {
         let cloned;
         if (material.name.startsWith('BodyPaint')) {
-          cloned = new THREE.MeshToonMaterial({color:this.color});
+          cloned = new THREE.MeshBasicMaterial({color:this.color});
           cloned.name = material.name; this.paintMaterials.push(cloned);
         } else {
           cloned = material.clone(); cloned.userData = { ...cloned.userData, importedAsset: false };
           cloned.envMapIntensity = 1.1;
-          if (/glass/i.test(material.name)) { cloned = new THREE.MeshToonMaterial({color:'#143b61'}); }
-          else if (/Alloy|Chrome|Polished|GraphiteTrim/i.test(material.name)) cloned = new THREE.MeshToonMaterial({color:'#1b4f78'});
+          if (/glass/i.test(material.name)) { cloned = new THREE.MeshBasicMaterial({color:'#143b61'}); }
+          else if (/Alloy|Chrome|Polished|GraphiteTrim/i.test(material.name)) cloned = new THREE.MeshBasicMaterial({color:'#1b4f78'});
         }
         return cloned;
       };
@@ -339,7 +339,7 @@ export class Game {
     this.camera.position.lerp(targetPosition, lerp); this.cameraLook.lerp(targetLook, lerp); this.camera.lookAt(this.cameraLook);
     if (Math.abs(this.camera.fov - fov) > 0.02) { this.camera.fov += (fov - this.camera.fov) * (snap ? 1 : 0.08); this.camera.updateProjectionMatrix(); }
     this.car.visible = this.phase === 'menu' || this.cameraMode !== 'hood';
-    if(this.coachSprite){this.coachSprite.visible=this.phase!=='menu'&&this.cameraMode!=='hood';const distance=this.camera.position.distanceTo(this.vehicleRoot.position),unit=2*distance*Math.tan(THREE.MathUtils.degToRad(this.camera.fov/2))/Math.max(1,this.canvas.clientHeight);this.coachSprite.scale.setScalar(Math.max(1.9,unit*62));}
+    if(this.coachSprite){this.coachSprite.visible=this.phase!=='menu'&&this.cameraMode!=='hood';const distance=this.camera.position.distanceTo(this.vehicleRoot.position),unit=2*distance*Math.tan(THREE.MathUtils.degToRad(this.camera.fov/2))/Math.max(1,this.canvas.clientHeight);this.coachSprite.scale.setScalar(Math.max(.9,unit*44));}
   }
 
   frame(timestamp) {
