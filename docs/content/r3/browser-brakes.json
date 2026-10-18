@@ -1,0 +1,134 @@
+{
+  "status": "VERIFIED",
+  "rows": [
+    {
+      "label": "hard brake three distinct flag/cream frames",
+      "status": "VERIFIED",
+      "samples": [
+        {
+          "distance": "9.84",
+          "speed": "5.76",
+          "bend": "1",
+          "tilt": "6.31",
+          "sway": "-0.33",
+          "acceleration": "-5.00"
+        },
+        {
+          "distance": "11.26",
+          "speed": "4.35",
+          "bend": "1",
+          "tilt": "24.75",
+          "sway": "8.58",
+          "acceleration": "-5.00"
+        },
+        {
+          "distance": "13.11",
+          "speed": "0.00",
+          "bend": "1",
+          "tilt": "0.23",
+          "sway": "0.20",
+          "acceleration": "0.00"
+        }
+      ],
+      "changedCakePixels": [
+        4682,
+        4664
+      ],
+      "method": "One held brake: onset, deflection, stationary recovery; no position or angle injection"
+    },
+    {
+      "label": "slow approach and gentle stop three distinct recovering frames",
+      "status": "VERIFIED",
+      "samples": [
+        {
+          "distance": "1.85",
+          "speed": "0.37",
+          "bend": "1",
+          "tilt": "17.19",
+          "sway": "5.89",
+          "acceleration": "-5.00"
+        },
+        {
+          "distance": "1.86",
+          "speed": "0.00",
+          "bend": "1",
+          "tilt": "7.82",
+          "sway": "5.01",
+          "acceleration": "0.00"
+        },
+        {
+          "distance": "1.86",
+          "speed": "0.00",
+          "bend": "1",
+          "tilt": "1.73",
+          "sway": "1.37",
+          "acceleration": "0.00"
+        }
+      ],
+      "changedCakePixels": [
+        4026,
+        3963
+      ],
+      "method": "Release pedal before low-speed stop; same brake control, no hidden force or state injection"
+    }
+  ],
+  "shots": [
+    {
+      "path": "docs/content/r3/phone-cake-hard-brake-1.png",
+      "width": 390,
+      "height": 844,
+      "sha256": "088196154242e1cae51ddea242b290156ca1e44a332d3ac13922585385287f93",
+      "native": false,
+      "method": "unmodified headless Chromium runtime screenshot",
+      "captureFreeze": "RAF paused only during PNG capture; physical state never assigned"
+    },
+    {
+      "path": "docs/content/r3/phone-cake-hard-brake-2.png",
+      "width": 390,
+      "height": 844,
+      "sha256": "dd42a926c7f74cee6d497d635b4ee56cd00ed2dace0c72ff46d6915f99233cda",
+      "native": false,
+      "method": "unmodified headless Chromium runtime screenshot",
+      "captureFreeze": "RAF paused only during PNG capture; physical state never assigned"
+    },
+    {
+      "path": "docs/content/r3/phone-cake-hard-brake-3.png",
+      "width": 390,
+      "height": 844,
+      "sha256": "5b67acccdd2d2198190e1851f465dae154b78d6b97b0c9ba2b5e0fff3e46b1ae",
+      "native": false,
+      "method": "unmodified headless Chromium runtime screenshot",
+      "captureFreeze": "RAF paused only during PNG capture; physical state never assigned"
+    },
+    {
+      "path": "docs/content/r3/phone-cake-gentle-brake-1.png",
+      "width": 390,
+      "height": 844,
+      "sha256": "befe4bee56dd58bcd4f4f437808ef4493a10302f76d638b44a2b52804bf7009e",
+      "native": false,
+      "method": "unmodified headless Chromium runtime screenshot",
+      "captureFreeze": "RAF paused only during PNG capture; physical state never assigned"
+    },
+    {
+      "path": "docs/content/r3/phone-cake-gentle-brake-2.png",
+      "width": 390,
+      "height": 844,
+      "sha256": "003f5922821ce101d6c9db67a1a027083c1941424ff58e7dc1b51ee4e557a927",
+      "native": false,
+      "method": "unmodified headless Chromium runtime screenshot",
+      "captureFreeze": "RAF paused only during PNG capture; physical state never assigned"
+    },
+    {
+      "path": "docs/content/r3/phone-cake-gentle-brake-3.png",
+      "width": 390,
+      "height": 844,
+      "sha256": "e92d78773c5eab2827032cf2d04d9656fb0656acd31933f94d0f68ecc0c6a2cb",
+      "native": false,
+      "method": "unmodified headless Chromium runtime screenshot",
+      "captureFreeze": "RAF paused only during PNG capture; physical state never assigned"
+    }
+  ],
+  "errors": [],
+  "external": [],
+  "responses": []
+}

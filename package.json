@@ -1,6 +1,6 @@
 {
   "name": "taiwan-island-drive",
-  "version": "2.14.0",
+  "version": "2.15.0",
   "private": true,
   "type": "module",
   "license": "MIT",
@@ -11,6 +11,7 @@
     "test": "node --test \"tests/**/*.test.js\"",
     "test:store": "node scripts/check-store-review.mjs",
     "test:merge": "node scripts/check-merge.mjs",
+    "test:content:r3": "node scripts/check-content-r3.mjs",
     "native:build": "node scripts/build-native.mjs",
     "native:sync": "node scripts/build-native.mjs && cap sync",
     "native:assets": "capacitor-assets generate --assetPath resources --android --ios"

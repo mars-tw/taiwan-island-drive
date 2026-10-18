@@ -1,0 +1,43 @@
+/* One place and one set of controls per lesson; the shared Alu window is the anchor. */
+#content-picker button::before,#content-picker button::after,#content-picker small::before,#content-picker small::after{content:none!important;display:none!important}
+#content-picker [data-content=crossing] img{height:110px;object-fit:contain}
+#content-picker [data-content=cake] img{clip-path:inset(0 0 7%)}
+.content-intro{position:absolute;inset:100px 15% auto;display:flex;flex-direction:column;align-items:center;gap:8px;padding:10px;background:#ffffffed;border:3px solid #1479b8;border-radius:20px;z-index:12;font-weight:900;text-align:center}
+.content-intro img{width:clamp(80px,26vw,160px);height:clamp(80px,26vw,160px);object-fit:contain}
+#content-rest{width:min(600px,95%);display:flex;flex-direction:column;align-items:center;gap:8px;padding:12px;box-sizing:border-box;background:#fff;border:3px solid #1479b8;border-radius:22px}
+.content-rest-coach{width:clamp(100px,36vw,210px);height:clamp(100px,36vw,210px);object-fit:contain}
+#content-rest h2,#content-rest p{margin:0}#content-rest p{font-weight:900;font-size:18px}#content-rest button{width:min(300px,95%)}
+#content-r1[data-kind=cake][data-stage="0"] .content-scene{background-image:url('/art/content-r3/cake-slope.webp');background-size:cover}
+#content-r1[data-kind=cake][data-stage="1"] .content-scene{background-image:url('/art/content-r3/cake-bends.webp');background-size:cover}
+#content-r1[data-kind=cake][data-stage="2"] .content-scene{background-image:url('/art/content-r3/cake-bay.webp');background-size:cover}
+#content-r1[data-kind=cake] .content-scene::before{display:none}
+.content-carrier{bottom:8%;height:54%}
+.content-force{left:8px;right:8px;bottom:8px;justify-content:space-between;padding:2px 8px}
+.content-force small{display:block;font-size:12px}.cake-level{width:90px;height:42px;flex:none}
+.content-road-sign{top:100px;width:76px}.content-road-sign svg{height:46px}
+.content-scene-cue{top:55px;font-size:14px}
+#content-r1[data-kind=crossing] .content-route{display:none}
+.content-observe{left:8px;right:auto;top:8px;display:none;border:2px solid #1479b8;border-radius:8px;background:#fff;padding:5px 10px;font-weight:900;font-size:14px;pointer-events:none}
+#content-r1 [data-action][data-checked=true]{background:#d5f2c7;box-shadow:inset 0 -5px 0 #58b85b}
+#content-r1[data-kind=tickets] .content-scene{background-image:url('/art/content-r3/station-horizontal.webp');background-size:100% 100%}
+#content-r1[data-kind=tickets] .content-route{top:86px;left:8px}
+#content-r1 .content-stations button{top:50%;right:auto;transform:translate(-50%,-50%);width:64px;min-height:66px;z-index:5}
+#content-r1 .content-stations button::after{content:'';position:absolute;top:100%;left:calc(50% - 4px);width:8px;height:50px;background:#1479b8;border-inline:1px solid #143b61;z-index:-1;pointer-events:none}
+#content-r1 .content-stations button:disabled{opacity:1;color:#143b61}
+.ticket-vehicle{display:none;position:absolute;bottom:19%;width:64%;aspect-ratio:2.4;z-index:4;pointer-events:none}
+#content-r1[data-kind=tickets] .ticket-vehicle{display:block}
+#content-r1[data-kind=tickets] .content-train{position:absolute;inset:0;display:block;width:100%;height:100%;object-fit:fill;transform:none;z-index:1}
+.ticket-seats{position:absolute;inset:0;z-index:2}
+.ticket-seated{position:absolute;top:20%;height:39%;width:17%;overflow:hidden;border-radius:6px}
+.ticket-seated img{width:100%;height:170%;object-fit:cover;object-position:center top}
+.ticket-vehicle[data-doors=true]::after{content:'';position:absolute;left:78%;top:19%;width:12%;height:58%;background:#143b61;border:2px solid #ffd344;border-radius:5px;z-index:3}
+#content-r1[data-kind=tickets] .content-passengers{inset:0;width:100%;height:100%;display:block;z-index:6}
+.content-passengers .boarding-friend{position:absolute;top:auto;bottom:31%;width:36px;height:66px;transform:translateX(-50%);overflow:visible}
+.content-passengers .boarding-friend img{width:100%;height:100%;object-fit:contain}
+.ticket-final-proof{position:absolute;top:10px;right:10px;display:flex;align-items:center;gap:6px;z-index:2;color:#143b61}
+.ticket-final-proof>span{padding:4px;background:white;border:2px solid #1479b8;border-radius:8px;font-weight:900}
+.ticket-final-proof>div{width:60px;height:82px;padding:3px;box-sizing:border-box;background:white;border:3px solid #1479b8;border-radius:8px;text-align:center;font-size:12px;display:flex;flex-direction:column}
+.ticket-final-proof svg{height:54px;width:100%}.ticket-final-proof .final-ticket{border-style:dashed;border-color:#58b85b}
+@media(max-width:360px) and (orientation:portrait){.content-scene-cue{font-size:12px}.content-force small{font-size:11px}.content-road-sign{width:63px}.content-road-sign svg{height:36px}.content-intro{inset:88px 18% auto}.content-intro img{width:80px;height:80px}#content-r1 .content-stations button{width:60px;min-height:60px}.content-passengers .boarding-friend{height:52px;width:30px}}
+@media(orientation:landscape) and (max-height:520px){.content-intro{inset:70px 18% auto;padding:4px;gap:2px;font-size:11px}.content-intro img{width:65px;height:65px}.content-force{bottom:2px;font-size:11px}.content-force small{font-size:10px}.cake-level{width:60px;height:26px}.content-road-sign{top:65px;width:56px}.content-road-sign svg{height:28px}.content-scene-cue{top:32px;font-size:10px}.content-observe{top:3px;font-size:10px;padding:2px 6px}#content-r1 .content-stations button{top:43%;min-height:60px;width:60px}.content-stations button::after{height:20px!important}.content-passengers .boarding-friend{height:42px;width:27px}.content-rest-coach{width:70px;height:70px}#content-rest{display:grid;grid-template-columns:90px 1fr 1fr;gap:3px;padding:5px}.content-rest-coach{grid-row:1/3}#content-rest-progress{grid-column:2/4;font-size:14px!important}#content-rest h2{display:none}.ticket-final-proof>div{height:66px;width:52px}.ticket-final-proof svg{height:40px}.ticket-final-proof>span{font-size:10px}}
+@media(prefers-reduced-motion:reduce){.ticket-vehicle,.content-intro{animation:none!important;transition:none!important}}

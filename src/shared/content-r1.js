@@ -7,7 +7,7 @@ export const CAKE_ROUTES=['海風起步坡','燈塔彎・連續彎','榕樹灣�
 export const TICKETS=[{shape:'circle',color:'blue',name:'藍圓形'},{shape:'triangle',color:'orange',name:'橘三角形'},{shape:'square',color:'green',name:'綠正方形'}];
 export class ContentLesson{
  constructor(kind,saved={}){if(!CONTENT_LESSONS[kind])throw Error('Unknown lesson');saved=saved&&typeof saved==='object'?saved:{};this.kind=kind;this.stage=clamp(Number.isFinite(saved.stage)?Math.floor(saved.stage):0,0,2);this.completed=saved.completed===true;this.skills={start:!!saved.skills?.start,turn:!!saved.skills?.turn,stop:!!saved.skills?.stop};this.phase=this.completed?'done':'ready';this.paused=false;this.input={};this.hint='';this.reset();}
- reset(){this.release();this.speed=0;this.distance=0;this.steer=0;this.tilt=0;this.acceleration=0;this.sway=0;this.smooth={start:0,turn:0,stop:0};this.looked={left:false,right:false};this.crossed=0;this.crossTime=0;this.selected=-1;this.boardTime=0;this.phase=this.completed?'done':'ready';}
+ reset(){this.release();this.speed=0;this.distance=0;this.steer=0;this.tilt=0;this.acceleration=0;this.sway=0;this.smooth={start:0,turn:0,stop:0};this.looked={left:false,right:false};this.crossed=0;this.crossTime=0;this.selected=-1;this.trainX=-40;this.travelFrom=-40;this.boardTime=0;this.phase=this.completed?'done':'ready';}
  begin(){if(this.phase!=='ready')return;this.phase='playing';this.speed=this.kind==='crossing'?5:0;}
  release(){this.input={go:false,brake:false,left:false,right:false};}
  pause(){this.paused=true;this.release();}
@@ -23,7 +23,7 @@ export class ContentLesson{
  get platforms(){const t=this.target;return [t,{...t,color:t.color==='blue'?'orange':'blue',name:`${t.color==='blue'?'橘':'藍'}${{circle:'圓形',triangle:'三角形',square:'正方形'}[t.shape]}`},{...t,shape:t.shape==='circle'?'square':'circle',name:`${{blue:'藍',orange:'橘',green:'綠'}[t.color]}${t.shape==='circle'?'正方形':'圓形'}`}].map((_,i,a)=>a[(i+this.stage)%3]);}
  get matched(){const p=this.platforms[this.selected];return !!p&&p.color===this.target.color&&p.shape===this.target.shape;}
  look(side){if(this.kind!=='crossing'||this.phase!=='playing'||this.paused)return;if(this.speed>.05){this.hint='先按住煞車，停穩再看。';return;}this.looked[side]=true;this.hint=side==='left'?'左邊看清楚了，再看右邊。':'右邊也看看，等朋友過完。';}
- select(index){if(this.kind!=='tickets'||this.phase!=='playing'||this.paused)return;if(this.speed>.05){this.hint='先停穩，再選月台。';return;}this.selected=index;this.distance=0;this.hint=this.matched?'月台選好了，按住前進。':'再看看車票，形狀和顏色都要一樣。';}
+ select(index){if(this.kind!=='tickets'||this.phase!=='playing'||this.paused||!Number.isInteger(index)||index<0||index>2)return;if(this.speed>.05){this.hint='先停穩，再選月台。';return;}this.travelFrom=this.trainX;this.selected=index;this.distance=0;this.hint=this.matched?'月台選好了，按住前進。':'再看看車票，形狀和顏色都要一樣。';}
  depart(){if(this.kind!=='crossing'||this.phase!=='playing'||this.paused)return false;if(this.speed>.05||!this.looked.left||!this.looked.right||this.crossed<3){this.hint='停、看左、看右，等朋友過完。';return false;}this.checkpoint();return true;}
  door(){if(this.kind!=='tickets'||this.phase!=='playing'||this.paused)return false;if(!this.matched||this.distance<28||this.speed>.05){this.hint=!this.matched&&this.selected>=0?'這站不一樣，停穩再換月台。':'對好月台，停穩再開門。';return false;}this.phase='boarding';this.release();return true;}
  checkpoint(){for(const k of Object.keys(this.skills))this.skills[k]||=this.smooth[k]>.25;this.release();this.phase=this.stage===2?'done':'checkpoint';this.completed=this.stage===2;}
@@ -32,8 +32,10 @@ export class ContentLesson{
  const before=this.speed,target=this.input.go?(this.approach?4:7):0,accel=this.input.brake?-5:(target-this.speed)*1.4-(this.input.go||this.speed>0?this.grade:0);
  this.speed=clamp(this.speed+accel*dt,0,7);if(this.speed<.04)this.speed=0;
  const targetSteer=(this.input.right?1:0)-(this.input.left?1:0);this.steer+=(targetSteer-this.steer)*Math.min(1,dt*2.5);
- this.acceleration=accel;
- this.tilt+=(clamp(-accel*6-this.steer*this.speed*4,-32,32)-this.tilt)*Math.min(1,dt*5);
+ // A held brake at zero speed exerts no acceleration. Read actual motion,
+ // including speed clamps, so the flag can settle after the car stops.
+ this.acceleration=dt>0?(this.speed-before)/dt:0;
+ this.tilt+=(clamp(-this.acceleration*6-this.steer*this.speed*4,-32,32)-this.tilt)*Math.min(1,dt*5);
  this.sway+=(this.tilt*.42-this.sway)*Math.min(1,dt*9);
  if(this.kind==='cake'){
   const turn=this.distance>15&&this.distance<40;const aligned=!turn||this.steer*this.bend>.25;
@@ -45,6 +47,6 @@ export class ContentLesson{
   if(this.distance>=55&&this.speed===0)this.checkpoint();
  }else if(this.kind==='crossing'){
   if(this.speed===0&&this.looked.left&&this.looked.right&&this.crossed<3){this.crossTime+=dt;if(this.crossTime>=this.crossingDuration){this.crossed++;this.crossTime=0;this.hint='';}}
- }else if(this.selected>=0){this.distance=Math.min(30,this.distance+this.speed*dt);if(this.distance>=28&&!this.matched)this.hint='這站不一樣，停穩再換月台。';}
+ }else if(this.selected>=0){this.distance=Math.min(30,this.distance+this.speed*dt);this.trainX=this.travelFrom+(2+this.selected*16-this.travelFrom)*this.distance/30;if(this.distance>=28&&!this.matched)this.hint='這站不一樣，停穩再換月台。';}
  }
 }
