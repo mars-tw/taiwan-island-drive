@@ -1,6 +1,6 @@
 {
   "name": "taiwan-island-drive",
-  "version": "2.20.0",
+  "version": "2.21.0",
   "private": true,
   "type": "module",
   "license": "MIT",
@@ -19,7 +19,8 @@
     "native:sync": "node scripts/build-native.mjs && cap sync",
     "native:assets": "capacitor-assets generate --assetPath resources --android --ios",
     "test:content:r8": "node scripts/check-content-r8.mjs",
-    "test:content:r7": "node scripts/check-content-r7.mjs"
+    "test:content:r7": "node scripts/check-content-r7.mjs",
+    "test:content:r9": "node scripts/check-content-r9.mjs"
   },
   "dependencies": {
     "@capacitor-community/text-to-speech": "8.0.2",

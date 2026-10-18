@@ -15,5 +15,5 @@ export function cakeFeedback(g){
 export function crossingPose(g){
  const p=clamp(g.crossTime/g.crossingDuration,0,1),right=g.crossingPerson==='bike';
  const start=g.crossingPerson==='grandma'?57:39;
- return {x:right?85-p*70:15+p*70,bottom:p<.25?start-p/.25*(start-29):p>.82?29+(p-.82)/.18*10:29};
+ return {x:right?85-p*70:g.crossingPerson==='grandma'?20+p*60:15+p*70,bottom:p<.25?start-p/.25*(start-29):p>.82?29+(p-.82)/.18*10:29};
 }

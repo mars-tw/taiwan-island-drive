@@ -6,11 +6,13 @@ import './content-r5.css';
 import './content-r6.css';
 import './content-r7.css';
 import './content-r8.css';
+import './content-r9.css';
+import {boardingFrame,passengerPosition,aislePosition,grandmaFrame} from './content-r9-scene.js';
 import {closeupPose,cakeFeedback,crossingPose} from './content-r7-scene.js';
 import {lessonFacts} from './content-r5-feedback.js';
 import {cakePose,sideWatch,cakeTask} from './content-r4-scene.js';
 import {ContentLesson,CONTENT_LESSONS,CAKE_ROUTES,CROSSING_ORDERS} from './content-r1.js';
-import {PLATFORM_X,boardingPose,ticketGeometry} from './content-r3-scene.js';
+import {PLATFORM_X,ticketGeometry} from './content-r3-scene.js';
 import {readStudent,updateStudentSection,studentSaved} from './student-save.js';
 import {readSettings} from './settings.js';
 import {speakNative,stopNativeSpeech,registerGameLifecycle,registerNativeOverlay} from './native.js';
@@ -19,7 +21,7 @@ import {appUrl} from './paths.js';
 
 const image=(path,alt='',cls='')=>`<img class="${cls}" src="${appUrl(path)}" alt="${alt}" draggable="false">`;
 const icon=(name)=>{const paths={go:'M8 4L22 16 8 28Z',brake:'M7 5h6v22H7zM19 5h6v22h-6z',left:'M21 5L9 16l12 11M10 16h17',right:'M11 5l12 11-12 11M22 16H5',eye:'M2 16Q16 0 30 16Q16 32 2 16ZM20 16a4 4 0 1 1-8 0 4 4 0 1 1 8 0',door:'M5 4h22v24H5zM16 4v24M11 14v4m10-4v4',sound:'M3 12h6l7-7v22l-7-7H3zM21 10q9 6 0 12'};return `<svg viewBox="0 0 32 32" aria-hidden="true"><path d="${paths[name]||paths.go}" fill="none" stroke="currentColor" stroke-width="3" stroke-linejoin="round"/></svg>`;};
-const friendArt=(who,pose=0)=>who==='bike'?`art/content-r1/bike-${pose}.png`:`art/content-r7/${who}-${pose}.png`;
+const friendArt=(who,pose=0)=>who==='grandma'&&pose===2?'art/content-r9/grandma-2.png':who==='bike'?`art/content-r1/bike-${pose}.png`:`art/content-r7/${who}-${pose}.png`;
 const friendName=who=>({child:'小朋友',bike:'腳踏車',grandma:'奶奶'}[who]);
 const curve=side=>`<svg viewBox="0 0 32 32" aria-hidden="true" style="transform:scaleX(${side==='right'?1:-1})"><path d="M5 26V16Q5 6 16 6H27M19 1L27 6 19 13" fill="none" stroke="currentColor" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/></svg>`;
 const shape=t=>`<svg class="ticket-shape" viewBox="0 0 64 64" aria-hidden="true"><g fill="${{blue:'#1479b8',orange:'#f46b27',green:'#58b85b'}[t.color]}" stroke="#143b61" stroke-width="4">${t.shape==='circle'?'<circle cx="32" cy="32" r="25"/>':t.shape==='triangle'?'<path d="M32 5L60 58H4Z"/>':'<rect x="8" y="8" width="48" height="48" rx="5"/>'}</g></svg>`;
@@ -137,7 +139,7 @@ export function installContentLessons(){
   const depart=dialog.querySelector('[data-action=depart]');if(depart){depart.dataset.ready=String(lesson.canDepart);depart.setAttribute('aria-disabled',String(!lesson.canDepart));depart.setAttribute('aria-description',lesson.canDepart?'路口空了，可以出發':'等朋友過完才可出發');}
   const walker=dialog.querySelector('.content-walker');walker.replaceChildren();
   const reduced=readSettings().reducedMotion||matchMedia('(prefers-reduced-motion:reduce)').matches;
-  if(lesson.kind==='crossing'&&lesson.crossed<3){const who=lesson.crossingPerson,pose=reduced?0:Math.floor(lesson.crossTime*3)%2,pos=crossingPose(lesson);walker.innerHTML=image(friendArt(who,pose),{child:'行人',bike:'腳踏車',grandma:'推菜籃奶奶'}[who]);walker.dataset.person=who;walker.dataset.pose=String(pose);walker.hidden=lesson.crossTime===0;walker.style.left=`${pos.x}%`;walker.style.bottom=`${pos.bottom}%`;walker.style.scale=who==='bike'?'-1 1':'1';}
+  if(lesson.kind==='crossing'&&lesson.crossed<3){const who=lesson.crossingPerson,pose=reduced?0:who==='grandma'?grandmaFrame(lesson.crossTime/lesson.crossingDuration):Math.floor(lesson.crossTime*3)%2,pos=crossingPose(lesson);walker.innerHTML=image(friendArt(who,pose),{child:'行人',bike:'腳踏車',grandma:'推菜籃奶奶'}[who]);walker.dataset.person=who;walker.dataset.pose=String(pose);walker.hidden=lesson.crossTime===0;walker.style.left=`${pos.x}%`;walker.style.bottom=`${pos.bottom}%`;walker.style.scale=who==='bike'?'-1 1':'1';}
   if(lesson.kind==='crossing'){
    const order=CROSSING_ORDERS[lesson.stage];
    if(roster.dataset.stage!==String(lesson.stage)){roster.dataset.stage=String(lesson.stage);roster.innerHTML=order.map((w,i)=>`<button data-friend-request="${w}" aria-label="請${friendName(w)}先過">${image(friendArt(w))}<span>${i+1}</span></button>`).join('');}
@@ -149,8 +151,8 @@ export function installContentLessons(){
   const train=dialog.querySelector('.content-train'),geometry=ticketGeometry(lesson);train.src=appUrl('art/content-r3/train-side.webp');train.alt=lesson.selected<0?'等待選月台的列車':`${lesson.platforms[lesson.selected].name}月台的列車`;vehicle.style.left=`${geometry.x}%`;vehicle.dataset.x=geometry.x.toFixed(2);
   const passengers=dialog.querySelector('.content-passengers'),boarding=lesson.phase==='boarding',seated=checkpoint||done,waiting=lesson.selected>=0&&lesson.distance>=28;
   const visibleFriends=lesson.kind==='tickets'&&(boarding||seated||waiting);
-  seats.innerHTML=visibleFriends?[0,1,2].map(n=>{const state=boardingPose(lesson.boardTime,n,seated);return state.seated?`<div class="ticket-seated" data-friend="${n}" style="left:${13+n*21}%">${image(`art/r5/passenger-${n+1}-0.png`,'乘客已坐好')}</div>`:'';}).join(''):'';
-  passengers.innerHTML=visibleFriends?[0,1,2].map(n=>{const state=boardingPose(lesson.boardTime,n,seated);if(state.seated)return '';const t=reduced?0:state.progress,origin=Math.max(18,Math.min(60,geometry.queue-8))+n*12,x=origin+(geometry.door-origin)*t;return `<div class="boarding-friend" data-friend="${n}" data-progress="${state.progress.toFixed(2)}" style="left:${x}%;bottom:${35.5-t*7}%">${image(`art/r5/passenger-${n+1}-${reduced?0:state.pose}.png`,'朋友沿月台走進車門')}</div>`;}).join(''):'';
+  seats.innerHTML=visibleFriends?[0,1,2].map(n=>{const state=boardingFrame(lesson.boardTime,n,seated);return state.seated||state.inside?`<div class="ticket-seated" data-friend="${n}" data-entering="${!state.seated}" style="left:${state.seated?13+n*21:aislePosition(state.progress,n)}%">${image(`art/r5/passenger-${n+1}-0.png`,state.seated?'乘客已坐好':'朋友走進車廂找座位')}</div>`:'';}).join(''):'';
+  passengers.innerHTML=visibleFriends?[0,1,2].map(n=>{const state=boardingFrame(lesson.boardTime,n,seated);if(state.seated||state.inside)return '';const pos=passengerPosition(geometry,n,state.progress);return `<div class="boarding-friend" data-friend="${n}" data-progress="${state.progress.toFixed(2)}" style="left:${pos.x}%;bottom:${pos.bottom}%">${image(`art/r5/passenger-${n+1}-${reduced?0:state.pose}.png`,'朋友沿月台走進車門')}</div>`;}).join(''):'';
   const doorOpen=boarding?Math.min(1,lesson.boardTime/.06,Math.max(0,(1.2-lesson.boardTime)/.18)):0;
   vehicle.dataset.doors=String(doorOpen>0);vehicle.style.setProperty('--door-open',String(doorOpen));
   scene.dataset.doorState=boarding&&lesson.boardTime>=1.2?'closed':boarding&&lesson.boardTime>=1.02?'closing':doorOpen>0?'open':'closed';

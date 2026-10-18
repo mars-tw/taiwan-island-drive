@@ -1,0 +1,1874 @@
+{
+  "status": "VERIFIED",
+  "rows": [
+    {
+      "label": "se actual station arrival controls",
+      "status": "VERIFIED",
+      "controls": 9
+    },
+    {
+      "label": "se actual queue and sign geometry",
+      "status": "VERIFIED",
+      "scene": {
+        "x": 8,
+        "y": 82,
+        "right": 312,
+        "bottom": 366.21875,
+        "width": 304,
+        "height": 284.21875
+      },
+      "people": [
+        {
+          "id": "0",
+          "entering": false,
+          "x": 132.859375,
+          "y": 216.453125,
+          "right": 161.859375,
+          "bottom": 264.453125,
+          "width": 29,
+          "height": 48
+        },
+        {
+          "id": "1",
+          "entering": false,
+          "x": 79.21875,
+          "y": 216.453125,
+          "right": 108.21875,
+          "bottom": 264.453125,
+          "width": 29,
+          "height": 48
+        },
+        {
+          "id": "2",
+          "entering": false,
+          "x": 25.578125,
+          "y": 216.453125,
+          "right": 54.578125,
+          "bottom": 264.453125,
+          "width": 29,
+          "height": 48
+        }
+      ],
+      "signs": [
+        {
+          "text": "✓ 停對了",
+          "x": 25.6875,
+          "y": 152,
+          "right": 85.6875,
+          "bottom": 214,
+          "width": 60,
+          "height": 62
+        },
+        {
+          "text": "月台",
+          "x": 130,
+          "y": 153,
+          "right": 190,
+          "bottom": 213,
+          "width": 60,
+          "height": 60
+        },
+        {
+          "text": "月台",
+          "x": 234.296875,
+          "y": 153,
+          "right": 294.296875,
+          "bottom": 213,
+          "width": 60,
+          "height": 60
+        }
+      ]
+    },
+    {
+      "label": "se actual aisle and waiting people",
+      "status": "VERIFIED",
+      "scene": {
+        "x": 8,
+        "y": 82,
+        "right": 312,
+        "bottom": 366.21875,
+        "width": 304,
+        "height": 284.21875
+      },
+      "people": [
+        {
+          "id": "0",
+          "entering": true,
+          "x": 149.87890625,
+          "y": 271.84375,
+          "right": 182.30078125,
+          "bottom": 302.828125,
+          "width": 32.421875,
+          "height": 30.984375
+        },
+        {
+          "id": "1",
+          "entering": false,
+          "x": 79.21875,
+          "y": 216.453125,
+          "right": 108.21875,
+          "bottom": 264.453125,
+          "width": 29,
+          "height": 48
+        },
+        {
+          "id": "2",
+          "entering": false,
+          "x": 25.578125,
+          "y": 216.453125,
+          "right": 54.578125,
+          "bottom": 264.453125,
+          "width": 29,
+          "height": 48
+        }
+      ],
+      "signs": [
+        {
+          "text": "✓ 停對了",
+          "x": 25.6875,
+          "y": 152,
+          "right": 85.6875,
+          "bottom": 214,
+          "width": 60,
+          "height": 62
+        },
+        {
+          "text": "月台",
+          "x": 130,
+          "y": 153,
+          "right": 190,
+          "bottom": 213,
+          "width": 60,
+          "height": 60
+        },
+        {
+          "text": "月台",
+          "x": 234.296875,
+          "y": 153,
+          "right": 294.296875,
+          "bottom": 213,
+          "width": 60,
+          "height": 60
+        }
+      ]
+    },
+    {
+      "label": "phone actual station arrival controls",
+      "status": "VERIFIED",
+      "controls": 9
+    },
+    {
+      "label": "phone actual queue and sign geometry",
+      "status": "VERIFIED",
+      "scene": {
+        "x": 13,
+        "y": 87,
+        "right": 377,
+        "bottom": 623.21875,
+        "width": 364,
+        "height": 536.21875
+      },
+      "people": [
+        {
+          "id": "0",
+          "entering": false,
+          "x": 155.3125,
+          "y": 342,
+          "right": 204.3125,
+          "bottom": 432,
+          "width": 49,
+          "height": 90
+        },
+        {
+          "id": "1",
+          "entering": false,
+          "x": 90.875,
+          "y": 342,
+          "right": 139.875,
+          "bottom": 432,
+          "width": 49,
+          "height": 90
+        },
+        {
+          "id": "2",
+          "entering": false,
+          "x": 26.4375,
+          "y": 342,
+          "right": 75.4375,
+          "bottom": 432,
+          "width": 49,
+          "height": 90
+        }
+      ],
+      "signs": [
+        {
+          "text": "✓ 停對了",
+          "x": 35.6875,
+          "y": 235.671875,
+          "right": 103.6875,
+          "bottom": 304.859375,
+          "width": 68,
+          "height": 69.1875
+        },
+        {
+          "text": "月台",
+          "x": 161,
+          "y": 237.265625,
+          "right": 229,
+          "bottom": 303.265625,
+          "width": 68,
+          "height": 66
+        },
+        {
+          "text": "月台",
+          "x": 286.296875,
+          "y": 237.265625,
+          "right": 354.296875,
+          "bottom": 303.265625,
+          "width": 68,
+          "height": 66
+        }
+      ]
+    },
+    {
+      "label": "phone actual aisle and waiting people",
+      "status": "VERIFIED",
+      "scene": {
+        "x": 13,
+        "y": 87,
+        "right": 377,
+        "bottom": 623.21875,
+        "width": 364,
+        "height": 536.21875
+      },
+      "people": [
+        {
+          "id": "0",
+          "entering": true,
+          "x": 182.85000610351562,
+          "y": 480.21875,
+          "right": 221.78750610351562,
+          "bottom": 517.4375,
+          "width": 38.9375,
+          "height": 37.21875
+        },
+        {
+          "id": "1",
+          "entering": false,
+          "x": 90.875,
+          "y": 342,
+          "right": 139.875,
+          "bottom": 432,
+          "width": 49,
+          "height": 90
+        },
+        {
+          "id": "2",
+          "entering": false,
+          "x": 26.4375,
+          "y": 342,
+          "right": 75.4375,
+          "bottom": 432,
+          "width": 49,
+          "height": 90
+        }
+      ],
+      "signs": [
+        {
+          "text": "✓ 停對了",
+          "x": 35.6875,
+          "y": 235.671875,
+          "right": 103.6875,
+          "bottom": 304.859375,
+          "width": 68,
+          "height": 69.1875
+        },
+        {
+          "text": "月台",
+          "x": 161,
+          "y": 237.265625,
+          "right": 229,
+          "bottom": 303.265625,
+          "width": 68,
+          "height": 66
+        },
+        {
+          "text": "月台",
+          "x": 286.296875,
+          "y": 237.265625,
+          "right": 354.296875,
+          "bottom": 303.265625,
+          "width": 68,
+          "height": 66
+        }
+      ]
+    },
+    {
+      "label": "small-landscape actual station arrival controls",
+      "status": "VERIFIED",
+      "controls": 9
+    },
+    {
+      "label": "small-landscape actual queue and sign geometry",
+      "status": "VERIFIED",
+      "scene": {
+        "x": 6,
+        "y": 80,
+        "right": 268.84375,
+        "bottom": 314,
+        "width": 262.84375,
+        "height": 234
+      },
+      "people": [
+        {
+          "id": "0",
+          "entering": false,
+          "x": 115.53125,
+          "y": 196.0625,
+          "right": 137.53125,
+          "bottom": 230.0625,
+          "width": 22,
+          "height": 34
+        },
+        {
+          "id": "1",
+          "entering": false,
+          "x": 69.296875,
+          "y": 196.0625,
+          "right": 91.296875,
+          "bottom": 230.0625,
+          "width": 22,
+          "height": 34
+        },
+        {
+          "id": "2",
+          "entering": false,
+          "x": 23.0625,
+          "y": 196.0625,
+          "right": 45.0625,
+          "bottom": 230.0625,
+          "width": 22,
+          "height": 34
+        }
+      ],
+      "signs": [
+        {
+          "text": "✓ 停對了",
+          "x": 17.515625,
+          "y": 120.40625,
+          "right": 77.515625,
+          "bottom": 181.59375,
+          "width": 60,
+          "height": 61.1875
+        },
+        {
+          "text": "月台",
+          "x": 107.421875,
+          "y": 121,
+          "right": 167.421875,
+          "bottom": 181,
+          "width": 60,
+          "height": 60
+        },
+        {
+          "text": "月台",
+          "x": 197.3125,
+          "y": 121,
+          "right": 257.3125,
+          "bottom": 181,
+          "width": 60,
+          "height": 60
+        }
+      ]
+    },
+    {
+      "label": "small-landscape actual aisle and waiting people",
+      "status": "VERIFIED",
+      "scene": {
+        "x": 6,
+        "y": 80,
+        "right": 268.84375,
+        "bottom": 314,
+        "width": 262.84375,
+        "height": 234
+      },
+      "people": [
+        {
+          "id": "0",
+          "entering": true,
+          "x": 123.6812515258789,
+          "y": 247.09375,
+          "right": 151.61874389648438,
+          "bottom": 273.796875,
+          "width": 27.93749237060547,
+          "height": 26.703125
+        },
+        {
+          "id": "1",
+          "entering": false,
+          "x": 69.296875,
+          "y": 196.0625,
+          "right": 91.296875,
+          "bottom": 230.0625,
+          "width": 22,
+          "height": 34
+        },
+        {
+          "id": "2",
+          "entering": false,
+          "x": 23.0625,
+          "y": 196.0625,
+          "right": 45.0625,
+          "bottom": 230.0625,
+          "width": 22,
+          "height": 34
+        }
+      ],
+      "signs": [
+        {
+          "text": "✓ 停對了",
+          "x": 17.515625,
+          "y": 120.40625,
+          "right": 77.515625,
+          "bottom": 181.59375,
+          "width": 60,
+          "height": 61.1875
+        },
+        {
+          "text": "月台",
+          "x": 107.421875,
+          "y": 121,
+          "right": 167.421875,
+          "bottom": 181,
+          "width": 60,
+          "height": 60
+        },
+        {
+          "text": "月台",
+          "x": 197.3125,
+          "y": 121,
+          "right": 257.3125,
+          "bottom": 181,
+          "width": 60,
+          "height": 60
+        }
+      ]
+    },
+    {
+      "label": "landscape actual station arrival controls",
+      "status": "VERIFIED",
+      "controls": 9
+    },
+    {
+      "label": "landscape actual queue and sign geometry",
+      "status": "VERIFIED",
+      "scene": {
+        "x": 6,
+        "y": 80,
+        "right": 400.28125,
+        "bottom": 384,
+        "width": 394.28125,
+        "height": 304
+      },
+      "people": [
+        {
+          "id": "0",
+          "entering": false,
+          "x": 175.671875,
+          "y": 241.21875,
+          "right": 197.671875,
+          "bottom": 275.21875,
+          "width": 22,
+          "height": 34
+        },
+        {
+          "id": "1",
+          "entering": false,
+          "x": 105.78125,
+          "y": 241.21875,
+          "right": 127.78125,
+          "bottom": 275.21875,
+          "width": 22,
+          "height": 34
+        },
+        {
+          "id": "2",
+          "entering": false,
+          "x": 35.890625,
+          "y": 241.21875,
+          "right": 57.890625,
+          "bottom": 275.21875,
+          "width": 22,
+          "height": 34
+        }
+      ],
+      "signs": [
+        {
+          "text": "✓ 停對了",
+          "x": 37.234375,
+          "y": 120.40625,
+          "right": 97.234375,
+          "bottom": 181.59375,
+          "width": 60,
+          "height": 61.1875
+        },
+        {
+          "text": "月台",
+          "x": 173.140625,
+          "y": 121,
+          "right": 233.140625,
+          "bottom": 181,
+          "width": 60,
+          "height": 60
+        },
+        {
+          "text": "月台",
+          "x": 309.03125,
+          "y": 121,
+          "right": 369.03125,
+          "bottom": 181,
+          "width": 60,
+          "height": 60
+        }
+      ]
+    },
+    {
+      "label": "landscape actual aisle and waiting people",
+      "status": "VERIFIED",
+      "scene": {
+        "x": 6,
+        "y": 80,
+        "right": 400.28125,
+        "bottom": 384,
+        "width": 394.28125,
+        "height": 304
+      },
+      "people": [
+        {
+          "id": "0",
+          "entering": true,
+          "x": 189.96640014648438,
+          "y": 286.265625,
+          "right": 232.20077514648438,
+          "bottom": 326.640625,
+          "width": 42.234375,
+          "height": 40.375
+        },
+        {
+          "id": "1",
+          "entering": false,
+          "x": 105.78125,
+          "y": 241.21875,
+          "right": 127.78125,
+          "bottom": 275.21875,
+          "width": 22,
+          "height": 34
+        },
+        {
+          "id": "2",
+          "entering": false,
+          "x": 35.890625,
+          "y": 241.21875,
+          "right": 57.890625,
+          "bottom": 275.21875,
+          "width": 22,
+          "height": 34
+        }
+      ],
+      "signs": [
+        {
+          "text": "✓ 停對了",
+          "x": 37.234375,
+          "y": 120.40625,
+          "right": 97.234375,
+          "bottom": 181.59375,
+          "width": 60,
+          "height": 61.1875
+        },
+        {
+          "text": "月台",
+          "x": 173.140625,
+          "y": 121,
+          "right": 233.140625,
+          "bottom": 181,
+          "width": 60,
+          "height": 60
+        },
+        {
+          "text": "月台",
+          "x": 309.03125,
+          "y": 121,
+          "right": 369.03125,
+          "bottom": 181,
+          "width": 60,
+          "height": 60
+        }
+      ]
+    },
+    {
+      "label": "ipad actual station arrival controls",
+      "status": "VERIFIED",
+      "controls": 9
+    },
+    {
+      "label": "ipad actual queue and sign geometry",
+      "status": "VERIFIED",
+      "scene": {
+        "x": 13,
+        "y": 149,
+        "right": 441.15625,
+        "bottom": 949,
+        "width": 428.15625,
+        "height": 800
+      },
+      "people": [
+        {
+          "id": "0",
+          "entering": false,
+          "x": 184.671875,
+          "y": 574.140625,
+          "right": 233.671875,
+          "bottom": 664.140625,
+          "width": 49,
+          "height": 90
+        },
+        {
+          "id": "1",
+          "entering": false,
+          "x": 108.6875,
+          "y": 574.140625,
+          "right": 157.6875,
+          "bottom": 664.140625,
+          "width": 49,
+          "height": 90
+        },
+        {
+          "id": "2",
+          "entering": false,
+          "x": 32.6875,
+          "y": 574.140625,
+          "right": 81.6875,
+          "bottom": 664.140625,
+          "width": 49,
+          "height": 90
+        }
+      ],
+      "signs": [
+        {
+          "text": "✓ 停對了",
+          "x": 45.3125,
+          "y": 387.359375,
+          "right": 113.3125,
+          "bottom": 456.546875,
+          "width": 68,
+          "height": 69.1875
+        },
+        {
+          "text": "月台",
+          "x": 193.078125,
+          "y": 388.953125,
+          "right": 261.078125,
+          "bottom": 454.953125,
+          "width": 68,
+          "height": 66
+        },
+        {
+          "text": "月台",
+          "x": 340.828125,
+          "y": 388.953125,
+          "right": 408.828125,
+          "bottom": 454.953125,
+          "width": 68,
+          "height": 66
+        }
+      ]
+    },
+    {
+      "label": "ipad actual aisle and waiting people",
+      "status": "VERIFIED",
+      "scene": {
+        "x": 13,
+        "y": 149,
+        "right": 441.15625,
+        "bottom": 949,
+        "width": 428.15625,
+        "height": 800
+      },
+      "people": [
+        {
+          "id": "0",
+          "entering": true,
+          "x": 204.5476531982422,
+          "y": 760.671875,
+          "right": 250.4695281982422,
+          "bottom": 804.5625,
+          "width": 45.921875,
+          "height": 43.890625
+        },
+        {
+          "id": "1",
+          "entering": false,
+          "x": 108.6875,
+          "y": 574.140625,
+          "right": 157.6875,
+          "bottom": 664.140625,
+          "width": 49,
+          "height": 90
+        },
+        {
+          "id": "2",
+          "entering": false,
+          "x": 32.6875,
+          "y": 574.140625,
+          "right": 81.6875,
+          "bottom": 664.140625,
+          "width": 49,
+          "height": 90
+        }
+      ],
+      "signs": [
+        {
+          "text": "✓ 停對了",
+          "x": 45.3125,
+          "y": 387.359375,
+          "right": 113.3125,
+          "bottom": 456.546875,
+          "width": 68,
+          "height": 69.1875
+        },
+        {
+          "text": "月台",
+          "x": 193.078125,
+          "y": 388.953125,
+          "right": 261.078125,
+          "bottom": 454.953125,
+          "width": 68,
+          "height": 66
+        },
+        {
+          "text": "月台",
+          "x": 340.828125,
+          "y": 388.953125,
+          "right": 408.828125,
+          "bottom": 454.953125,
+          "width": 68,
+          "height": 66
+        }
+      ]
+    },
+    {
+      "label": "ipad-landscape actual station arrival controls",
+      "status": "VERIFIED",
+      "controls": 9
+    },
+    {
+      "label": "ipad-landscape actual queue and sign geometry",
+      "status": "VERIFIED",
+      "scene": {
+        "x": 13,
+        "y": 87,
+        "right": 590.484375,
+        "bottom": 755,
+        "width": 577.484375,
+        "height": 668
+      },
+      "people": [
+        {
+          "id": "0",
+          "entering": false,
+          "x": 253,
+          "y": 427,
+          "right": 302,
+          "bottom": 517,
+          "width": 49,
+          "height": 90
+        },
+        {
+          "id": "1",
+          "entering": false,
+          "x": 150.140625,
+          "y": 427,
+          "right": 199.140625,
+          "bottom": 517,
+          "width": 49,
+          "height": 90
+        },
+        {
+          "id": "2",
+          "entering": false,
+          "x": 47.265625,
+          "y": 427,
+          "right": 96.265625,
+          "bottom": 517,
+          "width": 49,
+          "height": 90
+        }
+      ],
+      "signs": [
+        {
+          "text": "✓ 停對了",
+          "x": 67.71875,
+          "y": 280.484375,
+          "right": 135.71875,
+          "bottom": 349.671875,
+          "width": 68,
+          "height": 69.1875
+        },
+        {
+          "text": "月台",
+          "x": 267.734375,
+          "y": 282.078125,
+          "right": 335.734375,
+          "bottom": 348.078125,
+          "width": 68,
+          "height": 66
+        },
+        {
+          "text": "月台",
+          "x": 467.75,
+          "y": 282.078125,
+          "right": 535.75,
+          "bottom": 348.078125,
+          "width": 68,
+          "height": 66
+        }
+      ]
+    },
+    {
+      "label": "ipad-landscape actual aisle and waiting people",
+      "status": "VERIFIED",
+      "scene": {
+        "x": 13,
+        "y": 87,
+        "right": 590.484375,
+        "bottom": 755,
+        "width": 577.484375,
+        "height": 668
+      },
+      "people": [
+        {
+          "id": "0",
+          "entering": true,
+          "x": 282.36016845703125,
+          "y": 550.640625,
+          "right": 344.53204345703125,
+          "bottom": 610.0625,
+          "width": 62.171875,
+          "height": 59.421875
+        },
+        {
+          "id": "1",
+          "entering": false,
+          "x": 150.140625,
+          "y": 427,
+          "right": 199.140625,
+          "bottom": 517,
+          "width": 49,
+          "height": 90
+        },
+        {
+          "id": "2",
+          "entering": false,
+          "x": 47.265625,
+          "y": 427,
+          "right": 96.265625,
+          "bottom": 517,
+          "width": 49,
+          "height": 90
+        }
+      ],
+      "signs": [
+        {
+          "text": "✓ 停對了",
+          "x": 67.71875,
+          "y": 280.484375,
+          "right": 135.71875,
+          "bottom": 349.671875,
+          "width": 68,
+          "height": 69.1875
+        },
+        {
+          "text": "月台",
+          "x": 267.734375,
+          "y": 282.078125,
+          "right": 335.734375,
+          "bottom": 348.078125,
+          "width": 68,
+          "height": 66
+        },
+        {
+          "text": "月台",
+          "x": 467.75,
+          "y": 282.078125,
+          "right": 535.75,
+          "bottom": 348.078125,
+          "width": 68,
+          "height": 66
+        }
+      ]
+    },
+    {
+      "label": "laptop actual station arrival controls",
+      "status": "VERIFIED",
+      "controls": 9
+    },
+    {
+      "label": "laptop actual queue and sign geometry",
+      "status": "VERIFIED",
+      "scene": {
+        "x": 146,
+        "y": 87,
+        "right": 767.828125,
+        "bottom": 587,
+        "width": 621.828125,
+        "height": 500
+      },
+      "people": [
+        {
+          "id": "0",
+          "entering": false,
+          "x": 406.296875,
+          "y": 318.640625,
+          "right": 455.296875,
+          "bottom": 408.640625,
+          "width": 49,
+          "height": 90
+        },
+        {
+          "id": "1",
+          "entering": false,
+          "x": 295.453125,
+          "y": 318.640625,
+          "right": 344.453125,
+          "bottom": 408.640625,
+          "width": 49,
+          "height": 90
+        },
+        {
+          "id": "2",
+          "entering": false,
+          "x": 184.59375,
+          "y": 318.640625,
+          "right": 233.59375,
+          "bottom": 408.640625,
+          "width": 49,
+          "height": 90
+        }
+      ],
+      "signs": [
+        {
+          "text": "✓ 停對了",
+          "x": 207.359375,
+          "y": 223.359375,
+          "right": 275.359375,
+          "bottom": 292.546875,
+          "width": 68,
+          "height": 69.1875
+        },
+        {
+          "text": "月台",
+          "x": 422.90625,
+          "y": 224.953125,
+          "right": 490.90625,
+          "bottom": 290.953125,
+          "width": 68,
+          "height": 66
+        },
+        {
+          "text": "月台",
+          "x": 638.453125,
+          "y": 224.953125,
+          "right": 706.453125,
+          "bottom": 290.953125,
+          "width": 68,
+          "height": 66
+        }
+      ]
+    },
+    {
+      "label": "laptop actual aisle and waiting people",
+      "status": "VERIFIED",
+      "scene": {
+        "x": 146,
+        "y": 87,
+        "right": 767.828125,
+        "bottom": 587,
+        "width": 621.828125,
+        "height": 500
+      },
+      "people": [
+        {
+          "id": "0",
+          "entering": true,
+          "x": 436.0249938964844,
+          "y": 393.359375,
+          "right": 503.0249938964844,
+          "bottom": 457.390625,
+          "width": 67,
+          "height": 64.03125
+        },
+        {
+          "id": "1",
+          "entering": false,
+          "x": 295.453125,
+          "y": 318.640625,
+          "right": 344.453125,
+          "bottom": 408.640625,
+          "width": 49,
+          "height": 90
+        },
+        {
+          "id": "2",
+          "entering": false,
+          "x": 184.59375,
+          "y": 318.640625,
+          "right": 233.59375,
+          "bottom": 408.640625,
+          "width": 49,
+          "height": 90
+        }
+      ],
+      "signs": [
+        {
+          "text": "✓ 停對了",
+          "x": 207.359375,
+          "y": 223.359375,
+          "right": 275.359375,
+          "bottom": 292.546875,
+          "width": 68,
+          "height": 69.1875
+        },
+        {
+          "text": "月台",
+          "x": 422.90625,
+          "y": 224.953125,
+          "right": 490.90625,
+          "bottom": 290.953125,
+          "width": 68,
+          "height": 66
+        },
+        {
+          "text": "月台",
+          "x": 638.453125,
+          "y": 224.953125,
+          "right": 706.453125,
+          "bottom": 290.953125,
+          "width": 68,
+          "height": 66
+        }
+      ]
+    },
+    {
+      "label": "short-laptop actual station arrival controls",
+      "status": "VERIFIED",
+      "controls": 9
+    },
+    {
+      "label": "short-laptop actual queue and sign geometry",
+      "status": "VERIFIED",
+      "scene": {
+        "x": 103,
+        "y": 87,
+        "right": 724.828125,
+        "bottom": 627,
+        "width": 621.828125,
+        "height": 540
+      },
+      "people": [
+        {
+          "id": "0",
+          "entering": false,
+          "x": 363.296875,
+          "y": 344.4375,
+          "right": 412.296875,
+          "bottom": 434.4375,
+          "width": 49,
+          "height": 90
+        },
+        {
+          "id": "1",
+          "entering": false,
+          "x": 252.453125,
+          "y": 344.4375,
+          "right": 301.453125,
+          "bottom": 434.4375,
+          "width": 49,
+          "height": 90
+        },
+        {
+          "id": "2",
+          "entering": false,
+          "x": 141.59375,
+          "y": 344.4375,
+          "right": 190.59375,
+          "bottom": 434.4375,
+          "width": 49,
+          "height": 90
+        }
+      ],
+      "signs": [
+        {
+          "text": "✓ 停對了",
+          "x": 164.359375,
+          "y": 236.953125,
+          "right": 232.359375,
+          "bottom": 306.140625,
+          "width": 68,
+          "height": 69.1875
+        },
+        {
+          "text": "月台",
+          "x": 379.90625,
+          "y": 238.546875,
+          "right": 447.90625,
+          "bottom": 304.546875,
+          "width": 68,
+          "height": 66
+        },
+        {
+          "text": "月台",
+          "x": 595.453125,
+          "y": 238.546875,
+          "right": 663.453125,
+          "bottom": 304.546875,
+          "width": 68,
+          "height": 66
+        }
+      ]
+    },
+    {
+      "label": "short-laptop actual aisle and waiting people",
+      "status": "VERIFIED",
+      "scene": {
+        "x": 103,
+        "y": 87,
+        "right": 724.828125,
+        "bottom": 627,
+        "width": 621.828125,
+        "height": 540
+      },
+      "people": [
+        {
+          "id": "0",
+          "entering": true,
+          "x": 381.1343688964844,
+          "y": 428.546875,
+          "right": 448.1343688964844,
+          "bottom": 492.578125,
+          "width": 67,
+          "height": 64.03125
+        },
+        {
+          "id": "1",
+          "entering": false,
+          "x": 252.453125,
+          "y": 344.4375,
+          "right": 301.453125,
+          "bottom": 434.4375,
+          "width": 49,
+          "height": 90
+        },
+        {
+          "id": "2",
+          "entering": false,
+          "x": 141.59375,
+          "y": 344.4375,
+          "right": 190.59375,
+          "bottom": 434.4375,
+          "width": 49,
+          "height": 90
+        }
+      ],
+      "signs": [
+        {
+          "text": "✓ 停對了",
+          "x": 164.359375,
+          "y": 236.953125,
+          "right": 232.359375,
+          "bottom": 306.140625,
+          "width": 68,
+          "height": 69.1875
+        },
+        {
+          "text": "月台",
+          "x": 379.90625,
+          "y": 238.546875,
+          "right": 447.90625,
+          "bottom": 304.546875,
+          "width": 68,
+          "height": 66
+        },
+        {
+          "text": "月台",
+          "x": 595.453125,
+          "y": 238.546875,
+          "right": 663.453125,
+          "bottom": 304.546875,
+          "width": 68,
+          "height": 66
+        }
+      ]
+    }
+  ],
+  "shots": [
+    {
+      "path": "docs/content/r9/device-se-tickets-queue.png",
+      "width": 320,
+      "height": 568,
+      "sha256": "0f4edc5924dde7334bc7f47437be5b280ee10267bcdca664eca916d8421d926a",
+      "state": {
+        "settled": "false",
+        "correction": "left",
+        "distance": "30.00",
+        "speed": "0.00",
+        "bend": "1",
+        "tilt": "7.47",
+        "sway": "5.47",
+        "acceleration": "0.00",
+        "bayStopped": "false",
+        "bayRestarted": "false",
+        "leftTurn": "false",
+        "rightTurn": "false",
+        "focus": "center",
+        "crossTime": "0.000",
+        "crossDuration": "2.1",
+        "orderHint": "",
+        "fruitSway": "10.06",
+        "flagSway": "21.87",
+        "assisting": "false",
+        "crossed": "0",
+        "lookedLeft": "false",
+        "lookedRight": "false",
+        "decision": "false",
+        "confirmed": "false",
+        "confirmDelay": "0",
+        "person": "child",
+        "doorState": "closed"
+      },
+      "phase": "playing",
+      "seats": 0,
+      "offset": "0.00",
+      "summary": "",
+      "native": false,
+      "method": "Original headless runtime PNG; RAF suspended during capture only; no gameplay assignments or pixel edits"
+    },
+    {
+      "path": "docs/content/r9/device-se-tickets-aisle.png",
+      "width": 320,
+      "height": 568,
+      "sha256": "6e68b7beafde1decec178e8e44637f8e9d90b254d29215455213c9de0fd758ab",
+      "state": {
+        "settled": "true",
+        "correction": "",
+        "distance": "30.00",
+        "speed": "0.00",
+        "bend": "1",
+        "tilt": "4.71",
+        "sway": "3.51",
+        "acceleration": "0.00",
+        "bayStopped": "false",
+        "bayRestarted": "false",
+        "leftTurn": "false",
+        "rightTurn": "false",
+        "focus": "center",
+        "crossTime": "0.000",
+        "crossDuration": "2.1",
+        "orderHint": "",
+        "fruitSway": "8.62",
+        "flagSway": "19.24",
+        "assisting": "false",
+        "crossed": "0",
+        "lookedLeft": "false",
+        "lookedRight": "false",
+        "decision": "false",
+        "confirmed": "false",
+        "confirmDelay": "0",
+        "person": "child",
+        "doorState": "open"
+      },
+      "phase": "boarding",
+      "seats": 1,
+      "offset": "0.00",
+      "summary": "",
+      "native": false,
+      "method": "Original headless runtime PNG; RAF suspended during capture only; no gameplay assignments or pixel edits"
+    },
+    {
+      "path": "docs/content/r9/phone-tickets-queue.png",
+      "width": 390,
+      "height": 844,
+      "sha256": "0f88c94e0d22882d149f715483e1f36e57e2580cba2c5d38e653d8ab30608fd9",
+      "state": {
+        "settled": "false",
+        "correction": "left",
+        "distance": "30.00",
+        "speed": "0.00",
+        "bend": "1",
+        "tilt": "10.56",
+        "sway": "7.24",
+        "acceleration": "0.00",
+        "bayStopped": "false",
+        "bayRestarted": "false",
+        "leftTurn": "false",
+        "rightTurn": "false",
+        "focus": "center",
+        "crossTime": "0.000",
+        "crossDuration": "2.1",
+        "orderHint": "",
+        "fruitSway": "10.96",
+        "flagSway": "23.81",
+        "assisting": "false",
+        "crossed": "0",
+        "lookedLeft": "false",
+        "lookedRight": "false",
+        "decision": "false",
+        "confirmed": "false",
+        "confirmDelay": "0",
+        "person": "child",
+        "doorState": "closed"
+      },
+      "phase": "playing",
+      "seats": 0,
+      "offset": "0.00",
+      "summary": "",
+      "native": false,
+      "method": "Original headless runtime PNG; RAF suspended during capture only; no gameplay assignments or pixel edits"
+    },
+    {
+      "path": "docs/content/r9/phone-tickets-aisle.png",
+      "width": 390,
+      "height": 844,
+      "sha256": "8ae1110090f28561643da2939f26aa10f4ddf3cebf567240314a0024b3e3cde0",
+      "state": {
+        "settled": "false",
+        "correction": "left",
+        "distance": "30.00",
+        "speed": "0.00",
+        "bend": "1",
+        "tilt": "5.13",
+        "sway": "3.79",
+        "acceleration": "0.00",
+        "bayStopped": "false",
+        "bayRestarted": "false",
+        "leftTurn": "false",
+        "rightTurn": "false",
+        "focus": "center",
+        "crossTime": "0.000",
+        "crossDuration": "2.1",
+        "orderHint": "",
+        "fruitSway": "8.88",
+        "flagSway": "19.73",
+        "assisting": "false",
+        "crossed": "0",
+        "lookedLeft": "false",
+        "lookedRight": "false",
+        "decision": "false",
+        "confirmed": "false",
+        "confirmDelay": "0",
+        "person": "child",
+        "doorState": "open"
+      },
+      "phase": "boarding",
+      "seats": 1,
+      "offset": "0.00",
+      "summary": "",
+      "native": false,
+      "method": "Original headless runtime PNG; RAF suspended during capture only; no gameplay assignments or pixel edits"
+    },
+    {
+      "path": "docs/content/r9/device-small-landscape-tickets-queue.png",
+      "width": 568,
+      "height": 320,
+      "sha256": "0a6556698aa1ffc93319bdaf3a967abe24ae28f8863bab918cbb9ae3c540a2c9",
+      "state": {
+        "settled": "false",
+        "correction": "left",
+        "distance": "30.00",
+        "speed": "0.00",
+        "bend": "1",
+        "tilt": "9.69",
+        "sway": "6.77",
+        "acceleration": "0.00",
+        "bayStopped": "false",
+        "bayRestarted": "false",
+        "leftTurn": "false",
+        "rightTurn": "false",
+        "focus": "center",
+        "crossTime": "0.000",
+        "crossDuration": "2.1",
+        "orderHint": "",
+        "fruitSway": "10.75",
+        "flagSway": "23.34",
+        "assisting": "false",
+        "crossed": "0",
+        "lookedLeft": "false",
+        "lookedRight": "false",
+        "decision": "false",
+        "confirmed": "false",
+        "confirmDelay": "0",
+        "person": "child",
+        "doorState": "closed"
+      },
+      "phase": "playing",
+      "seats": 0,
+      "offset": "0.00",
+      "summary": "",
+      "native": false,
+      "method": "Original headless runtime PNG; RAF suspended during capture only; no gameplay assignments or pixel edits"
+    },
+    {
+      "path": "docs/content/r9/device-small-landscape-tickets-aisle.png",
+      "width": 568,
+      "height": 320,
+      "sha256": "9c049faa1f1356ae8df903cf9123ee65d03e619f0a07dc5b092f6594c5a37493",
+      "state": {
+        "settled": "false",
+        "correction": "left",
+        "distance": "30.00",
+        "speed": "0.00",
+        "bend": "1",
+        "tilt": "5.14",
+        "sway": "3.78",
+        "acceleration": "0.00",
+        "bayStopped": "false",
+        "bayRestarted": "false",
+        "leftTurn": "false",
+        "rightTurn": "false",
+        "focus": "center",
+        "crossTime": "0.000",
+        "crossDuration": "2.1",
+        "orderHint": "",
+        "fruitSway": "8.89",
+        "flagSway": "19.75",
+        "assisting": "false",
+        "crossed": "0",
+        "lookedLeft": "false",
+        "lookedRight": "false",
+        "decision": "false",
+        "confirmed": "false",
+        "confirmDelay": "0",
+        "person": "child",
+        "doorState": "open"
+      },
+      "phase": "boarding",
+      "seats": 1,
+      "offset": "0.00",
+      "summary": "",
+      "native": false,
+      "method": "Original headless runtime PNG; RAF suspended during capture only; no gameplay assignments or pixel edits"
+    },
+    {
+      "path": "docs/content/r9/device-landscape-tickets-queue.png",
+      "width": 844,
+      "height": 390,
+      "sha256": "cbe41d0cc29bc0f861ff8bbb2b80f6a38ae9282309ea93f334da6c1932fc493d",
+      "state": {
+        "settled": "false",
+        "correction": "left",
+        "distance": "30.00",
+        "speed": "0.00",
+        "bend": "1",
+        "tilt": "7.49",
+        "sway": "5.49",
+        "acceleration": "0.00",
+        "bayStopped": "false",
+        "bayRestarted": "false",
+        "leftTurn": "false",
+        "rightTurn": "false",
+        "focus": "center",
+        "crossTime": "0.000",
+        "crossDuration": "2.1",
+        "orderHint": "",
+        "fruitSway": "10.06",
+        "flagSway": "21.85",
+        "assisting": "false",
+        "crossed": "0",
+        "lookedLeft": "false",
+        "lookedRight": "false",
+        "decision": "false",
+        "confirmed": "false",
+        "confirmDelay": "0",
+        "person": "child",
+        "doorState": "closed"
+      },
+      "phase": "playing",
+      "seats": 0,
+      "offset": "0.00",
+      "summary": "",
+      "native": false,
+      "method": "Original headless runtime PNG; RAF suspended during capture only; no gameplay assignments or pixel edits"
+    },
+    {
+      "path": "docs/content/r9/device-landscape-tickets-aisle.png",
+      "width": 844,
+      "height": 390,
+      "sha256": "60aa192ba2332efe8d600ca43c1b7d1c443be534da72607f2a47db41cb0e000b",
+      "state": {
+        "settled": "true",
+        "correction": "",
+        "distance": "30.00",
+        "speed": "0.00",
+        "bend": "1",
+        "tilt": "4.33",
+        "sway": "3.26",
+        "acceleration": "0.00",
+        "bayStopped": "false",
+        "bayRestarted": "false",
+        "leftTurn": "false",
+        "rightTurn": "false",
+        "focus": "center",
+        "crossTime": "0.000",
+        "crossDuration": "2.1",
+        "orderHint": "",
+        "fruitSway": "8.37",
+        "flagSway": "18.73",
+        "assisting": "false",
+        "crossed": "0",
+        "lookedLeft": "false",
+        "lookedRight": "false",
+        "decision": "false",
+        "confirmed": "false",
+        "confirmDelay": "0",
+        "person": "child",
+        "doorState": "open"
+      },
+      "phase": "boarding",
+      "seats": 1,
+      "offset": "0.00",
+      "summary": "",
+      "native": false,
+      "method": "Original headless runtime PNG; RAF suspended during capture only; no gameplay assignments or pixel edits"
+    },
+    {
+      "path": "docs/content/r9/device-ipad-tickets-queue.png",
+      "width": 768,
+      "height": 1024,
+      "sha256": "9e5034f8f10b7d3b1f3ae58a0f5d7cf95df9bf88ef60436f1c70d1d928f64aea",
+      "state": {
+        "settled": "false",
+        "correction": "left",
+        "distance": "30.00",
+        "speed": "0.00",
+        "bend": "1",
+        "tilt": "8.14",
+        "sway": "5.88",
+        "acceleration": "0.00",
+        "bayStopped": "false",
+        "bayRestarted": "false",
+        "leftTurn": "false",
+        "rightTurn": "false",
+        "focus": "center",
+        "crossTime": "0.000",
+        "crossDuration": "2.1",
+        "orderHint": "",
+        "fruitSway": "10.30",
+        "flagSway": "22.37",
+        "assisting": "false",
+        "crossed": "0",
+        "lookedLeft": "false",
+        "lookedRight": "false",
+        "decision": "false",
+        "confirmed": "false",
+        "confirmDelay": "0",
+        "person": "child",
+        "doorState": "closed"
+      },
+      "phase": "playing",
+      "seats": 0,
+      "offset": "0.00",
+      "summary": "",
+      "native": false,
+      "method": "Original headless runtime PNG; RAF suspended during capture only; no gameplay assignments or pixel edits"
+    },
+    {
+      "path": "docs/content/r9/device-ipad-tickets-aisle.png",
+      "width": 768,
+      "height": 1024,
+      "sha256": "2aeef392dbdc2b67797b452cc84441363783f3bd3b75f1ce57700e74f413bb41",
+      "state": {
+        "settled": "false",
+        "correction": "left",
+        "distance": "30.00",
+        "speed": "0.00",
+        "bend": "1",
+        "tilt": "5.13",
+        "sway": "3.78",
+        "acceleration": "0.00",
+        "bayStopped": "false",
+        "bayRestarted": "false",
+        "leftTurn": "false",
+        "rightTurn": "false",
+        "focus": "center",
+        "crossTime": "0.000",
+        "crossDuration": "2.1",
+        "orderHint": "",
+        "fruitSway": "8.89",
+        "flagSway": "19.74",
+        "assisting": "false",
+        "crossed": "0",
+        "lookedLeft": "false",
+        "lookedRight": "false",
+        "decision": "false",
+        "confirmed": "false",
+        "confirmDelay": "0",
+        "person": "child",
+        "doorState": "open"
+      },
+      "phase": "boarding",
+      "seats": 1,
+      "offset": "0.00",
+      "summary": "",
+      "native": false,
+      "method": "Original headless runtime PNG; RAF suspended during capture only; no gameplay assignments or pixel edits"
+    },
+    {
+      "path": "docs/content/r9/device-ipad-landscape-tickets-queue.png",
+      "width": 1024,
+      "height": 768,
+      "sha256": "4761890c60053edd521ca94ebf83b4aac345ae00bcf11b66bddec3df44c9a08b",
+      "state": {
+        "settled": "false",
+        "correction": "left",
+        "distance": "30.00",
+        "speed": "0.00",
+        "bend": "1",
+        "tilt": "8.13",
+        "sway": "5.87",
+        "acceleration": "0.00",
+        "bayStopped": "false",
+        "bayRestarted": "false",
+        "leftTurn": "false",
+        "rightTurn": "false",
+        "focus": "center",
+        "crossTime": "0.000",
+        "crossDuration": "2.1",
+        "orderHint": "",
+        "fruitSway": "10.30",
+        "flagSway": "22.36",
+        "assisting": "false",
+        "crossed": "0",
+        "lookedLeft": "false",
+        "lookedRight": "false",
+        "decision": "false",
+        "confirmed": "false",
+        "confirmDelay": "0",
+        "person": "child",
+        "doorState": "closed"
+      },
+      "phase": "playing",
+      "seats": 0,
+      "offset": "0.00",
+      "summary": "",
+      "native": false,
+      "method": "Original headless runtime PNG; RAF suspended during capture only; no gameplay assignments or pixel edits"
+    },
+    {
+      "path": "docs/content/r9/device-ipad-landscape-tickets-aisle.png",
+      "width": 1024,
+      "height": 768,
+      "sha256": "b9671dfa399bfce2162749c1026791cd21ee8b4c181cc512fde013fa6bf2c2b9",
+      "state": {
+        "settled": "false",
+        "correction": "left",
+        "distance": "30.00",
+        "speed": "0.00",
+        "bend": "1",
+        "tilt": "5.13",
+        "sway": "3.79",
+        "acceleration": "0.00",
+        "bayStopped": "false",
+        "bayRestarted": "false",
+        "leftTurn": "false",
+        "rightTurn": "false",
+        "focus": "center",
+        "crossTime": "0.000",
+        "crossDuration": "2.1",
+        "orderHint": "",
+        "fruitSway": "8.88",
+        "flagSway": "19.73",
+        "assisting": "false",
+        "crossed": "0",
+        "lookedLeft": "false",
+        "lookedRight": "false",
+        "decision": "false",
+        "confirmed": "false",
+        "confirmDelay": "0",
+        "person": "child",
+        "doorState": "open"
+      },
+      "phase": "boarding",
+      "seats": 1,
+      "offset": "0.00",
+      "summary": "",
+      "native": false,
+      "method": "Original headless runtime PNG; RAF suspended during capture only; no gameplay assignments or pixel edits"
+    },
+    {
+      "path": "docs/content/r9/device-laptop-tickets-queue.png",
+      "width": 1366,
+      "height": 600,
+      "sha256": "8d6cfea5b9e3d88e433041f14585131e451865fa0a1671200215ecefd6203d44",
+      "state": {
+        "settled": "false",
+        "correction": "left",
+        "distance": "30.00",
+        "speed": "0.00",
+        "bend": "1",
+        "tilt": "9.73",
+        "sway": "6.79",
+        "acceleration": "0.00",
+        "bayStopped": "false",
+        "bayRestarted": "false",
+        "leftTurn": "false",
+        "rightTurn": "false",
+        "focus": "center",
+        "crossTime": "0.000",
+        "crossDuration": "2.1",
+        "orderHint": "",
+        "fruitSway": "10.75",
+        "flagSway": "23.31",
+        "assisting": "false",
+        "crossed": "0",
+        "lookedLeft": "false",
+        "lookedRight": "false",
+        "decision": "false",
+        "confirmed": "false",
+        "confirmDelay": "0",
+        "person": "child",
+        "doorState": "closed"
+      },
+      "phase": "playing",
+      "seats": 0,
+      "offset": "0.00",
+      "summary": "",
+      "native": false,
+      "method": "Original headless runtime PNG; RAF suspended during capture only; no gameplay assignments or pixel edits"
+    },
+    {
+      "path": "docs/content/r9/device-laptop-tickets-aisle.png",
+      "width": 1366,
+      "height": 600,
+      "sha256": "890211d10d8c5718cf1466000e005228ec0cbe9d19ae0355e7d296e15b063afa",
+      "state": {
+        "settled": "true",
+        "correction": "",
+        "distance": "30.00",
+        "speed": "0.00",
+        "bend": "1",
+        "tilt": "4.33",
+        "sway": "3.26",
+        "acceleration": "0.00",
+        "bayStopped": "false",
+        "bayRestarted": "false",
+        "leftTurn": "false",
+        "rightTurn": "false",
+        "focus": "center",
+        "crossTime": "0.000",
+        "crossDuration": "2.1",
+        "orderHint": "",
+        "fruitSway": "8.37",
+        "flagSway": "18.73",
+        "assisting": "false",
+        "crossed": "0",
+        "lookedLeft": "false",
+        "lookedRight": "false",
+        "decision": "false",
+        "confirmed": "false",
+        "confirmDelay": "0",
+        "person": "child",
+        "doorState": "open"
+      },
+      "phase": "boarding",
+      "seats": 1,
+      "offset": "0.00",
+      "summary": "",
+      "native": false,
+      "method": "Original headless runtime PNG; RAF suspended during capture only; no gameplay assignments or pixel edits"
+    },
+    {
+      "path": "docs/content/r9/device-short-laptop-tickets-queue.png",
+      "width": 1280,
+      "height": 640,
+      "sha256": "4327d1fa1e387c8d40ed4a26d8f53fbcca16db4ba62c44a87575c87c351e86be",
+      "state": {
+        "settled": "false",
+        "correction": "left",
+        "distance": "30.00",
+        "speed": "0.00",
+        "bend": "1",
+        "tilt": "10.57",
+        "sway": "7.24",
+        "acceleration": "0.00",
+        "bayStopped": "false",
+        "bayRestarted": "false",
+        "leftTurn": "false",
+        "rightTurn": "false",
+        "focus": "center",
+        "crossTime": "0.000",
+        "crossDuration": "2.1",
+        "orderHint": "",
+        "fruitSway": "10.96",
+        "flagSway": "23.81",
+        "assisting": "false",
+        "crossed": "0",
+        "lookedLeft": "false",
+        "lookedRight": "false",
+        "decision": "false",
+        "confirmed": "false",
+        "confirmDelay": "0",
+        "person": "child",
+        "doorState": "closed"
+      },
+      "phase": "playing",
+      "seats": 0,
+      "offset": "0.00",
+      "summary": "",
+      "native": false,
+      "method": "Original headless runtime PNG; RAF suspended during capture only; no gameplay assignments or pixel edits"
+    },
+    {
+      "path": "docs/content/r9/device-short-laptop-tickets-aisle.png",
+      "width": 1280,
+      "height": 640,
+      "sha256": "c388e58f2c829d6b83254113b578dcc782b87fb25d9d7e5bb3746543628e9c9f",
+      "state": {
+        "settled": "false",
+        "correction": "left",
+        "distance": "30.00",
+        "speed": "0.00",
+        "bend": "1",
+        "tilt": "5.59",
+        "sway": "4.08",
+        "acceleration": "0.00",
+        "bayStopped": "false",
+        "bayRestarted": "false",
+        "leftTurn": "false",
+        "rightTurn": "false",
+        "focus": "center",
+        "crossTime": "0.000",
+        "crossDuration": "2.1",
+        "orderHint": "",
+        "fruitSway": "9.14",
+        "flagSway": "20.23",
+        "assisting": "false",
+        "crossed": "0",
+        "lookedLeft": "false",
+        "lookedRight": "false",
+        "decision": "false",
+        "confirmed": "false",
+        "confirmDelay": "0",
+        "person": "child",
+        "doorState": "open"
+      },
+      "phase": "boarding",
+      "seats": 1,
+      "offset": "0.00",
+      "summary": "",
+      "native": false,
+      "method": "Original headless runtime PNG; RAF suspended during capture only; no gameplay assignments or pixel edits"
+    }
+  ],
+  "errors": [],
+  "external": [],
+  "responses": []
+}
