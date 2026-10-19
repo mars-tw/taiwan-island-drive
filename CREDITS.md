@@ -1,5 +1,10 @@
 # CREDITS
 
+## 2.29.0 新內容第17輪
+
+- 新增一張海岸T字路口背景，工具 `image_gen.imagegen` 一次；實際模型slug未揭露，記null。原尺寸來源、完整提示、來源SHA與WebP在 `docs/content/r17/art/` 及 `public/art/content-r17/`。
+- 沿用本作原有角色、載具、雙姿勢圖、聲音與字型；沒有下載第三方美術。Sharp只做WebP轉檔與驗證縮圖。程式碼MIT及既有授權聲明保留，未宣稱AI素材具有排他權。
+
 ## 2.12.0 R8／送審前深度優化第一輪
 
 - 八次實際生成、八個新設計，工具 `image_gen.imagegen`；實際模型 slug 未揭露，manifest 記錄 null。沒有把計畫中的 gpt-image 型號當成模型證據。

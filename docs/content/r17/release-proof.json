@@ -1,0 +1,33 @@
+{
+  "status": "VERIFIED",
+  "branch": "r1-fun-polish",
+  "baseline": "4af0b7fce9927445217b6b702a3c46d83d055d41",
+  "version": "2.29.0",
+  "nativeSourceBuild": 25,
+  "unitTests": 242,
+  "oldTestFilesUnchanged": 37,
+  "browserChecks": 228,
+  "originalScreenshots": 428,
+  "reviewSet": 15,
+  "mergeChecks": 132,
+  "storeChecks": 101,
+  "newGenerationCalls": 1,
+  "newRuntimeAssets": 1,
+  "newDependencies": 0,
+  "secretHits": 0,
+  "maxMedianP95": 16.8,
+  "performanceStatus": "EXECUTED - concurrent host reference only",
+  "cleanup": {
+    "files": 775,
+    "bytes": 769763779,
+    "retainedInputs": 2506
+  },
+  "blocked": [
+    "Human observer direction/target check needs a participant",
+    "Physical iPhone/iPad touch and native voice need devices",
+    "Parent-child playtest needs participants",
+    "Clean-machine performance needs exclusive hardware",
+    "Muse >=8 needs independent rescore",
+    "Native rebuild and signing not performed"
+  ]
+}

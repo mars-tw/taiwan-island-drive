@@ -1,0 +1,62 @@
+/* R17: separate held input from the next action; one road and one passenger. */
+#content-r1[data-kind=cake] #content-controls [data-action][data-needed=true][data-held=false]{background:#fff!important;outline:3px solid #f46b27!important;box-shadow:0 0 0 3px #fff!important;animation:next-action 1.1s ease-in-out infinite alternate}
+#content-r1[data-kind=cake] #content-controls [data-action][data-held=true]{background:#ffd344!important;outline:0!important;box-shadow:inset 0 6px #d69a13!important;animation:none}
+#content-r1[data-kind=cake] #content-controls [data-needed=true][data-held=false] span::after{content:'下一步';display:block;font-size:11px;line-height:12px}
+#content-r1[data-kind=cake] .content-carrier .content-car{transform:rotate(var(--car-turn,0deg))!important}
+@keyframes next-action{to{outline-color:#1479b8;box-shadow:0 0 0 5px #ffe6b4}}
+@media(prefers-reduced-motion:reduce){#content-r1 #content-controls [data-needed]{animation:none!important}}
+#content-r1[data-kind=crossing] .crossing-panorama::before{background:url('/art/content-r17/crossing-junction.webp') center/100% 100%!important;transform:none!important}
+#content-r1[data-kind=crossing] .content-scene{background:#fff8d9!important}
+#content-r1[data-kind=crossing] .content-zebra{display:none!important}
+#content-r1[data-kind=crossing] .content-carrier{display:none!important}
+#content-r1[data-kind=crossing] .content-coach{display:block!important;right:calc(50% - 44px)!important;bottom:3%!important;width:88px!important;height:88px!important;z-index:6}
+#content-r1[data-kind=crossing]{--friend-w:58px;--friend-h:74px}
+#content-r1[data-kind=crossing] .content-walker[data-person=bike] .friend-number{scale:1!important}
+#content-r1[data-kind=crossing] .crossing-lookout{top:54px!important;max-width:47%;z-index:7}
+#content-r1[data-kind=crossing] .crossing-traffic{width:66px;height:40px;z-index:2}
+#content-r1[data-kind=crossing] .driver-view{z-index:3}
+#content-r1[data-kind=crossing] .driver-view path{fill:none;stroke-width:1}
+#content-r1[data-kind=crossing] .driver-view ellipse{fill:#fff7cc25}
+#content-r1[data-kind=crossing] [data-wrong-look=true]{outline:4px solid #f46b27!important;background:#ffe7d4!important}
+#content-r1[data-kind=crossing] [data-wrong-look=true] span::after{content:'剛才先按';display:block;font-size:10px}
+#content-r1[data-kind=crossing] .crossing-waiting [data-waiting]{filter:none!important}
+#content-r1[data-kind=tickets][data-phase] .ticket-vehicle{width:90%!important;aspect-ratio:2.42}
+#content-r1[data-kind=tickets] .content-scene{width:100%;max-width:max(280px,calc((100dvh - 104px)*.64));justify-self:center;box-sizing:border-box}
+#content-r1[data-kind=tickets] .content-stations button{top:108px!important}
+#content-r1[data-kind=tickets][data-phase] .ticket-counts{top:170px!important}
+#content-r1[data-kind=tickets] .content-stations button::after{display:none}
+#content-r1[data-kind=tickets] .ticket-closeup{display:none!important}
+#content-r1[data-kind=tickets] .content-stations [data-wrong=true]{background:#fff0e5!important;outline:4px solid #d34e36!important}
+#content-r1[data-kind=tickets] .boarding-friend{min-height:60px!important;min-width:60px!important}
+#content-r1[data-kind=tickets] button.boarding-friend{border:0!important}
+#content-r1[data-kind=tickets] button.boarding-friend[aria-pressed=true]{outline:3px solid #f46b27}
+#content-r1[data-kind=tickets] .boarding-friend img{height:var(--rider-height)!important;width:100%!important;position:absolute;bottom:0;left:0;object-fit:contain!important;object-position:center bottom}
+#content-r1[data-kind=tickets] .boarding-friend[data-entering=true]{clip-path:inset(0 var(--door-occlusion) 0 0)}
+#content-r1[data-kind=tickets] .boarding-friend[data-entering=true]>b{display:none}
+#content-r1[data-kind=tickets] .ticket-seated{height:30%!important;top:26%!important;overflow:hidden}
+#content-r1[data-kind=tickets] .ticket-seated img{width:100%;height:160%;object-fit:contain;object-position:center top}
+#content-r1[data-kind=tickets][data-phase=done] .ticket-seated img{height:100%}
+#content-r1[data-kind=tickets] .ticket-comparison{top:auto!important;bottom:4px!important}
+#content-r1[data-kind=tickets] .content-scene[data-compact=true]{background-size:100% 126.92%!important;background-position:center top!important}
+#content-r1[data-kind=tickets]:has(.content-scene[data-compact=true]) .content-stations button{height:64px!important;min-height:64px!important;padding:3px}
+#content-r1[data-kind=tickets]:has(.content-scene[data-compact=true]) .content-stations svg{height:28px!important}
+@media(max-width:360px) and (orientation:portrait){
+ #content-r1[data-kind=tickets][data-phase] .ticket-counts{top:39px!important;bottom:auto!important}
+ #content-r1[data-kind=tickets] .ticket-counts span{font-size:11px!important;line-height:14px;padding:0 4px!important}
+ #content-r1[data-kind=tickets] .content-stations button{top:89px!important}
+ #content-r1[data-kind=crossing]{--friend-w:32px;--friend-h:36px}
+ #content-r1[data-kind=crossing] .friend-number{font-size:11px;line-height:13px;bottom:-7px}
+ #content-r1[data-kind=crossing] .crossing-traffic{width:48px;height:26px}
+ #content-r1[data-kind=crossing] .content-coach{width:60px!important;height:60px!important;right:calc(50% - 30px)!important}
+ #content-r1[data-kind=crossing] .crossing-lookout{top:31px!important}
+}
+@media(orientation:landscape) and (max-height:520px){
+ #content-r1[data-kind=tickets][data-phase] .ticket-counts{top:39px!important;bottom:auto!important}
+ #content-r1[data-kind=tickets] .ticket-counts span{font-size:11px!important;line-height:14px;padding:0 4px!important}
+ #content-r1[data-kind=tickets] .content-stations button{top:79px!important}
+ #content-r1[data-kind=crossing]{--friend-w:32px;--friend-h:clamp(24px,calc((100dvh - 100px)*.12),52px)}
+ #content-r1[data-kind=crossing] .friend-number{font-size:11px;line-height:13px;bottom:-9px}
+ #content-r1[data-kind=crossing] .crossing-traffic{width:48px;height:26px}
+ #content-r1[data-kind=crossing] .crossing-lookout{top:30px!important}
+ #content-r1[data-kind=crossing] .content-coach{width:60px!important;height:60px!important;right:calc(50% - 30px)!important}
+}
