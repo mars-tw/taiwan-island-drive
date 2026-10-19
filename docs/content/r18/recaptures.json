@@ -1,0 +1,150 @@
+{
+  "status": "VERIFIED",
+  "policy": "Run manifests retain capture-time hashes. Later focused reruns replace same-name PNGs. screenshots.json is the delivered current-image index; review-set is copied from that index.",
+  "recaptures": [
+    {
+      "path": "docs/content/r18/device-390x844-tickets-ready.png",
+      "previousSha256": "72eae4b87bf9c940421f3d07bcbcbd207eae916b73dcd75b0a159a817d3a19ed",
+      "currentSha256": "ad895714263535822dbb8ee5e6f09fc95fe1efc41b2ef32ec6c0550a8bf10fdc",
+      "currentManifest": "docs/content/r18/browser-all.json"
+    },
+    {
+      "path": "docs/content/r18/device-390x844-cake-ready.png",
+      "previousSha256": "52bf4d7fcb3a4e8aed3f239002b312059c34d5c7e04bd4a215338e08a8a47de5",
+      "currentSha256": "eabbbc96e39c81ad4993a8f41b8c314f5c23692fa61dedfc0689d47263a63e00",
+      "currentManifest": "docs/content/r18/browser-all.json"
+    },
+    {
+      "path": "docs/content/r18/device-390x844-crossing-ready.png",
+      "previousSha256": "e6687b7665b17b6269a0bb8cea79ab588200f1ccf5f197681a09cfd8d82e85bf",
+      "currentSha256": "56fa7f5769fd2ef70dca19c2237a27510c3268af206a26c75562d7cfc2a6765a",
+      "currentManifest": "docs/content/r18/browser-all.json"
+    },
+    {
+      "path": "docs/content/r18/device-390x844-cake-ready.png",
+      "previousSha256": "eabbbc96e39c81ad4993a8f41b8c314f5c23692fa61dedfc0689d47263a63e00",
+      "currentSha256": "52bf4d7fcb3a4e8aed3f239002b312059c34d5c7e04bd4a215338e08a8a47de5",
+      "currentManifest": "docs/content/r18/browser-cake.json"
+    },
+    {
+      "path": "docs/content/r18/phone-cake-first-bend.png",
+      "previousSha256": "3f442d5824ab222c62a8a2087e55db63df5790a75995a9cbdadcdbd08c40d588",
+      "currentSha256": "f294858c22e5885ff3283a0048fd02d319624138ec357911f013a1d0fa39d25d",
+      "currentManifest": "docs/content/r18/browser-cake.json"
+    },
+    {
+      "path": "docs/content/r18/phone-cake-stage-1-departing-1.png",
+      "previousSha256": "e1978d7acf1047c1b0ef122e298367b6cbabba2192913ba2465afbabb7544472",
+      "currentSha256": "e62154ad4459cc425d8cd362a55450cee27949483fd988922eba23366f90c6d6",
+      "currentManifest": "docs/content/r18/browser-cake.json"
+    },
+    {
+      "path": "docs/content/r18/phone-cake-stage-1-departing-2.png",
+      "previousSha256": "958c05a7760e402b7cfaf20c1345de535ac604634775e1a4775e8532ce893645",
+      "currentSha256": "8165fbac6dd85365623c47297176f036002a90634572eaa0f48b7d24929d7e1b",
+      "currentManifest": "docs/content/r18/browser-cake.json"
+    },
+    {
+      "path": "docs/content/r18/phone-cake-stage-1-departing-3.png",
+      "previousSha256": "b0932827bfcdbc63ecc13e25af6463d991190ce336b7f7f1c7d7dfc6d576fc32",
+      "currentSha256": "a8078b13365683bd31f68db5f28851df75ade295b8ddd6a9c170c566b11e0503",
+      "currentManifest": "docs/content/r18/browser-cake.json"
+    },
+    {
+      "path": "docs/content/r18/phone-cake-stage-2-left-ready.png",
+      "previousSha256": "9b97a7fef5b6f258594da4415c80b74c0ffbfdb6821df343627853d075f6000e",
+      "currentSha256": "1fd1bfbb6f09761db38e3db32f10b43ec35ef2df5c88d6d0e5e595e5f06c4863",
+      "currentManifest": "docs/content/r18/browser-cake.json"
+    },
+    {
+      "path": "docs/content/r18/phone-cake-stage-2-wrong-turn.png",
+      "previousSha256": "48d53f147d5e6e18b4275436d91ed820f4b7d3888deb3258abf9d5fbcf5dfa68",
+      "currentSha256": "3c9d17043a76a87258be0a279f9b665bb1f3b6663cdbb030ee699b0fb8fa9436",
+      "currentManifest": "docs/content/r18/browser-cake.json"
+    },
+    {
+      "path": "docs/content/r18/phone-cake-stage-2-left-half-second.png",
+      "previousSha256": "424ba09ae979fa31b64bec684ca8695ecf742b550b15eea0fa67110913f06559",
+      "currentSha256": "30e2f6c0f762a7e25cd1d3bff617831471649bc7dabba141610b34b5305db3fd",
+      "currentManifest": "docs/content/r18/browser-cake.json"
+    },
+    {
+      "path": "docs/content/r18/phone-cake-stage-2-right-ready.png",
+      "previousSha256": "34ca0f4fc75d24344dd50cade6868a8a15257ff5c5f96e9f8c9d5ec088430a70",
+      "currentSha256": "304d297319093bd608c4e4d4e4319c257b73f4a84344a39bbdb842e21fee1ea4",
+      "currentManifest": "docs/content/r18/browser-cake.json"
+    },
+    {
+      "path": "docs/content/r18/phone-cake-stage-2-right-half-second.png",
+      "previousSha256": "56ea9c62bb92cf0c2e4d0963e0bc88c09d980f10a00eeacdbf38bbda81d9dd53",
+      "currentSha256": "d8e2b4c8402b59f20ba2982d951608ef136a67b5f3c4249bf4a7cde2eb722b40",
+      "currentManifest": "docs/content/r18/browser-cake.json"
+    },
+    {
+      "path": "docs/content/r18/phone-cake-stage-2-departing-1.png",
+      "previousSha256": "70d459accdbc39d36243c2092240e79324acff3fea06681ab1555afcc2948d59",
+      "currentSha256": "581b1beed7420a9912fe125fe3e86aa3ad2684b4bc839ea5037f69c85f69fb05",
+      "currentManifest": "docs/content/r18/browser-cake.json"
+    },
+    {
+      "path": "docs/content/r18/phone-cake-stage-2-departing-2.png",
+      "previousSha256": "06dbe397604bcde266e2e695102d79c5a9ada1525ee601eefbd9ac3a5cf6d84f",
+      "currentSha256": "b5c751a90c3a6bd3faded34594fd8455798f9625c20c92ddcff13e50eb1e776a",
+      "currentManifest": "docs/content/r18/browser-cake.json"
+    },
+    {
+      "path": "docs/content/r18/phone-cake-stage-2-departing-3.png",
+      "previousSha256": "83ef400f12042cf293859bccf6d7c7118c52d36eb40cdc34fad447ab1332f7f6",
+      "currentSha256": "008cedffd5cb20923dbc989a421709f10d6e9010ec717b7f356e7a5a54efc75d",
+      "currentManifest": "docs/content/r18/browser-cake.json"
+    },
+    {
+      "path": "docs/content/r18/phone-cake-stage-3-departing-1.png",
+      "previousSha256": "a347408d58b26c92adc0b839deb880d09c93b59d6f08332bd47f289bb301647a",
+      "currentSha256": "fc339b5137894465c2a6d4891d431377c83791d75587dae72903b9ac359c64bf",
+      "currentManifest": "docs/content/r18/browser-cake.json"
+    },
+    {
+      "path": "docs/content/r18/phone-cake-stage-3-departing-2.png",
+      "previousSha256": "4d73795a720869a7b264d06928c4eacdcdef8200f1b7c4fcd529d021a4f64f7d",
+      "currentSha256": "d4720ebbf798b6a690eb45fb4b49a320e8468ff6c7243177b901200968889a06",
+      "currentManifest": "docs/content/r18/browser-cake.json"
+    },
+    {
+      "path": "docs/content/r18/phone-cake-stage-3-departing-3.png",
+      "previousSha256": "3ac84777b4e8fc7809971f8bdffdb3028e651f0bad618e2c8db53d070877ea29",
+      "currentSha256": "b2369c9176d65b394e1378256da3aaece75991c7fa8f574b943e496597327ac8",
+      "currentManifest": "docs/content/r18/browser-cake.json"
+    },
+    {
+      "path": "docs/content/r18/phone-cake-saved-result.png",
+      "previousSha256": "a105e075a674e1f4abe8e4d2cc9fcc38a6ed09e7e4a669640fd2bbf1c6cd65e4",
+      "currentSha256": "85e0a3ed8640cba3a38939162a0ffe66e4060fbf7850564639dc6f1ae68bd877",
+      "currentManifest": "docs/content/r18/browser-cake.json"
+    },
+    {
+      "path": "docs/content/r18/phone-cake-replay-bend.png",
+      "previousSha256": "492f982195dad98248c55d32a779193f3f5e5630c3a420fb4ebd8ac6c75adf86",
+      "currentSha256": "0b9ba9827f1d562d72d79702c0c5a3f58cb63b347d164597aaeb40edf3eef101",
+      "currentManifest": "docs/content/r18/browser-cake.json"
+    },
+    {
+      "path": "docs/content/r18/phone-cake-replay-old-direction.png",
+      "previousSha256": "873cf16b69ea7b7de2a7542cceaa8d705d51596d14b8aee27720b99859b36782",
+      "currentSha256": "91335f4bfc8dec079aac512cab9fe59a6450749f34264d7a3975fc61077afbf5",
+      "currentManifest": "docs/content/r18/browser-cake.json"
+    },
+    {
+      "path": "docs/content/r18/device-390x844-crossing-ready.png",
+      "previousSha256": "56fa7f5769fd2ef70dca19c2237a27510c3268af206a26c75562d7cfc2a6765a",
+      "currentSha256": "6f26d4a59ac3c86ecaed41c350b564d058fba608ed2613a42d5678d975afdc86",
+      "currentManifest": "docs/content/r18/browser-negative.json"
+    },
+    {
+      "path": "docs/content/r18/device-390x844-crossing-ready.png",
+      "previousSha256": "6f26d4a59ac3c86ecaed41c350b564d058fba608ed2613a42d5678d975afdc86",
+      "currentSha256": "e6687b7665b17b6269a0bb8cea79ab588200f1ccf5f197681a09cfd8d82e85bf",
+      "currentManifest": "docs/content/r18/browser-negative.json"
+    }
+  ]
+}

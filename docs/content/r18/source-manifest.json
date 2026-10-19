@@ -1,0 +1,82 @@
+{
+  "status": "VERIFIED",
+  "baseline": "65834975c39b72472a1c1e67dbcf80cf11dee14d",
+  "files": [
+    {
+      "path": "package.json",
+      "sha256": "685b290217a71ca90b163ffd48ede38b6627fb8b838b4c0977a24d71a5fe9ffc"
+    },
+    {
+      "path": "package-lock.json",
+      "sha256": "5f665de9e223cf327d0bd79ad504c4d1530d835c9f0730f1fe19e210943837f4"
+    },
+    {
+      "path": "src/games/car/config.js",
+      "sha256": "03e0fa29907b767b12a3e40acab6b06bb8eff6ac00c73f8c91c3878b4b91edca"
+    },
+    {
+      "path": "public/models/catalog.json",
+      "sha256": "3a0ddd709a3578743b55b8e5bdb0196032400a775b7ca1f9841ac7f50dcf1415"
+    },
+    {
+      "path": "android/app/build.gradle",
+      "sha256": "d176220782d6b87e26afcf60c161c95a52a2fe72b2b8488b9e77d458a59fb54a"
+    },
+    {
+      "path": "ios/App/App.xcodeproj/project.pbxproj",
+      "sha256": "318887a1af156d9b395eef5974935f8593965a5d10662b45acce740e89846702"
+    },
+    {
+      "path": "src/shared/content-r1-ui.js",
+      "sha256": "4099577778f390fd73c5f66fc5e1c38ed9c717e3c8618e5a25d5bfe719898214"
+    },
+    {
+      "path": "src/shared/content-r18.js",
+      "sha256": "e6032f7b2c5e9f39f50e2cd5c95aad775082028d9d70bd9e4718c347b814b113"
+    },
+    {
+      "path": "src/shared/content-r18-scene.js",
+      "sha256": "97f73fb61dd8aaead188c255b209d70ef4bb95015024c5ddd7fed0f85ba718a1"
+    },
+    {
+      "path": "src/shared/content-r18.css",
+      "sha256": "59539181a1122af8ef8818146398219236d85329418269df4c0700d4c607e008"
+    },
+    {
+      "path": "tests/shared/content-r18.test.js",
+      "sha256": "f1f21b9f985c9b039cfb20459d883804db44d19498f11f47f95b8c954683dfb8"
+    },
+    {
+      "path": "scripts/check-content-r18.mjs",
+      "sha256": "068b25963caf734c75c699273e28034a2d4d1d4c56bbd0b111608a92d6b8ebed"
+    },
+    {
+      "path": "scripts/run-content-r18-validation.mjs",
+      "sha256": "c89fab8541802d11770c31f0efff1b11f5a1c465f94d1ac9d7b8944c8b65dd01"
+    },
+    {
+      "path": "scripts/measure-content-r18.mjs",
+      "sha256": "5f92fff05e451e0557b7b889dbcbb3c210ec013e0c084c86bb2b5b6ba70cd0d2"
+    },
+    {
+      "path": "scripts/cleanup-content-r18.py",
+      "sha256": "8fb63809c1437772851218f645e5606558e5a6c12238b9a92494efc595106bd0"
+    },
+    {
+      "path": "scripts/verify-content-r18-release.mjs",
+      "sha256": "e033dd23857934d43560e20f65137f4aa534a5c71b96f9b16c2d3121d0058fd2"
+    },
+    {
+      "path": "docs/art/ART_DIRECTION.md",
+      "sha256": "3ae79a412a069a14abfc9a31c6b2d191d5a9659b38b38bb8a00201b139e0bd7a"
+    },
+    {
+      "path": "docs/OPTIM_PLAN_CONTENT_R18.md",
+      "sha256": "0bc4426a0916fb50d3b712bd8f914eedd2582035ff2eb3d8c46b4b6343959a1a"
+    },
+    {
+      "path": "docs/CODEX_RESPONSE_CONTENT_R18.md",
+      "sha256": "f3217595d9e2361178e2d704ec5387e34934d60b722e0f37b50d11ad025591e9"
+    }
+  ]
+}
