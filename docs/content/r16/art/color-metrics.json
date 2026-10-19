@@ -1,0 +1,27 @@
+{
+  "status": "VERIFIED",
+  "method": "Visible alpha>=16 pixels only; Rec709 weighted sRGB luma, HSV saturation; existing character identities retained, new front waving poses only",
+  "rows": [
+    {
+      "path": "public/art/content-r16/passenger-1-wave.webp",
+      "meanLuma": 0.3929167460339759,
+      "meanSaturation": 0.6558969769533902,
+      "nearBlackFraction": 0.19653913319574537,
+      "lowSaturationFraction": 0.023363496851352066
+    },
+    {
+      "path": "public/art/content-r16/passenger-2-wave.webp",
+      "meanLuma": 0.3752748229007703,
+      "meanSaturation": 0.6135163897967539,
+      "nearBlackFraction": 0.2586722877143675,
+      "lowSaturationFraction": 0.03804616545658001
+    },
+    {
+      "path": "public/art/content-r16/passenger-3-wave.webp",
+      "meanLuma": 0.4248682185243624,
+      "meanSaturation": 0.6656859840154726,
+      "nearBlackFraction": 0.20099636461559175,
+      "lowSaturationFraction": 0.13787531977918405
+    }
+  ]
+}

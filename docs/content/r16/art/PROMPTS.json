@@ -1,0 +1,18 @@
+{
+  "tool": "image_gen.imagegen",
+  "model_slug": null,
+  "style_prefix": "Island Traffic Academy sunny Taiwan coastal storybook, chunky ink-navy outlines, rounded toy proportions, warm upper-left light, saturated sea blue sunflower yellow coral orange, gentle paper texture, clean silhouette readable at 64px.",
+  "records": [
+    {
+      "id": "passengers-waving",
+      "prompt": "Island Traffic Academy sunny Taiwan coastal storybook, chunky ink-navy outlines, rounded toy proportions, warm upper-left light, saturated sea blue sunflower yellow coral orange, gentle paper texture, clean silhouette readable at 64px. Create a transparent-background sprite sheet: exactly THREE SEPARATE half-body cheerful child passengers, front facing, smiling and waving one hand safely INSIDE a train window. NO TRAIN, no window frames, no scenery, NO text. Three equal cells horizontally in one row, generous empty transparent gaps. LEFT character identity reference passenger-1-0: young East Asian boy, spiky dark brown hair, orange short sleeve T-shirt, royal blue backpack straps. CENTER character identity reference passenger-2-0: East Asian girl, dark navy side ponytail, red bow, yellow T-shirt, red backpack straps, red skirt with white flowers if visible. RIGHT character identity reference passenger-3-0: warm brown skin boy, curly brown hair under blue-and-white sailor baseball cap with small orange sailboat emblem, white shirt with blue trim, green backpack straps. Preserve the exact faces, colors and child proportions of the three supporting reference sprites. Waist-up, both shoulders and entire waving hand clearly within each cell, no cropped fingertips or hat. All three seated upright, each has a distinct raised-hand waving pose (actual different hand and arm pose from walking references). Transparent alpha background. 1536x1024 landscape sprite sheet if possible.",
+      "references": [
+        "public/art/r5/passenger-1-0.png",
+        "public/art/r5/passenger-2-0.png",
+        "public/art/r5/passenger-3-0.png"
+      ],
+      "original": "docs/content/r16/art/passengers-waving-original.png",
+      "accepted": true
+    }
+  ]
+}

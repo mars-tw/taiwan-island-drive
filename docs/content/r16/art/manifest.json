@@ -1,0 +1,48 @@
+{
+  "status": "VERIFIED",
+  "tool": "image_gen.imagegen",
+  "model_slug": null,
+  "newGenerationCalls": 2,
+  "newDesigns": 4,
+  "newRuntimeAssets": 4,
+  "originals": [
+    {
+      "path": "docs/content/r16/art/passengers-waving-original.png",
+      "sha256": "829b588fc72082533a5a111703a09f237b315aae26fe6d2c0398cdbcd2c6d267"
+    },
+    {
+      "path": "docs/content/r16/art/cake-delivery-original.png",
+      "sha256": "ba322817e17d4e04560a13d32714dc79befa80aa539d9b50e4fec194d7656773"
+    }
+  ],
+  "method": "Generated passenger sheet: per-cell extraction/alpha trim and WebP encoding with sharp. Separate cake delivery illustration. Distinct waving arm poses are static ending poses, not a new waving animation.",
+  "assets": [
+    {
+      "path": "public/art/content-r16/passenger-1-wave.webp",
+      "width": 256,
+      "height": 253,
+      "hasAlpha": true,
+      "sha256": "5532d598cecd51396c4a4b2b89de317da688d74c39e373242d0e2aec72abd5ba"
+    },
+    {
+      "path": "public/art/content-r16/passenger-2-wave.webp",
+      "width": 256,
+      "height": 234,
+      "hasAlpha": true,
+      "sha256": "7c191a01ad5ef0cf775791cf25987ccf070542783a4dee818adbe56b7cc57ac7"
+    },
+    {
+      "path": "public/art/content-r16/passenger-3-wave.webp",
+      "width": 256,
+      "height": 238,
+      "hasAlpha": true,
+      "sha256": "b8e9471506444fcdce1718c14c290a78d1c5e18214bc514351a32ccb42c62e6c"
+    },
+    {
+      "path": "public/art/content-r16/cake-delivery.webp",
+      "width": 1024,
+      "height": 1536,
+      "sha256": "ee943e0411815947beff34b179bff1f6a9c9bd603525ea7f5771da06e68a8811"
+    }
+  ]
+}

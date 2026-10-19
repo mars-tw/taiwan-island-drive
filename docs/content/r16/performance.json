@@ -1,0 +1,107 @@
+{
+  "status": "EXECUTED",
+  "method": "Three real-time 2000ms RAF samples per course/viewport, median p95. R16: each train sample explicitly invites the first rider. Train is measured while the live doorway magnifier and passengers are active. One headless browser/context at a time; concurrent host load, reference only, not clean/native performance.",
+  "rows": [
+    {
+      "viewport": "desktop",
+      "kind": "cake",
+      "activeState": "pedal and cake balance",
+      "runs": [
+        16.7,
+        16.7,
+        16.8
+      ],
+      "p95": 16.7
+    },
+    {
+      "viewport": "desktop",
+      "kind": "crossing",
+      "activeState": "friend crossing zebra",
+      "runs": [
+        16.8,
+        16.7,
+        16.7
+      ],
+      "p95": 16.7
+    },
+    {
+      "viewport": "desktop",
+      "kind": "tickets",
+      "activeState": "live doorway zoom and serial boarding",
+      "runs": [
+        16.8,
+        16.7,
+        16.7
+      ],
+      "p95": 16.7
+    },
+    {
+      "viewport": "portrait",
+      "kind": "cake",
+      "activeState": "pedal and cake balance",
+      "runs": [
+        16.8,
+        16.7,
+        16.8
+      ],
+      "p95": 16.8
+    },
+    {
+      "viewport": "portrait",
+      "kind": "crossing",
+      "activeState": "friend crossing zebra",
+      "runs": [
+        16.8,
+        16.7,
+        16.8
+      ],
+      "p95": 16.8
+    },
+    {
+      "viewport": "portrait",
+      "kind": "tickets",
+      "activeState": "live doorway zoom and serial boarding",
+      "runs": [
+        16.8,
+        16.8,
+        16.7
+      ],
+      "p95": 16.8
+    },
+    {
+      "viewport": "landscape",
+      "kind": "cake",
+      "activeState": "pedal and cake balance",
+      "runs": [
+        16.8,
+        16.8,
+        16.7
+      ],
+      "p95": 16.8
+    },
+    {
+      "viewport": "landscape",
+      "kind": "crossing",
+      "activeState": "friend crossing zebra",
+      "runs": [
+        16.7,
+        16.8,
+        16.7
+      ],
+      "p95": 16.7
+    },
+    {
+      "viewport": "landscape",
+      "kind": "tickets",
+      "activeState": "live doorway zoom and serial boarding",
+      "runs": [
+        16.8,
+        16.7,
+        16.8
+      ],
+      "p95": 16.8
+    }
+  ],
+  "limitMs": 18,
+  "withinReferenceLimit": true
+}

@@ -1,0 +1,21 @@
+{
+  "status": "VERIFIED",
+  "method": "Unscaled byte copies of R15 versus R16 originals",
+  "comparisons": [
+    [
+      "phone",
+      "docs/content/r15/phone-cake-stage-2-left-driving.png",
+      "docs/content/r16/phone-cake-stage-2-left-driving.png"
+    ],
+    [
+      "landscape",
+      "docs/content/r15/device-844x390-cake.png",
+      "docs/content/r16/device-844x390-cake.png"
+    ],
+    [
+      "ipad",
+      "docs/content/r15/device-768x1024-cake.png",
+      "docs/content/r16/device-768x1024-cake.png"
+    ]
+  ]
+}

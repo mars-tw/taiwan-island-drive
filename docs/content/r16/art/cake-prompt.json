@@ -1,0 +1,18 @@
+{
+  "tool": "image_gen.imagegen",
+  "model_slug": null,
+  "prompt": "Island Traffic Academy sunny Taiwan coastal storybook, chunky ink-navy outlines, rounded toy proportions, warm upper-left light, saturated sea blue sunflower yellow coral orange, gentle paper texture, clean silhouette readable at 64px. NEW vertical 2:3 children's game completion illustration, no text, no UI. This is the CAKE DELIVERY ending. Preserve the exact three children from the passenger reference sprites: orange T-shirt dark spiky brown-haired boy with blue backpack; yellow T-shirt red skirt white flowers and navy ponytail red bow girl; blue-white-orange sailboat cap curly-haired tan boy with white/blue shirt and green backpack. All three standing together beside a wooden picnic table in a sunny Taiwan coastal garden, ocean, lighthouse and banyan beyond. On the table at the children's hand level sits the exact delivered birthday cake shown in the gameplay screenshot reference: tall multi-tier strawberry cream cake, THREE stacked round tiers with red strawberry triangular filling motifs on each cream side, whole strawberries on top, ONE thin straight green triangular dotted flag pick. Cake perfectly upright, completely intact, no slices removed. The children joyfully open their hands toward the safely delivered cake, celebrating careful driving; calm happy faces, full expressive hands visible. Small sea-blue car safely parked on road in distant background. All three children and entire tall cake comfortably within frame, cake central and prominent; upper 15 percent is calm sky/foliage for game overlay. It must be a finished storybook scene of an actual intact cake delivered to their table, not floating cake, no one-layer substitute, no cropped cake flag. Screenshot is ONLY a cake-design reference; REMOVE all screenshot interface elements, signs, buttons, labels, borders and meters.",
+  "references": [
+    "docs/content/r16/phone-cake-stage-2-left-driving.png",
+    "public/art/r5/passenger-1-0.png",
+    "public/art/r5/passenger-2-0.png",
+    "public/art/r5/passenger-3-0.png"
+  ],
+  "original": "docs/content/r16/art/cake-delivery-original.png",
+  "accepted": true,
+  "frozenReference": {
+    "sourceAtCall": "docs/content/r16/phone-cake-stage-2-left-driving.png",
+    "path": "docs/content/r16/art/cake-design-reference.png",
+    "sha256": "d767492834d7f78c389a52bf10791ee9c15d592cfb58f8400daeb81289aa55b2"
+  }
+}

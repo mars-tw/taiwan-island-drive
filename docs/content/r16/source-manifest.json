@@ -1,0 +1,86 @@
+{
+  "status": "VERIFIED",
+  "baseline": "c429d761fe79e7e48c61345ad6b8e50e93a1dd8d",
+  "files": [
+    {
+      "path": "CREDITS.md",
+      "sha256": "869a3a500fafc9a68e99f9ca2d3dffae68a8efbc66587dda09049ee9274d63eb"
+    },
+    {
+      "path": "android/app/build.gradle",
+      "sha256": "09e367c9f1ed2487e7af9f66ffb2696931935dd0a4296aba398dce4d7ec56b51"
+    },
+    {
+      "path": "ios/App/App.xcodeproj/project.pbxproj",
+      "sha256": "6f05dbc6b7c9c497206fda9811f68b182922f847f1803d10d9493b982d79c0ff"
+    },
+    {
+      "path": "package.json",
+      "sha256": "3356bfb020ecd4104d96d5534e8f7b170b74f8d5c7e28c4ba6764995b9863b1b"
+    },
+    {
+      "path": "package-lock.json",
+      "sha256": "33e27a4e43b93ed252042e1e3e499e00c7274682db8a9a444c64909b2698c172"
+    },
+    {
+      "path": "public/models/catalog.json",
+      "sha256": "67b690cab420ae0ba4893e93b4d59b21a6bf91d07131206e5722d83e6c2273f1"
+    },
+    {
+      "path": "src/games/car/config.js",
+      "sha256": "d0a2dac91b623493dd0939a43e12c3fb7eb7d7b46731161fc443c8df52bbd4a5"
+    },
+    {
+      "path": "src/shared/content-r1-ui.js",
+      "sha256": "d876995a469263945239327957e7104b19da309fed9e43c944dd91ed9d3a71dc"
+    },
+    {
+      "path": "src/shared/content-r16.js",
+      "sha256": "072780b802469a5e3e8af27f0da34887d4204ff930e06851dd8763ce36d97754"
+    },
+    {
+      "path": "src/shared/content-r16-scene.js",
+      "sha256": "7598b9c470993fec8378dd42cfa6e34b8dcb0a5361e0c7ff513bf108875b7335"
+    },
+    {
+      "path": "src/shared/content-r16.css",
+      "sha256": "a8ff0b71e5ae59613d22c01fcf488368e1686dfdd0a0b534f16b0923b2900434"
+    },
+    {
+      "path": "tests/shared/content-r16.test.js",
+      "sha256": "dd8b163d64e9b1bc4e1522c2557d807ac3f8b8a67a96b3ec9ec15e540ef2de97"
+    },
+    {
+      "path": "scripts/check-content-r16.mjs",
+      "sha256": "6ab1da0678865575a740d9231ab910757d3c05a7883f251d843d9d2d2496fd32"
+    },
+    {
+      "path": "scripts/run-content-r16-validation.mjs",
+      "sha256": "15c08079d58bb79bc317cf7391870f238aaeb2a6ee73aa7c64401bbcc8bddfba"
+    },
+    {
+      "path": "scripts/prepare-content-r16.mjs",
+      "sha256": "2ba0f8080faaed66337a4820c5bfc85beb60120e82285c20ebc13c7fb66aa38f"
+    },
+    {
+      "path": "scripts/measure-content-r16.mjs",
+      "sha256": "e87a49a6efff0ff65b8d4d4ab8e29b40f3437b99f904dcc017da8206b065d8ae"
+    },
+    {
+      "path": "scripts/verify-content-r16-release.mjs",
+      "sha256": "e5d1210180f1ebbd9b4132adb39def4f12c5feffc8d71b64e24c69b12c001ebc"
+    },
+    {
+      "path": "docs/art/ART_DIRECTION.md",
+      "sha256": "da8e19e99de1d9f09c63ec621f65c28b274edcdf1108ef8962437f1bfd11f910"
+    },
+    {
+      "path": "docs/OPTIM_PLAN_CONTENT_R16.md",
+      "sha256": "7fa7368c23d74716e04f5976788c026e37e5d2498a4b0be4192b38fdd4c66c4a"
+    },
+    {
+      "path": "docs/CODEX_RESPONSE_CONTENT_R16.md",
+      "sha256": "b0be72329646f2768157bf99423adcc6971c55beaf1a128811b36eec8805589a"
+    }
+  ]
+}
