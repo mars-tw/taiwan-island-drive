@@ -1,0 +1,589 @@
+{
+  "status": "VERIFIED",
+  "offline": false,
+  "rows": [
+    {
+      "label": "store original 1290x2796",
+      "status": "VERIFIED"
+    },
+    {
+      "label": "store original 2064x2752",
+      "status": "VERIFIED"
+    }
+  ],
+  "shots": [
+    {
+      "path": "docs/store/screenshots/content-r14/tickets-boarding-1290x2796.png",
+      "width": 1290,
+      "height": 2796,
+      "sha256": "611ab0017fad3deb439a589cdaf8d8c530ba3d37ee10b6be12c5aa740d73f544",
+      "phase": "boarding",
+      "state": {
+        "boardTime": "0.285",
+        "cue": "go",
+        "settled": "true",
+        "correction": "",
+        "distance": "30.00",
+        "speed": "0.00",
+        "bend": "1",
+        "tilt": "1.37",
+        "sway": "1.14",
+        "acceleration": "0.00",
+        "bayStopped": "false",
+        "bayRestarted": "false",
+        "leftTurn": "false",
+        "rightTurn": "false",
+        "focus": "center",
+        "crossTime": "0.000",
+        "crossDuration": "2.1",
+        "orderHint": "",
+        "fruitSway": "5.18",
+        "flagSway": "12.66",
+        "balanceLean": "0.00",
+        "balanceStatus": "steady",
+        "recoveries": "0",
+        "assists": "0",
+        "assisting": "false",
+        "crossed": "0",
+        "lookedLeft": "false",
+        "lookedRight": "false",
+        "decision": "false",
+        "confirmed": "false",
+        "confirmDelay": "0",
+        "person": "child",
+        "trafficActive": "true",
+        "trafficTime": "0.00",
+        "watchSide": "",
+        "doorState": "open",
+        "step": "1"
+      },
+      "hint": "正在上車，等朋友坐好。",
+      "controls": [
+        {
+          "action": "status",
+          "text": "正在上車",
+          "needed": "false",
+          "color": "rgb(220, 228, 233)"
+        },
+        {
+          "action": "listen",
+          "text": "再聽一次",
+          "needed": "false",
+          "color": "rgb(255, 255, 255)"
+        }
+      ],
+      "geometry": {
+        "scene": {
+          "x": 13,
+          "y": 103,
+          "width": 404,
+          "height": 615.015625,
+          "right": 417,
+          "bottom": 718.015625
+        },
+        "car": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0,
+          "right": 0,
+          "bottom": 0
+        },
+        "bay": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0,
+          "right": 0,
+          "bottom": 0
+        },
+        "step": {
+          "box": {
+            "x": 135.390625,
+            "y": 564.4375,
+            "width": 31.828125,
+            "height": 13,
+            "right": 167.21875,
+            "bottom": 577.4375
+          },
+          "hidden": false,
+          "transform": "matrix(1, 0, 0, 1, 0, 0)"
+        },
+        "markers": [
+          {
+            "id": "0",
+            "box": {
+              "x": 141.3125,
+              "y": 526.578125,
+              "width": 20,
+              "height": 20,
+              "right": 161.3125,
+              "bottom": 546.578125
+            }
+          }
+        ],
+        "people": [
+          {
+            "id": "0",
+            "kind": "boarding-friend",
+            "progress": "0.64",
+            "box": {
+              "x": 139.3125,
+              "y": 525.578125,
+              "width": 24,
+              "height": 38.875,
+              "right": 163.3125,
+              "bottom": 564.453125
+            }
+          },
+          {
+            "id": "1",
+            "kind": "boarding-friend",
+            "progress": "0.00",
+            "box": {
+              "x": 179.3125,
+              "y": 464.6875,
+              "width": 24,
+              "height": 38.875,
+              "right": 203.3125,
+              "bottom": 503.5625
+            }
+          },
+          {
+            "id": "2",
+            "kind": "boarding-friend",
+            "progress": "0.00",
+            "box": {
+              "x": 201.3125,
+              "y": 434.234375,
+              "width": 24,
+              "height": 38.875,
+              "right": 225.3125,
+              "bottom": 473.109375
+            }
+          }
+        ],
+        "door": {
+          "x": 135.546875,
+          "y": 520.84375,
+          "width": 31.515625,
+          "height": 43.40625,
+          "right": 167.0625,
+          "bottom": 564.25
+        },
+        "signs": [
+          {
+            "id": "0",
+            "box": {
+              "x": 117.3125,
+              "y": 284.546875,
+              "width": 68,
+              "height": 69.1875,
+              "right": 185.3125,
+              "bottom": 353.734375
+            },
+            "pole": "193.828px"
+          },
+          {
+            "id": "1",
+            "box": {
+              "x": 228.75,
+              "y": 285.140625,
+              "width": 68,
+              "height": 68,
+              "right": 296.75,
+              "bottom": 353.140625
+            },
+            "pole": "194.422px"
+          },
+          {
+            "id": "2",
+            "box": {
+              "x": 340.1875,
+              "y": 285.140625,
+              "width": 68,
+              "height": 68,
+              "right": 408.1875,
+              "bottom": 353.140625
+            },
+            "pole": "194.422px"
+          }
+        ],
+        "checks": []
+      },
+      "proof": {
+        "statusFont": "16px",
+        "miniFlag": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0,
+          "right": 0,
+          "bottom": 0
+        },
+        "meter": 0,
+        "meterColor": null,
+        "controlsBox": {
+          "x": 24,
+          "y": 763.8125,
+          "width": 382,
+          "height": 128.1875,
+          "right": 406,
+          "bottom": 892
+        },
+        "zoomFriends": [
+          {
+            "id": "0",
+            "box": {
+              "x": 240,
+              "y": 569.015625,
+              "width": 50,
+              "height": 94,
+              "right": 290,
+              "bottom": 663.015625
+            },
+            "image": {
+              "x": 240,
+              "y": 569.015625,
+              "width": 50,
+              "height": 94,
+              "right": 290,
+              "bottom": 663.015625
+            }
+          }
+        ],
+        "zoomStep": {
+          "x": 216,
+          "y": 669.015625,
+          "width": 96,
+          "height": 14,
+          "right": 312,
+          "bottom": 683.015625
+        },
+        "zoomStepHidden": false,
+        "roadMirror": "none",
+        "flag": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0,
+          "right": 0,
+          "bottom": 0
+        },
+        "cakeWidth": 103.67999999999999,
+        "rigid": "rotate(0deg)",
+        "queue": "",
+        "counts": {
+          "x": 136.65625,
+          "y": 200,
+          "width": 156.6875,
+          "height": 37,
+          "right": 293.34375,
+          "bottom": 237
+        },
+        "train": {
+          "x": 14.734375,
+          "y": 508.546875,
+          "width": 175.109375,
+          "height": 72.34375,
+          "right": 189.84375,
+          "bottom": 580.890625
+        },
+        "carSource": "http://127.0.0.1:5286/art/content-r11/car-rear.png",
+        "trainSource": "http://127.0.0.1:5286/art/content-r3/train-side.webp",
+        "pastArrow": "none",
+        "waiting": []
+      },
+      "native": false,
+      "method": "Original headless runtime PNG; Native RAF callbacks retained; timestamp held during capture only; no game state assignments or pixel edits"
+    },
+    {
+      "path": "docs/store/screenshots/content-r14/tickets-boarding-2064x2752.png",
+      "width": 2064,
+      "height": 2752,
+      "sha256": "27b59c1f9f438ca7dd0043cc6c6f0c50753959612d720f75b7fd25191ceb82bc",
+      "phase": "boarding",
+      "state": {
+        "boardTime": "0.270",
+        "cue": "go",
+        "settled": "true",
+        "correction": "",
+        "distance": "30.00",
+        "speed": "0.00",
+        "bend": "1",
+        "tilt": "1.37",
+        "sway": "1.14",
+        "acceleration": "0.00",
+        "bayStopped": "false",
+        "bayRestarted": "false",
+        "leftTurn": "false",
+        "rightTurn": "false",
+        "focus": "center",
+        "crossTime": "0.000",
+        "crossDuration": "2.1",
+        "orderHint": "",
+        "fruitSway": "5.18",
+        "flagSway": "12.66",
+        "balanceLean": "0.00",
+        "balanceStatus": "steady",
+        "recoveries": "0",
+        "assists": "0",
+        "assisting": "false",
+        "crossed": "0",
+        "lookedLeft": "false",
+        "lookedRight": "false",
+        "decision": "false",
+        "confirmed": "false",
+        "confirmDelay": "0",
+        "person": "child",
+        "trafficActive": "true",
+        "trafficTime": "0.00",
+        "watchSide": "",
+        "doorState": "open",
+        "step": "1"
+      },
+      "hint": "正在上車，等朋友坐好。",
+      "controls": [
+        {
+          "action": "status",
+          "text": "正在上車",
+          "needed": "false",
+          "color": "rgb(220, 228, 233)"
+        },
+        {
+          "action": "listen",
+          "text": "再聽一次",
+          "needed": "false",
+          "color": "rgb(255, 255, 255)"
+        }
+      ],
+      "geometry": {
+        "scene": {
+          "x": 13,
+          "y": 325,
+          "width": 582.15625,
+          "height": 800,
+          "right": 595.15625,
+          "bottom": 1125
+        },
+        "car": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0,
+          "right": 0,
+          "bottom": 0
+        },
+        "bay": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0,
+          "right": 0,
+          "bottom": 0
+        },
+        "step": {
+          "box": {
+            "x": 188.796875,
+            "y": 922.84375,
+            "width": 46.078125,
+            "height": 13,
+            "right": 234.875,
+            "bottom": 935.84375
+          },
+          "hidden": false,
+          "transform": "matrix(1, 0, 0, 1, 0, 0)"
+        },
+        "markers": [
+          {
+            "id": "0",
+            "box": {
+              "x": 201.890625,
+              "y": 883.609375,
+              "width": 20,
+              "height": 20,
+              "right": 221.890625,
+              "bottom": 903.609375
+            }
+          }
+        ],
+        "people": [
+          {
+            "id": "0",
+            "kind": "boarding-friend",
+            "progress": "0.59",
+            "box": {
+              "x": 195.09375,
+              "y": 866.171875,
+              "width": 33.59375,
+              "height": 56.6875,
+              "right": 228.6875,
+              "bottom": 922.859375
+            }
+          },
+          {
+            "id": "1",
+            "kind": "boarding-friend",
+            "progress": "0.00",
+            "box": {
+              "x": 235.09375,
+              "y": 786.765625,
+              "width": 33.59375,
+              "height": 56.6875,
+              "right": 268.6875,
+              "bottom": 843.453125
+            }
+          },
+          {
+            "id": "2",
+            "kind": "boarding-friend",
+            "progress": "0.00",
+            "box": {
+              "x": 257.109375,
+              "y": 747.0625,
+              "width": 33.59375,
+              "height": 56.6875,
+              "right": 290.703125,
+              "bottom": 803.75
+            }
+          }
+        ],
+        "door": {
+          "x": 189.078125,
+          "y": 860.171875,
+          "width": 45.625,
+          "height": 62.84375,
+          "right": 234.703125,
+          "bottom": 923.015625
+        },
+        "signs": [
+          {
+            "id": "0",
+            "box": {
+              "x": 177.890625,
+              "y": 571.296875,
+              "width": 68,
+              "height": 69.1875,
+              "right": 245.890625,
+              "bottom": 640.484375
+            },
+            "pole": "264.125px"
+          },
+          {
+            "id": "1",
+            "box": {
+              "x": 339.203125,
+              "y": 571.890625,
+              "width": 68,
+              "height": 68,
+              "right": 407.203125,
+              "bottom": 639.890625
+            },
+            "pole": "264.719px"
+          },
+          {
+            "id": "2",
+            "box": {
+              "x": 500.53125,
+              "y": 571.890625,
+              "width": 68,
+              "height": 68,
+              "right": 568.53125,
+              "bottom": 639.890625
+            },
+            "pole": "264.719px"
+          }
+        ],
+        "checks": []
+      },
+      "proof": {
+        "statusFont": "16px",
+        "miniFlag": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0,
+          "right": 0,
+          "bottom": 0
+        },
+        "meter": 0,
+        "meterColor": null,
+        "controlsBox": {
+          "x": 614.15625,
+          "y": 678.65625,
+          "width": 393.828125,
+          "height": 128.1875,
+          "right": 1007.984375,
+          "bottom": 806.84375
+        },
+        "zoomFriends": [
+          {
+            "id": "0",
+            "box": {
+              "x": 329.078125,
+              "y": 976,
+              "width": 50,
+              "height": 94,
+              "right": 379.078125,
+              "bottom": 1070
+            },
+            "image": {
+              "x": 329.078125,
+              "y": 976,
+              "width": 50,
+              "height": 94,
+              "right": 379.078125,
+              "bottom": 1070
+            }
+          }
+        ],
+        "zoomStep": {
+          "x": 305.078125,
+          "y": 1076,
+          "width": 96,
+          "height": 14,
+          "right": 401.078125,
+          "bottom": 1090
+        },
+        "zoomStepHidden": false,
+        "roadMirror": "none",
+        "flag": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0,
+          "right": 0,
+          "bottom": 0
+        },
+        "cakeWidth": 103.67999999999999,
+        "rigid": "rotate(0deg)",
+        "queue": "",
+        "counts": {
+          "x": 225.734375,
+          "y": 422,
+          "width": 156.6875,
+          "height": 37,
+          "right": 382.421875,
+          "bottom": 459
+        },
+        "train": {
+          "x": 14.171875,
+          "y": 842.375,
+          "width": 253.5,
+          "height": 104.75,
+          "right": 267.671875,
+          "bottom": 947.125
+        },
+        "carSource": "http://127.0.0.1:5286/art/content-r11/car-rear.png",
+        "trainSource": "http://127.0.0.1:5286/art/content-r3/train-side.webp",
+        "pastArrow": "none",
+        "waiting": []
+      },
+      "native": false,
+      "method": "Original headless runtime PNG; Native RAF callbacks retained; timestamp held during capture only; no game state assignments or pixel edits"
+    }
+  ],
+  "errors": [],
+  "external": [],
+  "responses": []
+}

@@ -9,7 +9,7 @@ export function pedalState(g,cue){
 }
 export function drivingCue(g){
  const cue=previousCue(g);
- if(cue.release)return {...cue,text:'放開放慢，看蛋糕扶正。'};
+ if(cue.release)return {...cue,text:'放開放慢，看蛋糕回穩。'};
  if(g.stage===1&&['left','right'].includes(cue.action))return {...cue,text:'沿路面箭頭，輕輕轉。'};
  return cue;
 }

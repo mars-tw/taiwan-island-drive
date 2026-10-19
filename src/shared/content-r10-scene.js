@@ -9,7 +9,7 @@ export function drivingCue(g){
  if(g.speed===0)return {action:'go',text:'按住踏板起步。'};
  if(g.distance<.25&&g.input?.go)return {action:'go',text:'踩住了，慢慢起步。'};
  const f=cakeFeedback(g);
- if(g.balancePractice&&(g.balanceDanger||Math.abs(g.balanceLean||0)>=18))return {action:f.direction,release:true,text:`蛋糕歪了！放開放慢，輕輕${f.direction==='left'?'左':'右'}轉扶正。`};
+ if(g.balancePractice&&(g.balanceDanger||Math.abs(g.balanceLean||0)>=18))return {action:f.direction,release:true,text:`蛋糕歪了！放開放慢，輕輕${f.direction==='left'?'左':'右'}轉回穩。`};
  if(!f.settled)return {action:f.direction,release:true,text:`鬆踏板，輕輕${f.direction==='left'?'左':'右'}轉。`};
  if(g.distance>15&&g.distance<=40)return {action:g.bend>0?'right':'left',text:`輕輕${g.bend>0?'右':'左'}轉。`};
  return {action:'go',text:'按住踏板，慢慢前進。'};
