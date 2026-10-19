@@ -1,0 +1,58 @@
+{
+  "status": "VERIFIED",
+  "tool": "image_gen.imagegen",
+  "model_slug": null,
+  "calls": 2,
+  "designs": 1,
+  "runtimeAssets": 1,
+  "rejected": "First edit retained two widely spaced rails; second edit removes the far rail.",
+  "assets": [
+    {
+      "source": "C:/Users/digimkt/.codex/generated_images/01a152a2-d0c2-7123-a95d-b12044e432de/exec-594a6b86-3e75-4cd1-8ad4-0dc7f44d5098.png",
+      "original": "docs/content/r13/art/station-rail-contact-original.png",
+      "path": "public/art/content-r13/station-rail-contact.webp",
+      "width": 1024,
+      "height": 1536,
+      "sha256": "9c7078f18d5754a05d99aa3e580df6e082ba493ff49e0c6acfeb9070d4f07fc2",
+      "originalSha256": "61bca15f1a44e535d164dc75c76e0be3b2885b7e6f39b1790ba08e143c8bb417",
+      "processing": "Sharp encoding and validation thumbnails only; no pixel painting"
+    }
+  ],
+  "palette": {
+    "luminance": 0.5375395235902226,
+    "saturation": 0.6957041596451482,
+    "nearBlack": 0.05268541971842448,
+    "lowSaturation": 0.09886932373046875
+  },
+  "registration": {
+    "railTopY": 1186,
+    "canvasHeight": 1536,
+    "trainWidth": 1942,
+    "trainHeight": 809,
+    "wheelAlphaThreshold": 128,
+    "wheels": [
+      {
+        "x": 289,
+        "y": 756,
+        "normalized": 0.934487021013597
+      },
+      {
+        "x": 553,
+        "y": 755,
+        "normalized": 0.9332509270704573
+      },
+      {
+        "x": 1340,
+        "y": 755,
+        "normalized": 0.9332509270704573
+      },
+      {
+        "x": 1655,
+        "y": 756,
+        "normalized": 0.934487021013597
+      }
+    ],
+    "usedWheelBottom": 0.94,
+    "method": "Measured opaque wheel centers from existing alpha artwork; rail upper edge read from original generated single-rail scene. Browser geometric contact error includes subpixel rounding."
+  }
+}

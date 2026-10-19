@@ -75,3 +75,7 @@
 # 新內容第五輪（2026-10-19）
 
 新增一張阿路提醒表情，實際工具 `image_gen.imagegen`，模型 slug 未揭露。參考本專案 `public/art/r8/coach-safe-window.png`，沿用相同完整風格前綴、黃帽石虎、藍窗與安全帶；只做透明等比縮圖。提示、原畫及 SHA-256 在 `docs/content/r5/art/`，遊戲圖為 `public/art/content-r5/coach-reminder.png`。由本專案生成，隨本 MIT 專案提供；沒有外部下載素材、依賴或 SDK。安心與提醒使用不同靜態表情，不宣稱骨架動畫。
+
+# 新內容第13輪（2026-10-19）
+
+海岸低月台與前軌接觸場景經兩次 `image_gen.imagegen` 編修，一個採用設計、一張runtime WebP；第一版未採用。保留既有亭子、榕樹、海岸村落、燈塔及完整風格前綴；模型slug未揭露。原圖、提示、來源、工具、色盤與SHA-256在 `docs/content/r13/art/`，遊戲檔為 `public/art/content-r13/station-rail-contact.webp`。只做格式編碼及QA縮圖，隨本MIT專案提供。人物、蛋糕、來車與列車沿用既有受管原畫，沒有新增外部素材、依賴或SDK。

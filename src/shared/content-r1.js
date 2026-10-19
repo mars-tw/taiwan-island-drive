@@ -6,13 +6,14 @@ export const CROSSING_SECONDS={child:2.1,bike:1.45,grandma:2.4};
 export const CAKE_ROUTES=['海風起步坡','燈塔彎・連續彎','榕樹灣・臨停'];
 export const TICKETS=[{shape:'circle',color:'blue',name:'藍圓形'},{shape:'triangle',color:'orange',name:'橘三角形'},{shape:'square',color:'green',name:'綠正方形'}];
 export class ContentLesson{
- constructor(kind,saved={},options={}){this.freshObservation=options.freshObservation===true;this.visualDeparture=options.visualDeparture===true;if(!CONTENT_LESSONS[kind])throw Error('Unknown lesson');saved=saved&&typeof saved==='object'?saved:{};this.kind=kind;this.stage=clamp(Number.isFinite(saved.stage)?Math.floor(saved.stage):0,0,2);this.completed=saved.completed===true;this.skills={start:!!saved.skills?.start,turn:!!saved.skills?.turn,stop:!!saved.skills?.stop};this.facts=Object.fromEntries(['recoveries','assists','bayStops','bayRestarts','leftViews','rightViews','waited','wrongStops','reselections','boarded','blockedStarts','orderReminders','confirmations'].map(k=>[k,clamp(Number.isFinite(saved.facts?.[k])?Math.floor(saved.facts[k]):0,0,9999)]));this.boardingRate=1;this.boardingEnd=1.2;this.phase=this.completed?'done':'ready';this.paused=false;this.input={};this.hint='';this.reset();}
- reset(){this.tierOffset=0;this.tierVelocity=0;this.friendConfirmed=false;this.confirmDelay=0;this.assisting=false;this.assistRecorded=false;this.needsRecovery=false;this.wrongRecorded=false;this.release();this.speed=0;this.distance=0;this.steer=0;this.tilt=0;this.acceleration=0;this.sway=0;this.fruitSway=0;this.flagSway=0;this.orderHint='';this.smooth={start:0,turn:0,stop:0};this.turns={left:0,right:0};this.bayStopped=false;this.bayRestarted=false;this.focus='center';this.looked={left:false,right:false};this.crossed=0;this.crossTime=0;this.departureTime=0;this.selected=-1;this.trainX=-40;this.travelFrom=-40;this.boardTime=0;this.phase=this.completed?'done':'ready';if(this.completed&&this.kind==='tickets'){this.selected=this.platforms.findIndex(p=>p.shape===this.target.shape&&p.color===this.target.color);this.trainX=2+this.selected*16;this.travelFrom=this.trainX;this.distance=30;this.boardTime=1.2;}}
+ constructor(kind,saved={},options={}){this.releaseRecovery=options.releaseRecovery===true;this.observeTraffic=options.observeTraffic===true;this.freshObservation=options.freshObservation===true;this.visualDeparture=options.visualDeparture===true;if(!CONTENT_LESSONS[kind])throw Error('Unknown lesson');saved=saved&&typeof saved==='object'?saved:{};this.kind=kind;this.stage=clamp(Number.isFinite(saved.stage)?Math.floor(saved.stage):0,0,2);this.completed=saved.completed===true;this.skills={start:!!saved.skills?.start,turn:!!saved.skills?.turn,stop:!!saved.skills?.stop};this.facts=Object.fromEntries(['recoveries','assists','bayStops','bayRestarts','leftViews','rightViews','waited','wrongStops','reselections','boarded','blockedStarts','orderReminders','confirmations'].map(k=>[k,clamp(Number.isFinite(saved.facts?.[k])?Math.floor(saved.facts[k]):0,0,9999)]));this.boardingRate=1;this.boardingEnd=1.2;this.phase=this.completed?'done':'ready';this.paused=false;this.input={};this.hint='';this.reset();}
+ reset(){this.trafficTime=0;this.tierOffset=0;this.tierVelocity=0;this.friendConfirmed=false;this.confirmDelay=0;this.assisting=false;this.assistRecorded=false;this.needsRecovery=false;this.wrongRecorded=false;this.release();this.speed=0;this.distance=0;this.steer=0;this.tilt=0;this.acceleration=0;this.sway=0;this.fruitSway=0;this.flagSway=0;this.orderHint='';this.smooth={start:0,turn:0,stop:0};this.turns={left:0,right:0};this.bayStopped=false;this.bayRestarted=false;this.focus='center';this.looked={left:false,right:false};this.crossed=0;this.crossTime=0;this.departureTime=0;this.selected=-1;this.trainX=-40;this.travelFrom=-40;this.boardTime=0;this.phase=this.completed?'done':'ready';if(this.completed&&this.kind==='tickets'){this.selected=this.platforms.findIndex(p=>p.shape===this.target.shape&&p.color===this.target.color);this.trainX=2+this.selected*16;this.travelFrom=this.trainX;this.distance=30;this.boardTime=1.2;}}
  begin(){if(this.phase!=='ready')return;this.phase='playing';this.speed=this.kind==='crossing'?5:0;this.balanceLean=0;this.balanceDanger=false;this.balanceCorrected=false;this.balanceRecovered=false;}
  release(){this.input={go:false,brake:false,left:false,right:false};}
  pause(){this.paused=true;this.release();}
  snapshot(){return {stage:this.phase==='checkpoint'?this.stage+1:this.stage,completed:this.completed,started:this.phase!=='ready',skills:{...this.skills},facts:{...this.facts}};}
  get bend(){return this.stage===1&&this.distance>29?1:[1,-1,1][this.stage];}
+ get trafficActive(){return this.observeTraffic&&this.crossed===0&&this.trafficTime<[2.8,3.8,3.2][this.stage];}
  get crossingPerson(){return CROSSING_ORDERS[this.stage][this.crossed];}
  get crossingDuration(){return CROSSING_SECONDS[this.crossingPerson]||2.1;}
  get canDepart(){return this.speed<=.05&&this.looked.left&&this.looked.right&&this.crossed===3;}
@@ -52,7 +53,14 @@ export class ContentLesson{
    if(correct)this.balanceCorrected=true;
    // Lean accumulates from real acceleration and road camber; clicks never reset it.
    const force=-this.acceleration*4-(turn?this.bend*this.speed*.45:this.grade*this.speed*.22);
-   this.balanceLean=clamp(old+(force+targetSteer*15-old*(this.speed===0?1.8:.10))*dt,-32,32);
+   if(this.releaseRecovery){
+    // Lateral roll is outward from the actual turn, never a counter-steering command.
+    const lateral=-this.steer*this.speed*4.2;
+    const pitch=this.stage===0&&this.distance<15?-this.acceleration*5:0;
+    const desired=this.input.go?lateral+pitch:0;
+    this.balanceLean=clamp(old+(desired-old)*(this.input.go?2.6:1.25)*dt,-32,32);
+    if(Math.abs(old)>=5&&!this.input.go)this.balanceCorrected=true;
+   }else this.balanceLean=clamp(old+(force+targetSteer*15-old*(this.speed===0?1.8:.10))*dt,-32,32);
    if(Math.abs(this.balanceLean)>=18)this.balanceDanger=true;
    if(Math.abs(this.balanceLean)<5)this.balanceDanger=false;
    if(this.balanceCorrected&&!this.balanceRecovered&&Math.abs(old)>=3&&Math.abs(this.balanceLean)<3){this.facts.recoveries++;this.balanceRecovered=true;this.balanceCorrected=false;this.recoveryNotice=1.5;}
@@ -74,7 +82,8 @@ export class ContentLesson{
   if(this.stage===2&&!this.bayStopped)this.distance=Math.min(47,this.distance);
   if(this.distance>=55&&this.speed===0)this.checkpoint();
  }else if(this.kind==='crossing'){
-  if(this.speed===0&&this.looked.left&&this.looked.right&&this.crossed<3&&this.friendConfirmed){if(this.confirmDelay>0){this.confirmDelay-=dt;return;}this.crossTime+=dt;if(this.crossTime>=this.crossingDuration){this.crossed++;this.facts.waited++;this.crossTime=0;this.friendConfirmed=false;if(this.freshObservation&&this.crossed<3){this.looked={left:false,right:false};this.focus='center';}this.hint='';}}
+  if(this.observeTraffic&&this.speed===0&&(this.looked.left||this.looked.right))this.trafficTime+=dt;
+  if(!this.trafficActive&&this.speed===0&&this.looked.left&&this.looked.right&&this.crossed<3&&this.friendConfirmed){if(this.confirmDelay>0){this.confirmDelay-=dt;return;}this.crossTime+=dt;if(this.crossTime>=this.crossingDuration){this.crossed++;this.facts.waited++;this.crossTime=0;this.friendConfirmed=false;if(this.freshObservation&&this.crossed<3){this.looked={left:false,right:false};this.focus='center';}this.hint='';}}
  }else if(this.selected>=0){this.distance=Math.min(30,this.distance+this.speed*dt);this.trainX=this.travelFrom+(2+this.selected*16-this.travelFrom)*this.distance/30;if(this.distance>=28&&!this.matched){this.hint='這站不一樣，停穩再換月台。';if(this.speed===0&&!this.wrongRecorded){this.facts.wrongStops++;this.wrongRecorded=true;}}}
  }
 }

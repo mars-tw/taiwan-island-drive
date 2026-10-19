@@ -1,0 +1,133 @@
+{
+  "status": "VERIFIED",
+  "version": "2.25.0",
+  "build": 21,
+  "baseline": "24cec45a3de585cd5dbf04f538a7010128b309b0",
+  "branch": "r1-fun-polish",
+  "unitTests": 221,
+  "oldTestFilesUnchanged": 33,
+  "browserChecks": 137,
+  "originalScreenshots": 160,
+  "reviewSet": 15,
+  "mergeChecks": 132,
+  "storeChecks": 101,
+  "newArtCalls": 2,
+  "newRuntimeArt": 1,
+  "newDependencies": 0,
+  "secretScan": {
+    "files": 1349,
+    "hits": 0
+  },
+  "performanceMaxMedianP95": 16.8,
+  "retainedUntracked": [
+    {
+      "path": "docs/art/ART_RESCORE2_MUSE.md",
+      "sha256": "62ae54980aca3c67086b28acef6fdcdb62142e177865152301898e8b8bd2dd5c"
+    },
+    {
+      "path": "docs/art/ART_RESCORE3_MUSE.md",
+      "sha256": "67cfbb87e4c55522fd465053299777011a6654981dedd8a93ae96f0b8ec2b918"
+    },
+    {
+      "path": "docs/art/ART_RESCORE4_MUSE.md",
+      "sha256": "f9de7a05c119356a0c75a55685c8cdf3e4401cd59f17afda20aa63d5a9e659e4"
+    },
+    {
+      "path": "docs/art/ART_RESCORE5_MUSE.md",
+      "sha256": "fced21608715c10fdcb61e04f48876adce277f925474e2532bf582aa7fc104ea"
+    },
+    {
+      "path": "docs/art/ART_RESCORE6_MUSE.md",
+      "sha256": "262f0188255247989bbea6b191b8e3124c7a2ec6f275da0029aa8e5c4debc9fc"
+    },
+    {
+      "path": "docs/art/ART_RESCORE_MUSE.md",
+      "sha256": "5bacc02d4cc4f4719b15a9c1b9f0eaff6f914d5bf753dd0dce2516c52164a8d8"
+    },
+    {
+      "path": "docs/content/CONTENT_REVIEW_R10_CLAUDE.md",
+      "sha256": "7681be51fc7d997e0583be24dec810e60945b6899b4f5262aa27825b70bc46db"
+    },
+    {
+      "path": "docs/content/CONTENT_REVIEW_R10_GPT.md",
+      "sha256": "71475f7f68ed4a9e8c32040bbcf55f2ae073e3ac9fee24782fc8ee20ce997729"
+    },
+    {
+      "path": "docs/content/CONTENT_REVIEW_R10_MUSE.md",
+      "sha256": "c3a7e329069fd0b14ac78c9962ad733b8727ecbd742e061f01509a8e6432117f"
+    },
+    {
+      "path": "docs/content/CONTENT_REVIEW_R11_CLAUDE.md",
+      "sha256": "0b14e8f464ba8db20dca4a94b31406618d02aa4a9e85a0ee962439db6a05a7d6"
+    },
+    {
+      "path": "docs/content/CONTENT_REVIEW_R11_GPT.md",
+      "sha256": "78777e6da6902772a148f9be8e07148d5039407fd482d82d4eb1e704d1173ff1"
+    },
+    {
+      "path": "docs/content/CONTENT_REVIEW_R11_MUSE.md",
+      "sha256": "0c12eacc4431c4377c48032a4ea392e32f077c261c66db60d3c568459491c4ea"
+    },
+    {
+      "path": "docs/content/CONTENT_REVIEW_R12_CLAUDE.md",
+      "sha256": "fffb9d8d9c043512480927825e5587f2dc48f94339a1173f99595a3e4509e1f5"
+    },
+    {
+      "path": "docs/content/CONTENT_REVIEW_R12_GPT.md",
+      "sha256": "2ba7fedc09c2960a93332dce5e7a588948d9f9a7295a2ca1683883121d4f993a"
+    },
+    {
+      "path": "docs/content/CONTENT_REVIEW_R12_MUSE.md",
+      "sha256": "a288ba80fa3b3be700ee87b9818249a014a89f4ee09a91085d629042b229b79f"
+    },
+    {
+      "path": "docs/content/CONTENT_REVIEW_R1_MUSE.md",
+      "sha256": "8583b33aca05fb2072163c14871cf613a23d8ecbb58bd5040e1085104712ce17"
+    },
+    {
+      "path": "docs/content/CONTENT_REVIEW_R2_MUSE.md",
+      "sha256": "7d639b316e7d03d1ef0744d82346c177074671fb696e7aab9c58153b678222e3"
+    },
+    {
+      "path": "docs/content/CONTENT_REVIEW_R3_MUSE.md",
+      "sha256": "040f5afe772453eaf4e3fe3e4be5d175b01f6146d52e5e8b2db638abd82efcc1"
+    },
+    {
+      "path": "docs/content/CONTENT_REVIEW_R4_MUSE.md",
+      "sha256": "52e2d13c89cd97934634b7bac22b2015485921f3dbcf3b048bf8dcf4e84b53bb"
+    },
+    {
+      "path": "docs/content/CONTENT_REVIEW_R5_MUSE.md",
+      "sha256": "22f92f25ef6763d70b7afac04f2458c0d2271b98dc0f74972bbd0068efb1244f"
+    },
+    {
+      "path": "docs/content/CONTENT_REVIEW_R6_MUSE.md",
+      "sha256": "5bba6d3d4ef6d66cef831fec36378e614e71bcccda99874bcef7f5c9061b2787"
+    },
+    {
+      "path": "docs/content/CONTENT_REVIEW_R7_MUSE.md",
+      "sha256": "6e4989924baed4a15f5c4402adfa8c4820a4bb79bb0df7f79824b3c1fb96bb2e"
+    },
+    {
+      "path": "docs/content/CONTENT_REVIEW_R8_MUSE.md",
+      "sha256": "ce5acdee52f40f7a97d67906c5d466621a32503e49335e793ba3105468e9fb65"
+    },
+    {
+      "path": "docs/content/CONTENT_REVIEW_R9_CLAUDE.md",
+      "sha256": "e76ac71e4a15657783e6b31928d02ad50670b0939055dddffa9d109e7aab1aa4"
+    },
+    {
+      "path": "docs/content/CONTENT_REVIEW_R9_GPT.md",
+      "sha256": "07580535ce15ef289a10e0a954c68f4e191aa6a8c3e199dbafa8f1718cc091b2"
+    },
+    {
+      "path": "docs/content/CONTENT_REVIEW_R9_MUSE.md",
+      "sha256": "e2e401e84f119bcad6927022868d56bb39d8e9997fcbdb5c5ba9fbfe9738e443"
+    }
+  ],
+  "blocked": [
+    "Physical device and parent-child tests require devices/participants",
+    "Clean-machine performance requires exclusive hardware; present measurements reference only",
+    "Independent Muse >=8 requires rescore; not asserted"
+  ]
+}

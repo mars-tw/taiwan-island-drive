@@ -1,0 +1,21 @@
+{
+  "tool": "image_gen.imagegen",
+  "model_slug": null,
+  "style_prefix": "Island Traffic Academy sunny Taiwan coastal storybook, chunky ink-navy outlines, rounded toy proportions, warm upper-left light, saturated sea blue sunflower yellow coral orange, gentle paper texture, clean silhouette readable at 64px. ",
+  "records": [
+    {
+      "attempt": 1,
+      "prompt": "Island Traffic Academy sunny Taiwan coastal storybook, chunky ink-navy outlines, rounded toy proportions, warm upper-left light, saturated sea blue sunflower yellow coral orange, gentle paper texture, clean silhouette readable at 64px. EDIT target reference station-low-platform.webp. Preserve exact ocean village, blue sky, pavilion on left, banyan, lighthouse right, garden, ink palette and composition. Portrait 2:3. No text, no people, no trains, no signage, no UI. Correct ONLY lower ground geometry: extend unobstructed terracotta FLAT platform downward to y=77 percent of the full canvas. At EXACTLY y=77% draw a thin straight horizontal yellow tactile platform edge. Immediately beneath it, a very shallow 1% canvas-height stone fascia; NOT a tall wall. At y=79% draw the top surface of the FRONT steel railway rail, straight and perfectly horizontal across full image. A second far rail may be just behind it at y=78%, nearly overlapped in this SIDE ELEVATION view. NOT two widely separated tracks seen from above. Rail heads and sleepers must read as a real railway seen from side, supporting a train's wheels touching y79% while its door sill meets platform y77%. Keep foreground garden below y82%. Preserve everything above y53%. Platform terracotta from y53% to y77%, no steps, ramps or diagonal safety stripes.",
+      "accepted": false,
+      "reference": "public/art/content-r12/station-low-platform.webp",
+      "output": "docs/content/r13/art/attempt-1-rejected.png"
+    },
+    {
+      "attempt": 2,
+      "prompt": "Island Traffic Academy sunny Taiwan coastal storybook, chunky ink-navy outlines, rounded toy proportions, warm upper-left light, saturated sea blue sunflower yellow coral orange, gentle paper texture, clean silhouette readable at 64px. EDIT target reference station-low-platform.webp. Preserve exact ocean village, blue sky, pavilion on left, banyan, lighthouse right, garden, ink palette and composition. Portrait 2:3. No text, no people, no trains, no signage, no UI. Correct ONLY lower ground geometry: extend unobstructed terracotta FLAT platform downward to y=77 percent of the full canvas. At EXACTLY y=77% draw a thin straight horizontal yellow tactile platform edge. Immediately beneath it, a very shallow 1% canvas-height stone fascia; NOT a tall wall. At y=79% draw the top surface of the FRONT steel railway rail, straight and perfectly horizontal across full image. A second far rail may be just behind it at y=78%, nearly overlapped in this SIDE ELEVATION view. NOT two widely separated tracks seen from above. Rail heads and sleepers must read as a real railway seen from side, supporting a train's wheels touching y79% while its door sill meets platform y77%. Keep foreground garden below y82%. Preserve everything above y53%. Platform terracotta from y53% to y77%, no steps, ramps or diagonal safety stripes. CRITICAL correction to target: place the YELLOW PLATFORM EDGE immediately ONE THIN LINE above the lowest/front railway rail. Remove the upper/back rail entirely and fill its space with terracotta paving. There must be ONLY ONE VISIBLE horizontal steel rail. Rail has wooden sleepers and ballast below, not above. Yellow tactile edge and rail touch visually with only a 1-percent canvas-height dark gap. No wide track bed separating edge and rail. The lowest rail stays at y79%. The yellow platform extends all the way down to y77%.",
+      "accepted": true,
+      "reference": "docs/content/r13/art/attempt-1-rejected.png",
+      "output": "docs/content/r13/art/station-rail-contact-original.png"
+    }
+  ]
+}
