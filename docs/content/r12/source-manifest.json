@@ -1,0 +1,67 @@
+{
+  "status": "VERIFIED",
+  "version": "2.24.0",
+  "baseline": "a81c33f7f3ce36c6bda78044daf20c7ece7d03c1",
+  "files": [
+    {
+      "path": "android/app/build.gradle",
+      "sha256": "64c1de08ed4d86f7f092bd401793f5a9c6464eb652bae29a9a435d8332c357a1"
+    },
+    {
+      "path": "ios/App/App.xcodeproj/project.pbxproj",
+      "sha256": "3e677805457d492dc4c416b9af4061eef4b57b4d25c2488eb2395b65498045bd"
+    },
+    {
+      "path": "package-lock.json",
+      "sha256": "43654f9b416be137988eaeb573304e4df0321d8480303fb8d3591af5e132538d"
+    },
+    {
+      "path": "package.json",
+      "sha256": "b47c8538fbbe1512e85982ddadec386d12150a30ee4f6a42295cfd9de3903696"
+    },
+    {
+      "path": "public/models/catalog.json",
+      "sha256": "930cc8d9b65f7cb3077186a3ff56ddd7b688cc907cee931911715a08ac7d0fea"
+    },
+    {
+      "path": "src/games/car/config.js",
+      "sha256": "626746df1cc5d87e7257275dba4f51ba400a6950d498e4afc2d7d8666d8d179c"
+    },
+    {
+      "path": "src/shared/content-r1-ui.js",
+      "sha256": "c33abd16b674746b4b5afee177af3824cb5620e21129046af200a36b2121ebf8"
+    },
+    {
+      "path": "src/shared/content-r1.js",
+      "sha256": "e9d188e2d7f04137af85ff1c27dd71175cdf103a45c150c133987d3f1fdc3605"
+    },
+    {
+      "path": "src/shared/content-r12-scene.js",
+      "sha256": "952f4c266ac2afc5b532e9a1b155b5440f3c9683ef0dd53d1871746c6e43de54"
+    },
+    {
+      "path": "src/shared/content-r12.css",
+      "sha256": "64023ccbb5d6102f55dd1ec01e8c716343dc9c463221c221fe782a9d5df3bc30"
+    },
+    {
+      "path": "tests/shared/content-r12.test.js",
+      "sha256": "a74c53092b093150f13259ae16106cdab4d3fe070590490d991d26dedd367d23"
+    },
+    {
+      "path": "scripts/check-content-r12.mjs",
+      "sha256": "17672c6d18995c3f8a76f423d5ad030e10e8ed637b09715ca1039fc7e5aabc0b"
+    },
+    {
+      "path": "scripts/prepare-content-r12.mjs",
+      "sha256": "5e23d490a4f457f803cef564f3cd820b8d476efbe0948f543eb9bedcfe84053f"
+    },
+    {
+      "path": "scripts/verify-content-r12-release.mjs",
+      "sha256": "3898bd196c06df2ae65d2bce1158706b0b17735f7b0aef52fa7d2464c3fdb3a5"
+    },
+    {
+      "path": "public/art/content-r12/station-low-platform.webp",
+      "sha256": "de4199747fed570df373a0262e1c50307e362e532c589e91695ce36ee2f54d3e"
+    }
+  ]
+}

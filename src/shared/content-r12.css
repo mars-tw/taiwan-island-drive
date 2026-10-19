@@ -1,0 +1,103 @@
+/* R12: readable physical feedback, one place for each instruction. */
+#content-r1[data-kind=cake] .cake-closeup{width:174px;height:174px;overflow:hidden}
+#content-r1[data-kind=cake] .cake-closeup>.cake-stack{transform:scale(.96)}
+.cake-rigid{position:absolute;inset:0;transform-origin:86px 162px}
+.cake-level-line{position:absolute;left:24px;bottom:6px;width:124px;border-top:3px solid #f46b27;z-index:6}
+.cake-fixed-level{position:absolute;left:24px;bottom:6px;width:124px;border-top:2px dashed #1479b8}
+.cake-flag-tip{position:absolute;left:110px;top:0;width:1px;height:1px}
+#content-r1[data-kind=cake] .flag-trail{display:none}
+#content-r1[data-kind=cake][data-phase=playing] .cake-task{left:181px;font-size:12px}
+#content-r1[data-kind=cake][data-phase] .cake-route-map{display:none}
+#content-r1[data-kind=cake][data-phase=playing] .content-force{left:181px;top:46px;min-height:108px}
+#content-r1[data-kind=cake] .force-readout{display:flex;flex-wrap:wrap;font-size:13px;gap:3px}
+#content-r1[data-kind=cake] .force-readout strong{flex:1}
+#content-r1[data-kind=cake] .force-meter,#content-r1[data-kind=cake] .force-readout small{flex-basis:100%}
+#content-r1[data-kind=cake] .force-arrow{color:#1479b8;font-size:13px}
+#content-r1[data-kind=cake] .force-arrow svg{display:block}
+#content-r1[data-kind=cake] .cake-road-view{inset:176px 0 0}
+#content-r1[data-kind=cake] [data-action=go][data-pedal=released]{background:#f5fbff;color:#143b61;box-shadow:inset 0 -4px #b5d8e8}
+#content-r1[data-kind=cake] [data-action=go][data-pedal=ready]{background:#ffd344;color:#143b61;outline:3px solid #f46b27}
+#content-r1[data-kind=cake] [data-action=left][data-needed=true],#content-r1[data-kind=cake] [data-action=right][data-needed=true]{background:#d5efff;outline:3px solid #1479b8;box-shadow:none}
+#content-r1[data-kind=cake] .content-road-sign{display:none}
+#content-r1[data-stage="1"] .cake-timing{top:40%;left:42%;right:auto;transform:rotate(-16deg);font-size:15px}
+#content-r1[data-stage="1"] .cake-timing b{background:#ffffffb3;border:0;box-shadow:none;color:#1479b8}
+.cake-lane-arrow{display:block;font-size:44px;line-height:1;color:#1479b8}
+#content-r1[data-kind=cake][data-phase=done] .content-finale{display:none}
+#content-r1[data-kind=cake][data-phase=done] .cake-road-view{display:block;inset:45px 0 0}
+#content-r1[data-kind=cake][data-phase=done] .cake-timing{display:none}
+#content-r1[data-kind=cake][data-phase=done] .cake-task{display:none}
+#content-r1[data-kind=cake][data-phase=done] .content-force{display:none}
+#content-r1[data-kind=cake][data-phase=done] .lesson-route-proof{top:48px;bottom:auto;height:82px;box-sizing:border-box}
+#content-r1[data-kind=cake][data-phase=done] .lesson-route-proof section{min-height:0}
+#content-r1[data-kind=cake][data-phase=done] .lesson-route-proof .road-thumbnail{height:49px}
+#content-r1[data-stage="2"] .cake-timing{top:46%;font-size:11px}
+#content-r1[data-kind=cake][data-phase=done] .content-scene-cue{background:#fff0bd;border-color:#f46b27}
+.cake-sharing{display:none;position:absolute;left:3%;bottom:2%;width:34%;height:32%;z-index:8;align-items:end}
+.cake-sharing img{width:33%;height:100%;object-fit:contain;object-position:center bottom}
+#content-r1[data-kind=cake][data-phase=done] .cake-sharing{display:flex}
+
+/* Past observation is a small green check, never a competing direction. */
+#content-r1[data-kind=crossing]{--friend-h:92px;--friend-w:78px}
+#content-r1[data-kind=crossing] .content-scene[data-watch-side]{box-shadow:none}
+#content-r1[data-kind=crossing] .content-scene[data-watch-side]::after{content:none}
+.crossing-checks{position:absolute;inset:25% 5px auto;display:flex;justify-content:space-between;z-index:7;pointer-events:none}
+.crossing-checks span{background:#d5f2c7;border:2px solid #58b85b;border-radius:5px;color:#143b61;font-size:15px;width:24px;text-align:center}
+.crossing-checks span[data-seen=false]{visibility:hidden}
+#content-r1[data-kind=crossing] .crossing-arrived b{top:12%;right:3%;width:18px;height:18px;font-size:12px}
+#content-r1[data-kind=crossing][data-phase=departing] .content-carrier{transition:none}
+
+/* Use the same un-stretched vehicle and rail/sill alignment in play and end. */
+#content-r1[data-kind=tickets] .content-scene{background-image:url('/art/content-r12/station-low-platform.webp');background-size:100% 100%}
+#content-r1[data-kind=tickets] .ticket-vehicle{width:64%;aspect-ratio:2.42}
+#content-r1[data-kind=tickets] .ticket-door{left:69%;width:18%;top:17%;height:60%;border:3px solid #ffd344;box-shadow:0 0 0 2px #143b61;box-sizing:border-box;background:#102d44 url('/art/content-r11/open-door.png') center/100% 100% no-repeat}
+#content-r1[data-kind=tickets] .ticket-boarding-bridge{height:17px;border:2px solid #143b61;border-top:4px solid #ffd344;box-shadow:0 2px #fff8d9;background-image:repeating-linear-gradient(135deg,#ffd344 0 7px,transparent 7px 13px),url('/art/content-r10/boarding-step.png');box-sizing:border-box}
+#content-r1[data-kind=tickets][data-phase] .ticket-counts,#content-r1[data-kind=tickets][data-phase]:has(.ticket-comparison:not(:empty)) .ticket-counts{top:94px;bottom:auto;left:50%;right:auto;transform:translateX(-50%);gap:6px}
+#content-r1[data-kind=tickets] .ticket-comparison{top:5px;left:6px;right:6px;max-width:none;padding:3px;transform:none;grid-template-columns:52px 20px 52px 1fr}
+#content-r1[data-kind=tickets] .ticket-comparison>strong{grid-column:auto;white-space:normal;font-size:12px}
+#content-r1[data-kind=tickets]:has(.ticket-comparison:not(:empty)) .content-ticket{visibility:hidden}
+#content-r1[data-kind=tickets] .boarding-friend{width:28px}
+#content-r1[data-kind=tickets][data-phase=done] .ticket-counts{display:none}
+#content-r1[data-kind=tickets][data-phase=done] .lesson-route-proof{top:15%;height:21%}
+#content-r1[data-kind=tickets][data-phase=done] .ticket-arrival{top:39%}
+#content-r1[data-kind=tickets][data-phase=done] .ticket-arrival img{width:44px;height:44px}
+#content-r1[data-kind=tickets][data-phase=done] .ticket-arrival span{font-size:13px}
+#content-r1[data-kind=tickets][data-phase=done] .ticket-vehicle{bottom:auto;height:auto;aspect-ratio:2.42}
+#content-r1[data-kind=tickets][data-phase=done] .content-scene-cue{background:#d5efff}
+#content-r1[data-kind=crossing][data-phase=done] .content-scene-cue{background:#d5f2c7;border-color:#58b85b}
+
+@media(max-width:360px) and (orientation:portrait){
+ #content-r1[data-kind=cake] .cake-closeup{width:124px;height:124px}
+ #content-r1[data-kind=cake] .cake-closeup>.cake-stack{transform:scale(.68)}
+ #content-r1[data-kind=cake][data-phase=playing] .cake-task{left:130px;font-size:10px}
+ #content-r1[data-kind=cake][data-phase=playing] .content-force{left:130px;top:39px;min-height:75px}
+ #content-r1[data-kind=cake] .cake-road-view{inset:126px 0 0}
+ #content-r1[data-kind=cake] .force-readout{font-size:10px}
+ #content-r1[data-kind=cake] .force-coach{display:none}
+ #content-r1[data-kind=tickets][data-phase] .ticket-counts,#content-r1[data-kind=tickets][data-phase]:has(.ticket-comparison:not(:empty)) .ticket-counts{top:4px;left:44px;right:auto;transform:none;font-size:10px}
+ #content-r1[data-kind=tickets] .ticket-comparison{top:auto;bottom:4px;max-height:43px;font-size:9px}
+ #content-r1[data-kind=tickets] .ticket-comparison svg{width:25px;height:25px}
+ #content-r1[data-kind=tickets] .ticket-boarding-bridge{height:11px}
+ #content-r1[data-kind=crossing]{--friend-h:62px;--friend-w:52px}
+ .crossing-waiting b{font-size:9px}
+}
+@media(orientation:landscape) and (max-height:520px){
+ #content-r1[data-kind=cake] .cake-closeup{width:112px;height:112px}
+ #content-r1[data-kind=cake] .cake-closeup>.cake-stack{transform:scale(.61)}
+ #content-r1[data-kind=cake][data-phase=playing] .content-force{left:0;top:116px;width:108px;min-height:42px}
+ #content-r1[data-kind=cake] .cake-road-view{inset:0 0 0 116px}
+ #content-r1[data-kind=cake] .force-readout{font-size:10px}
+ #content-r1[data-kind=cake] .force-coach{display:none}
+ #content-r1[data-kind=tickets][data-phase] .ticket-counts,#content-r1[data-kind=tickets][data-phase]:has(.ticket-comparison:not(:empty)) .ticket-counts{top:4px;left:auto;right:4px;transform:none}
+ #content-r1[data-kind=tickets] .ticket-comparison{top:auto;bottom:4px;left:4px;right:4px;max-height:38px;font-size:9px}
+ #content-r1[data-kind=tickets] .ticket-comparison svg{width:22px;height:22px}
+ #content-r1[data-kind=crossing]{--friend-h:52px;--friend-w:46px}
+ #content-r1[data-kind=tickets] .ticket-boarding-bridge{height:10px}
+}
+@media(max-width:360px) and (orientation:portrait),(orientation:landscape) and (max-height:520px){
+ #content-r1[data-kind=tickets] .ticket-comparison{grid-template-columns:58px 14px 58px 1fr;max-height:none;min-height:30px;border-width:2px;padding:2px}
+ #content-r1[data-kind=tickets] .ticket-comparison>div{display:flex;align-items:center;justify-content:center;gap:2px;white-space:nowrap}
+ #content-r1[data-kind=tickets] .ticket-comparison>div>span{font-size:8px;line-height:1.1}
+ #content-r1[data-kind=tickets] .ticket-comparison>b{font-size:18px}
+ #content-r1[data-kind=tickets] .ticket-comparison>strong{font-size:10px}
+ #content-r1[data-kind=tickets] .ticket-comparison>strong svg{width:14px;height:14px}
+}

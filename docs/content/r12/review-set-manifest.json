@@ -1,0 +1,3164 @@
+{
+  "status": "VERIFIED",
+  "version": "2.24.0",
+  "distribution": {
+    "cake": 6,
+    "crossing": 4,
+    "tickets": 5
+  },
+  "policy": "15 byte-identical 390x844 originals. Each lesson covers all three stations and a success trigger. Three continuous cake frames; two departure frames; two stage-2 boarding frames. Endings retain live vehicles.",
+  "shots": [
+    {
+      "path": "docs/content/r12/review-set/01-cake-tilting-1.png",
+      "width": 390,
+      "height": 844,
+      "sha256": "c289bc4862004b0db99e0b3d35ee0be651ab0c9df24b89952261c0e8a731cf79",
+      "phase": "playing",
+      "state": {
+        "boardTime": "0.000",
+        "cue": "right",
+        "settled": "false",
+        "correction": "right",
+        "distance": "4.64",
+        "speed": "4.32",
+        "bend": "1",
+        "tilt": "2.57",
+        "sway": "0.20",
+        "acceleration": "-0.80",
+        "bayStopped": "false",
+        "bayRestarted": "false",
+        "leftTurn": "false",
+        "rightTurn": "false",
+        "focus": "center",
+        "crossTime": "0.000",
+        "crossDuration": "2.1",
+        "orderHint": "",
+        "fruitSway": "-4.26",
+        "flagSway": "-9.48",
+        "balanceLean": "-16.13",
+        "balanceStatus": "danger",
+        "recoveries": "0",
+        "assists": "1",
+        "assisting": "true",
+        "crossed": "0",
+        "lookedLeft": "false",
+        "lookedRight": "false",
+        "decision": "false",
+        "confirmed": "false",
+        "confirmDelay": "0",
+        "person": "child",
+        "watchSide": "",
+        "doorState": "closed",
+        "step": "0"
+      },
+      "hint": "放開放慢，看蛋糕扶正。",
+      "controls": [
+        {
+          "action": "left",
+          "text": "左轉",
+          "needed": "false",
+          "held": "false",
+          "color": "rgb(245, 251, 255)"
+        },
+        {
+          "action": "right",
+          "text": "扶正",
+          "needed": "true",
+          "held": "false",
+          "color": "rgb(213, 239, 255)"
+        },
+        {
+          "action": "go",
+          "text": "請放開",
+          "needed": "false",
+          "held": "true",
+          "release": "true",
+          "color": "rgb(244, 107, 39)"
+        },
+        {
+          "action": "brake",
+          "text": "煞車",
+          "needed": "false",
+          "held": "false",
+          "color": "rgb(245, 251, 255)"
+        },
+        {
+          "action": "listen",
+          "text": "再聽一次",
+          "color": "rgb(245, 251, 255)"
+        }
+      ],
+      "geometry": {
+        "scene": {
+          "x": 13,
+          "y": 87,
+          "width": 364,
+          "height": 559.015625,
+          "right": 377,
+          "bottom": 646.015625
+        },
+        "car": {
+          "x": 98.45103454589844,
+          "y": 522.9921264648438,
+          "width": 193.89134216308594,
+          "height": 110.31707763671875,
+          "right": 292.3423767089844,
+          "bottom": 633.3092041015625
+        },
+        "bay": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0,
+          "right": 0,
+          "bottom": 0
+        },
+        "step": {
+          "box": {
+            "x": 0,
+            "y": 0,
+            "width": 0,
+            "height": 0,
+            "right": 0,
+            "bottom": 0
+          },
+          "hidden": true,
+          "transform": "none"
+        },
+        "markers": [],
+        "people": [],
+        "door": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0,
+          "right": 0,
+          "bottom": 0
+        },
+        "signs": [],
+        "checks": []
+      },
+      "proof": {
+        "flag": {
+          "x": 57.697330474853516,
+          "y": 97.43354797363281,
+          "width": 1.2758255004882812,
+          "height": 1.2758255004882812,
+          "right": 58.9731559753418,
+          "bottom": 98.7093734741211
+        },
+        "cakeWidth": 103.67999999999999,
+        "rigid": "rotate(-25.007deg)",
+        "queue": "",
+        "counts": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0,
+          "right": 0,
+          "bottom": 0
+        },
+        "train": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0,
+          "right": 0,
+          "bottom": 0
+        },
+        "carSource": "http://127.0.0.1:5286/art/content-r11/car-rear.png",
+        "trainSource": "http://127.0.0.1:5286/art/content-r3/train-side.webp",
+        "pastArrow": "none",
+        "waiting": []
+      },
+      "native": false,
+      "method": "Original headless runtime PNG; RAF paused during capture only; no game state assignments or pixel edits",
+      "original": "docs/content/r12/phone-cake-tilting-1.png",
+      "kind": "cake"
+    },
+    {
+      "path": "docs/content/r12/review-set/02-cake-correcting-2.png",
+      "width": 390,
+      "height": 844,
+      "sha256": "68328f65c8ff1643909594bc75ea338e598de35dc629359a5be1b827200298b0",
+      "phase": "playing",
+      "state": {
+        "boardTime": "0.000",
+        "cue": "right",
+        "settled": "false",
+        "correction": "right",
+        "distance": "6.10",
+        "speed": "4.04",
+        "bend": "1",
+        "tilt": "-0.58",
+        "sway": "0.32",
+        "acceleration": "-0.80",
+        "bayStopped": "false",
+        "bayRestarted": "false",
+        "leftTurn": "false",
+        "rightTurn": "false",
+        "focus": "center",
+        "crossTime": "0.000",
+        "crossDuration": "2.1",
+        "orderHint": "",
+        "fruitSway": "-0.95",
+        "flagSway": "-3.82",
+        "balanceLean": "-10.23",
+        "balanceStatus": "danger",
+        "recoveries": "0",
+        "assists": "1",
+        "assisting": "true",
+        "crossed": "0",
+        "lookedLeft": "false",
+        "lookedRight": "false",
+        "decision": "false",
+        "confirmed": "false",
+        "confirmDelay": "0",
+        "person": "child",
+        "watchSide": "",
+        "doorState": "closed",
+        "step": "0"
+      },
+      "hint": "放開放慢，看蛋糕扶正。",
+      "controls": [
+        {
+          "action": "left",
+          "text": "左轉",
+          "needed": "false",
+          "held": "false",
+          "color": "rgb(245, 251, 255)"
+        },
+        {
+          "action": "right",
+          "text": "扶正",
+          "needed": "true",
+          "held": "true",
+          "color": "rgb(213, 239, 255)"
+        },
+        {
+          "action": "go",
+          "text": "踏板",
+          "needed": "false",
+          "held": "false",
+          "release": "true",
+          "color": "rgb(245, 251, 255)"
+        },
+        {
+          "action": "brake",
+          "text": "煞車",
+          "needed": "false",
+          "held": "false",
+          "color": "rgb(245, 251, 255)"
+        },
+        {
+          "action": "listen",
+          "text": "再聽一次",
+          "color": "rgb(245, 251, 255)"
+        }
+      ],
+      "geometry": {
+        "scene": {
+          "x": 13,
+          "y": 87,
+          "width": 364,
+          "height": 559.015625,
+          "right": 377,
+          "bottom": 646.015625
+        },
+        "car": {
+          "x": 98.49056243896484,
+          "y": 520.7393798828125,
+          "width": 195.190673828125,
+          "height": 113.51031494140625,
+          "right": 293.68123626708984,
+          "bottom": 634.2496948242188
+        },
+        "bay": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0,
+          "right": 0,
+          "bottom": 0
+        },
+        "step": {
+          "box": {
+            "x": 0,
+            "y": 0,
+            "width": 0,
+            "height": 0,
+            "right": 0,
+            "bottom": 0
+          },
+          "hidden": true,
+          "transform": "none"
+        },
+        "markers": [],
+        "people": [],
+        "door": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0,
+          "right": 0,
+          "bottom": 0
+        },
+        "signs": [],
+        "checks": []
+      },
+      "proof": {
+        "flag": {
+          "x": 82.23579406738281,
+          "y": 92.35956573486328,
+          "width": 1.1857452392578125,
+          "height": 1.1857452392578125,
+          "right": 83.42153930664062,
+          "bottom": 93.5453109741211
+        },
+        "cakeWidth": 103.67999999999999,
+        "rigid": "rotate(-15.8546deg)",
+        "queue": "",
+        "counts": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0,
+          "right": 0,
+          "bottom": 0
+        },
+        "train": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0,
+          "right": 0,
+          "bottom": 0
+        },
+        "carSource": "http://127.0.0.1:5286/art/content-r11/car-rear.png",
+        "trainSource": "http://127.0.0.1:5286/art/content-r3/train-side.webp",
+        "pastArrow": "none",
+        "waiting": []
+      },
+      "native": false,
+      "method": "Original headless runtime PNG; RAF paused during capture only; no game state assignments or pixel edits",
+      "original": "docs/content/r12/phone-cake-correcting-2.png",
+      "kind": "cake"
+    },
+    {
+      "path": "docs/content/r12/review-set/03-cake-recovered-3.png",
+      "width": 390,
+      "height": 844,
+      "sha256": "60661662e10f8ec9b67c484c03e4b34cad5da51007e8d5c6dce16e45138b59e5",
+      "phase": "playing",
+      "state": {
+        "boardTime": "0.000",
+        "cue": "go",
+        "settled": "true",
+        "correction": "",
+        "distance": "7.18",
+        "speed": "2.67",
+        "bend": "1",
+        "tilt": "15.36",
+        "sway": "4.80",
+        "acceleration": "-4.44",
+        "bayStopped": "false",
+        "bayRestarted": "false",
+        "leftTurn": "false",
+        "rightTurn": "false",
+        "focus": "center",
+        "crossTime": "0.000",
+        "crossDuration": "2.1",
+        "orderHint": "",
+        "fruitSway": "1.05",
+        "flagSway": "2.10",
+        "balanceLean": "-0.96",
+        "balanceStatus": "steady",
+        "recoveries": "1",
+        "assists": "1",
+        "assisting": "false",
+        "crossed": "0",
+        "lookedLeft": "false",
+        "lookedRight": "false",
+        "decision": "false",
+        "confirmed": "false",
+        "confirmDelay": "0",
+        "person": "child",
+        "watchSide": "",
+        "doorState": "closed",
+        "step": "0"
+      },
+      "hint": "按住踏板，慢慢前進。",
+      "controls": [
+        {
+          "action": "left",
+          "text": "左轉",
+          "needed": "false",
+          "held": "false",
+          "color": "rgb(245, 251, 255)"
+        },
+        {
+          "action": "right",
+          "text": "右轉",
+          "needed": "false",
+          "held": "false",
+          "color": "rgb(245, 251, 255)"
+        },
+        {
+          "action": "go",
+          "text": "按住前進",
+          "needed": "true",
+          "held": "false",
+          "release": "false",
+          "color": "rgb(255, 211, 68)"
+        },
+        {
+          "action": "brake",
+          "text": "煞車",
+          "needed": "false",
+          "held": "false",
+          "color": "rgb(245, 251, 255)"
+        },
+        {
+          "action": "listen",
+          "text": "再聽一次",
+          "color": "rgb(245, 251, 255)"
+        }
+      ],
+      "geometry": {
+        "scene": {
+          "x": 13,
+          "y": 87,
+          "width": 364,
+          "height": 559.015625,
+          "right": 377,
+          "bottom": 646.015625
+        },
+        "car": {
+          "x": 98.10107421875,
+          "y": 515.4661865234375,
+          "width": 199.9488525390625,
+          "height": 123.29425048828125,
+          "right": 298.0499267578125,
+          "bottom": 638.7604370117188
+        },
+        "bay": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0,
+          "right": 0,
+          "bottom": 0
+        },
+        "step": {
+          "box": {
+            "x": 0,
+            "y": 0,
+            "width": 0,
+            "height": 0,
+            "right": 0,
+            "bottom": 0
+          },
+          "hidden": true,
+          "transform": "none"
+        },
+        "markers": [],
+        "people": [],
+        "door": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0,
+          "right": 0,
+          "bottom": 0
+        },
+        "signs": [],
+        "checks": []
+      },
+      "proof": {
+        "flag": {
+          "x": 121.5732192993164,
+          "y": 92.43170928955078,
+          "width": 0.9844970703125,
+          "height": 0.9844894409179688,
+          "right": 122.5577163696289,
+          "bottom": 93.41619873046875
+        },
+        "cakeWidth": 103.67999999999999,
+        "rigid": "rotate(-1.48085deg)",
+        "queue": "",
+        "counts": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0,
+          "right": 0,
+          "bottom": 0
+        },
+        "train": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0,
+          "right": 0,
+          "bottom": 0
+        },
+        "carSource": "http://127.0.0.1:5286/art/content-r11/car-rear.png",
+        "trainSource": "http://127.0.0.1:5286/art/content-r3/train-side.webp",
+        "pastArrow": "none",
+        "waiting": []
+      },
+      "native": false,
+      "method": "Original headless runtime PNG; RAF paused during capture only; no game state assignments or pixel edits",
+      "original": "docs/content/r12/phone-cake-recovered-3.png",
+      "kind": "cake"
+    },
+    {
+      "path": "docs/content/r12/review-set/04-cake-bends-timing.png",
+      "width": 390,
+      "height": 844,
+      "sha256": "7347928c28c402a487542ce90f167eb8c26ceaf7f959de131a63a46f33938e56",
+      "phase": "playing",
+      "state": {
+        "boardTime": "0.000",
+        "cue": "right",
+        "settled": "false",
+        "correction": "right",
+        "distance": "18.64",
+        "speed": "4.54",
+        "bend": "-1",
+        "tilt": "-5.69",
+        "sway": "-0.01",
+        "acceleration": "3.52",
+        "bayStopped": "false",
+        "bayRestarted": "false",
+        "leftTurn": "true",
+        "rightTurn": "false",
+        "focus": "center",
+        "crossTime": "0.000",
+        "crossDuration": "2.4",
+        "orderHint": "",
+        "fruitSway": "1.94",
+        "flagSway": "2.90",
+        "balanceLean": "-9.05",
+        "balanceStatus": "leaning",
+        "recoveries": "2",
+        "assists": "1",
+        "assisting": "false",
+        "crossed": "0",
+        "lookedLeft": "false",
+        "lookedRight": "false",
+        "decision": "false",
+        "confirmed": "false",
+        "confirmDelay": "0",
+        "person": "grandma",
+        "watchSide": "",
+        "doorState": "closed",
+        "step": "0"
+      },
+      "hint": "放開放慢，看蛋糕扶正。",
+      "controls": [
+        {
+          "action": "left",
+          "text": "左轉",
+          "needed": "false",
+          "held": "true",
+          "color": "rgb(245, 251, 255)"
+        },
+        {
+          "action": "right",
+          "text": "扶正",
+          "needed": "true",
+          "held": "false",
+          "color": "rgb(213, 239, 255)"
+        },
+        {
+          "action": "go",
+          "text": "請放開",
+          "needed": "false",
+          "held": "true",
+          "release": "true",
+          "color": "rgb(244, 107, 39)"
+        },
+        {
+          "action": "brake",
+          "text": "煞車",
+          "needed": "false",
+          "held": "false",
+          "color": "rgb(245, 251, 255)"
+        },
+        {
+          "action": "listen",
+          "text": "再聽一次",
+          "color": "rgb(245, 251, 255)"
+        }
+      ],
+      "geometry": {
+        "scene": {
+          "x": 13,
+          "y": 87,
+          "width": 364,
+          "height": 559.015625,
+          "right": 377,
+          "bottom": 646.015625
+        },
+        "car": {
+          "x": 71.65788269042969,
+          "y": 513.2127685546875,
+          "width": 193.2106475830078,
+          "height": 117.180419921875,
+          "right": 264.8685302734375,
+          "bottom": 630.3931884765625
+        },
+        "bay": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0,
+          "right": 0,
+          "bottom": 0
+        },
+        "step": {
+          "box": {
+            "x": 0,
+            "y": 0,
+            "width": 0,
+            "height": 0,
+            "right": 0,
+            "bottom": 0
+          },
+          "hidden": true,
+          "transform": "none"
+        },
+        "markers": [],
+        "people": [],
+        "door": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0,
+          "right": 0,
+          "bottom": 0
+        },
+        "signs": [],
+        "checks": []
+      },
+      "proof": {
+        "flag": {
+          "x": 87.19731140136719,
+          "y": 91.82218170166016,
+          "width": 1.1641464233398438,
+          "height": 1.1641464233398438,
+          "right": 88.36145782470703,
+          "bottom": 92.986328125
+        },
+        "cakeWidth": 103.67999999999999,
+        "rigid": "rotate(-14.0346deg)",
+        "queue": "",
+        "counts": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0,
+          "right": 0,
+          "bottom": 0
+        },
+        "train": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0,
+          "right": 0,
+          "bottom": 0
+        },
+        "carSource": "http://127.0.0.1:5286/art/content-r11/car-rear.png",
+        "trainSource": "http://127.0.0.1:5286/art/content-r3/train-side.webp",
+        "pastArrow": "none",
+        "waiting": []
+      },
+      "native": false,
+      "method": "Original headless runtime PNG; RAF paused during capture only; no game state assignments or pixel edits",
+      "original": "docs/content/r12/phone-cake-bends-timing.png",
+      "kind": "cake"
+    },
+    {
+      "path": "docs/content/r12/review-set/05-cake-bay-stopped.png",
+      "width": 390,
+      "height": 844,
+      "sha256": "c91591536eecce39e51db30dc29f5daf85b5fe30654d94d1ea713c077997088e",
+      "phase": "playing",
+      "state": {
+        "boardTime": "0.000",
+        "cue": "go",
+        "settled": "true",
+        "correction": "",
+        "distance": "43.90",
+        "speed": "0.00",
+        "bend": "1",
+        "tilt": "0.00",
+        "sway": "0.00",
+        "acceleration": "0.00",
+        "bayStopped": "true",
+        "bayRestarted": "false",
+        "leftTurn": "false",
+        "rightTurn": "false",
+        "focus": "center",
+        "crossTime": "0.000",
+        "crossDuration": "1.45",
+        "orderHint": "",
+        "fruitSway": "0.15",
+        "flagSway": "1.01",
+        "balanceLean": "0.72",
+        "balanceStatus": "steady",
+        "recoveries": "4",
+        "assists": "1",
+        "assisting": "false",
+        "crossed": "0",
+        "lookedLeft": "false",
+        "lookedRight": "false",
+        "decision": "false",
+        "confirmed": "false",
+        "confirmDelay": "0",
+        "person": "bike",
+        "watchSide": "",
+        "doorState": "closed",
+        "step": "0"
+      },
+      "hint": "停穩了，按住踏板再起步。",
+      "controls": [
+        {
+          "action": "left",
+          "text": "左轉",
+          "needed": "false",
+          "held": "false",
+          "color": "rgb(245, 251, 255)"
+        },
+        {
+          "action": "right",
+          "text": "右轉",
+          "needed": "false",
+          "held": "false",
+          "color": "rgb(245, 251, 255)"
+        },
+        {
+          "action": "go",
+          "text": "按住前進",
+          "needed": "true",
+          "held": "false",
+          "release": "false",
+          "color": "rgb(255, 211, 68)"
+        },
+        {
+          "action": "brake",
+          "text": "煞車",
+          "needed": "false",
+          "held": "false",
+          "color": "rgb(245, 251, 255)"
+        },
+        {
+          "action": "listen",
+          "text": "再聽一次",
+          "color": "rgb(245, 251, 255)"
+        }
+      ],
+      "geometry": {
+        "scene": {
+          "x": 13,
+          "y": 87,
+          "width": 364,
+          "height": 559.015625,
+          "right": 377,
+          "bottom": 646.015625
+        },
+        "car": {
+          "x": 205.3663330078125,
+          "y": 497.98150634765625,
+          "width": 158.23538208007812,
+          "height": 88.828369140625,
+          "right": 363.6017150878906,
+          "bottom": 586.8098754882812
+        },
+        "bay": {
+          "x": 195,
+          "y": 489.6875,
+          "width": 164.671875,
+          "height": 119.671875,
+          "right": 359.671875,
+          "bottom": 609.359375
+        },
+        "step": {
+          "box": {
+            "x": 0,
+            "y": 0,
+            "width": 0,
+            "height": 0,
+            "right": 0,
+            "bottom": 0
+          },
+          "hidden": true,
+          "transform": "none"
+        },
+        "markers": [],
+        "people": [],
+        "door": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0,
+          "right": 0,
+          "bottom": 0
+        },
+        "signs": [],
+        "checks": []
+      },
+      "proof": {
+        "flag": {
+          "x": 128.59698486328125,
+          "y": 93.47673034667969,
+          "width": 0.97845458984375,
+          "height": 0.97845458984375,
+          "right": 129.575439453125,
+          "bottom": 94.45518493652344
+        },
+        "cakeWidth": 103.67999999999999,
+        "rigid": "rotate(1.11267deg)",
+        "queue": "",
+        "counts": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0,
+          "right": 0,
+          "bottom": 0
+        },
+        "train": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0,
+          "right": 0,
+          "bottom": 0
+        },
+        "carSource": "http://127.0.0.1:5286/art/content-r11/car-rear.png",
+        "trainSource": "http://127.0.0.1:5286/art/content-r3/train-side.webp",
+        "pastArrow": "none",
+        "waiting": []
+      },
+      "native": false,
+      "method": "Original headless runtime PNG; RAF paused during capture only; no game state assignments or pixel edits",
+      "original": "docs/content/r12/phone-cake-bay-stopped.png",
+      "kind": "cake"
+    },
+    {
+      "path": "docs/content/r12/review-set/06-cake-saved-result.png",
+      "width": 390,
+      "height": 844,
+      "sha256": "946cf9fe5f9103a4e0328fef2a11de5cb6b6c599661b4bb0cfaf9b3d3cca8580",
+      "phase": "done",
+      "state": {
+        "boardTime": "0.000",
+        "cue": "go",
+        "settled": "true",
+        "correction": "",
+        "distance": "0.00",
+        "speed": "0.00",
+        "bend": "1",
+        "tilt": "0.00",
+        "sway": "0.00",
+        "acceleration": "0.00",
+        "bayStopped": "false",
+        "bayRestarted": "false",
+        "leftTurn": "false",
+        "rightTurn": "false",
+        "focus": "center",
+        "crossTime": "0.000",
+        "crossDuration": "1.45",
+        "orderHint": "",
+        "fruitSway": "0.00",
+        "flagSway": "0.00",
+        "balanceLean": "0.00",
+        "balanceStatus": "steady",
+        "recoveries": "4",
+        "assists": "1",
+        "assisting": "false",
+        "crossed": "0",
+        "lookedLeft": "false",
+        "lookedRight": "false",
+        "decision": "false",
+        "confirmed": "false",
+        "confirmDelay": "0",
+        "person": "bike",
+        "watchSide": "",
+        "doorState": "closed",
+        "step": "0"
+      },
+      "hint": "蛋糕送到了！一起分享。",
+      "controls": [
+        {
+          "action": "replay",
+          "text": "再玩一次",
+          "color": "rgb(245, 251, 255)"
+        },
+        {
+          "action": "picker",
+          "text": "換一課",
+          "color": "rgb(245, 251, 255)"
+        },
+        {
+          "action": "listen",
+          "text": "再聽一次",
+          "color": "rgb(245, 251, 255)"
+        }
+      ],
+      "geometry": {
+        "scene": {
+          "x": 13,
+          "y": 87,
+          "width": 364,
+          "height": 401.25,
+          "right": 377,
+          "bottom": 488.25
+        },
+        "car": {
+          "x": 205.3671875,
+          "y": 350.62384033203125,
+          "width": 158.234375,
+          "height": 82.46875,
+          "right": 363.6015625,
+          "bottom": 433.09259033203125
+        },
+        "bay": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0,
+          "right": 0,
+          "bottom": 0
+        },
+        "step": {
+          "box": {
+            "x": 0,
+            "y": 0,
+            "width": 0,
+            "height": 0,
+            "right": 0,
+            "bottom": 0
+          },
+          "hidden": true,
+          "transform": "none"
+        },
+        "markers": [],
+        "people": [],
+        "door": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0,
+          "right": 0,
+          "bottom": 0
+        },
+        "signs": [],
+        "checks": []
+      },
+      "proof": {
+        "flag": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0,
+          "right": 0,
+          "bottom": 0
+        },
+        "cakeWidth": 103.67999999999999,
+        "rigid": "rotate(0deg)",
+        "queue": "",
+        "counts": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0,
+          "right": 0,
+          "bottom": 0
+        },
+        "train": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0,
+          "right": 0,
+          "bottom": 0
+        },
+        "carSource": "http://127.0.0.1:5286/art/content-r11/car-rear.png",
+        "trainSource": "http://127.0.0.1:5286/art/content-r3/train-side.webp",
+        "pastArrow": "none",
+        "waiting": []
+      },
+      "native": false,
+      "method": "Original headless runtime PNG; RAF paused during capture only; no game state assignments or pixel edits",
+      "original": "docs/content/r12/phone-cake-saved-result.png",
+      "kind": "cake"
+    },
+    {
+      "path": "docs/content/r12/review-set/07-crossing-stage-1-missing-right-1.png",
+      "width": 390,
+      "height": 844,
+      "sha256": "6c4c4502b00b91bd1cf92d6706d56fff953dc640fdc5f917ca31873db1c064e0",
+      "phase": "playing",
+      "state": {
+        "boardTime": "0.000",
+        "cue": "go",
+        "settled": "true",
+        "correction": "",
+        "distance": "0.00",
+        "speed": "0.00",
+        "bend": "1",
+        "tilt": "0.90",
+        "sway": "0.73",
+        "acceleration": "0.00",
+        "bayStopped": "false",
+        "bayRestarted": "false",
+        "leftTurn": "false",
+        "rightTurn": "false",
+        "focus": "left",
+        "crossTime": "0.000",
+        "crossDuration": "2.1",
+        "orderHint": "",
+        "fruitSway": "4.09",
+        "flagSway": "10.20",
+        "balanceLean": "0.00",
+        "balanceStatus": "steady",
+        "recoveries": "0",
+        "assists": "0",
+        "assisting": "false",
+        "crossed": "0",
+        "lookedLeft": "true",
+        "lookedRight": "false",
+        "decision": "false",
+        "confirmed": "false",
+        "confirmDelay": "0",
+        "person": "child",
+        "watchSide": "left",
+        "doorState": "closed",
+        "step": "0"
+      },
+      "hint": "還沒看右邊，先看右。",
+      "controls": [
+        {
+          "action": "brake",
+          "text": "停下",
+          "needed": "false",
+          "color": "rgb(255, 255, 255)"
+        },
+        {
+          "action": "look-left",
+          "text": "✓ 看過了",
+          "needed": "false",
+          "checked": "true",
+          "color": "rgb(213, 242, 199)"
+        },
+        {
+          "action": "look-right",
+          "text": "看右",
+          "needed": "true",
+          "checked": "false",
+          "color": "rgb(255, 211, 68)"
+        },
+        {
+          "action": "depart",
+          "text": "出發",
+          "needed": "false",
+          "color": "rgb(225, 230, 234)"
+        },
+        {
+          "action": "listen",
+          "text": "再聽一次",
+          "needed": "false",
+          "color": "rgb(255, 255, 255)"
+        }
+      ],
+      "geometry": {
+        "scene": {
+          "x": 13,
+          "y": 87,
+          "width": 364,
+          "height": 559.015625,
+          "right": 377,
+          "bottom": 646.015625
+        },
+        "car": {
+          "x": 155,
+          "y": 548.015625,
+          "width": 80,
+          "height": 95,
+          "right": 235,
+          "bottom": 643.015625
+        },
+        "bay": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0,
+          "right": 0,
+          "bottom": 0
+        },
+        "step": {
+          "box": {
+            "x": 0,
+            "y": 0,
+            "width": 0,
+            "height": 0,
+            "right": 0,
+            "bottom": 0
+          },
+          "hidden": true,
+          "transform": "none"
+        },
+        "markers": [],
+        "people": [
+          {
+            "id": "child",
+            "kind": "crossing-waiting",
+            "box": {
+              "x": 16.375,
+              "y": 202.625,
+              "width": 78,
+              "height": 92,
+              "right": 94.375,
+              "bottom": 294.625
+            }
+          },
+          {
+            "id": "bike",
+            "kind": "crossing-waiting",
+            "box": {
+              "x": 295.609375,
+              "y": 246.859375,
+              "width": 78,
+              "height": 92,
+              "right": 373.609375,
+              "bottom": 338.859375
+            }
+          },
+          {
+            "id": "grandma",
+            "kind": "crossing-waiting",
+            "box": {
+              "x": 16.375,
+              "y": 291.109375,
+              "width": 78,
+              "height": 92,
+              "right": 94.375,
+              "bottom": 383.109375
+            }
+          }
+        ],
+        "door": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0,
+          "right": 0,
+          "bottom": 0
+        },
+        "signs": [],
+        "checks": []
+      },
+      "proof": {
+        "flag": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0,
+          "right": 0,
+          "bottom": 0
+        },
+        "cakeWidth": 103.67999999999999,
+        "rigid": "rotate(0deg)",
+        "queue": "",
+        "counts": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0,
+          "right": 0,
+          "bottom": 0
+        },
+        "train": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0,
+          "right": 0,
+          "bottom": 0
+        },
+        "carSource": "http://127.0.0.1:5286/art/content-r11/car-rear.png",
+        "trainSource": "http://127.0.0.1:5286/art/content-r3/train-side.webp",
+        "pastArrow": "none",
+        "waiting": [
+          {
+            "text": "→ 再看右邊",
+            "box": {
+              "x": 24.171875,
+              "y": 293.625,
+              "width": 62.40625,
+              "height": 21,
+              "right": 86.578125,
+              "bottom": 314.625
+            }
+          },
+          {
+            "text": "等一等",
+            "box": {
+              "x": 303.40625,
+              "y": 337.859375,
+              "width": 62.40625,
+              "height": 21,
+              "right": 365.8125,
+              "bottom": 358.859375
+            }
+          },
+          {
+            "text": "等一等",
+            "box": {
+              "x": 24.171875,
+              "y": 382.109375,
+              "width": 62.40625,
+              "height": 21,
+              "right": 86.578125,
+              "bottom": 403.109375
+            }
+          }
+        ]
+      },
+      "native": false,
+      "method": "Original headless runtime PNG; RAF paused during capture only; no game state assignments or pixel edits",
+      "original": "docs/content/r12/phone-crossing-stage-1-missing-right-1.png",
+      "kind": "crossing"
+    },
+    {
+      "path": "docs/content/r12/review-set/08-crossing-stage-2-grandma-moving-2.png",
+      "width": 390,
+      "height": 844,
+      "sha256": "c24e529255521a75d567e81ba3d87fb92e31761daded73a5a6a7c914d3e29c54",
+      "phase": "playing",
+      "state": {
+        "boardTime": "0.000",
+        "cue": "go",
+        "settled": "true",
+        "correction": "",
+        "distance": "0.00",
+        "speed": "0.00",
+        "bend": "-1",
+        "tilt": "0.00",
+        "sway": "0.00",
+        "acceleration": "0.00",
+        "bayStopped": "false",
+        "bayRestarted": "false",
+        "leftTurn": "false",
+        "rightTurn": "false",
+        "focus": "left",
+        "crossTime": "1.150",
+        "crossDuration": "2.4",
+        "orderHint": "",
+        "fruitSway": "0.02",
+        "flagSway": "0.26",
+        "balanceLean": "0.00",
+        "balanceStatus": "steady",
+        "recoveries": "0",
+        "assists": "0",
+        "assisting": "false",
+        "crossed": "0",
+        "lookedLeft": "true",
+        "lookedRight": "true",
+        "decision": "false",
+        "confirmed": "true",
+        "confirmDelay": "-0.016600000000000517",
+        "person": "grandma",
+        "watchSide": "left",
+        "doorState": "closed",
+        "step": "0"
+      },
+      "hint": "看清楚了，請朋友過街。",
+      "controls": [
+        {
+          "action": "brake",
+          "text": "停下",
+          "needed": "false",
+          "color": "rgb(255, 255, 255)"
+        },
+        {
+          "action": "look-left",
+          "text": "✓ 看過了",
+          "needed": "false",
+          "checked": "true",
+          "color": "rgb(213, 242, 199)"
+        },
+        {
+          "action": "look-right",
+          "text": "✓ 看過了",
+          "needed": "false",
+          "checked": "true",
+          "color": "rgb(213, 242, 199)"
+        },
+        {
+          "action": "depart",
+          "text": "出發",
+          "needed": "false",
+          "color": "rgb(225, 230, 234)"
+        },
+        {
+          "action": "listen",
+          "text": "再聽一次",
+          "needed": "false",
+          "color": "rgb(255, 255, 255)"
+        }
+      ],
+      "geometry": {
+        "scene": {
+          "x": 13,
+          "y": 87,
+          "width": 364,
+          "height": 559.015625,
+          "right": 377,
+          "bottom": 646.015625
+        },
+        "car": {
+          "x": 155,
+          "y": 548.015625,
+          "width": 80,
+          "height": 95,
+          "right": 235,
+          "bottom": 643.015625
+        },
+        "bay": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0,
+          "right": 0,
+          "bottom": 0
+        },
+        "step": {
+          "box": {
+            "x": 0,
+            "y": 0,
+            "width": 0,
+            "height": 0,
+            "right": 0,
+            "bottom": 0
+          },
+          "hidden": true,
+          "transform": "none"
+        },
+        "markers": [],
+        "people": [
+          {
+            "id": "child",
+            "kind": "crossing-waiting",
+            "box": {
+              "x": 16.375,
+              "y": 202.625,
+              "width": 78,
+              "height": 92,
+              "right": 94.375,
+              "bottom": 294.625
+            }
+          },
+          {
+            "id": "bike",
+            "kind": "crossing-waiting",
+            "box": {
+              "x": 295.609375,
+              "y": 246.859375,
+              "width": 78,
+              "height": 92,
+              "right": 373.609375,
+              "bottom": 338.859375
+            }
+          },
+          {
+            "id": "grandma",
+            "kind": "content-walker",
+            "box": {
+              "x": 146.890625,
+              "y": 354.703125,
+              "width": 78,
+              "height": 92,
+              "right": 224.890625,
+              "bottom": 446.703125
+            }
+          }
+        ],
+        "door": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0,
+          "right": 0,
+          "bottom": 0
+        },
+        "signs": [],
+        "checks": []
+      },
+      "proof": {
+        "flag": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0,
+          "right": 0,
+          "bottom": 0
+        },
+        "cakeWidth": 103.67999999999999,
+        "rigid": "rotate(0deg)",
+        "queue": "",
+        "counts": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0,
+          "right": 0,
+          "bottom": 0
+        },
+        "train": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0,
+          "right": 0,
+          "bottom": 0
+        },
+        "carSource": "http://127.0.0.1:5286/art/content-r11/car-rear.png",
+        "trainSource": "http://127.0.0.1:5286/art/content-r3/train-side.webp",
+        "pastArrow": "none",
+        "waiting": [
+          {
+            "text": "等一等",
+            "box": {
+              "x": 24.171875,
+              "y": 293.625,
+              "width": 62.40625,
+              "height": 21,
+              "right": 86.578125,
+              "bottom": 314.625
+            }
+          },
+          {
+            "text": "等一等",
+            "box": {
+              "x": 303.40625,
+              "y": 337.859375,
+              "width": 62.40625,
+              "height": 21,
+              "right": 365.8125,
+              "bottom": 358.859375
+            }
+          }
+        ]
+      },
+      "native": false,
+      "method": "Original headless runtime PNG; RAF paused during capture only; no game state assignments or pixel edits",
+      "original": "docs/content/r12/phone-crossing-stage-2-grandma-moving-2.png",
+      "kind": "crossing"
+    },
+    {
+      "path": "docs/content/r12/review-set/09-crossing-stage-3-ready-depart.png",
+      "width": 390,
+      "height": 844,
+      "sha256": "7110505af2b1e74534a7789da748ef561f3f64738b3142b0e5e6a0d101e907db",
+      "phase": "playing",
+      "state": {
+        "boardTime": "0.000",
+        "cue": "go",
+        "settled": "true",
+        "correction": "",
+        "distance": "0.00",
+        "speed": "0.00",
+        "bend": "1",
+        "tilt": "0.00",
+        "sway": "0.00",
+        "acceleration": "0.00",
+        "bayStopped": "false",
+        "bayRestarted": "false",
+        "leftTurn": "false",
+        "rightTurn": "false",
+        "focus": "left",
+        "crossTime": "0.000",
+        "crossDuration": "2.1",
+        "orderHint": "",
+        "fruitSway": "0.00",
+        "flagSway": "0.00",
+        "balanceLean": "0.00",
+        "balanceStatus": "steady",
+        "recoveries": "0",
+        "assists": "0",
+        "assisting": "false",
+        "crossed": "3",
+        "lookedLeft": "true",
+        "lookedRight": "true",
+        "decision": "false",
+        "confirmed": "false",
+        "confirmDelay": "-0.016599999999998654",
+        "person": "",
+        "watchSide": "left",
+        "doorState": "closed",
+        "step": "0"
+      },
+      "hint": "路口空了，可以出發。",
+      "controls": [
+        {
+          "action": "brake",
+          "text": "停下",
+          "needed": "false",
+          "color": "rgb(255, 255, 255)"
+        },
+        {
+          "action": "look-left",
+          "text": "✓ 看過了",
+          "needed": "false",
+          "checked": "true",
+          "color": "rgb(213, 242, 199)"
+        },
+        {
+          "action": "look-right",
+          "text": "✓ 看過了",
+          "needed": "false",
+          "checked": "true",
+          "color": "rgb(213, 242, 199)"
+        },
+        {
+          "action": "depart",
+          "text": "出發",
+          "needed": "true",
+          "color": "rgb(255, 211, 68)"
+        },
+        {
+          "action": "listen",
+          "text": "再聽一次",
+          "needed": "false",
+          "color": "rgb(255, 255, 255)"
+        }
+      ],
+      "geometry": {
+        "scene": {
+          "x": 13,
+          "y": 87,
+          "width": 364,
+          "height": 559.015625,
+          "right": 377,
+          "bottom": 646.015625
+        },
+        "car": {
+          "x": 155,
+          "y": 548.015625,
+          "width": 80,
+          "height": 95,
+          "right": 235,
+          "bottom": 643.015625
+        },
+        "bay": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0,
+          "right": 0,
+          "bottom": 0
+        },
+        "step": {
+          "box": {
+            "x": 0,
+            "y": 0,
+            "width": 0,
+            "height": 0,
+            "right": 0,
+            "bottom": 0
+          },
+          "hidden": true,
+          "transform": "none"
+        },
+        "markers": [],
+        "people": [
+          {
+            "id": "child",
+            "kind": "content-walker",
+            "box": {
+              "x": 308.09375,
+              "y": 319.390625,
+              "width": 53.03125,
+              "height": 62.546875,
+              "right": 361.125,
+              "bottom": 381.9375
+            }
+          },
+          {
+            "id": "bike",
+            "kind": "crossing-arrived",
+            "box": {
+              "x": 16.375,
+              "y": 302.171875,
+              "width": 78,
+              "height": 92,
+              "right": 94.375,
+              "bottom": 394.171875
+            }
+          },
+          {
+            "id": "grandma",
+            "kind": "crossing-arrived",
+            "box": {
+              "x": 295.609375,
+              "y": 329.8125,
+              "width": 78,
+              "height": 92,
+              "right": 373.609375,
+              "bottom": 421.8125
+            }
+          },
+          {
+            "id": "child",
+            "kind": "crossing-arrived",
+            "box": {
+              "x": 295.609375,
+              "y": 280.046875,
+              "width": 78,
+              "height": 92,
+              "right": 373.609375,
+              "bottom": 372.046875
+            }
+          }
+        ],
+        "door": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0,
+          "right": 0,
+          "bottom": 0
+        },
+        "signs": [],
+        "checks": [
+          {
+            "id": "bike",
+            "box": {
+              "x": 74.046875,
+              "y": 313.203125,
+              "width": 18,
+              "height": 18,
+              "right": 92.046875,
+              "bottom": 331.203125
+            }
+          },
+          {
+            "id": "grandma",
+            "box": {
+              "x": 353.28125,
+              "y": 340.84375,
+              "width": 18,
+              "height": 18,
+              "right": 371.28125,
+              "bottom": 358.84375
+            }
+          },
+          {
+            "id": "child",
+            "box": {
+              "x": 353.28125,
+              "y": 291.078125,
+              "width": 18,
+              "height": 18,
+              "right": 371.28125,
+              "bottom": 309.078125
+            }
+          }
+        ]
+      },
+      "proof": {
+        "flag": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0,
+          "right": 0,
+          "bottom": 0
+        },
+        "cakeWidth": 103.67999999999999,
+        "rigid": "rotate(0deg)",
+        "queue": "",
+        "counts": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0,
+          "right": 0,
+          "bottom": 0
+        },
+        "train": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0,
+          "right": 0,
+          "bottom": 0
+        },
+        "carSource": "http://127.0.0.1:5286/art/content-r11/car-rear.png",
+        "trainSource": "http://127.0.0.1:5286/art/content-r3/train-side.webp",
+        "pastArrow": "none",
+        "waiting": []
+      },
+      "native": false,
+      "method": "Original headless runtime PNG; RAF paused during capture only; no game state assignments or pixel edits",
+      "original": "docs/content/r12/phone-crossing-stage-3-ready-depart.png",
+      "kind": "crossing"
+    },
+    {
+      "path": "docs/content/r12/review-set/10-crossing-stage-3-departing.png",
+      "width": 390,
+      "height": 844,
+      "sha256": "dab0de0a83a1ba84a39cc616b1a8414b4bffb0b4f7e76a687e36975a430b5b2a",
+      "phase": "departing",
+      "state": {
+        "boardTime": "0.000",
+        "cue": "go",
+        "settled": "true",
+        "correction": "",
+        "distance": "0.00",
+        "speed": "0.00",
+        "bend": "1",
+        "tilt": "0.00",
+        "sway": "0.00",
+        "acceleration": "0.00",
+        "bayStopped": "false",
+        "bayRestarted": "false",
+        "leftTurn": "false",
+        "rightTurn": "false",
+        "focus": "left",
+        "crossTime": "0.000",
+        "crossDuration": "2.1",
+        "orderHint": "",
+        "fruitSway": "0.00",
+        "flagSway": "0.00",
+        "balanceLean": "0.00",
+        "balanceStatus": "steady",
+        "recoveries": "0",
+        "assists": "0",
+        "assisting": "false",
+        "crossed": "3",
+        "lookedLeft": "true",
+        "lookedRight": "true",
+        "decision": "false",
+        "confirmed": "false",
+        "confirmDelay": "-0.016599999999998654",
+        "person": "",
+        "watchSide": "left",
+        "doorState": "closed",
+        "step": "0"
+      },
+      "hint": "路口空了，可以出發。",
+      "controls": [
+        {
+          "action": "depart",
+          "text": "正在出發",
+          "needed": "false",
+          "color": "rgb(88, 184, 91)"
+        },
+        {
+          "action": "listen",
+          "text": "再聽一次",
+          "needed": "false",
+          "color": "rgb(255, 255, 255)"
+        }
+      ],
+      "geometry": {
+        "scene": {
+          "x": 13,
+          "y": 87,
+          "width": 364,
+          "height": 536.21875,
+          "right": 377,
+          "bottom": 623.21875
+        },
+        "car": {
+          "x": 158.6354522705078,
+          "y": 480.9661865234375,
+          "width": 72.72909545898438,
+          "height": 86.36578369140625,
+          "right": 231.3645477294922,
+          "bottom": 567.3319702148438
+        },
+        "bay": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0,
+          "right": 0,
+          "bottom": 0
+        },
+        "step": {
+          "box": {
+            "x": 0,
+            "y": 0,
+            "width": 0,
+            "height": 0,
+            "right": 0,
+            "bottom": 0
+          },
+          "hidden": true,
+          "transform": "none"
+        },
+        "markers": [],
+        "people": [
+          {
+            "id": "child",
+            "kind": "content-walker",
+            "box": {
+              "x": 308.09375,
+              "y": 307.359375,
+              "width": 53.03125,
+              "height": 62.546875,
+              "right": 361.125,
+              "bottom": 369.90625
+            }
+          },
+          {
+            "id": "bike",
+            "kind": "crossing-arrived",
+            "box": {
+              "x": 16.375,
+              "y": 289.625,
+              "width": 78,
+              "height": 92,
+              "right": 94.375,
+              "bottom": 381.625
+            }
+          },
+          {
+            "id": "grandma",
+            "kind": "crossing-arrived",
+            "box": {
+              "x": 295.609375,
+              "y": 316.140625,
+              "width": 78,
+              "height": 92,
+              "right": 373.609375,
+              "bottom": 408.140625
+            }
+          },
+          {
+            "id": "child",
+            "kind": "crossing-arrived",
+            "box": {
+              "x": 295.609375,
+              "y": 268.421875,
+              "width": 78,
+              "height": 92,
+              "right": 373.609375,
+              "bottom": 360.421875
+            }
+          }
+        ],
+        "door": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0,
+          "right": 0,
+          "bottom": 0
+        },
+        "signs": [],
+        "checks": [
+          {
+            "id": "bike",
+            "box": {
+              "x": 74.046875,
+              "y": 300.65625,
+              "width": 18,
+              "height": 18,
+              "right": 92.046875,
+              "bottom": 318.65625
+            }
+          },
+          {
+            "id": "grandma",
+            "box": {
+              "x": 353.28125,
+              "y": 327.171875,
+              "width": 18,
+              "height": 18,
+              "right": 371.28125,
+              "bottom": 345.171875
+            }
+          },
+          {
+            "id": "child",
+            "box": {
+              "x": 353.28125,
+              "y": 279.453125,
+              "width": 18,
+              "height": 18,
+              "right": 371.28125,
+              "bottom": 297.453125
+            }
+          }
+        ]
+      },
+      "proof": {
+        "flag": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0,
+          "right": 0,
+          "bottom": 0
+        },
+        "cakeWidth": 103.67999999999999,
+        "rigid": "rotate(0deg)",
+        "queue": "",
+        "counts": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0,
+          "right": 0,
+          "bottom": 0
+        },
+        "train": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0,
+          "right": 0,
+          "bottom": 0
+        },
+        "carSource": "http://127.0.0.1:5286/art/content-r11/car-rear.png",
+        "trainSource": "http://127.0.0.1:5286/art/content-r3/train-side.webp",
+        "pastArrow": "none",
+        "waiting": []
+      },
+      "native": false,
+      "method": "Original headless runtime PNG; RAF paused during capture only; no game state assignments or pixel edits",
+      "original": "docs/content/r12/phone-crossing-stage-3-departing.png",
+      "kind": "crossing"
+    },
+    {
+      "path": "docs/content/r12/review-set/11-tickets-stage-1-wrong-closed.png",
+      "width": 390,
+      "height": 844,
+      "sha256": "cefd1d124653db8a64927f3b55634adcefa899b8f517096682884e2422decffc",
+      "phase": "playing",
+      "state": {
+        "boardTime": "0.000",
+        "cue": "go",
+        "settled": "true",
+        "correction": "",
+        "distance": "30.00",
+        "speed": "0.00",
+        "bend": "1",
+        "tilt": "1.37",
+        "sway": "1.14",
+        "acceleration": "0.00",
+        "bayStopped": "false",
+        "bayRestarted": "false",
+        "leftTurn": "false",
+        "rightTurn": "false",
+        "focus": "center",
+        "crossTime": "0.000",
+        "crossDuration": "2.1",
+        "orderHint": "",
+        "fruitSway": "5.17",
+        "flagSway": "12.65",
+        "balanceLean": "0.00",
+        "balanceStatus": "steady",
+        "recoveries": "0",
+        "assists": "0",
+        "assisting": "false",
+        "crossed": "0",
+        "lookedLeft": "false",
+        "lookedRight": "false",
+        "decision": "false",
+        "confirmed": "false",
+        "confirmDelay": "0",
+        "person": "child",
+        "watchSide": "",
+        "doorState": "closed",
+        "step": "0"
+      },
+      "hint": "形狀或顏色不同，點別的站牌。",
+      "controls": [
+        {
+          "action": "go",
+          "text": "前進",
+          "needed": "false",
+          "color": "rgb(245, 251, 255)"
+        },
+        {
+          "action": "brake",
+          "text": "停穩",
+          "needed": "false",
+          "color": "rgb(255, 255, 255)"
+        },
+        {
+          "action": "door",
+          "text": "開門",
+          "needed": "false",
+          "color": "rgb(255, 255, 255)"
+        },
+        {
+          "action": "listen",
+          "text": "再聽一次",
+          "needed": "false",
+          "color": "rgb(255, 255, 255)"
+        }
+      ],
+      "geometry": {
+        "scene": {
+          "x": 13,
+          "y": 87,
+          "width": 364,
+          "height": 559.015625,
+          "right": 377,
+          "bottom": 646.015625
+        },
+        "car": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0,
+          "right": 0,
+          "bottom": 0
+        },
+        "bay": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0,
+          "right": 0,
+          "bottom": 0
+        },
+        "step": {
+          "box": {
+            "x": 0,
+            "y": 0,
+            "width": 0,
+            "height": 0,
+            "right": 0,
+            "bottom": 0
+          },
+          "hidden": true,
+          "transform": "none"
+        },
+        "markers": [
+          {
+            "id": "1",
+            "box": {
+              "x": 208.484375,
+              "y": 471.578125,
+              "width": 24,
+              "height": 24,
+              "right": 232.484375,
+              "bottom": 495.578125
+            }
+          }
+        ],
+        "people": [
+          {
+            "id": "0",
+            "kind": "boarding-friend",
+            "progress": "0.00",
+            "box": {
+              "x": 248.2421875,
+              "y": 398.171875,
+              "width": 30.390625,
+              "height": 51.296875,
+              "right": 278.6328125,
+              "bottom": 449.46875
+            }
+          },
+          {
+            "id": "1",
+            "kind": "boarding-friend",
+            "progress": "0.00",
+            "box": {
+              "x": 280.4609375,
+              "y": 370.515625,
+              "width": 30.390625,
+              "height": 51.296875,
+              "right": 310.8515625,
+              "bottom": 421.8125
+            }
+          },
+          {
+            "id": "2",
+            "kind": "boarding-friend",
+            "progress": "0.00",
+            "box": {
+              "x": 312.6796875,
+              "y": 342.875,
+              "width": 30.390625,
+              "height": 51.296875,
+              "right": 343.0703125,
+              "bottom": 394.171875
+            }
+          }
+        ],
+        "door": {
+          "x": 199.84375,
+          "y": 414.5,
+          "width": 41.234375,
+          "height": 56.796875,
+          "right": 241.078125,
+          "bottom": 471.296875
+        },
+        "signs": [
+          {
+            "id": "0",
+            "box": {
+              "x": 33.6875,
+              "y": 232.953125,
+              "width": 72,
+              "height": 68,
+              "right": 105.6875,
+              "bottom": 300.953125
+            },
+            "pole": "145.484px"
+          },
+          {
+            "id": "1",
+            "box": {
+              "x": 159,
+              "y": 232.953125,
+              "width": 72,
+              "height": 68,
+              "right": 231,
+              "bottom": 300.953125
+            },
+            "pole": "145.484px"
+          },
+          {
+            "id": "2",
+            "box": {
+              "x": 284.296875,
+              "y": 232.953125,
+              "width": 72,
+              "height": 68,
+              "right": 356.296875,
+              "bottom": 300.953125
+            },
+            "pole": "145.484px"
+          }
+        ],
+        "checks": []
+      },
+      "proof": {
+        "flag": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0,
+          "right": 0,
+          "bottom": 0
+        },
+        "cakeWidth": 103.67999999999999,
+        "rigid": "rotate(0deg)",
+        "queue": "",
+        "counts": {
+          "x": 116.65625,
+          "y": 184,
+          "width": 156.6875,
+          "height": 37,
+          "right": 273.34375,
+          "bottom": 221
+        },
+        "train": {
+          "x": 41.765625,
+          "y": 398.40625,
+          "width": 229.109375,
+          "height": 94.671875,
+          "right": 270.875,
+          "bottom": 493.078125
+        },
+        "carSource": "http://127.0.0.1:5286/art/content-r11/car-rear.png",
+        "trainSource": "http://127.0.0.1:5286/art/content-r3/train-side.webp",
+        "pastArrow": "none",
+        "waiting": []
+      },
+      "native": false,
+      "method": "Original headless runtime PNG; RAF paused during capture only; no game state assignments or pixel edits",
+      "original": "docs/content/r12/phone-tickets-stage-1-wrong-closed.png",
+      "kind": "tickets"
+    },
+    {
+      "path": "docs/content/r12/review-set/12-tickets-stage-2-open.png",
+      "width": 390,
+      "height": 844,
+      "sha256": "d696f883af25e92223582157fbe4d1ae1cf362ecd3e964df2a3680cdc8a0d8a1",
+      "phase": "boarding",
+      "state": {
+        "boardTime": "0.065",
+        "cue": "go",
+        "settled": "true",
+        "correction": "",
+        "distance": "30.00",
+        "speed": "0.00",
+        "bend": "1",
+        "tilt": "1.03",
+        "sway": "0.83",
+        "acceleration": "0.00",
+        "bayStopped": "false",
+        "bayRestarted": "false",
+        "leftTurn": "false",
+        "rightTurn": "false",
+        "focus": "center",
+        "crossTime": "0.000",
+        "crossDuration": "2.4",
+        "orderHint": "",
+        "fruitSway": "4.52",
+        "flagSway": "11.49",
+        "balanceLean": "0.00",
+        "balanceStatus": "steady",
+        "recoveries": "0",
+        "assists": "0",
+        "assisting": "false",
+        "crossed": "0",
+        "lookedLeft": "false",
+        "lookedRight": "false",
+        "decision": "false",
+        "confirmed": "false",
+        "confirmDelay": "0",
+        "person": "grandma",
+        "watchSide": "",
+        "doorState": "open",
+        "step": "1"
+      },
+      "hint": "朋友慢慢上車，等一等。",
+      "controls": [
+        {
+          "action": "go",
+          "text": "前進",
+          "needed": "false",
+          "color": "rgb(220, 228, 233)"
+        },
+        {
+          "action": "brake",
+          "text": "停穩",
+          "needed": "false",
+          "color": "rgb(220, 228, 233)"
+        },
+        {
+          "action": "door",
+          "text": "上車中",
+          "needed": "false",
+          "color": "rgb(220, 228, 233)"
+        },
+        {
+          "action": "listen",
+          "text": "再聽一次",
+          "needed": "false",
+          "color": "rgb(255, 255, 255)"
+        }
+      ],
+      "geometry": {
+        "scene": {
+          "x": 13,
+          "y": 87,
+          "width": 364,
+          "height": 559.015625,
+          "right": 377,
+          "bottom": 646.015625
+        },
+        "car": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0,
+          "right": 0,
+          "bottom": 0
+        },
+        "bay": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0,
+          "right": 0,
+          "bottom": 0
+        },
+        "step": {
+          "box": {
+            "x": 223.703125,
+            "y": 471.140625,
+            "width": 78.75,
+            "height": 17,
+            "right": 302.453125,
+            "bottom": 488.140625
+          },
+          "hidden": false,
+          "transform": "matrix(1, 0, 0, 1, 0, 0)"
+        },
+        "markers": [
+          {
+            "id": "2",
+            "box": {
+              "x": 231.390625,
+              "y": 471.578125,
+              "width": 24,
+              "height": 24,
+              "right": 255.390625,
+              "bottom": 495.578125
+            }
+          }
+        ],
+        "people": [
+          {
+            "id": "0",
+            "kind": "boarding-friend",
+            "progress": "0.00",
+            "box": {
+              "x": 271.1640625,
+              "y": 398.171875,
+              "width": 30.390625,
+              "height": 51.296875,
+              "right": 301.5546875,
+              "bottom": 449.46875
+            }
+          },
+          {
+            "id": "1",
+            "kind": "boarding-friend",
+            "progress": "0.00",
+            "box": {
+              "x": 303.3828125,
+              "y": 370.515625,
+              "width": 30.390625,
+              "height": 51.296875,
+              "right": 333.7734375,
+              "bottom": 421.8125
+            }
+          },
+          {
+            "id": "2",
+            "kind": "boarding-friend",
+            "progress": "0.00",
+            "box": {
+              "x": 335.6015625,
+              "y": 342.875,
+              "width": 30.390625,
+              "height": 51.296875,
+              "right": 365.9921875,
+              "bottom": 394.171875
+            }
+          }
+        ],
+        "door": {
+          "x": 222.765625,
+          "y": 414.5,
+          "width": 41.234375,
+          "height": 56.796875,
+          "right": 264,
+          "bottom": 471.296875
+        },
+        "signs": [
+          {
+            "id": "0",
+            "box": {
+              "x": 33.6875,
+              "y": 232.953125,
+              "width": 72,
+              "height": 68,
+              "right": 105.6875,
+              "bottom": 300.953125
+            },
+            "pole": "145.484px"
+          },
+          {
+            "id": "1",
+            "box": {
+              "x": 159,
+              "y": 232.953125,
+              "width": 72,
+              "height": 68,
+              "right": 231,
+              "bottom": 300.953125
+            },
+            "pole": "145.484px"
+          },
+          {
+            "id": "2",
+            "box": {
+              "x": 284.296875,
+              "y": 232.359375,
+              "width": 72,
+              "height": 69.1875,
+              "right": 356.296875,
+              "bottom": 301.546875
+            },
+            "pole": "144.891px"
+          }
+        ],
+        "checks": []
+      },
+      "proof": {
+        "flag": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0,
+          "right": 0,
+          "bottom": 0
+        },
+        "cakeWidth": 103.67999999999999,
+        "rigid": "rotate(0deg)",
+        "queue": "<path d=\"M93.52000000000001 55L84.52000000000001 60L75.52000000000001 65L63.52 68.92405063291139\"></path>",
+        "counts": {
+          "x": 116.65625,
+          "y": 184,
+          "width": 156.6875,
+          "height": 37,
+          "right": 273.34375,
+          "bottom": 221
+        },
+        "train": {
+          "x": 64.6875,
+          "y": 398.40625,
+          "width": 229.109375,
+          "height": 94.671875,
+          "right": 293.796875,
+          "bottom": 493.078125
+        },
+        "carSource": "http://127.0.0.1:5286/art/content-r11/car-rear.png",
+        "trainSource": "http://127.0.0.1:5286/art/content-r3/train-side.webp",
+        "pastArrow": "none",
+        "waiting": []
+      },
+      "native": false,
+      "method": "Original headless runtime PNG; RAF paused during capture only; no game state assignments or pixel edits",
+      "original": "docs/content/r12/phone-tickets-stage-2-open.png",
+      "kind": "tickets"
+    },
+    {
+      "path": "docs/content/r12/review-set/13-tickets-stage-2-doorway-2.png",
+      "width": 390,
+      "height": 844,
+      "sha256": "a59cc32649daac5cfc4badbfabf7d91917b8937aa1534db5ad99eb80fbc7cc23",
+      "phase": "boarding",
+      "state": {
+        "boardTime": "0.580",
+        "cue": "go",
+        "settled": "true",
+        "correction": "",
+        "distance": "30.00",
+        "speed": "0.00",
+        "bend": "1",
+        "tilt": "1.03",
+        "sway": "0.83",
+        "acceleration": "0.00",
+        "bayStopped": "false",
+        "bayRestarted": "false",
+        "leftTurn": "false",
+        "rightTurn": "false",
+        "focus": "center",
+        "crossTime": "0.000",
+        "crossDuration": "2.4",
+        "orderHint": "",
+        "fruitSway": "4.52",
+        "flagSway": "11.49",
+        "balanceLean": "0.00",
+        "balanceStatus": "steady",
+        "recoveries": "0",
+        "assists": "0",
+        "assisting": "false",
+        "crossed": "0",
+        "lookedLeft": "false",
+        "lookedRight": "false",
+        "decision": "false",
+        "confirmed": "false",
+        "confirmDelay": "0",
+        "person": "grandma",
+        "watchSide": "",
+        "doorState": "open",
+        "step": "1"
+      },
+      "hint": "朋友慢慢上車，等一等。",
+      "controls": [
+        {
+          "action": "go",
+          "text": "前進",
+          "needed": "false",
+          "color": "rgb(220, 228, 233)"
+        },
+        {
+          "action": "brake",
+          "text": "停穩",
+          "needed": "false",
+          "color": "rgb(220, 228, 233)"
+        },
+        {
+          "action": "door",
+          "text": "上車中",
+          "needed": "false",
+          "color": "rgb(220, 228, 233)"
+        },
+        {
+          "action": "listen",
+          "text": "再聽一次",
+          "needed": "false",
+          "color": "rgb(255, 255, 255)"
+        }
+      ],
+      "geometry": {
+        "scene": {
+          "x": 13,
+          "y": 87,
+          "width": 364,
+          "height": 559.015625,
+          "right": 377,
+          "bottom": 646.015625
+        },
+        "car": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0,
+          "right": 0,
+          "bottom": 0
+        },
+        "bay": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0,
+          "right": 0,
+          "bottom": 0
+        },
+        "step": {
+          "box": {
+            "x": 223.703125,
+            "y": 471.140625,
+            "width": 78.75,
+            "height": 17,
+            "right": 302.453125,
+            "bottom": 488.140625
+          },
+          "hidden": false,
+          "transform": "matrix(1, 0, 0, 1, 0, 0)"
+        },
+        "markers": [
+          {
+            "id": "2",
+            "box": {
+              "x": 231.390625,
+              "y": 471.578125,
+              "width": 24,
+              "height": 24,
+              "right": 255.390625,
+              "bottom": 495.578125
+            }
+          }
+        ],
+        "people": [
+          {
+            "id": "0",
+            "kind": "ticket-seated",
+            "box": {
+              "x": 92.5218734741211,
+              "y": 417.328125,
+              "width": 38.93750762939453,
+              "height": 36.921875,
+              "right": 131.45938110351562,
+              "bottom": 454.25
+            }
+          },
+          {
+            "id": "1",
+            "kind": "boarding-friend",
+            "progress": "0.59",
+            "box": {
+              "x": 228.1953125,
+              "y": 419.875,
+              "width": 30.390625,
+              "height": 51.296875,
+              "right": 258.5859375,
+              "bottom": 471.171875
+            }
+          },
+          {
+            "id": "2",
+            "kind": "boarding-friend",
+            "progress": "0.00",
+            "box": {
+              "x": 335.6015625,
+              "y": 342.875,
+              "width": 30.390625,
+              "height": 51.296875,
+              "right": 365.9921875,
+              "bottom": 394.171875
+            }
+          }
+        ],
+        "door": {
+          "x": 222.765625,
+          "y": 414.5,
+          "width": 41.234375,
+          "height": 56.796875,
+          "right": 264,
+          "bottom": 471.296875
+        },
+        "signs": [
+          {
+            "id": "0",
+            "box": {
+              "x": 33.6875,
+              "y": 232.953125,
+              "width": 72,
+              "height": 68,
+              "right": 105.6875,
+              "bottom": 300.953125
+            },
+            "pole": "145.484px"
+          },
+          {
+            "id": "1",
+            "box": {
+              "x": 159,
+              "y": 232.953125,
+              "width": 72,
+              "height": 68,
+              "right": 231,
+              "bottom": 300.953125
+            },
+            "pole": "145.484px"
+          },
+          {
+            "id": "2",
+            "box": {
+              "x": 284.296875,
+              "y": 232.359375,
+              "width": 72,
+              "height": 69.1875,
+              "right": 356.296875,
+              "bottom": 301.546875
+            },
+            "pole": "144.891px"
+          }
+        ],
+        "checks": []
+      },
+      "proof": {
+        "flag": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0,
+          "right": 0,
+          "bottom": 0
+        },
+        "cakeWidth": 103.67999999999999,
+        "rigid": "rotate(0deg)",
+        "queue": "<path d=\"M93.52000000000001 55L84.52000000000001 60L75.52000000000001 65L63.52 68.92405063291139\"></path>",
+        "counts": {
+          "x": 116.65625,
+          "y": 184,
+          "width": 156.6875,
+          "height": 37,
+          "right": 273.34375,
+          "bottom": 221
+        },
+        "train": {
+          "x": 64.6875,
+          "y": 398.40625,
+          "width": 229.109375,
+          "height": 94.671875,
+          "right": 293.796875,
+          "bottom": 493.078125
+        },
+        "carSource": "http://127.0.0.1:5286/art/content-r11/car-rear.png",
+        "trainSource": "http://127.0.0.1:5286/art/content-r3/train-side.webp",
+        "pastArrow": "none",
+        "waiting": []
+      },
+      "native": false,
+      "method": "Original headless runtime PNG; RAF paused during capture only; no game state assignments or pixel edits",
+      "original": "docs/content/r12/phone-tickets-stage-2-doorway-2.png",
+      "kind": "tickets"
+    },
+    {
+      "path": "docs/content/r12/review-set/14-tickets-stage-3-closed.png",
+      "width": 390,
+      "height": 844,
+      "sha256": "a5b8e70a0ba5f012e7d23884d1ceafed109a466384411a5aae69ff762cc76719",
+      "phase": "boarding",
+      "state": {
+        "boardTime": "1.410",
+        "cue": "go",
+        "settled": "true",
+        "correction": "",
+        "distance": "30.00",
+        "speed": "0.00",
+        "bend": "1",
+        "tilt": "0.94",
+        "sway": "0.76",
+        "acceleration": "0.00",
+        "bayStopped": "false",
+        "bayRestarted": "false",
+        "leftTurn": "false",
+        "rightTurn": "false",
+        "focus": "center",
+        "crossTime": "0.000",
+        "crossDuration": "1.45",
+        "orderHint": "",
+        "fruitSway": "4.33",
+        "flagSway": "11.14",
+        "balanceLean": "0.00",
+        "balanceStatus": "steady",
+        "recoveries": "0",
+        "assists": "0",
+        "assisting": "false",
+        "crossed": "0",
+        "lookedLeft": "false",
+        "lookedRight": "false",
+        "decision": "false",
+        "confirmed": "false",
+        "confirmDelay": "0",
+        "person": "bike",
+        "watchSide": "",
+        "doorState": "closed",
+        "step": "0"
+      },
+      "hint": "三位坐好了，門關好了 ✓",
+      "controls": [
+        {
+          "action": "go",
+          "text": "前進",
+          "needed": "false",
+          "color": "rgb(220, 228, 233)"
+        },
+        {
+          "action": "brake",
+          "text": "停穩",
+          "needed": "false",
+          "color": "rgb(220, 228, 233)"
+        },
+        {
+          "action": "door",
+          "text": "門關好了",
+          "needed": "false",
+          "color": "rgb(220, 228, 233)"
+        },
+        {
+          "action": "listen",
+          "text": "再聽一次",
+          "needed": "false",
+          "color": "rgb(255, 255, 255)"
+        }
+      ],
+      "geometry": {
+        "scene": {
+          "x": 13,
+          "y": 87,
+          "width": 364,
+          "height": 559.015625,
+          "right": 377,
+          "bottom": 646.015625
+        },
+        "car": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0,
+          "right": 0,
+          "bottom": 0
+        },
+        "bay": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0,
+          "right": 0,
+          "bottom": 0
+        },
+        "step": {
+          "box": {
+            "x": 0,
+            "y": 0,
+            "width": 0,
+            "height": 0,
+            "right": 0,
+            "bottom": 0
+          },
+          "hidden": true,
+          "transform": "none"
+        },
+        "markers": [
+          {
+            "id": "1",
+            "box": {
+              "x": 208.484375,
+              "y": 471.578125,
+              "width": 24,
+              "height": 24,
+              "right": 232.484375,
+              "bottom": 495.578125
+            }
+          }
+        ],
+        "people": [
+          {
+            "id": "0",
+            "kind": "ticket-seated",
+            "box": {
+              "x": 69.5999984741211,
+              "y": 417.328125,
+              "width": 38.9375,
+              "height": 36.921875,
+              "right": 108.5374984741211,
+              "bottom": 454.25
+            }
+          },
+          {
+            "id": "1",
+            "kind": "ticket-seated",
+            "box": {
+              "x": 117.7093734741211,
+              "y": 417.328125,
+              "width": 38.93750762939453,
+              "height": 36.921875,
+              "right": 156.64688110351562,
+              "bottom": 454.25
+            }
+          },
+          {
+            "id": "2",
+            "kind": "ticket-seated",
+            "box": {
+              "x": 165.81875610351562,
+              "y": 417.328125,
+              "width": 38.9375,
+              "height": 36.921875,
+              "right": 204.75625610351562,
+              "bottom": 454.25
+            }
+          }
+        ],
+        "door": {
+          "x": 199.84375,
+          "y": 414.5,
+          "width": 41.234375,
+          "height": 56.796875,
+          "right": 241.078125,
+          "bottom": 471.296875
+        },
+        "signs": [
+          {
+            "id": "0",
+            "box": {
+              "x": 33.6875,
+              "y": 232.953125,
+              "width": 72,
+              "height": 68,
+              "right": 105.6875,
+              "bottom": 300.953125
+            },
+            "pole": "145.484px"
+          },
+          {
+            "id": "1",
+            "box": {
+              "x": 159,
+              "y": 232.359375,
+              "width": 72,
+              "height": 69.1875,
+              "right": 231,
+              "bottom": 301.546875
+            },
+            "pole": "144.891px"
+          },
+          {
+            "id": "2",
+            "box": {
+              "x": 284.296875,
+              "y": 232.953125,
+              "width": 72,
+              "height": 68,
+              "right": 356.296875,
+              "bottom": 300.953125
+            },
+            "pole": "145.484px"
+          }
+        ],
+        "checks": []
+      },
+      "proof": {
+        "flag": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0,
+          "right": 0,
+          "bottom": 0
+        },
+        "cakeWidth": 103.67999999999999,
+        "rigid": "rotate(0deg)",
+        "queue": "",
+        "counts": {
+          "x": 116.65625,
+          "y": 184,
+          "width": 156.6875,
+          "height": 37,
+          "right": 273.34375,
+          "bottom": 221
+        },
+        "train": {
+          "x": 41.765625,
+          "y": 398.40625,
+          "width": 229.109375,
+          "height": 94.671875,
+          "right": 270.875,
+          "bottom": 493.078125
+        },
+        "carSource": "http://127.0.0.1:5286/art/content-r11/car-rear.png",
+        "trainSource": "http://127.0.0.1:5286/art/content-r3/train-side.webp",
+        "pastArrow": "none",
+        "waiting": []
+      },
+      "native": false,
+      "method": "Original headless runtime PNG; RAF paused during capture only; no game state assignments or pixel edits",
+      "original": "docs/content/r12/phone-tickets-stage-3-closed.png",
+      "kind": "tickets"
+    },
+    {
+      "path": "docs/content/r12/review-set/15-tickets-saved-result.png",
+      "width": 390,
+      "height": 844,
+      "sha256": "6c1beda22d52e091b9e7087dc4ab4b13cccd9df2eff05f165f905ba087d1a8d0",
+      "phase": "done",
+      "state": {
+        "boardTime": "1.200",
+        "cue": "go",
+        "settled": "true",
+        "correction": "",
+        "distance": "30.00",
+        "speed": "0.00",
+        "bend": "1",
+        "tilt": "0.00",
+        "sway": "0.00",
+        "acceleration": "0.00",
+        "bayStopped": "false",
+        "bayRestarted": "false",
+        "leftTurn": "false",
+        "rightTurn": "false",
+        "focus": "center",
+        "crossTime": "0.000",
+        "crossDuration": "1.45",
+        "orderHint": "",
+        "fruitSway": "0.00",
+        "flagSway": "0.00",
+        "balanceLean": "0.00",
+        "balanceStatus": "steady",
+        "recoveries": "0",
+        "assists": "0",
+        "assisting": "false",
+        "crossed": "0",
+        "lookedLeft": "false",
+        "lookedRight": "false",
+        "decision": "false",
+        "confirmed": "false",
+        "confirmDelay": "0",
+        "person": "bike",
+        "watchSide": "",
+        "doorState": "closed",
+        "step": "0"
+      },
+      "hint": "大家坐好了！一起去旅行。",
+      "controls": [
+        {
+          "action": "replay",
+          "text": "再玩一次",
+          "needed": "false",
+          "color": "rgb(255, 255, 255)"
+        },
+        {
+          "action": "picker",
+          "text": "換一課",
+          "needed": "false",
+          "color": "rgb(255, 255, 255)"
+        },
+        {
+          "action": "listen",
+          "text": "再聽一次",
+          "needed": "false",
+          "color": "rgb(255, 255, 255)"
+        }
+      ],
+      "geometry": {
+        "scene": {
+          "x": 13,
+          "y": 87,
+          "width": 364,
+          "height": 415.546875,
+          "right": 377,
+          "bottom": 502.546875
+        },
+        "car": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0,
+          "right": 0,
+          "bottom": 0
+        },
+        "bay": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0,
+          "right": 0,
+          "bottom": 0
+        },
+        "step": {
+          "box": {
+            "x": 0,
+            "y": 0,
+            "width": 0,
+            "height": 0,
+            "right": 0,
+            "bottom": 0
+          },
+          "hidden": true,
+          "transform": "none"
+        },
+        "markers": [
+          {
+            "id": "1",
+            "box": {
+              "x": 0,
+              "y": 0,
+              "width": 0,
+              "height": 0,
+              "right": 0,
+              "bottom": 0
+            }
+          }
+        ],
+        "people": [
+          {
+            "id": "0",
+            "kind": "ticket-seated",
+            "box": {
+              "x": 69.5999984741211,
+              "y": 318.671875,
+              "width": 38.9375,
+              "height": 36.921875,
+              "right": 108.5374984741211,
+              "bottom": 355.59375
+            }
+          },
+          {
+            "id": "1",
+            "kind": "ticket-seated",
+            "box": {
+              "x": 117.7093734741211,
+              "y": 318.671875,
+              "width": 38.93750762939453,
+              "height": 36.921875,
+              "right": 156.64688110351562,
+              "bottom": 355.59375
+            }
+          },
+          {
+            "id": "2",
+            "kind": "ticket-seated",
+            "box": {
+              "x": 165.81875610351562,
+              "y": 318.671875,
+              "width": 38.9375,
+              "height": 36.921875,
+              "right": 204.75625610351562,
+              "bottom": 355.59375
+            }
+          }
+        ],
+        "door": {
+          "x": 199.84375,
+          "y": 315.84375,
+          "width": 41.234375,
+          "height": 56.796875,
+          "right": 241.078125,
+          "bottom": 372.640625
+        },
+        "signs": [
+          {
+            "id": "0",
+            "box": {
+              "x": 0,
+              "y": 0,
+              "width": 0,
+              "height": 0,
+              "right": 0,
+              "bottom": 0
+            },
+            "pole": "353.5px"
+          },
+          {
+            "id": "1",
+            "box": {
+              "x": 0,
+              "y": 0,
+              "width": 0,
+              "height": 0,
+              "right": 0,
+              "bottom": 0
+            },
+            "pole": "353.5px"
+          },
+          {
+            "id": "2",
+            "box": {
+              "x": 0,
+              "y": 0,
+              "width": 0,
+              "height": 0,
+              "right": 0,
+              "bottom": 0
+            },
+            "pole": "353.5px"
+          }
+        ],
+        "checks": []
+      },
+      "proof": {
+        "flag": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0,
+          "right": 0,
+          "bottom": 0
+        },
+        "cakeWidth": 103.67999999999999,
+        "rigid": "rotate(0deg)",
+        "queue": "",
+        "counts": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0,
+          "right": 0,
+          "bottom": 0
+        },
+        "train": {
+          "x": 41.765625,
+          "y": 299.75,
+          "width": 229.109375,
+          "height": 94.671875,
+          "right": 270.875,
+          "bottom": 394.421875
+        },
+        "carSource": "http://127.0.0.1:5286/art/content-r11/car-rear.png",
+        "trainSource": "http://127.0.0.1:5286/art/content-r3/train-side.webp",
+        "pastArrow": "none",
+        "waiting": []
+      },
+      "native": false,
+      "method": "Original headless runtime PNG; RAF paused during capture only; no game state assignments or pixel edits",
+      "original": "docs/content/r12/phone-tickets-saved-result.png",
+      "kind": "tickets"
+    }
+  ]
+}

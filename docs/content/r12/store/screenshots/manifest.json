@@ -1,0 +1,217 @@
+{
+  "sourceVersion": "2.24.0",
+  "status": "VERIFIED",
+  "native": false,
+  "buildWorkerSha256": "3938e2ad227adf9700cb12b04367d054b72fbd5a0af6d8d61055febebe8801c9",
+  "method": "headless Chromium; UI actions and wall-clock waits; no modified progress or completion flags; offline 3D captures after SW install",
+  "shots": [
+    {
+      "path": "docs/content/r12/store/after/se-01-home.png",
+      "width": 320,
+      "height": 568,
+      "sha256": "5ad88aed52aa627825d0620b3b233606d020731c8a9891696f16d03e36151626",
+      "kind": "unmodified_headless_chromium_runtime_capture",
+      "native": false
+    },
+    {
+      "path": "docs/content/r12/store/after/se-landscape-01-home.png",
+      "width": 568,
+      "height": 320,
+      "sha256": "4846fb1865b9b2f828d15184a89393914dafbbc362ef66dfb45626372bca2fc8",
+      "kind": "unmodified_headless_chromium_runtime_capture",
+      "native": false
+    },
+    {
+      "path": "docs/content/r12/store/after/phone-01-home.png",
+      "width": 390,
+      "height": 844,
+      "sha256": "3ec4b9a5a56a3d5959a1b7eeeeb67876cca522f7c8ca5fd984b40b2ce092b806",
+      "kind": "unmodified_headless_chromium_runtime_capture",
+      "native": false
+    },
+    {
+      "path": "docs/content/r12/store/after/phone-landscape-01-home.png",
+      "width": 844,
+      "height": 390,
+      "sha256": "4ab813f0aafb3fcff87765a384eda5d350f9a6e383f511ec1c64cbe13c7adac5",
+      "kind": "unmodified_headless_chromium_runtime_capture",
+      "native": false
+    },
+    {
+      "path": "docs/content/r12/store/after/large-01-home.png",
+      "width": 440,
+      "height": 956,
+      "sha256": "bf41e860db617d2c098de8876fafb47e334c38d5769bef8634fd78ddc8b642d8",
+      "kind": "unmodified_headless_chromium_runtime_capture",
+      "native": false
+    },
+    {
+      "path": "docs/content/r12/store/after/laptop-01-home.png",
+      "width": 1366,
+      "height": 600,
+      "sha256": "d85853db8f5ddd2088cc6f2733f4954509cc236fe2d1df2bf5c66855adabe27b",
+      "kind": "unmodified_headless_chromium_runtime_capture",
+      "native": false
+    },
+    {
+      "path": "docs/content/r12/store/after/short-laptop-01-home.png",
+      "width": 1280,
+      "height": 640,
+      "sha256": "6216bb76fc505ee83d3fe4a8b922a225c6f1fcb48e93c322857961a5e601c2dd",
+      "kind": "unmodified_headless_chromium_runtime_capture",
+      "native": false
+    },
+    {
+      "path": "docs/content/r12/store/after/ipad-01-home.png",
+      "width": 768,
+      "height": 1024,
+      "sha256": "bed03e3da73546d2ab9ecafb49236370b524c089d3d5453d155df7577c7a4df2",
+      "kind": "unmodified_headless_chromium_runtime_capture",
+      "native": false
+    },
+    {
+      "path": "docs/content/r12/store/after/ipad-landscape-01-home.png",
+      "width": 1024,
+      "height": 768,
+      "sha256": "2a6cf85d7deffe563ec2965a4c92ada5b6ff681a09cd86d2ac8d26a05999aaab",
+      "kind": "unmodified_headless_chromium_runtime_capture",
+      "native": false
+    },
+    {
+      "path": "docs/content/r12/store/after/ipad13-landscape-01-home.png",
+      "width": 1376,
+      "height": 1032,
+      "sha256": "20d0d3781a023c0e68e36c1a5177884fff754dad071d7b16ec9786047b7e6e2a",
+      "kind": "unmodified_headless_chromium_runtime_capture",
+      "native": false
+    },
+    {
+      "path": "docs/content/r12/store/screenshots/iphone-store-01-home.png",
+      "width": 1290,
+      "height": 2796,
+      "sha256": "c27b2e0bb06a72c96ea6fc562a1cee16e205d7f583934e8c463a921ed153990c",
+      "kind": "unmodified_headless_chromium_runtime_capture",
+      "native": false
+    },
+    {
+      "path": "docs/content/r12/store/screenshots/iphone-store-02-road-wait.png",
+      "width": 1290,
+      "height": 2796,
+      "sha256": "231c669123ba628f93ccde46bdd09d930cc262fb40c10978656c2b9b681e5aea",
+      "kind": "unmodified_headless_chromium_runtime_capture",
+      "native": false
+    },
+    {
+      "path": "docs/content/r12/store/screenshots/iphone-store-03-train-boarding.png",
+      "width": 1290,
+      "height": 2796,
+      "sha256": "2c9352ae68e04c98995723cba3c4d1c3ecc876c2daad4f29abc61c319719ee3c",
+      "kind": "unmodified_headless_chromium_runtime_capture",
+      "native": false
+    },
+    {
+      "path": "docs/content/r12/store/screenshots/iphone-store-04-runway-clear.png",
+      "width": 1290,
+      "height": 2796,
+      "sha256": "15decd48ea15acd474def8629037c0e13f8d1d86f6eac08fef52e08993c4f136",
+      "kind": "unmodified_headless_chromium_runtime_capture",
+      "native": false
+    },
+    {
+      "path": "docs/content/r12/store/screenshots/iphone-store-05-stamp.png",
+      "width": 1290,
+      "height": 2796,
+      "sha256": "de2253cac89ea9d348e8f025a022b1b7e672c3b50e1244f784eaa670be7f27fa",
+      "kind": "unmodified_headless_chromium_runtime_capture",
+      "native": false
+    },
+    {
+      "path": "docs/content/r12/store/screenshots/iphone-store-06-car-offline.png",
+      "width": 1290,
+      "height": 2796,
+      "sha256": "490fc8d841a494866c6fce39699c5fed89fa91854714875b865dbdcb1b5ccb4a",
+      "kind": "unmodified_headless_chromium_runtime_capture",
+      "native": false
+    },
+    {
+      "path": "docs/content/r12/store/screenshots/iphone-store-06-train-offline.png",
+      "width": 1290,
+      "height": 2796,
+      "sha256": "b29281bc93a24b7bd983ca9947681bc9fba1b3e6710433747af6ca29fcdf313e",
+      "kind": "unmodified_headless_chromium_runtime_capture",
+      "native": false
+    },
+    {
+      "path": "docs/content/r12/store/screenshots/iphone-store-06-flight-offline.png",
+      "width": 1290,
+      "height": 2796,
+      "sha256": "34ef92ed43b7d17598533b7ff669f5a4f17312b2e9557c53450f040864588f3b",
+      "kind": "unmodified_headless_chromium_runtime_capture",
+      "native": false
+    },
+    {
+      "path": "docs/content/r12/store/screenshots/ipad13-store-01-home.png",
+      "width": 2064,
+      "height": 2752,
+      "sha256": "dfd151fe50677e7431ae8df578bc1d6d211030b62729fefe2f0116be3f0523ab",
+      "kind": "unmodified_headless_chromium_runtime_capture",
+      "native": false
+    },
+    {
+      "path": "docs/content/r12/store/screenshots/ipad13-store-02-road-wait.png",
+      "width": 2064,
+      "height": 2752,
+      "sha256": "8d9055686770733607f8ed77643692b0117d53ee82dd594db8ab46f85027ed3e",
+      "kind": "unmodified_headless_chromium_runtime_capture",
+      "native": false
+    },
+    {
+      "path": "docs/content/r12/store/screenshots/ipad13-store-03-train-boarding.png",
+      "width": 2064,
+      "height": 2752,
+      "sha256": "9eb3a27d4579f69efef6e44e37039730e1e8214d0b08199d5d55025073e1e7f4",
+      "kind": "unmodified_headless_chromium_runtime_capture",
+      "native": false
+    },
+    {
+      "path": "docs/content/r12/store/screenshots/ipad13-store-04-runway-clear.png",
+      "width": 2064,
+      "height": 2752,
+      "sha256": "cbd38876ba525cac26f5e64ae7b642cb4f4aa58599c3617c69200431b8081d09",
+      "kind": "unmodified_headless_chromium_runtime_capture",
+      "native": false
+    },
+    {
+      "path": "docs/content/r12/store/screenshots/ipad13-store-05-stamp.png",
+      "width": 2064,
+      "height": 2752,
+      "sha256": "8afbffda6a795cbcb729337ea43df35fd251cf717bf5fd3c58335224999c0d54",
+      "kind": "unmodified_headless_chromium_runtime_capture",
+      "native": false
+    },
+    {
+      "path": "docs/content/r12/store/screenshots/ipad13-store-06-car-offline.png",
+      "width": 2064,
+      "height": 2752,
+      "sha256": "f92f22771a60fdbb35772309c758e8e9ff1c75a45cd24cf7701b65757b0b779d",
+      "kind": "unmodified_headless_chromium_runtime_capture",
+      "native": false
+    },
+    {
+      "path": "docs/content/r12/store/screenshots/ipad13-store-06-train-offline.png",
+      "width": 2064,
+      "height": 2752,
+      "sha256": "9c05d4ce9136f0379733a00805417aa1f21d95ead7186742f3273bd5531f0c93",
+      "kind": "unmodified_headless_chromium_runtime_capture",
+      "native": false
+    },
+    {
+      "path": "docs/content/r12/store/screenshots/ipad13-store-06-flight-offline.png",
+      "width": 2064,
+      "height": 2752,
+      "sha256": "fee60cffda89bdd0f4455d7a90ef1e18ab8c94655f155c3e9def1562d8727c8c",
+      "kind": "unmodified_headless_chromium_runtime_capture",
+      "native": false
+    }
+  ]
+}
