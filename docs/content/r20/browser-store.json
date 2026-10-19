@@ -1,0 +1,2331 @@
+{
+  "status": "VERIFIED",
+  "rows": [],
+  "shots": [
+    {
+      "path": "docs/content/r20/store-device-430x932-tickets-ready.png",
+      "width": 1290,
+      "height": 2796,
+      "sha256": "d62171bf4ebd2b9b8e8119cb7661629db34ea3a8f6ea2977f78894e4c62bf147",
+      "state": {
+        "boardTime": "0.000",
+        "doorStage": "closed",
+        "boardingIndex": "0",
+        "hazard": "false",
+        "wrongTurn": "false",
+        "inBend": "false",
+        "cue": "go",
+        "settled": "true",
+        "correction": "",
+        "compact": "false",
+        "targetName": "藍圓形",
+        "layoutSeed": "0",
+        "distance": "0.00",
+        "speed": "0.00",
+        "bend": "1",
+        "tilt": "0.00",
+        "sway": "0.00",
+        "acceleration": "0.00",
+        "bayStopped": "false",
+        "bayRestarted": "false",
+        "leftTurn": "false",
+        "rightTurn": "false",
+        "focus": "center",
+        "crossTime": "0.000",
+        "crossDuration": "2.1",
+        "orderHint": "",
+        "fruitSway": "0.00",
+        "flagSway": "0.00",
+        "balanceLean": "0.00",
+        "balanceStatus": "steady",
+        "recoveries": "0",
+        "assists": "0",
+        "assisting": "false",
+        "crossed": "0",
+        "lookedLeft": "false",
+        "lookedRight": "false",
+        "decision": "false",
+        "confirmed": "false",
+        "confirmDelay": "0",
+        "person": "child",
+        "trafficActive": "true",
+        "trafficTime": "0.00",
+        "watchSide": "",
+        "doorState": "closed",
+        "step": "0"
+      },
+      "phase": "ready",
+      "hint": "點月台站牌，停穩再開門。",
+      "controls": [
+        {
+          "id": "begin",
+          "text": "一起出發",
+          "needed": "false",
+          "color": "rgb(244, 107, 39)",
+          "disabled": false
+        },
+        {
+          "id": "listen",
+          "text": "再聽一次",
+          "needed": "false",
+          "color": "rgb(255, 255, 255)",
+          "disabled": false
+        }
+      ],
+      "geometry": {
+        "scene": {
+          "x": 13,
+          "y": 103,
+          "width": 404,
+          "height": 592.21875,
+          "right": 417,
+          "bottom": 695.21875
+        },
+        "car": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0,
+          "right": 0,
+          "bottom": 0
+        },
+        "carrier": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0,
+          "right": 0,
+          "bottom": 0
+        },
+        "train": {
+          "x": -43.6875,
+          "y": 419.34375,
+          "width": 358.1875,
+          "height": 148,
+          "right": 314.5,
+          "bottom": 567.34375
+        },
+        "door": {
+          "x": 203.453125,
+          "y": 444.5,
+          "width": 64.46875,
+          "height": 88.796875,
+          "right": 267.921875,
+          "bottom": 533.296875
+        },
+        "signs": [
+          {
+            "id": "0",
+            "text": "1 號月台",
+            "box": {
+              "x": 61.59375,
+              "y": 174,
+              "width": 68,
+              "height": 80,
+              "right": 129.59375,
+              "bottom": 254
+            }
+          },
+          {
+            "id": "1",
+            "text": "2 號月台",
+            "box": {
+              "x": 181,
+              "y": 174,
+              "width": 68,
+              "height": 80,
+              "right": 249,
+              "bottom": 254
+            }
+          },
+          {
+            "id": "2",
+            "text": "3 號月台",
+            "box": {
+              "x": 300.390625,
+              "y": 174,
+              "width": 68,
+              "height": 80,
+              "right": 368.390625,
+              "bottom": 254
+            }
+          }
+        ],
+        "people": [
+          {
+            "id": "0",
+            "kind": "boarding-friend",
+            "box": {
+              "x": 57.625,
+              "y": 354.46875,
+              "width": 60,
+              "height": 71.03125,
+              "right": 117.625,
+              "bottom": 425.5
+            }
+          },
+          {
+            "id": "1",
+            "kind": "boarding-friend",
+            "box": {
+              "x": 185,
+              "y": 354.46875,
+              "width": 60,
+              "height": 71.03125,
+              "right": 245,
+              "bottom": 425.5
+            }
+          },
+          {
+            "id": "2",
+            "kind": "boarding-friend",
+            "box": {
+              "x": 312.359375,
+              "y": 354.46875,
+              "width": 60,
+              "height": 71.03125,
+              "right": 372.359375,
+              "bottom": 425.5
+            }
+          }
+        ],
+        "labels": [
+          {
+            "text": "1 小安",
+            "box": {
+              "x": 68.546875,
+              "y": 424.5,
+              "width": 38.15625,
+              "height": 20,
+              "right": 106.703125,
+              "bottom": 444.5
+            },
+            "clipped": false
+          },
+          {
+            "text": "2 小晴",
+            "box": {
+              "x": 195.921875,
+              "y": 424.5,
+              "width": 38.15625,
+              "height": 20,
+              "right": 234.078125,
+              "bottom": 444.5
+            },
+            "clipped": false
+          },
+          {
+            "text": "3 小宇",
+            "box": {
+              "x": 323.28125,
+              "y": 424.5,
+              "width": 38.15625,
+              "height": 20,
+              "right": 361.4375,
+              "bottom": 444.5
+            },
+            "clipped": false
+          },
+          {
+            "text": "第 1 站・藍圓形車票",
+            "box": {
+              "x": 84,
+              "y": 113,
+              "width": 324,
+              "height": 24,
+              "right": 408,
+              "bottom": 137
+            },
+            "clipped": false
+          },
+          {
+            "text": "月台 3 人",
+            "box": {
+              "x": 182.8125,
+              "y": 140,
+              "width": 63.0625,
+              "height": 27,
+              "right": 245.875,
+              "bottom": 167
+            },
+            "clipped": false
+          },
+          {
+            "text": "上車中 0 人",
+            "box": {
+              "x": 251.875,
+              "y": 140,
+              "width": 74.0625,
+              "height": 27,
+              "right": 325.9375,
+              "bottom": 167
+            },
+            "clipped": false
+          },
+          {
+            "text": "已入座 0 人",
+            "box": {
+              "x": 331.9375,
+              "y": 140,
+              "width": 74.0625,
+              "height": 27,
+              "right": 406,
+              "bottom": 167
+            },
+            "clipped": false
+          },
+          {
+            "text": "1 號月台",
+            "box": {
+              "x": 70.59375,
+              "y": 222,
+              "width": 50,
+              "height": 15.59375,
+              "right": 120.59375,
+              "bottom": 237.59375
+            },
+            "clipped": false
+          },
+          {
+            "text": "2 號月台",
+            "box": {
+              "x": 190,
+              "y": 222,
+              "width": 50,
+              "height": 15.59375,
+              "right": 240,
+              "bottom": 237.59375
+            },
+            "clipped": false
+          },
+          {
+            "text": "3 號月台",
+            "box": {
+              "x": 309.390625,
+              "y": 222,
+              "width": 50,
+              "height": 15.59375,
+              "right": 359.390625,
+              "bottom": 237.59375
+            },
+            "clipped": false
+          }
+        ],
+        "look": "",
+        "panorama": "none",
+        "road": "0px",
+        "counts": "月台 3 人\n上車中 0 人\n已入座 0 人",
+        "queue": "",
+        "mini": "translateX(0px) rotate(0deg)",
+        "large": "translateX(0px) rotate(0deg)",
+        "route": 0,
+        "controls": {
+          "x": 24,
+          "y": 741.015625,
+          "width": 382,
+          "height": 128.1875,
+          "right": 406,
+          "bottom": 869.203125
+        },
+        "trainSource": "http://127.0.0.1:5286/art/content-r3/train-side.webp"
+      },
+      "method": "Unmodified headless Chromium PNG; real public UI with Playwright clock controlling RAF/timers; no game state or save assignments",
+      "native": false,
+      "regression": {
+        "traffic": null,
+        "trafficLabel": null,
+        "ellipse": null,
+        "labels": [],
+        "riders": [
+          {
+            "id": "0",
+            "box": {
+              "x": 57.625,
+              "y": 354.46875,
+              "right": 117.625,
+              "bottom": 425.5,
+              "width": 60,
+              "height": 71.03125
+            },
+            "image": {
+              "x": 57.625,
+              "y": 361.875,
+              "right": 117.625,
+              "bottom": 425.5,
+              "width": 60,
+              "height": 63.625
+            },
+            "entering": "false",
+            "clip": "none"
+          },
+          {
+            "id": "1",
+            "box": {
+              "x": 185,
+              "y": 354.46875,
+              "right": 245,
+              "bottom": 425.5,
+              "width": 60,
+              "height": 71.03125
+            },
+            "image": {
+              "x": 185,
+              "y": 361.875,
+              "right": 245,
+              "bottom": 425.5,
+              "width": 60,
+              "height": 63.625
+            },
+            "entering": "false",
+            "clip": "none"
+          },
+          {
+            "id": "2",
+            "box": {
+              "x": 312.359375,
+              "y": 354.46875,
+              "right": 372.359375,
+              "bottom": 425.5,
+              "width": 60,
+              "height": 71.03125
+            },
+            "image": {
+              "x": 312.359375,
+              "y": 361.875,
+              "right": 372.359375,
+              "bottom": 425.5,
+              "width": 60,
+              "height": 63.625
+            },
+            "entering": "false",
+            "clip": "none"
+          }
+        ],
+        "playerSource": "http://127.0.0.1:5286/art/r8/coach-safe-window.png",
+        "playerCount": 0,
+        "turn": "none",
+        "zoomVisible": false
+      },
+      "screenContract": {
+        "failures": [],
+        "overlaps": [],
+        "textCount": 17,
+        "labels": [
+          {
+            "text": "1 小安",
+            "box": {
+              "x": 68.546875,
+              "y": 424.5,
+              "right": 106.703125,
+              "bottom": 444.5,
+              "width": 38.15625,
+              "height": 20
+            }
+          },
+          {
+            "text": "2 小晴",
+            "box": {
+              "x": 195.921875,
+              "y": 424.5,
+              "right": 234.078125,
+              "bottom": 444.5,
+              "width": 38.15625,
+              "height": 20
+            }
+          },
+          {
+            "text": "3 小宇",
+            "box": {
+              "x": 323.28125,
+              "y": 424.5,
+              "right": 361.4375,
+              "bottom": 444.5,
+              "width": 38.15625,
+              "height": 20
+            }
+          },
+          {
+            "text": "第 1 站・藍圓形車票",
+            "box": {
+              "x": 84,
+              "y": 113,
+              "right": 408,
+              "bottom": 137,
+              "width": 324,
+              "height": 24
+            }
+          },
+          {
+            "text": "月台 3 人",
+            "box": {
+              "x": 182.8125,
+              "y": 140,
+              "right": 245.875,
+              "bottom": 167,
+              "width": 63.0625,
+              "height": 27
+            }
+          },
+          {
+            "text": "上車中 0 人",
+            "box": {
+              "x": 251.875,
+              "y": 140,
+              "right": 325.9375,
+              "bottom": 167,
+              "width": 74.0625,
+              "height": 27
+            }
+          },
+          {
+            "text": "已入座 0 人",
+            "box": {
+              "x": 331.9375,
+              "y": 140,
+              "right": 406,
+              "bottom": 167,
+              "width": 74.0625,
+              "height": 27
+            }
+          },
+          {
+            "text": "1 號月台",
+            "box": {
+              "x": 61.59375,
+              "y": 174,
+              "right": 129.59375,
+              "bottom": 254,
+              "width": 68,
+              "height": 80
+            }
+          },
+          {
+            "text": "2 號月台",
+            "box": {
+              "x": 181,
+              "y": 174,
+              "right": 249,
+              "bottom": 254,
+              "width": 68,
+              "height": 80
+            }
+          },
+          {
+            "text": "3 號月台",
+            "box": {
+              "x": 300.390625,
+              "y": 174,
+              "right": 368.390625,
+              "bottom": 254,
+              "width": 68,
+              "height": 80
+            }
+          }
+        ],
+        "stageDots": 0,
+        "progress": ""
+      },
+      "r20": {
+        "barColor": null,
+        "diagonal": false,
+        "ellipse": false,
+        "counts": [
+          "月台 3 人",
+          "上車中 0 人",
+          "已入座 0 人"
+        ],
+        "riders": [
+          {
+            "id": "0",
+            "p": 0,
+            "box": {
+              "x": 57.625,
+              "y": 354.46875,
+              "right": 117.625,
+              "bottom": 425.5,
+              "width": 60,
+              "height": 71.03125
+            },
+            "foot": 425.5
+          },
+          {
+            "id": "1",
+            "p": 0,
+            "box": {
+              "x": 185,
+              "y": 354.46875,
+              "right": 245,
+              "bottom": 425.5,
+              "width": 60,
+              "height": 71.03125
+            },
+            "foot": 425.5
+          },
+          {
+            "id": "2",
+            "p": 0,
+            "box": {
+              "x": 312.359375,
+              "y": 354.46875,
+              "right": 372.359375,
+              "bottom": 425.5,
+              "width": 60,
+              "height": 71.03125
+            },
+            "foot": 425.5
+          }
+        ],
+        "door": {
+          "x": 203.453125,
+          "y": 444.5,
+          "right": 267.921875,
+          "bottom": 533.296875,
+          "width": 64.46875,
+          "height": 88.796875
+        },
+        "scene": {
+          "x": 13,
+          "y": 103,
+          "right": 417,
+          "bottom": 695.21875,
+          "width": 404,
+          "height": 592.21875
+        },
+        "bay": "url(\"http://127.0.0.1:5286/art/content-r3/cake-slope.webp\")"
+      }
+    },
+    {
+      "path": "docs/store/screenshots/content-r20/tickets-player-boarding-1290x2796.png",
+      "width": 1290,
+      "height": 2796,
+      "sha256": "220a99a784d53d5b944768937ffff549cff498cd2e366f687dc3b2dcf5ed71b3",
+      "state": {
+        "boardTime": "0.278",
+        "doorStage": "boarding",
+        "boardingIndex": "0",
+        "hazard": "false",
+        "wrongTurn": "false",
+        "inBend": "false",
+        "cue": "go",
+        "settled": "true",
+        "correction": "",
+        "compact": "false",
+        "targetName": "藍圓形",
+        "layoutSeed": "0",
+        "distance": "30.00",
+        "speed": "0.00",
+        "bend": "1",
+        "tilt": "1.50",
+        "sway": "1.25",
+        "acceleration": "0.00",
+        "bayStopped": "false",
+        "bayRestarted": "false",
+        "leftTurn": "false",
+        "rightTurn": "false",
+        "focus": "center",
+        "crossTime": "0.000",
+        "crossDuration": "2.1",
+        "orderHint": "",
+        "fruitSway": "5.41",
+        "flagSway": "13.09",
+        "balanceLean": "0.00",
+        "balanceStatus": "steady",
+        "recoveries": "0",
+        "assists": "0",
+        "assisting": "false",
+        "crossed": "0",
+        "lookedLeft": "false",
+        "lookedRight": "false",
+        "decision": "false",
+        "confirmed": "false",
+        "confirmDelay": "0",
+        "person": "child",
+        "trafficActive": "true",
+        "trafficTime": "0.00",
+        "watchSide": "",
+        "doorState": "open",
+        "step": "1"
+      },
+      "phase": "boarding",
+      "hint": "小安正在上車。",
+      "controls": [
+        {
+          "id": "status",
+          "text": "正在上車",
+          "needed": "false",
+          "color": "rgb(220, 228, 233)",
+          "disabled": true
+        },
+        {
+          "id": "listen",
+          "text": "再聽一次",
+          "needed": "false",
+          "color": "rgb(255, 255, 255)",
+          "disabled": false
+        }
+      ],
+      "geometry": {
+        "scene": {
+          "x": 13,
+          "y": 103,
+          "width": 404,
+          "height": 615.015625,
+          "right": 417,
+          "bottom": 718.015625
+        },
+        "car": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0,
+          "right": 0,
+          "bottom": 0
+        },
+        "carrier": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0,
+          "right": 0,
+          "bottom": 0
+        },
+        "train": {
+          "x": 35.890625,
+          "y": 437.109375,
+          "width": 358.1875,
+          "height": 148,
+          "right": 394.078125,
+          "bottom": 585.109375
+        },
+        "door": {
+          "x": 283.03125,
+          "y": 462.265625,
+          "width": 64.46875,
+          "height": 88.796875,
+          "right": 347.5,
+          "bottom": 551.0625
+        },
+        "signs": [
+          {
+            "id": "0",
+            "text": "1 號月台\n✓ 停對了",
+            "box": {
+              "x": 61.59375,
+              "y": 172.953125,
+              "width": 68,
+              "height": 82.09375,
+              "right": 129.59375,
+              "bottom": 255.046875
+            }
+          },
+          {
+            "id": "1",
+            "text": "2 號月台",
+            "box": {
+              "x": 181,
+              "y": 174,
+              "width": 68,
+              "height": 80,
+              "right": 249,
+              "bottom": 254
+            }
+          },
+          {
+            "id": "2",
+            "text": "3 號月台",
+            "box": {
+              "x": 300.390625,
+              "y": 174,
+              "width": 68,
+              "height": 80,
+              "right": 368.390625,
+              "bottom": 254
+            }
+          }
+        ],
+        "people": [
+          {
+            "id": "0",
+            "kind": "boarding-friend",
+            "box": {
+              "x": 285.28125,
+              "y": 479.953125,
+              "width": 60,
+              "height": 71.03125,
+              "right": 345.28125,
+              "bottom": 550.984375
+            }
+          },
+          {
+            "id": "1",
+            "kind": "boarding-friend",
+            "box": {
+              "x": 185,
+              "y": 366.890625,
+              "width": 60,
+              "height": 71.03125,
+              "right": 245,
+              "bottom": 437.921875
+            }
+          },
+          {
+            "id": "2",
+            "kind": "boarding-friend",
+            "box": {
+              "x": 312.359375,
+              "y": 366.890625,
+              "width": 60,
+              "height": 71.03125,
+              "right": 372.359375,
+              "bottom": 437.921875
+            }
+          }
+        ],
+        "labels": [
+          {
+            "text": "2 小晴",
+            "box": {
+              "x": 195.921875,
+              "y": 436.921875,
+              "width": 38.15625,
+              "height": 20,
+              "right": 234.078125,
+              "bottom": 456.921875
+            },
+            "clipped": false
+          },
+          {
+            "text": "3 小宇",
+            "box": {
+              "x": 323.28125,
+              "y": 436.921875,
+              "width": 38.15625,
+              "height": 20,
+              "right": 361.4375,
+              "bottom": 456.921875
+            },
+            "clipped": false
+          },
+          {
+            "text": "第 1 站・藍圓形車票",
+            "box": {
+              "x": 84,
+              "y": 113,
+              "width": 324,
+              "height": 24,
+              "right": 408,
+              "bottom": 137
+            },
+            "clipped": false
+          },
+          {
+            "text": "月台 2 人",
+            "box": {
+              "x": 182.8125,
+              "y": 140,
+              "width": 63.0625,
+              "height": 27,
+              "right": 245.875,
+              "bottom": 167
+            },
+            "clipped": false
+          },
+          {
+            "text": "上車中 1 人",
+            "box": {
+              "x": 251.875,
+              "y": 140,
+              "width": 74.0625,
+              "height": 27,
+              "right": 325.9375,
+              "bottom": 167
+            },
+            "clipped": false
+          },
+          {
+            "text": "已入座 0 人",
+            "box": {
+              "x": 331.9375,
+              "y": 140,
+              "width": 74.0625,
+              "height": 27,
+              "right": 406,
+              "bottom": 167
+            },
+            "clipped": false
+          },
+          {
+            "text": "1 號月台✓ 停對了",
+            "box": {
+              "x": 70.59375,
+              "y": 222.953125,
+              "width": 50,
+              "height": 26.09375,
+              "right": 120.59375,
+              "bottom": 249.046875
+            },
+            "clipped": false
+          },
+          {
+            "text": "2 號月台",
+            "box": {
+              "x": 190,
+              "y": 222,
+              "width": 50,
+              "height": 15.59375,
+              "right": 240,
+              "bottom": 237.59375
+            },
+            "clipped": false
+          },
+          {
+            "text": "3 號月台",
+            "box": {
+              "x": 309.390625,
+              "y": 222,
+              "width": 50,
+              "height": 15.59375,
+              "right": 359.390625,
+              "bottom": 237.59375
+            },
+            "clipped": false
+          }
+        ],
+        "look": "",
+        "panorama": "none",
+        "road": "-150px",
+        "counts": "月台 2 人\n上車中 1 人\n已入座 0 人",
+        "queue": "",
+        "mini": "translateX(0px) rotate(0deg)",
+        "large": "translateX(0px) rotate(0deg)",
+        "route": 0,
+        "controls": {
+          "x": 24,
+          "y": 763.8125,
+          "width": 382,
+          "height": 128.1875,
+          "right": 406,
+          "bottom": 892
+        },
+        "trainSource": "http://127.0.0.1:5286/art/content-r3/train-side.webp"
+      },
+      "method": "Unmodified headless Chromium PNG; real public UI with Playwright clock controlling RAF/timers; no game state or save assignments",
+      "native": false,
+      "regression": {
+        "traffic": null,
+        "trafficLabel": null,
+        "ellipse": null,
+        "labels": [],
+        "riders": [
+          {
+            "id": "0",
+            "box": {
+              "x": 285.28125,
+              "y": 479.953125,
+              "right": 345.28125,
+              "bottom": 550.984375,
+              "width": 60,
+              "height": 71.03125
+            },
+            "image": {
+              "x": 285.28125,
+              "y": 479.953125,
+              "right": 345.28125,
+              "bottom": 550.984375,
+              "width": 60,
+              "height": 71.03125
+            },
+            "entering": "true",
+            "clip": "inset(0px 45.9875% 0px 0px)"
+          },
+          {
+            "id": "1",
+            "box": {
+              "x": 185,
+              "y": 366.890625,
+              "right": 245,
+              "bottom": 437.921875,
+              "width": 60,
+              "height": 71.03125
+            },
+            "image": {
+              "x": 185,
+              "y": 374.296875,
+              "right": 245,
+              "bottom": 437.921875,
+              "width": 60,
+              "height": 63.625
+            },
+            "entering": "false",
+            "clip": "none"
+          },
+          {
+            "id": "2",
+            "box": {
+              "x": 312.359375,
+              "y": 366.890625,
+              "right": 372.359375,
+              "bottom": 437.921875,
+              "width": 60,
+              "height": 71.03125
+            },
+            "image": {
+              "x": 312.359375,
+              "y": 374.296875,
+              "right": 372.359375,
+              "bottom": 437.921875,
+              "width": 60,
+              "height": 63.625
+            },
+            "entering": "false",
+            "clip": "none"
+          }
+        ],
+        "playerSource": "http://127.0.0.1:5286/art/r8/coach-safe-window.png",
+        "playerCount": 0,
+        "turn": "none",
+        "zoomVisible": false
+      },
+      "screenContract": {
+        "failures": [],
+        "overlaps": [],
+        "textCount": 16,
+        "labels": [
+          {
+            "text": "2 小晴",
+            "box": {
+              "x": 195.921875,
+              "y": 436.921875,
+              "right": 234.078125,
+              "bottom": 456.921875,
+              "width": 38.15625,
+              "height": 20
+            }
+          },
+          {
+            "text": "3 小宇",
+            "box": {
+              "x": 323.28125,
+              "y": 436.921875,
+              "right": 361.4375,
+              "bottom": 456.921875,
+              "width": 38.15625,
+              "height": 20
+            }
+          },
+          {
+            "text": "第 1 站・藍圓形車票",
+            "box": {
+              "x": 84,
+              "y": 113,
+              "right": 408,
+              "bottom": 137,
+              "width": 324,
+              "height": 24
+            }
+          },
+          {
+            "text": "月台 2 人",
+            "box": {
+              "x": 182.8125,
+              "y": 140,
+              "right": 245.875,
+              "bottom": 167,
+              "width": 63.0625,
+              "height": 27
+            }
+          },
+          {
+            "text": "上車中 1 人",
+            "box": {
+              "x": 251.875,
+              "y": 140,
+              "right": 325.9375,
+              "bottom": 167,
+              "width": 74.0625,
+              "height": 27
+            }
+          },
+          {
+            "text": "已入座 0 人",
+            "box": {
+              "x": 331.9375,
+              "y": 140,
+              "right": 406,
+              "bottom": 167,
+              "width": 74.0625,
+              "height": 27
+            }
+          },
+          {
+            "text": "1 號月台\n✓ 停對了",
+            "box": {
+              "x": 61.59375,
+              "y": 172.953125,
+              "right": 129.59375,
+              "bottom": 255.046875,
+              "width": 68,
+              "height": 82.09375
+            }
+          },
+          {
+            "text": "2 號月台",
+            "box": {
+              "x": 181,
+              "y": 174,
+              "right": 249,
+              "bottom": 254,
+              "width": 68,
+              "height": 80
+            }
+          },
+          {
+            "text": "3 號月台",
+            "box": {
+              "x": 300.390625,
+              "y": 174,
+              "right": 368.390625,
+              "bottom": 254,
+              "width": 68,
+              "height": 80
+            }
+          }
+        ],
+        "stageDots": 0,
+        "progress": ""
+      },
+      "r20": {
+        "barColor": null,
+        "diagonal": false,
+        "ellipse": false,
+        "counts": [
+          "月台 2 人",
+          "上車中 1 人",
+          "已入座 0 人"
+        ],
+        "riders": [
+          {
+            "id": "0",
+            "p": 0.61,
+            "box": {
+              "x": 285.28125,
+              "y": 479.953125,
+              "right": 345.28125,
+              "bottom": 550.984375,
+              "width": 60,
+              "height": 71.03125
+            },
+            "foot": 550.984375
+          },
+          {
+            "id": "1",
+            "p": 0,
+            "box": {
+              "x": 185,
+              "y": 366.890625,
+              "right": 245,
+              "bottom": 437.921875,
+              "width": 60,
+              "height": 71.03125
+            },
+            "foot": 437.921875
+          },
+          {
+            "id": "2",
+            "p": 0,
+            "box": {
+              "x": 312.359375,
+              "y": 366.890625,
+              "right": 372.359375,
+              "bottom": 437.921875,
+              "width": 60,
+              "height": 71.03125
+            },
+            "foot": 437.921875
+          }
+        ],
+        "door": {
+          "x": 283.03125,
+          "y": 462.265625,
+          "right": 347.5,
+          "bottom": 551.0625,
+          "width": 64.46875,
+          "height": 88.796875
+        },
+        "scene": {
+          "x": 13,
+          "y": 103,
+          "right": 417,
+          "bottom": 718.015625,
+          "width": 404,
+          "height": 615.015625
+        },
+        "bay": "url(\"http://127.0.0.1:5286/art/content-r3/cake-slope.webp\")"
+      }
+    },
+    {
+      "path": "docs/content/r20/store-device-1032x1376-tickets-ready.png",
+      "width": 2064,
+      "height": 2752,
+      "sha256": "2ce092c85ba44217b29e93399e2a46c0e516495c923262c82a2c15460a9441b2",
+      "state": {
+        "boardTime": "0.000",
+        "doorStage": "closed",
+        "boardingIndex": "0",
+        "hazard": "false",
+        "wrongTurn": "false",
+        "inBend": "false",
+        "cue": "go",
+        "settled": "true",
+        "correction": "",
+        "compact": "false",
+        "targetName": "藍圓形",
+        "layoutSeed": "0",
+        "distance": "0.00",
+        "speed": "0.00",
+        "bend": "1",
+        "tilt": "0.00",
+        "sway": "0.00",
+        "acceleration": "0.00",
+        "bayStopped": "false",
+        "bayRestarted": "false",
+        "leftTurn": "false",
+        "rightTurn": "false",
+        "focus": "center",
+        "crossTime": "0.000",
+        "crossDuration": "2.1",
+        "orderHint": "",
+        "fruitSway": "0.00",
+        "flagSway": "0.00",
+        "balanceLean": "0.00",
+        "balanceStatus": "steady",
+        "recoveries": "0",
+        "assists": "0",
+        "assisting": "false",
+        "crossed": "0",
+        "lookedLeft": "false",
+        "lookedRight": "false",
+        "decision": "false",
+        "confirmed": "false",
+        "confirmDelay": "0",
+        "person": "child",
+        "trafficActive": "true",
+        "trafficTime": "0.00",
+        "watchSide": "",
+        "doorState": "closed",
+        "step": "0"
+      },
+      "phase": "ready",
+      "hint": "點月台站牌，停穩再開門。",
+      "controls": [
+        {
+          "id": "begin",
+          "text": "一起出發",
+          "needed": "false",
+          "color": "rgb(244, 107, 39)",
+          "disabled": false
+        },
+        {
+          "id": "listen",
+          "text": "再聽一次",
+          "needed": "false",
+          "color": "rgb(255, 255, 255)",
+          "disabled": false
+        }
+      ],
+      "geometry": {
+        "scene": {
+          "x": 13,
+          "y": 325,
+          "width": 582.15625,
+          "height": 800,
+          "right": 595.15625,
+          "bottom": 1125
+        },
+        "car": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0,
+          "right": 0,
+          "bottom": 0
+        },
+        "carrier": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0,
+          "right": 0,
+          "bottom": 0
+        },
+        "train": {
+          "x": -70.421875,
+          "y": 739.90625,
+          "width": 518.53125,
+          "height": 214.265625,
+          "right": 448.109375,
+          "bottom": 954.171875
+        },
+        "door": {
+          "x": 287.359375,
+          "y": 776.328125,
+          "width": 93.328125,
+          "height": 128.546875,
+          "right": 380.6875,
+          "bottom": 904.875
+        },
+        "signs": [
+          {
+            "id": "0",
+            "text": "1 號月台",
+            "box": {
+              "x": 97.21875,
+              "y": 396,
+              "width": 68,
+              "height": 80,
+              "right": 165.21875,
+              "bottom": 476
+            }
+          },
+          {
+            "id": "1",
+            "text": "2 號月台",
+            "box": {
+              "x": 270.078125,
+              "y": 396,
+              "width": 68,
+              "height": 80,
+              "right": 338.078125,
+              "bottom": 476
+            }
+          },
+          {
+            "id": "2",
+            "text": "3 號月台",
+            "box": {
+              "x": 442.921875,
+              "y": 396,
+              "width": 68,
+              "height": 80,
+              "right": 510.921875,
+              "bottom": 476
+            }
+          }
+        ],
+        "people": [
+          {
+            "id": "0",
+            "kind": "boarding-friend",
+            "box": {
+              "x": 89.703125,
+              "y": 658.015625,
+              "width": 60,
+              "height": 102.71875,
+              "right": 149.703125,
+              "bottom": 760.734375
+            }
+          },
+          {
+            "id": "1",
+            "kind": "boarding-friend",
+            "box": {
+              "x": 274.078125,
+              "y": 658.015625,
+              "width": 60,
+              "height": 102.71875,
+              "right": 334.078125,
+              "bottom": 760.734375
+            }
+          },
+          {
+            "id": "2",
+            "kind": "boarding-friend",
+            "box": {
+              "x": 458.4375,
+              "y": 658.015625,
+              "width": 60,
+              "height": 102.71875,
+              "right": 518.4375,
+              "bottom": 760.734375
+            }
+          }
+        ],
+        "labels": [
+          {
+            "text": "1 小安",
+            "box": {
+              "x": 100.625,
+              "y": 759.734375,
+              "width": 38.15625,
+              "height": 20,
+              "right": 138.78125,
+              "bottom": 779.734375
+            },
+            "clipped": false
+          },
+          {
+            "text": "2 小晴",
+            "box": {
+              "x": 285,
+              "y": 759.734375,
+              "width": 38.15625,
+              "height": 20,
+              "right": 323.15625,
+              "bottom": 779.734375
+            },
+            "clipped": false
+          },
+          {
+            "text": "3 小宇",
+            "box": {
+              "x": 469.359375,
+              "y": 759.734375,
+              "width": 38.15625,
+              "height": 20,
+              "right": 507.515625,
+              "bottom": 779.734375
+            },
+            "clipped": false
+          },
+          {
+            "text": "第 1 站・藍圓形車票",
+            "box": {
+              "x": 84,
+              "y": 335,
+              "width": 502.15625,
+              "height": 24,
+              "right": 586.15625,
+              "bottom": 359
+            },
+            "clipped": false
+          },
+          {
+            "text": "月台 3 人",
+            "box": {
+              "x": 360.96875,
+              "y": 362,
+              "width": 63.0625,
+              "height": 27,
+              "right": 424.03125,
+              "bottom": 389
+            },
+            "clipped": false
+          },
+          {
+            "text": "上車中 0 人",
+            "box": {
+              "x": 430.03125,
+              "y": 362,
+              "width": 74.0625,
+              "height": 27,
+              "right": 504.09375,
+              "bottom": 389
+            },
+            "clipped": false
+          },
+          {
+            "text": "已入座 0 人",
+            "box": {
+              "x": 510.09375,
+              "y": 362,
+              "width": 74.0625,
+              "height": 27,
+              "right": 584.15625,
+              "bottom": 389
+            },
+            "clipped": false
+          },
+          {
+            "text": "1 號月台",
+            "box": {
+              "x": 106.21875,
+              "y": 444,
+              "width": 50,
+              "height": 15.59375,
+              "right": 156.21875,
+              "bottom": 459.59375
+            },
+            "clipped": false
+          },
+          {
+            "text": "2 號月台",
+            "box": {
+              "x": 279.078125,
+              "y": 444,
+              "width": 50,
+              "height": 15.59375,
+              "right": 329.078125,
+              "bottom": 459.59375
+            },
+            "clipped": false
+          },
+          {
+            "text": "3 號月台",
+            "box": {
+              "x": 451.921875,
+              "y": 444,
+              "width": 50,
+              "height": 15.59375,
+              "right": 501.921875,
+              "bottom": 459.59375
+            },
+            "clipped": false
+          }
+        ],
+        "look": "",
+        "panorama": "none",
+        "road": "0px",
+        "counts": "月台 3 人\n上車中 0 人\n已入座 0 人",
+        "queue": "",
+        "mini": "translateX(0px) rotate(0deg)",
+        "large": "translateX(0px) rotate(0deg)",
+        "route": 0,
+        "controls": {
+          "x": 614.15625,
+          "y": 667.25,
+          "width": 393.828125,
+          "height": 128.1875,
+          "right": 1007.984375,
+          "bottom": 795.4375
+        },
+        "trainSource": "http://127.0.0.1:5286/art/content-r3/train-side.webp"
+      },
+      "method": "Unmodified headless Chromium PNG; real public UI with Playwright clock controlling RAF/timers; no game state or save assignments",
+      "native": false,
+      "regression": {
+        "traffic": null,
+        "trafficLabel": null,
+        "ellipse": null,
+        "labels": [],
+        "riders": [
+          {
+            "id": "0",
+            "box": {
+              "x": 89.703125,
+              "y": 658.015625,
+              "right": 149.703125,
+              "bottom": 760.734375,
+              "width": 60,
+              "height": 102.71875
+            },
+            "image": {
+              "x": 89.703125,
+              "y": 668.71875,
+              "right": 149.703125,
+              "bottom": 760.734375,
+              "width": 60,
+              "height": 92.015625
+            },
+            "entering": "false",
+            "clip": "none"
+          },
+          {
+            "id": "1",
+            "box": {
+              "x": 274.078125,
+              "y": 658.015625,
+              "right": 334.078125,
+              "bottom": 760.734375,
+              "width": 60,
+              "height": 102.71875
+            },
+            "image": {
+              "x": 274.078125,
+              "y": 668.71875,
+              "right": 334.078125,
+              "bottom": 760.734375,
+              "width": 60,
+              "height": 92.015625
+            },
+            "entering": "false",
+            "clip": "none"
+          },
+          {
+            "id": "2",
+            "box": {
+              "x": 458.4375,
+              "y": 658.015625,
+              "right": 518.4375,
+              "bottom": 760.734375,
+              "width": 60,
+              "height": 102.71875
+            },
+            "image": {
+              "x": 458.4375,
+              "y": 668.71875,
+              "right": 518.4375,
+              "bottom": 760.734375,
+              "width": 60,
+              "height": 92.015625
+            },
+            "entering": "false",
+            "clip": "none"
+          }
+        ],
+        "playerSource": "http://127.0.0.1:5286/art/r8/coach-safe-window.png",
+        "playerCount": 0,
+        "turn": "none",
+        "zoomVisible": false
+      },
+      "screenContract": {
+        "failures": [],
+        "overlaps": [],
+        "textCount": 17,
+        "labels": [
+          {
+            "text": "1 小安",
+            "box": {
+              "x": 100.625,
+              "y": 759.734375,
+              "right": 138.78125,
+              "bottom": 779.734375,
+              "width": 38.15625,
+              "height": 20
+            }
+          },
+          {
+            "text": "2 小晴",
+            "box": {
+              "x": 285,
+              "y": 759.734375,
+              "right": 323.15625,
+              "bottom": 779.734375,
+              "width": 38.15625,
+              "height": 20
+            }
+          },
+          {
+            "text": "3 小宇",
+            "box": {
+              "x": 469.359375,
+              "y": 759.734375,
+              "right": 507.515625,
+              "bottom": 779.734375,
+              "width": 38.15625,
+              "height": 20
+            }
+          },
+          {
+            "text": "第 1 站・藍圓形車票",
+            "box": {
+              "x": 84,
+              "y": 335,
+              "right": 586.15625,
+              "bottom": 359,
+              "width": 502.15625,
+              "height": 24
+            }
+          },
+          {
+            "text": "月台 3 人",
+            "box": {
+              "x": 360.96875,
+              "y": 362,
+              "right": 424.03125,
+              "bottom": 389,
+              "width": 63.0625,
+              "height": 27
+            }
+          },
+          {
+            "text": "上車中 0 人",
+            "box": {
+              "x": 430.03125,
+              "y": 362,
+              "right": 504.09375,
+              "bottom": 389,
+              "width": 74.0625,
+              "height": 27
+            }
+          },
+          {
+            "text": "已入座 0 人",
+            "box": {
+              "x": 510.09375,
+              "y": 362,
+              "right": 584.15625,
+              "bottom": 389,
+              "width": 74.0625,
+              "height": 27
+            }
+          },
+          {
+            "text": "1 號月台",
+            "box": {
+              "x": 97.21875,
+              "y": 396,
+              "right": 165.21875,
+              "bottom": 476,
+              "width": 68,
+              "height": 80
+            }
+          },
+          {
+            "text": "2 號月台",
+            "box": {
+              "x": 270.078125,
+              "y": 396,
+              "right": 338.078125,
+              "bottom": 476,
+              "width": 68,
+              "height": 80
+            }
+          },
+          {
+            "text": "3 號月台",
+            "box": {
+              "x": 442.921875,
+              "y": 396,
+              "right": 510.921875,
+              "bottom": 476,
+              "width": 68,
+              "height": 80
+            }
+          }
+        ],
+        "stageDots": 0,
+        "progress": ""
+      },
+      "r20": {
+        "barColor": null,
+        "diagonal": false,
+        "ellipse": false,
+        "counts": [
+          "月台 3 人",
+          "上車中 0 人",
+          "已入座 0 人"
+        ],
+        "riders": [
+          {
+            "id": "0",
+            "p": 0,
+            "box": {
+              "x": 89.703125,
+              "y": 658.015625,
+              "right": 149.703125,
+              "bottom": 760.734375,
+              "width": 60,
+              "height": 102.71875
+            },
+            "foot": 760.734375
+          },
+          {
+            "id": "1",
+            "p": 0,
+            "box": {
+              "x": 274.078125,
+              "y": 658.015625,
+              "right": 334.078125,
+              "bottom": 760.734375,
+              "width": 60,
+              "height": 102.71875
+            },
+            "foot": 760.734375
+          },
+          {
+            "id": "2",
+            "p": 0,
+            "box": {
+              "x": 458.4375,
+              "y": 658.015625,
+              "right": 518.4375,
+              "bottom": 760.734375,
+              "width": 60,
+              "height": 102.71875
+            },
+            "foot": 760.734375
+          }
+        ],
+        "door": {
+          "x": 287.359375,
+          "y": 776.328125,
+          "right": 380.6875,
+          "bottom": 904.875,
+          "width": 93.328125,
+          "height": 128.546875
+        },
+        "scene": {
+          "x": 13,
+          "y": 325,
+          "right": 595.15625,
+          "bottom": 1125,
+          "width": 582.15625,
+          "height": 800
+        },
+        "bay": "url(\"http://127.0.0.1:5286/art/content-r3/cake-slope.webp\")"
+      }
+    },
+    {
+      "path": "docs/store/screenshots/content-r20/tickets-player-boarding-2064x2752.png",
+      "width": 2064,
+      "height": 2752,
+      "sha256": "f706bcf75d371893b8d82d0f495d9b4688ff15a8b549de633d02cae104b56f1b",
+      "state": {
+        "boardTime": "0.278",
+        "doorStage": "boarding",
+        "boardingIndex": "0",
+        "hazard": "false",
+        "wrongTurn": "false",
+        "inBend": "false",
+        "cue": "go",
+        "settled": "true",
+        "correction": "",
+        "compact": "false",
+        "targetName": "藍圓形",
+        "layoutSeed": "0",
+        "distance": "30.00",
+        "speed": "0.00",
+        "bend": "1",
+        "tilt": "1.50",
+        "sway": "1.25",
+        "acceleration": "0.00",
+        "bayStopped": "false",
+        "bayRestarted": "false",
+        "leftTurn": "false",
+        "rightTurn": "false",
+        "focus": "center",
+        "crossTime": "0.000",
+        "crossDuration": "2.1",
+        "orderHint": "",
+        "fruitSway": "5.41",
+        "flagSway": "13.09",
+        "balanceLean": "0.00",
+        "balanceStatus": "steady",
+        "recoveries": "0",
+        "assists": "0",
+        "assisting": "false",
+        "crossed": "0",
+        "lookedLeft": "false",
+        "lookedRight": "false",
+        "decision": "false",
+        "confirmed": "false",
+        "confirmDelay": "0",
+        "person": "child",
+        "trafficActive": "true",
+        "trafficTime": "0.00",
+        "watchSide": "",
+        "doorState": "open",
+        "step": "1"
+      },
+      "phase": "boarding",
+      "hint": "小安正在上車。",
+      "controls": [
+        {
+          "id": "status",
+          "text": "正在上車",
+          "needed": "false",
+          "color": "rgb(220, 228, 233)",
+          "disabled": true
+        },
+        {
+          "id": "listen",
+          "text": "再聽一次",
+          "needed": "false",
+          "color": "rgb(255, 255, 255)",
+          "disabled": false
+        }
+      ],
+      "geometry": {
+        "scene": {
+          "x": 13,
+          "y": 325,
+          "width": 582.15625,
+          "height": 800,
+          "right": 595.15625,
+          "bottom": 1125
+        },
+        "car": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0,
+          "right": 0,
+          "bottom": 0
+        },
+        "carrier": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0,
+          "right": 0,
+          "bottom": 0
+        },
+        "train": {
+          "x": 44.796875,
+          "y": 739.90625,
+          "width": 518.53125,
+          "height": 214.265625,
+          "right": 563.328125,
+          "bottom": 954.171875
+        },
+        "door": {
+          "x": 402.578125,
+          "y": 776.328125,
+          "width": 93.328125,
+          "height": 128.546875,
+          "right": 495.90625,
+          "bottom": 904.875
+        },
+        "signs": [
+          {
+            "id": "0",
+            "text": "1 號月台\n✓ 停對了",
+            "box": {
+              "x": 97.21875,
+              "y": 394.953125,
+              "width": 68,
+              "height": 82.09375,
+              "right": 165.21875,
+              "bottom": 477.046875
+            }
+          },
+          {
+            "id": "1",
+            "text": "2 號月台",
+            "box": {
+              "x": 270.078125,
+              "y": 396,
+              "width": 68,
+              "height": 80,
+              "right": 338.078125,
+              "bottom": 476
+            }
+          },
+          {
+            "id": "2",
+            "text": "3 號月台",
+            "box": {
+              "x": 442.921875,
+              "y": 396,
+              "width": 68,
+              "height": 80,
+              "right": 510.921875,
+              "bottom": 476
+            }
+          }
+        ],
+        "people": [
+          {
+            "id": "0",
+            "kind": "boarding-friend",
+            "box": {
+              "x": 419.265625,
+              "y": 802.0625,
+              "width": 60,
+              "height": 102.71875,
+              "right": 479.265625,
+              "bottom": 904.78125
+            }
+          },
+          {
+            "id": "1",
+            "kind": "boarding-friend",
+            "box": {
+              "x": 274.078125,
+              "y": 658.015625,
+              "width": 60,
+              "height": 102.71875,
+              "right": 334.078125,
+              "bottom": 760.734375
+            }
+          },
+          {
+            "id": "2",
+            "kind": "boarding-friend",
+            "box": {
+              "x": 458.4375,
+              "y": 658.015625,
+              "width": 60,
+              "height": 102.71875,
+              "right": 518.4375,
+              "bottom": 760.734375
+            }
+          }
+        ],
+        "labels": [
+          {
+            "text": "2 小晴",
+            "box": {
+              "x": 285,
+              "y": 759.734375,
+              "width": 38.15625,
+              "height": 20,
+              "right": 323.15625,
+              "bottom": 779.734375
+            },
+            "clipped": false
+          },
+          {
+            "text": "3 小宇",
+            "box": {
+              "x": 469.359375,
+              "y": 759.734375,
+              "width": 38.15625,
+              "height": 20,
+              "right": 507.515625,
+              "bottom": 779.734375
+            },
+            "clipped": false
+          },
+          {
+            "text": "第 1 站・藍圓形車票",
+            "box": {
+              "x": 84,
+              "y": 335,
+              "width": 502.15625,
+              "height": 24,
+              "right": 586.15625,
+              "bottom": 359
+            },
+            "clipped": false
+          },
+          {
+            "text": "月台 2 人",
+            "box": {
+              "x": 360.96875,
+              "y": 362,
+              "width": 63.0625,
+              "height": 27,
+              "right": 424.03125,
+              "bottom": 389
+            },
+            "clipped": false
+          },
+          {
+            "text": "上車中 1 人",
+            "box": {
+              "x": 430.03125,
+              "y": 362,
+              "width": 74.0625,
+              "height": 27,
+              "right": 504.09375,
+              "bottom": 389
+            },
+            "clipped": false
+          },
+          {
+            "text": "已入座 0 人",
+            "box": {
+              "x": 510.09375,
+              "y": 362,
+              "width": 74.0625,
+              "height": 27,
+              "right": 584.15625,
+              "bottom": 389
+            },
+            "clipped": false
+          },
+          {
+            "text": "1 號月台✓ 停對了",
+            "box": {
+              "x": 106.21875,
+              "y": 444.953125,
+              "width": 50,
+              "height": 26.09375,
+              "right": 156.21875,
+              "bottom": 471.046875
+            },
+            "clipped": false
+          },
+          {
+            "text": "2 號月台",
+            "box": {
+              "x": 279.078125,
+              "y": 444,
+              "width": 50,
+              "height": 15.59375,
+              "right": 329.078125,
+              "bottom": 459.59375
+            },
+            "clipped": false
+          },
+          {
+            "text": "3 號月台",
+            "box": {
+              "x": 451.921875,
+              "y": 444,
+              "width": 50,
+              "height": 15.59375,
+              "right": 501.921875,
+              "bottom": 459.59375
+            },
+            "clipped": false
+          }
+        ],
+        "look": "",
+        "panorama": "none",
+        "road": "-150px",
+        "counts": "月台 2 人\n上車中 1 人\n已入座 0 人",
+        "queue": "",
+        "mini": "translateX(0px) rotate(0deg)",
+        "large": "translateX(0px) rotate(0deg)",
+        "route": 0,
+        "controls": {
+          "x": 614.15625,
+          "y": 678.65625,
+          "width": 393.828125,
+          "height": 128.1875,
+          "right": 1007.984375,
+          "bottom": 806.84375
+        },
+        "trainSource": "http://127.0.0.1:5286/art/content-r3/train-side.webp"
+      },
+      "method": "Unmodified headless Chromium PNG; real public UI with Playwright clock controlling RAF/timers; no game state or save assignments",
+      "native": false,
+      "regression": {
+        "traffic": null,
+        "trafficLabel": null,
+        "ellipse": null,
+        "labels": [],
+        "riders": [
+          {
+            "id": "0",
+            "box": {
+              "x": 419.265625,
+              "y": 802.0625,
+              "right": 479.265625,
+              "bottom": 904.78125,
+              "width": 60,
+              "height": 102.71875
+            },
+            "image": {
+              "x": 419.265625,
+              "y": 802.0625,
+              "right": 479.265625,
+              "bottom": 904.78125,
+              "width": 60,
+              "height": 102.71875
+            },
+            "entering": "true",
+            "clip": "inset(0px 45.9875% 0px 0px)"
+          },
+          {
+            "id": "1",
+            "box": {
+              "x": 274.078125,
+              "y": 658.015625,
+              "right": 334.078125,
+              "bottom": 760.734375,
+              "width": 60,
+              "height": 102.71875
+            },
+            "image": {
+              "x": 274.078125,
+              "y": 668.71875,
+              "right": 334.078125,
+              "bottom": 760.734375,
+              "width": 60,
+              "height": 92.015625
+            },
+            "entering": "false",
+            "clip": "none"
+          },
+          {
+            "id": "2",
+            "box": {
+              "x": 458.4375,
+              "y": 658.015625,
+              "right": 518.4375,
+              "bottom": 760.734375,
+              "width": 60,
+              "height": 102.71875
+            },
+            "image": {
+              "x": 458.4375,
+              "y": 668.71875,
+              "right": 518.4375,
+              "bottom": 760.734375,
+              "width": 60,
+              "height": 92.015625
+            },
+            "entering": "false",
+            "clip": "none"
+          }
+        ],
+        "playerSource": "http://127.0.0.1:5286/art/r8/coach-safe-window.png",
+        "playerCount": 0,
+        "turn": "none",
+        "zoomVisible": false
+      },
+      "screenContract": {
+        "failures": [],
+        "overlaps": [],
+        "textCount": 16,
+        "labels": [
+          {
+            "text": "2 小晴",
+            "box": {
+              "x": 285,
+              "y": 759.734375,
+              "right": 323.15625,
+              "bottom": 779.734375,
+              "width": 38.15625,
+              "height": 20
+            }
+          },
+          {
+            "text": "3 小宇",
+            "box": {
+              "x": 469.359375,
+              "y": 759.734375,
+              "right": 507.515625,
+              "bottom": 779.734375,
+              "width": 38.15625,
+              "height": 20
+            }
+          },
+          {
+            "text": "第 1 站・藍圓形車票",
+            "box": {
+              "x": 84,
+              "y": 335,
+              "right": 586.15625,
+              "bottom": 359,
+              "width": 502.15625,
+              "height": 24
+            }
+          },
+          {
+            "text": "月台 2 人",
+            "box": {
+              "x": 360.96875,
+              "y": 362,
+              "right": 424.03125,
+              "bottom": 389,
+              "width": 63.0625,
+              "height": 27
+            }
+          },
+          {
+            "text": "上車中 1 人",
+            "box": {
+              "x": 430.03125,
+              "y": 362,
+              "right": 504.09375,
+              "bottom": 389,
+              "width": 74.0625,
+              "height": 27
+            }
+          },
+          {
+            "text": "已入座 0 人",
+            "box": {
+              "x": 510.09375,
+              "y": 362,
+              "right": 584.15625,
+              "bottom": 389,
+              "width": 74.0625,
+              "height": 27
+            }
+          },
+          {
+            "text": "1 號月台\n✓ 停對了",
+            "box": {
+              "x": 97.21875,
+              "y": 394.953125,
+              "right": 165.21875,
+              "bottom": 477.046875,
+              "width": 68,
+              "height": 82.09375
+            }
+          },
+          {
+            "text": "2 號月台",
+            "box": {
+              "x": 270.078125,
+              "y": 396,
+              "right": 338.078125,
+              "bottom": 476,
+              "width": 68,
+              "height": 80
+            }
+          },
+          {
+            "text": "3 號月台",
+            "box": {
+              "x": 442.921875,
+              "y": 396,
+              "right": 510.921875,
+              "bottom": 476,
+              "width": 68,
+              "height": 80
+            }
+          }
+        ],
+        "stageDots": 0,
+        "progress": ""
+      },
+      "r20": {
+        "barColor": null,
+        "diagonal": false,
+        "ellipse": false,
+        "counts": [
+          "月台 2 人",
+          "上車中 1 人",
+          "已入座 0 人"
+        ],
+        "riders": [
+          {
+            "id": "0",
+            "p": 0.61,
+            "box": {
+              "x": 419.265625,
+              "y": 802.0625,
+              "right": 479.265625,
+              "bottom": 904.78125,
+              "width": 60,
+              "height": 102.71875
+            },
+            "foot": 904.78125
+          },
+          {
+            "id": "1",
+            "p": 0,
+            "box": {
+              "x": 274.078125,
+              "y": 658.015625,
+              "right": 334.078125,
+              "bottom": 760.734375,
+              "width": 60,
+              "height": 102.71875
+            },
+            "foot": 760.734375
+          },
+          {
+            "id": "2",
+            "p": 0,
+            "box": {
+              "x": 458.4375,
+              "y": 658.015625,
+              "right": 518.4375,
+              "bottom": 760.734375,
+              "width": 60,
+              "height": 102.71875
+            },
+            "foot": 760.734375
+          }
+        ],
+        "door": {
+          "x": 402.578125,
+          "y": 776.328125,
+          "right": 495.90625,
+          "bottom": 904.875,
+          "width": 93.328125,
+          "height": 128.546875
+        },
+        "scene": {
+          "x": 13,
+          "y": 325,
+          "right": 595.15625,
+          "bottom": 1125,
+          "width": 582.15625,
+          "height": 800
+        },
+        "bay": "url(\"http://127.0.0.1:5286/art/content-r3/cake-slope.webp\")"
+      }
+    }
+  ],
+  "errors": [],
+  "external": [],
+  "http": []
+}

@@ -1,0 +1,27 @@
+{
+  "status": "VERIFIED",
+  "tool": "image_gen.imagegen",
+  "model_slug": null,
+  "newGenerationCalls": 1,
+  "newRuntimeAssets": 1,
+  "assets": [
+    {
+      "path": "docs/content/r20/art/cake-bay-original.png",
+      "sha256": "4ec072078cab20d724157f49836657ff405050c370d17f73906d69acccb3987a",
+      "width": 1024,
+      "height": 1536
+    },
+    {
+      "path": "public/art/content-r20/cake-bay.webp",
+      "sha256": "2137b9799d28c71e8448b0d6a2d202a1c9b6f768a54a6a0c6bec2e48f0be8211",
+      "width": 1024,
+      "height": 1536
+    },
+    {
+      "path": "docs/content/r20/art/cake-bay-64.png",
+      "sha256": "0993017cf07fa8fe7f7d7c939301bb5660d67987d110e3f93144381bdc372d69",
+      "width": 64,
+      "height": 96
+    }
+  ]
+}

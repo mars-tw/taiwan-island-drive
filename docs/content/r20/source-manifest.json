@@ -1,0 +1,70 @@
+{
+  "status": "VERIFIED",
+  "baseline": "cd0dbad",
+  "files": [
+    {
+      "path": "package.json",
+      "sha256": "7403888c2ee968b02428b58904410609e405dde4a39a34ebe21fa8512eb57f60"
+    },
+    {
+      "path": "package-lock.json",
+      "sha256": "3a2fdf22700e34fa6f4c03048746efa51a8fdac92fe46879640f8ca624e6e41e"
+    },
+    {
+      "path": "android/app/build.gradle",
+      "sha256": "0e97ff1cb54e98f60c6d3bce7e40829216bf6ee2a2286d4f44c015e568ca7855"
+    },
+    {
+      "path": "ios/App/App.xcodeproj/project.pbxproj",
+      "sha256": "13deff88c2c58445440268446dbe31c01dcdfd1ab46b070e6159761eceb1760e"
+    },
+    {
+      "path": "public/models/catalog.json",
+      "sha256": "04b130500b4f636961d16677b3b01e1ce388fb1f08256ec815e6509c70897572"
+    },
+    {
+      "path": "src/games/car/config.js",
+      "sha256": "a9c24513c994941fda8813e8c09105dd34cfc9bb9cd9aca7aeee15ac903762cd"
+    },
+    {
+      "path": "src/shared/content-r1-ui.js",
+      "sha256": "43a57875d43a901bafbdcf61cdb8c35a4ecf4348d78fb418462c39e14bd87904"
+    },
+    {
+      "path": "src/shared/content-r20-scene.js",
+      "sha256": "608561483a364a3752938c98a6011bd952502d93b7c9bf967a3f2f997e363c96"
+    },
+    {
+      "path": "src/shared/content-r20.css",
+      "sha256": "60025d2a4bc004a07181bcfd565fc8e4e0fc73f5cfb2e4ba2781a362b7e371af"
+    },
+    {
+      "path": "tests/shared/content-r20.test.js",
+      "sha256": "43cb3617924df7bbae9f9dd0fdfbbfe70924d34bc990d725c5b69d2ee01dd93a"
+    },
+    {
+      "path": "scripts/check-content-r20.mjs",
+      "sha256": "6db56b2001d3cc32d3eaa9a5f76b4fe3103bd7ba629e05acaf111783aef31d3e"
+    },
+    {
+      "path": "scripts/run-content-r20-validation.mjs",
+      "sha256": "bd8018bc7781adc38989ea17fa919f0486b396cb1f60245733717ddd88ef320d"
+    },
+    {
+      "path": "scripts/measure-content-r20.mjs",
+      "sha256": "764dd937af5fe32ff6e40d075ad1dfef2129921d721cdae5cd2399954d8d3493"
+    },
+    {
+      "path": "scripts/cleanup-content-r20.py",
+      "sha256": "666a480418502af0edfb8e8f9479ecf3135e7f6918e64b8d5b3b07e09889f75c"
+    },
+    {
+      "path": "scripts/verify-content-r20-release.mjs",
+      "sha256": "d40f83bf830fe6b21b20846bd09a4aa51aab006967d3b4b6dd182a196f2a0470"
+    },
+    {
+      "path": "docs/art/ART_DIRECTION.md",
+      "sha256": "c2f58c95c9515a51c47b7fcf2604f182f773427f2ae066363ef38b7df26e6fa4"
+    }
+  ]
+}

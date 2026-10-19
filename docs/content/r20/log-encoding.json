@@ -1,0 +1,46 @@
+{
+  "status": "VERIFIED",
+  "method": "Lossless Unicode decoding of PowerShell redirection logs; no test text or numbers changed",
+  "files": [
+    {
+      "path": "docs/content/r20/unit-test.txt",
+      "sourceEncoding": "UTF-16LE BOM",
+      "outputEncoding": "UTF-8",
+      "textPreserved": true,
+      "beforeSha256": "bf4ed9a73e963751b7aa2052fafae37fccb519f082e09a8efc90a02119a23de1",
+      "sha256": "132d9b3eb877919098426557b802cb7abe37f4933350adeda5fb9b9ea7d1cae8"
+    },
+    {
+      "path": "docs/content/r20/build-test.txt",
+      "sourceEncoding": "UTF-16LE BOM",
+      "outputEncoding": "UTF-8",
+      "textPreserved": true,
+      "beforeSha256": "ce6075ac0f9a699fd5191588aacd57893ed83cc9e3a70d0e7ba28a3b245590c2",
+      "sha256": "375ba46899d9a5f4fe563ffdc6f635d0dd37a8e327f197d547b7ca9c7cad9d8a"
+    },
+    {
+      "path": "docs/content/r20/merge-test.txt",
+      "sourceEncoding": "UTF-16LE BOM",
+      "outputEncoding": "UTF-8",
+      "textPreserved": true,
+      "beforeSha256": "d496d6ebb4a1ae355f07e5b7d6b872ff5f81a7a0a927856f2a9a138e388fd107",
+      "sha256": "a1c6e2f22249d17b6827dd6f2050a01ea7b48d08981563ab4bf742394ab075de"
+    },
+    {
+      "path": "docs/content/r20/store-test.txt",
+      "sourceEncoding": "UTF-16LE BOM",
+      "outputEncoding": "UTF-8",
+      "textPreserved": true,
+      "beforeSha256": "0a0c1c5da206eaa8c5ab30eb6c307c1ff3b27d24d55a24711a9714a036987698",
+      "sha256": "2ff62f6c3b46561750e8787d38aab27b5bcb64caf24349accadcc07b0b960707"
+    },
+    {
+      "path": "docs/content/r20/performance-test.txt",
+      "sourceEncoding": "UTF-16LE BOM",
+      "outputEncoding": "UTF-8",
+      "textPreserved": true,
+      "beforeSha256": "871ee40b230700e8d5c5ce66fb09288172ddb7d1729edf4e64f7a60dffb48797",
+      "sha256": "904fed7fa0ca3d1e650c9847f35ce66ee0f544b59705b302bf527a7b0d26289d"
+    }
+  ]
+}
