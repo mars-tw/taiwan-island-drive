@@ -8,7 +8,7 @@ export const TICKETS=[{shape:'circle',color:'blue',name:'藍圓形'},{shape:'tri
 export class ContentLesson{
  constructor(kind,saved={},options={}){this.freshObservation=options.freshObservation===true;if(!CONTENT_LESSONS[kind])throw Error('Unknown lesson');saved=saved&&typeof saved==='object'?saved:{};this.kind=kind;this.stage=clamp(Number.isFinite(saved.stage)?Math.floor(saved.stage):0,0,2);this.completed=saved.completed===true;this.skills={start:!!saved.skills?.start,turn:!!saved.skills?.turn,stop:!!saved.skills?.stop};this.facts=Object.fromEntries(['recoveries','assists','bayStops','bayRestarts','leftViews','rightViews','waited','wrongStops','reselections','boarded','blockedStarts','orderReminders','confirmations'].map(k=>[k,clamp(Number.isFinite(saved.facts?.[k])?Math.floor(saved.facts[k]):0,0,9999)]));this.boardingRate=1;this.boardingEnd=1.2;this.phase=this.completed?'done':'ready';this.paused=false;this.input={};this.hint='';this.reset();}
  reset(){this.tierOffset=0;this.tierVelocity=0;this.friendConfirmed=false;this.confirmDelay=0;this.assisting=false;this.assistRecorded=false;this.needsRecovery=false;this.wrongRecorded=false;this.release();this.speed=0;this.distance=0;this.steer=0;this.tilt=0;this.acceleration=0;this.sway=0;this.fruitSway=0;this.flagSway=0;this.orderHint='';this.smooth={start:0,turn:0,stop:0};this.turns={left:0,right:0};this.bayStopped=false;this.bayRestarted=false;this.focus='center';this.looked={left:false,right:false};this.crossed=0;this.crossTime=0;this.selected=-1;this.trainX=-40;this.travelFrom=-40;this.boardTime=0;this.phase=this.completed?'done':'ready';if(this.completed&&this.kind==='tickets'){this.selected=this.platforms.findIndex(p=>p.shape===this.target.shape&&p.color===this.target.color);this.trainX=2+this.selected*16;this.travelFrom=this.trainX;this.distance=30;this.boardTime=1.2;}}
- begin(){if(this.phase!=='ready')return;this.phase='playing';this.speed=this.kind==='crossing'?5:0;}
+ begin(){if(this.phase!=='ready')return;this.phase='playing';this.speed=this.kind==='crossing'?5:0;this.balanceLean=0;this.balanceDanger=false;this.balanceCorrected=false;this.balanceRecovered=false;}
  release(){this.input={go:false,brake:false,left:false,right:false};}
  pause(){this.paused=true;this.release();}
  snapshot(){return {stage:this.phase==='checkpoint'?this.stage+1:this.stage,completed:this.completed,started:this.phase!=='ready',skills:{...this.skills},facts:{...this.facts}};}
@@ -33,7 +33,7 @@ export class ContentLesson{
  next(){if(this.phase!=='checkpoint')return;this.stage++;this.reset();this.begin();}
  update(seconds){if(this.paused||!['playing','boarding'].includes(this.phase))return;const dt=clamp(seconds,0,.05);if(this.phase==='boarding'){this.boardTime+=dt*this.boardingRate;if(this.boardTime>=this.boardingEnd){this.facts.boarded+=3;this.checkpoint();}return;}
  const wasRough=this.rough;
- this.assisting=this.kind==='cake'&&((this.rough&&this.speed>4.3)||(this.assisting&&(Math.abs(this.tilt)>9||Math.abs(this.steer)>.25)&&this.speed>0));
+ this.assisting=this.kind==='cake'&&(((this.balancePractice?Math.abs(this.balanceLean||0)>=18:this.rough)&&this.speed>4.3)||(this.assisting&&(this.balancePractice?Math.abs(this.balanceLean||0)>9:Math.abs(this.tilt)>9||Math.abs(this.steer)>.25)&&this.speed>0));
  if(this.assisting&&!this.assistRecorded){this.facts.assists++;this.assistRecorded=true;}
  const before=this.speed,target=this.input.go?(this.assisting?3.8:this.approach?4:7):0,freeAccel=(target-this.speed)*1.4-(this.input.go||this.speed>0?this.grade:0),accel=this.input.brake?-5:this.assisting?Math.max(-.8,freeAccel):freeAccel;
  this.speed=clamp(this.speed+accel*dt,0,7);if(this.speed<.04)this.speed=0;
@@ -45,9 +45,22 @@ export class ContentLesson{
  this.sway+=(this.tilt*.42-this.sway)*Math.min(1,dt*9);
  this.fruitSway+=(this.sway-this.fruitSway)*Math.min(1,dt*3);this.flagSway+=(this.tilt-this.flagSway)*Math.min(1,dt*2);
  if(this.kind==='cake'){
+  if(this.balancePractice){
+   const old=this.balanceLean||0,turn=this.distance>15&&this.distance<=40;
+   const correct=old*targetSteer<0&&Math.abs(old)>=3;
+   if(Math.abs(old)>=18)this.balanceRecovered=false;
+   if(correct)this.balanceCorrected=true;
+   // Lean accumulates from real acceleration and road camber; clicks never reset it.
+   const force=-this.acceleration*4-(turn?this.bend*this.speed*.45:this.grade*this.speed*.22);
+   this.balanceLean=clamp(old+(force+targetSteer*15-old*(this.speed===0?1.8:.10))*dt,-32,32);
+   if(Math.abs(this.balanceLean)>=18)this.balanceDanger=true;
+   if(Math.abs(this.balanceLean)<5)this.balanceDanger=false;
+   if(this.balanceCorrected&&!this.balanceRecovered&&Math.abs(old)>=3&&Math.abs(this.balanceLean)<3){this.facts.recoveries++;this.balanceRecovered=true;this.balanceCorrected=false;this.recoveryNotice=1.5;}
+   this.recoveryNotice=Math.max(0,(this.recoveryNotice||0)-dt);
+  }
   const target=clamp(this.tilt*1.85,-44,44);this.tierVelocity=(this.tierVelocity||0)+(target-(this.tierOffset||0))*48*dt-(this.tierVelocity||0)*8*dt;this.tierOffset=(this.tierOffset||0)+this.tierVelocity*dt;
   if(wasRough)this.needsRecovery=true;
-  if(this.needsRecovery&&Math.abs(this.tilt)<9&&!this.input.left&&!this.input.right){this.facts.recoveries++;this.needsRecovery=false;}
+  if(this.needsRecovery&&Math.abs(this.tilt)<9&&!this.input.left&&!this.input.right){if(!this.balancePractice)this.facts.recoveries++;this.needsRecovery=false;}
   const turn=this.distance>15&&this.distance<=40;const aligned=!turn||this.steer*this.bend>.25;
   if(this.speed>1&&Math.abs(accel)<5&&this.distance<15)this.smooth.start+=dt;
   if(turn&&aligned&&this.speed>1&&this.speed<6.5)this.smooth.turn+=dt;

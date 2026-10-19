@@ -9,6 +9,7 @@ export function drivingCue(g){
  if(g.speed===0)return {action:'go',text:'按住踏板起步。'};
  if(g.distance<.25&&g.input?.go)return {action:'go',text:'踩住了，慢慢起步。'};
  const f=cakeFeedback(g);
+ if(g.balancePractice&&(g.balanceDanger||Math.abs(g.balanceLean||0)>=18))return {action:f.direction,release:true,text:`蛋糕歪了！放開放慢，輕輕${f.direction==='left'?'左':'右'}轉扶正。`};
  if(!f.settled)return {action:f.direction,release:true,text:`鬆踏板，輕輕${f.direction==='left'?'左':'右'}轉。`};
  if(g.distance>15&&g.distance<=40)return {action:g.bend>0?'right':'left',text:`輕輕${g.bend>0?'右':'左'}轉。`};
  return {action:'go',text:'按住踏板，慢慢前進。'};
@@ -26,11 +27,11 @@ export function queueFrame(time,index,seated=false){
  return {progress,seated:seated||progress>=1,inside:seated||progress>=.72,pose:Math.floor(progress*8)%2};
 }
 export function queuePosition(door,index,progress,thresholdBottom){
- const t=clamp(progress/.58),start=door-14-index*18;
+ const t=clamp(progress/.58),start=door+14+index*13;
  return {x:start+(door-start)*t,bottom:35+index*5+(thresholdBottom-35-index*5)*t};
 }
 export function carGround(g){
  // Stay in the broad foreground lane; the old -48% projection reached the sea.
  const p=clamp(g.distance/55);
- return {x:g.stage===1?Math.sin(p*Math.PI*2)*-.08:g.stage===2&&g.distance>=40?.12:0,y:-p*.08,scale:1-p*.10};
+ return g.balancePractice?{x:g.stage===1?Math.sin(p*Math.PI*2)*-.08:g.stage===2&&g.distance>=40?.25:0,y:g.stage===2&&g.distance>=40?-.12:-p*.08,scale:g.stage===2&&g.distance>=40?.65:.8-p*.10}:{x:g.stage===1?Math.sin(p*Math.PI*2)*-.08:g.stage===2&&g.distance>=40?.12:0,y:-p*.08,scale:1-p*.10};
 }

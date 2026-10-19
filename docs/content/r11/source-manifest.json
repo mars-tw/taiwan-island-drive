@@ -1,0 +1,87 @@
+{
+  "status": "VERIFIED",
+  "version": "2.23.0",
+  "baseline": "f56fc8b2d7c2b830be72cbd744b0cbb1dc1c5b14",
+  "files": [
+    {
+      "path": "android/app/build.gradle",
+      "sha256": "592db2daac42dc207235c20da8d74293b879644676c30054bcd3363324aff210"
+    },
+    {
+      "path": "ios/App/App.xcodeproj/project.pbxproj",
+      "sha256": "764db26dadba1ae6c2e974bd6e614a79d672db32f94ed7ba9f43c5a0d6da8e2e"
+    },
+    {
+      "path": "package-lock.json",
+      "sha256": "7b2915b7e93781f2ae0a057b8625b2c012298e32372f695cb306cd3ebf8dd894"
+    },
+    {
+      "path": "package.json",
+      "sha256": "652530dd8cdfaea0f5f3d03b2259c7b4d2ad5f65fd9af4ad95165fba3b4b75d4"
+    },
+    {
+      "path": "public/models/catalog.json",
+      "sha256": "fa9c273f5cb0046ebddc9adde764f203a5ac68553307bed3ca4b042f420447ff"
+    },
+    {
+      "path": "src/games/car/config.js",
+      "sha256": "842f6480c13b7e2bdc2f84541d7b15f157595ac1a83627ef5ec3b9a07a114a62"
+    },
+    {
+      "path": "src/shared/content-r1-ui.js",
+      "sha256": "39e40a657fe4e19b0e444ff7c3949a3cd769d7686eba49cf82c1bc15cc7db874"
+    },
+    {
+      "path": "src/shared/content-r1.js",
+      "sha256": "6ed25aa6d12705bca489cb02ac99bcfa9068accca2f6e3906af568260ae554e5"
+    },
+    {
+      "path": "src/shared/content-r10-scene.js",
+      "sha256": "604868a6d5868742d7d6acd374a01ca53036dfdab7125dda650385b9925e63d8"
+    },
+    {
+      "path": "src/shared/content-r7-scene.js",
+      "sha256": "f485f00188cde6c9b985dc3601aa6c8e7e9cd9d9ee780971ced1ad2127bcb853"
+    },
+    {
+      "path": "src/shared/content-r11.css",
+      "sha256": "1c01de25bef1e8f8899089efea606e532a4fd73d66cf746d5ed5141934e3c922"
+    },
+    {
+      "path": "src/shared/content-r11-scene.js",
+      "sha256": "856bb7c31bdc81431255e924dc2db20791f58a553b3a18b9bc3168d5c8598365"
+    },
+    {
+      "path": "tests/shared/content-r11.test.js",
+      "sha256": "a71031663e0fc2c044d69505d538cb82f57f428544dac2f587387b2454a766e2"
+    },
+    {
+      "path": "scripts/check-content-r11.mjs",
+      "sha256": "402aa2a3c4dbf1826eea80f82bdfaad070558ea0471d0f9e510ade66cbf0f59d"
+    },
+    {
+      "path": "scripts/verify-content-r11-release.mjs",
+      "sha256": "678952550337331201f3223fd141c566464f8d2c0cccd37dc9660f9528f1976b"
+    },
+    {
+      "path": "scripts/prepare-content-r11.mjs",
+      "sha256": "3a446ef3b41bf40ef182b7462a7a24e657d64ef4418f87d657ece875c551ee92"
+    },
+    {
+      "path": "scripts/measure-content-r11-art.mjs",
+      "sha256": "e24e19127f17511654e054fb0f4dc49f81ff36bdc9230eb58681ef6136305b99"
+    },
+    {
+      "path": "public/art/content-r11/crossing-complete.webp",
+      "sha256": "22dabbabe6f66e0834bdcfeb83e0fb0b7e5dd40a6497dcd2e96dc689cbfad6af"
+    },
+    {
+      "path": "public/art/content-r11/car-rear.png",
+      "sha256": "8806b426e515bcfea18026065ede62a04ef9fbe2acbd301270a3286554b97bc9"
+    },
+    {
+      "path": "public/art/content-r11/open-door.png",
+      "sha256": "159e0bef4c67e9fcfa4d4a9dcb82ef79c8b5285b6be2af3eac2abb4f8590db84"
+    }
+  ]
+}

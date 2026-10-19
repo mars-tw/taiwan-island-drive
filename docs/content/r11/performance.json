@@ -1,0 +1,189 @@
+{
+  "status": "EXECUTED",
+  "method": "Three real-time rAF samples of 2000ms per mode and viewport; median p95; one headless browser; concurrent host load; reference only, not native frame time; ticket rows refreshed with three runs per viewport after final doorway/platform alignment; raw refresh in performance-tickets-final.json",
+  "rows": [
+    {
+      "viewport": "desktop",
+      "kind": "cake",
+      "runs": [
+        16.7,
+        16.8,
+        16.7
+      ],
+      "p95": 16.7
+    },
+    {
+      "viewport": "desktop",
+      "kind": "crossing",
+      "runs": [
+        16.7,
+        16.8,
+        16.8
+      ],
+      "p95": 16.8
+    },
+    {
+      "viewport": "desktop",
+      "kind": "tickets",
+      "runs": [
+        16.7,
+        16.8,
+        16.7
+      ],
+      "p95": 16.7
+    },
+    {
+      "viewport": "desktop",
+      "kind": "car",
+      "runs": [
+        16.7,
+        16.7,
+        16.7
+      ],
+      "p95": 16.7
+    },
+    {
+      "viewport": "desktop",
+      "kind": "train",
+      "runs": [
+        16.7,
+        16.7,
+        16.8
+      ],
+      "p95": 16.7
+    },
+    {
+      "viewport": "desktop",
+      "kind": "flight",
+      "runs": [
+        16.7,
+        16.7,
+        16.8
+      ],
+      "p95": 16.7
+    },
+    {
+      "viewport": "portrait",
+      "kind": "cake",
+      "runs": [
+        16.7,
+        16.7,
+        16.7
+      ],
+      "p95": 16.7
+    },
+    {
+      "viewport": "portrait",
+      "kind": "crossing",
+      "runs": [
+        16.7,
+        16.7,
+        16.7
+      ],
+      "p95": 16.7
+    },
+    {
+      "viewport": "portrait",
+      "kind": "tickets",
+      "runs": [
+        16.8,
+        16.7,
+        16.7
+      ],
+      "p95": 16.7
+    },
+    {
+      "viewport": "portrait",
+      "kind": "car",
+      "runs": [
+        16.8,
+        16.7,
+        16.7
+      ],
+      "p95": 16.7
+    },
+    {
+      "viewport": "portrait",
+      "kind": "train",
+      "runs": [
+        16.7,
+        16.8,
+        16.8
+      ],
+      "p95": 16.8
+    },
+    {
+      "viewport": "portrait",
+      "kind": "flight",
+      "runs": [
+        16.8,
+        16.7,
+        16.8
+      ],
+      "p95": 16.8
+    },
+    {
+      "viewport": "landscape",
+      "kind": "cake",
+      "runs": [
+        16.8,
+        16.7,
+        16.8
+      ],
+      "p95": 16.8
+    },
+    {
+      "viewport": "landscape",
+      "kind": "crossing",
+      "runs": [
+        16.8,
+        16.8,
+        16.7
+      ],
+      "p95": 16.8
+    },
+    {
+      "viewport": "landscape",
+      "kind": "tickets",
+      "runs": [
+        16.8,
+        16.7,
+        16.7
+      ],
+      "p95": 16.7
+    },
+    {
+      "viewport": "landscape",
+      "kind": "car",
+      "runs": [
+        16.8,
+        16.8,
+        16.8
+      ],
+      "p95": 16.8
+    },
+    {
+      "viewport": "landscape",
+      "kind": "train",
+      "runs": [
+        16.7,
+        16.7,
+        16.8
+      ],
+      "p95": 16.7
+    },
+    {
+      "viewport": "landscape",
+      "kind": "flight",
+      "runs": [
+        16.8,
+        16.8,
+        16.7
+      ],
+      "p95": 16.8
+    }
+  ],
+  "limitMs": 18,
+  "withinReferenceLimit": true,
+  "refreshedSource": "docs/content/r11/performance-tickets-final.json"
+}

@@ -1,0 +1,37 @@
+{
+  "tool": "image_gen.imagegen",
+  "model_slug": null,
+  "style_prefix": "Island Traffic Academy sunny Taiwan coastal storybook, chunky ink-navy outlines, rounded toy proportions, warm upper-left light, saturated sea blue sunflower yellow coral orange, gentle paper texture, clean silhouette readable at 64px. ",
+  "records": [
+    {
+      "id": "crossing-complete",
+      "prompt": "Island Traffic Academy sunny Taiwan coastal storybook, chunky ink-navy outlines, rounded toy proportions, warm upper-left light, saturated sea blue sunflower yellow coral orange, gentle paper texture, clean silhouette readable at 64px. Use case: identity-preserve illustration-story. Redraw the first reference ending scene, portrait composition. On a sunny coastal sidewalk in front of banyan and ocean lighthouse, exactly THREE familiar friends smile and wave thanks after crossing safely, whole bodies and feet entirely visible. LEFT: the exact little boy in second reference, blue shirt, orange shorts, blue backpack, white socks, blue sneakers. CENTER: the exact SMALL YOUNG BOY in fourth reference, same child age and head-to-body proportions as left boy, yellow helmet, coral orange T-shirt, rolled blue pants, navy backpack, blue sneakers; standing next to his exact YELLOW small bicycle, both wheels entirely visible. RIGHT: the exact petite grandmother in third reference, gray hair in bun with yellow hairpin, green cardigan, yellow white-daisy skirt, orange shoulder purse, brown shoes, her exact BLUE and WHITE plaid trolley with visible vegetables and black wheels. Keep the references' chibi proportions and identities exactly, no adolescent, no long-legged teenager. Clear sunny scene, joyful warm completion illustration. Absolutely NO vehicle, no car, no car fragment, no partial blue foreground object anywhere. Lower foreground contains only clean zebra crossing and stone curb. Entire three people and bicycle and trolley within frame with margins. No written text, no UI, no logos. Match rendering quality and palette of reference sprites.",
+      "original": "docs/content/r11/art/crossing-complete-original.png",
+      "source": "C:/Users/digimkt/.codex/generated_images/01a1522d-3a7a-7e92-a430-084031c35804/exec-6333caf6-9d91-4080-9d24-61bea393b2dc.png",
+      "references": [
+        "public/art/content-r2/crossing-complete.webp",
+        "public/art/content-r7/child-0.png",
+        "public/art/content-r7/grandma-0.png",
+        "public/art/content-r1/bike-0.png"
+      ]
+    },
+    {
+      "id": "car-rear",
+      "prompt": "Island Traffic Academy sunny Taiwan coastal storybook, chunky ink-navy outlines, rounded toy proportions, warm upper-left light, saturated sea blue sunflower yellow coral orange, gentle paper texture, clean silhouette readable at 64px. Production game sprite, identity preserve. Draw exactly the reference turquoise blue friendly two-door sports coupe, but in a centered SYMMETRICAL STRAIGHT REAR VIEW, facing AWAY from viewer along a road going towards top of image. Camera slightly elevated looking down at rear, both rear tires visible symmetrically, front is not visible, rear windshield and rounded roof visible, two red taillights, navy blank license plate, blue bumper. The car's longitudinal axis must be VERTICAL in the frame, no diagonal or 3/4 yaw, no side view, no front view. Rounded toy proportions, no aggressive racing pose. Isolated full vehicle with generous margins and genuine transparent background. No road, no shadow ground plane, no cake, no text, no logos, no passengers. Car only.",
+      "original": "docs/content/r11/art/car-rear-original.png",
+      "source": "C:/Users/digimkt/.codex/generated_images/01a1522d-3a7a-7e92-a430-084031c35804/exec-c4cd931f-56b8-4dab-b8af-cb7587345a8b.png",
+      "references": [
+        "public/art/r7/car-rear.png"
+      ]
+    },
+    {
+      "id": "open-door",
+      "prompt": "Island Traffic Academy sunny Taiwan coastal storybook, chunky ink-navy outlines, rounded toy proportions, warm upper-left light, saturated sea blue sunflower yellow coral orange, gentle paper texture, clean silhouette readable at 64px. Production transparent sprite for the reference blue and yellow toy train. ONE tall upright OPEN DOOR FRAME seen exactly straight-on in side elevation. Thick rounded sunflower yellow outer jamb and navy thin trim, dark turquoise open interior, golden handrail inside on right, wooden floor at bottom visible, yellow navy safety sill. A simple high quality rounded doorway, orthographic rectangular elevation, aspect ratio about 0.55 width to 1 height. NO STEP, no ramp, no projecting part, no diagonal pole anywhere, no train body, no people. Entire door within frame with transparent exterior margins, interior fully opaque. No text, no symbols, no letters, no ground shadow. This sprite overlays the train's closed yellow door, so preserve palette and front facing flat side elevation.",
+      "original": "docs/content/r11/art/open-door-original.png",
+      "source": "C:/Users/digimkt/.codex/generated_images/01a1522d-3a7a-7e92-a430-084031c35804/exec-8104c99e-2fb0-4860-b91f-93bcd476a494.png",
+      "references": [
+        "public/art/content-r3/train-side.webp"
+      ]
+    }
+  ]
+}

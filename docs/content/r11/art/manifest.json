@@ -1,0 +1,46 @@
+{
+  "status": "VERIFIED",
+  "calls": 3,
+  "designs": 3,
+  "assets": [
+    {
+      "id": "crossing-complete",
+      "path": "public/art/content-r11/crossing-complete.webp",
+      "original": "docs/content/r11/art/crossing-complete-original.png",
+      "width": 1024,
+      "height": 1536,
+      "alpha": false,
+      "sha256": "22dabbabe6f66e0834bdcfeb83e0fb0b7e5dd40a6497dcd2e96dc689cbfad6af",
+      "originalSha256": "f2ad7069c4b4cce810491e3f7e48efdd74d87b7c686738473825b3c28c442344",
+      "tool": "image_gen.imagegen",
+      "model_slug": null,
+      "processing": "Sharp crop of exterior transparent margins, proportional resize and PNG/WebP encoding only"
+    },
+    {
+      "id": "car-rear",
+      "path": "public/art/content-r11/car-rear.png",
+      "original": "docs/content/r11/art/car-rear-original.png",
+      "width": 500,
+      "height": 382,
+      "alpha": true,
+      "sha256": "8806b426e515bcfea18026065ede62a04ef9fbe2acbd301270a3286554b97bc9",
+      "originalSha256": "d514878dfa243333d44d3c84ce07a6d020d84a8376e1af4a368a79ec06aaf2c0",
+      "tool": "image_gen.imagegen",
+      "model_slug": null,
+      "processing": "Sharp crop of exterior transparent margins, proportional resize and PNG/WebP encoding only"
+    },
+    {
+      "id": "open-door",
+      "path": "public/art/content-r11/open-door.png",
+      "original": "docs/content/r11/art/open-door-original.png",
+      "width": 200,
+      "height": 400,
+      "alpha": true,
+      "sha256": "159e0bef4c67e9fcfa4d4a9dcb82ef79c8b5285b6be2af3eac2abb4f8590db84",
+      "originalSha256": "f8c4143b51aa036a9b069608ad5ccfa25702bae126025e6fb1bb215324aaf1a1",
+      "tool": "image_gen.imagegen",
+      "model_slug": null,
+      "processing": "Sharp crop of exterior transparent margins, proportional resize and PNG/WebP encoding only"
+    }
+  ]
+}
