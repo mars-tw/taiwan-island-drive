@@ -1,0 +1,1005 @@
+{
+  "status": "VERIFIED",
+  "rows": [
+    {
+      "label": "pedal ready, physical pointer down and released; single cue; release grey",
+      "status": "VERIFIED"
+    },
+    {
+      "label": "cake 1 real road and saved checkpoint",
+      "status": "VERIFIED"
+    },
+    {
+      "label": "cake 2 real road and saved checkpoint",
+      "status": "VERIFIED"
+    },
+    {
+      "label": "cake 3 real road and saved checkpoint",
+      "status": "VERIFIED"
+    },
+    {
+      "label": "cake: three stations completed and saved reload",
+      "status": "VERIFIED"
+    }
+  ],
+  "shots": [
+    {
+      "path": "docs/content/r10/phone-cake-pedal-ready.png",
+      "width": 390,
+      "height": 844,
+      "sha256": "16896521de693c58c8868f813fea03d078a633aaeb337153a122b4c14ca8dcd2",
+      "phase": "playing",
+      "state": {
+        "boardTime": "0.000",
+        "cue": "go",
+        "settled": "true",
+        "correction": "",
+        "distance": "0.00",
+        "speed": "0.00",
+        "bend": "1",
+        "tilt": "0.00",
+        "sway": "0.00",
+        "acceleration": "0.00",
+        "bayStopped": "false",
+        "bayRestarted": "false",
+        "leftTurn": "false",
+        "rightTurn": "false",
+        "focus": "center",
+        "crossTime": "0.000",
+        "crossDuration": "2.1",
+        "orderHint": "",
+        "fruitSway": "0.00",
+        "flagSway": "0.00",
+        "assisting": "false",
+        "crossed": "0",
+        "lookedLeft": "false",
+        "lookedRight": "false",
+        "decision": "false",
+        "confirmed": "false",
+        "confirmDelay": "0",
+        "person": "child",
+        "doorState": "closed"
+      },
+      "hint": "按住踏板起步。",
+      "controls": [
+        {
+          "action": "left",
+          "text": "左轉",
+          "needed": "false",
+          "held": "false",
+          "color": "rgb(245, 251, 255)"
+        },
+        {
+          "action": "right",
+          "text": "右轉",
+          "needed": "false",
+          "held": "false",
+          "color": "rgb(245, 251, 255)"
+        },
+        {
+          "action": "go",
+          "text": "按住起步",
+          "needed": "true",
+          "held": "false",
+          "release": "false",
+          "color": "rgb(255, 211, 68)"
+        },
+        {
+          "action": "brake",
+          "text": "煞車",
+          "needed": "false",
+          "held": "false",
+          "color": "rgb(245, 251, 255)"
+        },
+        {
+          "action": "listen",
+          "text": "再聽一次",
+          "color": "rgb(245, 251, 255)"
+        }
+      ],
+      "geometry": {
+        "people": [],
+        "door": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0,
+          "right": 0,
+          "bottom": 0
+        },
+        "signs": [],
+        "checks": []
+      },
+      "native": false,
+      "method": "Original headless runtime PNG; RAF paused during capture only; no game state assignments or pixel edits"
+    },
+    {
+      "path": "docs/content/r10/phone-cake-pedal-pressed.png",
+      "width": 390,
+      "height": 844,
+      "sha256": "5aa4697ad82dad19459fa7c3d5e2854c5a664aeeb52eccd86c073192a7f2f9a4",
+      "phase": "playing",
+      "state": {
+        "boardTime": "0.000",
+        "cue": "go",
+        "settled": "false",
+        "correction": "right",
+        "distance": "0.02",
+        "speed": "0.45",
+        "bend": "1",
+        "tilt": "-7.35",
+        "sway": "-0.86",
+        "acceleration": "8.78",
+        "bayStopped": "false",
+        "bayRestarted": "false",
+        "leftTurn": "false",
+        "rightTurn": "false",
+        "focus": "center",
+        "crossTime": "0.000",
+        "crossDuration": "2.1",
+        "orderHint": "",
+        "fruitSway": "-0.07",
+        "flagSway": "-0.49",
+        "assisting": "false",
+        "crossed": "0",
+        "lookedLeft": "false",
+        "lookedRight": "false",
+        "decision": "false",
+        "confirmed": "false",
+        "confirmDelay": "0",
+        "person": "child",
+        "doorState": "closed"
+      },
+      "hint": "踩住了，慢慢起步。",
+      "controls": [
+        {
+          "action": "left",
+          "text": "左轉",
+          "needed": "false",
+          "held": "false",
+          "color": "rgb(245, 251, 255)"
+        },
+        {
+          "action": "right",
+          "text": "右轉",
+          "needed": "false",
+          "held": "false",
+          "color": "rgb(245, 251, 255)"
+        },
+        {
+          "action": "go",
+          "text": "踩住中",
+          "needed": "true",
+          "held": "true",
+          "release": "false",
+          "color": "rgb(244, 107, 39)"
+        },
+        {
+          "action": "brake",
+          "text": "煞車",
+          "needed": "false",
+          "held": "false",
+          "color": "rgb(245, 251, 255)"
+        },
+        {
+          "action": "listen",
+          "text": "再聽一次",
+          "color": "rgb(245, 251, 255)"
+        }
+      ],
+      "geometry": {
+        "people": [],
+        "door": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0,
+          "right": 0,
+          "bottom": 0
+        },
+        "signs": [],
+        "checks": []
+      },
+      "native": false,
+      "method": "Original headless runtime PNG; RAF paused during capture only; no game state assignments or pixel edits"
+    },
+    {
+      "path": "docs/content/r10/phone-cake-pedal-released.png",
+      "width": 390,
+      "height": 844,
+      "sha256": "5311a8b8679f6e883ca7ca29b870d92309d4d85b5e1176adb4329341da14d8f0",
+      "phase": "playing",
+      "state": {
+        "boardTime": "0.000",
+        "cue": "right",
+        "settled": "false",
+        "correction": "right",
+        "distance": "0.24",
+        "speed": "1.19",
+        "bend": "1",
+        "tilt": "-7.14",
+        "sway": "-4.80",
+        "acceleration": "-2.32",
+        "bayStopped": "false",
+        "bayRestarted": "false",
+        "leftTurn": "false",
+        "rightTurn": "false",
+        "focus": "center",
+        "crossTime": "0.000",
+        "crossDuration": "2.1",
+        "orderHint": "",
+        "fruitSway": "-2.08",
+        "flagSway": "-4.85",
+        "assisting": "false",
+        "crossed": "0",
+        "lookedLeft": "false",
+        "lookedRight": "false",
+        "decision": "false",
+        "confirmed": "false",
+        "confirmDelay": "0",
+        "person": "child",
+        "doorState": "closed"
+      },
+      "hint": "鬆踏板，輕輕右轉。",
+      "controls": [
+        {
+          "action": "left",
+          "text": "左轉",
+          "needed": "false",
+          "held": "false",
+          "color": "rgb(245, 251, 255)"
+        },
+        {
+          "action": "right",
+          "text": "右轉",
+          "needed": "true",
+          "held": "false",
+          "color": "rgb(255, 211, 68)"
+        },
+        {
+          "action": "go",
+          "text": "已放開",
+          "needed": "false",
+          "held": "false",
+          "release": "true",
+          "color": "rgb(220, 228, 233)"
+        },
+        {
+          "action": "brake",
+          "text": "煞車",
+          "needed": "false",
+          "held": "false",
+          "color": "rgb(245, 251, 255)"
+        },
+        {
+          "action": "listen",
+          "text": "再聽一次",
+          "color": "rgb(245, 251, 255)"
+        }
+      ],
+      "geometry": {
+        "people": [],
+        "door": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0,
+          "right": 0,
+          "bottom": 0
+        },
+        "signs": [],
+        "checks": []
+      },
+      "native": false,
+      "method": "Original headless runtime PNG; RAF paused during capture only; no game state assignments or pixel edits"
+    },
+    {
+      "path": "docs/content/r10/phone-cake-stage-1-result.png",
+      "width": 390,
+      "height": 844,
+      "sha256": "dfe81d4fb2e65ebcb15ecdceb5bfffa93671fd7e546821387b46a4957cd88a08",
+      "phase": "checkpoint",
+      "state": {
+        "boardTime": "0.000",
+        "cue": "brake",
+        "settled": "false",
+        "correction": "left",
+        "distance": "55.00",
+        "speed": "0.00",
+        "bend": "1",
+        "tilt": "29.45",
+        "sway": "12.40",
+        "acceleration": "-4.32",
+        "bayStopped": "false",
+        "bayRestarted": "false",
+        "leftTurn": "false",
+        "rightTurn": "false",
+        "focus": "center",
+        "crossTime": "0.000",
+        "crossDuration": "2.1",
+        "orderHint": "",
+        "fruitSway": "10.32",
+        "flagSway": "22.25",
+        "assisting": "false",
+        "crossed": "0",
+        "lookedLeft": "false",
+        "lookedRight": "false",
+        "decision": "false",
+        "confirmed": "false",
+        "confirmDelay": "0",
+        "person": "child",
+        "doorState": "closed"
+      },
+      "hint": "這段路練好了，去下一站。",
+      "controls": [
+        {
+          "action": "next",
+          "text": "下一站",
+          "color": "rgb(245, 251, 255)"
+        },
+        {
+          "action": "listen",
+          "text": "再聽一次",
+          "color": "rgb(245, 251, 255)"
+        }
+      ],
+      "geometry": {
+        "people": [],
+        "door": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0,
+          "right": 0,
+          "bottom": 0
+        },
+        "signs": [],
+        "checks": []
+      },
+      "native": false,
+      "method": "Original headless runtime PNG; RAF paused during capture only; no game state assignments or pixel edits"
+    },
+    {
+      "path": "docs/content/r10/phone-cake-left-bend.png",
+      "width": 390,
+      "height": 844,
+      "sha256": "ec917dc4fb20f186d0acd9db74e9b5b16d1f4a54eb8e209b8a15737033241a92",
+      "phase": "playing",
+      "state": {
+        "boardTime": "0.000",
+        "cue": "left",
+        "settled": "false",
+        "correction": "left",
+        "distance": "19.91",
+        "speed": "4.79",
+        "bend": "-1",
+        "tilt": "2.87",
+        "sway": "2.82",
+        "acceleration": "3.17",
+        "bayStopped": "false",
+        "bayRestarted": "false",
+        "leftTurn": "true",
+        "rightTurn": "false",
+        "focus": "center",
+        "crossTime": "0.000",
+        "crossDuration": "2.4",
+        "orderHint": "",
+        "fruitSway": "3.10",
+        "flagSway": "5.87",
+        "assisting": "false",
+        "crossed": "0",
+        "lookedLeft": "false",
+        "lookedRight": "false",
+        "decision": "false",
+        "confirmed": "false",
+        "confirmDelay": "0",
+        "person": "grandma",
+        "doorState": "closed"
+      },
+      "hint": "鬆踏板，輕輕左轉。",
+      "controls": [
+        {
+          "action": "left",
+          "text": "左轉",
+          "needed": "true",
+          "held": "true",
+          "color": "rgb(255, 211, 68)"
+        },
+        {
+          "action": "right",
+          "text": "右轉",
+          "needed": "false",
+          "held": "false",
+          "color": "rgb(245, 251, 255)"
+        },
+        {
+          "action": "go",
+          "text": "請放開",
+          "needed": "false",
+          "held": "true",
+          "release": "true",
+          "color": "rgb(220, 228, 233)"
+        },
+        {
+          "action": "brake",
+          "text": "煞車",
+          "needed": "false",
+          "held": "false",
+          "color": "rgb(245, 251, 255)"
+        },
+        {
+          "action": "listen",
+          "text": "再聽一次",
+          "color": "rgb(245, 251, 255)"
+        }
+      ],
+      "geometry": {
+        "people": [],
+        "door": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0,
+          "right": 0,
+          "bottom": 0
+        },
+        "signs": [],
+        "checks": []
+      },
+      "native": false,
+      "method": "Original headless runtime PNG; RAF paused during capture only; no game state assignments or pixel edits"
+    },
+    {
+      "path": "docs/content/r10/phone-cake-right-bend.png",
+      "width": 390,
+      "height": 844,
+      "sha256": "6a13e1da4f792f47baa8c4d1c148871dc1564bbcc603dc1314fe958d8990d017",
+      "phase": "playing",
+      "state": {
+        "boardTime": "0.000",
+        "cue": "right",
+        "settled": "false",
+        "correction": "right",
+        "distance": "34.19",
+        "speed": "4.68",
+        "bend": "1",
+        "tilt": "-13.82",
+        "sway": "-6.21",
+        "acceleration": "-0.80",
+        "bayStopped": "false",
+        "bayRestarted": "false",
+        "leftTurn": "true",
+        "rightTurn": "true",
+        "focus": "center",
+        "crossTime": "0.000",
+        "crossDuration": "2.4",
+        "orderHint": "",
+        "fruitSway": "-4.85",
+        "flagSway": "-9.68",
+        "assisting": "true",
+        "crossed": "0",
+        "lookedLeft": "false",
+        "lookedRight": "false",
+        "decision": "false",
+        "confirmed": "false",
+        "confirmDelay": "0",
+        "person": "grandma",
+        "doorState": "closed"
+      },
+      "hint": "鬆踏板，輕輕右轉。",
+      "controls": [
+        {
+          "action": "left",
+          "text": "左轉",
+          "needed": "false",
+          "held": "false",
+          "color": "rgb(245, 251, 255)"
+        },
+        {
+          "action": "right",
+          "text": "右轉",
+          "needed": "true",
+          "held": "true",
+          "color": "rgb(255, 211, 68)"
+        },
+        {
+          "action": "go",
+          "text": "已放開",
+          "needed": "false",
+          "held": "false",
+          "release": "true",
+          "color": "rgb(220, 228, 233)"
+        },
+        {
+          "action": "brake",
+          "text": "煞車",
+          "needed": "false",
+          "held": "false",
+          "color": "rgb(245, 251, 255)"
+        },
+        {
+          "action": "listen",
+          "text": "再聽一次",
+          "color": "rgb(245, 251, 255)"
+        }
+      ],
+      "geometry": {
+        "people": [],
+        "door": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0,
+          "right": 0,
+          "bottom": 0
+        },
+        "signs": [],
+        "checks": []
+      },
+      "native": false,
+      "method": "Original headless runtime PNG; RAF paused during capture only; no game state assignments or pixel edits"
+    },
+    {
+      "path": "docs/content/r10/phone-cake-stage-2-result.png",
+      "width": 390,
+      "height": 844,
+      "sha256": "42d1a24f33e9ba62513fdd49b87ef819b13b761159712940f90aad95b8cb995c",
+      "phase": "checkpoint",
+      "state": {
+        "boardTime": "0.000",
+        "cue": "brake",
+        "settled": "false",
+        "correction": "left",
+        "distance": "55.00",
+        "speed": "0.00",
+        "bend": "1",
+        "tilt": "29.97",
+        "sway": "12.44",
+        "acceleration": "-6.10",
+        "bayStopped": "false",
+        "bayRestarted": "false",
+        "leftTurn": "true",
+        "rightTurn": "true",
+        "focus": "center",
+        "crossTime": "0.000",
+        "crossDuration": "2.4",
+        "orderHint": "",
+        "fruitSway": "10.43",
+        "flagSway": "22.55",
+        "assisting": "false",
+        "crossed": "0",
+        "lookedLeft": "false",
+        "lookedRight": "false",
+        "decision": "false",
+        "confirmed": "false",
+        "confirmDelay": "0",
+        "person": "grandma",
+        "doorState": "closed"
+      },
+      "hint": "這段路練好了，去下一站。",
+      "controls": [
+        {
+          "action": "next",
+          "text": "下一站",
+          "color": "rgb(245, 251, 255)"
+        },
+        {
+          "action": "listen",
+          "text": "再聽一次",
+          "color": "rgb(245, 251, 255)"
+        }
+      ],
+      "geometry": {
+        "people": [],
+        "door": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0,
+          "right": 0,
+          "bottom": 0
+        },
+        "signs": [],
+        "checks": []
+      },
+      "native": false,
+      "method": "Original headless runtime PNG; RAF paused during capture only; no game state assignments or pixel edits"
+    },
+    {
+      "path": "docs/content/r10/phone-cake-bay-stopped.png",
+      "width": 390,
+      "height": 844,
+      "sha256": "8d60fef08cf68f318b75c7d201073c1ea89dbf939726ebd5fcc57170c6cfe549",
+      "phase": "playing",
+      "state": {
+        "boardTime": "0.000",
+        "cue": "go",
+        "settled": "true",
+        "correction": "",
+        "distance": "43.52",
+        "speed": "0.00",
+        "bend": "1",
+        "tilt": "0.00",
+        "sway": "0.00",
+        "acceleration": "0.00",
+        "bayStopped": "true",
+        "bayRestarted": "false",
+        "leftTurn": "false",
+        "rightTurn": "false",
+        "focus": "center",
+        "crossTime": "0.000",
+        "crossDuration": "1.45",
+        "orderHint": "",
+        "fruitSway": "0.01",
+        "flagSway": "0.13",
+        "assisting": "false",
+        "crossed": "0",
+        "lookedLeft": "false",
+        "lookedRight": "false",
+        "decision": "false",
+        "confirmed": "false",
+        "confirmDelay": "0",
+        "person": "bike",
+        "doorState": "closed"
+      },
+      "hint": "停穩了，按住踏板再起步。",
+      "controls": [
+        {
+          "action": "left",
+          "text": "左轉",
+          "needed": "false",
+          "held": "false",
+          "color": "rgb(245, 251, 255)"
+        },
+        {
+          "action": "right",
+          "text": "右轉",
+          "needed": "false",
+          "held": "false",
+          "color": "rgb(245, 251, 255)"
+        },
+        {
+          "action": "go",
+          "text": "再踩起步",
+          "needed": "true",
+          "held": "false",
+          "release": "false",
+          "color": "rgb(255, 211, 68)"
+        },
+        {
+          "action": "brake",
+          "text": "煞車",
+          "needed": "false",
+          "held": "false",
+          "color": "rgb(245, 251, 255)"
+        },
+        {
+          "action": "listen",
+          "text": "再聽一次",
+          "color": "rgb(245, 251, 255)"
+        }
+      ],
+      "geometry": {
+        "people": [],
+        "door": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0,
+          "right": 0,
+          "bottom": 0
+        },
+        "signs": [],
+        "checks": []
+      },
+      "native": false,
+      "method": "Original headless runtime PNG; RAF paused during capture only; no game state assignments or pixel edits"
+    },
+    {
+      "path": "docs/content/r10/phone-cake-bay-restarted.png",
+      "width": 390,
+      "height": 844,
+      "sha256": "3cb52c1ff89cd60655ae33d7454d1b3bb2d72ed987e9e19c97a26e03d47d706a",
+      "phase": "playing",
+      "state": {
+        "boardTime": "0.000",
+        "cue": "right",
+        "settled": "false",
+        "correction": "right",
+        "distance": "43.65",
+        "speed": "1.06",
+        "bend": "1",
+        "tilt": "-19.20",
+        "sway": "-5.74",
+        "acceleration": "4.22",
+        "bayStopped": "true",
+        "bayRestarted": "true",
+        "leftTurn": "false",
+        "rightTurn": "false",
+        "focus": "center",
+        "crossTime": "0.000",
+        "crossDuration": "1.45",
+        "orderHint": "",
+        "fruitSway": "-1.57",
+        "flagSway": "-4.76",
+        "assisting": "false",
+        "crossed": "0",
+        "lookedLeft": "false",
+        "lookedRight": "false",
+        "decision": "false",
+        "confirmed": "false",
+        "confirmDelay": "0",
+        "person": "bike",
+        "doorState": "closed"
+      },
+      "hint": "鬆踏板，輕輕右轉。",
+      "controls": [
+        {
+          "action": "left",
+          "text": "左轉",
+          "needed": "false",
+          "held": "false",
+          "color": "rgb(245, 251, 255)"
+        },
+        {
+          "action": "right",
+          "text": "右轉",
+          "needed": "true",
+          "held": "false",
+          "color": "rgb(255, 211, 68)"
+        },
+        {
+          "action": "go",
+          "text": "請放開",
+          "needed": "false",
+          "held": "true",
+          "release": "true",
+          "color": "rgb(220, 228, 233)"
+        },
+        {
+          "action": "brake",
+          "text": "煞車",
+          "needed": "false",
+          "held": "false",
+          "color": "rgb(245, 251, 255)"
+        },
+        {
+          "action": "listen",
+          "text": "再聽一次",
+          "color": "rgb(245, 251, 255)"
+        }
+      ],
+      "geometry": {
+        "people": [],
+        "door": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0,
+          "right": 0,
+          "bottom": 0
+        },
+        "signs": [],
+        "checks": []
+      },
+      "native": false,
+      "method": "Original headless runtime PNG; RAF paused during capture only; no game state assignments or pixel edits"
+    },
+    {
+      "path": "docs/content/r10/phone-cake-stage-3-result.png",
+      "width": 390,
+      "height": 844,
+      "sha256": "c6f451254aa3350c3752e0c63c81851414fa53ea75e6b4f641db3ab39098eb22",
+      "phase": "done",
+      "state": {
+        "boardTime": "0.000",
+        "cue": "brake",
+        "settled": "false",
+        "correction": "left",
+        "distance": "55.00",
+        "speed": "0.00",
+        "bend": "1",
+        "tilt": "28.70",
+        "sway": "12.15",
+        "acceleration": "-3.32",
+        "bayStopped": "true",
+        "bayRestarted": "true",
+        "leftTurn": "false",
+        "rightTurn": "false",
+        "focus": "center",
+        "crossTime": "0.000",
+        "crossDuration": "1.45",
+        "orderHint": "",
+        "fruitSway": "9.48",
+        "flagSway": "20.63",
+        "assisting": "false",
+        "crossed": "0",
+        "lookedLeft": "false",
+        "lookedRight": "false",
+        "decision": "false",
+        "confirmed": "false",
+        "confirmDelay": "0",
+        "person": "bike",
+        "doorState": "closed"
+      },
+      "hint": "蛋糕送到了！一起分享。",
+      "controls": [
+        {
+          "action": "replay",
+          "text": "再玩一次",
+          "color": "rgb(245, 251, 255)"
+        },
+        {
+          "action": "picker",
+          "text": "換一課",
+          "color": "rgb(245, 251, 255)"
+        },
+        {
+          "action": "listen",
+          "text": "再聽一次",
+          "color": "rgb(245, 251, 255)"
+        }
+      ],
+      "geometry": {
+        "people": [],
+        "door": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0,
+          "right": 0,
+          "bottom": 0
+        },
+        "signs": [],
+        "checks": []
+      },
+      "native": false,
+      "method": "Original headless runtime PNG; RAF paused during capture only; no game state assignments or pixel edits"
+    },
+    {
+      "path": "docs/content/r10/phone-cake-complete.png",
+      "width": 390,
+      "height": 844,
+      "sha256": "c6f451254aa3350c3752e0c63c81851414fa53ea75e6b4f641db3ab39098eb22",
+      "phase": "done",
+      "state": {
+        "boardTime": "0.000",
+        "cue": "brake",
+        "settled": "false",
+        "correction": "left",
+        "distance": "55.00",
+        "speed": "0.00",
+        "bend": "1",
+        "tilt": "28.70",
+        "sway": "12.15",
+        "acceleration": "-3.32",
+        "bayStopped": "true",
+        "bayRestarted": "true",
+        "leftTurn": "false",
+        "rightTurn": "false",
+        "focus": "center",
+        "crossTime": "0.000",
+        "crossDuration": "1.45",
+        "orderHint": "",
+        "fruitSway": "9.48",
+        "flagSway": "20.63",
+        "assisting": "false",
+        "crossed": "0",
+        "lookedLeft": "false",
+        "lookedRight": "false",
+        "decision": "false",
+        "confirmed": "false",
+        "confirmDelay": "0",
+        "person": "bike",
+        "doorState": "closed"
+      },
+      "hint": "蛋糕送到了！一起分享。",
+      "controls": [
+        {
+          "action": "replay",
+          "text": "再玩一次",
+          "color": "rgb(245, 251, 255)"
+        },
+        {
+          "action": "picker",
+          "text": "換一課",
+          "color": "rgb(245, 251, 255)"
+        },
+        {
+          "action": "listen",
+          "text": "再聽一次",
+          "color": "rgb(245, 251, 255)"
+        }
+      ],
+      "geometry": {
+        "people": [],
+        "door": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0,
+          "right": 0,
+          "bottom": 0
+        },
+        "signs": [],
+        "checks": []
+      },
+      "native": false,
+      "method": "Original headless runtime PNG; RAF paused during capture only; no game state assignments or pixel edits"
+    },
+    {
+      "path": "docs/content/r10/phone-cake-saved-result.png",
+      "width": 390,
+      "height": 844,
+      "sha256": "6a96221de3f4d067e14041681a309899f8a4a40a57138f630e2adc33f89fe115",
+      "phase": "done",
+      "state": {
+        "boardTime": "0.000",
+        "cue": "go",
+        "settled": "true",
+        "correction": "",
+        "distance": "0.00",
+        "speed": "0.00",
+        "bend": "1",
+        "tilt": "0.00",
+        "sway": "0.00",
+        "acceleration": "0.00",
+        "bayStopped": "false",
+        "bayRestarted": "false",
+        "leftTurn": "false",
+        "rightTurn": "false",
+        "focus": "center",
+        "crossTime": "0.000",
+        "crossDuration": "1.45",
+        "orderHint": "",
+        "fruitSway": "0.00",
+        "flagSway": "0.00",
+        "assisting": "false",
+        "crossed": "0",
+        "lookedLeft": "false",
+        "lookedRight": "false",
+        "decision": "false",
+        "confirmed": "false",
+        "confirmDelay": "0",
+        "person": "bike",
+        "doorState": "closed"
+      },
+      "hint": "蛋糕送到了！一起分享。",
+      "controls": [
+        {
+          "action": "replay",
+          "text": "再玩一次",
+          "color": "rgb(245, 251, 255)"
+        },
+        {
+          "action": "picker",
+          "text": "換一課",
+          "color": "rgb(245, 251, 255)"
+        },
+        {
+          "action": "listen",
+          "text": "再聽一次",
+          "color": "rgb(245, 251, 255)"
+        }
+      ],
+      "geometry": {
+        "people": [],
+        "door": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0,
+          "right": 0,
+          "bottom": 0
+        },
+        "signs": [],
+        "checks": []
+      },
+      "native": false,
+      "method": "Original headless runtime PNG; RAF paused during capture only; no game state assignments or pixel edits"
+    }
+  ],
+  "errors": [],
+  "external": [],
+  "responses": []
+}

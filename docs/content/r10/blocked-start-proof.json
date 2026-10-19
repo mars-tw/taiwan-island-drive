@@ -1,0 +1,17 @@
+{
+  "status": "VERIFIED",
+  "before": "docs/content/r10/phone-crossing-stage-2-passed-1.png",
+  "after": "docs/content/r10/phone-crossing-stage-2-missing-right-2.png",
+  "countBefore": 1,
+  "countAfter": 1,
+  "carRegion": {
+    "left": 125,
+    "top": 510,
+    "width": 135,
+    "height": 95
+  },
+  "carPixelsSha256": "2820ef0792ae4859fa2874780f8158fa065a27b56e09c07be5cb4e4646b79ec9",
+  "carPixelsUnchanged": true,
+  "missingSide": "right",
+  "hint": "還沒看右邊，先看右。"
+}
