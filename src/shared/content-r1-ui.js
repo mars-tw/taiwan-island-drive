@@ -16,16 +16,17 @@ import './content-r15.css';
 import './content-r16.css';
 import './content-r17.css';
 import './content-r18.css';
+import './content-r19.css';
 import {ticketHint,cakeStatus} from './content-r11-scene.js';
 import {queueFrame,carGround} from './content-r10-scene.js';
 import {rigidCakePose,showQueue} from './content-r12-scene.js';
-import {pedalState,drivingCue,crossingCue,crossingLocation,crossingTraffic,ticketMismatch,ticketSceneGeometry,queuePosition,stability,ticketDoorState,boardingCue,lessonResult,bendTravel,observation,trafficLabelPosition,landedFriends,completedCrossings,STOP_X,FRONT_RAIL,WHEEL_BOTTOM,DOOR_SILL} from './content-r18-scene.js';
+import {pedalState,drivingCue,crossingCue,crossingLocation,crossingTraffic,ticketMismatch,ticketSceneGeometry,queuePosition,stability,ticketDoorState,boardingCue,lessonResult,bendTravel,observation,trafficLabelPosition,landedFriends,completedCrossings,cakeShift,cakeAngle,departLabel,STOP_X,FRONT_RAIL,WHEEL_BOTTOM,DOOR_SILL} from './content-r19-scene.js';
 import {grandmaFrame} from './content-r9-scene.js';
 import {cakeFeedback} from './content-r7-scene.js';
 import {lessonFacts} from './content-r5-feedback.js';
 import {cakePose,sideWatch,cakeTask} from './content-r4-scene.js';
 import {CONTENT_LESSONS,CAKE_ROUTES,CROSSING_ORDERS} from './content-r1.js';
-import {ContentLesson,FRIEND_NAMES,PASSENGER_NAMES} from './content-r18.js';
+import {ContentLesson,FRIEND_NAMES,PASSENGER_NAMES} from './content-r19.js';
 
 import {readStudent,updateStudentSection,studentSaved} from './student-save.js';
 import {readSettings} from './settings.js';
@@ -90,6 +91,7 @@ export function installContentLessons(){
  const checks=document.createElement('div');checks.className='crossing-checks';scene.append(checks);
  const traffic=document.createElement('div');traffic.className='crossing-traffic';traffic.innerHTML=image('art/r6/car.png','來車通過中，請在線後等待')+'<b>來車</b>';scene.append(traffic);
  const decision=document.createElement('div');decision.className='crossing-decision';scene.append(decision);
+ const crossDirection=document.createElement('div');crossDirection.className='crossing-direction';scene.append(crossDirection);
  const viewCone=document.createElementNS('http://www.w3.org/2000/svg','svg');viewCone.classList.add('driver-view');viewCone.setAttribute('viewBox','0 0 100 100');viewCone.setAttribute('preserveAspectRatio','none');viewCone.setAttribute('aria-label','駕駛觀察的道路範圍');scene.append(viewCone);
 
  const routeProof=document.createElement('div');routeProof.className='lesson-route-proof';scene.append(routeProof);
@@ -106,6 +108,7 @@ export function installContentLessons(){
   for(const el of [carrier,bay])if(el.parentElement!==(lesson.kind==='cake'?roadView:scene))(lesson.kind==='cake'?roadView:scene).append(el);
   if(scene.clientHeight>0)scene.dataset.compact=String(scene.clientHeight<360);scene.dataset.targetName=lesson.target.name;scene.dataset.layoutSeed=String(lesson.layoutSeed||0);scene.dataset.distance=lesson.distance.toFixed(2);scene.dataset.speed=lesson.speed.toFixed(2);scene.dataset.bend=String(lesson.bend);scene.dataset.tilt=lesson.tilt.toFixed(2);scene.dataset.sway=lesson.sway.toFixed(2);scene.dataset.acceleration=lesson.acceleration.toFixed(2);scene.dataset.bayStopped=String(lesson.bayStopped);scene.dataset.bayRestarted=String(lesson.bayRestarted);scene.dataset.leftTurn=String(lesson.turns.left>=.2);scene.dataset.rightTurn=String(lesson.turns.right>=.2);scene.dataset.focus=lesson.focus;scene.dataset.crossTime=lesson.crossTime.toFixed(3);scene.dataset.crossDuration=String(lesson.crossingDuration);scene.dataset.orderHint=lesson.orderHint;scene.dataset.fruitSway=lesson.fruitSway.toFixed(2);scene.dataset.flagSway=lesson.flagSway.toFixed(2);
   const done=lesson.phase==='done',checkpoint=lesson.phase==='checkpoint',ready=lesson.phase==='ready',playing=lesson.phase==='playing';
+  dialog.dataset.guided=String(lesson.stage===0&&!(lesson.layoutSeed||0));
   const doorMode=lesson.kind==='tickets'&&lesson.phase==='boarding'?lesson.doorStage:'';
   if((playing||lesson.phase==='boarding')&&studentSaved())$('save').textContent='';
   const crossCue=crossingCue(lesson),summary=lessonResult(lesson);
@@ -136,9 +139,12 @@ export function installContentLessons(){
   }
   if(lesson.kind==='cake')for(const side of ['left','right','go','brake']){const b=dialog.querySelector(`[data-action="${side}"]`);if(b){b.dataset.needed=String(playing&&cue.action===side);b.dataset.held=String(!!lesson.input[side]&&!lesson.recoveryLocked);b.dataset.recovering=String(lesson.recoveryLocked);b.setAttribute('aria-disabled',String(lesson.recoveryLocked));b.querySelector('svg').outerHTML=icon(side);if(['left','right'].includes(side))b.querySelector('span').textContent=side==='left'?'左轉':'右轉';if(side==='go'){const pedal=pedalState(lesson,cue);b.dataset.release=String(!!cue.release);b.dataset.pedal=pedal.state;b.querySelector('span').textContent=pedal.text;}}}
   const pose={...cakePose(lesson),...carGround(done&&lesson.kind==='cake'?{...lesson,distance:47}:lesson)},reducedMotion=readSettings().reducedMotion||matchMedia('(prefers-reduced-motion:reduce)').matches;
+  if(lesson.kind==='cake'&&lesson.recoveryLocked)for(const b of dialog.querySelectorAll('#content-controls [data-hold]'))b.querySelector('span').textContent='等待回穩';
+  else if(lesson.kind==='cake'){const brake=dialog.querySelector('[data-action=brake] span');if(brake)brake.textContent='煞車';}
   if(lesson.kind==='cake'&&lesson.stage===1)pose.x=bendTravel(lesson);
-  const angle=rigidCakePose(lesson);closeup.dataset.warning=String(Math.abs(angle)>15);closeup.dataset.offset=angle.toFixed(2);
-  for(const stack of [closeup,miniature])stack.querySelector('.cake-rigid').style.transform=`translateX(${Math.sign(lesson.balanceLean||0)*Math.max(0,Math.abs(lesson.balanceLean||0)-22)*1.2}px) rotate(${angle}deg)`;
+  const angle=cakeAngle(lesson);closeup.dataset.warning=String(Math.abs(angle)>15);closeup.dataset.offset=angle.toFixed(2);
+  if(lesson.kind==='cake'&&closeup.clientWidth>0){const fit=Math.min((closeup.clientWidth-8)/240,(closeup.clientHeight-8)/196);closeup.style.setProperty('--cake-fit',String(fit));closeup.style.setProperty('--cake-inset-y',`${(closeup.clientHeight/fit-180)/2}px`);}
+  for(const stack of [closeup,miniature])stack.querySelector('.cake-rigid').style.transform=`translateX(${cakeShift(lesson)}px) rotate(${angle}deg)`;
   scene.dataset.decision=String(lesson.needsDecision);scene.dataset.confirmed=String(!!lesson.friendConfirmed);scene.dataset.confirmDelay=String(lesson.confirmDelay);scene.dataset.person=lesson.crossingPerson||'';
   decision.textContent='';
   routeProof.innerHTML=done?[0,1,2].map(i=>`<div><b>✓</b><span>第 ${i+1} 站</span></div>`).join(''):'';
@@ -153,11 +159,13 @@ export function installContentLessons(){
   roadView.style.setProperty('--road-travel',`${-lesson.distance*5}px`);
   task.textContent='';
   timing.innerHTML=lesson.kind==='cake'?`<b>${lesson.inBend?`<span class="cake-lane-arrow">${lesson.bend<0?'↰':'↱'}</span>${lesson.bend<0?'左彎':'右彎'}`:lesson.stage===0?'坡頂・放開放慢':lesson.stage===1?'彎道前・慢慢起步':'路旁休息區'}</b>`:'';
+  timing.dataset.active=String(playing&&lesson.inBend&&!!cue.action);
   recovery.textContent=lesson.kind==='cake'&&playing&&feedback.settled&&!lesson.bayStopped&&lesson.distance<42&&(lesson.recoveryNotice||0)>0?'✓ 蛋糕坐穩了':'';
   task.dataset.left=String(lesson.turns.left>=.2);task.dataset.right=String(lesson.turns.right>=.2);
   panorama.style.transform='none';
   const trafficPose=crossingTraffic(lesson);traffic.style.setProperty('--label-left',`${trafficLabelPosition(lesson,scene.clientWidth,traffic.querySelector('b').offsetWidth||44)-trafficPose.x*scene.clientWidth/100+traffic.offsetWidth/2}px`);traffic.hidden=lesson.kind!=='crossing'||!playing||!lesson.trafficActive||lesson.focus==='center'||lesson.crossTime>0;traffic.style.left=`${trafficPose.x}%`;traffic.style.top=`${trafficPose.top}%`;traffic.querySelector('img').style.scale=trafficPose.reverse?'-1 1':'1';scene.dataset.trafficActive=String(!!lesson.trafficActive);scene.dataset.trafficTime=(lesson.trafficTime||0).toFixed(2);
   const observed=observation(lesson);
+  traffic.style.setProperty('--label-top',`${-scene.clientHeight*.03-18}px`);
   viewCone.innerHTML=lesson.kind==='crossing'&&observed?`<path d="M50 87 L${observed.x} ${observed.y}"/><ellipse cx="${observed.x}" cy="${observed.y}" rx="13" ry="7"/>`:'';
   lookout.replaceChildren();
   if(lesson.kind==='crossing'&&observed){
@@ -166,7 +174,7 @@ export function installContentLessons(){
   }
   const warning=lesson.kind==='cake'&&cue.release===true;
   const meter=stability(lesson);
-  force.innerHTML=lesson.kind==='cake'?`<div class="force-readout"><strong>${meter.status}</strong><div class="force-meter" data-tone="${meter.tone}" role="meter" aria-label="穩定度，虛線是坐穩位置" aria-valuemin="0" aria-valuemax="100" aria-valuenow="${meter.fill}"><i style="width:${meter.fill}%"></i></div><small>${cue.text}</small></div>`:'';
+  force.innerHTML=lesson.kind==='cake'?`<div class="force-readout"><strong>${meter.status}</strong><div class="force-meter" data-tone="${meter.tone}" role="meter" aria-label="穩定度，虛線是坐穩位置" aria-valuemin="0" aria-valuemax="100" aria-valuenow="${meter.fill}"><i style="width:${meter.fill}%"></i></div><small>${lesson.recoveryLocked?'蛋糕往中央回來':lesson.inBend?'看路牌，照顧蛋糕':'慢慢前進，蛋糕坐穩'}</small></div>`:'';
   roadSign.innerHTML=lesson.kind==='cake'?`<svg viewBox="0 0 120 70" aria-hidden="true"><path d="${lesson.inBend?(lesson.bend>0?'M40 65V40Q40 18 75 18H100':'M80 65V40Q80 18 45 18H20'):['M10 60L110 15','M10 60C10 5 100 65 70 10S110 20 110 5','M10 55H85V15'][lesson.stage]}" fill="none" stroke="#143b61" stroke-width="10" stroke-linecap="round"/><path d="M85 5h24v24" fill="none" stroke="#58b85b" stroke-width="7" style="display:${lesson.inBend?'none':'block'}"/></svg><span>${lesson.distance>=55?'慢慢停':lesson.distance>15&&lesson.distance<40?(lesson.bend>0?'右彎 →':'← 左彎'):['按住起步','左右連彎','臨停再起步'][lesson.stage]}</span>`:'';
   dialog.querySelector('.content-stamps').innerHTML=lesson.kind==='cake'?['start','turn','stop'].map((k,i)=>`<span class="${lesson.skills[k]||lesson.smooth[k]>.25?'earned':''}">${icon(['go','right','brake'][i])}</span>`).join(''):'';
   dialog.querySelectorAll('.content-route i').forEach((el,i)=>el.classList.toggle('complete',lesson.kind==='crossing'?i<completedCrossings(lesson):i<lesson.stage||done||checkpoint&&i===lesson.stage));
@@ -182,7 +190,8 @@ export function installContentLessons(){
   for(const action of ['board','retract','close-door','train-depart','next']){const b=dialog.querySelector(`[data-action=${action}]`);if(b)b.dataset.needed='true';}
   comparison.innerHTML=wrong?`<div>${shape(lesson.target)}<span>車票</span></div><b>≠</b><div>${shape(lesson.platforms[lesson.selected])}<span>這站</span></div><strong>${icon('brake')}門關著，再找找</strong>`:'';
   // Scene signs remain the source of truth after arrival; no leftover floating ticket.
-  scene.querySelector('.content-ticket').hidden=done||checkpoint;
+  scene.querySelector('.content-ticket').hidden=lesson.kind!=='tickets';
+  scene.querySelector('.content-ticket').setAttribute('aria-label',`本站車票：${lesson.target.name}`);
   watch.innerHTML=lesson.kind==='crossing'?`路口完成 ${completedCrossings(lesson)}/3<small>本站到岸 ${landedFriends(lesson)}/3 人</small>`:'';
   watch.setAttribute('role','status');
   for(const side of ['left','right']){const b=dialog.querySelector(`[data-action="look-${side}"]`);if(b){b.dataset.checked=String(lesson.looked[side]);b.dataset.wrongLook=String(lesson.wrongLook===side);b.querySelector('span').textContent=lesson.looked[side]?(side==='left'?'左邊看過':'右邊看過'):side==='left'?'看左':'看右';}}
@@ -190,17 +199,19 @@ export function installContentLessons(){
   if(lesson.kind==='crossing')for(const b of dialog.querySelectorAll('#content-controls [data-action]'))b.dataset.wait=String(playing&&!crossCue.action&&b.dataset.action!=='listen');
   scene.dataset.watchSide=lesson.kind==='crossing'&&lesson.focus!=='center'?lesson.focus:'';
   checks.innerHTML='';
-  const depart=dialog.querySelector('[data-action=depart]');if(depart){depart.disabled=!lesson.canDepart||lesson.phase==='departing';depart.querySelector('span').textContent=lesson.phase==='departing'?'出發中':crossCue.action?'出發':crossCue.state;depart.dataset.ready=String(lesson.canDepart);depart.setAttribute('aria-disabled',String(!lesson.canDepart));depart.setAttribute('aria-description',lesson.canDepart?'路口空了，可以出發':'等朋友過完才可出發');}
+  const depart=dialog.querySelector('[data-action=depart]');if(depart){depart.disabled=!lesson.canDepart||lesson.phase==='departing';depart.querySelector('span').textContent=departLabel(lesson);depart.dataset.ready=String(lesson.canDepart);depart.setAttribute('aria-disabled',String(!lesson.canDepart));depart.setAttribute('aria-description',lesson.canDepart?'路口空了，可以出發':'等朋友過完才可出發');}
   const walker=dialog.querySelector('.content-walker');walker.replaceChildren();walker.hidden=true;
   const reduced=readSettings().reducedMotion||matchMedia('(prefers-reduced-motion:reduce)').matches;
   if(lesson.kind==='crossing'&&lesson.crossed<3){const who=lesson.crossingPerson,pose=reduced?0:who==='grandma'?grandmaFrame(lesson.crossTime/lesson.crossingDuration):Math.floor(lesson.crossTime*3)%2,pos=crossingLocation(who,'crossing',lesson.crossTime/lesson.crossingDuration,lesson.stage);walker.innerHTML=image(friendArt(who,pose),friendName(who));walker.dataset.person=who;walker.dataset.pose=String(pose);walker.innerHTML+=`<i class="friend-number">${CROSSING_ORDERS[lesson.stage].indexOf(who)+1} ${shortFriend(who)}</i>`;walker.hidden=lesson.crossTime===0;walker.style.left=`${pos.x}%`;walker.style.bottom=`${pos.bottom}%`;walker.style.scale='1';walker.querySelector('img').style.scale=lesson.stage===1?'-1 1':'1';}
   if(lesson.kind==='crossing'){
    const order=CROSSING_ORDERS[lesson.stage];
+   const start=lesson.stage===1?88:12,end=100-start;
+   crossDirection.innerHTML=`<span style="left:${start}%">起點</span><span class="crossing-arrow" aria-label="過街方向${start<end?'向右':'向左'}">${start<end?'→':'←'}</span><span style="left:${end}%">對岸 ✓</span>`;
    roster.replaceChildren();
    arrived.innerHTML=order.slice(0,lesson.crossed).map(w=>{const pos=crossingLocation(w,'arrived',0,lesson.stage);return `<div data-arrived-friend="${w}" style="left:${pos.x}%;bottom:${pos.bottom}%">${image(w==='grandma'?friendArt(w,2):waitingArt(w),friendName(w)+'已到對側')}<i class="friend-number">${order.indexOf(w)+1} ${shortFriend(w)}</i><b>✓</b></div>`;}).join('');
    panorama.innerHTML=order.slice(lesson.crossed).filter(w=>w!==lesson.crossingPerson||lesson.crossTime===0).map(w=>{const pos=crossingLocation(w,'waiting',0,lesson.stage);return `<div class="crossing-waiting"><div data-waiting="${w}" style="left:${pos.x}%;bottom:${pos.bottom}%">${image(waitingArt(w),friendName(w)+'站在線後等候')}<i class="friend-number">${order.indexOf(w)+1} ${shortFriend(w)}</i><b>等一等</b></div></div>`;}).join('');
    scene.querySelector('.content-coach').src=appUrl('art/content-r11/car-rear.png');scene.querySelector('.content-coach').alt='阿路的車尾朝玩家，車頭朝路口';scene.querySelector('.content-coach').style.translate=lesson.phase==='departing'?`0 ${-departing*Math.max(150,scene.clientHeight*.48)}px`:'none';
-  }else{panorama.replaceChildren();roster.replaceChildren();roster.dataset.stage='';arrived.replaceChildren();}
+  }else{panorama.replaceChildren();roster.replaceChildren();roster.dataset.stage='';arrived.replaceChildren();crossDirection.replaceChildren();}
   const train=dialog.querySelector('.content-train'),geometry=ticketSceneGeometry(lesson,scene.clientWidth),drawX=geometry.x+(lesson.kind==='tickets'&&lesson.phase==='departing'?Math.min(1,lesson.departureTime/1.5)*Math.max(42,150/scene.clientWidth*100):0);train.src=appUrl('art/content-r3/train-side.webp');train.alt=lesson.selected<0?'等待選月台的列車':`${lesson.platforms[lesson.selected].name}月台的列車`;vehicle.style.left=`${drawX}%`;vehicle.dataset.x=drawX.toFixed(2);
   vehicle.style.top=lesson.kind==='tickets'?`${scene.clientHeight*(scene.clientHeight<360?.98:FRONT_RAIL)-vehicle.offsetHeight*WHEEL_BOTTOM}px`:'';
   platformSegments.innerHTML=lesson.kind==='tickets'?lesson.platforms.map((t,n)=>n===lesson.selected?`<span data-stop="${n}" style="left:${geometry.markers[n]}%"><b>${n+1}</b></span>`:'').join(''):'';
@@ -208,7 +219,7 @@ export function installContentLessons(){
   const doors=ticketDoorState(lesson);
   queuePath.innerHTML='';
    const visibleFriends=lesson.kind==='tickets';
-  bridge.hidden=doors.step===0;bridge.style.cssText=`left:${(geometry.door-4)*scene.clientWidth/100}px;top:${vehicle.offsetTop+vehicle.offsetHeight*DOOR_SILL}px;width:${scene.clientWidth*.08}px;transform:translateY(${(1-doors.step)*-8}px) scaleY(${doors.step});`;
+  bridge.hidden=doors.step===0;bridge.style.cssText=`left:${(geometry.door-8)*scene.clientWidth/100}px;top:${vehicle.offsetTop+vehicle.offsetHeight*DOOR_SILL-2}px;width:${scene.clientWidth*.16}px;transform:translateY(${(1-doors.step)*-18}px) scaleY(${doors.step});`;
    seats.innerHTML=visibleFriends?[0,1,2].map(n=>{const state=queueFrame(lesson.boardTime,n,seated);return state.seated||state.inside?`<div class="ticket-seated" data-friend="${n}" data-entering="${!state.seated}" style="left:${state.seated?13+n*21:69.5+(13+n*21-69.5)*Math.max(0,Math.min(1,(state.progress-.72)/.28))}%">${image(done?`art/content-r16/passenger-${n+1}-wave.webp`:`art/r5/passenger-${n+1}-0.png`,done?PASSENGER_NAMES[n]+'在車窗內揮手':state.seated?'乘客已坐好':'朋友走進車廂找座位')}</div>`:'';}).join(''):'';
   passengers.innerHTML=visibleFriends?[0,1,2].map(n=>{const state=queueFrame(lesson.boardTime,n,seated);if(state.seated||state.inside)return '';const thresholdBottom=(scene.clientHeight-vehicle.offsetTop-vehicle.offsetHeight*DOOR_SILL)/scene.clientHeight*100;const pos=queuePosition(geometry.door,n,state.progress,thresholdBottom,scene.clientWidth,scene.clientHeight,vehicle.offsetHeight);const choose=boarding&&doorMode==='awaiting',tag=choose?'button':'div';return `<${tag} ${choose?`data-passenger="${n}" aria-label="選${PASSENGER_NAMES[n]}" aria-pressed="${lesson.chosenPassenger===n}"`:""} class="boarding-friend" data-friend="${n}" data-progress="${state.progress.toFixed(2)}" data-entering="${state.progress>.50}" style="--door-occlusion:${Math.max(0,Math.min(90,(state.progress-.5)/.22*90))}%;--rider-height:${vehicle.offsetHeight*(.43+.05*Math.min(1,state.progress/.58))}px;left:${pos.x}%;bottom:${pos.bottom}%;height:${Math.max(60,vehicle.offsetHeight*.48)}px;width:60px">${image(`art/r5/passenger-${n+1}-${reduced?0:state.pose}.png`,'朋友沿月台走進車門')}<b>${n+1} ${PASSENGER_NAMES[n]}</b></${tag}>`;}).join(''):'';
   const doorOpen=doors.open;

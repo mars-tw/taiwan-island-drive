@@ -1,0 +1,30 @@
+{
+  "status": "VERIFIED",
+  "method": "Unscaled originals; baseline PNGs checked directly against git objects, after images copied byte-for-byte",
+  "comparisons": [
+    {
+      "before": "docs/content/r19/before-cake.png",
+      "beforeBaseline": "baece5c",
+      "beforeSha256": "1ed806bf348f388d959393bd4b2ba193c9d0f240f88e54e0588fd6cca46ad103",
+      "after": "docs/content/r19/after-cake.png",
+      "source": "docs/content/r19/phone-cake-tray-edge-sliding.png",
+      "afterSha256": "874bc960fa2eb8193e3a809c58fcfb0be578f526a01ef5cd3ad574c676b9231a"
+    },
+    {
+      "before": "docs/content/r19/before-crossing.png",
+      "beforeBaseline": "baece5c",
+      "beforeSha256": "575cb3a879ab145126775b60761a935440affa791e981ab47e685a73da9b7b06",
+      "after": "docs/content/r19/after-crossing.png",
+      "source": "docs/content/r19/phone-crossing-stage-2-grandma-arrived.png",
+      "afterSha256": "ba6c056a69ad4a729b53b57df19503315714f296df2ea50fbaaa17d9021e3b9f"
+    },
+    {
+      "before": "docs/content/r19/before-tickets.png",
+      "beforeBaseline": "baece5c",
+      "beforeSha256": "13de5a5a2665843a998e0655c3c2c749e2ca56b950635eb7ee3962257ea79b09",
+      "after": "docs/content/r19/after-tickets.png",
+      "source": "docs/content/r19/phone-tickets-stage-1-seated-3.png",
+      "afterSha256": "c0e385ca2d938b0e3e85ca77e1de40f1d694bee95796fadb9b913b45c057c486"
+    }
+  ]
+}

@@ -1,0 +1,23 @@
+{
+  "status": "VERIFIED",
+  "tool": "image_gen.imagegen",
+  "newGenerationCalls": 1,
+  "newRuntimeAssets": 1,
+  "assets": [
+    {
+      "path": "docs/content/r19/art/cake-bends-original.png",
+      "sha256": "3b0ce7db540001ce8fda996e75fb1fc9507f1f741b84d7037d57fb692b4e1a04",
+      "role": "generated sign direction correction"
+    },
+    {
+      "path": "public/art/content-r19/cake-bends.webp",
+      "sha256": "92f3a9eaf2f0af9f9e6dc009fcb05990a83d626343194485660ca2e3f82dfaf4",
+      "role": "generated sign direction correction"
+    },
+    {
+      "path": "public/art/content-r10/boarding-step.png",
+      "sha256": "2d16ccc6aa4a43f9032531ff5d5791c9098905f06719760eb7be7242e440f215",
+      "role": "existing generated step, enlarged and raised above vehicle"
+    }
+  ]
+}

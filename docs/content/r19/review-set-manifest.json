@@ -1,0 +1,143 @@
+{
+  "status": "VERIFIED",
+  "count": 15,
+  "perCourse": 5,
+  "method": "Byte-identical original portrait screenshots; no montage, overlays or scaling",
+  "images": [
+    {
+      "index": 1,
+      "path": "docs/content/r19/review-set/01-cake-replay-old-direction.png",
+      "source": "docs/content/r19/phone-cake-replay-old-direction.png",
+      "purpose": "回歸：重玩左彎按舊右轉，仍在原地且說明錯向",
+      "width": 390,
+      "height": 844,
+      "sha256": "ce9f27699320eedc2929ab9d637a6b5d282810ac3b46ae12e7d4bc38c49123fa"
+    },
+    {
+      "index": 2,
+      "path": "docs/content/r19/review-set/02-cake-tray-edge-sliding.png",
+      "source": "docs/content/r19/phone-cake-tray-edge-sliding.png",
+      "purpose": "盤緣：主車蛋糕偏離中央，按鍵灰色等待",
+      "width": 390,
+      "height": 844,
+      "sha256": "874bc960fa2eb8193e3a809c58fcfb0be578f526a01ef5cd3ad574c676b9231a"
+    },
+    {
+      "index": 3,
+      "path": "docs/content/r19/review-set/03-cake-tray-edge-recovering.png",
+      "source": "docs/content/r19/phone-cake-tray-edge-recovering.png",
+      "purpose": "連續回穩：相同倍率，主車與特寫同步回中央",
+      "width": 390,
+      "height": 844,
+      "sha256": "8e591a3179e62ea8264477ed20ec6a952541580ba8d3de49ea65ae49fcab78d7"
+    },
+    {
+      "index": 4,
+      "path": "docs/content/r19/review-set/04-cake-tray-edge-recovered.png",
+      "source": "docs/content/r19/phone-cake-tray-edge-recovered.png",
+      "purpose": "連續坐穩：回中央後恢復操作，重玩無正解亮框",
+      "width": 390,
+      "height": 844,
+      "sha256": "227be59868a90b66d48bb3eefb682d61f28ffe1c42744ff367b03f6a8e4817ac"
+    },
+    {
+      "index": 5,
+      "path": "docs/content/r19/review-set/05-cake-stage-3-bay-stopped.png",
+      "source": "docs/content/r19/phone-cake-stage-3-bay-stopped.png",
+      "purpose": "回歸：第三站實際停在臨停灣，接著須再起步",
+      "width": 390,
+      "height": 844,
+      "sha256": "e1de1dc8e089f7341507018063372d2193337bb0a0834709bf973c61a6ccf97c"
+    },
+    {
+      "index": 6,
+      "path": "docs/content/r19/review-set/06-crossing-stage-1-child-arrived.png",
+      "source": "docs/content/r19/phone-crossing-stage-1-child-arrived.png",
+      "purpose": "第一站1人到岸，2人仍在起點，方向標記可見",
+      "width": 390,
+      "height": 844,
+      "sha256": "336236136e9c7461b3f9a60d61f7213667224b02a23126b7fcc5b1b3fbc87525"
+    },
+    {
+      "index": 7,
+      "path": "docs/content/r19/review-set/07-crossing-stage-2-grandma-moving-1.png",
+      "source": "docs/content/r19/phone-crossing-stage-2-grandma-moving-1.png",
+      "purpose": "奶奶到岸前：仍在斑馬線，計數不增加",
+      "width": 390,
+      "height": 844,
+      "sha256": "5c81af9079b06959b809cb703fad656a0bfc09165d1fa156fe34fabd1522496d"
+    },
+    {
+      "index": 8,
+      "path": "docs/content/r19/review-set/08-crossing-stage-2-grandma-moving-2.png",
+      "source": "docs/content/r19/phone-crossing-stage-2-grandma-moving-2.png",
+      "purpose": "連續踏上對岸：仍等走到空位，計數不增加",
+      "width": 390,
+      "height": 844,
+      "sha256": "494d6828b2da3fc01e58ee5994bab12ed62088f4fe6025f02aee98e6782f9041"
+    },
+    {
+      "index": 9,
+      "path": "docs/content/r19/review-set/09-crossing-stage-2-grandma-arrived.png",
+      "source": "docs/content/r19/phone-crossing-stage-2-grandma-arrived.png",
+      "purpose": "連續落位：奶奶在對岸空位打勾，才計1人",
+      "width": 390,
+      "height": 844,
+      "sha256": "ba6c056a69ad4a729b53b57df19503315714f296df2ea50fbaaa17d9021e3b9f"
+    },
+    {
+      "index": 10,
+      "path": "docs/content/r19/review-set/10-crossing-stage-3-bike-arrived.png",
+      "source": "docs/content/r19/phone-crossing-stage-3-bike-arrived.png",
+      "purpose": "第三站1人到岸：方向與起點清楚，另2人未提前過街",
+      "width": 390,
+      "height": 844,
+      "sha256": "56e6fe59583999beef0eea218c8293dd5e03333bb9941260345164fb81ef4937"
+    },
+    {
+      "index": 11,
+      "path": "docs/content/r19/review-set/11-tickets-stage-1-wrong.png",
+      "source": "docs/content/r19/phone-tickets-stage-1-wrong.png",
+      "purpose": "回歸：第一站錯選仍顯示左上車票，形狀對而顏色不同",
+      "width": 390,
+      "height": 844,
+      "sha256": "357d58fe2530303db0905c30f7c1dcf99572bdd82741677d3eac462bdd942964"
+    },
+    {
+      "index": 12,
+      "path": "docs/content/r19/review-set/12-tickets-stage-1-boarding-1-1.png",
+      "source": "docs/content/r19/phone-tickets-stage-1-boarding-1-1.png",
+      "purpose": "玩家邀請後真正上車：月台2＋上車中1＋已入座0",
+      "width": 390,
+      "height": 844,
+      "sha256": "e1f7e2d2e6d2455db6c1dabb09dbfd606833ca13389f6a8001d509adf12e73e5"
+    },
+    {
+      "index": 13,
+      "path": "docs/content/r19/review-set/13-tickets-stage-1-seated-3.png",
+      "source": "docs/content/r19/phone-tickets-stage-1-seated-3.png",
+      "purpose": "三人落座，門開且踏階伸出，等玩家收回",
+      "width": 390,
+      "height": 844,
+      "sha256": "c0e385ca2d938b0e3e85ca77e1de40f1d694bee95796fadb9b913b45c057c486"
+    },
+    {
+      "index": 14,
+      "path": "docs/content/r19/review-set/14-tickets-stage-1-close-ready.png",
+      "source": "docs/content/r19/phone-tickets-stage-1-close-ready.png",
+      "purpose": "連續收階後：階面已消失，門仍開，才提供關門",
+      "width": 390,
+      "height": 844,
+      "sha256": "166cc04d4a0baca01d431c41bba9d7607f2f332a926ee99520a57792cd64b20b"
+    },
+    {
+      "index": 15,
+      "path": "docs/content/r19/review-set/15-tickets-stage-1-closed.png",
+      "source": "docs/content/r19/phone-tickets-stage-1-closed.png",
+      "purpose": "連續關門後：門已關，等玩家按前進",
+      "width": 390,
+      "height": 844,
+      "sha256": "430d05a3f29224f1258e783005865a06c869a31214ffc25e10f0fcb70a093d04"
+    }
+  ]
+}
