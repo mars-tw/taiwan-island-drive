@@ -1,0 +1,31 @@
+{
+  "status": "VERIFIED",
+  "method": "Original before/after and three viewport copies; cross-round images are illustrative, not a controlled physics comparison",
+  "shots": [
+    {
+      "path": "docs/evidence/content-r31/before-r30-cake.png",
+      "source": "docs/content/r30/phone-cake-controlled-high-support.png",
+      "sha256": "46e91b04e4c2bcd8407acbf127dfae35f55dc82d5d3fe680cba9294ab75ed38d"
+    },
+    {
+      "path": "docs/evidence/content-r31/after-r31-cake.png",
+      "source": "docs/content/r31/phone-cake-controlled-brake-support.png",
+      "sha256": "2712b5711dbfbb8c6617d74581c0f34628e772471ea59c411247fd9f6e81292a"
+    },
+    {
+      "path": "docs/evidence/content-r31/after-phone.png",
+      "source": "docs/content/r31/phone-crossing-stage-1-car-still-wait.png",
+      "sha256": "cfdd1dc49b4cd8a7537ad4177dff84d2827663d2aa295c2d0aa700588458574d"
+    },
+    {
+      "path": "docs/evidence/content-r31/after-phone-landscape.png",
+      "source": "docs/content/r31/layout/device-844x390-crossing-new-car.png",
+      "sha256": "5b487106af3c63cd505bfe21c0b13f7cdcd1c6367ded305ed44e06c7caa3eb9b"
+    },
+    {
+      "path": "docs/evidence/content-r31/after-ipad.png",
+      "source": "docs/content/r31/layout/device-768x1024-crossing-new-car.png",
+      "sha256": "c71903e4d3ee7666fe1dec414b30f41954ec3e764ea09adce5cba2ff75ebc793"
+    }
+  ]
+}

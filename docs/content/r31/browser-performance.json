@@ -1,0 +1,31 @@
+{
+  "status": "VERIFIED",
+  "sourceFingerprint": {
+    "src/shared/content-r1-ui.js": "974596c72404dbc909cce20dd0e3cfd260a209f8140682defa1263734a8faf07",
+    "src/shared/content-r31.js": "4382868f1c601a99c2b5ed4a83f51ac4173df1396aab1fe1a3f8ebbf027b0484",
+    "src/shared/content-r31-scene.js": "ff51343d3c231fd5b5f0c99bc0b780787f57579230e36825ab401dba422193af",
+    "src/shared/content-r31.css": "d530d71f6f21368eaea3d2319646ed489f573dfc19a6ab120b7337182625da28",
+    "scripts/check-content-r31.mjs": "f0d4e43f02e32887f8bc496ae621fb7ec7435cb8e81038cb9fed143a16f89463"
+  },
+  "checks": [
+    {
+      "status": "VERIFIED",
+      "label": "reference performance 390x844",
+      "p95": 16.799999999999727
+    },
+    {
+      "status": "VERIFIED",
+      "label": "reference performance 768x1024",
+      "p95": 16.800000000000182
+    },
+    {
+      "status": "VERIFIED",
+      "label": "reference performance 1366x600",
+      "p95": 16.799999999999272
+    }
+  ],
+  "shots": [],
+  "errors": [],
+  "failed": [],
+  "external": []
+}

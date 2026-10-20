@@ -1,0 +1,37 @@
+{
+  "status": "VERIFIED",
+  "version": "2.43.0",
+  "nativeSourceBuild": 39,
+  "mergeChecks": 132,
+  "storeChecks": 101,
+  "existingTestsUnchanged": 51,
+  "preexistingUntrackedPreserved": 96,
+  "verifiedSourceScreenshots": 364,
+  "reviewScreenshots": 15,
+  "deletedFiles": 33,
+  "releasedBytes": 14223797,
+  "performanceReference": [
+    {
+      "width": 390,
+      "height": 844,
+      "p95": 16.799999999999727
+    },
+    {
+      "width": 768,
+      "height": 1024,
+      "p95": 16.800000000000182
+    },
+    {
+      "width": 1366,
+      "height": 600,
+      "p95": 16.799999999999272
+    }
+  ],
+  "limitations": [
+    "physical devices",
+    "native speech output",
+    "parent-child playtest and masked-text recognition",
+    "clean workstation performance",
+    "independent Muse score >=8"
+  ]
+}
