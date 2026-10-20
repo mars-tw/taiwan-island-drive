@@ -1,6 +1,6 @@
 {
   "name": "taiwan-island-drive",
-  "version": "2.38.0",
+  "version": "2.39.0",
   "private": true,
   "type": "module",
   "license": "MIT",
@@ -37,7 +37,8 @@
     "test:content:r25": "node scripts/check-content-r25.mjs",
     "test:content:r26": "node scripts/check-content-r26.mjs",
     "test:content:r24": "node scripts/check-content-r24.mjs",
-    "test:content:r23": "node scripts/check-content-r23.mjs"
+    "test:content:r23": "node scripts/check-content-r23.mjs",
+    "test:content:r27": "node scripts/check-content-r27.mjs"
   },
   "dependencies": {
     "@capacitor-community/text-to-speech": "8.0.2",

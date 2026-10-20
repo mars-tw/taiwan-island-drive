@@ -1,0 +1,20 @@
+{
+  "status": "VERIFIED",
+  "tool": "image_gen.imagegen",
+  "model_slug": null,
+  "generationCalls": 2,
+  "newRuntimeImages": 2,
+  "source": "docs/content/r27/art/bike-walk-original.png",
+  "sourceSha256": "98bc210c6980dd2be2475074f83bedfa8486224687d94eec8c5f415197d4f3c3",
+  "method": "First sheet repeated gait; second call corrected the right frame. Boy and both legs visibly beside bicycle, empty saddle. Sharp only splits, trims alpha and scales; no program drawing or local GPU.",
+  "assets": [
+    {
+      "path": "public/art/content-r27/bike-walk-0.webp",
+      "sha256": "dc9b58557ec7a58fc6acd4cf604659f9bf11738daf2a71cd353f31604d4c0727"
+    },
+    {
+      "path": "public/art/content-r27/bike-walk-1.webp",
+      "sha256": "860a9eaa3c0d18498ffb02e3c79b1c9f567cea14bc958e106d9ec3caf4179697"
+    }
+  ]
+}

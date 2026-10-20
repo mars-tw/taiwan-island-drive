@@ -1,0 +1,28 @@
+{
+  "status": "VERIFIED",
+  "method": "Alpha-aware luminance and HSV saturation gates; runtime sprites remain unchanged. Two distinct generated walking silhouettes were also visually inspected at original and gameplay sizes.",
+  "rows": [
+    {
+      "path": "public/art/content-r27/bike-walk-0.webp",
+      "width": 384,
+      "height": 384,
+      "pixels": 69953,
+      "transparentPixels": 77503,
+      "meanLuminance": 0.3638461411093042,
+      "meanSaturation": 0.6397152336462855,
+      "nearBlackRatio": 0.3157262733549669,
+      "lowSaturationRatio": 0.1316169428044544
+    },
+    {
+      "path": "public/art/content-r27/bike-walk-1.webp",
+      "width": 384,
+      "height": 384,
+      "pixels": 68792,
+      "transparentPixels": 78664,
+      "meanLuminance": 0.3612871902227595,
+      "meanSaturation": 0.6544645011346482,
+      "nearBlackRatio": 0.31531282707291547,
+      "lowSaturationRatio": 0.1254506337946273
+    }
+  ]
+}
