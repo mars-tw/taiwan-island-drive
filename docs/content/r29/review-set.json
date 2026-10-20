@@ -1,0 +1,126 @@
+{
+  "status": "VERIFIED",
+  "method": "Unmodified full-resolution copies, five per course",
+  "images": [
+    {
+      "path": "docs/content/r29/review-set/01-cake-turn-only.png",
+      "source": "docs/content/r29/phone-cake-turn-only.png",
+      "purpose": "Steering onset before cake tilt",
+      "width": 390,
+      "height": 844,
+      "sha256": "b56cbbb528fa86a75aa062e855d5ca55225e22059fefc9f45687a7c29157fe96"
+    },
+    {
+      "path": "docs/content/r29/review-set/02-cake-controlled-high-support.png",
+      "source": "docs/content/r29/phone-cake-controlled-high-support.png",
+      "purpose": "Same initial state: fast support only",
+      "width": 390,
+      "height": 844,
+      "sha256": "c14a633e1047870ddaff73d24c46e184e21c9fd5c2db2b6c59b3c63a6c504bb7"
+    },
+    {
+      "path": "docs/content/r29/review-set/03-cake-controlled-brake-support.png",
+      "source": "docs/content/r29/phone-cake-controlled-brake-support.png",
+      "purpose": "Same initial state: braking and support",
+      "width": 390,
+      "height": 844,
+      "sha256": "b6d46bd7d616ac9e119f4cba81f3652c9361ac5021919e9ddff4fbe4f4a76dc0"
+    },
+    {
+      "path": "docs/content/r29/review-set/04-cake-bay-main-road.png",
+      "source": "docs/content/r29/phone-cake-bay-main-road.png",
+      "purpose": "Actually back on the main road",
+      "width": 390,
+      "height": 844,
+      "sha256": "892c1c9efa0fe0d9c1b76cab72a4adb477015d7661c2ed766b97e5893ac97d2d"
+    },
+    {
+      "path": "docs/content/r29/review-set/05-cake-replay-new-conditions.png",
+      "source": "docs/content/r29/phone-cake-replay-new-conditions.png",
+      "purpose": "Nine-station previews: previous and current bend",
+      "width": 390,
+      "height": 844,
+      "sha256": "2395c63467266906919c2157b4af7d38a0d8139298e03495aad9604777e810db"
+    },
+    {
+      "path": "docs/content/r29/review-set/06-crossing-stage-1-traffic-2.png",
+      "source": "docs/content/r29/phone-crossing-stage-1-traffic-2.png",
+      "purpose": "Same crossing, car moving across the observed side",
+      "width": 390,
+      "height": 844,
+      "sha256": "8daca0b3b11706c60e0153272ef69d50d9b87627ef8ae4fac1342b6d4d957bbc"
+    },
+    {
+      "path": "docs/content/r29/review-set/07-crossing-stage-1-traffic-clear.png",
+      "source": "docs/content/r29/phone-crossing-stage-1-traffic-clear.png",
+      "purpose": "Same crossing, actual empty road after traffic left",
+      "width": 390,
+      "height": 844,
+      "sha256": "bbd6a78ecf533dfc23dd9187b0859c539ce40d0bc653725de3dd6acc56483cfd"
+    },
+    {
+      "path": "docs/content/r29/review-set/08-crossing-stage-1-1-middle.png",
+      "source": "docs/content/r29/phone-crossing-stage-1-1-middle.png",
+      "purpose": "Wait reason beside locked departure; name follows walker",
+      "width": 390,
+      "height": 844,
+      "sha256": "0e1ab079368d1f988ef268fd99de6b4c463c12bbf4cf8f450b9edb64972b5ffc"
+    },
+    {
+      "path": "docs/content/r29/review-set/09-crossing-stage-1-ready.png",
+      "source": "docs/content/r29/phone-crossing-stage-1-ready.png",
+      "purpose": "Three friends arrived, road clear, departure unlocked",
+      "width": 390,
+      "height": 844,
+      "sha256": "b86ef636d54acfa6c93d5e4d3404ac4c93b6b522b4b475f597fcbac02947a08b"
+    },
+    {
+      "path": "docs/content/r29/review-set/10-crossing-replay-new-conditions.png",
+      "source": "docs/content/r29/phone-crossing-replay-new-conditions.png",
+      "purpose": "Three crossing previews and changed traffic source",
+      "width": 390,
+      "height": 844,
+      "sha256": "9f740cd99e2413a0df9790bae3a0f9977cde93a7ac968fab65068449600de0b6"
+    },
+    {
+      "path": "docs/content/r29/review-set/11-tickets-stage-3-holding.png",
+      "source": "docs/content/r29/phone-tickets-stage-3-holding.png",
+      "purpose": "Literal matching rule; finger and progress while walking",
+      "width": 390,
+      "height": 844,
+      "sha256": "8eeac151b1ed33f922050c459bae6cc9a560b81c29acf418ab0823123cf24a1d"
+    },
+    {
+      "path": "docs/content/r29/review-set/12-tickets-stage-3-paused.png",
+      "source": "docs/content/r29/phone-tickets-stage-3-paused.png",
+      "purpose": "Blue pause, no early seating",
+      "width": 390,
+      "height": 844,
+      "sha256": "bd922f42f69ec79a1d25f8f069ba9ea2fe0de5d1f18d0a1ea9680ab080f12b5b"
+    },
+    {
+      "path": "docs/content/r29/review-set/13-tickets-stage-3-resumed.png",
+      "source": "docs/content/r29/phone-tickets-stage-3-resumed.png",
+      "purpose": "Yellow held state, full-body walking in the aisle",
+      "width": 390,
+      "height": 844,
+      "sha256": "6ba9be7d1740a1a8a391545ec905bbc20008a5035f9c1f915b924176a8abe2d7"
+    },
+    {
+      "path": "docs/content/r29/review-set/14-tickets-stage-3-seated-1.png",
+      "source": "docs/content/r29/phone-tickets-stage-3-seated-1.png",
+      "purpose": "Same friend actually seated, count changes only now",
+      "width": 390,
+      "height": 844,
+      "sha256": "2747194ab6a1680b3d5518385285563c4fb7b7119211b01f80d60c44f499d847"
+    },
+    {
+      "path": "docs/content/r29/review-set/15-tickets-replay-new-conditions.png",
+      "source": "docs/content/r29/phone-tickets-replay-new-conditions.png",
+      "purpose": "Three ticket previews: actual previous and current targets",
+      "width": 390,
+      "height": 844,
+      "sha256": "f4db7f206cac1da11082b96dd06765dd49d10ae1b6110fcda2aa62ad0d62736f"
+    }
+  ]
+}

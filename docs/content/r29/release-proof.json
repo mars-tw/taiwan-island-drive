@@ -1,0 +1,101 @@
+{
+  "status": "VERIFIED",
+  "branch": "r1-fun-polish",
+  "baseline": "4cd8714eadf101f818f79351c2b9a0b08b7e4b7c",
+  "version": "2.41.0",
+  "sourceBuild": 37,
+  "existingTestsUnchanged": 50,
+  "preexistingUntrackedPreserved": 90,
+  "captureExclusions": [
+    "docs/OPTIM_PLAN_CONTENT_R29.md"
+  ],
+  "evidence": [
+    {
+      "mode": "all",
+      "checks": 18,
+      "images": 121
+    },
+    {
+      "mode": "controlled",
+      "checks": 1,
+      "images": 6
+    },
+    {
+      "mode": "offline",
+      "checks": 19,
+      "images": 121
+    },
+    {
+      "mode": "layout",
+      "checks": 8,
+      "images": 96
+    },
+    {
+      "mode": "store",
+      "checks": 2,
+      "images": 2
+    },
+    {
+      "mode": "performance",
+      "checks": 3,
+      "images": 0
+    }
+  ],
+  "regressions": [
+    {
+      "label": "merge",
+      "status": "VERIFIED",
+      "checks": 132,
+      "images": 25
+    },
+    {
+      "label": "store",
+      "status": "VERIFIED",
+      "checks": 101,
+      "images": 26
+    }
+  ],
+  "reviewImages": 15,
+  "cleanup": {
+    "status": "VERIFIED",
+    "deletedFiles": 68,
+    "releasedBytes": 91486937,
+    "retained": 7999
+  },
+  "performance": [
+    {
+      "width": 390,
+      "height": 844,
+      "p95": 16.799999999999272
+    },
+    {
+      "width": 768,
+      "height": 1024,
+      "p95": 16.80000000000109
+    },
+    {
+      "width": 1366,
+      "height": 600,
+      "p95": 16.800000000000182
+    }
+  ],
+  "sourceSha256": {
+    "src/shared/content-r1-ui.js": "7fcf4652849fb46a5ab49644166f761c7fd91445a6ae2347e161a6f36bc052e5",
+    "src/shared/content-r29.js": "6f476ac853ac70cd09780535ae83ae098b068817bf09123728a830073dcd4a86",
+    "src/shared/content-r29-scene.js": "d143d7ca661a0dac9bfa3f997ebe96dc03a8b6fb67ea5c1992ff8c0574c7f252",
+    "src/shared/content-r29.css": "e67f7e6f52c939d15fe7ca59237c809e43d017064cda94dafafe9083800b7f1c",
+    "public/sw.js": "80c9059a0484fb349c8aed05aa421f350a36de68da8e7ad0b0d30fa7a42136ca",
+    "public/art/content-r29/steady-cake.webp": "cb842ac0c1f774111cbeaa07e824add013063888ae4810d321d8569b02ac65c3",
+    "public/art/content-r29/traffic-car.webp": "e08b7f8970430ec89a335df4d957646496b02c9533916ce76f8647d975d7105b",
+    "tests/shared/content-r29.test.js": "7f5aa93b582ad8f07c002ce948a1e9e0691dcddbf41fc32b5d2a462179ed2632",
+    "scripts/check-content-r29.mjs": "9d08e1b0d4c1ff3cb2b4b6b489b88096f015aa0107a1d4dd9e37577546569949",
+    "package.json": "8e103da7cea60768e02dd3a88f5e8093799526b131509e9e241300b95213e70f",
+    "package-lock.json": "c376dfde48aac8072ba4b9f6b74286ce42920630b9101376f49e44f6dca83018",
+    "dist/sw.js": "2fb906f670666cd65ad84adff46f58a38b8f731035aacac13b97a3f6c79c0a9c"
+  },
+  "limits": [
+    "Physical devices and families unavailable",
+    "Concurrent workstation performance only",
+    "Muse score requires independent review"
+  ]
+}

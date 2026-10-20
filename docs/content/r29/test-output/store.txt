@@ -1,0 +1,19 @@
+
+> taiwan-island-drive@2.41.0 test:store
+> node scripts/check-store-review.mjs
+
+PASS se: full cold-start / observation / first goal / resume / persistence path
+PASS se-landscape: full cold-start / observation / first goal / resume / persistence path
+PASS phone: full cold-start / observation / first goal / resume / persistence path
+PASS phone-landscape: full cold-start / observation / first goal / resume / persistence path
+PASS large: full cold-start / observation / first goal / resume / persistence path
+PASS laptop: full cold-start / observation / first goal / resume / persistence path
+PASS short-laptop: full cold-start / observation / first goal / resume / persistence path
+PASS ipad: full cold-start / observation / first goal / resume / persistence path
+PASS ipad-landscape: full cold-start / observation / first goal / resume / persistence path
+PASS ipad13-landscape: full cold-start / observation / first goal / resume / persistence path
+iphone-store: checking installed offline cache
+PASS iphone-store: full cold-start / observation / first goal / resume / persistence path
+ipad13-store: checking installed offline cache
+PASS ipad13-store: full cold-start / observation / first goal / resume / persistence path
+PASS 101 checks; 26 unmodified screenshots; zero runtime errors and external requests

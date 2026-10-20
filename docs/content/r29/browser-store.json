@@ -1,0 +1,668 @@
+{
+  "status": "VERIFIED",
+  "checks": [
+    {
+      "status": "VERIFIED",
+      "label": "store original 1290x2796"
+    },
+    {
+      "status": "VERIFIED",
+      "label": "store original 2064x2752"
+    }
+  ],
+  "shots": [
+    {
+      "path": "docs/store/screenshots/content-r29/cake-bay-1290x2796.png",
+      "width": 1290,
+      "height": 2796,
+      "sha256": "2d12a6a37e50651bea108ff57c64525be0ec285bfee8c6c13320476a53ce15e3",
+      "phase": "playing",
+      "state": {
+        "roadShape": "left",
+        "boardTime": "0.000",
+        "doorStage": "closed",
+        "boardingIndex": "0",
+        "hazard": "false",
+        "wrongTurn": "false",
+        "inBend": "false",
+        "cue": "go",
+        "settled": "true",
+        "correction": "",
+        "compact": "false",
+        "recoveryActive": "false",
+        "lookStep": "0",
+        "targetName": "綠正方形",
+        "layoutSeed": "0",
+        "distance": "47.00",
+        "speed": "0.00",
+        "bend": "1",
+        "tilt": "0.00",
+        "sway": "0.00",
+        "acceleration": "0.00",
+        "bayStopped": "true",
+        "bayRestarted": "false",
+        "leftTurn": "false",
+        "rightTurn": "true",
+        "focus": "center",
+        "crossTime": "0.000",
+        "crossDuration": "1.45",
+        "orderHint": "",
+        "fruitSway": "0.00",
+        "flagSway": "0.00",
+        "hintVisible": "false",
+        "crossingOrder": "bike,grandma,child",
+        "balanceLean": "0.00",
+        "balanceStatus": "steady",
+        "recoveries": "1",
+        "assists": "0",
+        "assisting": "false",
+        "crossed": "0",
+        "lookedLeft": "false",
+        "lookedRight": "false",
+        "decision": "false",
+        "confirmed": "false",
+        "confirmDelay": "0",
+        "person": "bike",
+        "trafficActive": "false",
+        "trafficTime": "0.00",
+        "watchSide": "",
+        "platformSide": "front",
+        "doorState": "closed",
+        "step": "0",
+        "semanticStatus": "坐穩了",
+        "nextAction": "go",
+        "holdState": "paused",
+        "holdProgress": "1.000",
+        "recheckTime": "2",
+        "hintLevel": "0",
+        "forceTarget": "0",
+        "forceLag": "0",
+        "recoveryRate": "0",
+        "trafficConfirmed": "false",
+        "trafficSource": "left",
+        "lookSequence": "left,right,left",
+        "escortGate": "false",
+        "escortGateReleased": "false",
+        "restReady": "true",
+        "visited": "",
+        "steering": "false",
+        "steadying": "false",
+        "standStillTime": "0"
+      },
+      "controls": [
+        {
+          "id": "content-back",
+          "w": 68,
+          "h": 60,
+          "bad": false
+        },
+        {
+          "id": "content-pause",
+          "w": 68,
+          "h": 60,
+          "bad": false
+        },
+        {
+          "id": "left",
+          "w": 91,
+          "h": 64,
+          "bad": false
+        },
+        {
+          "id": "right",
+          "w": 91,
+          "h": 64,
+          "bad": false
+        },
+        {
+          "id": "go",
+          "w": 91,
+          "h": 64,
+          "bad": false
+        },
+        {
+          "id": "brake",
+          "w": 91,
+          "h": 64,
+          "bad": false
+        },
+        {
+          "id": "recover-left",
+          "w": 188,
+          "h": 64,
+          "bad": false
+        },
+        {
+          "id": "recover-right",
+          "w": 188,
+          "h": 64,
+          "bad": false
+        },
+        {
+          "id": "listen",
+          "w": 382,
+          "h": 64,
+          "bad": false
+        }
+      ],
+      "layout": {
+        "labels": [
+          {
+            "id": "content-back:回學院",
+            "x": 16,
+            "y": 32,
+            "right": 84,
+            "bottom": 92,
+            "width": 68,
+            "height": 60
+          },
+          {
+            "id": "content-title:把蛋糕平穩送到",
+            "x": 92,
+            "y": 51.5,
+            "right": 338,
+            "bottom": 72.5,
+            "width": 246,
+            "height": 21
+          },
+          {
+            "id": "content-pause:暫停",
+            "x": 346,
+            "y": 32,
+            "right": 414,
+            "bottom": 92,
+            "width": 68,
+            "height": 60
+          },
+          {
+            "id": "content-scene-cue:第 3 站・休息灣・停穩再起步",
+            "x": 238.84375,
+            "y": 110,
+            "right": 410,
+            "bottom": 138,
+            "width": 171.15625,
+            "height": 28
+          },
+          {
+            "id": "cake-lean-legend:✓ 坐穩參照",
+            "x": 23,
+            "y": 112,
+            "right": 185,
+            "bottom": 128,
+            "width": 162,
+            "height": 16
+          },
+          {
+            "id": "content-hint:蛋糕坐穩了，按住踏板出灣。",
+            "x": 24,
+            "y": 661.203125,
+            "right": 406,
+            "bottom": 682,
+            "width": 382,
+            "height": 20.796875
+          },
+          {
+            "id": "BUTTON:左轉",
+            "x": 24,
+            "y": 688,
+            "right": 115,
+            "bottom": 752,
+            "width": 91,
+            "height": 64
+          },
+          {
+            "id": "BUTTON:右轉",
+            "x": 121,
+            "y": 688,
+            "right": 212,
+            "bottom": 752,
+            "width": 91,
+            "height": 64
+          },
+          {
+            "id": "BUTTON:按住出灣",
+            "x": 218,
+            "y": 688,
+            "right": 309,
+            "bottom": 752,
+            "width": 91,
+            "height": 64
+          },
+          {
+            "id": "BUTTON:煞車",
+            "x": 315,
+            "y": 688,
+            "right": 406,
+            "bottom": 752,
+            "width": 91,
+            "height": 64
+          },
+          {
+            "id": "BUTTON:向左扶",
+            "x": 24,
+            "y": 758,
+            "right": 212,
+            "bottom": 822,
+            "width": 188,
+            "height": 64
+          },
+          {
+            "id": "BUTTON:向右扶",
+            "x": 218,
+            "y": 758,
+            "right": 406,
+            "bottom": 822,
+            "width": 188,
+            "height": 64
+          },
+          {
+            "id": "BUTTON:再聽一次",
+            "x": 24,
+            "y": 828,
+            "right": 406,
+            "bottom": 892,
+            "width": 382,
+            "height": 64
+          },
+          {
+            "id": "content-force:坐穩了\n蛋糕回正 100%\n▰▱▱ 慢慢開・歪 0°",
+            "x": 197,
+            "y": 152,
+            "right": 411,
+            "bottom": 256,
+            "width": 214,
+            "height": 104
+          }
+        ],
+        "overlaps": [],
+        "iconOverlaps": [],
+        "signOcclusion": [],
+        "counterOcclusion": [],
+        "carOffset": null,
+        "recovery": [
+          {
+            "action": "recover-left",
+            "needed": "false",
+            "held": "false",
+            "background": "rgb(245, 251, 255)"
+          },
+          {
+            "action": "recover-right",
+            "needed": "false",
+            "held": "false",
+            "background": "rgb(245, 251, 255)"
+          }
+        ]
+      },
+      "text": "回學院\n把蛋糕平穩送到\n暫停\n第 3 站・休息灣・停穩再起步\n坐穩了\n蛋糕回正 100%\n▰▱▱ 慢慢開・歪 0°\n✓ 坐穩參照\n\n蛋糕坐穩了，按住踏板出灣。\n\n左轉\n右轉\n按住出灣\n煞車\n向左扶\n向右扶\n再聽一次",
+      "highlights": [
+        {
+          "id": "left",
+          "needed": "false",
+          "color": "rgb(245, 251, 255)"
+        },
+        {
+          "id": "right",
+          "needed": "false",
+          "color": "rgb(245, 251, 255)"
+        },
+        {
+          "id": "go",
+          "needed": "true",
+          "color": "rgb(255, 211, 68)"
+        },
+        {
+          "id": "brake",
+          "needed": "false",
+          "color": "rgb(245, 251, 255)"
+        },
+        {
+          "id": "recover-left",
+          "needed": "false",
+          "color": "rgb(245, 251, 255)"
+        },
+        {
+          "id": "recover-right",
+          "needed": "false",
+          "color": "rgb(245, 251, 255)"
+        },
+        {
+          "id": "listen",
+          "needed": "false",
+          "color": "rgb(245, 251, 255)"
+        }
+      ],
+      "ring": null,
+      "finger": null,
+      "textClipping": []
+    },
+    {
+      "path": "docs/store/screenshots/content-r29/cake-bay-2064x2752.png",
+      "width": 2064,
+      "height": 2752,
+      "sha256": "9a40514e7a13221a57b85d9537ceea7ff273672e3d0e9987a4cbfd79e70ab8e7",
+      "phase": "playing",
+      "state": {
+        "roadShape": "left",
+        "boardTime": "0.000",
+        "doorStage": "closed",
+        "boardingIndex": "0",
+        "hazard": "false",
+        "wrongTurn": "false",
+        "inBend": "false",
+        "cue": "go",
+        "settled": "true",
+        "correction": "",
+        "compact": "false",
+        "recoveryActive": "false",
+        "lookStep": "0",
+        "targetName": "綠正方形",
+        "layoutSeed": "0",
+        "distance": "47.00",
+        "speed": "0.00",
+        "bend": "1",
+        "tilt": "0.00",
+        "sway": "0.00",
+        "acceleration": "0.00",
+        "bayStopped": "true",
+        "bayRestarted": "false",
+        "leftTurn": "false",
+        "rightTurn": "true",
+        "focus": "center",
+        "crossTime": "0.000",
+        "crossDuration": "1.45",
+        "orderHint": "",
+        "fruitSway": "0.00",
+        "flagSway": "0.00",
+        "hintVisible": "false",
+        "crossingOrder": "bike,grandma,child",
+        "balanceLean": "0.00",
+        "balanceStatus": "steady",
+        "recoveries": "1",
+        "assists": "0",
+        "assisting": "false",
+        "crossed": "0",
+        "lookedLeft": "false",
+        "lookedRight": "false",
+        "decision": "false",
+        "confirmed": "false",
+        "confirmDelay": "0",
+        "person": "bike",
+        "trafficActive": "false",
+        "trafficTime": "0.00",
+        "watchSide": "",
+        "platformSide": "front",
+        "doorState": "closed",
+        "step": "0",
+        "semanticStatus": "坐穩了",
+        "nextAction": "go",
+        "holdState": "paused",
+        "holdProgress": "1.000",
+        "recheckTime": "2",
+        "hintLevel": "0",
+        "forceTarget": "0",
+        "forceLag": "0",
+        "recoveryRate": "0",
+        "trafficConfirmed": "false",
+        "trafficSource": "left",
+        "lookSequence": "left,right,left",
+        "escortGate": "false",
+        "escortGateReleased": "false",
+        "restReady": "true",
+        "visited": "",
+        "steering": "false",
+        "steadying": "false",
+        "standStillTime": "0"
+      },
+      "controls": [
+        {
+          "id": "content-back",
+          "w": 68,
+          "h": 60,
+          "bad": false
+        },
+        {
+          "id": "content-pause",
+          "w": 68,
+          "h": 60,
+          "bad": false
+        },
+        {
+          "id": "left",
+          "w": 93.953125,
+          "h": 64,
+          "bad": false
+        },
+        {
+          "id": "right",
+          "w": 93.953125,
+          "h": 64,
+          "bad": false
+        },
+        {
+          "id": "go",
+          "w": 93.953125,
+          "h": 64,
+          "bad": false
+        },
+        {
+          "id": "brake",
+          "w": 93.96875,
+          "h": 64,
+          "bad": false
+        },
+        {
+          "id": "recover-left",
+          "w": 193.90625,
+          "h": 64,
+          "bad": false
+        },
+        {
+          "id": "recover-right",
+          "w": 193.921875,
+          "h": 64,
+          "bad": false
+        },
+        {
+          "id": "listen",
+          "w": 393.828125,
+          "h": 64,
+          "bad": false
+        }
+      ],
+      "layout": {
+        "labels": [
+          {
+            "id": "content-back:回學院",
+            "x": 16,
+            "y": 254,
+            "right": 84,
+            "bottom": 314,
+            "width": 68,
+            "height": 60
+          },
+          {
+            "id": "content-title:把蛋糕平穩送到",
+            "x": 92,
+            "y": 266.5,
+            "right": 940,
+            "bottom": 301.5,
+            "width": 848,
+            "height": 35
+          },
+          {
+            "id": "content-pause:暫停",
+            "x": 948,
+            "y": 254,
+            "right": 1016,
+            "bottom": 314,
+            "width": 68,
+            "height": 60
+          },
+          {
+            "id": "content-scene-cue:第 3 站・休息灣・停穩再起步",
+            "x": 417,
+            "y": 332,
+            "right": 588.15625,
+            "bottom": 360,
+            "width": 171.15625,
+            "height": 28
+          },
+          {
+            "id": "cake-lean-legend:✓ 坐穩參照",
+            "x": 23,
+            "y": 334,
+            "right": 185,
+            "bottom": 350,
+            "width": 162,
+            "height": 16
+          },
+          {
+            "id": "content-hint:蛋糕坐穩了，按住踏板出灣。",
+            "x": 614.15625,
+            "y": 605.25,
+            "right": 1007.984375,
+            "bottom": 634.75,
+            "width": 393.828125,
+            "height": 29.5
+          },
+          {
+            "id": "BUTTON:左轉",
+            "x": 614.15625,
+            "y": 640.75,
+            "right": 708.109375,
+            "bottom": 704.75,
+            "width": 93.953125,
+            "height": 64
+          },
+          {
+            "id": "BUTTON:右轉",
+            "x": 714.109375,
+            "y": 640.75,
+            "right": 808.0625,
+            "bottom": 704.75,
+            "width": 93.953125,
+            "height": 64
+          },
+          {
+            "id": "BUTTON:按住出灣",
+            "x": 814.0625,
+            "y": 640.75,
+            "right": 908.015625,
+            "bottom": 704.75,
+            "width": 93.953125,
+            "height": 64
+          },
+          {
+            "id": "BUTTON:煞車",
+            "x": 914.015625,
+            "y": 640.75,
+            "right": 1007.984375,
+            "bottom": 704.75,
+            "width": 93.96875,
+            "height": 64
+          },
+          {
+            "id": "BUTTON:向左扶",
+            "x": 614.15625,
+            "y": 710.75,
+            "right": 808.0625,
+            "bottom": 774.75,
+            "width": 193.90625,
+            "height": 64
+          },
+          {
+            "id": "BUTTON:向右扶",
+            "x": 814.0625,
+            "y": 710.75,
+            "right": 1007.984375,
+            "bottom": 774.75,
+            "width": 193.921875,
+            "height": 64
+          },
+          {
+            "id": "BUTTON:再聽一次",
+            "x": 614.15625,
+            "y": 780.75,
+            "right": 1007.984375,
+            "bottom": 844.75,
+            "width": 393.828125,
+            "height": 64
+          },
+          {
+            "id": "content-force:坐穩了\n蛋糕回正 100%\n▰▱▱ 慢慢開・歪 0°",
+            "x": 197,
+            "y": 374,
+            "right": 589.15625,
+            "bottom": 478,
+            "width": 392.15625,
+            "height": 104
+          }
+        ],
+        "overlaps": [],
+        "iconOverlaps": [],
+        "signOcclusion": [],
+        "counterOcclusion": [],
+        "carOffset": null,
+        "recovery": [
+          {
+            "action": "recover-left",
+            "needed": "false",
+            "held": "false",
+            "background": "rgb(245, 251, 255)"
+          },
+          {
+            "action": "recover-right",
+            "needed": "false",
+            "held": "false",
+            "background": "rgb(245, 251, 255)"
+          }
+        ]
+      },
+      "text": "回學院\n把蛋糕平穩送到\n暫停\n第 3 站・休息灣・停穩再起步\n坐穩了\n蛋糕回正 100%\n▰▱▱ 慢慢開・歪 0°\n✓ 坐穩參照\n\n蛋糕坐穩了，按住踏板出灣。\n\n左轉\n右轉\n按住出灣\n煞車\n向左扶\n向右扶\n再聽一次",
+      "highlights": [
+        {
+          "id": "left",
+          "needed": "false",
+          "color": "rgb(245, 251, 255)"
+        },
+        {
+          "id": "right",
+          "needed": "false",
+          "color": "rgb(245, 251, 255)"
+        },
+        {
+          "id": "go",
+          "needed": "true",
+          "color": "rgb(255, 211, 68)"
+        },
+        {
+          "id": "brake",
+          "needed": "false",
+          "color": "rgb(245, 251, 255)"
+        },
+        {
+          "id": "recover-left",
+          "needed": "false",
+          "color": "rgb(245, 251, 255)"
+        },
+        {
+          "id": "recover-right",
+          "needed": "false",
+          "color": "rgb(245, 251, 255)"
+        },
+        {
+          "id": "listen",
+          "needed": "false",
+          "color": "rgb(245, 251, 255)"
+        }
+      ],
+      "ring": null,
+      "finger": null,
+      "textClipping": []
+    }
+  ],
+  "errors": [],
+  "failed": [],
+  "external": []
+}

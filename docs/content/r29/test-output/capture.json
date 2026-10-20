@@ -1,0 +1,37 @@
+{
+  "status": "EXECUTED",
+  "captures": [
+    {
+      "command": "npm test",
+      "source": "docs/content/r29/unit-tests.log",
+      "sourceSha256": "e6693268d9a51643d864f9f12c91f298e6f54779b6dc263d6baa3456b728117a",
+      "output": "docs/content/r29/test-output/unit.txt",
+      "sha256": "b1d81f98f59d883ba8d6e9f6a53ba74373253a4a01f7ee4f58b3ed87af79e546",
+      "normalization": "Lossless Unicode decoding of PowerShell redirection to UTF-8; output text unchanged"
+    },
+    {
+      "command": "npm run build",
+      "source": "docs/content/r29/build.log",
+      "sourceSha256": "d5bfce99d04fc2504024b6c0f6681295989923c65b5ead79cd0374019e321027",
+      "output": "docs/content/r29/test-output/build.txt",
+      "sha256": "62199d5dc3867d2c461c240fec51c335119d437831ebb2831cc37464efbb0864",
+      "normalization": "Lossless Unicode decoding of PowerShell redirection to UTF-8; output text unchanged"
+    },
+    {
+      "command": "npm run test:merge",
+      "source": "docs/content/r29/merge.log",
+      "sourceSha256": "5610c61afab8944b206319855db364c933ce6a0b6d5b0ac44bb573ada3bc07ea",
+      "output": "docs/content/r29/test-output/merge.txt",
+      "sha256": "32e5d6009d73d893583f09841b0b3fd09a48238180a0e6be71a1a6480eca7c70",
+      "normalization": "Lossless Unicode decoding of PowerShell redirection to UTF-8; output text unchanged"
+    },
+    {
+      "command": "npm run test:store",
+      "source": "docs/content/r29/store-regression.log",
+      "sourceSha256": "731df454870447a98ebd5cb7a918deb1fc1bd81e3c1e695c757d8f41256443f7",
+      "output": "docs/content/r29/test-output/store.txt",
+      "sha256": "6d4be0c6356c1190b75c62f7ebbccfe364bc6208c09340cb2e27c19140890afe",
+      "normalization": "Lossless Unicode decoding of PowerShell redirection to UTF-8; output text unchanged"
+    }
+  ]
+}

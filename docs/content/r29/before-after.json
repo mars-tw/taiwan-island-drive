@@ -1,0 +1,25 @@
+{
+  "status": "VERIFIED",
+  "baseline": "4cd8714eadf101f818f79351c2b9a0b08b7e4b7c",
+  "method": "Matching course, station and phase UI comparisons; physics-controlled comparison is a separate JSON proof",
+  "comparisons": [
+    {
+      "before": "docs/evidence/content-r29/before-cake.png",
+      "after": "docs/evidence/content-r29/after-cake.png",
+      "beforeSha256": "b3d072ed97c1bc2cd72d127598254975c97595c6400863cbd194c3e754485a76",
+      "afterSha256": "88eb8afe333f5cec7513806da3a125b1a12a492c3343de808aa9414e8e8aa1d2"
+    },
+    {
+      "before": "docs/evidence/content-r29/before-crossing.png",
+      "after": "docs/evidence/content-r29/after-crossing.png",
+      "beforeSha256": "bd8760abeac973a194733bcb1653064b28af7c07b7ca7199c547736e8c581ad4",
+      "afterSha256": "d9bd3731a9ddf7e530ba8b50f58006c32f44a67cf141ef03bbaa80dfedc4d7a3"
+    },
+    {
+      "before": "docs/evidence/content-r29/before-tickets.png",
+      "after": "docs/evidence/content-r29/after-tickets.png",
+      "beforeSha256": "942b1c8f6188fbb7555ab09e6dad1acf08051b6fef5ffc3afdc042fdd9cef383",
+      "afterSha256": "6ba9be7d1740a1a8a391545ec905bbc20008a5035f9c1f915b924176a8abe2d7"
+    }
+  ]
+}

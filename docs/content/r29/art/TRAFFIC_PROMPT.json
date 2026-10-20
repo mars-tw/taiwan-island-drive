@@ -1,0 +1,9 @@
+﻿{
+  "tool": "image_gen.imagegen",
+  "model_slug": null,
+  "prompt": "Island Traffic Academy sunny Taiwan coastal storybook, chunky ink-navy outlines, rounded toy proportions, warm upper-left light, saturated sea blue sunflower yellow coral orange, gentle paper texture, clean silhouette readable at 64px. Use case: precise-object-edit. Edit target and style reference: the provided cyan car. Produce ONE clean transparent cutout of this same cyan friendly toy car in a strict SIDE PROFILE, front facing RIGHT, rear at LEFT, horizontal level wheels. Keep the cyan/blue paint, navy outline, rounded body, soft warm storybook rendering, two yellow headlight hints and red tail-light at rear. IMPORTANT remove ALL anthropomorphic facial features: windshield and side windows are plain softly reflective blue glass, no eyes, eyebrows, face, mouth or smile on the vehicle. No passengers, no driver, no background, no ground strip, no arrows, no words. Both wheels visible on the near side, enough transparent padding all around. Compact low-VRAM children's game sprite, clear forward direction at 64px. Do not change the vehicle into a different theme or photorealism.",
+  "reference": "public/art/r6/car.png",
+  "original": "docs/content/r29/art/traffic-car-original.png",
+  "runtime": "public/art/content-r29/traffic-car.webp",
+  "conversion": "Sharp resize/encoding only; original alpha preserved"
+}

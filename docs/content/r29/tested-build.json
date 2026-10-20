@@ -1,0 +1,28 @@
+{
+  "status": "VERIFIED",
+  "purpose": "Final build fingerprint before the closing merge and store regression runs",
+  "sha256": {
+    "dist/sw.js": "2fb906f670666cd65ad84adff46f58a38b8f731035aacac13b97a3f6c79c0a9c",
+    "dist/precache.json": "541a8ff768593acb0bd3f6b9d9f714fc06a76eb38638ee230f687c30e285b02b",
+    "src/shared/content-r1-ui.js": "7fcf4652849fb46a5ab49644166f761c7fd91445a6ae2347e161a6f36bc052e5",
+    "src/shared/content-r29.js": "6f476ac853ac70cd09780535ae83ae098b068817bf09123728a830073dcd4a86",
+    "src/shared/content-r29-scene.js": "d143d7ca661a0dac9bfa3f997ebe96dc03a8b6fb67ea5c1992ff8c0574c7f252",
+    "src/shared/content-r29.css": "e67f7e6f52c939d15fe7ca59237c809e43d017064cda94dafafe9083800b7f1c",
+    "package.json": "8e103da7cea60768e02dd3a88f5e8093799526b131509e9e241300b95213e70f",
+    "tests/shared/content-r29.test.js": "7f5aa93b582ad8f07c002ce948a1e9e0691dcddbf41fc32b5d2a462179ed2632"
+  },
+  "regressions": [
+    {
+      "label": "merge",
+      "status": "VERIFIED",
+      "checks": 132,
+      "images": 25
+    },
+    {
+      "label": "store",
+      "status": "VERIFIED",
+      "checks": 101,
+      "images": 26
+    }
+  ]
+}
