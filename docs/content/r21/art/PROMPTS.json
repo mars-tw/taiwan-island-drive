@@ -1,0 +1,28 @@
+{
+  "status": "VERIFIED",
+  "tool": "image_gen.imagegen",
+  "model_slug": null,
+  "model_note": "Built-in tool does not disclose a model slug; none inferred.",
+  "prompt": "Island Transport Academy — sunny Taiwan coastal picture-book, premium preschool game art for ages 3–8. Rounded hand-painted gouache shapes with subtle paper texture, confident midnight-blue contours, toy-like proportions, warm sunlight. Palette sea blue #1479B8, ink #143B61, vivid orange #F46B27, signal yellow #FFD344, leaf green #58B85B. Cheerful clean composition, readable large silhouettes, no generic dark teal UI, no photorealism, no watermark. Use case: precise-object-edit. Input is the existing small retractable train boarding step, used as style and shape reference. Create a much more readable game sprite of ONE fully extended short broad rectangular train boarding step, viewed slightly from above and from the front, horizontal and symmetrical. Wide light-blue non-slip tread surface clearly visible, confident thick navy contour, substantial bright signal-yellow outer rim with alternating very dark navy diagonal safety stripes along the FRONT FASCIA only. Make top tread deep enough to read at 80 by 42 screen pixels. Rounded toy-like corners, blue metallic underside, tiny two side mounting tabs at rear. No train body, no railings, no people, no floor, no lettering or label, no white glow. Entire sprite isolated with actual transparent background and 8 percent padding. Wide 2:1 object, centered on landscape image. Keep matching the reference's cheerful rounded painted edge and blue and yellow material, but remove the large dark rear backing and give the front edge visibly contrasting yellow-black stripes. Asset will be a visible physical object below the live train door.",
+  "source": "C:\\Users\\digimkt\\.codex\\generated_images\\01a1589e-f033-7820-bd89-dcfac8a1a7c1\\exec-72f44402-5d5e-44a0-b442-6ab37d79a50f.png",
+  "newGenerationCalls": 1,
+  "newRuntimeAssets": 1,
+  "conversion": "Sharp alpha trim and WebP encoding only; no programmatic painting",
+  "width": 1748,
+  "height": 504,
+  "transparentPixels": 144482,
+  "files": [
+    {
+      "path": "docs/content/r21/art/boarding-step-original.png",
+      "sha256": "a03a3dcba88a4365601c49b441295daae44cfb0c27b300332382c698fbee4621"
+    },
+    {
+      "path": "public/art/content-r21/boarding-step.webp",
+      "sha256": "3aaafa04ed7439d2a4a2786b7e36b078fe3bc7c50c8c879fd4ed242cce44aa5b"
+    },
+    {
+      "path": "docs/content/r21/art/boarding-step-64.png",
+      "sha256": "b3e77adaf44499a193cbe4345f3f8a1cf41cb72954c528708e312ac5c001cfdd"
+    }
+  ]
+}

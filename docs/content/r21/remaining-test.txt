@@ -1,0 +1,46 @@
+EXECUTED offline
+VERIFIED cake stage 1 driven by controls
+VERIFIED cake stage 2 driven by controls
+VERIFIED cake stage 3 driven by controls
+VERIFIED cake three stops complete and restore exact saved facts
+VERIFIED crossing stage 1 observations, wait, three arrivals, departure
+VERIFIED crossing stage 2 observations, wait, three arrivals, departure
+VERIFIED crossing stage 3 observations, wait, three arrivals, departure
+VERIFIED crossing three stops complete and restore exact saved facts
+VERIFIED tickets stage 1 wrong choice, reselect, escort three friends, step/door/depart
+VERIFIED tickets stage 2 wrong choice, reselect, escort three friends, step/door/depart
+VERIFIED tickets stage 3 wrong choice, reselect, escort three friends, step/door/depart
+VERIFIED ticket answers move through all three platform positions
+VERIFIED tickets three stops complete and restore exact saved facts
+VERIFIED no script errors, failed local requests, or external network
+VERIFIED offline
+EXECUTED store
+VERIFIED store 1290x2796 live escort
+VERIFIED store 2064x2752 live escort
+VERIFIED no script errors, failed local requests, or external network
+VERIFIED store
+EXECUTED negative
+VERIFIED rest freezes actual recovery and movement
+VERIFIED touch cancellation releases recovery input
+VERIFIED reduced motion keeps recovery playable without answer animation
+VERIFIED blocked storage explains unsaved state and keeps play/exit reachable
+VERIFIED negative
+EXECUTED performance
+desktop cake: 33.4ms
+desktop crossing: 33.3ms
+desktop tickets: 33.4ms
+portrait cake: 16.7ms
+portrait crossing: 16.7ms
+portrait tickets: 16.7ms
+landscape cake: 16.8ms
+landscape crossing: 16.7ms
+landscape tickets: 16.8ms
+file:///C:/Users/digimkt/Desktop/%E9%81%8A%E6%88%B2/taiwan-island-drive/scripts/run-content-r21-validation.mjs:6
+ const child=spawn(process.execPath,args,{env:{...process.env,...env,R21_COURSES:'cake,crossing,tickets'},windowsHide:true});for(const s of [child.stdout,child.stderr])s.on('data',b=>{appendFileSync(path,b);process.stdout.write(b);});const code=await new Promise((r,j)=>{child.on('exit',r);child.on('error',j);});if(code!==0)throw Error(scope+' failed: '+code);console.log('VERIFIED '+scope);
+                                                                                                                                                                                                                                                                                                                                           ^
+
+Error: performance failed: 1
+    at file:///C:/Users/digimkt/Desktop/%E9%81%8A%E6%88%B2/taiwan-island-drive/scripts/run-content-r21-validation.mjs:6:332
+    at process.processTicksAndRejections (node:internal/process/task_queues:104:5)
+
+Node.js v24.15.0

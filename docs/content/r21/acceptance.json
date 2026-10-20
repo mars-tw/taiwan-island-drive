@@ -1,0 +1,44 @@
+{
+  "status": "VERIFIED",
+  "recovery": {
+    "lean": [
+      9.98,
+      6.53,
+      3.07
+    ],
+    "readout": [
+      "回中央 69%",
+      "回中央 80%",
+      "回中央 90%"
+    ],
+    "playerAction": "held recovery key",
+    "idleAndWrongHold": "frozen without penalty"
+  },
+  "step": {
+    "height": 46,
+    "width": 85.90625,
+    "rect": {
+      "left": 239,
+      "top": 489,
+      "width": 92,
+      "height": 71
+    },
+    "changedPixels": 3798,
+    "blindHumanTest": "BLOCKED - participant required"
+  },
+  "singleProgress": true,
+  "answerHighlight": false,
+  "fixedFriendNumbers": {
+    "child": 1,
+    "bike": 2,
+    "grandma": 3
+  },
+  "decisionFrames": [
+    "docs/content/r21/review-set/01-cake-stage-2-wrong.png",
+    "docs/content/r21/review-set/05-cake-stage-3-bay.png",
+    "docs/content/r21/review-set/06-crossing-stage-2-right-first.png",
+    "docs/content/r21/review-set/07-crossing-stage-3-recheck.png",
+    "docs/content/r21/review-set/11-tickets-stage-2-decision.png",
+    "docs/content/r21/review-set/12-tickets-stage-3-decision.png"
+  ]
+}

@@ -1,0 +1,30 @@
+{
+  "status": "VERIFIED",
+  "method": "Original Git baseline captures; different stops used to compare the named UI correction, not a pixel-aligned scene comparison",
+  "comparisons": [
+    {
+      "before": "docs/content/r21/before-cake.png",
+      "baseline": "99becd2ba4ea8edc50daa9ad336814bee9239632",
+      "baselineSource": "docs/content/r20/review-set/03-cake-tray-edge-recovering.png",
+      "beforeSha256": "f7e81d2b269ce36676932ead301f34fd0e5f123507c62111d65daec8510a0433",
+      "after": "docs/content/r21/after-cake.png",
+      "afterSha256": "560666271a96c94112c2ccdc6de15ecb474a62f6dc2d99d4713f432cfd5440f8"
+    },
+    {
+      "before": "docs/content/r21/before-crossing.png",
+      "baseline": "99becd2ba4ea8edc50daa9ad336814bee9239632",
+      "baselineSource": "docs/content/r20/review-set/06-crossing-stage-1-child-look-left.png",
+      "beforeSha256": "1ccb5c8c8eba36edad4f262c2a86179ab7ddd44e5e6c2f4807d8caf33796b876",
+      "after": "docs/content/r21/after-crossing.png",
+      "afterSha256": "116e5852daa16e08edd3a289d852637c92e73dff7aab2c7fd3350d1f016e5bd5"
+    },
+    {
+      "before": "docs/content/r21/before-tickets.png",
+      "baseline": "99becd2ba4ea8edc50daa9ad336814bee9239632",
+      "baselineSource": "docs/content/r20/review-set/13-tickets-stage-1-seated-3.png",
+      "beforeSha256": "6a9f7e5b12a84282115b8dec248364e44d2b3f127ff24a9c9dcc66765690b5d3",
+      "after": "docs/content/r21/after-tickets.png",
+      "afterSha256": "e03a181489f363f2320a3c5075e133b3ec2dc633ca9693267516b3d1168b287e"
+    }
+  ]
+}

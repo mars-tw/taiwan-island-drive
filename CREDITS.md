@@ -88,3 +88,7 @@
 # 新內容第16輪（2026-10-19）
 
 經兩次 `image_gen.imagegen` 生成同三位乘客的揮手半身姿勢表與完整三層蛋糕送達插畫，共四張runtime WebP。保留既有人物身分、服裝及完整海岸繪本風格前綴；模型slug未揭露。原圖、提示、凍結參考、alpha、64px檢查及SHA-256在 `docs/content/r16/art/`，遊戲用圖在 `public/art/content-r16/`。Sharp只做分格裁切、透明修邊、編碼與檢查縮圖。揮手為靜態姿勢，不宣稱新增動畫循環或骨架。由本專案生成，隨本MIT專案提供；沒有外部下載素材、依賴或SDK。
+
+## 新內容第21輪
+
+黃黑邊登車踏階：使用內建 `image_gen.imagegen` 編修本作既有R10踏階，新增一次生成、一個runtime WebP。提示與原圖見 `docs/content/r21/art/PROMPTS.json`。模型slug未由工具揭露；沒有引入外部遊戲素材、第三方SDK或新依賴。角色與場景沿用本作既有受管美術。
