@@ -1,0 +1,14 @@
+{
+  "id": "standing-atlas",
+  "tool": "image_gen.imagegen",
+  "model_slug": null,
+  "prompt": "Island Transport Academy — sunny Taiwan coastal picture-book, premium preschool game art for ages 3–8. Rounded hand-painted gouache shapes with subtle paper texture, confident midnight-blue contours, toy-like proportions, warm sunlight. Palette sea blue #1479B8, ink #143B61, vivid orange #F46B27, signal yellow #FFD344, leaf green #58B85B. Cheerful clean composition, readable large silhouettes, no generic dark teal UI, no photorealism, no watermark.\nUse case: identity-preserve. A single transparent game sprite atlas in landscape 1536x1024, THREE CHARACTERS in three equal horizontal cells, matching reference images 1 2 3 exactly in face, hair, outfit, backpack and shoes. Change ONLY the pose to safely standing still at a train doorway: both feet flat on the same ground baseline, legs straight and parallel with a small natural gap, knees relaxed, weight centered, hands calmly touching backpack straps or resting at sides. NO walking stride, NO running, NO waving, NO sitting. Faces and bodies turned three-quarters toward LEFT, because they walk left into the cabin. LEFT same black-haired orange T-shirt boy blue shorts blue backpack blue sneakers. MIDDLE same ponytail girl red flower hair tie yellow shirt red floral skirt red backpack red shoes. RIGHT same curly-haired boy sailboat blue-white-orange cap white shirt green shorts green backpack blue sneakers. Head and foot baselines aligned across the three sprites, full body including both shoes, isolated transparent canvas with wide empty gutters between all three. No background, no platform, no shadow, no text or UI. Preserve cheerful large eyes and midnight-blue contours, identity and palette exactly. Must clearly read as PAUSED WITH BOTH FEET PLANTED, never a frozen walking pose.",
+  "transparent_background": true,
+  "source": "docs/content/r33/art/standing-atlas-source.png",
+  "runtime": [
+    "public/art/content-r33/passenger-1-standing.png",
+    "public/art/content-r33/passenger-2-standing.png",
+    "public/art/content-r33/passenger-3-standing.png"
+  ],
+  "processing": "Sharp thirds, alpha trim, equal-height export. Runtime mirrors the two boys to face into the cabin; the girl already faces left."
+}

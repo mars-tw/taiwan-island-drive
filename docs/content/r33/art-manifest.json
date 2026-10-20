@@ -1,0 +1,55 @@
+{
+  "status": "VERIFIED",
+  "generationCalls": 3,
+  "newDesigns": 7,
+  "newRuntimeArt": 7,
+  "tool": "image_gen.imagegen",
+  "model_slug": null,
+  "prompts": [
+    "docs/content/r33/art/PROMPTS.json",
+    "docs/content/r33/art/PROMPT_BAY.json",
+    "docs/content/r33/art/PROMPT_STANDING.json"
+  ],
+  "files": [
+    {
+      "path": "docs/content/r33/art/seated-atlas-source.png",
+      "sha256": "aa96da215b3dadb2f5911822e202dc249929f9fd9261b9d6e2a534fd1b2001d3"
+    },
+    {
+      "path": "docs/content/r33/art/bay-panorama-source.png",
+      "sha256": "4b2a031284350a3ac744bcdbd4cce8e4b9e8e8482cd4ea609c9ccf746904d0c1"
+    },
+    {
+      "path": "docs/content/r33/art/standing-atlas-source.png",
+      "sha256": "8fd2ad08f1e4e691e634a0e9a6bd7d49b4602e682ac644ff42d7a4be4ffdea8d"
+    },
+    {
+      "path": "public/art/content-r33/bay-panorama.webp",
+      "sha256": "cbb15b5d81f4b084a1414a484648c52bbe6e6d932ff5b71904305d1992359f30"
+    },
+    {
+      "path": "public/art/content-r33/passenger-1-seated.png",
+      "sha256": "48f39d6f938b1708c4114c471daef972000e8db1004799a9457e66e597036b6b"
+    },
+    {
+      "path": "public/art/content-r33/passenger-2-seated.png",
+      "sha256": "74754afe3f64d418f9923e4e68be7da33ff5101b2ff86b981c1ffb2e20ff520b"
+    },
+    {
+      "path": "public/art/content-r33/passenger-3-seated.png",
+      "sha256": "fca80a037df2e3ce1b6195bfabe2586f8f89493b45b0349fe6de78e2ed60a6cc"
+    },
+    {
+      "path": "public/art/content-r33/passenger-1-standing.png",
+      "sha256": "ceeeadc40544e241a9f2037eee64f75c4642147636559b9cae6ea12aaa907c19"
+    },
+    {
+      "path": "public/art/content-r33/passenger-2-standing.png",
+      "sha256": "23b4878e822dd9b67d5ade147ebac77ce64fd76e797669ef3201ab17e8b152c0"
+    },
+    {
+      "path": "public/art/content-r33/passenger-3-standing.png",
+      "sha256": "f995bad8a407ad3253e6ba21e5775980ad07d181a526e91278487d14a764276e"
+    }
+  ]
+}

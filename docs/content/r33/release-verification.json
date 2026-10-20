@@ -1,0 +1,29 @@
+{
+  "status": "VERIFIED",
+  "version": "2.45.0",
+  "nativeSourceBuild": 41,
+  "unitTests": 331,
+  "regressions": {
+    "merge": 132,
+    "store-regression": 101
+  },
+  "rawImages": 469,
+  "reviewImages": 15,
+  "deletedFiles": 33,
+  "releasedBytes": 14461202,
+  "retainedInputs": 9492,
+  "existingTestsUnchanged": 53,
+  "preexistingUntrackedUnchanged": 102,
+  "p95": [
+    16.799999999999955,
+    16.800000000000182,
+    16.799999999999272
+  ],
+  "performanceStatus": "VERIFIED",
+  "blocked": [
+    "physical devices",
+    "family playtest",
+    "clean-machine frame timing",
+    "independent Muse score >=8"
+  ]
+}

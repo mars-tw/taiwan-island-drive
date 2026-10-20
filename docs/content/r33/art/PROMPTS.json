@@ -1,0 +1,19 @@
+{
+  "style_prefix": "Island Transport Academy — sunny Taiwan coastal picture-book, premium preschool game art for ages 3–8. Rounded hand-painted gouache shapes with subtle paper texture, confident midnight-blue contours, toy-like proportions, warm sunlight. Palette sea blue #1479B8, ink #143B61, vivid orange #F46B27, signal yellow #FFD344, leaf green #58B85B. Cheerful clean composition, readable large silhouettes, no generic dark teal UI, no photorealism, no watermark.",
+  "records": [
+    {
+      "id": "seated-atlas",
+      "tool": "image_gen.imagegen",
+      "model_slug": null,
+      "prompt": "Island Transport Academy — sunny Taiwan coastal picture-book, premium preschool game art for ages 3–8. Rounded hand-painted gouache shapes with subtle paper texture, confident midnight-blue contours, toy-like proportions, warm sunlight. Palette sea blue #1479B8, ink #143B61, vivid orange #F46B27, signal yellow #FFD344, leaf green #58B85B. Cheerful clean composition, readable large silhouettes, no generic dark teal UI, no photorealism, no watermark.\nUse case: identity-preserve. Game transparent sprite atlas, landscape 1536x1024, three evenly separated characters in a SINGLE ROW, each fully inside its own third of the canvas. Reference images 1 2 3 are the locked character identities, change ONLY their pose from walking to sitting. Left: same black-haired boy orange T-shirt blue shorts blue backpack blue sneakers. Middle: same ponytail girl red flower hair tie yellow shirt red floral skirt red backpack red shoes. Right: same curly-haired boy blue-white-orange sailboat cap white shirt green shorts green backpack blue sneakers. All three are FACING THE VIEWER, sitting upright, smiling, hands resting on thighs, hips at same baseline y=62%, thighs horizontal, knees bent together at 90 degrees, lower legs straight downward and feet side by side (absolutely no walking stride or crossed legs). The pelvis and bent thighs must clearly read as resting on an invisible chair cushion. No actual chair, seat or floor. Both shoes fully visible. Keep exact faces, colors, clothes, backpacks from references. Large silhouettes easy to read at 80px. Transparent background, no text, no props, no panels, no shadows or labels. Provide local generated file path.",
+      "transparent_background": true,
+      "source": "docs/content/r33/art/seated-atlas-source.png",
+      "runtime": [
+        "public/art/content-r33/passenger-1-seated.png",
+        "public/art/content-r33/passenger-2-seated.png",
+        "public/art/content-r33/passenger-3-seated.png"
+      ],
+      "processing": "Sharp extracts thirds, alpha trim and equal-height resize only"
+    }
+  ]
+}

@@ -1,0 +1,41 @@
+{
+  "status": "VERIFIED",
+  "method": "byte-identical raw copies, no resize or montage",
+  "shots": [
+    {
+      "path": "docs/evidence/content-r33/before-stop-line.png",
+      "source": "docs/content/r32/phone-crossing-1-child-on-zebra.png",
+      "sha256": "c0d4390d75bdcf65938a4578d4e93ae21c2d57b912dea5fd1d650c61745a1f08"
+    },
+    {
+      "path": "docs/evidence/content-r33/after-stop-line.png",
+      "source": "docs/content/r33/phone-crossing-stage-1-new-car-yields.png",
+      "sha256": "682747e6a181662a5e29681a2bf55919fbfbb1579a9f2961052c2dd14f37ffa1"
+    },
+    {
+      "path": "docs/evidence/content-r33/before-seated.png",
+      "source": "docs/content/r32/phone-tickets-stage-1-seated-1.png",
+      "sha256": "4e18f240e750116f622e0ff889f2c3d9981be1e6d07621a30c195edc5c779440"
+    },
+    {
+      "path": "docs/evidence/content-r33/after-seated.png",
+      "source": "docs/content/r33/phone-tickets-stage-1-seated-3.png",
+      "sha256": "0e17232a9fa7c3de306700ec8ac39a97101597b523a75403dfd1cf6f9d4ae50b"
+    },
+    {
+      "path": "docs/evidence/content-r33/phone-bay-main-road.png",
+      "source": "docs/content/r33/phone-cake-bay-main-road.png",
+      "sha256": "d9f27a65c1eae57bc1d851793a11bddbb9c4d344d67fc501d02e3994238d39af"
+    },
+    {
+      "path": "docs/evidence/content-r33/phone-landscape.png",
+      "source": "docs/content/r33/layout/layout/device-844x390-cabin.png",
+      "sha256": "71ada16a1c2823d9378a8ac507d7e4b9b361e06ad5cc3a2d43f4498bb1d3a97e"
+    },
+    {
+      "path": "docs/evidence/content-r33/ipad.png",
+      "source": "docs/content/r33/layout/layout/device-768x1024-cabin.png",
+      "sha256": "2313deeb23bdacacbb26d869e2461db88f245c2268b0deb4774d10ef7011fa18"
+    }
+  ]
+}
