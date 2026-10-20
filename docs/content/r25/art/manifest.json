@@ -1,0 +1,37 @@
+{
+  "status": "VERIFIED",
+  "newRuntimeArt": 0,
+  "generationCalls": 0,
+  "actualGenerationTool": null,
+  "method": "Existing managed artwork reused. Sharp creates inspection thumbnails only, not new game art.",
+  "assets": [
+    {
+      "who": "child",
+      "source": "public/art/content-r7/child-0.png",
+      "sourceSha256": "d8e94d9b1214968bec494ccfe7473200b55ae9190dbc97d1af55225d68f7c008",
+      "thumbnail": "docs/content/r25/art/child-64.png",
+      "thumbnailSha256": "7db6296832e97332fc1a2d9e44730a2268163cfe3093f3809c018e207422ff3b"
+    },
+    {
+      "who": "bike",
+      "source": "public/art/content-r1/bike-0.png",
+      "sourceSha256": "e0eaec4851544486a9d0618692f676316fb44c14b436fc05a37bdaa307b362ea",
+      "thumbnail": "docs/content/r25/art/bike-64.png",
+      "thumbnailSha256": "783abd655eafa7553428ec2ac9c37c9518df7fbe1b8bc4994628c088763a534e"
+    },
+    {
+      "who": "grandma",
+      "source": "public/art/content-r9/grandma-2.png",
+      "sourceSha256": "b358d7a76d462573c3e202d8840c20a93b05e4310a5e7818ea0ce4197f427da7",
+      "thumbnail": "docs/content/r25/art/grandma-64.png",
+      "thumbnailSha256": "74f034881cabf134f3c9ab6161d001efb5b9653407bbc67e846b342868474c4e"
+    },
+    {
+      "who": "passenger",
+      "source": "public/art/r5/passenger-1-0.png",
+      "sourceSha256": "35193f9b422366a80bfbb6ce9c5b6f41a0c72dbe91fdf6c2f48519f08cb01937",
+      "thumbnail": "docs/content/r25/art/passenger-64.png",
+      "thumbnailSha256": "030cb7512181c4cabf3bb3b03630f7bcbb72451fa1b1c9a448e4ce858b37b7a3"
+    }
+  ]
+}

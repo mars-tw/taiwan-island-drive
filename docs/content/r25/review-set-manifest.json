@@ -1,0 +1,2210 @@
+{
+  "status": "VERIFIED",
+  "policy": "Five original 390x844 screenshots per course, exact byte copies; every selected state passed all-label, banner, road-sign, counter, button, icon and progress geometry checks at capture time.",
+  "shots": [
+    {
+      "path": "docs/content/r25/review-set/01-cake-wrong-recovery.png",
+      "original": "docs/content/r25/phone-cake-wrong-recovery.png",
+      "caption": "錯向當下只亮正確鍵，提示指名左邊",
+      "width": 390,
+      "height": 844,
+      "sha256": "ffea2b7d4c94f12f89f304ba8a6bef42394272d5515fc74516ad63800cdf441a",
+      "layout": {
+        "labels": [
+          {
+            "id": "content-back:回學院",
+            "x": 16,
+            "y": 16,
+            "right": 84,
+            "bottom": 76,
+            "width": 68,
+            "height": 60
+          },
+          {
+            "id": "content-title:把蛋糕平穩送到",
+            "x": 92,
+            "y": 35.5,
+            "right": 298,
+            "bottom": 56.5,
+            "width": 206,
+            "height": 21
+          },
+          {
+            "id": "content-pause:暫停",
+            "x": 306,
+            "y": 16,
+            "right": 374,
+            "bottom": 76,
+            "width": 68,
+            "height": 60
+          },
+          {
+            "id": "content-scene-cue:第 2 站・燈塔彎・連續彎・↰ ↱ 兩個彎",
+            "x": 190,
+            "y": 94,
+            "right": 370,
+            "bottom": 134,
+            "width": 180,
+            "height": 40
+          },
+          {
+            "id": "content-hint:越扶越歪，改按左邊。",
+            "x": 24,
+            "y": 659.203125,
+            "right": 366,
+            "bottom": 680,
+            "width": 342,
+            "height": 20.796875
+          },
+          {
+            "id": "BUTTON:向左扶",
+            "x": 24,
+            "y": 686,
+            "right": 192,
+            "bottom": 750,
+            "width": 168,
+            "height": 64
+          },
+          {
+            "id": "BUTTON:向右扶",
+            "x": 198,
+            "y": 686,
+            "right": 366,
+            "bottom": 750,
+            "width": 168,
+            "height": 64
+          },
+          {
+            "id": "BUTTON:再聽一次",
+            "x": 24,
+            "y": 756,
+            "right": 366,
+            "bottom": 820,
+            "width": 342,
+            "height": 64
+          },
+          {
+            "id": "content-force:回穩中\n回中央 47%",
+            "x": 197,
+            "y": 136,
+            "right": 371,
+            "bottom": 240,
+            "width": 174,
+            "height": 104
+          },
+          {
+            "id": "cake-timing:↰左彎",
+            "x": 162.5546875,
+            "y": 283.71875,
+            "right": 227.4453125,
+            "bottom": 319.390625,
+            "width": 64.890625,
+            "height": 35.671875
+          }
+        ],
+        "overlaps": [],
+        "iconOverlaps": [],
+        "signOcclusion": [],
+        "counterOcclusion": [],
+        "carOffset": null,
+        "recovery": [
+          {
+            "action": "recover-left",
+            "needed": "true",
+            "held": "false",
+            "background": "rgb(255, 211, 68)"
+          },
+          {
+            "action": "recover-right",
+            "needed": "false",
+            "held": "true",
+            "background": "rgb(229, 237, 241)"
+          }
+        ]
+      }
+    },
+    {
+      "path": "docs/content/r25/review-set/02-cake-stage-2-centre-62.png",
+      "original": "docs/content/r25/phone-cake-stage-2-centre-62.png",
+      "caption": "放開保留位置，路牌完整",
+      "width": 390,
+      "height": 844,
+      "sha256": "82f1cbc8052f0916b56ecca77b1a28e976178501a0f5f9557124a1d79e336c50",
+      "layout": {
+        "labels": [
+          {
+            "id": "content-back:回學院",
+            "x": 16,
+            "y": 16,
+            "right": 84,
+            "bottom": 76,
+            "width": 68,
+            "height": 60
+          },
+          {
+            "id": "content-title:把蛋糕平穩送到",
+            "x": 92,
+            "y": 35.5,
+            "right": 298,
+            "bottom": 56.5,
+            "width": 206,
+            "height": 21
+          },
+          {
+            "id": "content-pause:暫停",
+            "x": 306,
+            "y": 16,
+            "right": 374,
+            "bottom": 76,
+            "width": 68,
+            "height": 60
+          },
+          {
+            "id": "content-scene-cue:第 2 站・燈塔彎・連續彎・↰ ↱ 兩個彎",
+            "x": 190,
+            "y": 94,
+            "right": 370,
+            "bottom": 134,
+            "width": 180,
+            "height": 40
+          },
+          {
+            "id": "content-hint:放開了，蛋糕停在這裡。",
+            "x": 24,
+            "y": 659.203125,
+            "right": 366,
+            "bottom": 680,
+            "width": 342,
+            "height": 20.796875
+          },
+          {
+            "id": "BUTTON:向左扶",
+            "x": 24,
+            "y": 686,
+            "right": 192,
+            "bottom": 750,
+            "width": 168,
+            "height": 64
+          },
+          {
+            "id": "BUTTON:向右扶",
+            "x": 198,
+            "y": 686,
+            "right": 366,
+            "bottom": 750,
+            "width": 168,
+            "height": 64
+          },
+          {
+            "id": "BUTTON:再聽一次",
+            "x": 24,
+            "y": 756,
+            "right": 366,
+            "bottom": 820,
+            "width": 342,
+            "height": 64
+          },
+          {
+            "id": "content-force:等你扶正\n回中央 62%",
+            "x": 197,
+            "y": 136,
+            "right": 371,
+            "bottom": 240,
+            "width": 174,
+            "height": 104
+          },
+          {
+            "id": "cake-timing:↰左彎",
+            "x": 162.5546875,
+            "y": 283.71875,
+            "right": 227.4453125,
+            "bottom": 319.390625,
+            "width": 64.890625,
+            "height": 35.671875
+          }
+        ],
+        "overlaps": [],
+        "iconOverlaps": [],
+        "signOcclusion": [],
+        "counterOcclusion": [],
+        "carOffset": null,
+        "recovery": [
+          {
+            "action": "recover-left",
+            "needed": "true",
+            "held": "false",
+            "background": "rgb(255, 211, 68)"
+          },
+          {
+            "action": "recover-right",
+            "needed": "false",
+            "held": "false",
+            "background": "rgb(245, 251, 255)"
+          }
+        ]
+      }
+    },
+    {
+      "path": "docs/content/r25/review-set/03-cake-stage-2-centre-100.png",
+      "original": "docs/content/r25/phone-cake-stage-2-centre-100.png",
+      "caption": "恢復直立後四鍵圖文與圓環分離",
+      "width": 390,
+      "height": 844,
+      "sha256": "88f8f124f0203f2b32361e66445bab015fb11b1c8b75e50b8435a108bbdcc96c",
+      "layout": {
+        "labels": [
+          {
+            "id": "content-back:回學院",
+            "x": 16,
+            "y": 16,
+            "right": 84,
+            "bottom": 76,
+            "width": 68,
+            "height": 60
+          },
+          {
+            "id": "content-title:把蛋糕平穩送到",
+            "x": 92,
+            "y": 35.5,
+            "right": 298,
+            "bottom": 56.5,
+            "width": 206,
+            "height": 21
+          },
+          {
+            "id": "content-pause:暫停",
+            "x": 306,
+            "y": 16,
+            "right": 374,
+            "bottom": 76,
+            "width": 68,
+            "height": 60
+          },
+          {
+            "id": "content-scene-cue:第 2 站・燈塔彎・連續彎・↰ ↱ 兩個彎",
+            "x": 190,
+            "y": 94,
+            "right": 370,
+            "bottom": 134,
+            "width": 180,
+            "height": 40
+          },
+          {
+            "id": "cake-recovery:✓ 蛋糕坐穩了",
+            "x": 73.265625,
+            "y": 331.59375,
+            "right": 316.734375,
+            "bottom": 359.59375,
+            "width": 243.46875,
+            "height": 28
+          },
+          {
+            "id": "content-hint:前方左彎，看路牌。",
+            "x": 24,
+            "y": 659.203125,
+            "right": 366,
+            "bottom": 680,
+            "width": 342,
+            "height": 20.796875
+          },
+          {
+            "id": "BUTTON:左轉",
+            "x": 24,
+            "y": 686,
+            "right": 105,
+            "bottom": 750,
+            "width": 81,
+            "height": 64
+          },
+          {
+            "id": "BUTTON:右轉",
+            "x": 111,
+            "y": 686,
+            "right": 192,
+            "bottom": 750,
+            "width": 81,
+            "height": 64
+          },
+          {
+            "id": "BUTTON:踏板",
+            "x": 198,
+            "y": 686,
+            "right": 279,
+            "bottom": 750,
+            "width": 81,
+            "height": 64
+          },
+          {
+            "id": "BUTTON:煞車",
+            "x": 285,
+            "y": 686,
+            "right": 366,
+            "bottom": 750,
+            "width": 81,
+            "height": 64
+          },
+          {
+            "id": "BUTTON:再聽一次",
+            "x": 24,
+            "y": 756,
+            "right": 366,
+            "bottom": 820,
+            "width": 342,
+            "height": 64
+          },
+          {
+            "id": "content-force:坐穩了\n回中央 100%",
+            "x": 197,
+            "y": 136,
+            "right": 371,
+            "bottom": 240,
+            "width": 174,
+            "height": 104
+          },
+          {
+            "id": "cake-timing:↰左彎",
+            "x": 162.5546875,
+            "y": 283.71875,
+            "right": 227.4453125,
+            "bottom": 319.390625,
+            "width": 64.890625,
+            "height": 35.671875
+          }
+        ],
+        "overlaps": [],
+        "iconOverlaps": [],
+        "signOcclusion": [],
+        "counterOcclusion": [],
+        "carOffset": null,
+        "recovery": []
+      }
+    },
+    {
+      "path": "docs/content/r25/review-set/04-cake-stage-3-bay.png",
+      "original": "docs/content/r25/phone-cake-stage-3-bay.png",
+      "caption": "休息灣停穩後才再起步",
+      "width": 390,
+      "height": 844,
+      "sha256": "630bed6a7136ccbd1ffce84776cf8baeb9fa1c5146bc29c0973d5b9acf2a9e02",
+      "layout": {
+        "labels": [
+          {
+            "id": "content-back:回學院",
+            "x": 16,
+            "y": 16,
+            "right": 84,
+            "bottom": 76,
+            "width": 68,
+            "height": 60
+          },
+          {
+            "id": "content-title:把蛋糕平穩送到",
+            "x": 92,
+            "y": 35.5,
+            "right": 298,
+            "bottom": 56.5,
+            "width": 206,
+            "height": 21
+          },
+          {
+            "id": "content-pause:暫停",
+            "x": 306,
+            "y": 16,
+            "right": 374,
+            "bottom": 76,
+            "width": 68,
+            "height": 60
+          },
+          {
+            "id": "content-scene-cue:第 3 站・榕樹灣・臨停・停 → 走・休息灣",
+            "x": 190,
+            "y": 94,
+            "right": 370,
+            "bottom": 134,
+            "width": 180,
+            "height": 40
+          },
+          {
+            "id": "content-hint:休息好了，可以出發了。",
+            "x": 24,
+            "y": 659.203125,
+            "right": 366,
+            "bottom": 680,
+            "width": 342,
+            "height": 20.796875
+          },
+          {
+            "id": "BUTTON:左轉",
+            "x": 24,
+            "y": 686,
+            "right": 105,
+            "bottom": 750,
+            "width": 81,
+            "height": 64
+          },
+          {
+            "id": "BUTTON:右轉",
+            "x": 111,
+            "y": 686,
+            "right": 192,
+            "bottom": 750,
+            "width": 81,
+            "height": 64
+          },
+          {
+            "id": "BUTTON:踏板",
+            "x": 198,
+            "y": 686,
+            "right": 279,
+            "bottom": 750,
+            "width": 81,
+            "height": 64
+          },
+          {
+            "id": "BUTTON:煞車",
+            "x": 285,
+            "y": 686,
+            "right": 366,
+            "bottom": 750,
+            "width": 81,
+            "height": 64
+          },
+          {
+            "id": "BUTTON:再聽一次",
+            "x": 24,
+            "y": 756,
+            "right": 366,
+            "bottom": 820,
+            "width": 342,
+            "height": 64
+          },
+          {
+            "id": "content-force:傾斜中\n回中央 99%",
+            "x": 197,
+            "y": 136,
+            "right": 371,
+            "bottom": 240,
+            "width": 174,
+            "height": 104
+          },
+          {
+            "id": "cake-timing:路旁休息區",
+            "x": 145,
+            "y": 283.71875,
+            "right": 245,
+            "bottom": 316.71875,
+            "width": 100,
+            "height": 33
+          }
+        ],
+        "overlaps": [],
+        "iconOverlaps": [],
+        "signOcclusion": [],
+        "counterOcclusion": [],
+        "carOffset": null,
+        "recovery": []
+      }
+    },
+    {
+      "path": "docs/content/r25/review-set/05-cake-complete.png",
+      "original": "docs/content/r25/phone-cake-complete.png",
+      "caption": "分享蛋糕專屬收尾",
+      "width": 390,
+      "height": 844,
+      "sha256": "574c78d337f6f94ff09b71ad91386cc790e35704c85b64713799002688c9fbc4",
+      "layout": {
+        "labels": [
+          {
+            "id": "content-back:回學院",
+            "x": 16,
+            "y": 16,
+            "right": 84,
+            "bottom": 76,
+            "width": 68,
+            "height": 60
+          },
+          {
+            "id": "content-title:把蛋糕平穩送到",
+            "x": 92,
+            "y": 35.5,
+            "right": 298,
+            "bottom": 56.5,
+            "width": 206,
+            "height": 21
+          },
+          {
+            "id": "content-pause:暫停",
+            "x": 306,
+            "y": 16,
+            "right": 374,
+            "bottom": 76,
+            "width": 68,
+            "height": 60
+          },
+          {
+            "id": "content-scene-cue:三站完成・蛋糕送到了",
+            "x": 117,
+            "y": 100,
+            "right": 273,
+            "bottom": 135,
+            "width": 156,
+            "height": 35
+          },
+          {
+            "id": "STRONG:看彎道、扶回中央、臨停再起步。",
+            "x": 30,
+            "y": 702.8125,
+            "right": 360,
+            "bottom": 725.203125,
+            "width": 330,
+            "height": 22.390625
+          },
+          {
+            "id": "BUTTON:再送一次",
+            "x": 24,
+            "y": 735.203125,
+            "right": 192,
+            "bottom": 799.203125,
+            "width": 168,
+            "height": 64
+          },
+          {
+            "id": "BUTTON:換一課",
+            "x": 198,
+            "y": 735.203125,
+            "right": 366,
+            "bottom": 799.203125,
+            "width": 168,
+            "height": 64
+          },
+          {
+            "id": "content-save:旅程已保存",
+            "x": 24,
+            "y": 803.203125,
+            "right": 366,
+            "bottom": 820,
+            "width": 342,
+            "height": 16.796875
+          },
+          {
+            "id": "lesson-route-proof:✓\n起步\n✓\n轉彎\n✓\n臨停",
+            "x": 24,
+            "y": 612.8125,
+            "right": 366,
+            "bottom": 666.8125,
+            "width": 342,
+            "height": 54
+          }
+        ],
+        "overlaps": [],
+        "iconOverlaps": [],
+        "signOcclusion": [],
+        "counterOcclusion": [],
+        "carOffset": null,
+        "recovery": []
+      }
+    },
+    {
+      "path": "docs/content/r25/review-set/06-crossing-stage-3-recheck-3.png",
+      "original": "docs/content/r25/phone-crossing-stage-3-recheck-3.png",
+      "caption": "車到右緣，標籤仍貼車身",
+      "width": 390,
+      "height": 844,
+      "sha256": "71e5590e11f60ff46f7a6ac6e54081a52b6e9aa7dba2a78d5a6a1984c63b2320",
+      "layout": {
+        "labels": [
+          {
+            "id": "content-back:回學院",
+            "x": 16,
+            "y": 16,
+            "right": 84,
+            "bottom": 76,
+            "width": 68,
+            "height": 60
+          },
+          {
+            "id": "content-title:路口停看等",
+            "x": 92,
+            "y": 35.5,
+            "right": 298,
+            "bottom": 56.5,
+            "width": 206,
+            "height": 21
+          },
+          {
+            "id": "content-pause:暫停",
+            "x": 306,
+            "y": 16,
+            "right": 374,
+            "bottom": 76,
+            "width": 68,
+            "height": 60
+          },
+          {
+            "id": "friend-number:2 腳踏車",
+            "x": 53.4375,
+            "y": 498.609375,
+            "right": 107.4375,
+            "bottom": 520.609375,
+            "width": 54,
+            "height": 22
+          },
+          {
+            "id": "friend-number:3 奶奶",
+            "x": 174.5,
+            "y": 498.609375,
+            "right": 215.5,
+            "bottom": 520.609375,
+            "width": 41,
+            "height": 22
+          },
+          {
+            "id": "friend-number:1 小朋友",
+            "x": 282.546875,
+            "y": 498.609375,
+            "right": 336.546875,
+            "bottom": 520.609375,
+            "width": 54,
+            "height": 22
+          },
+          {
+            "id": "content-scene-cue:第 3 站・燈塔小徑",
+            "x": 24,
+            "y": 138,
+            "right": 135.15625,
+            "bottom": 162,
+            "width": 111.15625,
+            "height": 24
+          },
+          {
+            "id": "content-observe:已到對岸 0/3 人",
+            "x": 24,
+            "y": 98,
+            "right": 159,
+            "bottom": 134,
+            "width": 135,
+            "height": 36
+          },
+          {
+            "id": "SPAN:○ 左邊待確認",
+            "x": 24,
+            "y": 162,
+            "right": 111,
+            "bottom": 184,
+            "width": 87,
+            "height": 22
+          },
+          {
+            "id": "SPAN:✓ 右邊看過",
+            "x": 116,
+            "y": 162,
+            "right": 188,
+            "bottom": 184,
+            "width": 72,
+            "height": 22
+          },
+          {
+            "id": "B:來車",
+            "x": 322.625,
+            "y": 381.84375,
+            "right": 360.625,
+            "bottom": 401.84375,
+            "width": 38,
+            "height": 20
+          },
+          {
+            "id": "SPAN:對岸",
+            "x": 332,
+            "y": 192,
+            "right": 366,
+            "bottom": 214,
+            "width": 34,
+            "height": 22
+          },
+          {
+            "id": "station-rule:← → ← 再看一次",
+            "x": 263,
+            "y": 154,
+            "right": 368,
+            "bottom": 178,
+            "width": 105,
+            "height": 24
+          },
+          {
+            "id": "lane-direction:→",
+            "x": 23.15625,
+            "y": 432.15625,
+            "right": 51.15625,
+            "bottom": 458.15625,
+            "width": 28,
+            "height": 26
+          },
+          {
+            "id": "content-hint:車子快離開了，等一等。",
+            "x": 24,
+            "y": 638.40625,
+            "right": 366,
+            "bottom": 680,
+            "width": 342,
+            "height": 41.59375
+          },
+          {
+            "id": "BUTTON:停下",
+            "x": 24,
+            "y": 686,
+            "right": 105,
+            "bottom": 750,
+            "width": 81,
+            "height": 64
+          },
+          {
+            "id": "BUTTON:看左邊",
+            "x": 111,
+            "y": 686,
+            "right": 192,
+            "bottom": 750,
+            "width": 81,
+            "height": 64
+          },
+          {
+            "id": "BUTTON:看右邊",
+            "x": 198,
+            "y": 686,
+            "right": 279,
+            "bottom": 750,
+            "width": 81,
+            "height": 64
+          },
+          {
+            "id": "BUTTON:出發",
+            "x": 285,
+            "y": 686,
+            "right": 366,
+            "bottom": 750,
+            "width": 81,
+            "height": 64
+          },
+          {
+            "id": "BUTTON:再聽一次",
+            "x": 24,
+            "y": 756,
+            "right": 366,
+            "bottom": 820,
+            "width": 342,
+            "height": 64
+          }
+        ],
+        "overlaps": [],
+        "iconOverlaps": [],
+        "signOcclusion": [],
+        "counterOcclusion": [],
+        "carOffset": 0,
+        "recovery": []
+      }
+    },
+    {
+      "path": "docs/content/r25/review-set/07-crossing-stage-3-1-middle.png",
+      "original": "docs/content/r25/phone-crossing-stage-3-1-middle.png",
+      "caption": "腳踏車在斑馬線中央，0/3",
+      "width": 390,
+      "height": 844,
+      "sha256": "19f398775797434544024f3fcbcc8509c0c79435988d856ab59139c3372c67b6",
+      "layout": {
+        "labels": [
+          {
+            "id": "content-back:回學院",
+            "x": 16,
+            "y": 16,
+            "right": 84,
+            "bottom": 76,
+            "width": 68,
+            "height": 60
+          },
+          {
+            "id": "content-title:路口停看等",
+            "x": 92,
+            "y": 35.5,
+            "right": 298,
+            "bottom": 56.5,
+            "width": 206,
+            "height": 21
+          },
+          {
+            "id": "content-pause:暫停",
+            "x": 306,
+            "y": 16,
+            "right": 374,
+            "bottom": 76,
+            "width": 68,
+            "height": 60
+          },
+          {
+            "id": "friend-number:3 奶奶",
+            "x": 174.5,
+            "y": 498.609375,
+            "right": 215.5,
+            "bottom": 520.609375,
+            "width": 41,
+            "height": 22
+          },
+          {
+            "id": "friend-number:1 小朋友",
+            "x": 282.546875,
+            "y": 498.609375,
+            "right": 336.546875,
+            "bottom": 520.609375,
+            "width": 54,
+            "height": 22
+          },
+          {
+            "id": "friend-number:2 腳踏車",
+            "x": 239,
+            "y": 362.265625,
+            "right": 293,
+            "bottom": 384.265625,
+            "width": 54,
+            "height": 22
+          },
+          {
+            "id": "content-scene-cue:第 3 站・燈塔小徑",
+            "x": 24,
+            "y": 138,
+            "right": 135.15625,
+            "bottom": 162,
+            "width": 111.15625,
+            "height": 24
+          },
+          {
+            "id": "content-observe:已到對岸 0/3 人",
+            "x": 24,
+            "y": 98,
+            "right": 159,
+            "bottom": 134,
+            "width": 135,
+            "height": 36
+          },
+          {
+            "id": "SPAN:✓ 左邊看過",
+            "x": 24,
+            "y": 162,
+            "right": 96,
+            "bottom": 184,
+            "width": 72,
+            "height": 22
+          },
+          {
+            "id": "SPAN:✓ 右邊看過",
+            "x": 101,
+            "y": 162,
+            "right": 173,
+            "bottom": 184,
+            "width": 72,
+            "height": 22
+          },
+          {
+            "id": "SPAN:對岸",
+            "x": 332,
+            "y": 192,
+            "right": 366,
+            "bottom": 214,
+            "width": 34,
+            "height": 22
+          },
+          {
+            "id": "station-rule:← → ← 再看一次",
+            "x": 263,
+            "y": 154,
+            "right": 368,
+            "bottom": 178,
+            "width": 105,
+            "height": 24
+          },
+          {
+            "id": "content-hint:腳踏車正在過街，還能看左右。",
+            "x": 24,
+            "y": 638.40625,
+            "right": 366,
+            "bottom": 680,
+            "width": 342,
+            "height": 41.59375
+          },
+          {
+            "id": "BUTTON:停下",
+            "x": 24,
+            "y": 686,
+            "right": 105,
+            "bottom": 750,
+            "width": 81,
+            "height": 64
+          },
+          {
+            "id": "BUTTON:看左邊",
+            "x": 111,
+            "y": 686,
+            "right": 192,
+            "bottom": 750,
+            "width": 81,
+            "height": 64
+          },
+          {
+            "id": "BUTTON:看右邊",
+            "x": 198,
+            "y": 686,
+            "right": 279,
+            "bottom": 750,
+            "width": 81,
+            "height": 64
+          },
+          {
+            "id": "BUTTON:出發",
+            "x": 285,
+            "y": 686,
+            "right": 366,
+            "bottom": 750,
+            "width": 81,
+            "height": 64
+          },
+          {
+            "id": "BUTTON:再聽一次",
+            "x": 24,
+            "y": 756,
+            "right": 366,
+            "bottom": 820,
+            "width": 342,
+            "height": 64
+          }
+        ],
+        "overlaps": [],
+        "iconOverlaps": [],
+        "signOcclusion": [],
+        "counterOcclusion": [],
+        "carOffset": null,
+        "recovery": []
+      }
+    },
+    {
+      "path": "docs/content/r25/review-set/08-crossing-stage-3-2-middle.png",
+      "original": "docs/content/r25/phone-crossing-stage-3-2-middle.png",
+      "caption": "奶奶在中央，腳踏車已到岸，1/3",
+      "width": 390,
+      "height": 844,
+      "sha256": "793d4b2c7a7dfc5aa83ee480896aa348cc18ea333670099923cdfd71cb6a233b",
+      "layout": {
+        "labels": [
+          {
+            "id": "content-back:回學院",
+            "x": 16,
+            "y": 16,
+            "right": 84,
+            "bottom": 76,
+            "width": 68,
+            "height": 60
+          },
+          {
+            "id": "content-title:路口停看等",
+            "x": 92,
+            "y": 35.5,
+            "right": 298,
+            "bottom": 56.5,
+            "width": 206,
+            "height": 21
+          },
+          {
+            "id": "content-pause:暫停",
+            "x": 306,
+            "y": 16,
+            "right": 374,
+            "bottom": 76,
+            "width": 68,
+            "height": 60
+          },
+          {
+            "id": "friend-number:1 小朋友",
+            "x": 282.546875,
+            "y": 498.609375,
+            "right": 336.546875,
+            "bottom": 520.609375,
+            "width": 54,
+            "height": 22
+          },
+          {
+            "id": "friend-number:3 奶奶",
+            "x": 239,
+            "y": 360.21875,
+            "right": 280,
+            "bottom": 382.21875,
+            "width": 41,
+            "height": 22
+          },
+          {
+            "id": "content-scene-cue:第 3 站・燈塔小徑",
+            "x": 24,
+            "y": 138,
+            "right": 135.15625,
+            "bottom": 162,
+            "width": 111.15625,
+            "height": 24
+          },
+          {
+            "id": "friend-number:2 腳踏車",
+            "x": 46.9375,
+            "y": 335.421875,
+            "right": 113.9375,
+            "bottom": 357.421875,
+            "width": 67,
+            "height": 22
+          },
+          {
+            "id": "content-observe:已到對岸 1/3 人",
+            "x": 24,
+            "y": 98,
+            "right": 159,
+            "bottom": 134,
+            "width": 135,
+            "height": 36
+          },
+          {
+            "id": "SPAN:✓ 左邊看過",
+            "x": 24,
+            "y": 162,
+            "right": 96,
+            "bottom": 184,
+            "width": 72,
+            "height": 22
+          },
+          {
+            "id": "SPAN:✓ 右邊看過",
+            "x": 101,
+            "y": 162,
+            "right": 173,
+            "bottom": 184,
+            "width": 72,
+            "height": 22
+          },
+          {
+            "id": "SPAN:對岸",
+            "x": 332,
+            "y": 192,
+            "right": 366,
+            "bottom": 214,
+            "width": 34,
+            "height": 22
+          },
+          {
+            "id": "station-rule:← → ← 再看一次",
+            "x": 263,
+            "y": 154,
+            "right": 368,
+            "bottom": 178,
+            "width": 105,
+            "height": 24
+          },
+          {
+            "id": "content-hint:奶奶正在過街，還能看左右。",
+            "x": 24,
+            "y": 638.40625,
+            "right": 366,
+            "bottom": 680,
+            "width": 342,
+            "height": 41.59375
+          },
+          {
+            "id": "BUTTON:停下",
+            "x": 24,
+            "y": 686,
+            "right": 105,
+            "bottom": 750,
+            "width": 81,
+            "height": 64
+          },
+          {
+            "id": "BUTTON:看左邊",
+            "x": 111,
+            "y": 686,
+            "right": 192,
+            "bottom": 750,
+            "width": 81,
+            "height": 64
+          },
+          {
+            "id": "BUTTON:看右邊",
+            "x": 198,
+            "y": 686,
+            "right": 279,
+            "bottom": 750,
+            "width": 81,
+            "height": 64
+          },
+          {
+            "id": "BUTTON:出發",
+            "x": 285,
+            "y": 686,
+            "right": 366,
+            "bottom": 750,
+            "width": 81,
+            "height": 64
+          },
+          {
+            "id": "BUTTON:再聽一次",
+            "x": 24,
+            "y": 756,
+            "right": 366,
+            "bottom": 820,
+            "width": 342,
+            "height": 64
+          }
+        ],
+        "overlaps": [],
+        "iconOverlaps": [],
+        "signOcclusion": [],
+        "counterOcclusion": [],
+        "carOffset": null,
+        "recovery": []
+      }
+    },
+    {
+      "path": "docs/content/r25/review-set/09-crossing-stage-3-3-middle.png",
+      "original": "docs/content/r25/phone-crossing-stage-3-3-middle.png",
+      "caption": "小朋友在中央，前兩位到岸，2/3",
+      "width": 390,
+      "height": 844,
+      "sha256": "52235a606bf20dadb95d1dd90e29ec77fa4b51b5ffe3c1c24d0ebf6dd5652385",
+      "layout": {
+        "labels": [
+          {
+            "id": "content-back:回學院",
+            "x": 16,
+            "y": 16,
+            "right": 84,
+            "bottom": 76,
+            "width": 68,
+            "height": 60
+          },
+          {
+            "id": "content-title:路口停看等",
+            "x": 92,
+            "y": 35.5,
+            "right": 298,
+            "bottom": 56.5,
+            "width": 206,
+            "height": 21
+          },
+          {
+            "id": "content-pause:暫停",
+            "x": 306,
+            "y": 16,
+            "right": 374,
+            "bottom": 76,
+            "width": 68,
+            "height": 60
+          },
+          {
+            "id": "friend-number:1 小朋友",
+            "x": 239,
+            "y": 364.34375,
+            "right": 293,
+            "bottom": 386.34375,
+            "width": 54,
+            "height": 22
+          },
+          {
+            "id": "content-scene-cue:第 3 站・燈塔小徑",
+            "x": 24,
+            "y": 138,
+            "right": 135.15625,
+            "bottom": 162,
+            "width": 111.15625,
+            "height": 24
+          },
+          {
+            "id": "friend-number:2 腳踏車",
+            "x": 46.9375,
+            "y": 335.421875,
+            "right": 113.9375,
+            "bottom": 357.421875,
+            "width": 67,
+            "height": 22
+          },
+          {
+            "id": "friend-number:3 奶奶",
+            "x": 168,
+            "y": 335.421875,
+            "right": 222,
+            "bottom": 357.421875,
+            "width": 54,
+            "height": 22
+          },
+          {
+            "id": "content-observe:已到對岸 2/3 人",
+            "x": 24,
+            "y": 98,
+            "right": 159,
+            "bottom": 134,
+            "width": 135,
+            "height": 36
+          },
+          {
+            "id": "SPAN:✓ 左邊看過",
+            "x": 24,
+            "y": 162,
+            "right": 96,
+            "bottom": 184,
+            "width": 72,
+            "height": 22
+          },
+          {
+            "id": "SPAN:✓ 右邊看過",
+            "x": 101,
+            "y": 162,
+            "right": 173,
+            "bottom": 184,
+            "width": 72,
+            "height": 22
+          },
+          {
+            "id": "SPAN:對岸",
+            "x": 332,
+            "y": 192,
+            "right": 366,
+            "bottom": 214,
+            "width": 34,
+            "height": 22
+          },
+          {
+            "id": "station-rule:← → ← 再看一次",
+            "x": 263,
+            "y": 154,
+            "right": 368,
+            "bottom": 178,
+            "width": 105,
+            "height": 24
+          },
+          {
+            "id": "content-hint:小朋友正在過街，還能看左右。",
+            "x": 24,
+            "y": 638.40625,
+            "right": 366,
+            "bottom": 680,
+            "width": 342,
+            "height": 41.59375
+          },
+          {
+            "id": "BUTTON:停下",
+            "x": 24,
+            "y": 686,
+            "right": 105,
+            "bottom": 750,
+            "width": 81,
+            "height": 64
+          },
+          {
+            "id": "BUTTON:看左邊",
+            "x": 111,
+            "y": 686,
+            "right": 192,
+            "bottom": 750,
+            "width": 81,
+            "height": 64
+          },
+          {
+            "id": "BUTTON:看右邊",
+            "x": 198,
+            "y": 686,
+            "right": 279,
+            "bottom": 750,
+            "width": 81,
+            "height": 64
+          },
+          {
+            "id": "BUTTON:出發",
+            "x": 285,
+            "y": 686,
+            "right": 366,
+            "bottom": 750,
+            "width": 81,
+            "height": 64
+          },
+          {
+            "id": "BUTTON:再聽一次",
+            "x": 24,
+            "y": 756,
+            "right": 366,
+            "bottom": 820,
+            "width": 342,
+            "height": 64
+          }
+        ],
+        "overlaps": [],
+        "iconOverlaps": [],
+        "signOcclusion": [],
+        "counterOcclusion": [],
+        "carOffset": null,
+        "recovery": []
+      }
+    },
+    {
+      "path": "docs/content/r25/review-set/10-crossing-stage-3-ready-depart.png",
+      "original": "docs/content/r25/phone-crossing-stage-3-ready-depart.png",
+      "caption": "3/3到岸，名字與對岸牌分開，只有出發亮黃",
+      "width": 390,
+      "height": 844,
+      "sha256": "597952d6905c46c33a3b87b9fee6484ac6d950c52646f468395c51aba5ed959e",
+      "layout": {
+        "labels": [
+          {
+            "id": "content-back:回學院",
+            "x": 16,
+            "y": 16,
+            "right": 84,
+            "bottom": 76,
+            "width": 68,
+            "height": 60
+          },
+          {
+            "id": "content-title:路口停看等",
+            "x": 92,
+            "y": 35.5,
+            "right": 298,
+            "bottom": 56.5,
+            "width": 206,
+            "height": 21
+          },
+          {
+            "id": "content-pause:暫停",
+            "x": 306,
+            "y": 16,
+            "right": 374,
+            "bottom": 76,
+            "width": 68,
+            "height": 60
+          },
+          {
+            "id": "content-scene-cue:第 3 站・燈塔小徑",
+            "x": 24,
+            "y": 138,
+            "right": 135.15625,
+            "bottom": 162,
+            "width": 111.15625,
+            "height": 24
+          },
+          {
+            "id": "friend-number:2 腳踏車",
+            "x": 46.9375,
+            "y": 335.421875,
+            "right": 113.9375,
+            "bottom": 357.421875,
+            "width": 67,
+            "height": 22
+          },
+          {
+            "id": "friend-number:3 奶奶",
+            "x": 168,
+            "y": 335.421875,
+            "right": 222,
+            "bottom": 357.421875,
+            "width": 54,
+            "height": 22
+          },
+          {
+            "id": "friend-number:1 小朋友",
+            "x": 276.046875,
+            "y": 335.421875,
+            "right": 343.046875,
+            "bottom": 357.421875,
+            "width": 67,
+            "height": 22
+          },
+          {
+            "id": "content-observe:已到對岸 3/3 人",
+            "x": 24,
+            "y": 98,
+            "right": 159,
+            "bottom": 134,
+            "width": 135,
+            "height": 36
+          },
+          {
+            "id": "SPAN:✓ 左邊看過",
+            "x": 24,
+            "y": 162,
+            "right": 96,
+            "bottom": 184,
+            "width": 72,
+            "height": 22
+          },
+          {
+            "id": "SPAN:✓ 右邊看過",
+            "x": 101,
+            "y": 162,
+            "right": 173,
+            "bottom": 184,
+            "width": 72,
+            "height": 22
+          },
+          {
+            "id": "SPAN:對岸 ✓",
+            "x": 320,
+            "y": 192,
+            "right": 366,
+            "bottom": 214,
+            "width": 46,
+            "height": 22
+          },
+          {
+            "id": "station-rule:← → ← 再看一次",
+            "x": 263,
+            "y": 154,
+            "right": 368,
+            "bottom": 178,
+            "width": 105,
+            "height": 24
+          },
+          {
+            "id": "content-hint:大家都到了，可以出發。",
+            "x": 24,
+            "y": 638.40625,
+            "right": 366,
+            "bottom": 680,
+            "width": 342,
+            "height": 41.59375
+          },
+          {
+            "id": "BUTTON:停下",
+            "x": 24,
+            "y": 686,
+            "right": 105,
+            "bottom": 750,
+            "width": 81,
+            "height": 64
+          },
+          {
+            "id": "BUTTON:看左邊",
+            "x": 111,
+            "y": 686,
+            "right": 192,
+            "bottom": 750,
+            "width": 81,
+            "height": 64
+          },
+          {
+            "id": "BUTTON:看右邊",
+            "x": 198,
+            "y": 686,
+            "right": 279,
+            "bottom": 750,
+            "width": 81,
+            "height": 64
+          },
+          {
+            "id": "BUTTON:出發",
+            "x": 285,
+            "y": 686,
+            "right": 366,
+            "bottom": 750,
+            "width": 81,
+            "height": 64
+          },
+          {
+            "id": "BUTTON:再聽一次",
+            "x": 24,
+            "y": 756,
+            "right": 366,
+            "bottom": 820,
+            "width": 342,
+            "height": 64
+          }
+        ],
+        "overlaps": [],
+        "iconOverlaps": [],
+        "signOcclusion": [],
+        "counterOcclusion": [],
+        "carOffset": null,
+        "recovery": []
+      }
+    },
+    {
+      "path": "docs/content/r25/review-set/11-tickets-stage-1-board-start.png",
+      "original": "docs/content/r25/phone-tickets-stage-1-board-start.png",
+      "caption": "小安起步，另外兩位留在前景等候區，0/3",
+      "width": 390,
+      "height": 844,
+      "sha256": "6db17bf95c82b2489f629eb9892cfdbbee033512fc1aba2552f5aa850fd107f9",
+      "layout": {
+        "labels": [
+          {
+            "id": "content-back:回學院",
+            "x": 16,
+            "y": 16,
+            "right": 84,
+            "bottom": 76,
+            "width": 68,
+            "height": 60
+          },
+          {
+            "id": "content-title:形狀車票，找對月台",
+            "x": 92,
+            "y": 35.5,
+            "right": 298,
+            "bottom": 56.5,
+            "width": 206,
+            "height": 21
+          },
+          {
+            "id": "content-pause:暫停",
+            "x": 306,
+            "y": 16,
+            "right": 374,
+            "bottom": 76,
+            "width": 68,
+            "height": 60
+          },
+          {
+            "id": "B:小晴",
+            "x": 179,
+            "y": 612.734375,
+            "right": 211,
+            "bottom": 632.734375,
+            "width": 32,
+            "height": 20
+          },
+          {
+            "id": "B:小宇",
+            "x": 293.546875,
+            "y": 612.734375,
+            "right": 325.546875,
+            "bottom": 632.734375,
+            "width": 32,
+            "height": 20
+          },
+          {
+            "id": "content-scene-cue:第 1 站・海風站",
+            "x": 84,
+            "y": 97,
+            "right": 368,
+            "bottom": 121,
+            "width": 284,
+            "height": 24
+          },
+          {
+            "id": "BUTTON:1 號月台",
+            "x": 55.59375,
+            "y": 504.140625,
+            "right": 119.59375,
+            "bottom": 568.140625,
+            "width": 64,
+            "height": 64
+          },
+          {
+            "id": "BUTTON:2 號月台",
+            "x": 163,
+            "y": 504.140625,
+            "right": 227,
+            "bottom": 568.140625,
+            "width": 64,
+            "height": 64
+          },
+          {
+            "id": "BUTTON:3 號月台",
+            "x": 270.390625,
+            "y": 504.140625,
+            "right": 334.390625,
+            "bottom": 568.140625,
+            "width": 64,
+            "height": 64
+          },
+          {
+            "id": "station-rule:● 比對形色",
+            "x": 293,
+            "y": 162,
+            "right": 368,
+            "bottom": 186,
+            "width": 75,
+            "height": 24
+          },
+          {
+            "id": "content-hint:放開了，朋友等你再按住。",
+            "x": 24,
+            "y": 659.203125,
+            "right": 366,
+            "bottom": 680,
+            "width": 342,
+            "height": 20.796875
+          },
+          {
+            "id": "BUTTON:陪著上車",
+            "x": 24,
+            "y": 686,
+            "right": 366,
+            "bottom": 750,
+            "width": 342,
+            "height": 64
+          },
+          {
+            "id": "BUTTON:再聽一次",
+            "x": 24,
+            "y": 756,
+            "right": 366,
+            "bottom": 820,
+            "width": 342,
+            "height": 64
+          },
+          {
+            "id": "ticket-counts:已入座 0/3 人",
+            "x": 256,
+            "y": 124,
+            "right": 366,
+            "bottom": 156,
+            "width": 110,
+            "height": 32
+          }
+        ],
+        "overlaps": [],
+        "iconOverlaps": [],
+        "signOcclusion": [],
+        "counterOcclusion": [],
+        "carOffset": null,
+        "recovery": []
+      }
+    },
+    {
+      "path": "docs/content/r25/review-set/12-tickets-stage-1-boarding-2.png",
+      "original": "docs/content/r25/phone-tickets-stage-1-boarding-2.png",
+      "caption": "小安經過踏階與門口，0/3",
+      "width": 390,
+      "height": 844,
+      "sha256": "e52b7b9fa26e7c5d38ec5e9be33eb2da998355ec5000891584b1c873dd2c8637",
+      "layout": {
+        "labels": [
+          {
+            "id": "content-back:回學院",
+            "x": 16,
+            "y": 16,
+            "right": 84,
+            "bottom": 76,
+            "width": 68,
+            "height": 60
+          },
+          {
+            "id": "content-title:形狀車票，找對月台",
+            "x": 92,
+            "y": 35.5,
+            "right": 298,
+            "bottom": 56.5,
+            "width": 206,
+            "height": 21
+          },
+          {
+            "id": "content-pause:暫停",
+            "x": 306,
+            "y": 16,
+            "right": 374,
+            "bottom": 76,
+            "width": 68,
+            "height": 60
+          },
+          {
+            "id": "B:小晴",
+            "x": 179,
+            "y": 612.734375,
+            "right": 211,
+            "bottom": 632.734375,
+            "width": 32,
+            "height": 20
+          },
+          {
+            "id": "B:小宇",
+            "x": 293.546875,
+            "y": 612.734375,
+            "right": 325.546875,
+            "bottom": 632.734375,
+            "width": 32,
+            "height": 20
+          },
+          {
+            "id": "content-scene-cue:第 1 站・海風站",
+            "x": 84,
+            "y": 97,
+            "right": 368,
+            "bottom": 121,
+            "width": 284,
+            "height": 24
+          },
+          {
+            "id": "BUTTON:1 號月台",
+            "x": 55.59375,
+            "y": 504.140625,
+            "right": 119.59375,
+            "bottom": 568.140625,
+            "width": 64,
+            "height": 64
+          },
+          {
+            "id": "BUTTON:2 號月台",
+            "x": 163,
+            "y": 504.140625,
+            "right": 227,
+            "bottom": 568.140625,
+            "width": 64,
+            "height": 64
+          },
+          {
+            "id": "BUTTON:3 號月台",
+            "x": 270.390625,
+            "y": 504.140625,
+            "right": 334.390625,
+            "bottom": 568.140625,
+            "width": 64,
+            "height": 64
+          },
+          {
+            "id": "station-rule:● 比對形色",
+            "x": 293,
+            "y": 162,
+            "right": 368,
+            "bottom": 186,
+            "width": 75,
+            "height": 24
+          },
+          {
+            "id": "content-hint:按住陪小安上車，放開就停。",
+            "x": 24,
+            "y": 659.203125,
+            "right": 366,
+            "bottom": 680,
+            "width": 342,
+            "height": 20.796875
+          },
+          {
+            "id": "BUTTON:陪著上車",
+            "x": 24,
+            "y": 686,
+            "right": 366,
+            "bottom": 750,
+            "width": 342,
+            "height": 64
+          },
+          {
+            "id": "BUTTON:再聽一次",
+            "x": 24,
+            "y": 756,
+            "right": 366,
+            "bottom": 820,
+            "width": 342,
+            "height": 64
+          },
+          {
+            "id": "ticket-counts:已入座 0/3 人",
+            "x": 256,
+            "y": 124,
+            "right": 366,
+            "bottom": 156,
+            "width": 110,
+            "height": 32
+          }
+        ],
+        "overlaps": [],
+        "iconOverlaps": [],
+        "signOcclusion": [],
+        "counterOcclusion": [],
+        "carOffset": null,
+        "recovery": []
+      }
+    },
+    {
+      "path": "docs/content/r25/review-set/13-tickets-stage-1-inside.png",
+      "original": "docs/content/r25/phone-tickets-stage-1-inside.png",
+      "caption": "進門後陪入座，仍是0/3",
+      "width": 390,
+      "height": 844,
+      "sha256": "0b041e3f5cbed8fa64bcc1128b0bcd2c5e8ec3df32e5db660afe15cb42d36f74",
+      "layout": {
+        "labels": [
+          {
+            "id": "content-back:回學院",
+            "x": 16,
+            "y": 16,
+            "right": 84,
+            "bottom": 76,
+            "width": 68,
+            "height": 60
+          },
+          {
+            "id": "content-title:形狀車票，找對月台",
+            "x": 92,
+            "y": 35.5,
+            "right": 298,
+            "bottom": 56.5,
+            "width": 206,
+            "height": 21
+          },
+          {
+            "id": "content-pause:暫停",
+            "x": 306,
+            "y": 16,
+            "right": 374,
+            "bottom": 76,
+            "width": 68,
+            "height": 60
+          },
+          {
+            "id": "B:小晴",
+            "x": 179,
+            "y": 612.734375,
+            "right": 211,
+            "bottom": 632.734375,
+            "width": 32,
+            "height": 20
+          },
+          {
+            "id": "B:小宇",
+            "x": 293.546875,
+            "y": 612.734375,
+            "right": 325.546875,
+            "bottom": 632.734375,
+            "width": 32,
+            "height": 20
+          },
+          {
+            "id": "content-scene-cue:第 1 站・海風站",
+            "x": 84,
+            "y": 97,
+            "right": 368,
+            "bottom": 121,
+            "width": 284,
+            "height": 24
+          },
+          {
+            "id": "BUTTON:1 號月台",
+            "x": 55.59375,
+            "y": 504.140625,
+            "right": 119.59375,
+            "bottom": 568.140625,
+            "width": 64,
+            "height": 64
+          },
+          {
+            "id": "BUTTON:2 號月台",
+            "x": 163,
+            "y": 504.140625,
+            "right": 227,
+            "bottom": 568.140625,
+            "width": 64,
+            "height": 64
+          },
+          {
+            "id": "BUTTON:3 號月台",
+            "x": 270.390625,
+            "y": 504.140625,
+            "right": 334.390625,
+            "bottom": 568.140625,
+            "width": 64,
+            "height": 64
+          },
+          {
+            "id": "station-rule:● 比對形色",
+            "x": 293,
+            "y": 162,
+            "right": 368,
+            "bottom": 186,
+            "width": 75,
+            "height": 24
+          },
+          {
+            "id": "content-hint:進門了，繼續按住陪朋友入座。",
+            "x": 24,
+            "y": 659.203125,
+            "right": 366,
+            "bottom": 680,
+            "width": 342,
+            "height": 20.796875
+          },
+          {
+            "id": "BUTTON:陪著上車",
+            "x": 24,
+            "y": 686,
+            "right": 366,
+            "bottom": 750,
+            "width": 342,
+            "height": 64
+          },
+          {
+            "id": "BUTTON:再聽一次",
+            "x": 24,
+            "y": 756,
+            "right": 366,
+            "bottom": 820,
+            "width": 342,
+            "height": 64
+          },
+          {
+            "id": "ticket-counts:已入座 0/3 人",
+            "x": 256,
+            "y": 124,
+            "right": 366,
+            "bottom": 156,
+            "width": 110,
+            "height": 32
+          }
+        ],
+        "overlaps": [],
+        "iconOverlaps": [],
+        "signOcclusion": [],
+        "counterOcclusion": [],
+        "carOffset": null,
+        "recovery": []
+      }
+    },
+    {
+      "path": "docs/content/r25/review-set/14-tickets-stage-1-seated-1.png",
+      "original": "docs/content/r25/phone-tickets-stage-1-seated-1.png",
+      "caption": "同一位小安真正坐下，計數1/3",
+      "width": 390,
+      "height": 844,
+      "sha256": "1050a6b3931f3dc03da86966162cb8272abee72ccdabfe8262b7b84346cd5f48",
+      "layout": {
+        "labels": [
+          {
+            "id": "content-back:回學院",
+            "x": 16,
+            "y": 16,
+            "right": 84,
+            "bottom": 76,
+            "width": 68,
+            "height": 60
+          },
+          {
+            "id": "content-title:形狀車票，找對月台",
+            "x": 92,
+            "y": 35.5,
+            "right": 298,
+            "bottom": 56.5,
+            "width": 206,
+            "height": 21
+          },
+          {
+            "id": "content-pause:暫停",
+            "x": 306,
+            "y": 16,
+            "right": 374,
+            "bottom": 76,
+            "width": 68,
+            "height": 60
+          },
+          {
+            "id": "boarding-friend:小晴",
+            "x": 165,
+            "y": 571.734375,
+            "right": 225,
+            "bottom": 631.734375,
+            "width": 60,
+            "height": 60
+          },
+          {
+            "id": "boarding-friend:小宇",
+            "x": 279.546875,
+            "y": 571.734375,
+            "right": 339.546875,
+            "bottom": 631.734375,
+            "width": 60,
+            "height": 60
+          },
+          {
+            "id": "content-scene-cue:第 1 站・海風站",
+            "x": 84,
+            "y": 97,
+            "right": 368,
+            "bottom": 121,
+            "width": 284,
+            "height": 24
+          },
+          {
+            "id": "BUTTON:1 號月台",
+            "x": 55.59375,
+            "y": 504.140625,
+            "right": 119.59375,
+            "bottom": 568.140625,
+            "width": 64,
+            "height": 64
+          },
+          {
+            "id": "BUTTON:2 號月台",
+            "x": 163,
+            "y": 504.140625,
+            "right": 227,
+            "bottom": 568.140625,
+            "width": 64,
+            "height": 64
+          },
+          {
+            "id": "BUTTON:3 號月台",
+            "x": 270.390625,
+            "y": 504.140625,
+            "right": 334.390625,
+            "bottom": 568.140625,
+            "width": 64,
+            "height": 64
+          },
+          {
+            "id": "station-rule:● 比對形色",
+            "x": 293,
+            "y": 162,
+            "right": 368,
+            "bottom": 186,
+            "width": 75,
+            "height": 24
+          },
+          {
+            "id": "content-hint:點月台上的朋友，再邀請上車。",
+            "x": 24,
+            "y": 659.203125,
+            "right": 366,
+            "bottom": 680,
+            "width": 342,
+            "height": 20.796875
+          },
+          {
+            "id": "BUTTON:先點一位朋友",
+            "x": 24,
+            "y": 686,
+            "right": 279,
+            "bottom": 750,
+            "width": 255,
+            "height": 64
+          },
+          {
+            "id": "BUTTON:再聽一次",
+            "x": 24,
+            "y": 756,
+            "right": 366,
+            "bottom": 820,
+            "width": 342,
+            "height": 64
+          },
+          {
+            "id": "ticket-counts:已入座 1/3 人",
+            "x": 256,
+            "y": 124,
+            "right": 366,
+            "bottom": 156,
+            "width": 110,
+            "height": 32
+          }
+        ],
+        "overlaps": [],
+        "iconOverlaps": [],
+        "signOcclusion": [],
+        "counterOcclusion": [],
+        "carOffset": null,
+        "recovery": []
+      }
+    },
+    {
+      "path": "docs/content/r25/review-set/15-tickets-complete.png",
+      "original": "docs/content/r25/phone-tickets-complete.png",
+      "caption": "車窗揮手與完成旅程票，3/3完整可讀",
+      "width": 390,
+      "height": 844,
+      "sha256": "d5666ad9088b122b1298d3f01aa2af97b26a22e103c442f8639b6d4916e278f2",
+      "layout": {
+        "labels": [
+          {
+            "id": "content-back:回學院",
+            "x": 16,
+            "y": 16,
+            "right": 84,
+            "bottom": 76,
+            "width": 68,
+            "height": 60
+          },
+          {
+            "id": "content-title:形狀車票，找對月台",
+            "x": 92,
+            "y": 35.5,
+            "right": 298,
+            "bottom": 56.5,
+            "width": 206,
+            "height": 21
+          },
+          {
+            "id": "content-pause:暫停",
+            "x": 306,
+            "y": 16,
+            "right": 374,
+            "bottom": 76,
+            "width": 68,
+            "height": 60
+          },
+          {
+            "id": "content-scene-cue:三站完成・大家坐好了",
+            "x": 24,
+            "y": 98,
+            "right": 366,
+            "bottom": 122,
+            "width": 342,
+            "height": 24
+          },
+          {
+            "id": "STRONG:三站對好票、坐好、關門，出發了。",
+            "x": 30,
+            "y": 702.8125,
+            "right": 360,
+            "bottom": 725.203125,
+            "width": 330,
+            "height": 22.390625
+          },
+          {
+            "id": "BUTTON:再搭一班",
+            "x": 24,
+            "y": 735.203125,
+            "right": 192,
+            "bottom": 799.203125,
+            "width": 168,
+            "height": 64
+          },
+          {
+            "id": "BUTTON:換一課",
+            "x": 198,
+            "y": 735.203125,
+            "right": 366,
+            "bottom": 799.203125,
+            "width": 168,
+            "height": 64
+          },
+          {
+            "id": "content-save:旅程已保存",
+            "x": 24,
+            "y": 803.203125,
+            "right": 366,
+            "bottom": 820,
+            "width": 342,
+            "height": 16.796875
+          },
+          {
+            "id": "ticket-counts:已入座 3/3 人",
+            "x": 256,
+            "y": 124,
+            "right": 366,
+            "bottom": 156,
+            "width": 110,
+            "height": 32
+          },
+          {
+            "id": "lesson-route-proof:✓\n海風站\n✓\n榕樹站\n✓\n燈塔站",
+            "x": 24,
+            "y": 176,
+            "right": 366,
+            "bottom": 230,
+            "width": 342,
+            "height": 54
+          }
+        ],
+        "overlaps": [],
+        "iconOverlaps": [],
+        "signOcclusion": [],
+        "counterOcclusion": [],
+        "carOffset": null,
+        "recovery": []
+      }
+    }
+  ]
+}

@@ -1,0 +1,29 @@
+{
+  "status": "VERIFIED",
+  "comparisons": [
+    {
+      "kind": "cake",
+      "before": "docs/evidence/content-r25/before-cake.png",
+      "after": "docs/evidence/content-r25/after-cake.png",
+      "source": "d53b6f9bc42586dcac032991db23153ba740ccb2:docs/content/r24/review-set/01-cake-wrong-recovery.png",
+      "beforeSha256": "7f8c2bd1f5f9393c2d64304960fbef57f9e7024376ca4171c65d7af2debbcda5",
+      "afterSha256": "ffea2b7d4c94f12f89f304ba8a6bef42394272d5515fc74516ad63800cdf441a"
+    },
+    {
+      "kind": "crossing",
+      "before": "docs/evidence/content-r25/before-crossing.png",
+      "after": "docs/evidence/content-r25/after-crossing.png",
+      "source": "d53b6f9bc42586dcac032991db23153ba740ccb2:docs/content/r24/review-set/10-crossing-stage-3-ready-depart.png",
+      "beforeSha256": "249558d5a8db4599623f7d863dba558f35779abd0c06575a925abf383e35e5b0",
+      "afterSha256": "597952d6905c46c33a3b87b9fee6484ac6d950c52646f468395c51aba5ed959e"
+    },
+    {
+      "kind": "tickets",
+      "before": "docs/evidence/content-r25/before-tickets.png",
+      "after": "docs/evidence/content-r25/after-tickets.png",
+      "source": "d53b6f9bc42586dcac032991db23153ba740ccb2:docs/content/r24/review-set/15-tickets-complete.png",
+      "beforeSha256": "27cd4c301d09e46f153c7a97ee06d8ec75a2dc5e09e6ae847f96bad11cc6b2fc",
+      "afterSha256": "d5666ad9088b122b1298d3f01aa2af97b26a22e103c442f8639b6d4916e278f2"
+    }
+  ]
+}

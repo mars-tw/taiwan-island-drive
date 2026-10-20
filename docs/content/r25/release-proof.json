@@ -1,0 +1,138 @@
+{
+  "status": "VERIFIED",
+  "baseline": "d53b6f9bc42586dcac032991db23153ba740ccb2",
+  "branch": "r1-fun-polish",
+  "version": "2.37.0",
+  "sourceBuild": 33,
+  "unitTests": 281,
+  "unchangedExistingTestFiles": 45,
+  "courseBrowserChecks": 62,
+  "mergeChecks": 132,
+  "storeChecks": 101,
+  "screenshots": 338,
+  "reviewSet": 15,
+  "newRuntimeArt": 0,
+  "generationCalls": 0,
+  "secretHits": 0,
+  "cleanup": {
+    "files": 65,
+    "bytes": 90458244,
+    "retained": 6334
+  },
+  "performance": {
+    "status": "VERIFIED",
+    "renderArgs": [
+      "--use-angle=d3d11",
+      "--enable-gpu",
+      "--ignore-gpu-blocklist"
+    ],
+    "method": "Same D3D11 browser rendering arguments as the required merge/store regressions. Three real 2000ms RAF samples per lesson/viewport; median p95. Concurrent host load, one browser/context at a time; reference only, not clean hardware or native-device performance.",
+    "limitMs": 18,
+    "rows": [
+      {
+        "viewport": "desktop",
+        "kind": "cake",
+        "runs": [
+          16.7,
+          16.7,
+          16.7
+        ],
+        "p95": 16.7
+      },
+      {
+        "viewport": "desktop",
+        "kind": "crossing",
+        "runs": [
+          16.7,
+          16.8,
+          16.8
+        ],
+        "p95": 16.8
+      },
+      {
+        "viewport": "desktop",
+        "kind": "tickets",
+        "runs": [
+          16.7,
+          16.7,
+          16.8
+        ],
+        "p95": 16.7
+      },
+      {
+        "viewport": "portrait",
+        "kind": "cake",
+        "runs": [
+          16.7,
+          16.7,
+          16.8
+        ],
+        "p95": 16.7
+      },
+      {
+        "viewport": "portrait",
+        "kind": "crossing",
+        "runs": [
+          16.8,
+          16.8,
+          16.8
+        ],
+        "p95": 16.8
+      },
+      {
+        "viewport": "portrait",
+        "kind": "tickets",
+        "runs": [
+          16.7,
+          16.8,
+          16.8
+        ],
+        "p95": 16.8
+      },
+      {
+        "viewport": "landscape",
+        "kind": "cake",
+        "runs": [
+          16.7,
+          16.8,
+          16.8
+        ],
+        "p95": 16.8
+      },
+      {
+        "viewport": "landscape",
+        "kind": "crossing",
+        "runs": [
+          16.8,
+          16.7,
+          16.8
+        ],
+        "p95": 16.8
+      },
+      {
+        "viewport": "landscape",
+        "kind": "tickets",
+        "runs": [
+          16.8,
+          16.7,
+          16.7
+        ],
+        "p95": 16.7
+      }
+    ]
+  },
+  "blocked": [
+    "Physical iPhone/iPad touch and native speech require devices",
+    "Parent-child play and three-second blind button recognition require participants",
+    "Clean hardware performance needs exclusive hardware",
+    "Muse >=8 and combined review target require independent rescore",
+    "Native signed packages not rebuilt"
+  ],
+  "sourceSha256": {
+    "src/shared/content-r1-ui.js": "174a838e33c8299ca8a08c29e20bf3fb0de7fc2da157c95f9de51b736ad8f4ef",
+    "src/shared/content-r25-scene.js": "410b8cd19b11885034fea2d8fcb28ce180389e6fb211d23624770390378c6fda",
+    "src/shared/content-r25.css": "d19dd70f6957f50ba4dd9d2922005853965a1c12e2c39619e35a950711674087",
+    "package.json": "2359fdfdb61320dfb99747fba06edeb3bb8e7be3724bee239158eb3186d7d11f",
+    "dist/sw.js": "548cb4746d8b93b536a50e59879a3d7cd14a336fdee0de4a5093782136161917"
+  }
+}
