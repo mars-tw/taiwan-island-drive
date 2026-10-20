@@ -1,0 +1,24 @@
+{
+  "status": "VERIFIED",
+  "checks": [
+    {
+      "status": "VERIFIED",
+      "label": "reference performance 390x844",
+      "p95": 16.700000000000728
+    },
+    {
+      "status": "VERIFIED",
+      "label": "reference performance 768x1024",
+      "p95": 16.800000000000182
+    },
+    {
+      "status": "VERIFIED",
+      "label": "reference performance 1366x600",
+      "p95": 16.800000000000182
+    }
+  ],
+  "shots": [],
+  "errors": [],
+  "failed": [],
+  "external": []
+}

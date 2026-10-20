@@ -1,0 +1,792 @@
+{
+  "status": "VERIFIED",
+  "checks": [
+    {
+      "status": "VERIFIED",
+      "label": "store 1290x2796"
+    },
+    {
+      "status": "VERIFIED",
+      "label": "store 2064x2752"
+    }
+  ],
+  "shots": [
+    {
+      "path": "docs/store/screenshots/content-r30/ticket-comparison-1290x2796.png",
+      "width": 1290,
+      "height": 2796,
+      "sha256": "c2beef9d7d9b820adcc8842ae7413f9c5865d27f31266d157de285c13a67cb46",
+      "phase": "playing",
+      "state": {
+        "roadShape": "uphill",
+        "cakeStage": "starting",
+        "newTraffic": "false",
+        "newTrafficTime": "0",
+        "staleSide": "",
+        "refreshes": "0",
+        "boardTime": "0.000",
+        "doorStage": "closed",
+        "boardingIndex": "0",
+        "hazard": "false",
+        "wrongTurn": "false",
+        "inBend": "false",
+        "cue": "go",
+        "settled": "true",
+        "correction": "",
+        "compact": "false",
+        "recoveryActive": "false",
+        "lookStep": "0",
+        "targetName": "藍圓形",
+        "layoutSeed": "0",
+        "distance": "0.00",
+        "speed": "0.00",
+        "bend": "1",
+        "tilt": "0.00",
+        "sway": "0.00",
+        "acceleration": "0.00",
+        "bayStopped": "false",
+        "bayRestarted": "false",
+        "leftTurn": "false",
+        "rightTurn": "false",
+        "focus": "center",
+        "crossTime": "0.000",
+        "crossDuration": "2.1",
+        "orderHint": "",
+        "fruitSway": "0.00",
+        "flagSway": "0.00",
+        "hintVisible": "false",
+        "crossingOrder": "child,bike,grandma",
+        "balanceLean": "0.00",
+        "balanceStatus": "steady",
+        "recoveries": "0",
+        "assists": "0",
+        "assisting": "false",
+        "crossed": "0",
+        "lookedLeft": "false",
+        "lookedRight": "false",
+        "decision": "false",
+        "confirmed": "false",
+        "confirmDelay": "0",
+        "person": "child",
+        "trafficActive": "false",
+        "trafficTime": "0.00",
+        "watchSide": "",
+        "platformSide": "front",
+        "signGround": "487.85",
+        "doorState": "closed",
+        "step": "0",
+        "semanticStatus": "顏色不同，再看票色。",
+        "nextAction": "",
+        "holdState": "holding",
+        "holdProgress": "0.000",
+        "recheckTime": "2",
+        "hintLevel": "1",
+        "forceTarget": "0",
+        "forceLag": "0",
+        "recoveryRate": "0",
+        "trafficConfirmed": "false",
+        "trafficSource": "left",
+        "lookSequence": "left,right",
+        "escortGate": "false",
+        "escortGateReleased": "false",
+        "restReady": "false",
+        "visited": "",
+        "steering": "false",
+        "steadying": "false",
+        "standStillTime": "0"
+      },
+      "controls": [
+        {
+          "id": "content-back",
+          "w": 68,
+          "h": 60,
+          "bad": false
+        },
+        {
+          "id": "content-pause",
+          "w": 68,
+          "h": 60,
+          "bad": false
+        },
+        {
+          "id": "0",
+          "w": 70,
+          "h": 90,
+          "bad": false
+        },
+        {
+          "id": "1",
+          "w": 70,
+          "h": 90,
+          "bad": false
+        },
+        {
+          "id": "2",
+          "w": 70,
+          "h": 90,
+          "bad": false
+        },
+        {
+          "id": "0",
+          "w": 64,
+          "h": 64,
+          "bad": false
+        },
+        {
+          "id": "1",
+          "w": 64,
+          "h": 64,
+          "bad": false
+        },
+        {
+          "id": "2",
+          "w": 64,
+          "h": 64,
+          "bad": false
+        },
+        {
+          "id": "go",
+          "w": 91,
+          "h": 64,
+          "bad": false
+        },
+        {
+          "id": "brake",
+          "w": 91,
+          "h": 64,
+          "bad": false
+        },
+        {
+          "id": "listen",
+          "w": 382,
+          "h": 64,
+          "bad": false
+        }
+      ],
+      "layout": {
+        "labels": [
+          {
+            "id": "content-back:回學院",
+            "x": 16,
+            "y": 32,
+            "right": 84,
+            "bottom": 92,
+            "width": 68,
+            "height": 60
+          },
+          {
+            "id": "content-title:形狀車票，找對月台",
+            "x": 92,
+            "y": 51.5,
+            "right": 338,
+            "bottom": 72.5,
+            "width": 246,
+            "height": 21
+          },
+          {
+            "id": "content-pause:暫停",
+            "x": 346,
+            "y": 32,
+            "right": 414,
+            "bottom": 92,
+            "width": 68,
+            "height": 60
+          },
+          {
+            "id": "boarding-friend:↓ 小安",
+            "x": 68.546875,
+            "y": 568.96875,
+            "right": 138.546875,
+            "bottom": 658.96875,
+            "width": 70,
+            "height": 90
+          },
+          {
+            "id": "boarding-friend:↓ 小晴",
+            "x": 180,
+            "y": 568.96875,
+            "right": 250,
+            "bottom": 658.96875,
+            "width": 70,
+            "height": 90
+          },
+          {
+            "id": "boarding-friend:↓ 小宇",
+            "x": 291.4375,
+            "y": 568.96875,
+            "right": 361.4375,
+            "bottom": 658.96875,
+            "width": 70,
+            "height": 90
+          },
+          {
+            "id": "content-scene-cue:第 1 站・海風站",
+            "x": 84,
+            "y": 113,
+            "right": 408,
+            "bottom": 137,
+            "width": 324,
+            "height": 24
+          },
+          {
+            "id": "BUTTON:1 號月台",
+            "x": 63.59375,
+            "y": 484.84375,
+            "right": 127.59375,
+            "bottom": 548.84375,
+            "width": 64,
+            "height": 64
+          },
+          {
+            "id": "BUTTON:2 號月台",
+            "x": 183,
+            "y": 484.84375,
+            "right": 247,
+            "bottom": 548.84375,
+            "width": 64,
+            "height": 64
+          },
+          {
+            "id": "BUTTON:3 號月台",
+            "x": 302.390625,
+            "y": 484.84375,
+            "right": 366.390625,
+            "bottom": 548.84375,
+            "width": 64,
+            "height": 64
+          },
+          {
+            "id": "SPAN:小安的票",
+            "x": 118.765625,
+            "y": 281,
+            "right": 170.765625,
+            "bottom": 299,
+            "width": 52,
+            "height": 18
+          },
+          {
+            "id": "B:≠",
+            "x": 203.765625,
+            "y": 239,
+            "right": 226.234375,
+            "bottom": 275,
+            "width": 22.46875,
+            "height": 36
+          },
+          {
+            "id": "SPAN:月台的票",
+            "x": 259.234375,
+            "y": 281,
+            "right": 311.234375,
+            "bottom": 299,
+            "width": 52,
+            "height": 18
+          },
+          {
+            "id": "SPAN:✓",
+            "x": 135.78125,
+            "y": 302,
+            "right": 209.015625,
+            "bottom": 328,
+            "width": 73.234375,
+            "height": 26
+          },
+          {
+            "id": "SPAN:×",
+            "x": 227.015625,
+            "y": 302,
+            "right": 294.21875,
+            "bottom": 328,
+            "width": 67.203125,
+            "height": 26
+          },
+          {
+            "id": "station-rule:形狀、顏色都一樣",
+            "x": 300,
+            "y": 178,
+            "right": 408,
+            "bottom": 202,
+            "width": 108,
+            "height": 24
+          },
+          {
+            "id": "content-hint:顏色不同，再看票色。",
+            "x": 24,
+            "y": 704,
+            "right": 406,
+            "bottom": 724.796875,
+            "width": 382,
+            "height": 20.796875
+          },
+          {
+            "id": "BUTTON:前進",
+            "x": 24,
+            "y": 730.796875,
+            "right": 115,
+            "bottom": 794.796875,
+            "width": 91,
+            "height": 64
+          },
+          {
+            "id": "BUTTON:停穩",
+            "x": 121,
+            "y": 730.796875,
+            "right": 212,
+            "bottom": 794.796875,
+            "width": 91,
+            "height": 64
+          },
+          {
+            "id": "BUTTON:開門",
+            "x": 218,
+            "y": 730.796875,
+            "right": 309,
+            "bottom": 794.796875,
+            "width": 91,
+            "height": 64
+          },
+          {
+            "id": "BUTTON:再聽一次",
+            "x": 24,
+            "y": 800.796875,
+            "right": 406,
+            "bottom": 864.796875,
+            "width": 382,
+            "height": 64
+          },
+          {
+            "id": "ticket-counts:已入座 0/3 人",
+            "x": 296,
+            "y": 140,
+            "right": 406,
+            "bottom": 172,
+            "width": 110,
+            "height": 32
+          }
+        ],
+        "overlaps": [],
+        "iconOverlaps": [],
+        "signOcclusion": [],
+        "counterOcclusion": [],
+        "carOffset": null,
+        "recovery": []
+      },
+      "text": "回學院\n形狀車票，找對月台\n暫停\n↓ 小安\n↓ 小晴\n↓ 小宇\n第 1 站・海風站\n已入座 0/3 人\n1 號月台\n2 號月台\n3 號月台\n小安的票\n≠\n月台的票\n✓\n×\n形狀、顏色都一樣\n\n顏色不同，再看票色。\n\n前進\n停穩\n開門\n再聽一次",
+      "highlights": [
+        {
+          "id": "go",
+          "needed": "false",
+          "color": "rgb(245, 251, 255)"
+        },
+        {
+          "id": "brake",
+          "needed": "false",
+          "color": "rgb(245, 251, 255)"
+        },
+        {
+          "id": "door",
+          "needed": "false",
+          "color": "rgb(245, 251, 255)"
+        },
+        {
+          "id": "listen",
+          "needed": "false",
+          "color": "rgb(245, 251, 255)"
+        }
+      ],
+      "ring": null,
+      "finger": null,
+      "textClipping": []
+    },
+    {
+      "path": "docs/store/screenshots/content-r30/ticket-comparison-2064x2752.png",
+      "width": 2064,
+      "height": 2752,
+      "sha256": "f1f95b5d89c05d87878293606d1964a277546583ae22b905b753aec2bc9967ef",
+      "phase": "playing",
+      "state": {
+        "roadShape": "uphill",
+        "cakeStage": "starting",
+        "newTraffic": "false",
+        "newTrafficTime": "0",
+        "staleSide": "",
+        "refreshes": "0",
+        "boardTime": "0.000",
+        "doorStage": "closed",
+        "boardingIndex": "0",
+        "hazard": "false",
+        "wrongTurn": "false",
+        "inBend": "false",
+        "cue": "go",
+        "settled": "true",
+        "correction": "",
+        "compact": "false",
+        "recoveryActive": "false",
+        "lookStep": "0",
+        "targetName": "藍圓形",
+        "layoutSeed": "0",
+        "distance": "0.00",
+        "speed": "0.00",
+        "bend": "1",
+        "tilt": "0.00",
+        "sway": "0.00",
+        "acceleration": "0.00",
+        "bayStopped": "false",
+        "bayRestarted": "false",
+        "leftTurn": "false",
+        "rightTurn": "false",
+        "focus": "center",
+        "crossTime": "0.000",
+        "crossDuration": "2.1",
+        "orderHint": "",
+        "fruitSway": "0.00",
+        "flagSway": "0.00",
+        "hintVisible": "false",
+        "crossingOrder": "child,bike,grandma",
+        "balanceLean": "0.00",
+        "balanceStatus": "steady",
+        "recoveries": "0",
+        "assists": "0",
+        "assisting": "false",
+        "crossed": "0",
+        "lookedLeft": "false",
+        "lookedRight": "false",
+        "decision": "false",
+        "confirmed": "false",
+        "confirmDelay": "0",
+        "person": "child",
+        "trafficActive": "false",
+        "trafficTime": "0.00",
+        "watchSide": "",
+        "platformSide": "front",
+        "signGround": "668.04",
+        "doorState": "closed",
+        "step": "0",
+        "semanticStatus": "顏色不同，再看票色。",
+        "nextAction": "",
+        "holdState": "holding",
+        "holdProgress": "0.000",
+        "recheckTime": "2",
+        "hintLevel": "1",
+        "forceTarget": "0",
+        "forceLag": "0",
+        "recoveryRate": "0",
+        "trafficConfirmed": "false",
+        "trafficSource": "left",
+        "lookSequence": "left,right",
+        "escortGate": "false",
+        "escortGateReleased": "false",
+        "restReady": "false",
+        "visited": "",
+        "steering": "false",
+        "steadying": "false",
+        "standStillTime": "0"
+      },
+      "controls": [
+        {
+          "id": "content-back",
+          "w": 68,
+          "h": 60,
+          "bad": false
+        },
+        {
+          "id": "content-pause",
+          "w": 68,
+          "h": 60,
+          "bad": false
+        },
+        {
+          "id": "0",
+          "w": 70,
+          "h": 90,
+          "bad": false
+        },
+        {
+          "id": "1",
+          "w": 70,
+          "h": 90,
+          "bad": false
+        },
+        {
+          "id": "2",
+          "w": 70,
+          "h": 90,
+          "bad": false
+        },
+        {
+          "id": "0",
+          "w": 64,
+          "h": 64,
+          "bad": false
+        },
+        {
+          "id": "1",
+          "w": 64,
+          "h": 64,
+          "bad": false
+        },
+        {
+          "id": "2",
+          "w": 64,
+          "h": 64,
+          "bad": false
+        },
+        {
+          "id": "go",
+          "w": 93.953125,
+          "h": 64,
+          "bad": false
+        },
+        {
+          "id": "brake",
+          "w": 93.953125,
+          "h": 64,
+          "bad": false
+        },
+        {
+          "id": "listen",
+          "w": 393.828125,
+          "h": 64,
+          "bad": false
+        }
+      ],
+      "layout": {
+        "labels": [
+          {
+            "id": "content-back:回學院",
+            "x": 16,
+            "y": 254,
+            "right": 84,
+            "bottom": 314,
+            "width": 68,
+            "height": 60
+          },
+          {
+            "id": "content-title:形狀車票，找對月台",
+            "x": 92,
+            "y": 266.5,
+            "right": 940,
+            "bottom": 301.5,
+            "width": 848,
+            "height": 35
+          },
+          {
+            "id": "content-pause:暫停",
+            "x": 948,
+            "y": 254,
+            "right": 1016,
+            "bottom": 314,
+            "width": 68,
+            "height": 60
+          },
+          {
+            "id": "boarding-friend:↓ 小安",
+            "x": 107.75,
+            "y": 1000.25,
+            "right": 177.75,
+            "bottom": 1090.25,
+            "width": 70,
+            "height": 90
+          },
+          {
+            "id": "boarding-friend:↓ 小晴",
+            "x": 269.078125,
+            "y": 1000.25,
+            "right": 339.078125,
+            "bottom": 1090.25,
+            "width": 70,
+            "height": 90
+          },
+          {
+            "id": "boarding-friend:↓ 小宇",
+            "x": 430.390625,
+            "y": 1000.25,
+            "right": 500.390625,
+            "bottom": 1090.25,
+            "width": 70,
+            "height": 90
+          },
+          {
+            "id": "content-scene-cue:第 1 站・海風站",
+            "x": 84,
+            "y": 335,
+            "right": 586.15625,
+            "bottom": 359,
+            "width": 502.15625,
+            "height": 24
+          },
+          {
+            "id": "BUTTON:1 號月台",
+            "x": 99.21875,
+            "y": 887.03125,
+            "right": 163.21875,
+            "bottom": 951.03125,
+            "width": 64,
+            "height": 64
+          },
+          {
+            "id": "BUTTON:2 號月台",
+            "x": 272.078125,
+            "y": 887.03125,
+            "right": 336.078125,
+            "bottom": 951.03125,
+            "width": 64,
+            "height": 64
+          },
+          {
+            "id": "BUTTON:3 號月台",
+            "x": 444.921875,
+            "y": 887.03125,
+            "right": 508.921875,
+            "bottom": 951.03125,
+            "width": 64,
+            "height": 64
+          },
+          {
+            "id": "SPAN:小安的票",
+            "x": 207.84375,
+            "y": 503,
+            "right": 259.84375,
+            "bottom": 521,
+            "width": 52,
+            "height": 18
+          },
+          {
+            "id": "B:≠",
+            "x": 292.84375,
+            "y": 461,
+            "right": 315.3125,
+            "bottom": 497,
+            "width": 22.46875,
+            "height": 36
+          },
+          {
+            "id": "SPAN:月台的票",
+            "x": 348.3125,
+            "y": 503,
+            "right": 400.3125,
+            "bottom": 521,
+            "width": 52,
+            "height": 18
+          },
+          {
+            "id": "SPAN:✓",
+            "x": 224.859375,
+            "y": 524,
+            "right": 298.09375,
+            "bottom": 550,
+            "width": 73.234375,
+            "height": 26
+          },
+          {
+            "id": "SPAN:×",
+            "x": 316.09375,
+            "y": 524,
+            "right": 383.296875,
+            "bottom": 550,
+            "width": 67.203125,
+            "height": 26
+          },
+          {
+            "id": "station-rule:形狀、顏色都一樣",
+            "x": 478.15625,
+            "y": 400,
+            "right": 586.15625,
+            "bottom": 424,
+            "width": 108,
+            "height": 24
+          },
+          {
+            "id": "content-hint:顏色不同，再看票色。",
+            "x": 614.15625,
+            "y": 640.25,
+            "right": 1007.984375,
+            "bottom": 669.75,
+            "width": 393.828125,
+            "height": 29.5
+          },
+          {
+            "id": "BUTTON:前進",
+            "x": 614.15625,
+            "y": 675.75,
+            "right": 708.109375,
+            "bottom": 739.75,
+            "width": 93.953125,
+            "height": 64
+          },
+          {
+            "id": "BUTTON:停穩",
+            "x": 714.109375,
+            "y": 675.75,
+            "right": 808.0625,
+            "bottom": 739.75,
+            "width": 93.953125,
+            "height": 64
+          },
+          {
+            "id": "BUTTON:開門",
+            "x": 814.0625,
+            "y": 675.75,
+            "right": 908.015625,
+            "bottom": 739.75,
+            "width": 93.953125,
+            "height": 64
+          },
+          {
+            "id": "BUTTON:再聽一次",
+            "x": 614.15625,
+            "y": 745.75,
+            "right": 1007.984375,
+            "bottom": 809.75,
+            "width": 393.828125,
+            "height": 64
+          },
+          {
+            "id": "ticket-counts:已入座 0/3 人",
+            "x": 474.15625,
+            "y": 362,
+            "right": 584.15625,
+            "bottom": 394,
+            "width": 110,
+            "height": 32
+          }
+        ],
+        "overlaps": [],
+        "iconOverlaps": [],
+        "signOcclusion": [],
+        "counterOcclusion": [],
+        "carOffset": null,
+        "recovery": []
+      },
+      "text": "回學院\n形狀車票，找對月台\n暫停\n↓ 小安\n↓ 小晴\n↓ 小宇\n第 1 站・海風站\n已入座 0/3 人\n1 號月台\n2 號月台\n3 號月台\n小安的票\n≠\n月台的票\n✓\n×\n形狀、顏色都一樣\n\n顏色不同，再看票色。\n\n前進\n停穩\n開門\n再聽一次",
+      "highlights": [
+        {
+          "id": "go",
+          "needed": "false",
+          "color": "rgb(245, 251, 255)"
+        },
+        {
+          "id": "brake",
+          "needed": "false",
+          "color": "rgb(245, 251, 255)"
+        },
+        {
+          "id": "door",
+          "needed": "false",
+          "color": "rgb(245, 251, 255)"
+        },
+        {
+          "id": "listen",
+          "needed": "false",
+          "color": "rgb(245, 251, 255)"
+        }
+      ],
+      "ring": null,
+      "finger": null,
+      "textClipping": []
+    }
+  ],
+  "errors": [],
+  "failed": [],
+  "external": []
+}

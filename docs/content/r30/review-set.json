@@ -1,0 +1,140 @@
+{
+  "status": "VERIFIED",
+  "images": [
+    {
+      "kind": "cake",
+      "source": "docs/content/r30/phone-cake-controlled-high-support.png",
+      "path": "docs/content/r30/review-set/01-cake-controlled-high-support.png",
+      "purpose": "同起點同輸入時間：只扶正",
+      "width": 390,
+      "height": 844,
+      "sha256": "46e91b04e4c2bcd8407acbf127dfae35f55dc82d5d3fe680cba9294ab75ed38d"
+    },
+    {
+      "kind": "cake",
+      "source": "docs/content/r30/phone-cake-controlled-brake-support.png",
+      "path": "docs/content/r30/review-set/02-cake-controlled-brake-support.png",
+      "purpose": "接續對照：煞車加扶正",
+      "width": 390,
+      "height": 844,
+      "sha256": "1e302a58b1c3d50f73f29b07de0d236497c225187f1e00015e09c18f05b6a987"
+    },
+    {
+      "kind": "cake",
+      "source": "docs/content/r30/phone-cake-stage-3-parked.png",
+      "path": "docs/content/r30/review-set/03-cake-stage-3-parked.png",
+      "purpose": "休息灣停妥、坐穩與出灣亮鍵一致",
+      "width": 390,
+      "height": 844,
+      "sha256": "13b45ac040e8c0827f9b2cea62a3ea766035fa166a4c2cf229fe133814eb7ca5"
+    },
+    {
+      "kind": "cake",
+      "source": "docs/content/r30/phone-cake-stage-3-main-road.png",
+      "path": "docs/content/r30/review-set/04-cake-stage-3-main-road.png",
+      "purpose": "同趟離灣後，車完全回主路",
+      "width": 390,
+      "height": 844,
+      "sha256": "577ba43efd0c6f9d4b100b9d21899625044c4f7f5deb6b76e2d69dc9fcf55bee"
+    },
+    {
+      "kind": "cake",
+      "source": "docs/content/r30/phone-cake-replay-new-conditions.png",
+      "path": "docs/content/r30/review-set/05-cake-replay-new-conditions.png",
+      "purpose": "重玩卡以坡道、雙彎和蛋糕方向預告",
+      "width": 390,
+      "height": 844,
+      "sha256": "22b5eaf2fcc5ee40ca53e8918159d48664edaab70303f72fd400d3d29d71e813"
+    },
+    {
+      "kind": "crossing",
+      "source": "docs/content/r30/phone-crossing-stage-1-look-first.png",
+      "path": "docs/content/r30/review-set/06-crossing-stage-1-look-first.png",
+      "purpose": "玩家觀察第一側來車",
+      "width": 390,
+      "height": 844,
+      "sha256": "2a460ff97a03a583e515a46d8bd17c4da344603e0729c4435ec991d11ef2499c"
+    },
+    {
+      "kind": "crossing",
+      "source": "docs/content/r30/phone-crossing-stage-1-first-clear.png",
+      "path": "docs/content/r30/review-set/07-crossing-stage-1-first-clear.png",
+      "purpose": "同路口第一台車通過",
+      "width": 390,
+      "height": 844,
+      "sha256": "c06c7e91efe5b0ac5d3410903ccf20b8f6606a9dfc3aaa2e5772c4e895dc2cde"
+    },
+    {
+      "kind": "crossing",
+      "source": "docs/content/r30/phone-crossing-stage-1-car-still-wait.png",
+      "path": "docs/content/r30/review-set/08-crossing-stage-1-car-still-wait.png",
+      "purpose": "朋友過街中新車出現、右側確認失效",
+      "width": 390,
+      "height": 844,
+      "sha256": "75db3c1c93c27d6478870df6ad9a5d513552bb2ec38087326cd491cc166920fb"
+    },
+    {
+      "kind": "crossing",
+      "source": "docs/content/r30/phone-crossing-stage-1-new-car-clear-unconfirmed.png",
+      "path": "docs/content/r30/review-set/09-crossing-stage-1-new-car-clear-unconfirmed.png",
+      "purpose": "新車通過，仍須玩家重新看",
+      "width": 390,
+      "height": 844,
+      "sha256": "377dd3b5aaff2e95b4e7ecb0347d11650195e79f54d3bfc1180a714b33e4dd9a"
+    },
+    {
+      "kind": "crossing",
+      "source": "docs/content/r30/phone-crossing-stage-1-look-again-confirmed.png",
+      "path": "docs/content/r30/review-set/10-crossing-stage-1-look-again-confirmed.png",
+      "purpose": "正確重看後解除失效",
+      "width": 390,
+      "height": 844,
+      "sha256": "ebbe798c857cab9ddd619a134975745a241c4fe3bf2b52fd7342ea6bf16d3e46"
+    },
+    {
+      "kind": "tickets",
+      "source": "docs/content/r30/phone-tickets-stage-1-wrong-shape.png",
+      "path": "docs/content/r30/review-set/11-tickets-stage-1-wrong-shape.png",
+      "purpose": "朋友持票、放大並排、輪廓不同",
+      "width": 390,
+      "height": 844,
+      "sha256": "ca0efc8bb5044f3eb608dec3bf1071feb494c1fb94ef743612fa0bc2e2270c94"
+    },
+    {
+      "kind": "tickets",
+      "source": "docs/content/r30/phone-tickets-stage-1-wrong-color.png",
+      "path": "docs/content/r30/review-set/12-tickets-stage-1-wrong-color.png",
+      "purpose": "同站票色不同，圖示分開指出",
+      "width": 390,
+      "height": 844,
+      "sha256": "66a225d02363cdeab2a9afb9695daa67a8dd2152dc4904d0a6fb804812c057dc"
+    },
+    {
+      "kind": "tickets",
+      "source": "docs/content/r30/phone-tickets-stage-1-paused.png",
+      "path": "docs/content/r30/review-set/13-tickets-stage-1-paused.png",
+      "purpose": "同人門檻放開，藍色暫停",
+      "width": 390,
+      "height": 844,
+      "sha256": "3681bc04df7cb2160a720c42152207f337056468a3de86faac99bbc908082759"
+    },
+    {
+      "kind": "tickets",
+      "source": "docs/content/r30/phone-tickets-stage-1-paused-still.png",
+      "path": "docs/content/r30/review-set/14-tickets-stage-1-paused-still.png",
+      "purpose": "700ms後維持同進度與位置",
+      "width": 390,
+      "height": 844,
+      "sha256": "48e05573f3afebc62e7a368450936719e5fe3c850ba157210e3764f9bc430d70"
+    },
+    {
+      "kind": "tickets",
+      "source": "docs/content/r30/phone-tickets-stage-1-seated-1.png",
+      "path": "docs/content/r30/review-set/15-tickets-stage-1-seated-1.png",
+      "purpose": "續按後確實入座，人數才加一",
+      "width": 390,
+      "height": 844,
+      "sha256": "3948b5b53878c14704971b3f6745c44ccf22a81c2acf013676935187da6d4745"
+    }
+  ]
+}

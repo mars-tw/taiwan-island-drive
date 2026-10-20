@@ -1,0 +1,106 @@
+{
+  "status": "VERIFIED",
+  "version": "2.42.0",
+  "build": 38,
+  "branch": "r1-fun-polish",
+  "baseline": "5511425a8973f3d64fe2fafb76ab7ed588ee90ef",
+  "existingTestsUnchanged": 51,
+  "preexistingUntrackedPreserved": 93,
+  "tests": 317,
+  "reviewImages": 15,
+  "cleanup": {
+    "deletedFiles": 68,
+    "releasedBytes": 91049035,
+    "retained": 8352
+  },
+  "performance": {
+    "status": "VERIFIED",
+    "method": "Real-clock RAF, three 180-frame samples; concurrent workstation reference only",
+    "rows": [
+      {
+        "width": 390,
+        "height": 844,
+        "runs": [
+          {
+            "p95": 16.799999999999727,
+            "max": 16.800000000000182,
+            "samples": 170
+          },
+          {
+            "p95": 16.700000000000728,
+            "max": 16.800000000000182,
+            "samples": 170
+          },
+          {
+            "p95": 16.700000000000728,
+            "max": 16.800000000000182,
+            "samples": 170
+          }
+        ],
+        "p95": 16.700000000000728
+      },
+      {
+        "width": 768,
+        "height": 1024,
+        "runs": [
+          {
+            "p95": 33.399999999999636,
+            "max": 33.40000000000009,
+            "samples": 170
+          },
+          {
+            "p95": 16.800000000000182,
+            "max": 33.399999999999636,
+            "samples": 170
+          },
+          {
+            "p95": 16.700000000000728,
+            "max": 33.30000000000018,
+            "samples": 170
+          }
+        ],
+        "p95": 16.800000000000182
+      },
+      {
+        "width": 1366,
+        "height": 600,
+        "runs": [
+          {
+            "p95": 33.30000000000018,
+            "max": 50.09999999999991,
+            "samples": 170
+          },
+          {
+            "p95": 16.800000000000182,
+            "max": 33.399999999999636,
+            "samples": 170
+          },
+          {
+            "p95": 16.700000000000728,
+            "max": 16.800000000000182,
+            "samples": 170
+          }
+        ],
+        "p95": 16.800000000000182
+      }
+    ]
+  },
+  "sourceSha256": {
+    "package.json": "08eb7a92bdf3b97a0aa0f1bf7bc6441e7c1561eb5cf838691691d087ea0ed1f8",
+    "package-lock.json": "cea220ca0f63caae28cb5849fd9ab69b157b45e9b2e9c5bc55bce0e8bc57bd0c",
+    "src/games/car/config.js": "f734e2f34134bf49803ae1d7c257ff88745a68293a01ed2db652c2f5ffdc734a",
+    "public/sw.js": "1408d0ae3c325a58a2de1bf683a8fc8bb923b856137e3e20524e4acdf5549ffc",
+    "android/app/build.gradle": "efebf938ba082f38f22919566430b3744d4d507f6bcb724291ee9843413bd446",
+    "ios/App/App.xcodeproj/project.pbxproj": "460d63fdaedd96fef986dbdb4396b94d82db21bd08d1a366b1e86abed72834e4",
+    "src/shared/content-r1-ui.js": "ab06317baa1a20a3d817d227f17a72d5b01a4cfb58689b09fd9fc1b8330b39cf",
+    "src/shared/content-r30.js": "a47bb29f8180420645516589d17a41d6c92c7e2a33ec7a7b62f3167b1afc9c44",
+    "src/shared/content-r30-scene.js": "fe5884d85924c793a134b1466d7cc3e0aadbee7305e6b3b22d640623d779720a",
+    "src/shared/content-r30.css": "9b355c9aed18d93adf9f5c13a732947ece7492f77a225e57433b17bf84c56b84"
+  },
+  "limits": [
+    "Physical devices and native voice require devices",
+    "Families and masked-text identification require human participants",
+    "Concurrent load performance is reference only",
+    "Muse >=8 requires independent review"
+  ]
+}
