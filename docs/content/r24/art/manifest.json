@@ -1,0 +1,86 @@
+{
+  "status": "VERIFIED",
+  "tool": "image_gen.imagegen",
+  "model_slug": null,
+  "generationCalls": 6,
+  "newRuntimeImages": 5,
+  "rejected": "Lighthouse first draft contained painted cars; the sixth call removed them. Rejected draft not used.",
+  "processing": "Sharp encoding and inspection thumbnail only; no procedural painting",
+  "assets": [
+    {
+      "id": "crossing-harbor",
+      "original": "docs/content/r24/art/crossing-harbor-original.png",
+      "runtime": "public/art/content-r24/crossing-harbor.webp",
+      "width": 1024,
+      "height": 1536,
+      "bytes": 665956,
+      "sha256": "abaeb329460b614cd4f5675d954599e30080e352cd150771ad1639e3e79581a2",
+      "meanRGB": [
+        120.41941197713216,
+        130.22635205586752,
+        124.35767491658528
+      ],
+      "originalSha256": "e06eca62a3991c34ce575e811a73776a08af0d23cb74af1bc0012685aa06694d"
+    },
+    {
+      "id": "crossing-banyan",
+      "original": "docs/content/r24/art/crossing-banyan-original.png",
+      "runtime": "public/art/content-r24/crossing-banyan.webp",
+      "width": 1024,
+      "height": 1536,
+      "bytes": 649260,
+      "sha256": "2a8ae8648f01c21206b8712d645ff3f64dbb49673068eb39d5fcf73d87c0c27b",
+      "meanRGB": [
+        131.15984535217285,
+        125.15026791890462,
+        97.41940625508626
+      ],
+      "originalSha256": "62c8469ed8d89484b7439adfe3245106dff19d48184b40cfdd8a4442af445e4f"
+    },
+    {
+      "id": "crossing-lighthouse",
+      "original": "docs/content/r24/art/crossing-lighthouse-original.png",
+      "runtime": "public/art/content-r24/crossing-lighthouse.webp",
+      "width": 1024,
+      "height": 1536,
+      "bytes": 576968,
+      "sha256": "0b812e0e9f51eb4962f2a66e4470bd4c93fdb44cd3757b3d20c95192c9fb05cc",
+      "meanRGB": [
+        120.09791946411133,
+        138.30209032694498,
+        127.32806587219238
+      ],
+      "originalSha256": "61a47a435e68671761be300236a31174a94b3ea69cd5f3e9865dcf98f79b2a83"
+    },
+    {
+      "id": "station-banyan",
+      "original": "docs/content/r24/art/station-banyan-original.png",
+      "runtime": "public/art/content-r24/station-banyan.webp",
+      "width": 1024,
+      "height": 1536,
+      "bytes": 691174,
+      "sha256": "9e2caa2344b88e70f84243dd7cbe067cc389d96ef43979b14d42d3f9f3104d41",
+      "meanRGB": [
+        142.93741035461426,
+        124.69887288411458,
+        76.80285898844402
+      ],
+      "originalSha256": "4b5b4234f862b143b6949a3be567fabf0321f8171b389d5974593ce35746efd7"
+    },
+    {
+      "id": "station-lighthouse",
+      "original": "docs/content/r24/art/station-lighthouse-original.png",
+      "runtime": "public/art/content-r24/station-lighthouse.webp",
+      "width": 1024,
+      "height": 1536,
+      "bytes": 546582,
+      "sha256": "5bfb7e6ddd151270eddc0265ae92e05b1fdc4603881c7689571522a5c8e20d05",
+      "meanRGB": [
+        139.72732416788736,
+        141.1146094004313,
+        128.1743418375651
+      ],
+      "originalSha256": "1d5b416753de2e10fb368fc31c721f32d669c0e6e0dca452e903f53ad34c0713"
+    }
+  ]
+}

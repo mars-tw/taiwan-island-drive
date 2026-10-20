@@ -1,0 +1,722 @@
+{
+  "status": "VERIFIED",
+  "scope": "store",
+  "method": "Headless Chromium; public UI; real timers/RAF advanced by Playwright clock; no game-state assignments or synthetic saves",
+  "rows": [
+    {
+      "status": "VERIFIED",
+      "label": "store 1290x2796 live escort"
+    },
+    {
+      "status": "VERIFIED",
+      "label": "store 2064x2752 live escort"
+    },
+    {
+      "status": "VERIFIED",
+      "label": "no script errors, failed local requests, or external network"
+    }
+  ],
+  "shots": [
+    {
+      "path": "docs/content/r24/store/device-430x932-phone-tickets-instructions.png",
+      "width": 1290,
+      "height": 2796,
+      "sha256": "f4db9bc69c18ac1fdbe4d44d8c3f42347e5759c238c43741398d00d76ec39a1b",
+      "state": {
+        "roadShape": "uphill",
+        "boardTime": "0.000",
+        "doorStage": "closed",
+        "boardingIndex": "0",
+        "hazard": "false",
+        "wrongTurn": "false",
+        "inBend": "false",
+        "cue": "go",
+        "settled": "true",
+        "correction": "",
+        "compact": "false",
+        "recoveryActive": "false",
+        "lookStep": "0",
+        "targetName": "藍圓形",
+        "layoutSeed": "0",
+        "distance": "0.00",
+        "speed": "0.00",
+        "bend": "1",
+        "tilt": "0.00",
+        "sway": "0.00",
+        "acceleration": "0.00",
+        "bayStopped": "false",
+        "bayRestarted": "false",
+        "leftTurn": "false",
+        "rightTurn": "false",
+        "focus": "center",
+        "crossTime": "0.000",
+        "crossDuration": "2.1",
+        "orderHint": "",
+        "fruitSway": "0.00",
+        "flagSway": "0.00",
+        "balanceLean": "0.00",
+        "balanceStatus": "steady",
+        "recoveries": "0",
+        "assists": "0",
+        "assisting": "false",
+        "crossed": "0",
+        "lookedLeft": "false",
+        "lookedRight": "false",
+        "decision": "false",
+        "confirmed": "false",
+        "confirmDelay": "0",
+        "person": "child",
+        "trafficActive": "false",
+        "trafficTime": "0.00",
+        "watchSide": "",
+        "platformSide": "front",
+        "signGround": "564.6600000000001",
+        "doorState": "closed",
+        "step": "0",
+        "holdState": "holding",
+        "holdProgress": "0.000",
+        "recheckTime": "2"
+      },
+      "phase": "ready",
+      "hint": "對形狀和顏色。邀朋友後，按住陪著上車。",
+      "proof": {
+        "controls": [
+          {
+            "id": "content-back",
+            "w": 68,
+            "h": 60,
+            "bad": false
+          },
+          {
+            "id": "content-pause",
+            "w": 68,
+            "h": 60,
+            "bad": false
+          },
+          {
+            "id": "begin",
+            "w": 91,
+            "h": 62.1875,
+            "bad": false
+          },
+          {
+            "id": "listen",
+            "w": 382,
+            "h": 60,
+            "bad": false
+          }
+        ],
+        "clipping": [],
+        "kind": "tickets",
+        "phase": "ready",
+        "text": "回學院\n形狀車票，找對月台\n暫停\n小安\n小晴\n小宇\n第 1 站・海風站\n阿路陪你練習\n已入座 0/3 人\n1 號月台\n2 號月台\n3 號月台\n\n對形狀和顏色。邀朋友後，按住陪著上車。\n\n一起出發\n再聽一次",
+        "metres": 0,
+        "rings": 0,
+        "progress": "",
+        "needed": [],
+        "riders": [
+          {
+            "id": "0",
+            "progress": "0.00",
+            "image": {
+              "x": 57.625,
+              "y": 629.5,
+              "width": 60,
+              "height": 45.140625,
+              "right": 117.625,
+              "bottom": 674.640625
+            },
+            "box": {
+              "x": 57.625,
+              "y": 614.640625,
+              "width": 60,
+              "height": 60,
+              "right": 117.625,
+              "bottom": 674.640625
+            },
+            "opacity": "1",
+            "display": "block"
+          },
+          {
+            "id": "1",
+            "progress": "0.00",
+            "image": {
+              "x": 185,
+              "y": 629.5,
+              "width": 60,
+              "height": 45.140625,
+              "right": 245,
+              "bottom": 674.640625
+            },
+            "box": {
+              "x": 185,
+              "y": 614.640625,
+              "width": 60,
+              "height": 60,
+              "right": 245,
+              "bottom": 674.640625
+            },
+            "opacity": "1",
+            "display": "block"
+          },
+          {
+            "id": "2",
+            "progress": "0.00",
+            "image": {
+              "x": 312.359375,
+              "y": 629.5,
+              "width": 60,
+              "height": 45.140625,
+              "right": 372.359375,
+              "bottom": 674.640625
+            },
+            "box": {
+              "x": 312.359375,
+              "y": 614.640625,
+              "width": 60,
+              "height": 60,
+              "right": 372.359375,
+              "bottom": 674.640625
+            },
+            "opacity": "1",
+            "display": "block"
+          }
+        ],
+        "step": null,
+        "numbers": [],
+        "counts": "已入座 0/3 人",
+        "highlights": []
+      }
+    },
+    {
+      "path": "docs/store/screenshots/content-r24/tickets-escort-1290x2796.png",
+      "width": 1290,
+      "height": 2796,
+      "sha256": "a209abc34f1b8d91b01c23b4eae1109ded1a858c81c62758dff173acb340b8ab",
+      "state": {
+        "roadShape": "uphill",
+        "boardTime": "0.278",
+        "doorStage": "boarding",
+        "boardingIndex": "0",
+        "hazard": "false",
+        "wrongTurn": "false",
+        "inBend": "false",
+        "cue": "go",
+        "settled": "true",
+        "correction": "",
+        "compact": "false",
+        "recoveryActive": "false",
+        "lookStep": "0",
+        "targetName": "藍圓形",
+        "layoutSeed": "0",
+        "distance": "30.00",
+        "speed": "0.00",
+        "bend": "1",
+        "tilt": "2.47",
+        "sway": "2.02",
+        "acceleration": "0.00",
+        "bayStopped": "false",
+        "bayRestarted": "false",
+        "leftTurn": "false",
+        "rightTurn": "false",
+        "focus": "center",
+        "crossTime": "0.000",
+        "crossDuration": "2.1",
+        "orderHint": "",
+        "fruitSway": "6.74",
+        "flagSway": "15.52",
+        "balanceLean": "0.00",
+        "balanceStatus": "steady",
+        "recoveries": "0",
+        "assists": "0",
+        "assisting": "false",
+        "crossed": "0",
+        "lookedLeft": "false",
+        "lookedRight": "false",
+        "decision": "false",
+        "confirmed": "false",
+        "confirmDelay": "0",
+        "person": "child",
+        "trafficActive": "false",
+        "trafficTime": "0.00",
+        "watchSide": "",
+        "platformSide": "front",
+        "signGround": "584.615",
+        "doorState": "open",
+        "step": "1",
+        "holdState": "holding",
+        "holdProgress": "0.612",
+        "recheckTime": "2"
+      },
+      "phase": "boarding",
+      "hint": "按住陪小安上車，放開就停。",
+      "proof": {
+        "controls": [
+          {
+            "id": "content-back",
+            "w": 68,
+            "h": 60,
+            "bad": false
+          },
+          {
+            "id": "content-pause",
+            "w": 68,
+            "h": 60,
+            "bad": false
+          },
+          {
+            "id": "escort",
+            "w": 382,
+            "h": 62.1875,
+            "bad": false
+          },
+          {
+            "id": "listen",
+            "w": 382,
+            "h": 60,
+            "bad": false
+          }
+        ],
+        "clipping": [],
+        "kind": "tickets",
+        "phase": "boarding",
+        "text": "回學院\n形狀車票，找對月台\n暫停\n小安上車中\n小晴\n小宇\n第 1 站・海風站\n已入座 0/3 人\n1 號月台\n2 號月台\n3 號月台\n✓ 停對了\n\n按住陪小安上車，放開就停。\n\n陪著上車\n再聽一次",
+        "metres": 0,
+        "rings": 0,
+        "progress": "",
+        "needed": [],
+        "riders": [
+          {
+            "id": "0",
+            "progress": "0.61",
+            "image": {
+              "x": 304.390625,
+              "y": 508.484375,
+              "width": 60,
+              "height": 50.390625,
+              "right": 364.390625,
+              "bottom": 558.875
+            },
+            "box": {
+              "x": 304.390625,
+              "y": 498.875,
+              "width": 60,
+              "height": 60,
+              "right": 364.390625,
+              "bottom": 558.875
+            },
+            "opacity": "1",
+            "display": "block"
+          },
+          {
+            "id": "1",
+            "progress": "0.00",
+            "image": {
+              "x": 185,
+              "y": 651.609375,
+              "width": 60,
+              "height": 45.140625,
+              "right": 245,
+              "bottom": 696.75
+            },
+            "box": {
+              "x": 185,
+              "y": 636.75,
+              "width": 60,
+              "height": 60,
+              "right": 245,
+              "bottom": 696.75
+            },
+            "opacity": "1",
+            "display": "block"
+          },
+          {
+            "id": "2",
+            "progress": "0.00",
+            "image": {
+              "x": 312.359375,
+              "y": 651.609375,
+              "width": 60,
+              "height": 45.140625,
+              "right": 372.359375,
+              "bottom": 696.75
+            },
+            "box": {
+              "x": 312.359375,
+              "y": 636.75,
+              "width": 60,
+              "height": 60,
+              "right": 372.359375,
+              "bottom": 696.75
+            },
+            "opacity": "1",
+            "display": "block"
+          }
+        ],
+        "step": {
+          "x": 274.6875,
+          "y": 556.84375,
+          "width": 119.390625,
+          "height": 51.75,
+          "right": 394.078125,
+          "bottom": 608.59375
+        },
+        "numbers": [],
+        "counts": "已入座 0/3 人",
+        "highlights": []
+      }
+    },
+    {
+      "path": "docs/content/r24/store/device-1032x1376-phone-tickets-instructions.png",
+      "width": 2064,
+      "height": 2752,
+      "sha256": "d218d4a415893179ee17cdf55e3539e80443122934746a5cb006e3fc0f14754e",
+      "state": {
+        "roadShape": "uphill",
+        "boardTime": "0.000",
+        "doorStage": "closed",
+        "boardingIndex": "0",
+        "hazard": "false",
+        "wrongTurn": "false",
+        "inBend": "false",
+        "cue": "go",
+        "settled": "true",
+        "correction": "",
+        "compact": "false",
+        "recoveryActive": "false",
+        "lookStep": "0",
+        "targetName": "藍圓形",
+        "layoutSeed": "0",
+        "distance": "0.00",
+        "speed": "0.00",
+        "bend": "1",
+        "tilt": "0.00",
+        "sway": "0.00",
+        "acceleration": "0.00",
+        "bayStopped": "false",
+        "bayRestarted": "false",
+        "leftTurn": "false",
+        "rightTurn": "false",
+        "focus": "center",
+        "crossTime": "0.000",
+        "crossDuration": "2.1",
+        "orderHint": "",
+        "fruitSway": "0.00",
+        "flagSway": "0.00",
+        "balanceLean": "0.00",
+        "balanceStatus": "steady",
+        "recoveries": "0",
+        "assists": "0",
+        "assisting": "false",
+        "crossed": "0",
+        "lookedLeft": "false",
+        "lookedRight": "false",
+        "decision": "false",
+        "confirmed": "false",
+        "confirmDelay": "0",
+        "person": "child",
+        "trafficActive": "false",
+        "trafficTime": "0.00",
+        "watchSide": "",
+        "platformSide": "front",
+        "signGround": "721.04",
+        "doorState": "closed",
+        "step": "0",
+        "holdState": "holding",
+        "holdProgress": "0.000",
+        "recheckTime": "2"
+      },
+      "phase": "ready",
+      "hint": "對形狀和顏色。邀朋友後，按住陪著上車。",
+      "proof": {
+        "controls": [
+          {
+            "id": "content-back",
+            "w": 68,
+            "h": 60,
+            "bad": false
+          },
+          {
+            "id": "content-pause",
+            "w": 68,
+            "h": 60,
+            "bad": false
+          },
+          {
+            "id": "begin",
+            "w": 93.953125,
+            "h": 62.1875,
+            "bad": false
+          },
+          {
+            "id": "listen",
+            "w": 393.828125,
+            "h": 60,
+            "bad": false
+          }
+        ],
+        "clipping": [],
+        "kind": "tickets",
+        "phase": "ready",
+        "text": "回學院\n形狀車票，找對月台\n暫停\n小安\n小晴\n小宇\n第 1 站・海風站\n阿路陪你練習\n已入座 0/3 人\n1 號月台\n2 號月台\n3 號月台\n\n對形狀和顏色。邀朋友後，按住陪著上車。\n\n一起出發\n再聽一次",
+        "metres": 0,
+        "rings": 0,
+        "progress": "",
+        "needed": [],
+        "riders": [
+          {
+            "id": "0",
+            "progress": "0.00",
+            "image": {
+              "x": 89.703125,
+              "y": 1032.828125,
+              "width": 60,
+              "height": 65.359375,
+              "right": 149.703125,
+              "bottom": 1098.1875
+            },
+            "box": {
+              "x": 89.703125,
+              "y": 1025.234375,
+              "width": 60,
+              "height": 72.953125,
+              "right": 149.703125,
+              "bottom": 1098.1875
+            },
+            "opacity": "1",
+            "display": "block"
+          },
+          {
+            "id": "1",
+            "progress": "0.00",
+            "image": {
+              "x": 274.078125,
+              "y": 1032.828125,
+              "width": 60,
+              "height": 65.359375,
+              "right": 334.078125,
+              "bottom": 1098.1875
+            },
+            "box": {
+              "x": 274.078125,
+              "y": 1025.234375,
+              "width": 60,
+              "height": 72.953125,
+              "right": 334.078125,
+              "bottom": 1098.1875
+            },
+            "opacity": "1",
+            "display": "block"
+          },
+          {
+            "id": "2",
+            "progress": "0.00",
+            "image": {
+              "x": 458.4375,
+              "y": 1032.828125,
+              "width": 60,
+              "height": 65.359375,
+              "right": 518.4375,
+              "bottom": 1098.1875
+            },
+            "box": {
+              "x": 458.4375,
+              "y": 1025.234375,
+              "width": 60,
+              "height": 72.953125,
+              "right": 518.4375,
+              "bottom": 1098.1875
+            },
+            "opacity": "1",
+            "display": "block"
+          }
+        ],
+        "step": null,
+        "numbers": [],
+        "counts": "已入座 0/3 人",
+        "highlights": []
+      }
+    },
+    {
+      "path": "docs/store/screenshots/content-r24/tickets-escort-2064x2752.png",
+      "width": 2064,
+      "height": 2752,
+      "sha256": "75fac9b7620027a291161bf34521671a7f6c8a7e98c34756e6c3f5f40a203dbe",
+      "state": {
+        "roadShape": "uphill",
+        "boardTime": "0.278",
+        "doorStage": "boarding",
+        "boardingIndex": "0",
+        "hazard": "false",
+        "wrongTurn": "false",
+        "inBend": "false",
+        "cue": "go",
+        "settled": "true",
+        "correction": "",
+        "compact": "false",
+        "recoveryActive": "false",
+        "lookStep": "0",
+        "targetName": "藍圓形",
+        "layoutSeed": "0",
+        "distance": "30.00",
+        "speed": "0.00",
+        "bend": "1",
+        "tilt": "2.47",
+        "sway": "2.02",
+        "acceleration": "0.00",
+        "bayStopped": "false",
+        "bayRestarted": "false",
+        "leftTurn": "false",
+        "rightTurn": "false",
+        "focus": "center",
+        "crossTime": "0.000",
+        "crossDuration": "2.1",
+        "orderHint": "",
+        "fruitSway": "6.74",
+        "flagSway": "15.52",
+        "balanceLean": "0.00",
+        "balanceStatus": "steady",
+        "recoveries": "0",
+        "assists": "0",
+        "assisting": "false",
+        "crossed": "0",
+        "lookedLeft": "false",
+        "lookedRight": "false",
+        "decision": "false",
+        "confirmed": "false",
+        "confirmDelay": "0",
+        "person": "child",
+        "trafficActive": "false",
+        "trafficTime": "0.00",
+        "watchSide": "",
+        "platformSide": "front",
+        "signGround": "721.04",
+        "doorState": "open",
+        "step": "1",
+        "holdState": "holding",
+        "holdProgress": "0.612",
+        "recheckTime": "2"
+      },
+      "phase": "boarding",
+      "hint": "按住陪小安上車，放開就停。",
+      "proof": {
+        "controls": [
+          {
+            "id": "content-back",
+            "w": 68,
+            "h": 60,
+            "bad": false
+          },
+          {
+            "id": "content-pause",
+            "w": 68,
+            "h": 60,
+            "bad": false
+          },
+          {
+            "id": "escort",
+            "w": 393.828125,
+            "h": 62.1875,
+            "bad": false
+          },
+          {
+            "id": "listen",
+            "w": 393.828125,
+            "h": 60,
+            "bad": false
+          }
+        ],
+        "clipping": [],
+        "kind": "tickets",
+        "phase": "boarding",
+        "text": "回學院\n形狀車票，找對月台\n暫停\n小安上車中\n小晴\n小宇\n第 1 站・海風站\n已入座 0/3 人\n1 號月台\n2 號月台\n3 號月台\n✓ 停對了\n\n按住陪小安上車，放開就停。\n\n陪著上車\n再聽一次",
+        "metres": 0,
+        "rings": 0,
+        "progress": "",
+        "needed": [],
+        "riders": [
+          {
+            "id": "0",
+            "progress": "0.61",
+            "image": {
+              "x": 446.921875,
+              "y": 842.09375,
+              "width": 60,
+              "height": 72.953125,
+              "right": 506.921875,
+              "bottom": 915.046875
+            },
+            "box": {
+              "x": 446.921875,
+              "y": 842.09375,
+              "width": 60,
+              "height": 72.953125,
+              "right": 506.921875,
+              "bottom": 915.046875
+            },
+            "opacity": "1",
+            "display": "block"
+          },
+          {
+            "id": "1",
+            "progress": "0.00",
+            "image": {
+              "x": 274.078125,
+              "y": 1032.828125,
+              "width": 60,
+              "height": 65.359375,
+              "right": 334.078125,
+              "bottom": 1098.1875
+            },
+            "box": {
+              "x": 274.078125,
+              "y": 1025.234375,
+              "width": 60,
+              "height": 72.953125,
+              "right": 334.078125,
+              "bottom": 1098.1875
+            },
+            "opacity": "1",
+            "display": "block"
+          },
+          {
+            "id": "2",
+            "progress": "0.00",
+            "image": {
+              "x": 458.4375,
+              "y": 1032.828125,
+              "width": 60,
+              "height": 65.359375,
+              "right": 518.4375,
+              "bottom": 1098.1875
+            },
+            "box": {
+              "x": 458.4375,
+              "y": 1025.234375,
+              "width": 60,
+              "height": 72.953125,
+              "right": 518.4375,
+              "bottom": 1098.1875
+            },
+            "opacity": "1",
+            "display": "block"
+          }
+        ],
+        "step": {
+          "x": 390.390625,
+          "y": 913.03125,
+          "width": 172.796875,
+          "height": 54,
+          "right": 563.1875,
+          "bottom": 967.03125
+        },
+        "numbers": [],
+        "counts": "已入座 0/3 人",
+        "highlights": []
+      }
+    }
+  ],
+  "errors": [],
+  "http": [],
+  "external": []
+}

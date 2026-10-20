@@ -1,0 +1,142 @@
+{
+  "status": "VERIFIED",
+  "scope": "Local implementation, requested tests, original evidence and D3D11 reference benchmark; independent score and physical-device tests remain pending",
+  "baseline": "2457616c4fcc544257c0831d0d85ed18b13c1ba8",
+  "branch": "r1-fun-polish",
+  "version": "2.36.0",
+  "sourceBuild": 32,
+  "unitTests": 278,
+  "existingTestFilesUnchanged": 44,
+  "courseBrowserChecks": 62,
+  "mergeChecks": 132,
+  "storeChecks": 101,
+  "screenshots": 308,
+  "reviewSet": 15,
+  "newRuntimeArt": 5,
+  "generationCalls": 6,
+  "secretHits": 0,
+  "cleanup": {
+    "files": 65,
+    "bytes": 89933397,
+    "retained": 6011
+  },
+  "performance": {
+    "status": "VERIFIED",
+    "renderArgs": [
+      "--use-angle=d3d11",
+      "--enable-gpu",
+      "--ignore-gpu-blocklist"
+    ],
+    "method": "Same D3D11 browser rendering arguments as the existing R23 benchmark and required merge/store regressions. Three real 2000ms RAF samples per lesson/viewport; median p95. Concurrent host load, one browser/context at a time; reference only, not clean hardware or native-device performance. The separate forced-software experiment is retained in performance-software.json.",
+    "limitMs": 18,
+    "rows": [
+      {
+        "viewport": "desktop",
+        "kind": "cake",
+        "runs": [
+          16.8,
+          16.7,
+          16.8
+        ],
+        "p95": 16.8
+      },
+      {
+        "viewport": "desktop",
+        "kind": "crossing",
+        "runs": [
+          16.8,
+          16.7,
+          16.7
+        ],
+        "p95": 16.7
+      },
+      {
+        "viewport": "desktop",
+        "kind": "tickets",
+        "runs": [
+          16.8,
+          16.7,
+          16.7
+        ],
+        "p95": 16.7
+      },
+      {
+        "viewport": "portrait",
+        "kind": "cake",
+        "runs": [
+          16.7,
+          16.8,
+          16.8
+        ],
+        "p95": 16.8
+      },
+      {
+        "viewport": "portrait",
+        "kind": "crossing",
+        "runs": [
+          16.7,
+          16.7,
+          16.8
+        ],
+        "p95": 16.7
+      },
+      {
+        "viewport": "portrait",
+        "kind": "tickets",
+        "runs": [
+          16.7,
+          16.7,
+          16.7
+        ],
+        "p95": 16.7
+      },
+      {
+        "viewport": "landscape",
+        "kind": "cake",
+        "runs": [
+          16.7,
+          16.8,
+          16.7
+        ],
+        "p95": 16.7
+      },
+      {
+        "viewport": "landscape",
+        "kind": "crossing",
+        "runs": [
+          16.7,
+          16.7,
+          16.7
+        ],
+        "p95": 16.7
+      },
+      {
+        "viewport": "landscape",
+        "kind": "tickets",
+        "runs": [
+          16.8,
+          16.7,
+          16.7
+        ],
+        "p95": 16.7
+      }
+    ]
+  },
+  "forcedSoftwareExperiment": {
+    "status": "BLOCKED",
+    "desktopP95": [
+      33.4,
+      33.3,
+      33.3
+    ],
+    "artifact": "docs/content/r24/performance-software.json"
+  },
+  "blocked": [
+    "Physical iPhone/iPad touch and native speech need devices",
+    "Parent-child play and blind interpretation need participants",
+    "Clean performance needs exclusive hardware",
+    "Independent Muse score >=8 pending",
+    "Native signed packages not rebuilt",
+    "Forced software-rendering desktop experiment exceeded 18ms; kept separate from the established D3D11 benchmark"
+  ]
+}
