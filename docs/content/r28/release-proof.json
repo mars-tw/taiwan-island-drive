@@ -1,0 +1,111 @@
+{
+  "status": "VERIFIED",
+  "branch": "r1-fun-polish",
+  "baseline": "906fd1017229b396d8830d12b67530e92c75965c",
+  "version": "2.40.0",
+  "sourceBuild": 36,
+  "unitTests": 299,
+  "originalTestFilesUnchanged": 49,
+  "mergeChecks": 132,
+  "storeChecks": 101,
+  "originalScreenshots": 310,
+  "reviewSet": 15,
+  "generationCalls": 2,
+  "newRuntimeArt": 1,
+  "cleanup": {
+    "files": 182,
+    "bytes": 122862760,
+    "retained": 7680
+  },
+  "secretHits": 0,
+  "performance": {
+    "status": "VERIFIED",
+    "method": "Real-clock RAF, three 180-frame runs per viewport; active cake gameplay; concurrent workstation load, reference only",
+    "rows": [
+      {
+        "width": 390,
+        "height": 844,
+        "runs": [
+          {
+            "p95": 16.700000000000273,
+            "max": 16.800000000000182,
+            "samples": 170
+          },
+          {
+            "p95": 16.700000000000728,
+            "max": 16.800000000000182,
+            "samples": 170
+          },
+          {
+            "p95": 16.700000000000728,
+            "max": 16.800000000000182,
+            "samples": 170
+          }
+        ],
+        "p95": 16.700000000000728
+      },
+      {
+        "width": 768,
+        "height": 1024,
+        "runs": [
+          {
+            "p95": 16.800000000000182,
+            "max": 50,
+            "samples": 170
+          },
+          {
+            "p95": 16.800000000000182,
+            "max": 50,
+            "samples": 170
+          },
+          {
+            "p95": 16.799999999999272,
+            "max": 33.30000000000018,
+            "samples": 170
+          }
+        ],
+        "p95": 16.800000000000182
+      },
+      {
+        "width": 1366,
+        "height": 600,
+        "runs": [
+          {
+            "p95": 33.30000000000007,
+            "max": 33.5,
+            "samples": 170
+          },
+          {
+            "p95": 16.800000000000182,
+            "max": 33.40000000000009,
+            "samples": 170
+          },
+          {
+            "p95": 16.799999999999272,
+            "max": 16.80000000000109,
+            "samples": 170
+          }
+        ],
+        "p95": 16.800000000000182
+      }
+    ]
+  },
+  "sourceSha256": {
+    "src/shared/content-r1-ui.js": "4bef51ae9609e2f02d109dc56cf9f569b169ddf3a0a1dfad77ca64c6cf9ff116",
+    "src/shared/content-r28.js": "26817b956b6448425d7dd61c0e82f6e632ff1dc4ecac8fdb01a41b4daeadd49e",
+    "src/shared/content-r28-scene.js": "a2a2955a07f04c2e5c2b00a87a37605408cced5213d7a481925800e3c6b33a56",
+    "src/shared/content-r28.css": "ce2396d2b1ff1cae8b435fe124a19a3d3d1e4fe6c0f7873307ab55e203bf9e0e",
+    "public/sw.js": "18604d78ba373ae5e82c7ae1af6cf3b4e313eac93ff2af96628b030eb1211719",
+    "tests/shared/content-r28.test.js": "fd5194b6fdb1b51aa12f25ef11d73cd39a61034cc3121f1bd96ecb4448cc2da5",
+    "scripts/check-content-r28.mjs": "abbeecbbec66c54a2b5384c4cb99b846f218ff665d28d7cf44dde35c964bfe73",
+    "package.json": "ebe19c39d2fc6241a6e55f43e44f649c32b342fcacbbc965859553603c474051",
+    "dist/sw.js": "663f615a12e257c15798a96127e18074ceef5dfe8f810038d1455d5764f6462f"
+  },
+  "blocked": [
+    "Physical iPhone/iPad touch and native speech require devices",
+    "Parent-child and hidden-text comprehension tests require participants",
+    "Clean performance requires exclusive hardware; recorded concurrent-load timings are reference only",
+    "Independent Muse rescore >=8 not yet received",
+    "No signed native package produced"
+  ]
+}

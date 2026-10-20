@@ -1,0 +1,8 @@
+{
+  "tool": "image_gen.imagegen",
+  "model_slug": null,
+  "prompt": "Island Traffic Academy sunny Taiwan coastal storybook, chunky ink-navy outlines, rounded toy proportions, warm upper-left light, saturated sea blue sunflower yellow coral orange, gentle paper texture, clean silhouette readable at 64px. Precise edit of supplied rest bay painting. Preserve all scenery, palette, lighthouse, village, banyan, P sign and main road. REPLACE ONLY the small slanted white parking rectangle with a MUCH LARGER AND NEARLY FRONT-FACING RECTANGULAR PARKING SPACE. Erase old white parking rectangle fully. New white outline vertices approximately image normalized (0.49,0.48), (0.92,0.48), (0.92,0.77), (0.49,0.77), mildly tapered upper edge okay. Broad grey paved space inside box. This is a painted practical game parking area with enough width and height for the player car and birthday cake. Need a clear wide open bay entrance connecting across the white road boundary at lower-left edge of bay. Keep blue P sign on its posts touching pavement, outside parking outline at right. No vehicles or people. No UI. Portrait1024x1536. Keep existing sunny Taiwan storybook brushwork.",
+  "reference": "docs/content/r28/art/cake-bay-original.png",
+  "output": "docs/content/r28/art/cake-bay-final.png",
+  "reason": "First white parking outline too small; enlarge to contain the rendered car."
+}

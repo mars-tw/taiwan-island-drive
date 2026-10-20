@@ -1,0 +1,3265 @@
+{
+  "status": "VERIFIED",
+  "checks": [
+    {
+      "status": "VERIFIED",
+      "label": "cake stage 1 continuous controls"
+    },
+    {
+      "status": "VERIFIED",
+      "label": "cake stage 2 continuous controls"
+    },
+    {
+      "status": "VERIFIED",
+      "label": "cake stage 3 continuous controls"
+    },
+    {
+      "status": "VERIFIED",
+      "label": "cake three stations, completion and exact saved readback",
+      "stage": 2,
+      "completed": true,
+      "started": true,
+      "skills": {
+        "start": true,
+        "turn": true,
+        "stop": true
+      },
+      "facts": {
+        "recoveries": 4,
+        "assists": 0,
+        "bayStops": 1,
+        "bayRestarts": 1,
+        "leftViews": 0,
+        "rightViews": 0,
+        "waited": 0,
+        "wrongStops": 0,
+        "reselections": 0,
+        "boarded": 0,
+        "blockedStarts": 0,
+        "orderReminders": 0,
+        "confirmations": 0
+      },
+      "layoutSeed": 0,
+      "visited": [
+        0,
+        1,
+        2
+      ],
+      "contentVersion": 28
+    },
+    {
+      "status": "VERIFIED",
+      "label": "crossing 1 child continuous feet path"
+    },
+    {
+      "status": "VERIFIED",
+      "label": "crossing 1 bike continuous feet path"
+    },
+    {
+      "status": "VERIFIED",
+      "label": "crossing 1 grandma continuous feet path"
+    },
+    {
+      "status": "VERIFIED",
+      "label": "crossing 2 grandma continuous feet path"
+    },
+    {
+      "status": "VERIFIED",
+      "label": "crossing 2 child continuous feet path"
+    },
+    {
+      "status": "VERIFIED",
+      "label": "crossing 2 bike continuous feet path"
+    },
+    {
+      "status": "VERIFIED",
+      "label": "crossing 3 bike continuous feet path"
+    },
+    {
+      "status": "VERIFIED",
+      "label": "crossing 3 grandma continuous feet path"
+    },
+    {
+      "status": "VERIFIED",
+      "label": "crossing 3 child continuous feet path"
+    },
+    {
+      "status": "VERIFIED",
+      "label": "crossing three stations, completion and exact saved readback",
+      "stage": 2,
+      "completed": true,
+      "started": true,
+      "skills": {
+        "start": false,
+        "turn": false,
+        "stop": false
+      },
+      "facts": {
+        "recoveries": 0,
+        "assists": 0,
+        "bayStops": 0,
+        "bayRestarts": 0,
+        "leftViews": 12,
+        "rightViews": 9,
+        "waited": 9,
+        "wrongStops": 0,
+        "reselections": 0,
+        "boarded": 0,
+        "blockedStarts": 0,
+        "orderReminders": 0,
+        "confirmations": 9
+      },
+      "layoutSeed": 0,
+      "visited": [
+        0,
+        1,
+        2
+      ],
+      "contentVersion": 28
+    },
+    {
+      "status": "VERIFIED",
+      "label": "tickets stage 1 released, resumed and seated all three"
+    },
+    {
+      "status": "VERIFIED",
+      "label": "tickets stage 2 released, resumed and seated all three"
+    },
+    {
+      "status": "VERIFIED",
+      "label": "tickets stage 3 released, resumed and seated all three"
+    },
+    {
+      "status": "VERIFIED",
+      "label": "tickets three stations, completion and exact saved readback",
+      "stage": 2,
+      "completed": true,
+      "started": true,
+      "skills": {
+        "start": false,
+        "turn": false,
+        "stop": false
+      },
+      "facts": {
+        "recoveries": 0,
+        "assists": 0,
+        "bayStops": 0,
+        "bayRestarts": 0,
+        "leftViews": 0,
+        "rightViews": 0,
+        "waited": 0,
+        "wrongStops": 0,
+        "reselections": 0,
+        "boarded": 9,
+        "blockedStarts": 0,
+        "orderReminders": 0,
+        "confirmations": 0
+      },
+      "layoutSeed": 0,
+      "visited": [
+        0,
+        1,
+        2
+      ],
+      "contentVersion": 28
+    }
+  ],
+  "shots": [
+    {
+      "path": "docs/content/r28/clean/phone-cake-select-stations.png",
+      "width": 390,
+      "height": 844,
+      "sha256": "b0060153e13ed4eb735da7b0c37badd81020f8a1b976dc7078bbaf0fcdd05e26",
+      "phase": "ready",
+      "state": {
+        "roadShape": "uphill",
+        "boardTime": "0.000",
+        "doorStage": "closed",
+        "boardingIndex": "0",
+        "hazard": "false",
+        "wrongTurn": "false",
+        "inBend": "false",
+        "cue": "go",
+        "settled": "true",
+        "correction": "",
+        "compact": "false",
+        "recoveryActive": "false",
+        "lookStep": "0",
+        "targetName": "藍圓形",
+        "layoutSeed": "0",
+        "distance": "0.00",
+        "speed": "0.00",
+        "bend": "1",
+        "tilt": "0.00",
+        "sway": "0.00",
+        "acceleration": "0.00",
+        "bayStopped": "false",
+        "bayRestarted": "false",
+        "leftTurn": "false",
+        "rightTurn": "false",
+        "focus": "center",
+        "crossTime": "0.000",
+        "crossDuration": "2.1",
+        "orderHint": "",
+        "fruitSway": "0.00",
+        "flagSway": "0.00",
+        "hintVisible": "false",
+        "crossingOrder": "child,bike,grandma",
+        "balanceLean": "0.00",
+        "balanceStatus": "steady",
+        "recoveries": "0",
+        "assists": "0",
+        "assisting": "false",
+        "crossed": "0",
+        "lookedLeft": "false",
+        "lookedRight": "false",
+        "decision": "false",
+        "confirmed": "false",
+        "confirmDelay": "0",
+        "person": "child",
+        "trafficActive": "false",
+        "trafficTime": "0.00",
+        "watchSide": "",
+        "platformSide": "front",
+        "doorState": "closed",
+        "step": "0",
+        "semanticStatus": "坐穩了",
+        "nextAction": "go",
+        "holdState": "paused",
+        "holdProgress": "1.000",
+        "recheckTime": "2",
+        "hintLevel": "0",
+        "forceTarget": "0",
+        "forceLag": "0",
+        "recoveryRate": "0",
+        "trafficConfirmed": "false",
+        "trafficSource": "left",
+        "lookSequence": "left,right",
+        "escortGate": "false",
+        "escortGateReleased": "false",
+        "restReady": "false",
+        "visited": ""
+      },
+      "controls": [
+        {
+          "id": "content-back",
+          "w": 68,
+          "h": 60,
+          "bad": false
+        },
+        {
+          "id": "content-pause",
+          "w": 68,
+          "h": 60,
+          "bad": false
+        },
+        {
+          "id": "0",
+          "w": 110.65625,
+          "h": 144,
+          "bad": false
+        },
+        {
+          "id": "1",
+          "w": 110.671875,
+          "h": 144,
+          "bad": false
+        },
+        {
+          "id": "2",
+          "w": 110.65625,
+          "h": 144,
+          "bad": false
+        },
+        {
+          "id": "begin",
+          "w": 81,
+          "h": 64,
+          "bad": false
+        },
+        {
+          "id": "listen",
+          "w": 342,
+          "h": 64,
+          "bad": false
+        }
+      ],
+      "layout": {
+        "labels": [
+          {
+            "id": "content-back:回學院",
+            "x": 16,
+            "y": 16,
+            "right": 84,
+            "bottom": 76,
+            "width": 68,
+            "height": 60
+          },
+          {
+            "id": "content-title:把蛋糕平穩送到",
+            "x": 92,
+            "y": 35.5,
+            "right": 298,
+            "bottom": 56.5,
+            "width": 206,
+            "height": 21
+          },
+          {
+            "id": "content-pause:暫停",
+            "x": 306,
+            "y": 16,
+            "right": 374,
+            "bottom": 76,
+            "width": 68,
+            "height": 60
+          },
+          {
+            "id": "content-scene-cue:第 1 站・海岸坡・慢慢上坡",
+            "x": 210.84375,
+            "y": 94,
+            "right": 370,
+            "bottom": 122,
+            "width": 159.15625,
+            "height": 28
+          },
+          {
+            "id": "SPAN:阿路陪你練習",
+            "x": 147,
+            "y": 322.515625,
+            "right": 243,
+            "bottom": 343.515625,
+            "width": 96,
+            "height": 21
+          },
+          {
+            "id": "BUTTON:1・上坡・右彎",
+            "x": 23,
+            "y": 460.40625,
+            "right": 133.65625,
+            "bottom": 604.40625,
+            "width": 110.65625,
+            "height": 144
+          },
+          {
+            "id": "BUTTON:2・左→右・慢慢轉",
+            "x": 139.65625,
+            "y": 460.40625,
+            "right": 250.328125,
+            "bottom": 604.40625,
+            "width": 110.671875,
+            "height": 144
+          },
+          {
+            "id": "BUTTON:3・進灣・停妥・離灣",
+            "x": 256.328125,
+            "y": 460.40625,
+            "right": 366.984375,
+            "bottom": 604.40625,
+            "width": 110.65625,
+            "height": 144
+          },
+          {
+            "id": "content-hint:上坡・右彎。慢慢開，減速一起扶。",
+            "x": 24,
+            "y": 636.40625,
+            "right": 366,
+            "bottom": 657.203125,
+            "width": 342,
+            "height": 20.796875
+          },
+          {
+            "id": "BUTTON:一起出發",
+            "x": 24,
+            "y": 663.203125,
+            "right": 105,
+            "bottom": 727.203125,
+            "width": 81,
+            "height": 64
+          },
+          {
+            "id": "BUTTON:再聽一次",
+            "x": 24,
+            "y": 733.203125,
+            "right": 366,
+            "bottom": 797.203125,
+            "width": 342,
+            "height": 64
+          }
+        ],
+        "overlaps": [],
+        "iconOverlaps": [],
+        "signOcclusion": [],
+        "counterOcclusion": [],
+        "carOffset": null,
+        "recovery": []
+      },
+      "text": "回學院\n把蛋糕平穩送到\n暫停\n第 1 站・海岸坡・慢慢上坡\n阿路陪你練習\n1・上坡・右彎\n2・左→右・慢慢轉\n3・進灣・停妥・離灣\n\n上坡・右彎。慢慢開，減速一起扶。\n\n一起出發\n再聽一次",
+      "highlights": [
+        {
+          "id": "begin",
+          "needed": "false",
+          "color": "rgb(245, 251, 255)"
+        },
+        {
+          "id": "listen",
+          "needed": "false",
+          "color": "rgb(245, 251, 255)"
+        }
+      ],
+      "ring": null,
+      "textClipping": []
+    },
+    {
+      "path": "docs/content/r28/clean/phone-cake-no-hint.png",
+      "width": 390,
+      "height": 844,
+      "sha256": "8fb0e967d2308a0a838b63ee2a846ecd11ab2855e62e1b3d9f704ac03e8d43a4",
+      "phase": "playing",
+      "state": {
+        "roadShape": "uphill",
+        "boardTime": "0.000",
+        "doorStage": "closed",
+        "boardingIndex": "0",
+        "hazard": "false",
+        "wrongTurn": "false",
+        "inBend": "false",
+        "cue": "go",
+        "settled": "true",
+        "correction": "",
+        "compact": "false",
+        "recoveryActive": "false",
+        "lookStep": "0",
+        "targetName": "藍圓形",
+        "layoutSeed": "0",
+        "distance": "0.00",
+        "speed": "0.00",
+        "bend": "1",
+        "tilt": "0.00",
+        "sway": "0.00",
+        "acceleration": "0.00",
+        "bayStopped": "false",
+        "bayRestarted": "false",
+        "leftTurn": "false",
+        "rightTurn": "false",
+        "focus": "center",
+        "crossTime": "0.000",
+        "crossDuration": "2.1",
+        "orderHint": "",
+        "fruitSway": "0.00",
+        "flagSway": "0.00",
+        "hintVisible": "false",
+        "crossingOrder": "child,bike,grandma",
+        "balanceLean": "0.00",
+        "balanceStatus": "steady",
+        "recoveries": "0",
+        "assists": "0",
+        "assisting": "false",
+        "crossed": "0",
+        "lookedLeft": "false",
+        "lookedRight": "false",
+        "decision": "false",
+        "confirmed": "false",
+        "confirmDelay": "0",
+        "person": "child",
+        "trafficActive": "false",
+        "trafficTime": "0.00",
+        "watchSide": "",
+        "platformSide": "front",
+        "doorState": "closed",
+        "step": "0",
+        "semanticStatus": "坐穩了",
+        "nextAction": "go",
+        "holdState": "paused",
+        "holdProgress": "1.000",
+        "recheckTime": "2",
+        "hintLevel": "0",
+        "forceTarget": "0",
+        "forceLag": "0",
+        "recoveryRate": "0",
+        "trafficConfirmed": "false",
+        "trafficSource": "left",
+        "lookSequence": "left,right",
+        "escortGate": "false",
+        "escortGateReleased": "false",
+        "restReady": "false",
+        "visited": ""
+      },
+      "controls": [
+        {
+          "id": "content-back",
+          "w": 68,
+          "h": 60,
+          "bad": false
+        },
+        {
+          "id": "content-pause",
+          "w": 68,
+          "h": 60,
+          "bad": false
+        },
+        {
+          "id": "left",
+          "w": 81,
+          "h": 64,
+          "bad": false
+        },
+        {
+          "id": "right",
+          "w": 81,
+          "h": 64,
+          "bad": false
+        },
+        {
+          "id": "go",
+          "w": 81,
+          "h": 64,
+          "bad": false
+        },
+        {
+          "id": "brake",
+          "w": 81,
+          "h": 64,
+          "bad": false
+        },
+        {
+          "id": "recover-left",
+          "w": 168,
+          "h": 64,
+          "bad": false
+        },
+        {
+          "id": "recover-right",
+          "w": 168,
+          "h": 64,
+          "bad": false
+        },
+        {
+          "id": "listen",
+          "w": 342,
+          "h": 64,
+          "bad": false
+        }
+      ],
+      "layout": {
+        "labels": [
+          {
+            "id": "content-back:回學院",
+            "x": 16,
+            "y": 16,
+            "right": 84,
+            "bottom": 76,
+            "width": 68,
+            "height": 60
+          },
+          {
+            "id": "content-title:把蛋糕平穩送到",
+            "x": 92,
+            "y": 35.5,
+            "right": 298,
+            "bottom": 56.5,
+            "width": 206,
+            "height": 21
+          },
+          {
+            "id": "content-pause:暫停",
+            "x": 306,
+            "y": 16,
+            "right": 374,
+            "bottom": 76,
+            "width": 68,
+            "height": 60
+          },
+          {
+            "id": "content-scene-cue:第 1 站・海岸坡・慢慢上坡",
+            "x": 210.84375,
+            "y": 94,
+            "right": 370,
+            "bottom": 122,
+            "width": 159.15625,
+            "height": 28
+          },
+          {
+            "id": "cake-lean-legend:✓ 坐穩參照",
+            "x": 23,
+            "y": 96,
+            "right": 185,
+            "bottom": 112,
+            "width": 162,
+            "height": 16
+          },
+          {
+            "id": "content-hint:輕踩踏板，照顧蛋糕。",
+            "x": 24,
+            "y": 589.203125,
+            "right": 366,
+            "bottom": 610,
+            "width": 342,
+            "height": 20.796875
+          },
+          {
+            "id": "BUTTON:左轉",
+            "x": 24,
+            "y": 616,
+            "right": 105,
+            "bottom": 680,
+            "width": 81,
+            "height": 64
+          },
+          {
+            "id": "BUTTON:右轉",
+            "x": 111,
+            "y": 616,
+            "right": 192,
+            "bottom": 680,
+            "width": 81,
+            "height": 64
+          },
+          {
+            "id": "BUTTON:踏板",
+            "x": 198,
+            "y": 616,
+            "right": 279,
+            "bottom": 680,
+            "width": 81,
+            "height": 64
+          },
+          {
+            "id": "BUTTON:煞車",
+            "x": 285,
+            "y": 616,
+            "right": 366,
+            "bottom": 680,
+            "width": 81,
+            "height": 64
+          },
+          {
+            "id": "BUTTON:向左扶",
+            "x": 24,
+            "y": 686,
+            "right": 192,
+            "bottom": 750,
+            "width": 168,
+            "height": 64
+          },
+          {
+            "id": "BUTTON:向右扶",
+            "x": 198,
+            "y": 686,
+            "right": 366,
+            "bottom": 750,
+            "width": 168,
+            "height": 64
+          },
+          {
+            "id": "BUTTON:再聽一次",
+            "x": 24,
+            "y": 756,
+            "right": 366,
+            "bottom": 820,
+            "width": 342,
+            "height": 64
+          },
+          {
+            "id": "content-force:坐穩了\n回中央 100%\n車速 0.0",
+            "x": 197,
+            "y": 136,
+            "right": 371,
+            "bottom": 240,
+            "width": 174,
+            "height": 104
+          },
+          {
+            "id": "cake-timing:↑上坡",
+            "x": 158,
+            "y": 280.921875,
+            "right": 232,
+            "bottom": 316.59375,
+            "width": 74,
+            "height": 35.671875
+          }
+        ],
+        "overlaps": [],
+        "iconOverlaps": [],
+        "signOcclusion": [],
+        "counterOcclusion": [],
+        "carOffset": null,
+        "recovery": [
+          {
+            "action": "recover-left",
+            "needed": "false",
+            "held": "false",
+            "background": "rgb(245, 251, 255)"
+          },
+          {
+            "action": "recover-right",
+            "needed": "false",
+            "held": "false",
+            "background": "rgb(245, 251, 255)"
+          }
+        ]
+      },
+      "text": "回學院\n把蛋糕平穩送到\n暫停\n第 1 站・海岸坡・慢慢上坡\n坐穩了\n回中央 100%\n車速 0.0\n✓ 坐穩參照\n↑上坡\n\n輕踩踏板，照顧蛋糕。\n\n左轉\n右轉\n踏板\n煞車\n向左扶\n向右扶\n再聽一次",
+      "highlights": [
+        {
+          "id": "left",
+          "needed": "false",
+          "color": "rgb(245, 251, 255)"
+        },
+        {
+          "id": "right",
+          "needed": "false",
+          "color": "rgb(245, 251, 255)"
+        },
+        {
+          "id": "go",
+          "needed": "false",
+          "color": "rgb(245, 251, 255)"
+        },
+        {
+          "id": "brake",
+          "needed": "false",
+          "color": "rgb(245, 251, 255)"
+        },
+        {
+          "id": "recover-left",
+          "needed": "false",
+          "color": "rgb(245, 251, 255)"
+        },
+        {
+          "id": "recover-right",
+          "needed": "false",
+          "color": "rgb(245, 251, 255)"
+        },
+        {
+          "id": "listen",
+          "needed": "false",
+          "color": "rgb(245, 251, 255)"
+        }
+      ],
+      "ring": null,
+      "textClipping": []
+    },
+    {
+      "path": "docs/content/r28/clean/phone-cake-complete.png",
+      "width": 390,
+      "height": 844,
+      "sha256": "fcff2ba853ebbd9630f7085228cc9f7860090006402d8cd549aa43635bb5d502",
+      "phase": "done",
+      "state": {
+        "roadShape": "left",
+        "boardTime": "0.000",
+        "doorStage": "closed",
+        "boardingIndex": "0",
+        "hazard": "false",
+        "wrongTurn": "false",
+        "inBend": "false",
+        "cue": "brake",
+        "settled": "true",
+        "correction": "",
+        "compact": "false",
+        "recoveryActive": "false",
+        "lookStep": "0",
+        "targetName": "綠正方形",
+        "layoutSeed": "0",
+        "distance": "55.00",
+        "speed": "0.00",
+        "bend": "1",
+        "tilt": "0.00",
+        "sway": "0.00",
+        "acceleration": "-5.78",
+        "bayStopped": "true",
+        "bayRestarted": "true",
+        "leftTurn": "false",
+        "rightTurn": "true",
+        "focus": "center",
+        "crossTime": "0.000",
+        "crossDuration": "1.45",
+        "orderHint": "",
+        "fruitSway": "0.00",
+        "flagSway": "0.00",
+        "hintVisible": "false",
+        "crossingOrder": "bike,grandma,child",
+        "balanceLean": "0.00",
+        "balanceStatus": "steady",
+        "recoveries": "4",
+        "assists": "0",
+        "assisting": "false",
+        "crossed": "0",
+        "lookedLeft": "false",
+        "lookedRight": "false",
+        "decision": "false",
+        "confirmed": "false",
+        "confirmDelay": "0",
+        "person": "bike",
+        "trafficActive": "false",
+        "trafficTime": "0.00",
+        "watchSide": "",
+        "platformSide": "front",
+        "doorState": "closed",
+        "step": "0",
+        "semanticStatus": "坐穩了",
+        "nextAction": "brake",
+        "holdState": "paused",
+        "holdProgress": "1.000",
+        "recheckTime": "2",
+        "hintLevel": "0",
+        "forceTarget": "0",
+        "forceLag": "0",
+        "recoveryRate": "0",
+        "trafficConfirmed": "false",
+        "trafficSource": "left",
+        "lookSequence": "left,right,left",
+        "escortGate": "false",
+        "escortGateReleased": "false",
+        "restReady": "true",
+        "visited": "0,1,2"
+      },
+      "controls": [
+        {
+          "id": "content-back",
+          "w": 68,
+          "h": 60,
+          "bad": false
+        },
+        {
+          "id": "content-pause",
+          "w": 68,
+          "h": 60,
+          "bad": false
+        },
+        {
+          "id": "replay",
+          "w": 168,
+          "h": 64,
+          "bad": false
+        },
+        {
+          "id": "picker",
+          "w": 168,
+          "h": 64,
+          "bad": false
+        }
+      ],
+      "layout": {
+        "labels": [
+          {
+            "id": "content-back:回學院",
+            "x": 16,
+            "y": 16,
+            "right": 84,
+            "bottom": 76,
+            "width": 68,
+            "height": 60
+          },
+          {
+            "id": "content-title:把蛋糕平穩送到",
+            "x": 92,
+            "y": 35.5,
+            "right": 298,
+            "bottom": 56.5,
+            "width": 206,
+            "height": 21
+          },
+          {
+            "id": "content-pause:暫停",
+            "x": 306,
+            "y": 16,
+            "right": 374,
+            "bottom": 76,
+            "width": 68,
+            "height": 60
+          },
+          {
+            "id": "content-scene-cue:三站完成・蛋糕送到了",
+            "x": 117,
+            "y": 100,
+            "right": 273,
+            "bottom": 135,
+            "width": 156,
+            "height": 35
+          },
+          {
+            "id": "STRONG:上坡輕起步・彎道扶正・入灣停穩。扶正 4 次。",
+            "x": 30,
+            "y": 680.421875,
+            "right": 360,
+            "bottom": 725.203125,
+            "width": 330,
+            "height": 44.78125
+          },
+          {
+            "id": "BUTTON:再送一次",
+            "x": 24,
+            "y": 735.203125,
+            "right": 192,
+            "bottom": 799.203125,
+            "width": 168,
+            "height": 64
+          },
+          {
+            "id": "BUTTON:換一課",
+            "x": 198,
+            "y": 735.203125,
+            "right": 366,
+            "bottom": 799.203125,
+            "width": 168,
+            "height": 64
+          },
+          {
+            "id": "content-save:旅程已保存",
+            "x": 24,
+            "y": 803.203125,
+            "right": 366,
+            "bottom": 820,
+            "width": 342,
+            "height": 16.796875
+          },
+          {
+            "id": "lesson-route-proof:✓\n坡道起步\n✓\n彎道扶正\n✓\n入灣停穩",
+            "x": 24,
+            "y": 590.421875,
+            "right": 366,
+            "bottom": 644.421875,
+            "width": 342,
+            "height": 54
+          }
+        ],
+        "overlaps": [],
+        "iconOverlaps": [],
+        "signOcclusion": [],
+        "counterOcclusion": [],
+        "carOffset": null,
+        "recovery": []
+      },
+      "text": "回學院\n把蛋糕平穩送到\n暫停\n三站完成・蛋糕送到了\n✓\n坡道起步\n✓\n彎道扶正\n✓\n入灣停穩\n上坡輕起步・彎道扶正・入灣停穩。扶正 4 次。\n再送一次\n換一課\n\n旅程已保存",
+      "highlights": [
+        {
+          "id": "replay",
+          "needed": "false",
+          "color": "rgb(245, 251, 255)"
+        },
+        {
+          "id": "picker",
+          "needed": "false",
+          "color": "rgb(245, 251, 255)"
+        }
+      ],
+      "ring": null,
+      "textClipping": []
+    },
+    {
+      "path": "docs/content/r28/clean/phone-cake-saved.png",
+      "width": 390,
+      "height": 844,
+      "sha256": "28ba6f7d1e8316201842f0e8b39ac98321e5f3f7285fa23017671c1ef6d69d6a",
+      "phase": "done",
+      "state": {
+        "roadShape": "left",
+        "boardTime": "0.000",
+        "doorStage": "closed",
+        "boardingIndex": "0",
+        "hazard": "false",
+        "wrongTurn": "false",
+        "inBend": "false",
+        "cue": "go",
+        "settled": "true",
+        "correction": "",
+        "compact": "false",
+        "recoveryActive": "false",
+        "lookStep": "0",
+        "targetName": "綠正方形",
+        "layoutSeed": "0",
+        "distance": "0.00",
+        "speed": "0.00",
+        "bend": "1",
+        "tilt": "0.00",
+        "sway": "0.00",
+        "acceleration": "0.00",
+        "bayStopped": "false",
+        "bayRestarted": "false",
+        "leftTurn": "false",
+        "rightTurn": "false",
+        "focus": "center",
+        "crossTime": "0.000",
+        "crossDuration": "1.45",
+        "orderHint": "",
+        "fruitSway": "0.00",
+        "flagSway": "0.00",
+        "hintVisible": "false",
+        "crossingOrder": "bike,grandma,child",
+        "balanceLean": "0.00",
+        "balanceStatus": "steady",
+        "recoveries": "4",
+        "assists": "0",
+        "assisting": "false",
+        "crossed": "0",
+        "lookedLeft": "false",
+        "lookedRight": "false",
+        "decision": "false",
+        "confirmed": "false",
+        "confirmDelay": "0",
+        "person": "bike",
+        "trafficActive": "false",
+        "trafficTime": "0.00",
+        "watchSide": "",
+        "platformSide": "front",
+        "doorState": "closed",
+        "step": "0",
+        "semanticStatus": "坐穩了",
+        "nextAction": "go",
+        "holdState": "paused",
+        "holdProgress": "1.000",
+        "recheckTime": "2",
+        "hintLevel": "0",
+        "forceTarget": "0",
+        "forceLag": "0",
+        "recoveryRate": "0",
+        "trafficConfirmed": "false",
+        "trafficSource": "left",
+        "lookSequence": "left,right,left",
+        "escortGate": "false",
+        "escortGateReleased": "false",
+        "restReady": "false",
+        "visited": "0,1,2"
+      },
+      "controls": [
+        {
+          "id": "content-back",
+          "w": 68,
+          "h": 60,
+          "bad": false
+        },
+        {
+          "id": "content-pause",
+          "w": 68,
+          "h": 60,
+          "bad": false
+        },
+        {
+          "id": "replay",
+          "w": 168,
+          "h": 64,
+          "bad": false
+        },
+        {
+          "id": "picker",
+          "w": 168,
+          "h": 64,
+          "bad": false
+        }
+      ],
+      "layout": {
+        "labels": [
+          {
+            "id": "content-back:回學院",
+            "x": 16,
+            "y": 16,
+            "right": 84,
+            "bottom": 76,
+            "width": 68,
+            "height": 60
+          },
+          {
+            "id": "content-title:把蛋糕平穩送到",
+            "x": 92,
+            "y": 35.5,
+            "right": 298,
+            "bottom": 56.5,
+            "width": 206,
+            "height": 21
+          },
+          {
+            "id": "content-pause:暫停",
+            "x": 306,
+            "y": 16,
+            "right": 374,
+            "bottom": 76,
+            "width": 68,
+            "height": 60
+          },
+          {
+            "id": "content-scene-cue:三站完成・蛋糕送到了",
+            "x": 117,
+            "y": 100,
+            "right": 273,
+            "bottom": 135,
+            "width": 156,
+            "height": 35
+          },
+          {
+            "id": "STRONG:上坡輕起步・彎道扶正・入灣停穩。扶正 4 次。",
+            "x": 30,
+            "y": 680.421875,
+            "right": 360,
+            "bottom": 725.203125,
+            "width": 330,
+            "height": 44.78125
+          },
+          {
+            "id": "BUTTON:再送一次",
+            "x": 24,
+            "y": 735.203125,
+            "right": 192,
+            "bottom": 799.203125,
+            "width": 168,
+            "height": 64
+          },
+          {
+            "id": "BUTTON:換一課",
+            "x": 198,
+            "y": 735.203125,
+            "right": 366,
+            "bottom": 799.203125,
+            "width": 168,
+            "height": 64
+          },
+          {
+            "id": "content-save:旅程已保存",
+            "x": 24,
+            "y": 803.203125,
+            "right": 366,
+            "bottom": 820,
+            "width": 342,
+            "height": 16.796875
+          },
+          {
+            "id": "lesson-route-proof:✓\n坡道起步\n✓\n彎道扶正\n✓\n入灣停穩",
+            "x": 24,
+            "y": 590.421875,
+            "right": 366,
+            "bottom": 644.421875,
+            "width": 342,
+            "height": 54
+          }
+        ],
+        "overlaps": [],
+        "iconOverlaps": [],
+        "signOcclusion": [],
+        "counterOcclusion": [],
+        "carOffset": null,
+        "recovery": []
+      },
+      "text": "回學院\n把蛋糕平穩送到\n暫停\n三站完成・蛋糕送到了\n✓\n坡道起步\n✓\n彎道扶正\n✓\n入灣停穩\n上坡輕起步・彎道扶正・入灣停穩。扶正 4 次。\n再送一次\n換一課\n\n旅程已保存",
+      "highlights": [
+        {
+          "id": "replay",
+          "needed": "false",
+          "color": "rgb(245, 251, 255)"
+        },
+        {
+          "id": "picker",
+          "needed": "false",
+          "color": "rgb(245, 251, 255)"
+        }
+      ],
+      "ring": null,
+      "textClipping": []
+    },
+    {
+      "path": "docs/content/r28/clean/phone-crossing-select-stations.png",
+      "width": 390,
+      "height": 844,
+      "sha256": "34b21b212f3a7ea3b3a7aef5ec77f53b3bbae31360c901318983679ac41ef4c1",
+      "phase": "ready",
+      "state": {
+        "roadShape": "uphill",
+        "boardTime": "0.000",
+        "doorStage": "closed",
+        "boardingIndex": "0",
+        "hazard": "false",
+        "wrongTurn": "false",
+        "inBend": "false",
+        "cue": "go",
+        "settled": "true",
+        "correction": "",
+        "compact": "false",
+        "recoveryActive": "false",
+        "lookStep": "0",
+        "targetName": "藍圓形",
+        "layoutSeed": "0",
+        "distance": "0.00",
+        "speed": "0.00",
+        "bend": "1",
+        "tilt": "0.00",
+        "sway": "0.00",
+        "acceleration": "0.00",
+        "bayStopped": "false",
+        "bayRestarted": "false",
+        "leftTurn": "false",
+        "rightTurn": "false",
+        "focus": "center",
+        "crossTime": "0.000",
+        "crossDuration": "2.1",
+        "orderHint": "",
+        "fruitSway": "0.00",
+        "flagSway": "0.00",
+        "hintVisible": "false",
+        "crossingOrder": "child,bike,grandma",
+        "balanceLean": "0.00",
+        "balanceStatus": "steady",
+        "recoveries": "0",
+        "assists": "0",
+        "assisting": "false",
+        "crossed": "0",
+        "lookedLeft": "false",
+        "lookedRight": "false",
+        "decision": "false",
+        "confirmed": "false",
+        "confirmDelay": "0",
+        "person": "child",
+        "trafficActive": "true",
+        "trafficTime": "0.00",
+        "watchSide": "",
+        "platformSide": "front",
+        "doorState": "closed",
+        "step": "0",
+        "semanticStatus": "左邊傳來車聲。",
+        "nextAction": "look-left",
+        "holdState": "",
+        "holdProgress": "0.000",
+        "recheckTime": "2",
+        "hintLevel": "0",
+        "forceTarget": "0",
+        "forceLag": "0",
+        "recoveryRate": "0",
+        "trafficConfirmed": "false",
+        "trafficSource": "left",
+        "lookSequence": "left,right",
+        "escortGate": "false",
+        "escortGateReleased": "false",
+        "restReady": "false",
+        "visited": ""
+      },
+      "controls": [
+        {
+          "id": "content-back",
+          "w": 68,
+          "h": 60,
+          "bad": false
+        },
+        {
+          "id": "content-pause",
+          "w": 68,
+          "h": 60,
+          "bad": false
+        },
+        {
+          "id": "0",
+          "w": 110.65625,
+          "h": 135,
+          "bad": false
+        },
+        {
+          "id": "1",
+          "w": 110.671875,
+          "h": 135,
+          "bad": false
+        },
+        {
+          "id": "2",
+          "w": 110.65625,
+          "h": 135,
+          "bad": false
+        },
+        {
+          "id": "begin",
+          "w": 81,
+          "h": 64,
+          "bad": false
+        },
+        {
+          "id": "listen",
+          "w": 342,
+          "h": 64,
+          "bad": false
+        }
+      ],
+      "layout": {
+        "labels": [
+          {
+            "id": "content-back:回學院",
+            "x": 16,
+            "y": 16,
+            "right": 84,
+            "bottom": 76,
+            "width": 68,
+            "height": 60
+          },
+          {
+            "id": "content-title:路口停看等",
+            "x": 92,
+            "y": 35.5,
+            "right": 298,
+            "bottom": 56.5,
+            "width": 206,
+            "height": 21
+          },
+          {
+            "id": "content-pause:暫停",
+            "x": 306,
+            "y": 16,
+            "right": 374,
+            "bottom": 76,
+            "width": 68,
+            "height": 60
+          },
+          {
+            "id": "content-scene-cue:第 1 站・海風斑馬線",
+            "x": 24,
+            "y": 98,
+            "right": 147.15625,
+            "bottom": 122,
+            "width": 123.15625,
+            "height": 24
+          },
+          {
+            "id": "SPAN:阿路陪你練習",
+            "x": 147,
+            "y": 318.140625,
+            "right": 243,
+            "bottom": 339.140625,
+            "width": 96,
+            "height": 21
+          },
+          {
+            "id": "BUTTON:1・左來車\n小安→小柏→阿嬤",
+            "x": 23,
+            "y": 448.609375,
+            "right": 133.65625,
+            "bottom": 583.609375,
+            "width": 110.65625,
+            "height": 135
+          },
+          {
+            "id": "BUTTON:2・右來車\n阿嬤→小安→小柏",
+            "x": 139.65625,
+            "y": 448.609375,
+            "right": 250.328125,
+            "bottom": 583.609375,
+            "width": 110.671875,
+            "height": 135
+          },
+          {
+            "id": "BUTTON:3・左來車・再看一次\n小柏→阿嬤→小安",
+            "x": 256.328125,
+            "y": 448.609375,
+            "right": 366.984375,
+            "bottom": 583.609375,
+            "width": 110.65625,
+            "height": 135
+          },
+          {
+            "id": "content-hint:左來車。停穩，看清楚兩邊。",
+            "x": 24,
+            "y": 615.609375,
+            "right": 366,
+            "bottom": 657.203125,
+            "width": 342,
+            "height": 41.59375
+          },
+          {
+            "id": "BUTTON:一起出發",
+            "x": 24,
+            "y": 663.203125,
+            "right": 105,
+            "bottom": 727.203125,
+            "width": 81,
+            "height": 64
+          },
+          {
+            "id": "BUTTON:再聽一次",
+            "x": 24,
+            "y": 733.203125,
+            "right": 366,
+            "bottom": 797.203125,
+            "width": 342,
+            "height": 64
+          }
+        ],
+        "overlaps": [],
+        "iconOverlaps": [],
+        "signOcclusion": [],
+        "counterOcclusion": [],
+        "carOffset": null,
+        "recovery": []
+      },
+      "text": "回學院\n路口停看等\n暫停\n第 1 站・海風斑馬線\n阿路陪你練習\n1・左來車\n小安→小柏→阿嬤\n2・右來車\n阿嬤→小安→小柏\n3・左來車・再看一次\n小柏→阿嬤→小安\n\n左來車。停穩，看清楚兩邊。\n\n一起出發\n再聽一次",
+      "highlights": [
+        {
+          "id": "begin",
+          "needed": "false",
+          "color": "rgb(245, 251, 255)"
+        },
+        {
+          "id": "listen",
+          "needed": "false",
+          "color": "rgb(245, 251, 255)"
+        }
+      ],
+      "ring": null,
+      "textClipping": []
+    },
+    {
+      "path": "docs/content/r28/clean/phone-crossing-no-hint.png",
+      "width": 390,
+      "height": 844,
+      "sha256": "1bcd1387328bcb92b0d67148e9c2527690c07d1ee89fc32bea0874deea9efc02",
+      "phase": "playing",
+      "state": {
+        "roadShape": "uphill",
+        "boardTime": "0.000",
+        "doorStage": "closed",
+        "boardingIndex": "0",
+        "hazard": "false",
+        "wrongTurn": "false",
+        "inBend": "false",
+        "cue": "go",
+        "settled": "true",
+        "correction": "",
+        "compact": "false",
+        "recoveryActive": "false",
+        "lookStep": "0",
+        "targetName": "藍圓形",
+        "layoutSeed": "0",
+        "distance": "0.00",
+        "speed": "5.00",
+        "bend": "1",
+        "tilt": "0.00",
+        "sway": "0.00",
+        "acceleration": "0.00",
+        "bayStopped": "false",
+        "bayRestarted": "false",
+        "leftTurn": "false",
+        "rightTurn": "false",
+        "focus": "center",
+        "crossTime": "0.000",
+        "crossDuration": "2.1",
+        "orderHint": "",
+        "fruitSway": "0.00",
+        "flagSway": "0.00",
+        "hintVisible": "false",
+        "crossingOrder": "child,bike,grandma",
+        "balanceLean": "0.00",
+        "balanceStatus": "steady",
+        "recoveries": "0",
+        "assists": "0",
+        "assisting": "false",
+        "crossed": "0",
+        "lookedLeft": "false",
+        "lookedRight": "false",
+        "decision": "false",
+        "confirmed": "false",
+        "confirmDelay": "0",
+        "person": "child",
+        "trafficActive": "true",
+        "trafficTime": "0.00",
+        "watchSide": "",
+        "platformSide": "front",
+        "doorState": "closed",
+        "step": "0",
+        "semanticStatus": "停止線到了，車子還在動。",
+        "nextAction": "brake",
+        "holdState": "",
+        "holdProgress": "0.000",
+        "recheckTime": "2",
+        "hintLevel": "0",
+        "forceTarget": "0",
+        "forceLag": "0",
+        "recoveryRate": "0",
+        "trafficConfirmed": "false",
+        "trafficSource": "left",
+        "lookSequence": "left,right",
+        "escortGate": "false",
+        "escortGateReleased": "false",
+        "restReady": "false",
+        "visited": ""
+      },
+      "controls": [
+        {
+          "id": "content-back",
+          "w": 68,
+          "h": 60,
+          "bad": false
+        },
+        {
+          "id": "content-pause",
+          "w": 68,
+          "h": 60,
+          "bad": false
+        },
+        {
+          "id": "brake",
+          "w": 81,
+          "h": 64,
+          "bad": false
+        },
+        {
+          "id": "look-left",
+          "w": 81,
+          "h": 64,
+          "bad": false
+        },
+        {
+          "id": "look-right",
+          "w": 81,
+          "h": 64,
+          "bad": false
+        },
+        {
+          "id": "depart",
+          "w": 81,
+          "h": 64,
+          "bad": false
+        },
+        {
+          "id": "listen",
+          "w": 342,
+          "h": 64,
+          "bad": false
+        }
+      ],
+      "layout": {
+        "labels": [
+          {
+            "id": "content-back:回學院",
+            "x": 16,
+            "y": 16,
+            "right": 84,
+            "bottom": 76,
+            "width": 68,
+            "height": 60
+          },
+          {
+            "id": "content-title:路口停看等",
+            "x": 92,
+            "y": 35.5,
+            "right": 298,
+            "bottom": 56.5,
+            "width": 206,
+            "height": 21
+          },
+          {
+            "id": "content-pause:暫停",
+            "x": 306,
+            "y": 16,
+            "right": 374,
+            "bottom": 76,
+            "width": 68,
+            "height": 60
+          },
+          {
+            "id": "friend-number:小安",
+            "x": 47.53125,
+            "y": 456.484375,
+            "right": 77.53125,
+            "bottom": 478.484375,
+            "width": 30,
+            "height": 22
+          },
+          {
+            "id": "friend-number:小柏",
+            "x": 133.453125,
+            "y": 456.484375,
+            "right": 163.453125,
+            "bottom": 478.484375,
+            "width": 30,
+            "height": 22
+          },
+          {
+            "id": "friend-number:阿嬤",
+            "x": 298.125,
+            "y": 456.484375,
+            "right": 328.125,
+            "bottom": 478.484375,
+            "width": 30,
+            "height": 22
+          },
+          {
+            "id": "content-scene-cue:第 1 站・海風斑馬線",
+            "x": 24,
+            "y": 98,
+            "right": 147.15625,
+            "bottom": 122,
+            "width": 123.15625,
+            "height": 24
+          },
+          {
+            "id": "content-observe:已到對岸 0/3 人",
+            "x": 24,
+            "y": 130,
+            "right": 125.59375,
+            "bottom": 156,
+            "width": 101.59375,
+            "height": 26
+          },
+          {
+            "id": "SPAN:○ 左邊待確認",
+            "x": 24,
+            "y": 162,
+            "right": 113,
+            "bottom": 188,
+            "width": 89,
+            "height": 26
+          },
+          {
+            "id": "SPAN:○ 右邊待確認",
+            "x": 277,
+            "y": 162,
+            "right": 366,
+            "bottom": 188,
+            "width": 89,
+            "height": 26
+          },
+          {
+            "id": "content-hint:停止線到了，車子還在動。",
+            "x": 24,
+            "y": 638.40625,
+            "right": 366,
+            "bottom": 680,
+            "width": 342,
+            "height": 41.59375
+          },
+          {
+            "id": "BUTTON:停下",
+            "x": 24,
+            "y": 686,
+            "right": 105,
+            "bottom": 750,
+            "width": 81,
+            "height": 64
+          },
+          {
+            "id": "BUTTON:看左邊",
+            "x": 111,
+            "y": 686,
+            "right": 192,
+            "bottom": 750,
+            "width": 81,
+            "height": 64
+          },
+          {
+            "id": "BUTTON:看右邊",
+            "x": 198,
+            "y": 686,
+            "right": 279,
+            "bottom": 750,
+            "width": 81,
+            "height": 64
+          },
+          {
+            "id": "BUTTON:出發",
+            "x": 285,
+            "y": 686,
+            "right": 366,
+            "bottom": 750,
+            "width": 81,
+            "height": 64
+          },
+          {
+            "id": "BUTTON:再聽一次",
+            "x": 24,
+            "y": 756,
+            "right": 366,
+            "bottom": 820,
+            "width": 342,
+            "height": 64
+          }
+        ],
+        "overlaps": [],
+        "iconOverlaps": [],
+        "signOcclusion": [],
+        "counterOcclusion": [],
+        "carOffset": null,
+        "recovery": []
+      },
+      "text": "回學院\n路口停看等\n暫停\n小安\n小柏\n阿嬤\n第 1 站・海風斑馬線\n已到對岸 0/3 人\n○ 左邊待確認\n○ 右邊待確認\n\n停止線到了，車子還在動。\n\n停下\n看左邊\n看右邊\n出發\n再聽一次",
+      "highlights": [
+        {
+          "id": "brake",
+          "needed": "false",
+          "color": "rgb(245, 251, 255)"
+        },
+        {
+          "id": "look-left",
+          "needed": "false",
+          "color": "rgb(245, 251, 255)"
+        },
+        {
+          "id": "look-right",
+          "needed": "false",
+          "color": "rgb(245, 251, 255)"
+        },
+        {
+          "id": "depart",
+          "needed": "false",
+          "color": "rgb(220, 228, 232)"
+        },
+        {
+          "id": "listen",
+          "needed": "false",
+          "color": "rgb(245, 251, 255)"
+        }
+      ],
+      "ring": null,
+      "textClipping": []
+    },
+    {
+      "path": "docs/content/r28/clean/phone-crossing-complete.png",
+      "width": 390,
+      "height": 844,
+      "sha256": "89e90f18cf4363ec34361fb37c76a6ff5d07a8559784d10ab0f95a0b9f16d2f7",
+      "phase": "done",
+      "state": {
+        "roadShape": "left",
+        "boardTime": "0.000",
+        "doorStage": "closed",
+        "boardingIndex": "0",
+        "hazard": "false",
+        "wrongTurn": "false",
+        "inBend": "false",
+        "cue": "go",
+        "settled": "true",
+        "correction": "",
+        "compact": "false",
+        "recoveryActive": "false",
+        "lookStep": "0",
+        "targetName": "綠正方形",
+        "layoutSeed": "0",
+        "distance": "0.00",
+        "speed": "0.00",
+        "bend": "1",
+        "tilt": "0.00",
+        "sway": "0.00",
+        "acceleration": "0.00",
+        "bayStopped": "false",
+        "bayRestarted": "false",
+        "leftTurn": "false",
+        "rightTurn": "false",
+        "focus": "left",
+        "crossTime": "0.000",
+        "crossDuration": "2.1",
+        "orderHint": "",
+        "fruitSway": "0.00",
+        "flagSway": "0.00",
+        "hintVisible": "false",
+        "crossingOrder": "bike,grandma,child",
+        "balanceLean": "0.00",
+        "balanceStatus": "steady",
+        "recoveries": "0",
+        "assists": "0",
+        "assisting": "false",
+        "crossed": "3",
+        "lookedLeft": "true",
+        "lookedRight": "true",
+        "decision": "false",
+        "confirmed": "false",
+        "confirmDelay": "-0.0060000000000004355",
+        "person": "",
+        "trafficActive": "false",
+        "trafficTime": "11.79",
+        "watchSide": "left",
+        "platformSide": "front",
+        "doorState": "closed",
+        "step": "0",
+        "semanticStatus": "大家都到對岸，路口空了。",
+        "nextAction": "depart",
+        "holdState": "",
+        "holdProgress": "0.000",
+        "recheckTime": "2",
+        "hintLevel": "0",
+        "forceTarget": "0",
+        "forceLag": "0",
+        "recoveryRate": "0",
+        "trafficConfirmed": "true",
+        "trafficSource": "left",
+        "lookSequence": "left,right,left",
+        "escortGate": "false",
+        "escortGateReleased": "false",
+        "restReady": "false",
+        "visited": "0,1,2"
+      },
+      "controls": [
+        {
+          "id": "content-back",
+          "w": 68,
+          "h": 60,
+          "bad": false
+        },
+        {
+          "id": "content-pause",
+          "w": 68,
+          "h": 60,
+          "bad": false
+        },
+        {
+          "id": "replay",
+          "w": 168,
+          "h": 64,
+          "bad": false
+        },
+        {
+          "id": "picker",
+          "w": 168,
+          "h": 64,
+          "bad": false
+        }
+      ],
+      "layout": {
+        "labels": [
+          {
+            "id": "content-back:回學院",
+            "x": 16,
+            "y": 16,
+            "right": 84,
+            "bottom": 76,
+            "width": 68,
+            "height": 60
+          },
+          {
+            "id": "content-title:路口停看等",
+            "x": 92,
+            "y": 35.5,
+            "right": 298,
+            "bottom": 56.5,
+            "width": 206,
+            "height": 21
+          },
+          {
+            "id": "content-pause:暫停",
+            "x": 306,
+            "y": 16,
+            "right": 374,
+            "bottom": 76,
+            "width": 68,
+            "height": 60
+          },
+          {
+            "id": "content-scene-cue:三站完成・謝謝你等我們",
+            "x": 24,
+            "y": 98,
+            "right": 172,
+            "bottom": 130,
+            "width": 148,
+            "height": 32
+          },
+          {
+            "id": "friend-number:小柏",
+            "x": 51.765625,
+            "y": 362.875,
+            "right": 94.765625,
+            "bottom": 384.875,
+            "width": 43,
+            "height": 22
+          },
+          {
+            "id": "friend-number:阿嬤",
+            "x": 134.109375,
+            "y": 362.875,
+            "right": 177.109375,
+            "bottom": 384.875,
+            "width": 43,
+            "height": 22
+          },
+          {
+            "id": "friend-number:小安",
+            "x": 288.046875,
+            "y": 362.875,
+            "right": 331.046875,
+            "bottom": 384.875,
+            "width": 43,
+            "height": 22
+          },
+          {
+            "id": "STRONG:左來車・右來車・離場再看。安全停住 0 次。",
+            "x": 30,
+            "y": 702.8125,
+            "right": 360,
+            "bottom": 725.203125,
+            "width": 330,
+            "height": 22.390625
+          },
+          {
+            "id": "BUTTON:再陪朋友",
+            "x": 24,
+            "y": 735.203125,
+            "right": 192,
+            "bottom": 799.203125,
+            "width": 168,
+            "height": 64
+          },
+          {
+            "id": "BUTTON:換一課",
+            "x": 198,
+            "y": 735.203125,
+            "right": 366,
+            "bottom": 799.203125,
+            "width": 168,
+            "height": 64
+          },
+          {
+            "id": "content-save:旅程已保存",
+            "x": 24,
+            "y": 803.203125,
+            "right": 366,
+            "bottom": 820,
+            "width": 342,
+            "height": 16.796875
+          },
+          {
+            "id": "lesson-route-proof:✓\n左邊來車\n✓\n右邊來車\n✓\n離場複查",
+            "x": 24,
+            "y": 610.8125,
+            "right": 366,
+            "bottom": 664.8125,
+            "width": 342,
+            "height": 54
+          }
+        ],
+        "overlaps": [],
+        "iconOverlaps": [],
+        "signOcclusion": [],
+        "counterOcclusion": [],
+        "carOffset": null,
+        "recovery": []
+      },
+      "text": "回學院\n路口停看等\n暫停\n三站完成・謝謝你等我們\n小柏\n阿嬤\n小安\n✓\n左邊來車\n✓\n右邊來車\n✓\n離場複查\n左來車・右來車・離場再看。安全停住 0 次。\n再陪朋友\n換一課\n\n旅程已保存",
+      "highlights": [
+        {
+          "id": "replay",
+          "needed": "false",
+          "color": "rgb(245, 251, 255)"
+        },
+        {
+          "id": "picker",
+          "needed": "false",
+          "color": "rgb(245, 251, 255)"
+        }
+      ],
+      "ring": null,
+      "textClipping": []
+    },
+    {
+      "path": "docs/content/r28/clean/phone-crossing-saved.png",
+      "width": 390,
+      "height": 844,
+      "sha256": "b44dc200707adaa98f7f827df3b3a4dbc04e7cc11547a3166db06beb9a649333",
+      "phase": "done",
+      "state": {
+        "roadShape": "left",
+        "boardTime": "0.000",
+        "doorStage": "closed",
+        "boardingIndex": "0",
+        "hazard": "false",
+        "wrongTurn": "false",
+        "inBend": "false",
+        "cue": "go",
+        "settled": "true",
+        "correction": "",
+        "compact": "false",
+        "recoveryActive": "false",
+        "lookStep": "0",
+        "targetName": "綠正方形",
+        "layoutSeed": "0",
+        "distance": "0.00",
+        "speed": "0.00",
+        "bend": "1",
+        "tilt": "0.00",
+        "sway": "0.00",
+        "acceleration": "0.00",
+        "bayStopped": "false",
+        "bayRestarted": "false",
+        "leftTurn": "false",
+        "rightTurn": "false",
+        "focus": "center",
+        "crossTime": "0.000",
+        "crossDuration": "1.45",
+        "orderHint": "",
+        "fruitSway": "0.00",
+        "flagSway": "0.00",
+        "hintVisible": "false",
+        "crossingOrder": "bike,grandma,child",
+        "balanceLean": "0.00",
+        "balanceStatus": "steady",
+        "recoveries": "0",
+        "assists": "0",
+        "assisting": "false",
+        "crossed": "0",
+        "lookedLeft": "false",
+        "lookedRight": "false",
+        "decision": "false",
+        "confirmed": "false",
+        "confirmDelay": "0",
+        "person": "bike",
+        "trafficActive": "true",
+        "trafficTime": "0.00",
+        "watchSide": "",
+        "platformSide": "front",
+        "doorState": "closed",
+        "step": "0",
+        "semanticStatus": "看完兩邊，再確認靠近的一邊。",
+        "nextAction": "look-left",
+        "holdState": "",
+        "holdProgress": "0.000",
+        "recheckTime": "2",
+        "hintLevel": "0",
+        "forceTarget": "0",
+        "forceLag": "0",
+        "recoveryRate": "0",
+        "trafficConfirmed": "false",
+        "trafficSource": "left",
+        "lookSequence": "left,right,left",
+        "escortGate": "false",
+        "escortGateReleased": "false",
+        "restReady": "false",
+        "visited": "0,1,2"
+      },
+      "controls": [
+        {
+          "id": "content-back",
+          "w": 68,
+          "h": 60,
+          "bad": false
+        },
+        {
+          "id": "content-pause",
+          "w": 68,
+          "h": 60,
+          "bad": false
+        },
+        {
+          "id": "replay",
+          "w": 168,
+          "h": 64,
+          "bad": false
+        },
+        {
+          "id": "picker",
+          "w": 168,
+          "h": 64,
+          "bad": false
+        }
+      ],
+      "layout": {
+        "labels": [
+          {
+            "id": "content-back:回學院",
+            "x": 16,
+            "y": 16,
+            "right": 84,
+            "bottom": 76,
+            "width": 68,
+            "height": 60
+          },
+          {
+            "id": "content-title:路口停看等",
+            "x": 92,
+            "y": 35.5,
+            "right": 298,
+            "bottom": 56.5,
+            "width": 206,
+            "height": 21
+          },
+          {
+            "id": "content-pause:暫停",
+            "x": 306,
+            "y": 16,
+            "right": 374,
+            "bottom": 76,
+            "width": 68,
+            "height": 60
+          },
+          {
+            "id": "friend-number:小柏",
+            "x": 47.53125,
+            "y": 514.921875,
+            "right": 77.53125,
+            "bottom": 536.921875,
+            "width": 30,
+            "height": 22
+          },
+          {
+            "id": "friend-number:阿嬤",
+            "x": 133.453125,
+            "y": 514.921875,
+            "right": 163.453125,
+            "bottom": 536.921875,
+            "width": 30,
+            "height": 22
+          },
+          {
+            "id": "friend-number:小安",
+            "x": 298.125,
+            "y": 514.921875,
+            "right": 328.125,
+            "bottom": 536.921875,
+            "width": 30,
+            "height": 22
+          },
+          {
+            "id": "content-scene-cue:三站完成・謝謝你等我們",
+            "x": 24,
+            "y": 98,
+            "right": 172,
+            "bottom": 130,
+            "width": 148,
+            "height": 32
+          },
+          {
+            "id": "STRONG:左來車・右來車・離場再看。安全停住 0 次。",
+            "x": 30,
+            "y": 702.8125,
+            "right": 360,
+            "bottom": 725.203125,
+            "width": 330,
+            "height": 22.390625
+          },
+          {
+            "id": "BUTTON:再陪朋友",
+            "x": 24,
+            "y": 735.203125,
+            "right": 192,
+            "bottom": 799.203125,
+            "width": 168,
+            "height": 64
+          },
+          {
+            "id": "BUTTON:換一課",
+            "x": 198,
+            "y": 735.203125,
+            "right": 366,
+            "bottom": 799.203125,
+            "width": 168,
+            "height": 64
+          },
+          {
+            "id": "content-save:旅程已保存",
+            "x": 24,
+            "y": 803.203125,
+            "right": 366,
+            "bottom": 820,
+            "width": 342,
+            "height": 16.796875
+          },
+          {
+            "id": "lesson-route-proof:✓\n左邊來車\n✓\n右邊來車\n✓\n離場複查",
+            "x": 24,
+            "y": 610.8125,
+            "right": 366,
+            "bottom": 664.8125,
+            "width": 342,
+            "height": 54
+          }
+        ],
+        "overlaps": [],
+        "iconOverlaps": [],
+        "signOcclusion": [],
+        "counterOcclusion": [],
+        "carOffset": null,
+        "recovery": []
+      },
+      "text": "回學院\n路口停看等\n暫停\n小柏\n阿嬤\n小安\n三站完成・謝謝你等我們\n✓\n左邊來車\n✓\n右邊來車\n✓\n離場複查\n左來車・右來車・離場再看。安全停住 0 次。\n再陪朋友\n換一課\n\n旅程已保存",
+      "highlights": [
+        {
+          "id": "replay",
+          "needed": "false",
+          "color": "rgb(245, 251, 255)"
+        },
+        {
+          "id": "picker",
+          "needed": "false",
+          "color": "rgb(245, 251, 255)"
+        }
+      ],
+      "ring": null,
+      "textClipping": []
+    },
+    {
+      "path": "docs/content/r28/clean/phone-tickets-select-stations.png",
+      "width": 390,
+      "height": 844,
+      "sha256": "a65e1ef3fcd7bb49ce9c7bb2e112b200caa8fb0f4393704486c9857da616a763",
+      "phase": "ready",
+      "state": {
+        "roadShape": "uphill",
+        "boardTime": "0.000",
+        "doorStage": "closed",
+        "boardingIndex": "0",
+        "hazard": "false",
+        "wrongTurn": "false",
+        "inBend": "false",
+        "cue": "go",
+        "settled": "true",
+        "correction": "",
+        "compact": "false",
+        "recoveryActive": "false",
+        "lookStep": "0",
+        "targetName": "藍圓形",
+        "layoutSeed": "0",
+        "distance": "0.00",
+        "speed": "0.00",
+        "bend": "1",
+        "tilt": "0.00",
+        "sway": "0.00",
+        "acceleration": "0.00",
+        "bayStopped": "false",
+        "bayRestarted": "false",
+        "leftTurn": "false",
+        "rightTurn": "false",
+        "focus": "center",
+        "crossTime": "0.000",
+        "crossDuration": "2.1",
+        "orderHint": "",
+        "fruitSway": "0.00",
+        "flagSway": "0.00",
+        "hintVisible": "false",
+        "crossingOrder": "child,bike,grandma",
+        "balanceLean": "0.00",
+        "balanceStatus": "steady",
+        "recoveries": "0",
+        "assists": "0",
+        "assisting": "false",
+        "crossed": "0",
+        "lookedLeft": "false",
+        "lookedRight": "false",
+        "decision": "false",
+        "confirmed": "false",
+        "confirmDelay": "0",
+        "person": "child",
+        "trafficActive": "false",
+        "trafficTime": "0.00",
+        "watchSide": "",
+        "platformSide": "front",
+        "doorState": "closed",
+        "step": "0",
+        "semanticStatus": "形狀＋顏色。找藍圓形，陪朋友上車。",
+        "nextAction": "",
+        "holdState": "holding",
+        "holdProgress": "0.000",
+        "recheckTime": "2",
+        "hintLevel": "0",
+        "forceTarget": "0",
+        "forceLag": "0",
+        "recoveryRate": "0",
+        "trafficConfirmed": "false",
+        "trafficSource": "left",
+        "lookSequence": "left,right",
+        "escortGate": "false",
+        "escortGateReleased": "false",
+        "restReady": "false",
+        "visited": "",
+        "signGround": "449.15"
+      },
+      "controls": [
+        {
+          "id": "content-back",
+          "w": 68,
+          "h": 60,
+          "bad": false
+        },
+        {
+          "id": "content-pause",
+          "w": 68,
+          "h": 60,
+          "bad": false
+        },
+        {
+          "id": "0",
+          "w": 110.65625,
+          "h": 130,
+          "bad": false
+        },
+        {
+          "id": "1",
+          "w": 110.671875,
+          "h": 130,
+          "bad": false
+        },
+        {
+          "id": "2",
+          "w": 110.65625,
+          "h": 130,
+          "bad": false
+        },
+        {
+          "id": "begin",
+          "w": 81,
+          "h": 64,
+          "bad": false
+        },
+        {
+          "id": "listen",
+          "w": 342,
+          "h": 64,
+          "bad": false
+        }
+      ],
+      "layout": {
+        "labels": [
+          {
+            "id": "content-back:回學院",
+            "x": 16,
+            "y": 16,
+            "right": 84,
+            "bottom": 76,
+            "width": 68,
+            "height": 60
+          },
+          {
+            "id": "content-title:形狀車票，找對月台",
+            "x": 92,
+            "y": 35.5,
+            "right": 298,
+            "bottom": 56.5,
+            "width": 206,
+            "height": 21
+          },
+          {
+            "id": "content-pause:暫停",
+            "x": 306,
+            "y": 16,
+            "right": 374,
+            "bottom": 76,
+            "width": 68,
+            "height": 60
+          },
+          {
+            "id": "content-scene-cue:第 1 站・海風站",
+            "x": 84,
+            "y": 97,
+            "right": 368,
+            "bottom": 121,
+            "width": 284,
+            "height": 24
+          },
+          {
+            "id": "SPAN:阿路陪你練習",
+            "x": 147,
+            "y": 322.515625,
+            "right": 243,
+            "bottom": 343.515625,
+            "width": 96,
+            "height": 21
+          },
+          {
+            "id": "BUTTON:1・形狀＋顏色",
+            "x": 23,
+            "y": 474.40625,
+            "right": 133.65625,
+            "bottom": 604.40625,
+            "width": 110.65625,
+            "height": 130
+          },
+          {
+            "id": "BUTTON:2・同形・找顏色",
+            "x": 139.65625,
+            "y": 474.40625,
+            "right": 250.328125,
+            "bottom": 604.40625,
+            "width": 110.671875,
+            "height": 130
+          },
+          {
+            "id": "BUTTON:3・同色・找形狀",
+            "x": 256.328125,
+            "y": 474.40625,
+            "right": 366.984375,
+            "bottom": 604.40625,
+            "width": 110.65625,
+            "height": 130
+          },
+          {
+            "id": "content-hint:形狀＋顏色。找藍圓形，陪朋友上車。",
+            "x": 24,
+            "y": 636.40625,
+            "right": 366,
+            "bottom": 657.203125,
+            "width": 342,
+            "height": 20.796875
+          },
+          {
+            "id": "BUTTON:一起出發",
+            "x": 24,
+            "y": 663.203125,
+            "right": 105,
+            "bottom": 727.203125,
+            "width": 81,
+            "height": 64
+          },
+          {
+            "id": "BUTTON:再聽一次",
+            "x": 24,
+            "y": 733.203125,
+            "right": 366,
+            "bottom": 797.203125,
+            "width": 342,
+            "height": 64
+          }
+        ],
+        "overlaps": [],
+        "iconOverlaps": [],
+        "signOcclusion": [],
+        "counterOcclusion": [],
+        "carOffset": null,
+        "recovery": []
+      },
+      "text": "回學院\n形狀車票，找對月台\n暫停\n第 1 站・海風站\n阿路陪你練習\n1・形狀＋顏色\n2・同形・找顏色\n3・同色・找形狀\n\n形狀＋顏色。找藍圓形，陪朋友上車。\n\n一起出發\n再聽一次",
+      "highlights": [
+        {
+          "id": "begin",
+          "needed": "false",
+          "color": "rgb(245, 251, 255)"
+        },
+        {
+          "id": "listen",
+          "needed": "false",
+          "color": "rgb(245, 251, 255)"
+        }
+      ],
+      "ring": null,
+      "textClipping": []
+    },
+    {
+      "path": "docs/content/r28/clean/phone-tickets-no-hint.png",
+      "width": 390,
+      "height": 844,
+      "sha256": "fcc71d06d7861526b7a9d2352f105f01e548046a65a2324022153ae8234c95ca",
+      "phase": "playing",
+      "state": {
+        "roadShape": "uphill",
+        "boardTime": "0.000",
+        "doorStage": "closed",
+        "boardingIndex": "0",
+        "hazard": "false",
+        "wrongTurn": "false",
+        "inBend": "false",
+        "cue": "go",
+        "settled": "true",
+        "correction": "",
+        "compact": "false",
+        "recoveryActive": "false",
+        "lookStep": "0",
+        "targetName": "藍圓形",
+        "layoutSeed": "0",
+        "distance": "0.00",
+        "speed": "0.00",
+        "bend": "1",
+        "tilt": "0.00",
+        "sway": "0.00",
+        "acceleration": "0.00",
+        "bayStopped": "false",
+        "bayRestarted": "false",
+        "leftTurn": "false",
+        "rightTurn": "false",
+        "focus": "center",
+        "crossTime": "0.000",
+        "crossDuration": "2.1",
+        "orderHint": "",
+        "fruitSway": "0.00",
+        "flagSway": "0.00",
+        "hintVisible": "false",
+        "crossingOrder": "child,bike,grandma",
+        "balanceLean": "0.00",
+        "balanceStatus": "steady",
+        "recoveries": "0",
+        "assists": "0",
+        "assisting": "false",
+        "crossed": "0",
+        "lookedLeft": "false",
+        "lookedRight": "false",
+        "decision": "false",
+        "confirmed": "false",
+        "confirmDelay": "0",
+        "person": "child",
+        "trafficActive": "false",
+        "trafficTime": "0.00",
+        "watchSide": "",
+        "platformSide": "front",
+        "doorState": "closed",
+        "step": "0",
+        "semanticStatus": "看車票，找一樣的月台。",
+        "nextAction": "",
+        "holdState": "holding",
+        "holdProgress": "0.000",
+        "recheckTime": "2",
+        "hintLevel": "0",
+        "forceTarget": "0",
+        "forceLag": "0",
+        "recoveryRate": "0",
+        "trafficConfirmed": "false",
+        "trafficSource": "left",
+        "lookSequence": "left,right",
+        "escortGate": "false",
+        "escortGateReleased": "false",
+        "restReady": "false",
+        "visited": "",
+        "signGround": "467.15"
+      },
+      "controls": [
+        {
+          "id": "content-back",
+          "w": 68,
+          "h": 60,
+          "bad": false
+        },
+        {
+          "id": "content-pause",
+          "w": 68,
+          "h": 60,
+          "bad": false
+        },
+        {
+          "id": "0",
+          "w": 64,
+          "h": 64,
+          "bad": false
+        },
+        {
+          "id": "1",
+          "w": 64,
+          "h": 64,
+          "bad": false
+        },
+        {
+          "id": "2",
+          "w": 64,
+          "h": 64,
+          "bad": false
+        },
+        {
+          "id": "go",
+          "w": 81,
+          "h": 64,
+          "bad": false
+        },
+        {
+          "id": "brake",
+          "w": 81,
+          "h": 64,
+          "bad": false
+        },
+        {
+          "id": "listen",
+          "w": 342,
+          "h": 64,
+          "bad": false
+        }
+      ],
+      "layout": {
+        "labels": [
+          {
+            "id": "content-back:回學院",
+            "x": 16,
+            "y": 16,
+            "right": 84,
+            "bottom": 76,
+            "width": 68,
+            "height": 60
+          },
+          {
+            "id": "content-title:形狀車票，找對月台",
+            "x": 92,
+            "y": 35.5,
+            "right": 298,
+            "bottom": 56.5,
+            "width": 206,
+            "height": 21
+          },
+          {
+            "id": "content-pause:暫停",
+            "x": 306,
+            "y": 16,
+            "right": 374,
+            "bottom": 76,
+            "width": 68,
+            "height": 60
+          },
+          {
+            "id": "B:小安",
+            "x": 78.75,
+            "y": 615.328125,
+            "right": 110.75,
+            "bottom": 632.328125,
+            "width": 32,
+            "height": 17
+          },
+          {
+            "id": "B:小晴",
+            "x": 150.359375,
+            "y": 615.328125,
+            "right": 182.359375,
+            "bottom": 632.328125,
+            "width": 32,
+            "height": 17
+          },
+          {
+            "id": "B:小宇",
+            "x": 221.953125,
+            "y": 615.328125,
+            "right": 253.953125,
+            "bottom": 632.328125,
+            "width": 32,
+            "height": 17
+          },
+          {
+            "id": "content-scene-cue:第 1 站・海風站",
+            "x": 84,
+            "y": 97,
+            "right": 368,
+            "bottom": 121,
+            "width": 284,
+            "height": 24
+          },
+          {
+            "id": "BUTTON:1 號月台",
+            "x": 55.59375,
+            "y": 468.140625,
+            "right": 119.59375,
+            "bottom": 532.140625,
+            "width": 64,
+            "height": 64
+          },
+          {
+            "id": "BUTTON:2 號月台",
+            "x": 163,
+            "y": 468.140625,
+            "right": 227,
+            "bottom": 532.140625,
+            "width": 64,
+            "height": 64
+          },
+          {
+            "id": "BUTTON:3 號月台",
+            "x": 270.390625,
+            "y": 468.140625,
+            "right": 334.390625,
+            "bottom": 532.140625,
+            "width": 64,
+            "height": 64
+          },
+          {
+            "id": "station-rule:比對形色",
+            "x": 308,
+            "y": 162,
+            "right": 368,
+            "bottom": 186,
+            "width": 60,
+            "height": 24
+          },
+          {
+            "id": "content-hint:看車票，找一樣的月台。",
+            "x": 24,
+            "y": 659.203125,
+            "right": 366,
+            "bottom": 680,
+            "width": 342,
+            "height": 20.796875
+          },
+          {
+            "id": "BUTTON:前進",
+            "x": 24,
+            "y": 686,
+            "right": 105,
+            "bottom": 750,
+            "width": 81,
+            "height": 64
+          },
+          {
+            "id": "BUTTON:停穩",
+            "x": 111,
+            "y": 686,
+            "right": 192,
+            "bottom": 750,
+            "width": 81,
+            "height": 64
+          },
+          {
+            "id": "BUTTON:開門",
+            "x": 198,
+            "y": 686,
+            "right": 279,
+            "bottom": 750,
+            "width": 81,
+            "height": 64
+          },
+          {
+            "id": "BUTTON:再聽一次",
+            "x": 24,
+            "y": 756,
+            "right": 366,
+            "bottom": 820,
+            "width": 342,
+            "height": 64
+          },
+          {
+            "id": "ticket-counts:已入座 0/3 人",
+            "x": 256,
+            "y": 124,
+            "right": 366,
+            "bottom": 156,
+            "width": 110,
+            "height": 32
+          }
+        ],
+        "overlaps": [],
+        "iconOverlaps": [],
+        "signOcclusion": [],
+        "counterOcclusion": [],
+        "carOffset": null,
+        "recovery": []
+      },
+      "text": "回學院\n形狀車票，找對月台\n暫停\n小安\n小晴\n小宇\n第 1 站・海風站\n已入座 0/3 人\n1 號月台\n2 號月台\n3 號月台\n比對形色\n\n看車票，找一樣的月台。\n\n前進\n停穩\n開門\n再聽一次",
+      "highlights": [
+        {
+          "id": "go",
+          "needed": "false",
+          "color": "rgb(245, 251, 255)"
+        },
+        {
+          "id": "brake",
+          "needed": "false",
+          "color": "rgb(245, 251, 255)"
+        },
+        {
+          "id": "door",
+          "needed": "false",
+          "color": "rgb(245, 251, 255)"
+        },
+        {
+          "id": "listen",
+          "needed": "false",
+          "color": "rgb(245, 251, 255)"
+        }
+      ],
+      "ring": null,
+      "textClipping": []
+    },
+    {
+      "path": "docs/content/r28/clean/phone-tickets-complete.png",
+      "width": 390,
+      "height": 844,
+      "sha256": "8e380200611bde9bbc9ad9724fb5fb1fe2788bbb3af4d618c2972b70c2f29d75",
+      "phase": "done",
+      "state": {
+        "roadShape": "left",
+        "boardTime": "1.400",
+        "doorStage": "closed",
+        "boardingIndex": "3",
+        "hazard": "false",
+        "wrongTurn": "false",
+        "inBend": "false",
+        "cue": "go",
+        "settled": "false",
+        "correction": "left",
+        "compact": "false",
+        "recoveryActive": "false",
+        "lookStep": "0",
+        "targetName": "綠正方形",
+        "layoutSeed": "0",
+        "distance": "30.00",
+        "speed": "0.00",
+        "bend": "1",
+        "tilt": "23.47",
+        "sway": "11.87",
+        "acceleration": "0.00",
+        "bayStopped": "false",
+        "bayRestarted": "false",
+        "leftTurn": "false",
+        "rightTurn": "false",
+        "focus": "center",
+        "crossTime": "0.000",
+        "crossDuration": "1.45",
+        "orderHint": "",
+        "fruitSway": "12.05",
+        "flagSway": "26.99",
+        "hintVisible": "false",
+        "crossingOrder": "bike,grandma,child",
+        "balanceLean": "0.00",
+        "balanceStatus": "danger",
+        "recoveries": "0",
+        "assists": "0",
+        "assisting": "false",
+        "crossed": "0",
+        "lookedLeft": "false",
+        "lookedRight": "false",
+        "decision": "false",
+        "confirmed": "false",
+        "confirmDelay": "0",
+        "person": "bike",
+        "trafficActive": "false",
+        "trafficTime": "0.00",
+        "watchSide": "",
+        "platformSide": "front",
+        "doorState": "closed",
+        "step": "0",
+        "semanticStatus": "",
+        "nextAction": "",
+        "holdState": "holding",
+        "holdProgress": "1.000",
+        "recheckTime": "2",
+        "hintLevel": "0",
+        "forceTarget": "0",
+        "forceLag": "0",
+        "recoveryRate": "0",
+        "trafficConfirmed": "false",
+        "trafficSource": "left",
+        "lookSequence": "left,right,left",
+        "escortGate": "false",
+        "escortGateReleased": "true",
+        "restReady": "false",
+        "visited": "0,1,2",
+        "signGround": "467.15"
+      },
+      "controls": [
+        {
+          "id": "content-back",
+          "w": 68,
+          "h": 60,
+          "bad": false
+        },
+        {
+          "id": "content-pause",
+          "w": 68,
+          "h": 60,
+          "bad": false
+        },
+        {
+          "id": "replay",
+          "w": 168,
+          "h": 64,
+          "bad": false
+        },
+        {
+          "id": "picker",
+          "w": 168,
+          "h": 64,
+          "bad": false
+        }
+      ],
+      "layout": {
+        "labels": [
+          {
+            "id": "content-back:回學院",
+            "x": 16,
+            "y": 16,
+            "right": 84,
+            "bottom": 76,
+            "width": 68,
+            "height": 60
+          },
+          {
+            "id": "content-title:形狀車票，找對月台",
+            "x": 92,
+            "y": 35.5,
+            "right": 298,
+            "bottom": 56.5,
+            "width": 206,
+            "height": 21
+          },
+          {
+            "id": "content-pause:暫停",
+            "x": 306,
+            "y": 16,
+            "right": 374,
+            "bottom": 76,
+            "width": 68,
+            "height": 60
+          },
+          {
+            "id": "B:小安",
+            "x": 52.584373474121094,
+            "y": 491.421875,
+            "right": 74.5843734741211,
+            "bottom": 507.421875,
+            "width": 22,
+            "height": 16
+          },
+          {
+            "id": "B:小晴",
+            "x": 100.6937484741211,
+            "y": 491.421875,
+            "right": 122.6937484741211,
+            "bottom": 507.421875,
+            "width": 22,
+            "height": 16
+          },
+          {
+            "id": "B:小宇",
+            "x": 148.80313110351562,
+            "y": 491.421875,
+            "right": 170.80313110351562,
+            "bottom": 507.421875,
+            "width": 22,
+            "height": 16
+          },
+          {
+            "id": "content-scene-cue:三站完成・大家坐好了",
+            "x": 141.296875,
+            "y": 98,
+            "right": 366,
+            "bottom": 122,
+            "width": 224.703125,
+            "height": 24
+          },
+          {
+            "id": "SPAN:2 號月台 ✓",
+            "x": 32,
+            "y": 196.5,
+            "right": 94.984375,
+            "bottom": 213.5,
+            "width": 62.984375,
+            "height": 17
+          },
+          {
+            "id": "SPAN:車票相同",
+            "x": 132.984375,
+            "y": 196.5,
+            "right": 184.984375,
+            "bottom": 213.5,
+            "width": 52,
+            "height": 17
+          },
+          {
+            "id": "STRONG:比形色・同形找顏色・同色找形狀。改選 0 次。",
+            "x": 30,
+            "y": 680.421875,
+            "right": 360,
+            "bottom": 725.203125,
+            "width": 330,
+            "height": 44.78125
+          },
+          {
+            "id": "BUTTON:再搭一班",
+            "x": 24,
+            "y": 735.203125,
+            "right": 192,
+            "bottom": 799.203125,
+            "width": 168,
+            "height": 64
+          },
+          {
+            "id": "BUTTON:換一課",
+            "x": 198,
+            "y": 735.203125,
+            "right": 366,
+            "bottom": 799.203125,
+            "width": 168,
+            "height": 64
+          },
+          {
+            "id": "content-save:旅程已保存",
+            "x": 24,
+            "y": 803.203125,
+            "right": 366,
+            "bottom": 820,
+            "width": 342,
+            "height": 16.796875
+          },
+          {
+            "id": "ticket-counts:已入座 3/3 人",
+            "x": 256,
+            "y": 124,
+            "right": 366,
+            "bottom": 156,
+            "width": 110,
+            "height": 32
+          },
+          {
+            "id": "lesson-route-proof:✓\n比形色\n✓\n再看顏色\n✓\n再看形狀",
+            "x": 24,
+            "y": 584.421875,
+            "right": 366,
+            "bottom": 638.421875,
+            "width": 342,
+            "height": 54
+          }
+        ],
+        "overlaps": [],
+        "iconOverlaps": [],
+        "signOcclusion": [],
+        "counterOcclusion": [],
+        "carOffset": null,
+        "recovery": []
+      },
+      "text": "回學院\n形狀車票，找對月台\n暫停\n小安\n小晴\n小宇\n三站完成・大家坐好了\n已入座 3/3 人\n✓\n比形色\n✓\n再看顏色\n✓\n再看形狀\n2 號月台 ✓\n車票相同\n比形色・同形找顏色・同色找形狀。改選 0 次。\n再搭一班\n換一課\n\n旅程已保存",
+      "highlights": [
+        {
+          "id": "replay",
+          "needed": "false",
+          "color": "rgb(245, 251, 255)"
+        },
+        {
+          "id": "picker",
+          "needed": "false",
+          "color": "rgb(245, 251, 255)"
+        }
+      ],
+      "ring": null,
+      "textClipping": []
+    },
+    {
+      "path": "docs/content/r28/clean/phone-tickets-saved.png",
+      "width": 390,
+      "height": 844,
+      "sha256": "3aabc00ae6b8b230ecb927a6fe0a5c8f1336ad8b383921b6923d8a65100a6080",
+      "phase": "done",
+      "state": {
+        "roadShape": "left",
+        "boardTime": "1.200",
+        "doorStage": "closed",
+        "boardingIndex": "0",
+        "hazard": "false",
+        "wrongTurn": "false",
+        "inBend": "false",
+        "cue": "go",
+        "settled": "true",
+        "correction": "",
+        "compact": "false",
+        "recoveryActive": "false",
+        "lookStep": "0",
+        "targetName": "綠正方形",
+        "layoutSeed": "0",
+        "distance": "30.00",
+        "speed": "0.00",
+        "bend": "1",
+        "tilt": "0.00",
+        "sway": "0.00",
+        "acceleration": "0.00",
+        "bayStopped": "false",
+        "bayRestarted": "false",
+        "leftTurn": "false",
+        "rightTurn": "false",
+        "focus": "center",
+        "crossTime": "0.000",
+        "crossDuration": "1.45",
+        "orderHint": "",
+        "fruitSway": "0.00",
+        "flagSway": "0.00",
+        "hintVisible": "false",
+        "crossingOrder": "bike,grandma,child",
+        "balanceLean": "0.00",
+        "balanceStatus": "steady",
+        "recoveries": "0",
+        "assists": "0",
+        "assisting": "false",
+        "crossed": "0",
+        "lookedLeft": "false",
+        "lookedRight": "false",
+        "decision": "false",
+        "confirmed": "false",
+        "confirmDelay": "0",
+        "person": "bike",
+        "trafficActive": "false",
+        "trafficTime": "0.00",
+        "watchSide": "",
+        "platformSide": "front",
+        "doorState": "closed",
+        "step": "0",
+        "semanticStatus": "",
+        "nextAction": "",
+        "holdState": "holding",
+        "holdProgress": "1.000",
+        "recheckTime": "2",
+        "hintLevel": "0",
+        "forceTarget": "0",
+        "forceLag": "0",
+        "recoveryRate": "0",
+        "trafficConfirmed": "false",
+        "trafficSource": "left",
+        "lookSequence": "left,right,left",
+        "escortGate": "false",
+        "escortGateReleased": "false",
+        "restReady": "false",
+        "visited": "0,1,2"
+      },
+      "controls": [
+        {
+          "id": "content-back",
+          "w": 68,
+          "h": 60,
+          "bad": false
+        },
+        {
+          "id": "content-pause",
+          "w": 68,
+          "h": 60,
+          "bad": false
+        },
+        {
+          "id": "replay",
+          "w": 168,
+          "h": 64,
+          "bad": false
+        },
+        {
+          "id": "picker",
+          "w": 168,
+          "h": 64,
+          "bad": false
+        }
+      ],
+      "layout": {
+        "labels": [
+          {
+            "id": "content-back:回學院",
+            "x": 16,
+            "y": 16,
+            "right": 84,
+            "bottom": 76,
+            "width": 68,
+            "height": 60
+          },
+          {
+            "id": "content-title:形狀車票，找對月台",
+            "x": 92,
+            "y": 35.5,
+            "right": 298,
+            "bottom": 56.5,
+            "width": 206,
+            "height": 21
+          },
+          {
+            "id": "content-pause:暫停",
+            "x": 306,
+            "y": 16,
+            "right": 374,
+            "bottom": 76,
+            "width": 68,
+            "height": 60
+          },
+          {
+            "id": "B:小安",
+            "x": 52.584373474121094,
+            "y": 479.078125,
+            "right": 74.5843734741211,
+            "bottom": 495.078125,
+            "width": 22,
+            "height": 16
+          },
+          {
+            "id": "B:小晴",
+            "x": 100.6937484741211,
+            "y": 479.078125,
+            "right": 122.6937484741211,
+            "bottom": 495.078125,
+            "width": 22,
+            "height": 16
+          },
+          {
+            "id": "B:小宇",
+            "x": 148.80313110351562,
+            "y": 479.078125,
+            "right": 170.80313110351562,
+            "bottom": 495.078125,
+            "width": 22,
+            "height": 16
+          },
+          {
+            "id": "content-scene-cue:三站完成・大家坐好了",
+            "x": 141.296875,
+            "y": 98,
+            "right": 366,
+            "bottom": 122,
+            "width": 224.703125,
+            "height": 24
+          },
+          {
+            "id": "SPAN:2 號月台 ✓",
+            "x": 32,
+            "y": 196.5,
+            "right": 94.984375,
+            "bottom": 213.5,
+            "width": 62.984375,
+            "height": 17
+          },
+          {
+            "id": "SPAN:車票相同",
+            "x": 132.984375,
+            "y": 196.5,
+            "right": 184.984375,
+            "bottom": 213.5,
+            "width": 52,
+            "height": 17
+          },
+          {
+            "id": "STRONG:比形色・同形找顏色・同色找形狀。改選 0 次。",
+            "x": 30,
+            "y": 680.421875,
+            "right": 360,
+            "bottom": 725.203125,
+            "width": 330,
+            "height": 44.78125
+          },
+          {
+            "id": "BUTTON:再搭一班",
+            "x": 24,
+            "y": 735.203125,
+            "right": 192,
+            "bottom": 799.203125,
+            "width": 168,
+            "height": 64
+          },
+          {
+            "id": "BUTTON:換一課",
+            "x": 198,
+            "y": 735.203125,
+            "right": 366,
+            "bottom": 799.203125,
+            "width": 168,
+            "height": 64
+          },
+          {
+            "id": "content-save:旅程已保存",
+            "x": 24,
+            "y": 803.203125,
+            "right": 366,
+            "bottom": 820,
+            "width": 342,
+            "height": 16.796875
+          },
+          {
+            "id": "ticket-counts:已入座 3/3 人",
+            "x": 256,
+            "y": 124,
+            "right": 366,
+            "bottom": 156,
+            "width": 110,
+            "height": 32
+          },
+          {
+            "id": "lesson-route-proof:✓\n比形色\n✓\n再看顏色\n✓\n再看形狀",
+            "x": 24,
+            "y": 584.421875,
+            "right": 366,
+            "bottom": 638.421875,
+            "width": 342,
+            "height": 54
+          }
+        ],
+        "overlaps": [],
+        "iconOverlaps": [],
+        "signOcclusion": [],
+        "counterOcclusion": [],
+        "carOffset": null,
+        "recovery": []
+      },
+      "text": "回學院\n形狀車票，找對月台\n暫停\n小安\n小晴\n小宇\n三站完成・大家坐好了\n已入座 3/3 人\n✓\n比形色\n✓\n再看顏色\n✓\n再看形狀\n2 號月台 ✓\n車票相同\n比形色・同形找顏色・同色找形狀。改選 0 次。\n再搭一班\n換一課\n\n旅程已保存",
+      "highlights": [
+        {
+          "id": "replay",
+          "needed": "false",
+          "color": "rgb(245, 251, 255)"
+        },
+        {
+          "id": "picker",
+          "needed": "false",
+          "color": "rgb(245, 251, 255)"
+        }
+      ],
+      "ring": null,
+      "textClipping": []
+    }
+  ],
+  "errors": [],
+  "failed": [],
+  "external": []
+}

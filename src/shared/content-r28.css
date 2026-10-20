@@ -1,0 +1,78 @@
+/* R28: continuous driving, visible observation and one boarding place. */
+#content-r1[data-kind=cake][data-phase=playing] #content-controls{grid-template-columns:repeat(4,minmax(60px,1fr))!important}
+#content-r1[data-kind=cake] #content-controls [data-action^=recover-]{grid-column:span 2}
+#content-r1[data-kind=cake] #content-controls [data-action=listen]{grid-column:1/-1!important}
+#content-r1[data-kind=cake] #content-controls [data-action][data-held=true]{background:#d5efff!important;box-shadow:inset 0 4px #1479b8!important}
+#content-r1[data-kind=cake] .cake-miniature .cake-rigid{transform-origin:86px 170px!important}
+#content-r1[data-kind=cake] .cake-miniature{transform:scale(var(--roof-cake-fit,.6))!important}
+#content-r1 .force-readout .r28-speed-inline{flex:0 0 100%;font-size:11px;line-height:16px;color:#143b61}
+#content-r1[data-kind=cake] .cake-miniature .cake-level-line,#content-r1[data-kind=cake] .cake-miniature .cake-fixed-level{display:none!important}
+#content-r1[data-kind=cake] .cake-road-view .content-cake{bottom:55%!important}
+#content-r1[data-kind=cake][data-stage="2"] .cake-road-view{background-image:url('/art/content-r28/cake-bay.webp')!important}
+#content-r1[data-kind=cake] .cake-bay-mark{display:none!important}
+#content-r1[data-kind=cake][data-stage="2"] .content-road-sign{display:none!important}
+#content-r1[data-kind=cake][data-stage="2"] .cake-timing{display:none!important}
+#content-r1 .r28-speed{position:absolute;left:51%;right:7px;top:150px;z-index:12;background:#fff8d9;border:2px solid #1479b8;border-radius:6px;padding:0 5px;font-size:11px;line-height:14px;color:#143b61}
+#content-r1 .r28-speed i{display:block;width:100%;height:6px;border-radius:4px;background:linear-gradient(to right,#237b43 var(--speed),#c5dce5 var(--speed))}
+#content-r1 .r28-stage-cards{position:absolute;left:7px;right:7px;bottom:10px;z-index:50;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:6px}
+#content-r1 .r28-stage-cards button{min-width:60px;min-height:130px;border:3px solid #1479b8;border-radius:12px;padding:4px;background:#fff8d9;color:#143b61;display:flex;flex-direction:column;align-items:center;gap:4px;font-size:12px;line-height:16px}
+#content-r1 .r28-stage-cards button[aria-pressed=true]{border-color:#237b43;box-shadow:inset 0 0 0 2px #ffd344}
+#content-r1 .r28-stage-cards button>img{width:100%;height:65px;object-fit:cover;border-radius:6px}
+#content-r1 .r28-stage-cards button svg{width:22px;height:22px}
+#content-r1[data-phase=ready] .content-intro{top:21%!important;bottom:auto!important}
+#content-r1[data-kind=crossing][data-phase] .content-scene .content-scene-cue{display:block!important;top:8px!important;left:8px!important;right:8px!important;max-width:none!important;min-height:22px!important;font-size:12px!important;transform:none!important;translate:none!important;width:max-content!important}
+#content-r1 .crossing-exit-path path:nth-child(2){stroke-dasharray:2 2!important;stroke-width:1.2!important}
+#content-r1[data-kind=crossing][data-phase=ready] .crossing-exit-path{display:none!important}
+#content-r1[data-kind=crossing][data-phase] .content-observe{top:40px!important;left:8px!important;font-size:12px!important;line-height:18px!important;padding:2px 6px!important}
+#content-r1[data-kind=crossing] .crossing-checks,#content-r1[data-kind=crossing] .content-scene:not([data-cross-time="0.000"]) .crossing-checks{display:flex!important;top:72px!important;left:8px!important;right:8px!important}
+#content-r1[data-kind=crossing] .crossing-checks span{width:auto!important;padding:2px 5px!important;font-size:12px!important}
+#content-r1[data-kind=crossing] .crossing-traffic{width:100px!important;max-width:28%!important}
+#content-r1[data-kind=crossing] .crossing-waiting [data-waiting] img,#content-r1[data-kind=crossing] .content-walker img,#content-r1[data-kind=crossing] .crossing-arrived>div img{height:100%!important;width:100%!important;max-height:none!important;object-fit:contain!important;object-position:center bottom!important}
+#content-r1[data-kind=crossing]:not([data-stage="2"]) .crossing-waiting>[data-waiting]:not([data-waiting=bike]),#content-r1[data-kind=crossing]:not([data-stage="2"]) .content-walker:not([data-person=bike]),#content-r1[data-kind=crossing]:not([data-stage="2"]) .crossing-arrived>[data-arrived-friend]:not([data-arrived-friend=bike]){height:72px!important}
+#content-r1[data-kind=crossing]:not([data-stage="2"]) .crossing-waiting>[data-waiting=bike],#content-r1[data-kind=crossing]:not([data-stage="2"]) .content-walker[data-person=bike],#content-r1[data-kind=crossing]:not([data-stage="2"]) .crossing-arrived>[data-arrived-friend=bike]{height:68px!important;width:82px!important;margin-left:-41px!important}
+#content-r1[data-kind=crossing][data-stage="2"] .crossing-arrived>div,#content-r1[data-kind=crossing][data-stage="2"] .crossing-waiting>[data-waiting],#content-r1[data-kind=crossing][data-stage="2"] .content-walker{height:52px!important;width:60px!important;margin-left:-30px!important}
+#content-r1[data-kind=crossing][data-stage="2"] .crossing-waiting>[data-waiting=bike],#content-r1[data-kind=crossing][data-stage="2"] .content-walker[data-person=bike],#content-r1[data-kind=crossing][data-stage="2"] .crossing-arrived>[data-arrived-friend=bike]{width:76px!important;height:64px!important;margin-left:-38px!important}
+#content-r1[data-kind=crossing] #content-controls [data-action=depart][data-locked=true]{filter:grayscale(1)!important;background:#dce4e8!important;color:#64717a!important}
+#content-r1 .r28-side-view{position:absolute;top:108px;left:12px;right:12px;height:116px;border:3px solid #1479b8;border-radius:12px;z-index:25;overflow:hidden;background:var(--view-background) left 62%/170% 240%;box-shadow:0 3px 0 #143b6155}
+#content-r1 .r28-side-view[data-side=right]{background-position:right 62%}
+#content-r1 .r28-side-view>b{display:block;background:#fff8d9;color:#143b61;font-size:13px;padding:3px 6px}
+#content-r1 .r28-side-view div{position:relative;height:84px}
+#content-r1 .r28-side-view img{height:72px;width:124px;object-fit:contain;position:absolute;left:8%;bottom:0}
+#content-r1 .r28-side-view[data-side=right] img{left:auto;right:8%;scale:-1 1}
+#content-r1 .r28-side-view[data-car=false] img{height:58px;width:64px}
+#content-r1 .r28-control-note{grid-column:1/-1;margin:0;padding:3px;color:#143b61;font-size:15px;font-weight:700;text-align:center}
+#content-r1[data-kind=tickets] .boarding-friend img{width:32px!important}
+#content-r1[data-kind=tickets] .boarding-friend[data-entering=true]>b{bottom:38px!important}
+#content-r1[data-kind=tickets] .boarding-friend[aria-pressed]{outline:2px dashed #1479b8;border-radius:10px!important;background:#ffffff35!important}
+#content-r1[data-kind=tickets] .boarding-friend[aria-pressed=true]{outline:3px solid #237b43}
+#content-r1 .r28-docked{position:absolute;left:7px;top:96px;z-index:25;display:flex;gap:6px;align-items:center;padding:4px 7px;border-radius:6px;background:#fff8d9;border:2px solid #237b43;color:#143b61;font-size:13px;font-weight:700}
+#content-r1 .r28-docked svg{width:26px;height:26px}
+#content-r1 [data-platform][data-reduced=true]{opacity:.38}
+#content-r1 [hidden]{display:none!important}
+#content-r1[data-kind][data-phase=ready] .content-observe,#content-r1[data-kind][data-phase=ready] .crossing-checks,#content-r1[data-kind][data-phase=ready] .ticket-counts{display:none!important}
+@media(max-width:360px) and (orientation:portrait){
+ #content-r1[data-phase=ready] .content-intro{top:36px!important;left:8px!important;right:8px!important;width:auto!important;transform:none!important;translate:none!important;min-height:68px!important;height:68px!important;padding:2px!important;display:flex!important;flex-direction:row!important;justify-content:center!important;gap:8px}
+ #content-r1[data-phase=ready] .content-intro img{width:58px!important;height:58px!important}
+ #content-r1[data-phase=ready] .content-intro span{font-size:12px!important}
+ #content-r1 .r28-speed{top:86px;left:46%;font-size:11px}
+ #content-r1 .r28-stage-cards button{min-height:108px;font-size:10px;line-height:14px;padding:2px}
+ #content-r1 .r28-stage-cards button>img{height:44px}
+ #content-r1 .r28-side-view{height:65px;top:104px}
+ #content-r1 .r28-side-view div{height:36px}
+ #content-r1 .r28-side-view img{height:38px}
+ #content-r1 .r28-docked{top:58px;font-size:11px}
+}
+@media(orientation:landscape) and (max-height:520px){
+ #content-r1[data-kind=cake][data-phase=playing] #content-controls [data-action^=recover-]{grid-column:auto!important}
+ #content-r1[data-kind=cake][data-phase=playing] #content-controls [data-action=listen]{grid-column:span 2!important}
+ #content-r1 .r28-stage-cards{left:4px;right:4px;bottom:5px;gap:4px}
+ #content-r1[data-phase=ready] .content-intro{top:30px!important;left:6px!important;right:6px!important;width:auto!important;transform:none!important;translate:none!important;min-height:64px!important;height:64px!important;padding:2px!important;display:flex!important;flex-direction:row!important;justify-content:center!important;gap:4px}
+ #content-r1[data-phase=ready] .content-intro img{width:48px!important;height:48px!important}
+ #content-r1[data-phase=ready] .content-intro span{font-size:11px!important}
+ #content-r1 .r28-stage-cards button{min-height:75px;font-size:10px;line-height:12px}
+ #content-r1 .r28-stage-cards button>img{height:28px}
+ #content-r1 .r28-stage-cards button>span{display:none}
+ #content-r1 .r28-side-view{left:52%;top:100px;height:76px}
+ #content-r1 .r28-speed{left:5px;right:auto;top:85px;width:105px}
+ #content-r1 .r28-docked{top:50px;font-size:11px}
+}
