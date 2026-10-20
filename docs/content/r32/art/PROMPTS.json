@@ -1,0 +1,15 @@
+{
+  "style_prefix": "Island Transport Academy — sunny Taiwan coastal picture-book, premium preschool game art for ages 3–8. Rounded hand-painted gouache shapes with subtle paper texture, confident midnight-blue contours, toy-like proportions, warm sunlight. Palette sea blue #1479B8, ink #143B61, vivid orange #F46B27, signal yellow #FFD344, leaf green #58B85B. Cheerful clean composition, readable large silhouettes, no generic dark teal UI, no photorealism, no watermark.",
+  "records": [
+    {
+      "id": "train-cabin",
+      "tool": "image_gen.imagegen",
+      "model_slug": null,
+      "transparent_background": false,
+      "prompt": "Island Transport Academy — sunny Taiwan coastal picture-book, premium preschool game art for ages 3–8. Rounded hand-painted gouache shapes with subtle paper texture, confident midnight-blue contours, toy-like proportions, warm sunlight. Palette sea blue #1479B8, ink #143B61, vivid orange #F46B27, signal yellow #FFD344, leaf green #58B85B. Cheerful clean composition, readable large silhouettes, no generic dark teal UI, no photorealism, no watermark.\nUse case: illustration-story. Runtime game background, landscape 1536x1024. A close side-on cutaway of the interior of the same cute blue and yellow coastal school train. Entire foreground wall removed so children can see inside. Broad open doorway on the RIGHT at x=82%, from y=18% to y=78%; a visible metal threshold at y=78% leads from the sunny terracotta platform on the right into the cabin. A continuous pale warm wood aisle at y=72% extends horizontally from that doorway to three separate empty blue passenger seats at x=18%, 39%, 60%. Seats face the viewer, with tall rounded blue backrests, yellow trim and distinct cushions at y=65%. Three large windows above the seats show Taiwan ocean, palm tree and a distant lighthouse. Visible continuous cabin floor and open space in front of seats to allow character sprites to walk. Strong readable doorway, aisle and seats, no overlapping foreground wall obscuring floor. No people, no text, no labels, no arrows, no interface, no numbers. Full opaque image. This must look like a finished charming hand-painted game scene, not boxes or a diagram.",
+      "source": "docs/content/r32/art/train-cabin-source.png",
+      "runtime": "public/art/content-r32/train-cabin.webp",
+      "processing": "sharp WebP quality90; no painting or generated shapes"
+    }
+  ]
+}

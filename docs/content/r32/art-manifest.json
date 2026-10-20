@@ -1,0 +1,18 @@
+{
+  "status": "VERIFIED",
+  "newGeneratedArt": 1,
+  "generationCalls": 1,
+  "tool": "image_gen.imagegen",
+  "model_slug": null,
+  "prompts": "docs/content/r32/art/PROMPTS.json",
+  "sources": [
+    {
+      "path": "docs/content/r32/art/train-cabin-source.png",
+      "sha256": "d02f08b613f48e46aa69e5f3e3be634301bb60e2c57c3f41307d3cd721650dbc"
+    },
+    {
+      "path": "public/art/content-r32/train-cabin.webp",
+      "sha256": "10d6c05bb5d735ee978181f3256ee54160a8ed24360b67e10108ebfbe28e3490"
+    }
+  ]
+}

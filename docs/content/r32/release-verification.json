@@ -1,0 +1,28 @@
+{
+  "status": "VERIFIED",
+  "version": "2.44.0",
+  "nativeSourceBuild": 40,
+  "unitTests": 326,
+  "regressions": {
+    "merge": 132,
+    "store": 101
+  },
+  "originalImages": 340,
+  "reviewImages": 15,
+  "newArt": 1,
+  "deletedFiles": 33,
+  "releasedBytes": 14104397,
+  "preexistingFilesPreserved": 99,
+  "unchangedExistingTests": 52,
+  "p95": [
+    16.700000000000728,
+    16.800000000000182,
+    16.799999999999272
+  ],
+  "blocked": [
+    "physical devices and native voice",
+    "family playtest and three adult interpretation",
+    "clean-machine performance",
+    "independent Muse >=8 review"
+  ]
+}
