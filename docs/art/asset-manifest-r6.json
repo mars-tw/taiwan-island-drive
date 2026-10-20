@@ -1,0 +1,852 @@
+{
+  "status": "VERIFIED",
+  "tool": "image_gen.imagegen",
+  "model_slug": null,
+  "model_note": "Actual tool did not expose model slug; no inferred gpt-image-2 claim.",
+  "generation_calls": 9,
+  "runtime_files": 39,
+  "runtime_bytes": 4265513,
+  "sources": [
+    {
+      "path": "docs/art/source/r6/car-atlas.png",
+      "sha256": "44a7dc9d8e34cf16fe0834c85825ae6c9fee3401dce8cf5f7d860020319989e3"
+    },
+    {
+      "path": "docs/art/source/r6/car-atlas-mask.png",
+      "sha256": "11732df412fa01f8151fc1806a4f03545741edc2de3ce734b42b26354c30bbfc"
+    },
+    {
+      "path": "docs/art/source/r6/car-atlas-opaque.png",
+      "sha256": "6dd8aa9df498ebaac33d14d12f5d0574aee46dc5ad1024124a1a9e3fc25908e2"
+    },
+    {
+      "path": "docs/art/source/r6/coast.png",
+      "sha256": "56cefd5daacef2274ddd8d30b12a75b87a01e8b19287062171adaa70d0a3f125"
+    },
+    {
+      "path": "docs/art/source/r6/coach.png",
+      "sha256": "2683e796928b901456444db087a574a1b1e22cfb8a8ccca1bac84475aed99f44"
+    },
+    {
+      "path": "docs/art/source/r6/coach-mask.png",
+      "sha256": "a09228bd7cce034e7887050af5c4f3df5fada8120a664d734c5859ef525be5df"
+    },
+    {
+      "path": "docs/art/source/r6/coach-opaque.png",
+      "sha256": "5d706780dc658cf04ac35f67b8212a744d2210c6fc6feb78c9cbe1f53f0b6f40"
+    },
+    {
+      "path": "docs/art/source/r6/ui.png",
+      "sha256": "6b799afd68d03a62c71b791a11daebb9c54598cb56ca83e33c4d04e5c8e55ee4"
+    },
+    {
+      "path": "docs/art/source/r6/ui-mask.png",
+      "sha256": "5091bf238647d978c6819f1d4a4eb48105ea34106212927f41d9617e89812910"
+    },
+    {
+      "path": "docs/art/source/r6/ui-opaque.png",
+      "sha256": "c34b7098896e105bed551ddfbaeb9b5f221f9e446748444ce75e14f5ce6cdf96"
+    },
+    {
+      "path": "docs/art/source/r6/trio.png",
+      "sha256": "0ee62ea937fba088221a7bc3fc9364e82e2ad264587705473e53373c6ba352b3"
+    },
+    {
+      "path": "docs/art/source/r6/trio-mask.png",
+      "sha256": "49c0507efc9ac9ce78fdec29bcde320fa23614a9fb52f4d70ae0987dbe85477c"
+    },
+    {
+      "path": "docs/art/source/r6/trio-opaque.png",
+      "sha256": "bcea1bd1661576611f621487132d223057b4bc6ccd277b4f9d641238c6711c46"
+    },
+    {
+      "path": "docs/art/source/r6/logo.png",
+      "sha256": "4de82ab5e536f6db7101928c87a04a07e6349df8020b39fb2819dd7f04737d2f"
+    },
+    {
+      "path": "docs/art/source/r6/logo-mask.png",
+      "sha256": "504f4f453c5e097e22c5b748f09c3c71aff5934abcbe06b8c740d219d0d41ada"
+    },
+    {
+      "path": "docs/art/source/r6/logo-opaque.png",
+      "sha256": "90b7b7826e1413546a277494ffcc11c9def5d6b3ed0087066b4f299764a27e58"
+    },
+    {
+      "path": "docs/art/source/r6/icon.png",
+      "sha256": "722b9908b1af2920dbf5e4eb20b11204c0d8dc1929f13b26c45f775de5f26611"
+    },
+    {
+      "path": "docs/art/source/r6/routes.png",
+      "sha256": "1795f9af339ca6a377daf10008bf799e0cb377fdf029b484ac8c36722ac3b079"
+    },
+    {
+      "path": "docs/art/source/r6/night-route.png",
+      "sha256": "2d75df9f5bc083e8e6a96cd9eca62ed86807858e827cc4cf061f8aad57845f76"
+    }
+  ],
+  "outputs": [
+    {
+      "path": "public/art/r6/coast.webp",
+      "size": [
+        1536,
+        1024
+      ],
+      "bytes": 318246,
+      "sha256": "2d48dcb3fcd7f087b85e521d1ce739f82202b92597e80f64fd46a1f5ea1a5616",
+      "source_box": null
+    },
+    {
+      "path": "public/art/r6/route-taipei.webp",
+      "size": [
+        384,
+        288
+      ],
+      "bytes": 45050,
+      "sha256": "4f78e7aa50e0ab9f9dc06564c574c73f1583f4ae1d5c2e1ae3514dae43002e26",
+      "source_box": null
+    },
+    {
+      "path": "public/art/r6/route-coast.webp",
+      "size": [
+        384,
+        288
+      ],
+      "bytes": 41668,
+      "sha256": "ce51af1ecc35bf8b33cfb7f2aabea7e1636a2646d4ad504e13ced68031e88208",
+      "source_box": null
+    },
+    {
+      "path": "public/art/r6/route-valley.webp",
+      "size": [
+        384,
+        288
+      ],
+      "bytes": 44968,
+      "sha256": "9aef3c18ad679022fe21d300a909b841351d9b255ce641327464c6d0910e9dc3",
+      "source_box": null
+    },
+    {
+      "path": "public/art/r6/route-island.webp",
+      "size": [
+        384,
+        288
+      ],
+      "bytes": 43000,
+      "sha256": "dc5ea3171d76fb618a20c4de7a4c95892d45ffd8615f2ad128f4bdf5a3592b9b",
+      "source_box": null
+    },
+    {
+      "path": "public/art/r6/route-metro.webp",
+      "size": [
+        384,
+        288
+      ],
+      "bytes": 39676,
+      "sha256": "016a3494869adb72c27f6bd4d737b061281e8a5a93e081a01ccdd3d1f09571d4",
+      "source_box": null
+    },
+    {
+      "path": "public/art/r6/coupe-0.png",
+      "size": [
+        384,
+        224
+      ],
+      "bytes": 67316,
+      "sha256": "b377756aa853e2cb159fd0fe0e02a5f9c9a4e946ae84aaf77b78763a7438ddd4",
+      "source_box": [
+        0,
+        0,
+        384,
+        205
+      ],
+      "alpha_corners": true,
+      "occupancy": 0.3711,
+      "mean_luminance": 0.3751,
+      "near_black": 0.1212,
+      "mean_saturation": 0.8,
+      "low_saturation": 0.0412,
+      "transparent_rgb_zero": true
+    },
+    {
+      "path": "public/art/r6/rally-0.png",
+      "size": [
+        384,
+        224
+      ],
+      "bytes": 80955,
+      "sha256": "98a87e7a03ac03b690801151eace2c55c779bf2f3416d9115108a2e6cb51db0c",
+      "source_box": [
+        384,
+        0,
+        768,
+        205
+      ],
+      "alpha_corners": true,
+      "occupancy": 0.4362,
+      "mean_luminance": 0.3636,
+      "near_black": 0.1233,
+      "mean_saturation": 0.802,
+      "low_saturation": 0.0372,
+      "transparent_rgb_zero": true
+    },
+    {
+      "path": "public/art/r6/suv-0.png",
+      "size": [
+        384,
+        224
+      ],
+      "bytes": 88162,
+      "sha256": "defda831bcedecb9e3177460ef3121583606fb1b854f979e693f8583f48c34f8",
+      "source_box": [
+        768,
+        0,
+        1152,
+        205
+      ],
+      "alpha_corners": true,
+      "occupancy": 0.4841,
+      "mean_luminance": 0.3425,
+      "near_black": 0.1369,
+      "mean_saturation": 0.7868,
+      "low_saturation": 0.0586,
+      "transparent_rgb_zero": true
+    },
+    {
+      "path": "public/art/r6/van-0.png",
+      "size": [
+        384,
+        224
+      ],
+      "bytes": 89418,
+      "sha256": "48e649265ce502e5bd0c6cd65044bff25c73fad3c4439cd8061d08d13a99ea17",
+      "source_box": [
+        1152,
+        0,
+        1536,
+        205
+      ],
+      "alpha_corners": true,
+      "occupancy": 0.553,
+      "mean_luminance": 0.4722,
+      "near_black": 0.0863,
+      "mean_saturation": 0.687,
+      "low_saturation": 0.1572,
+      "transparent_rgb_zero": true
+    },
+    {
+      "path": "public/art/r6/coupe-1.png",
+      "size": [
+        384,
+        224
+      ],
+      "bytes": 71064,
+      "sha256": "83b0660cb06a66a1c8753816a8c7906e49230425e4ab7afc9720eec0c6a01f35",
+      "source_box": [
+        0,
+        205,
+        384,
+        410
+      ],
+      "alpha_corners": true,
+      "occupancy": 0.379,
+      "mean_luminance": 0.5093,
+      "near_black": 0.0843,
+      "mean_saturation": 0.6316,
+      "low_saturation": 0.0485,
+      "transparent_rgb_zero": true
+    },
+    {
+      "path": "public/art/r6/rally-1.png",
+      "size": [
+        384,
+        224
+      ],
+      "bytes": 85291,
+      "sha256": "79952d65fdad5858da2df9a70f4b32b91f9af0c847de3ba554f61f6a2c1e00e5",
+      "source_box": [
+        384,
+        205,
+        768,
+        410
+      ],
+      "alpha_corners": true,
+      "occupancy": 0.4456,
+      "mean_luminance": 0.4791,
+      "near_black": 0.0998,
+      "mean_saturation": 0.6581,
+      "low_saturation": 0.0505,
+      "transparent_rgb_zero": true
+    },
+    {
+      "path": "public/art/r6/suv-1.png",
+      "size": [
+        384,
+        224
+      ],
+      "bytes": 93437,
+      "sha256": "d01386421f02a35d62e508342135f14792902e4e5cf64ae158bd322c396b11b1",
+      "source_box": [
+        768,
+        205,
+        1152,
+        410
+      ],
+      "alpha_corners": true,
+      "occupancy": 0.4932,
+      "mean_luminance": 0.413,
+      "near_black": 0.1234,
+      "mean_saturation": 0.6643,
+      "low_saturation": 0.0897,
+      "transparent_rgb_zero": true
+    },
+    {
+      "path": "public/art/r6/van-1.png",
+      "size": [
+        384,
+        224
+      ],
+      "bytes": 95344,
+      "sha256": "343693c023b885d7177f1bfd23167cb2a6413da07f3d66df04b9ad1a01678c9d",
+      "source_box": [
+        1152,
+        205,
+        1536,
+        410
+      ],
+      "alpha_corners": true,
+      "occupancy": 0.5696,
+      "mean_luminance": 0.5785,
+      "near_black": 0.0728,
+      "mean_saturation": 0.5566,
+      "low_saturation": 0.2114,
+      "transparent_rgb_zero": true
+    },
+    {
+      "path": "public/art/r6/coupe-2.png",
+      "size": [
+        384,
+        224
+      ],
+      "bytes": 70000,
+      "sha256": "851134b259393a8cd81f1e0a79980dff823f1090f77a9c3ca9f86727dae6ca7d",
+      "source_box": [
+        0,
+        410,
+        384,
+        614
+      ],
+      "alpha_corners": true,
+      "occupancy": 0.3762,
+      "mean_luminance": 0.5587,
+      "near_black": 0.0944,
+      "mean_saturation": 0.4303,
+      "low_saturation": 0.4891,
+      "transparent_rgb_zero": true
+    },
+    {
+      "path": "public/art/r6/rally-2.png",
+      "size": [
+        384,
+        224
+      ],
+      "bytes": 84946,
+      "sha256": "f17207bf7e95e15aa65b5e497204107535d9c7fba68d184b064c21ab96427ccc",
+      "source_box": [
+        384,
+        410,
+        768,
+        614
+      ],
+      "alpha_corners": true,
+      "occupancy": 0.4439,
+      "mean_luminance": 0.519,
+      "near_black": 0.0996,
+      "mean_saturation": 0.4758,
+      "low_saturation": 0.4219,
+      "transparent_rgb_zero": true
+    },
+    {
+      "path": "public/art/r6/suv-2.png",
+      "size": [
+        384,
+        224
+      ],
+      "bytes": 93315,
+      "sha256": "de1de8de8a695fc7ae4ddf9c790c6ca5d9223c026b0f9c62e27234e3710acba5",
+      "source_box": [
+        768,
+        410,
+        1152,
+        614
+      ],
+      "alpha_corners": true,
+      "occupancy": 0.4954,
+      "mean_luminance": 0.4415,
+      "near_black": 0.1314,
+      "mean_saturation": 0.5725,
+      "low_saturation": 0.2957,
+      "transparent_rgb_zero": true
+    },
+    {
+      "path": "public/art/r6/van-2.png",
+      "size": [
+        384,
+        224
+      ],
+      "bytes": 94562,
+      "sha256": "06045a071811a0e756ffe3d79f7cff0d82e67f249ca5b4b92cfd766e3688fb4c",
+      "source_box": [
+        1152,
+        410,
+        1536,
+        614
+      ],
+      "alpha_corners": true,
+      "occupancy": 0.5728,
+      "mean_luminance": 0.6296,
+      "near_black": 0.0776,
+      "mean_saturation": 0.3655,
+      "low_saturation": 0.5694,
+      "transparent_rgb_zero": true
+    },
+    {
+      "path": "public/art/r6/coupe-3.png",
+      "size": [
+        384,
+        224
+      ],
+      "bytes": 69432,
+      "sha256": "0139cca64f0de160b8f7b414f449b26c542b531fd7d6856be58a293b4df5607b",
+      "source_box": [
+        0,
+        614,
+        384,
+        819
+      ],
+      "alpha_corners": true,
+      "occupancy": 0.3777,
+      "mean_luminance": 0.3915,
+      "near_black": 0.0964,
+      "mean_saturation": 0.6717,
+      "low_saturation": 0.0405,
+      "transparent_rgb_zero": true
+    },
+    {
+      "path": "public/art/r6/rally-3.png",
+      "size": [
+        384,
+        224
+      ],
+      "bytes": 83512,
+      "sha256": "a0b187088bd37147a7269b1aae0674bce530b22784a88318c14194113b69c37b",
+      "source_box": [
+        384,
+        614,
+        768,
+        819
+      ],
+      "alpha_corners": true,
+      "occupancy": 0.4438,
+      "mean_luminance": 0.374,
+      "near_black": 0.1044,
+      "mean_saturation": 0.6805,
+      "low_saturation": 0.0406,
+      "transparent_rgb_zero": true
+    },
+    {
+      "path": "public/art/r6/suv-3.png",
+      "size": [
+        384,
+        224
+      ],
+      "bytes": 92955,
+      "sha256": "c08fe6b08b84f3e84f72c4783e899dc094942b190d81c27a09afde48b245d7bb",
+      "source_box": [
+        768,
+        614,
+        1152,
+        819
+      ],
+      "alpha_corners": true,
+      "occupancy": 0.504,
+      "mean_luminance": 0.3411,
+      "near_black": 0.1252,
+      "mean_saturation": 0.695,
+      "low_saturation": 0.0618,
+      "transparent_rgb_zero": true
+    },
+    {
+      "path": "public/art/r6/van-3.png",
+      "size": [
+        384,
+        224
+      ],
+      "bytes": 94531,
+      "sha256": "6e14d5c7ba2536817da0e14f107e1e5164e2d20a3c50df7a4aa464698067b8d7",
+      "source_box": [
+        1152,
+        614,
+        1536,
+        819
+      ],
+      "alpha_corners": true,
+      "occupancy": 0.5762,
+      "mean_luminance": 0.49,
+      "near_black": 0.0773,
+      "mean_saturation": 0.5749,
+      "low_saturation": 0.2147,
+      "transparent_rgb_zero": true
+    },
+    {
+      "path": "public/art/r6/coupe-4.png",
+      "size": [
+        384,
+        224
+      ],
+      "bytes": 65118,
+      "sha256": "9a138d484400369fbb5d0ad5962ac0863828ce4b1052a4f487c3ac73b6599f43",
+      "source_box": [
+        0,
+        819,
+        384,
+        1024
+      ],
+      "alpha_corners": true,
+      "occupancy": 0.3801,
+      "mean_luminance": 0.2943,
+      "near_black": 0.1,
+      "mean_saturation": 0.5931,
+      "low_saturation": 0.074,
+      "transparent_rgb_zero": true
+    },
+    {
+      "path": "public/art/r6/rally-4.png",
+      "size": [
+        384,
+        224
+      ],
+      "bytes": 78539,
+      "sha256": "bf34d02acb0fa497d2d5a82d1d5923f7e807c9cbb8a1958c377782d6a5b98c62",
+      "source_box": [
+        384,
+        819,
+        768,
+        1024
+      ],
+      "alpha_corners": true,
+      "occupancy": 0.4463,
+      "mean_luminance": 0.2947,
+      "near_black": 0.1039,
+      "mean_saturation": 0.5956,
+      "low_saturation": 0.0864,
+      "transparent_rgb_zero": true
+    },
+    {
+      "path": "public/art/r6/suv-4.png",
+      "size": [
+        384,
+        224
+      ],
+      "bytes": 79204,
+      "sha256": "d6774b83f3167513f944549a5157b258649a890d596651b7749fa40bff663d6d",
+      "source_box": [
+        768,
+        819,
+        1152,
+        1024
+      ],
+      "alpha_corners": true,
+      "occupancy": 0.4625,
+      "mean_luminance": 0.2973,
+      "near_black": 0.1229,
+      "mean_saturation": 0.6523,
+      "low_saturation": 0.0685,
+      "transparent_rgb_zero": true
+    },
+    {
+      "path": "public/art/r6/van-4.png",
+      "size": [
+        384,
+        224
+      ],
+      "bytes": 80756,
+      "sha256": "9c0fbccc29c1ec16f7fba6436160301e3626ee6ef5f9770d31d9db5afaa1ed7a",
+      "source_box": [
+        1152,
+        819,
+        1536,
+        1024
+      ],
+      "alpha_corners": true,
+      "occupancy": 0.5227,
+      "mean_luminance": 0.3918,
+      "near_black": 0.0837,
+      "mean_saturation": 0.5238,
+      "low_saturation": 0.164,
+      "transparent_rgb_zero": true
+    },
+    {
+      "path": "public/art/r6/car.png",
+      "size": [
+        384,
+        256
+      ],
+      "bytes": 141385,
+      "sha256": "349eee11b482ed37dd3538de2dec067a3f919c4da08f8f19e7bca19900429567",
+      "source_box": [
+        0,
+        0,
+        724,
+        724
+      ],
+      "alpha_corners": true,
+      "occupancy": 0.6015,
+      "mean_luminance": 0.4129,
+      "near_black": 0.1901,
+      "mean_saturation": 0.7726,
+      "low_saturation": 0.0733,
+      "transparent_rgb_zero": true
+    },
+    {
+      "path": "public/art/r6/train.png",
+      "size": [
+        384,
+        256
+      ],
+      "bytes": 144732,
+      "sha256": "53878585ac4ebd94a79d8680bc3fc8a43ff3230bae4ea74aba8b6e555eead047",
+      "source_box": [
+        724,
+        0,
+        1448,
+        724
+      ],
+      "alpha_corners": true,
+      "occupancy": 0.6229,
+      "mean_luminance": 0.4395,
+      "near_black": 0.1468,
+      "mean_saturation": 0.7283,
+      "low_saturation": 0.1135,
+      "transparent_rgb_zero": true
+    },
+    {
+      "path": "public/art/r6/flight.png",
+      "size": [
+        384,
+        256
+      ],
+      "bytes": 112325,
+      "sha256": "b4bcc152804387386b7a0abe9c7f8ddc19792194bea3354f2fd4a9aed0ab3ef2",
+      "source_box": [
+        1448,
+        0,
+        2172,
+        724
+      ],
+      "alpha_corners": true,
+      "occupancy": 0.4349,
+      "mean_luminance": 0.5196,
+      "near_black": 0.143,
+      "mean_saturation": 0.8,
+      "low_saturation": 0.035,
+      "transparent_rgb_zero": true
+    },
+    {
+      "path": "public/art/r6/coach.png",
+      "size": [
+        384,
+        576
+      ],
+      "bytes": 258227,
+      "sha256": "4fa78443397ff3ddcfa84f59f0488eef5b35ad965b8009e776c7b25fc6a3b94c",
+      "source_box": null,
+      "alpha_corners": true,
+      "occupancy": 0.4915,
+      "mean_luminance": 0.488,
+      "near_black": 0.1566,
+      "mean_saturation": 0.7077,
+      "low_saturation": 0.1005,
+      "transparent_rgb_zero": true,
+      "dual_gate": true
+    },
+    {
+      "path": "public/art/r6/coach-cheer.png",
+      "size": [
+        384,
+        576
+      ],
+      "bytes": 223483,
+      "sha256": "5e6f0206a1aae55c5325915026d16cfaf13b0b23843c178425605cb813156e3b",
+      "source_box": null,
+      "alpha_corners": true,
+      "occupancy": 0.4051,
+      "mean_luminance": 0.4864,
+      "near_black": 0.1527,
+      "mean_saturation": 0.7061,
+      "low_saturation": 0.0994,
+      "transparent_rgb_zero": true,
+      "dual_gate": true
+    },
+    {
+      "path": "public/art/r6/ticket.png",
+      "size": [
+        768,
+        180
+      ],
+      "bytes": 101879,
+      "sha256": "d3ab78f4f852e156b657a8a3e32e0ca4857733996c01ee557facb0fa3f32673f",
+      "source_box": null,
+      "alpha_corners": true,
+      "occupancy": 0.7609,
+      "mean_luminance": 0.8549,
+      "near_black": 0.0,
+      "mean_saturation": 0.1936,
+      "low_saturation": 0.7953,
+      "transparent_rgb_zero": true
+    },
+    {
+      "path": "public/art/r6/badge.png",
+      "size": [
+        192,
+        192
+      ],
+      "bytes": 56203,
+      "sha256": "76142070261ba7c77d77936f75727683dc59896efd529d89a27fe9879710c1bd",
+      "source_box": [
+        140,
+        265,
+        545,
+        669
+      ],
+      "alpha_corners": true,
+      "occupancy": 0.606,
+      "mean_luminance": 0.6025,
+      "near_black": 0.0192,
+      "mean_saturation": 0.8559,
+      "low_saturation": 0.029,
+      "transparent_rgb_zero": true
+    },
+    {
+      "path": "public/art/r6/route-badge.png",
+      "size": [
+        192,
+        192
+      ],
+      "bytes": 59001,
+      "sha256": "b51b2c5f51886e9e42d22da29730a338724b42ae3e4ce4939015f95b0108a43e",
+      "source_box": [
+        580,
+        265,
+        950,
+        669
+      ],
+      "alpha_corners": true,
+      "occupancy": 0.6039,
+      "mean_luminance": 0.5205,
+      "near_black": 0.0436,
+      "mean_saturation": 0.7783,
+      "low_saturation": 0.0385,
+      "transparent_rgb_zero": true
+    },
+    {
+      "path": "public/art/r6/mail-badge.png",
+      "size": [
+        192,
+        192
+      ],
+      "bytes": 56333,
+      "sha256": "60c79fc4e72c68e3a9e59e594cb4e910aebda1a4a75267947663fc4d3adf9ece",
+      "source_box": [
+        990,
+        265,
+        1400,
+        669
+      ],
+      "alpha_corners": true,
+      "occupancy": 0.6264,
+      "mean_luminance": 0.5668,
+      "near_black": 0.0386,
+      "mean_saturation": 0.66,
+      "low_saturation": 0.2744,
+      "transparent_rgb_zero": true
+    },
+    {
+      "path": "public/art/r6/confetti.png",
+      "size": [
+        768,
+        190
+      ],
+      "bytes": 144712,
+      "sha256": "a4a6d908347c1b099bffc046c47465e14b6f607894ae35917f9d25c7648ebf94",
+      "source_box": [
+        0,
+        669,
+        1536,
+        1024
+      ],
+      "alpha_corners": true,
+      "occupancy": 0.3245,
+      "mean_luminance": 0.4902,
+      "near_black": 0.0591,
+      "mean_saturation": 0.8802,
+      "low_saturation": 0.0045,
+      "transparent_rgb_zero": true
+    },
+    {
+      "path": "public/art/r6/logo.png",
+      "size": [
+        480,
+        280
+      ],
+      "bytes": 192179,
+      "sha256": "ea8137689a224180bb084f2470c015c2da44a1c2938ca45453a19fe1280a94bc",
+      "source_box": null,
+      "alpha_corners": true,
+      "occupancy": 0.6294,
+      "mean_luminance": 0.5464,
+      "near_black": 0.0007,
+      "mean_saturation": 0.692,
+      "low_saturation": 0.2155,
+      "transparent_rgb_zero": true
+    },
+    {
+      "path": "public/art/r6/app-icon-192.png",
+      "size": [
+        192,
+        192
+      ],
+      "bytes": 86496,
+      "sha256": "9da605189e6b00f941cab70abfb61e695729c7973dde70d55abbe6ffe15a7f08",
+      "source_box": null
+    },
+    {
+      "path": "public/art/r6/app-icon-512.png",
+      "size": [
+        512,
+        512
+      ],
+      "bytes": 498093,
+      "sha256": "547c8ebae5d685bda1d0ba7e63ec0bdc6b625a4155cf54095816198aacc098aa",
+      "source_box": null
+    }
+  ],
+  "postprocess": "Native alpha masks preserved, threshold <20 transparent >235 opaque, connected component separation for coach, crop and LANCZOS resize, RGB zero at alpha=0 after resampling. Background WebP q84. No replacement drawings.",
+  "animation": "R5 two limb poses per passenger retained; R6 two new coach arm/flag poses. Interpolated path >=700ms, no skeleton claim.",
+  "native_icon_receipt": "resources/branding/native-icons-r6-report.json",
+  "limitations": [
+    "Three-person human thumbnail test not performed.",
+    "No new independent Muse score.",
+    "Native icon catalogs exported locally; no native binary or physical device verification."
+  ],
+  "reference_images": [
+    {
+      "path": "public/art/r5/coach.png",
+      "sha256": "3e9cea0b91df3f1be961e0ee250439e9b69a21d2531b23c13a16a81f822b6eb3"
+    },
+    {
+      "path": "public/art/r6/route-metro.webp",
+      "sha256": "016a3494869adb72c27f6bd4d737b061281e8a5a93e081a01ccdd3d1f09571d4"
+    }
+  ],
+  "all_prompts_share_prefix": true
+}

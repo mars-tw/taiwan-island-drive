@@ -1,0 +1,65 @@
+/* R15: one instruction, player-controlled turns and one invitation per rider. */
+#content-r1[data-kind=cake] [data-action=go][data-held=true][data-release][data-needed]{background:#1479b8!important;color:white!important;box-shadow:inset 0 5px #143b61!important;outline:0!important}
+#content-r1[data-kind=cake] [data-action=left][data-needed=true] svg,#content-r1[data-kind=cake] [data-action=right][data-needed=true] svg{animation:turn-invite .9s ease-in-out infinite alternate}
+@keyframes turn-invite{to{translate:4px 0}}
+@media(prefers-reduced-motion:reduce){#content-r1 [data-needed=true] svg{animation:none!important}}
+#content-r1 .content-route{background:#143b61;border:2px solid white;border-radius:9px;padding:4px}
+#content-r1 .content-route i{background:#fff;border-color:#fff}
+#content-r1 .content-route i.complete{background:#58b85b;border-color:#58b85b}
+#content-r1[data-kind=cake] .cake-road-view{background-position:center calc(50% + var(--road-travel,0px));background-size:100% calc(100% + 140px)}
+#content-r1[data-kind=cake][data-stage="1"] .cake-road-view::before{inset:-70px 0;translate:0 var(--road-travel,0px)}
+#content-r1[data-kind=cake] .cake-timing{translate:0 var(--road-travel,0px)}
+#content-r1[data-kind=cake] .cake-task,#content-r1[data-kind=cake] .cake-correction{display:none!important}
+#content-r1[data-kind=cake] .cake-road-view .content-carrier{transition:none}
+#content-r1[data-kind=cake] .cake-closeup>.cake-stack{scale:1}
+#content-r1[data-kind=crossing] .crossing-roster,#content-r1[data-kind=crossing] .crossing-decision{display:none!important}
+#content-r1[data-kind=crossing] .content-observe{font-size:17px;padding:5px 12px}
+#content-r1[data-kind=crossing] .crossing-lookout{top:46px;background:#fff8d9;font-size:14px;max-width:50%}
+#content-r1[data-kind=crossing] .friend-number{font-size:13px}
+#content-r1[data-kind=crossing] #content-controls [data-action=depart]:disabled{background:#dce4e9!important;color:#526776!important;outline:0!important;box-shadow:none}
+#content-r1[data-kind=crossing][data-phase=departing] .content-carrier{transition:none;scale:1!important}
+#content-r1[data-kind=tickets] .content-stations small{display:block;font-size:12px;white-space:nowrap;line-height:1.2}
+#content-r1[data-kind=tickets] .content-stations button{min-height:80px;top:244px}
+#content-r1[data-kind=tickets] .content-stations button>span{font-size:13px}
+#content-r1[data-kind=tickets] .ticket-closeup{top:60px;bottom:auto;height:135px;width:240px;left:50%;border-style:dashed;box-shadow:none}
+#content-r1[data-kind=tickets] .ticket-closeup-world{scale:.67;transform-origin:top left;width:354px;height:163px}
+#content-r1[data-kind=tickets] .ticket-closeup>strong{font-size:14px}
+#content-r1[data-kind=tickets][data-phase] .content-ticket{left:8px;right:auto;top:7px;transform:none;width:50px;height:50px}
+#content-r1[data-kind=tickets][data-phase] .ticket-counts,#content-r1[data-kind=tickets][data-phase]:has(.ticket-comparison:not(:empty)) .ticket-counts{top:8px;left:auto;right:8px;transform:none;pointer-events:none}
+#content-r1[data-kind=tickets] .ticket-comparison{top:64px;bottom:auto}
+#content-r1[data-kind=tickets] .boarding-friend>b{font-size:12px;top:-12px}
+#content-r1[data-kind=tickets] .zoom-step{top:116px;height:17px;z-index:9}
+#content-r1[data-kind=tickets] .ticket-door i,#content-r1[data-kind=tickets] .zoom-door i{background-image:url('/art/content-r3/train-side.webp');background-size:2170% 206%;background-position:75.7% 52.4%;border:0;box-shadow:none}
+#content-r1[data-kind=tickets] .ticket-door i:last-child,#content-r1[data-kind=tickets] .zoom-door i:last-child{background-position:80.56% 52.4%}
+#content-r1[data-kind=tickets] .ticket-door i::after{content:none}
+#content-r1[data-kind=tickets] #content-controls [data-action=board],#content-r1[data-kind=tickets] #content-controls [data-action=close-door]{grid-column:1/4}
+#content-r1[data-phase=done] .content-facts,#content-r1[data-phase=done] #content-hint,#content-r1[data-phase=done] .ticket-arrival{display:none!important}
+#content-r1[data-phase=done] .lesson-route-proof{display:flex;position:absolute;top:48px!important;bottom:auto!important;left:8px;right:8px;height:60px!important;padding:5px;background:#fff8d9;gap:8px;z-index:16}
+#content-r1[data-phase=done] .lesson-route-proof>div{display:flex;flex:1;flex-direction:row;align-items:center;justify-content:center;gap:4px;font-size:14px}
+#content-r1[data-phase=done] .lesson-route-proof b{font-size:24px;color:#287c3a}
+#content-r1[data-phase=done] .lesson-result{padding:6px;font-size:17px;line-height:1.4}
+#content-r1[data-phase=done] .content-work{gap:4px}
+#content-r1[data-phase=done] #content-controls{grid-template-columns:1fr 1fr!important}
+#content-r1[data-phase=done] #content-controls button{grid-column:auto!important;min-height:60px}
+#content-r1[data-phase=done] .content-route{display:none!important}
+@media(max-width:360px) and (orientation:portrait){
+ #content-r1[data-kind=tickets] .ticket-closeup{display:none!important}
+ #content-r1[data-kind=tickets][data-phase] .content-ticket{width:32px;height:32px;left:3px;top:3px}
+ #content-r1[data-kind=tickets] .content-stations button{top:92px;min-height:72px}
+ #content-r1[data-kind=tickets] .ticket-comparison{top:auto;bottom:4px}
+ #content-r1[data-kind=tickets] .content-stations button>span{font-size:11px}
+ #content-r1[data-kind=tickets] .content-stations small{font-size:10px}
+ #content-r1[data-kind=crossing] .crossing-lookout{top:36px;font-size:12px}
+ #content-r1[data-phase=done] .lesson-route-proof{top:36px!important;height:48px!important;gap:2px}
+ #content-r1[data-phase=done] .lesson-route-proof>div{font-size:12px}
+}
+@media(orientation:landscape) and (max-height:520px){
+ #content-r1[data-kind=tickets] .ticket-closeup{display:none!important}
+ #content-r1[data-kind=tickets][data-phase] .content-ticket{width:32px;height:32px;left:3px;top:3px}
+ #content-r1[data-kind=tickets] .content-stations button{top:82px;min-height:72px}
+ #content-r1[data-kind=tickets] .ticket-comparison{top:auto;bottom:4px}
+ #content-r1[data-kind=tickets] .content-stations button>span{font-size:11px}
+ #content-r1[data-kind=tickets] .content-stations small{font-size:10px}
+ #content-r1[data-kind=crossing] .crossing-lookout{top:32px;font-size:11px}
+ #content-r1[data-phase=done] .lesson-route-proof{top:36px!important;height:42px!important}
+}

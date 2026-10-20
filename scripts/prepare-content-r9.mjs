@@ -1,0 +1,11 @@
+﻿import sharp from 'sharp';
+import {mkdir,copyFile,readFile,writeFile} from 'node:fs/promises';
+import {createHash} from 'node:crypto';
+const out='docs/content/r9/art',dest='public/art/content-r9';
+await mkdir(out,{recursive:true});await mkdir(dest,{recursive:true});
+const original=out+'/grandma-contact-original.png';
+await copyFile('C:/Users/digimkt/.codex/generated_images/01a150cf-0154-7603-80c3-6e0eb812e5df/exec-952345e0-ec48-4892-a277-3e2a3dfac902.png',original);
+const b=await sharp(original).trim().resize({height:350}).png().toBuffer(),m=await sharp(b).metadata(),left=Math.floor((420-m.width)/2),path=dest+'/grandma-2.png';
+await sharp(b).extend({left,right:420-m.width-left,top:25,bottom:25,background:'#00000000'}).png().toFile(path);
+const hash=async p=>createHash('sha256').update(await readFile(p)).digest('hex');
+await writeFile(out+'/manifest.json',JSON.stringify({status:'VERIFIED',tool:'image_gen.imagegen',model_slug:null,modelEvidence:'The built-in tool does not expose a model slug; no model inferred.',generationCalls:1,newRuntimeImages:1,newCharacterPoses:1,processing:'Preserve generated alpha; trim transparent margins, proportional resize to 350px high; 420x400 transparent canvas and 25px baseline padding match R7. No repainting.',assets:[{path,width:420,height:400,hasAlpha:true,sha256:await hash(path),original,sourceSha256:await hash(original)}]},null,2));

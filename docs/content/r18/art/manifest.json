@@ -1,0 +1,22 @@
+{
+  "status": "VERIFIED",
+  "newGenerationCalls": 0,
+  "newRuntimeAssets": 0,
+  "policy": "Reuse existing generated art with unchanged hashes; CSS mirrors road to match bend; no new bitmap needed",
+  "assets": [
+    {
+      "path": "public/art/content-r11/car-rear.png",
+      "sha256": "8806b426e515bcfea18026065ede62a04ef9fbe2acbd301270a3286554b97bc9",
+      "originalGenerationTool": "image_gen.imagegen",
+      "toolThisRound": null,
+      "contract": "docs/content/r11/art/PROMPTS.json"
+    },
+    {
+      "path": "public/art/content-r3/cake-bends.webp",
+      "sha256": "41e7cd4614a32a954ba00c22b0eb5d6c7015c0c610d327798930165b9eaf0462",
+      "originalGenerationTool": "image_gen.imagegen",
+      "toolThisRound": null,
+      "contract": "docs/content/r14/art/manifest.json"
+    }
+  ]
+}

@@ -1,0 +1,55 @@
+/* R4 uses the existing, managed coastal illustrations and the shared coach. */
+html.art-r8.art-r7.art-r6.art-r5.art-r4 #content-r1{background:#8ed8f0 url('/art/r4/coast.webp') center/cover no-repeat!important;font-weight:800}
+.content-header{background:#fffffff2;border-radius:12px;padding:3px;flex-shrink:0}
+#content-picker{justify-content:center;gap:12px;min-height:0}
+.content-picker-guide{display:flex;align-items:center;justify-content:center;gap:12px;flex:none;background:#ffffffeb;border:3px solid #1479b8;border-radius:20px;padding:5px 12px;box-shadow:0 4px #143b61}
+.content-picker-guide img{width:76px!important;height:76px!important}.content-picker-guide p{margin:0;font-size:17px;line-height:1.6}
+#content-picker button{position:relative;flex:none;min-height:145px;max-height:180px;grid-template-columns:84px 1fr;grid-template-rows:auto auto auto;gap:3px;padding:6px;background:#fffcf2;border:14px solid transparent;border-image:url('/art/r8/ocean-ticket.png') 22% 14% 23% 14% fill stretch;border-radius:12px;box-shadow:0 5px #143b61;text-align:left;isolation:isolate}
+#content-picker button img{grid-row:1/4;width:78px;height:90px;object-fit:contain}
+#content-picker [data-content=cake] img{clip-path:inset(0 0 20%)}
+#content-picker button span{font-size:20px;line-height:1.35;padding-right:5px}
+#content-picker button em{font-style:normal;font-size:13px;line-height:1.4;padding-right:6px}
+#content-picker small{font-size:13px;font-weight:900;justify-self:start;padding:4px 8px;background:#e4f6ff;border:2px solid #1479b8;border-radius:6px}
+#content-picker [data-state=started] small{background:#ffd344}#content-picker [data-state=completed] small{background:#d5f2c7}
+.content-carrier{will-change:transform;transform-origin:50% 90%}
+.content-carrier .content-cake{transform-origin:50% 90%;width:46%;height:47%;left:32%;bottom:43%}
+.cake-cream{will-change:transform}.cake-task{display:none;position:absolute;top:94px;left:10px;padding:6px 8px;max-width:58%;border:3px solid #1479b8;border-radius:10px;background:#ffffffed;font-size:15px;z-index:6}
+#content-r1[data-kind=cake] .cake-task{display:block}
+.content-road-sign{top:140px}.content-force{min-height:46px}
+.crossing-panorama{display:none;position:absolute;inset:0 -17%;background:var(--crossing-background) center/100% 100%;z-index:-1;transition:transform .25s ease}
+#content-r1[data-kind=crossing] .content-scene{background:none;--crossing-background:url('/art/content-r1/crossing.webp')}
+#content-r1[data-kind=crossing][data-stage="1"] .content-scene{background:none;--crossing-background:url('/art/content-r2/crossing-banyan.webp')}
+#content-r1[data-kind=crossing][data-stage="2"] .content-scene{background:none;--crossing-background:url('/art/content-r2/crossing-lighthouse.webp')}
+#content-r1[data-kind=crossing] .crossing-panorama{display:block}
+.crossing-lookout{display:none;position:absolute;top:100px;left:8px;z-index:7;background:#ffffffef;border:3px solid #1479b8;border-radius:14px;padding:6px;text-align:center;max-width:50%;font-size:13px}
+#content-r1[data-kind=crossing] .crossing-lookout:not(:empty){display:block}
+.crossing-lookout[data-side=right]{left:auto;right:8px}
+.crossing-lookout b,.crossing-lookout span{display:block}.crossing-lookout div{display:flex;justify-content:center;min-height:65px}.crossing-lookout img{width:48px;height:72px;object-fit:contain}
+#content-r1[data-kind=crossing] .content-walker{width:100px;height:130px;margin-left:-50px}
+#content-r1[data-kind=tickets] .content-stations button[data-arrived=true]{background:#d5f2c7;border:5px double #143b61;outline:4px solid #ffd344;outline-offset:3px}
+.ticket-arrival{display:none;position:absolute;top:104px;left:50%;transform:translateX(-50%);background:#ffffffed;border:3px solid #1479b8;border-radius:14px;padding:4px 10px;z-index:7;align-items:center;gap:7px;white-space:nowrap}
+.ticket-arrival img{width:64px;height:64px;object-fit:contain}.ticket-arrival span{font-size:15px}
+#content-r1[data-kind=tickets] .ticket-arrival:not(:empty){display:flex}
+#content-r1[data-kind=tickets][data-phase=done] .content-finale{display:none}
+#content-r1[data-kind=tickets][data-phase=done] .content-scene-cue{display:block}
+#content-r1[data-kind=cake][data-phase=done] .content-scene-cue,#content-r1[data-kind=crossing][data-phase=done] .content-scene-cue{display:block;z-index:11;top:10px}
+#content-save{color:#31566f;line-height:1.4;min-height:1.4em}
+@media(min-width:750px),(orientation:landscape){
+ #content-picker{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));grid-template-rows:auto minmax(0,1fr);align-content:center;align-items:center;gap:12px;flex:1}
+ .content-picker-guide{grid-column:1/-1;justify-self:center}
+ #content-picker button{display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;min-height:230px;max-height:430px;width:100%;height:100%;box-sizing:border-box}
+ #content-picker button img{width:110px;height:110px}#content-picker small{margin-top:0}#content-picker button span{font-size:20px}#content-picker button em{font-size:14px}
+}
+@media(max-width:360px) and (orientation:portrait){
+ #content-picker{gap:8px}.content-picker-guide{padding:2px 8px;gap:6px}.content-picker-guide img{width:52px!important;height:52px!important}.content-picker-guide p{font-size:14px}
+ #content-picker button{min-height:106px;max-height:118px;grid-template-columns:58px 1fr;padding:3px;border-width:10px;gap:2px}#content-picker button img{width:56px;height:76px}#content-picker button span{font-size:16px}#content-picker button em,#content-picker small{font-size:11px}#content-picker small{padding:2px 5px}
+ .cake-task{top:82px;font-size:11px;padding:3px;max-width:61%}.content-road-sign{top:121px}.crossing-lookout{top:86px}.crossing-lookout img{height:52px;width:35px}.crossing-lookout div{min-height:52px}.ticket-arrival{top:100px}.ticket-arrival img{width:45px;height:45px}.ticket-arrival span{font-size:12px}
+}
+@media(orientation:landscape) and (max-height:520px){
+ #content-picker{grid-template-rows:50px minmax(0,1fr);gap:6px}.content-picker-guide{height:40px;padding:0 12px;gap:8px}.content-picker-guide img{width:40px!important;height:40px!important}.content-picker-guide p{display:block!important;font-size:12px;line-height:1.2}.content-picker-guide br{display:none}
+ #content-picker button{min-height:130px;padding:4px;gap:1px}#content-picker button img{height:50px;width:68px}#content-picker button span{font-size:14px}#content-picker button em,#content-picker small{font-size:10px;line-height:1.25}#content-picker small{padding:1px 4px}
+ .cake-task{top:62px;font-size:10px;max-width:55%;padding:2px;border-width:2px}.content-road-sign{top:98px;width:46px;font-size:10px}.content-road-sign svg{height:23px}
+ .crossing-lookout{top:58px;font-size:10px;padding:3px}.crossing-lookout div{min-height:30px}.crossing-lookout img{height:35px;width:25px}
+ #content-r1[data-kind=crossing] .content-walker{height:76px;width:65px;margin-left:-32px}.ticket-arrival{top:63px;gap:3px;padding:2px 5px}.ticket-arrival img{height:30px;width:30px}.ticket-arrival span{font-size:10px}
+}
+@media(prefers-reduced-motion:reduce){.crossing-panorama{transition:none}.content-carrier{will-change:auto}}

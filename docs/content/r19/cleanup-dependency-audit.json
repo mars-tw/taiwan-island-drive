@@ -1,0 +1,890 @@
+{
+  "status": "VERIFIED",
+  "referencedDeleted": {},
+  "restoredProtectedInputs": [
+    {
+      "path": "docs/evidence/deep-r1/store/after/ipad-01-home.png",
+      "bytes": 582490,
+      "sha256": "801154a714f91e890cd0e182801754009a6510cccfd79e849f2f101d32acb146",
+      "readers": [
+        "docs/evidence/deep-r1/store-screenshots.json",
+        "docs/evidence/deep-r1/store/evidence-manifest.json"
+      ]
+    },
+    {
+      "path": "docs/evidence/deep-r1/store/after/ipad-landscape-01-home.png",
+      "bytes": 593832,
+      "sha256": "3d55b28636d61ea9266be4b79c844f5679b9f4be61a56f2dcc009cb610e80175",
+      "readers": [
+        "docs/evidence/deep-r1/store-screenshots.json",
+        "docs/evidence/deep-r1/store/evidence-manifest.json"
+      ]
+    },
+    {
+      "path": "docs/evidence/deep-r1/store/after/ipad13-landscape-01-home.png",
+      "bytes": 1055682,
+      "sha256": "b5cafdc86648d6bf93b94b8533839cc4513a8627b4bdc2a886e392a26d58ce93",
+      "readers": [
+        "docs/evidence/deep-r1/store-screenshots.json",
+        "docs/evidence/deep-r1/store/evidence-manifest.json"
+      ]
+    },
+    {
+      "path": "docs/evidence/deep-r1/store/after/laptop-01-home.png",
+      "bytes": 672310,
+      "sha256": "bfabc2b0f3f5dec464374757ecf5c6ef0d8a54499624e79b9472b3dab94aee9c",
+      "readers": [
+        "docs/evidence/deep-r1/store-screenshots.json",
+        "docs/evidence/deep-r1/store/evidence-manifest.json"
+      ]
+    },
+    {
+      "path": "docs/evidence/deep-r1/store/after/large-01-home.png",
+      "bytes": 264908,
+      "sha256": "73e21e256a5d616edf4fd705d43b2440b8d77517a9577a6cbb28bbc5e19f8525",
+      "readers": [
+        "docs/evidence/deep-r1/store-screenshots.json",
+        "docs/evidence/deep-r1/store/evidence-manifest.json"
+      ]
+    },
+    {
+      "path": "docs/evidence/deep-r1/store/after/phone-landscape-01-home.png",
+      "bytes": 313210,
+      "sha256": "017af3605d859d49b6a978a7cfa8686c5098638dabcae456fb75d0e322729e80",
+      "readers": [
+        "docs/evidence/deep-r1/store-screenshots.json",
+        "docs/evidence/deep-r1/store/evidence-manifest.json"
+      ]
+    },
+    {
+      "path": "docs/evidence/deep-r1/store/after/se-01-home.png",
+      "bytes": 142335,
+      "sha256": "9e212a7e710b57f329190161471bf71be058c9adddfdd829c602cdf60203d07d",
+      "readers": [
+        "docs/evidence/deep-r1/store-screenshots.json",
+        "docs/evidence/deep-r1/store/evidence-manifest.json"
+      ]
+    },
+    {
+      "path": "docs/evidence/deep-r1/store/after/se-landscape-01-home.png",
+      "bytes": 192429,
+      "sha256": "afffc690e0c528ba1d06a089f8b2b67d6582e51612062934f9e9403bf54308f4",
+      "readers": [
+        "docs/evidence/deep-r1/store-screenshots.json",
+        "docs/evidence/deep-r1/store/evidence-manifest.json"
+      ]
+    },
+    {
+      "path": "docs/evidence/deep-r1/store/after/short-laptop-01-home.png",
+      "bytes": 673296,
+      "sha256": "e02e4a115ef542d733201981d3f50a187fd63efe94d674012251111406c81b34",
+      "readers": [
+        "docs/evidence/deep-r1/store-screenshots.json",
+        "docs/evidence/deep-r1/store/evidence-manifest.json"
+      ]
+    },
+    {
+      "path": "docs/evidence/deep-r1/store/before/iphone-home-2.11.0.png",
+      "bytes": 1497088,
+      "sha256": "f6efb32a71b62eb42e2148697dd41459967b75afa01c9a837809995284f43d79",
+      "readers": [
+        "docs/evidence/deep-r1/store/evidence-manifest.json"
+      ]
+    },
+    {
+      "path": "docs/evidence/merge/after/390x844-car-complete.png",
+      "bytes": 98452,
+      "sha256": "a199e3379a25071fd5dde9af91f1e6f429156e67943767c900cca9ee57d81275",
+      "readers": [
+        "docs/evidence/merge/evidence-manifest.json",
+        "docs/evidence/merge/merge-evidence-manifest.json"
+      ]
+    },
+    {
+      "path": "docs/evidence/merge/after/390x844-flight-complete.png",
+      "bytes": 75305,
+      "sha256": "4a15e97e7ba9a4468487ae7d18669d18bb12cf4dbd1c4f76ecf3d16f3f530c38",
+      "readers": [
+        "docs/evidence/merge/evidence-manifest.json",
+        "docs/evidence/merge/merge-evidence-manifest.json"
+      ]
+    },
+    {
+      "path": "docs/evidence/merge/after/390x844-train-complete.png",
+      "bytes": 114440,
+      "sha256": "c44fb7e8982532f8c759dafd929538c20286155d9beeb23c58178dbb730f6f16",
+      "readers": [
+        "docs/evidence/merge/evidence-manifest.json",
+        "docs/evidence/merge/merge-evidence-manifest.json"
+      ]
+    },
+    {
+      "path": "docs/evidence/merge/after/844x390-car-complete.png",
+      "bytes": 110097,
+      "sha256": "7c2bbd462e7726bbc3f310e228ac23d370b7f3b877d1ef9902c4db9bf702442e",
+      "readers": [
+        "docs/evidence/merge/evidence-manifest.json",
+        "docs/evidence/merge/merge-evidence-manifest.json"
+      ]
+    },
+    {
+      "path": "docs/evidence/merge/after/844x390-flight-complete.png",
+      "bytes": 64863,
+      "sha256": "a554dc1ddeb7ba9ec812136d543fb58ec21314d8a45fffe6ecd5e3436ab58ede",
+      "readers": [
+        "docs/evidence/merge/evidence-manifest.json",
+        "docs/evidence/merge/merge-evidence-manifest.json"
+      ]
+    },
+    {
+      "path": "docs/evidence/merge/after/844x390-train-complete.png",
+      "bytes": 107584,
+      "sha256": "f1db6f8cc10fde834d9f6114f049b43bf2f2804984c1e5004b6f31aa08f4741e",
+      "readers": [
+        "docs/evidence/merge/evidence-manifest.json",
+        "docs/evidence/merge/merge-evidence-manifest.json"
+      ]
+    },
+    {
+      "path": "docs/evidence/merge/after/ipad-01-home.png",
+      "bytes": 484857,
+      "sha256": "c584c4f3602f7bca1a4160a890c4c888f9d14d72365f75a6cae3632116fc54dd",
+      "readers": [
+        "docs/evidence/merge/evidence-manifest.json",
+        "docs/evidence/merge/merge-evidence-manifest.json"
+      ]
+    },
+    {
+      "path": "docs/evidence/merge/after/ipad-01-mainline.png",
+      "bytes": 572864,
+      "sha256": "178043d6d7071716ec78a6ecf6f750e506216dbece70f532c342cb8d2e8796cb",
+      "readers": [
+        "docs/evidence/merge/evidence-manifest.json",
+        "docs/evidence/merge/merge-evidence-manifest.json"
+      ]
+    },
+    {
+      "path": "docs/evidence/merge/after/ipad-landscape-01-home.png",
+      "bytes": 358910,
+      "sha256": "82893074840b8a8946e5b6dc69fe79d694e99f5fd40e64bc89247d87450b9fde",
+      "readers": [
+        "docs/evidence/merge/evidence-manifest.json",
+        "docs/evidence/merge/merge-evidence-manifest.json"
+      ]
+    },
+    {
+      "path": "docs/evidence/merge/after/ipad-landscape-01-mainline.png",
+      "bytes": 650061,
+      "sha256": "103a57963f354953c0a3c51d7cdb2784c8a444fb926c75a87a1a3f58c56033cf",
+      "readers": [
+        "docs/evidence/merge/evidence-manifest.json",
+        "docs/evidence/merge/merge-evidence-manifest.json"
+      ]
+    },
+    {
+      "path": "docs/evidence/merge/after/ipad13-landscape-01-home.png",
+      "bytes": 809144,
+      "sha256": "ae6060764ecbdfa3a5b33f2347360b18193c73bdb2e315982e46828863dacf79",
+      "readers": [
+        "docs/evidence/merge/evidence-manifest.json",
+        "docs/evidence/merge/merge-evidence-manifest.json"
+      ]
+    },
+    {
+      "path": "docs/evidence/merge/after/ipad13-landscape-01-mainline.png",
+      "bytes": 1131364,
+      "sha256": "1b8e3ccc2c927a7262e0a22d20b7fba6c86365388d335329a0ae3285172d94a2",
+      "readers": [
+        "docs/evidence/merge/evidence-manifest.json",
+        "docs/evidence/merge/merge-evidence-manifest.json"
+      ]
+    },
+    {
+      "path": "docs/evidence/merge/after/laptop-01-home.png",
+      "bytes": 215914,
+      "sha256": "bec0232b53e5a00dec892dd8b5ceb26ec0f6cba0b5c1f234e4bdb2e43b788d79",
+      "readers": [
+        "docs/evidence/merge/evidence-manifest.json",
+        "docs/evidence/merge/merge-evidence-manifest.json"
+      ]
+    },
+    {
+      "path": "docs/evidence/merge/after/laptop-01-mainline.png",
+      "bytes": 756452,
+      "sha256": "54a3de9b804cad6b5a3b50a63b12b6308a7bfa46123245a15da55ac68f71d99e",
+      "readers": [
+        "docs/evidence/merge/evidence-manifest.json",
+        "docs/evidence/merge/merge-evidence-manifest.json"
+      ]
+    },
+    {
+      "path": "docs/evidence/merge/after/large-01-home.png",
+      "bytes": 147169,
+      "sha256": "d581b6e0b973f5712aa7986d93204f92b7d7332a0807771108148dcd2bb345fa",
+      "readers": [
+        "docs/evidence/merge/evidence-manifest.json",
+        "docs/evidence/merge/merge-evidence-manifest.json"
+      ]
+    },
+    {
+      "path": "docs/evidence/merge/after/phone-01-mainline.png",
+      "bytes": 234738,
+      "sha256": "0bb61b9215399613202175552f8777683dcf40b6f8d99401b1a0838e28b9d2b9",
+      "readers": [
+        "docs/evidence/merge/evidence-manifest.json",
+        "docs/evidence/merge/merge-evidence-manifest.json"
+      ]
+    },
+    {
+      "path": "docs/evidence/merge/after/phone-landscape-01-home.png",
+      "bytes": 89227,
+      "sha256": "fefc2ff3c2d0bf3d5be7a3c5717e24cebb2ec698732d8a9d293ad0191b098ffb",
+      "readers": [
+        "docs/evidence/merge/evidence-manifest.json",
+        "docs/evidence/merge/merge-evidence-manifest.json"
+      ]
+    },
+    {
+      "path": "docs/evidence/merge/after/phone-landscape-01-mainline.png",
+      "bytes": 228071,
+      "sha256": "dfed1ef93d81e659e6f0810af042b13909744efbe6db0f94d90528b7fe1db41b",
+      "readers": [
+        "docs/evidence/merge/evidence-manifest.json",
+        "docs/evidence/merge/merge-evidence-manifest.json"
+      ]
+    },
+    {
+      "path": "docs/evidence/merge/after/se-01-home.png",
+      "bytes": 70905,
+      "sha256": "fb399d06df1d77215407ff73b6e801b79e8e6c0c9060a383c4f51fe2310441d7",
+      "readers": [
+        "docs/evidence/merge/evidence-manifest.json",
+        "docs/evidence/merge/merge-evidence-manifest.json"
+      ]
+    },
+    {
+      "path": "docs/evidence/merge/after/se-01-mainline.png",
+      "bytes": 153707,
+      "sha256": "c8eef384ebb6031185a5e2b2752df876b56851c663b25b51b35f36bd37b352be",
+      "readers": [
+        "docs/evidence/merge/evidence-manifest.json",
+        "docs/evidence/merge/merge-evidence-manifest.json"
+      ]
+    },
+    {
+      "path": "docs/evidence/merge/after/se-landscape-01-home.png",
+      "bytes": 53725,
+      "sha256": "049d41f52d08a52d44e7bcb784b0d5eef9b8ef977ad4c96edfdb52868d962b7a",
+      "readers": [
+        "docs/evidence/merge/evidence-manifest.json",
+        "docs/evidence/merge/merge-evidence-manifest.json"
+      ]
+    },
+    {
+      "path": "docs/evidence/merge/after/se-landscape-01-mainline.png",
+      "bytes": 159879,
+      "sha256": "539d28e3fe77118f08a78f5830bcd8962aa8303200007bebfb72836ab2d45e09",
+      "readers": [
+        "docs/evidence/merge/evidence-manifest.json",
+        "docs/evidence/merge/merge-evidence-manifest.json"
+      ]
+    },
+    {
+      "path": "docs/evidence/merge/after/short-laptop-01-home.png",
+      "bytes": 270038,
+      "sha256": "2c20c7b799c94a283482f01d6fa4baa38e5c252ebeb55e6b9a34816f885a1a19",
+      "readers": [
+        "docs/evidence/merge/evidence-manifest.json",
+        "docs/evidence/merge/merge-evidence-manifest.json"
+      ]
+    },
+    {
+      "path": "docs/evidence/merge/after/short-laptop-01-mainline.png",
+      "bytes": 715276,
+      "sha256": "1565cebd7f00c6c920e4783f77121e6810be5dcd44661af4ec328a932cd67232",
+      "readers": [
+        "docs/evidence/merge/evidence-manifest.json",
+        "docs/evidence/merge/merge-evidence-manifest.json"
+      ]
+    },
+    {
+      "path": "docs/evidence/merge/before/1366x600-home.png",
+      "bytes": 346938,
+      "sha256": "cd30f19af3b7c977920384be44fc3051076d0fa64d936c96768e4336cfacbaec",
+      "readers": [
+        "docs/evidence/merge/evidence-manifest.json",
+        "docs/evidence/merge/merge-evidence-manifest.json"
+      ]
+    },
+    {
+      "path": "docs/evidence/merge/before/390x844-home.png",
+      "bytes": 172013,
+      "sha256": "34a493253cc2f7852626678d6a9e949579f458b8a3f7d3e256a84c60aa938900",
+      "readers": [
+        "docs/evidence/merge/evidence-manifest.json",
+        "docs/evidence/merge/merge-evidence-manifest.json"
+      ]
+    },
+    {
+      "path": "docs/evidence/merge/before/844x390-home.png",
+      "bytes": 188646,
+      "sha256": "13c08d1663f05d73276dc9325cd620da68f2773ec753cb21ddb3a346aeff5655",
+      "readers": [
+        "docs/evidence/merge/evidence-manifest.json",
+        "docs/evidence/merge/merge-evidence-manifest.json"
+      ]
+    },
+    {
+      "path": "docs/evidence/r2-mobile/after/390x844-car-complete.png",
+      "bytes": 113589,
+      "sha256": "964226b9ed2c5613654e7a3e17d198b5c50945df4c4f7e05075313257e3225dc",
+      "readers": [
+        "docs/evidence/r2-mobile/evidence-manifest.json"
+      ]
+    },
+    {
+      "path": "docs/evidence/r2-mobile/after/390x844-flight-complete.png",
+      "bytes": 82139,
+      "sha256": "64b7a87b1546b6f067b5bafc7613837c084c3ffe6702aa0adc4bbf9b6194395b",
+      "readers": [
+        "docs/evidence/r2-mobile/evidence-manifest.json"
+      ]
+    },
+    {
+      "path": "docs/evidence/r2-mobile/after/390x844-train-complete.png",
+      "bytes": 119802,
+      "sha256": "72278b3208a6ef0c1d30fc454e534a6cbebd81193316a11c3f46f0f913ca8b6b",
+      "readers": [
+        "docs/evidence/r2-mobile/evidence-manifest.json"
+      ]
+    },
+    {
+      "path": "docs/evidence/r2-mobile/after/844x390-car-complete.png",
+      "bytes": 127869,
+      "sha256": "242ca6f22d8a8e2b5080300c740f2993490f02b09a6075c856dad2a3025d5c90",
+      "readers": [
+        "docs/evidence/r2-mobile/evidence-manifest.json"
+      ]
+    },
+    {
+      "path": "docs/evidence/r2-mobile/after/844x390-flight-complete.png",
+      "bytes": 74187,
+      "sha256": "d44068dbf9d430877b714e775baba999e309e39ff3d51b7cd6d89cb806148486",
+      "readers": [
+        "docs/evidence/r2-mobile/evidence-manifest.json"
+      ]
+    },
+    {
+      "path": "docs/evidence/r2-mobile/after/844x390-train-complete.png",
+      "bytes": 117297,
+      "sha256": "473be5dab626c554e6e25d29c4f34892aac4f40e8a2a7aba076b3aa7c1c78565",
+      "readers": [
+        "docs/evidence/r2-mobile/evidence-manifest.json"
+      ]
+    },
+    {
+      "path": "docs/evidence/r2-mobile/after/landscape-car-passport.png",
+      "bytes": 71040,
+      "sha256": "866e7619157faeb411462bf1fc5daae9c55c9933b2a78a0577c96620636732e3",
+      "readers": [
+        "docs/evidence/r2-mobile/evidence-manifest.json"
+      ]
+    },
+    {
+      "path": "docs/evidence/r2-mobile/after/landscape-car-play.png",
+      "bytes": 192751,
+      "sha256": "8fa61cce2ed38717c9398bb394c432cbe1d597756f053806d2729a447f8f1b03",
+      "readers": [
+        "docs/evidence/r2-mobile/evidence-manifest.json"
+      ]
+    },
+    {
+      "path": "docs/evidence/r2-mobile/after/landscape-car.png",
+      "bytes": 143807,
+      "sha256": "6047e8c349d3558d43d70784db7e7c9d95ee185d47adfc69d52f54a290dd9ad0",
+      "readers": [
+        "docs/evidence/r2-mobile/evidence-manifest.json"
+      ]
+    },
+    {
+      "path": "docs/evidence/r2-mobile/after/landscape-flight-passport.png",
+      "bytes": 71919,
+      "sha256": "60191d01f71c66ea52e50cf0eaf80d22148ce815e15a8960b9e9e6d483e45d26",
+      "readers": [
+        "docs/evidence/r2-mobile/evidence-manifest.json"
+      ]
+    },
+    {
+      "path": "docs/evidence/r2-mobile/after/landscape-flight-play.png",
+      "bytes": 55634,
+      "sha256": "55c50a2d42c160ff84b390658fac88a08780d242fa552144ef7dfd9345e89d9e",
+      "readers": [
+        "docs/evidence/r2-mobile/evidence-manifest.json"
+      ]
+    },
+    {
+      "path": "docs/evidence/r2-mobile/after/landscape-flight.png",
+      "bytes": 164155,
+      "sha256": "ee826243798c74a1cf2fd9569e7e65f9582c836f55665ffcf4bd44c801f7ffb4",
+      "readers": [
+        "docs/evidence/r2-mobile/evidence-manifest.json"
+      ]
+    },
+    {
+      "path": "docs/evidence/r2-mobile/after/landscape-home-passport.png",
+      "bytes": 82539,
+      "sha256": "7bb3b3b594b1b15454490fc16385f15bfc1cd65ed5a25c0320b435dd8c73bc7a",
+      "readers": [
+        "docs/evidence/r2-mobile/evidence-manifest.json"
+      ]
+    },
+    {
+      "path": "docs/evidence/r2-mobile/after/landscape-home.png",
+      "bytes": 261017,
+      "sha256": "0a91ca4213c3fbea9ad6ca8fabeb246dfb72716e97edd55b2e33ba304540220c",
+      "readers": [
+        "docs/evidence/r2-mobile/evidence-manifest.json"
+      ]
+    },
+    {
+      "path": "docs/evidence/r2-mobile/after/landscape-train-passport.png",
+      "bytes": 75951,
+      "sha256": "4f1d550ccb49aeb5dcf543d7b201324dbadb9a224e6a9a36c75fc0dca80031ee",
+      "readers": [
+        "docs/evidence/r2-mobile/evidence-manifest.json"
+      ]
+    },
+    {
+      "path": "docs/evidence/r2-mobile/after/landscape-train-play.png",
+      "bytes": 123962,
+      "sha256": "2b074dd16c23671168dfba0d6ffb20fbf2adea6acc36bccd18ff5934d2f5db45",
+      "readers": [
+        "docs/evidence/r2-mobile/evidence-manifest.json"
+      ]
+    },
+    {
+      "path": "docs/evidence/r2-mobile/after/landscape-train.png",
+      "bytes": 130684,
+      "sha256": "9f72854e9ac702405e7fec038f04814f0f6de48ee119a77ef7e18f6a6798a874",
+      "readers": [
+        "docs/evidence/r2-mobile/evidence-manifest.json"
+      ]
+    },
+    {
+      "path": "docs/evidence/r2-mobile/after/laptop-car-passport.png",
+      "bytes": 140145,
+      "sha256": "82a1de1c67df18c96003501dc89fdc660a5bc271fb2f8ca84c2633e6030a115b",
+      "readers": [
+        "docs/evidence/r2-mobile/evidence-manifest.json"
+      ]
+    },
+    {
+      "path": "docs/evidence/r2-mobile/after/laptop-car-play.png",
+      "bytes": 399749,
+      "sha256": "7d390fc3a93931249ab8ebed0fe2c23618a7c579e89494c424fa00f4cba3eff8",
+      "readers": [
+        "docs/evidence/r2-mobile/evidence-manifest.json"
+      ]
+    },
+    {
+      "path": "docs/evidence/r2-mobile/after/laptop-car.png",
+      "bytes": 415894,
+      "sha256": "f0e5f37bed09365f8b546abe32e0c7903ca6d1d8d111d9f1ec717ae7805d68f3",
+      "readers": [
+        "docs/evidence/r2-mobile/evidence-manifest.json"
+      ]
+    },
+    {
+      "path": "docs/evidence/r2-mobile/after/laptop-flight-passport.png",
+      "bytes": 161718,
+      "sha256": "6b5938f4ce9eb31e4c57c7cb8fa7eb5c28ced0a3f7c05c87274496c812be4ff9",
+      "readers": [
+        "docs/evidence/r2-mobile/evidence-manifest.json"
+      ]
+    },
+    {
+      "path": "docs/evidence/r2-mobile/after/laptop-flight-play.png",
+      "bytes": 86586,
+      "sha256": "affc1fdad5ad37b98d0d303449d1f8e3b5eae53d6f5235cd496ab91deb09a248",
+      "readers": [
+        "docs/evidence/r2-mobile/evidence-manifest.json"
+      ]
+    },
+    {
+      "path": "docs/evidence/r2-mobile/after/laptop-flight.png",
+      "bytes": 377295,
+      "sha256": "4e854c87c7623b4fbc4d78ef11a98308bb62b9bd264f6597b350ff066f7f3c41",
+      "readers": [
+        "docs/evidence/r2-mobile/evidence-manifest.json"
+      ]
+    },
+    {
+      "path": "docs/evidence/r2-mobile/after/laptop-home-passport.png",
+      "bytes": 181621,
+      "sha256": "693932a1445b366f902d6843fa5471737b3c2a803a78e7e538494403ca40012c",
+      "readers": [
+        "docs/evidence/r2-mobile/evidence-manifest.json"
+      ]
+    },
+    {
+      "path": "docs/evidence/r2-mobile/after/laptop-home.png",
+      "bytes": 359043,
+      "sha256": "18d2d5a18d9a7804cf320dfb8ecb192db56ab7a9463ab231e5b91cad99bf2476",
+      "readers": [
+        "docs/evidence/r2-mobile/evidence-manifest.json"
+      ]
+    },
+    {
+      "path": "docs/evidence/r2-mobile/after/laptop-train-passport.png",
+      "bytes": 135561,
+      "sha256": "ea08ae17a043554d454dcc32066014ab4299552c7dc4da07f4473f7ee2e396b7",
+      "readers": [
+        "docs/evidence/r2-mobile/evidence-manifest.json"
+      ]
+    },
+    {
+      "path": "docs/evidence/r2-mobile/after/laptop-train-play.png",
+      "bytes": 248681,
+      "sha256": "69c0740fdddc56206e96693db81f888ef6908e01dfcbbbaace2b383cc3dab4fc",
+      "readers": [
+        "docs/evidence/r2-mobile/evidence-manifest.json"
+      ]
+    },
+    {
+      "path": "docs/evidence/r2-mobile/after/laptop-train.png",
+      "bytes": 251436,
+      "sha256": "68281ce55a6f8e8d49c01a9936d7f92bfb20c02a04fe60c8328218869418952f",
+      "readers": [
+        "docs/evidence/r2-mobile/evidence-manifest.json"
+      ]
+    },
+    {
+      "path": "docs/evidence/r2-mobile/after/portrait-car-passport.png",
+      "bytes": 78981,
+      "sha256": "df866d3f17471ce8b3bcc431f3ca8c1f01b13ccbf690c7f4cc706adad10977c2",
+      "readers": [
+        "docs/evidence/r2-mobile/evidence-manifest.json"
+      ]
+    },
+    {
+      "path": "docs/evidence/r2-mobile/after/portrait-car-play.png",
+      "bytes": 211576,
+      "sha256": "32d79ab6502d1bc111cd524e3fa9213d82211d13450c67048ace9eb7d35a71eb",
+      "readers": [
+        "docs/evidence/r2-mobile/evidence-manifest.json"
+      ]
+    },
+    {
+      "path": "docs/evidence/r2-mobile/after/portrait-car.png",
+      "bytes": 172237,
+      "sha256": "0b301eb94e3d698f57d4755fe4577807846addd31eb8486db42e1d14ec36af31",
+      "readers": [
+        "docs/evidence/r2-mobile/evidence-manifest.json"
+      ]
+    },
+    {
+      "path": "docs/evidence/r2-mobile/after/portrait-flight-passport.png",
+      "bytes": 79247,
+      "sha256": "e24dc3d10bd0d6ed9fc527dc5cd98a06667f5840508bc6b70baed32e03ffef5e",
+      "readers": [
+        "docs/evidence/r2-mobile/evidence-manifest.json"
+      ]
+    },
+    {
+      "path": "docs/evidence/r2-mobile/after/portrait-flight-play.png",
+      "bytes": 62554,
+      "sha256": "483593c467287bfaeab3e5f3c61558ec907d91fac9b0ea5569463bf0145162d5",
+      "readers": [
+        "docs/evidence/r2-mobile/evidence-manifest.json"
+      ]
+    },
+    {
+      "path": "docs/evidence/r2-mobile/after/portrait-flight.png",
+      "bytes": 132881,
+      "sha256": "ec31286e32ca3309a0024f17dbffb27d996d038d786f144cd763a9cb085b3a88",
+      "readers": [
+        "docs/evidence/r2-mobile/evidence-manifest.json"
+      ]
+    },
+    {
+      "path": "docs/evidence/r2-mobile/after/portrait-home-passport.png",
+      "bytes": 87173,
+      "sha256": "6f8edc937ea8004652b44d252f112bf752314d9e41797b72b5ef016d1331a2c1",
+      "readers": [
+        "docs/evidence/r2-mobile/evidence-manifest.json"
+      ]
+    },
+    {
+      "path": "docs/evidence/r2-mobile/after/portrait-home.png",
+      "bytes": 194348,
+      "sha256": "79f4d1166002e6c718de7bdfa7baacb46f2aca55da7bb5d767c051c8ffbce0c4",
+      "readers": [
+        "docs/evidence/r2-mobile/evidence-manifest.json"
+      ]
+    },
+    {
+      "path": "docs/evidence/r2-mobile/after/portrait-train-passport.png",
+      "bytes": 89266,
+      "sha256": "0c78d9e6834fb6c8c8b520c4f5b8e8fb75395d158e4f8318c57d726ffe521827",
+      "readers": [
+        "docs/evidence/r2-mobile/evidence-manifest.json"
+      ]
+    },
+    {
+      "path": "docs/evidence/r2-mobile/after/portrait-train-play.png",
+      "bytes": 171796,
+      "sha256": "1968986106c2b06c556357ef41562b9c7c80ab41fd5a10dec5b5832b097ee03b",
+      "readers": [
+        "docs/evidence/r2-mobile/evidence-manifest.json"
+      ]
+    },
+    {
+      "path": "docs/evidence/r2-mobile/after/portrait-train.png",
+      "bytes": 173368,
+      "sha256": "19060f56004c800288e54a93606e5833cbae1ec66c0f62d8752198f6d240b63b",
+      "readers": [
+        "docs/evidence/r2-mobile/evidence-manifest.json"
+      ]
+    },
+    {
+      "path": "docs/evidence/r2-mobile/before/landscape-car.png",
+      "bytes": 148499,
+      "sha256": "403641353923db679c1bc9c5b9d3709e9fe7f7c1133c396e65fc3039ca0066bd",
+      "readers": [
+        "docs/evidence/r2-mobile/evidence-manifest.json"
+      ]
+    },
+    {
+      "path": "docs/evidence/r2-mobile/before/landscape-flight.png",
+      "bytes": 177094,
+      "sha256": "37bc325eb72f06a43873b6ac5d204c596226fb30622d26ce1345812b26511a54",
+      "readers": [
+        "docs/evidence/r2-mobile/evidence-manifest.json"
+      ]
+    },
+    {
+      "path": "docs/evidence/r2-mobile/before/landscape-home.png",
+      "bytes": 284678,
+      "sha256": "8cdbde4910c8ab33acf2455a441e50a5a2abbc598d43236bbfa29d041a19f6e1",
+      "readers": [
+        "docs/evidence/r2-mobile/evidence-manifest.json"
+      ]
+    },
+    {
+      "path": "docs/evidence/r2-mobile/before/landscape-train.png",
+      "bytes": 124026,
+      "sha256": "c463286b7b8136ed67f7c05a06404f083049611da1efde9ce8895ef87e4b1f3e",
+      "readers": [
+        "docs/evidence/r2-mobile/evidence-manifest.json"
+      ]
+    },
+    {
+      "path": "docs/evidence/r2-mobile/before/laptop-car.png",
+      "bytes": 497999,
+      "sha256": "606f030563b9d6afac24025956faed898575e41a65b1e1c724697362ff112418",
+      "readers": [
+        "docs/evidence/r2-mobile/evidence-manifest.json"
+      ]
+    },
+    {
+      "path": "docs/evidence/r2-mobile/before/laptop-flight.png",
+      "bytes": 410830,
+      "sha256": "7e177b0cc297d264eba27782c3130b5e1fe55adca9c965ae3dca84bcfe689666",
+      "readers": [
+        "docs/evidence/r2-mobile/evidence-manifest.json"
+      ]
+    },
+    {
+      "path": "docs/evidence/r2-mobile/before/laptop-home.png",
+      "bytes": 362472,
+      "sha256": "b7669b8001897fd448acc38e1c3a3b9bb51812dfd84a3217dc5e6978402a7869",
+      "readers": [
+        "docs/evidence/r2-mobile/evidence-manifest.json"
+      ]
+    },
+    {
+      "path": "docs/evidence/r2-mobile/before/laptop-train.png",
+      "bytes": 280754,
+      "sha256": "0fe0d4afe86aedb2baefbc4adef7b1fb159219b4905e12da58b00b806862fb1f",
+      "readers": [
+        "docs/evidence/r2-mobile/evidence-manifest.json"
+      ]
+    },
+    {
+      "path": "docs/evidence/r2-mobile/before/portrait-car.png",
+      "bytes": 194214,
+      "sha256": "f700d6afba44a9e3901944ef0bbc2b63c2db282770f3f32a9c60ba9caf3e6250",
+      "readers": [
+        "docs/evidence/r2-mobile/evidence-manifest.json"
+      ]
+    },
+    {
+      "path": "docs/evidence/r2-mobile/before/portrait-flight.png",
+      "bytes": 118423,
+      "sha256": "5c283decc4f4a6d1555ef64c1daaab97cb2b38fbe8f08a3c51fd2ff719aa9ff0",
+      "readers": [
+        "docs/evidence/r2-mobile/evidence-manifest.json"
+      ]
+    },
+    {
+      "path": "docs/evidence/r2-mobile/before/portrait-home.png",
+      "bytes": 208114,
+      "sha256": "964f41a9366897b649a807ae1d5e63df508025eb09828ad7342cd76c65bf75f9",
+      "readers": [
+        "docs/evidence/r2-mobile/evidence-manifest.json"
+      ]
+    },
+    {
+      "path": "docs/evidence/r2-mobile/before/portrait-train.png",
+      "bytes": 155332,
+      "sha256": "618a6896fb91d23c6116f269244d078f9efec53f540b82d5eca50de268c061c3",
+      "readers": [
+        "docs/evidence/r2-mobile/evidence-manifest.json"
+      ]
+    },
+    {
+      "path": "docs/evidence/r3-store/after/390x844-car-complete.png",
+      "bytes": 92364,
+      "sha256": "efba421d93ecce7145fc57a3095945b75e7907bf838713ff382b173f26c32c98",
+      "readers": [
+        "docs/evidence/r3-store/evidence-manifest.json"
+      ]
+    },
+    {
+      "path": "docs/evidence/r3-store/after/390x844-flight-complete.png",
+      "bytes": 72473,
+      "sha256": "8463df2840f94cfed65261ef862b734b8372ddaf0cdc224642db246412426f6e",
+      "readers": [
+        "docs/evidence/r3-store/evidence-manifest.json"
+      ]
+    },
+    {
+      "path": "docs/evidence/r3-store/after/390x844-train-complete.png",
+      "bytes": 115158,
+      "sha256": "691a675857f40a8a1cc58803c992c5c838bd879a39e12bf567fe70a57ac43de3",
+      "readers": [
+        "docs/evidence/r3-store/evidence-manifest.json"
+      ]
+    },
+    {
+      "path": "docs/evidence/r3-store/after/844x390-car-complete.png",
+      "bytes": 108034,
+      "sha256": "95f69f430db122c92045ee86b20c91ea4c61dd02adefbb4bff7857fc37253792",
+      "readers": [
+        "docs/evidence/r3-store/evidence-manifest.json"
+      ]
+    },
+    {
+      "path": "docs/evidence/r3-store/after/844x390-flight-complete.png",
+      "bytes": 59951,
+      "sha256": "99ed4f93880473c0f7721679e63e5c9004c94b324451e8107692854742ebd4de",
+      "readers": [
+        "docs/evidence/r3-store/evidence-manifest.json"
+      ]
+    },
+    {
+      "path": "docs/evidence/r3-store/after/844x390-train-complete.png",
+      "bytes": 107125,
+      "sha256": "e9a0e34733da8e8b1e435c4c8dffaec32122901ba47ee5d8311f23c6c7594e30",
+      "readers": [
+        "docs/evidence/r3-store/evidence-manifest.json"
+      ]
+    },
+    {
+      "path": "docs/evidence/r3-store/after/ipad-01-home.png",
+      "bytes": 401038,
+      "sha256": "c21eb6d3f37a9b716856bbe3ee5cbdd8b6cf54b315ba015ae46f3710fa63e101",
+      "readers": [
+        "docs/evidence/r3-store/evidence-manifest.json"
+      ]
+    },
+    {
+      "path": "docs/evidence/r3-store/after/ipad-landscape-01-home.png",
+      "bytes": 459978,
+      "sha256": "e1b28aa23a9357638baefd3d710aa65fc042856866df635ce6e59cc52d5f6e05",
+      "readers": [
+        "docs/evidence/r3-store/evidence-manifest.json"
+      ]
+    },
+    {
+      "path": "docs/evidence/r3-store/after/ipad13-landscape-01-home.png",
+      "bytes": 608927,
+      "sha256": "11678e0ae71d90200f5efedf1ad7a5832517f220b08f800b7858257b39d59fa5",
+      "readers": [
+        "docs/evidence/r3-store/evidence-manifest.json"
+      ]
+    },
+    {
+      "path": "docs/evidence/r3-store/after/laptop-01-home.png",
+      "bytes": 362322,
+      "sha256": "b0caffbe790b01b82edbc92b6ae429cf2ed91beac897f6e45890afb77b445df8",
+      "readers": [
+        "docs/evidence/r3-store/evidence-manifest.json"
+      ]
+    },
+    {
+      "path": "docs/evidence/r3-store/after/large-01-home.png",
+      "bytes": 219432,
+      "sha256": "31fb61ea847c62f84f1f8d0a2d09a83f7a63f7b9bdc9523685f8c9aed46a754b",
+      "readers": [
+        "docs/evidence/r3-store/evidence-manifest.json"
+      ]
+    },
+    {
+      "path": "docs/evidence/r3-store/after/phone-landscape-01-home.png",
+      "bytes": 197945,
+      "sha256": "9f3a0cb397c934c12c0568ba67271bd1f8272bdab279611d5b7061c6c9fa7bc0",
+      "readers": [
+        "docs/evidence/r3-store/evidence-manifest.json"
+      ]
+    },
+    {
+      "path": "docs/evidence/r3-store/after/se-01-home.png",
+      "bytes": 99518,
+      "sha256": "13def108733972388e6718111e53ff1521bd49b7839e08edf35ace8204897a90",
+      "readers": [
+        "docs/evidence/r3-store/evidence-manifest.json"
+      ]
+    },
+    {
+      "path": "docs/evidence/r3-store/after/se-landscape-01-home.png",
+      "bytes": 61654,
+      "sha256": "f94ef20f5519d14a224589096c6966a0913a6def60651dd7b6b5cca47c3366f9",
+      "readers": [
+        "docs/evidence/r3-store/evidence-manifest.json"
+      ]
+    },
+    {
+      "path": "docs/evidence/r3-store/after/short-laptop-01-home.png",
+      "bytes": 394019,
+      "sha256": "d87977c353713a29247b856e9ddde1e88b6d567ae7bc4d87ab1ed879637fa896",
+      "readers": [
+        "docs/evidence/r3-store/evidence-manifest.json"
+      ]
+    },
+    {
+      "path": "docs/evidence/r3-store/before/1366x600-home.png",
+      "bytes": 345234,
+      "sha256": "3953e0fc01dd60b87be81c97cfc15e80989fa817ea29bcba2484dc225f28a102",
+      "readers": [
+        "docs/evidence/r3-store/evidence-manifest.json"
+      ]
+    },
+    {
+      "path": "docs/evidence/r3-store/before/390x844-home.png",
+      "bytes": 188414,
+      "sha256": "d5d7733f21ea419f0dc311126872008362938dc87d28f3c18ce4e48e6a6fb1a0",
+      "readers": [
+        "docs/evidence/r3-store/evidence-manifest.json"
+      ]
+    },
+    {
+      "path": "docs/evidence/r3-store/before/844x390-home.png",
+      "bytes": 241877,
+      "sha256": "e538e9fe4077eba2cd6daa84b0df42e78ed650678f952445318cbdbc0461c8e3",
+      "readers": [
+        "docs/evidence/r3-store/evidence-manifest.json"
+      ]
+    }
+  ]
+}

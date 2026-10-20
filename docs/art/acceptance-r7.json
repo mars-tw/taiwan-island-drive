@@ -1,0 +1,385 @@
+{
+  "status": "VERIFIED",
+  "rows": [
+    {
+      "name": "phone",
+      "status": "VERIFIED",
+      "navigation": [
+        {
+          "label": "回學院",
+          "href": "http://127.0.0.1:5286/",
+          "x": 0,
+          "y": 0.5,
+          "w": 72.890625,
+          "h": 60
+        },
+        {
+          "label": "汽車",
+          "href": "http://127.0.0.1:5286/car/",
+          "x": 72.890625,
+          "y": 0.5,
+          "w": 72.890625,
+          "h": 60
+        },
+        {
+          "label": "火車",
+          "href": "http://127.0.0.1:5286/train/",
+          "x": 145.78125,
+          "y": 0.5,
+          "w": 72.90625,
+          "h": 60
+        },
+        {
+          "label": "飛機",
+          "href": "http://127.0.0.1:5286/flight/",
+          "x": 218.6875,
+          "y": 0.5,
+          "w": 72.890625,
+          "h": 60
+        }
+      ],
+      "train": {
+        "x": 14,
+        "y": 200.21875,
+        "width": 213.578125,
+        "height": 288
+      },
+      "coach": {
+        "width": 62.05442063978754,
+        "height": 62.207863777428265,
+        "visible": true,
+        "seatAttached": true,
+        "pose": "reward"
+      },
+      "roundedModel": {
+        "actualTriangles": 26687,
+        "expectedTriangles": 26687,
+        "sha256": "472e3592fd31377318213a2b60c413b8987b9eb068dd038f5f61bd9a5268777b"
+      },
+      "starHierarchy": [
+        {
+          "current": true,
+          "scale": 0.28195719823054877,
+          "label": false,
+          "kind": "star"
+        },
+        {
+          "current": false,
+          "scale": 0.158756162084548,
+          "label": false,
+          "kind": "star"
+        },
+        {
+          "current": false,
+          "scale": 0.24531822993598157,
+          "label": false,
+          "kind": "star"
+        },
+        {
+          "current": false,
+          "scale": 0.33210298176592945,
+          "label": false,
+          "kind": "star"
+        },
+        {
+          "current": false,
+          "scale": 0.41750440499690344,
+          "label": false,
+          "kind": "star"
+        },
+        {
+          "current": false,
+          "scale": 0.502324478131998,
+          "label": false,
+          "kind": "star"
+        }
+      ],
+      "reward": "Natural collision event after UI auto-throttle, no state mutation; 420ms into the coach reward pose",
+      "secondaryEquipment": "Available in existing pause"
+    },
+    {
+      "name": "iphone-store",
+      "status": "VERIFIED",
+      "navigation": [
+        {
+          "label": "回學院",
+          "href": "http://127.0.0.1:5286/",
+          "x": 0,
+          "y": 0.5,
+          "w": 80.359375,
+          "h": 60
+        },
+        {
+          "label": "汽車",
+          "href": "http://127.0.0.1:5286/car/",
+          "x": 80.359375,
+          "y": 0.5,
+          "w": 80.375,
+          "h": 60
+        },
+        {
+          "label": "火車",
+          "href": "http://127.0.0.1:5286/train/",
+          "x": 160.734375,
+          "y": 0.5,
+          "w": 80.375,
+          "h": 60
+        },
+        {
+          "label": "飛機",
+          "href": "http://127.0.0.1:5286/flight/",
+          "x": 241.109375,
+          "y": 0.5,
+          "w": 80.375,
+          "h": 60
+        }
+      ],
+      "train": {
+        "x": 14,
+        "y": 244.21875,
+        "width": 237.171875,
+        "height": 288
+      },
+      "coach": {
+        "width": 68.3591132979248,
+        "height": 68.52374112941403,
+        "visible": true,
+        "seatAttached": true,
+        "pose": "reward"
+      },
+      "roundedModel": {
+        "actualTriangles": 26687,
+        "expectedTriangles": 26687,
+        "sha256": "472e3592fd31377318213a2b60c413b8987b9eb068dd038f5f61bd9a5268777b"
+      },
+      "starHierarchy": [
+        {
+          "current": true,
+          "scale": 0.24069153850886799,
+          "label": false,
+          "kind": "star"
+        },
+        {
+          "current": false,
+          "scale": 0.13503624601024236,
+          "label": false,
+          "kind": "star"
+        },
+        {
+          "current": false,
+          "scale": 0.20844158863958226,
+          "label": false,
+          "kind": "star"
+        },
+        {
+          "current": false,
+          "scale": 0.2820350609386514,
+          "label": false,
+          "kind": "star"
+        },
+        {
+          "current": false,
+          "scale": 0.3544577308438182,
+          "label": false,
+          "kind": "star"
+        },
+        {
+          "current": false,
+          "scale": 0.42638723941458095,
+          "label": false,
+          "kind": "star"
+        }
+      ],
+      "reward": "Natural collision event after UI auto-throttle, no state mutation; 420ms into the coach reward pose",
+      "secondaryEquipment": "Available in existing pause"
+    },
+    {
+      "name": "ipad-store",
+      "status": "VERIFIED",
+      "navigation": [
+        {
+          "label": "回學院",
+          "href": "http://127.0.0.1:5286/",
+          "x": 0,
+          "y": 0.5,
+          "w": 192.890625,
+          "h": 60
+        },
+        {
+          "label": "汽車",
+          "href": "http://127.0.0.1:5286/car/",
+          "x": 192.890625,
+          "y": 0.5,
+          "w": 192.890625,
+          "h": 60
+        },
+        {
+          "label": "火車",
+          "href": "http://127.0.0.1:5286/train/",
+          "x": 385.78125,
+          "y": 0.5,
+          "w": 192.90625,
+          "h": 60
+        },
+        {
+          "label": "飛機",
+          "href": "http://127.0.0.1:5286/flight/",
+          "x": 578.6875,
+          "y": 0.5,
+          "w": 192.890625,
+          "h": 60
+        }
+      ],
+      "train": {
+        "x": 66,
+        "y": 464.21875,
+        "width": 531,
+        "height": 288
+      },
+      "coach": {
+        "width": 112.38486950028363,
+        "height": 112.65911064410928,
+        "visible": true,
+        "seatAttached": true,
+        "pose": "reward"
+      },
+      "roundedModel": {
+        "actualTriangles": 26687,
+        "expectedTriangles": 26687,
+        "sha256": "472e3592fd31377318213a2b60c413b8987b9eb068dd038f5f61bd9a5268777b"
+      },
+      "starHierarchy": [
+        {
+          "current": true,
+          "scale": 0.13983504845246159,
+          "label": false,
+          "kind": "star"
+        },
+        {
+          "current": false,
+          "scale": 0.078692369850272,
+          "label": false,
+          "kind": "star"
+        },
+        {
+          "current": false,
+          "scale": 0.12157999041868607,
+          "label": false,
+          "kind": "star"
+        },
+        {
+          "current": false,
+          "scale": 0.1645783113681565,
+          "label": false,
+          "kind": "star"
+        },
+        {
+          "current": false,
+          "scale": 0.20689122047393377,
+          "label": false,
+          "kind": "star"
+        },
+        {
+          "current": false,
+          "scale": 0.24891622085591641,
+          "label": false,
+          "kind": "star"
+        }
+      ],
+      "reward": "Natural collision event after UI auto-throttle, no state mutation; 420ms into the coach reward pose",
+      "secondaryEquipment": "Available in existing pause"
+    }
+  ],
+  "errors": [],
+  "shots": [
+    {
+      "path": "docs/art/evidence/r7/phone-celebration-settled.png",
+      "width": 390,
+      "height": 844,
+      "sha256": "6f248c6bdf2dd35ee3ab86754ca79d26c4398c6a67569c3572db6b41021e9b9e",
+      "method": "Unmodified headless Chromium. Actual UI and elapsed time only.",
+      "native": false
+    },
+    {
+      "path": "docs/art/evidence/r7/phone-02-car-reward.png",
+      "width": 390,
+      "height": 844,
+      "sha256": "eb271f926c7e5cb443bb3c22c417bb9cee874ca8cbb82bab6154485e7de42823",
+      "method": "Unmodified headless Chromium. Actual UI and elapsed time only.",
+      "native": false
+    },
+    {
+      "path": "docs/art/evidence/r7/phone-03-flight-target.png",
+      "width": 390,
+      "height": 844,
+      "sha256": "4d53dbda773a8235f0e2e01df7d1e053d0652c623f66e0054e801e8803236df0",
+      "method": "Unmodified headless Chromium. Actual UI and elapsed time only.",
+      "native": false
+    },
+    {
+      "path": "docs/store/screenshots/art-r7/iphone-store-05-split-action.png",
+      "width": 1290,
+      "height": 2796,
+      "sha256": "466f919e3d3ca3c388ea1f690851060640e7330dab53ed5c324b0d722b71d4dc",
+      "method": "Unmodified headless Chromium. Actual UI and elapsed time only.",
+      "native": false
+    },
+    {
+      "path": "docs/art/evidence/r7/iphone-store-celebration-settled.png",
+      "width": 1290,
+      "height": 2796,
+      "sha256": "76f254fb9c9659977e257ee1f4649f3e3c6db00c6de69736fc99baa0a8355f4e",
+      "method": "Unmodified headless Chromium. Actual UI and elapsed time only.",
+      "native": false
+    },
+    {
+      "path": "docs/store/screenshots/art-r7/iphone-store-02-car-reward.png",
+      "width": 1290,
+      "height": 2796,
+      "sha256": "8a15de1c0fe945c21fdaedc7a4d74635dcfaa58d08216ba6610194c9a0877b3c",
+      "method": "Unmodified headless Chromium. Actual UI and elapsed time only.",
+      "native": false
+    },
+    {
+      "path": "docs/store/screenshots/art-r7/iphone-store-03-flight-target.png",
+      "width": 1290,
+      "height": 2796,
+      "sha256": "ec11e6d5411e304ef5ad3f8f40a571a58c3359958db787dc82ee96a5bb4386a7",
+      "method": "Unmodified headless Chromium. Actual UI and elapsed time only.",
+      "native": false
+    },
+    {
+      "path": "docs/store/screenshots/art-r7/ipad-store-05-split-action.png",
+      "width": 2064,
+      "height": 2752,
+      "sha256": "ccfdf3eb516e40f7ab51d3f7b7df76edbf98d3d5f5c0fd37a07009f95da91bfa",
+      "method": "Unmodified headless Chromium. Actual UI and elapsed time only.",
+      "native": false
+    },
+    {
+      "path": "docs/art/evidence/r7/ipad-store-celebration-settled.png",
+      "width": 2064,
+      "height": 2752,
+      "sha256": "8e2e0fc7c669d76fdceaa4236f2e3efa37fd12a680705306112cb9b4c935aa66",
+      "method": "Unmodified headless Chromium. Actual UI and elapsed time only.",
+      "native": false
+    },
+    {
+      "path": "docs/store/screenshots/art-r7/ipad-store-02-car-reward.png",
+      "width": 2064,
+      "height": 2752,
+      "sha256": "3189d5bf86ff01d6efa58adc55cbfb1accf8b830ec40491d5fa44a24862462dd",
+      "method": "Unmodified headless Chromium. Actual UI and elapsed time only.",
+      "native": false
+    },
+    {
+      "path": "docs/store/screenshots/art-r7/ipad-store-03-flight-target.png",
+      "width": 2064,
+      "height": 2752,
+      "sha256": "09d595b5f4c041266ceee4720029a9f37fb0c349aa9d2b9436586496867ca635",
+      "method": "Unmodified headless Chromium. Actual UI and elapsed time only.",
+      "native": false
+    }
+  ],
+  "limits": "No independent score or child perception study; not native screenshots."
+}

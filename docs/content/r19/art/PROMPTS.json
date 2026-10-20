@@ -1,0 +1,12 @@
+{
+  "tool": "image_gen.imagegen",
+  "model_slug": null,
+  "style_prefix": "Island Traffic Academy sunny Taiwan coastal storybook, chunky ink-navy outlines, rounded toy proportions, warm upper-left light, saturated sea blue sunflower yellow coral orange, gentle paper texture, clean silhouette readable at 64px.",
+  "prompt": "Island Traffic Academy sunny Taiwan coastal storybook, chunky ink-navy outlines, rounded toy proportions, warm upper-left light, saturated sea blue sunflower yellow coral orange, gentle paper texture, clean silhouette readable at 64px. Use case: precise-object-edit. Edit only the far left yellow road sign black chevron from right to left, matching the near right sign. Preserve all other existing painting and composition. No new objects, text or characters.",
+  "newGenerationCalls": 1,
+  "newRuntimeAssets": 1,
+  "original": "docs/content/r19/art/cake-bends-original.png",
+  "runtime": "public/art/content-r19/cake-bends.webp",
+  "input": "public/art/content-r3/cake-bends.webp",
+  "conversion": "sharp WebP quality92 only; no programmatic painting"
+}

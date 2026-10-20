@@ -1,0 +1,11 @@
+python : ......
+位於 線路:2 字元:98
++ ... EXITCODE }; python -m unittest discover -s tests/native-ios -p 'test_ ...
++                 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (......:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+
+----------------------------------------------------------------------
+Ran 6 tests in 0.110s
+
+OK

@@ -2,8 +2,10 @@ import { FEET,KNOTS,G } from './physics.js';
 import { RUNWAY,MAP_EXTENT } from './config.js';
 import { NAVIGATION_POINTS,getFlightTargets,getFlightTarget } from './flight-plans.js';
 export const WAYPOINTS=NAVIGATION_POINTS;
-export function newMission(mode,map='coast'){
- const targets=getFlightTargets(mode,map);return {mode,map,phase:0,stage:'ready',passed:0,total:targets.length||(mode==='free'?0:1),progress:0,targets,complete:false,retry:false,message:'',stableTime:0,score:0,events:[],eventSequence:0,activeParcel:null,dropCount:0,autoDrop:false,requestDrop:false};
+export function newMission(mode,map='coast',options={}){
+ let targets=getFlightTargets(mode,map);
+ if(Number.isInteger(options.targets)&&options.targets>0)targets=targets.slice(0,options.targets);
+ return {mode,map,phase:0,stage:'ready',passed:0,total:targets.length||(mode==='free'?0:1),progress:0,targets,complete:false,retry:false,message:'',stableTime:0,score:0,events:[],eventSequence:0,activeParcel:null,dropCount:0,autoDrop:false,requestDrop:false};
 }
 function event(m,type,label,s){m.events.push({id:++m.eventSequence,type,label,time:s.time});if(m.events.length>8)m.events.shift();}
 function finish(m,text){m.complete=true;m.passed=m.total;m.progress=1;m.score=100;m.stage='complete';m.message=text;}
@@ -46,10 +48,10 @@ export function updateMission(m,s,dt,{progressPaused=false}={}){
    else m.stableTime=0;
   }
   m.progress=m.total?m.passed/m.total:0;
-  if(m.passed===m.total)finish(m,m.mode==='treasure'?'六份寶藏都找到了！':m.mode==='tour'?'三個景點都看到了。這趟旅程完成了！':'金色圓圈都飛過了！');
+  if(m.passed===m.total)finish(m,m.mode==='treasure'?`${m.total} 份寶藏都找到了！`:m.mode==='tour'?`${m.total} 個景點都看到了！`:'金色圓圈都飛過了！');
  }else if(m.mode==='mail'){
   m.stage=m.activeParcel?'dropping':'delivering';const target=getFlightTarget(m);m.message=m.activeParcel?'郵件慢慢落下來了。':target?'飛向'+target.label+'，把郵件送過去。':'郵件都送到了。';mailDelivery(m,s);m.phase=m.passed;m.progress=m.passed/m.total;
-  if(m.passed===m.total)finish(m,'兩份郵件都送到了！');
+  if(m.passed===m.total)finish(m,`${m.total} 份郵件都送到了！`);
  }else if(m.mode==='landing'){
   m.stage=s.grounded?'stopping':'landing';m.message=s.grounded?'慢慢停下來，這次不用一直按住。':'對準跑道，我們慢慢下降。';m.progress=s.grounded?.85:Math.max(0,Math.min(.8,.8-s.position.y/120));
   if(s.grounded&&s.touchdown){m.phase=1;if(s.touchdown.onRunway&&s.airspeed<1.5&&s.throttle<.1){finish(m,'降落完成！飛機安全停好了。');m.score=Math.max(60,100-Math.round(Math.abs(s.touchdown.verticalSpeed)*8));}}

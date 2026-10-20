@@ -13,3 +13,39 @@
 /* The shared navigation occupies layout space above this embedded edition. */
 body.academy-game[data-game="train"] #app{min-height:calc(100dvh - var(--academy-nav-height,46px))}
 @media(max-width:650px){body.academy-game[data-game="train"] .scene{height:38dvh;min-height:260px;max-height:400px}}
+
+/* R1 好玩＋美觀：下一步按鈕更醒目、其他按鈕退後、到站評等與按得到的頁尾。 */
+.child-console>button{transition:opacity .2s,filter .2s,transform .2s}
+.child-console .coach-next{outline:5px solid #fff3a6;outline-offset:3px;transform:scale(1.04);z-index:1;animation:train-next-glow 1.3s ease-in-out infinite}
+.child-console .coach-dim{opacity:.55;filter:saturate(.8)}
+@keyframes train-next-glow{0%,100%{box-shadow:0 4px 0 #102c34,0 0 0 0 rgba(255,243,166,.75)}50%{box-shadow:0 4px 0 #102c34,0 0 0 14px rgba(255,243,166,0)}}
+.child-console>#child-prepare,.child-console>#child-go{background:#5fd6a6}
+.child-console>#child-stop,.child-console>#child-help-stop{background:#ffcf4a}
+.child-console>#child-doors{background:#8fd3ff}
+.app-footer button,.app-footer a{min-height:44px;display:inline-flex;align-items:center;padding:0 6px}
+.result-stars{display:flex;justify-content:center;gap:8px;margin:4px 0 10px}
+.result-stars i{font-style:normal;font-size:44px;line-height:1;color:#d9dfd8}
+.result-stars i.on{color:#ffc61a;text-shadow:0 3px 0 #d99a00;animation:train-star-pop .5s cubic-bezier(.2,1.6,.4,1) backwards}
+.result-stars i.on:nth-child(2){animation-delay:.18s}.result-stars i.on:nth-child(3){animation-delay:.36s}
+@keyframes train-star-pop{0%{transform:scale(0) rotate(-40deg)}100%{transform:scale(1) rotate(0)}}
+@media(prefers-reduced-motion:reduce){.child-console .coach-next{animation:none}}
+.app-footer{padding-top:0;padding-bottom:0;min-height:44px}
+body.academy-game[data-game="train"] .scene{height:calc(100dvh - 416px)}
+.view-tools button,#view{min-height:44px}
+@media(max-width:650px){body.academy-game[data-game="train"] .scene{height:38dvh}.masthead .icon-button{min-width:44px}}
+@media(max-height:500px) and (min-width:651px){
+ body.academy-game[data-game="train"] .masthead{height:48px}
+ body.academy-game[data-game="train"] .scene{height:calc(100dvh - 247px);min-height:120px}
+ body.academy-game[data-game="train"] .coach{min-height:36px;padding-top:4px;padding-bottom:4px}
+ body.academy-game[data-game="train"] .child-console{padding:8px 20px 0;gap:6px 10px}
+ body.academy-game[data-game="train"] .child-console>button{min-height:60px}
+ body.academy-game[data-game="train"] .child-console .child-note{height:44px}
+ body.academy-game[data-game="train"] .child-note button{min-height:44px}
+}
+@media(max-height:500px) and (min-width:651px){
+ body.academy-game[data-game="train"] .view-footer{display:none}
+ body.academy-game[data-game="train"] .speed-instrument{transform:scale(.72);transform-origin:top left}
+ body.academy-game[data-game="train"] .next-station,body.academy-game[data-game="train"] .signal-instrument{transform:scale(.72);transform-origin:top right}
+}
+@media(max-height:500px){.result-stars{margin:0 0 4px}.result-stars i{font-size:28px}}
+@media(max-height:500px){#result-dialog{padding:12px 22px}#result-dialog h2{font-size:19px;margin:2px 0 4px}#result-dialog .result-score{padding:4px 14px;margin:0 0 4px;min-height:0}#result-dialog .result-score strong{font-size:32px}#result-dialog .stop-result{padding:4px 0}#result-dialog #result-feedback{font-size:12px;margin:4px 0 8px;line-height:1.5}#result-dialog .result-actions button{min-height:44px}}

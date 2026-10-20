@@ -1,0 +1,32 @@
+{
+  "status": "VERIFIED",
+  "method": "sRGB linear relative luminance; visible text color pairs, not screenshot-wide OCR",
+  "old_coral_text_ratio": 3.818,
+  "old_report_ratio_corrected": true,
+  "rows": [
+    {
+      "foreground": "#143b61",
+      "background": "#ffffff",
+      "ratio": 11.488,
+      "status": "VERIFIED"
+    },
+    {
+      "foreground": "#0c2742",
+      "background": "#f46b27",
+      "ratio": 5.041,
+      "status": "VERIFIED"
+    },
+    {
+      "foreground": "#143b61",
+      "background": "#ffd344",
+      "ratio": 8.016,
+      "status": "VERIFIED"
+    },
+    {
+      "foreground": "#143b61",
+      "background": "#e4f5ff",
+      "ratio": 10.287,
+      "status": "VERIFIED"
+    }
+  ]
+}

@@ -1,0 +1,29 @@
+/* Adult simulation data remains available only in parent mode. */
+.train-child-dashboard{display:contents}
+body.content-child-driving[data-game=train] .train-child-dashboard{display:flex!important;position:absolute;top:72px!important;left:8px!important;right:8px!important;align-items:center;justify-content:space-between;gap:6px;padding:6px!important;border:3px solid #1479b8!important;border-radius:12px!important;background:white!important;color:#143b61!important;z-index:2}
+body.content-child-driving[data-game=train] .train-child-dashboard :is(.train-child-meters,.next-station,.signal-instrument){position:static!important;inset:auto!important;transform:none!important;border:0!important;border-radius:0!important;box-shadow:none!important;background:transparent!important;padding:0!important;margin:0!important;width:auto!important;color:#143b61!important;font-size:12px!important;min-width:0!important}
+body.content-child-driving[data-game=train] .train-child-dashboard .train-child-meters{display:flex!important;gap:3px!important;font-size:12px!important}
+body.content-child-driving[data-game=train] .train-child-dashboard .next-station{max-width:100px!important;text-align:center!important;min-height:0!important;height:auto!important}
+body.content-child-driving[data-game=train] .train-child-dashboard .next-station:before{display:none!important}
+body.content-child-driving[data-game=train] #toast{display:none!important}
+body.content-child-driving[data-game=train] .train-child-dashboard .next-station b{font-size:14px!important;color:#143b61!important;margin:0!important}
+body.content-child-driving[data-game=train] .train-child-dashboard :is(small,.route-progress){display:none!important}
+body.content-child-driving[data-game=train] .train-child-dashboard .signal-instrument{display:flex!important;gap:4px!important;max-width:95px!important}
+body.content-child-driving[data-game=train] .train-child-dashboard .signal-instrument b{font-size:12px!important;color:#143b61!important}
+body.content-child-driving[data-game=train] :is(.view-tools,.view-footer){display:none!important}
+body.content-child-driving[data-game=train] .coach .train-cab-coach{display:flex!important;position:absolute!important;left:3px!important;top:0!important;bottom:0!important;width:70px!important;height:100%!important}
+body.content-child-driving[data-game=train] .coach .train-cab-coach img{height:100%;object-fit:contain}
+body.content-child-driving[data-game=train] .coach .train-cab-coach span{display:none!important}
+body.content-child-driving[data-game=train] .coach{position:relative!important;padding-left:80px!important;min-height:70px!important}
+body.content-child-driving[data-game=train] .coach-label{display:none!important}
+body.content-child-driving[data-game=train] .coach>p{font-size:16px!important}
+@media(max-height:520px) and (orientation:landscape){body.content-child-driving[data-game=train] .train-child-dashboard{top:8px!important;left:5px!important;right:5px!important}body.content-child-driving[data-game=train] .train-child-dashboard .train-child-meters strong{display:none}body.content-child-driving[data-game=train] .coach{min-height:50px!important;padding-left:58px!important}body.content-child-driving[data-game=train] .coach .train-cab-coach{width:50px!important}body.content-child-driving[data-game=train] .coach>p{font-size:13px!important}}
+body.content-child-driving[data-game=train] :is(.speed-instrument,.next-station>span,#signal-distance,#elapsed,.result-score,.stop-result span){display:none!important}
+.train-child-meters,.train-cab-coach{display:none}
+body.content-child-driving .train-child-meters{position:absolute;left:12px;top:72px;display:flex;flex-direction:column;gap:6px;padding:8px;background:#fff;border:3px solid #1479b8;border-radius:12px;color:#143b61;font-weight:900;font-size:14px}
+.train-child-meters>span{display:flex;gap:5px}.train-child-meters i{width:12px;height:17px;background:#e4f6ff;border:2px solid #1479b8;border-radius:4px}.train-child-meters i.lit{background:#ffd344}
+body.content-child-driving .train-cab-coach{display:flex;position:absolute;right:5px;bottom:24px;flex-direction:column;align-items:center;width:clamp(90px,24vw,190px);font-size:12px;font-weight:900;color:#143b61}
+.train-cab-coach img{width:100%;height:auto}.train-cab-coach span{padding:3px;background:white;border:2px solid #1479b8;border-radius:6px}
+body.content-child-driving[data-game=car] :is(.result-stats,#clock,#clock-label,#distance-label,.speed-number,.speed-unit,.boost-label){display:none!important}
+body.content-child-driving[data-game=car] [data-mode=timeattack]{display:none!important}
+@media(max-height:520px) and (orientation:landscape){body.content-child-driving .train-child-meters{left:6px;top:50px;padding:4px;font-size:11px;gap:2px}.train-child-meters i{height:10px;width:8px}body.content-child-driving .train-cab-coach{width:85px;bottom:3px}body.content-child-driving .train-cab-coach span{display:none}}

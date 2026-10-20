@@ -1,0 +1,323 @@
+{
+  "schemaVersion": 2,
+  "license": "MIT",
+  "coordinates": {
+    "up": "+Y",
+    "forward": "+Z",
+    "units": "metres"
+  },
+  "modelCount": 12,
+  "textureCount": 3,
+  "groups": [
+    {
+      "id": "car",
+      "sourceFiles": [
+        "blender/island-drive.blend",
+        "blender/build_assets.py"
+      ],
+      "textures": [
+        {
+          "file": "car-detail-atlas.png",
+          "publicPath": "textures/car-detail-atlas.png",
+          "repositoryPath": "public/textures/car-detail-atlas.png",
+          "source": "built-in image_gen",
+          "grid": [
+            4,
+            4
+          ],
+          "tileMap": "docs/realism/car/tile-map.json",
+          "sha256": "dd17dfcd5ce2f222277cca265e8a2d04876d4b6c556d3d98be869505bff7281a"
+        }
+      ],
+      "models": [
+        {
+          "id": "coupe",
+          "file": "coupe.glb",
+          "publicPath": "models/coupe.glb",
+          "repositoryPath": "public/models/coupe.glb",
+          "bytes": 4124368,
+          "sha256": "da0705986b4ee8df8e8b4d4ca4396309adddb7148ffac51faf85114cd2ec5cda",
+          "meshes": 36,
+          "nodes": 41,
+          "embeddedImages": 1,
+          "source": "blender/island-drive.blend",
+          "generator": "blender/build_assets.py",
+          "drawCalls": 36,
+          "triangles": 22862,
+          "texturedMaterials": 18
+        },
+        {
+          "id": "rally",
+          "file": "rally.glb",
+          "publicPath": "models/rally.glb",
+          "repositoryPath": "public/models/rally.glb",
+          "bytes": 4356020,
+          "sha256": "94b5363596cf20a8308ea52057dcca222fc113ef71c9b8c50a3caf808c08bed5",
+          "meshes": 36,
+          "nodes": 41,
+          "embeddedImages": 1,
+          "source": "blender/island-drive.blend",
+          "generator": "blender/build_assets.py",
+          "drawCalls": 36,
+          "triangles": 26986,
+          "texturedMaterials": 18
+        },
+        {
+          "id": "suv",
+          "file": "suv.glb",
+          "publicPath": "models/suv.glb",
+          "repositoryPath": "public/models/suv.glb",
+          "bytes": 4199488,
+          "sha256": "e9cb8e12cb6eb62d51cf21c690314f7686a26a4be0c5bffe3d8382bb106953e0",
+          "meshes": 36,
+          "nodes": 41,
+          "embeddedImages": 1,
+          "source": "blender/island-drive.blend",
+          "generator": "blender/build_assets.py",
+          "drawCalls": 36,
+          "triangles": 23898,
+          "texturedMaterials": 18
+        },
+        {
+          "id": "van",
+          "file": "van.glb",
+          "publicPath": "models/van.glb",
+          "repositoryPath": "public/models/van.glb",
+          "bytes": 4186796,
+          "sha256": "8f91a4d54de79ececa852660afd92f3cb8f93291eeabedbffb208bb079aa6b82",
+          "meshes": 37,
+          "nodes": 42,
+          "embeddedImages": 1,
+          "source": "blender/island-drive.blend",
+          "generator": "blender/build_assets.py",
+          "drawCalls": 37,
+          "triangles": 24210,
+          "texturedMaterials": 18
+        },
+        {
+          "id": "palm",
+          "file": "palm.glb",
+          "publicPath": "models/palm.glb",
+          "repositoryPath": "public/models/palm.glb",
+          "bytes": 18928,
+          "sha256": "40f32b49a71ed3d1ae63d3fbf6e1131162c7d570c7f6c23efe4368c81004d22a",
+          "meshes": 2,
+          "nodes": 3,
+          "embeddedImages": 0,
+          "source": "blender/island-drive.blend",
+          "generator": "blender/build_assets.py",
+          "drawCalls": 2,
+          "triangles": 228,
+          "texturedMaterials": 0
+        },
+        {
+          "id": "pine",
+          "file": "pine.glb",
+          "publicPath": "models/pine.glb",
+          "repositoryPath": "public/models/pine.glb",
+          "bytes": 9296,
+          "sha256": "bf2f1ac4f458dd726e4be7fd5c4f7ff8917c933905748360869f5ad9dbd664fb",
+          "meshes": 3,
+          "nodes": 4,
+          "embeddedImages": 0,
+          "source": "blender/island-drive.blend",
+          "generator": "blender/build_assets.py",
+          "drawCalls": 3,
+          "triangles": 92,
+          "texturedMaterials": 0
+        },
+        {
+          "id": "city_tower",
+          "file": "city_tower.glb",
+          "publicPath": "models/city_tower.glb",
+          "repositoryPath": "public/models/city_tower.glb",
+          "bytes": 222532,
+          "sha256": "598f8fd9ad1e5b958d68e40be372f935c05fe8d3e203d16327c027c670f97e10",
+          "meshes": 4,
+          "nodes": 5,
+          "embeddedImages": 0,
+          "source": "blender/island-drive.blend",
+          "generator": "blender/build_assets.py",
+          "drawCalls": 4,
+          "triangles": 3124,
+          "texturedMaterials": 0
+        },
+        {
+          "id": "road_sign",
+          "file": "road_sign.glb",
+          "publicPath": "models/road_sign.glb",
+          "repositoryPath": "public/models/road_sign.glb",
+          "bytes": 119124,
+          "sha256": "4a0d54d692f00fb19a942b048cdce1cfa06bed6fa3142098deb8cadedf17a899",
+          "meshes": 3,
+          "nodes": 4,
+          "embeddedImages": 0,
+          "source": "blender/island-drive.blend",
+          "generator": "blender/build_assets.py",
+          "drawCalls": 3,
+          "triangles": 2792,
+          "texturedMaterials": 0
+        }
+      ]
+    },
+    {
+      "id": "train",
+      "sourceFiles": [
+        "blender/train/models.blend",
+        "blender/train/build_assets.py"
+      ],
+      "textures": [
+        {
+          "file": "train-detail-atlas.png",
+          "publicPath": "textures/train-detail-atlas.png",
+          "repositoryPath": "public/textures/train-detail-atlas.png",
+          "source": "built-in image_gen",
+          "grid": [
+            4,
+            4
+          ],
+          "tileMap": "docs/realism/train/tile-map.json",
+          "sha256": "0284e44b73b0fb3809fe46d3afe8db2d546b5e821dbac1b4935cfae18851e15b"
+        }
+      ],
+      "models": [
+        {
+          "id": "train",
+          "file": "train.glb",
+          "publicPath": "models/train.glb",
+          "repositoryPath": "public/models/train.glb",
+          "bytes": 5636312,
+          "sha256": "fac8ae7404353bd640d25d1aff0c705f46c860e5de097a6d79a819420bf6c284",
+          "meshes": 18,
+          "nodes": 21,
+          "embeddedImages": 1,
+          "source": "blender/train/models.blend",
+          "generator": "blender/train/build_assets.py",
+          "drawCalls": 18,
+          "triangles": 73008,
+          "texturedMaterials": 16
+        },
+        {
+          "id": "train-cab",
+          "file": "train-cab.glb",
+          "publicPath": "models/train-cab.glb",
+          "repositoryPath": "public/models/train-cab.glb",
+          "bytes": 3069012,
+          "sha256": "d508d7af683e610caf0235c78a198f7e3923d6b39e050ddd384425a6fb4b0517",
+          "meshes": 15,
+          "nodes": 18,
+          "embeddedImages": 1,
+          "source": "blender/train/models.blend",
+          "generator": "blender/train/build_assets.py",
+          "drawCalls": 15,
+          "triangles": 8386,
+          "texturedMaterials": 8
+        }
+      ]
+    },
+    {
+      "id": "flight",
+      "sourceFiles": [
+        "blender/flight/models.blend",
+        "blender/flight/build_assets.py"
+      ],
+      "textures": [
+        {
+          "file": "flight-detail-atlas.png",
+          "publicPath": "textures/flight-detail-atlas.png",
+          "repositoryPath": "public/textures/flight-detail-atlas.png",
+          "source": "built-in image_gen",
+          "grid": [
+            4,
+            4
+          ],
+          "tileMap": "docs/realism/flight/tile-map.json",
+          "sha256": "3da59811320b72f19fbc9159603b328079897d788f02089dfa420effaa6d442b"
+        }
+      ],
+      "models": [
+        {
+          "id": "aircraft",
+          "file": "aircraft.glb",
+          "publicPath": "models/aircraft.glb",
+          "repositoryPath": "public/models/aircraft.glb",
+          "bytes": 4164940,
+          "sha256": "c3a6beb9d21776da5471ee6bc1beb637d2062f605f700408470736ddb4474064",
+          "meshes": 25,
+          "nodes": 28,
+          "embeddedImages": 1,
+          "source": "blender/flight/models.blend",
+          "generator": "blender/flight/build_assets.py",
+          "drawCalls": 28,
+          "triangles": 49870,
+          "texturedMaterials": 16
+        },
+        {
+          "id": "aircraft-cab",
+          "file": "aircraft-cab.glb",
+          "publicPath": "models/aircraft-cab.glb",
+          "repositoryPath": "public/models/aircraft-cab.glb",
+          "bytes": 3180796,
+          "sha256": "207a647298d08b9b3e6ad09859f36d64079fec6e5dcd02b336a39b7f8bbecc21",
+          "meshes": 15,
+          "nodes": 18,
+          "embeddedImages": 1,
+          "source": "blender/flight/models.blend",
+          "generator": "blender/flight/build_assets.py",
+          "drawCalls": 15,
+          "triangles": 13636,
+          "texturedMaterials": 9
+        }
+      ]
+    }
+  ],
+  "textures": [
+    {
+      "id": "car",
+      "file": "public/textures/car-detail-atlas.png",
+      "publicPath": "textures/car-detail-atlas.png",
+      "repositoryPath": "public/textures/car-detail-atlas.png",
+      "source": "built-in image_gen",
+      "grid": [
+        4,
+        4
+      ],
+      "tileMap": "docs/realism/car/tile-map.json",
+      "sha256": "dd17dfcd5ce2f222277cca265e8a2d04876d4b6c556d3d98be869505bff7281a",
+      "mapping": "UV 4x4 per-face atlas"
+    },
+    {
+      "id": "train",
+      "file": "public/textures/train-detail-atlas.png",
+      "publicPath": "textures/train-detail-atlas.png",
+      "repositoryPath": "public/textures/train-detail-atlas.png",
+      "source": "built-in image_gen",
+      "grid": [
+        4,
+        4
+      ],
+      "tileMap": "docs/realism/train/tile-map.json",
+      "sha256": "0284e44b73b0fb3809fe46d3afe8db2d546b5e821dbac1b4935cfae18851e15b",
+      "mapping": "UV 4x4 per-face atlas"
+    },
+    {
+      "id": "flight",
+      "file": "public/textures/flight-detail-atlas.png",
+      "publicPath": "textures/flight-detail-atlas.png",
+      "repositoryPath": "public/textures/flight-detail-atlas.png",
+      "source": "built-in image_gen",
+      "grid": [
+        4,
+        4
+      ],
+      "tileMap": "docs/realism/flight/tile-map.json",
+      "sha256": "3da59811320b72f19fbc9159603b328079897d788f02089dfa420effaa6d442b",
+      "mapping": "UV 4x4 per-face atlas"
+    }
+  ],
+  "visualVersion": "2.3.0",
+  "historicalTextures": [
+    "textures/train.png",
+    "textures/aircraft.png"
+  ]
+}

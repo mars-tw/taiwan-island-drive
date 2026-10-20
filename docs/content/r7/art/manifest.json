@@ -1,0 +1,131 @@
+{
+  "status": "VERIFIED",
+  "tool": "image_gen.imagegen",
+  "model_slug": null,
+  "generationCalls": 2,
+  "newRuntimeImages": 8,
+  "newCharacterPoses": 4,
+  "processing": "Crop atlas cells, trim transparent margin, proportional resize; character frames share 350px body height and foot baseline in 420x400 alpha canvas; no repainting",
+  "assets": [
+    {
+      "path": "public/art/content-r7/cake-base.png",
+      "width": 400,
+      "height": 264,
+      "hasAlpha": true,
+      "sha256": "125e8dce5834f8ed75a48969af3c4e3b24b969df15b7fff937041442f192b6ff",
+      "original": "docs/content/r7/art/cake-parts-original.png",
+      "sourceSha256": "4afefc87b15029708f5cbb7bb6676cb4233536234d1e6caf12c9384d20b5af3f",
+      "crop": {
+        "left": 0,
+        "top": 0,
+        "width": 813,
+        "height": 561
+      }
+    },
+    {
+      "path": "public/art/content-r7/cake-middle.png",
+      "width": 400,
+      "height": 322,
+      "hasAlpha": true,
+      "sha256": "8e16ea25b91aeb15769a16cbdd6680ca868ca5c36c3329ee437bdcce31e3a2f1",
+      "original": "docs/content/r7/art/cake-parts-original.png",
+      "sourceSha256": "4afefc87b15029708f5cbb7bb6676cb4233536234d1e6caf12c9384d20b5af3f",
+      "crop": {
+        "left": 813,
+        "top": 0,
+        "width": 589,
+        "height": 561
+      }
+    },
+    {
+      "path": "public/art/content-r7/cake-top.png",
+      "width": 364,
+      "height": 400,
+      "hasAlpha": true,
+      "sha256": "99a156e487fc331a713e9f639ffddac3498cccd1dc5d3ac1b67f2215a1779884",
+      "original": "docs/content/r7/art/cake-parts-original.png",
+      "sourceSha256": "4afefc87b15029708f5cbb7bb6676cb4233536234d1e6caf12c9384d20b5af3f",
+      "crop": {
+        "left": 0,
+        "top": 561,
+        "width": 813,
+        "height": 561
+      }
+    },
+    {
+      "path": "public/art/content-r7/cake-pick.png",
+      "width": 254,
+      "height": 400,
+      "hasAlpha": true,
+      "sha256": "0a91a7b88740839f262a3591896f55ac854d1e2480010a4e5238130df64cea9b",
+      "original": "docs/content/r7/art/cake-parts-original.png",
+      "sourceSha256": "4afefc87b15029708f5cbb7bb6676cb4233536234d1e6caf12c9384d20b5af3f",
+      "crop": {
+        "left": 813,
+        "top": 561,
+        "width": 589,
+        "height": 561
+      }
+    },
+    {
+      "path": "public/art/content-r7/child-0.png",
+      "width": 420,
+      "height": 400,
+      "hasAlpha": true,
+      "sha256": "d8e94d9b1214968bec494ccfe7473200b55ae9190dbc97d1af55225d68f7c008",
+      "original": "docs/content/r7/art/walking-pairs-original.png",
+      "sourceSha256": "3e6dd6c8751f4cf0e97eee7ab261bc0efe80602ed6d8c8b6ede7bef0fa97944e",
+      "crop": {
+        "left": 0,
+        "top": 0,
+        "width": 671,
+        "height": 627
+      }
+    },
+    {
+      "path": "public/art/content-r7/child-1.png",
+      "width": 420,
+      "height": 400,
+      "hasAlpha": true,
+      "sha256": "7bca61934f4ba2ad4aca0bf2c5e3677b492824bb392433e4a591824acc656daf",
+      "original": "docs/content/r7/art/walking-pairs-original.png",
+      "sourceSha256": "3e6dd6c8751f4cf0e97eee7ab261bc0efe80602ed6d8c8b6ede7bef0fa97944e",
+      "crop": {
+        "left": 671,
+        "top": 0,
+        "width": 583,
+        "height": 627
+      }
+    },
+    {
+      "path": "public/art/content-r7/grandma-0.png",
+      "width": 420,
+      "height": 400,
+      "hasAlpha": true,
+      "sha256": "d9f0021fbb6a630ff2915a2eba51135b7a4cd3988e28917c16c71ec1976df369",
+      "original": "docs/content/r7/art/walking-pairs-original.png",
+      "sourceSha256": "3e6dd6c8751f4cf0e97eee7ab261bc0efe80602ed6d8c8b6ede7bef0fa97944e",
+      "crop": {
+        "left": 0,
+        "top": 627,
+        "width": 671,
+        "height": 627
+      }
+    },
+    {
+      "path": "public/art/content-r7/grandma-1.png",
+      "width": 420,
+      "height": 400,
+      "hasAlpha": true,
+      "sha256": "ed41208ca86ecfd9241af832623d16a004851d518b38a076be99004ab4534cb9",
+      "original": "docs/content/r7/art/walking-pairs-original.png",
+      "sourceSha256": "3e6dd6c8751f4cf0e97eee7ab261bc0efe80602ed6d8c8b6ede7bef0fa97944e",
+      "crop": {
+        "left": 671,
+        "top": 627,
+        "width": 583,
+        "height": 627
+      }
+    }
+  ]
+}

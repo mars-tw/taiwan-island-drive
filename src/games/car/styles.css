@@ -29,3 +29,67 @@
 @media(max-width:900px){.tilt-toolbar{top:120px;right:20px}}
 @media(max-width:600px){.tilt-toolbar{top:112px;right:16px;gap:6px}.tilt-toolbar .hud-button{width:50px;height:50px}}
 @media(max-height:520px) and (orientation:landscape){.tilt-toolbar{top:96px;right:18px;gap:6px}.tilt-toolbar .hud-button{width:48px;height:48px}.tilt-toolbar span{font-size:8px}}
+
+/* R1 好玩＋美觀：幼兒取向的明亮按鈕、星星 HUD 與結算評等。 */
+body[data-game=car]{--lime:#ffd23f;--star:#ffc61a}
+body[data-game=car] .title-outline{color:#ff8a1f;-webkit-text-stroke:0;text-shadow:0 3px 0 #fff3c4}
+body[data-game=car] .icon-button{min-width:44px;min-height:44px}
+body[data-game=car] .source-button{min-height:44px}
+body[data-game=car] .mode-selector button{min-height:44px;font-size:13px;font-weight:700}
+body[data-game=car] .paint-options{gap:0!important}
+body[data-game=car] .paint-dot{width:44px!important;height:44px!important;border:0;border-radius:50%;background:radial-gradient(circle,var(--paint) 0 11px,#fff 11.5px 13.5px,rgba(23,54,59,.18) 14px 14.5px,transparent 15px)}
+body[data-game=car] .paint-dot.selected{background:radial-gradient(circle,var(--paint) 0 13px,#fff 13.5px 16px,#17363b 16.5px 18px,transparent 18.5px)}
+body[data-game=car] .paint-dot.selected:after{display:none}
+body[data-game=car] .start-button{background:linear-gradient(#ffdd55,#ffc21a);color:#4a2f00;box-shadow:0 5px 0 #d99a00,0 10px 22px rgba(217,154,0,.32);border-radius:16px;font-size:18px;letter-spacing:1px;transition:transform .12s}
+body[data-game=car] .start-button:not(:disabled){animation:car-start-bob 1.6s ease-in-out infinite}
+body[data-game=car] .start-button:active{transform:translateY(4px);box-shadow:0 1px 0 #d99a00}
+@keyframes car-start-bob{0%,100%{box-shadow:0 5px 0 #d99a00,0 10px 22px rgba(217,154,0,.32),0 0 0 0 rgba(255,198,26,.55)}50%{box-shadow:0 5px 0 #d99a00,0 10px 22px rgba(217,154,0,.32),0 0 0 10px rgba(255,198,26,0)}}
+body[data-game=car] .map-card.selected{border-color:#ff8a1f;box-shadow:0 0 0 3px rgba(255,138,31,.25)}
+body[data-game=car] .vehicle-choice.selected{border-color:#ff8a1f;box-shadow:0 0 0 2px rgba(255,138,31,.22)}
+.hud-stars{display:flex;align-items:center;gap:6px;margin:0 auto;padding:6px 16px 6px 10px;border-radius:999px;background:rgba(255,248,214,.94);border:3px solid var(--star,#ffc61a);color:#5a3b00;box-shadow:0 5px 0 rgba(120,70,0,.2);font-weight:900;align-self:flex-start}
+.hud-stars b{font-size:26px;line-height:1}.hud-stars span{font-size:28px;line-height:1;font-family:'Barlow Condensed',sans-serif}.hud-stars small{font-size:15px;opacity:.7}
+.hud-stars.bump{animation:hud-star-bump .45s cubic-bezier(.2,1.6,.4,1)}
+@keyframes hud-star-bump{0%{transform:scale(1)}40%{transform:scale(1.28)}100%{transform:scale(1)}}
+.finish-stars{display:flex;flex-direction:column;align-items:center;gap:6px;margin:-10px 0 18px}
+.finish-stars .rating{display:flex;gap:6px}.finish-stars .rating i{font-style:normal;font-size:40px;line-height:1;color:#d9dfd8;text-shadow:0 3px 0 rgba(0,0,0,.08)}
+.finish-stars .rating i.on{color:#ffc61a;text-shadow:0 3px 0 #d99a00;animation:finish-star-pop .5s cubic-bezier(.2,1.6,.4,1) backwards}
+.finish-stars .rating i.on:nth-child(2){animation-delay:.18s}.finish-stars .rating i.on:nth-child(3){animation-delay:.36s}
+.finish-stars .haul{font-size:14px;color:#5a3b00;font-weight:700}.finish-stars .haul b{font-size:20px}
+@keyframes finish-star-pop{0%{transform:scale(0) rotate(-40deg)}100%{transform:scale(1) rotate(0)}}
+@media(max-width:600px){.hud-top{flex-wrap:wrap;gap:12px}.hud-stars{order:3;margin:0;padding:4px 12px 4px 8px}.hud-stars b{font-size:20px}.hud-stars span{font-size:22px}}
+@media(max-height:520px) and (orientation:landscape){
+ body[data-game=car] .vehicle-panel{width:300px;padding:10px 12px}
+ body[data-game=car] .paint-options{position:static;margin:2px 0 0}
+ body[data-game=car] .paint-dot{width:44px!important;height:44px!important}
+ body[data-game=car] .vehicle-choices{grid-template-columns:repeat(4,1fr);margin-top:4px}
+ body[data-game=car] .vehicle-choice{min-height:44px;padding:2px;justify-content:center}
+ body[data-game=car] .vehicle-choice span{display:none}
+ body[data-game=car] .vehicle-stats{display:none}
+ body[data-game=car] .mode-selector button{min-height:44px;font-size:11px;padding:6px 10px}
+ body[data-game=car] .start-button{min-height:44px;font-size:14px}
+ .hud-stars{padding:3px 10px 3px 7px;border-width:2px}.hud-stars b{font-size:17px}.hud-stars span{font-size:19px}.hud-stars small{font-size:11px}
+ .finish-stars{margin:-6px 0 8px}.finish-stars .rating i{font-size:28px}
+}
+body[data-game=car] .vehicle-stats{display:none}
+body[data-game=car] .paint-dot{flex-shrink:0}
+@media(max-height:520px) and (orientation:landscape){
+ body[data-game=car] .intro h1{font-size:26px;margin:8px 0 6px;line-height:1.2}
+ body[data-game=car] .intro h1 br{display:none}
+ body[data-game=car] .intro-copy{font-size:11px;margin:0 0 6px}
+ body[data-game=car] .intro-copy br{display:none}
+ body[data-game=car] .mode-selector{top:104px}
+}
+body[data-game=car] .brand{min-height:44px}
+body[data-game=car] .hud-button{min-width:44px;min-height:44px}
+@media(max-height:520px) and (orientation:landscape){
+ body[data-game=car] .result-card{display:grid;grid-template-columns:1fr 1fr;column-gap:12px;padding:12px 22px;max-height:calc(100dvh - 56px)}
+ body[data-game=car] .result-card>*{grid-column:1/-1}
+ body[data-game=car] .result-card>#again-button{grid-column:1}
+ body[data-game=car] .result-card>#choose-button{grid-column:2;margin-top:0}
+ body[data-game=car] .result-card h2{font-size:20px;margin:2px 0}
+ body[data-game=car] #finish-route,body[data-game=car] #best-record,body[data-game=car] #finish-eyebrow{display:none}
+ body[data-game=car] .finish-stars{flex-direction:row;gap:14px;margin:0 0 4px;justify-content:center}
+ body[data-game=car] .result-stats{padding:4px 0;margin-bottom:8px}
+ body[data-game=car] .result-stats strong{font-size:22px}
+ body[data-game=car] .result-card .primary-button,body[data-game=car] .result-card .secondary-button{min-height:44px}
+}

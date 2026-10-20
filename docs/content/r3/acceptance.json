@@ -1,0 +1,566 @@
+{
+  "round": "CONTENT_R3",
+  "basis": "docs/content/CONTENT_REVIEW_R2_MUSE.md section 4 five items",
+  "status": "VERIFIED",
+  "meaning": "Local interaction and original screenshot evidence verified; blocked human, device and independent scoring criteria remain unfinished.",
+  "items": [
+    {
+      "id": 1,
+      "title": "蛋糕急煞、輕煞過程與平穩基準",
+      "local": "VERIFIED",
+      "blocked": [
+        "五人遮字排序，至少四人排對最晃畫面"
+      ],
+      "screenshots": [
+        {
+          "path": "docs/content/r3/phone-cake-hard-brake-1.png",
+          "width": 390,
+          "height": 844,
+          "sha256": "088196154242e1cae51ddea242b290156ca1e44a332d3ac13922585385287f93",
+          "native": false,
+          "method": "unmodified headless Chromium runtime screenshot",
+          "captureFreeze": "RAF paused only during PNG capture; physical state never assigned"
+        },
+        {
+          "path": "docs/content/r3/phone-cake-hard-brake-2.png",
+          "width": 390,
+          "height": 844,
+          "sha256": "dd42a926c7f74cee6d497d635b4ee56cd00ed2dace0c72ff46d6915f99233cda",
+          "native": false,
+          "method": "unmodified headless Chromium runtime screenshot",
+          "captureFreeze": "RAF paused only during PNG capture; physical state never assigned"
+        },
+        {
+          "path": "docs/content/r3/phone-cake-hard-brake-3.png",
+          "width": 390,
+          "height": 844,
+          "sha256": "5b67acccdd2d2198190e1851f465dae154b78d6b97b0c9ba2b5e0fff3e46b1ae",
+          "native": false,
+          "method": "unmodified headless Chromium runtime screenshot",
+          "captureFreeze": "RAF paused only during PNG capture; physical state never assigned"
+        },
+        {
+          "path": "docs/content/r3/phone-cake-gentle-brake-1.png",
+          "width": 390,
+          "height": 844,
+          "sha256": "befe4bee56dd58bcd4f4f437808ef4493a10302f76d638b44a2b52804bf7009e",
+          "native": false,
+          "method": "unmodified headless Chromium runtime screenshot",
+          "captureFreeze": "RAF paused only during PNG capture; physical state never assigned"
+        },
+        {
+          "path": "docs/content/r3/phone-cake-gentle-brake-2.png",
+          "width": 390,
+          "height": 844,
+          "sha256": "003f5922821ce101d6c9db67a1a027083c1941424ff58e7dc1b51ee4e557a927",
+          "native": false,
+          "method": "unmodified headless Chromium runtime screenshot",
+          "captureFreeze": "RAF paused only during PNG capture; physical state never assigned"
+        },
+        {
+          "path": "docs/content/r3/phone-cake-gentle-brake-3.png",
+          "width": 390,
+          "height": 844,
+          "sha256": "e92d78773c5eab2827032cf2d04d9656fb0656acd31933f94d0f68ecc0c6a2cb",
+          "native": false,
+          "method": "unmodified headless Chromium runtime screenshot",
+          "captureFreeze": "RAF paused only during PNG capture; physical state never assigned"
+        },
+        {
+          "path": "docs/content/r3/phone-cake-steady.png",
+          "width": 390,
+          "height": 844,
+          "sha256": "402f09f4fa0a36b4150b4686d157030f7adc65e06d36ee65015c7e44999c9a20",
+          "native": false,
+          "method": "unmodified headless Chromium runtime screenshot"
+        },
+        {
+          "path": "docs/content/r3/phone-cake-starting.png",
+          "width": 390,
+          "height": 844,
+          "sha256": "d5571dcb618ffe7952e22c69d224d159452fe41dafdb02f3f42ddd5911f2c7d3",
+          "native": false,
+          "method": "unmodified headless Chromium runtime screenshot"
+        },
+        {
+          "path": "docs/content/r3/phone-cake-turning.png",
+          "width": 390,
+          "height": 844,
+          "sha256": "f48d2071b443b05fe5907781831c041d8d9656065135a3c5b2211c70bc7199e4",
+          "native": false,
+          "method": "unmodified headless Chromium runtime screenshot"
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "title": "蛋糕三站、臨停與分享",
+      "local": "VERIFIED",
+      "blocked": [],
+      "screenshots": [
+        {
+          "path": "docs/content/r3/phone-cake-stage-1.png",
+          "width": 390,
+          "height": 844,
+          "sha256": "d7880cdcb4907bcfb2f801c60d2d2d89461c911dd8477aa474cf193bf5a8f412",
+          "native": false,
+          "method": "unmodified headless Chromium runtime screenshot"
+        },
+        {
+          "path": "docs/content/r3/phone-cake-stage-2.png",
+          "width": 390,
+          "height": 844,
+          "sha256": "cc9c82d9b6a7c0a2545ee431ea2b5cd65583925f57f4cb215e37e6875cad5172",
+          "native": false,
+          "method": "unmodified headless Chromium runtime screenshot"
+        },
+        {
+          "path": "docs/content/r3/phone-cake-stage-3.png",
+          "width": 390,
+          "height": 844,
+          "sha256": "5f6ca0ef4fb29b53c800e5e21fe9039744eb5e7ffe156ef59cec4406f0773bf5",
+          "native": false,
+          "method": "unmodified headless Chromium runtime screenshot"
+        },
+        {
+          "path": "docs/content/r3/phone-cake-complete.png",
+          "width": 390,
+          "height": 844,
+          "sha256": "77d77380181342de1727c7ce80de4793fd6fa6af9afbd01351bb85ccbf6b4908",
+          "native": false,
+          "method": "unmodified headless Chromium runtime screenshot"
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "title": "三位過街者雙姿勢與單一操作列",
+      "local": "VERIFIED",
+      "blocked": [
+        "實機語音聽感"
+      ],
+      "screenshots": [
+        {
+          "path": "docs/content/r3/phone-crossing-blocked.png",
+          "width": 390,
+          "height": 844,
+          "sha256": "7217b8b537169e82eeada2d3d635e334b2bd035d96f26082de74a33bc12a6d06",
+          "native": false,
+          "method": "unmodified headless Chromium runtime screenshot"
+        },
+        {
+          "path": "docs/content/r3/phone-crossing-stage-1-child-pose-0.png",
+          "width": 390,
+          "height": 844,
+          "sha256": "5a00c636ac21a16102f65f764da66ec5fbb9f8605a29b1df5ee529f79d41d85a",
+          "native": false,
+          "method": "unmodified headless Chromium runtime screenshot"
+        },
+        {
+          "path": "docs/content/r3/phone-crossing-stage-1-child-pose-1.png",
+          "width": 390,
+          "height": 844,
+          "sha256": "149c72288e00bcedbd6c75073a754460380e263e2445b692fc59acf42fd8eb45",
+          "native": false,
+          "method": "unmodified headless Chromium runtime screenshot"
+        },
+        {
+          "path": "docs/content/r3/phone-crossing-stage-1-bike-pose-0.png",
+          "width": 390,
+          "height": 844,
+          "sha256": "209701934ac05c1ad0dd7b5a90ffcf2f6fbc409c936d92d1f33c97f7f91d0db8",
+          "native": false,
+          "method": "unmodified headless Chromium runtime screenshot"
+        },
+        {
+          "path": "docs/content/r3/phone-crossing-stage-1-bike-pose-1.png",
+          "width": 390,
+          "height": 844,
+          "sha256": "a122a15800a575bfc2b0d9262d09dccb17bf3d6b8bcd7902bc4aecafc08c6a27",
+          "native": false,
+          "method": "unmodified headless Chromium runtime screenshot"
+        },
+        {
+          "path": "docs/content/r3/phone-crossing-stage-1-grandma-pose-0.png",
+          "width": 390,
+          "height": 844,
+          "sha256": "181c34c2f8455b228b23f9acdc2108f9fea72dc67385919e1099afc4896e268f",
+          "native": false,
+          "method": "unmodified headless Chromium runtime screenshot"
+        },
+        {
+          "path": "docs/content/r3/phone-crossing-stage-1-grandma-pose-1.png",
+          "width": 390,
+          "height": 844,
+          "sha256": "50bc1b5205dfed1a739efd39ef4ec023fd06ff8f08da4a940e39844c7a20a50a",
+          "native": false,
+          "method": "unmodified headless Chromium runtime screenshot"
+        },
+        {
+          "path": "docs/content/r3/phone-crossing-stage-2-child-pose-0.png",
+          "width": 390,
+          "height": 844,
+          "sha256": "8ca8e9351befd27f992790ac8a03f6f779d0208db36c519c023122c2f4e26da9",
+          "native": false,
+          "method": "unmodified headless Chromium runtime screenshot"
+        },
+        {
+          "path": "docs/content/r3/phone-crossing-stage-2-child-pose-1.png",
+          "width": 390,
+          "height": 844,
+          "sha256": "291c1fcf3affe2f2300ce37e45b0695422011d85e17a7256b080f9f1c4beb9c7",
+          "native": false,
+          "method": "unmodified headless Chromium runtime screenshot"
+        },
+        {
+          "path": "docs/content/r3/phone-crossing-stage-2-bike-pose-0.png",
+          "width": 390,
+          "height": 844,
+          "sha256": "94d590b96e4792e04b247270d44e95e87142394b1e0cacd82fd14153266e48eb",
+          "native": false,
+          "method": "unmodified headless Chromium runtime screenshot"
+        },
+        {
+          "path": "docs/content/r3/phone-crossing-stage-2-bike-pose-1.png",
+          "width": 390,
+          "height": 844,
+          "sha256": "334f393aca15c031bbc60c46a8f5224f034d4b612100d76f89f232831323ac6c",
+          "native": false,
+          "method": "unmodified headless Chromium runtime screenshot"
+        },
+        {
+          "path": "docs/content/r3/phone-crossing-stage-2-grandma-pose-0.png",
+          "width": 390,
+          "height": 844,
+          "sha256": "5fa49b72ed8eb2f9a3d2a1912bcc35aa7c166dba3cdfbbe70d173903d3c99521",
+          "native": false,
+          "method": "unmodified headless Chromium runtime screenshot"
+        },
+        {
+          "path": "docs/content/r3/phone-crossing-stage-2-grandma-pose-1.png",
+          "width": 390,
+          "height": 844,
+          "sha256": "5535e43107ea2b9e8619b19c6c85e8cac303bfae12dd6b2d0872423b9a1a3464",
+          "native": false,
+          "method": "unmodified headless Chromium runtime screenshot"
+        },
+        {
+          "path": "docs/content/r3/phone-crossing-stage-3-child-pose-0.png",
+          "width": 390,
+          "height": 844,
+          "sha256": "fd10a65b49f926cc53f10d98bca4c9b979f3ebde0c06b625d341dcebc2dace95",
+          "native": false,
+          "method": "unmodified headless Chromium runtime screenshot"
+        },
+        {
+          "path": "docs/content/r3/phone-crossing-stage-3-child-pose-1.png",
+          "width": 390,
+          "height": 844,
+          "sha256": "3b86ca661e86a57da186c089fbf84812c88eb0c2824f5e66f1eb83c98f5c909b",
+          "native": false,
+          "method": "unmodified headless Chromium runtime screenshot"
+        },
+        {
+          "path": "docs/content/r3/phone-crossing-stage-3-bike-pose-0.png",
+          "width": 390,
+          "height": 844,
+          "sha256": "7d64265549ad4b7d3e647d91aacd804139cb6a4146ccb72d7fdf2d4f770787c2",
+          "native": false,
+          "method": "unmodified headless Chromium runtime screenshot"
+        },
+        {
+          "path": "docs/content/r3/phone-crossing-stage-3-bike-pose-1.png",
+          "width": 390,
+          "height": 844,
+          "sha256": "0b63e24020ab88e3995fe0ae1d5479a9f9011ad1f115f027b2635982c3771140",
+          "native": false,
+          "method": "unmodified headless Chromium runtime screenshot"
+        },
+        {
+          "path": "docs/content/r3/phone-crossing-stage-3-grandma-pose-0.png",
+          "width": 390,
+          "height": 844,
+          "sha256": "08bf7adc47b9f7fd6e2bba4b1666763f438e6bc8557488ac2dba1585e4f7f778",
+          "native": false,
+          "method": "unmodified headless Chromium runtime screenshot"
+        },
+        {
+          "path": "docs/content/r3/phone-crossing-stage-3-grandma-pose-1.png",
+          "width": 390,
+          "height": 844,
+          "sha256": "5c3f55c6184136e63e27b41c86be6c0c634cc303a8114e5583dddd2f58c5b727",
+          "native": false,
+          "method": "unmodified headless Chromium runtime screenshot"
+        },
+        {
+          "path": "docs/content/r3/phone-crossing-stage-1-clear.png",
+          "width": 390,
+          "height": 844,
+          "sha256": "3cd9df73fdd01861dcc03e44e788cb25e8aab55238bd157065638f5b44ee16e6",
+          "native": false,
+          "method": "unmodified headless Chromium runtime screenshot"
+        },
+        {
+          "path": "docs/content/r3/phone-crossing-stage-2-clear.png",
+          "width": 390,
+          "height": 844,
+          "sha256": "572999bb9c1b084da8417dc121e7fccdd2781e9e613565168797679713e41b22",
+          "native": false,
+          "method": "unmodified headless Chromium runtime screenshot"
+        },
+        {
+          "path": "docs/content/r3/phone-crossing-stage-3-clear.png",
+          "width": 390,
+          "height": 844,
+          "sha256": "846b8b9fbdc47568265b8c235a2a74389e3c714863c1cc9fab8b83a295eb2c3c",
+          "native": false,
+          "method": "unmodified headless Chromium runtime screenshot"
+        },
+        {
+          "path": "docs/content/r3/phone-crossing-complete.png",
+          "width": 390,
+          "height": 844,
+          "sha256": "2c811244dde542adcb14ff50a2f929cf10462c905775a79cf7a991efd72b14dd",
+          "native": false,
+          "method": "unmodified headless Chromium runtime screenshot"
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "title": "單一月台、錯對停車、步行上客與綠方完成證據",
+      "local": "VERIFIED",
+      "blocked": [],
+      "screenshots": [
+        {
+          "path": "docs/content/r3/phone-tickets-stage-1-wrong.png",
+          "width": 390,
+          "height": 844,
+          "sha256": "864b1517d1be2c4bdea519d44e92d0bf309ec8c68380a7d6f74c5a0cc0462a7f",
+          "native": false,
+          "method": "unmodified headless Chromium runtime screenshot"
+        },
+        {
+          "path": "docs/content/r3/phone-tickets-stage-1-right.png",
+          "width": 390,
+          "height": 844,
+          "sha256": "db49321d14a6935d3f25b6262b4484ef3dba91bc42ac8ec6ea409f1d24e75067",
+          "native": false,
+          "method": "unmodified headless Chromium runtime screenshot"
+        },
+        {
+          "path": "docs/content/r3/phone-tickets-stage-1-boarding-1.png",
+          "width": 390,
+          "height": 844,
+          "sha256": "7f7c765d8c018cf13acfb912579f538c68262793a0657a5bf286a66fea4b8fe6",
+          "native": false,
+          "method": "unmodified headless Chromium runtime screenshot"
+        },
+        {
+          "path": "docs/content/r3/phone-tickets-stage-1-boarding-2.png",
+          "width": 390,
+          "height": 844,
+          "sha256": "2e948c8d979d74b1e03c5b9fb2d46ebc04524aa4085dbdfbe27f31e361761c95",
+          "native": false,
+          "method": "unmodified headless Chromium runtime screenshot"
+        },
+        {
+          "path": "docs/content/r3/phone-tickets-stage-1-boarding-3.png",
+          "width": 390,
+          "height": 844,
+          "sha256": "1307a9def1a7b5fe0ae661f46cefa0d7c5ceef6f0de726bb265a02453259370d",
+          "native": false,
+          "method": "unmodified headless Chromium runtime screenshot"
+        },
+        {
+          "path": "docs/content/r3/phone-tickets-stage-2-wrong.png",
+          "width": 390,
+          "height": 844,
+          "sha256": "384d33d90a2ee16d99c79bb93a04994b5c4e6e1daf3a76a6e1b06369abc146a4",
+          "native": false,
+          "method": "unmodified headless Chromium runtime screenshot"
+        },
+        {
+          "path": "docs/content/r3/phone-tickets-stage-2-right.png",
+          "width": 390,
+          "height": 844,
+          "sha256": "229339d221b3808fac51c359c2a720c03e86b8f34d668afa5f377d39f084b7de",
+          "native": false,
+          "method": "unmodified headless Chromium runtime screenshot"
+        },
+        {
+          "path": "docs/content/r3/phone-tickets-stage-2-boarding-1.png",
+          "width": 390,
+          "height": 844,
+          "sha256": "f9ab61ff9cbe0eaa5244a4302774e195a0f40e35f13ecbe3ce432e7734e192b1",
+          "native": false,
+          "method": "unmodified headless Chromium runtime screenshot"
+        },
+        {
+          "path": "docs/content/r3/phone-tickets-stage-2-boarding-2.png",
+          "width": 390,
+          "height": 844,
+          "sha256": "52dc886fb2835b8f652762f8560cb8c16e7f3366902f70ab2bed6855d3a96436",
+          "native": false,
+          "method": "unmodified headless Chromium runtime screenshot"
+        },
+        {
+          "path": "docs/content/r3/phone-tickets-stage-2-boarding-3.png",
+          "width": 390,
+          "height": 844,
+          "sha256": "ab85de9b8d45d067cac356dfcaced5fe2bc38beabfc2e158d7178969a59f2550",
+          "native": false,
+          "method": "unmodified headless Chromium runtime screenshot"
+        },
+        {
+          "path": "docs/content/r3/phone-tickets-stage-3-wrong.png",
+          "width": 390,
+          "height": 844,
+          "sha256": "735b373f2f920441d8ee51a2af8ec52b09fe0471586c686726c213656791145b",
+          "native": false,
+          "method": "unmodified headless Chromium runtime screenshot"
+        },
+        {
+          "path": "docs/content/r3/phone-tickets-stage-3-right.png",
+          "width": 390,
+          "height": 844,
+          "sha256": "5ba5e38ef45538dbde7a56bc6311792e5b30d636d88ea6690674fdd0bfdfc999",
+          "native": false,
+          "method": "unmodified headless Chromium runtime screenshot"
+        },
+        {
+          "path": "docs/content/r3/phone-tickets-stage-3-boarding-1.png",
+          "width": 390,
+          "height": 844,
+          "sha256": "22986f581f57d65267b9e497fab4509880531fd77b2aa5c1adf0937b980d5f0f",
+          "native": false,
+          "method": "unmodified headless Chromium runtime screenshot"
+        },
+        {
+          "path": "docs/content/r3/phone-tickets-stage-3-boarding-2.png",
+          "width": 390,
+          "height": 844,
+          "sha256": "19795151a1f77850b2aa922e9bbcd132a42ca44f618419b2cb1820005eb69bb1",
+          "native": false,
+          "method": "unmodified headless Chromium runtime screenshot"
+        },
+        {
+          "path": "docs/content/r3/phone-tickets-stage-3-boarding-3.png",
+          "width": 390,
+          "height": 844,
+          "sha256": "451cef2272f90a84cf792c3483005a13ed4ee2204054d8418afa3f01340d35c5",
+          "native": false,
+          "method": "unmodified headless Chromium runtime screenshot"
+        },
+        {
+          "path": "docs/content/r3/phone-tickets-stage-1-seated.png",
+          "width": 390,
+          "height": 844,
+          "sha256": "95ac2aca33c6defdc1ba506a15fb8b43ee42d75e4bedc3370403ccf4c603ade1",
+          "native": false,
+          "method": "unmodified headless Chromium runtime screenshot"
+        },
+        {
+          "path": "docs/content/r3/phone-tickets-stage-2-seated.png",
+          "width": 390,
+          "height": 844,
+          "sha256": "55378e8700dcd1e31b3c2d12aad45643864e624475bc18e47002571490daa96b",
+          "native": false,
+          "method": "unmodified headless Chromium runtime screenshot"
+        },
+        {
+          "path": "docs/content/r3/phone-tickets-complete.png",
+          "width": 390,
+          "height": 844,
+          "sha256": "c5097ffdde8155438ee36384a93db34406536d3b2238952e7ecb0621f9298737",
+          "native": false,
+          "method": "unmodified headless Chromium runtime screenshot"
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "title": "兒童驗收與全域一致性收尾",
+      "local": "VERIFIED",
+      "blocked": [
+        "五位3至8歲兒童，家長同意且無成人代讀，至少四位完成一課第一站",
+        "原生 iPhone/iPad 觸控、語音與截圖",
+        "Muse 獨立複審分數，目標至少8分"
+      ],
+      "screenshots": [
+        {
+          "path": "docs/content/r3/phone-picker.png",
+          "width": 390,
+          "height": 844,
+          "sha256": "16d259b63e25c2b294ad262896c162a0b69d6236d0e14f6a488ed876e3e49368",
+          "native": false,
+          "method": "unmodified headless Chromium runtime screenshot"
+        },
+        {
+          "path": "docs/content/r3/phone-cake-intro.png",
+          "width": 390,
+          "height": 844,
+          "sha256": "2b444901b2e01400a9f9f0ab4e18b2de754a3669345fe896c96738ed1c1d5f28",
+          "native": false,
+          "method": "unmodified headless Chromium runtime screenshot"
+        },
+        {
+          "path": "docs/content/r3/phone-cake-paused.png",
+          "width": 390,
+          "height": 844,
+          "sha256": "12d8001ef963521472e93a38ebd6d8240a82c880f3a52c97d9f23147c7d920af",
+          "native": false,
+          "method": "unmodified headless Chromium runtime screenshot"
+        },
+        {
+          "path": "docs/content/r3/phone-crossing-intro.png",
+          "width": 390,
+          "height": 844,
+          "sha256": "6eaa2bb6613fcb55a068876f086abfb091fc783f9f5c5e8eca1aca6d7b65d060",
+          "native": false,
+          "method": "unmodified headless Chromium runtime screenshot"
+        },
+        {
+          "path": "docs/content/r3/phone-crossing-paused.png",
+          "width": 390,
+          "height": 844,
+          "sha256": "b7aa54c60220f4179e4a12fd0ed4f12b78fe6b5e3187289de5bf3e67a1353be8",
+          "native": false,
+          "method": "unmodified headless Chromium runtime screenshot"
+        },
+        {
+          "path": "docs/content/r3/phone-tickets-intro.png",
+          "width": 390,
+          "height": 844,
+          "sha256": "12bf0e19f4dcad2fd1ed1166cbd56a152f192c6e3207c40f268e8537ab623833",
+          "native": false,
+          "method": "unmodified headless Chromium runtime screenshot"
+        },
+        {
+          "path": "docs/content/r3/phone-tickets-paused.png",
+          "width": 390,
+          "height": 844,
+          "sha256": "3b285858399d3c0fe477112980a29bddf28db8bde921c52befe8d9ef17aa7e1f",
+          "native": false,
+          "method": "unmodified headless Chromium runtime screenshot"
+        },
+        {
+          "path": "docs/content/r3/phone-train-driving.png",
+          "width": 390,
+          "height": 844,
+          "sha256": "12711af5ab644c913a565115e8b2ebe01a9036c6b89ee626c8386c55f51be833",
+          "native": false,
+          "method": "unmodified headless Chromium runtime screenshot"
+        },
+        {
+          "path": "docs/content/r3/phone-save-all-three.png",
+          "width": 390,
+          "height": 844,
+          "sha256": "77d6083e721b9980a7ac7fe66b6e72e89d5391eee452317933456fba76c149c8",
+          "native": false,
+          "method": "unmodified headless Chromium runtime screenshot"
+        }
+      ]
+    }
+  ]
+}

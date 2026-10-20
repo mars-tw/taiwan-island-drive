@@ -1,0 +1,28 @@
+{
+  "status": "VERIFIED",
+  "tool": "image_gen.imagegen",
+  "model_slug": null,
+  "modelEvidence": "The built-in tool does not expose a model slug; no model inferred.",
+  "generationCalls": 1,
+  "newRuntimeImages": 1,
+  "newCharacterPoses": 1,
+  "processing": "Preserve generated alpha; trim transparent margins, proportional resize to 350px high; 420x400 transparent canvas and 25px baseline padding match R7. No repainting.",
+  "assets": [
+    {
+      "path": "public/art/content-r9/grandma-2.png",
+      "width": 420,
+      "height": 400,
+      "hasAlpha": true,
+      "sha256": "b358d7a76d462573c3e202d8840c20a93b05e4310a5e7818ea0ce4197f427da7",
+      "original": "docs/content/r9/art/grandma-contact-original.png",
+      "sourceSha256": "15e8beadd1fae1917a8b257133bb27680a6820938579d66aa9e5a74c54947a6a"
+    }
+  ],
+  "metrics": {
+    "visiblePixels": 60048,
+    "luminance": 0.5069048988782785,
+    "saturation": 0.6222031150943328,
+    "nearBlack": 0.20536903810285106,
+    "lowSaturation": 0.18983146815880628
+  }
+}

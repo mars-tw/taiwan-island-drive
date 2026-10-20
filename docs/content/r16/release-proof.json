@@ -1,0 +1,28 @@
+{
+  "status": "VERIFIED",
+  "branch": "r1-fun-polish",
+  "baseline": "c429d761fe79e7e48c61345ad6b8e50e93a1dd8d",
+  "version": "2.28.0",
+  "build": 24,
+  "unitTests": 237,
+  "oldTestFilesUnchanged": 36,
+  "browserChecks": 155,
+  "originalScreenshots": 398,
+  "reviewSet": 15,
+  "mergeChecks": 132,
+  "storeChecks": 101,
+  "newGenerationCalls": 2,
+  "newArt": 4,
+  "newRuntimeAssets": 4,
+  "newDependencies": 0,
+  "secretHits": 0,
+  "maxMedianP95": 16.8,
+  "performanceStatus": "EXECUTED - concurrent machine, reference only",
+  "blocked": [
+    "Physical iPhone/iPad and native touch/voice need devices",
+    "Parent-child playtest needs participants",
+    "Clean-machine performance needs exclusive hardware",
+    "Muse >=8 requires independent rescore; not performed",
+    "Native package rebuild/signing not performed"
+  ]
+}

@@ -1,0 +1,258 @@
+{
+  "status": "EXECUTED",
+  "version": "2.6.0",
+  "method": "SHA-256 exact bytes plus same-relative-source text similarity >= 0.8; no sibling writes",
+  "concurrentSnapshot": true,
+  "scannedOwnFiles": 319,
+  "siblings": [
+    {
+      "game": "Crackveil Vanguard",
+      "folder": "rift-survivors",
+      "runtimeFiles": 5194,
+      "exists": true
+    },
+    {
+      "game": "暴風啟示錄",
+      "folder": "storm-apocalypse",
+      "runtimeFiles": 2653,
+      "exists": true
+    },
+    {
+      "game": "灰燼護航",
+      "folder": "doomsday-shooter",
+      "runtimeFiles": 1076,
+      "exists": true
+    },
+    {
+      "game": "無盡塔防",
+      "folder": "tower-defense",
+      "runtimeFiles": 449,
+      "exists": true
+    },
+    {
+      "game": "裂潮卡牌",
+      "folder": "skill",
+      "runtimeFiles": 155,
+      "exists": true
+    },
+    {
+      "game": "陽光農場",
+      "folder": "pixel-idle-farm-skill",
+      "runtimeFiles": 392,
+      "exists": true
+    },
+    {
+      "game": "村莊攻防",
+      "folder": "village-siege",
+      "runtimeFiles": 329,
+      "exists": true
+    },
+    {
+      "game": "七期：斷鏈行動",
+      "folder": "seven-district-reckoning",
+      "runtimeFiles": 640,
+      "exists": true
+    },
+    {
+      "game": "Rift Forge 3D",
+      "folder": "rift-forge-3d",
+      "runtimeFiles": 69,
+      "exists": true
+    },
+    {
+      "game": "小小列車長",
+      "folder": "taiwan-train-math",
+      "runtimeFiles": 555,
+      "exists": true
+    },
+    {
+      "game": "夜行列車",
+      "folder": "夜行列車_重製企劃_20261002",
+      "runtimeFiles": 10,
+      "exists": true
+    },
+    {
+      "game": "島嶼飛行學校",
+      "folder": "island-flight-school",
+      "runtimeFiles": 22,
+      "exists": true
+    },
+    {
+      "game": "島嶼鐵道學校",
+      "folder": "taiwan-train-school",
+      "runtimeFiles": 18,
+      "exists": true
+    }
+  ],
+  "duplicates": [
+    {
+      "file": "android/app/src/main/assets/public/cordova.js",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "matches": [
+        {
+          "game": "小小列車長",
+          "path": "android/app/src/main/assets/public/cordova.js"
+        },
+        {
+          "game": "小小列車長",
+          "path": "android/app/src/main/assets/public/cordova_plugins.js"
+        },
+        {
+          "game": "小小列車長",
+          "path": "ios/App/App/public/cordova.js"
+        },
+        {
+          "game": "小小列車長",
+          "path": "ios/App/App/public/cordova_plugins.js"
+        }
+      ]
+    },
+    {
+      "file": "android/app/src/main/assets/public/cordova_plugins.js",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "matches": [
+        {
+          "game": "小小列車長",
+          "path": "android/app/src/main/assets/public/cordova.js"
+        },
+        {
+          "game": "小小列車長",
+          "path": "android/app/src/main/assets/public/cordova_plugins.js"
+        },
+        {
+          "game": "小小列車長",
+          "path": "ios/App/App/public/cordova.js"
+        },
+        {
+          "game": "小小列車長",
+          "path": "ios/App/App/public/cordova_plugins.js"
+        }
+      ]
+    },
+    {
+      "file": "ios/App/App/public/cordova.js",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "matches": [
+        {
+          "game": "小小列車長",
+          "path": "android/app/src/main/assets/public/cordova.js"
+        },
+        {
+          "game": "小小列車長",
+          "path": "android/app/src/main/assets/public/cordova_plugins.js"
+        },
+        {
+          "game": "小小列車長",
+          "path": "ios/App/App/public/cordova.js"
+        },
+        {
+          "game": "小小列車長",
+          "path": "ios/App/App/public/cordova_plugins.js"
+        }
+      ]
+    },
+    {
+      "file": "ios/App/App/public/cordova_plugins.js",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "matches": [
+        {
+          "game": "小小列車長",
+          "path": "android/app/src/main/assets/public/cordova.js"
+        },
+        {
+          "game": "小小列車長",
+          "path": "android/app/src/main/assets/public/cordova_plugins.js"
+        },
+        {
+          "game": "小小列車長",
+          "path": "ios/App/App/public/cordova.js"
+        },
+        {
+          "game": "小小列車長",
+          "path": "ios/App/App/public/cordova_plugins.js"
+        }
+      ]
+    },
+    {
+      "file": "public/textures/aircraft.png",
+      "sha256": "426b94f8263b65c0b0ea80d66f98c948d1fa14bf2701567aea963876a0edeffd",
+      "matches": [
+        {
+          "game": "島嶼飛行學校",
+          "path": "public/textures/aircraft.png"
+        }
+      ]
+    },
+    {
+      "file": "public/textures/train.png",
+      "sha256": "dd40c889e7a3d195977fc9e701d0e1edb3c6a88915767bee662c95e051320921",
+      "matches": [
+        {
+          "game": "島嶼鐵道學校",
+          "path": "public/textures/train.png"
+        }
+      ]
+    },
+    {
+      "file": "src/games/flight/audio.js",
+      "sha256": "afd50b79359e1483d153f8e86ab2a946a33710f107d4fbfc70f6bd7b50384fbf",
+      "matches": [
+        {
+          "game": "島嶼飛行學校",
+          "path": "src/audio.js"
+        }
+      ]
+    },
+    {
+      "file": "src/games/flight/instruments.js",
+      "sha256": "45aab04200eddfd385cd5612827d33f36273e8d1dee85c6715a9d4cc106dcd16",
+      "matches": [
+        {
+          "game": "島嶼飛行學校",
+          "path": "src/instruments.js"
+        }
+      ]
+    },
+    {
+      "file": "src/games/flight/physics.js",
+      "sha256": "03d5b2e92347222e0736a22c30d7ba26624228515d863daac61c817f6b7868a8",
+      "matches": [
+        {
+          "game": "島嶼飛行學校",
+          "path": "src/physics.js"
+        }
+      ]
+    },
+    {
+      "file": "src/games/train/audio.js",
+      "sha256": "8b01e658db151d4082b53afc89c133ffeb197829d9cdc69f11ff1c1ec33c0dee",
+      "matches": [
+        {
+          "game": "島嶼鐵道學校",
+          "path": "src/audio.js"
+        }
+      ]
+    },
+    {
+      "file": "src/games/train/game.js",
+      "sha256": "783956e37c0fcbe00f0897aae56fb5bd5169c8c4345200cc7699e5a1afc36990",
+      "matches": [
+        {
+          "game": "島嶼鐵道學校",
+          "path": "src/game.js"
+        }
+      ]
+    },
+    {
+      "file": "src/games/train/physics.js",
+      "sha256": "143fd1193b7719468a59d1e426bf900f5284ac062cbf22c05579a037a4185e66",
+      "matches": [
+        {
+          "game": "島嶼鐵道學校",
+          "path": "src/physics.js"
+        }
+      ]
+    }
+  ],
+  "nearDuplicates": []
+}

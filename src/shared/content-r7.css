@@ -1,0 +1,41 @@
+/* Fixed magnifier uses generated, independent tiers; no gameplay numbers are required. */
+.cake-closeup{display:none;position:absolute;right:7px;top:42px;width:180px;height:180px;box-sizing:border-box;border:4px solid #1479b8;border-radius:28px;background:#fff8de;box-shadow:0 5px #143b6140;z-index:8;overflow:hidden;pointer-events:none}
+#content-r1[data-kind=cake][data-phase=playing] .cake-closeup{display:block}
+.cake-stack .cake-layer{position:absolute;object-fit:fill;transform-origin:50% 85%;will-change:transform}
+.cake-stack .cake-base{width:108px;height:70px;left:32px;bottom:5px;z-index:1}
+.cake-stack .cake-middle{width:88px;height:54px;left:42px;bottom:48px;z-index:2}
+.cake-stack .cake-top{width:68px;height:58px;left:52px;bottom:83px;z-index:3}
+.cake-stack .cake-pick{width:30px;height:52px;left:84px;bottom:126px;z-index:4}
+.cake-closeup .flag-trail{position:absolute;width:80px;height:55px;left:70px;top:0;fill:none;stroke:#f46b27;stroke-width:3;stroke-dasharray:6 6;opacity:0}
+.cake-closeup[data-warning=true]{border-color:#f46b27;background:#fff0bd}.cake-closeup[data-warning=true] .flag-trail{opacity:1}
+.cake-correction{width:31px;height:31px;opacity:.75}
+.crossing-decision{display:none;position:absolute;left:8px;right:8px;top:134px;z-index:10;background:#fff8d9;border:3px solid #1479b8;border-radius:12px;padding:5px;text-align:center;font-size:16px;pointer-events:none}
+#content-r1[data-kind=crossing][data-phase=playing] .crossing-decision:not(:empty){display:block}
+#content-r1 [data-action][data-needed=true]{background:#ffd344;outline:4px solid #f46b27;outline-offset:-6px}
+.crossing-lookout{top:193px;max-width:32%;padding:3px;font-size:11px}.crossing-lookout img{height:40px;width:28px}.crossing-lookout div{min-height:40px}
+#content-r1[data-kind=crossing] .content-walker{width:140px;height:160px;margin-left:-70px}
+.content-walker img{position:relative;z-index:1;object-position:center bottom}
+.content-walker::before,.crossing-arrived>div::before,.crossing-waiting::before{content:'';position:absolute;bottom:0;left:6%;width:88%;height:12px;border-radius:50%;background:#143b614d;transform:skewX(-22deg) scaleY(.55);filter:blur(1px)}
+.crossing-waiting::before{bottom:0}.crossing-arrived img{position:relative;object-position:center bottom}
+.crossing-waiting{align-items:flex-end}.crossing-waiting img{object-position:center bottom}
+#content-controls [data-action=go]:disabled,#content-controls [data-action=go][aria-disabled=true]{background:#dce4e9;color:#526776;box-shadow:inset 0 0 0 2px #a6b8c3}
+#content-r1[data-kind=tickets][data-phase=boarding] .content-ticket{visibility:visible;width:64px;height:64px;left:calc(50% - 36px);top:10px;border-style:solid}
+#content-r1[data-kind=tickets][data-phase=boarding] .ticket-counts{top:94px}
+.lesson-route-proof{display:none;position:absolute;bottom:10px;left:8px;right:8px;z-index:12;gap:5px;background:#ffffffed;border:3px solid #1479b8;border-radius:12px;padding:5px;pointer-events:none}
+.lesson-route-proof:not(:empty){display:flex}.lesson-route-proof>div{flex:1;min-width:0;display:flex;justify-content:center;align-items:center;gap:2px}
+.lesson-route-proof img{width:28px;height:44px;object-fit:contain}.lesson-route-proof svg{height:34px;width:45px}.lesson-route-proof .road-thumbnail{width:40px;height:58px;object-fit:cover;border-radius:6px}
+@media(max-width:360px) and (orientation:portrait){
+ .cake-closeup{right:3px;top:36px;width:144px;height:144px}.cake-closeup>div{position:absolute;inset:0;width:172px;height:172px;transform:scale(.79);transform-origin:top left}
+ .crossing-decision{top:110px;font-size:12px;padding:3px}.crossing-lookout{top:154px;font-size:9px}.crossing-lookout div{min-height:24px}.crossing-lookout img{height:25px;width:18px}
+ #content-r1[data-kind=crossing] .content-walker{height:110px;width:100px;margin-left:-50px}.lesson-route-proof{padding:2px;gap:2px;bottom:4px}.lesson-route-proof img{width:19px;height:28px}.lesson-route-proof .road-thumbnail{width:30px;height:38px}.lesson-route-proof svg{width:30px;height:28px}
+}
+@media(orientation:landscape) and (max-height:520px){
+ .cake-closeup{top:32px;right:2px;width:144px;height:144px}.cake-closeup>div{position:absolute;inset:0;width:172px;height:172px;transform:scale(.79);transform-origin:top left}
+ .crossing-decision{top:98px;font-size:11px;padding:2px;left:3px;right:3px}.crossing-lookout{display:none!important}
+ #content-r1[data-kind=crossing] .content-walker{height:88px;width:90px;margin-left:-45px}.lesson-route-proof{bottom:3px;padding:1px}.lesson-route-proof img{width:19px;height:26px}.lesson-route-proof svg{height:24px;width:30px}.lesson-route-proof .road-thumbnail{width:28px;height:32px}
+}
+@media(prefers-reduced-motion:reduce){.cake-stack .cake-layer{will-change:auto}.cake-closeup .flag-trail{display:none}}
+
+.content-carrier .content-cake>img,.content-carrier .cake-cream,.content-carrier .cake-fruit{display:none}
+.cake-miniature{position:absolute;width:180px;height:180px;left:calc(50% - 90px);bottom:0;transform:scale(.85);transform-origin:50% 100%}.cake-miniature .flag-trail{display:none}
+.lesson-route-proof>div+div{border-left:2px solid #1479b8}

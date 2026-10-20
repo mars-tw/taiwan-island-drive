@@ -1,0 +1,145 @@
+{
+  "note": "Execution manifests retain their original capture hashes. screenshots.json is the delivered current-image index; these later captures supersede earlier files at the same paths.",
+  "superseded": [
+    {
+      "path": "docs/content/r4/phone-picker-new.png",
+      "previousManifest": "browser-matrix.json",
+      "previousSha256": "d1559f285e3c7f183005b8da2e6cd87c95f0b086cf655f2130613576cc431c4d",
+      "currentManifest": "browser-store.json",
+      "currentSha256": "e411e28b47f58bde2f648c20ba634be1f360b72a1cd6538a3b779a0753e304d3"
+    },
+    {
+      "path": "docs/content/r4/phone-picker-progress.png",
+      "previousManifest": "browser-play.json",
+      "previousSha256": "659bebbb869aa85eeb1670d6335532fd1a96f1bea37ce91a2f9f139124c88da4",
+      "currentManifest": "browser-store.json",
+      "currentSha256": "5b1bff2dae40e0b3f90c2f152dae3f29a70393ab4d3a08aaf3e4d88c2ec34a66"
+    },
+    {
+      "path": "docs/content/r4/phone-crossing-stage-1-child-pose-0.png",
+      "previousManifest": "browser-play.json",
+      "previousSha256": "c271494fe6746bcc473eea1d9d62bb1d4eca70e1d22dbe9b2681ba43ce493893",
+      "currentManifest": "browser-poses.json",
+      "currentSha256": "800738c93e02e6cc5460113266d24c8ae51090c4bf773a187f8bc7d2dffe0172"
+    },
+    {
+      "path": "docs/content/r4/phone-crossing-stage-1-child-pose-1.png",
+      "previousManifest": "browser-play.json",
+      "previousSha256": "8a0d377b437bd8aabf67c1515c9566104e4063a55a60d766fc3cbae9e1d97407",
+      "currentManifest": "browser-poses.json",
+      "currentSha256": "f706fbde58160e5a4ee584222e31eac2220fd456417f62db1611c608e1e46f07"
+    },
+    {
+      "path": "docs/content/r4/phone-crossing-stage-1-bike-pose-0.png",
+      "previousManifest": "browser-play.json",
+      "previousSha256": "a3a8736b0e298937265cc5ce3eb347210856a3b211354696250d0865d4da22a2",
+      "currentManifest": "browser-poses.json",
+      "currentSha256": "b400960e8c773d9f14f71ff3c8ffef201c73a4864d85552ac8b12062d9bea072"
+    },
+    {
+      "path": "docs/content/r4/phone-crossing-stage-1-bike-pose-1.png",
+      "previousManifest": "browser-play.json",
+      "previousSha256": "a5e9af91d8c0edae62c3fcb1124cfb743b1aef9094fe7ef815d94903bd7f3e58",
+      "currentManifest": "browser-poses.json",
+      "currentSha256": "5b271a9f3a9bfc2dd4553bca51ff2c7b5cf98fa74ca1839afd943f583d026e5b"
+    },
+    {
+      "path": "docs/content/r4/phone-crossing-stage-1-grandma-pose-0.png",
+      "previousManifest": "browser-play.json",
+      "previousSha256": "2ca16433c65feebc69eb4b9824ccd8a89eeaa9ac231e62c2a69730e5254d409d",
+      "currentManifest": "browser-poses.json",
+      "currentSha256": "0dd46128bdfc57d93a4163d952d92553af7c327143ecbca93cfb71041cd21c5b"
+    },
+    {
+      "path": "docs/content/r4/phone-crossing-stage-1-grandma-pose-1.png",
+      "previousManifest": "browser-play.json",
+      "previousSha256": "abdb60e696ca31d8c5d48ccf8e0ff78c3cb0a0b07e39eb6d7a9be19bc4513003",
+      "currentManifest": "browser-poses.json",
+      "currentSha256": "f358a5fdc5bdf03a45b6c148111f1a48be6b2b29028281f642fd807ff7ef373c"
+    },
+    {
+      "path": "docs/content/r4/phone-crossing-stage-2-grandma-pose-0.png",
+      "previousManifest": "browser-play.json",
+      "previousSha256": "c70f2a3024b344674c0bee6740e20582119250fab911c7efe197867a56fa5e6c",
+      "currentManifest": "browser-poses.json",
+      "currentSha256": "4530b6cb33ba1b1a11d74374a0b6fbff32865e80ba406407de868bd1a2558ff9"
+    },
+    {
+      "path": "docs/content/r4/phone-crossing-stage-2-grandma-pose-1.png",
+      "previousManifest": "browser-play.json",
+      "previousSha256": "1ab83a89e33bee65a2fcebb2fb4d0ff497a4f9fd40b2765bb1511bc57e4bd4fd",
+      "currentManifest": "browser-poses.json",
+      "currentSha256": "39c228bfc700e0276450462701f80830a90acc10136cb61b7f71503e09bc7477"
+    },
+    {
+      "path": "docs/content/r4/phone-crossing-stage-2-child-pose-0.png",
+      "previousManifest": "browser-play.json",
+      "previousSha256": "59f7d733c53d337ac3d4134c62c37793375277d301215efece57372c9c5c71c6",
+      "currentManifest": "browser-poses.json",
+      "currentSha256": "caa726d29f3d7a50d1e7128b0e377227fc3a3c71ebabf8a5ed919c094cc13a17"
+    },
+    {
+      "path": "docs/content/r4/phone-crossing-stage-2-child-pose-1.png",
+      "previousManifest": "browser-play.json",
+      "previousSha256": "7c59e8bda4865b3dfb713a2f43dd1ed9a3c15d8356ec801e4b0405123f40eda6",
+      "currentManifest": "browser-poses.json",
+      "currentSha256": "12ad40046f085757127015ff512d054550d9a82a7ff154cd1fa78698b1f847d2"
+    },
+    {
+      "path": "docs/content/r4/phone-crossing-stage-2-bike-pose-0.png",
+      "previousManifest": "browser-play.json",
+      "previousSha256": "8d6aef8fd252a50ed59f7f17b23094efcdf0a6632e6de82ce9a1d5ef1f345ee3",
+      "currentManifest": "browser-poses.json",
+      "currentSha256": "5d3b323b840cf2e19ebdbe969910290ef14bc0ff5ec5d9bba17fb4bdd6888986"
+    },
+    {
+      "path": "docs/content/r4/phone-crossing-stage-2-bike-pose-1.png",
+      "previousManifest": "browser-play.json",
+      "previousSha256": "795e5ab4bcb2f9afdce2536ff8b70a78d4ba910f6c0e0d6209ca51f32a7bb161",
+      "currentManifest": "browser-poses.json",
+      "currentSha256": "cc7efd3e175d66cc7203d7aae789e8e98b9e9729fed0f065e6713449d8e4bf91"
+    },
+    {
+      "path": "docs/content/r4/phone-crossing-stage-3-bike-pose-0.png",
+      "previousManifest": "browser-play.json",
+      "previousSha256": "a152d6f55e0a40369cfb862ccbba95d63186b0f7b84caece7c1b4e247e79e2ae",
+      "currentManifest": "browser-poses.json",
+      "currentSha256": "43569aa5d12c47864715eec6ead7b248ead7bd30eda841ae0cdfbb4905eca800"
+    },
+    {
+      "path": "docs/content/r4/phone-crossing-stage-3-bike-pose-1.png",
+      "previousManifest": "browser-play.json",
+      "previousSha256": "32e6f15a91c0681973b43ab615e411ff1d593c176b47c8c01aa3a7858f6ecf30",
+      "currentManifest": "browser-poses.json",
+      "currentSha256": "6d57c6cf00bc7211b3c88ceaeaf87244bd3a57ed315d8fd2d886b7f937503ae4"
+    },
+    {
+      "path": "docs/content/r4/phone-crossing-stage-3-grandma-pose-0.png",
+      "previousManifest": "browser-play.json",
+      "previousSha256": "0c6b45f9199c787ff0ac1bb431b3ae3dd3e86ca38ad18f16cb9aeb98c37b7db0",
+      "currentManifest": "browser-poses.json",
+      "currentSha256": "f0c6f35fba79c387e343db0a65cffda594ec0b02e9ed6efe451b5e6fc170d3aa"
+    },
+    {
+      "path": "docs/content/r4/phone-crossing-stage-3-grandma-pose-1.png",
+      "previousManifest": "browser-play.json",
+      "previousSha256": "c452ef3b7bf1ca112ee5681b65e6778c073d86a8f79c6d15dcc22dbb1ecf150f",
+      "currentManifest": "browser-poses.json",
+      "currentSha256": "1129f7ec8f8c1d446cc83f46bc21b689ff1fbcf55a6981ecb3d656421e3e4442"
+    },
+    {
+      "path": "docs/content/r4/phone-crossing-stage-3-child-pose-0.png",
+      "previousManifest": "browser-play.json",
+      "previousSha256": "4dd896adc350342cac38e13e8fbe226d3b4a1be4e3cd54d3ae0a7111ead2c6e7",
+      "currentManifest": "browser-poses.json",
+      "currentSha256": "8066707c8e4ddb87ad4b0c2e5833b4c93d1c4c6e586e5ad4d0779b4d662ef210"
+    },
+    {
+      "path": "docs/content/r4/phone-crossing-stage-3-child-pose-1.png",
+      "previousManifest": "browser-play.json",
+      "previousSha256": "e595e925c1a5d7c8a9ff925e9c9e50ac926dfaded75f411b6f17ae2849b06551",
+      "currentManifest": "browser-poses.json",
+      "currentSha256": "b3b42ce87fe7852d45157c0270e29e1cf71047ec09ab0e2cc6314db76ecee3fa"
+    }
+  ]
+}

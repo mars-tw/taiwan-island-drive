@@ -1,0 +1,177 @@
+{
+  "status": "VERIFIED",
+  "rows": [
+    {
+      "name": "iphone-store",
+      "passengerCount": 5,
+      "answers": [
+        {
+          "text": "3 人",
+          "background": "rgb(255, 255, 255)",
+          "color": "rgb(20, 59, 97)",
+          "border": "rgb(20, 121, 184)",
+          "width": 115.328125,
+          "height": 60
+        },
+        {
+          "text": "4 人",
+          "background": "rgb(255, 255, 255)",
+          "color": "rgb(20, 59, 97)",
+          "border": "rgb(20, 121, 184)",
+          "width": 115.34375,
+          "height": 60
+        },
+        {
+          "text": "5 人",
+          "background": "rgb(255, 255, 255)",
+          "color": "rgb(20, 59, 97)",
+          "border": "rgb(20, 121, 184)",
+          "width": 115.328125,
+          "height": 60
+        }
+      ],
+      "mobileKeyboardHints": false,
+      "status": "VERIFIED"
+    },
+    {
+      "name": "ipad-store",
+      "passengerCount": 5,
+      "answers": [
+        {
+          "text": "3 人",
+          "background": "rgb(255, 255, 255)",
+          "color": "rgb(20, 59, 97)",
+          "border": "rgb(20, 121, 184)",
+          "width": 316,
+          "height": 60
+        },
+        {
+          "text": "4 人",
+          "background": "rgb(255, 255, 255)",
+          "color": "rgb(20, 59, 97)",
+          "border": "rgb(20, 121, 184)",
+          "width": 316,
+          "height": 60
+        },
+        {
+          "text": "5 人",
+          "background": "rgb(255, 255, 255)",
+          "color": "rgb(20, 59, 97)",
+          "border": "rgb(20, 121, 184)",
+          "width": 316,
+          "height": 60
+        }
+      ],
+      "mobileKeyboardHints": false,
+      "status": "VERIFIED"
+    },
+    {
+      "name": "se-landscape",
+      "passengerCount": 5,
+      "answers": [
+        {
+          "text": "3 人",
+          "background": "rgb(255, 255, 255)",
+          "color": "rgb(20, 59, 97)",
+          "border": "rgb(20, 121, 184)",
+          "width": 164.65625,
+          "height": 60
+        },
+        {
+          "text": "4 人",
+          "background": "rgb(255, 255, 255)",
+          "color": "rgb(20, 59, 97)",
+          "border": "rgb(20, 121, 184)",
+          "width": 164.671875,
+          "height": 60
+        },
+        {
+          "text": "5 人",
+          "background": "rgb(255, 255, 255)",
+          "color": "rgb(20, 59, 97)",
+          "border": "rgb(20, 121, 184)",
+          "width": 164.671875,
+          "height": 60
+        }
+      ],
+      "mobileKeyboardHints": false,
+      "status": "VERIFIED"
+    }
+  ],
+  "errors": [],
+  "external": [],
+  "shots": [
+    {
+      "path": "docs/store/screenshots/art-r4/iphone-store-math-load.png",
+      "width": 1290,
+      "height": 2796,
+      "sha256": "f7dff9ef3c515fb392c8a79d7c689f8096ef7f1c3f2ee4d2ed4113b08953c137"
+    },
+    {
+      "path": "docs/store/screenshots/art-r4/iphone-store-math-split.png",
+      "width": 1290,
+      "height": 2796,
+      "sha256": "809ce9576eea0a9cc146a7c44dfdffe819d7b632d146bf30c67732219136d1f3"
+    },
+    {
+      "path": "docs/store/screenshots/art-r4/iphone-store-math-answers.png",
+      "width": 1290,
+      "height": 2796,
+      "sha256": "891d0e6b8eed36fbeb034b8013d0d243a8c5832e088c5067c49d5f9c8d3a0b4a"
+    },
+    {
+      "path": "docs/store/screenshots/art-r4/iphone-store-math-done.png",
+      "width": 1290,
+      "height": 2796,
+      "sha256": "6d5a00a98d3b7b9181a9bd1f27d0dcb06d3f21dd259f20c76742ec5d4e6684c8"
+    },
+    {
+      "path": "docs/store/screenshots/art-r4/ipad-store-math-load.png",
+      "width": 2064,
+      "height": 2752,
+      "sha256": "ee51fe927dc36f4cd5cc0d182abc2ad3c357c44acb9de1b1597fd4d21960f733"
+    },
+    {
+      "path": "docs/store/screenshots/art-r4/ipad-store-math-split.png",
+      "width": 2064,
+      "height": 2752,
+      "sha256": "2668c37480ffc530bb8a3e1b1d3fd8a604cd4f45bbad84614647c54ec92f6427"
+    },
+    {
+      "path": "docs/store/screenshots/art-r4/ipad-store-math-answers.png",
+      "width": 2064,
+      "height": 2752,
+      "sha256": "11e0d29aa8fe8be961c0bc93585f2f94bb61a0ed83c11e9bf37143c8a4ba4234"
+    },
+    {
+      "path": "docs/store/screenshots/art-r4/ipad-store-math-done.png",
+      "width": 2064,
+      "height": 2752,
+      "sha256": "f66ea2d15ca560268471e96fe8f1d5c01aa416fdcf4d53f8b90c83d799f9a953"
+    },
+    {
+      "path": "docs/art/evidence/se-landscape-math-load.png",
+      "width": 568,
+      "height": 320,
+      "sha256": "d374b69798b3c3a522d2f59de241747723fd9a3664720cda7d3b624ae2aee7d8"
+    },
+    {
+      "path": "docs/art/evidence/se-landscape-math-split.png",
+      "width": 568,
+      "height": 320,
+      "sha256": "d190717b619501d0b7180ac88cd43b22ec698ed6d6879bb3c33e0c408a2d0b58"
+    },
+    {
+      "path": "docs/art/evidence/se-landscape-math-answers.png",
+      "width": 568,
+      "height": 320,
+      "sha256": "7449f77048242e469e7bae8c62f060446647c7d67dc32453329838343071f9f3"
+    },
+    {
+      "path": "docs/art/evidence/se-landscape-math-done.png",
+      "width": 568,
+      "height": 320,
+      "sha256": "a45255afdc18312ed92067d96b05df848f86d1d27e039414cdd4feb2a7299bd7"
+    }
+  ]
+}

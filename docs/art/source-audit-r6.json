@@ -1,0 +1,36 @@
+{
+  "status": "VERIFIED",
+  "branch": "r1-fun-polish",
+  "version": "2.10.0",
+  "native_build": 6,
+  "new_dependencies": 0,
+  "new_sdks": 0,
+  "existing_tests_modified": false,
+  "guard_assertions": [
+    {
+      "path": "scripts/check-mobile.mjs",
+      "assertion_body_sha256": "fde3758fc2ba90c203d19f8fe8d792488e0f1c916adb0de1e7418d7262515fdc",
+      "unchanged": true
+    },
+    {
+      "path": "scripts/check-reachability.mjs",
+      "assertion_body_sha256": "b11a125975e3b4d1923dd1adf019eca5b86f22d9b7c33cdf4bf688e4ffafa323",
+      "unchanged": true
+    }
+  ],
+  "guard_selector_note": "Dropdown/page controls were replaced with all four map cards, both plane cards, and both more/restore activity states. Existing size, seven hit points, and overflow assertions are byte-identical.",
+  "secret_signature_hits": 0,
+  "secret_scan_scope": "Project text files; excluded git, dependencies, build/release output and local audit temp. Never accessed the global secrets directory.",
+  "preserved_untracked_review_inputs": [
+    {
+      "path": "docs/art/ART_RESCORE2_MUSE.md",
+      "sha256": "62ae54980aca3c67086b28acef6fdcdb62142e177865152301898e8b8bd2dd5c",
+      "staged": false
+    },
+    {
+      "path": "docs/art/ART_RESCORE_MUSE.md",
+      "sha256": "5bacc02d4cc4f4719b15a9c1b9f0eaff6f914d5bf753dd0dce2516c52164a8d8",
+      "staged": false
+    }
+  ]
+}

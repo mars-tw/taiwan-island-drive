@@ -1,0 +1,61 @@
+{
+  "status": "VERIFIED",
+  "tool": "image_gen.imagegen",
+  "model_slug": null,
+  "generationCalls": 5,
+  "designs": 5,
+  "runtimeImages": 5,
+  "processing": "PNG to WebP quality 90 only; original dimensions and alpha preserved",
+  "outputs": [
+    {
+      "path": "public/art/content-r3/cake-slope.webp",
+      "source": "docs/content/r3/art/cake-slope-master.png",
+      "width": 1024,
+      "height": 1536,
+      "hasAlpha": false,
+      "bytes": 421128,
+      "sha256": "559f4d30a61c63ce9c32fc2509dd9d2da9ebf84ec3da537d48644b8229555ffb",
+      "sourceSha256": "dd45e00b8a639a6f535446429b6d5b832f4b19af0b2b797d2a53a4b996bc32cb"
+    },
+    {
+      "path": "public/art/content-r3/cake-bends.webp",
+      "source": "docs/content/r3/art/cake-bends-master.png",
+      "width": 1024,
+      "height": 1536,
+      "hasAlpha": false,
+      "bytes": 512290,
+      "sha256": "41e7cd4614a32a954ba00c22b0eb5d6c7015c0c610d327798930165b9eaf0462",
+      "sourceSha256": "d10e0b8a9f0024e1cbc4ff15d80306a0d6fd777b32cf5fe0fa6acf5d50f3805d"
+    },
+    {
+      "path": "public/art/content-r3/cake-bay.webp",
+      "source": "docs/content/r3/art/cake-bay-master.png",
+      "width": 1024,
+      "height": 1536,
+      "hasAlpha": false,
+      "bytes": 389126,
+      "sha256": "e59ead97a1ff0ff771e46dd11052649e6d72e9da27f6204605dcc503e242e188",
+      "sourceSha256": "f8b10a4870c1164355088f89ae53050d2a28630bc156e19cf8820b5cb031d1bd"
+    },
+    {
+      "path": "public/art/content-r3/station-horizontal.webp",
+      "source": "docs/content/r3/art/station-horizontal-master.png",
+      "width": 1024,
+      "height": 1536,
+      "hasAlpha": false,
+      "bytes": 489144,
+      "sha256": "f341af18b3c892f5f943747b3a9c23af0a7d19eb2c6b9755f822c78379ebf219",
+      "sourceSha256": "27be47a10a2aba7603a2819efaede95c927dea84dbde2742436564dd477db130"
+    },
+    {
+      "path": "public/art/content-r3/train-side.webp",
+      "source": "docs/content/r3/art/train-side-master.png",
+      "width": 1942,
+      "height": 809,
+      "hasAlpha": true,
+      "bytes": 194164,
+      "sha256": "3342fe060254debded56d8a6410d9a7c03b38ecc781f38344b42c06dc1db4d6f",
+      "sourceSha256": "e0680f909056b8ee15e55c2c012a77430157817f60fbef25648b28fdf8017cb4"
+    }
+  ]
+}

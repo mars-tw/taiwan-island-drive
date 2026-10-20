@@ -1,0 +1,47 @@
+/* The academy palette and type are shared with the existing driving classrooms. */
+:root{--academy-paper:#fffaf0;--academy-ink:#173d47;--academy-teal:#198968;--academy-gold:#ffdb68}
+.academy-mission{background:var(--academy-paper);border:3px solid #249d7c;border-radius:18px;padding:14px 18px;display:grid;grid-template-columns:1fr auto;gap:4px 20px;align-items:center}
+.academy-mission h1{font-size:26px;margin:0;color:var(--academy-ink)}
+#academy-story{margin:0;font-size:14px;line-height:1.5;max-width:750px}
+#academy-start{grid-column:2;grid-row:1/4;background:var(--academy-teal);color:#fff;min-height:66px;min-width:160px;border-radius:8px;padding:10px 16px;font-weight:900}
+#academy-route{font-size:12px;margin:4px 0 0;color:#366763}#academy-record{font-size:13px;font-weight:800;margin:4px 0 0;color:#665000}
+#math-practice{background:#fff4c4;color:#513500;border:2px solid #f4be37;border-radius:8px;min-height:60px;padding:5px 14px}
+#math-lesson{position:fixed;inset:0;box-sizing:border-box;margin:auto;width:min(1000px,calc(100vw - 12px));height:min(790px,calc(100dvh - 12px));max-height:calc(100dvh - 12px);padding:0;border:3px solid #249d7c;border-radius:18px;background:var(--academy-paper);color:var(--academy-ink);font-family:'Microsoft JhengHei','PingFang TC',sans-serif;overflow:hidden}
+#math-lesson::backdrop{background:#163d4fb8}
+.dispatch-page{height:100%;display:grid;grid-template-rows:64px minmax(0,1fr) auto}
+.dispatch-top{display:flex;justify-content:space-between;align-items:center;padding:2px 8px;background:#d6f5e6;gap:6px;font-weight:900}
+#math-lesson button{font:800 16px 'Microsoft JhengHei','PingFang TC',sans-serif;min-width:60px;min-height:60px;touch-action:manipulation;border:2px solid #249d7c;border-radius:8px;background:#fff;color:#173d47;padding:6px 12px;cursor:pointer}
+#math-lesson button:focus-visible{outline:3px solid #ce5d24;outline-offset:-4px}
+#math-lesson button:disabled{opacity:.5;cursor:default}
+.dispatch-body{overflow:auto;text-align:center;padding:10px 20px;min-height:0}
+.dispatch-route{display:flex;justify-content:center;gap:20px;list-style:none;padding:0;margin:0;font-size:14px}.dispatch-route [aria-current]{color:#087653;font-weight:900}
+#dispatch-title{font-size:clamp(18px,2.8vw,30px);margin:8px 0}.dispatch-instruction{margin:4px 0;font-size:15px;line-height:1.5}
+.dispatch-train{display:flex;align-items:center;justify-content:center;margin:12px auto;max-width:760px;gap:8px}
+.dispatch-carriage{flex:1;max-width:340px;background:#d6f5e6;border:3px solid #198968;border-radius:18px;padding:8px 12px 0;min-width:0}.dispatch-carriage.rear{background:#fff1bf;border-color:#b28818}
+.dispatch-carriage h2{display:flex;justify-content:space-between;align-items:center;font-size:16px;margin:0 0 6px}.dispatch-carriage strong{font-size:28px}.dispatch-carriage small{font-size:13px}
+.dispatch-seats{display:grid;grid-template-columns:repeat(5,1fr);gap:5px}.dispatch-seats span{border-radius:8px;background:#fff;line-height:28px;font-size:21px;color:#087653;border:1px solid #98bbab}.dispatch-seats .empty{color:#66887d}.dispatch-wheels{color:#173d47;line-height:24px;font-size:20px}.dispatch-coupler{font-size:24px}.uncoupled .dispatch-coupler{margin:0 8px}
+.dispatch-equation{font-weight:900;font-size:clamp(15px,2.4vw,25px);margin:8px 0}.dispatch-feedback{font-size:14px;min-height:20px;margin:6px 0}.dispatch-completed,.math-save{font-size:12px;margin:4px 0}
+.dispatch-controls{display:flex;gap:8px;padding:8px;background:#e8f6ed;justify-content:center;flex-wrap:wrap}.dispatch-controls button{flex:1;max-width:380px}.dispatch-controls button:last-child{background:var(--academy-gold)!important;border-color:#ad841b!important}
+.math-paused{position:absolute;inset:0;display:flex;flex-direction:column;justify-content:center;align-items:center;background:var(--academy-paper);gap:12px;z-index:3}.math-paused p,.math-paused h2{margin:0}
+.train-import{border-top:1px solid #b9d1ce;margin-top:14px;padding-top:14px;font-size:13px}.train-import label{display:block;min-height:60px}.train-import input{max-width:100%;min-height:60px;font-size:14px}.train-import small{display:block;line-height:1.6}
+.academy-home{display:grid;grid-template-rows:auto auto auto minmax(210px,1fr);gap:10px;height:100dvh;padding-bottom:16px}
+.home-header{height:76px}.welcome{position:static!important;transform:none!important;display:flex!important;justify-content:space-between;gap:10px;padding:0!important;width:auto!important;clip:auto!important;clip-path:none!important;overflow:visible!important;height:auto!important;pointer-events:auto!important}
+.welcome>div,.welcome .family-badge{display:none}.welcome button{min-height:60px;min-width:60px;flex:1;font-weight:800}.family-note,.home-footer{display:none}
+.vehicle-gallery{height:auto!important;min-height:0!important;max-height:none!important;gap:14px}.card-copy h2{font-size:24px}.card-copy p{margin:0 0 8px}.card-action{min-height:60px}.academy-brand{min-height:60px}.welcome #safety-start{width:auto;font-size:14px}
+@media(max-width:600px) and (orientation:portrait){
+ .academy-home{padding:0 8px 8px;gap:7px;grid-template-rows:128px auto 60px minmax(210px,1fr)}.home-header{height:128px}.header-tools{top:66px}.header-tools #home-settings{top:-64px}.academy-brand{font-size:14px;gap:5px}.academy-mark{width:32px;height:32px}.header-tools #home-settings{font-size:12px}
+ .academy-mission{padding:8px;display:grid;grid-template-columns:1fr;border-radius:12px;gap:3px}.academy-mission h1{font-size:20px}#academy-story{font-size:12px;line-height:1.4}#academy-start{grid-column:1;grid-row:auto;min-height:60px}#academy-route{display:none}#academy-record{font-size:12px;margin:0}
+ .vehicle-gallery{grid-template-rows:repeat(3,minmax(60px,1fr));gap:7px}.academy-card{border-radius:12px;border-width:2px}.card-image{flex:0 0 28%}.vehicle-symbol,.card-stars,.card-english,.card-copy p{display:none}.card-copy{padding:3px 6px;grid-template-columns:auto minmax(60px,1fr);grid-template-areas:'title action';gap:6px}.card-copy h2{font-size:17px;white-space:nowrap;margin:0}.card-action{font-size:13px;padding:0 7px;gap:2px;min-height:60px;border-radius:8px}.card-action b{font-size:18px}
+ #math-practice{font-size:13px;padding:5px}.welcome #safety-start{font-size:12px}
+ .dispatch-body{padding:6px}.dispatch-instruction{font-size:13px}.dispatch-route{gap:12px;font-size:12px}.dispatch-train{gap:3px;margin:8px auto}.dispatch-carriage{padding:6px 6px 0;border-radius:12px}.dispatch-carriage h2{font-size:13px}.dispatch-carriage strong{font-size:24px}.dispatch-coupler{font-size:16px}.dispatch-controls{gap:5px;padding:6px}.dispatch-controls button{font-size:13px!important;padding:5px!important}.uncoupled .dispatch-coupler{margin:0 2px}
+}
+@media(max-height:520px) and (orientation:landscape){
+ .academy-home{padding:0 10px 6px;grid-template-rows:64px 74px 60px minmax(60px,1fr);gap:5px}.home-header{height:64px}.academy-brand{font-size:14px}.header-tools{gap:4px}.header-tools .star-shelf{padding:0 6px}.header-tools .passport-open{min-width:70px;padding:0 5px}.header-tools #home-settings{font-size:12px;padding:0 8px}.academy-mark{display:none}
+ .academy-mission{padding:5px 10px;gap:2px 8px;border-radius:10px}.academy-mission h1{font-size:18px}#academy-story{display:none}#academy-record{font-size:11px}#academy-route{display:none}#academy-start{grid-row:1/3;min-width:140px;font-size:13px;min-height:60px}
+ .welcome{gap:8px}.welcome button{font-size:12px!important}.vehicle-gallery{gap:7px}.academy-card{flex-direction:row;border-width:2px;border-radius:10px}.card-image{flex:0 0 24%}.card-copy{padding:0 3px;display:flex;flex:1;justify-content:center}.card-copy h2,.vehicle-symbol,.card-stars{display:none}.card-action{min-height:60px;font-size:13px;padding:0 6px;width:100%;gap:3px}.card-action b{font-size:15px}
+ .dispatch-page{grid-template-rows:64px minmax(0,1fr) auto}.dispatch-body{padding:2px 8px}.dispatch-route,.dispatch-instruction,.dispatch-feedback,.dispatch-completed,.math-save{display:none}#dispatch-title{font-size:17px;margin:2px 0}.dispatch-train{margin:3px auto;max-width:600px;gap:8px}.dispatch-carriage{padding:3px 10px 0;border-width:2px}.dispatch-carriage h2{font-size:13px;margin:0}.dispatch-carriage strong{font-size:19px}.dispatch-seats{gap:3px}.dispatch-seats span{line-height:20px;font-size:16px}.dispatch-wheels{font-size:14px;line-height:14px}.dispatch-equation{font-size:16px;margin:2px 0}.dispatch-controls{padding:4px 6px;gap:6px}.dispatch-controls button{font-size:13px!important}
+}
+@media(prefers-reduced-motion:reduce){#math-lesson *{animation:none!important;transition:none!important}}
+@media(max-width:600px) and (max-height:650px) and (orientation:portrait){#academy-story{display:none}.academy-mission{padding:6px 8px}.academy-mission h1{font-size:19px}}
+.math-save.save-failed{display:block!important;font-weight:800;color:#954b1e}
+.dispatch-wheels{display:flex;justify-content:space-between;padding-inline:10px}

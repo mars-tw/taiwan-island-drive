@@ -1,0 +1,1234 @@
+{
+  "status": "VERIFIED",
+  "rows": [
+    {
+      "label": "se picker",
+      "status": "VERIFIED"
+    },
+    {
+      "label": "se cake ready",
+      "status": "VERIFIED"
+    },
+    {
+      "label": "se cake controls",
+      "status": "VERIFIED"
+    },
+    {
+      "label": "se crossing ready",
+      "status": "VERIFIED"
+    },
+    {
+      "label": "se crossing controls",
+      "status": "VERIFIED"
+    },
+    {
+      "label": "se tickets ready",
+      "status": "VERIFIED"
+    },
+    {
+      "label": "se tickets controls",
+      "status": "VERIFIED"
+    },
+    {
+      "label": "landscape-small picker",
+      "status": "VERIFIED"
+    },
+    {
+      "label": "landscape-small cake ready",
+      "status": "VERIFIED"
+    },
+    {
+      "label": "landscape-small cake controls",
+      "status": "VERIFIED"
+    },
+    {
+      "label": "landscape-small crossing ready",
+      "status": "VERIFIED"
+    },
+    {
+      "label": "landscape-small crossing controls",
+      "status": "VERIFIED"
+    },
+    {
+      "label": "landscape-small tickets ready",
+      "status": "VERIFIED"
+    },
+    {
+      "label": "landscape-small tickets controls",
+      "status": "VERIFIED"
+    },
+    {
+      "label": "phone picker",
+      "status": "VERIFIED"
+    },
+    {
+      "label": "phone cake ready",
+      "status": "VERIFIED"
+    },
+    {
+      "label": "phone cake controls",
+      "status": "VERIFIED"
+    },
+    {
+      "label": "phone crossing ready",
+      "status": "VERIFIED"
+    },
+    {
+      "label": "phone crossing controls",
+      "status": "VERIFIED"
+    },
+    {
+      "label": "phone tickets ready",
+      "status": "VERIFIED"
+    },
+    {
+      "label": "phone tickets controls",
+      "status": "VERIFIED"
+    },
+    {
+      "label": "phone-landscape picker",
+      "status": "VERIFIED"
+    },
+    {
+      "label": "phone-landscape cake ready",
+      "status": "VERIFIED"
+    },
+    {
+      "label": "phone-landscape cake controls",
+      "status": "VERIFIED"
+    },
+    {
+      "label": "phone-landscape crossing ready",
+      "status": "VERIFIED"
+    },
+    {
+      "label": "phone-landscape crossing controls",
+      "status": "VERIFIED"
+    },
+    {
+      "label": "phone-landscape tickets ready",
+      "status": "VERIFIED"
+    },
+    {
+      "label": "phone-landscape tickets controls",
+      "status": "VERIFIED"
+    },
+    {
+      "label": "ipad picker",
+      "status": "VERIFIED"
+    },
+    {
+      "label": "ipad cake ready",
+      "status": "VERIFIED"
+    },
+    {
+      "label": "ipad cake controls",
+      "status": "VERIFIED"
+    },
+    {
+      "label": "ipad crossing ready",
+      "status": "VERIFIED"
+    },
+    {
+      "label": "ipad crossing controls",
+      "status": "VERIFIED"
+    },
+    {
+      "label": "ipad tickets ready",
+      "status": "VERIFIED"
+    },
+    {
+      "label": "ipad tickets controls",
+      "status": "VERIFIED"
+    },
+    {
+      "label": "ipad-landscape picker",
+      "status": "VERIFIED"
+    },
+    {
+      "label": "ipad-landscape cake ready",
+      "status": "VERIFIED"
+    },
+    {
+      "label": "ipad-landscape cake controls",
+      "status": "VERIFIED"
+    },
+    {
+      "label": "ipad-landscape crossing ready",
+      "status": "VERIFIED"
+    },
+    {
+      "label": "ipad-landscape crossing controls",
+      "status": "VERIFIED"
+    },
+    {
+      "label": "ipad-landscape tickets ready",
+      "status": "VERIFIED"
+    },
+    {
+      "label": "ipad-landscape tickets controls",
+      "status": "VERIFIED"
+    },
+    {
+      "label": "laptop picker",
+      "status": "VERIFIED"
+    },
+    {
+      "label": "laptop cake ready",
+      "status": "VERIFIED"
+    },
+    {
+      "label": "laptop cake controls",
+      "status": "VERIFIED"
+    },
+    {
+      "label": "laptop crossing ready",
+      "status": "VERIFIED"
+    },
+    {
+      "label": "laptop crossing controls",
+      "status": "VERIFIED"
+    },
+    {
+      "label": "laptop tickets ready",
+      "status": "VERIFIED"
+    },
+    {
+      "label": "laptop tickets controls",
+      "status": "VERIFIED"
+    },
+    {
+      "label": "laptop-short picker",
+      "status": "VERIFIED"
+    },
+    {
+      "label": "laptop-short cake ready",
+      "status": "VERIFIED"
+    },
+    {
+      "label": "laptop-short cake controls",
+      "status": "VERIFIED"
+    },
+    {
+      "label": "laptop-short crossing ready",
+      "status": "VERIFIED"
+    },
+    {
+      "label": "laptop-short crossing controls",
+      "status": "VERIFIED"
+    },
+    {
+      "label": "laptop-short tickets ready",
+      "status": "VERIFIED"
+    },
+    {
+      "label": "laptop-short tickets controls",
+      "status": "VERIFIED"
+    },
+    {
+      "label": "cake checkpoint survives reload",
+      "status": "VERIFIED"
+    },
+    {
+      "label": "cake all three routes through held UI controls",
+      "status": "VERIFIED",
+      "startTilt": -28.5,
+      "turnTilt": 17.82,
+      "brakeTilt": 30.16
+    },
+    {
+      "label": "crossing three friends, distinct paths/poses, early departure gate, three stations persisted",
+      "status": "VERIFIED"
+    },
+    {
+      "label": "tickets wrong/right platforms, stopped doors, boarding before next station, persisted completion",
+      "status": "VERIFIED"
+    },
+    {
+      "label": "reload all completions and real offline first-station playthrough",
+      "status": "VERIFIED"
+    },
+    {
+      "label": "pause, reduced motion and denied storage still playable",
+      "status": "VERIFIED"
+    },
+    {
+      "label": "phone train floating panels <=3",
+      "status": "VERIFIED",
+      "panels": [
+        "train-child-dashboard"
+      ],
+      "dashboardHeight": 75,
+      "controls60px": true
+    },
+    {
+      "label": "landscape train floating panels <=3",
+      "status": "VERIFIED",
+      "panels": [
+        "train-child-dashboard"
+      ],
+      "dashboardHeight": 58,
+      "controls60px": true
+    },
+    {
+      "label": "ipad train floating panels <=3",
+      "status": "VERIFIED",
+      "panels": [
+        "train-child-dashboard"
+      ],
+      "dashboardHeight": 75,
+      "controls60px": true
+    },
+    {
+      "label": "se train floating panels <=3",
+      "status": "VERIFIED",
+      "panels": [
+        "train-child-dashboard"
+      ],
+      "dashboardHeight": 75,
+      "controls60px": true
+    },
+    {
+      "label": "small-landscape train floating panels <=3",
+      "status": "VERIFIED",
+      "panels": [
+        "train-child-dashboard"
+      ],
+      "dashboardHeight": 48,
+      "controls60px": true
+    },
+    {
+      "label": "ipad-landscape train floating panels <=3",
+      "status": "VERIFIED",
+      "panels": [
+        "train-child-dashboard"
+      ],
+      "dashboardHeight": 75,
+      "controls60px": true
+    },
+    {
+      "label": "short-laptop train floating panels <=3",
+      "status": "VERIFIED",
+      "panels": [
+        "train-child-dashboard"
+      ],
+      "dashboardHeight": 75,
+      "controls60px": true
+    },
+    {
+      "label": "cake final artwork grounding and three physical routes via held controls",
+      "status": "VERIFIED",
+      "startTilt": -27.28,
+      "turnTilt": 16.53
+    },
+    {
+      "label": "crossing three independent scene images, all three two-pose friends per station, all three stations offline",
+      "status": "VERIFIED",
+      "backgrounds": [
+        "url(\"http://127.0.0.1:5286/art/content-r1/crossing.webp\")",
+        "url(\"http://127.0.0.1:5286/art/content-r2/crossing-banyan.webp\")",
+        "url(\"http://127.0.0.1:5286/art/content-r2/crossing-lighthouse.webp\")"
+      ]
+    }
+  ],
+  "shots": [
+    {
+      "path": "docs/content/r2/se-home.png",
+      "width": 320,
+      "height": 568,
+      "sha256": "309769704b11eb8a806f2552d989c5e4d1dcbabeea32335ca64638b71389f0e2",
+      "native": false,
+      "method": "unmodified headless Chromium runtime screenshot"
+    },
+    {
+      "path": "docs/content/r2/se-cake-playing.png",
+      "width": 320,
+      "height": 568,
+      "sha256": "6a42963bb1bc8da38e1d287ee3446acefb827c477df89e2dc7fcbcb6754f2b4a",
+      "native": false,
+      "method": "unmodified headless Chromium runtime screenshot"
+    },
+    {
+      "path": "docs/content/r2/se-crossing-playing.png",
+      "width": 320,
+      "height": 568,
+      "sha256": "b9a10c736a05fc9042eeefe67ff46b79813ca465ec3c5fe58d36475cf8a872f0",
+      "native": false,
+      "method": "unmodified headless Chromium runtime screenshot"
+    },
+    {
+      "path": "docs/content/r2/se-tickets-playing.png",
+      "width": 320,
+      "height": 568,
+      "sha256": "e2d622b43dda098af0abbfeb8ae952815b3dac0ddf4d85ede11d4e7f514313ec",
+      "native": false,
+      "method": "unmodified headless Chromium runtime screenshot"
+    },
+    {
+      "path": "docs/content/r2/landscape-small-home.png",
+      "width": 568,
+      "height": 320,
+      "sha256": "cff471a61e06e4f3c41b065f17757ac9c598d3af8087fb3aae5b51919fc5e483",
+      "native": false,
+      "method": "unmodified headless Chromium runtime screenshot"
+    },
+    {
+      "path": "docs/content/r2/landscape-small-cake-playing.png",
+      "width": 568,
+      "height": 320,
+      "sha256": "224154e9ee2d4f717885cb3a4e5ab79c3daf24bc0562f18983da47a5cedb382a",
+      "native": false,
+      "method": "unmodified headless Chromium runtime screenshot"
+    },
+    {
+      "path": "docs/content/r2/landscape-small-crossing-playing.png",
+      "width": 568,
+      "height": 320,
+      "sha256": "0c05530255e382d6cf85e5e0062d180599b5a63e2ed6279d64efadfccd990120",
+      "native": false,
+      "method": "unmodified headless Chromium runtime screenshot"
+    },
+    {
+      "path": "docs/content/r2/landscape-small-tickets-playing.png",
+      "width": 568,
+      "height": 320,
+      "sha256": "2cfb80895944a125f5b7f1ee78518b160f77a3a635535b6c511480bb3528a998",
+      "native": false,
+      "method": "unmodified headless Chromium runtime screenshot"
+    },
+    {
+      "path": "docs/content/r2/phone-home.png",
+      "width": 390,
+      "height": 844,
+      "sha256": "89519dff356fdf2ebb46ea29ffce266a7ae118389acc409c7d0a2c1b46fd064e",
+      "native": false,
+      "method": "unmodified headless Chromium runtime screenshot"
+    },
+    {
+      "path": "docs/content/r2/phone-entry-picker.png",
+      "width": 390,
+      "height": 844,
+      "sha256": "ced8009d1d9739743939d4d25b0ecb22a10fa9a7d7ff9d64392d2112221a6ad2",
+      "native": false,
+      "method": "unmodified headless Chromium runtime screenshot"
+    },
+    {
+      "path": "docs/content/r2/phone-cake-playing.png",
+      "width": 390,
+      "height": 844,
+      "sha256": "dac8d4eaa4a2f517cdb5d3a33f0f8d93356d4352c6adbc755ebf734cea5997ef",
+      "native": false,
+      "method": "unmodified headless Chromium runtime screenshot"
+    },
+    {
+      "path": "docs/content/r2/phone-crossing-playing.png",
+      "width": 390,
+      "height": 844,
+      "sha256": "d876f2e2d018bd023d3f56146f61a171012c67e90b946eded56dfc452d8c6311",
+      "native": false,
+      "method": "unmodified headless Chromium runtime screenshot"
+    },
+    {
+      "path": "docs/content/r2/phone-tickets-playing.png",
+      "width": 390,
+      "height": 844,
+      "sha256": "ec7eaa670210b868ab14a16b22774a232abf987a29f120576a0581e1767338c0",
+      "native": false,
+      "method": "unmodified headless Chromium runtime screenshot"
+    },
+    {
+      "path": "docs/content/r2/phone-landscape-home.png",
+      "width": 844,
+      "height": 390,
+      "sha256": "b3ca5d4128cdf9cc6e8fd7746a14cef734336e9eaef529a7ca7e11919de3fcfc",
+      "native": false,
+      "method": "unmodified headless Chromium runtime screenshot"
+    },
+    {
+      "path": "docs/content/r2/phone-landscape-cake-playing.png",
+      "width": 844,
+      "height": 390,
+      "sha256": "dc1f362870d07ddf734308d552be74431782fb94f1e1c2a034bb8f5b704c92c8",
+      "native": false,
+      "method": "unmodified headless Chromium runtime screenshot"
+    },
+    {
+      "path": "docs/content/r2/phone-landscape-crossing-playing.png",
+      "width": 844,
+      "height": 390,
+      "sha256": "867cd43da01ecec7a88a48780e1cff7ed1850870b9a9e13a722fde4870985706",
+      "native": false,
+      "method": "unmodified headless Chromium runtime screenshot"
+    },
+    {
+      "path": "docs/content/r2/phone-landscape-tickets-playing.png",
+      "width": 844,
+      "height": 390,
+      "sha256": "d2b5698853a12b3efeda689c2e09309757553bf62bcd7676a77cc38ece66f57e",
+      "native": false,
+      "method": "unmodified headless Chromium runtime screenshot"
+    },
+    {
+      "path": "docs/content/r2/ipad-home.png",
+      "width": 768,
+      "height": 1024,
+      "sha256": "5864a051c1b16c9c0152004d731059936f80b3e3b3ee9fd431a036cd4c602d10",
+      "native": false,
+      "method": "unmodified headless Chromium runtime screenshot"
+    },
+    {
+      "path": "docs/content/r2/ipad-cake-playing.png",
+      "width": 768,
+      "height": 1024,
+      "sha256": "c079ecf26e21b8daee1d407e26719f7103399cbe515623af53b3bc0d94cfe840",
+      "native": false,
+      "method": "unmodified headless Chromium runtime screenshot"
+    },
+    {
+      "path": "docs/content/r2/ipad-crossing-playing.png",
+      "width": 768,
+      "height": 1024,
+      "sha256": "ee368655501bf93058c647b4e0e1babc9cef88dc2d93d9361e7a4b8b23550930",
+      "native": false,
+      "method": "unmodified headless Chromium runtime screenshot"
+    },
+    {
+      "path": "docs/content/r2/ipad-tickets-playing.png",
+      "width": 768,
+      "height": 1024,
+      "sha256": "cce6a7adda0ef55390822465b231defe484504fd3421045df3262fada254092c",
+      "native": false,
+      "method": "unmodified headless Chromium runtime screenshot"
+    },
+    {
+      "path": "docs/content/r2/ipad-landscape-home.png",
+      "width": 1024,
+      "height": 768,
+      "sha256": "d095a01acd7727b7b9324f57e547255518ccea85e904acaae815f417f58614c6",
+      "native": false,
+      "method": "unmodified headless Chromium runtime screenshot"
+    },
+    {
+      "path": "docs/content/r2/ipad-landscape-cake-playing.png",
+      "width": 1024,
+      "height": 768,
+      "sha256": "03d2a16f26720a3b1268a12461d798f7abf1685697cf9cf19894f80966dd7720",
+      "native": false,
+      "method": "unmodified headless Chromium runtime screenshot"
+    },
+    {
+      "path": "docs/content/r2/ipad-landscape-crossing-playing.png",
+      "width": 1024,
+      "height": 768,
+      "sha256": "27cee816fcdabf03039825e671188a0db812a44e35f5e32cc0e9dbd8a45ab6b5",
+      "native": false,
+      "method": "unmodified headless Chromium runtime screenshot"
+    },
+    {
+      "path": "docs/content/r2/ipad-landscape-tickets-playing.png",
+      "width": 1024,
+      "height": 768,
+      "sha256": "3454192e55dbf90e0a8ba375865a37b83051c63a0294e4e613ba9c9df844e772",
+      "native": false,
+      "method": "unmodified headless Chromium runtime screenshot"
+    },
+    {
+      "path": "docs/content/r2/laptop-home.png",
+      "width": 1366,
+      "height": 600,
+      "sha256": "272641be1632db7922fca37517ed823e23bbbc6bd07bef76486a312dff30a7b5",
+      "native": false,
+      "method": "unmodified headless Chromium runtime screenshot"
+    },
+    {
+      "path": "docs/content/r2/laptop-cake-playing.png",
+      "width": 1366,
+      "height": 600,
+      "sha256": "2c6df619a0d0b27798d684f3949244389dc498ed0ba136501e50249291d2ef66",
+      "native": false,
+      "method": "unmodified headless Chromium runtime screenshot"
+    },
+    {
+      "path": "docs/content/r2/laptop-crossing-playing.png",
+      "width": 1366,
+      "height": 600,
+      "sha256": "c4b907fa8da9b58b5e3a183a437ef57a7814ebbe89b7019096d3e9d147ad880f",
+      "native": false,
+      "method": "unmodified headless Chromium runtime screenshot"
+    },
+    {
+      "path": "docs/content/r2/laptop-tickets-playing.png",
+      "width": 1366,
+      "height": 600,
+      "sha256": "2db9758a8ed3c1e49e7ceb2bdfbf2867cf1d66108d2a1afbace07576ace82833",
+      "native": false,
+      "method": "unmodified headless Chromium runtime screenshot"
+    },
+    {
+      "path": "docs/content/r2/laptop-short-home.png",
+      "width": 1280,
+      "height": 640,
+      "sha256": "013e47427afe39a1910de5a3afaba0cbac89fea6189f1cf6b6a6aa22bdc486fc",
+      "native": false,
+      "method": "unmodified headless Chromium runtime screenshot"
+    },
+    {
+      "path": "docs/content/r2/laptop-short-cake-playing.png",
+      "width": 1280,
+      "height": 640,
+      "sha256": "4b476a2d25269c05cf6f3583bcf62d19346bfa8c7b03205224439c95460ce047",
+      "native": false,
+      "method": "unmodified headless Chromium runtime screenshot"
+    },
+    {
+      "path": "docs/content/r2/laptop-short-crossing-playing.png",
+      "width": 1280,
+      "height": 640,
+      "sha256": "3848f7901d132b66364506c25363743bdd66659e19e2077d3b01827bf71259c5",
+      "native": false,
+      "method": "unmodified headless Chromium runtime screenshot"
+    },
+    {
+      "path": "docs/content/r2/laptop-short-tickets-playing.png",
+      "width": 1280,
+      "height": 640,
+      "sha256": "11184a62e85012b9a03a2c0b45d11471f81f34eeb4ddd2a9835387dc33b74114",
+      "native": false,
+      "method": "unmodified headless Chromium runtime screenshot"
+    },
+    {
+      "path": "docs/content/r2/phone-cake-starting-1.png",
+      "width": 390,
+      "height": 844,
+      "sha256": "5423298b10e55a55048459ce717e19af5599de168db5532bd52e1e2d56cd8378",
+      "native": false,
+      "method": "unmodified headless Chromium runtime screenshot"
+    },
+    {
+      "path": "docs/content/r2/phone-cake-turning-1.png",
+      "width": 390,
+      "height": 844,
+      "sha256": "1d8b391cb43db3a0487a0d11740384ad7b29603c34720e76237fb302668081bb",
+      "native": false,
+      "method": "unmodified headless Chromium runtime screenshot"
+    },
+    {
+      "path": "docs/content/r2/phone-cake-braking-1.png",
+      "width": 390,
+      "height": 844,
+      "sha256": "10051c68517c1e16549b9aa174c4998fc0e2caeeaa66a0e4f92889706343d0db",
+      "native": false,
+      "method": "unmodified headless Chromium runtime screenshot"
+    },
+    {
+      "path": "docs/content/r2/phone-cake-braking-2.png",
+      "width": 390,
+      "height": 844,
+      "sha256": "75d7015e8e52d1eda1cc2c643f50b49610d493acd41433645cc355e8bbc1c96f",
+      "native": false,
+      "method": "unmodified headless Chromium runtime screenshot"
+    },
+    {
+      "path": "docs/content/r2/phone-cake-braking-3.png",
+      "width": 390,
+      "height": 844,
+      "sha256": "f28eb3d7f173f4c48d3d1215e910f6eb672e59afb0eb6c1c9d87e0013be4c4d5",
+      "native": false,
+      "method": "unmodified headless Chromium runtime screenshot"
+    },
+    {
+      "path": "docs/content/r2/phone-cake-stage-1.png",
+      "width": 390,
+      "height": 844,
+      "sha256": "4cb787280bbf67da2c0ae3330eebbb7593d51bda54d97547b5274dbd8450b336",
+      "native": false,
+      "method": "unmodified headless Chromium runtime screenshot"
+    },
+    {
+      "path": "docs/content/r2/phone-cake-stage-2.png",
+      "width": 390,
+      "height": 844,
+      "sha256": "96e0b9b7e35e681bc79b364b6d5617d491fa0f05b1c4c0564fac3d93eca410ea",
+      "native": false,
+      "method": "unmodified headless Chromium runtime screenshot"
+    },
+    {
+      "path": "docs/content/r2/phone-cake-stage-3.png",
+      "width": 390,
+      "height": 844,
+      "sha256": "bb06d0b0187050b14cac532459c339d6f1ced55bf412e67e61323a87b05afa74",
+      "native": false,
+      "method": "unmodified headless Chromium runtime screenshot"
+    },
+    {
+      "path": "docs/content/r2/phone-cake-complete.png",
+      "width": 390,
+      "height": 844,
+      "sha256": "58eb54c19772f68cdc05503638e2114076812175f155b51cb251bb7c86b38be6",
+      "native": false,
+      "method": "unmodified headless Chromium runtime screenshot"
+    },
+    {
+      "path": "docs/content/r2/phone-crossing-blocked.png",
+      "width": 390,
+      "height": 844,
+      "sha256": "3599c6888eb79183cb0853b41673caa8648331a4900aa32750b6b3e82457f5bf",
+      "native": false,
+      "method": "unmodified headless Chromium runtime screenshot"
+    },
+    {
+      "path": "docs/content/r2/phone-crossing-stage-1-child-1.png",
+      "width": 390,
+      "height": 844,
+      "sha256": "1436340d7711156aca4bf19f49bba1cc9abbbd886caa36a1f35351df7b0f31b1",
+      "native": false,
+      "method": "unmodified headless Chromium runtime screenshot"
+    },
+    {
+      "path": "docs/content/r2/phone-crossing-stage-1-child-2.png",
+      "width": 390,
+      "height": 844,
+      "sha256": "55951bd5713ce33c75cf87070542777b61883f181623675a93d41c713aef9114",
+      "native": false,
+      "method": "unmodified headless Chromium runtime screenshot"
+    },
+    {
+      "path": "docs/content/r2/phone-crossing-stage-1-child-3.png",
+      "width": 390,
+      "height": 844,
+      "sha256": "d8ee05d67581090ecdae0496b52922948683cf3da69b5c636b7327bfc6bd4d02",
+      "native": false,
+      "method": "unmodified headless Chromium runtime screenshot"
+    },
+    {
+      "path": "docs/content/r2/phone-crossing-stage-1-bike-1.png",
+      "width": 390,
+      "height": 844,
+      "sha256": "8f984e03a3a2d4d3862f5030622c29c8b9539020464101a04bea82b913f5afaf",
+      "native": false,
+      "method": "unmodified headless Chromium runtime screenshot"
+    },
+    {
+      "path": "docs/content/r2/phone-crossing-stage-1-bike-2.png",
+      "width": 390,
+      "height": 844,
+      "sha256": "516756a1f4bddd215b60aa060e3c35cdb407769a02ae7d731e4eae72f8a3d788",
+      "native": false,
+      "method": "unmodified headless Chromium runtime screenshot"
+    },
+    {
+      "path": "docs/content/r2/phone-crossing-stage-1-bike-3.png",
+      "width": 390,
+      "height": 844,
+      "sha256": "2b0991c3523f6c71e6db61e62312ea07d5da35b81f969ee62d565abe49eae9b2",
+      "native": false,
+      "method": "unmodified headless Chromium runtime screenshot"
+    },
+    {
+      "path": "docs/content/r2/phone-crossing-stage-1-grandma-1.png",
+      "width": 390,
+      "height": 844,
+      "sha256": "376e427de05cee5df5cf6301bd7247ecc6ef9e9725f58efd325256585df7321b",
+      "native": false,
+      "method": "unmodified headless Chromium runtime screenshot"
+    },
+    {
+      "path": "docs/content/r2/phone-crossing-stage-1-grandma-2.png",
+      "width": 390,
+      "height": 844,
+      "sha256": "f4b06afb641dd55eedb5071109bfff39399c99bbfb7a74f2138c4b17327fbb4e",
+      "native": false,
+      "method": "unmodified headless Chromium runtime screenshot"
+    },
+    {
+      "path": "docs/content/r2/phone-crossing-stage-1-grandma-3.png",
+      "width": 390,
+      "height": 844,
+      "sha256": "1bce254e3aed9e91e0ad3ea9ef57eb99f02f9fac2a809c83900920c1f53d758c",
+      "native": false,
+      "method": "unmodified headless Chromium runtime screenshot"
+    },
+    {
+      "path": "docs/content/r2/phone-crossing-stage-1-clear.png",
+      "width": 390,
+      "height": 844,
+      "sha256": "dc8f997ef593202753453c4f1bd5d4255034912f6cc307821f91237e098c4647",
+      "native": false,
+      "method": "unmodified headless Chromium runtime screenshot"
+    },
+    {
+      "path": "docs/content/r2/phone-crossing-stage-2-grandma-1.png",
+      "width": 390,
+      "height": 844,
+      "sha256": "7fb0adb5a60d4b0cf5383568917a6dea783575cdbfee0c86c026bf7db4ca2b78",
+      "native": false,
+      "method": "unmodified headless Chromium runtime screenshot"
+    },
+    {
+      "path": "docs/content/r2/phone-crossing-stage-2-grandma-2.png",
+      "width": 390,
+      "height": 844,
+      "sha256": "32d5518306fee4c343dadbabff6c20db4d37b79d7d625af94c81240d5a9434d5",
+      "native": false,
+      "method": "unmodified headless Chromium runtime screenshot"
+    },
+    {
+      "path": "docs/content/r2/phone-crossing-stage-2-grandma-3.png",
+      "width": 390,
+      "height": 844,
+      "sha256": "23e63e09fa81cf1fbf6e2b2fb73d45119ead327551edecff32181d0bb6867a58",
+      "native": false,
+      "method": "unmodified headless Chromium runtime screenshot"
+    },
+    {
+      "path": "docs/content/r2/phone-crossing-stage-2-clear.png",
+      "width": 390,
+      "height": 844,
+      "sha256": "4f3bdcfe164af81d3e7cf29ec1c1f049bf7588521642f439c0396e7d4146039c",
+      "native": false,
+      "method": "unmodified headless Chromium runtime screenshot"
+    },
+    {
+      "path": "docs/content/r2/phone-crossing-stage-3-bike-1.png",
+      "width": 390,
+      "height": 844,
+      "sha256": "620891265e6d753bf15ec0708394ee907114525e7ea518d60221bf0419f1763e",
+      "native": false,
+      "method": "unmodified headless Chromium runtime screenshot"
+    },
+    {
+      "path": "docs/content/r2/phone-crossing-stage-3-bike-2.png",
+      "width": 390,
+      "height": 844,
+      "sha256": "bb565cdd386fc60ce646aa59c839ce66cdea843014c26479892ddedf3c633522",
+      "native": false,
+      "method": "unmodified headless Chromium runtime screenshot"
+    },
+    {
+      "path": "docs/content/r2/phone-crossing-stage-3-bike-3.png",
+      "width": 390,
+      "height": 844,
+      "sha256": "284808da6907c7be2058efead2ecaa50b82a2b7e3798b57419c78e2494e49428",
+      "native": false,
+      "method": "unmodified headless Chromium runtime screenshot"
+    },
+    {
+      "path": "docs/content/r2/phone-crossing-stage-3-clear.png",
+      "width": 390,
+      "height": 844,
+      "sha256": "4a3c799a421c23d81b9fa0ccf1a166c092d46d0e7ecc633ea45c18380e5a7216",
+      "native": false,
+      "method": "unmodified headless Chromium runtime screenshot"
+    },
+    {
+      "path": "docs/content/r2/phone-crossing-complete.png",
+      "width": 390,
+      "height": 844,
+      "sha256": "6df503387086c0b3f3b2d56c0d3a94d381bf9bca622baa3d48dd44d0a5262c07",
+      "native": false,
+      "method": "unmodified headless Chromium runtime screenshot"
+    },
+    {
+      "path": "docs/content/r2/phone-tickets-stage-1-wrong.png",
+      "width": 390,
+      "height": 844,
+      "sha256": "c9996f3f78d3606b969e7a9b4382b32e4b77d465a57b56122d7b8ecf1a586188",
+      "native": false,
+      "method": "unmodified headless Chromium runtime screenshot"
+    },
+    {
+      "path": "docs/content/r2/phone-tickets-stage-1-right.png",
+      "width": 390,
+      "height": 844,
+      "sha256": "a2b647375216e7fbf4bc2dace5618ea2d5efd33104914093b2968a1e49071e1e",
+      "native": false,
+      "method": "unmodified headless Chromium runtime screenshot"
+    },
+    {
+      "path": "docs/content/r2/phone-tickets-stage-1-boarding-1.png",
+      "width": 390,
+      "height": 844,
+      "sha256": "3872bd27a845c3987dc8a07062b3a3ed674208f5bebc8e095dfa999686f96efb",
+      "native": false,
+      "method": "unmodified headless Chromium runtime screenshot"
+    },
+    {
+      "path": "docs/content/r2/phone-tickets-stage-1-boarding-2.png",
+      "width": 390,
+      "height": 844,
+      "sha256": "0504e7e374f535d5df19b526ddb1288ecdab0260945011ea8b9ee6d2e96f85a7",
+      "native": false,
+      "method": "unmodified headless Chromium runtime screenshot"
+    },
+    {
+      "path": "docs/content/r2/phone-tickets-stage-1-boarding-3.png",
+      "width": 390,
+      "height": 844,
+      "sha256": "a0edff20d464e51d3232f5ae5adbc3e87a019bf93e79ac05a28ca78ed794b9f5",
+      "native": false,
+      "method": "unmodified headless Chromium runtime screenshot"
+    },
+    {
+      "path": "docs/content/r2/phone-tickets-stage-1-seated.png",
+      "width": 390,
+      "height": 844,
+      "sha256": "91b970e3a88da34c70c98cca512fc1d6790eda719be730d9cab2712952af2829",
+      "native": false,
+      "method": "unmodified headless Chromium runtime screenshot"
+    },
+    {
+      "path": "docs/content/r2/phone-tickets-stage-2-wrong.png",
+      "width": 390,
+      "height": 844,
+      "sha256": "e46dbcdf0d6f2f052aa6fd48999425eee59e5173c28e951d950dcad42023b81e",
+      "native": false,
+      "method": "unmodified headless Chromium runtime screenshot"
+    },
+    {
+      "path": "docs/content/r2/phone-tickets-stage-2-right.png",
+      "width": 390,
+      "height": 844,
+      "sha256": "670fa409d85bc45310e2615cc9312ac16b8018e0137700be89a4c234150d53ee",
+      "native": false,
+      "method": "unmodified headless Chromium runtime screenshot"
+    },
+    {
+      "path": "docs/content/r2/phone-tickets-stage-2-boarding-1.png",
+      "width": 390,
+      "height": 844,
+      "sha256": "56e70481e555f1ba9098794aa484df80b012302a11c9e61e86c7d079bbf6dca7",
+      "native": false,
+      "method": "unmodified headless Chromium runtime screenshot"
+    },
+    {
+      "path": "docs/content/r2/phone-tickets-stage-2-boarding-2.png",
+      "width": 390,
+      "height": 844,
+      "sha256": "596d825d103030c67e02178223dfd770cf688b2d939df1acec2d56f74ecb161d",
+      "native": false,
+      "method": "unmodified headless Chromium runtime screenshot"
+    },
+    {
+      "path": "docs/content/r2/phone-tickets-stage-2-boarding-3.png",
+      "width": 390,
+      "height": 844,
+      "sha256": "ed4b5ef120080f12fc83e57d3b2d7738d78eccf0a0b4e76b2114c38cc6827719",
+      "native": false,
+      "method": "unmodified headless Chromium runtime screenshot"
+    },
+    {
+      "path": "docs/content/r2/phone-tickets-stage-2-seated.png",
+      "width": 390,
+      "height": 844,
+      "sha256": "3f7055a588fbac22d15ccb8010359e784df34e9d885491ad0997a473339f6189",
+      "native": false,
+      "method": "unmodified headless Chromium runtime screenshot"
+    },
+    {
+      "path": "docs/content/r2/phone-tickets-stage-3-wrong.png",
+      "width": 390,
+      "height": 844,
+      "sha256": "676679afe30670d7329743f613b0ce3a3baa7406bb011d3f40e50bc8d7bacdd0",
+      "native": false,
+      "method": "unmodified headless Chromium runtime screenshot"
+    },
+    {
+      "path": "docs/content/r2/phone-tickets-stage-3-right.png",
+      "width": 390,
+      "height": 844,
+      "sha256": "0c570f2b4697a87c45b47a293b9ecb9bddc2002e9dd787c833ef22ca0515615a",
+      "native": false,
+      "method": "unmodified headless Chromium runtime screenshot"
+    },
+    {
+      "path": "docs/content/r2/phone-tickets-stage-3-boarding-1.png",
+      "width": 390,
+      "height": 844,
+      "sha256": "8b9302b2851f36a0f433191c50e70536093efd0a8ae6dd48449a036574ba901a",
+      "native": false,
+      "method": "unmodified headless Chromium runtime screenshot"
+    },
+    {
+      "path": "docs/content/r2/phone-tickets-stage-3-boarding-2.png",
+      "width": 390,
+      "height": 844,
+      "sha256": "262b656b8c6a2cad01ed910dc9a30dadec5825b6aba3b06cd313594d5a20574a",
+      "native": false,
+      "method": "unmodified headless Chromium runtime screenshot"
+    },
+    {
+      "path": "docs/content/r2/phone-tickets-stage-3-boarding-3.png",
+      "width": 390,
+      "height": 844,
+      "sha256": "1dca4124968eeeb53c3d56de8e7d35a09efde60e0d972312b3b8f9f2cd2cbc37",
+      "native": false,
+      "method": "unmodified headless Chromium runtime screenshot"
+    },
+    {
+      "path": "docs/content/r2/phone-tickets-complete.png",
+      "width": 390,
+      "height": 844,
+      "sha256": "7b3b795890572a23d19e09b5f784b051239efd626a0e614042860d8ba35abb4e",
+      "native": false,
+      "method": "unmodified headless Chromium runtime screenshot"
+    },
+    {
+      "path": "docs/content/r2/phone-save-all-three.png",
+      "width": 390,
+      "height": 844,
+      "sha256": "746c19e59bd6f34ec3252e90a3be19aedec07a78c917dd1c2b4dadc47d9d58ad",
+      "native": false,
+      "method": "unmodified headless Chromium runtime screenshot"
+    },
+    {
+      "path": "docs/content/r2/phone-offline-checkpoint.png",
+      "width": 390,
+      "height": 844,
+      "sha256": "dae14997757bb23093533fe525921a42e5d126bb2b189e384e040298d7c259ce",
+      "native": false,
+      "method": "unmodified headless Chromium runtime screenshot"
+    },
+    {
+      "path": "docs/content/r2/phone-paused.png",
+      "width": 390,
+      "height": 844,
+      "sha256": "d435082c7858cfa7baecc913da826cf6c7cd59c4ade78dbe9f3832d952349e4c",
+      "native": false,
+      "method": "unmodified headless Chromium runtime screenshot"
+    },
+    {
+      "path": "docs/content/r2/phone-storage-denied.png",
+      "width": 390,
+      "height": 844,
+      "sha256": "f41570424326313e51174ffd18f1cb6efc4d54b4f23b83222949ff922e0b3000",
+      "native": false,
+      "method": "unmodified headless Chromium runtime screenshot"
+    },
+    {
+      "path": "docs/store/screenshots/content-r2/iphone-cake.png",
+      "width": 1290,
+      "height": 2796,
+      "sha256": "577f25578258107f34ea3280516e65560973c6fd71cafd993ea241b73ccd92ff",
+      "native": false,
+      "method": "unmodified headless Chromium runtime screenshot"
+    },
+    {
+      "path": "docs/store/screenshots/content-r2/iphone-crossing.png",
+      "width": 1290,
+      "height": 2796,
+      "sha256": "7e5ef2fe8f62d56b0656a2d0cd3c422b27e023b2f8de87a60388ce960159f6ae",
+      "native": false,
+      "method": "unmodified headless Chromium runtime screenshot"
+    },
+    {
+      "path": "docs/store/screenshots/content-r2/iphone-tickets.png",
+      "width": 1290,
+      "height": 2796,
+      "sha256": "206df6bad7e1b8d137d964493cadbb1b44e8d11f63d1b28bc5f5b160b709a11c",
+      "native": false,
+      "method": "unmodified headless Chromium runtime screenshot"
+    },
+    {
+      "path": "docs/store/screenshots/content-r2/ipad-cake.png",
+      "width": 2064,
+      "height": 2752,
+      "sha256": "b4b3e42aa291a8ed5b14f21918b033004fe1b0e51c056a2ced23cc06a4a1e58e",
+      "native": false,
+      "method": "unmodified headless Chromium runtime screenshot"
+    },
+    {
+      "path": "docs/store/screenshots/content-r2/ipad-crossing.png",
+      "width": 2064,
+      "height": 2752,
+      "sha256": "d3ac4a75ad206b63aa91ccdbdb39b6ac1d82025e2e463071bc7c7d207ebf7f7a",
+      "native": false,
+      "method": "unmodified headless Chromium runtime screenshot"
+    },
+    {
+      "path": "docs/store/screenshots/content-r2/ipad-tickets.png",
+      "width": 2064,
+      "height": 2752,
+      "sha256": "60bad2a90d4b9051edfe24a0b437c51afd1ac28d94125be04b061f77b6fec12b",
+      "native": false,
+      "method": "unmodified headless Chromium runtime screenshot"
+    },
+    {
+      "path": "docs/content/r2/phone-train-driving.png",
+      "width": 390,
+      "height": 844,
+      "sha256": "12711af5ab644c913a565115e8b2ebe01a9036c6b89ee626c8386c55f51be833",
+      "native": false,
+      "method": "unmodified headless Chromium runtime screenshot"
+    },
+    {
+      "path": "docs/content/r2/landscape-train-driving.png",
+      "width": 844,
+      "height": 390,
+      "sha256": "c8b660839d5c24f5006aa551cf61d8421c1fa8cf0de4e20c2db8205e5ea90d56",
+      "native": false,
+      "method": "unmodified headless Chromium runtime screenshot"
+    },
+    {
+      "path": "docs/content/r2/ipad-train-driving.png",
+      "width": 768,
+      "height": 1024,
+      "sha256": "089f97d24eeec6593e1e06a6ce02ef040f8f577f7fc6b5ef2e7236a3e80bcb74",
+      "native": false,
+      "method": "unmodified headless Chromium runtime screenshot"
+    },
+    {
+      "path": "docs/content/r2/se-train-driving.png",
+      "width": 320,
+      "height": 568,
+      "sha256": "9bb1de9c92f59c986e4d1a5e554d175bfab35a2f98c7e1c7b09038d60fa6137d",
+      "native": false,
+      "method": "unmodified headless Chromium runtime screenshot"
+    },
+    {
+      "path": "docs/content/r2/small-landscape-train-driving.png",
+      "width": 568,
+      "height": 320,
+      "sha256": "77f555e5df49b8d116bad5c73bce134e2a55d46ee71b5e6ae9624425a4ffccc2",
+      "native": false,
+      "method": "unmodified headless Chromium runtime screenshot"
+    },
+    {
+      "path": "docs/content/r2/ipad-landscape-train-driving.png",
+      "width": 1024,
+      "height": 768,
+      "sha256": "f35ea9dbe6424f4c3355b09f097e0b6c66dd3cab418ac33b4555643c9e884d6d",
+      "native": false,
+      "method": "unmodified headless Chromium runtime screenshot"
+    },
+    {
+      "path": "docs/content/r2/short-laptop-train-driving.png",
+      "width": 1366,
+      "height": 600,
+      "sha256": "45243e7a5abfb4964f5b1c4c36da8866eced88da4c24fc3b1260d2fc3e083598",
+      "native": false,
+      "method": "unmodified headless Chromium runtime screenshot"
+    },
+    {
+      "path": "docs/content/r2/phone-crossing-stage-2-child-1.png",
+      "width": 390,
+      "height": 844,
+      "sha256": "52e81c0d797a97bc9708e2e220a9796fd6e9e1e2fe10f64a48899886ea87b8e3",
+      "native": false,
+      "method": "unmodified headless Chromium runtime screenshot"
+    },
+    {
+      "path": "docs/content/r2/phone-crossing-stage-2-child-2.png",
+      "width": 390,
+      "height": 844,
+      "sha256": "677d2489b92b27e0d973af49856d189bbcba147a584b13a25cbfd384ae363e07",
+      "native": false,
+      "method": "unmodified headless Chromium runtime screenshot"
+    },
+    {
+      "path": "docs/content/r2/phone-crossing-stage-2-child-3.png",
+      "width": 390,
+      "height": 844,
+      "sha256": "1697556cabd48fb52140ea6438fa97eb738cca8bd8f68257103c398675ee162c",
+      "native": false,
+      "method": "unmodified headless Chromium runtime screenshot"
+    },
+    {
+      "path": "docs/content/r2/phone-crossing-stage-2-bike-1.png",
+      "width": 390,
+      "height": 844,
+      "sha256": "1100501ccc3eed591bcb6d81ea6ec394e2deffe3ef4ec7457a436815bba6055d",
+      "native": false,
+      "method": "unmodified headless Chromium runtime screenshot"
+    },
+    {
+      "path": "docs/content/r2/phone-crossing-stage-2-bike-2.png",
+      "width": 390,
+      "height": 844,
+      "sha256": "1cce9d0f4b46d7a05771c136bba26bfeb30202d8d14a0f795e9ccb08c9c4249e",
+      "native": false,
+      "method": "unmodified headless Chromium runtime screenshot"
+    },
+    {
+      "path": "docs/content/r2/phone-crossing-stage-2-bike-3.png",
+      "width": 390,
+      "height": 844,
+      "sha256": "49072943d7e1997ff81b6a1d41ab10fbd601d760acf0e4473a3f290889e6d791",
+      "native": false,
+      "method": "unmodified headless Chromium runtime screenshot"
+    },
+    {
+      "path": "docs/content/r2/phone-crossing-stage-3-grandma-1.png",
+      "width": 390,
+      "height": 844,
+      "sha256": "8b088173d6175ac00fe7617417402464a6a3ab205e18db0d4e16bc364ae74bfd",
+      "native": false,
+      "method": "unmodified headless Chromium runtime screenshot"
+    },
+    {
+      "path": "docs/content/r2/phone-crossing-stage-3-grandma-2.png",
+      "width": 390,
+      "height": 844,
+      "sha256": "39d27aba9d59f25f386edcdd86bf8a2cac3fa911cd7de40059d771119f0a85f7",
+      "native": false,
+      "method": "unmodified headless Chromium runtime screenshot"
+    },
+    {
+      "path": "docs/content/r2/phone-crossing-stage-3-grandma-3.png",
+      "width": 390,
+      "height": 844,
+      "sha256": "7d152e549ff9d4d493b2cc4924b922bd20447f19446bd8d166bd6c4101a4b040",
+      "native": false,
+      "method": "unmodified headless Chromium runtime screenshot"
+    },
+    {
+      "path": "docs/content/r2/phone-crossing-stage-3-child-1.png",
+      "width": 390,
+      "height": 844,
+      "sha256": "c82cc8aec8c3237b7a800815d967cfb2721342c0dadb4e791f61faaa1a94fdfb",
+      "native": false,
+      "method": "unmodified headless Chromium runtime screenshot"
+    },
+    {
+      "path": "docs/content/r2/phone-crossing-stage-3-child-2.png",
+      "width": 390,
+      "height": 844,
+      "sha256": "0efb0e1f1e48882ccf0cbfd7582f9bdb4932f288fd4f907eebccc89c4999a8fd",
+      "native": false,
+      "method": "unmodified headless Chromium runtime screenshot"
+    },
+    {
+      "path": "docs/content/r2/phone-crossing-stage-3-child-3.png",
+      "width": 390,
+      "height": 844,
+      "sha256": "09bccc53313673e3cad7f1ed3ef66381139e223be1dd3a9f0328aca831d5e355",
+      "native": false,
+      "method": "unmodified headless Chromium runtime screenshot"
+    },
+    {
+      "path": "docs/content/r2/phone-crossing-offline-stage-1-clear.png",
+      "width": 390,
+      "height": 844,
+      "sha256": "6642489b98954e2653eee596ef00b94a4f6f7440cbe034b351d3e48c724e897c",
+      "native": false,
+      "method": "unmodified headless Chromium runtime screenshot"
+    },
+    {
+      "path": "docs/content/r2/phone-crossing-offline-stage-2-clear.png",
+      "width": 390,
+      "height": 844,
+      "sha256": "49a6f71293b3ba0f968a86746d08b180c4d5dde4fcef6a1d9df2a9d8b83a0909",
+      "native": false,
+      "method": "unmodified headless Chromium runtime screenshot"
+    },
+    {
+      "path": "docs/content/r2/phone-crossing-offline-stage-3-clear.png",
+      "width": 390,
+      "height": 844,
+      "sha256": "4a3c799a421c23d81b9fa0ccf1a166c092d46d0e7ecc633ea45c18380e5a7216",
+      "native": false,
+      "method": "unmodified headless Chromium runtime screenshot"
+    }
+  ],
+  "errors": [],
+  "external": []
+}

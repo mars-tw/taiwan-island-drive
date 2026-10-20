@@ -1,29 +1,43 @@
 import '../../shared/bootstrap.js';
-import { APP_BASE, appUrl } from '../../shared/paths.js';
+import {progressStorage} from '../../shared/student-save.js';
 import { readSettings, updateSettings, subscribeSettings } from '../../shared/settings.js';
 import './styles.css';
+import '../../shared/mobile-controls.css';
 import '@fontsource/barlow-condensed/latin-500.css';
 import '@fontsource/barlow-condensed/latin-600.css';
 import '@fontsource/barlow-condensed/latin-700.css';
 import '@fontsource/barlow-condensed/latin-800.css';
 import { MAPS, VEHICLES, COLORS, TRACK_LENGTH } from './config.js';
 import { Game } from './game.js';
-import { roadCenter } from './physics.js';
+import { roadCenter, roadHeading } from './physics.js';
 import { TiltController, combineSteering } from './tilt.js';
+import { celebrate } from '../../shared/celebrate.js';
+import { addStars, recordBest, starRating } from '../../shared/rewards.js';
+import { requestedJourney } from '../../shared/journeys.js';
+import { journeyResult } from '../../shared/passport.js';
+import { appUrl } from '../../shared/paths.js';
+import {roadSpeedDisplay} from '../../shared/child-display.js';
+import '../../shared/content-r1-driving.css';
+document.body.classList.toggle('content-child-driving',readSettings().childMode);
+subscribeSettings(s=>document.body.classList.toggle('content-child-driving',s.childMode));
 
 const $ = (s) => document.querySelector(s);
 const $$ = (s) => [...document.querySelectorAll(s)];
-const base = APP_BASE;
+const drivingInputHint = () => matchMedia('(pointer:coarse), (max-width:1100px)').matches ? '點方向與油門按鈕出發' : '手機觸控 · 電腦鍵盤';
+addEventListener('resize',()=>{if(!document.body.classList.contains('tilt-enabled'))$('#start-hint').textContent=mode==='cruise'?drivingInputHint():'倒數結束前，跑完 2.4 公里';});
 const familySettings = readSettings();
 const storage = {
-  get(key, fallback) { try { return JSON.parse(localStorage.getItem(`island-drive:${key}`)) ?? fallback; } catch { return fallback; } },
-  set(key, value) { try { localStorage.setItem(`island-drive:${key}`, JSON.stringify(value)); } catch { /* Private browsing can disable storage. */ } }
+  get(key, fallback) { try { return JSON.parse(progressStorage.getItem(`island-drive:${key}`)) ?? fallback; } catch { return fallback; } },
+  set(key, value) { try { progressStorage.setItem(`island-drive:${key}`, JSON.stringify(value)); } catch { /* Private browsing can disable storage. */ } }
 };
 const saved = storage.get('preferences', {});
 let mapId = MAPS.some(m => m.id === saved.map) ? saved.map : 'coast';
 let vehicleId = VEHICLES.some(v => v.id === saved.vehicle) ? saved.vehicle : 'coupe';
 let paint = COLORS.includes(saved.paint) ? saved.paint : COLORS[0];
-let mode = saved.mode === 'timeattack' ? 'timeattack' : 'cruise';
+let mode = !readSettings().childMode && saved.mode === 'timeattack' ? 'timeattack' : 'cruise';
+let journey = requestedJourney('car');
+let autoThrottle = false;
+if (journey) { mapId = journey.map; mode = 'cruise'; }
 let quality = familySettings.quality;
 let muted = familySettings.muted;
 let ready = false;
@@ -39,28 +53,9 @@ const currentMap = () => MAPS.find(m => m.id === mapId);
 const currentVehicle = () => VEHICLES.find(v => v.id === vehicleId);
 const persist = () => storage.set('preferences', { map: mapId, vehicle: vehicleId, paint, mode, quality, muted });
 
-function mapArt(id) {
-  const common = 'viewBox="0 0 240 92" aria-hidden="true"';
-  if (id === 'coast') return `<svg ${common}><rect width="240" height="92" fill="#c9e5e7"/><path d="M0 37h240v55H0" fill="#6bb7c2"/><path d="M0 4 68 26l26 32L60 92H0Z" fill="#718f81"/><path d="m0 22 52 17 17 21-32 32H0Z" fill="#537e74"/><path d="m0 39 38 10 24 24L40 92H15l25-26-40-9" fill="#dde1d6"/><path d="m0 46 34 9 18 18-23 19" fill="none" stroke="#78878a" stroke-width="9"/><path d="m0 46 34 9 18 18-23 19" fill="none" stroke="#eaeac7" stroke-width="1.3" stroke-dasharray="5 5"/><path d="m128 56 54 0m-83 13h112m-50 12h46" stroke="#b8e2e4" stroke-width="2" opacity=".7"/></svg>`;
-  if (id === 'alishan') return `<svg ${common}><rect width="240" height="92" fill="#d5ded3"/><path d="M0 56 44 16l38 32 35-26 60 46 32-27 31 21v30H0" fill="#9bad99"/><path d="M0 73 44 47l68 34 46-36 82 29v18H0" fill="#748d74"/><path d="M109 92c65-42-60-21-13-60" fill="none" stroke="#aeb1a0" stroke-width="10"/><path d="M109 92c65-42-60-21-13-60" fill="none" stroke="#f7eed6" stroke-width="1" stroke-dasharray="5 5"/><g fill="#3c685a">${[10,32,57,174,195,221].map((x,i)=>`<path d="m${x} ${30+i%3*9}-13 29h8l-11 16h32l-11-16h8Z"/>`).join('')}</g></svg>`;
-  if (id === 'taipei') return `<svg ${common}><rect width="240" height="92" fill="#696684"/><circle cx="188" cy="20" r="10" fill="#e5d9bf"/><path d="M0 59h240v33H0" fill="#3d4b60"/><g fill="#354052"><path d="M6 29h24v44H6Zm33 10h29v35H39Zm96-13h20v52h-20Zm27 19h27v33h-27Zm44-11h24v44h-24Z"/><path d="M98 5h4v12h7v8h3v12h4v13h3v28H81V50h3V37h4V25h3v-8h7Z"/></g><path d="M0 88 96 67h35l109 21" fill="none" stroke="#7c7e94" stroke-width="12"/><path d="M0 88 96 67h35l109 21" fill="none" stroke="#ddccb0" stroke-width="1.4" stroke-dasharray="7 7"/><g stroke="#e4c982" stroke-width="2"><path d="M13 38h10m-10 7h10m22 5h15m-15 9h15m84-23h3m-3 10h3m28 8h10m-10 6h10M93 28h14m-18 12h20m-21 12h24"/></g></svg>`;
-  return `<svg ${common}><rect width="240" height="92" fill="#eadcba"/><circle cx="179" cy="22" r="14" fill="#e9b864"/><path d="M0 49h240v43H0" fill="#79bec0"/><path d="M0 63 95 52l43 19L88 92H0" fill="#d5c395"/><path d="M0 80 62 64l32 9-33 19" fill="none" stroke="#a1a291" stroke-width="10"/><path d="M0 80 62 64l32 9-33 19" fill="none" stroke="#eee4c6" stroke-width="1.3" stroke-dasharray="5 5"/><g stroke="#6f8c70" fill="#6f8c70"><path d="m27 72 3-34m35 20 5-30" stroke="#897854" stroke-width="3"/><path d="m30 38-21-7 18 0-8-12 13 15 13-13-8 17 19 2-22 1Zm40-10-17-6 15 1-8-11 12 12 10-12-6 16 16 2-19 1Z"/></g><path d="M160 62h61m-87 15h92" stroke="#b2d5ce" stroke-width="2"/></svg>`;
-}
-
-function carArt(id) {
-  const bodies = {
-    coupe: 'M8 26 19 22l14-13h29l17 12 14 3 4 14H6Z',
-    rally: 'M9 25 18 11h45l18 13 15 2 2 12H6Z',
-    suv: 'M8 25 17 9h49l20 15 11 3v11H5Z',
-    van: 'M10 11h62l14 13 11 3v12H7V16Z'
-  };
-  return `<svg viewBox="0 0 104 48" aria-hidden="true"><path d="${bodies[id]}" fill="currentColor"/><path d="m${id === 'van' ? '22 14h47l10 10H21' : '35 12h25l15 11H24'}Z" fill="#e5eded" opacity=".78"/><path d="M49 13v11" stroke="currentColor" stroke-width="3"/><circle cx="25" cy="36" r="8" fill="#23383d"/><circle cx="79" cy="36" r="8" fill="#23383d"/><circle cx="25" cy="36" r="3" fill="#cddcdb"/><circle cx="79" cy="36" r="3" fill="#cddcdb"/><path d="M89 28h6" stroke="#f9e8bc" stroke-width="3"/></svg>`;
-}
-
-$('#map-choices').innerHTML = MAPS.map((m, i) => `<button class="map-card" data-map="${m.id}" aria-pressed="false" aria-label="選擇${m.name}"><div class="map-art">${mapArt(m.id)}<span class="map-number">0${i + 1}</span><span class="selected-check">✓</span></div><div class="map-caption"><strong>${m.name}</strong><span>${m.english}</span></div></button>`).join('');
-$('#vehicle-choices').innerHTML = VEHICLES.map(v => `<button class="vehicle-choice" data-vehicle="${v.id}" aria-pressed="false" aria-label="選擇${v.category} ${v.name}" style="--car-color:${v.color}">${carArt(v.id)}<span>${v.category}</span></button>`).join('');
+$('#map-choices').innerHTML = MAPS.map((m, i) => `<button class="map-card" data-map="${m.id}" aria-pressed="false" aria-label="選擇${m.name}"><div class="map-art"><img src="${appUrl(`art/r6/route-${({coast:'coast',alishan:'valley',taipei:'taipei',kenting:'island'})[m.id]}.webp`)}" alt=""><span class="map-number">0${i + 1}</span><span class="selected-check">✓</span></div><div class="map-caption"><strong>${m.name}</strong><span>${m.tag}</span></div></button>`).join('');
+$('#vehicle-choices').innerHTML = VEHICLES.map(v => `<button class="vehicle-choice" data-vehicle="${v.id}" aria-pressed="false" aria-label="選擇${v.category} ${v.name}" style="--car-color:${v.color}"><img src="${appUrl(`art/r6/${v.id}-${COLORS.indexOf(paint)}.png`)}" alt=""><span>${v.category}</span></button>`).join('');
 $('#paint-options').innerHTML = COLORS.map((c, i) => `<button class="paint-dot" data-paint="${c}" style="--paint:${c}" aria-label="${['海洋青','奶油黃','雲霧白','夕陽紅','石墨灰'][i]}車身" aria-pressed="false"></button>`).join('');
-$('#download-source').href = `${base}downloads/island-drive-source.zip`;
 
 function syncSelection() {
   const map = currentMap();
@@ -75,6 +70,9 @@ function syncSelection() {
   $('#difficulty').textContent = map.difficulty;
   $('#vehicle-name').textContent = car.name;
   $('#vehicle-category').textContent = car.category;
+  const preview=$('#car-preview-image');
+  if(preview){preview.src=appUrl(`art/r6/${vehicleId}-${COLORS.indexOf(paint)}.png`);preview.alt=`${car.name} ${car.category}`;}
+  $$('[data-vehicle] img').forEach(img=>img.src=appUrl(`art/r6/${img.closest('[data-vehicle]').dataset.vehicle}-${COLORS.indexOf(paint)}.png`));
   $('#vehicle-index').innerHTML = `0${VEHICLES.indexOf(car) + 1}<span> / 04</span>`;
   $('#car-maxspeed').textContent = car.maxSpeed;
   $('#handling-bar').style.width = `${car.stats[1]}%`;
@@ -84,7 +82,7 @@ function syncSelection() {
   $('#sound-button').setAttribute('aria-label', muted ? '開啟音效' : '關閉音效');
   $('#sound-button').setAttribute('aria-pressed', !muted);
   $('#sound-button use').setAttribute('href', muted ? '#i-muted' : '#i-sound');
-  $('#start-hint').textContent = mode === 'cruise' ? '手機觸控 · 電腦鍵盤' : '倒數結束前，跑完 2.4 公里';
+  $('#start-hint').textContent = mode === 'cruise' ? drivingInputHint() : '倒數結束前，跑完 2.4 公里';
   drawMinimap(0);
   persist();
 }
@@ -110,6 +108,8 @@ function queueChange(fn) {
 }
 
 const minimap = $('#minimap').getContext('2d');
+const finishFlag=new Image();finishFlag.src=appUrl('art/r7/finish-flag.png');
+let coachRewardUntil=0;
 let routePoints = [];
 let routeMap;
 function drawMinimap(progress) {
@@ -123,27 +123,33 @@ function drawMinimap(progress) {
   minimap.lineWidth = 5;
   minimap.lineCap = 'round';
   const path = (until, color) => { minimap.beginPath(); routePoints.slice(0, until).forEach((p, i) => i ? minimap.lineTo(p.x, p.y) : minimap.moveTo(p.x, p.y)); minimap.strokeStyle = color; minimap.stroke(); };
-  path(81, 'rgba(230,244,236,.26)');
-  path(Math.floor(progress * 80) + 1, '#dff395');
+  minimap.lineWidth=10;path(81,'#143b61');minimap.lineWidth=5;path(81,'#80d6fa');
+  path(Math.floor(progress * 80) + 1, '#f46b27');
   const p = routePoints[Math.min(80, Math.max(0, Math.round(progress * 80)))];
-  minimap.beginPath(); minimap.arc(p.x, p.y, 5.5, 0, Math.PI * 2); minimap.fillStyle = '#e4f69c'; minimap.fill();
-  const end = routePoints[80]; minimap.fillStyle = '#f3f5ef'; minimap.fillRect(end.x - 3, end.y - 3, 6, 6);
+  minimap.beginPath(); minimap.arc(p.x, p.y, 7, 0, Math.PI * 2); minimap.fillStyle = '#f46b27'; minimap.fill();minimap.strokeStyle='#fff';minimap.lineWidth=2;minimap.stroke();
+  const end = routePoints[80];if(finishFlag.complete&&finishFlag.naturalWidth)minimap.drawImage(finishFlag,end.x-10,end.y-15,22,32);
 }
 
 function updateHUD(state) {
   lastState = state;
+  if (state.phase === 'paused' && autoThrottle) { autoThrottle = false; $('#auto-throttle').setAttribute('aria-pressed','false'); }
   tilt.setActive(state.phase === 'running');
   updateInput();
   $('#speed').textContent = String(Math.round(state.speed || 0)).padStart(3, '0');
+  const steps=$('.speed-steps');if(steps){const {bars,label}=roadSpeedDisplay(state.speed);steps.setAttribute('aria-valuenow',bars);steps.setAttribute('aria-valuetext',`${label}，速度 ${bars} 格`);steps.querySelector('span').textContent=label;steps.querySelectorAll('i').forEach((e,i)=>e.classList.toggle('lit',i<bars));}
+  const coach=$('.drive-coach');if(coach){const bend=roadHeading((state.distance||0)+55,mapId)-roadHeading(state.distance||0,mapId);const pose=performance.now()<coachRewardUntil?'reward':Math.abs(bend)>.018?'turn':'straight';const left=pose==='turn'&&bend>0;if(coach.dataset.pose!==pose){coach.dataset.pose=pose;coach.querySelector('img').src=appUrl(`art/r8/coach-safe-window.png`);}game.setCoachPose(pose,left);coach.classList.toggle('turn-left',left);coach.querySelector('span').textContent=pose==='reward'?'星星收好了！':pose==='turn'?(left?'前面往左彎':'前面往右彎'):'沿著海岸慢慢開';coach.querySelector('img').alt=pose==='reward'?'副駕阿路舉起剛找到的星星':pose==='turn'?`副駕阿路舉${left?'左':'右'}彎牌指路`:'副駕阿路繫好安全帶舉直行牌';}
+  if(coach)coach.querySelector('img').alt='阿路教練坐在閉合車窗內，繫好安全帶；'+coach.querySelector('span').textContent;
   $('#gear').textContent = state.speed < 1 ? 'N' : Math.min(6, 1 + Math.floor(state.speed / 34));
-  $('#progress-bar').style.width = `${Math.min(100, state.progress * 100)}%`;
   $('#boost-bar').style.width = `${Math.max(0, state.boost ?? 1) * 100}%`;
-  $('#distance-label').textContent = `${((state.distance || 0) / 1000).toFixed(2)} / 2.40 km`;
+  const length = journey?.distance || TRACK_LENGTH;
+  $('#progress-bar').style.width = `${Math.min(100,(state.distance || 0)/length*100)}%`;
+  $('#distance-label').textContent = `${((state.distance || 0) / 1000).toFixed(2)} / ${(length/1000).toFixed(2)} km`;
   $('#clock').textContent = timeFormat(mode === 'timeattack' ? state.timeLeft : state.elapsed, true);
   $('#clock').classList.toggle('urgent', mode === 'timeattack' && state.timeLeft < 20);
   $('#drive-message').textContent = state.offRoad ? '回到路面，繼續前進' : '';
   $('#drive-message').classList.toggle('visible', Boolean(state.offRoad));
   drawMinimap(state.progress || 0);
+  if (state.starTotal) { $('#star-count').textContent = state.stars; $('#star-total').textContent = `/${state.starTotal}`; }
   const counting = state.phase === 'countdown';
   $('#countdown').classList.toggle('hidden', !counting);
   if (counting) $('#countdown').textContent = state.countdown > 0 ? Math.ceil(state.countdown) : '出發';
@@ -156,18 +162,26 @@ function finish(result) {
   $('#countdown').classList.add('hidden');
   $('#finish-overlay').classList.remove('hidden');
   const completed = result.completed !== false;
-  $('#finish-title').textContent = completed ? '這段風景，收下了。' : '再給自己一個彎。';
-  $('#finish-eyebrow').textContent = completed ? 'JOURNEY COMPLETE' : 'TRY ANOTHER RUN';
-  $('#finish-route').textContent = `${currentMap().name} · ${currentVehicle().name} · ${completed ? '2.40' : (result.distance / 1000).toFixed(2)} km`;
+  const stars = result.stars || 0, rating = completed ? starRating(stars, result.starTotal || 12) : 0;
+  if (stars) addStars('car', stars);
+  if (completed) recordBest(journey ? `car:${journey.id}` : `car:${mapId}`, rating);
+  $('#finish-overlay .journey-result')?.remove();
+  if (completed) journeyResult($('#finish-overlay .result-card'), journey, rating);
+  $('#finish-stars').innerHTML = `<span class="rating" aria-label="${rating} 顆星評等">${[1, 2, 3].map(i => `<i class="${i <= rating ? 'on' : ''}">★</i>`).join('')}</span><span class="haul">收集到 <b>${stars}</b> / ${result.starTotal || 12} 顆星星</span>`;
+  if (completed) celebrate({ text: rating === 3 ? '超級司機！' : '到終點了！', kind: 'finish', y: 0.3, pieces: 40, big: true, sound: !muted });
+  $('#finish-title').textContent = completed ? (stars === result.starTotal ? '星星全都帶回家！' : '到終點囉，好棒！') : '時間到，再試一次！';
+  $('#finish-eyebrow').textContent = completed ? '旅程完成' : '再試一趟';
+  $('#finish-route').textContent = readSettings().childMode ? `${currentMap().name} · 大家一起到站了` : `${currentMap().name} · ${currentVehicle().name} · ${(Math.min(result.distance,journey?.distance||TRACK_LENGTH) / 1000).toFixed(2)} km`;
   $('#finish-time').textContent = timeFormat(result.elapsed, true);
   $('#finish-score').textContent = Math.round(result.score || 0).toLocaleString('zh-TW');
-  const key = `${mapId}:${vehicleId}:${mode}`;
+  const key = `${mapId}:${vehicleId}:${mode}${journey ? `:${journey.id}` : ''}`;
   const previous = records[key];
   if (completed && (!previous || result.elapsed < previous.elapsed)) {
     records[key] = { elapsed: result.elapsed, score: result.score };
     storage.set('records', records);
     $('#best-record').textContent = previous ? '刷新了你的最佳紀錄。' : '第一段旅程，已經記住了。';
   } else $('#best-record').textContent = previous ? `個人最快紀錄 ${timeFormat(previous.elapsed, true)}` : '換一台車，再試一次。';
+  if(readSettings().childMode)$('#best-record').textContent='這段風景記住了，再一起出發吧。';
 }
 
 function showDriving() {
@@ -181,11 +195,13 @@ function showDriving() {
   $('#mini-map-label').textContent = currentMap().tag;
   $('#hud-mode').textContent = mode === 'cruise' ? '自由駕駛' : '計時挑戰';
   $('#clock-label').textContent = mode === 'cruise' ? '旅程時間' : '剩餘時間';
+  $('#drive-guide').textContent = journey ? `${journey.name}：${journey.tip}` : '按住右下油門前進；左下按鈕轉向。也可點「自動油門」。';
+  $('#auto-throttle').setAttribute('aria-pressed','false');
 }
 
-function start() { if (!ready || busy) return; releaseInput(); showDriving(); game.start(mode); }
+function start() { if (!ready || busy) return; if(readSettings().childMode)mode='cruise'; releaseInput(); showDriving(); game.start(mode, {distance:journey?.distance}); }
 function returnToMenu() {
-  releaseInput(); game.returnToMenu();
+  releaseInput(); journey=null; game.returnToMenu();
   document.body.classList.remove('driving');
   $('#menu').classList.remove('hidden'); $('#topbar').classList.remove('hidden'); $('#hud').classList.add('hidden');
   $$('.overlay, #countdown').forEach(el => el.classList.add('hidden'));
@@ -196,9 +212,12 @@ function updateInput() {
     const active = (...keys) => keys.some(k => pressedKeys.has(k));
     const left = active('a', 'arrowleft') || touches.has('left');
     const right = active('d', 'arrowright') || touches.has('right');
+    const braking = active('s', 'arrowdown') || touches.has('brake');
     game.input.steer = game.phase === 'running' ? combineSteering(left, right, tilt.enabled, tilt.steer) : 0;
-    game.input.throttle = active('w', 'arrowup') || touches.has('throttle') ? 1 : 0;
-    game.input.brake = active('s', 'arrowdown') || touches.has('brake') ? 1 : 0;
+    game.input.throttle = game.phase === 'running' && !braking && (autoThrottle || active('w', 'arrowup') || touches.has('throttle')) ? 1 : 0;
+    // Child auto-cruise gives time to read the coast and steer; manual pedal stays manual.
+    if(autoThrottle&&readSettings().childMode&&game.input.throttle)game.input.throttle=Math.max(0,Math.min(1,.2+(65-lastState.speed)/18));
+    game.input.brake = game.phase === 'running' && braking ? 1 : 0;
     game.input.boost = active('shift') || touches.has('boost');
     $$('[data-input]').forEach(el => el.classList.toggle('held', touches.has(el.dataset.input)));
 }
@@ -223,14 +242,22 @@ function bindControls() {
 }
 
 function releaseInput() {
+  autoThrottle = false;
+  $('#auto-throttle').setAttribute('aria-pressed','false');
   pressedKeys.clear(); pointers.clear();
   tilt.resetSteer();
   if (typeof game !== 'undefined') Object.assign(game.input, { steer: 0, throttle: 0, brake: 0, boost: false });
   $$('[data-input]').forEach(el => el.classList.remove('held'));
 }
 
+function collected({ collected: count, total }) {
+  coachRewardUntil=performance.now()+1600;
+  const badge = $('#hud-stars'); badge.classList.remove('bump'); void badge.offsetWidth; badge.classList.add('bump');
+  celebrate({ text: count === total ? '全部找到了！' : `${count} 顆星星`, kind: 'star', x: 0.5, y: 0.36, pieces: count === total ? 34 : 14, sound: false, big: count === total });
+}
+
 const game = new Game({
-  canvas: $('#world'), onUpdate: updateHUD, onFinish: finish,
+  canvas: $('#world'), onUpdate: updateHUD, onFinish: finish, onCollect: collected,
   onReady: () => {},
   onError: error => { console.error(error); toast('3D 場景載入遇到問題，請重新整理。'); }
 });
@@ -252,7 +279,7 @@ function syncTiltUI(state = tilt.getState()) {
   $('#tilt-calibrate').classList.toggle('hidden', !state.enabled);
   $('#tilt-calibrate').disabled = !state.ready;
   document.body.classList.toggle('tilt-enabled', state.enabled);
-  if (ready) $('#start-hint').textContent = state.enabled ? '傾斜手機轉向 · 右手按油門' : mode === 'cruise' ? '手機觸控 · 電腦鍵盤' : '倒數結束前，跑完 2.4 公里';
+  if (ready) $('#start-hint').textContent = state.enabled ? '傾斜手機轉向 · 右手按油門' : mode === 'cruise' ? drivingInputHint() : '倒數結束前，跑完 2.4 公里';
 }
 
 const tilt = new TiltController({ onSteer: updateInput, onStatus: syncTiltUI, onNotice: toast });
@@ -270,6 +297,7 @@ $$('[data-vehicle]').forEach(button => button.addEventListener('click', () => { 
 $$('[data-paint]').forEach(button => button.addEventListener('click', () => { paint = button.dataset.paint; game.setColor(paint); syncSelection(); }));
 $$('[data-mode]').forEach(button => button.addEventListener('click', () => { mode = button.dataset.mode; syncSelection(); }));
 $('#start-button').addEventListener('click', start);
+$('#auto-throttle').addEventListener('click', () => { autoThrottle = !autoThrottle; $('#auto-throttle').setAttribute('aria-pressed',String(autoThrottle)); updateInput(); });
 $('#pause-button').addEventListener('click', () => { releaseInput(); game.pause(); });
 $('#resume-button').addEventListener('click', () => game.resume());
 $('#restart-button').addEventListener('click', start);
@@ -302,6 +330,7 @@ try {
   $('#start-button span').textContent = '出發上路';
   $('#loading-screen').classList.add('loaded');
   setTimeout(() => $('#loading-screen').remove(), 550);
+  if (journey) start();
 } catch (error) {
   console.error(error);
   $('#loading-text').textContent = '無法載入 3D 場景。請確認瀏覽器支援 WebGL，再重新整理。';
@@ -314,3 +343,7 @@ subscribeSettings(value => {
   if (ready) { game.setMuted(muted); game.setQuality(quality); }
   syncSelection();
 });
+
+import {installArt} from "../../shared/art-refresh.js";
+installArt();
+import '../../shared/art-refresh.css';

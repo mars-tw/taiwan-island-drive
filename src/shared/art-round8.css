@@ -1,0 +1,58 @@
+/* R8: consistent instruments, coastal tickets, safe co-driver and grounded reward. */
+html.art-r8.art-r7.art-r6.art-r5.art-r4 :is(button,a,summary){-webkit-tap-highlight-color:#ffd34455}
+html.art-r8.art-r7.art-r6.art-r5.art-r4 :is(button,a,summary):active{filter:brightness(.94);box-shadow:inset 0 3px 0 #143b6140}
+html.art-r8.art-r7.art-r6.art-r5.art-r4 :is(button,a,summary):focus-visible{outline:3px solid #f46b27;outline-offset:-4px}
+html.art-r8.art-r7.art-r6.art-r5.art-r4 :is(#pause-button,body[data-game] #pause,#math-pause,#safety-pause){position:fixed!important;top:76px!important;right:12px!important;left:auto!important;bottom:auto!important;box-sizing:border-box!important;width:60px!important;height:60px!important;min-width:60px!important;min-height:60px!important;padding:3px!important;margin:0!important;z-index:40!important;background:#fff!important;border:3px solid #1479b8!important;border-radius:8px!important;color:#143b61!important;font:900 16px/1.2 'Microsoft JhengHei',sans-serif!important}
+html.art-r8.art-r7.art-r6.art-r5.art-r4 .academy-nav .passport-open{grid-column:5;grid-row:1}
+html.art-r8.art-r7.art-r6.art-r5.art-r4 #math-lesson .dispatch-route{margin-right:72px;min-height:60px;box-sizing:border-box;gap:8px}
+html.art-r8.art-r7.art-r6.art-r5.art-r4 #math-lesson .dispatch-top .passport-open img{width:30px;height:30px}
+html.art-r8.art-r7.art-r6.art-r5.art-r4 #math-lesson[data-in-transit] .dispatch-equation{font-size:20px;background:#fff;border-style:dashed}
+html.art-r8.art-r7.art-r6.art-r5.art-r4 #math-lesson .dispatch-controls .next-ready{background:#f46b27;color:#0c2742;border-color:#ae470a}
+html.art-r8.art-r7.art-r6.art-r5.art-r4 #math-lesson[data-phase=done] #math-next{background:#f46b27;color:#0c2742;border-color:#ae470a}
+html.art-r8.art-r7.art-r6.art-r5.art-r4 #math-lesson[data-phase=done] [data-dispatch=start]{background:#fff!important;color:#143b61!important;border-color:#1479b8!important}
+html.art-r8.art-r7.art-r6.art-r5.art-r4 #math-lesson[data-phase=done] .departure-train{left:0;bottom:0;width:66%;height:94%;object-fit:contain}
+html.art-r8.art-r7.art-r6.art-r5.art-r4 #math-lesson[data-phase=done] .dispatch-coach{width:34%;height:82%;bottom:0}
+html.art-r8.art-r7.art-r6.art-r5.art-r4 #math-lesson[data-phase=done] .math-award{background:#fff;border:24px solid transparent;border-image:url('/art/r8/ocean-ticket.png') 22% 14% 23% 14% fill stretch;padding:8px;box-sizing:border-box}
+html.art-r8.art-r7.art-r6.art-r5.art-r4 #math-lesson[data-phase=done] .celebration-stage{background:url('/art/r8/platform-floor.webp') center bottom/100% 25% no-repeat;border-radius:16px;border-bottom:4px solid #1479b8}
+html.art-r8.art-r7.art-r6.art-r5.art-r4 #math-lesson .dispatch-carriage:after{content:'';position:absolute;z-index:0;bottom:-7px;left:0;right:0;height:25px;background:url('/art/r8/rail-strip.webp') center/100% 100% no-repeat}
+html.art-r8.art-r7.art-r6.art-r5.art-r4 body[data-game=car] .hud-top{padding-right:72px;box-sizing:border-box}
+html.art-r8.art-r7.art-r6.art-r5.art-r4 body[data-game=car] .hud-route{max-width:calc(100% - 106px);min-width:0}
+html.art-r8.art-r7.art-r6.art-r5.art-r4 body[data-game=car] #hud-stars{margin-right:0;max-width:100px;box-sizing:border-box}
+html.art-r8.art-r7.art-r6.art-r5.art-r4 .drive-coach{display:flex;width:116px;height:130px;right:12px;bottom:122px;border:0;background:none}
+html.art-r8.art-r7.art-r6.art-r5.art-r4 .drive-coach:after{display:none}
+html.art-r8.art-r7.art-r6.art-r5.art-r4 .drive-coach>img{width:116px;height:116px;transform:none}
+html.art-r8.art-r7.art-r6.art-r5.art-r4 .drive-coach>span{bottom:-14px;font-size:11px;padding:4px;background:#fff}
+html.art-r8.art-r7.art-r6.art-r5.art-r4 body[data-game=flight] .flight-top .top-actions{padding-right:72px}
+html.art-r8.art-r7.art-r6.art-r5.art-r4 #child-flight-meters{display:flex;align-items:center;gap:14px;color:#143b61;font-size:12px;flex:1}
+html.art-r8.art-r7.art-r6.art-r5.art-r4 #child-flight-meters[hidden]{display:none}
+html.art-r8.art-r7.art-r6.art-r5.art-r4 #child-flight-meters>span{display:flex;gap:5px;align-items:center}
+html.art-r8.art-r7.art-r6.art-r5.art-r4 #child-flight-meters>span>span{display:flex;gap:2px}
+html.art-r8.art-r7.art-r6.art-r5.art-r4 #child-flight-meters i{display:block;width:10px;height:16px;border:1px solid #1479b8;border-radius:3px;background:#d3eaf5}
+html.art-r8.art-r7.art-r6.art-r5.art-r4 #child-flight-meters i.lit{background:#ffd344}
+html.art-r8.art-r7.art-r6.art-r5.art-r4 #flight-goal-count{padding:4px 8px;border-radius:7px;background:#fff3bf;white-space:nowrap}
+html.art-r8.art-r7.art-r6.art-r5.art-r4 .preschool #flight-status{font-size:12px;font-weight:900}
+html.art-r8.art-r7.art-r6.art-r5.art-r4 .preschool #child-cue{display:none}
+html.art-r8.art-r7.art-r6.art-r5.art-r4 #child-action #child-icon{font-size:0;width:42px;height:42px;background:url('/art/r8/coast-star.png') center/contain no-repeat}
+html.art-r8.art-r7.art-r6.art-r5.art-r4 #safety-lesson .safety-route{padding-right:76px;box-sizing:border-box;min-height:72px}
+html.art-r8.art-r7.art-r6.art-r5.art-r4 body[data-game=train] .masthead .top-actions{padding-right:72px}
+@media(max-width:600px){
+ html.art-r8.art-r7.art-r6.art-r5.art-r4 #child-flight-meters{gap:6px;font-size:10px;flex-wrap:wrap}
+ html.art-r8.art-r7.art-r6.art-r5.art-r4 #child-flight-meters i{width:7px;height:12px}
+ html.art-r8.art-r7.art-r6.art-r5.art-r4 #child-flight-meters>span{gap:3px}
+ html.art-r8.art-r7.art-r6.art-r5.art-r4 #flight-goal-count{padding:2px 4px}
+}
+@media(max-width:720px) and (min-height:621px) and (max-height:740px) and (orientation:portrait){
+ html.art-r8.art-r7.art-r6.art-r5.art-r4 body[data-game=flight] #menu .brand{height:112px;min-height:112px;flex:none}
+ html.art-r8.art-r7.art-r6.art-r5.art-r4 body[data-game=flight] #menu .brand h1{font-size:20px;padding:5px 10px}
+}
+@media(max-height:520px) and (orientation:landscape){
+ html.art-r8.art-r7.art-r6.art-r5.art-r4 body[data-game=train] #app{grid-template-rows:76px minmax(0,1fr) 48px}
+ html.art-r8.art-r7.art-r6.art-r5.art-r4 body[data-game=train] .child-console{padding:4px;gap:4px}
+ html.art-r8.art-r7.art-r6.art-r5.art-r4 body[data-game=train] .coach{min-height:0;height:48px;padding:4px 12px;box-sizing:border-box;overflow:hidden}
+ html.art-r8.art-r7.art-r6.art-r5.art-r4 .drive-coach{right:148px;bottom:12px;width:94px;height:94px}
+ html.art-r8.art-r7.art-r6.art-r5.art-r4 .drive-coach>img{width:94px;height:94px}
+ html.art-r8.art-r7.art-r6.art-r5.art-r4 #math-lesson .dispatch-route{min-height:30px}
+ html.art-r8.art-r7.art-r6.art-r5.art-r4 #math-lesson[data-phase=done] .math-award{padding:3px;border-width:12px}
+ html.art-r8.art-r7.art-r6.art-r5.art-r4 #child-flight-meters{gap:5px;font-size:10px}
+ html.art-r8.art-r7.art-r6.art-r5.art-r4 #child-flight-meters i{width:7px;height:10px}
+}

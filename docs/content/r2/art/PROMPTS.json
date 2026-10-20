@@ -1,0 +1,45 @@
+{
+  "tool": "image_gen.imagegen",
+  "model_slug": null,
+  "style_prefix": "Island Traffic Academy sunny Taiwan coastal storybook, chunky ink-navy outlines, rounded toy proportions, warm upper-left light, saturated sea blue sunflower yellow coral orange, gentle paper texture, clean silhouette readable at 64px. ",
+  "records": [
+    {
+      "id": "station",
+      "prompt": "Island Traffic Academy sunny Taiwan coastal storybook, chunky ink-navy outlines, rounded toy proportions, warm upper-left light, saturated sea blue sunflower yellow coral orange, gentle paper texture, clean silhouette readable at 64px. Use case: illustration-story. Asset type: game railway station environment, portrait 2:3 full bleed. A charming Taiwanese seaside train station with THREE clearly distinct parallel platform bays, arranged as three horizontal tiers at y=38%, 62%, and 86% of image. Each bay has a real terracotta platform edge, a blue post holding a large EMPTY white round-corner station sign on its RIGHT side at x=83%, and a horizontal rail track immediately below it spanning full width. Empty tracks, no trains, no people. The three white signs are completely blank for runtime colored shape symbols. Pale turquoise sea and lighthouse in distant top quarter, middle bay surrounded by lush banyan leaves, lowest bay has orange coastal flowers and tiled platform. Foreground perspective almost side elevation, like a children's railway diorama, three distinct stop positions aligned vertically, enough room for a train sprite 55% width on the LEFT of each bay. Calm readable large shapes, beautiful rich paper texture, not generic geometric blocks. No UI, no text, no numerals, no letters, no watermarks.",
+      "source": "docs/content/r2/art/station-master.png",
+      "generated_file": "exec-371e4820-548c-44ed-87b2-be16a8928f1c.png"
+    },
+    {
+      "id": "cake",
+      "prompt": "Island Traffic Academy sunny Taiwan coastal storybook, chunky ink-navy outlines, rounded toy proportions, warm upper-left light, saturated sea blue sunflower yellow coral orange, gentle paper texture, clean silhouette readable at 64px. Use case: illustration-story. Asset type: children's game full-screen completion illustration, portrait 2:3. A joyous seaside picnic: a smiling Taiwanese child in blue shirt and orange shorts, helmeted bicycle friend in coral shirt, silver-haired grandmother in green cardigan and yellow skirt, all seated SAFELY around a low round picnic table on a lighthouse garden terrace. A strawberry layer cake on blue plate at the center has a wedge already cut and three little plates each with a slice. Rounded turquoise toy car parked safely BEHIND the terrace, not on the table, cake has been safely delivered. Child passing a plate to grandmother with visible caring action. Sea and sunset peach clouds, banyan tree, warm celebratory feel. Detailed appealing faces, thick navy outlines and paper grain matching game. NO trophy, NO UI, NO text, NO flags, NO numerals, NO watermarks. Full bleed beautiful picture.",
+      "source": "docs/content/r2/art/cake-master.png",
+      "generated_file": "exec-2676590e-a0f2-4c8c-9174-56e8a97488e7.png"
+    },
+    {
+      "id": "crossing",
+      "prompt": "Island Traffic Academy sunny Taiwan coastal storybook, chunky ink-navy outlines, rounded toy proportions, warm upper-left light, saturated sea blue sunflower yellow coral orange, gentle paper texture, clean silhouette readable at 64px. Use case: illustration-story. Asset type: children's game completion illustration, portrait 2:3 full bleed. At a Taiwan seaside zebra crossing, THREE distinct road friends have safely REACHED THE FAR SIDEWALK and turned back to smile and wave thanks toward the viewer. A child with short brown hair in blue shirt and orange shorts waving one hand; a bicyclist with yellow helmet coral shirt and blue trousers has DISMOUNTED and holds the handlebars of a blue bicycle safely beside them, other hand waving; a silver-haired grandmother in green cardigan and yellow skirt holds her little wheeled vegetable shopping trolley on the sidewalk, waves one hand. All three full bodies visible with hands and safe sidewalk contact, no one remains on the road. White zebra stripes in foreground, quiet turquoise sea and small lighthouse left, green banyan tree right. Cheerful faces, strong rounded ink-navy contours, colorful paper grain. All friends grouped in lower two thirds. A small turquoise car stopped BEFORE stop line foreground corner, no driver needed. No text, no UI, no trophies, no labels, no watermark.",
+      "source": "docs/content/r2/art/crossing-master.png",
+      "generated_file": "exec-f76b08f2-1628-4de0-8f64-c9af7a2dfbc3.png"
+    },
+    {
+      "id": "tickets",
+      "prompt": "Island Traffic Academy sunny Taiwan coastal storybook, chunky ink-navy outlines, rounded toy proportions, warm upper-left light, saturated sea blue sunflower yellow coral orange, gentle paper texture, clean silhouette readable at 64px. Use case: illustration-story. Asset type: children's game completion illustration, portrait 2:3 full bleed. A cutaway SIDE VIEW of a cheerful blue and sunflower-yellow toy commuter train, safely stopped along a Taiwanese flower-garden station platform by turquoise sea. Large open side windows clearly reveal THREE young passengers ALREADY SITTING safely ON orange upholstered seats INSIDE carriage. Full child faces and seated bodies and feet inside train: child with blue shirt orange shorts, girl with orange flower hair clip green dress, boy with glasses yellow shirt. Lower third shows wheels touching steel rails and sleepers, a continuous terracotta platform safely at side, no passengers standing on tracks, no levitation. Foreground a little green square station sign on a navy post with no lettering, a green square paper ticket tucked into a yellow door-side ticket holder. Bright white clouds and Taiwan coastal hills, sunset warm yellow light. Focus on seated friends waving from windows, detailed friendly faces, rich ink-navy outlined storybook illustration. Not a trophy screen, no UI, no written text, no numerals, no watermarks. No gigantic front-on face, use SIDE view so seats are unmistakable.",
+      "source": "docs/content/r2/art/tickets-master.png",
+      "generated_file": "exec-2bb743e8-e9c6-4ef8-a6bf-8a8d6734b40c.png"
+    },
+    {
+      "id": "crossing-banyan",
+      "prompt": "Island Traffic Academy sunny Taiwan coastal storybook, chunky ink-navy outlines, rounded toy proportions, warm upper-left light, saturated sea blue sunflower yellow coral orange, gentle paper texture, clean silhouette readable at 64px. Use case: precise-object-edit. Create a new game background variant from the reference. Preserve EXACT camera, road perspective, empty zebra crossing band at y=65%, stop line at y=79%, empty foreground, bright rounded ink-navy paper storybook style. Change the surroundings into a lush Taiwan village BANYAN ALLEY in soft morning light: massive green banyan canopy overhead on both sides, red-tile low houses and a small blue-roof bus shelter in the middle distance, potted orange flowers along safe raised sidewalks, distant green mountain rather than visible open sea. NO people, bicycles, cars, letters, words, UI, numbers or watermark. Keep all walking surfaces at exactly the same heights as reference for game sprite alignment. The village surroundings must be clearly visually different from the original open seacoast. Landscape 3:2.",
+      "source": "docs/content/r2/art/crossing-banyan-master.png",
+      "generated_file": "exec-f8299543-e4ab-47dc-94d1-6921559a3052.png",
+      "reference": "public/art/content-r1/crossing.webp"
+    },
+    {
+      "id": "crossing-lighthouse",
+      "prompt": "Island Traffic Academy sunny Taiwan coastal storybook, chunky ink-navy outlines, rounded toy proportions, warm upper-left light, saturated sea blue sunflower yellow coral orange, gentle paper texture, clean silhouette readable at 64px. Use case: precise-object-edit. Create a new game background variant from the reference. Preserve EXACT camera, road perspective, empty zebra crossing band at y=65%, stop line at y=79%, empty foreground, rounded ink-navy paper storybook style. Change the location to a LIGHTHOUSE GARDEN lane in warm golden late afternoon light, peach and yellow clouds. Large white lighthouse with orange roof close by at LEFT middle distance, white garden fence, sunflower beds and coastal shrubs on both sides; bright calm turquoise sea glimpsed on right. Road still clearly visible from driver viewpoint, open sightlines both sides, safe sidewalks. NO people, bicycles, cars, letters, words, UI, numbers or watermark. Keep all walking surfaces at exactly the same heights as reference for game sprite alignment. Must be distinct from both blue-sky coast and green village scenes. Landscape 3:2.",
+      "source": "docs/content/r2/art/crossing-lighthouse-master.png",
+      "generated_file": "exec-503b9a4a-19ce-4a49-be30-c01bfbf2121e.png",
+      "reference": "public/art/content-r1/crossing.webp"
+    }
+  ]
+}

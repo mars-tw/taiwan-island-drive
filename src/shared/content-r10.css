@@ -1,0 +1,77 @@
+/* R10: a single action cue, a shared person scale and continuous boarding route. */
+#content-r1[data-kind=cake] .cake-closeup{width:144px;height:144px;left:1px}
+#content-r1[data-kind=cake] .cake-closeup>div{transform:scale(.80);transform-origin:top left}
+#content-r1[data-kind=cake] .cake-road-view{inset:146px 0 0}
+#content-r1[data-kind=cake][data-phase=playing] .cake-task{left:152px;top:4px;font-size:12px}
+#content-r1[data-kind=cake] .cake-route-map{left:152px;top:36px}
+#content-r1[data-kind=cake][data-phase=playing] .content-force{left:152px;top:75px;min-height:64px}
+#content-r1[data-kind=cake] .content-carrier{left:16%;width:68%;height:58%;bottom:1%}
+#content-r1[data-kind=cake] .cake-miniature{transform:scale(.40)}
+#content-r1[data-kind=cake] .cake-correction{display:none}
+#content-r1[data-kind=cake] [data-action]{background:#f5fbff;box-shadow:inset 0 -4px #b5d8e8}
+#content-r1[data-kind=cake] [data-action][data-needed=true]{background:#ffd344;box-shadow:inset 0 0 0 3px #f46b27}
+#content-r1[data-kind=cake] [data-action=go][data-held=true]:not([data-release=true]){background:#f46b27;transform:translateY(3px);box-shadow:inset 0 4px #bf451a}
+#content-r1[data-kind=cake] [data-action=go][data-release=true]{background:#dce4e9;outline:0;color:#526776;transform:none;box-shadow:inset 0 0 0 2px #a6b8c3}
+
+#content-r1[data-kind=crossing]{--friend-h:124px;--friend-w:110px}
+#content-r1[data-kind=crossing] .content-walker,
+#content-r1[data-kind=crossing] .crossing-waiting>div,
+#content-r1[data-kind=crossing] .crossing-arrived>div{width:var(--friend-w);height:var(--friend-h);margin-left:calc(var(--friend-w) / -2);right:auto}
+#content-r1[data-kind=crossing] .crossing-waiting{inset:0;position:absolute;height:100%;width:100%}
+#content-r1[data-kind=crossing] .crossing-waiting>div{position:absolute;filter:none}
+#content-r1[data-kind=crossing] .crossing-waiting img{filter:grayscale(1);opacity:1}
+#content-r1[data-kind=crossing] [data-waiting=child],#content-r1[data-kind=crossing] [data-waiting=bike],#content-r1[data-kind=crossing] .content-walker[data-person=child],#content-r1[data-kind=crossing] .content-walker[data-person=bike],#content-r1[data-kind=crossing] [data-arrived-friend=child],#content-r1[data-kind=crossing] [data-arrived-friend=bike]{height:calc(var(--friend-h) * .68);width:calc(var(--friend-w) * .68);margin-left:calc(var(--friend-w) * -.34)}
+#content-r1[data-kind=crossing][data-phase=playing] .content-coach{display:none}
+.crossing-waiting b{position:absolute;bottom:-20px;left:10%;right:10%;background:#f5fbff;border:2px solid #1479b8;border-radius:8px;text-align:center;font-size:13px;white-space:nowrap}
+#content-r1[data-kind=crossing] .crossing-arrived b{top:4px;right:20%;width:24px;height:24px;display:grid;place-items:center;z-index:2}
+#content-r1[data-kind=crossing] .crossing-waiting img,#content-r1[data-kind=crossing] .content-walker img,#content-r1[data-kind=crossing] .crossing-arrived img{object-fit:contain;width:100%;height:100%}
+#content-r1[data-kind=crossing] .crossing-roster{top:48px}
+
+#content-r1[data-kind=tickets] .content-stations{z-index:9}
+#content-r1[data-kind=tickets] .content-passengers{z-index:10}
+#content-r1[data-kind=tickets]:has(.ticket-comparison:not(:empty)) .ticket-counts{top:auto;bottom:4px}
+#content-r1[data-kind=tickets] .content-scene{background-image:url('/art/content-r10/station-wide-platform.webp')}
+#content-r1[data-kind=tickets] .content-stations button{top:32%;width:72px;min-height:68px}
+#content-r1[data-kind=tickets] .content-stations button::after{display:block;top:100%;height:var(--pole-height,100px)!important;z-index:-1;box-shadow:2px 0 #fff8d9}
+.ticket-platform-segments{display:none;position:absolute;inset:64% 0 auto;height:5%;z-index:3;pointer-events:none}
+#content-r1[data-kind=tickets] .ticket-platform-segments{display:block}
+.ticket-platform-segments>span{position:absolute;top:0;width:33.33%;height:100%;border-top:4px solid #1479b8;border-right:3px dashed #143b61;box-sizing:border-box}
+.ticket-platform-segments b{position:absolute;left:43%;top:-8px;background:#fff8d9;color:#143b61;border:2px solid #1479b8;border-radius:50%;width:22px;height:22px;display:grid;place-items:center}
+.ticket-queue-path{display:none;position:absolute;inset:0;height:100%;width:100%;z-index:5;pointer-events:none;overflow:visible}
+#content-r1[data-kind=tickets] .ticket-queue-path{display:block}
+.ticket-queue-path path{fill:none;stroke:#fff8d9;stroke-width:3;stroke-dasharray:8 6;vector-effect:non-scaling-stroke;stroke-linecap:round;filter:drop-shadow(1px 1px #143b61)}
+.ticket-boarding-bridge{display:none;position:absolute;height:20px;background:url('/art/content-r10/boarding-step.png') center/100% 100% no-repeat;transform-origin:0 50%;z-index:5;pointer-events:none}
+#content-r1[data-kind=tickets] .ticket-boarding-bridge{display:block}
+#content-r1[data-kind=tickets] .ticket-seated[data-entering=true]{top:19%;height:58%;overflow:hidden}
+#content-r1[data-kind=tickets] .ticket-seated[data-entering=true] img{height:100%;object-fit:contain}
+#content-r1[data-kind=tickets] .boarding-friend{height:78px;width:44px}
+.boarding-friend>b{position:absolute;left:0;bottom:0;background:#fff8d9;border:2px solid #1479b8;border-radius:50%;width:20px;height:20px;display:grid;place-items:center;font-size:13px}
+#content-r1[data-kind=tickets] .ticket-door{background:#174a5a url('/art/content-r10/open-door.png') center/100% 100% no-repeat;border:2px solid #ffd344;z-index:3}
+#content-r1[data-kind=tickets] .ticket-door::after{content:'';position:absolute;bottom:0;left:0;right:0;height:9%;background:repeating-linear-gradient(135deg,#ffd344 0 5px,#143b61 5px 9px)}
+#content-r1[data-kind=tickets] .ticket-vehicle[data-doors=true]::before{content:'';position:absolute;left:69%;width:16%;top:70%;height:9%;background:url('/art/content-r10/boarding-step.png') center/100% 100% no-repeat;transform:skewY(18deg);z-index:5}
+
+@media(max-width:360px) and (orientation:portrait){
+ #content-r1[data-kind=cake] .cake-closeup{width:140px;height:140px}
+ #content-r1[data-kind=cake] .cake-closeup>div{transform:scale(.78)}
+ #content-r1[data-kind=cake][data-phase=playing] .content-force{left:145px;top:70px}
+ #content-r1[data-kind=cake][data-phase=playing] .cake-task{left:145px;top:0;font-size:11px}
+ #content-r1[data-kind=cake] .cake-route-map{left:145px;top:34px}
+ #content-r1[data-kind=cake] .cake-road-view{inset:142px 0 0}
+ #content-r1[data-kind=crossing]{--friend-h:64px;--friend-w:62px}
+ #content-r1[data-kind=tickets] .content-stations button{top:72px;width:60px;min-height:60px;font-size:10px}
+ #content-r1[data-kind=tickets][data-phase] .content-ticket{left:3px;top:2px}
+ #content-r1[data-kind=tickets][data-phase] .ticket-counts{top:2px;left:44px;right:auto;transform:none}
+ #content-r1[data-kind=tickets] .content-stations button::after{height:var(--pole-height,35px)!important}
+ #content-r1[data-kind=tickets] .boarding-friend{height:44px;width:26px}
+ .crossing-waiting b{font-size:9px;bottom:-14px}
+}
+@media(orientation:landscape) and (max-height:520px){
+ #content-r1[data-kind=cake] .cake-road-view{inset:0 0 0 146px}
+ #content-r1[data-kind=cake][data-phase=playing] .content-force{left:0;top:145px;width:142px;min-height:48px}
+ #content-r1[data-kind=crossing]{--friend-h:58px;--friend-w:58px}
+ #content-r1[data-kind=crossing] .crossing-roster{top:35px}
+ #content-r1[data-kind=tickets] .content-stations button{top:60px;width:60px;min-height:60px;font-size:10px}
+ #content-r1[data-kind=tickets] .content-stations button::after{height:var(--pole-height,30px)!important}
+ #content-r1[data-kind=tickets] .boarding-friend{height:28px;width:20px}
+ .crossing-waiting b{font-size:9px;bottom:-14px}
+}

@@ -1,0 +1,131 @@
+import assert from 'node:assert/strict';
+import {pathToFileURL} from 'node:url';
+import {mkdir,readFile,writeFile} from 'node:fs/promises';
+import {createHash} from 'node:crypto';
+const {chromium}=await import(pathToFileURL(process.env.PLAYWRIGHT_MODULE||'C:/Users/digimkt/Desktop/遊戲/storm-apocalypse/node_modules/playwright/index.mjs').href);
+const base=process.env.BASE_URL||'http://127.0.0.1:5286/',out='docs/content/r9',scope=process.env.R9_SCOPE||'play';
+await mkdir(out,{recursive:true});
+const browser=await chromium.launch({headless:true,args:['--use-angle=d3d11','--enable-gpu','--ignore-gpu-blocklist']}),rows=[],shots=[],errors=[],external=[],responses=[];
+const a=(p,id)=>p.locator(`[data-action="${id}"]`),diag=p=>p.locator('.content-scene').evaluate(e=>({...e.dataset})),check=(label,detail={})=>{rows.push({label,status:'VERIFIED',...detail});console.log('VERIFIED '+label);};
+function watch(p){const wait=p.waitForFunction.bind(p);p.waitForFunction=(fn,arg,options={})=>wait(fn,arg,{polling:40,...options});p.on('pageerror',e=>errors.push(e.message));p.on('request',r=>{if(/^https?:/.test(r.url())&&new URL(r.url()).origin!==new URL(base).origin)external.push(r.url());});p.on('response',r=>{if(r.status()>=400)responses.push({url:r.url(),status:r.status()});});}
+async function frozen(p,fn){if(await p.evaluate(()=>!!window.__r7Capture))return fn();await p.evaluate(()=>new Promise(resolve=>{const original=requestAnimationFrame,queued=[];window.__r7Capture={original,queued};window.requestAnimationFrame=cb=>{queued.push(cb);return 0;};original(()=>original(resolve));}));try{return await fn();}finally{await p.evaluate(()=>{const {original,queued}=window.__r7Capture;window.requestAnimationFrame=original;delete window.__r7Capture;queued.forEach(cb=>original(cb));});}}
+async function shot(p,name,folder=out){return frozen(p,async()=>{await p.evaluate(async()=>{await Promise.all([...document.images].filter(i=>i.getClientRects().length).map(i=>i.decode().catch(()=>{})));});const state=await diag(p),path=`${folder}/${name}.png`;await p.screenshot({path});const b=await readFile(path),s={path,width:b.readUInt32BE(16),height:b.readUInt32BE(20),sha256:createHash('sha256').update(b).digest('hex'),state,phase:await p.locator('#content-r1').getAttribute('data-phase'),seats:await p.locator('.ticket-seated').count(),offset:await p.locator('.cake-closeup').getAttribute('data-offset'),summary:await p.locator('.content-facts').innerText(),native:false,method:'Original headless runtime PNG; RAF suspended during capture only; no gameplay assignments or pixel edits'};const i=shots.findIndex(row=>row.path===path);if(i>=0)shots.splice(i,1);shots.push(s);return s;});}
+async function noReadout(p,name){const css=await p.addStyleTag({content:'.content-header,#content-hint,.content-work,.cake-task,.cake-route-map,.content-force,.cake-correction,.content-route,.content-scene-cue{visibility:hidden!important}'});try{return await shot(p,name);}finally{await css.evaluate(e=>e.remove());}}
+async function reach(p,label){const controls=await p.locator('#content-r1 button').evaluateAll(es=>es.filter(e=>e.getClientRects().length&&!e.disabled).map(e=>{const r=e.getBoundingClientRect();return {id:e.dataset.action||e.dataset.platform||e.id,size:[r.width,r.height],bad:r.width<59.8||r.height<59.8||r.x<-.5||r.y<-.5||r.right>innerWidth+.5||r.bottom>innerHeight+.5||[[r.x+r.width/2,r.y+r.height/2],[r.x+4,r.y+4],[r.right-4,r.bottom-4]].some(([x,y])=>{const h=document.elementFromPoint(x,y);return h!==e&&!e.contains(h);})};}));assert.ok(controls.length);assert.deepEqual(controls.filter(c=>c.bad),[],label);check(label,{controls:controls.length});}
+async function key(p,id,on){await a(p,id).dispatchEvent(on?'keydown':'keyup',{key:' '});}
+async function hold(p,id,ms){const r=await a(p,id).boundingBox();await p.mouse.move(r.x+r.width/2,r.y+r.height/2);await p.mouse.down();await p.waitForTimeout(ms);await p.mouse.up();}
+async function enter(p,k){await p.locator('#content-start').click();await p.locator(`[data-content=${k}]`).click();}
+async function peopleProof(p,label){
+ const geometry=await p.locator('.content-scene').evaluate(scene=>{
+  const rect=e=>{const r=e.getBoundingClientRect();return {x:r.x,y:r.y,right:r.right,bottom:r.bottom,width:r.width,height:r.height};};
+  const people=[...scene.querySelectorAll('.boarding-friend,.ticket-seated')].map(e=>({id:e.dataset.friend,entering:e.dataset.entering==='true',...rect(e)}));
+  const signs=[...scene.querySelectorAll('[data-platform]')].map(e=>({text:e.innerText,...rect(e)}));
+  return {scene:rect(scene),people,signs};
+ });
+ assert.equal(geometry.people.length,3,label);assert.equal(new Set(geometry.people.map(r=>r.id)).size,3,label);
+ const intersects=(a,b)=>a.x<b.right-1&&a.right>b.x+1&&a.y<b.bottom-1&&a.bottom>b.y+1;
+ for(let n=0;n<3;n++){
+  const r=geometry.people[n];assert.ok(r.x>=geometry.scene.x&&r.right<=geometry.scene.right&&r.y>=geometry.scene.y&&r.bottom<=geometry.scene.bottom,label+' bounds');
+  for(const other of geometry.people.slice(n+1))assert.equal(intersects(r,other),false,label+' separate bodies');
+  for(const sign of geometry.signs){if(intersects(r,sign)){console.log(JSON.stringify({label,geometry}));await p.screenshot({path:'.audit-tmp/r9-layout.png'});}assert.equal(intersects(r,sign),false,label+' clear signs');}
+ }
+ assert.ok(geometry.signs.some(r=>r.text.includes('停對了')),label+' complete arrival label');check(label,geometry);
+}
+const record=(p,k)=>p.evaluate(k=>JSON.parse(localStorage.getItem('island-transport:student:v2')).sections.contentR1[k],k);
+async function home(p,k,n){await p.locator('#content-back').click();assert.equal(await p.locator('#content-start').getAttribute('data-completed'),String(n));await shot(p,`phone-home-after-${k}`);if(n===3){assert.match(await p.locator('#academy-record').innerText(),/\u4e3b\u7dda\u5b78\u751f\u8b49.*\u7368\u7acb\u6d77\u5cb8/);assert.match(await p.locator('#content-start').innerText(),/\u518d\u73a9\u6d77\u5cb8\u5be6\u4f5c\u8ab2/);await p.locator('#content-start').click();assert.equal(await p.locator('[data-state=completed]').count(),3);await shot(p,'phone-picker-completed');await p.locator('#content-back').click();}await p.reload();await enter(p,k);assert.equal(await p.locator('#content-r1').getAttribute('data-phase'),'done');await shot(p,`phone-${k}-saved-result`);await p.locator('#content-back').click();check(`${k}: completion and factual summary persist; homepage ${n}/3`);}
+let status='EXECUTED';
+try{
+ if(scope==='matrix')for(const [name,w,h] of [['se',320,568],['phone',390,844],['small-landscape',568,320],['landscape',844,390],['ipad',768,1024],['ipad-landscape',1024,768],['laptop',1366,600],['short-laptop',1280,640]]){
+  const c=await browser.newContext({viewport:{width:w,height:h},hasTouch:true}),p=await c.newPage();watch(p);await p.goto(base);await p.locator('#content-start').click();await reach(p,`${name} picker`);await p.locator('#content-back').click();
+  for(const k of ['cake','crossing','tickets']){await enter(p,k);await reach(p,`${name} ${k} intro`);await a(p,'begin').click();await reach(p,`${name} ${k} playing`);assert.doesNotMatch(await p.locator('#content-r1').innerText(),/WASD|方向鍵|空白鍵|鍵盤/);if(k==='cake'){const r=await p.locator('.cake-closeup').boundingBox();assert.ok(r.width>=140&&r.height>=140);const road=await p.locator('.cake-road-view').boundingBox();assert.ok(r.y+r.height<=road.y+1||r.x+r.width<=road.x+1,'magnifier and road never overlap');}
+   await p.locator('#content-pause').click();await reach(p,`${name} ${k} rest`);await p.locator('#content-resume').click();await p.locator('#content-back').click();}
+  if(['phone','landscape','ipad'].includes(name)){await enter(p,'cake');await a(p,'begin').click();await shot(p,`${name==='phone'?'phone':'device-'+name}-cake-layout`);await p.locator('#content-back').click();}
+  await c.close();
+ }
+ if(scope==='boarding-matrix')for(const [name,w,h] of [['se',320,568],['phone',390,844],['small-landscape',568,320],['landscape',844,390],['ipad',768,1024],['ipad-landscape',1024,768],['laptop',1366,600],['short-laptop',1280,640]]){
+  const c=await browser.newContext({viewport:{width:w,height:h},hasTouch:true}),p=await c.newPage();watch(p);await p.goto(base);await enter(p,'tickets');await a(p,'begin').click();await p.getByRole('button',{name:'藍圓形月台',exact:true}).click();await hold(p,'go',5700);await hold(p,'brake',1600);
+  await reach(p,`${name} actual station arrival controls`);await frozen(p,async()=>{await peopleProof(p,`${name} actual queue and sign geometry`);await shot(p,`${name==='phone'?'phone':'device-'+name}-tickets-queue`);});await a(p,'door').click();await p.waitForFunction(()=>!!document.querySelector('.ticket-seated[data-entering=true]'),null,{polling:10});await frozen(p,async()=>{await peopleProof(p,`${name} actual aisle and waiting people`);await shot(p,`${name==='phone'?'phone':'device-'+name}-tickets-aisle`);});await c.close();
+ }
+ if(scope==='done-matrix')for(const [name,w,h] of [['se',320,568],['phone',390,844],['small-landscape',568,320],['landscape',844,390],['ipad',768,1024],['ipad-landscape',1024,768],['laptop',1366,600],['short-laptop',1280,640]]){
+  const c=await browser.newContext({viewport:{width:w,height:h},hasTouch:true});await c.addInitScript(()=>localStorage.setItem('island-transport:student:v2',JSON.stringify({schemaVersion:2,revision:1,sections:{contentR1:Object.fromEntries(['cake','crossing','tickets'].map(k=>[k,{completed:true,stage:2,facts:{recoveries:9,assists:3,bayStops:1,bayRestarts:1,leftViews:3,rightViews:3,waited:9,blockedStarts:3,reselections:3,boarded:9}}]))}})));const p=await c.newPage();watch(p);await p.goto(base);for(const k of ['cake','crossing','tickets']){await enter(p,k);await reach(p,`${name} ${k} completed fixture controls only; no review screenshot`);await p.locator('#content-back').click();}await c.close();
+ }
+ if(scope==='play'){
+  const c=await browser.newContext({viewport:{width:390,height:844},hasTouch:true}),p=await c.newPage();watch(p);await p.goto(base);await enter(p,'cake');await a(p,'begin').click();
+  await key(p,'go',true);await p.waitForFunction(()=>+document.querySelector('.cake-closeup').dataset.offset< -27);const start=await shot(p,'phone-cake-starting');await noReadout(p,'phone-cake-noreadout-starting');assert.equal((await diag(p)).correction,'right');assert.equal(await a(p,'right').getAttribute('data-needed'),'true');await p.waitForTimeout(1900);await key(p,'left',true);await p.waitForTimeout(1100);const turn=await shot(p,'phone-cake-turning');await noReadout(p,'phone-cake-noreadout-turning');assert.equal((await diag(p)).correction,'left');assert.equal(await a(p,'left').getAttribute('data-needed'),'true');const fast=await diag(p);await p.waitForTimeout(800);const slow=await shot(p,'phone-cake-assisted-slowing');assert.ok(+slow.state.speed<+fast.speed);await key(p,'left',false);await key(p,'go',false);await hold(p,'brake',1400);for(let n=1;n<=3;n++){await p.waitForTimeout(180);await shot(p,`phone-cake-recovery-${n}`);}await p.waitForTimeout(4000);const settled=await shot(p,'phone-cake-settled');await noReadout(p,'phone-cake-noreadout-settled');assert.equal((await diag(p)).settled,'true');assert.equal(await p.locator('.force-meter').getAttribute('aria-valuenow'),'100');assert.match(await p.locator('.force-readout strong').innerText(),/\u5750\u7a69\u4e86/);
+  assert.ok(+start.offset< -27);assert.ok(+turn.offset>27);assert.ok(Math.abs(+settled.offset)<1);check('magnified three tiers: start and bend opposite by over 54 CSS px; settle; real speed assistance',{start:start.offset,turn:turn.offset,settled:settled.offset,fast:fast.speed,slow:slow.state.speed});
+  for(let stage=0;stage<3;stage++){
+   await shot(p,`phone-cake-stage-${stage+1}-playing`);let go=false,steer='';
+   for(let n=0;n<240&&+(await diag(p)).distance<55;n++){const d=await diag(p),want=+d.distance>15&&+d.distance<=40?(+d.bend>0?'right':'left'):'';if(want!==steer){if(steer)await key(p,steer,false);if(want)await key(p,want,true);steer=want;}
+    if(stage===2&&+d.distance>=42&&d.bayStopped==='false'){if(go){await key(p,'go',false);go=false;}await hold(p,'brake',1400);await shot(p,'phone-cake-bay-stopped');}else if(!go){await key(p,'go',true);go=true;}await p.waitForTimeout(200);if(stage===2&&(await diag(p)).bayRestarted==='true'&&!shots.some(s=>s.path.endsWith('phone-cake-bay-restarted.png')))await shot(p,'phone-cake-bay-restarted');
+    if(stage===1){for(const [direction,from,to] of [['left',18,22],['right',32,36]])if(+d.distance>from&&+d.distance<to&&!shots.some(s=>s.path.endsWith(`phone-cake-${direction}-bend.png`)))await shot(p,`phone-cake-${direction}-bend`);if(+d.distance>29&&+d.distance<31)await shot(p,'phone-cake-double-bend');}
+   }
+   if(go)await key(p,'go',false);if(steer)await key(p,steer,false);assert.equal(+(await diag(p)).distance,55);await hold(p,'brake',1700);await shot(p,`phone-cake-stage-${stage+1}-result`);assert.equal((await record(p,'cake')).stage,Math.min(stage+1,2));if(stage===2){assert.equal((await diag(p)).bayRestarted,'true');}if(stage<2)await a(p,'next').click();check(`cake stage ${stage+1}: real drive, stopping, saved checkpoint`);
+  }await home(p,'cake',1);
+  await enter(p,'crossing');await a(p,'begin').click();
+  for(let stage=0;stage<3;stage++){
+   await hold(p,'brake',1400);await a(p,'look-left').click();await a(p,'depart').click({force:true});await shot(p,`phone-crossing-stage-${stage+1}-early-departure`);await a(p,'look-right').click();
+   for(let n=0;n<3;n++){
+    const before=await diag(p);await p.waitForTimeout(650);assert.equal((await diag(p)).crossed,String(n));assert.equal((await diag(p)).crossTime,'0.000');await shot(p,`phone-crossing-stage-${stage+1}-decision-${n+1}`);const side=before.person==='bike'?'right':'left';
+    await a(p,`look-${side==='left'?'right':'left'}`).click();assert.equal((await diag(p)).confirmed,'false');if(n===0)await shot(p,`phone-crossing-stage-${stage+1}-wrong-side`);await a(p,`look-${side}`).click();assert.equal((await diag(p)).confirmed,'true');await shot(p,`phone-crossing-stage-${stage+1}-confirmed-${n+1}`);
+    if(stage===1&&n===0){const positions=[];for(const [pose,min,max] of [[0,.22,.33],[1,.50,.65],[2,.91,.98]]){
+     await p.waitForFunction(({pose,min,max})=>{const w=document.querySelector('.content-walker'),d=document.querySelector('.content-scene').dataset,t=+d.crossTime/+d.crossDuration;return w.dataset.pose===String(pose)&&t>=min&&t<max;},{pose,min,max},{polling:10});
+     await frozen(p,async()=>{assert.equal((await diag(p)).crossed,'0');positions.push((await p.locator('.content-walker').boundingBox()).x);await shot(p,`phone-crossing-grandma-step-${pose+1}`);});
+    }assert.ok(positions[1]-positions[0]>45);assert.ok(positions[2]-positions[1]>65);check('grandmother three different drawings advance from left curb through centre to right curb; no mid-crossing count',{positions});}
+    await p.waitForFunction(n=>+document.querySelector('.content-scene').dataset.crossed===n+1,n);await shot(p,`phone-crossing-stage-${stage+1}-passed-${n+1}`);assert.equal((await diag(p)).confirmed,'false');
+   }
+   assert.equal(await a(p,'depart').getAttribute('data-ready'),'true');await shot(p,`phone-crossing-stage-${stage+1}-clear`);await a(p,'depart').click();await shot(p,`phone-crossing-stage-${stage+1}-result`);assert.equal((await record(p,'crossing')).facts.blockedStarts,stage+1);if(stage<2)await a(p,'next').click();check(`crossing stage ${stage+1}: idle blocked, wrong side blocked, three actual directional confirmations, factual reminder`);
+  }await home(p,'crossing',2);
+  await enter(p,'tickets');await a(p,'begin').click();
+  for(let stage=0;stage<3;stage++){
+   const correct=p.getByRole('button',{name:['藍圓形','橘三角形','綠正方形'][stage]+'月台',exact:true});await shot(p,`phone-tickets-stage-${stage+1}-playing`);await p.locator(`[data-platform="${[1,0,2][stage]}"]`).click();await hold(p,'go',5700);await hold(p,'brake',1600);await a(p,'door').click();assert.equal(await p.locator('.ticket-vehicle').getAttribute('data-doors'),'false');await shot(p,`phone-tickets-stage-${stage+1}-wrong-closed`);const x=await p.locator('.ticket-vehicle').getAttribute('data-x');await correct.click();assert.equal(await p.locator('.ticket-vehicle').getAttribute('data-x'),x);await hold(p,'go',5700);await hold(p,'brake',1600);await a(p,'door').click();await p.waitForFunction(()=>+document.querySelector('.ticket-vehicle').style.getPropertyValue('--door-open')===1&&+document.querySelector('.boarding-friend').dataset.progress===0,{},{polling:10});
+   await frozen(p,async()=>{const state=await diag(p),pos=await p.locator('.ticket-vehicle').getAttribute('data-x'),seats=await p.locator('.ticket-seated').count();assert.equal(await a(p,'go').isDisabled(),true);const r=await a(p,'go').boundingBox();for(let n=0;n<3;n++)await p.mouse.click(r.x+r.width/2,r.y+r.height/2);assert.equal(await p.locator('.ticket-vehicle').getAttribute('data-x'),pos);assert.equal(await p.locator('.ticket-seated').count(),seats);assert.equal((await diag(p)).crossed,state.crossed);assert.match(await p.locator('#content-hint').innerText(),/等一等/);const css=await a(p,'go').evaluate(e=>getComputedStyle(e).backgroundColor);assert.equal(css,'rgb(220, 228, 233)');check(`tickets stage ${stage+1}: three real clicks while boarding preserve train and people`,{pos,seats,css});});
+   await frozen(p,async()=>{await peopleProof(p,`stage ${stage+1} waiting: count three separated people, clear signs`);await shot(p,`phone-tickets-stage-${stage+1}-door-open-waiting`);});
+   await p.waitForFunction(()=>{const f=document.querySelector('.boarding-friend[data-friend="0"]');return f&&+f.dataset.progress>=.45&&+f.dataset.progress<.60;},null,{polling:10});
+   await frozen(p,async()=>{await peopleProof(p,`stage ${stage+1} doorway: only one friend at door`);await shot(p,`phone-tickets-stage-${stage+1}-doorway`);});
+   await p.waitForFunction(()=>{const f=document.querySelector('.ticket-seated[data-friend="0"][data-entering=true]');return f&&parseFloat(f.style.left)<55&&parseFloat(f.style.left)>25;},null,{polling:10});
+   await frozen(p,async()=>{await peopleProof(p,`stage ${stage+1} aisle: visible door-to-seat movement`);await shot(p,`phone-tickets-stage-${stage+1}-entering`);});
+   for(let n=1;n<=3;n++){await p.waitForFunction(n=>document.querySelectorAll('.ticket-seated[data-entering=false]').length===n,n,{polling:20});await shot(p,`phone-tickets-stage-${stage+1}-seat-${n}`);}
+   await p.waitForFunction(()=>document.querySelector('.content-scene').dataset.doorState==='closed'&&document.querySelectorAll('.ticket-seated[data-entering=false]').length===3&&document.querySelector('#content-r1').dataset.phase==='boarding',null,{polling:20});
+   await frozen(p,async()=>{await peopleProof(p,`stage ${stage+1} seated: three countable heads in separate windows`);await shot(p,`phone-tickets-stage-${stage+1}-closed-before-result`);});
+   await p.waitForFunction(()=>['done','checkpoint'].includes(document.querySelector('#content-r1').dataset.phase));await shot(p,`phone-tickets-stage-${stage+1}-result`);assert.equal((await record(p,'tickets')).facts.boarded,(stage+1)*3);if(stage<2)await a(p,'next').click();
+  }await home(p,'tickets',3);check('three factual completion records',{records:await p.evaluate(()=>JSON.parse(localStorage.getItem('island-transport:student:v2')).sections.contentR1)});await c.close();
+ }
+ if(scope==='home-proof'){
+  // Reopen actual completed records exported by this round's full nine-station run.
+  // The only adaptation is the normal student-save envelope, never lesson facts.
+  const completed=JSON.parse(await readFile(`${out}/browser-play.json`,'utf8')).rows.find(r=>r.records).records;
+  for(const k of ['cake','crossing','tickets'])assert.equal(completed[k].completed,true);
+  const c=await browser.newContext({viewport:{width:390,height:844},hasTouch:true});await c.addInitScript(records=>localStorage.setItem('island-transport:student:v2',JSON.stringify({schemaVersion:2,revision:1,sections:{contentR1:records}})),completed);
+  const p=await c.newPage();watch(p);await p.goto(base);assert.equal(await p.locator('#content-start').getAttribute('data-completed'),'3');await shot(p,'phone-home-proof-completed');
+  const box=await p.locator('#content-start').evaluate(e=>{const r=e.getBoundingClientRect();return [...e.querySelectorAll('span,small')].every(s=>{const b=s.getBoundingClientRect();return b.top>=r.top&&b.bottom<=r.bottom;});});assert.equal(box,true);
+  await p.locator('#content-start').click();assert.equal(await p.locator('[data-state=completed]').count(),3);await shot(p,'phone-picker-proof-completed');for(const k of ['cake','crossing','tickets']){await p.locator(`[data-content=${k}]`).click();assert.equal(await p.locator('#content-r1').getAttribute('data-phase'),'done');await a(p,'picker').click();}
+  check('real completed nine-station records reopen; compact homepage text fits; three completed course records');await c.close();
+ }
+ if(scope==='cake-proof'){
+  const c=await browser.newContext({viewport:{width:390,height:844},hasTouch:true}),p=await c.newPage();watch(p);await p.goto(base);await enter(p,'cake');await a(p,'begin').click();
+  for(let stage=0;stage<2;stage++){
+   let go=false,steer='',proof=false,rightReset=false;
+   for(let n=0;n<300&&+(await diag(p)).distance<55;n++){
+    const d=await diag(p),want=+d.distance>15&&+d.distance<=40?(+d.bend>0?'right':'left'):'';
+    if(want!==steer){if(steer)await key(p,steer,false);if(want)await key(p,want,true);steer=want;}
+    if(!go){await key(p,'go',true);go=true;}await p.waitForTimeout(200);
+    if(stage===1&&+d.distance>29&&!rightReset){
+     if(go){await key(p,'go',false);go=false;}if(steer){await key(p,steer,false);steer='';}
+     await hold(p,'brake',1600);await p.waitForTimeout(3000);await key(p,'right',true);steer='right';await key(p,'go',true);go=true;await p.waitForTimeout(500);
+     assert.ok(+(await p.locator('.cake-closeup').getAttribute('data-offset'))< -27);await shot(p,'phone-cake-proof-right-bend');rightReset=true;
+    }
+    if(stage===1&&+d.distance>18&&+d.distance<22&&!shots.some(s=>s.path.endsWith('phone-cake-proof-left-bend.png')))await shot(p,'phone-cake-proof-left-bend');
+    if(stage===1&&+d.distance>42&&!proof){await key(p,'go',false);go=false;if(steer){await key(p,steer,false);steer='';}await hold(p,'brake',1600);await p.waitForTimeout(4000);assert.equal((await diag(p)).settled,'true');await shot(p,'phone-cake-proof-settled');proof=true;}
+   }
+   if(go)await key(p,'go',false);if(steer)await key(p,steer,false);await hold(p,'brake',1700);if(stage===0)await a(p,'next').click();
+  }
+  const left=shots.find(s=>s.path.endsWith('phone-cake-proof-left-bend.png')),right=shots.find(s=>s.path.endsWith('phone-cake-proof-right-bend.png'));assert.ok(+left.offset>27);assert.ok(+right.offset< -27);assert.equal(left.state.correction,'left');assert.equal(right.state.correction,'right');check('same second-station run: left bend, right bend, fully settled; no road overlap');await c.close();
+ }
+ if(scope==='resilience'){
+  const c=await browser.newContext({viewport:{width:390,height:844},hasTouch:true}),p=await c.newPage();watch(p);await p.goto(base);await p.evaluate(()=>navigator.serviceWorker.ready);await p.reload();await p.waitForFunction(()=>!!navigator.serviceWorker.controller);await c.setOffline(true);await p.reload();await enter(p,'crossing');await a(p,'begin').click();
+  for(let stage=0;stage<3;stage++){await hold(p,'brake',1400);await a(p,'look-left').click();await a(p,'look-right').click();for(let n=0;n<3;n++){const d=await diag(p);await a(p,d.person==='bike'?'look-right':'look-left').click();await p.waitForFunction(n=>+document.querySelector('.content-scene').dataset.crossed===n+1,n);}await a(p,'depart').click();if(stage<2)await a(p,'next').click();}assert.equal((await record(p,'crossing')).facts.confirmations,9);await shot(p,'phone-crossing-offline-result');check('offline reload, nine decisions and completed local save');await c.close();
+  const denied=await browser.newContext({viewport:{width:320,height:568},hasTouch:true,reducedMotion:'reduce'});await denied.addInitScript(()=>Object.defineProperty(window,'localStorage',{get(){throw Error('storage disabled');}}));const q=await denied.newPage();watch(q);await q.goto(base);await enter(q,'crossing');await a(q,'begin').click();await hold(q,'brake',1400);await a(q,'look-left').click();await a(q,'look-right').click();await a(q,'look-left').click();await q.locator('#content-pause').click();await q.waitForTimeout(120);const before=await diag(q);await q.waitForTimeout(500);assert.deepEqual(await diag(q),before);await q.locator('#content-resume').click();for(let n=0;n<3;n++){if(n){const d=await diag(q);await a(q,d.person==='bike'?'look-right':'look-left').click();}await q.waitForFunction(n=>+document.querySelector('.content-scene').dataset.crossed===n+1,n);assert.equal(await q.locator('.content-walker').getAttribute('data-pose'),'0');}await a(q,'depart').click();assert.match(await q.locator('#content-save').innerText(),/無法儲存/);await reach(q,'320px storage denied, reduced motion, pause, successful checkpoint');await shot(q,'phone-crossing-storage-denied');await denied.close();
+ }
+ if(scope==='store')for(const [w,h,dpr] of [[430,932,3],[1032,1376,2]]){const c=await browser.newContext({viewport:{width:w,height:h},deviceScaleFactor:dpr,hasTouch:true}),p=await c.newPage();watch(p);await p.goto(base);await enter(p,'tickets');await a(p,'begin').click();await p.getByRole('button',{name:'藍圓形月台',exact:true}).click();await hold(p,'go',5700);await hold(p,'brake',1600);await a(p,'door').click();await p.waitForFunction(()=>{const f=document.querySelector('.boarding-friend[data-friend="0"]');return f&&+f.dataset.progress>=.45&&+f.dataset.progress<.60;},null,{polling:10});await mkdir('docs/store/screenshots/content-r9',{recursive:true});await shot(p,`tickets-queue-${w*dpr}x${h*dpr}`,'docs/store/screenshots/content-r9');await c.close();check(`store ${w*dpr}x${h*dpr} original runtime`);}
+ assert.deepEqual(errors,[]);assert.deepEqual(external,[]);assert.deepEqual(responses,[]);status='VERIFIED';
+}finally{await browser.close();await writeFile(`${out}/browser-${scope}.json`,JSON.stringify({status,rows,shots,errors,external,responses},null,2));}

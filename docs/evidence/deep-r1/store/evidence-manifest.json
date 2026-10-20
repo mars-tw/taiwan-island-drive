@@ -1,0 +1,95 @@
+{
+  "status": "VERIFIED",
+  "native": false,
+  "images": [
+    {
+      "path": "docs/evidence/deep-r1/store/before/iphone-home-2.11.0.png",
+      "phase": "before",
+      "sourceVersion": "2.11.0",
+      "width": 1290,
+      "height": 2796,
+      "sha256": "f6efb32a71b62eb42e2148697dd41459967b75afa01c9a837809995284f43d79"
+    },
+    {
+      "path": "docs/evidence/deep-r1/store/after/ipad-01-home.png",
+      "phase": "after",
+      "sourceVersion": "2.12.0",
+      "width": 768,
+      "height": 1024,
+      "sha256": "801154a714f91e890cd0e182801754009a6510cccfd79e849f2f101d32acb146"
+    },
+    {
+      "path": "docs/evidence/deep-r1/store/after/ipad-landscape-01-home.png",
+      "phase": "after",
+      "sourceVersion": "2.12.0",
+      "width": 1024,
+      "height": 768,
+      "sha256": "3d55b28636d61ea9266be4b79c844f5679b9f4be61a56f2dcc009cb610e80175"
+    },
+    {
+      "path": "docs/evidence/deep-r1/store/after/ipad13-landscape-01-home.png",
+      "phase": "after",
+      "sourceVersion": "2.12.0",
+      "width": 1376,
+      "height": 1032,
+      "sha256": "b5cafdc86648d6bf93b94b8533839cc4513a8627b4bdc2a886e392a26d58ce93"
+    },
+    {
+      "path": "docs/evidence/deep-r1/store/after/laptop-01-home.png",
+      "phase": "after",
+      "sourceVersion": "2.12.0",
+      "width": 1366,
+      "height": 600,
+      "sha256": "bfabc2b0f3f5dec464374757ecf5c6ef0d8a54499624e79b9472b3dab94aee9c"
+    },
+    {
+      "path": "docs/evidence/deep-r1/store/after/large-01-home.png",
+      "phase": "after",
+      "sourceVersion": "2.12.0",
+      "width": 440,
+      "height": 956,
+      "sha256": "73e21e256a5d616edf4fd705d43b2440b8d77517a9577a6cbb28bbc5e19f8525"
+    },
+    {
+      "path": "docs/evidence/deep-r1/store/after/phone-01-home.png",
+      "phase": "after",
+      "sourceVersion": "2.12.0",
+      "width": 390,
+      "height": 844,
+      "sha256": "bd268c1a41dbd86983744f18fb1213ca2e5716b08f75b67d87bd3780fb1f4573"
+    },
+    {
+      "path": "docs/evidence/deep-r1/store/after/phone-landscape-01-home.png",
+      "phase": "after",
+      "sourceVersion": "2.12.0",
+      "width": 844,
+      "height": 390,
+      "sha256": "017af3605d859d49b6a978a7cfa8686c5098638dabcae456fb75d0e322729e80"
+    },
+    {
+      "path": "docs/evidence/deep-r1/store/after/se-01-home.png",
+      "phase": "after",
+      "sourceVersion": "2.12.0",
+      "width": 320,
+      "height": 568,
+      "sha256": "9e212a7e710b57f329190161471bf71be058c9adddfdd829c602cdf60203d07d"
+    },
+    {
+      "path": "docs/evidence/deep-r1/store/after/se-landscape-01-home.png",
+      "phase": "after",
+      "sourceVersion": "2.12.0",
+      "width": 568,
+      "height": 320,
+      "sha256": "afffc690e0c528ba1d06a089f8b2b67d6582e51612062934f9e9403bf54308f4"
+    },
+    {
+      "path": "docs/evidence/deep-r1/store/after/short-laptop-01-home.png",
+      "phase": "after",
+      "sourceVersion": "2.12.0",
+      "width": 1280,
+      "height": 640,
+      "sha256": "e02e4a115ef542d733201981d3f50a187fd63efe94d674012251111406c81b34"
+    }
+  ],
+  "storeImagesManifest": "output/playwright/r8-store/manifest.json"
+}

@@ -1,0 +1,103 @@
+/* Small hands: real hit rectangles, never transform-scaled buttons. */
+button,a,select,summary{-webkit-tap-highlight-color:transparent}
+.academy-nav{height:calc(60px + env(safe-area-inset-top,0px));min-height:60px;padding-top:env(safe-area-inset-top,0px);gap:2px;padding-inline:max(4px,env(safe-area-inset-left,0px)) max(4px,env(safe-area-inset-right,0px))}
+.academy-nav a{height:60px;min-height:60px;min-width:60px;padding:0 6px;gap:3px}
+.academy-nav .passport-open{margin-left:4px;min-width:80px}
+body.academy-game,body.academy-game[data-game=flight]{--academy-nav-height:calc(60px + env(safe-area-inset-top,0px))}
+@media(max-width:600px){.academy-nav a{flex-direction:column;gap:1px}.academy-nav a span{font-size:11px}.academy-nav a:first-child{min-width:60px}.academy-nav .passport-open{flex:1;min-width:60px;margin-left:0;font-size:13px;padding:0 5px}}
+
+/* Car: thumbs stay in the lower corners; optional cruise uses one hand. */
+body[data-game=car] .icon-button,body[data-game=car] .hud-button{min-width:60px;min-height:60px}
+body[data-game=car] .start-button,body[data-game=car] .mode-selector button{min-height:60px}
+body[data-game=car] .paint-dot{width:60px!important;height:60px!important}
+body[data-game=car] .vehicle-choice,body[data-game=car] .map-card{min-height:60px}
+body[data-game=car] [data-input]{min-width:60px;min-height:60px;touch-action:none;user-select:none}
+body[data-game=car] .overlay-card button{min-height:60px}
+.auto-throttle{position:absolute;left:18px;bottom:160px;min-width:112px;min-height:60px;border-radius:16px;background:#fff4c4;border:2px solid #e8be43;color:#173d47;font-size:15px;font-weight:800;pointer-events:auto;touch-action:manipulation}
+.auto-throttle[aria-pressed=true]{background:#227857;color:white;border-color:#a4ecbb}
+.drive-guide{position:absolute;left:18px;right:18px;top:98px;max-width:540px;margin:0;padding:8px 12px;background:#173d47e8;border-radius:12px;color:white;font-size:14px;line-height:1.5;pointer-events:none}
+body[data-game=car] .tilt-toolbar{top:178px}
+@media(max-width:600px){body[data-game=car] .hud-clock{display:none}body[data-game=car] .hud-top{flex-wrap:nowrap;gap:8px}.hud-stars{order:0;align-self:center;margin-left:auto}.hud-route{min-width:0}.drive-guide{top:100px;left:12px;right:12px;font-size:13px}.auto-throttle{left:12px;bottom:150px}body[data-game=car] .tilt-toolbar{top:205px}body[data-game=car] .paint-options{display:flex;gap:0}.vehicle-panel{max-width:calc(100vw - 28px)}}
+@media(max-height:520px) and (orientation:landscape){
+ body[data-game=car] .menu{height:calc(100dvh - 108px)!important}body[data-game=car] .vehicle-panel{padding:4px 10px;top:6px;width:300px}body[data-game=car] .vehicle-heading{display:none}body[data-game=car] .vehicle-choices{margin-top:0}
+ body[data-game=car] .mode-selector{top:62px}body[data-game=car] .intro-copy{display:none}body[data-game=car] .trip-panel{padding-top:4px}body[data-game=car] .map-art{height:36px}body[data-game=car] .map-caption{padding:3px 5px}body[data-game=car] .trip-heading{margin-bottom:3px}body[data-game=car] .departure p{display:none}
+ .drive-guide{left:18px;top:70px;right:130px;font-size:12px;padding:6px 10px;max-width:510px}.auto-throttle{left:165px;bottom:16px;min-width:106px}body[data-game=car] .tilt-toolbar{top:125px}.touch-boost{display:none!important}body[data-game=car] .hud-bottom{bottom:80px}
+ body[data-game=car] .result-card{width:min(620px,calc(100vw - 24px));max-height:calc(100dvh - 72px);padding:10px 18px;gap:4px 12px}body[data-game=car] .result-stats{display:none}body[data-game=car] .result-card button{margin:0}body[data-game=car] .finish-stars{margin:2px 0}
+}
+
+/* Train: the scene yields space to the controls in short viewports. */
+body.academy-game[data-game=train] #app{min-height:0;height:calc(100dvh - var(--academy-nav-height));display:flex;flex-direction:column}
+body.academy-game[data-game=train] .masthead{height:64px;min-height:64px;padding:2px 12px}
+body.academy-game[data-game=train] .masthead .icon-button{width:60px;min-width:60px;min-height:60px}
+body.academy-game[data-game=train] .scene{height:auto;flex:1;min-height:140px;max-height:none}
+body.academy-game[data-game=train] .child-console>button{min-height:64px;transform:none;border-radius:8px}
+body.academy-game[data-game=train] .child-console{flex-shrink:0}
+body.academy-game[data-game=train] #pause-overlay button,body.academy-game[data-game=train] .result-actions button{min-height:60px}
+body.academy-game[data-game=train] .app-footer{display:none}
+body.academy-game[data-game=train] .brand h1{font-size:19px}
+body.academy-game[data-game=train] #result-dialog{max-height:calc(100dvh - 20px)}
+@media(max-height:520px) and (orientation:landscape){
+ body.academy-game[data-game=train] .masthead{min-height:60px;height:60px}body.academy-game[data-game=train] .scene{min-height:80px}body.academy-game[data-game=train] .coach{min-height:38px;padding:4px 14px}body.academy-game[data-game=train] .child-console{padding:5px 12px;gap:4px 8px}body.academy-game[data-game=train] .child-console>button{min-height:60px}body.academy-game[data-game=train] .child-note{display:none}
+ body.academy-game[data-game=train] #result-dialog{width:min(650px,calc(100vw - 24px));padding:10px 18px}#result-dialog:has(.journey-result) .result-score,#result-dialog:has(.journey-result) #result-feedback{display:none}#result-dialog:has(.journey-result) #stop-results{display:none}#result-dialog .journey-result{margin-top:4px}
+}
+
+/* Flight: 60px pause and result controls, 3 large lesson choices per page. */
+.flight-top .top-actions button{min-width:60px;min-height:60px}.flight-top .top-actions{gap:4px}.telemetry button{min-height:44px;min-width:60px}
+.result-card button{min-height:60px}.lesson-card{min-height:64px}.select-row select{min-height:60px}
+body[data-game=flight] .dispatch-card .primary{min-height:60px}
+@media(max-width:600px){.flight-top>div:first-child{max-width:100px}.flight-top strong{white-space:normal}.flight-top #map-name{display:none}.flight-top #view,.flight-top #mute{display:none}.flight-top .top-actions{margin-left:auto}}
+@media(max-height:520px) and (orientation:landscape){.flight-top{min-height:64px}.preschool .telemetry{flex-direction:row}.preschool .flight-status{display:none}.preschool .child-panel{margin-top:auto;margin-bottom:0}.preschool .child-panel .child-action{min-height:60px}.preschool .child-panel>button:not(.child-action){min-height:60px}.preschool .flight-controls{gap:4px;padding-top:4px}.preschool .telemetry{flex-shrink:0}.preschool .telemetry button{min-height:44px}.result-card:has(.journey-result){width:min(620px,calc(100vw - 28px));display:grid;grid-template-columns:1fr 1fr;gap:4px 10px;padding:12px 18px}.result-card:has(.journey-result)>*{grid-column:1/-1}.result-card:has(.journey-result) h2{font-size:20px;margin:2px 0}.result-card:has(.journey-result) #result-tag,.result-card:has(.journey-result) #result-text,.result-card:has(.journey-result) #result-data{display:none}.result-card:has(.journey-result) #replay{grid-column:1}.result-card:has(.journey-result) #home{grid-column:2}.result-card:has(.journey-result) button{margin:0}}
+@media(prefers-reduced-motion:reduce){body[data-game=car] .start-button,.result-stars i,.finish-stars i,.star-shelf.bump,.hud-stars.bump{animation:none!important}}
+/* Activity pagination keeps every choice reachable without a sticky overlay. */
+.lesson-pages{display:flex;align-items:center;justify-content:space-between;gap:8px;margin:8px 0}.lesson-pages button{min-height:60px;min-width:100px;padding:0 10px;font-size:14px}.lesson-pages span{font-size:13px;white-space:nowrap}
+body[data-game=flight] .dispatch-card .primary{position:static;margin:0}.lesson-card[hidden]{display:none!important}
+@media(max-width:720px) and (min-height:521px){body[data-game=flight] .brand{height:190px}.dispatch-card{padding:14px}.dispatch-title{margin-bottom:8px}.dispatch-title .tag{display:none}.parent-settings{margin:4px 0}.parent-settings>summary{min-height:44px}.dispatch-card>.learning-note{margin:8px 0 0}.lesson-grid{grid-template-columns:1fr 1fr}.select-row{margin:8px 0 10px}.select-row select{min-height:60px}.model-badge{bottom:10px}}
+@media(max-width:600px){body[data-game=car] .paint-options{position:static;margin:0 0 4px}body[data-game=car] .vehicle-heading{display:none}body[data-game=car] .vehicle-panel{padding-top:8px;padding-bottom:8px}}
+@media(max-height:520px) and (orientation:landscape){
+ body[data-game=car] #pause-overlay .overlay-card{width:min(620px,calc(100vw - 24px));padding:12px 18px;display:grid;grid-template-columns:1fr 1fr;gap:8px}body[data-game=car] #pause-overlay .overlay-card>*{grid-column:1/-1}body[data-game=car] #pause-overlay h2{margin:0}body[data-game=car] #pause-overlay .small-label{display:none}body[data-game=car] #pause-overlay .overlay-card>p{margin:0;font-size:13px}body[data-game=car] #restart-button{grid-column:1}body[data-game=car] #back-button{grid-column:2;margin:0}
+ body[data-game=flight] .menu{grid-template-columns:minmax(0,1fr) minmax(300px,44%);padding:8px 14px;gap:16px;position:relative}body[data-game=flight] .dispatch-card{padding:8px 10px}.dispatch-title{display:none}.dispatch-card .select-row{margin:0 0 6px}.dispatch-card .select-row label{font-size:11px}.dispatch-card .select-row select{margin-top:3px}.dispatch-card legend{display:none}.dispatch-card .lesson-grid{grid-template-columns:repeat(3,1fr);gap:5px}.dispatch-card .lesson-card{padding:5px;gap:4px;flex-direction:column;justify-content:center}.dispatch-card .lesson-number{font-size:18px;line-height:1}.dispatch-card .lesson-card strong{font-size:12px;text-align:center}.lesson-pages{margin:5px 0}.lesson-pages button{min-height:60px;min-width:90px}.dispatch-card>.learning-note{display:none}.dispatch-card>.parent-settings{position:absolute;left:14px;bottom:2px;width:calc(52% - 30px);margin:0;background:#153d4be8;padding:0 8px;z-index:4;border-radius:10px}.parent-settings>summary{min-height:44px}.parent-settings[open]{max-height:calc(100% - 10px);overflow:auto}
+ body[data-game=flight] .result-card{width:min(620px,calc(100vw - 28px));padding:12px 18px;display:grid;grid-template-columns:1fr 1fr;gap:6px 10px}body[data-game=flight] .result-card>*{grid-column:1/-1}body[data-game=flight] .result-card h2{font-size:21px;margin:0}body[data-game=flight] #result-tag,body[data-game=flight] #result-data{display:none}body[data-game=flight] #result-text{margin:2px 0;font-size:13px}body[data-game=flight] .result-card button{margin:0}body[data-game=flight] #replay{grid-column:1}body[data-game=flight] #home{grid-column:2}
+}
+@media(max-height:350px) and (orientation:landscape){.dispatch-card .select-row select{min-height:44px}.lesson-pages button{min-height:44px}.dispatch-card .lesson-card{min-height:60px}body[data-game=flight] .dispatch-card .primary{min-height:60px}.dispatch-card .select-row label{font-size:10px}}
+/* The larger paint targets need a wider vehicle panel on laptops too. */
+@media(min-width:901px){body[data-game=car] .vehicle-panel{width:340px;padding:14px 18px}.vehicle-heading{min-height:50px}}
+@media(min-width:901px) and (max-height:700px){body[data-game=car]{min-height:0}body[data-game=car] .menu{height:calc(100dvh - 140px);min-height:0}body[data-game=car] .trip-panel{bottom:12px;padding:12px 18px}body[data-game=car] .map-art{height:62px}body[data-game=car] .map-card{min-width:0}.departure p{display:none}body[data-game=car] .vehicle-panel{top:2px}.menu-footer{display:none}body[data-game=car] .intro h1{font-size:40px;margin-top:6px}.intro-copy{margin:4px 0}.keyboard-tip{display:none}}
+body[data-game=flight] #menu .brand{min-height:180px}
+@media(min-width:721px) and (min-height:521px){body[data-game=flight] #menu .brand{height:calc(100dvh - 140px)}}
+@media(max-height:520px) and (orientation:landscape){body[data-game=flight] #menu .brand{height:calc(100dvh - 122px);min-height:150px}}
+body[data-game=car] #finish-overlay .result-card button{min-height:60px}
+/* Mainline adds a next-chapter action: retain its whole panel on small phones. */
+@media(max-width:600px) and (max-height:700px) and (orientation:portrait){
+ body[data-game=train] #result-dialog:has(.journey-result){padding:12px 16px}
+ body[data-game=train] #result-dialog:has(.journey-result) .result-score,body[data-game=train] #result-dialog:has(.journey-result) #stop-results,body[data-game=train] #result-dialog:has(.journey-result) #result-feedback{display:none}
+ body[data-game=car] .result-card:has(.journey-result){padding:12px 16px;width:calc(100vw - 24px);max-height:calc(100dvh - 80px)}
+ body[data-game=car] .result-card:has(.journey-result) .result-stats,body[data-game=car] .result-card:has(.journey-result) #best-record,body[data-game=car] .result-card:has(.journey-result) #finish-route,body[data-game=car] .result-card:has(.journey-result) #finish-eyebrow{display:none}
+ body[data-game=car] .result-card:has(.journey-result) h2{font-size:20px;margin:3px 0}
+ body[data-game=car] .result-card:has(.journey-result) .finish-stars{margin:4px 0}
+ body[data-game=car] .result-card:has(.journey-result) .journey-result p{font-size:12px;margin:4px 0}
+}
+body.academy-game[data-game=train] #result-dialog #replay{min-height:60px}
+@media(max-height:700px){
+ body[data-game=car] .result-card:has(.journey-result){padding:12px 18px}
+ body[data-game=car] .result-card:has(.journey-result) .result-stats,body[data-game=car] .result-card:has(.journey-result) #best-record,body[data-game=car] .result-card:has(.journey-result) #finish-route,body[data-game=car] .result-card:has(.journey-result) #finish-eyebrow{display:none}
+ body[data-game=car] .result-card:has(.journey-result) h2{font-size:20px;margin:4px 0}
+ body[data-game=car] .result-card:has(.journey-result) .finish-stars{margin:4px 0}
+ body[data-game=flight] .result-card:has(.journey-result) #result-data{display:none}
+}
+@media(max-height:350px) and (orientation:landscape){
+ body[data-game=car] #finish-overlay{padding:4px}
+ body[data-game=car] .result-card:has(.journey-result){padding:6px 12px;gap:2px 8px}
+ body[data-game=car] .result-card:has(.journey-result) .journey-result p{font-size:11px;line-height:1.25;margin:2px 0}
+ body[data-game=car] .result-card:has(.journey-result) .finish-stars .rating i{font-size:22px}
+ body.academy-game[data-game=train] .scene{min-height:24px}
+ body.academy-game[data-game=train] .coach{min-height:30px;padding:2px 12px}
+ body.academy-game[data-game=train] .coach p{font-size:11px;line-height:1.3}
+ body.academy-game[data-game=train] .child-console{padding:4px 10px;gap:4px 8px}
+}
+@media(min-width:901px) and (max-height:700px){body[data-game=car] .vehicle-heading{display:none}body[data-game=car] .vehicle-choices{grid-template-columns:repeat(4,minmax(0,1fr))}.vehicle-choice svg{height:30px}.vehicle-choice span{font-size:9px}body[data-game=car] .intro{top:10px}body[data-game=car] .intro h1{font-size:36px;margin:0;line-height:1.2}.intro .intro-copy,.intro .route-note,.intro .route-description,.intro .eyebrow{display:none}.intro .mode-selector{margin-top:8px}}
+@media(min-width:721px) and (min-height:521px) and (max-height:700px){body[data-game=flight] .menu{padding:12px 24px}.dispatch-card{padding:14px}.dispatch-title{margin-bottom:6px}.dispatch-card .select-row{margin:8px 0}.dispatch-card .parent-settings{margin:4px 0}.dispatch-card .parent-settings>summary{min-height:44px}.dispatch-card>.learning-note{display:none}.dispatch-card .lesson-card{min-height:64px}.dispatch-card .lesson-card small{display:none}}
+@media(max-width:720px) and (max-height:740px) and (orientation:portrait){body[data-game=flight] #menu .brand{height:120px;min-height:120px}.dispatch-card .lesson-grid{grid-template-columns:repeat(3,1fr);gap:5px}.dispatch-card .lesson-card{flex-direction:column;justify-content:center;padding:4px;gap:3px}.dispatch-card .lesson-card strong{font-size:12px}.dispatch-card .lesson-number{font-size:19px}.dispatch-card>.learning-note{display:none}.brand .model-badge{display:none}}
+body[data-game=car] .map-caption strong{font-size:12px;letter-spacing:0;line-height:1.4;white-space:normal}
+body[data-game=car] .vehicle-choice span{font-size:12px;line-height:1.4}
+@media(max-width:600px) and (min-height:521px){body[data-game=car] .vehicle-panel{bottom:340px}}
+@media(max-height:520px) and (orientation:landscape){body[data-game=car] .map-caption strong{font-size:12px}body[data-game=car] .map-card{min-height:64px}}

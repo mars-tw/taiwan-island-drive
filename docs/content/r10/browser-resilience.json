@@ -1,0 +1,429 @@
+{
+  "status": "VERIFIED",
+  "rows": [
+    {
+      "label": "installed offline reload, nine fresh observations and saved completion",
+      "status": "VERIFIED"
+    },
+    {
+      "label": "storage denied remains playable; pause freezes; reduced motion completes station",
+      "status": "VERIFIED"
+    }
+  ],
+  "shots": [
+    {
+      "path": "docs/content/r10/phone-crossing-offline-result.png",
+      "width": 390,
+      "height": 844,
+      "sha256": "5a99daa029421767847d63b040f1ea3a9be3adf8457d336c89ce2f2c717ad128",
+      "phase": "done",
+      "state": {
+        "boardTime": "0.000",
+        "cue": "go",
+        "settled": "true",
+        "correction": "",
+        "distance": "0.00",
+        "speed": "0.00",
+        "bend": "1",
+        "tilt": "0.00",
+        "sway": "0.00",
+        "acceleration": "0.00",
+        "bayStopped": "false",
+        "bayRestarted": "false",
+        "leftTurn": "false",
+        "rightTurn": "false",
+        "focus": "left",
+        "crossTime": "0.000",
+        "crossDuration": "2.1",
+        "orderHint": "",
+        "fruitSway": "0.00",
+        "flagSway": "0.00",
+        "assisting": "false",
+        "crossed": "3",
+        "lookedLeft": "true",
+        "lookedRight": "true",
+        "decision": "false",
+        "confirmed": "false",
+        "confirmDelay": "-0.016599999999998546",
+        "person": "",
+        "doorState": "closed"
+      },
+      "hint": "謝謝你等我們！朋友揮揮手。",
+      "controls": [
+        {
+          "action": "replay",
+          "text": "再玩一次",
+          "color": "rgb(255, 255, 255)"
+        },
+        {
+          "action": "picker",
+          "text": "換一課",
+          "color": "rgb(255, 255, 255)"
+        },
+        {
+          "action": "listen",
+          "text": "再聽一次",
+          "color": "rgb(255, 255, 255)"
+        }
+      ],
+      "geometry": {
+        "people": [
+          {
+            "id": "child",
+            "kind": "content-walker",
+            "box": {
+              "x": 268.515625,
+              "y": 314.140625,
+              "width": 74.796875,
+              "height": 84.3125,
+              "right": 343.3125,
+              "bottom": 398.453125
+            }
+          },
+          {
+            "id": "bike",
+            "kind": "crossing-arrived",
+            "box": {
+              "x": 25.4375,
+              "y": 153.765625,
+              "width": 110,
+              "height": 124,
+              "right": 135.4375,
+              "bottom": 277.765625
+            }
+          },
+          {
+            "id": "grandma",
+            "kind": "crossing-arrived",
+            "box": {
+              "x": 254.546875,
+              "y": 274.453125,
+              "width": 110,
+              "height": 124,
+              "right": 364.546875,
+              "bottom": 398.453125
+            }
+          },
+          {
+            "id": "child",
+            "kind": "crossing-arrived",
+            "box": {
+              "x": 254.546875,
+              "y": 386.21875,
+              "width": 110,
+              "height": 124,
+              "right": 364.546875,
+              "bottom": 510.21875
+            }
+          }
+        ],
+        "door": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0,
+          "right": 0,
+          "bottom": 0
+        },
+        "signs": [],
+        "checks": [
+          {
+            "id": "bike",
+            "box": {
+              "x": 89.4375,
+              "y": 157.765625,
+              "width": 24,
+              "height": 24,
+              "right": 113.4375,
+              "bottom": 181.765625
+            }
+          },
+          {
+            "id": "grandma",
+            "box": {
+              "x": 318.546875,
+              "y": 278.453125,
+              "width": 24,
+              "height": 24,
+              "right": 342.546875,
+              "bottom": 302.453125
+            }
+          },
+          {
+            "id": "child",
+            "box": {
+              "x": 318.546875,
+              "y": 390.21875,
+              "width": 24,
+              "height": 24,
+              "right": 342.546875,
+              "bottom": 414.21875
+            }
+          }
+        ]
+      },
+      "native": false,
+      "method": "Original headless runtime PNG; RAF paused during capture only; no game state assignments or pixel edits"
+    },
+    {
+      "path": "docs/content/r10/phone-crossing-offline-saved.png",
+      "width": 390,
+      "height": 844,
+      "sha256": "b48daff5d6831a8ff4c0c26ffe66f652c81180449474a07c2a90f4c3a18c11f9",
+      "phase": "done",
+      "state": {
+        "boardTime": "0.000",
+        "cue": "go",
+        "settled": "true",
+        "correction": "",
+        "distance": "0.00",
+        "speed": "0.00",
+        "bend": "1",
+        "tilt": "0.00",
+        "sway": "0.00",
+        "acceleration": "0.00",
+        "bayStopped": "false",
+        "bayRestarted": "false",
+        "leftTurn": "false",
+        "rightTurn": "false",
+        "focus": "center",
+        "crossTime": "0.000",
+        "crossDuration": "1.45",
+        "orderHint": "",
+        "fruitSway": "0.00",
+        "flagSway": "0.00",
+        "assisting": "false",
+        "crossed": "0",
+        "lookedLeft": "false",
+        "lookedRight": "false",
+        "decision": "false",
+        "confirmed": "false",
+        "confirmDelay": "0",
+        "person": "bike",
+        "doorState": "closed"
+      },
+      "hint": "謝謝你等我們！朋友揮揮手。",
+      "controls": [
+        {
+          "action": "replay",
+          "text": "再玩一次",
+          "color": "rgb(255, 255, 255)"
+        },
+        {
+          "action": "picker",
+          "text": "換一課",
+          "color": "rgb(255, 255, 255)"
+        },
+        {
+          "action": "listen",
+          "text": "再聽一次",
+          "color": "rgb(255, 255, 255)"
+        }
+      ],
+      "geometry": {
+        "people": [
+          {
+            "id": "bike",
+            "kind": "crossing-waiting",
+            "box": {
+              "x": 254.546875,
+              "y": 167.171875,
+              "width": 110,
+              "height": 124,
+              "right": 364.546875,
+              "bottom": 291.171875
+            }
+          },
+          {
+            "id": "grandma",
+            "kind": "crossing-waiting",
+            "box": {
+              "x": 25.4375,
+              "y": 274.453125,
+              "width": 110,
+              "height": 124,
+              "right": 135.4375,
+              "bottom": 398.453125
+            }
+          },
+          {
+            "id": "child",
+            "kind": "crossing-waiting",
+            "box": {
+              "x": 25.4375,
+              "y": 167.171875,
+              "width": 110,
+              "height": 124,
+              "right": 135.4375,
+              "bottom": 291.171875
+            }
+          }
+        ],
+        "door": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0,
+          "right": 0,
+          "bottom": 0
+        },
+        "signs": [],
+        "checks": []
+      },
+      "native": false,
+      "method": "Original headless runtime PNG; RAF paused during capture only; no game state assignments or pixel edits"
+    },
+    {
+      "path": "docs/content/r10/phone-crossing-storage-denied.png",
+      "width": 320,
+      "height": 568,
+      "sha256": "d2381d254cb9d6af22aa322ec8f7fbe6bebc053f0bff04c1a71d41b8de87326a",
+      "phase": "checkpoint",
+      "state": {
+        "boardTime": "0.000",
+        "cue": "go",
+        "settled": "true",
+        "correction": "",
+        "distance": "0.00",
+        "speed": "0.00",
+        "bend": "1",
+        "tilt": "0.00",
+        "sway": "0.00",
+        "acceleration": "0.00",
+        "bayStopped": "false",
+        "bayRestarted": "false",
+        "leftTurn": "false",
+        "rightTurn": "false",
+        "focus": "left",
+        "crossTime": "0.000",
+        "crossDuration": "2.1",
+        "orderHint": "",
+        "fruitSway": "0.00",
+        "flagSway": "0.00",
+        "assisting": "false",
+        "crossed": "3",
+        "lookedLeft": "true",
+        "lookedRight": "true",
+        "decision": "false",
+        "confirmed": "false",
+        "confirmDelay": "-0.016600000000000316",
+        "person": "",
+        "doorState": "closed"
+      },
+      "hint": "朋友都過街了，去下個路口。",
+      "controls": [
+        {
+          "action": "next",
+          "text": "下一站",
+          "color": "rgb(244, 107, 39)"
+        },
+        {
+          "action": "listen",
+          "text": "再聽一次",
+          "color": "rgb(255, 255, 255)"
+        }
+      ],
+      "geometry": {
+        "people": [
+          {
+            "id": "grandma",
+            "kind": "content-walker",
+            "box": {
+              "x": 219.046875,
+              "y": 168.8125,
+              "width": 62,
+              "height": 64,
+              "right": 281.046875,
+              "bottom": 232.8125
+            }
+          },
+          {
+            "id": "child",
+            "kind": "crossing-arrived",
+            "box": {
+              "x": 224.359375,
+              "y": 222.375,
+              "width": 62,
+              "height": 64,
+              "right": 286.359375,
+              "bottom": 286.375
+            }
+          },
+          {
+            "id": "bike",
+            "kind": "crossing-arrived",
+            "box": {
+              "x": 33.625,
+              "y": 110.984375,
+              "width": 62,
+              "height": 64,
+              "right": 95.625,
+              "bottom": 174.984375
+            }
+          },
+          {
+            "id": "grandma",
+            "kind": "crossing-arrived",
+            "box": {
+              "x": 224.359375,
+              "y": 168.8125,
+              "width": 62,
+              "height": 64,
+              "right": 286.359375,
+              "bottom": 232.8125
+            }
+          }
+        ],
+        "door": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0,
+          "right": 0,
+          "bottom": 0
+        },
+        "signs": [],
+        "checks": [
+          {
+            "id": "child",
+            "box": {
+              "x": 249.96875,
+              "y": 226.375,
+              "width": 24,
+              "height": 24,
+              "right": 273.96875,
+              "bottom": 250.375
+            }
+          },
+          {
+            "id": "bike",
+            "box": {
+              "x": 59.234375,
+              "y": 114.984375,
+              "width": 24,
+              "height": 24,
+              "right": 83.234375,
+              "bottom": 138.984375
+            }
+          },
+          {
+            "id": "grandma",
+            "box": {
+              "x": 249.96875,
+              "y": 172.8125,
+              "width": 24,
+              "height": 24,
+              "right": 273.96875,
+              "bottom": 196.8125
+            }
+          }
+        ]
+      },
+      "native": false,
+      "method": "Original headless runtime PNG; RAF paused during capture only; no game state assignments or pixel edits"
+    }
+  ],
+  "errors": [],
+  "external": [],
+  "responses": []
+}

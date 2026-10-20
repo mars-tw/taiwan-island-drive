@@ -1,0 +1,43 @@
+{
+  "status": "VERIFIED",
+  "runtime_files": 28,
+  "runtime_bytes": 3038263,
+  "runtime_mib": 2.898,
+  "generation_calls": 10,
+  "cutouts": 24,
+  "character_gates": 14,
+  "source_and_output_hashes": true,
+  "pose_diff": [
+    {
+      "passenger": 1,
+      "rgba_mean_abs_diff": 30.452
+    },
+    {
+      "passenger": 2,
+      "rgba_mean_abs_diff": 40.729
+    },
+    {
+      "passenger": 3,
+      "rgba_mean_abs_diff": 20.884
+    },
+    {
+      "passenger": 4,
+      "rgba_mean_abs_diff": 37.062
+    },
+    {
+      "passenger": 5,
+      "rgba_mean_abs_diff": 25.876
+    },
+    {
+      "passenger": 6,
+      "rgba_mean_abs_diff": 30.49
+    }
+  ],
+  "pairs": 22,
+  "store_images": 14,
+  "recommended_images": 12,
+  "limitations": [
+    "Pose pixel difference establishes distinct frames, not a complete locomotion study.",
+    "Human blind tests and native-device performance not verified."
+  ]
+}

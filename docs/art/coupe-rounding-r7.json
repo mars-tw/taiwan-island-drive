@@ -1,0 +1,35 @@
+{
+  "status": "EXECUTED",
+  "tool": "Blender 5.2 CLI --background",
+  "basis": "Existing Blender-authored coupe.glb; welded body seams, rounded body edges and weighted normals only. Wheels, lamps, windows, UVs, materials and named hierarchy retained.",
+  "source_sha256": "da0705986b4ee8df8e8b4d4ca4396309adddb7148ffac51faf85114cd2ec5cda",
+  "output_sha256": "472e3592fd31377318213a2b60c413b8987b9eb068dd038f5f61bd9a5268777b",
+  "bytes": 4236724,
+  "body_meshes": [
+    {
+      "name": "BodyPaint_coupe_DoorParts",
+      "original_polygons": 914,
+      "bevel_width": 0.085,
+      "segments": 3
+    },
+    {
+      "name": "BodyPaint_coupe_HoodParts",
+      "original_polygons": 32,
+      "bevel_width": 0.085,
+      "segments": 3
+    },
+    {
+      "name": "BodyPaint_coupe_RoofParts",
+      "original_polygons": 216,
+      "bevel_width": 0.085,
+      "segments": 3
+    },
+    {
+      "name": "BodyPaintParts",
+      "original_polygons": 1362,
+      "bevel_width": 0.085,
+      "segments": 3
+    }
+  ],
+  "rendered": false
+}

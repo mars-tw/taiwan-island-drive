@@ -1,0 +1,92 @@
+// Offline, reversible lessons. No scores, deadlines, failure or reward currency.
+const clamp=(v,a,b)=>Math.max(a,Math.min(b,v));
+export const CONTENT_LESSONS={cake:'把蛋糕平穩送到',crossing:'路口停看聽',tickets:'形狀車票，找對月台'};
+export const CROSSING_ORDERS=[['child','bike','grandma'],['grandma','child','bike'],['bike','grandma','child']];
+export const CROSSING_SECONDS={child:2.1,bike:1.45,grandma:2.4};
+export const CAKE_ROUTES=['海風起步坡','燈塔彎・連續彎','榕樹灣・臨停'];
+export const TICKETS=[{shape:'circle',color:'blue',name:'藍圓形'},{shape:'triangle',color:'orange',name:'橘三角形'},{shape:'square',color:'green',name:'綠正方形'}];
+export class ContentLesson{
+ constructor(kind,saved={},options={}){this.manualDoors=options.manualDoors===true;this.visualDelivery=options.visualDelivery===true;this.strictTurns=options.strictTurns===true;this.releaseRecovery=options.releaseRecovery===true;this.observeTraffic=options.observeTraffic===true;this.freshObservation=options.freshObservation===true;this.visualDeparture=options.visualDeparture===true;if(!CONTENT_LESSONS[kind])throw Error('Unknown lesson');saved=saved&&typeof saved==='object'?saved:{};this.kind=kind;this.stage=clamp(Number.isFinite(saved.stage)?Math.floor(saved.stage):0,0,2);this.completed=saved.completed===true;this.skills={start:!!saved.skills?.start,turn:!!saved.skills?.turn,stop:!!saved.skills?.stop};this.facts=Object.fromEntries(['recoveries','assists','bayStops','bayRestarts','leftViews','rightViews','waited','wrongStops','reselections','boarded','blockedStarts','orderReminders','confirmations'].map(k=>[k,clamp(Number.isFinite(saved.facts?.[k])?Math.floor(saved.facts[k]):0,0,9999)]));this.boardingRate=1;this.boardingEnd=1.2;this.phase=this.completed?'done':'ready';this.paused=false;this.input={};this.hint='';this.reset();}
+ reset(){this.stepRequested=false;this.trafficTime=0;this.tierOffset=0;this.tierVelocity=0;this.friendConfirmed=false;this.confirmDelay=0;this.assisting=false;this.assistRecorded=false;this.needsRecovery=false;this.wrongRecorded=false;this.release();this.speed=0;this.distance=0;this.steer=0;this.tilt=0;this.acceleration=0;this.sway=0;this.fruitSway=0;this.flagSway=0;this.orderHint='';this.smooth={start:0,turn:0,stop:0};this.turns={left:0,right:0};this.bayStopped=false;this.bayRestarted=false;this.focus='center';this.looked={left:false,right:false};this.crossed=0;this.crossTime=0;this.departureTime=0;this.selected=-1;this.trainX=-40;this.travelFrom=-40;this.boardTime=0;this.phase=this.completed?'done':'ready';if(this.completed&&this.kind==='tickets'){this.selected=this.platforms.findIndex(p=>p.shape===this.target.shape&&p.color===this.target.color);this.trainX=2+this.selected*16;this.travelFrom=this.trainX;this.distance=30;this.boardTime=1.2;}}
+ begin(){if(this.phase!=='ready')return;this.phase='playing';this.speed=this.kind==='crossing'?5:0;this.balanceLean=0;this.balanceDanger=false;this.balanceCorrected=false;this.balanceRecovered=false;}
+ release(){this.input={go:false,brake:false,left:false,right:false};}
+ wrongTurn(side){if(!this.strictTurns||this.kind!=='cake'||this.phase!=='playing'||this.paused||!['left','right'].includes(side)||this.distance<=15||this.distance>40||(side==='right'?1:-1)===this.bend)return false;this.release();this.steer=0;this.balanceLean=(Math.sign(this.balanceLean)||-this.bend)*Math.min(32,Math.abs(this.balanceLean||0)+8);this.balanceDanger=Math.abs(this.balanceLean)>=18;return true;}
+ pause(){this.paused=true;this.release();}
+ snapshot(){return {stage:this.phase==='checkpoint'?this.stage+1:this.stage,completed:this.completed,started:this.phase!=='ready',skills:{...this.skills},facts:{...this.facts}};}
+ get bend(){return this.stage===1&&this.distance>29?1:[1,-1,1][this.stage];}
+ get trafficActive(){return this.observeTraffic&&this.crossed===0&&this.trafficTime<[2.8,3.8,3.2][this.stage];}
+ get crossingPerson(){return CROSSING_ORDERS[this.stage][this.crossed];}
+ get crossingDuration(){return CROSSING_SECONDS[this.crossingPerson]||2.1;}
+ get canDepart(){return this.speed<=.05&&this.looked.left&&this.looked.right&&this.crossed===3;}
+ get decisionSide(){return this.crossingPerson==='bike'?'right':'left';}
+ get needsDecision(){return this.kind==='crossing'&&this.crossed<3&&this.speed===0&&this.looked.left&&this.looked.right&&!this.friendConfirmed;}
+ get rough(){return Math.abs(this.tilt)>22;}
+ get grade(){return this.kind==='cake'&&this.stage===0&&this.distance<15?.6:0;}
+ get approach(){return this.kind==='cake'&&this.stage===2&&this.distance>40;}
+ get target(){return TICKETS[this.stage];}
+ get platforms(){const t=this.target;return [t,{...t,color:t.color==='blue'?'orange':'blue',name:`${t.color==='blue'?'橘':'藍'}${{circle:'圓形',triangle:'三角形',square:'正方形'}[t.shape]}`},{...t,shape:t.shape==='circle'?'square':'circle',name:`${{blue:'藍',orange:'橘',green:'綠'}[t.color]}${t.shape==='circle'?'正方形':'圓形'}`}].map((_,i,a)=>a[(i+this.stage)%3]);}
+ get matched(){const p=this.platforms[this.selected];return !!p&&p.color===this.target.color&&p.shape===this.target.shape;}
+ look(side){if(this.kind!=='crossing'||this.phase!=='playing'||this.paused||!['left','right'].includes(side))return;if(this.speed>.05){this.hint='先按住煞車，停穩再看。';return;}this.focus=side;const decision=this.needsDecision;if(!this.looked[side])this.facts[side+'Views']++;this.looked[side]=true;if(decision){if(side===this.decisionSide){this.friendConfirmed=true;this.facts.confirmations++;this.confirmDelay=.55;this.hint='看清楚了，請朋友過街。';}else{this.hint=`朋友在${this.decisionSide==='left'?'左':'右'}邊，再看一次。`;}}else this.hint=side==='left'?'左邊看清楚了，再看右邊。':'右邊也看看，等朋友過完。';if(this.needsDecision)this.hint=`朋友在${this.decisionSide==='left'?'左':'右'}邊，再看一次。`;}
+ select(index){if(this.kind!=='tickets'||this.phase!=='playing'||this.paused||!Number.isInteger(index)||index<0||index>2)return;if(this.speed>.05){this.hint='先停穩，再選月台。';return;}if(this.selected>=0&&this.distance>=28&&!this.matched&&index!==this.selected)this.facts.reselections++;this.travelFrom=this.trainX;this.selected=index;this.distance=0;this.wrongRecorded=false;this.hint=this.matched?'月台選好了，按住前進。':'再看看車票，形狀和顏色都要一樣。';}
+ requestFriend(who){if(this.kind!=='crossing'||this.phase!=='playing'||this.paused||!['child','bike','grandma'].includes(who))return false;const current=this.crossingPerson;if(who!==current){this.facts.orderReminders++;this.orderHint=current?`${{child:'小朋友',bike:'腳踏車',grandma:'奶奶'}[current]}先過，等一等。`:'朋友都過完了。';this.hint=this.orderHint;return false;}this.orderHint='';this.hint='看到了，這位朋友先過。';return true;}
+ depart(){if(this.kind!=='crossing'||this.phase!=='playing'||this.paused)return false;if(this.speed>.05||!this.looked.left||!this.looked.right||this.crossed<3){this.facts.blockedStarts++;this.hint=this.speed>.05?'先停穩，再看左右。':!this.looked.left?'還沒看左邊，先看左。':!this.looked.right?'還沒看右邊，先看右。':'等朋友過完，再出發。';return false;}if(this.visualDeparture){this.release();this.phase='departing';this.departureTime=0;}else this.checkpoint();return true;}
+ door(){if(this.kind!=='tickets'||this.phase!=='playing'||this.paused)return false;if(!this.matched||this.distance<28||this.speed>.05){this.hint=!this.matched&&this.selected>=0?'這站不一樣，停穩再換月台。':'對好月台，停穩再開門。';return false;}this.phase='boarding';this.release();return true;}
+ retractStep(){if(this.paused||this.phase!=='boarding'||this.boardTime<1.04||this.stepRequested)return false;this.stepRequested=true;return true;}
+ departTrain(){if(this.paused||this.kind!=='tickets'||this.phase!=='boarding'||this.boardTime<1.4)return false;this.phase='departing';this.departureTime=0;this.release();return true;}
+ checkpoint(){for(const k of Object.keys(this.skills))this.skills[k]||=this.smooth[k]>.25;this.release();this.phase=this.stage===2?'done':'checkpoint';this.completed=this.stage===2;}
+ next(){if(this.phase!=='checkpoint')return;this.stage++;this.reset();this.begin();}
+ update(seconds){if(this.paused||!['playing','boarding','departing','delivering'].includes(this.phase))return;const dt=clamp(seconds,0,.05);if(this.phase==='departing'||this.phase==='delivering'){this.departureTime+=dt;if(this.departureTime>=1.1){if(this.kind==='tickets')this.facts.boarded+=3;this.checkpoint();}return;}if(this.phase==='boarding'){if(this.manualDoors&&this.boardTime>=1.4)return;if(this.manualDoors&&!this.stepRequested&&this.boardTime>=1.04)return;this.boardTime+=dt*this.boardingRate;if(this.manualDoors)this.boardTime=Math.min(this.stepRequested?1.4:1.04,this.boardTime);if(this.boardTime>=this.boardingEnd){this.facts.boarded+=3;this.checkpoint();}return;}
+ const wasRough=this.rough;
+ this.assisting=this.kind==='cake'&&(((this.balancePractice?Math.abs(this.balanceLean||0)>=18:this.rough)&&this.speed>4.3)||(this.assisting&&(this.balancePractice?Math.abs(this.balanceLean||0)>9:Math.abs(this.tilt)>9||Math.abs(this.steer)>.25)&&this.speed>0));
+ if(this.assisting&&!this.assistRecorded){this.facts.assists++;this.assistRecorded=true;}
+ const before=this.speed,target=this.input.go?(this.assisting?3.8:this.approach?4:7):0,freeAccel=(target-this.speed)*1.4-(this.input.go||this.speed>0?this.grade:0),accel=this.input.brake?-5:this.assisting?Math.max(-.8,freeAccel):freeAccel;
+ this.speed=clamp(this.speed+accel*dt,0,7);if(this.speed<.04)this.speed=0;
+ const targetSteer=(this.input.right?1:0)-(this.input.left?1:0);this.steer+=(targetSteer-this.steer)*Math.min(1,dt*2.5);
+ // A held brake at zero speed exerts no acceleration. Read actual motion,
+ // including speed clamps, so the flag can settle after the car stops.
+ this.acceleration=dt>0?(this.speed-before)/dt:0;
+ this.tilt+=(clamp(-this.acceleration*6-this.steer*this.speed*4,-32,32)-this.tilt)*Math.min(1,dt*5);
+ this.sway+=(this.tilt*.42-this.sway)*Math.min(1,dt*9);
+ this.fruitSway+=(this.sway-this.fruitSway)*Math.min(1,dt*3);this.flagSway+=(this.tilt-this.flagSway)*Math.min(1,dt*2);
+ if(this.kind==='cake'){
+  if(this.balancePractice){
+   const old=this.balanceLean||0,turn=this.distance>15&&this.distance<=40;
+   const correct=old*targetSteer<0&&Math.abs(old)>=3;
+   if(Math.abs(old)>=18)this.balanceRecovered=false;
+   if(correct)this.balanceCorrected=true;
+   // Lean accumulates from real acceleration and road camber; clicks never reset it.
+   const force=-this.acceleration*4-(turn?this.bend*this.speed*.45:this.grade*this.speed*.22);
+   if(this.releaseRecovery){
+    // Lateral roll is outward from the actual turn, never a counter-steering command.
+    const lateral=-this.steer*this.speed*4.2;
+    const pitch=this.stage===0&&this.distance<15?-this.acceleration*5:0;
+    const desired=this.input.go?lateral+pitch:0;
+    this.balanceLean=clamp(old+(desired-old)*(this.input.go?2.6:1.25)*dt,-32,32);
+    if(Math.abs(old)>=5&&!this.input.go)this.balanceCorrected=true;
+   }else this.balanceLean=clamp(old+(force+targetSteer*15-old*(this.speed===0?1.8:.10))*dt,-32,32);
+   if(Math.abs(this.balanceLean)>=18)this.balanceDanger=true;
+   if(Math.abs(this.balanceLean)<5)this.balanceDanger=false;
+   if(this.balanceCorrected&&!this.balanceRecovered&&Math.abs(old)>=3&&Math.abs(this.balanceLean)<3){this.facts.recoveries++;this.balanceRecovered=true;this.balanceCorrected=false;this.recoveryNotice=1.5;}
+   this.recoveryNotice=Math.max(0,(this.recoveryNotice||0)-dt);
+  }
+  const target=clamp(this.tilt*1.85,-44,44);this.tierVelocity=(this.tierVelocity||0)+(target-(this.tierOffset||0))*48*dt-(this.tierVelocity||0)*8*dt;this.tierOffset=(this.tierOffset||0)+this.tierVelocity*dt;
+  if(wasRough)this.needsRecovery=true;
+  if(this.needsRecovery&&Math.abs(this.tilt)<9&&!this.input.left&&!this.input.right){if(!this.balancePractice)this.facts.recoveries++;this.needsRecovery=false;}
+  const turn=this.distance>15&&this.distance<=40;const aligned=!turn||this.steer*this.bend>.25;
+  if(this.speed>1&&Math.abs(accel)<5&&this.distance<15)this.smooth.start+=dt;
+  if(turn&&aligned&&this.speed>1&&this.speed<6.5)this.smooth.turn+=dt;
+  if(this.input.brake&&before>.1&&Math.abs(this.tilt)<29)this.smooth.stop+=dt;
+  if(this.stage===1&&turn&&aligned&&this.speed>1)this.turns[this.bend>0?'right':'left']+=dt;
+  if(this.stage===2&&this.distance>=42&&this.input.brake&&this.speed===0&&!this.bayStopped){this.bayStopped=true;this.facts.bayStops++;}
+  if(this.bayStopped&&this.input.go&&!this.input.brake&&this.speed>.3&&!this.bayRestarted){this.bayRestarted=true;this.facts.bayRestarts++;}
+  // Unsteered bends slow the journey gently; the cake never breaks or disappears.
+  this.distance=Math.min(55,this.distance+this.speed*dt*(aligned?1:this.strictTurns?0:.3));
+  if(this.stage===1){if(this.turns.left<.2)this.distance=Math.min(29,this.distance);else if(this.turns.right<.2)this.distance=Math.min(40,this.distance);}
+  if(this.stage===2&&!this.bayStopped)this.distance=Math.min(47,this.distance);
+  if(this.distance>=55&&this.speed===0){if(this.visualDelivery){this.phase='delivering';this.departureTime=0;this.release();}else this.checkpoint();}
+ }else if(this.kind==='crossing'){
+  if(this.observeTraffic&&this.speed===0&&(this.looked.left||this.looked.right))this.trafficTime+=dt;
+  if(!this.trafficActive&&this.speed===0&&this.looked.left&&this.looked.right&&this.crossed<3&&this.friendConfirmed){if(this.confirmDelay>0){this.confirmDelay-=dt;return;}this.crossTime+=dt;if(this.crossTime>=this.crossingDuration){this.crossed++;this.facts.waited++;this.crossTime=0;this.friendConfirmed=false;if(this.freshObservation&&this.crossed<3){this.looked={left:false,right:false};this.focus='center';}this.hint='';}}
+ }else if(this.selected>=0){this.distance=Math.min(30,this.distance+this.speed*dt);this.trainX=this.travelFrom+(2+this.selected*16-this.travelFrom)*this.distance/30;if(this.distance>=28&&!this.matched){this.hint='這站不一樣，停穩再換月台。';if(this.speed===0&&!this.wrongRecorded){this.facts.wrongStops++;this.wrongRecorded=true;}}}
+ }
+}

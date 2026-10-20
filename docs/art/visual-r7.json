@@ -1,0 +1,2201 @@
+{
+  "status": "VERIFIED",
+  "rows": [
+    {
+      "label": "se home",
+      "controls": 7,
+      "problems": []
+    },
+    {
+      "label": "se loaded",
+      "controls": 4,
+      "problems": []
+    },
+    {
+      "label": "se split",
+      "controls": 5,
+      "problems": []
+    },
+    {
+      "label": "se awards",
+      "controls": 4,
+      "problems": []
+    },
+    {
+      "label": "se car menu",
+      "controls": 23,
+      "problems": []
+    },
+    {
+      "label": "se car drive",
+      "controls": 6,
+      "problems": []
+    },
+    {
+      "label": "se flight menu",
+      "controls": 17,
+      "problems": []
+    },
+    {
+      "label": "se more flight activities",
+      "controls": 7,
+      "problems": []
+    },
+    {
+      "label": "se flight play",
+      "controls": 6,
+      "problems": []
+    },
+    {
+      "label": "se complete",
+      "status": "VERIFIED",
+      "characters": [
+        {
+          "id": "0",
+          "w": 48,
+          "h": 76,
+          "images": [
+            "http://127.0.0.1:5286/art/r5/passenger-1-0.png",
+            "http://127.0.0.1:5286/art/r5/passenger-1-1.png"
+          ]
+        },
+        {
+          "id": "1",
+          "w": 48,
+          "h": 76,
+          "images": [
+            "http://127.0.0.1:5286/art/r5/passenger-2-0.png",
+            "http://127.0.0.1:5286/art/r5/passenger-2-1.png"
+          ]
+        },
+        {
+          "id": "2",
+          "w": 48,
+          "h": 76,
+          "images": [
+            "http://127.0.0.1:5286/art/r5/passenger-3-0.png",
+            "http://127.0.0.1:5286/art/r5/passenger-3-1.png"
+          ]
+        },
+        {
+          "id": "3",
+          "w": 48,
+          "h": 76,
+          "images": [
+            "http://127.0.0.1:5286/art/r5/passenger-4-0.png",
+            "http://127.0.0.1:5286/art/r5/passenger-4-1.png"
+          ]
+        },
+        {
+          "id": "4",
+          "w": 48,
+          "h": 76,
+          "images": [
+            "http://127.0.0.1:5286/art/r5/passenger-5-0.png",
+            "http://127.0.0.1:5286/art/r5/passenger-5-1.png"
+          ]
+        }
+      ]
+    },
+    {
+      "label": "se-landscape home",
+      "controls": 7,
+      "problems": []
+    },
+    {
+      "label": "se-landscape loaded",
+      "controls": 4,
+      "problems": []
+    },
+    {
+      "label": "se-landscape split",
+      "controls": 5,
+      "problems": []
+    },
+    {
+      "label": "se-landscape awards",
+      "controls": 4,
+      "problems": []
+    },
+    {
+      "label": "se-landscape car menu",
+      "controls": 23,
+      "problems": []
+    },
+    {
+      "label": "se-landscape car drive",
+      "controls": 6,
+      "problems": []
+    },
+    {
+      "label": "se-landscape flight menu",
+      "controls": 17,
+      "problems": []
+    },
+    {
+      "label": "se-landscape more flight activities",
+      "controls": 7,
+      "problems": []
+    },
+    {
+      "label": "se-landscape flight play",
+      "controls": 6,
+      "problems": []
+    },
+    {
+      "label": "se-landscape complete",
+      "status": "VERIFIED",
+      "characters": [
+        {
+          "id": "0",
+          "w": 40,
+          "h": 60,
+          "images": [
+            "http://127.0.0.1:5286/art/r5/passenger-1-0.png",
+            "http://127.0.0.1:5286/art/r5/passenger-1-1.png"
+          ]
+        },
+        {
+          "id": "1",
+          "w": 40,
+          "h": 60,
+          "images": [
+            "http://127.0.0.1:5286/art/r5/passenger-2-0.png",
+            "http://127.0.0.1:5286/art/r5/passenger-2-1.png"
+          ]
+        },
+        {
+          "id": "2",
+          "w": 40,
+          "h": 60,
+          "images": [
+            "http://127.0.0.1:5286/art/r5/passenger-3-0.png",
+            "http://127.0.0.1:5286/art/r5/passenger-3-1.png"
+          ]
+        },
+        {
+          "id": "3",
+          "w": 40,
+          "h": 60,
+          "images": [
+            "http://127.0.0.1:5286/art/r5/passenger-4-0.png",
+            "http://127.0.0.1:5286/art/r5/passenger-4-1.png"
+          ]
+        },
+        {
+          "id": "4",
+          "w": 40,
+          "h": 60,
+          "images": [
+            "http://127.0.0.1:5286/art/r5/passenger-5-0.png",
+            "http://127.0.0.1:5286/art/r5/passenger-5-1.png"
+          ]
+        }
+      ]
+    },
+    {
+      "label": "phone home",
+      "controls": 7,
+      "problems": []
+    },
+    {
+      "label": "700ms boarding of passenger 0 with distinct limb poses",
+      "duration": 700,
+      "samples": [
+        {
+          "x": 61,
+          "y": 206.5,
+          "poses": [
+            "1",
+            "0"
+          ]
+        },
+        {
+          "x": 57.971771240234375,
+          "y": 226.10800170898438,
+          "poses": [
+            "0",
+            "1"
+          ]
+        },
+        {
+          "x": 46.923580169677734,
+          "y": 297.6458435058594,
+          "poses": [
+            "0",
+            "1"
+          ]
+        }
+      ]
+    },
+    {
+      "label": "phone loaded",
+      "controls": 4,
+      "problems": []
+    },
+    {
+      "label": "Same child walks out the door, along the aisle, into rear carriage",
+      "path": "carriage-aisle",
+      "keyframes": 4,
+      "duration": 700
+    },
+    {
+      "label": "phone split",
+      "controls": 5,
+      "problems": []
+    },
+    {
+      "label": "Passenger identity preserved on round trip",
+      "id": "4",
+      "source": "http://127.0.0.1:5286/art/r5/passenger-5-0.png"
+    },
+    {
+      "label": "phone awards",
+      "controls": 4,
+      "problems": []
+    },
+    {
+      "label": "phone car menu",
+      "controls": 23,
+      "problems": []
+    },
+    {
+      "label": "All four vehicle silhouettes and five paints respond to real UI",
+      "combinations": 20
+    },
+    {
+      "label": "phone car drive",
+      "controls": 6,
+      "problems": []
+    },
+    {
+      "label": "phone flight menu",
+      "controls": 17,
+      "problems": []
+    },
+    {
+      "label": "phone more flight activities",
+      "controls": 7,
+      "problems": []
+    },
+    {
+      "label": "phone flight play",
+      "controls": 6,
+      "problems": []
+    },
+    {
+      "label": "phone complete",
+      "status": "VERIFIED",
+      "characters": [
+        {
+          "id": "0",
+          "w": 48,
+          "h": 76,
+          "images": [
+            "http://127.0.0.1:5286/art/r5/passenger-1-0.png",
+            "http://127.0.0.1:5286/art/r5/passenger-1-1.png"
+          ]
+        },
+        {
+          "id": "1",
+          "w": 48,
+          "h": 76,
+          "images": [
+            "http://127.0.0.1:5286/art/r5/passenger-2-0.png",
+            "http://127.0.0.1:5286/art/r5/passenger-2-1.png"
+          ]
+        },
+        {
+          "id": "2",
+          "w": 48,
+          "h": 76,
+          "images": [
+            "http://127.0.0.1:5286/art/r5/passenger-3-0.png",
+            "http://127.0.0.1:5286/art/r5/passenger-3-1.png"
+          ]
+        },
+        {
+          "id": "3",
+          "w": 48,
+          "h": 76,
+          "images": [
+            "http://127.0.0.1:5286/art/r5/passenger-4-0.png",
+            "http://127.0.0.1:5286/art/r5/passenger-4-1.png"
+          ]
+        },
+        {
+          "id": "4",
+          "w": 48,
+          "h": 76,
+          "images": [
+            "http://127.0.0.1:5286/art/r5/passenger-5-0.png",
+            "http://127.0.0.1:5286/art/r5/passenger-5-1.png"
+          ]
+        }
+      ]
+    },
+    {
+      "label": "phone-landscape home",
+      "controls": 7,
+      "problems": []
+    },
+    {
+      "label": "phone-landscape loaded",
+      "controls": 4,
+      "problems": []
+    },
+    {
+      "label": "phone-landscape split",
+      "controls": 5,
+      "problems": []
+    },
+    {
+      "label": "phone-landscape awards",
+      "controls": 4,
+      "problems": []
+    },
+    {
+      "label": "phone-landscape car menu",
+      "controls": 23,
+      "problems": []
+    },
+    {
+      "label": "phone-landscape car drive",
+      "controls": 6,
+      "problems": []
+    },
+    {
+      "label": "phone-landscape flight menu",
+      "controls": 17,
+      "problems": []
+    },
+    {
+      "label": "phone-landscape more flight activities",
+      "controls": 7,
+      "problems": []
+    },
+    {
+      "label": "phone-landscape flight play",
+      "controls": 8,
+      "problems": []
+    },
+    {
+      "label": "phone-landscape complete",
+      "status": "VERIFIED",
+      "characters": [
+        {
+          "id": "0",
+          "w": 40,
+          "h": 60,
+          "images": [
+            "http://127.0.0.1:5286/art/r5/passenger-1-0.png",
+            "http://127.0.0.1:5286/art/r5/passenger-1-1.png"
+          ]
+        },
+        {
+          "id": "1",
+          "w": 40,
+          "h": 60,
+          "images": [
+            "http://127.0.0.1:5286/art/r5/passenger-2-0.png",
+            "http://127.0.0.1:5286/art/r5/passenger-2-1.png"
+          ]
+        },
+        {
+          "id": "2",
+          "w": 40,
+          "h": 60,
+          "images": [
+            "http://127.0.0.1:5286/art/r5/passenger-3-0.png",
+            "http://127.0.0.1:5286/art/r5/passenger-3-1.png"
+          ]
+        },
+        {
+          "id": "3",
+          "w": 40,
+          "h": 60,
+          "images": [
+            "http://127.0.0.1:5286/art/r5/passenger-4-0.png",
+            "http://127.0.0.1:5286/art/r5/passenger-4-1.png"
+          ]
+        },
+        {
+          "id": "4",
+          "w": 40,
+          "h": 60,
+          "images": [
+            "http://127.0.0.1:5286/art/r5/passenger-5-0.png",
+            "http://127.0.0.1:5286/art/r5/passenger-5-1.png"
+          ]
+        }
+      ]
+    },
+    {
+      "label": "laptop home",
+      "controls": 7,
+      "problems": []
+    },
+    {
+      "label": "laptop loaded",
+      "controls": 4,
+      "problems": []
+    },
+    {
+      "label": "laptop split",
+      "controls": 5,
+      "problems": []
+    },
+    {
+      "label": "laptop awards",
+      "controls": 4,
+      "problems": []
+    },
+    {
+      "label": "laptop car menu",
+      "controls": 23,
+      "problems": []
+    },
+    {
+      "label": "laptop car drive",
+      "controls": 6,
+      "problems": []
+    },
+    {
+      "label": "laptop flight menu",
+      "controls": 17,
+      "problems": []
+    },
+    {
+      "label": "laptop more flight activities",
+      "controls": 7,
+      "problems": []
+    },
+    {
+      "label": "laptop flight play",
+      "controls": 8,
+      "problems": []
+    },
+    {
+      "label": "laptop complete",
+      "status": "VERIFIED",
+      "characters": [
+        {
+          "id": "0",
+          "w": 48,
+          "h": 76,
+          "images": [
+            "http://127.0.0.1:5286/art/r5/passenger-1-0.png",
+            "http://127.0.0.1:5286/art/r5/passenger-1-1.png"
+          ]
+        },
+        {
+          "id": "1",
+          "w": 48,
+          "h": 76,
+          "images": [
+            "http://127.0.0.1:5286/art/r5/passenger-2-0.png",
+            "http://127.0.0.1:5286/art/r5/passenger-2-1.png"
+          ]
+        },
+        {
+          "id": "2",
+          "w": 48,
+          "h": 76,
+          "images": [
+            "http://127.0.0.1:5286/art/r5/passenger-3-0.png",
+            "http://127.0.0.1:5286/art/r5/passenger-3-1.png"
+          ]
+        },
+        {
+          "id": "3",
+          "w": 48,
+          "h": 76,
+          "images": [
+            "http://127.0.0.1:5286/art/r5/passenger-4-0.png",
+            "http://127.0.0.1:5286/art/r5/passenger-4-1.png"
+          ]
+        },
+        {
+          "id": "4",
+          "w": 48,
+          "h": 76,
+          "images": [
+            "http://127.0.0.1:5286/art/r5/passenger-5-0.png",
+            "http://127.0.0.1:5286/art/r5/passenger-5-1.png"
+          ]
+        }
+      ]
+    },
+    {
+      "label": "short-laptop home",
+      "controls": 7,
+      "problems": []
+    },
+    {
+      "label": "short-laptop loaded",
+      "controls": 4,
+      "problems": []
+    },
+    {
+      "label": "short-laptop split",
+      "controls": 5,
+      "problems": []
+    },
+    {
+      "label": "short-laptop awards",
+      "controls": 4,
+      "problems": []
+    },
+    {
+      "label": "short-laptop car menu",
+      "controls": 23,
+      "problems": []
+    },
+    {
+      "label": "short-laptop car drive",
+      "controls": 6,
+      "problems": []
+    },
+    {
+      "label": "short-laptop flight menu",
+      "controls": 17,
+      "problems": []
+    },
+    {
+      "label": "short-laptop more flight activities",
+      "controls": 7,
+      "problems": []
+    },
+    {
+      "label": "short-laptop flight play",
+      "controls": 8,
+      "problems": []
+    },
+    {
+      "label": "short-laptop complete",
+      "status": "VERIFIED",
+      "characters": [
+        {
+          "id": "0",
+          "w": 48,
+          "h": 76,
+          "images": [
+            "http://127.0.0.1:5286/art/r5/passenger-1-0.png",
+            "http://127.0.0.1:5286/art/r5/passenger-1-1.png"
+          ]
+        },
+        {
+          "id": "1",
+          "w": 48,
+          "h": 76,
+          "images": [
+            "http://127.0.0.1:5286/art/r5/passenger-2-0.png",
+            "http://127.0.0.1:5286/art/r5/passenger-2-1.png"
+          ]
+        },
+        {
+          "id": "2",
+          "w": 48,
+          "h": 76,
+          "images": [
+            "http://127.0.0.1:5286/art/r5/passenger-3-0.png",
+            "http://127.0.0.1:5286/art/r5/passenger-3-1.png"
+          ]
+        },
+        {
+          "id": "3",
+          "w": 48,
+          "h": 76,
+          "images": [
+            "http://127.0.0.1:5286/art/r5/passenger-4-0.png",
+            "http://127.0.0.1:5286/art/r5/passenger-4-1.png"
+          ]
+        },
+        {
+          "id": "4",
+          "w": 48,
+          "h": 76,
+          "images": [
+            "http://127.0.0.1:5286/art/r5/passenger-5-0.png",
+            "http://127.0.0.1:5286/art/r5/passenger-5-1.png"
+          ]
+        }
+      ]
+    },
+    {
+      "label": "ipad home",
+      "controls": 7,
+      "problems": []
+    },
+    {
+      "label": "ipad loaded",
+      "controls": 4,
+      "problems": []
+    },
+    {
+      "label": "ipad split",
+      "controls": 5,
+      "problems": []
+    },
+    {
+      "label": "ipad awards",
+      "controls": 4,
+      "problems": []
+    },
+    {
+      "label": "ipad car menu",
+      "controls": 23,
+      "problems": []
+    },
+    {
+      "label": "ipad car drive",
+      "controls": 6,
+      "problems": []
+    },
+    {
+      "label": "ipad flight menu",
+      "controls": 17,
+      "problems": []
+    },
+    {
+      "label": "ipad more flight activities",
+      "controls": 7,
+      "problems": []
+    },
+    {
+      "label": "ipad flight play",
+      "controls": 8,
+      "problems": []
+    },
+    {
+      "label": "ipad complete",
+      "status": "VERIFIED",
+      "characters": [
+        {
+          "id": "0",
+          "w": 48,
+          "h": 76,
+          "images": [
+            "http://127.0.0.1:5286/art/r5/passenger-1-0.png",
+            "http://127.0.0.1:5286/art/r5/passenger-1-1.png"
+          ]
+        },
+        {
+          "id": "1",
+          "w": 48,
+          "h": 76,
+          "images": [
+            "http://127.0.0.1:5286/art/r5/passenger-2-0.png",
+            "http://127.0.0.1:5286/art/r5/passenger-2-1.png"
+          ]
+        },
+        {
+          "id": "2",
+          "w": 48,
+          "h": 76,
+          "images": [
+            "http://127.0.0.1:5286/art/r5/passenger-3-0.png",
+            "http://127.0.0.1:5286/art/r5/passenger-3-1.png"
+          ]
+        },
+        {
+          "id": "3",
+          "w": 48,
+          "h": 76,
+          "images": [
+            "http://127.0.0.1:5286/art/r5/passenger-4-0.png",
+            "http://127.0.0.1:5286/art/r5/passenger-4-1.png"
+          ]
+        },
+        {
+          "id": "4",
+          "w": 48,
+          "h": 76,
+          "images": [
+            "http://127.0.0.1:5286/art/r5/passenger-5-0.png",
+            "http://127.0.0.1:5286/art/r5/passenger-5-1.png"
+          ]
+        }
+      ]
+    },
+    {
+      "label": "ipad-landscape home",
+      "controls": 7,
+      "problems": []
+    },
+    {
+      "label": "ipad-landscape loaded",
+      "controls": 4,
+      "problems": []
+    },
+    {
+      "label": "ipad-landscape split",
+      "controls": 5,
+      "problems": []
+    },
+    {
+      "label": "ipad-landscape awards",
+      "controls": 4,
+      "problems": []
+    },
+    {
+      "label": "ipad-landscape car menu",
+      "controls": 23,
+      "problems": []
+    },
+    {
+      "label": "ipad-landscape car drive",
+      "controls": 6,
+      "problems": []
+    },
+    {
+      "label": "ipad-landscape flight menu",
+      "controls": 17,
+      "problems": []
+    },
+    {
+      "label": "ipad-landscape more flight activities",
+      "controls": 7,
+      "problems": []
+    },
+    {
+      "label": "ipad-landscape flight play",
+      "controls": 8,
+      "problems": []
+    },
+    {
+      "label": "ipad-landscape complete",
+      "status": "VERIFIED",
+      "characters": [
+        {
+          "id": "0",
+          "w": 48,
+          "h": 76,
+          "images": [
+            "http://127.0.0.1:5286/art/r5/passenger-1-0.png",
+            "http://127.0.0.1:5286/art/r5/passenger-1-1.png"
+          ]
+        },
+        {
+          "id": "1",
+          "w": 48,
+          "h": 76,
+          "images": [
+            "http://127.0.0.1:5286/art/r5/passenger-2-0.png",
+            "http://127.0.0.1:5286/art/r5/passenger-2-1.png"
+          ]
+        },
+        {
+          "id": "2",
+          "w": 48,
+          "h": 76,
+          "images": [
+            "http://127.0.0.1:5286/art/r5/passenger-3-0.png",
+            "http://127.0.0.1:5286/art/r5/passenger-3-1.png"
+          ]
+        },
+        {
+          "id": "3",
+          "w": 48,
+          "h": 76,
+          "images": [
+            "http://127.0.0.1:5286/art/r5/passenger-4-0.png",
+            "http://127.0.0.1:5286/art/r5/passenger-4-1.png"
+          ]
+        },
+        {
+          "id": "4",
+          "w": 48,
+          "h": 76,
+          "images": [
+            "http://127.0.0.1:5286/art/r5/passenger-5-0.png",
+            "http://127.0.0.1:5286/art/r5/passenger-5-1.png"
+          ]
+        }
+      ]
+    },
+    {
+      "label": "ipad13-landscape home",
+      "controls": 7,
+      "problems": []
+    },
+    {
+      "label": "ipad13-landscape loaded",
+      "controls": 4,
+      "problems": []
+    },
+    {
+      "label": "ipad13-landscape split",
+      "controls": 5,
+      "problems": []
+    },
+    {
+      "label": "ipad13-landscape awards",
+      "controls": 4,
+      "problems": []
+    },
+    {
+      "label": "ipad13-landscape car menu",
+      "controls": 23,
+      "problems": []
+    },
+    {
+      "label": "ipad13-landscape car drive",
+      "controls": 6,
+      "problems": []
+    },
+    {
+      "label": "ipad13-landscape flight menu",
+      "controls": 17,
+      "problems": []
+    },
+    {
+      "label": "ipad13-landscape more flight activities",
+      "controls": 7,
+      "problems": []
+    },
+    {
+      "label": "ipad13-landscape flight play",
+      "controls": 8,
+      "problems": []
+    },
+    {
+      "label": "ipad13-landscape complete",
+      "status": "VERIFIED",
+      "characters": [
+        {
+          "id": "0",
+          "w": 48,
+          "h": 76,
+          "images": [
+            "http://127.0.0.1:5286/art/r5/passenger-1-0.png",
+            "http://127.0.0.1:5286/art/r5/passenger-1-1.png"
+          ]
+        },
+        {
+          "id": "1",
+          "w": 48,
+          "h": 76,
+          "images": [
+            "http://127.0.0.1:5286/art/r5/passenger-2-0.png",
+            "http://127.0.0.1:5286/art/r5/passenger-2-1.png"
+          ]
+        },
+        {
+          "id": "2",
+          "w": 48,
+          "h": 76,
+          "images": [
+            "http://127.0.0.1:5286/art/r5/passenger-3-0.png",
+            "http://127.0.0.1:5286/art/r5/passenger-3-1.png"
+          ]
+        },
+        {
+          "id": "3",
+          "w": 48,
+          "h": 76,
+          "images": [
+            "http://127.0.0.1:5286/art/r5/passenger-4-0.png",
+            "http://127.0.0.1:5286/art/r5/passenger-4-1.png"
+          ]
+        },
+        {
+          "id": "4",
+          "w": 48,
+          "h": 76,
+          "images": [
+            "http://127.0.0.1:5286/art/r5/passenger-5-0.png",
+            "http://127.0.0.1:5286/art/r5/passenger-5-1.png"
+          ]
+        }
+      ]
+    },
+    {
+      "label": "desktop home",
+      "controls": 7,
+      "problems": []
+    },
+    {
+      "label": "desktop loaded",
+      "controls": 4,
+      "problems": []
+    },
+    {
+      "label": "desktop split",
+      "controls": 5,
+      "problems": []
+    },
+    {
+      "label": "desktop awards",
+      "controls": 4,
+      "problems": []
+    },
+    {
+      "label": "desktop car menu",
+      "controls": 23,
+      "problems": []
+    },
+    {
+      "label": "desktop car drive",
+      "controls": 6,
+      "problems": []
+    },
+    {
+      "label": "desktop flight menu",
+      "controls": 17,
+      "problems": []
+    },
+    {
+      "label": "desktop more flight activities",
+      "controls": 7,
+      "problems": []
+    },
+    {
+      "label": "desktop flight play",
+      "controls": 8,
+      "problems": []
+    },
+    {
+      "label": "desktop complete",
+      "status": "VERIFIED",
+      "characters": [
+        {
+          "id": "0",
+          "w": 48,
+          "h": 76,
+          "images": [
+            "http://127.0.0.1:5286/art/r5/passenger-1-0.png",
+            "http://127.0.0.1:5286/art/r5/passenger-1-1.png"
+          ]
+        },
+        {
+          "id": "1",
+          "w": 48,
+          "h": 76,
+          "images": [
+            "http://127.0.0.1:5286/art/r5/passenger-2-0.png",
+            "http://127.0.0.1:5286/art/r5/passenger-2-1.png"
+          ]
+        },
+        {
+          "id": "2",
+          "w": 48,
+          "h": 76,
+          "images": [
+            "http://127.0.0.1:5286/art/r5/passenger-3-0.png",
+            "http://127.0.0.1:5286/art/r5/passenger-3-1.png"
+          ]
+        },
+        {
+          "id": "3",
+          "w": 48,
+          "h": 76,
+          "images": [
+            "http://127.0.0.1:5286/art/r5/passenger-4-0.png",
+            "http://127.0.0.1:5286/art/r5/passenger-4-1.png"
+          ]
+        },
+        {
+          "id": "4",
+          "w": 48,
+          "h": 76,
+          "images": [
+            "http://127.0.0.1:5286/art/r5/passenger-5-0.png",
+            "http://127.0.0.1:5286/art/r5/passenger-5-1.png"
+          ]
+        }
+      ]
+    },
+    {
+      "label": "iphone-store home",
+      "controls": 7,
+      "problems": []
+    },
+    {
+      "label": "iphone-store loaded",
+      "controls": 4,
+      "problems": []
+    },
+    {
+      "label": "iphone-store split",
+      "controls": 5,
+      "problems": []
+    },
+    {
+      "label": "iphone-store awards",
+      "controls": 4,
+      "problems": []
+    },
+    {
+      "label": "iphone-store car menu",
+      "controls": 23,
+      "problems": []
+    },
+    {
+      "label": "iphone-store car drive",
+      "controls": 6,
+      "problems": []
+    },
+    {
+      "label": "iphone-store flight menu",
+      "controls": 17,
+      "problems": []
+    },
+    {
+      "label": "iphone-store more flight activities",
+      "controls": 7,
+      "problems": []
+    },
+    {
+      "label": "iphone-store flight play",
+      "controls": 6,
+      "problems": []
+    },
+    {
+      "label": "iphone-store complete",
+      "status": "VERIFIED",
+      "characters": [
+        {
+          "id": "0",
+          "w": 48,
+          "h": 76,
+          "images": [
+            "http://127.0.0.1:5286/art/r5/passenger-1-0.png",
+            "http://127.0.0.1:5286/art/r5/passenger-1-1.png"
+          ]
+        },
+        {
+          "id": "1",
+          "w": 48,
+          "h": 76,
+          "images": [
+            "http://127.0.0.1:5286/art/r5/passenger-2-0.png",
+            "http://127.0.0.1:5286/art/r5/passenger-2-1.png"
+          ]
+        },
+        {
+          "id": "2",
+          "w": 48,
+          "h": 76,
+          "images": [
+            "http://127.0.0.1:5286/art/r5/passenger-3-0.png",
+            "http://127.0.0.1:5286/art/r5/passenger-3-1.png"
+          ]
+        },
+        {
+          "id": "3",
+          "w": 48,
+          "h": 76,
+          "images": [
+            "http://127.0.0.1:5286/art/r5/passenger-4-0.png",
+            "http://127.0.0.1:5286/art/r5/passenger-4-1.png"
+          ]
+        },
+        {
+          "id": "4",
+          "w": 48,
+          "h": 76,
+          "images": [
+            "http://127.0.0.1:5286/art/r5/passenger-5-0.png",
+            "http://127.0.0.1:5286/art/r5/passenger-5-1.png"
+          ]
+        }
+      ]
+    },
+    {
+      "label": "ipad-store home",
+      "controls": 7,
+      "problems": []
+    },
+    {
+      "label": "ipad-store loaded",
+      "controls": 4,
+      "problems": []
+    },
+    {
+      "label": "ipad-store split",
+      "controls": 5,
+      "problems": []
+    },
+    {
+      "label": "ipad-store awards",
+      "controls": 4,
+      "problems": []
+    },
+    {
+      "label": "ipad-store car menu",
+      "controls": 23,
+      "problems": []
+    },
+    {
+      "label": "ipad-store car drive",
+      "controls": 6,
+      "problems": []
+    },
+    {
+      "label": "ipad-store flight menu",
+      "controls": 17,
+      "problems": []
+    },
+    {
+      "label": "ipad-store more flight activities",
+      "controls": 7,
+      "problems": []
+    },
+    {
+      "label": "ipad-store flight play",
+      "controls": 8,
+      "problems": []
+    },
+    {
+      "label": "ipad-store complete",
+      "status": "VERIFIED",
+      "characters": [
+        {
+          "id": "0",
+          "w": 48,
+          "h": 76,
+          "images": [
+            "http://127.0.0.1:5286/art/r5/passenger-1-0.png",
+            "http://127.0.0.1:5286/art/r5/passenger-1-1.png"
+          ]
+        },
+        {
+          "id": "1",
+          "w": 48,
+          "h": 76,
+          "images": [
+            "http://127.0.0.1:5286/art/r5/passenger-2-0.png",
+            "http://127.0.0.1:5286/art/r5/passenger-2-1.png"
+          ]
+        },
+        {
+          "id": "2",
+          "w": 48,
+          "h": 76,
+          "images": [
+            "http://127.0.0.1:5286/art/r5/passenger-3-0.png",
+            "http://127.0.0.1:5286/art/r5/passenger-3-1.png"
+          ]
+        },
+        {
+          "id": "3",
+          "w": 48,
+          "h": 76,
+          "images": [
+            "http://127.0.0.1:5286/art/r5/passenger-4-0.png",
+            "http://127.0.0.1:5286/art/r5/passenger-4-1.png"
+          ]
+        },
+        {
+          "id": "4",
+          "w": 48,
+          "h": 76,
+          "images": [
+            "http://127.0.0.1:5286/art/r5/passenger-5-0.png",
+            "http://127.0.0.1:5286/art/r5/passenger-5-1.png"
+          ]
+        }
+      ]
+    },
+    {
+      "label": "Reduced motion has no transit animation",
+      "status": "VERIFIED"
+    }
+  ],
+  "failures": [],
+  "errors": [],
+  "external": [],
+  "shots": [
+    {
+      "path": "docs/art/evidence/r7/se-01-home.png",
+      "width": 320,
+      "height": 568,
+      "sha256": "9e212a7e710b57f329190161471bf71be058c9adddfdd829c602cdf60203d07d",
+      "native": false,
+      "kind": "unmodified_headless_chromium_runtime"
+    },
+    {
+      "path": "docs/art/evidence/r7/se-04-load.png",
+      "width": 320,
+      "height": 568,
+      "sha256": "ec8564eedffa2637cdbced6443443ba5526418c12c0a062fc6e7837cfea38956",
+      "native": false,
+      "kind": "unmodified_headless_chromium_runtime"
+    },
+    {
+      "path": "docs/art/evidence/r7/se-05-split.png",
+      "width": 320,
+      "height": 568,
+      "sha256": "7e6754fc0db89717725ba7fd5e315a15675f70279eff815e24c541b6f4aee2e4",
+      "native": false,
+      "kind": "unmodified_headless_chromium_runtime"
+    },
+    {
+      "path": "docs/art/evidence/r7/se-subtract.png",
+      "width": 320,
+      "height": 568,
+      "sha256": "5cc93d04f79ddd3df5ec6b765ac8abe145caf6c425e38f633a5a7c981bc14029",
+      "native": false,
+      "kind": "unmodified_headless_chromium_runtime"
+    },
+    {
+      "path": "docs/art/evidence/r7/se-06-celebration.png",
+      "width": 320,
+      "height": 568,
+      "sha256": "63e030d459467dd17e5f2bd8cb164cd3b2d93cf1c0f8e457c2a7f4e8908a02ec",
+      "native": false,
+      "kind": "unmodified_headless_chromium_runtime"
+    },
+    {
+      "path": "docs/art/evidence/r7/se-car-menu.png",
+      "width": 320,
+      "height": 568,
+      "sha256": "0b3629581f998b5bf0a1cb0b05a3552304392a7b6a289b0a52d18ab0e738e4fb",
+      "native": false,
+      "kind": "unmodified_headless_chromium_runtime"
+    },
+    {
+      "path": "docs/art/evidence/r7/se-02-car-driving.png",
+      "width": 320,
+      "height": 568,
+      "sha256": "533654d8eecca45d5d774098685026ace7db7a47cea42a430492b25ea025de33",
+      "native": false,
+      "kind": "unmodified_headless_chromium_runtime",
+      "captureSource": "check-car-framing-r7.mjs after final portrait camera correction"
+    },
+    {
+      "path": "docs/art/evidence/r7/se-flight-menu.png",
+      "width": 320,
+      "height": 568,
+      "sha256": "6144d9549c9cc7d184e20d28fcdc7156d92208eec9b67eab6ddf26de77fe95ab",
+      "native": false,
+      "kind": "unmodified_headless_chromium_runtime"
+    },
+    {
+      "path": "docs/art/evidence/r7/se-flight-more.png",
+      "width": 320,
+      "height": 568,
+      "sha256": "6849089d2001f754937f3ba89a97bf045cbea767014021bda6efadcd7c7def39",
+      "native": false,
+      "kind": "unmodified_headless_chromium_runtime"
+    },
+    {
+      "path": "docs/art/evidence/r7/se-03-flight-playing.png",
+      "width": 320,
+      "height": 568,
+      "sha256": "774c09799af40999c04d642b637b852cbf92cc807b71422c5cb7e971796f3d93",
+      "native": false,
+      "kind": "unmodified_headless_chromium_runtime"
+    },
+    {
+      "path": "docs/art/evidence/r7/se-landscape-01-home.png",
+      "width": 568,
+      "height": 320,
+      "sha256": "c193fd56f7a8fd313e7f750bd14f396f74219e2449f4fbd634b24664af252e42",
+      "native": false,
+      "kind": "unmodified_headless_chromium_runtime"
+    },
+    {
+      "path": "docs/art/evidence/r7/se-landscape-04-load.png",
+      "width": 568,
+      "height": 320,
+      "sha256": "d278e9f920a5e338767887eec63eb43dba96e03fdeea602a8684312a223c5222",
+      "native": false,
+      "kind": "unmodified_headless_chromium_runtime"
+    },
+    {
+      "path": "docs/art/evidence/r7/se-landscape-05-split.png",
+      "width": 568,
+      "height": 320,
+      "sha256": "194dc1d7b444876f623dca0b0c646543e863a83a89a9b3dd45217d07864445b1",
+      "native": false,
+      "kind": "unmodified_headless_chromium_runtime"
+    },
+    {
+      "path": "docs/art/evidence/r7/se-landscape-subtract.png",
+      "width": 568,
+      "height": 320,
+      "sha256": "c82851302b08cf582822f7c1ef9777645638b0006fcfdf7142509f8a6118d222",
+      "native": false,
+      "kind": "unmodified_headless_chromium_runtime"
+    },
+    {
+      "path": "docs/art/evidence/r7/se-landscape-06-celebration.png",
+      "width": 568,
+      "height": 320,
+      "sha256": "6de299e79dffab7a17da4d4c9d350bd620199e3486985a76beb2ced262fbecc8",
+      "native": false,
+      "kind": "unmodified_headless_chromium_runtime"
+    },
+    {
+      "path": "docs/art/evidence/r7/se-landscape-car-menu.png",
+      "width": 568,
+      "height": 320,
+      "sha256": "1d2ad52388061cf2f141844cfb7cece379e8a09b2fdd3dc8139c1944bcd05d5c",
+      "native": false,
+      "kind": "unmodified_headless_chromium_runtime"
+    },
+    {
+      "path": "docs/art/evidence/r7/se-landscape-02-car-driving.png",
+      "width": 568,
+      "height": 320,
+      "sha256": "4030dac55a6495797f9211ac5beb91aedcbc7e28ab8e3670e5dea3afd3ddd941",
+      "native": false,
+      "kind": "unmodified_headless_chromium_runtime",
+      "captureSource": "check-car-framing-r7.mjs after final portrait camera correction"
+    },
+    {
+      "path": "docs/art/evidence/r7/se-landscape-flight-menu.png",
+      "width": 568,
+      "height": 320,
+      "sha256": "227441f25fb4fc6b8d4daba3e25fd98482f6c6c6f19f87bcd6af50325d471160",
+      "native": false,
+      "kind": "unmodified_headless_chromium_runtime"
+    },
+    {
+      "path": "docs/art/evidence/r7/se-landscape-flight-more.png",
+      "width": 568,
+      "height": 320,
+      "sha256": "09ce312d7a9ac76f13f529e4a0185d5e485df0ed20fe0952946f1853a0c5f537",
+      "native": false,
+      "kind": "unmodified_headless_chromium_runtime"
+    },
+    {
+      "path": "docs/art/evidence/r7/se-landscape-03-flight-playing.png",
+      "width": 568,
+      "height": 320,
+      "sha256": "e7df84109be0c28a16256ae536f0f8f6f69ab168f06debc8236d916ba07c1bc3",
+      "native": false,
+      "kind": "unmodified_headless_chromium_runtime"
+    },
+    {
+      "path": "docs/art/evidence/r7/phone-01-home.png",
+      "width": 390,
+      "height": 844,
+      "sha256": "db3f0699f8d6ca12766a7f1211dce44880e6b8cc9d115dcbe872193ad5f006c8",
+      "native": false,
+      "kind": "unmodified_headless_chromium_runtime"
+    },
+    {
+      "path": "docs/art/evidence/r7/phone-boarding-mid.png",
+      "width": 390,
+      "height": 844,
+      "sha256": "d2eb913435b3090c2c3be726c95e6d2f4dc2e8ebf83aaa8b4368d66e5d346de6",
+      "native": false,
+      "kind": "unmodified_headless_chromium_runtime"
+    },
+    {
+      "path": "docs/art/evidence/r7/phone-04-load.png",
+      "width": 390,
+      "height": 844,
+      "sha256": "207ee5825e4833a1c2a02b4bba2a29e6a072a8504f4883d93d8b29e8b1920685",
+      "native": false,
+      "kind": "unmodified_headless_chromium_runtime"
+    },
+    {
+      "path": "docs/art/evidence/r7/phone-split-mid.png",
+      "width": 390,
+      "height": 844,
+      "sha256": "1ea78d055e1d118a3ff70d666273b25ef917bfea105febd66771bdcbcaad2bfd",
+      "native": false,
+      "kind": "unmodified_headless_chromium_runtime"
+    },
+    {
+      "path": "docs/art/evidence/r7/phone-05-split.png",
+      "width": 390,
+      "height": 844,
+      "sha256": "997448ab5b7008e77c1f53e16b9a211972b49703b51befd6f7c06c90f4b09c76",
+      "native": false,
+      "kind": "unmodified_headless_chromium_runtime"
+    },
+    {
+      "path": "docs/art/evidence/r7/phone-subtract.png",
+      "width": 390,
+      "height": 844,
+      "sha256": "9339ab1b1dab46a86da36b91902693cf00f1dc42bcafc2d2f82a1c02f5b698ef",
+      "native": false,
+      "kind": "unmodified_headless_chromium_runtime"
+    },
+    {
+      "path": "docs/art/evidence/r7/phone-06-celebration.png",
+      "width": 390,
+      "height": 844,
+      "sha256": "42fefc3f0c62d9ec6fcbe1e24aca057b4b6bebb6c9806862ffddd6d4ad62b8fa",
+      "native": false,
+      "kind": "unmodified_headless_chromium_runtime"
+    },
+    {
+      "path": "docs/art/evidence/r7/phone-car-menu.png",
+      "width": 390,
+      "height": 844,
+      "sha256": "71232a2b1b866b15fefce359743b042772b09ed304089c7a70421f2715b6618c",
+      "native": false,
+      "kind": "unmodified_headless_chromium_runtime"
+    },
+    {
+      "path": "docs/art/evidence/r7/phone-02-car-driving.png",
+      "width": 390,
+      "height": 844,
+      "sha256": "16daf543f7eb49248cc70ddcba1dae6e6a74828aca69809fbeb50b899124ea91",
+      "native": false,
+      "kind": "unmodified_headless_chromium_runtime",
+      "captureSource": "check-car-framing-r7.mjs after final portrait camera correction"
+    },
+    {
+      "path": "docs/art/evidence/r7/phone-flight-menu.png",
+      "width": 390,
+      "height": 844,
+      "sha256": "a199ac2705cce2a7884f59f460169afa670db0642171b868934cfd244729418b",
+      "native": false,
+      "kind": "unmodified_headless_chromium_runtime"
+    },
+    {
+      "path": "docs/art/evidence/r7/phone-flight-more.png",
+      "width": 390,
+      "height": 844,
+      "sha256": "c4bc569c42ebb80a74ba048ee217dabc4a5d3408a2d23dacfeab5fe768cce6af",
+      "native": false,
+      "kind": "unmodified_headless_chromium_runtime"
+    },
+    {
+      "path": "docs/art/evidence/r7/phone-03-flight-playing.png",
+      "width": 390,
+      "height": 844,
+      "sha256": "b231d7b10c6946e7887f801171e574deefd8adfa3bd85ad65e5a5ffc73ad99ac",
+      "native": false,
+      "kind": "unmodified_headless_chromium_runtime"
+    },
+    {
+      "path": "docs/art/evidence/r7/phone-landscape-01-home.png",
+      "width": 844,
+      "height": 390,
+      "sha256": "8ae2c1a1f8eeb1946589f96792ec0fac727902c9c085a573dc36537cb953dee7",
+      "native": false,
+      "kind": "unmodified_headless_chromium_runtime"
+    },
+    {
+      "path": "docs/art/evidence/r7/phone-landscape-04-load.png",
+      "width": 844,
+      "height": 390,
+      "sha256": "179ce91ca168f2f673ec6d3883ae09ed7e4fac6a98e6b09d2922c6e70ac9509c",
+      "native": false,
+      "kind": "unmodified_headless_chromium_runtime"
+    },
+    {
+      "path": "docs/art/evidence/r7/phone-landscape-05-split.png",
+      "width": 844,
+      "height": 390,
+      "sha256": "14af032b7add8aff3c9da3571c1b675c3c91a2771b4811c155f14daca4e7f2fb",
+      "native": false,
+      "kind": "unmodified_headless_chromium_runtime"
+    },
+    {
+      "path": "docs/art/evidence/r7/phone-landscape-subtract.png",
+      "width": 844,
+      "height": 390,
+      "sha256": "3286214e0bc6fcc28c5d8f69b183bb37e87e60187d7e82ddb20255d16a3f4081",
+      "native": false,
+      "kind": "unmodified_headless_chromium_runtime"
+    },
+    {
+      "path": "docs/art/evidence/r7/phone-landscape-06-celebration.png",
+      "width": 844,
+      "height": 390,
+      "sha256": "83371eb43331e68f7aefb70d362a7523bd4ac094a934bec590b1658fe854c242",
+      "native": false,
+      "kind": "unmodified_headless_chromium_runtime"
+    },
+    {
+      "path": "docs/art/evidence/r7/phone-landscape-car-menu.png",
+      "width": 844,
+      "height": 390,
+      "sha256": "486045c1e51d85254b27c5e14dca66c6d8c48378648c29a0663f59df1437bd7a",
+      "native": false,
+      "kind": "unmodified_headless_chromium_runtime"
+    },
+    {
+      "path": "docs/art/evidence/r7/phone-landscape-02-car-driving.png",
+      "width": 844,
+      "height": 390,
+      "sha256": "119f87eb4249fe3f023ac7f9049d0f120d200d033c668cf874e323c52a36de62",
+      "native": false,
+      "kind": "unmodified_headless_chromium_runtime",
+      "captureSource": "check-car-framing-r7.mjs after final portrait camera correction"
+    },
+    {
+      "path": "docs/art/evidence/r7/phone-landscape-flight-menu.png",
+      "width": 844,
+      "height": 390,
+      "sha256": "8aac91b488d43e9181f2ea7624cf3ce267233abe480517b1d10f1a067c66d848",
+      "native": false,
+      "kind": "unmodified_headless_chromium_runtime"
+    },
+    {
+      "path": "docs/art/evidence/r7/phone-landscape-flight-more.png",
+      "width": 844,
+      "height": 390,
+      "sha256": "2f4c8cbfae95dbd9186a70feabea54a1b13e418fa96b8514a97420d4020a9caa",
+      "native": false,
+      "kind": "unmodified_headless_chromium_runtime"
+    },
+    {
+      "path": "docs/art/evidence/r7/phone-landscape-03-flight-playing.png",
+      "width": 844,
+      "height": 390,
+      "sha256": "15d1a2aa70e1c206491e1919ae25a4d9b061f25fa7c84a89044f9f7924c83452",
+      "native": false,
+      "kind": "unmodified_headless_chromium_runtime"
+    },
+    {
+      "path": "docs/art/evidence/r7/laptop-01-home.png",
+      "width": 1366,
+      "height": 600,
+      "sha256": "eaf659dafa4055c9279fd031294147ce208ed5ecdd4009113bc25eda610151b7",
+      "native": false,
+      "kind": "unmodified_headless_chromium_runtime"
+    },
+    {
+      "path": "docs/art/evidence/r7/laptop-04-load.png",
+      "width": 1366,
+      "height": 600,
+      "sha256": "ac7f0cc286ab5de7d1e0b7d6d9415b5373d2e745670a4820d428ece0aa7f9b63",
+      "native": false,
+      "kind": "unmodified_headless_chromium_runtime"
+    },
+    {
+      "path": "docs/art/evidence/r7/laptop-05-split.png",
+      "width": 1366,
+      "height": 600,
+      "sha256": "101f77d8a4fb1a0ae3105434788e40b108feec1d8a6ccee81bc03e3ee91b2dac",
+      "native": false,
+      "kind": "unmodified_headless_chromium_runtime"
+    },
+    {
+      "path": "docs/art/evidence/r7/laptop-subtract.png",
+      "width": 1366,
+      "height": 600,
+      "sha256": "e186c392859b198fcd9faf82caf98cd97242166691202c972ec1f41b7251a17f",
+      "native": false,
+      "kind": "unmodified_headless_chromium_runtime"
+    },
+    {
+      "path": "docs/art/evidence/r7/laptop-06-celebration.png",
+      "width": 1366,
+      "height": 600,
+      "sha256": "aea12ee5d091bd3f0ff22dabd9b99ed9d7b6724ea6bc44180b5d8fc9805b3561",
+      "native": false,
+      "kind": "unmodified_headless_chromium_runtime"
+    },
+    {
+      "path": "docs/art/evidence/r7/laptop-car-menu.png",
+      "width": 1366,
+      "height": 600,
+      "sha256": "d3b6f34c27d715d05951afc9015189a1af4fdef0626af0bc268ab1ddd799dc08",
+      "native": false,
+      "kind": "unmodified_headless_chromium_runtime"
+    },
+    {
+      "path": "docs/art/evidence/r7/laptop-02-car-driving.png",
+      "width": 1366,
+      "height": 600,
+      "sha256": "d2cf83667a50b872e6480bb802e5f4dfcc9fcf9ee1bb95ec8c9cbd6ccb3ca17c",
+      "native": false,
+      "kind": "unmodified_headless_chromium_runtime",
+      "captureSource": "check-car-framing-r7.mjs after final portrait camera correction"
+    },
+    {
+      "path": "docs/art/evidence/r7/laptop-flight-menu.png",
+      "width": 1366,
+      "height": 600,
+      "sha256": "645af7b677eed67d528ca1226110b25697d09b63b5affd42b316d5c996de1127",
+      "native": false,
+      "kind": "unmodified_headless_chromium_runtime"
+    },
+    {
+      "path": "docs/art/evidence/r7/laptop-flight-more.png",
+      "width": 1366,
+      "height": 600,
+      "sha256": "5f4123ceddf804308ba96b5c14240f221587cd247edba7221ba4c96ba8d9cc1d",
+      "native": false,
+      "kind": "unmodified_headless_chromium_runtime"
+    },
+    {
+      "path": "docs/art/evidence/r7/laptop-03-flight-playing.png",
+      "width": 1366,
+      "height": 600,
+      "sha256": "fbb295b6f5aeaacfb951672aadfb9c9768ce134870bbab9990099f2087c07196",
+      "native": false,
+      "kind": "unmodified_headless_chromium_runtime"
+    },
+    {
+      "path": "docs/art/evidence/r7/short-laptop-01-home.png",
+      "width": 1280,
+      "height": 640,
+      "sha256": "891ef9a6af438de84e277c2dfdc3d67b2729c43d60f3b7b3f5b278396658a845",
+      "native": false,
+      "kind": "unmodified_headless_chromium_runtime"
+    },
+    {
+      "path": "docs/art/evidence/r7/short-laptop-04-load.png",
+      "width": 1280,
+      "height": 640,
+      "sha256": "af5ce2604c1ef5a45cbb6c4b396b58410fa2694a2bb47ab8c7b776929d60cf4f",
+      "native": false,
+      "kind": "unmodified_headless_chromium_runtime"
+    },
+    {
+      "path": "docs/art/evidence/r7/short-laptop-05-split.png",
+      "width": 1280,
+      "height": 640,
+      "sha256": "e52b9472fcc88a9f1bfa8e6b36ff79fdb0d8c15c13768a617f77f6b0c6d2cd14",
+      "native": false,
+      "kind": "unmodified_headless_chromium_runtime"
+    },
+    {
+      "path": "docs/art/evidence/r7/short-laptop-subtract.png",
+      "width": 1280,
+      "height": 640,
+      "sha256": "d679492043252493649c4956f44d336f0c2de31ef154b5d8703702a280bd1b9e",
+      "native": false,
+      "kind": "unmodified_headless_chromium_runtime"
+    },
+    {
+      "path": "docs/art/evidence/r7/short-laptop-06-celebration.png",
+      "width": 1280,
+      "height": 640,
+      "sha256": "146f75c7e8ca9462578351d695d812e4cf44c6864e53ae67ae89de559fcc0f7c",
+      "native": false,
+      "kind": "unmodified_headless_chromium_runtime"
+    },
+    {
+      "path": "docs/art/evidence/r7/short-laptop-car-menu.png",
+      "width": 1280,
+      "height": 640,
+      "sha256": "6fcbad52ac563475b6b70086313bd1a19cf1df5e9f483db617b2be662e93a610",
+      "native": false,
+      "kind": "unmodified_headless_chromium_runtime"
+    },
+    {
+      "path": "docs/art/evidence/r7/short-laptop-02-car-driving.png",
+      "width": 1280,
+      "height": 640,
+      "sha256": "b454dbb9f0e270805213a149cf4edb03522e69506b532c02deb0b4540f476a0f",
+      "native": false,
+      "kind": "unmodified_headless_chromium_runtime",
+      "captureSource": "check-car-framing-r7.mjs after final portrait camera correction"
+    },
+    {
+      "path": "docs/art/evidence/r7/short-laptop-flight-menu.png",
+      "width": 1280,
+      "height": 640,
+      "sha256": "ad11e0d8d637b77a456fec454f10848353ce03adaef31a9158f8317148f95e36",
+      "native": false,
+      "kind": "unmodified_headless_chromium_runtime"
+    },
+    {
+      "path": "docs/art/evidence/r7/short-laptop-flight-more.png",
+      "width": 1280,
+      "height": 640,
+      "sha256": "0674a1278a14aba10c78f864bc3ef15aab979dd50494441bb84927217e828b23",
+      "native": false,
+      "kind": "unmodified_headless_chromium_runtime"
+    },
+    {
+      "path": "docs/art/evidence/r7/short-laptop-03-flight-playing.png",
+      "width": 1280,
+      "height": 640,
+      "sha256": "e4f9930db5931e11b0042fa4e8f9a0cfd2168ea3de1fba7eb693ac197b9d7863",
+      "native": false,
+      "kind": "unmodified_headless_chromium_runtime"
+    },
+    {
+      "path": "docs/art/evidence/r7/ipad-01-home.png",
+      "width": 768,
+      "height": 1024,
+      "sha256": "c5f27ec6a963a2d9892d5925a966a349cd8b57dd2d3996f90e15e510226af703",
+      "native": false,
+      "kind": "unmodified_headless_chromium_runtime"
+    },
+    {
+      "path": "docs/art/evidence/r7/ipad-04-load.png",
+      "width": 768,
+      "height": 1024,
+      "sha256": "1afc788a0a7a49c7e9b8383a9faf11d42f54ca89e4f103ac0ba8b2533b225291",
+      "native": false,
+      "kind": "unmodified_headless_chromium_runtime"
+    },
+    {
+      "path": "docs/art/evidence/r7/ipad-05-split.png",
+      "width": 768,
+      "height": 1024,
+      "sha256": "c06bec74e8faa0dfc9d6af6e06914152e8979efa0311af0e63910a68f2ed9664",
+      "native": false,
+      "kind": "unmodified_headless_chromium_runtime"
+    },
+    {
+      "path": "docs/art/evidence/r7/ipad-subtract.png",
+      "width": 768,
+      "height": 1024,
+      "sha256": "c3c1136b5cd204673756eb3da328965b46a0fe576c59e05e7efc1f970aded37c",
+      "native": false,
+      "kind": "unmodified_headless_chromium_runtime"
+    },
+    {
+      "path": "docs/art/evidence/r7/ipad-06-celebration.png",
+      "width": 768,
+      "height": 1024,
+      "sha256": "29651d7e8a6f3b6de62fceba715890f414b10d5ef1a39b33c040a6887a15923e",
+      "native": false,
+      "kind": "unmodified_headless_chromium_runtime"
+    },
+    {
+      "path": "docs/art/evidence/r7/ipad-car-menu.png",
+      "width": 768,
+      "height": 1024,
+      "sha256": "60179259ea88b8b246400d0693da436d91ba36e26ac4e544608760f6c2f20761",
+      "native": false,
+      "kind": "unmodified_headless_chromium_runtime"
+    },
+    {
+      "path": "docs/art/evidence/r7/ipad-02-car-driving.png",
+      "width": 768,
+      "height": 1024,
+      "sha256": "71a76392a536aa3f580be4e6ba9229da4b60d8f9896994c9a7c51265c4d4f0ae",
+      "native": false,
+      "kind": "unmodified_headless_chromium_runtime",
+      "captureSource": "check-car-framing-r7.mjs after final portrait camera correction"
+    },
+    {
+      "path": "docs/art/evidence/r7/ipad-flight-menu.png",
+      "width": 768,
+      "height": 1024,
+      "sha256": "fa12543f834352b2962bed40715b248dc60aa2d9064b178526716f82fd87d63c",
+      "native": false,
+      "kind": "unmodified_headless_chromium_runtime"
+    },
+    {
+      "path": "docs/art/evidence/r7/ipad-flight-more.png",
+      "width": 768,
+      "height": 1024,
+      "sha256": "bf2885715f40977f3a5f8d8f05d6e3541b3e2f41e3b73080829a76f59da67edb",
+      "native": false,
+      "kind": "unmodified_headless_chromium_runtime"
+    },
+    {
+      "path": "docs/art/evidence/r7/ipad-03-flight-playing.png",
+      "width": 768,
+      "height": 1024,
+      "sha256": "2a94d3a743cc3487297f8352935afaafc4d8118b60c52433cebcd7e096469a75",
+      "native": false,
+      "kind": "unmodified_headless_chromium_runtime"
+    },
+    {
+      "path": "docs/art/evidence/r7/ipad-landscape-01-home.png",
+      "width": 1024,
+      "height": 768,
+      "sha256": "4ba0215dc09ad766e5f505aef489cab5cf5ecb6b75706b3a55e7c2095ea1598a",
+      "native": false,
+      "kind": "unmodified_headless_chromium_runtime"
+    },
+    {
+      "path": "docs/art/evidence/r7/ipad-landscape-04-load.png",
+      "width": 1024,
+      "height": 768,
+      "sha256": "7b491f7df75bacfbffd03afbccfd0cabdb7f89a068cad4a358d66641faf3b1f1",
+      "native": false,
+      "kind": "unmodified_headless_chromium_runtime"
+    },
+    {
+      "path": "docs/art/evidence/r7/ipad-landscape-05-split.png",
+      "width": 1024,
+      "height": 768,
+      "sha256": "45b048723ac20be87890901925a7f14b13947c0f23e9fe64a862fdea53b095b9",
+      "native": false,
+      "kind": "unmodified_headless_chromium_runtime"
+    },
+    {
+      "path": "docs/art/evidence/r7/ipad-landscape-subtract.png",
+      "width": 1024,
+      "height": 768,
+      "sha256": "55e1d123c839f8ddd31d65e8d6aa0d6349927e7c7e703e8c477a32e4362f3d7d",
+      "native": false,
+      "kind": "unmodified_headless_chromium_runtime"
+    },
+    {
+      "path": "docs/art/evidence/r7/ipad-landscape-06-celebration.png",
+      "width": 1024,
+      "height": 768,
+      "sha256": "e3e98f41463aafd04bb87a62a24f27085daf5f18c6b54d47a15450364b740f61",
+      "native": false,
+      "kind": "unmodified_headless_chromium_runtime"
+    },
+    {
+      "path": "docs/art/evidence/r7/ipad-landscape-car-menu.png",
+      "width": 1024,
+      "height": 768,
+      "sha256": "bb9e9215b9703cbb4024e34d1beed0f7161b4051e308bc195f29cb35d40570e1",
+      "native": false,
+      "kind": "unmodified_headless_chromium_runtime"
+    },
+    {
+      "path": "docs/art/evidence/r7/ipad-landscape-02-car-driving.png",
+      "width": 1024,
+      "height": 768,
+      "sha256": "e9ac2733c95cad189165c8c47707f26b8685f25aeef29a7e998bfe909ce8cee4",
+      "native": false,
+      "kind": "unmodified_headless_chromium_runtime",
+      "captureSource": "check-car-framing-r7.mjs after final portrait camera correction"
+    },
+    {
+      "path": "docs/art/evidence/r7/ipad-landscape-flight-menu.png",
+      "width": 1024,
+      "height": 768,
+      "sha256": "b0d0d516da0120318a30de1f8ab6b2fb7f64cf0726524524a8eaf0ba2ed8807b",
+      "native": false,
+      "kind": "unmodified_headless_chromium_runtime"
+    },
+    {
+      "path": "docs/art/evidence/r7/ipad-landscape-flight-more.png",
+      "width": 1024,
+      "height": 768,
+      "sha256": "8bbaa00dd7182b67fa72b5fc9e03a1b216bbbafad08b2d64122f1af970ad0c99",
+      "native": false,
+      "kind": "unmodified_headless_chromium_runtime"
+    },
+    {
+      "path": "docs/art/evidence/r7/ipad-landscape-03-flight-playing.png",
+      "width": 1024,
+      "height": 768,
+      "sha256": "989fb063b476e8df533634179ce32264babcd76473c07c753eca258c46d0bf31",
+      "native": false,
+      "kind": "unmodified_headless_chromium_runtime"
+    },
+    {
+      "path": "docs/art/evidence/r7/ipad13-landscape-01-home.png",
+      "width": 1376,
+      "height": 1032,
+      "sha256": "147acc11e702db292a97237d78e46d4ff1deb450d92709c77a97dd08d3f5d8df",
+      "native": false,
+      "kind": "unmodified_headless_chromium_runtime"
+    },
+    {
+      "path": "docs/art/evidence/r7/ipad13-landscape-04-load.png",
+      "width": 1376,
+      "height": 1032,
+      "sha256": "439ef605f9c3abf7f05b36877f8fd76cbcdde9fff81bc1636797cccefb595d5b",
+      "native": false,
+      "kind": "unmodified_headless_chromium_runtime"
+    },
+    {
+      "path": "docs/art/evidence/r7/ipad13-landscape-05-split.png",
+      "width": 1376,
+      "height": 1032,
+      "sha256": "b43c02227b882b514e9cd8ed710d0179fc9013fa65b29cbce766479688c892da",
+      "native": false,
+      "kind": "unmodified_headless_chromium_runtime"
+    },
+    {
+      "path": "docs/art/evidence/r7/ipad13-landscape-subtract.png",
+      "width": 1376,
+      "height": 1032,
+      "sha256": "47e6e304d23fd0fb93e954a0f52f5e89e6ec291864d03c373348fa5eb8c3d787",
+      "native": false,
+      "kind": "unmodified_headless_chromium_runtime"
+    },
+    {
+      "path": "docs/art/evidence/r7/ipad13-landscape-06-celebration.png",
+      "width": 1376,
+      "height": 1032,
+      "sha256": "ceaf3d2472737818d27e6598e273ffdba1f2bcdf18a7b528949d6e31b585e5fe",
+      "native": false,
+      "kind": "unmodified_headless_chromium_runtime"
+    },
+    {
+      "path": "docs/art/evidence/r7/ipad13-landscape-car-menu.png",
+      "width": 1376,
+      "height": 1032,
+      "sha256": "8ec41676773ab2c8f2ae389ad7146ddded554f8bc56b4e80a4b9948824574ee2",
+      "native": false,
+      "kind": "unmodified_headless_chromium_runtime"
+    },
+    {
+      "path": "docs/art/evidence/r7/ipad13-landscape-02-car-driving.png",
+      "width": 1376,
+      "height": 1032,
+      "sha256": "92971c680f5b193fd9efe660c02f9b894619d3e68b9136f04108e3ebee27a267",
+      "native": false,
+      "kind": "unmodified_headless_chromium_runtime",
+      "captureSource": "check-car-framing-r7.mjs after final portrait camera correction"
+    },
+    {
+      "path": "docs/art/evidence/r7/ipad13-landscape-flight-menu.png",
+      "width": 1376,
+      "height": 1032,
+      "sha256": "a58e3525970a85441f32915f25a5db2e314fba4b383288b3ea177441390181e7",
+      "native": false,
+      "kind": "unmodified_headless_chromium_runtime"
+    },
+    {
+      "path": "docs/art/evidence/r7/ipad13-landscape-flight-more.png",
+      "width": 1376,
+      "height": 1032,
+      "sha256": "4fad9085b3339cfe4ced301353d5f2e193df3cc59c42dae3b5175de7b02658bf",
+      "native": false,
+      "kind": "unmodified_headless_chromium_runtime"
+    },
+    {
+      "path": "docs/art/evidence/r7/ipad13-landscape-03-flight-playing.png",
+      "width": 1376,
+      "height": 1032,
+      "sha256": "5ade34a2471d4b823db96b38344e21d70aff9d53795f4a44a4ec7049b7e5e8a1",
+      "native": false,
+      "kind": "unmodified_headless_chromium_runtime"
+    },
+    {
+      "path": "docs/art/evidence/r7/desktop-01-home.png",
+      "width": 1920,
+      "height": 1080,
+      "sha256": "31a55a8f981912b21810842a92865c1fc21a0f338a22ba9ac576814a3f566148",
+      "native": false,
+      "kind": "unmodified_headless_chromium_runtime"
+    },
+    {
+      "path": "docs/art/evidence/r7/desktop-04-load.png",
+      "width": 1920,
+      "height": 1080,
+      "sha256": "614fadd868c306d8fa074a7971d90170c8973cfea2c021375c87579c6f43f9ad",
+      "native": false,
+      "kind": "unmodified_headless_chromium_runtime"
+    },
+    {
+      "path": "docs/art/evidence/r7/desktop-05-split.png",
+      "width": 1920,
+      "height": 1080,
+      "sha256": "b81373a002d1eebd3a7fefc26dfca3ddac71d06cdb967538fbfa26ddae876378",
+      "native": false,
+      "kind": "unmodified_headless_chromium_runtime"
+    },
+    {
+      "path": "docs/art/evidence/r7/desktop-subtract.png",
+      "width": 1920,
+      "height": 1080,
+      "sha256": "3f53d699aa237a13baab0582a91378617ef64d765b6d4502d267ea6480c7aa2d",
+      "native": false,
+      "kind": "unmodified_headless_chromium_runtime"
+    },
+    {
+      "path": "docs/art/evidence/r7/desktop-06-celebration.png",
+      "width": 1920,
+      "height": 1080,
+      "sha256": "c981f0153029e0b159e1e7421048c7bf7ee7def105202ca1218212731dfe5d04",
+      "native": false,
+      "kind": "unmodified_headless_chromium_runtime"
+    },
+    {
+      "path": "docs/art/evidence/r7/desktop-car-menu.png",
+      "width": 1920,
+      "height": 1080,
+      "sha256": "fa1ee7466634e8dc2bd66a4cfe51f80cf697a6039fb600cd0a49ae46213822a5",
+      "native": false,
+      "kind": "unmodified_headless_chromium_runtime"
+    },
+    {
+      "path": "docs/art/evidence/r7/desktop-02-car-driving.png",
+      "width": 1920,
+      "height": 1080,
+      "sha256": "201417acfe97bb80326c932a7d7382d811f7eff027f692b389da658795ab5abb",
+      "native": false,
+      "kind": "unmodified_headless_chromium_runtime",
+      "captureSource": "check-car-framing-r7.mjs after final portrait camera correction"
+    },
+    {
+      "path": "docs/art/evidence/r7/desktop-flight-menu.png",
+      "width": 1920,
+      "height": 1080,
+      "sha256": "2b1efa8cd0e1747c80a67fe09a7e4122d11e2937c1dbedc655ef045c5c66c784",
+      "native": false,
+      "kind": "unmodified_headless_chromium_runtime"
+    },
+    {
+      "path": "docs/art/evidence/r7/desktop-flight-more.png",
+      "width": 1920,
+      "height": 1080,
+      "sha256": "da0042b1531a7f8c76b4fd5e1a1c107fe8e5ff7955dfa75a01991edbf7091bbf",
+      "native": false,
+      "kind": "unmodified_headless_chromium_runtime"
+    },
+    {
+      "path": "docs/art/evidence/r7/desktop-03-flight-playing.png",
+      "width": 1920,
+      "height": 1080,
+      "sha256": "600ebe812bd7242f3850c81719f0f58432c2a2c84edfe216af9909da67b3fbbb",
+      "native": false,
+      "kind": "unmodified_headless_chromium_runtime"
+    },
+    {
+      "path": "docs/store/screenshots/art-r7/iphone-store-01-home.png",
+      "width": 1290,
+      "height": 2796,
+      "sha256": "f6efb32a71b62eb42e2148697dd41459967b75afa01c9a837809995284f43d79",
+      "native": false,
+      "kind": "unmodified_headless_chromium_runtime"
+    },
+    {
+      "path": "docs/store/screenshots/art-r7/iphone-store-04-load.png",
+      "width": 1290,
+      "height": 2796,
+      "sha256": "5542be1fd1ad3f497b71db29d0cb30b57410f2bc3e6093a237b58e805b99300e",
+      "native": false,
+      "kind": "unmodified_headless_chromium_runtime"
+    },
+    {
+      "path": "docs/store/screenshots/art-r7/iphone-store-05-split.png",
+      "width": 1290,
+      "height": 2796,
+      "sha256": "16cbefb124baa020cc695ce605418440d9faedc1e705270ff41d2cceed369561",
+      "native": false,
+      "kind": "unmodified_headless_chromium_runtime"
+    },
+    {
+      "path": "docs/art/evidence/r7/iphone-store-subtract.png",
+      "width": 1290,
+      "height": 2796,
+      "sha256": "0b50fe52246bc39e8a8959d5e18c3544abff191f0efb9266549bbc5846c43477",
+      "native": false,
+      "kind": "unmodified_headless_chromium_runtime"
+    },
+    {
+      "path": "docs/store/screenshots/art-r7/iphone-store-06-celebration.png",
+      "width": 1290,
+      "height": 2796,
+      "sha256": "6249232182aa4c471dfa62bd595b188f0519fb5b7013a549aca5555b2120fc79",
+      "native": false,
+      "kind": "unmodified_headless_chromium_runtime"
+    },
+    {
+      "path": "docs/art/evidence/r7/iphone-store-car-menu.png",
+      "width": 1290,
+      "height": 2796,
+      "sha256": "b7e65f7d33c864a4154eaabf37074dc0b53b9175c9c4474a5afa1c37e62fdad9",
+      "native": false,
+      "kind": "unmodified_headless_chromium_runtime"
+    },
+    {
+      "path": "docs/store/screenshots/art-r7/iphone-store-02-car-driving.png",
+      "width": 1290,
+      "height": 2796,
+      "sha256": "24ad6afb560da6acdf2751fbf7f1469a61859f4e74028d911d5c59584ec812bb",
+      "native": false,
+      "kind": "unmodified_headless_chromium_runtime",
+      "captureSource": "check-car-framing-r7.mjs after final portrait camera correction"
+    },
+    {
+      "path": "docs/art/evidence/r7/iphone-store-flight-menu.png",
+      "width": 1290,
+      "height": 2796,
+      "sha256": "443c330ba280e6bc8ee2060da6cb3c05ac08d864d6f94a1efb7986f747cac240",
+      "native": false,
+      "kind": "unmodified_headless_chromium_runtime"
+    },
+    {
+      "path": "docs/art/evidence/r7/iphone-store-flight-more.png",
+      "width": 1290,
+      "height": 2796,
+      "sha256": "657c0cd577b4f4e2c71f93a68dbddfa4e1620ce0704fa843e8939a3dbe4aec63",
+      "native": false,
+      "kind": "unmodified_headless_chromium_runtime"
+    },
+    {
+      "path": "docs/store/screenshots/art-r7/iphone-store-03-flight-playing.png",
+      "width": 1290,
+      "height": 2796,
+      "sha256": "73f3e9bee0639029c55e2ba179add215378314e4b766c0fd2bbf7fcbb6db4daa",
+      "native": false,
+      "kind": "unmodified_headless_chromium_runtime"
+    },
+    {
+      "path": "docs/store/screenshots/art-r7/ipad-store-01-home.png",
+      "width": 2064,
+      "height": 2752,
+      "sha256": "dd65b6989fc944479fac4ea3d6703980e007fd6c4dfcb9d04ec714424f1f8d14",
+      "native": false,
+      "kind": "unmodified_headless_chromium_runtime"
+    },
+    {
+      "path": "docs/store/screenshots/art-r7/ipad-store-04-load.png",
+      "width": 2064,
+      "height": 2752,
+      "sha256": "b81d6fdac5fdbba9d882f10e4d2abc6674a6e1e3b47815878d117413997d5af1",
+      "native": false,
+      "kind": "unmodified_headless_chromium_runtime"
+    },
+    {
+      "path": "docs/store/screenshots/art-r7/ipad-store-05-split.png",
+      "width": 2064,
+      "height": 2752,
+      "sha256": "3be70bf6f9e199380e3de920fe6160dbe452eb9e9033d13fbf0834604c42cf4d",
+      "native": false,
+      "kind": "unmodified_headless_chromium_runtime"
+    },
+    {
+      "path": "docs/art/evidence/r7/ipad-store-subtract.png",
+      "width": 2064,
+      "height": 2752,
+      "sha256": "dc9624ea1826a2958c6a8cba5fa85b1fc83b59741af60ee9729d3385825322ca",
+      "native": false,
+      "kind": "unmodified_headless_chromium_runtime"
+    },
+    {
+      "path": "docs/store/screenshots/art-r7/ipad-store-06-celebration.png",
+      "width": 2064,
+      "height": 2752,
+      "sha256": "98539b7cd361a6942b63154ef12da917c1cb358ab2df37cf86b989b604f4c5b7",
+      "native": false,
+      "kind": "unmodified_headless_chromium_runtime"
+    },
+    {
+      "path": "docs/art/evidence/r7/ipad-store-car-menu.png",
+      "width": 2064,
+      "height": 2752,
+      "sha256": "999a2f8a01d109f5edb3386cfbce654ef5ff624a022e06259fcb0f6e645651ce",
+      "native": false,
+      "kind": "unmodified_headless_chromium_runtime"
+    },
+    {
+      "path": "docs/store/screenshots/art-r7/ipad-store-02-car-driving.png",
+      "width": 2064,
+      "height": 2752,
+      "sha256": "c93e6c0a20e3044abe071ba51b42fa405d5e408a39e7351e12e729c919f7bffd",
+      "native": false,
+      "kind": "unmodified_headless_chromium_runtime",
+      "captureSource": "check-car-framing-r7.mjs after final portrait camera correction"
+    },
+    {
+      "path": "docs/art/evidence/r7/ipad-store-flight-menu.png",
+      "width": 2064,
+      "height": 2752,
+      "sha256": "3f1056453cdf1c6c7aed61405484ecc67cc8bc758d212b91371d625487cd34c8",
+      "native": false,
+      "kind": "unmodified_headless_chromium_runtime"
+    },
+    {
+      "path": "docs/art/evidence/r7/ipad-store-flight-more.png",
+      "width": 2064,
+      "height": 2752,
+      "sha256": "ef13d56555fd16476511e853dc48e0cbd8301965f328965c07d42a4eb6dd4a36",
+      "native": false,
+      "kind": "unmodified_headless_chromium_runtime"
+    },
+    {
+      "path": "docs/store/screenshots/art-r7/ipad-store-03-flight-playing.png",
+      "width": 2064,
+      "height": 2752,
+      "sha256": "cdee5e8bac9905c3d184998ee9428d8cb8bb48bbef969d4c6de393e81b9355b9",
+      "native": false,
+      "kind": "unmodified_headless_chromium_runtime"
+    }
+  ],
+  "method": "Real UI actions and wall-clock waits; unchanged completion state; web captures, no native or human-study claim.",
+  "finalCarFraming": "car-framing-r7.json; final camera change affects car only; other 125 full-matrix checks unchanged"
+}

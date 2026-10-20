@@ -1,0 +1,349 @@
+{
+  "status": "VERIFIED",
+  "version": "2.5.0",
+  "baselineCommit": "2236302",
+  "branch": "r1-fun-polish",
+  "capture": "Playwright 1.63.0-alpha-2026-08-31, Chromium build 1243, headless, ANGLE D3D11",
+  "newGameArt": [],
+  "newGameAudio": [],
+  "gptImage2Used": false,
+  "images": [
+    {
+      "path": "docs/evidence/r2-mobile/after/390x844-car-complete.png",
+      "width": 390,
+      "height": 844,
+      "sha256": "314f9e05973ae02d96e5f072ef15d87536ce192059a0e923a181b858f71c04fd"
+    },
+    {
+      "path": "docs/evidence/r2-mobile/after/390x844-flight-complete.png",
+      "width": 390,
+      "height": 844,
+      "sha256": "465133c0f9a2c79fdab6017242e652f2a4d07c7d2c6ab27ff6acd3e426f154ba"
+    },
+    {
+      "path": "docs/evidence/r2-mobile/after/390x844-train-complete.png",
+      "width": 390,
+      "height": 844,
+      "sha256": "a69b30100651749bd965ecb3cefc235603e1deeb85174696b6f5019ca7d6fddd"
+    },
+    {
+      "path": "docs/evidence/r2-mobile/after/844x390-car-complete.png",
+      "width": 844,
+      "height": 390,
+      "sha256": "6944a9ac26b121cd19181fa0b7343c35459157dca90bcd4c221546025d5d2e4a"
+    },
+    {
+      "path": "docs/evidence/r2-mobile/after/844x390-flight-complete.png",
+      "width": 844,
+      "height": 390,
+      "sha256": "357bea3473fe563a0ca26bc05af1c557347ed298a47512a82c7cba065e7e19b2"
+    },
+    {
+      "path": "docs/evidence/r2-mobile/after/844x390-train-complete.png",
+      "width": 844,
+      "height": 390,
+      "sha256": "f414ff694ef97fb7f62f006492b1010424af9d6694925b5ba083e1ed32db3fdc"
+    },
+    {
+      "path": "docs/evidence/r2-mobile/after/landscape-car-passport.png",
+      "width": 844,
+      "height": 390,
+      "sha256": "866e7619157faeb411462bf1fc5daae9c55c9933b2a78a0577c96620636732e3"
+    },
+    {
+      "path": "docs/evidence/r2-mobile/after/landscape-car-play.png",
+      "width": 844,
+      "height": 390,
+      "sha256": "8fa61cce2ed38717c9398bb394c432cbe1d597756f053806d2729a447f8f1b03"
+    },
+    {
+      "path": "docs/evidence/r2-mobile/after/landscape-car.png",
+      "width": 844,
+      "height": 390,
+      "sha256": "6047e8c349d3558d43d70784db7e7c9d95ee185d47adfc69d52f54a290dd9ad0"
+    },
+    {
+      "path": "docs/evidence/r2-mobile/after/landscape-flight-passport.png",
+      "width": 844,
+      "height": 390,
+      "sha256": "60191d01f71c66ea52e50cf0eaf80d22148ce815e15a8960b9e9e6d483e45d26"
+    },
+    {
+      "path": "docs/evidence/r2-mobile/after/landscape-flight-play.png",
+      "width": 844,
+      "height": 390,
+      "sha256": "55c50a2d42c160ff84b390658fac88a08780d242fa552144ef7dfd9345e89d9e"
+    },
+    {
+      "path": "docs/evidence/r2-mobile/after/landscape-flight.png",
+      "width": 844,
+      "height": 390,
+      "sha256": "ee826243798c74a1cf2fd9569e7e65f9582c836f55665ffcf4bd44c801f7ffb4"
+    },
+    {
+      "path": "docs/evidence/r2-mobile/after/landscape-home-passport.png",
+      "width": 844,
+      "height": 390,
+      "sha256": "7bb3b3b594b1b15454490fc16385f15bfc1cd65ed5a25c0320b435dd8c73bc7a"
+    },
+    {
+      "path": "docs/evidence/r2-mobile/after/landscape-home.png",
+      "width": 844,
+      "height": 390,
+      "sha256": "0a91ca4213c3fbea9ad6ca8fabeb246dfb72716e97edd55b2e33ba304540220c"
+    },
+    {
+      "path": "docs/evidence/r2-mobile/after/landscape-train-passport.png",
+      "width": 844,
+      "height": 390,
+      "sha256": "4f1d550ccb49aeb5dcf543d7b201324dbadb9a224e6a9a36c75fc0dca80031ee"
+    },
+    {
+      "path": "docs/evidence/r2-mobile/after/landscape-train-play.png",
+      "width": 844,
+      "height": 390,
+      "sha256": "2b074dd16c23671168dfba0d6ffb20fbf2adea6acc36bccd18ff5934d2f5db45"
+    },
+    {
+      "path": "docs/evidence/r2-mobile/after/landscape-train.png",
+      "width": 844,
+      "height": 390,
+      "sha256": "9f72854e9ac702405e7fec038f04814f0f6de48ee119a77ef7e18f6a6798a874"
+    },
+    {
+      "path": "docs/evidence/r2-mobile/after/laptop-car-passport.png",
+      "width": 1366,
+      "height": 600,
+      "sha256": "82a1de1c67df18c96003501dc89fdc660a5bc271fb2f8ca84c2633e6030a115b"
+    },
+    {
+      "path": "docs/evidence/r2-mobile/after/laptop-car-play.png",
+      "width": 1366,
+      "height": 600,
+      "sha256": "7d390fc3a93931249ab8ebed0fe2c23618a7c579e89494c424fa00f4cba3eff8"
+    },
+    {
+      "path": "docs/evidence/r2-mobile/after/laptop-car.png",
+      "width": 1366,
+      "height": 600,
+      "sha256": "f0e5f37bed09365f8b546abe32e0c7903ca6d1d8d111d9f1ec717ae7805d68f3"
+    },
+    {
+      "path": "docs/evidence/r2-mobile/after/laptop-flight-passport.png",
+      "width": 1366,
+      "height": 600,
+      "sha256": "6b5938f4ce9eb31e4c57c7cb8fa7eb5c28ced0a3f7c05c87274496c812be4ff9"
+    },
+    {
+      "path": "docs/evidence/r2-mobile/after/laptop-flight-play.png",
+      "width": 1366,
+      "height": 600,
+      "sha256": "affc1fdad5ad37b98d0d303449d1f8e3b5eae53d6f5235cd496ab91deb09a248"
+    },
+    {
+      "path": "docs/evidence/r2-mobile/after/laptop-flight.png",
+      "width": 1366,
+      "height": 600,
+      "sha256": "4e854c87c7623b4fbc4d78ef11a98308bb62b9bd264f6597b350ff066f7f3c41"
+    },
+    {
+      "path": "docs/evidence/r2-mobile/after/laptop-home-passport.png",
+      "width": 1366,
+      "height": 600,
+      "sha256": "693932a1445b366f902d6843fa5471737b3c2a803a78e7e538494403ca40012c"
+    },
+    {
+      "path": "docs/evidence/r2-mobile/after/laptop-home.png",
+      "width": 1366,
+      "height": 600,
+      "sha256": "18d2d5a18d9a7804cf320dfb8ecb192db56ab7a9463ab231e5b91cad99bf2476"
+    },
+    {
+      "path": "docs/evidence/r2-mobile/after/laptop-train-passport.png",
+      "width": 1366,
+      "height": 600,
+      "sha256": "ea08ae17a043554d454dcc32066014ab4299552c7dc4da07f4473f7ee2e396b7"
+    },
+    {
+      "path": "docs/evidence/r2-mobile/after/laptop-train-play.png",
+      "width": 1366,
+      "height": 600,
+      "sha256": "69c0740fdddc56206e96693db81f888ef6908e01dfcbbbaace2b383cc3dab4fc"
+    },
+    {
+      "path": "docs/evidence/r2-mobile/after/laptop-train.png",
+      "width": 1366,
+      "height": 600,
+      "sha256": "68281ce55a6f8e8d49c01a9936d7f92bfb20c02a04fe60c8328218869418952f"
+    },
+    {
+      "path": "docs/evidence/r2-mobile/after/portrait-car-passport.png",
+      "width": 390,
+      "height": 844,
+      "sha256": "df866d3f17471ce8b3bcc431f3ca8c1f01b13ccbf690c7f4cc706adad10977c2"
+    },
+    {
+      "path": "docs/evidence/r2-mobile/after/portrait-car-play.png",
+      "width": 390,
+      "height": 844,
+      "sha256": "32d79ab6502d1bc111cd524e3fa9213d82211d13450c67048ace9eb7d35a71eb"
+    },
+    {
+      "path": "docs/evidence/r2-mobile/after/portrait-car.png",
+      "width": 390,
+      "height": 844,
+      "sha256": "0b301eb94e3d698f57d4755fe4577807846addd31eb8486db42e1d14ec36af31"
+    },
+    {
+      "path": "docs/evidence/r2-mobile/after/portrait-flight-passport.png",
+      "width": 390,
+      "height": 844,
+      "sha256": "e24dc3d10bd0d6ed9fc527dc5cd98a06667f5840508bc6b70baed32e03ffef5e"
+    },
+    {
+      "path": "docs/evidence/r2-mobile/after/portrait-flight-play.png",
+      "width": 390,
+      "height": 844,
+      "sha256": "483593c467287bfaeab3e5f3c61558ec907d91fac9b0ea5569463bf0145162d5"
+    },
+    {
+      "path": "docs/evidence/r2-mobile/after/portrait-flight.png",
+      "width": 390,
+      "height": 844,
+      "sha256": "ec31286e32ca3309a0024f17dbffb27d996d038d786f144cd763a9cb085b3a88"
+    },
+    {
+      "path": "docs/evidence/r2-mobile/after/portrait-home-passport.png",
+      "width": 390,
+      "height": 844,
+      "sha256": "6f8edc937ea8004652b44d252f112bf752314d9e41797b72b5ef016d1331a2c1"
+    },
+    {
+      "path": "docs/evidence/r2-mobile/after/portrait-home.png",
+      "width": 390,
+      "height": 844,
+      "sha256": "79f4d1166002e6c718de7bdfa7baacb46f2aca55da7bb5d767c051c8ffbce0c4"
+    },
+    {
+      "path": "docs/evidence/r2-mobile/after/portrait-train-passport.png",
+      "width": 390,
+      "height": 844,
+      "sha256": "0c78d9e6834fb6c8c8b520c4f5b8e8fb75395d158e4f8318c57d726ffe521827"
+    },
+    {
+      "path": "docs/evidence/r2-mobile/after/portrait-train-play.png",
+      "width": 390,
+      "height": 844,
+      "sha256": "1968986106c2b06c556357ef41562b9c7c80ab41fd5a10dec5b5832b097ee03b"
+    },
+    {
+      "path": "docs/evidence/r2-mobile/after/portrait-train.png",
+      "width": 390,
+      "height": 844,
+      "sha256": "19060f56004c800288e54a93606e5833cbae1ec66c0f62d8752198f6d240b63b"
+    },
+    {
+      "path": "docs/evidence/r2-mobile/before/landscape-car.png",
+      "width": 844,
+      "height": 390,
+      "sha256": "403641353923db679c1bc9c5b9d3709e9fe7f7c1133c396e65fc3039ca0066bd"
+    },
+    {
+      "path": "docs/evidence/r2-mobile/before/landscape-flight.png",
+      "width": 844,
+      "height": 390,
+      "sha256": "37bc325eb72f06a43873b6ac5d204c596226fb30622d26ce1345812b26511a54"
+    },
+    {
+      "path": "docs/evidence/r2-mobile/before/landscape-home.png",
+      "width": 844,
+      "height": 390,
+      "sha256": "8cdbde4910c8ab33acf2455a441e50a5a2abbc598d43236bbfa29d041a19f6e1"
+    },
+    {
+      "path": "docs/evidence/r2-mobile/before/landscape-train.png",
+      "width": 844,
+      "height": 390,
+      "sha256": "c463286b7b8136ed67f7c05a06404f083049611da1efde9ce8895ef87e4b1f3e"
+    },
+    {
+      "path": "docs/evidence/r2-mobile/before/laptop-car.png",
+      "width": 1366,
+      "height": 600,
+      "sha256": "606f030563b9d6afac24025956faed898575e41a65b1e1c724697362ff112418"
+    },
+    {
+      "path": "docs/evidence/r2-mobile/before/laptop-flight.png",
+      "width": 1366,
+      "height": 600,
+      "sha256": "7e177b0cc297d264eba27782c3130b5e1fe55adca9c965ae3dca84bcfe689666"
+    },
+    {
+      "path": "docs/evidence/r2-mobile/before/laptop-home.png",
+      "width": 1366,
+      "height": 600,
+      "sha256": "b7669b8001897fd448acc38e1c3a3b9bb51812dfd84a3217dc5e6978402a7869"
+    },
+    {
+      "path": "docs/evidence/r2-mobile/before/laptop-train.png",
+      "width": 1366,
+      "height": 600,
+      "sha256": "0fe0d4afe86aedb2baefbc4adef7b1fb159219b4905e12da58b00b806862fb1f"
+    },
+    {
+      "path": "docs/evidence/r2-mobile/before/portrait-car.png",
+      "width": 390,
+      "height": 844,
+      "sha256": "f700d6afba44a9e3901944ef0bbc2b63c2db282770f3f32a9c60ba9caf3e6250"
+    },
+    {
+      "path": "docs/evidence/r2-mobile/before/portrait-flight.png",
+      "width": 390,
+      "height": 844,
+      "sha256": "5c283decc4f4a6d1555ef64c1daaab97cb2b38fbe8f08a3c51fd2ff719aa9ff0"
+    },
+    {
+      "path": "docs/evidence/r2-mobile/before/portrait-home.png",
+      "width": 390,
+      "height": 844,
+      "sha256": "964f41a9366897b649a807ae1d5e63df508025eb09828ad7342cd76c65bf75f9"
+    },
+    {
+      "path": "docs/evidence/r2-mobile/before/portrait-train.png",
+      "width": 390,
+      "height": 844,
+      "sha256": "618a6896fb91d23c6116f269244d078f9efec53f540b82d5eca50de268c061c3"
+    }
+  ],
+  "sourceSha256": {
+    "README.md": "a7852502dc96f1772668e9cdbf14497954088b9a3ccef8cac2312b5d4835da51",
+    "car/index.html": "6c5a16f2e846bfdb0e920f5704f3a575ac59821bb8bd1b29f81201152de4c3ac",
+    "index.html": "bcbfd6675c8a5f2d47191c5ea17a27c97a411d4846232ab0cdbf560afb2cf44c",
+    "package-lock.json": "9033ea790c7cc4b4c865d5b1405b4cfb080f4dc329df5a3239a8297730241577",
+    "package.json": "19bd180c3adaf920445123c5a188d15bb85b9eac974e0a0464e5bdc5e8c1a9b8",
+    "scripts/flight-layout-check.js": "bf97b0a62fe3cc73481e3e96a42905acf7af1674440a500ea64cf2a7abc5abe5",
+    "scripts/measure-frame-times.mjs": "9ec6e086a67746c07cba317e2fd48221ca0bf6473a489f76600ea42327aea9c7",
+    "src/games/car/collectibles.js": "1557f3fec0a3811a78a2878eb4ba9214f5c26008e40599f064fa4a12605951bc",
+    "src/games/car/config.js": "37be30609a857b26a3573ec85706f68db3f738f0d29002aa7ce076a659c332bc",
+    "src/games/car/game.js": "bd654bd3f2b9c9324a434029e05d78de58dccb5afe7896255f3795d759f99921",
+    "src/games/car/main.js": "eaa1425f8055bc9a27b9043e8339788f08a06a7fc520c55f7b5221bb1b755e65",
+    "src/games/flight/game.js": "2e4ad2f42a80c4825862e6b03a2dd6b05731d7438d2ed475f407315a18948e4c",
+    "src/games/flight/main.js": "5d91f2478b4350f7e9b922cac4e7562bc3f66157fae75bf4f0b51d8c7ee90f7f",
+    "src/games/flight/mission.js": "b9906f1599e00ff415bf8fe91b5b218f76f38ed73f68cc71b867f2f187aea21e",
+    "src/games/flight/world.js": "d7e40035c751b1bcf57e3a2e9e15ea0ea7c11b6d1d94cfaf0df745be76e3176c",
+    "src/games/train/config.js": "4dd738a1a4a99bd45c24d6cace1c1b79ecf7b9a229f3ec939e7dc673304e3db4",
+    "src/games/train/main.js": "a2ae52412a350ed2bdd072c41cd5292b49c079893bdf851146e362cf084ce787",
+    "src/home.css": "9bbf0688dfc0e885ab7267814c9a6830f24f96d8d08a041ae3837f9e4cf484b9",
+    "src/shared/bootstrap.js": "087b4053e8555def72203d00bb8adec68b1f44704becfbe4a9433568c8a535ab",
+    "train/index.html": "fa01fca291cc1cdd77cba2401bc0e3457de34647e4fdce8d40011e67f6344858",
+    "src/shared/journeys.js": "4bef138f75c62d200f42b04e120a30cba9df9089516c9a81d42b0adbb8b55e6a",
+    "src/shared/passport.js": "8f3f1564f3dfeac3269fc81ddc34ea1cd306a4e5b25f44a751c04ff19930a666",
+    "src/shared/passport.css": "525d22df038727c05d45ddf0d4b138ab4c761d0054ccfb0b151ab3b4f7a38622",
+    "src/shared/mobile-controls.css": "1fae20abb3ebfa2096b97578ed1c093cdf4a8d5d90160aebb13c600993257ce3",
+    "tests/shared/journeys.test.js": "aa9021f6fa5a1b0c34e0f9c341a2642c3963b75eb029002093fda5a60e7a3d82",
+    "scripts/capture-mobile.mjs": "2523ad64bd87b8f007b87de4b0a110030f72f4b8fc9d72e5b97e3d1d12197e62",
+    "scripts/check-mobile.mjs": "d9c91f5afe6925676b65b0036298cf753c4ee2c1d8d25eecc033ca57d44a1090",
+    "scripts/run-flight-layout.mjs": "4eef09de8b21f920bd7ec7ae3116c33d7d35b229ab0db15e951be38f12ffae9d"
+  },
+  "performanceLabel": "並發載量測，僅供參考"
+}

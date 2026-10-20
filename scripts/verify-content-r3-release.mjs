@@ -1,0 +1,40 @@
+import assert from 'node:assert/strict';
+import {readFile,writeFile,readdir,stat} from 'node:fs/promises';
+import {createHash} from 'node:crypto';
+import {execFileSync} from 'node:child_process';
+const root='docs/content/r3',baseline='b4ee339',sha=b=>createHash('sha256').update(b).digest('hex');
+const json=async p=>JSON.parse(await readFile(p,'utf8'));
+const text=async p=>{const b=await readFile(p);return b[0]===255&&b[1]===254?b.toString('utf16le'):b.toString('utf8');};
+const pkg=await json('package.json'),lock=await json('package-lock.json');assert.equal(pkg.version,'2.15.0');assert.equal(lock.version,pkg.version);assert.equal(lock.packages[''].version,pkg.version);
+const branch=execFileSync('git',['branch','--show-current'],{encoding:'utf8'}).trim();assert.equal(branch,'r1-fun-polish');
+const before=JSON.parse(execFileSync('git',['show',`${baseline}:package.json`],{encoding:'utf8'}));assert.deepEqual(pkg.dependencies,before.dependencies);assert.deepEqual(pkg.devDependencies,before.devDependencies);
+const ios=await text('ios/App/App.xcodeproj/project.pbxproj'),android=await text('android/app/build.gradle');assert.equal((ios.match(/MARKETING_VERSION = 2\.15\.0;/g)||[]).length,2);assert.equal((ios.match(/CURRENT_PROJECT_VERSION = 11;/g)||[]).length,2);assert.match(android,/versionCode 11/);assert.match(android,/versionName "2\.15\.0"/);assert.match(await text('src/games/car/config.js'),/APP_VERSION = '2\.15\.0'/);assert.equal((await json('public/models/catalog.json')).visualVersion,pkg.version);
+const oldTests=execFileSync('git',['ls-tree','-r','--name-only',baseline,'tests'],{encoding:'utf8'}).trim().split(/\r?\n/);
+// Compare canonical Git blobs, including this repository's CRLF clean filter.
+// Raw checkout bytes can differ from the LF blob without a source change.
+for(const p of oldTests)assert.equal(execFileSync('git',['hash-object',`--path=${p}`,p],{encoding:'utf8'}).trim(),execFileSync('git',['rev-parse',`${baseline}:${p}`],{encoding:'utf8'}).trim(),`existing test changed: ${p}`);
+const changed=execFileSync('git',['diff','--name-only',baseline],{encoding:'utf8'}).trim().split(/\r?\n/);assert.ok(!changed.some(p=>p.endsWith('.glb')));
+assert.match(await text(`${root}/unit-tests.txt`),/pass 177/);assert.match(await text(`${root}/unit-tests.txt`),/fail 0/);assert.match(await text(`${root}/build.txt`),/PWA precache manifest: 210 local files/);
+const art=await json(`${root}/art/manifest.json`);assert.equal(art.tool,'image_gen.imagegen');assert.equal(art.runtimeImages,5);
+for(const x of art.outputs){assert.equal(sha(await readFile(x.path)),x.sha256);assert.equal(sha(await readFile(x.source)),x.sourceSha256);assert.equal(sha(await readFile(x.path.replace('public/','dist/'))),x.sha256);}
+const browser=await json(`${root}/browser-all.json`);assert.equal(browser.status,'VERIFIED');assert.deepEqual(browser.errors,[]);assert.deepEqual(browser.external,[]);assert.deepEqual(browser.responses,[]);
+const screenshots=[...new Map(browser.shots.map(s=>[s.path,s])).values()];for(const s of screenshots){const b=await readFile(s.path);assert.equal(sha(b),s.sha256,`stale capture ${s.path}`);assert.equal(b.readUInt32BE(16),s.width);assert.equal(b.readUInt32BE(20),s.height);}
+await writeFile(`${root}/screenshots.json`,JSON.stringify({status:'VERIFIED',sourceVersion:pkg.version,native:false,method:'Original headless runtime PNGs, no resizing or annotation after capture',shots:screenshots},null,2));
+const gallery=await text(`${root}/review.html`);for(const m of gallery.matchAll(/src="([^"]+\.png)"/g))assert.ok((await stat(`${root}/${m[1]}`)).size>1000);
+for(const [w,h] of [[1290,2796],[2064,2752]])assert.ok(screenshots.some(s=>s.path.startsWith('docs/store/')&&s.width===w&&s.height===h));
+const regressions={};for(const [kind,file] of [['merge','merge-path.json'],['store','review-path.json']]){const r=await json(`${root}/${kind}/${file}`);assert.deepEqual(r.errors,[]);assert.deepEqual(r.externalRequests,[]);for(const row of r.rows)assert.deepEqual(row.problems,[]);regressions[kind]={checks:r.rows.length};const m=await json(`docs/store/screenshots/content-r3/${kind}/manifest.json`);assert.equal(m.sourceVersion,pkg.version);for(const s of m.shots)assert.equal(sha(await readFile(s.path)),s.sha256);regressions[kind].screenshots=m.shots.length;}
+const performance=await json(`${root}/performance.json`);assert.equal(performance.withinReferenceLimit,true);
+const files=[];async function scan(dir){for(const e of await readdir(dir,{withFileTypes:true})){if(['.git','node_modules','dist','dist-native','.audit-tmp','output','release','.playwright-cli','.playwright','.gradle','build','__pycache__'].includes(e.name))continue;const p=dir==='.'?e.name:`${dir}/${e.name}`;if(e.isDirectory())await scan(p);else if(/\.(?:js|mjs|cjs|json|md|txt|html|css|py|ps1|yml|yaml|gradle|xml|plist|pbxproj)$/.test(e.name)&&(await stat(p)).size<5e6)files.push(p);}}
+await scan('.');const matches=[];for(const p of files)if(/sk-proj-[A-Za-z0-9_-]{20,}|sk-[a-z0-9]{40,}|ghp_[A-Za-z0-9]{36}|-----BEGIN (?:RSA |EC |OPENSSH )?PRIVATE KEY-----/.test(await text(p)))matches.push(p);assert.deepEqual(matches,[]);
+const capture=name=>{const s=screenshots.find(x=>x.path===`${root}/${name}.png`);assert.ok(s,`missing ${name}`);assert.equal(s.width,390);assert.equal(s.height,844);return s;};
+const items=[
+ {id:1,title:'蛋糕急煞、輕煞過程與平穩基準',local:'VERIFIED',blocked:['五人遮字排序，至少四人排對最晃畫面'],names:['hard','gentle'].flatMap(k=>[1,2,3].map(i=>`phone-cake-${k}-brake-${i}`)).concat(['phone-cake-steady','phone-cake-starting','phone-cake-turning'])},
+ {id:2,title:'蛋糕三站、臨停與分享',local:'VERIFIED',blocked:[],names:[1,2,3].map(i=>`phone-cake-stage-${i}`).concat(['phone-cake-complete'])},
+ {id:3,title:'三位過街者雙姿勢與單一操作列',local:'VERIFIED',blocked:['實機語音聽感'],names:['phone-crossing-blocked',...[1,2,3].flatMap(i=>['child','bike','grandma'].flatMap(who=>[0,1].map(pose=>`phone-crossing-stage-${i}-${who}-pose-${pose}`))),... [1,2,3].map(i=>`phone-crossing-stage-${i}-clear`),'phone-crossing-complete']},
+ {id:4,title:'單一月台、錯對停車、步行上客與綠方完成證據',local:'VERIFIED',blocked:[],names:[1,2,3].flatMap(i=>[`phone-tickets-stage-${i}-wrong`,`phone-tickets-stage-${i}-right`,...[1,2,3].map(f=>`phone-tickets-stage-${i}-boarding-${f}`)]).concat(['phone-tickets-stage-1-seated','phone-tickets-stage-2-seated','phone-tickets-complete'])},
+ {id:5,title:'兒童驗收與全域一致性收尾',local:'VERIFIED',blocked:['五位3至8歲兒童，家長同意且無成人代讀，至少四位完成一課第一站','原生 iPhone/iPad 觸控、語音與截圖','Muse 獨立複審分數，目標至少8分'],names:['phone-picker',...['cake','crossing','tickets'].flatMap(k=>[`phone-${k}-intro`,`phone-${k}-paused`]),'phone-train-driving','phone-save-all-three']}
+].map(({names,...i})=>({...i,screenshots:names.map(capture)}));
+await writeFile(`${root}/acceptance.json`,JSON.stringify({round:'CONTENT_R3',basis:'docs/content/CONTENT_REVIEW_R2_MUSE.md section 4 five items',status:'VERIFIED',meaning:'Local interaction and original screenshot evidence verified; blocked human, device and independent scoring criteria remain unfinished.',items},null,2));
+const retained=['docs/art/ART_RESCORE_MUSE.md',...Array.from({length:5},(_,i)=>`docs/art/ART_RESCORE${i+2}_MUSE.md`),'docs/content/CONTENT_REVIEW_R1_MUSE.md','docs/content/CONTENT_REVIEW_R2_MUSE.md'];
+const proof={status:'VERIFIED',branch,baselineCommit:baseline,version:pkg.version,nativeSourceBuild:11,newDependencies:0,existingTestsUnchanged:oldTests.length,unitTests:177,secretScan:{files:files.length,matches},regressions,contentChecks:browser.rows.length,originalContentScreenshots:screenshots.length,storeScreenshots:screenshots.filter(s=>s.path.startsWith('docs/store/')).length,runtimeArtBytes:art.outputs.reduce((n,x)=>n+x.bytes,0),performanceMaxMedianP95:Math.max(...performance.rows.map(r=>r.p95)),retainedUntrackedMuse:await Promise.all(retained.map(async path=>({path,sha256:sha(await readFile(path))}))),limits:items.flatMap(i=>i.blocked)};
+await writeFile(`${root}/release-proof.json`,JSON.stringify(proof,null,2));console.log(`VERIFIED ${pkg.version} build11; ${browser.rows.length} content checks; ${screenshots.length} unique screenshots; ${files.length} text files zero secret matches; existing tests unchanged`);

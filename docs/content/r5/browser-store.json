@@ -1,0 +1,72 @@
+{
+  "status": "VERIFIED",
+  "rows": [
+    {
+      "label": "iphone: original new-content store screenshot",
+      "status": "VERIFIED"
+    },
+    {
+      "label": "ipad: original new-content store screenshot",
+      "status": "VERIFIED"
+    }
+  ],
+  "shots": [
+    {
+      "path": "docs/store/screenshots/content-r5/iphone-cake-care.png",
+      "width": 1290,
+      "height": 2796,
+      "sha256": "e324ca1b66b05ce3f8e558f0d295b2db85d8b7fbb59bea9077c26c1ce833967a",
+      "state": {
+        "distance": "2.22",
+        "speed": "4.31",
+        "bend": "1",
+        "tilt": "-17.07",
+        "sway": "-9.61",
+        "acceleration": "-0.80",
+        "bayStopped": "false",
+        "bayRestarted": "false",
+        "leftTurn": "false",
+        "rightTurn": "false",
+        "focus": "center",
+        "assisting": "true",
+        "crossed": "0",
+        "lookedLeft": "false",
+        "lookedRight": "false"
+      },
+      "phase": "playing",
+      "seats": 0,
+      "native": false,
+      "method": "Unmodified headless runtime PNG; RAF suspended only during capture; no gameplay assignments"
+    },
+    {
+      "path": "docs/store/screenshots/content-r5/ipad-cake-care.png",
+      "width": 2064,
+      "height": 2752,
+      "sha256": "0d7e8f9e333f5ab282b101e18075ec4d1531bce296338b1a66049720464dc1b4",
+      "state": {
+        "distance": "2.00",
+        "speed": "4.35",
+        "bend": "1",
+        "tilt": "-23.60",
+        "sway": "-10.67",
+        "acceleration": "3.18",
+        "bayStopped": "false",
+        "bayRestarted": "false",
+        "leftTurn": "false",
+        "rightTurn": "false",
+        "focus": "center",
+        "assisting": "false",
+        "crossed": "0",
+        "lookedLeft": "false",
+        "lookedRight": "false"
+      },
+      "phase": "playing",
+      "seats": 0,
+      "native": false,
+      "method": "Unmodified headless runtime PNG; RAF suspended only during capture; no gameplay assignments"
+    }
+  ],
+  "errors": [],
+  "external": [],
+  "responses": []
+}

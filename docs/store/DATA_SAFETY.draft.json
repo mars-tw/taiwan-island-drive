@@ -1,0 +1,17 @@
+{
+  "status": "PREPARED",
+  "version": "2.7.0",
+  "enteredInConsole": false,
+  "collectsUserDataOffDevice": false,
+  "sharesUserDataOffDevice": false,
+  "accountCreation": false,
+  "ads": false,
+  "analyticsSdk": false,
+  "newLocalData": {"key": "island-transport:student:v2", "fields": ["schemaVersion", "revision", "academy.dispatch", "academy.delivered", "academy.awarded", "academy.imported", "academy.archive", "passport", "rewards", "safety", "settings", "carPreferences", "carRecords", "flightRecords", "music"], "location": "localStorage and native Preferences recovery copy", "upload": false},
+  "localProgress": ["single canonical student record", "settings", "vehicle preferences", "records", "stars", "passport", "safety checkpoints", "music preference", "math quantities and phases", "mainline badges", "optional parent-selected source backup verbatim"],
+  "optionalOnDeviceAccess": ["orientation motion behind parent gate", "installed local Chinese voice for fixed instructional phrases"],
+  "nativeInternetPermissionInRepo": false,
+  "sourceValidated": true,
+  "signedBinaryValidated": false,
+  "limitations": ["Browser version makes same-origin static-file requests", "OS voice and backup behavior require device verification", "Final AAB merged manifest and network audit still required", "No console actions were performed"]
+}

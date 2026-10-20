@@ -1,0 +1,214 @@
+{
+  "status": "EXECUTED",
+  "elapsedSeconds": 197.078,
+  "events": [
+    {
+      "seconds": 1.8,
+      "label": "01-home",
+      "url": "http://127.0.0.1:5286/"
+    },
+    {
+      "seconds": 1.9,
+      "label": "early check with empty carriage",
+      "url": "http://127.0.0.1:5286/",
+      "state": "load"
+    },
+    {
+      "seconds": 7.2,
+      "label": "08-load",
+      "url": "http://127.0.0.1:5286/",
+      "state": "load"
+    },
+    {
+      "seconds": 8.9,
+      "label": "06-split",
+      "url": "http://127.0.0.1:5286/",
+      "state": "split"
+    },
+    {
+      "seconds": 9,
+      "label": "wrong answer encourages recount",
+      "url": "http://127.0.0.1:5286/",
+      "state": "subtract"
+    },
+    {
+      "seconds": 11.1,
+      "label": "07-complete",
+      "url": "http://127.0.0.1:5286/",
+      "state": "done"
+    },
+    {
+      "seconds": 21.1,
+      "label": "02-driving",
+      "url": "http://127.0.0.1:5286/car/",
+      "state": {
+        "phase": "running",
+        "speed": 92.29169573385501,
+        "distance": 53.48825598290301,
+        "stars": 0
+      }
+    },
+    {
+      "seconds": 43.1,
+      "label": "car road exploration 0",
+      "url": "http://127.0.0.1:5286/car/",
+      "state": {
+        "phase": "running",
+        "speed": 180,
+        "distance": 1087.7318805058776,
+        "stars": 3
+      }
+    },
+    {
+      "seconds": 65.2,
+      "label": "car road exploration 1",
+      "url": "http://127.0.0.1:5286/car/",
+      "state": {
+        "phase": "running",
+        "speed": 180,
+        "distance": 2188.5652138391492,
+        "stars": 5
+      }
+    },
+    {
+      "seconds": 87.2,
+      "label": "car road exploration 2",
+      "url": "http://127.0.0.1:5286/car/",
+      "state": {
+        "phase": "finished",
+        "speed": 180,
+        "distance": 2400,
+        "stars": 6
+      }
+    },
+    {
+      "seconds": 109.2,
+      "label": "car road exploration 3",
+      "url": "http://127.0.0.1:5286/car/",
+      "state": {
+        "phase": "finished",
+        "speed": 180,
+        "distance": 2400,
+        "stars": 6
+      }
+    },
+    {
+      "seconds": 131.2,
+      "label": "car road exploration 4",
+      "url": "http://127.0.0.1:5286/car/",
+      "state": {
+        "phase": "finished",
+        "speed": 180,
+        "distance": 2400,
+        "stars": 6
+      }
+    },
+    {
+      "seconds": 153.2,
+      "label": "car road exploration 5",
+      "url": "http://127.0.0.1:5286/car/",
+      "state": {
+        "phase": "finished",
+        "speed": 180,
+        "distance": 2400,
+        "stars": 6
+      }
+    },
+    {
+      "seconds": 153.4,
+      "label": "03-car-later",
+      "url": "http://127.0.0.1:5286/car/",
+      "state": {
+        "phase": "finished",
+        "speed": 180,
+        "distance": 2400,
+        "stars": 6
+      }
+    },
+    {
+      "seconds": 157,
+      "label": "04-takeoff",
+      "url": "http://127.0.0.1:5286/flight/",
+      "state": {
+        "mode": "playing",
+        "time": 2.099999999999995,
+        "position": {
+          "x": 0,
+          "y": 143.72302936679012,
+          "z": 193.60801993226463
+        },
+        "grounded": false,
+        "passed": 0,
+        "target": {
+          "id": "treasure-coast-1",
+          "visited": false,
+          "x": 0,
+          "y": 160,
+          "z": 550,
+          "label": "星星 1",
+          "kind": "star",
+          "radius": 135
+        },
+        "stage": "cruise",
+        "hint": "阿路無線電：第 1 顆，機翼放平，飛向金星！"
+      }
+    },
+    {
+      "seconds": 177,
+      "label": "flight goal exploration 0",
+      "url": "http://127.0.0.1:5286/flight/",
+      "state": {
+        "mode": "playing",
+        "time": 21.724999999999408,
+        "position": {
+          "x": 49.348659608979844,
+          "y": 160.3457971597122,
+          "z": 952.0642265324329
+        },
+        "grounded": false,
+        "passed": 2,
+        "target": {
+          "id": "treasure-coast-3",
+          "visited": false,
+          "x": 140,
+          "y": 160,
+          "z": 1450,
+          "label": "星星 3",
+          "kind": "star",
+          "radius": 135
+        },
+        "stage": "cruise",
+        "hint": "找到一顆星星！"
+      }
+    },
+    {
+      "seconds": 197.1,
+      "label": "flight goal exploration 1",
+      "url": "http://127.0.0.1:5286/flight/",
+      "state": {
+        "mode": "playing",
+        "time": 41.77499999999827,
+        "position": {
+          "x": 200.90959867791068,
+          "y": 166.9713012322224,
+          "z": 1791.5535856073286
+        },
+        "grounded": false,
+        "passed": 4,
+        "target": {
+          "id": "treasure-coast-5",
+          "visited": false,
+          "x": 240,
+          "y": 170,
+          "z": 2350,
+          "label": "星星 5",
+          "kind": "star",
+          "radius": 135
+        },
+        "stage": "cruise",
+        "hint": "找到一顆星星！"
+      }
+    }
+  ],
+  "errors": []
+}

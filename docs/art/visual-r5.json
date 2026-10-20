@@ -1,0 +1,807 @@
+{
+  "status": "VERIFIED",
+  "rows": [
+    {
+      "name": "se",
+      "status": "VERIFIED",
+      "motion": null,
+      "answers": [
+        {
+          "w": 78.65625,
+          "h": 60,
+          "bg": "rgb(255, 255, 255)"
+        },
+        {
+          "w": 78.671875,
+          "h": 60,
+          "bg": "rgb(255, 255, 255)"
+        },
+        {
+          "w": 78.671875,
+          "h": 60,
+          "bg": "rgb(255, 255, 255)"
+        }
+      ],
+      "sceneFraction": 0.3908450704225352,
+      "live": {
+        "cabVisible": false,
+        "sky": true
+      }
+    },
+    {
+      "name": "phone",
+      "status": "VERIFIED",
+      "motion": {
+        "duration": 700,
+        "poses": [
+          "http://127.0.0.1:5286/art/r5/passenger-1-0.png",
+          "http://127.0.0.1:5286/art/r5/passenger-1-1.png"
+        ],
+        "samples": [
+          {
+            "x": 60.912452697753906,
+            "y": 253.0252685546875,
+            "opacity": [
+              "1",
+              "0"
+            ]
+          },
+          {
+            "x": 59.69861602783203,
+            "y": 283.7244873046875,
+            "opacity": [
+              "1",
+              "0"
+            ]
+          },
+          {
+            "x": 57.08513641357422,
+            "y": 349.82196044921875,
+            "opacity": [
+              "1",
+              "0"
+            ]
+          }
+        ]
+      },
+      "answers": [
+        {
+          "w": 102,
+          "h": 60,
+          "bg": "rgb(255, 255, 255)"
+        },
+        {
+          "w": 102,
+          "h": 60,
+          "bg": "rgb(255, 255, 255)"
+        },
+        {
+          "w": 102,
+          "h": 60,
+          "bg": "rgb(255, 255, 255)"
+        }
+      ],
+      "sceneFraction": 0.590047393364929,
+      "live": {
+        "cabVisible": false,
+        "sky": true
+      }
+    },
+    {
+      "name": "landscape",
+      "status": "VERIFIED",
+      "motion": null,
+      "answers": [
+        {
+          "w": 256.65625,
+          "h": 60,
+          "bg": "rgb(255, 255, 255)"
+        },
+        {
+          "w": 256.671875,
+          "h": 60,
+          "bg": "rgb(255, 255, 255)"
+        },
+        {
+          "w": 256.671875,
+          "h": 60,
+          "bg": "rgb(255, 255, 255)"
+        }
+      ],
+      "sceneFraction": 0.48648681492283385,
+      "live": {
+        "cabVisible": false,
+        "sky": true
+      }
+    },
+    {
+      "name": "se-landscape",
+      "status": "VERIFIED",
+      "motion": null,
+      "answers": [
+        {
+          "w": 164.65625,
+          "h": 60,
+          "bg": "rgb(255, 255, 255)"
+        },
+        {
+          "w": 164.671875,
+          "h": 60,
+          "bg": "rgb(255, 255, 255)"
+        },
+        {
+          "w": 164.671875,
+          "h": 60,
+          "bg": "rgb(255, 255, 255)"
+        }
+      ],
+      "sceneFraction": 0.3515404929577465,
+      "live": {
+        "cabVisible": false,
+        "sky": true
+      }
+    },
+    {
+      "name": "ipad",
+      "status": "VERIFIED",
+      "motion": null,
+      "answers": [
+        {
+          "w": 228,
+          "h": 60,
+          "bg": "rgb(255, 255, 255)"
+        },
+        {
+          "w": 228,
+          "h": 60,
+          "bg": "rgb(255, 255, 255)"
+        },
+        {
+          "w": 228,
+          "h": 60,
+          "bg": "rgb(255, 255, 255)"
+        }
+      ],
+      "sceneFraction": 0.7119140625,
+      "live": {
+        "cabVisible": false,
+        "sky": true
+      }
+    },
+    {
+      "name": "ipad-landscape",
+      "status": "VERIFIED",
+      "motion": null,
+      "answers": [
+        {
+          "w": 313.328125,
+          "h": 60,
+          "bg": "rgb(255, 255, 255)"
+        },
+        {
+          "w": 313.34375,
+          "h": 60,
+          "bg": "rgb(255, 255, 255)"
+        },
+        {
+          "w": 313.328125,
+          "h": 60,
+          "bg": "rgb(255, 255, 255)"
+        }
+      ],
+      "sceneFraction": 0.6158854166666666,
+      "live": {
+        "cabVisible": false,
+        "sky": true
+      }
+    },
+    {
+      "name": "short-laptop",
+      "status": "VERIFIED",
+      "motion": null,
+      "answers": [
+        {
+          "w": 331.328125,
+          "h": 60,
+          "bg": "rgb(255, 255, 255)"
+        },
+        {
+          "w": 331.34375,
+          "h": 60,
+          "bg": "rgb(255, 255, 255)"
+        },
+        {
+          "w": 331.328125,
+          "h": 60,
+          "bg": "rgb(255, 255, 255)"
+        }
+      ],
+      "sceneFraction": 0.5083333333333333,
+      "live": {
+        "cabVisible": false,
+        "sky": true
+      }
+    },
+    {
+      "name": "desktop",
+      "status": "VERIFIED",
+      "motion": null,
+      "answers": [
+        {
+          "w": 331.328125,
+          "h": 60,
+          "bg": "rgb(255, 255, 255)"
+        },
+        {
+          "w": 331.34375,
+          "h": 60,
+          "bg": "rgb(255, 255, 255)"
+        },
+        {
+          "w": 331.328125,
+          "h": 60,
+          "bg": "rgb(255, 255, 255)"
+        }
+      ],
+      "sceneFraction": 0.6814236111111112,
+      "live": {
+        "cabVisible": false,
+        "sky": true
+      }
+    },
+    {
+      "name": "iphone-store",
+      "status": "VERIFIED",
+      "motion": null,
+      "answers": [
+        {
+          "w": 115.328125,
+          "h": 60,
+          "bg": "rgb(255, 255, 255)"
+        },
+        {
+          "w": 115.34375,
+          "h": 60,
+          "bg": "rgb(255, 255, 255)"
+        },
+        {
+          "w": 115.328125,
+          "h": 60,
+          "bg": "rgb(255, 255, 255)"
+        }
+      ],
+      "sceneFraction": 0.628755364806867,
+      "live": {
+        "cabVisible": false,
+        "sky": true
+      }
+    },
+    {
+      "name": "ipad-store",
+      "status": "VERIFIED",
+      "motion": null,
+      "answers": [
+        {
+          "w": 316,
+          "h": 60,
+          "bg": "rgb(255, 255, 255)"
+        },
+        {
+          "w": 316,
+          "h": 60,
+          "bg": "rgb(255, 255, 255)"
+        },
+        {
+          "w": 316,
+          "h": 60,
+          "bg": "rgb(255, 255, 255)"
+        }
+      ],
+      "sceneFraction": 0.7856104651162791,
+      "live": {
+        "cabVisible": false,
+        "sky": true
+      }
+    },
+    {
+      "name": "reduced-motion",
+      "status": "VERIFIED",
+      "animations": 0
+    }
+  ],
+  "shots": [
+    {
+      "path": "docs/art/evidence/r5/se-01-home.png",
+      "width": 320,
+      "height": 568,
+      "sha256": "4d1e532708414c75af7b694fc9d945ed462a6518719cea6e41071febf6d441ee",
+      "native": false
+    },
+    {
+      "path": "docs/art/evidence/r5/se-02-load.png",
+      "width": 320,
+      "height": 568,
+      "sha256": "4e5759fca54eb497e9828a921349e778ea7e2ee02c87ae905d0847dbd10a94a1",
+      "native": false
+    },
+    {
+      "path": "docs/art/evidence/r5/se-03-split.png",
+      "width": 320,
+      "height": 568,
+      "sha256": "997ef0327c343be4c0ba41f37fdd81bf9a6ce1446f122a74dc7086876d0cc5a4",
+      "native": false
+    },
+    {
+      "path": "docs/art/evidence/r5/se-04-subtract.png",
+      "width": 320,
+      "height": 568,
+      "sha256": "5a49f6cc834b876961da171750ebd0dca212632d5dd43d1afc65df6ccfeffa2a",
+      "native": false
+    },
+    {
+      "path": "docs/art/evidence/r5/se-05-awards.png",
+      "width": 320,
+      "height": 568,
+      "sha256": "1109b70987825dbdd6ad1418acc8af33f82511857a83fad57cb4c701cf453c58",
+      "native": false
+    },
+    {
+      "path": "docs/art/evidence/r5/se-06-passport.png",
+      "width": 320,
+      "height": 568,
+      "sha256": "a3d9e7709485ec8b5e630fcffca7d0c2c1b47eb731352df4cf685e131e3e7f0c",
+      "native": false
+    },
+    {
+      "path": "docs/art/evidence/r5/se-07-train.png",
+      "width": 320,
+      "height": 568,
+      "sha256": "4dbff7dfdad437aa9f8b4ce285019e01ffe391c3e07b5ff58016744b4ebcae20",
+      "native": false
+    },
+    {
+      "path": "docs/art/evidence/r5/phone-01-home.png",
+      "width": 390,
+      "height": 844,
+      "sha256": "6848cfdae66af8ef8a9d568be57aad711e98b0dc0be67efe59fa917e4ed3fc6c",
+      "native": false
+    },
+    {
+      "path": "docs/art/evidence/r5/phone-02-load.png",
+      "width": 390,
+      "height": 844,
+      "sha256": "a44644279171b15ebcdb3db1e881043c0ccf8d85843e8f89db536606947b586a",
+      "native": false
+    },
+    {
+      "path": "docs/art/evidence/r5/phone-03-split.png",
+      "width": 390,
+      "height": 844,
+      "sha256": "fb37a4ba9667175db92fc4b8df32088bd63627c8433d5597bf628036f6f6fc36",
+      "native": false
+    },
+    {
+      "path": "docs/art/evidence/r5/phone-04-subtract.png",
+      "width": 390,
+      "height": 844,
+      "sha256": "c64efb12582c74cfbe0e235c0a7946e052ee6c2067573288864a8b1d92ac9d94",
+      "native": false
+    },
+    {
+      "path": "docs/art/evidence/r5/phone-05-awards.png",
+      "width": 390,
+      "height": 844,
+      "sha256": "14657e385a6d8999bd6be28bb0d0d7afc4fc68e8e2492786cd1a7c7257f65b70",
+      "native": false
+    },
+    {
+      "path": "docs/art/evidence/r5/phone-06-passport.png",
+      "width": 390,
+      "height": 844,
+      "sha256": "903a002e82c65a4ebb7b85a48fe47892371c085b7f9df49639b73fc7c6efc407",
+      "native": false
+    },
+    {
+      "path": "docs/art/evidence/r5/phone-07-train.png",
+      "width": 390,
+      "height": 844,
+      "sha256": "f91fc39b301ee42517fd06f3988157f055c5fbd7b77a77066b8fe019defbe671",
+      "native": false
+    },
+    {
+      "path": "docs/art/evidence/r5/landscape-01-home.png",
+      "width": 844,
+      "height": 390,
+      "sha256": "54d7044e174df69c4ccc6adca70ad9ca7bc380fae22474095b7c7ebd3200f5c2",
+      "native": false
+    },
+    {
+      "path": "docs/art/evidence/r5/landscape-02-load.png",
+      "width": 844,
+      "height": 390,
+      "sha256": "02379b09c7105e58324954aa6a0c8cde5e741b83fb3998024e1324488a332124",
+      "native": false
+    },
+    {
+      "path": "docs/art/evidence/r5/landscape-03-split.png",
+      "width": 844,
+      "height": 390,
+      "sha256": "af95ce2c0095294f5314292071cdbfc777e8e10258aea7c9cc1ffcd4120eed42",
+      "native": false
+    },
+    {
+      "path": "docs/art/evidence/r5/landscape-04-subtract.png",
+      "width": 844,
+      "height": 390,
+      "sha256": "3d3b313af5af17888b6c621f695ecf849b29c0249a5ff066a3ae24032968740d",
+      "native": false
+    },
+    {
+      "path": "docs/art/evidence/r5/landscape-05-awards.png",
+      "width": 844,
+      "height": 390,
+      "sha256": "cbfdd0afffe1ab194deba0b56c3c8fa96d1c1db2e4b8a567f6a1c08eb2a20dbf",
+      "native": false
+    },
+    {
+      "path": "docs/art/evidence/r5/landscape-06-passport.png",
+      "width": 844,
+      "height": 390,
+      "sha256": "edd48746e091af1b7ef23fb81012139c40bcf089e26e257ea311ccdfb57da783",
+      "native": false
+    },
+    {
+      "path": "docs/art/evidence/r5/landscape-07-train.png",
+      "width": 844,
+      "height": 390,
+      "sha256": "c0a89eb7c3cc140036c25ecefafddc1e2d83bb9af19d69127af0d3ca2dd85fa6",
+      "native": false
+    },
+    {
+      "path": "docs/art/evidence/r5/se-landscape-01-home.png",
+      "width": 568,
+      "height": 320,
+      "sha256": "1451b207d12272520de6c23655a0c9607ec5fec07700bb22507d147c362fae51",
+      "native": false
+    },
+    {
+      "path": "docs/art/evidence/r5/se-landscape-02-load.png",
+      "width": 568,
+      "height": 320,
+      "sha256": "aa1f661dea55035c85ca7ae4ffc7891834500b0c72964006c842e60d1c3a41d5",
+      "native": false
+    },
+    {
+      "path": "docs/art/evidence/r5/se-landscape-03-split.png",
+      "width": 568,
+      "height": 320,
+      "sha256": "8e3bfa83936b25e0c3ea5917b02fa16f59c6fbb02c25273abac334a71b538e3c",
+      "native": false
+    },
+    {
+      "path": "docs/art/evidence/r5/se-landscape-04-subtract.png",
+      "width": 568,
+      "height": 320,
+      "sha256": "0b7edac0ee1970661d654d73f1f214d15487c553dc22b5252b11a9655f0c4b9b",
+      "native": false
+    },
+    {
+      "path": "docs/art/evidence/r5/se-landscape-05-awards.png",
+      "width": 568,
+      "height": 320,
+      "sha256": "540a2b5dd451af5483c317c8e7562c486b547bfac62309fb35071789b3f55e43",
+      "native": false
+    },
+    {
+      "path": "docs/art/evidence/r5/se-landscape-06-passport.png",
+      "width": 568,
+      "height": 320,
+      "sha256": "f7b98499bf7c8b1a33dcfbd94d6ef4d70282ced6459c8120874c9890aab47602",
+      "native": false
+    },
+    {
+      "path": "docs/art/evidence/r5/se-landscape-07-train.png",
+      "width": 568,
+      "height": 320,
+      "sha256": "7cc06989f3f5322107d2db8b9c3d96f36c085ef1afa942d572cfcd115615c9c5",
+      "native": false
+    },
+    {
+      "path": "docs/art/evidence/r5/ipad-01-home.png",
+      "width": 768,
+      "height": 1024,
+      "sha256": "d5f1c345a635caafc230def965462d746e934f8b99c4cb24148a629dc669755b",
+      "native": false
+    },
+    {
+      "path": "docs/art/evidence/r5/ipad-02-load.png",
+      "width": 768,
+      "height": 1024,
+      "sha256": "4848fb80b75375044db2f777088663fbc72dd039f443ae36813d600d0cf7de13",
+      "native": false
+    },
+    {
+      "path": "docs/art/evidence/r5/ipad-03-split.png",
+      "width": 768,
+      "height": 1024,
+      "sha256": "fff22387df64874bd5f3509fef8031683f4b187fc41d533456b92446b51140b6",
+      "native": false
+    },
+    {
+      "path": "docs/art/evidence/r5/ipad-04-subtract.png",
+      "width": 768,
+      "height": 1024,
+      "sha256": "9f456b84ca9fa468b73c42dea9bb4a707892104c31b8f23690aefa91c9b31b95",
+      "native": false
+    },
+    {
+      "path": "docs/art/evidence/r5/ipad-05-awards.png",
+      "width": 768,
+      "height": 1024,
+      "sha256": "eceb28312f421af2c2568b8b267dd09abb2460a346f834900235bf8928a1febc",
+      "native": false
+    },
+    {
+      "path": "docs/art/evidence/r5/ipad-06-passport.png",
+      "width": 768,
+      "height": 1024,
+      "sha256": "933684afc9259c67d92d80dc66ea36b9f6c359fb9b15d285cfececf483cc8c47",
+      "native": false
+    },
+    {
+      "path": "docs/art/evidence/r5/ipad-07-train.png",
+      "width": 768,
+      "height": 1024,
+      "sha256": "11aec0ac7efcc9e58b92cf859a3cce0284aef78d6bd9bdf804f1802fed889b22",
+      "native": false
+    },
+    {
+      "path": "docs/art/evidence/r5/ipad-landscape-01-home.png",
+      "width": 1024,
+      "height": 768,
+      "sha256": "9e6e5d345207816348534c39f6ace92f66b236f27446b4c4194f5004526372cc",
+      "native": false
+    },
+    {
+      "path": "docs/art/evidence/r5/ipad-landscape-02-load.png",
+      "width": 1024,
+      "height": 768,
+      "sha256": "0cf711bd5b3272459f7abb3bdbd84883f7522532e12f27d763eadb5eccfc6134",
+      "native": false
+    },
+    {
+      "path": "docs/art/evidence/r5/ipad-landscape-03-split.png",
+      "width": 1024,
+      "height": 768,
+      "sha256": "3f8e64e6261a48baf87a8aef87d74bff50c3b3e8499ce87d6c8277538cb65c45",
+      "native": false
+    },
+    {
+      "path": "docs/art/evidence/r5/ipad-landscape-04-subtract.png",
+      "width": 1024,
+      "height": 768,
+      "sha256": "941a5a9c3ae85dd7f7b53f3897e43293056e2ec5a39f301afd680a6cbe57a67a",
+      "native": false
+    },
+    {
+      "path": "docs/art/evidence/r5/ipad-landscape-05-awards.png",
+      "width": 1024,
+      "height": 768,
+      "sha256": "5905e96e05821b834b748cb7ea4e21190e6954f09839132464c8cf47353d46e2",
+      "native": false
+    },
+    {
+      "path": "docs/art/evidence/r5/ipad-landscape-06-passport.png",
+      "width": 1024,
+      "height": 768,
+      "sha256": "fefb4eeb349d18c8610b2187688a11532add852de846fc5f4b0880998a3705d4",
+      "native": false
+    },
+    {
+      "path": "docs/art/evidence/r5/ipad-landscape-07-train.png",
+      "width": 1024,
+      "height": 768,
+      "sha256": "26ed5c0412bc98ca8be62e83646b6989a765df2db45be768c3dd71f6b36ef259",
+      "native": false
+    },
+    {
+      "path": "docs/art/evidence/r5/short-laptop-01-home.png",
+      "width": 1366,
+      "height": 600,
+      "sha256": "7be18138efec3c1f38ce0c21241364ca7be14d192e6d2a3a82d2d659dabb5519",
+      "native": false
+    },
+    {
+      "path": "docs/art/evidence/r5/short-laptop-02-load.png",
+      "width": 1366,
+      "height": 600,
+      "sha256": "1eca0f67d90458afc3460a6a4de1539c42c203767ffad38fbc60b485ed3567c4",
+      "native": false
+    },
+    {
+      "path": "docs/art/evidence/r5/short-laptop-03-split.png",
+      "width": 1366,
+      "height": 600,
+      "sha256": "6c54da9ce981b9b4907461090c77f7794f71a4dcc70fa47a84b242abf5dd2558",
+      "native": false
+    },
+    {
+      "path": "docs/art/evidence/r5/short-laptop-04-subtract.png",
+      "width": 1366,
+      "height": 600,
+      "sha256": "9f600ced158b0be236013b5c9f8349d131a23e20df6a74ed2e8010e9c474b205",
+      "native": false
+    },
+    {
+      "path": "docs/art/evidence/r5/short-laptop-05-awards.png",
+      "width": 1366,
+      "height": 600,
+      "sha256": "aea5fe922bde24419228a8d14225257d8aa46ba492bc45be564d9531a12b14ea",
+      "native": false
+    },
+    {
+      "path": "docs/art/evidence/r5/short-laptop-06-passport.png",
+      "width": 1366,
+      "height": 600,
+      "sha256": "5d5a23e567e9811a2906f9780b6c3ea9fd7999795ef5bc40aea1bab388923768",
+      "native": false
+    },
+    {
+      "path": "docs/art/evidence/r5/short-laptop-07-train.png",
+      "width": 1366,
+      "height": 600,
+      "sha256": "ad3b9c6f02aeef30f2ea5a13c0b897d145921be591f9b1efedd3a4f0fea4882f",
+      "native": false
+    },
+    {
+      "path": "docs/art/evidence/r5/desktop-01-home.png",
+      "width": 1920,
+      "height": 1080,
+      "sha256": "9162ebd1a63042c4999cbf446cbd506633686cb2126a3659d2d9f1b9474d2989",
+      "native": false
+    },
+    {
+      "path": "docs/art/evidence/r5/desktop-02-load.png",
+      "width": 1920,
+      "height": 1080,
+      "sha256": "4c40ed71572013c745c7e5c63a78b9d2341db4e46c62566b2a55fe05793792b8",
+      "native": false
+    },
+    {
+      "path": "docs/art/evidence/r5/desktop-03-split.png",
+      "width": 1920,
+      "height": 1080,
+      "sha256": "acad18536629411ff31bd1c14f0c8444a4fa953d7d497846cc451a89ab427644",
+      "native": false
+    },
+    {
+      "path": "docs/art/evidence/r5/desktop-04-subtract.png",
+      "width": 1920,
+      "height": 1080,
+      "sha256": "8fa2d9fa0ed945f3cdc3d9c71e4b8b132e40913260f76ed496086cee6c69f161",
+      "native": false
+    },
+    {
+      "path": "docs/art/evidence/r5/desktop-05-awards.png",
+      "width": 1920,
+      "height": 1080,
+      "sha256": "c7aa5ad4df084ac91f4173936fd6805c386df73d4071ea3ac8c1d43647449a9d",
+      "native": false
+    },
+    {
+      "path": "docs/art/evidence/r5/desktop-06-passport.png",
+      "width": 1920,
+      "height": 1080,
+      "sha256": "b80af08b47eea7641a2acebd56584f38403b0ec5850303da4a605e244ad068b0",
+      "native": false
+    },
+    {
+      "path": "docs/art/evidence/r5/desktop-07-train.png",
+      "width": 1920,
+      "height": 1080,
+      "sha256": "f41fe96dec53586c35e9368d82980e9ff0f62560f5d7fd3b6a700f53b8789ad2",
+      "native": false
+    },
+    {
+      "path": "docs/store/screenshots/art-r5/iphone-store-01-home.png",
+      "width": 1290,
+      "height": 2796,
+      "sha256": "1def050c09955d209683cdd9511c4f924c07b48827155efb5634edddeebf1b2c",
+      "native": false
+    },
+    {
+      "path": "docs/store/screenshots/art-r5/iphone-store-02-load.png",
+      "width": 1290,
+      "height": 2796,
+      "sha256": "4b4d41e75f535e4c388eed9327a2b46c164d67f283fd529f5cada1fa80118a91",
+      "native": false
+    },
+    {
+      "path": "docs/store/screenshots/art-r5/iphone-store-03-split.png",
+      "width": 1290,
+      "height": 2796,
+      "sha256": "5293022e4d3b880f5d2edea22ddb582c18b5f7f9afb622ee59dabd910a609cf3",
+      "native": false
+    },
+    {
+      "path": "docs/store/screenshots/art-r5/iphone-store-04-subtract.png",
+      "width": 1290,
+      "height": 2796,
+      "sha256": "b71b7dd175ef95a36dedd087c1c5b3be1fc64d95a109de4a38c0ae795431d0c3",
+      "native": false
+    },
+    {
+      "path": "docs/store/screenshots/art-r5/iphone-store-05-awards.png",
+      "width": 1290,
+      "height": 2796,
+      "sha256": "5d833f59d36753b849e32db6b92e0f7d4d8a986c3fa38667e75e8e9b1ef0c101",
+      "native": false
+    },
+    {
+      "path": "docs/store/screenshots/art-r5/iphone-store-06-passport.png",
+      "width": 1290,
+      "height": 2796,
+      "sha256": "17a90166132e395fcd887b30b534888150d2c7057914099b2505eac823323aa5",
+      "native": false
+    },
+    {
+      "path": "docs/store/screenshots/art-r5/iphone-store-07-train.png",
+      "width": 1290,
+      "height": 2796,
+      "sha256": "3f720d30bd1c288c3bf510edc52dd7b3c016fccdfb7ce9cc0e9100cbc311e179",
+      "native": false
+    },
+    {
+      "path": "docs/store/screenshots/art-r5/ipad-store-01-home.png",
+      "width": 2064,
+      "height": 2752,
+      "sha256": "ce8d73a1f286c42495e00245b8b8abe26861644bd3d9c394e094f2098bd531fb",
+      "native": false
+    },
+    {
+      "path": "docs/store/screenshots/art-r5/ipad-store-02-load.png",
+      "width": 2064,
+      "height": 2752,
+      "sha256": "80f152557e940fa914f6a0fb08fddf38bbabb2a30747e8b3f32285a8afa198bc",
+      "native": false
+    },
+    {
+      "path": "docs/store/screenshots/art-r5/ipad-store-03-split.png",
+      "width": 2064,
+      "height": 2752,
+      "sha256": "9b582d92b6996d311de0922aeda7d311d1a70ffde0308c626c27ff2b3cd2f578",
+      "native": false
+    },
+    {
+      "path": "docs/store/screenshots/art-r5/ipad-store-04-subtract.png",
+      "width": 2064,
+      "height": 2752,
+      "sha256": "ee11c5514dcdf67022458c77d69d9939f9ced28fe907cdedde00ec61b1b4624c",
+      "native": false
+    },
+    {
+      "path": "docs/store/screenshots/art-r5/ipad-store-05-awards.png",
+      "width": 2064,
+      "height": 2752,
+      "sha256": "ba0759a1d54bae97311302fb9d565df6bb2d94d90c0c823c0c5c852fa206a645",
+      "native": false
+    },
+    {
+      "path": "docs/store/screenshots/art-r5/ipad-store-06-passport.png",
+      "width": 2064,
+      "height": 2752,
+      "sha256": "2e5ce6887a40e52ca20df28fde8156abd1c740fd940d6c5f13fddb974faaa0c1",
+      "native": false
+    },
+    {
+      "path": "docs/store/screenshots/art-r5/ipad-store-07-train.png",
+      "width": 2064,
+      "height": 2752,
+      "sha256": "d46e587f27afd3d860aa23cc0632bd6d0086af2cd1a41d54033f53e8008ea011",
+      "native": false
+    }
+  ],
+  "errors": [],
+  "external": [],
+  "method": "Unmodified headless Chromium runtime. No native/device/independent-review claim."
+}

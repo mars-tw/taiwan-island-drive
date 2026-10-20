@@ -1,0 +1,33 @@
+{
+  "status": "VERIFIED",
+  "baseline": "d29ab17",
+  "scope": "Tracked and new source text plus current dist client JS/HTML/CSS/JSON; .git, node_modules, secret directories, output and binary art excluded.",
+  "scanned_text_files": 589,
+  "secret_matches": 0,
+  "matched_paths": [],
+  "new_model_private_absolute_paths": 0,
+  "test_changes": [],
+  "branch": "r1-fun-polish",
+  "version": "2.11.0",
+  "review_sources": [
+    {
+      "path": "docs/art/ART_RESCORE3_MUSE.md",
+      "sha256": "67cfbb87e4c55522fd465053299777011a6654981dedd8a93ae96f0b8ec2b918"
+    },
+    {
+      "path": "docs/art/ART_RESCORE2_MUSE.md",
+      "sha256": "62ae54980aca3c67086b28acef6fdcdb62142e177865152301898e8b8bd2dd5c"
+    },
+    {
+      "path": "docs/art/ART_REVIEW_MUSE.md",
+      "sha256": "5c67f291457ae16c57fc0581038b6e8f2a6255811cae334c5c34dafb0d1431cb"
+    }
+  ],
+  "review_sources_missing": [],
+  "dist_entries": {
+    "index.html": "e4f596805eb0ba4edc88395fde8e4d8445d4a0c63c2500d7d51bb7dc7b2cb131",
+    "car/index.html": "4c57a3ae724685b57c44407f9be802b8f6508e7f9eb3a15a59b431caab424964",
+    "train/index.html": "97cdb85dfb4c9fa63938e8e721b3022d245c1c71c24022dd37c9d53eb51bb6c8",
+    "flight/index.html": "d4e1bb1f5fe8fc146e03916fd8328c53c19e1049d16fa195f1fccbf22c688cb1"
+  }
+}

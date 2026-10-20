@@ -1,0 +1,66 @@
+{
+  "status": "VERIFIED",
+  "tool": "image_gen.imagegen",
+  "model_slug": null,
+  "generationCalls": 4,
+  "newDesigns": 5,
+  "newRuntimeImages": 6,
+  "assets": [
+    {
+      "path": "public/art/content-r10/child-waiting.png",
+      "source": "docs/content/r10/art/waiting-original.png",
+      "cell": 0,
+      "method": "sharp crop alpha cell, contain 390x350, 420x400 canvas, feet y=380",
+      "sha256": "8fc2921cd3a07ab2243a82de1142cf852082394ad51fa032a9b1b63ddf939530",
+      "width": 420,
+      "height": 400,
+      "alpha": true
+    },
+    {
+      "path": "public/art/content-r10/grandma-waiting.png",
+      "source": "docs/content/r10/art/waiting-original.png",
+      "cell": 1,
+      "method": "sharp crop alpha cell, contain 390x350, 420x400 canvas, feet y=380",
+      "sha256": "ac12ea1caad31c52cade9de14324f2be2827672c2706c2c490aaac69fa37b1bc",
+      "width": 420,
+      "height": 400,
+      "alpha": true
+    },
+    {
+      "path": "public/art/content-r10/bike-waiting.png",
+      "source": "docs/content/r10/art/waiting-original.png",
+      "cell": 2,
+      "method": "sharp crop alpha cell, contain 390x350, 420x400 canvas, feet y=380",
+      "sha256": "99cc076aeb3d24842ce1713731647247becfc12ed6b1b1206ec5cbdee5fa42bc",
+      "width": 420,
+      "height": 400,
+      "alpha": true
+    },
+    {
+      "path": "public/art/content-r10/open-door.png",
+      "source": "docs/content/r10/art/door-original.png",
+      "sha256": "d2287edab934b763a8913dd65ab16175068e9cca6e168a0eb57129d137c10540",
+      "width": 450,
+      "height": 480,
+      "alpha": true
+    },
+    {
+      "path": "public/art/content-r10/boarding-step.png",
+      "source": "docs/content/r10/art/door-original.png",
+      "method": "crop original illustrated lower tread, no painting",
+      "sha256": "2d16ccc6aa4a43f9032531ff5d5791c9098905f06719760eb7be7242e440f215",
+      "width": 256,
+      "height": 50,
+      "alpha": true
+    },
+    {
+      "path": "public/art/content-r10/station-wide-platform.webp",
+      "source": "docs/content/r10/art/platform-final-original.png",
+      "method": "sharp format conversion only; generated continuous waiting platform",
+      "sha256": "fe78cbc523d87d0d6c016daa03d8b3de18aa63e4a1ad5f994ed17a5353a4a923",
+      "width": 1024,
+      "height": 1536,
+      "alpha": false
+    }
+  ]
+}

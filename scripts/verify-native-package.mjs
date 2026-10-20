@@ -7,6 +7,7 @@ const checks=[];
 function check(id,ok){checks.push({id,passed:!!ok});if(!ok)throw new Error('Native package validation failed: '+id);}
 check('local-bundle-no-remote-server',config.webDir==='dist-native'&&!config.server?.url&&!(config.server?.allowNavigation?.length));
 check('release-web-inspection-off',config.android.webContentsDebuggingEnabled===false&&config.android.allowMixedContent===false);
+check('release-logging-off',config.loggingBehavior==='none');
 const manifest=plist.parse(await readFile(join(root,'ios/App/App/PrivacyInfo.xcprivacy'),'utf8'));
 check('no-tracking',manifest.NSPrivacyTracking===false&&manifest.NSPrivacyTrackingDomains.length===0&&manifest.NSPrivacyCollectedDataTypes.length===0);
 check('preferences-required-reason',manifest.NSPrivacyAccessedAPITypes.some(x=>x.NSPrivacyAccessedAPIType==='NSPrivacyAccessedAPICategoryUserDefaults'&&x.NSPrivacyAccessedAPITypeReasons.includes('CA92.1')));
@@ -20,9 +21,16 @@ check('android-target-36',/targetSdkVersion\s*=\s*36/.test(android)&&/compileSdk
 const permissions=await readFile(join(root,'android/app/src/main/AndroidManifest.xml'),'utf8');
 check('android-no-cloud-backup-or-cleartext',permissions.includes('android:allowBackup="false"')&&permissions.includes('android:usesCleartextTraffic="false"'));
 check('no-unneeded-sensitive-permissions',!permissions.match(/android\.permission\.(?:CAMERA|RECORD_AUDIO|ACCESS_FINE_LOCATION|READ_CONTACTS|READ_PHONE_STATE)/));
+check('no-internet-or-advertising-permission',!permissions.match(/(?:android\.permission\.INTERNET|com\.google\.android\.gms\.permission\.AD_ID)/));
+const version=JSON.parse(await readFile(join(root,'package.json'),'utf8')).version;
+const androidBuild=await readFile(join(root,'android/app/build.gradle'),'utf8');
+check('native-version-matches-source',project.includes(`MARKETING_VERSION = ${version};`)&&androidBuild.includes(`versionName "${version}"`));
+const support=await readFile(join(root,'public/support.html'),'utf8');
+check('support-never-opens-external-app',!support.includes('window.open(')&&!support.match(/href=["'](?:https?:|mailto:|tel:)/i));
 const build=join(root,'dist-native');
 for(const file of ['index.html','car/index.html','train/index.html','flight/index.html','privacy.html','support.html','models/aircraft.glb','models/train.glb','models/coupe.glb'])check('bundled-'+file,(await stat(join(build,file))).size>0);
 const top=await readdir(build);check('no-web-worker-or-source-archive',!top.some(x=>['sw.js','precache.json','downloads','textures'].includes(x)));
+for(const file of ['licenses/taiwan-train-math/LICENSE.txt','licenses/taiwan-train-math/NOTICE.txt'])check('math-attribution-'+file,(await readFile(join(build,file),'utf8'))===(await readFile(join(root,'public',file),'utf8')));
 const native=await readFile(join(root,'src/shared/native.js'),'utf8');
 check('local-only-voices',native.includes('localService===true')&&!native.includes('.openInstall('));
 const guard=await readFile(join(root,'src/shared/parent-gate.js'),'utf8');

@@ -1,0 +1,152 @@
+{
+  "status": "VERIFIED",
+  "baseline": "cd0dbad",
+  "branch": "r1-fun-polish",
+  "version": "2.32.0",
+  "nativeSourceBuild": 28,
+  "unitTests": 257,
+  "unchangedExistingTestFiles": 40,
+  "browserChecks": 159,
+  "screenshots": 502,
+  "reviewSet": 15,
+  "mergeChecks": 132,
+  "storeChecks": 101,
+  "newGenerationCalls": 1,
+  "newRuntimeAssets": 1,
+  "newDependencies": 0,
+  "secretHits": 0,
+  "stepChangedPixels": 2133,
+  "doorOverlap": [
+    {
+      "stage": 1,
+      "ratio": 0.96640625
+    },
+    {
+      "stage": 2,
+      "ratio": 0.96640625
+    },
+    {
+      "stage": 3,
+      "ratio": 0.96640625
+    }
+  ],
+  "cleanup": {
+    "files": 65,
+    "bytes": 89809018,
+    "retained": 4643
+  },
+  "performance": {
+    "status": "EXECUTED",
+    "method": "Three real-time 2000ms RAF samples per course/viewport, median p95. R20: each train sample explicitly invites the first rider. Train is measured while the single-scene doorway and passengers are active. One headless browser/context at a time; concurrent host load, reference only, not clean/native performance.",
+    "rows": [
+      {
+        "viewport": "desktop",
+        "kind": "cake",
+        "activeState": "pedal and cake balance",
+        "runs": [
+          16.7,
+          16.8,
+          16.7
+        ],
+        "p95": 16.7
+      },
+      {
+        "viewport": "desktop",
+        "kind": "crossing",
+        "activeState": "friend crossing zebra",
+        "runs": [
+          16.7,
+          16.7,
+          16.8
+        ],
+        "p95": 16.7
+      },
+      {
+        "viewport": "desktop",
+        "kind": "tickets",
+        "activeState": "single-scene serial boarding",
+        "runs": [
+          16.7,
+          16.7,
+          16.7
+        ],
+        "p95": 16.7
+      },
+      {
+        "viewport": "portrait",
+        "kind": "cake",
+        "activeState": "pedal and cake balance",
+        "runs": [
+          16.7,
+          16.8,
+          16.7
+        ],
+        "p95": 16.7
+      },
+      {
+        "viewport": "portrait",
+        "kind": "crossing",
+        "activeState": "friend crossing zebra",
+        "runs": [
+          16.7,
+          16.8,
+          16.7
+        ],
+        "p95": 16.7
+      },
+      {
+        "viewport": "portrait",
+        "kind": "tickets",
+        "activeState": "single-scene serial boarding",
+        "runs": [
+          16.7,
+          16.8,
+          16.7
+        ],
+        "p95": 16.7
+      },
+      {
+        "viewport": "landscape",
+        "kind": "cake",
+        "activeState": "pedal and cake balance",
+        "runs": [
+          16.8,
+          16.8,
+          16.8
+        ],
+        "p95": 16.8
+      },
+      {
+        "viewport": "landscape",
+        "kind": "crossing",
+        "activeState": "friend crossing zebra",
+        "runs": [
+          16.8,
+          16.7,
+          16.8
+        ],
+        "p95": 16.8
+      },
+      {
+        "viewport": "landscape",
+        "kind": "tickets",
+        "activeState": "single-scene serial boarding",
+        "runs": [
+          16.7,
+          16.7,
+          16.7
+        ],
+        "p95": 16.7
+      }
+    ],
+    "limitMs": 18,
+    "withinReferenceLimit": true
+  },
+  "blocked": [
+    "Physical iPhone/iPad touch and native voice require devices",
+    "Parent-child playtest requires participants",
+    "Clean hardware performance requires exclusive resources",
+    "Muse >=8 requires independent rescore",
+    "Native signed packages not rebuilt"
+  ]
+}

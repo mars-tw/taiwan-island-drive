@@ -1,0 +1,10 @@
+{
+  "status": "EXECUTED",
+  "tool": "mcp__blender__get_addon_status",
+  "actual_response": "Error checking addon status: Could not connect to Blender. Make sure the Blender addon is running.",
+  "constraint": "本輪只准背景／無頭，不啟動可見Blender，也不接管其他線路工作。",
+  "mcp_status": "BLOCKED",
+  "local_rework": "Blender 5.2 CLI --background --factory-startup；以既有Blender模型為底，車門、引擎蓋、車頂、車身四組圓角及法線重工。未程序化另造模型底。",
+  "completed": "原GLB另存coupe-original.glb；新GLB保留原UV、16格語意材質及車輪階層，通過原有8模型表面檢查，詳見coupe-rounding-r7.json與vehicle-test-r7.txt。",
+  "remaining": "新獨立評分、兒童同車辨識盲測及原生實機仍未驗證。"
+}

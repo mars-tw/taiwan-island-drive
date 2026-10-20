@@ -1,0 +1,125 @@
+{
+  "status": "EXECUTED",
+  "tool": "image_gen.imagegen",
+  "model_slug": null,
+  "generation_calls": 3,
+  "designs": 6,
+  "pose_frames": 6,
+  "outputs": [
+    {
+      "path": "public/art/content-r1/cake.png",
+      "width": 384,
+      "height": 384,
+      "sha256": "87fa87c867227157a5de69c71350b45fda27e143375107ddf9f982d7edc34090",
+      "crop": {
+        "left": 0,
+        "top": 0,
+        "width": 475,
+        "height": 444
+      }
+    },
+    {
+      "path": "public/art/content-r1/flag.png",
+      "width": 384,
+      "height": 384,
+      "sha256": "f90565b2d5d5679335d3d39f697c757f3982ea0e834d30d56a101902861569ae",
+      "crop": {
+        "left": 525,
+        "top": 20,
+        "width": 340,
+        "height": 400
+      }
+    },
+    {
+      "path": "public/art/content-r1/child-0.png",
+      "width": 384,
+      "height": 384,
+      "sha256": "96240dc7d9c64986194823bc8f518fc7fd67f590295a03a12b0e93092085cbb2",
+      "crop": {
+        "left": 887,
+        "top": 0,
+        "width": 444,
+        "height": 444
+      }
+    },
+    {
+      "path": "public/art/content-r1/child-1.png",
+      "width": 384,
+      "height": 384,
+      "sha256": "9aaa95d5097253dbe5eb54b92627c949211d8ea7e62d695181ad58f924aa0f2d",
+      "crop": {
+        "left": 1331,
+        "top": 0,
+        "width": 443,
+        "height": 444
+      }
+    },
+    {
+      "path": "public/art/content-r1/bike-0.png",
+      "width": 384,
+      "height": 384,
+      "sha256": "e0eaec4851544486a9d0618692f676316fb44c14b436fc05a37bdaa307b362ea",
+      "crop": {
+        "left": 0,
+        "top": 444,
+        "width": 475,
+        "height": 443
+      }
+    },
+    {
+      "path": "public/art/content-r1/bike-1.png",
+      "width": 384,
+      "height": 384,
+      "sha256": "310ec0b57b212fec13477e5b15cdd5cc3fd3d9f9b038021f0af041817e0de634",
+      "crop": {
+        "left": 490,
+        "top": 444,
+        "width": 397,
+        "height": 443
+      }
+    },
+    {
+      "path": "public/art/content-r1/grandma-0.png",
+      "width": 384,
+      "height": 384,
+      "sha256": "af720ec495e59cf0375778246523fa57d74af4b76b8c7842ddc93b1bb769e9bf",
+      "crop": {
+        "left": 887,
+        "top": 444,
+        "width": 444,
+        "height": 443
+      }
+    },
+    {
+      "path": "public/art/content-r1/grandma-1.png",
+      "width": 384,
+      "height": 384,
+      "sha256": "b53d613c078187d8f59bb7dfadfe4903a79f847dadbcf305ed493607cac2a725",
+      "crop": {
+        "left": 1331,
+        "top": 444,
+        "width": 443,
+        "height": 443
+      }
+    },
+    {
+      "path": "public/art/content-r1/crossing.webp",
+      "width": 1536,
+      "height": 1024,
+      "sha256": "32625e00c1457064d2dc5b7a9e2fa7b0d5bc8094e9b8db09b46ea4a49413bf9e",
+      "source": "docs/content/r1/art/crossing-master.png",
+      "source_sha256": "f100f8713df31f490ebf8f9c84398dac9971e372aa7d14d7bc2126739b353eb5"
+    }
+  ],
+  "source": "docs/content/r1/art/sprite-master.png",
+  "source_sha256": "6f0777716c434f3d953c398f635a7edfe79fa08be1325eac1838a0c6e8c88e85",
+  "processing": "sharp: grid crop and size normalization only, alpha retained; no procedural replacement art",
+  "runtime_generation_calls": 2,
+  "reference_boards": [
+    {
+      "path": "docs/content/r1/art/character-turnarounds.png",
+      "tool": "image_gen.imagegen",
+      "sha256": "392a1dfd8f748172cf565f0c0348f595631cd03b4f702de52f52807766fb2334"
+    }
+  ]
+}

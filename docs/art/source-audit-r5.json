@@ -1,0 +1,15 @@
+{
+  "status": "VERIFIED",
+  "secret_matches": 0,
+  "matched_paths": [],
+  "text_files_scanned": 596,
+  "scan_scope": "workspace UTF-8 text files; excludes git/dependencies/build outputs; never reads .secrets",
+  "versions": {
+    "package.json": "2.9.0",
+    "package-lock.json": "2.9.0"
+  },
+  "app_version_old_hits": 0,
+  "tests_modified": false,
+  "dependency_versions_unchanged": true,
+  "dependency_note": "domutils 2.8.0 is an existing dependency version; preserved."
+}

@@ -1,0 +1,707 @@
+{
+  "status": "PASS",
+  "sizes": 7,
+  "cases": 28,
+  "records": [
+    {
+      "width": 390,
+      "height": 844,
+      "pilot": "child",
+      "instruments": false,
+      "stage": {
+        "x": 0,
+        "y": 192,
+        "width": 390,
+        "height": 507,
+        "top": 192,
+        "right": 390,
+        "bottom": 699,
+        "left": 0
+      },
+      "plane": {
+        "left": 66.712912780861,
+        "top": 399.82762181886693,
+        "right": 323.287087219139,
+        "bottom": 509.1201569374638
+      },
+      "contained": true,
+      "noUiOverlap": true,
+      "childButtons": 3
+    },
+    {
+      "width": 390,
+      "height": 844,
+      "pilot": "child",
+      "instruments": true,
+      "stage": {
+        "x": 0,
+        "y": 192,
+        "width": 390,
+        "height": 372,
+        "top": 192,
+        "right": 390,
+        "bottom": 564,
+        "left": 0
+      },
+      "plane": {
+        "left": 93.49942904498947,
+        "top": 342.506131148096,
+        "right": 296.5005709550106,
+        "bottom": 428.4894240228432
+      },
+      "contained": true,
+      "noUiOverlap": true,
+      "childButtons": 3
+    },
+    {
+      "width": 390,
+      "height": 844,
+      "pilot": "parent",
+      "instruments": false,
+      "stage": {
+        "x": 0,
+        "y": 192,
+        "width": 390,
+        "height": 471,
+        "top": 192,
+        "right": 390,
+        "bottom": 663,
+        "left": 0
+      },
+      "plane": {
+        "left": 66.5881531222277,
+        "top": 382.97923950542247,
+        "right": 323.4118468777723,
+        "bottom": 490.8115372056323
+      },
+      "contained": true,
+      "noUiOverlap": true,
+      "childButtons": 0
+    },
+    {
+      "width": 390,
+      "height": 844,
+      "pilot": "parent",
+      "instruments": true,
+      "stage": {
+        "x": 0,
+        "y": 192,
+        "width": 390,
+        "height": 336,
+        "top": 192,
+        "right": 390,
+        "bottom": 528,
+        "left": 0
+      },
+      "plane": {
+        "left": 110.48861003410893,
+        "top": 330.49299626149406,
+        "right": 279.51138996589106,
+        "bottom": 401.1619686862771
+      },
+      "contained": true,
+      "noUiOverlap": true,
+      "childButtons": 0
+    },
+    {
+      "width": 375,
+      "height": 667,
+      "pilot": "child",
+      "instruments": false,
+      "stage": {
+        "x": 0,
+        "y": 192,
+        "width": 375,
+        "height": 330,
+        "top": 192,
+        "right": 375,
+        "bottom": 522,
+        "left": 0
+      },
+      "plane": {
+        "left": 97.50552565437937,
+        "top": 325.70610608232266,
+        "right": 277.49447434562063,
+        "bottom": 401.50656366895123
+      },
+      "contained": true,
+      "noUiOverlap": true,
+      "childButtons": 3
+    },
+    {
+      "width": 375,
+      "height": 667,
+      "pilot": "child",
+      "instruments": true,
+      "stage": {
+        "x": 0,
+        "y": 192,
+        "width": 375,
+        "height": 195,
+        "top": 192,
+        "right": 375,
+        "bottom": 387,
+        "left": 0
+      },
+      "plane": {
+        "left": 138.04174296925407,
+        "top": 272.15163457292783,
+        "right": 236.95825703074593,
+        "bottom": 313.75069586090933
+      },
+      "contained": true,
+      "noUiOverlap": true,
+      "childButtons": 3
+    },
+    {
+      "width": 375,
+      "height": 667,
+      "pilot": "parent",
+      "instruments": false,
+      "stage": {
+        "x": 0,
+        "y": 192,
+        "width": 375,
+        "height": 294,
+        "top": 192,
+        "right": 375,
+        "bottom": 486,
+        "left": 0
+      },
+      "plane": {
+        "left": 107.34483443298289,
+        "top": 311.20997115625096,
+        "right": 267.65516556701715,
+        "bottom": 378.51930347867494
+      },
+      "contained": true,
+      "noUiOverlap": true,
+      "childButtons": 0
+    },
+    {
+      "width": 375,
+      "height": 667,
+      "pilot": "parent",
+      "instruments": true,
+      "stage": {
+        "x": 0,
+        "y": 192,
+        "width": 375,
+        "height": 221.546875,
+        "top": 192,
+        "right": 375,
+        "bottom": 413.546875,
+        "left": 0
+      },
+      "plane": {
+        "left": 132.29854265962297,
+        "top": 283.7077960389908,
+        "right": 242.70145734037703,
+        "bottom": 329.83991771016133
+      },
+      "contained": true,
+      "noUiOverlap": true,
+      "childButtons": 0
+    },
+    {
+      "width": 844,
+      "height": 390,
+      "pilot": "child",
+      "instruments": false,
+      "stage": {
+        "x": 0,
+        "y": 155,
+        "width": 660,
+        "height": 235,
+        "top": 155,
+        "right": 660,
+        "bottom": 390,
+        "left": 0
+      },
+      "plane": {
+        "left": 265.91502377083157,
+        "top": 250.22323636164975,
+        "right": 394.08497622916843,
+        "bottom": 304.18192036829305
+      },
+      "contained": true,
+      "noUiOverlap": true,
+      "childButtons": 3
+    },
+    {
+      "width": 844,
+      "height": 390,
+      "pilot": "child",
+      "instruments": true,
+      "stage": {
+        "x": 0,
+        "y": 155,
+        "width": 660,
+        "height": 235,
+        "top": 155,
+        "right": 660,
+        "bottom": 390,
+        "left": 0
+      },
+      "plane": {
+        "left": 274.4141144255215,
+        "top": 252.7964705557503,
+        "right": 385.5858855744785,
+        "bottom": 299.59914846168226
+      },
+      "contained": true,
+      "noUiOverlap": true,
+      "childButtons": 3
+    },
+    {
+      "width": 844,
+      "height": 390,
+      "pilot": "parent",
+      "instruments": false,
+      "stage": {
+        "x": 0,
+        "y": 155,
+        "width": 616,
+        "height": 235,
+        "top": 155,
+        "right": 616,
+        "bottom": 390,
+        "left": 0
+      },
+      "plane": {
+        "left": 243.9304835089119,
+        "top": 250.2872483525571,
+        "right": 372.0695164910881,
+        "bottom": 304.0880210214914
+      },
+      "contained": true,
+      "noUiOverlap": true,
+      "childButtons": 0
+    },
+    {
+      "width": 844,
+      "height": 390,
+      "pilot": "parent",
+      "instruments": true,
+      "stage": {
+        "x": 0,
+        "y": 155,
+        "width": 616,
+        "height": 235,
+        "top": 155,
+        "right": 616,
+        "bottom": 390,
+        "left": 0
+      },
+      "plane": {
+        "left": 249.3457742623244,
+        "top": 252.0090424167783,
+        "right": 366.6542257376756,
+        "bottom": 301.03316582937305
+      },
+      "contained": true,
+      "noUiOverlap": true,
+      "childButtons": 0
+    },
+    {
+      "width": 568,
+      "height": 320,
+      "pilot": "child",
+      "instruments": false,
+      "stage": {
+        "x": 0,
+        "y": 155,
+        "width": 384,
+        "height": 165,
+        "top": 155,
+        "right": 384,
+        "bottom": 320,
+        "left": 0
+      },
+      "plane": {
+        "left": 147.00416562632856,
+        "top": 221.8588680837115,
+        "right": 236.99583437367147,
+        "bottom": 259.7447525990143
+      },
+      "contained": true,
+      "noUiOverlap": true,
+      "childButtons": 3
+    },
+    {
+      "width": 568,
+      "height": 320,
+      "pilot": "child",
+      "instruments": true,
+      "stage": {
+        "x": 0,
+        "y": 155,
+        "width": 384,
+        "height": 165,
+        "top": 155,
+        "right": 384,
+        "bottom": 320,
+        "left": 0
+      },
+      "plane": {
+        "left": 150.1519838300597,
+        "top": 222.82829827355545,
+        "right": 233.84801616994034,
+        "bottom": 258.0089957368929
+      },
+      "contained": true,
+      "noUiOverlap": true,
+      "childButtons": 3
+    },
+    {
+      "width": 568,
+      "height": 320,
+      "pilot": "parent",
+      "instruments": false,
+      "stage": {
+        "x": 0,
+        "y": 155,
+        "width": 340,
+        "height": 165,
+        "top": 155,
+        "right": 340,
+        "bottom": 320,
+        "left": 0
+      },
+      "plane": {
+        "left": 125.01495810014346,
+        "top": 221.9035552407531,
+        "right": 214.98504189985655,
+        "bottom": 259.6792009319094
+      },
+      "contained": true,
+      "noUiOverlap": true,
+      "childButtons": 0
+    },
+    {
+      "width": 568,
+      "height": 320,
+      "pilot": "parent",
+      "instruments": true,
+      "stage": {
+        "x": 0,
+        "y": 155,
+        "width": 340,
+        "height": 165,
+        "top": 155,
+        "right": 340,
+        "bottom": 320,
+        "left": 0
+      },
+      "plane": {
+        "left": 128.16878634147824,
+        "top": 222.90481151179168,
+        "right": 211.83121365852176,
+        "bottom": 257.8982934926089
+      },
+      "contained": true,
+      "noUiOverlap": true,
+      "childButtons": 0
+    },
+    {
+      "width": 768,
+      "height": 1024,
+      "pilot": "child",
+      "instruments": false,
+      "stage": {
+        "x": 0,
+        "y": 191,
+        "width": 768,
+        "height": 662,
+        "top": 191,
+        "right": 768,
+        "bottom": 853,
+        "left": 0
+      },
+      "plane": {
+        "left": 210.75276953582835,
+        "top": 461.4968673211763,
+        "right": 557.2472304641716,
+        "bottom": 607.2045858679278
+      },
+      "contained": true,
+      "noUiOverlap": true,
+      "childButtons": 3
+    },
+    {
+      "width": 768,
+      "height": 1024,
+      "pilot": "child",
+      "instruments": true,
+      "stage": {
+        "x": 0,
+        "y": 191,
+        "width": 768,
+        "height": 498,
+        "top": 191,
+        "right": 768,
+        "bottom": 689,
+        "left": 0
+      },
+      "plane": {
+        "left": 256.69763313110536,
+        "top": 395.18425589040714,
+        "right": 511.30236686889464,
+        "bottom": 502.7617048688319
+      },
+      "contained": true,
+      "noUiOverlap": true,
+      "childButtons": 3
+    },
+    {
+      "width": 768,
+      "height": 1024,
+      "pilot": "parent",
+      "instruments": false,
+      "stage": {
+        "x": 0,
+        "y": 194,
+        "width": 768,
+        "height": 606,
+        "top": 194,
+        "right": 768,
+        "bottom": 800,
+        "left": 0
+      },
+      "plane": {
+        "left": 225.45835625438116,
+        "top": 441.8368661057044,
+        "right": 542.5416437456188,
+        "bottom": 574.6743851898187
+      },
+      "contained": true,
+      "noUiOverlap": true,
+      "childButtons": 0
+    },
+    {
+      "width": 768,
+      "height": 1024,
+      "pilot": "parent",
+      "instruments": true,
+      "stage": {
+        "x": 0,
+        "y": 194,
+        "width": 768,
+        "height": 442,
+        "top": 194,
+        "right": 768,
+        "bottom": 636,
+        "left": 0
+      },
+      "plane": {
+        "left": 271.0966346126859,
+        "top": 375.61176986767737,
+        "right": 496.9033653873141,
+        "bottom": 470.1431723967682
+      },
+      "contained": true,
+      "noUiOverlap": true,
+      "childButtons": 0
+    },
+    {
+      "width": 1024,
+      "height": 768,
+      "pilot": "child",
+      "instruments": false,
+      "stage": {
+        "x": 0,
+        "y": 191,
+        "width": 1024,
+        "height": 406,
+        "top": 191,
+        "right": 1024,
+        "bottom": 597,
+        "left": 0
+      },
+      "plane": {
+        "left": 404.2997839065726,
+        "top": 356.4456367308127,
+        "right": 619.7002160934273,
+        "bottom": 447.0574354091547
+      },
+      "contained": true,
+      "noUiOverlap": true,
+      "childButtons": 3
+    },
+    {
+      "width": 1024,
+      "height": 768,
+      "pilot": "child",
+      "instruments": true,
+      "stage": {
+        "x": 0,
+        "y": 191,
+        "width": 1024,
+        "height": 242,
+        "top": 191,
+        "right": 1024,
+        "bottom": 433,
+        "left": 0
+      },
+      "plane": {
+        "left": 454.1767180218704,
+        "top": 291.54410105670587,
+        "right": 569.8232819781297,
+        "bottom": 340.19955163898123
+      },
+      "contained": true,
+      "noUiOverlap": true,
+      "childButtons": 3
+    },
+    {
+      "width": 1024,
+      "height": 768,
+      "pilot": "parent",
+      "instruments": false,
+      "stage": {
+        "x": 0,
+        "y": 194,
+        "width": 1024,
+        "height": 350,
+        "top": 194,
+        "right": 1024,
+        "bottom": 544,
+        "left": 0
+      },
+      "plane": {
+        "left": 419.1838036817262,
+        "top": 336.74302303485166,
+        "right": 604.8161963182738,
+        "bottom": 414.56771085125695
+      },
+      "contained": true,
+      "noUiOverlap": true,
+      "childButtons": 0
+    },
+    {
+      "width": 1024,
+      "height": 768,
+      "pilot": "parent",
+      "instruments": true,
+      "stage": {
+        "x": 0,
+        "y": 194,
+        "width": 1024,
+        "height": 282.171875,
+        "top": 194,
+        "right": 1024,
+        "bottom": 476.171875,
+        "left": 0
+      },
+      "plane": {
+        "left": 439.9666311329806,
+        "top": 309.8699527210068,
+        "right": 584.0333688670194,
+        "bottom": 370.1818430223725
+      },
+      "contained": true,
+      "noUiOverlap": true,
+      "childButtons": 0
+    },
+    {
+      "width": 1440,
+      "height": 900,
+      "pilot": "child",
+      "instruments": false,
+      "stage": {
+        "x": 0,
+        "y": 191,
+        "width": 1440,
+        "height": 538,
+        "top": 191,
+        "right": 1440,
+        "bottom": 729,
+        "left": 0
+      },
+      "plane": {
+        "left": 580.2552656144163,
+        "top": 411.1242547857333,
+        "right": 859.7447343855838,
+        "bottom": 528.7077357586322
+      },
+      "contained": true,
+      "noUiOverlap": true,
+      "childButtons": 3
+    },
+    {
+      "width": 1440,
+      "height": 900,
+      "pilot": "child",
+      "instruments": true,
+      "stage": {
+        "x": 0,
+        "y": 191,
+        "width": 1440,
+        "height": 374,
+        "top": 191,
+        "right": 1440,
+        "bottom": 565,
+        "left": 0
+      },
+      "plane": {
+        "left": 620.7495700452967,
+        "top": 343.18037925444145,
+        "right": 819.2504299547033,
+        "bottom": 427.19978440576307
+      },
+      "contained": true,
+      "noUiOverlap": true,
+      "childButtons": 3
+    },
+    {
+      "width": 1440,
+      "height": 900,
+      "pilot": "parent",
+      "instruments": false,
+      "stage": {
+        "x": 0,
+        "y": 194,
+        "width": 1440,
+        "height": 482,
+        "top": 194,
+        "right": 1440,
+        "bottom": 676,
+        "left": 0
+      },
+      "plane": {
+        "left": 594.8467004724256,
+        "top": 391.425338027512,
+        "right": 845.1532995275744,
+        "bottom": 496.2467075788098
+      },
+      "contained": true,
+      "noUiOverlap": true,
+      "childButtons": 0
+    },
+    {
+      "width": 1440,
+      "height": 900,
+      "pilot": "parent",
+      "instruments": true,
+      "stage": {
+        "x": 0,
+        "y": 194,
+        "width": 1440,
+        "height": 364,
+        "top": 194,
+        "right": 1440,
+        "bottom": 558,
+        "left": 0
+      },
+      "plane": {
+        "left": 625.7798323604895,
+        "top": 343.1669009700105,
+        "right": 814.2201676395105,
+        "bottom": 422.1109125985547
+      },
+      "contained": true,
+      "noUiOverlap": true,
+      "childButtons": 0
+    }
+  ]
+}

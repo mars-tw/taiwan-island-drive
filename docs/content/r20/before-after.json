@@ -1,0 +1,27 @@
+{
+  "status": "VERIFIED",
+  "method": "Original unscaled baseline git objects and byte-identical R20 captures",
+  "comparisons": [
+    {
+      "before": "docs/content/r20/before-cake.png",
+      "beforeBaseline": "cd0dbad",
+      "beforeSha256": "e1de1dc8e089f7341507018063372d2193337bb0a0834709bf973c61a6ccf97c",
+      "after": "docs/content/r20/after-cake.png",
+      "afterSha256": "2e59fcadb9ec2f60703a9aa42f7d8e7ec71742958638173bb230d4827bb5072a"
+    },
+    {
+      "before": "docs/content/r20/before-crossing.png",
+      "beforeBaseline": "cd0dbad",
+      "beforeSha256": "5c81af9079b06959b809cb703fad656a0bfc09165d1fa156fe34fabd1522496d",
+      "after": "docs/content/r20/after-crossing.png",
+      "afterSha256": "d794ba780e4c98857150bc47f9d4fa6c4698d4a2711b7ff23b39502a419a032c"
+    },
+    {
+      "before": "docs/content/r20/before-tickets.png",
+      "beforeBaseline": "cd0dbad",
+      "beforeSha256": "e1f7e2d2e6d2455db6c1dabb09dbfd606833ca13389f6a8001d509adf12e73e5",
+      "after": "docs/content/r20/after-tickets.png",
+      "afterSha256": "ae994366133ba60c8aa5ba033f32fb879c9eeebccbd16242ac43287ba5472ea6"
+    }
+  ]
+}

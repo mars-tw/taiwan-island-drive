@@ -1,0 +1,1350 @@
+{
+  "status": "VERIFIED",
+  "policy": "Execution manifests retain capture-time hashes. Later focused crossing and matrix runs replace same-name images. screenshots.json is the delivered current-image index; review-set contains byte-identical copies of those originals.",
+  "recaptures": [
+    {
+      "path": "docs/content/r17/phone-crossing-stage-1-start.png",
+      "previousManifest": "docs/content/r17/browser-all.json",
+      "previousSha256": "5c6635512482d7e949676adbe830c7cd30f9361cbbd7c030fca0b0d96d5cc6a2",
+      "currentManifest": "docs/content/r17/browser-crossing.json",
+      "currentSha256": "baf922b249580923520c7fc521e28250ab0cf79124ebeb15eae3db6246867f90"
+    },
+    {
+      "path": "docs/content/r17/phone-crossing-wrong-side.png",
+      "previousManifest": "docs/content/r17/browser-all.json",
+      "previousSha256": "35eaf1844a8df9cefaaabac91431785cdfca812a0d7f4540e826984a7e7ccb64",
+      "currentManifest": "docs/content/r17/browser-crossing.json",
+      "currentSha256": "1fd2e2316ce7b119ce75cce7c183c2425dc603028c8cfb8d0e33814b124dc769"
+    },
+    {
+      "path": "docs/content/r17/phone-crossing-stage-1-child-look-left.png",
+      "previousManifest": "docs/content/r17/browser-all.json",
+      "previousSha256": "952778aebbf30183d815dd974915b35235f0348c0e1049bb95b53565bbcd21fd",
+      "currentManifest": "docs/content/r17/browser-crossing.json",
+      "currentSha256": "3f25080386d1cfe8fddef97b1ff945cb187d4b308a70b0464544bb2750ffeae8"
+    },
+    {
+      "path": "docs/content/r17/phone-crossing-stage-1-traffic-moving-1.png",
+      "previousManifest": "docs/content/r17/browser-all.json",
+      "previousSha256": "952778aebbf30183d815dd974915b35235f0348c0e1049bb95b53565bbcd21fd",
+      "currentManifest": "docs/content/r17/browser-crossing.json",
+      "currentSha256": "3f25080386d1cfe8fddef97b1ff945cb187d4b308a70b0464544bb2750ffeae8"
+    },
+    {
+      "path": "docs/content/r17/phone-crossing-stage-1-traffic-moving-2.png",
+      "previousManifest": "docs/content/r17/browser-all.json",
+      "previousSha256": "fe14590c5a61fd411e43340df20d14f0902f89614d9576e4e8e9eb7cf533ea41",
+      "currentManifest": "docs/content/r17/browser-crossing.json",
+      "currentSha256": "17b9b88e5dbfe57fba1fdcccc72822b8fe5a3659b31090359637631b1d8decd5"
+    },
+    {
+      "path": "docs/content/r17/phone-crossing-stage-1-child-look-right.png",
+      "previousManifest": "docs/content/r17/browser-all.json",
+      "previousSha256": "c54631dabb957bd68fdd4da9f2762a66bc9abdd2aa7b6e86badb128efdf32f4c",
+      "currentManifest": "docs/content/r17/browser-crossing.json",
+      "currentSha256": "fad4090fde27590a5d24377afe2adec00c687b6d6629cef49fa394c37da28b8d"
+    },
+    {
+      "path": "docs/content/r17/phone-crossing-stage-1-traffic.png",
+      "previousManifest": "docs/content/r17/browser-all.json",
+      "previousSha256": "c54631dabb957bd68fdd4da9f2762a66bc9abdd2aa7b6e86badb128efdf32f4c",
+      "currentManifest": "docs/content/r17/browser-crossing.json",
+      "currentSha256": "fad4090fde27590a5d24377afe2adec00c687b6d6629cef49fa394c37da28b8d"
+    },
+    {
+      "path": "docs/content/r17/phone-crossing-stage-1-traffic-moving-3.png",
+      "previousManifest": "docs/content/r17/browser-all.json",
+      "previousSha256": "f0e4ec51d758a4c68484ab42c0fe13b6419ff803f0a09a8b226b2dbe5408297a",
+      "currentManifest": "docs/content/r17/browser-crossing.json",
+      "currentSha256": "b2cec5b959290709ed7a1a148f0a20ef5229ade10f7dd915834cdaa0a21c408e"
+    },
+    {
+      "path": "docs/content/r17/phone-crossing-stage-1-ready-cross.png",
+      "previousManifest": "docs/content/r17/browser-all.json",
+      "previousSha256": "cd625941892def2ca7e01b4bf6f7f305d03e2c38174796e1625a798e63d7b7b6",
+      "currentManifest": "docs/content/r17/browser-crossing.json",
+      "currentSha256": "5dbfec87d9acb2f349d32679753b6b2f8d75cafd8d8d32b320de9f7f2abec16c"
+    },
+    {
+      "path": "docs/content/r17/phone-crossing-stage-1-child-moving-1.png",
+      "previousManifest": "docs/content/r17/browser-all.json",
+      "previousSha256": "2cb789e86ec78434ffbb8e55e7265a9fd0c71325ddeefc46b79f4fe0f09b071c",
+      "currentManifest": "docs/content/r17/browser-crossing.json",
+      "currentSha256": "e5dc6bdc81d0e6dc0122e0588951f797c078910ebc147b83c1c356b894b65c70"
+    },
+    {
+      "path": "docs/content/r17/phone-crossing-stage-1-child-moving-2.png",
+      "previousManifest": "docs/content/r17/browser-all.json",
+      "previousSha256": "92597fed8a0cfbde8cc86b37a21d54a5e7dd0dabdc53ce0284a7ea04be4b3c28",
+      "currentManifest": "docs/content/r17/browser-crossing.json",
+      "currentSha256": "c4dedeae9efe4b22eb46e73dba08a208c0e29839340fd852b86bc128cae106d4"
+    },
+    {
+      "path": "docs/content/r17/phone-crossing-stage-1-child-moving-3.png",
+      "previousManifest": "docs/content/r17/browser-all.json",
+      "previousSha256": "5e5f5de341c547c4e5ce86d45efcd135bae0ab5223758da30b03544417c1ecbe",
+      "currentManifest": "docs/content/r17/browser-crossing.json",
+      "currentSha256": "d74a54c744b377950d7ce26d00d4d53c1b60394724a3f8bfd7ec6757beff30be"
+    },
+    {
+      "path": "docs/content/r17/phone-crossing-stage-1-child-arrived.png",
+      "previousManifest": "docs/content/r17/browser-all.json",
+      "previousSha256": "91facdf10f8e60dc11cda6e38d7fbb137ac8efd822704ac0dfd9decdfe62ca4e",
+      "currentManifest": "docs/content/r17/browser-crossing.json",
+      "currentSha256": "60bd7df83a871369ae5f10941cf72d03dd6e8c971fd5cc92b6c83a722aee2ad6"
+    },
+    {
+      "path": "docs/content/r17/phone-crossing-stage-1-bike-look-left.png",
+      "previousManifest": "docs/content/r17/browser-all.json",
+      "previousSha256": "d4f1162e45ee65cb67b6021416300e6e1af569dc468daa9265ed2c64a44ea1fa",
+      "currentManifest": "docs/content/r17/browser-crossing.json",
+      "currentSha256": "0819bc5ac9628db266750ff66b57bdf210e9b4da073414050592fe5714c7da76"
+    },
+    {
+      "path": "docs/content/r17/phone-crossing-stage-1-bike-look-right.png",
+      "previousManifest": "docs/content/r17/browser-all.json",
+      "previousSha256": "6745c9de870804b45b16d9a30c98423f815f1184cdd833cbd7c7aa2952988fd7",
+      "currentManifest": "docs/content/r17/browser-crossing.json",
+      "currentSha256": "abc6c69510ab4b99f91188be1dcaba7381467c32c5c2fcb7a0d76331ff95dec8"
+    },
+    {
+      "path": "docs/content/r17/phone-crossing-stage-1-bike-moving-1.png",
+      "previousManifest": "docs/content/r17/browser-all.json",
+      "previousSha256": "5137ec9dc89d45eab10f9ceea90f4d731aea3a589742846217e7aab4eb0cdec8",
+      "currentManifest": "docs/content/r17/browser-crossing.json",
+      "currentSha256": "c7f2eb881dcdf6c452fc3199bbeec7350e5eff8585bc13c40d036f32fbafaf84"
+    },
+    {
+      "path": "docs/content/r17/phone-crossing-stage-1-bike-moving-2.png",
+      "previousManifest": "docs/content/r17/browser-all.json",
+      "previousSha256": "8c74e72bc6050e6b9fd270cd6702ff93ede6ce245b8a73008cd9f3a71d46b0f9",
+      "currentManifest": "docs/content/r17/browser-crossing.json",
+      "currentSha256": "ac55423e691bddad9c7976b2d7415d4521003a94413814e81d68e172f5b69534"
+    },
+    {
+      "path": "docs/content/r17/phone-crossing-stage-1-bike-moving-3.png",
+      "previousManifest": "docs/content/r17/browser-all.json",
+      "previousSha256": "936ebd7f5340df536ebf02ae4e8e2baf0f94bb6199c13a9e868722b9dfc45c16",
+      "currentManifest": "docs/content/r17/browser-crossing.json",
+      "currentSha256": "96f84c7a958172e17a45a5afbe8787957b82542b0d287e528cb3c3d750daff6a"
+    },
+    {
+      "path": "docs/content/r17/phone-crossing-stage-1-bike-arrived.png",
+      "previousManifest": "docs/content/r17/browser-all.json",
+      "previousSha256": "dd2b9c165929105823e6a628b2961b158a391b44927047f776403b1b204e7c73",
+      "currentManifest": "docs/content/r17/browser-crossing.json",
+      "currentSha256": "1c8817c8612c07d96a3f5ef08694e8bb195abbb182d12a18c98a72c768e09ea6"
+    },
+    {
+      "path": "docs/content/r17/phone-crossing-stage-1-grandma-look-left.png",
+      "previousManifest": "docs/content/r17/browser-all.json",
+      "previousSha256": "07c8452f30c480fa490b685558e9c39dba4d4abe3d8529a42c62967f18c5ad70",
+      "currentManifest": "docs/content/r17/browser-crossing.json",
+      "currentSha256": "3eff9439f6d1d6d582ef08cfa910ee0b5246946105b2871de3e03f42b4e30dd2"
+    },
+    {
+      "path": "docs/content/r17/phone-crossing-stage-1-grandma-look-right.png",
+      "previousManifest": "docs/content/r17/browser-all.json",
+      "previousSha256": "80f698c9e4bfd5c0b209e556b613bbbca783f20aca7902652677ba0b656ebce8",
+      "currentManifest": "docs/content/r17/browser-crossing.json",
+      "currentSha256": "2afc2e7b280c6ba62da11234d48e6a58617a35db357858485405188cf53e32e2"
+    },
+    {
+      "path": "docs/content/r17/phone-crossing-stage-1-grandma-moving-1.png",
+      "previousManifest": "docs/content/r17/browser-all.json",
+      "previousSha256": "de0d66776bb42a11011d07bacc9a9ab0d74f3493d1ca7e124bcee446851601aa",
+      "currentManifest": "docs/content/r17/browser-crossing.json",
+      "currentSha256": "f070872b761d0eae704102f1b799e826f8af01ef5190bb52b6d45fee1ff31acf"
+    },
+    {
+      "path": "docs/content/r17/phone-crossing-stage-1-grandma-moving-2.png",
+      "previousManifest": "docs/content/r17/browser-all.json",
+      "previousSha256": "7c7c9e1ad58893607dbef50dd1b54de2322b377b5aa421969ef29efd25d3fc75",
+      "currentManifest": "docs/content/r17/browser-crossing.json",
+      "currentSha256": "fe4857261b5578087b7ab92ab7fe7c70b3495119b2a221d2169ca2dcf70874e2"
+    },
+    {
+      "path": "docs/content/r17/phone-crossing-stage-1-grandma-moving-3.png",
+      "previousManifest": "docs/content/r17/browser-all.json",
+      "previousSha256": "13bdfe36eba45df5d586bc140d710a9965d79d486f84e52b0d7f9eb0977d01c5",
+      "currentManifest": "docs/content/r17/browser-crossing.json",
+      "currentSha256": "61bd1e57ad960631844ab389720600f599adf4ece9c279ea8b7d084ff803a281"
+    },
+    {
+      "path": "docs/content/r17/phone-crossing-stage-1-grandma-arrived.png",
+      "previousManifest": "docs/content/r17/browser-all.json",
+      "previousSha256": "e501264439e08fe29d433266120dfc69c07c559699fe8cd1221a011c0b7bae68",
+      "currentManifest": "docs/content/r17/browser-crossing.json",
+      "currentSha256": "ba6b9f6b5516cad61b3675e3e1108cc036c323f64d539e7f4f24dda6cdea158d"
+    },
+    {
+      "path": "docs/content/r17/phone-crossing-stage-1-ready-depart.png",
+      "previousManifest": "docs/content/r17/browser-all.json",
+      "previousSha256": "e501264439e08fe29d433266120dfc69c07c559699fe8cd1221a011c0b7bae68",
+      "currentManifest": "docs/content/r17/browser-crossing.json",
+      "currentSha256": "ba6b9f6b5516cad61b3675e3e1108cc036c323f64d539e7f4f24dda6cdea158d"
+    },
+    {
+      "path": "docs/content/r17/phone-crossing-stage-1-departing-1.png",
+      "previousManifest": "docs/content/r17/browser-all.json",
+      "previousSha256": "b0b3292cd17eaba1461618e74ad6ff67bc290416a81bfa535eec7eb37828c5b5",
+      "currentManifest": "docs/content/r17/browser-crossing.json",
+      "currentSha256": "27855da6291a30a8ab0fdee564e1c1a5b899fbdef88bd6a8444bee066bc554e6"
+    },
+    {
+      "path": "docs/content/r17/phone-crossing-stage-1-departing-2.png",
+      "previousManifest": "docs/content/r17/browser-all.json",
+      "previousSha256": "5a3ec66336b6c00fc0667fb697affe641df488c6631e14c637f9a3af51500665",
+      "currentManifest": "docs/content/r17/browser-crossing.json",
+      "currentSha256": "57c1f3a49af3700afb853ce220b6fddf656665f8bf235852704b2658c8f22d30"
+    },
+    {
+      "path": "docs/content/r17/phone-crossing-stage-1-departing-3.png",
+      "previousManifest": "docs/content/r17/browser-all.json",
+      "previousSha256": "982229c79e8ec085415a7607e2434cc5478357034803ddc19b2f20d0812db897",
+      "currentManifest": "docs/content/r17/browser-crossing.json",
+      "currentSha256": "2f3faab6a7bedcaf765423c1061d7aa1bb0725515fd24a9361c056e6545e0661"
+    },
+    {
+      "path": "docs/content/r17/phone-crossing-stage-2-start.png",
+      "previousManifest": "docs/content/r17/browser-all.json",
+      "previousSha256": "5e5103743a044255a35de632f0f680481c4ab028d9f3f5217b53010c44083a96",
+      "currentManifest": "docs/content/r17/browser-crossing.json",
+      "currentSha256": "71a2d96eeae9a2b852a844536821f64e852f106467da3a1b347ffb1a0e6aeb26"
+    },
+    {
+      "path": "docs/content/r17/phone-crossing-stage-2-grandma-look-left.png",
+      "previousManifest": "docs/content/r17/browser-all.json",
+      "previousSha256": "bba4fc35e1148843f9a9809d14c915afa80206149e3e1bf5796b1395547f75c8",
+      "currentManifest": "docs/content/r17/browser-crossing.json",
+      "currentSha256": "a8fd8768d1d88efc2651a8d8ab338cb0aa781cc2b857171817d55fbbb23a7760"
+    },
+    {
+      "path": "docs/content/r17/phone-crossing-stage-2-traffic-moving-1.png",
+      "previousManifest": "docs/content/r17/browser-all.json",
+      "previousSha256": "bba4fc35e1148843f9a9809d14c915afa80206149e3e1bf5796b1395547f75c8",
+      "currentManifest": "docs/content/r17/browser-crossing.json",
+      "currentSha256": "a8fd8768d1d88efc2651a8d8ab338cb0aa781cc2b857171817d55fbbb23a7760"
+    },
+    {
+      "path": "docs/content/r17/phone-crossing-stage-2-traffic-moving-2.png",
+      "previousManifest": "docs/content/r17/browser-all.json",
+      "previousSha256": "81267187992401cccd4571ed13239a10da09be9b6a86a05744ce9e8d3977a652",
+      "currentManifest": "docs/content/r17/browser-crossing.json",
+      "currentSha256": "adc95f8a28331bd7a8e6ca62a27ff66b28a4b5fdbc6c1c6277c04423174d8c91"
+    },
+    {
+      "path": "docs/content/r17/phone-crossing-stage-2-grandma-look-right.png",
+      "previousManifest": "docs/content/r17/browser-all.json",
+      "previousSha256": "ab5dabcbed90e8a517daf10588cc3f6bf1dc73ed5eb731732bb7bd1a710d21a1",
+      "currentManifest": "docs/content/r17/browser-crossing.json",
+      "currentSha256": "f9143fb4a93d14269e3accb92800949124f2f67b90fd3e9d6fc2bdf5de67831b"
+    },
+    {
+      "path": "docs/content/r17/phone-crossing-stage-2-traffic.png",
+      "previousManifest": "docs/content/r17/browser-all.json",
+      "previousSha256": "ab5dabcbed90e8a517daf10588cc3f6bf1dc73ed5eb731732bb7bd1a710d21a1",
+      "currentManifest": "docs/content/r17/browser-crossing.json",
+      "currentSha256": "f9143fb4a93d14269e3accb92800949124f2f67b90fd3e9d6fc2bdf5de67831b"
+    },
+    {
+      "path": "docs/content/r17/phone-crossing-stage-2-traffic-moving-3.png",
+      "previousManifest": "docs/content/r17/browser-all.json",
+      "previousSha256": "4b8932710ad92bc8064d705da7a446d9398b362424e2bc7eccb5f96c25625145",
+      "currentManifest": "docs/content/r17/browser-crossing.json",
+      "currentSha256": "628d47678ecf0370d6467c47bb6fffbbeb63df3dea5ccc233d12cc5bf975513d"
+    },
+    {
+      "path": "docs/content/r17/phone-crossing-stage-2-ready-cross.png",
+      "previousManifest": "docs/content/r17/browser-all.json",
+      "previousSha256": "de43c8d1cf2bf9a9839784411d7276b9fdc2d84ff37be0b9501e2b620bce492e",
+      "currentManifest": "docs/content/r17/browser-crossing.json",
+      "currentSha256": "6a2c93f059b661f65adbd131cffe2968f48850fc58f14f85bde3f2d1d07310a1"
+    },
+    {
+      "path": "docs/content/r17/phone-crossing-stage-2-grandma-moving-1.png",
+      "previousManifest": "docs/content/r17/browser-all.json",
+      "previousSha256": "83cce5df22887c384c904f1c925cf3b4dccddf7df381297f77a402f9022eb6ea",
+      "currentManifest": "docs/content/r17/browser-crossing.json",
+      "currentSha256": "170ab92c4fd24ef528bb67b9c552c9e525e138a19ef3a4f864d1008f3f1f27fb"
+    },
+    {
+      "path": "docs/content/r17/phone-crossing-stage-2-grandma-moving-2.png",
+      "previousManifest": "docs/content/r17/browser-all.json",
+      "previousSha256": "6ebd77efcbd245aa42571887cc73d68b44eb97940ea9312efce04475412aa897",
+      "currentManifest": "docs/content/r17/browser-crossing.json",
+      "currentSha256": "600da3cb8901b78e43196ca7ce68606904c213f159b11c771180d7b21c9ac152"
+    },
+    {
+      "path": "docs/content/r17/phone-crossing-stage-2-grandma-moving-3.png",
+      "previousManifest": "docs/content/r17/browser-all.json",
+      "previousSha256": "4aa2ac2f9d9bebc665b961c2f0cffd4ee324417e82a237b23c6b612f84dae9e3",
+      "currentManifest": "docs/content/r17/browser-crossing.json",
+      "currentSha256": "2bdd88ce759578711a7adc6ef3343c0e70e32f86360469fb26e55737f3a6ec92"
+    },
+    {
+      "path": "docs/content/r17/phone-crossing-stage-2-grandma-arrived.png",
+      "previousManifest": "docs/content/r17/browser-all.json",
+      "previousSha256": "1793205a5b3ef4590dd801e6e44405957d55cc509207507e2ddf30e9e8494e2d",
+      "currentManifest": "docs/content/r17/browser-crossing.json",
+      "currentSha256": "64ca045c6988153a65efe2cbd352c96f3ed308e35c6ef695645c837e4f05cb80"
+    },
+    {
+      "path": "docs/content/r17/phone-crossing-stage-2-child-look-left.png",
+      "previousManifest": "docs/content/r17/browser-all.json",
+      "previousSha256": "8b36ae8b52c40b02ef77a2aff8367edf2ebdc01e364cf79a2c1c881c7ae33630",
+      "currentManifest": "docs/content/r17/browser-crossing.json",
+      "currentSha256": "9db5b6a72db765ee481e91c0dc19ce653504111e2a040bd7577ca1d06418a37a"
+    },
+    {
+      "path": "docs/content/r17/phone-crossing-stage-2-child-look-right.png",
+      "previousManifest": "docs/content/r17/browser-all.json",
+      "previousSha256": "43c69c78c822828abf282a1c975a70f85a1d7268d288972d9e0a44897d1560d2",
+      "currentManifest": "docs/content/r17/browser-crossing.json",
+      "currentSha256": "e3a6608dbf0239567e80dac0f17f0bc4519d98366a70e36b22bdb2103ecd41a2"
+    },
+    {
+      "path": "docs/content/r17/phone-crossing-stage-2-child-moving-1.png",
+      "previousManifest": "docs/content/r17/browser-all.json",
+      "previousSha256": "d57e5901346b0a684c7f5a94b8b7f08e8dbe562fd85475c13e78580d62475688",
+      "currentManifest": "docs/content/r17/browser-crossing.json",
+      "currentSha256": "1af64aa34bd3094a9d0b267877f13e0e9b885c1b2fed99619c091b7171b67efa"
+    },
+    {
+      "path": "docs/content/r17/phone-crossing-stage-2-child-moving-2.png",
+      "previousManifest": "docs/content/r17/browser-all.json",
+      "previousSha256": "4ca619557156ce577d40d0b56cdbf61fc95d8fa36b12f4b240b65b798f72e51a",
+      "currentManifest": "docs/content/r17/browser-crossing.json",
+      "currentSha256": "eecef61e7b25983c5b598a6b1173861d91a86ba46d1d79c50bdc4ee92d5e4016"
+    },
+    {
+      "path": "docs/content/r17/phone-crossing-stage-2-child-moving-3.png",
+      "previousManifest": "docs/content/r17/browser-all.json",
+      "previousSha256": "e6e49c34fdbd7613274a2797ed278c0cc5c061e31871a6a3f2e4a9f0219145a0",
+      "currentManifest": "docs/content/r17/browser-crossing.json",
+      "currentSha256": "f2eac5126f3ec7880ac8c8d475ffdcc252b925f276cb01d3af5880c12c5e6256"
+    },
+    {
+      "path": "docs/content/r17/phone-crossing-stage-2-child-arrived.png",
+      "previousManifest": "docs/content/r17/browser-all.json",
+      "previousSha256": "3c190447206c1c65189de908fe312c565b46779a7fbf0326fe353f45dac4073d",
+      "currentManifest": "docs/content/r17/browser-crossing.json",
+      "currentSha256": "c1a52689a12957de63e65528cf1866d758ae67804a32c99d86e26abf5a6bcf4d"
+    },
+    {
+      "path": "docs/content/r17/phone-crossing-stage-2-bike-look-left.png",
+      "previousManifest": "docs/content/r17/browser-all.json",
+      "previousSha256": "0291a5f087874274c50b2b39ca11a84de37f2e5d9e7e8308a45fba04f1adab68",
+      "currentManifest": "docs/content/r17/browser-crossing.json",
+      "currentSha256": "70d82212050063662921fc8618b677e2c1b6774be2f498e2fb9cb071423432fc"
+    },
+    {
+      "path": "docs/content/r17/phone-crossing-stage-2-bike-look-right.png",
+      "previousManifest": "docs/content/r17/browser-all.json",
+      "previousSha256": "321485297ee22d598eedbe3066940b6928254bd6f31f453a411df6dd70c9cb3d",
+      "currentManifest": "docs/content/r17/browser-crossing.json",
+      "currentSha256": "f380a44cad6316b27d3f99b397fb033b9d8b037f6af70fcc0a9dd4b57e98330b"
+    },
+    {
+      "path": "docs/content/r17/phone-crossing-stage-2-bike-moving-1.png",
+      "previousManifest": "docs/content/r17/browser-all.json",
+      "previousSha256": "5766d33e3fbe65081fd99f4ac45a366431dbc62456b085066449bd1af2c1bd1a",
+      "currentManifest": "docs/content/r17/browser-crossing.json",
+      "currentSha256": "3b595af029ccc586f9281a8e647f90e0a2b96928b744e196f2cead874301d687"
+    },
+    {
+      "path": "docs/content/r17/phone-crossing-stage-2-bike-moving-2.png",
+      "previousManifest": "docs/content/r17/browser-all.json",
+      "previousSha256": "bfb0ef2e4a990d8fa2efa5145c9b766dec4d9e45de84f76a0e880405fe5a6d69",
+      "currentManifest": "docs/content/r17/browser-crossing.json",
+      "currentSha256": "2f58bde4573833c938f26cb0c7c62b70274c6c48f78497d3c4a6a5e386040bbe"
+    },
+    {
+      "path": "docs/content/r17/phone-crossing-stage-2-bike-moving-3.png",
+      "previousManifest": "docs/content/r17/browser-all.json",
+      "previousSha256": "2e055ce7a075ae30215c6c5fca776ddeec779a5c6b067cfcbfce07948986adc9",
+      "currentManifest": "docs/content/r17/browser-crossing.json",
+      "currentSha256": "91b2f26eef131a9ce4350a0ee2f8db435b149fa51a306b8b035717c317235a3d"
+    },
+    {
+      "path": "docs/content/r17/phone-crossing-stage-2-bike-arrived.png",
+      "previousManifest": "docs/content/r17/browser-all.json",
+      "previousSha256": "f42c17470d05165db7a50e96100656efe1eb67a419c5293eac88b839c3ad6d60",
+      "currentManifest": "docs/content/r17/browser-crossing.json",
+      "currentSha256": "80c953b9c35d08c3c21e0e0e147bf937f20f525e1f0808c08928801cfa4f16c2"
+    },
+    {
+      "path": "docs/content/r17/phone-crossing-stage-2-ready-depart.png",
+      "previousManifest": "docs/content/r17/browser-all.json",
+      "previousSha256": "f42c17470d05165db7a50e96100656efe1eb67a419c5293eac88b839c3ad6d60",
+      "currentManifest": "docs/content/r17/browser-crossing.json",
+      "currentSha256": "80c953b9c35d08c3c21e0e0e147bf937f20f525e1f0808c08928801cfa4f16c2"
+    },
+    {
+      "path": "docs/content/r17/phone-crossing-stage-2-departing-1.png",
+      "previousManifest": "docs/content/r17/browser-all.json",
+      "previousSha256": "50111b118c208a42190e356edfea460cce4b0be9e5c803f7fbdefcc74251ceaa",
+      "currentManifest": "docs/content/r17/browser-crossing.json",
+      "currentSha256": "ed203c55221b3366024bbe1506b4fb6ee8fcacb7771704c3644d8edfe631d70e"
+    },
+    {
+      "path": "docs/content/r17/phone-crossing-stage-2-departing-2.png",
+      "previousManifest": "docs/content/r17/browser-all.json",
+      "previousSha256": "2582031b77e37fe5ca53bc40a5973843a6b5e64ca7fc129b0571deb956525c78",
+      "currentManifest": "docs/content/r17/browser-crossing.json",
+      "currentSha256": "6e9b7ba107c37059fcdc4c0f348107a30c57555bc50afbb00ae3690b7f13c276"
+    },
+    {
+      "path": "docs/content/r17/phone-crossing-stage-2-departing-3.png",
+      "previousManifest": "docs/content/r17/browser-all.json",
+      "previousSha256": "c9bd2380097ba04041dcf59f4e7cdeb28f56b17b09b7bd92789cc426837fef4b",
+      "currentManifest": "docs/content/r17/browser-crossing.json",
+      "currentSha256": "099b01e040837723526f4e90e3a23201483110255a0561bccecbd9d1f1ec0484"
+    },
+    {
+      "path": "docs/content/r17/phone-crossing-stage-3-start.png",
+      "previousManifest": "docs/content/r17/browser-all.json",
+      "previousSha256": "4c5911b618d5b54b092277926058193818f3f69e1e4592f56a4ff8fe6604fa9d",
+      "currentManifest": "docs/content/r17/browser-crossing.json",
+      "currentSha256": "068f7a95dd03a29640dc5f093912ebae7891ee46be59a0381b099f2061ac90d2"
+    },
+    {
+      "path": "docs/content/r17/phone-crossing-stage-3-bike-look-left.png",
+      "previousManifest": "docs/content/r17/browser-all.json",
+      "previousSha256": "4d83304b2d0ad7a0df91b0c9fdd03c45f4b0f95c28820650067dbb9d62867c75",
+      "currentManifest": "docs/content/r17/browser-crossing.json",
+      "currentSha256": "dd2ea0e72f9e2acaa8bde1beb53ce7865bda7a803be9e8defadeb96bb1a0adf3"
+    },
+    {
+      "path": "docs/content/r17/phone-crossing-stage-3-traffic-moving-1.png",
+      "previousManifest": "docs/content/r17/browser-all.json",
+      "previousSha256": "4d83304b2d0ad7a0df91b0c9fdd03c45f4b0f95c28820650067dbb9d62867c75",
+      "currentManifest": "docs/content/r17/browser-crossing.json",
+      "currentSha256": "dd2ea0e72f9e2acaa8bde1beb53ce7865bda7a803be9e8defadeb96bb1a0adf3"
+    },
+    {
+      "path": "docs/content/r17/phone-crossing-stage-3-traffic-moving-2.png",
+      "previousManifest": "docs/content/r17/browser-all.json",
+      "previousSha256": "029ee951e9e8be982b01488976187f7ef073b1d06331dc8e6dbc802791810d62",
+      "currentManifest": "docs/content/r17/browser-crossing.json",
+      "currentSha256": "5b2f3435db63958e74fbe17b907a635a590dfd9d394c3e8d4e01f8fea76f8f22"
+    },
+    {
+      "path": "docs/content/r17/phone-crossing-stage-3-bike-look-right.png",
+      "previousManifest": "docs/content/r17/browser-all.json",
+      "previousSha256": "0900781fa0ff7d14be39cfa3bf3d74b243ecd84530fd28785deb9ea211454fae",
+      "currentManifest": "docs/content/r17/browser-crossing.json",
+      "currentSha256": "42371b15f4fb9089148f866465c6f7cd6e92777fa49185ebb60a35bafb3ba042"
+    },
+    {
+      "path": "docs/content/r17/phone-crossing-stage-3-traffic.png",
+      "previousManifest": "docs/content/r17/browser-all.json",
+      "previousSha256": "0900781fa0ff7d14be39cfa3bf3d74b243ecd84530fd28785deb9ea211454fae",
+      "currentManifest": "docs/content/r17/browser-crossing.json",
+      "currentSha256": "42371b15f4fb9089148f866465c6f7cd6e92777fa49185ebb60a35bafb3ba042"
+    },
+    {
+      "path": "docs/content/r17/phone-crossing-stage-3-traffic-moving-3.png",
+      "previousManifest": "docs/content/r17/browser-all.json",
+      "previousSha256": "ce45407cee03463dde315d3a967feaca1879667198de1c767657e24e11a7052f",
+      "currentManifest": "docs/content/r17/browser-crossing.json",
+      "currentSha256": "cb81e091d88361e7c9d55cdb724e96646ed06e7aa9ab36ae2017600bbd1faf5d"
+    },
+    {
+      "path": "docs/content/r17/phone-crossing-stage-3-ready-cross.png",
+      "previousManifest": "docs/content/r17/browser-all.json",
+      "previousSha256": "ca3f8566406cfe1e96d4d4748d33a25128d041d79cd5e70ca3ef7abe9cb5798f",
+      "currentManifest": "docs/content/r17/browser-crossing.json",
+      "currentSha256": "25ca0ba6c7ecaef2813088c9d749580e3c248a1f341bd4edc19bc7177d1ad286"
+    },
+    {
+      "path": "docs/content/r17/phone-crossing-stage-3-bike-moving-1.png",
+      "previousManifest": "docs/content/r17/browser-all.json",
+      "previousSha256": "d4cc02178472e2895017180fbb84ee0335fb8ef419fc2bc9d82a8bf269761e52",
+      "currentManifest": "docs/content/r17/browser-crossing.json",
+      "currentSha256": "c0372869f0bb5d6ec83d57de8716e738c374e51ea38809b8930301ffab066947"
+    },
+    {
+      "path": "docs/content/r17/phone-crossing-stage-3-bike-moving-2.png",
+      "previousManifest": "docs/content/r17/browser-all.json",
+      "previousSha256": "1ea72958e52d419297e4ba659179e7e1803c3148e61c2ee2d5b3f197460cb767",
+      "currentManifest": "docs/content/r17/browser-crossing.json",
+      "currentSha256": "bf518fa9f1e4c691d3742cdd1ca0472c8baad5b4659e1efe360f93d5d6e89a8c"
+    },
+    {
+      "path": "docs/content/r17/phone-crossing-stage-3-bike-moving-3.png",
+      "previousManifest": "docs/content/r17/browser-all.json",
+      "previousSha256": "c74291dc7675771bb3b9a7fcd644f01ef7cee4af991ead20489ccbf34f3ed0dc",
+      "currentManifest": "docs/content/r17/browser-crossing.json",
+      "currentSha256": "be2ad57879ac0910dbb95d057999c928a1182f3eb04c7880bcc5c659b93415c9"
+    },
+    {
+      "path": "docs/content/r17/phone-crossing-stage-3-bike-arrived.png",
+      "previousManifest": "docs/content/r17/browser-all.json",
+      "previousSha256": "b78d0366dae9094c220a081d4ab31003697e9bf8e2da48be1156792e46dca096",
+      "currentManifest": "docs/content/r17/browser-crossing.json",
+      "currentSha256": "e3c55c28440cebb5e97d90475f3b8870925d5874201c96cb123d9b2220f3055e"
+    },
+    {
+      "path": "docs/content/r17/phone-crossing-stage-3-grandma-look-left.png",
+      "previousManifest": "docs/content/r17/browser-all.json",
+      "previousSha256": "6641389459f22666feee16d8fb6f6378b2a279d36c8287fadd0fa9bac8fdd667",
+      "currentManifest": "docs/content/r17/browser-crossing.json",
+      "currentSha256": "a868d1d83648d52b8e139e215e6a7701b4839ae77ff3c4db61b1c4e601da950a"
+    },
+    {
+      "path": "docs/content/r17/phone-crossing-stage-3-grandma-look-right.png",
+      "previousManifest": "docs/content/r17/browser-all.json",
+      "previousSha256": "d980f958107e2dfd6558c0a0c2482b4cd5fd8a752b9270b3168d8e4337374de1",
+      "currentManifest": "docs/content/r17/browser-crossing.json",
+      "currentSha256": "39d131f7199b0365dc40527a59d486b1ca67cf7d8a182b9a3ebd429c99f97612"
+    },
+    {
+      "path": "docs/content/r17/phone-crossing-stage-3-grandma-moving-1.png",
+      "previousManifest": "docs/content/r17/browser-all.json",
+      "previousSha256": "34e1998f5fc4b7ddcd56df93ffbaffee8d61d2e0f280bd62a90a98586a0a7d05",
+      "currentManifest": "docs/content/r17/browser-crossing.json",
+      "currentSha256": "ef2b48282f370f0759c1e7f4ca2f27a1a2fd369a49414bef51a45936abf6eed2"
+    },
+    {
+      "path": "docs/content/r17/phone-crossing-stage-3-grandma-moving-2.png",
+      "previousManifest": "docs/content/r17/browser-all.json",
+      "previousSha256": "115bec1c11ff850465bb9ca08d098fcd3be960a918f2b390fcf3f8c4575606f7",
+      "currentManifest": "docs/content/r17/browser-crossing.json",
+      "currentSha256": "dc81e46f8f8826fa1b553a8370ca500d6d682e0c94018b41b34df1d9a7d46d92"
+    },
+    {
+      "path": "docs/content/r17/phone-crossing-stage-3-grandma-moving-3.png",
+      "previousManifest": "docs/content/r17/browser-all.json",
+      "previousSha256": "9e23883a6a680b0175b1e0fa344dfef0feb4d1ba8fb72dcbe1ccffd1f3a3d41f",
+      "currentManifest": "docs/content/r17/browser-crossing.json",
+      "currentSha256": "b7f01dbc340b208fd20294cfc3dee4ac62e8ce3c5fca00ee963925da4f3718a1"
+    },
+    {
+      "path": "docs/content/r17/phone-crossing-stage-3-grandma-arrived.png",
+      "previousManifest": "docs/content/r17/browser-all.json",
+      "previousSha256": "aa5474c60ad543c33aa9c1c9fa63f3c0bf7b2e5fd58f66934572367194d465b9",
+      "currentManifest": "docs/content/r17/browser-crossing.json",
+      "currentSha256": "98798a77e4ad46aa0d249b6b08b80a118d4047c9fff26ed6e3feae352c844cfd"
+    },
+    {
+      "path": "docs/content/r17/phone-crossing-stage-3-child-look-left.png",
+      "previousManifest": "docs/content/r17/browser-all.json",
+      "previousSha256": "da3eb7fcc1b3a3756b243f18a1335ccdb1fa2a77f61b86aa98207f03b27f6ab4",
+      "currentManifest": "docs/content/r17/browser-crossing.json",
+      "currentSha256": "caae8c1df7e002a5d58a40f67f9a9f5c3ebeee7ea9c0bf3a125d5502be470a63"
+    },
+    {
+      "path": "docs/content/r17/phone-crossing-stage-3-child-look-right.png",
+      "previousManifest": "docs/content/r17/browser-all.json",
+      "previousSha256": "3338b731b599e5206ff8dc87f7ca2a45f7045ec991a05794fba79d77c86812d0",
+      "currentManifest": "docs/content/r17/browser-crossing.json",
+      "currentSha256": "623705ba19924639041aa170f024ed5e8faa01612feed4c0ce29fe223e329a42"
+    },
+    {
+      "path": "docs/content/r17/phone-crossing-stage-3-child-moving-1.png",
+      "previousManifest": "docs/content/r17/browser-all.json",
+      "previousSha256": "d5528bcc0ca4d612b3e6b8b3c59ab3a87d619af396eff60a5afdc4a7bcbbbd33",
+      "currentManifest": "docs/content/r17/browser-crossing.json",
+      "currentSha256": "f3db8e0d534ed9de6fd59c8140e769be746b7711e9d49bbce3d8e7e782afca1f"
+    },
+    {
+      "path": "docs/content/r17/phone-crossing-stage-3-child-moving-2.png",
+      "previousManifest": "docs/content/r17/browser-all.json",
+      "previousSha256": "c43703eac9841e54e7022a0dfd755b35e641177d099222cbec7f36c986751801",
+      "currentManifest": "docs/content/r17/browser-crossing.json",
+      "currentSha256": "2c19741085d1327509a9044429f847bf0fb07161bd7018923960e1a4d546fea9"
+    },
+    {
+      "path": "docs/content/r17/phone-crossing-stage-3-child-moving-3.png",
+      "previousManifest": "docs/content/r17/browser-all.json",
+      "previousSha256": "728b4df9d9bbc585e17682306edb25cec8f636424e794a6266a240b65ab511d4",
+      "currentManifest": "docs/content/r17/browser-crossing.json",
+      "currentSha256": "0e2cfeb39362185ec4336b40a56fed413ed6f115a0fc0d26eda94523f2a5cdc6"
+    },
+    {
+      "path": "docs/content/r17/phone-crossing-stage-3-child-arrived.png",
+      "previousManifest": "docs/content/r17/browser-all.json",
+      "previousSha256": "e29765bd10f43ebb4d90282b529609f9e27866859311229dd86799281c242080",
+      "currentManifest": "docs/content/r17/browser-crossing.json",
+      "currentSha256": "b7b0313421c914d52b470ca35d787fab4b15b69133a0b56702965657eb3b089d"
+    },
+    {
+      "path": "docs/content/r17/phone-crossing-stage-3-ready-depart.png",
+      "previousManifest": "docs/content/r17/browser-all.json",
+      "previousSha256": "e29765bd10f43ebb4d90282b529609f9e27866859311229dd86799281c242080",
+      "currentManifest": "docs/content/r17/browser-crossing.json",
+      "currentSha256": "b7b0313421c914d52b470ca35d787fab4b15b69133a0b56702965657eb3b089d"
+    },
+    {
+      "path": "docs/content/r17/phone-crossing-stage-3-departing-1.png",
+      "previousManifest": "docs/content/r17/browser-all.json",
+      "previousSha256": "0eec71fab483e3b0be4fc7676c035dce0103233afa3cde2fa7e133b6c2fd80a6",
+      "currentManifest": "docs/content/r17/browser-crossing.json",
+      "currentSha256": "0ca8837a129c929e5a3ef92a675173e3d9c610476a321a7633b050e415390447"
+    },
+    {
+      "path": "docs/content/r17/phone-crossing-stage-3-departing-2.png",
+      "previousManifest": "docs/content/r17/browser-all.json",
+      "previousSha256": "f1ab1110c3eb98fa991c72d1be743a6424f346059cf7b0527e09aff25f7b8bc1",
+      "currentManifest": "docs/content/r17/browser-crossing.json",
+      "currentSha256": "dd91c65ec8d72613de7f8c13724219bea0ee57f6cf89c06cb8238e8df62dfeff"
+    },
+    {
+      "path": "docs/content/r17/phone-crossing-stage-3-departing-3.png",
+      "previousManifest": "docs/content/r17/browser-all.json",
+      "previousSha256": "85c8ac7418f6b292696a9dddb79b5114b1649ab6e5bf3198a9aa7473f36f33d4",
+      "currentManifest": "docs/content/r17/browser-crossing.json",
+      "currentSha256": "2a7e7da5774d05aa745ef72baefbf99d7b60e1e824b7f7c38224bfca3c885cf9"
+    },
+    {
+      "path": "docs/content/r17/phone-crossing-complete.png",
+      "previousManifest": "docs/content/r17/browser-all.json",
+      "previousSha256": "d2588d6a42fdd0ea8150e55995c6926c5b09ea32553ed4c466b708a159acd9eb",
+      "currentManifest": "docs/content/r17/browser-crossing.json",
+      "currentSha256": "a3bb45219c88d3b9d200532de3af7c732f2fac6994aff3867a9229415a73ee60"
+    },
+    {
+      "path": "docs/content/r17/phone-crossing-replay-traffic.png",
+      "previousManifest": "docs/content/r17/browser-all.json",
+      "previousSha256": "1e1fa262e02e4275991c22bf6dd54b34c238f1a46b0dc42108bfb207fad45756",
+      "currentManifest": "docs/content/r17/browser-crossing.json",
+      "currentSha256": "9713a32fc254c451f2e35f01768e88a1e65b7eee8a3b3e4b87756f586acceb4d"
+    },
+    {
+      "path": "docs/content/r17/device-320x568-crossing.png",
+      "previousManifest": "docs/content/r17/browser-all.json",
+      "previousSha256": "cdb242d5000730181da0074ad94f226fdb9db2f476b5ef1ac31e2fe4f0e4fa75",
+      "currentManifest": "docs/content/r17/browser-matrix.json",
+      "currentSha256": "97792619f23cd98501eec2fe1f389fd5aacf7d65416c71a0a7de8728e4db8391"
+    },
+    {
+      "path": "docs/content/r17/device-568x320-crossing.png",
+      "previousManifest": "docs/content/r17/browser-all.json",
+      "previousSha256": "4aa61a81a4f3790e8c0b619d8ef10b41541663f077b0e662dee8070255382cd9",
+      "currentManifest": "docs/content/r17/browser-matrix.json",
+      "currentSha256": "6832b1c3649cb2a6e92f3168080f8a5be743bed2801061749b066ff94d9ddcf8"
+    },
+    {
+      "path": "docs/content/r17/device-568x320-tickets.png",
+      "previousManifest": "docs/content/r17/browser-all.json",
+      "previousSha256": "3795abfdd9e0a0c6772758c3210c11ce4cdd2172186d7cc42740518fec0a0a75",
+      "currentManifest": "docs/content/r17/browser-matrix.json",
+      "currentSha256": "e91cb851cbaadc4cd4c7acb0dd5708011f0a6dd69a3b4818e64f9d0d0ac782e2"
+    },
+    {
+      "path": "docs/content/r17/device-390x844-crossing.png",
+      "previousManifest": "docs/content/r17/browser-all.json",
+      "previousSha256": "611adcd614d6bcdc775c3a827bfcf425ce479b72796995855b033897518be1a6",
+      "currentManifest": "docs/content/r17/browser-matrix.json",
+      "currentSha256": "88b22561b6fc31908fd5126a3d4361d849e5640a3ae682d66e63e741db90a9d9"
+    },
+    {
+      "path": "docs/content/r17/device-390x844-tickets.png",
+      "previousManifest": "docs/content/r17/browser-all.json",
+      "previousSha256": "5235f17477ed53051e60658f688625c8f5a3e26dcefc686d2d2817ccfef239cf",
+      "currentManifest": "docs/content/r17/browser-matrix.json",
+      "currentSha256": "b9c12220f085226ef0bba92b3eebf6fa1ae634e778cdeb22dff5dbef83258b3d"
+    },
+    {
+      "path": "docs/content/r17/device-390x844-tickets-invite.png",
+      "previousManifest": "docs/content/r17/browser-all.json",
+      "previousSha256": "2af8614381e146f53530a366fb655e2552c3678778ed02dd13ecb24f0619f82d",
+      "currentManifest": "docs/content/r17/browser-matrix.json",
+      "currentSha256": "78d664fb0f4a19d4462fa49fa823a352e16f75264029410284c89af17318e0dc"
+    },
+    {
+      "path": "docs/content/r17/device-844x390-cake.png",
+      "previousManifest": "docs/content/r17/browser-all.json",
+      "previousSha256": "771812425904978a4c8fc8e4007330b5e1d5a98f0e710c9a680943e90e41b871",
+      "currentManifest": "docs/content/r17/browser-matrix.json",
+      "currentSha256": "b858e9ae76e7c55103db255c9e600cae6cbeb8ae24803592c0cc5a3ffb847c6c"
+    },
+    {
+      "path": "docs/content/r17/device-844x390-crossing.png",
+      "previousManifest": "docs/content/r17/browser-all.json",
+      "previousSha256": "13d924c712b21ff5b00801b027b45c9696e09e4abda4349a39e96e95bb26cafa",
+      "currentManifest": "docs/content/r17/browser-matrix.json",
+      "currentSha256": "e5f7a5a1312289fe11c70b0542231223db6084dc5762e7f21132209c481f6e44"
+    },
+    {
+      "path": "docs/content/r17/device-768x1024-cake.png",
+      "previousManifest": "docs/content/r17/browser-all.json",
+      "previousSha256": "40261fc9e72451ca3cc1bdc584e7507ad681f0edc5578d94169f38058ba0170f",
+      "currentManifest": "docs/content/r17/browser-matrix.json",
+      "currentSha256": "a09f05cf697a31bd2b5fcac043bc8e89de64a7b500f5667e848f938dceb978f3"
+    },
+    {
+      "path": "docs/content/r17/device-768x1024-crossing.png",
+      "previousManifest": "docs/content/r17/browser-all.json",
+      "previousSha256": "38bed5013ae0de90267c77a4ad9267f52331a1253ce60629b70505c8b2dbc1a1",
+      "currentManifest": "docs/content/r17/browser-matrix.json",
+      "currentSha256": "ee81b12553f8f7fecd4b7bfb625a8f1d09a716adc0049af71210c02ad62d45ab"
+    },
+    {
+      "path": "docs/content/r17/device-1024x768-cake.png",
+      "previousManifest": "docs/content/r17/browser-all.json",
+      "previousSha256": "a011043bbb32c94e1a7b6abff23f9532aecf9314782b6925f67c7fb25c42797d",
+      "currentManifest": "docs/content/r17/browser-matrix.json",
+      "currentSha256": "2a80374574deea3a1ba60b232a48979f33672e6042aa516b6887667006d5b7c1"
+    },
+    {
+      "path": "docs/content/r17/device-1024x768-crossing.png",
+      "previousManifest": "docs/content/r17/browser-all.json",
+      "previousSha256": "ac95402e0da4646096ef044c1b7087ffb6c404d96bb136bea8ca960c168a6ad0",
+      "currentManifest": "docs/content/r17/browser-matrix.json",
+      "currentSha256": "dec0a2dd84799041f5f639b50e6395bc4ef338eb862d056bccba878b99ad7d1f"
+    },
+    {
+      "path": "docs/content/r17/device-1024x768-tickets.png",
+      "previousManifest": "docs/content/r17/browser-all.json",
+      "previousSha256": "bbb1b799fe7bc769a7164d9b2addf0e9f74149a6a21df47f35a4be3ee658266a",
+      "currentManifest": "docs/content/r17/browser-matrix.json",
+      "currentSha256": "62865436ebb869144e89de9449b25befaf299328176397ba102f9363c8223a91"
+    },
+    {
+      "path": "docs/content/r17/device-1024x768-tickets-invite.png",
+      "previousManifest": "docs/content/r17/browser-all.json",
+      "previousSha256": "0028636fdfedd1a018c61107784970244f765cf7af166283dbdd19ddf15573a6",
+      "currentManifest": "docs/content/r17/browser-matrix.json",
+      "currentSha256": "1e29deac96e5de355ec6c641faa29bf3cbb3e03629b7b3e4a837a78db8864b18"
+    },
+    {
+      "path": "docs/content/r17/device-1366x600-cake.png",
+      "previousManifest": "docs/content/r17/browser-all.json",
+      "previousSha256": "598e46a8b84051c1feb11b8d43483352bc37cd74c0a9e2e2d9ec5ef57c93994e",
+      "currentManifest": "docs/content/r17/browser-matrix.json",
+      "currentSha256": "40ef7afbce57d8d63d73108f04ce9fc3c91a5eb620870c68686b73907a54a556"
+    },
+    {
+      "path": "docs/content/r17/device-1366x600-crossing.png",
+      "previousManifest": "docs/content/r17/browser-all.json",
+      "previousSha256": "0dc08e8286595c943215d3f09d651a1e63af1887b42643089789ed15420c00fc",
+      "currentManifest": "docs/content/r17/browser-matrix.json",
+      "currentSha256": "5191f592e58b650230390777f1f1b2b7c82a1ec5d13427cdcdb07cd1dafb88ed"
+    },
+    {
+      "path": "docs/content/r17/device-1280x640-crossing.png",
+      "previousManifest": "docs/content/r17/browser-all.json",
+      "previousSha256": "a7adc2b71ceec3cbfc40a0ca885a96694471b8cb44d24cb177758ed18593d859",
+      "currentManifest": "docs/content/r17/browser-matrix.json",
+      "currentSha256": "8927e49e1d59717660df13d5f5ce56c266a1ef7774fe53e5d3a52a73c6110919"
+    },
+    {
+      "path": "docs/content/r17/device-1280x640-tickets.png",
+      "previousManifest": "docs/content/r17/browser-all.json",
+      "previousSha256": "cff43563407d92edb9845a6506a11c0f6eb71b4b5b6bbd4984c1da0107f58ce4",
+      "currentManifest": "docs/content/r17/browser-matrix.json",
+      "currentSha256": "b13605177b0b52ae2ad6fdf0d55838a56998c20e58a8f8d7818208da4bfa463a"
+    },
+    {
+      "path": "docs/content/r17/offline/phone-crossing-stage-1-start.png",
+      "previousManifest": "docs/content/r17/offline/browser-offline.json",
+      "previousSha256": "5c6635512482d7e949676adbe830c7cd30f9361cbbd7c030fca0b0d96d5cc6a2",
+      "currentManifest": "docs/content/r17/offline/browser-offline-crossing.json",
+      "currentSha256": "baf922b249580923520c7fc521e28250ab0cf79124ebeb15eae3db6246867f90"
+    },
+    {
+      "path": "docs/content/r17/offline/phone-crossing-wrong-side.png",
+      "previousManifest": "docs/content/r17/offline/browser-offline.json",
+      "previousSha256": "35eaf1844a8df9cefaaabac91431785cdfca812a0d7f4540e826984a7e7ccb64",
+      "currentManifest": "docs/content/r17/offline/browser-offline-crossing.json",
+      "currentSha256": "1fd2e2316ce7b119ce75cce7c183c2425dc603028c8cfb8d0e33814b124dc769"
+    },
+    {
+      "path": "docs/content/r17/offline/phone-crossing-stage-1-child-look-left.png",
+      "previousManifest": "docs/content/r17/offline/browser-offline.json",
+      "previousSha256": "92a873dd5a2545af83856bdcbe5850fa3b3e1659e0ddb08d0f760296cdc10d51",
+      "currentManifest": "docs/content/r17/offline/browser-offline-crossing.json",
+      "currentSha256": "3f25080386d1cfe8fddef97b1ff945cb187d4b308a70b0464544bb2750ffeae8"
+    },
+    {
+      "path": "docs/content/r17/offline/phone-crossing-stage-1-traffic-moving-1.png",
+      "previousManifest": "docs/content/r17/offline/browser-offline.json",
+      "previousSha256": "92a873dd5a2545af83856bdcbe5850fa3b3e1659e0ddb08d0f760296cdc10d51",
+      "currentManifest": "docs/content/r17/offline/browser-offline-crossing.json",
+      "currentSha256": "3f25080386d1cfe8fddef97b1ff945cb187d4b308a70b0464544bb2750ffeae8"
+    },
+    {
+      "path": "docs/content/r17/offline/phone-crossing-stage-1-traffic-moving-2.png",
+      "previousManifest": "docs/content/r17/offline/browser-offline.json",
+      "previousSha256": "90d3acb0255096ae04ecf556f5f138ede31d12675267c09611884b4348783c77",
+      "currentManifest": "docs/content/r17/offline/browser-offline-crossing.json",
+      "currentSha256": "17b9b88e5dbfe57fba1fdcccc72822b8fe5a3659b31090359637631b1d8decd5"
+    },
+    {
+      "path": "docs/content/r17/offline/phone-crossing-stage-1-child-look-right.png",
+      "previousManifest": "docs/content/r17/offline/browser-offline.json",
+      "previousSha256": "ab941cfb6a89a48a8a63678a054b80569c67416205516505842f76f43e4b4091",
+      "currentManifest": "docs/content/r17/offline/browser-offline-crossing.json",
+      "currentSha256": "fad4090fde27590a5d24377afe2adec00c687b6d6629cef49fa394c37da28b8d"
+    },
+    {
+      "path": "docs/content/r17/offline/phone-crossing-stage-1-traffic.png",
+      "previousManifest": "docs/content/r17/offline/browser-offline.json",
+      "previousSha256": "ab941cfb6a89a48a8a63678a054b80569c67416205516505842f76f43e4b4091",
+      "currentManifest": "docs/content/r17/offline/browser-offline-crossing.json",
+      "currentSha256": "fad4090fde27590a5d24377afe2adec00c687b6d6629cef49fa394c37da28b8d"
+    },
+    {
+      "path": "docs/content/r17/offline/phone-crossing-stage-1-traffic-moving-3.png",
+      "previousManifest": "docs/content/r17/offline/browser-offline.json",
+      "previousSha256": "b205b6e03ceb063afdf209def5cd9d70a4a25023cc949e941f9d366e970f9fc9",
+      "currentManifest": "docs/content/r17/offline/browser-offline-crossing.json",
+      "currentSha256": "b2cec5b959290709ed7a1a148f0a20ef5229ade10f7dd915834cdaa0a21c408e"
+    },
+    {
+      "path": "docs/content/r17/offline/phone-crossing-stage-1-ready-cross.png",
+      "previousManifest": "docs/content/r17/offline/browser-offline.json",
+      "previousSha256": "da25b33f8d56c0b0ff2dc3fb049e3e3c6ba7386648d7668bd3a253fc9e109471",
+      "currentManifest": "docs/content/r17/offline/browser-offline-crossing.json",
+      "currentSha256": "3e061f53bff0abd60ace1de49d422714f8225633cfc93dacbe6898051547e599"
+    },
+    {
+      "path": "docs/content/r17/offline/phone-crossing-stage-1-child-moving-1.png",
+      "previousManifest": "docs/content/r17/offline/browser-offline.json",
+      "previousSha256": "c4de66125874a1334ad11978d8df76761183312ebd1b31399a989b4a94808360",
+      "currentManifest": "docs/content/r17/offline/browser-offline-crossing.json",
+      "currentSha256": "77f2fe7a60750df100d7b95d27e9c4f431cfcb13d930599e6648f8cfce960a58"
+    },
+    {
+      "path": "docs/content/r17/offline/phone-crossing-stage-1-child-moving-2.png",
+      "previousManifest": "docs/content/r17/offline/browser-offline.json",
+      "previousSha256": "c0a3ac4caf8b64432821f0a34d9a4c3a4b834d37a770f15fd0bc4b6e193edf6e",
+      "currentManifest": "docs/content/r17/offline/browser-offline-crossing.json",
+      "currentSha256": "c4dedeae9efe4b22eb46e73dba08a208c0e29839340fd852b86bc128cae106d4"
+    },
+    {
+      "path": "docs/content/r17/offline/phone-crossing-stage-1-child-moving-3.png",
+      "previousManifest": "docs/content/r17/offline/browser-offline.json",
+      "previousSha256": "8022658161ff17e764c86db5224ef58c828af56686136a5a69782f8690e24da0",
+      "currentManifest": "docs/content/r17/offline/browser-offline-crossing.json",
+      "currentSha256": "d74a54c744b377950d7ce26d00d4d53c1b60394724a3f8bfd7ec6757beff30be"
+    },
+    {
+      "path": "docs/content/r17/offline/phone-crossing-stage-1-child-arrived.png",
+      "previousManifest": "docs/content/r17/offline/browser-offline.json",
+      "previousSha256": "91facdf10f8e60dc11cda6e38d7fbb137ac8efd822704ac0dfd9decdfe62ca4e",
+      "currentManifest": "docs/content/r17/offline/browser-offline-crossing.json",
+      "currentSha256": "c02e0ce169af54135f90192138b730c74824bd7bdc1f43432a151bfa7ab55bce"
+    },
+    {
+      "path": "docs/content/r17/offline/phone-crossing-stage-1-bike-look-left.png",
+      "previousManifest": "docs/content/r17/offline/browser-offline.json",
+      "previousSha256": "d4f1162e45ee65cb67b6021416300e6e1af569dc468daa9265ed2c64a44ea1fa",
+      "currentManifest": "docs/content/r17/offline/browser-offline-crossing.json",
+      "currentSha256": "0819bc5ac9628db266750ff66b57bdf210e9b4da073414050592fe5714c7da76"
+    },
+    {
+      "path": "docs/content/r17/offline/phone-crossing-stage-1-bike-look-right.png",
+      "previousManifest": "docs/content/r17/offline/browser-offline.json",
+      "previousSha256": "6745c9de870804b45b16d9a30c98423f815f1184cdd833cbd7c7aa2952988fd7",
+      "currentManifest": "docs/content/r17/offline/browser-offline-crossing.json",
+      "currentSha256": "abc6c69510ab4b99f91188be1dcaba7381467c32c5c2fcb7a0d76331ff95dec8"
+    },
+    {
+      "path": "docs/content/r17/offline/phone-crossing-stage-1-bike-moving-1.png",
+      "previousManifest": "docs/content/r17/offline/browser-offline.json",
+      "previousSha256": "858321f23bf28b6ff75da2b9b021a567f2434f622d7452d68463b5468128db3e",
+      "currentManifest": "docs/content/r17/offline/browser-offline-crossing.json",
+      "currentSha256": "c7f2eb881dcdf6c452fc3199bbeec7350e5eff8585bc13c40d036f32fbafaf84"
+    },
+    {
+      "path": "docs/content/r17/offline/phone-crossing-stage-1-bike-moving-2.png",
+      "previousManifest": "docs/content/r17/offline/browser-offline.json",
+      "previousSha256": "6982f5c3f55a7874de5ca2dd7ca6bf44c41d56267663e99f1e8d6ddadfc0ef30",
+      "currentManifest": "docs/content/r17/offline/browser-offline-crossing.json",
+      "currentSha256": "ac55423e691bddad9c7976b2d7415d4521003a94413814e81d68e172f5b69534"
+    },
+    {
+      "path": "docs/content/r17/offline/phone-crossing-stage-1-bike-moving-3.png",
+      "previousManifest": "docs/content/r17/offline/browser-offline.json",
+      "previousSha256": "6474004c9e6fba912008f5866b2467d209452d15423c919c29d0c7a2fa1116e8",
+      "currentManifest": "docs/content/r17/offline/browser-offline-crossing.json",
+      "currentSha256": "96f84c7a958172e17a45a5afbe8787957b82542b0d287e528cb3c3d750daff6a"
+    },
+    {
+      "path": "docs/content/r17/offline/phone-crossing-stage-1-bike-arrived.png",
+      "previousManifest": "docs/content/r17/offline/browser-offline.json",
+      "previousSha256": "dd2b9c165929105823e6a628b2961b158a391b44927047f776403b1b204e7c73",
+      "currentManifest": "docs/content/r17/offline/browser-offline-crossing.json",
+      "currentSha256": "1c8817c8612c07d96a3f5ef08694e8bb195abbb182d12a18c98a72c768e09ea6"
+    },
+    {
+      "path": "docs/content/r17/offline/phone-crossing-stage-1-grandma-look-left.png",
+      "previousManifest": "docs/content/r17/offline/browser-offline.json",
+      "previousSha256": "07c8452f30c480fa490b685558e9c39dba4d4abe3d8529a42c62967f18c5ad70",
+      "currentManifest": "docs/content/r17/offline/browser-offline-crossing.json",
+      "currentSha256": "3eff9439f6d1d6d582ef08cfa910ee0b5246946105b2871de3e03f42b4e30dd2"
+    },
+    {
+      "path": "docs/content/r17/offline/phone-crossing-stage-1-grandma-look-right.png",
+      "previousManifest": "docs/content/r17/offline/browser-offline.json",
+      "previousSha256": "80f698c9e4bfd5c0b209e556b613bbbca783f20aca7902652677ba0b656ebce8",
+      "currentManifest": "docs/content/r17/offline/browser-offline-crossing.json",
+      "currentSha256": "2afc2e7b280c6ba62da11234d48e6a58617a35db357858485405188cf53e32e2"
+    },
+    {
+      "path": "docs/content/r17/offline/phone-crossing-stage-1-grandma-moving-1.png",
+      "previousManifest": "docs/content/r17/offline/browser-offline.json",
+      "previousSha256": "b7a2bf9664d8640eee017f6a16f5d3bb1cd860085ab49c3704d9f461c08195af",
+      "currentManifest": "docs/content/r17/offline/browser-offline-crossing.json",
+      "currentSha256": "f070872b761d0eae704102f1b799e826f8af01ef5190bb52b6d45fee1ff31acf"
+    },
+    {
+      "path": "docs/content/r17/offline/phone-crossing-stage-1-grandma-moving-2.png",
+      "previousManifest": "docs/content/r17/offline/browser-offline.json",
+      "previousSha256": "f5000b73978919770f426ae96c7f9a7ff8c06518087ffe02659e89d180629928",
+      "currentManifest": "docs/content/r17/offline/browser-offline-crossing.json",
+      "currentSha256": "fe4857261b5578087b7ab92ab7fe7c70b3495119b2a221d2169ca2dcf70874e2"
+    },
+    {
+      "path": "docs/content/r17/offline/phone-crossing-stage-1-grandma-moving-3.png",
+      "previousManifest": "docs/content/r17/offline/browser-offline.json",
+      "previousSha256": "4f0b19a29b0d086a1acc1a412b40053775cfd3e7eda2e8429d11aeb6bf5435f3",
+      "currentManifest": "docs/content/r17/offline/browser-offline-crossing.json",
+      "currentSha256": "61bd1e57ad960631844ab389720600f599adf4ece9c279ea8b7d084ff803a281"
+    },
+    {
+      "path": "docs/content/r17/offline/phone-crossing-stage-1-grandma-arrived.png",
+      "previousManifest": "docs/content/r17/offline/browser-offline.json",
+      "previousSha256": "e501264439e08fe29d433266120dfc69c07c559699fe8cd1221a011c0b7bae68",
+      "currentManifest": "docs/content/r17/offline/browser-offline-crossing.json",
+      "currentSha256": "ba6b9f6b5516cad61b3675e3e1108cc036c323f64d539e7f4f24dda6cdea158d"
+    },
+    {
+      "path": "docs/content/r17/offline/phone-crossing-stage-1-ready-depart.png",
+      "previousManifest": "docs/content/r17/offline/browser-offline.json",
+      "previousSha256": "e501264439e08fe29d433266120dfc69c07c559699fe8cd1221a011c0b7bae68",
+      "currentManifest": "docs/content/r17/offline/browser-offline-crossing.json",
+      "currentSha256": "ba6b9f6b5516cad61b3675e3e1108cc036c323f64d539e7f4f24dda6cdea158d"
+    },
+    {
+      "path": "docs/content/r17/offline/phone-crossing-stage-1-departing-1.png",
+      "previousManifest": "docs/content/r17/offline/browser-offline.json",
+      "previousSha256": "6a2cc958558b3c5e094a0b81d5b91a9ebb57506b3932b4e448dc751d2e2af489",
+      "currentManifest": "docs/content/r17/offline/browser-offline-crossing.json",
+      "currentSha256": "27855da6291a30a8ab0fdee564e1c1a5b899fbdef88bd6a8444bee066bc554e6"
+    },
+    {
+      "path": "docs/content/r17/offline/phone-crossing-stage-1-departing-2.png",
+      "previousManifest": "docs/content/r17/offline/browser-offline.json",
+      "previousSha256": "5a7955516bbf700fbf43c2bf669313ee21a4946e160d9af8d83848be4e23015e",
+      "currentManifest": "docs/content/r17/offline/browser-offline-crossing.json",
+      "currentSha256": "57c1f3a49af3700afb853ce220b6fddf656665f8bf235852704b2658c8f22d30"
+    },
+    {
+      "path": "docs/content/r17/offline/phone-crossing-stage-1-departing-3.png",
+      "previousManifest": "docs/content/r17/offline/browser-offline.json",
+      "previousSha256": "fb4e69a2c2d8aefea2b80f0f88b63e14da52fc20bbc4523a1cb5f4784e59806a",
+      "currentManifest": "docs/content/r17/offline/browser-offline-crossing.json",
+      "currentSha256": "2f3faab6a7bedcaf765423c1061d7aa1bb0725515fd24a9361c056e6545e0661"
+    },
+    {
+      "path": "docs/content/r17/offline/phone-crossing-stage-2-start.png",
+      "previousManifest": "docs/content/r17/offline/browser-offline.json",
+      "previousSha256": "5e5103743a044255a35de632f0f680481c4ab028d9f3f5217b53010c44083a96",
+      "currentManifest": "docs/content/r17/offline/browser-offline-crossing.json",
+      "currentSha256": "71a2d96eeae9a2b852a844536821f64e852f106467da3a1b347ffb1a0e6aeb26"
+    },
+    {
+      "path": "docs/content/r17/offline/phone-crossing-stage-2-grandma-look-left.png",
+      "previousManifest": "docs/content/r17/offline/browser-offline.json",
+      "previousSha256": "a4e31ef472c01ee88b9e1c3d0c313c3fd319569f3f60df1a6fda81dd027f61c1",
+      "currentManifest": "docs/content/r17/offline/browser-offline-crossing.json",
+      "currentSha256": "a8fd8768d1d88efc2651a8d8ab338cb0aa781cc2b857171817d55fbbb23a7760"
+    },
+    {
+      "path": "docs/content/r17/offline/phone-crossing-stage-2-traffic-moving-1.png",
+      "previousManifest": "docs/content/r17/offline/browser-offline.json",
+      "previousSha256": "a4e31ef472c01ee88b9e1c3d0c313c3fd319569f3f60df1a6fda81dd027f61c1",
+      "currentManifest": "docs/content/r17/offline/browser-offline-crossing.json",
+      "currentSha256": "a8fd8768d1d88efc2651a8d8ab338cb0aa781cc2b857171817d55fbbb23a7760"
+    },
+    {
+      "path": "docs/content/r17/offline/phone-crossing-stage-2-traffic-moving-2.png",
+      "previousManifest": "docs/content/r17/offline/browser-offline.json",
+      "previousSha256": "dc15aed4d64699a76bab1a4ee3f7d8e3776b09cb254c3a9d7862d36932eebc87",
+      "currentManifest": "docs/content/r17/offline/browser-offline-crossing.json",
+      "currentSha256": "adc95f8a28331bd7a8e6ca62a27ff66b28a4b5fdbc6c1c6277c04423174d8c91"
+    },
+    {
+      "path": "docs/content/r17/offline/phone-crossing-stage-2-grandma-look-right.png",
+      "previousManifest": "docs/content/r17/offline/browser-offline.json",
+      "previousSha256": "2b86d1bcd993f141c66ccecda900a03747eae74d33fff5ab5914ae52c8207bd6",
+      "currentManifest": "docs/content/r17/offline/browser-offline-crossing.json",
+      "currentSha256": "a0ca73ffcb801b70d1c5bc8cf82b212a65cdd4aabaa6df0d6a4e6c408b16781b"
+    },
+    {
+      "path": "docs/content/r17/offline/phone-crossing-stage-2-traffic.png",
+      "previousManifest": "docs/content/r17/offline/browser-offline.json",
+      "previousSha256": "2b86d1bcd993f141c66ccecda900a03747eae74d33fff5ab5914ae52c8207bd6",
+      "currentManifest": "docs/content/r17/offline/browser-offline-crossing.json",
+      "currentSha256": "a0ca73ffcb801b70d1c5bc8cf82b212a65cdd4aabaa6df0d6a4e6c408b16781b"
+    },
+    {
+      "path": "docs/content/r17/offline/phone-crossing-stage-2-traffic-moving-3.png",
+      "previousManifest": "docs/content/r17/offline/browser-offline.json",
+      "previousSha256": "fd393bff98f98887699dfe37496cbc773659e126a6b4fbc2ce73035c8ec6dedb",
+      "currentManifest": "docs/content/r17/offline/browser-offline-crossing.json",
+      "currentSha256": "e937b20b6a81c8ae0a8147bcdeb2445b16bd055958e0d2ed062cefcbf6237568"
+    },
+    {
+      "path": "docs/content/r17/offline/phone-crossing-stage-2-ready-cross.png",
+      "previousManifest": "docs/content/r17/offline/browser-offline.json",
+      "previousSha256": "a2a71a3cd188b90bd8401f243ec1ef59e91cc4a681941f7f2c580f47900f94fa",
+      "currentManifest": "docs/content/r17/offline/browser-offline-crossing.json",
+      "currentSha256": "6a2c93f059b661f65adbd131cffe2968f48850fc58f14f85bde3f2d1d07310a1"
+    },
+    {
+      "path": "docs/content/r17/offline/phone-crossing-stage-2-grandma-moving-1.png",
+      "previousManifest": "docs/content/r17/offline/browser-offline.json",
+      "previousSha256": "4ad879ff60eea5dccbc91d77dba9eba0014fd75f681e9ed66714a431ab1cb876",
+      "currentManifest": "docs/content/r17/offline/browser-offline-crossing.json",
+      "currentSha256": "c5e2f1f8aee09cf822df244463419d058c409a2700f7fecfd1d0db903486de3b"
+    },
+    {
+      "path": "docs/content/r17/offline/phone-crossing-stage-2-grandma-moving-2.png",
+      "previousManifest": "docs/content/r17/offline/browser-offline.json",
+      "previousSha256": "6cdefdbeda22f63d0a45d59f5bf192da7c7e114af1b9b1bac38cbd48875a6ee1",
+      "currentManifest": "docs/content/r17/offline/browser-offline-crossing.json",
+      "currentSha256": "ee8272baff1e9efafd3abfe95914ae28ec9a5f73145b76a0deaeea509a354074"
+    },
+    {
+      "path": "docs/content/r17/offline/phone-crossing-stage-2-grandma-moving-3.png",
+      "previousManifest": "docs/content/r17/offline/browser-offline.json",
+      "previousSha256": "811424c2867e99d263990ca7be9b83823a3e36bc51fcb095f5868d292b5267f9",
+      "currentManifest": "docs/content/r17/offline/browser-offline-crossing.json",
+      "currentSha256": "56fe7e80c1d4b176c2040e7dd308e300411fcacc69b42036fd5a3455e376c7d5"
+    },
+    {
+      "path": "docs/content/r17/offline/phone-crossing-stage-2-grandma-arrived.png",
+      "previousManifest": "docs/content/r17/offline/browser-offline.json",
+      "previousSha256": "1793205a5b3ef4590dd801e6e44405957d55cc509207507e2ddf30e9e8494e2d",
+      "currentManifest": "docs/content/r17/offline/browser-offline-crossing.json",
+      "currentSha256": "64ca045c6988153a65efe2cbd352c96f3ed308e35c6ef695645c837e4f05cb80"
+    },
+    {
+      "path": "docs/content/r17/offline/phone-crossing-stage-2-child-look-left.png",
+      "previousManifest": "docs/content/r17/offline/browser-offline.json",
+      "previousSha256": "8b36ae8b52c40b02ef77a2aff8367edf2ebdc01e364cf79a2c1c881c7ae33630",
+      "currentManifest": "docs/content/r17/offline/browser-offline-crossing.json",
+      "currentSha256": "9db5b6a72db765ee481e91c0dc19ce653504111e2a040bd7577ca1d06418a37a"
+    },
+    {
+      "path": "docs/content/r17/offline/phone-crossing-stage-2-child-look-right.png",
+      "previousManifest": "docs/content/r17/offline/browser-offline.json",
+      "previousSha256": "43c69c78c822828abf282a1c975a70f85a1d7268d288972d9e0a44897d1560d2",
+      "currentManifest": "docs/content/r17/offline/browser-offline-crossing.json",
+      "currentSha256": "e3a6608dbf0239567e80dac0f17f0bc4519d98366a70e36b22bdb2103ecd41a2"
+    },
+    {
+      "path": "docs/content/r17/offline/phone-crossing-stage-2-child-moving-1.png",
+      "previousManifest": "docs/content/r17/offline/browser-offline.json",
+      "previousSha256": "69dd13d224341ae8a1236a9c3c4e1d57a99d7e177911e138ef0a195665a74611",
+      "currentManifest": "docs/content/r17/offline/browser-offline-crossing.json",
+      "currentSha256": "1af64aa34bd3094a9d0b267877f13e0e9b885c1b2fed99619c091b7171b67efa"
+    },
+    {
+      "path": "docs/content/r17/offline/phone-crossing-stage-2-child-moving-2.png",
+      "previousManifest": "docs/content/r17/offline/browser-offline.json",
+      "previousSha256": "03f22257d634bb85a5c6c5be7dd8f5c757435220679fe06d88d46b0f94ac55ac",
+      "currentManifest": "docs/content/r17/offline/browser-offline-crossing.json",
+      "currentSha256": "eecef61e7b25983c5b598a6b1173861d91a86ba46d1d79c50bdc4ee92d5e4016"
+    },
+    {
+      "path": "docs/content/r17/offline/phone-crossing-stage-2-child-moving-3.png",
+      "previousManifest": "docs/content/r17/offline/browser-offline.json",
+      "previousSha256": "3d882607b641dd7cc3ed1aa95bdb27d41b94857d4aa83a037b7ccd708ea141e8",
+      "currentManifest": "docs/content/r17/offline/browser-offline-crossing.json",
+      "currentSha256": "82b8779897308ac667c8dd0b5e798bed822ac149bbec81b365650ec9e4015297"
+    },
+    {
+      "path": "docs/content/r17/offline/phone-crossing-stage-2-child-arrived.png",
+      "previousManifest": "docs/content/r17/offline/browser-offline.json",
+      "previousSha256": "3c190447206c1c65189de908fe312c565b46779a7fbf0326fe353f45dac4073d",
+      "currentManifest": "docs/content/r17/offline/browser-offline-crossing.json",
+      "currentSha256": "c1a52689a12957de63e65528cf1866d758ae67804a32c99d86e26abf5a6bcf4d"
+    },
+    {
+      "path": "docs/content/r17/offline/phone-crossing-stage-2-bike-look-left.png",
+      "previousManifest": "docs/content/r17/offline/browser-offline.json",
+      "previousSha256": "0291a5f087874274c50b2b39ca11a84de37f2e5d9e7e8308a45fba04f1adab68",
+      "currentManifest": "docs/content/r17/offline/browser-offline-crossing.json",
+      "currentSha256": "70d82212050063662921fc8618b677e2c1b6774be2f498e2fb9cb071423432fc"
+    },
+    {
+      "path": "docs/content/r17/offline/phone-crossing-stage-2-bike-look-right.png",
+      "previousManifest": "docs/content/r17/offline/browser-offline.json",
+      "previousSha256": "321485297ee22d598eedbe3066940b6928254bd6f31f453a411df6dd70c9cb3d",
+      "currentManifest": "docs/content/r17/offline/browser-offline-crossing.json",
+      "currentSha256": "f380a44cad6316b27d3f99b397fb033b9d8b037f6af70fcc0a9dd4b57e98330b"
+    },
+    {
+      "path": "docs/content/r17/offline/phone-crossing-stage-2-bike-moving-1.png",
+      "previousManifest": "docs/content/r17/offline/browser-offline.json",
+      "previousSha256": "859908d49c67445127f9afbc201ebc3027cd6a6bf80caf9317e10d309b4b08b5",
+      "currentManifest": "docs/content/r17/offline/browser-offline-crossing.json",
+      "currentSha256": "49b2069738cccf32cf92c9bb85c9f74639a93fb32bb23a9da7f4ef3ead97a530"
+    },
+    {
+      "path": "docs/content/r17/offline/phone-crossing-stage-2-bike-moving-2.png",
+      "previousManifest": "docs/content/r17/offline/browser-offline.json",
+      "previousSha256": "22761e62aeac2060bc9cb15e167237bcde8e02b2e5cb1b05a6638c496750410d",
+      "currentManifest": "docs/content/r17/offline/browser-offline-crossing.json",
+      "currentSha256": "fdaf368d2efa63fa2435a3498ef810d0c02e54aca47eed293002306912022497"
+    },
+    {
+      "path": "docs/content/r17/offline/phone-crossing-stage-2-bike-moving-3.png",
+      "previousManifest": "docs/content/r17/offline/browser-offline.json",
+      "previousSha256": "e7879e6c479999534ef87600ea8e652cd33b20a570d625c72ab80c971640c865",
+      "currentManifest": "docs/content/r17/offline/browser-offline-crossing.json",
+      "currentSha256": "b810435b47d63c03956fbda3b2bba0a4e609333b097e5bb9d7f4f1439800a2eb"
+    },
+    {
+      "path": "docs/content/r17/offline/phone-crossing-stage-2-bike-arrived.png",
+      "previousManifest": "docs/content/r17/offline/browser-offline.json",
+      "previousSha256": "cc153e04a89e742d35a37894863b4efe80b6a3ac6cb8cf35395e4a8f7dd28d2c",
+      "currentManifest": "docs/content/r17/offline/browser-offline-crossing.json",
+      "currentSha256": "53477ce24f8e13b61e667047a7278fce16cbc767340b8f86095e1465a67860af"
+    },
+    {
+      "path": "docs/content/r17/offline/phone-crossing-stage-2-ready-depart.png",
+      "previousManifest": "docs/content/r17/offline/browser-offline.json",
+      "previousSha256": "cc153e04a89e742d35a37894863b4efe80b6a3ac6cb8cf35395e4a8f7dd28d2c",
+      "currentManifest": "docs/content/r17/offline/browser-offline-crossing.json",
+      "currentSha256": "53477ce24f8e13b61e667047a7278fce16cbc767340b8f86095e1465a67860af"
+    },
+    {
+      "path": "docs/content/r17/offline/phone-crossing-stage-2-departing-1.png",
+      "previousManifest": "docs/content/r17/offline/browser-offline.json",
+      "previousSha256": "c6fab1a724aeac5b8e0b4bf7f2a8eef6fa388faef3a203271f37def7f7961b70",
+      "currentManifest": "docs/content/r17/offline/browser-offline-crossing.json",
+      "currentSha256": "8697661f6864e6ce18979b56f8d52193c58748e4e7d246e3005c8a56e40b341d"
+    },
+    {
+      "path": "docs/content/r17/offline/phone-crossing-stage-2-departing-2.png",
+      "previousManifest": "docs/content/r17/offline/browser-offline.json",
+      "previousSha256": "2582031b77e37fe5ca53bc40a5973843a6b5e64ca7fc129b0571deb956525c78",
+      "currentManifest": "docs/content/r17/offline/browser-offline-crossing.json",
+      "currentSha256": "f31447001d825a185a5d38e6b621bc8c544afe5aa640de001e81f9a10288df52"
+    },
+    {
+      "path": "docs/content/r17/offline/phone-crossing-stage-2-departing-3.png",
+      "previousManifest": "docs/content/r17/offline/browser-offline.json",
+      "previousSha256": "c9bd2380097ba04041dcf59f4e7cdeb28f56b17b09b7bd92789cc426837fef4b",
+      "currentManifest": "docs/content/r17/offline/browser-offline-crossing.json",
+      "currentSha256": "b65e2feed66ceef158d3b9a1077864e21f03da09ea4533163045c15b80fb6c2a"
+    },
+    {
+      "path": "docs/content/r17/offline/phone-crossing-stage-3-start.png",
+      "previousManifest": "docs/content/r17/offline/browser-offline.json",
+      "previousSha256": "4c5911b618d5b54b092277926058193818f3f69e1e4592f56a4ff8fe6604fa9d",
+      "currentManifest": "docs/content/r17/offline/browser-offline-crossing.json",
+      "currentSha256": "068f7a95dd03a29640dc5f093912ebae7891ee46be59a0381b099f2061ac90d2"
+    },
+    {
+      "path": "docs/content/r17/offline/phone-crossing-stage-3-bike-look-left.png",
+      "previousManifest": "docs/content/r17/offline/browser-offline.json",
+      "previousSha256": "3d25697adc212044dc2dcd713916b96b40d275c713b35adcd4f482106dcc8e81",
+      "currentManifest": "docs/content/r17/offline/browser-offline-crossing.json",
+      "currentSha256": "dd2ea0e72f9e2acaa8bde1beb53ce7865bda7a803be9e8defadeb96bb1a0adf3"
+    },
+    {
+      "path": "docs/content/r17/offline/phone-crossing-stage-3-traffic-moving-1.png",
+      "previousManifest": "docs/content/r17/offline/browser-offline.json",
+      "previousSha256": "3d25697adc212044dc2dcd713916b96b40d275c713b35adcd4f482106dcc8e81",
+      "currentManifest": "docs/content/r17/offline/browser-offline-crossing.json",
+      "currentSha256": "dd2ea0e72f9e2acaa8bde1beb53ce7865bda7a803be9e8defadeb96bb1a0adf3"
+    },
+    {
+      "path": "docs/content/r17/offline/phone-crossing-stage-3-traffic-moving-2.png",
+      "previousManifest": "docs/content/r17/offline/browser-offline.json",
+      "previousSha256": "1352a324cfa4253cdbfec8bb9a05420504a86ef289298cc39df1d6298529b8dd",
+      "currentManifest": "docs/content/r17/offline/browser-offline-crossing.json",
+      "currentSha256": "5b2f3435db63958e74fbe17b907a635a590dfd9d394c3e8d4e01f8fea76f8f22"
+    },
+    {
+      "path": "docs/content/r17/offline/phone-crossing-stage-3-bike-look-right.png",
+      "previousManifest": "docs/content/r17/offline/browser-offline.json",
+      "previousSha256": "93c79d6441aaa25287fa5f3d5b5e9adc598cdaa917d299df81999bee8bf9c913",
+      "currentManifest": "docs/content/r17/offline/browser-offline-crossing.json",
+      "currentSha256": "42371b15f4fb9089148f866465c6f7cd6e92777fa49185ebb60a35bafb3ba042"
+    },
+    {
+      "path": "docs/content/r17/offline/phone-crossing-stage-3-traffic.png",
+      "previousManifest": "docs/content/r17/offline/browser-offline.json",
+      "previousSha256": "93c79d6441aaa25287fa5f3d5b5e9adc598cdaa917d299df81999bee8bf9c913",
+      "currentManifest": "docs/content/r17/offline/browser-offline-crossing.json",
+      "currentSha256": "42371b15f4fb9089148f866465c6f7cd6e92777fa49185ebb60a35bafb3ba042"
+    },
+    {
+      "path": "docs/content/r17/offline/phone-crossing-stage-3-traffic-moving-3.png",
+      "previousManifest": "docs/content/r17/offline/browser-offline.json",
+      "previousSha256": "6b2ad4ddd14b6348ce9b438a72f84090869af1441ab09897baa42e5a80fa6113",
+      "currentManifest": "docs/content/r17/offline/browser-offline-crossing.json",
+      "currentSha256": "cb81e091d88361e7c9d55cdb724e96646ed06e7aa9ab36ae2017600bbd1faf5d"
+    },
+    {
+      "path": "docs/content/r17/offline/phone-crossing-stage-3-ready-cross.png",
+      "previousManifest": "docs/content/r17/offline/browser-offline.json",
+      "previousSha256": "ca3f8566406cfe1e96d4d4748d33a25128d041d79cd5e70ca3ef7abe9cb5798f",
+      "currentManifest": "docs/content/r17/offline/browser-offline-crossing.json",
+      "currentSha256": "25ca0ba6c7ecaef2813088c9d749580e3c248a1f341bd4edc19bc7177d1ad286"
+    },
+    {
+      "path": "docs/content/r17/offline/phone-crossing-stage-3-bike-moving-1.png",
+      "previousManifest": "docs/content/r17/offline/browser-offline.json",
+      "previousSha256": "7efa03a57d1898261a6e5b84a2a4181ac7d93595e0fa5b913b95b6ec3153c4ee",
+      "currentManifest": "docs/content/r17/offline/browser-offline-crossing.json",
+      "currentSha256": "c0372869f0bb5d6ec83d57de8716e738c374e51ea38809b8930301ffab066947"
+    },
+    {
+      "path": "docs/content/r17/offline/phone-crossing-stage-3-bike-moving-2.png",
+      "previousManifest": "docs/content/r17/offline/browser-offline.json",
+      "previousSha256": "711e85bcbef3e8891ac979a73c719168193b39a9819a8bb3df6a911e14e8acfa",
+      "currentManifest": "docs/content/r17/offline/browser-offline-crossing.json",
+      "currentSha256": "4e34de18d22d4564000d83ba44b8edd5aca7f1eb8049472474e6992d0da3d0eb"
+    },
+    {
+      "path": "docs/content/r17/offline/phone-crossing-stage-3-bike-moving-3.png",
+      "previousManifest": "docs/content/r17/offline/browser-offline.json",
+      "previousSha256": "553ede5f4b851cd10517445002ba91a11ccfa0a6109f9d60269c1978ecd8dab9",
+      "currentManifest": "docs/content/r17/offline/browser-offline-crossing.json",
+      "currentSha256": "be2ad57879ac0910dbb95d057999c928a1182f3eb04c7880bcc5c659b93415c9"
+    },
+    {
+      "path": "docs/content/r17/offline/phone-crossing-stage-3-bike-arrived.png",
+      "previousManifest": "docs/content/r17/offline/browser-offline.json",
+      "previousSha256": "b78d0366dae9094c220a081d4ab31003697e9bf8e2da48be1156792e46dca096",
+      "currentManifest": "docs/content/r17/offline/browser-offline-crossing.json",
+      "currentSha256": "59e45aab3b2050fdebefa7a4002a646d6a0811b6af7f0d22c7c2f38c6288d694"
+    },
+    {
+      "path": "docs/content/r17/offline/phone-crossing-stage-3-grandma-look-left.png",
+      "previousManifest": "docs/content/r17/offline/browser-offline.json",
+      "previousSha256": "6641389459f22666feee16d8fb6f6378b2a279d36c8287fadd0fa9bac8fdd667",
+      "currentManifest": "docs/content/r17/offline/browser-offline-crossing.json",
+      "currentSha256": "a868d1d83648d52b8e139e215e6a7701b4839ae77ff3c4db61b1c4e601da950a"
+    },
+    {
+      "path": "docs/content/r17/offline/phone-crossing-stage-3-grandma-look-right.png",
+      "previousManifest": "docs/content/r17/offline/browser-offline.json",
+      "previousSha256": "d980f958107e2dfd6558c0a0c2482b4cd5fd8a752b9270b3168d8e4337374de1",
+      "currentManifest": "docs/content/r17/offline/browser-offline-crossing.json",
+      "currentSha256": "39d131f7199b0365dc40527a59d486b1ca67cf7d8a182b9a3ebd429c99f97612"
+    },
+    {
+      "path": "docs/content/r17/offline/phone-crossing-stage-3-grandma-moving-1.png",
+      "previousManifest": "docs/content/r17/offline/browser-offline.json",
+      "previousSha256": "94c670d63e0dd601e4027958259d9c6900f864073b3cc89a1dbbaee69091bdab",
+      "currentManifest": "docs/content/r17/offline/browser-offline-crossing.json",
+      "currentSha256": "7a68e736cc6b435f2a3c4020b067422dd53fc1cbad8b0df09d87a944c53ebd9d"
+    },
+    {
+      "path": "docs/content/r17/offline/phone-crossing-stage-3-grandma-moving-2.png",
+      "previousManifest": "docs/content/r17/offline/browser-offline.json",
+      "previousSha256": "07f44c1cc526515ebd528dfc2480454980d6357d93dae67d8099e61a78273b1b",
+      "currentManifest": "docs/content/r17/offline/browser-offline-crossing.json",
+      "currentSha256": "44f8f1657a4a8910347f7455719d96126f83d01551a674fb144cdfaffc52b267"
+    },
+    {
+      "path": "docs/content/r17/offline/phone-crossing-stage-3-grandma-moving-3.png",
+      "previousManifest": "docs/content/r17/offline/browser-offline.json",
+      "previousSha256": "19109aef772b8f7dba2f776fb5fa68cc5d3b246948f3c7b7f4f64feffdbbf3f3",
+      "currentManifest": "docs/content/r17/offline/browser-offline-crossing.json",
+      "currentSha256": "e3cce1ab5cd0fcb0829249bbfd430ddfacbff3f58845b7bd52a9d20b710afa67"
+    },
+    {
+      "path": "docs/content/r17/offline/phone-crossing-stage-3-grandma-arrived.png",
+      "previousManifest": "docs/content/r17/offline/browser-offline.json",
+      "previousSha256": "0ecf30eecab65e4f7aed05b8654682c64c2ecd8b549510bc9e925bf154af7463",
+      "currentManifest": "docs/content/r17/offline/browser-offline-crossing.json",
+      "currentSha256": "a12d5a327f941931d68f8cbad2248b7d9821789e14864fbff03ba1efe3526218"
+    },
+    {
+      "path": "docs/content/r17/offline/phone-crossing-stage-3-child-look-left.png",
+      "previousManifest": "docs/content/r17/offline/browser-offline.json",
+      "previousSha256": "da3eb7fcc1b3a3756b243f18a1335ccdb1fa2a77f61b86aa98207f03b27f6ab4",
+      "currentManifest": "docs/content/r17/offline/browser-offline-crossing.json",
+      "currentSha256": "caae8c1df7e002a5d58a40f67f9a9f5c3ebeee7ea9c0bf3a125d5502be470a63"
+    },
+    {
+      "path": "docs/content/r17/offline/phone-crossing-stage-3-child-look-right.png",
+      "previousManifest": "docs/content/r17/offline/browser-offline.json",
+      "previousSha256": "3338b731b599e5206ff8dc87f7ca2a45f7045ec991a05794fba79d77c86812d0",
+      "currentManifest": "docs/content/r17/offline/browser-offline-crossing.json",
+      "currentSha256": "623705ba19924639041aa170f024ed5e8faa01612feed4c0ce29fe223e329a42"
+    },
+    {
+      "path": "docs/content/r17/offline/phone-crossing-stage-3-child-moving-1.png",
+      "previousManifest": "docs/content/r17/offline/browser-offline.json",
+      "previousSha256": "7bc88d14294e14e6dff1540885d00bf41157a971fefa9746f2ff8f071b9948a6",
+      "currentManifest": "docs/content/r17/offline/browser-offline-crossing.json",
+      "currentSha256": "f3db8e0d534ed9de6fd59c8140e769be746b7711e9d49bbce3d8e7e782afca1f"
+    },
+    {
+      "path": "docs/content/r17/offline/phone-crossing-stage-3-child-moving-2.png",
+      "previousManifest": "docs/content/r17/offline/browser-offline.json",
+      "previousSha256": "568a85ab31cd99981c154045fd409bc26509099a7d5f3483b89bb01c4fd029a9",
+      "currentManifest": "docs/content/r17/offline/browser-offline-crossing.json",
+      "currentSha256": "2c19741085d1327509a9044429f847bf0fb07161bd7018923960e1a4d546fea9"
+    },
+    {
+      "path": "docs/content/r17/offline/phone-crossing-stage-3-child-moving-3.png",
+      "previousManifest": "docs/content/r17/offline/browser-offline.json",
+      "previousSha256": "fddee88aaf5230b086a7cd70242db3e299bbdfb67b6652637f8b03c95493e64f",
+      "currentManifest": "docs/content/r17/offline/browser-offline-crossing.json",
+      "currentSha256": "0e2cfeb39362185ec4336b40a56fed413ed6f115a0fc0d26eda94523f2a5cdc6"
+    },
+    {
+      "path": "docs/content/r17/offline/phone-crossing-stage-3-child-arrived.png",
+      "previousManifest": "docs/content/r17/offline/browser-offline.json",
+      "previousSha256": "63997f8c25a8f667a4a4391764c363df9d830fed5b19387e6d2ff230ada66608",
+      "currentManifest": "docs/content/r17/offline/browser-offline-crossing.json",
+      "currentSha256": "b7b0313421c914d52b470ca35d787fab4b15b69133a0b56702965657eb3b089d"
+    },
+    {
+      "path": "docs/content/r17/offline/phone-crossing-stage-3-ready-depart.png",
+      "previousManifest": "docs/content/r17/offline/browser-offline.json",
+      "previousSha256": "63997f8c25a8f667a4a4391764c363df9d830fed5b19387e6d2ff230ada66608",
+      "currentManifest": "docs/content/r17/offline/browser-offline-crossing.json",
+      "currentSha256": "b7b0313421c914d52b470ca35d787fab4b15b69133a0b56702965657eb3b089d"
+    },
+    {
+      "path": "docs/content/r17/offline/phone-crossing-stage-3-departing-1.png",
+      "previousManifest": "docs/content/r17/offline/browser-offline.json",
+      "previousSha256": "f762a7418705b0839b431af9469fde1537114e0503dfe1e277b011e65b1bc90d",
+      "currentManifest": "docs/content/r17/offline/browser-offline-crossing.json",
+      "currentSha256": "0ca8837a129c929e5a3ef92a675173e3d9c610476a321a7633b050e415390447"
+    },
+    {
+      "path": "docs/content/r17/offline/phone-crossing-stage-3-departing-2.png",
+      "previousManifest": "docs/content/r17/offline/browser-offline.json",
+      "previousSha256": "d814b381add6f9bf0d667958e1aaf96318886b16d58aa6f10b8a08b4fad6fd08",
+      "currentManifest": "docs/content/r17/offline/browser-offline-crossing.json",
+      "currentSha256": "dd91c65ec8d72613de7f8c13724219bea0ee57f6cf89c06cb8238e8df62dfeff"
+    },
+    {
+      "path": "docs/content/r17/offline/phone-crossing-stage-3-departing-3.png",
+      "previousManifest": "docs/content/r17/offline/browser-offline.json",
+      "previousSha256": "0205a54977be0c4277ecd6947d3b9410e8443e2b60896e928d50279a9157ff03",
+      "currentManifest": "docs/content/r17/offline/browser-offline-crossing.json",
+      "currentSha256": "2a7e7da5774d05aa745ef72baefbf99d7b60e1e824b7f7c38224bfca3c885cf9"
+    },
+    {
+      "path": "docs/content/r17/offline/phone-crossing-complete.png",
+      "previousManifest": "docs/content/r17/offline/browser-offline.json",
+      "previousSha256": "d2588d6a42fdd0ea8150e55995c6926c5b09ea32553ed4c466b708a159acd9eb",
+      "currentManifest": "docs/content/r17/offline/browser-offline-crossing.json",
+      "currentSha256": "a3bb45219c88d3b9d200532de3af7c732f2fac6994aff3867a9229415a73ee60"
+    },
+    {
+      "path": "docs/content/r17/offline/phone-crossing-replay-traffic.png",
+      "previousManifest": "docs/content/r17/offline/browser-offline.json",
+      "previousSha256": "2b25b749e948b8e51054526aa60327c1dbdff4588db6369575edf7d14764771a",
+      "currentManifest": "docs/content/r17/offline/browser-offline-crossing.json",
+      "currentSha256": "4c6fb83fbbe0b4727d91690776c98e9bb9d422c8fa25bbeb1f18ee6f7b34f499"
+    }
+  ]
+}

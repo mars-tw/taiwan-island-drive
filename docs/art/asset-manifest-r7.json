@@ -1,0 +1,361 @@
+{
+  "status": "VERIFIED",
+  "tool": "image_gen.imagegen",
+  "model_slug": null,
+  "model_note": "實際工具未揭露模型slug，未自行推定。",
+  "generation_calls": 6,
+  "sources": [
+    {
+      "path": "docs/art/source/r7/coach-sheet.png",
+      "sha256": "b6ce85be9103a685cace65aa4d9afe25834fa3e9826070f2985979db94600fe6"
+    },
+    {
+      "path": "docs/art/source/r7/qingshui-coast.png",
+      "sha256": "2e4e20fe843b50bed1fbff9280f18f1e18d7ca3cde53a96d078637e0ff5bed02"
+    },
+    {
+      "path": "docs/art/source/r7/ui-objects.png",
+      "sha256": "15137ee953d9aa9781b4f2c94cfde7c3b24a80ffbc82d85868b0af12b5ca319b"
+    },
+    {
+      "path": "docs/art/source/r7/ui-objects-mask.png",
+      "sha256": "63aecff0e4b5e9fc051cf8ce0486998b5d4fd7cce845492dc6c803ff0cd37863"
+    },
+    {
+      "path": "docs/art/source/r7/ui-objects-opaque.png",
+      "sha256": "178a40902e9b0fce0d67e7cde7515fc4243bec458c6f60fa2ed141d679cf1a45"
+    },
+    {
+      "path": "docs/art/source/r7/logo.png",
+      "sha256": "470891dd0e85dbbf35104de42f86460bd2529a81d114208b0b9cbe1284da9e9d"
+    },
+    {
+      "path": "docs/art/source/r7/logo-mask.png",
+      "sha256": "e5d5187c93f3ecbfc30d38cebebe6214bc9fdecd651e216c42e2fa8974980ef5"
+    },
+    {
+      "path": "docs/art/source/r7/logo-opaque.png",
+      "sha256": "81c06f99ec60427d3d159174f16a579b0f648224ae7c2a705205d0ae10a7127b"
+    },
+    {
+      "path": "docs/art/source/r7/app-icon-proposal.png",
+      "sha256": "bca9bcbb5ff3ebcf12995eadf5c817167911889bf85decf2b29bd937b89a9dfb"
+    },
+    {
+      "path": "docs/art/source/r7/coach-acting.png",
+      "sha256": "6405e8921238ec9f1d7a2223957cee90682c7d3659c73c73278b6ef78fa784cb"
+    },
+    {
+      "path": "docs/art/source/r7/coach-acting-mask.png",
+      "sha256": "13b6d18bfd9ed5e2abb50cb52dcf9e1d4c8637d82b281f2cb58f6f3337ae837b"
+    },
+    {
+      "path": "docs/art/source/r7/coach-acting-opaque.png",
+      "sha256": "e6a6e3904a96752e01b4e33e0949c1eced7325fb8541dc17dbeaac05db473abf"
+    },
+    {
+      "path": "docs/art/source/r7/logo-runtime-mask.png",
+      "sha256": "278c826dfde7af673ac92f1a6e4c349f1f15d495f2dc3ed3707662ed45e18da5"
+    },
+    {
+      "path": "docs/art/source/r7/coach-straight-runtime-mask.png",
+      "sha256": "c313a0b2e9250d6d41ab35f2774404b9a7632c3b72768c083f6163503c46089e"
+    },
+    {
+      "path": "docs/art/source/r7/coach-turn-runtime-mask.png",
+      "sha256": "b412d6e1608c1a96e999734ace00d708b835513db5641494ac49cfe93cb583b6"
+    },
+    {
+      "path": "docs/art/source/r7/coach-reward-runtime-mask.png",
+      "sha256": "c6bb47faa86f46bd2a88eeb0c5279f990836ce5733265fbccb1baca20d8d8ca3"
+    },
+    {
+      "path": "docs/art/source/r7/coach-radio-runtime-mask.png",
+      "sha256": "905e1c9d9317f6129e1d9cc6c50effbf1f1e90083cc03caf96b4cd1bc50b9396"
+    },
+    {
+      "path": "docs/art/source/r7/panel-runtime-mask.png",
+      "sha256": "f565b33bec6084e9001feca0cedd29c73b2586b8b5897e5916b3da9ced89bee8"
+    },
+    {
+      "path": "docs/art/source/r7/badge-runtime-mask.png",
+      "sha256": "8e9d3f6ba85c361082a98923de44e649bcd81aba5af26a06d92c83da66478a8f"
+    },
+    {
+      "path": "docs/art/source/r7/turn-sign-runtime-mask.png",
+      "sha256": "8e17c0a91cd99c7a89093a726282a19a605ea77eb47a242787435b80cfcbc217"
+    },
+    {
+      "path": "docs/art/source/r7/car-rear-runtime-mask.png",
+      "sha256": "668254ddceaeba705d941e58c3c5465c30db1b23856802d0f72eb802353ef500"
+    },
+    {
+      "path": "docs/art/source/r7/flight-rear-runtime-mask.png",
+      "sha256": "956d3f9d3b4fc5bbd8c6a08ab9b54e24c4c6649aca874823b75051fd00d49d88"
+    },
+    {
+      "path": "docs/art/source/r7/finish-flag-runtime-mask.png",
+      "sha256": "8a7748d2bb7d4a03c7487684e3f838cd6ed0dc53acef59bc89da1718ec25771b"
+    }
+  ],
+  "outputs": [
+    {
+      "path": "public/art/r7/coast.webp",
+      "bytes": 376370,
+      "size": [
+        1536,
+        1024
+      ],
+      "sha256": "056bb6952b11ad956f5be697707c8fe3f5c660f3ab7103b126d6bfd999425813"
+    },
+    {
+      "path": "public/art/r7/logo.png",
+      "bytes": 190037,
+      "size": [
+        480,
+        250
+      ],
+      "sha256": "6c8f4167bbf5f3eb67c27cf501c4845a4f68cc5b7259ec13d7e5d371a6b1cad6",
+      "alpha_corners": true,
+      "occupancy": 0.6475416666666667,
+      "mean_luminance": 0.5287428890411322,
+      "near_black": 0.07621131201338395,
+      "mean_saturation": 0.7550608221978095,
+      "low_saturation": 0.16146966089698217
+    },
+    {
+      "path": "public/art/r7/app-icon-192.png",
+      "bytes": 91992,
+      "size": [
+        192,
+        192
+      ],
+      "sha256": "b14bf5420eec0a6205fa4bbf140777fb702ab7363ee97eea840ecc5d2d3876f0"
+    },
+    {
+      "path": "public/art/r7/app-icon-512.png",
+      "bytes": 528374,
+      "size": [
+        512,
+        512
+      ],
+      "sha256": "5217194b98dee51d13280426874ab8f594c01199dbb19cb19623f5acda3c0d7b"
+    },
+    {
+      "path": "public/art/r7/coach-straight.png",
+      "bytes": 206817,
+      "size": [
+        384,
+        384
+      ],
+      "sha256": "6431d74bee323cf50d4c955afee1fb9a35ffd1c037b5b7cd2ed6f64fc3b9ad15",
+      "alpha_corners": true,
+      "occupancy": 0.6675482855902778,
+      "mean_luminance": 0.4848579666279825,
+      "near_black": 0.18399130381778653,
+      "mean_saturation": 0.6988173511525342,
+      "low_saturation": 0.16720848487311296,
+      "dual_gate": true
+    },
+    {
+      "path": "public/art/r7/coach-turn.png",
+      "bytes": 164386,
+      "size": [
+        384,
+        384
+      ],
+      "sha256": "0678f3586cf280bcc7ad2ef73b0335911ca5d2d049cf12d168d3cced72b1fb06",
+      "alpha_corners": true,
+      "occupancy": 0.4921535915798611,
+      "mean_luminance": 0.4972471775983546,
+      "near_black": 0.18067823235176586,
+      "mean_saturation": 0.6832151997724856,
+      "low_saturation": 0.1767648234143115,
+      "dual_gate": true
+    },
+    {
+      "path": "public/art/r7/coach-reward.png",
+      "bytes": 174520,
+      "size": [
+        384,
+        384
+      ],
+      "sha256": "4556b3f4f19a3c5f575d36b97d18d753334e227ca0ceed9c258fbfd206036d5f",
+      "alpha_corners": true,
+      "occupancy": 0.5456271701388888,
+      "mean_luminance": 0.48885004368238294,
+      "near_black": 0.18109277120413642,
+      "mean_saturation": 0.7394331881586093,
+      "low_saturation": 0.11561598886347818,
+      "dual_gate": true
+    },
+    {
+      "path": "public/art/r7/coach-radio.png",
+      "bytes": 101844,
+      "size": [
+        256,
+        256
+      ],
+      "sha256": "bcdcb4d73c5065957427bae3fab978e57a95c5e6b333ffb1e42f7a36391d8e05",
+      "alpha_corners": true,
+      "occupancy": 0.599395751953125,
+      "mean_luminance": 0.5239199321147938,
+      "near_black": 0.1519525482409246,
+      "mean_saturation": 0.6669246204523798,
+      "low_saturation": 0.14156611170510666,
+      "dual_gate": true
+    },
+    {
+      "path": "public/art/r7/panel.png",
+      "bytes": 306624,
+      "size": [
+        768,
+        420
+      ],
+      "sha256": "45f8c140c3f0f5915a537e740640f9847c836dd5c51c2eb57752fb22c0ca5a0d",
+      "alpha_corners": true,
+      "occupancy": 0.7436104910714286,
+      "mean_luminance": 0.778631325671806,
+      "near_black": 0.0879433333750245,
+      "mean_saturation": 0.33328293829120087,
+      "low_saturation": 0.6702854593740489
+    },
+    {
+      "path": "public/art/r7/badge.png",
+      "bytes": 38406,
+      "size": [
+        192,
+        192
+      ],
+      "sha256": "ea34b13f930733986c25d5839f02a76b0f81faa3770026fe3c39447539d5d190",
+      "alpha_corners": true,
+      "occupancy": 0.4340277777777778,
+      "mean_luminance": 0.5523050916666666,
+      "near_black": 0.207125,
+      "mean_saturation": 0.8542102753787372,
+      "low_saturation": 0.061375
+    },
+    {
+      "path": "public/art/r7/turn-sign.png",
+      "bytes": 29234,
+      "size": [
+        128,
+        192
+      ],
+      "sha256": "4e57879cd0ed9accfe68dcd4ae3e58765c43c92456cfcb62e53ca2a25a8859ca",
+      "alpha_corners": true,
+      "occupancy": 0.4795328776041667,
+      "mean_luminance": 0.4890561723027776,
+      "near_black": 0.15231226134917267,
+      "mean_saturation": 0.6824917208085272,
+      "low_saturation": 0.24242681374628766
+    },
+    {
+      "path": "public/art/r7/car-rear.png",
+      "bytes": 133631,
+      "size": [
+        384,
+        256
+      ],
+      "sha256": "213fe5d8d2c955047fef6bf0bf63ca5e23c6a4e0a3c83cdb79d717418918532d",
+      "alpha_corners": true,
+      "occupancy": 0.601715087890625,
+      "mean_luminance": 0.34972362411786906,
+      "near_black": 0.2270967523795033,
+      "mean_saturation": 0.8263165463589482,
+      "low_saturation": 0.0324423931970719
+    },
+    {
+      "path": "public/art/r7/flight-rear.png",
+      "bytes": 113744,
+      "size": [
+        384,
+        256
+      ],
+      "sha256": "bae956a01b9a89080e76af702b4b7277187ccde0bf2ea304544f0ee322e0a1d1",
+      "alpha_corners": true,
+      "occupancy": 0.4888814290364583,
+      "mean_luminance": 0.5750426411490125,
+      "near_black": 0.19775692378118562,
+      "mean_saturation": 0.8440924917334052,
+      "low_saturation": 0.043072057262947626
+    },
+    {
+      "path": "public/art/r7/finish-flag.png",
+      "bytes": 24885,
+      "size": [
+        128,
+        192
+      ],
+      "sha256": "041eb42f0b60727219e1f2c10d1c3edc5d983bcabcb4b892cf61e9d35dd521bd",
+      "alpha_corners": true,
+      "occupancy": 0.39599609375,
+      "mean_luminance": 0.47982794194208717,
+      "near_black": 0.18721742704480066,
+      "mean_saturation": 0.6908979697075479,
+      "low_saturation": 0.26459103986847515
+    }
+  ],
+  "new_runtime_bytes": 2480864,
+  "postprocess": "Generated alpha preserved; connected components, crop, LANCZOS resize, transparent RGB zero; WebP q83. Radio white removed only by edge-connected mask.",
+  "references": [
+    {
+      "path": "public/art/r6/coach.png",
+      "sha256": "4fa78443397ff3ddcfa84f59f0488eef5b35ad965b8009e776c7b25fc6a3b94c"
+    },
+    {
+      "path": "public/art/r6/car.png",
+      "sha256": "349eee11b482ed37dd3538de2dec067a3f919c4da08f8f19e7bca19900429567"
+    }
+  ],
+  "model_rework": {
+    "status": "EXECUTED",
+    "tool": "Blender 5.2 CLI --background",
+    "basis": "Existing Blender-authored coupe.glb; welded body seams, rounded body edges and weighted normals only. Wheels, lamps, windows, UVs, materials and named hierarchy retained.",
+    "source_sha256": "da0705986b4ee8df8e8b4d4ca4396309adddb7148ffac51faf85114cd2ec5cda",
+    "output_sha256": "472e3592fd31377318213a2b60c413b8987b9eb068dd038f5f61bd9a5268777b",
+    "bytes": 4236724,
+    "body_meshes": [
+      {
+        "name": "BodyPaint_coupe_DoorParts",
+        "original_polygons": 914,
+        "bevel_width": 0.085,
+        "segments": 3
+      },
+      {
+        "name": "BodyPaint_coupe_HoodParts",
+        "original_polygons": 32,
+        "bevel_width": 0.085,
+        "segments": 3
+      },
+      {
+        "name": "BodyPaint_coupe_RoofParts",
+        "original_polygons": 216,
+        "bevel_width": 0.085,
+        "segments": 3
+      },
+      {
+        "name": "BodyPaintParts",
+        "original_polygons": 1362,
+        "bevel_width": 0.085,
+        "segments": 3
+      }
+    ],
+    "rendered": false,
+    "original_path": "docs/art/source/r7/coupe-original.glb",
+    "blend_source": "docs/art/source/r7/coupe-rounded.blend",
+    "blend_sha256": "65f9c8ec01f2b940916a21e11460c392a8334c0bf0081e2a65f4059c015cc7d7",
+    "runtime_path": "public/models/coupe.glb",
+    "runtime_delta_bytes": 112356,
+    "browser_runtime_verified": true,
+    "browser_evidence": "docs/art/acceptance-r7.json",
+    "camera_evidence": "docs/art/car-framing-r7.json"
+  },
+  "integration": {
+    "runtime_outputs": 13,
+    "proposal_only": [
+      "public/art/r7/turn-sign.png"
+    ],
+    "retained_3d": "Existing Blender base; coupe body bevels and weighted normals reworked in Blender 5.2 headless CLI, wheel hierarchy and semantic atlas metadata preserved. No new base mesh."
+  }
+}

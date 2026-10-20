@@ -1,0 +1,15 @@
+renderer: ANGLE (Intel, Intel(R) Graphics (0x00007D67) Direct3D11 vs_5_0 ps_5_0, D3D11)
+┌─────────┬─────────────┬──────────┬──────┬──────┬──────────────────────┐
+│ (index) │ viewport    │ mode     │ p50  │ p95  │ runs                 │
+├─────────┼─────────────┼──────────┼──────┼──────┼──────────────────────┤
+│ 0       │ 'desktop'   │ 'car'    │ 16.7 │ 16.8 │ [ 16.8, 16.7, 16.8 ] │
+│ 1       │ 'desktop'   │ 'train'  │ 16.7 │ 16.8 │ [ 16.8, 16.8, 16.7 ] │
+│ 2       │ 'desktop'   │ 'flight' │ 16.7 │ 16.8 │ [ 16.8, 16.8, 16.8 ] │
+│ 3       │ 'portrait'  │ 'car'    │ 16.7 │ 16.8 │ [ 16.7, 16.8, 16.8 ] │
+│ 4       │ 'portrait'  │ 'train'  │ 16.7 │ 16.7 │ [ 16.8, 16.7, 16.7 ] │
+│ 5       │ 'portrait'  │ 'flight' │ 16.7 │ 16.7 │ [ 16.7, 16.7, 16.7 ] │
+│ 6       │ 'landscape' │ 'car'    │ 16.7 │ 16.8 │ [ 16.7, 16.8, 16.8 ] │
+│ 7       │ 'landscape' │ 'train'  │ 16.7 │ 16.8 │ [ 16.7, 16.8, 16.8 ] │
+│ 8       │ 'landscape' │ 'flight' │ 16.7 │ 16.7 │ [ 16.7, 16.7, 16.7 ] │
+└─────────┴─────────────┴──────────┴──────┴──────┴──────────────────────┘
+{"renderer":"ANGLE (Intel, Intel(R) Graphics (0x00007D67) Direct3D11 vs_5_0 ps_5_0, D3D11)","rows":[{"viewport":"desktop","mode":"car","p50":16.7,"p95":16.8,"runs":[16.8,16.7,16.8]},{"viewport":"desktop","mode":"train","p50":16.7,"p95":16.8,"runs":[16.8,16.8,16.7]},{"viewport":"desktop","mode":"flight","p50":16.7,"p95":16.8,"runs":[16.8,16.8,16.8]},{"viewport":"portrait","mode":"car","p50":16.7,"p95":16.8,"runs":[16.7,16.8,16.8]},{"viewport":"portrait","mode":"train","p50":16.7,"p95":16.7,"runs":[16.8,16.7,16.7]},{"viewport":"portrait","mode":"flight","p50":16.7,"p95":16.7,"runs":[16.7,16.7,16.7]},{"viewport":"landscape","mode":"car","p50":16.7,"p95":16.8,"runs":[16.7,16.8,16.8]},{"viewport":"landscape","mode":"train","p50":16.7,"p95":16.8,"runs":[16.7,16.8,16.8]},{"viewport":"landscape","mode":"flight","p50":16.7,"p95":16.7,"runs":[16.7,16.7,16.7]}]}

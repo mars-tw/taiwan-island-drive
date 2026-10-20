@@ -1,0 +1,3520 @@
+{
+  "status": "VERIFIED",
+  "rows": [
+    {
+      "label": "tickets 1: three blocked forward clicks and wrong station stays shut",
+      "status": "VERIFIED"
+    },
+    {
+      "label": "tickets 1: serial threshold, aisle, seats and closed label",
+      "status": "VERIFIED"
+    },
+    {
+      "label": "tickets 2: three blocked forward clicks and wrong station stays shut",
+      "status": "VERIFIED"
+    },
+    {
+      "label": "tickets 2: serial threshold, aisle, seats and closed label",
+      "status": "VERIFIED"
+    },
+    {
+      "label": "tickets 3: three blocked forward clicks and wrong station stays shut",
+      "status": "VERIFIED"
+    },
+    {
+      "label": "tickets 3: serial threshold, aisle, seats and closed label",
+      "status": "VERIFIED"
+    },
+    {
+      "label": "tickets: three stations completed and saved reload",
+      "status": "VERIFIED"
+    }
+  ],
+  "shots": [
+    {
+      "path": "docs/content/r10/phone-tickets-stage-1-wrong-closed.png",
+      "width": 390,
+      "height": 844,
+      "sha256": "552f064305ae1635d59a1e304cbf4d49ba708b7f1f6bb681e7ad0422326ca1ed",
+      "phase": "playing",
+      "state": {
+        "boardTime": "0.000",
+        "cue": "go",
+        "settled": "true",
+        "correction": "",
+        "distance": "30.00",
+        "speed": "0.00",
+        "bend": "1",
+        "tilt": "1.37",
+        "sway": "1.14",
+        "acceleration": "0.00",
+        "bayStopped": "false",
+        "bayRestarted": "false",
+        "leftTurn": "false",
+        "rightTurn": "false",
+        "focus": "center",
+        "crossTime": "0.000",
+        "crossDuration": "2.1",
+        "orderHint": "",
+        "fruitSway": "5.18",
+        "flagSway": "12.66",
+        "assisting": "false",
+        "crossed": "0",
+        "lookedLeft": "false",
+        "lookedRight": "false",
+        "decision": "false",
+        "confirmed": "false",
+        "confirmDelay": "0",
+        "person": "child",
+        "doorState": "closed"
+      },
+      "hint": "這站不一樣，停穩再換月台。",
+      "controls": [
+        {
+          "action": "go",
+          "text": "前進",
+          "color": "rgb(244, 107, 39)"
+        },
+        {
+          "action": "brake",
+          "text": "停穩",
+          "color": "rgb(255, 255, 255)"
+        },
+        {
+          "action": "door",
+          "text": "開門",
+          "color": "rgb(255, 255, 255)"
+        },
+        {
+          "action": "listen",
+          "text": "再聽一次",
+          "color": "rgb(255, 255, 255)"
+        }
+      ],
+      "geometry": {
+        "people": [
+          {
+            "id": "0",
+            "kind": "boarding-friend",
+            "progress": "0.00",
+            "box": {
+              "x": 200.765625,
+              "y": 356.65625,
+              "width": 44,
+              "height": 78,
+              "right": 244.765625,
+              "bottom": 434.65625
+            }
+          },
+          {
+            "id": "1",
+            "kind": "boarding-friend",
+            "progress": "0.00",
+            "box": {
+              "x": 136.328125,
+              "y": 330.140625,
+              "width": 44,
+              "height": 78,
+              "right": 180.328125,
+              "bottom": 408.140625
+            }
+          },
+          {
+            "id": "2",
+            "kind": "boarding-friend",
+            "progress": "0.00",
+            "box": {
+              "x": 71.890625,
+              "y": 303.625,
+              "width": 44,
+              "height": 78,
+              "right": 115.890625,
+              "bottom": 381.625
+            }
+          }
+        ],
+        "door": {
+          "x": 259.140625,
+          "y": 479.265625,
+          "width": 32.0625,
+          "height": 55.359375,
+          "right": 291.203125,
+          "bottom": 534.625
+        },
+        "signs": [
+          {
+            "id": "0",
+            "box": {
+              "x": 33.6875,
+              "y": 225.65625,
+              "width": 72,
+              "height": 68,
+              "right": 105.6875,
+              "bottom": 293.65625
+            },
+            "pole": "137.844px"
+          },
+          {
+            "id": "1",
+            "box": {
+              "x": 159,
+              "y": 225.65625,
+              "width": 72,
+              "height": 68,
+              "right": 231,
+              "bottom": 293.65625
+            },
+            "pole": "137.844px"
+          },
+          {
+            "id": "2",
+            "box": {
+              "x": 284.296875,
+              "y": 225.65625,
+              "width": 72,
+              "height": 68,
+              "right": 356.296875,
+              "bottom": 293.65625
+            },
+            "pole": "137.844px"
+          }
+        ],
+        "checks": []
+      },
+      "native": false,
+      "method": "Original headless runtime PNG; RAF paused during capture only; no game state assignments or pixel edits"
+    },
+    {
+      "path": "docs/content/r10/phone-tickets-stage-1-queue.png",
+      "width": 390,
+      "height": 844,
+      "sha256": "00ab50c179dbf94ebfd9fc730e4eeb2a9398dc03af5570eaaa2116bc30183172",
+      "phase": "playing",
+      "state": {
+        "boardTime": "0.000",
+        "cue": "go",
+        "settled": "true",
+        "correction": "",
+        "distance": "30.00",
+        "speed": "0.00",
+        "bend": "1",
+        "tilt": "1.78",
+        "sway": "1.47",
+        "acceleration": "0.00",
+        "bayStopped": "false",
+        "bayRestarted": "false",
+        "leftTurn": "false",
+        "rightTurn": "false",
+        "focus": "center",
+        "crossTime": "0.000",
+        "crossDuration": "2.1",
+        "orderHint": "",
+        "fruitSway": "5.83",
+        "flagSway": "13.85",
+        "assisting": "false",
+        "crossed": "0",
+        "lookedLeft": "false",
+        "lookedRight": "false",
+        "decision": "false",
+        "confirmed": "false",
+        "confirmDelay": "0",
+        "person": "child",
+        "doorState": "closed"
+      },
+      "hint": "停穩了，開門接朋友。",
+      "controls": [
+        {
+          "action": "go",
+          "text": "前進",
+          "color": "rgb(244, 107, 39)"
+        },
+        {
+          "action": "brake",
+          "text": "停穩",
+          "color": "rgb(255, 255, 255)"
+        },
+        {
+          "action": "door",
+          "text": "開門",
+          "color": "rgb(255, 255, 255)"
+        },
+        {
+          "action": "listen",
+          "text": "再聽一次",
+          "color": "rgb(255, 255, 255)"
+        }
+      ],
+      "geometry": {
+        "people": [
+          {
+            "id": "0",
+            "kind": "boarding-friend",
+            "progress": "0.00",
+            "box": {
+              "x": 143.5,
+              "y": 356.65625,
+              "width": 44,
+              "height": 78,
+              "right": 187.5,
+              "bottom": 434.65625
+            }
+          },
+          {
+            "id": "1",
+            "kind": "boarding-friend",
+            "progress": "0.00",
+            "box": {
+              "x": 79.046875,
+              "y": 330.140625,
+              "width": 44,
+              "height": 78,
+              "right": 123.046875,
+              "bottom": 408.140625
+            }
+          },
+          {
+            "id": "2",
+            "kind": "boarding-friend",
+            "progress": "0.00",
+            "box": {
+              "x": 14.609375,
+              "y": 303.625,
+              "width": 44,
+              "height": 78,
+              "right": 58.609375,
+              "bottom": 381.625
+            }
+          }
+        ],
+        "door": {
+          "x": 201.859375,
+          "y": 479.265625,
+          "width": 32.0625,
+          "height": 55.359375,
+          "right": 233.921875,
+          "bottom": 534.625
+        },
+        "signs": [
+          {
+            "id": "0",
+            "box": {
+              "x": 33.6875,
+              "y": 225.0625,
+              "width": 72,
+              "height": 69.1875,
+              "right": 105.6875,
+              "bottom": 294.25
+            },
+            "pole": "137.25px"
+          },
+          {
+            "id": "1",
+            "box": {
+              "x": 159,
+              "y": 225.65625,
+              "width": 72,
+              "height": 68,
+              "right": 231,
+              "bottom": 293.65625
+            },
+            "pole": "137.844px"
+          },
+          {
+            "id": "2",
+            "box": {
+              "x": 284.296875,
+              "y": 225.65625,
+              "width": 72,
+              "height": 68,
+              "right": 356.296875,
+              "bottom": 293.65625
+            },
+            "pole": "137.844px"
+          }
+        ],
+        "checks": []
+      },
+      "native": false,
+      "method": "Original headless runtime PNG; RAF paused during capture only; no game state assignments or pixel edits"
+    },
+    {
+      "path": "docs/content/r10/phone-tickets-stage-1-doorway-1.png",
+      "width": 390,
+      "height": 844,
+      "sha256": "8d8cee1830ed72152ee8e345282dd21431a0da16400897bae63d76aa320f66b7",
+      "phase": "boarding",
+      "state": {
+        "boardTime": "0.265",
+        "cue": "go",
+        "settled": "true",
+        "correction": "",
+        "distance": "30.00",
+        "speed": "0.00",
+        "bend": "1",
+        "tilt": "0.94",
+        "sway": "0.76",
+        "acceleration": "0.00",
+        "bayStopped": "false",
+        "bayRestarted": "false",
+        "leftTurn": "false",
+        "rightTurn": "false",
+        "focus": "center",
+        "crossTime": "0.000",
+        "crossDuration": "2.1",
+        "orderHint": "",
+        "fruitSway": "4.33",
+        "flagSway": "11.14",
+        "assisting": "false",
+        "crossed": "0",
+        "lookedLeft": "false",
+        "lookedRight": "false",
+        "decision": "false",
+        "confirmed": "false",
+        "confirmDelay": "0",
+        "person": "child",
+        "doorState": "open"
+      },
+      "hint": "朋友慢慢上車，等一等。",
+      "controls": [
+        {
+          "action": "go",
+          "text": "前進",
+          "color": "rgb(220, 228, 233)"
+        },
+        {
+          "action": "brake",
+          "text": "停穩",
+          "color": "rgb(255, 255, 255)"
+        },
+        {
+          "action": "door",
+          "text": "上車中",
+          "color": "rgb(255, 255, 255)"
+        },
+        {
+          "action": "listen",
+          "text": "再聽一次",
+          "color": "rgb(255, 255, 255)"
+        }
+      ],
+      "geometry": {
+        "people": [
+          {
+            "id": "0",
+            "kind": "boarding-friend",
+            "progress": "0.57",
+            "box": {
+              "x": 192.640625,
+              "y": 454.421875,
+              "width": 44,
+              "height": 78,
+              "right": 236.640625,
+              "bottom": 532.421875
+            }
+          },
+          {
+            "id": "1",
+            "kind": "boarding-friend",
+            "progress": "0.00",
+            "box": {
+              "x": 79.046875,
+              "y": 330.140625,
+              "width": 44,
+              "height": 78,
+              "right": 123.046875,
+              "bottom": 408.140625
+            }
+          },
+          {
+            "id": "2",
+            "kind": "boarding-friend",
+            "progress": "0.00",
+            "box": {
+              "x": 14.609375,
+              "y": 303.625,
+              "width": 44,
+              "height": 78,
+              "right": 58.609375,
+              "bottom": 381.625
+            }
+          }
+        ],
+        "door": {
+          "x": 201.859375,
+          "y": 479.265625,
+          "width": 32.0625,
+          "height": 55.359375,
+          "right": 233.921875,
+          "bottom": 534.625
+        },
+        "signs": [
+          {
+            "id": "0",
+            "box": {
+              "x": 33.6875,
+              "y": 225.0625,
+              "width": 72,
+              "height": 69.1875,
+              "right": 105.6875,
+              "bottom": 294.25
+            },
+            "pole": "137.25px"
+          },
+          {
+            "id": "1",
+            "box": {
+              "x": 159,
+              "y": 225.65625,
+              "width": 72,
+              "height": 68,
+              "right": 231,
+              "bottom": 293.65625
+            },
+            "pole": "137.844px"
+          },
+          {
+            "id": "2",
+            "box": {
+              "x": 284.296875,
+              "y": 225.65625,
+              "width": 72,
+              "height": 68,
+              "right": 356.296875,
+              "bottom": 293.65625
+            },
+            "pole": "137.844px"
+          }
+        ],
+        "checks": []
+      },
+      "native": false,
+      "method": "Original headless runtime PNG; RAF paused during capture only; no game state assignments or pixel edits"
+    },
+    {
+      "path": "docs/content/r10/phone-tickets-stage-1-aisle.png",
+      "width": 390,
+      "height": 844,
+      "sha256": "6cffa508a1ef8e0d5125251f6c0898f789c76601ada22b6e679df675690ed434",
+      "phase": "boarding",
+      "state": {
+        "boardTime": "0.310",
+        "cue": "go",
+        "settled": "true",
+        "correction": "",
+        "distance": "30.00",
+        "speed": "0.00",
+        "bend": "1",
+        "tilt": "0.94",
+        "sway": "0.76",
+        "acceleration": "0.00",
+        "bayStopped": "false",
+        "bayRestarted": "false",
+        "leftTurn": "false",
+        "rightTurn": "false",
+        "focus": "center",
+        "crossTime": "0.000",
+        "crossDuration": "2.1",
+        "orderHint": "",
+        "fruitSway": "4.33",
+        "flagSway": "11.14",
+        "assisting": "false",
+        "crossed": "0",
+        "lookedLeft": "false",
+        "lookedRight": "false",
+        "decision": "false",
+        "confirmed": "false",
+        "confirmDelay": "0",
+        "person": "child",
+        "doorState": "open"
+      },
+      "hint": "朋友慢慢上車，等一等。",
+      "controls": [
+        {
+          "action": "go",
+          "text": "前進",
+          "color": "rgb(220, 228, 233)"
+        },
+        {
+          "action": "brake",
+          "text": "停穩",
+          "color": "rgb(255, 255, 255)"
+        },
+        {
+          "action": "door",
+          "text": "上車中",
+          "color": "rgb(255, 255, 255)"
+        },
+        {
+          "action": "listen",
+          "text": "再聽一次",
+          "color": "rgb(255, 255, 255)"
+        }
+      ],
+      "geometry": {
+        "people": [
+          {
+            "id": "0",
+            "kind": "ticket-seated",
+            "box": {
+              "x": 211.27188110351562,
+              "y": 479.265625,
+              "width": 38.9375,
+              "height": 55.359375,
+              "right": 250.20938110351562,
+              "bottom": 534.625
+            }
+          },
+          {
+            "id": "1",
+            "kind": "boarding-friend",
+            "progress": "0.00",
+            "box": {
+              "x": 79.046875,
+              "y": 330.140625,
+              "width": 44,
+              "height": 78,
+              "right": 123.046875,
+              "bottom": 408.140625
+            }
+          },
+          {
+            "id": "2",
+            "kind": "boarding-friend",
+            "progress": "0.00",
+            "box": {
+              "x": 14.609375,
+              "y": 303.625,
+              "width": 44,
+              "height": 78,
+              "right": 58.609375,
+              "bottom": 381.625
+            }
+          }
+        ],
+        "door": {
+          "x": 201.859375,
+          "y": 479.265625,
+          "width": 32.0625,
+          "height": 55.359375,
+          "right": 233.921875,
+          "bottom": 534.625
+        },
+        "signs": [
+          {
+            "id": "0",
+            "box": {
+              "x": 33.6875,
+              "y": 225.0625,
+              "width": 72,
+              "height": 69.1875,
+              "right": 105.6875,
+              "bottom": 294.25
+            },
+            "pole": "137.25px"
+          },
+          {
+            "id": "1",
+            "box": {
+              "x": 159,
+              "y": 225.65625,
+              "width": 72,
+              "height": 68,
+              "right": 231,
+              "bottom": 293.65625
+            },
+            "pole": "137.844px"
+          },
+          {
+            "id": "2",
+            "box": {
+              "x": 284.296875,
+              "y": 225.65625,
+              "width": 72,
+              "height": 68,
+              "right": 356.296875,
+              "bottom": 293.65625
+            },
+            "pole": "137.844px"
+          }
+        ],
+        "checks": []
+      },
+      "native": false,
+      "method": "Original headless runtime PNG; RAF paused during capture only; no game state assignments or pixel edits"
+    },
+    {
+      "path": "docs/content/r10/phone-tickets-stage-1-doorway-2.png",
+      "width": 390,
+      "height": 844,
+      "sha256": "02dc235c23e4bb1465feff1fa18416f9c6c1372ae1e959ca5756887258ee714c",
+      "phase": "boarding",
+      "state": {
+        "boardTime": "0.580",
+        "cue": "go",
+        "settled": "true",
+        "correction": "",
+        "distance": "30.00",
+        "speed": "0.00",
+        "bend": "1",
+        "tilt": "0.94",
+        "sway": "0.76",
+        "acceleration": "0.00",
+        "bayStopped": "false",
+        "bayRestarted": "false",
+        "leftTurn": "false",
+        "rightTurn": "false",
+        "focus": "center",
+        "crossTime": "0.000",
+        "crossDuration": "2.1",
+        "orderHint": "",
+        "fruitSway": "4.33",
+        "flagSway": "11.14",
+        "assisting": "false",
+        "crossed": "0",
+        "lookedLeft": "false",
+        "lookedRight": "false",
+        "decision": "false",
+        "confirmed": "false",
+        "confirmDelay": "0",
+        "person": "child",
+        "doorState": "open"
+      },
+      "hint": "朋友慢慢上車，等一等。",
+      "controls": [
+        {
+          "action": "go",
+          "text": "前進",
+          "color": "rgb(220, 228, 233)"
+        },
+        {
+          "action": "brake",
+          "text": "停穩",
+          "color": "rgb(255, 255, 255)"
+        },
+        {
+          "action": "door",
+          "text": "上車中",
+          "color": "rgb(255, 255, 255)"
+        },
+        {
+          "action": "listen",
+          "text": "再聽一次",
+          "color": "rgb(255, 255, 255)"
+        }
+      ],
+      "geometry": {
+        "people": [
+          {
+            "id": "0",
+            "kind": "ticket-seated",
+            "box": {
+              "x": 50.990623474121094,
+              "y": 480.21875,
+              "width": 38.9375,
+              "height": 37.21875,
+              "right": 89.9281234741211,
+              "bottom": 517.4375
+            }
+          },
+          {
+            "id": "1",
+            "kind": "boarding-friend",
+            "progress": "0.59",
+            "box": {
+              "x": 193.609375,
+              "y": 456.34375,
+              "width": 44,
+              "height": 78,
+              "right": 237.609375,
+              "bottom": 534.34375
+            }
+          },
+          {
+            "id": "2",
+            "kind": "boarding-friend",
+            "progress": "0.00",
+            "box": {
+              "x": 14.609375,
+              "y": 303.625,
+              "width": 44,
+              "height": 78,
+              "right": 58.609375,
+              "bottom": 381.625
+            }
+          }
+        ],
+        "door": {
+          "x": 201.859375,
+          "y": 479.265625,
+          "width": 32.0625,
+          "height": 55.359375,
+          "right": 233.921875,
+          "bottom": 534.625
+        },
+        "signs": [
+          {
+            "id": "0",
+            "box": {
+              "x": 33.6875,
+              "y": 225.0625,
+              "width": 72,
+              "height": 69.1875,
+              "right": 105.6875,
+              "bottom": 294.25
+            },
+            "pole": "137.25px"
+          },
+          {
+            "id": "1",
+            "box": {
+              "x": 159,
+              "y": 225.65625,
+              "width": 72,
+              "height": 68,
+              "right": 231,
+              "bottom": 293.65625
+            },
+            "pole": "137.844px"
+          },
+          {
+            "id": "2",
+            "box": {
+              "x": 284.296875,
+              "y": 225.65625,
+              "width": 72,
+              "height": 68,
+              "right": 356.296875,
+              "bottom": 293.65625
+            },
+            "pole": "137.844px"
+          }
+        ],
+        "checks": []
+      },
+      "native": false,
+      "method": "Original headless runtime PNG; RAF paused during capture only; no game state assignments or pixel edits"
+    },
+    {
+      "path": "docs/content/r10/phone-tickets-stage-1-doorway-3.png",
+      "width": 390,
+      "height": 844,
+      "sha256": "230ce4954a435dca86dbd162be1575c3a246f5e56da655ca2c5e48d894e2b6fd",
+      "phase": "boarding",
+      "state": {
+        "boardTime": "0.900",
+        "cue": "go",
+        "settled": "true",
+        "correction": "",
+        "distance": "30.00",
+        "speed": "0.00",
+        "bend": "1",
+        "tilt": "0.94",
+        "sway": "0.76",
+        "acceleration": "0.00",
+        "bayStopped": "false",
+        "bayRestarted": "false",
+        "leftTurn": "false",
+        "rightTurn": "false",
+        "focus": "center",
+        "crossTime": "0.000",
+        "crossDuration": "2.1",
+        "orderHint": "",
+        "fruitSway": "4.33",
+        "flagSway": "11.14",
+        "assisting": "false",
+        "crossed": "0",
+        "lookedLeft": "false",
+        "lookedRight": "false",
+        "decision": "false",
+        "confirmed": "false",
+        "confirmDelay": "0",
+        "person": "child",
+        "doorState": "open"
+      },
+      "hint": "朋友慢慢上車，等一等。",
+      "controls": [
+        {
+          "action": "go",
+          "text": "前進",
+          "color": "rgb(220, 228, 233)"
+        },
+        {
+          "action": "brake",
+          "text": "停穩",
+          "color": "rgb(255, 255, 255)"
+        },
+        {
+          "action": "door",
+          "text": "上車中",
+          "color": "rgb(255, 255, 255)"
+        },
+        {
+          "action": "listen",
+          "text": "再聽一次",
+          "color": "rgb(255, 255, 255)"
+        }
+      ],
+      "geometry": {
+        "people": [
+          {
+            "id": "0",
+            "kind": "ticket-seated",
+            "box": {
+              "x": 50.990623474121094,
+              "y": 480.21875,
+              "width": 38.9375,
+              "height": 37.21875,
+              "right": 89.9281234741211,
+              "bottom": 517.4375
+            }
+          },
+          {
+            "id": "1",
+            "kind": "ticket-seated",
+            "box": {
+              "x": 99.0999984741211,
+              "y": 480.21875,
+              "width": 38.93750762939453,
+              "height": 37.21875,
+              "right": 138.03750610351562,
+              "bottom": 517.4375
+            }
+          },
+          {
+            "id": "2",
+            "kind": "boarding-friend",
+            "progress": "0.62",
+            "box": {
+              "x": 193.609375,
+              "y": 456.34375,
+              "width": 44,
+              "height": 78,
+              "right": 237.609375,
+              "bottom": 534.34375
+            }
+          }
+        ],
+        "door": {
+          "x": 201.859375,
+          "y": 479.265625,
+          "width": 32.0625,
+          "height": 55.359375,
+          "right": 233.921875,
+          "bottom": 534.625
+        },
+        "signs": [
+          {
+            "id": "0",
+            "box": {
+              "x": 33.6875,
+              "y": 225.0625,
+              "width": 72,
+              "height": 69.1875,
+              "right": 105.6875,
+              "bottom": 294.25
+            },
+            "pole": "137.25px"
+          },
+          {
+            "id": "1",
+            "box": {
+              "x": 159,
+              "y": 225.65625,
+              "width": 72,
+              "height": 68,
+              "right": 231,
+              "bottom": 293.65625
+            },
+            "pole": "137.844px"
+          },
+          {
+            "id": "2",
+            "box": {
+              "x": 284.296875,
+              "y": 225.65625,
+              "width": 72,
+              "height": 68,
+              "right": 356.296875,
+              "bottom": 293.65625
+            },
+            "pole": "137.844px"
+          }
+        ],
+        "checks": []
+      },
+      "native": false,
+      "method": "Original headless runtime PNG; RAF paused during capture only; no game state assignments or pixel edits"
+    },
+    {
+      "path": "docs/content/r10/phone-tickets-stage-1-closed.png",
+      "width": 390,
+      "height": 844,
+      "sha256": "faaee561b8cc21e5d687b729cc4f9fd69babb81af42e336815ed1adc24ec7e5d",
+      "phase": "boarding",
+      "state": {
+        "boardTime": "1.220",
+        "cue": "go",
+        "settled": "true",
+        "correction": "",
+        "distance": "30.00",
+        "speed": "0.00",
+        "bend": "1",
+        "tilt": "0.94",
+        "sway": "0.76",
+        "acceleration": "0.00",
+        "bayStopped": "false",
+        "bayRestarted": "false",
+        "leftTurn": "false",
+        "rightTurn": "false",
+        "focus": "center",
+        "crossTime": "0.000",
+        "crossDuration": "2.1",
+        "orderHint": "",
+        "fruitSway": "4.33",
+        "flagSway": "11.14",
+        "assisting": "false",
+        "crossed": "0",
+        "lookedLeft": "false",
+        "lookedRight": "false",
+        "decision": "false",
+        "confirmed": "false",
+        "confirmDelay": "0",
+        "person": "child",
+        "doorState": "closed"
+      },
+      "hint": "三位坐好了，門關好了 ✓",
+      "controls": [
+        {
+          "action": "go",
+          "text": "前進",
+          "color": "rgb(220, 228, 233)"
+        },
+        {
+          "action": "brake",
+          "text": "停穩",
+          "color": "rgb(255, 255, 255)"
+        },
+        {
+          "action": "door",
+          "text": "門關好了",
+          "color": "rgb(255, 255, 255)"
+        },
+        {
+          "action": "listen",
+          "text": "再聽一次",
+          "color": "rgb(255, 255, 255)"
+        }
+      ],
+      "geometry": {
+        "people": [
+          {
+            "id": "0",
+            "kind": "ticket-seated",
+            "box": {
+              "x": 50.990623474121094,
+              "y": 480.21875,
+              "width": 38.9375,
+              "height": 37.21875,
+              "right": 89.9281234741211,
+              "bottom": 517.4375
+            }
+          },
+          {
+            "id": "1",
+            "kind": "ticket-seated",
+            "box": {
+              "x": 99.0999984741211,
+              "y": 480.21875,
+              "width": 38.93750762939453,
+              "height": 37.21875,
+              "right": 138.03750610351562,
+              "bottom": 517.4375
+            }
+          },
+          {
+            "id": "2",
+            "kind": "ticket-seated",
+            "box": {
+              "x": 147.20938110351562,
+              "y": 480.21875,
+              "width": 38.9375,
+              "height": 37.21875,
+              "right": 186.14688110351562,
+              "bottom": 517.4375
+            }
+          }
+        ],
+        "door": {
+          "x": 201.859375,
+          "y": 479.265625,
+          "width": 32.0625,
+          "height": 55.359375,
+          "right": 233.921875,
+          "bottom": 534.625
+        },
+        "signs": [
+          {
+            "id": "0",
+            "box": {
+              "x": 33.6875,
+              "y": 225.0625,
+              "width": 72,
+              "height": 69.1875,
+              "right": 105.6875,
+              "bottom": 294.25
+            },
+            "pole": "137.25px"
+          },
+          {
+            "id": "1",
+            "box": {
+              "x": 159,
+              "y": 225.65625,
+              "width": 72,
+              "height": 68,
+              "right": 231,
+              "bottom": 293.65625
+            },
+            "pole": "137.844px"
+          },
+          {
+            "id": "2",
+            "box": {
+              "x": 284.296875,
+              "y": 225.65625,
+              "width": 72,
+              "height": 68,
+              "right": 356.296875,
+              "bottom": 293.65625
+            },
+            "pole": "137.844px"
+          }
+        ],
+        "checks": []
+      },
+      "native": false,
+      "method": "Original headless runtime PNG; RAF paused during capture only; no game state assignments or pixel edits"
+    },
+    {
+      "path": "docs/content/r10/phone-tickets-stage-2-wrong-closed.png",
+      "width": 390,
+      "height": 844,
+      "sha256": "4e07b267a7b8a5f67e4ce2376c747f74fbb3b1e11e70096eaeb6bbe5d465f134",
+      "phase": "playing",
+      "state": {
+        "boardTime": "0.000",
+        "cue": "go",
+        "settled": "true",
+        "correction": "",
+        "distance": "30.00",
+        "speed": "0.00",
+        "bend": "1",
+        "tilt": "1.56",
+        "sway": "1.30",
+        "acceleration": "0.00",
+        "bayStopped": "false",
+        "bayRestarted": "false",
+        "leftTurn": "false",
+        "rightTurn": "false",
+        "focus": "center",
+        "crossTime": "0.000",
+        "crossDuration": "2.4",
+        "orderHint": "",
+        "fruitSway": "5.51",
+        "flagSway": "13.28",
+        "assisting": "false",
+        "crossed": "0",
+        "lookedLeft": "false",
+        "lookedRight": "false",
+        "decision": "false",
+        "confirmed": "false",
+        "confirmDelay": "0",
+        "person": "grandma",
+        "doorState": "closed"
+      },
+      "hint": "這站不一樣，停穩再換月台。",
+      "controls": [
+        {
+          "action": "go",
+          "text": "前進",
+          "color": "rgb(244, 107, 39)"
+        },
+        {
+          "action": "brake",
+          "text": "停穩",
+          "color": "rgb(255, 255, 255)"
+        },
+        {
+          "action": "door",
+          "text": "開門",
+          "color": "rgb(255, 255, 255)"
+        },
+        {
+          "action": "listen",
+          "text": "再聽一次",
+          "color": "rgb(255, 255, 255)"
+        }
+      ],
+      "geometry": {
+        "people": [
+          {
+            "id": "0",
+            "kind": "boarding-friend",
+            "progress": "0.00",
+            "box": {
+              "x": 143.5,
+              "y": 356.65625,
+              "width": 44,
+              "height": 78,
+              "right": 187.5,
+              "bottom": 434.65625
+            }
+          },
+          {
+            "id": "1",
+            "kind": "boarding-friend",
+            "progress": "0.00",
+            "box": {
+              "x": 79.046875,
+              "y": 330.140625,
+              "width": 44,
+              "height": 78,
+              "right": 123.046875,
+              "bottom": 408.140625
+            }
+          },
+          {
+            "id": "2",
+            "kind": "boarding-friend",
+            "progress": "0.00",
+            "box": {
+              "x": 14.609375,
+              "y": 303.625,
+              "width": 44,
+              "height": 78,
+              "right": 58.609375,
+              "bottom": 381.625
+            }
+          }
+        ],
+        "door": {
+          "x": 201.859375,
+          "y": 479.265625,
+          "width": 32.0625,
+          "height": 55.359375,
+          "right": 233.921875,
+          "bottom": 534.625
+        },
+        "signs": [
+          {
+            "id": "0",
+            "box": {
+              "x": 33.6875,
+              "y": 225.65625,
+              "width": 72,
+              "height": 68,
+              "right": 105.6875,
+              "bottom": 293.65625
+            },
+            "pole": "137.844px"
+          },
+          {
+            "id": "1",
+            "box": {
+              "x": 159,
+              "y": 225.65625,
+              "width": 72,
+              "height": 68,
+              "right": 231,
+              "bottom": 293.65625
+            },
+            "pole": "137.844px"
+          },
+          {
+            "id": "2",
+            "box": {
+              "x": 284.296875,
+              "y": 225.65625,
+              "width": 72,
+              "height": 68,
+              "right": 356.296875,
+              "bottom": 293.65625
+            },
+            "pole": "137.844px"
+          }
+        ],
+        "checks": []
+      },
+      "native": false,
+      "method": "Original headless runtime PNG; RAF paused during capture only; no game state assignments or pixel edits"
+    },
+    {
+      "path": "docs/content/r10/phone-tickets-stage-2-queue.png",
+      "width": 390,
+      "height": 844,
+      "sha256": "43dfa26dbc0d14b9c1e942598e6ce46798c9bb002780649ee7d6efd034c6f512",
+      "phase": "playing",
+      "state": {
+        "boardTime": "0.000",
+        "cue": "go",
+        "settled": "true",
+        "correction": "",
+        "distance": "30.00",
+        "speed": "0.00",
+        "bend": "1",
+        "tilt": "1.94",
+        "sway": "1.60",
+        "acceleration": "0.00",
+        "bayStopped": "false",
+        "bayRestarted": "false",
+        "leftTurn": "false",
+        "rightTurn": "false",
+        "focus": "center",
+        "crossTime": "0.000",
+        "crossDuration": "2.4",
+        "orderHint": "",
+        "fruitSway": "6.06",
+        "flagSway": "14.27",
+        "assisting": "false",
+        "crossed": "0",
+        "lookedLeft": "false",
+        "lookedRight": "false",
+        "decision": "false",
+        "confirmed": "false",
+        "confirmDelay": "0",
+        "person": "grandma",
+        "doorState": "closed"
+      },
+      "hint": "停穩了，開門接朋友。",
+      "controls": [
+        {
+          "action": "go",
+          "text": "前進",
+          "color": "rgb(244, 107, 39)"
+        },
+        {
+          "action": "brake",
+          "text": "停穩",
+          "color": "rgb(255, 255, 255)"
+        },
+        {
+          "action": "door",
+          "text": "開門",
+          "color": "rgb(255, 255, 255)"
+        },
+        {
+          "action": "listen",
+          "text": "再聽一次",
+          "color": "rgb(255, 255, 255)"
+        }
+      ],
+      "geometry": {
+        "people": [
+          {
+            "id": "0",
+            "kind": "boarding-friend",
+            "progress": "0.00",
+            "box": {
+              "x": 258.046875,
+              "y": 356.65625,
+              "width": 44,
+              "height": 78,
+              "right": 302.046875,
+              "bottom": 434.65625
+            }
+          },
+          {
+            "id": "1",
+            "kind": "boarding-friend",
+            "progress": "0.00",
+            "box": {
+              "x": 193.609375,
+              "y": 330.140625,
+              "width": 44,
+              "height": 78,
+              "right": 237.609375,
+              "bottom": 408.140625
+            }
+          },
+          {
+            "id": "2",
+            "kind": "boarding-friend",
+            "progress": "0.00",
+            "box": {
+              "x": 129.171875,
+              "y": 303.625,
+              "width": 44,
+              "height": 78,
+              "right": 173.171875,
+              "bottom": 381.625
+            }
+          }
+        ],
+        "door": {
+          "x": 316.421875,
+          "y": 479.265625,
+          "width": 32.0625,
+          "height": 55.359375,
+          "right": 348.484375,
+          "bottom": 534.625
+        },
+        "signs": [
+          {
+            "id": "0",
+            "box": {
+              "x": 33.6875,
+              "y": 225.65625,
+              "width": 72,
+              "height": 68,
+              "right": 105.6875,
+              "bottom": 293.65625
+            },
+            "pole": "137.844px"
+          },
+          {
+            "id": "1",
+            "box": {
+              "x": 159,
+              "y": 225.65625,
+              "width": 72,
+              "height": 68,
+              "right": 231,
+              "bottom": 293.65625
+            },
+            "pole": "137.844px"
+          },
+          {
+            "id": "2",
+            "box": {
+              "x": 284.296875,
+              "y": 225.0625,
+              "width": 72,
+              "height": 69.1875,
+              "right": 356.296875,
+              "bottom": 294.25
+            },
+            "pole": "137.25px"
+          }
+        ],
+        "checks": []
+      },
+      "native": false,
+      "method": "Original headless runtime PNG; RAF paused during capture only; no game state assignments or pixel edits"
+    },
+    {
+      "path": "docs/content/r10/phone-tickets-stage-2-doorway-1.png",
+      "width": 390,
+      "height": 844,
+      "sha256": "39f84f067c206305e508336dcbabc435a438427e0d2fb4b02749bcaed2b23657",
+      "phase": "boarding",
+      "state": {
+        "boardTime": "0.265",
+        "cue": "go",
+        "settled": "true",
+        "correction": "",
+        "distance": "30.00",
+        "speed": "0.00",
+        "bend": "1",
+        "tilt": "0.94",
+        "sway": "0.76",
+        "acceleration": "0.00",
+        "bayStopped": "false",
+        "bayRestarted": "false",
+        "leftTurn": "false",
+        "rightTurn": "false",
+        "focus": "center",
+        "crossTime": "0.000",
+        "crossDuration": "2.4",
+        "orderHint": "",
+        "fruitSway": "4.33",
+        "flagSway": "11.14",
+        "assisting": "false",
+        "crossed": "0",
+        "lookedLeft": "false",
+        "lookedRight": "false",
+        "decision": "false",
+        "confirmed": "false",
+        "confirmDelay": "0",
+        "person": "grandma",
+        "doorState": "open"
+      },
+      "hint": "朋友慢慢上車，等一等。",
+      "controls": [
+        {
+          "action": "go",
+          "text": "前進",
+          "color": "rgb(220, 228, 233)"
+        },
+        {
+          "action": "brake",
+          "text": "停穩",
+          "color": "rgb(255, 255, 255)"
+        },
+        {
+          "action": "door",
+          "text": "上車中",
+          "color": "rgb(255, 255, 255)"
+        },
+        {
+          "action": "listen",
+          "text": "再聽一次",
+          "color": "rgb(255, 255, 255)"
+        }
+      ],
+      "geometry": {
+        "people": [
+          {
+            "id": "0",
+            "kind": "boarding-friend",
+            "progress": "0.57",
+            "box": {
+              "x": 307.21875,
+              "y": 454.453125,
+              "width": 44,
+              "height": 78,
+              "right": 351.21875,
+              "bottom": 532.453125
+            }
+          },
+          {
+            "id": "1",
+            "kind": "boarding-friend",
+            "progress": "0.00",
+            "box": {
+              "x": 193.609375,
+              "y": 330.140625,
+              "width": 44,
+              "height": 78,
+              "right": 237.609375,
+              "bottom": 408.140625
+            }
+          },
+          {
+            "id": "2",
+            "kind": "boarding-friend",
+            "progress": "0.00",
+            "box": {
+              "x": 129.171875,
+              "y": 303.625,
+              "width": 44,
+              "height": 78,
+              "right": 173.171875,
+              "bottom": 381.625
+            }
+          }
+        ],
+        "door": {
+          "x": 316.421875,
+          "y": 479.265625,
+          "width": 32.0625,
+          "height": 55.359375,
+          "right": 348.484375,
+          "bottom": 534.625
+        },
+        "signs": [
+          {
+            "id": "0",
+            "box": {
+              "x": 33.6875,
+              "y": 225.65625,
+              "width": 72,
+              "height": 68,
+              "right": 105.6875,
+              "bottom": 293.65625
+            },
+            "pole": "137.844px"
+          },
+          {
+            "id": "1",
+            "box": {
+              "x": 159,
+              "y": 225.65625,
+              "width": 72,
+              "height": 68,
+              "right": 231,
+              "bottom": 293.65625
+            },
+            "pole": "137.844px"
+          },
+          {
+            "id": "2",
+            "box": {
+              "x": 284.296875,
+              "y": 225.0625,
+              "width": 72,
+              "height": 69.1875,
+              "right": 356.296875,
+              "bottom": 294.25
+            },
+            "pole": "137.25px"
+          }
+        ],
+        "checks": []
+      },
+      "native": false,
+      "method": "Original headless runtime PNG; RAF paused during capture only; no game state assignments or pixel edits"
+    },
+    {
+      "path": "docs/content/r10/phone-tickets-stage-2-aisle.png",
+      "width": 390,
+      "height": 844,
+      "sha256": "cf86142e18f51f1ea371213ef67033b40e1ccd5d2077ea9f103164931fa35ab8",
+      "phase": "boarding",
+      "state": {
+        "boardTime": "0.310",
+        "cue": "go",
+        "settled": "true",
+        "correction": "",
+        "distance": "30.00",
+        "speed": "0.00",
+        "bend": "1",
+        "tilt": "0.94",
+        "sway": "0.76",
+        "acceleration": "0.00",
+        "bayStopped": "false",
+        "bayRestarted": "false",
+        "leftTurn": "false",
+        "rightTurn": "false",
+        "focus": "center",
+        "crossTime": "0.000",
+        "crossDuration": "2.4",
+        "orderHint": "",
+        "fruitSway": "4.33",
+        "flagSway": "11.14",
+        "assisting": "false",
+        "crossed": "0",
+        "lookedLeft": "false",
+        "lookedRight": "false",
+        "decision": "false",
+        "confirmed": "false",
+        "confirmDelay": "0",
+        "person": "grandma",
+        "doorState": "open"
+      },
+      "hint": "朋友慢慢上車，等一等。",
+      "controls": [
+        {
+          "action": "go",
+          "text": "前進",
+          "color": "rgb(220, 228, 233)"
+        },
+        {
+          "action": "brake",
+          "text": "停穩",
+          "color": "rgb(255, 255, 255)"
+        },
+        {
+          "action": "door",
+          "text": "上車中",
+          "color": "rgb(255, 255, 255)"
+        },
+        {
+          "action": "listen",
+          "text": "再聽一次",
+          "color": "rgb(255, 255, 255)"
+        }
+      ],
+      "geometry": {
+        "people": [
+          {
+            "id": "0",
+            "kind": "ticket-seated",
+            "box": {
+              "x": 325.8343811035156,
+              "y": 479.265625,
+              "width": 38.9375,
+              "height": 55.359375,
+              "right": 364.7718811035156,
+              "bottom": 534.625
+            }
+          },
+          {
+            "id": "1",
+            "kind": "boarding-friend",
+            "progress": "0.00",
+            "box": {
+              "x": 193.609375,
+              "y": 330.140625,
+              "width": 44,
+              "height": 78,
+              "right": 237.609375,
+              "bottom": 408.140625
+            }
+          },
+          {
+            "id": "2",
+            "kind": "boarding-friend",
+            "progress": "0.00",
+            "box": {
+              "x": 129.171875,
+              "y": 303.625,
+              "width": 44,
+              "height": 78,
+              "right": 173.171875,
+              "bottom": 381.625
+            }
+          }
+        ],
+        "door": {
+          "x": 316.421875,
+          "y": 479.265625,
+          "width": 32.0625,
+          "height": 55.359375,
+          "right": 348.484375,
+          "bottom": 534.625
+        },
+        "signs": [
+          {
+            "id": "0",
+            "box": {
+              "x": 33.6875,
+              "y": 225.65625,
+              "width": 72,
+              "height": 68,
+              "right": 105.6875,
+              "bottom": 293.65625
+            },
+            "pole": "137.844px"
+          },
+          {
+            "id": "1",
+            "box": {
+              "x": 159,
+              "y": 225.65625,
+              "width": 72,
+              "height": 68,
+              "right": 231,
+              "bottom": 293.65625
+            },
+            "pole": "137.844px"
+          },
+          {
+            "id": "2",
+            "box": {
+              "x": 284.296875,
+              "y": 225.0625,
+              "width": 72,
+              "height": 69.1875,
+              "right": 356.296875,
+              "bottom": 294.25
+            },
+            "pole": "137.25px"
+          }
+        ],
+        "checks": []
+      },
+      "native": false,
+      "method": "Original headless runtime PNG; RAF paused during capture only; no game state assignments or pixel edits"
+    },
+    {
+      "path": "docs/content/r10/phone-tickets-stage-2-doorway-2.png",
+      "width": 390,
+      "height": 844,
+      "sha256": "7a5aea85782739def452700436d6b2e7191c1d9fd2ab927a89398896995b9cc2",
+      "phase": "boarding",
+      "state": {
+        "boardTime": "0.580",
+        "cue": "go",
+        "settled": "true",
+        "correction": "",
+        "distance": "30.00",
+        "speed": "0.00",
+        "bend": "1",
+        "tilt": "0.94",
+        "sway": "0.76",
+        "acceleration": "0.00",
+        "bayStopped": "false",
+        "bayRestarted": "false",
+        "leftTurn": "false",
+        "rightTurn": "false",
+        "focus": "center",
+        "crossTime": "0.000",
+        "crossDuration": "2.4",
+        "orderHint": "",
+        "fruitSway": "4.33",
+        "flagSway": "11.14",
+        "assisting": "false",
+        "crossed": "0",
+        "lookedLeft": "false",
+        "lookedRight": "false",
+        "decision": "false",
+        "confirmed": "false",
+        "confirmDelay": "0",
+        "person": "grandma",
+        "doorState": "open"
+      },
+      "hint": "朋友慢慢上車，等一等。",
+      "controls": [
+        {
+          "action": "go",
+          "text": "前進",
+          "color": "rgb(220, 228, 233)"
+        },
+        {
+          "action": "brake",
+          "text": "停穩",
+          "color": "rgb(255, 255, 255)"
+        },
+        {
+          "action": "door",
+          "text": "上車中",
+          "color": "rgb(255, 255, 255)"
+        },
+        {
+          "action": "listen",
+          "text": "再聽一次",
+          "color": "rgb(255, 255, 255)"
+        }
+      ],
+      "geometry": {
+        "people": [
+          {
+            "id": "0",
+            "kind": "ticket-seated",
+            "box": {
+              "x": 165.55313110351562,
+              "y": 480.21875,
+              "width": 38.9375,
+              "height": 37.21875,
+              "right": 204.49063110351562,
+              "bottom": 517.4375
+            }
+          },
+          {
+            "id": "1",
+            "kind": "boarding-friend",
+            "progress": "0.59",
+            "box": {
+              "x": 308.171875,
+              "y": 456.34375,
+              "width": 44,
+              "height": 78,
+              "right": 352.171875,
+              "bottom": 534.34375
+            }
+          },
+          {
+            "id": "2",
+            "kind": "boarding-friend",
+            "progress": "0.00",
+            "box": {
+              "x": 129.171875,
+              "y": 303.625,
+              "width": 44,
+              "height": 78,
+              "right": 173.171875,
+              "bottom": 381.625
+            }
+          }
+        ],
+        "door": {
+          "x": 316.421875,
+          "y": 479.265625,
+          "width": 32.0625,
+          "height": 55.359375,
+          "right": 348.484375,
+          "bottom": 534.625
+        },
+        "signs": [
+          {
+            "id": "0",
+            "box": {
+              "x": 33.6875,
+              "y": 225.65625,
+              "width": 72,
+              "height": 68,
+              "right": 105.6875,
+              "bottom": 293.65625
+            },
+            "pole": "137.844px"
+          },
+          {
+            "id": "1",
+            "box": {
+              "x": 159,
+              "y": 225.65625,
+              "width": 72,
+              "height": 68,
+              "right": 231,
+              "bottom": 293.65625
+            },
+            "pole": "137.844px"
+          },
+          {
+            "id": "2",
+            "box": {
+              "x": 284.296875,
+              "y": 225.0625,
+              "width": 72,
+              "height": 69.1875,
+              "right": 356.296875,
+              "bottom": 294.25
+            },
+            "pole": "137.25px"
+          }
+        ],
+        "checks": []
+      },
+      "native": false,
+      "method": "Original headless runtime PNG; RAF paused during capture only; no game state assignments or pixel edits"
+    },
+    {
+      "path": "docs/content/r10/phone-tickets-stage-2-doorway-3.png",
+      "width": 390,
+      "height": 844,
+      "sha256": "cc0f661e7eff4945cb65fc629e2f7e2afd6d3e3b0e27c07a61f0f0e7f12ac563",
+      "phase": "boarding",
+      "state": {
+        "boardTime": "0.900",
+        "cue": "go",
+        "settled": "true",
+        "correction": "",
+        "distance": "30.00",
+        "speed": "0.00",
+        "bend": "1",
+        "tilt": "0.94",
+        "sway": "0.76",
+        "acceleration": "0.00",
+        "bayStopped": "false",
+        "bayRestarted": "false",
+        "leftTurn": "false",
+        "rightTurn": "false",
+        "focus": "center",
+        "crossTime": "0.000",
+        "crossDuration": "2.4",
+        "orderHint": "",
+        "fruitSway": "4.33",
+        "flagSway": "11.14",
+        "assisting": "false",
+        "crossed": "0",
+        "lookedLeft": "false",
+        "lookedRight": "false",
+        "decision": "false",
+        "confirmed": "false",
+        "confirmDelay": "0",
+        "person": "grandma",
+        "doorState": "open"
+      },
+      "hint": "朋友慢慢上車，等一等。",
+      "controls": [
+        {
+          "action": "go",
+          "text": "前進",
+          "color": "rgb(220, 228, 233)"
+        },
+        {
+          "action": "brake",
+          "text": "停穩",
+          "color": "rgb(255, 255, 255)"
+        },
+        {
+          "action": "door",
+          "text": "上車中",
+          "color": "rgb(255, 255, 255)"
+        },
+        {
+          "action": "listen",
+          "text": "再聽一次",
+          "color": "rgb(255, 255, 255)"
+        }
+      ],
+      "geometry": {
+        "people": [
+          {
+            "id": "0",
+            "kind": "ticket-seated",
+            "box": {
+              "x": 165.55313110351562,
+              "y": 480.21875,
+              "width": 38.9375,
+              "height": 37.21875,
+              "right": 204.49063110351562,
+              "bottom": 517.4375
+            }
+          },
+          {
+            "id": "1",
+            "kind": "ticket-seated",
+            "box": {
+              "x": 213.66250610351562,
+              "y": 480.21875,
+              "width": 38.9375,
+              "height": 37.21875,
+              "right": 252.60000610351562,
+              "bottom": 517.4375
+            }
+          },
+          {
+            "id": "2",
+            "kind": "boarding-friend",
+            "progress": "0.62",
+            "box": {
+              "x": 308.171875,
+              "y": 456.34375,
+              "width": 44,
+              "height": 78,
+              "right": 352.171875,
+              "bottom": 534.34375
+            }
+          }
+        ],
+        "door": {
+          "x": 316.421875,
+          "y": 479.265625,
+          "width": 32.0625,
+          "height": 55.359375,
+          "right": 348.484375,
+          "bottom": 534.625
+        },
+        "signs": [
+          {
+            "id": "0",
+            "box": {
+              "x": 33.6875,
+              "y": 225.65625,
+              "width": 72,
+              "height": 68,
+              "right": 105.6875,
+              "bottom": 293.65625
+            },
+            "pole": "137.844px"
+          },
+          {
+            "id": "1",
+            "box": {
+              "x": 159,
+              "y": 225.65625,
+              "width": 72,
+              "height": 68,
+              "right": 231,
+              "bottom": 293.65625
+            },
+            "pole": "137.844px"
+          },
+          {
+            "id": "2",
+            "box": {
+              "x": 284.296875,
+              "y": 225.0625,
+              "width": 72,
+              "height": 69.1875,
+              "right": 356.296875,
+              "bottom": 294.25
+            },
+            "pole": "137.25px"
+          }
+        ],
+        "checks": []
+      },
+      "native": false,
+      "method": "Original headless runtime PNG; RAF paused during capture only; no game state assignments or pixel edits"
+    },
+    {
+      "path": "docs/content/r10/phone-tickets-stage-2-closed.png",
+      "width": 390,
+      "height": 844,
+      "sha256": "9668769f9ac5586743e69d95d953494358fa593a695cf2ddfdd8616deda07d1f",
+      "phase": "boarding",
+      "state": {
+        "boardTime": "1.220",
+        "cue": "go",
+        "settled": "true",
+        "correction": "",
+        "distance": "30.00",
+        "speed": "0.00",
+        "bend": "1",
+        "tilt": "0.94",
+        "sway": "0.76",
+        "acceleration": "0.00",
+        "bayStopped": "false",
+        "bayRestarted": "false",
+        "leftTurn": "false",
+        "rightTurn": "false",
+        "focus": "center",
+        "crossTime": "0.000",
+        "crossDuration": "2.4",
+        "orderHint": "",
+        "fruitSway": "4.33",
+        "flagSway": "11.14",
+        "assisting": "false",
+        "crossed": "0",
+        "lookedLeft": "false",
+        "lookedRight": "false",
+        "decision": "false",
+        "confirmed": "false",
+        "confirmDelay": "0",
+        "person": "grandma",
+        "doorState": "closed"
+      },
+      "hint": "三位坐好了，門關好了 ✓",
+      "controls": [
+        {
+          "action": "go",
+          "text": "前進",
+          "color": "rgb(220, 228, 233)"
+        },
+        {
+          "action": "brake",
+          "text": "停穩",
+          "color": "rgb(255, 255, 255)"
+        },
+        {
+          "action": "door",
+          "text": "門關好了",
+          "color": "rgb(255, 255, 255)"
+        },
+        {
+          "action": "listen",
+          "text": "再聽一次",
+          "color": "rgb(255, 255, 255)"
+        }
+      ],
+      "geometry": {
+        "people": [
+          {
+            "id": "0",
+            "kind": "ticket-seated",
+            "box": {
+              "x": 165.55313110351562,
+              "y": 480.21875,
+              "width": 38.9375,
+              "height": 37.21875,
+              "right": 204.49063110351562,
+              "bottom": 517.4375
+            }
+          },
+          {
+            "id": "1",
+            "kind": "ticket-seated",
+            "box": {
+              "x": 213.66250610351562,
+              "y": 480.21875,
+              "width": 38.9375,
+              "height": 37.21875,
+              "right": 252.60000610351562,
+              "bottom": 517.4375
+            }
+          },
+          {
+            "id": "2",
+            "kind": "ticket-seated",
+            "box": {
+              "x": 261.7718811035156,
+              "y": 480.21875,
+              "width": 38.9375,
+              "height": 37.21875,
+              "right": 300.7093811035156,
+              "bottom": 517.4375
+            }
+          }
+        ],
+        "door": {
+          "x": 316.421875,
+          "y": 479.265625,
+          "width": 32.0625,
+          "height": 55.359375,
+          "right": 348.484375,
+          "bottom": 534.625
+        },
+        "signs": [
+          {
+            "id": "0",
+            "box": {
+              "x": 33.6875,
+              "y": 225.65625,
+              "width": 72,
+              "height": 68,
+              "right": 105.6875,
+              "bottom": 293.65625
+            },
+            "pole": "137.844px"
+          },
+          {
+            "id": "1",
+            "box": {
+              "x": 159,
+              "y": 225.65625,
+              "width": 72,
+              "height": 68,
+              "right": 231,
+              "bottom": 293.65625
+            },
+            "pole": "137.844px"
+          },
+          {
+            "id": "2",
+            "box": {
+              "x": 284.296875,
+              "y": 225.0625,
+              "width": 72,
+              "height": 69.1875,
+              "right": 356.296875,
+              "bottom": 294.25
+            },
+            "pole": "137.25px"
+          }
+        ],
+        "checks": []
+      },
+      "native": false,
+      "method": "Original headless runtime PNG; RAF paused during capture only; no game state assignments or pixel edits"
+    },
+    {
+      "path": "docs/content/r10/phone-tickets-stage-3-wrong-closed.png",
+      "width": 390,
+      "height": 844,
+      "sha256": "26ad23f3d1ca4a84e3e1795a16308e6336b755896165a3b249b0771c02e8d93f",
+      "phase": "playing",
+      "state": {
+        "boardTime": "0.000",
+        "cue": "go",
+        "settled": "true",
+        "correction": "",
+        "distance": "30.00",
+        "speed": "0.00",
+        "bend": "1",
+        "tilt": "1.37",
+        "sway": "1.14",
+        "acceleration": "0.00",
+        "bayStopped": "false",
+        "bayRestarted": "false",
+        "leftTurn": "false",
+        "rightTurn": "false",
+        "focus": "center",
+        "crossTime": "0.000",
+        "crossDuration": "1.45",
+        "orderHint": "",
+        "fruitSway": "5.18",
+        "flagSway": "12.66",
+        "assisting": "false",
+        "crossed": "0",
+        "lookedLeft": "false",
+        "lookedRight": "false",
+        "decision": "false",
+        "confirmed": "false",
+        "confirmDelay": "0",
+        "person": "bike",
+        "doorState": "closed"
+      },
+      "hint": "這站不一樣，停穩再換月台。",
+      "controls": [
+        {
+          "action": "go",
+          "text": "前進",
+          "color": "rgb(244, 107, 39)"
+        },
+        {
+          "action": "brake",
+          "text": "停穩",
+          "color": "rgb(255, 255, 255)"
+        },
+        {
+          "action": "door",
+          "text": "開門",
+          "color": "rgb(255, 255, 255)"
+        },
+        {
+          "action": "listen",
+          "text": "再聽一次",
+          "color": "rgb(255, 255, 255)"
+        }
+      ],
+      "geometry": {
+        "people": [
+          {
+            "id": "0",
+            "kind": "boarding-friend",
+            "progress": "0.00",
+            "box": {
+              "x": 258.046875,
+              "y": 356.65625,
+              "width": 44,
+              "height": 78,
+              "right": 302.046875,
+              "bottom": 434.65625
+            }
+          },
+          {
+            "id": "1",
+            "kind": "boarding-friend",
+            "progress": "0.00",
+            "box": {
+              "x": 193.609375,
+              "y": 330.140625,
+              "width": 44,
+              "height": 78,
+              "right": 237.609375,
+              "bottom": 408.140625
+            }
+          },
+          {
+            "id": "2",
+            "kind": "boarding-friend",
+            "progress": "0.00",
+            "box": {
+              "x": 129.171875,
+              "y": 303.625,
+              "width": 44,
+              "height": 78,
+              "right": 173.171875,
+              "bottom": 381.625
+            }
+          }
+        ],
+        "door": {
+          "x": 316.421875,
+          "y": 479.265625,
+          "width": 32.0625,
+          "height": 55.359375,
+          "right": 348.484375,
+          "bottom": 534.625
+        },
+        "signs": [
+          {
+            "id": "0",
+            "box": {
+              "x": 33.6875,
+              "y": 225.65625,
+              "width": 72,
+              "height": 68,
+              "right": 105.6875,
+              "bottom": 293.65625
+            },
+            "pole": "137.844px"
+          },
+          {
+            "id": "1",
+            "box": {
+              "x": 159,
+              "y": 225.65625,
+              "width": 72,
+              "height": 68,
+              "right": 231,
+              "bottom": 293.65625
+            },
+            "pole": "137.844px"
+          },
+          {
+            "id": "2",
+            "box": {
+              "x": 284.296875,
+              "y": 225.65625,
+              "width": 72,
+              "height": 68,
+              "right": 356.296875,
+              "bottom": 293.65625
+            },
+            "pole": "137.844px"
+          }
+        ],
+        "checks": []
+      },
+      "native": false,
+      "method": "Original headless runtime PNG; RAF paused during capture only; no game state assignments or pixel edits"
+    },
+    {
+      "path": "docs/content/r10/phone-tickets-stage-3-queue.png",
+      "width": 390,
+      "height": 844,
+      "sha256": "ed1332e2411ca9f7f20e86eb0da23e59b84f5b20569292cb6e7c7ce383a37004",
+      "phase": "playing",
+      "state": {
+        "boardTime": "0.000",
+        "cue": "go",
+        "settled": "true",
+        "correction": "",
+        "distance": "30.00",
+        "speed": "0.00",
+        "bend": "1",
+        "tilt": "1.94",
+        "sway": "1.60",
+        "acceleration": "0.00",
+        "bayStopped": "false",
+        "bayRestarted": "false",
+        "leftTurn": "false",
+        "rightTurn": "false",
+        "focus": "center",
+        "crossTime": "0.000",
+        "crossDuration": "1.45",
+        "orderHint": "",
+        "fruitSway": "6.06",
+        "flagSway": "14.27",
+        "assisting": "false",
+        "crossed": "0",
+        "lookedLeft": "false",
+        "lookedRight": "false",
+        "decision": "false",
+        "confirmed": "false",
+        "confirmDelay": "0",
+        "person": "bike",
+        "doorState": "closed"
+      },
+      "hint": "停穩了，開門接朋友。",
+      "controls": [
+        {
+          "action": "go",
+          "text": "前進",
+          "color": "rgb(244, 107, 39)"
+        },
+        {
+          "action": "brake",
+          "text": "停穩",
+          "color": "rgb(255, 255, 255)"
+        },
+        {
+          "action": "door",
+          "text": "開門",
+          "color": "rgb(255, 255, 255)"
+        },
+        {
+          "action": "listen",
+          "text": "再聽一次",
+          "color": "rgb(255, 255, 255)"
+        }
+      ],
+      "geometry": {
+        "people": [
+          {
+            "id": "0",
+            "kind": "boarding-friend",
+            "progress": "0.00",
+            "box": {
+              "x": 200.765625,
+              "y": 356.65625,
+              "width": 44,
+              "height": 78,
+              "right": 244.765625,
+              "bottom": 434.65625
+            }
+          },
+          {
+            "id": "1",
+            "kind": "boarding-friend",
+            "progress": "0.00",
+            "box": {
+              "x": 136.328125,
+              "y": 330.140625,
+              "width": 44,
+              "height": 78,
+              "right": 180.328125,
+              "bottom": 408.140625
+            }
+          },
+          {
+            "id": "2",
+            "kind": "boarding-friend",
+            "progress": "0.00",
+            "box": {
+              "x": 71.890625,
+              "y": 303.625,
+              "width": 44,
+              "height": 78,
+              "right": 115.890625,
+              "bottom": 381.625
+            }
+          }
+        ],
+        "door": {
+          "x": 259.140625,
+          "y": 479.265625,
+          "width": 32.0625,
+          "height": 55.359375,
+          "right": 291.203125,
+          "bottom": 534.625
+        },
+        "signs": [
+          {
+            "id": "0",
+            "box": {
+              "x": 33.6875,
+              "y": 225.65625,
+              "width": 72,
+              "height": 68,
+              "right": 105.6875,
+              "bottom": 293.65625
+            },
+            "pole": "137.844px"
+          },
+          {
+            "id": "1",
+            "box": {
+              "x": 159,
+              "y": 225.0625,
+              "width": 72,
+              "height": 69.1875,
+              "right": 231,
+              "bottom": 294.25
+            },
+            "pole": "137.25px"
+          },
+          {
+            "id": "2",
+            "box": {
+              "x": 284.296875,
+              "y": 225.65625,
+              "width": 72,
+              "height": 68,
+              "right": 356.296875,
+              "bottom": 293.65625
+            },
+            "pole": "137.844px"
+          }
+        ],
+        "checks": []
+      },
+      "native": false,
+      "method": "Original headless runtime PNG; RAF paused during capture only; no game state assignments or pixel edits"
+    },
+    {
+      "path": "docs/content/r10/phone-tickets-stage-3-doorway-1.png",
+      "width": 390,
+      "height": 844,
+      "sha256": "5be03591d534b688fdcdda0684788ef341d40b6b3744fed5b8df2d84144e1c79",
+      "phase": "boarding",
+      "state": {
+        "boardTime": "0.270",
+        "cue": "go",
+        "settled": "true",
+        "correction": "",
+        "distance": "30.00",
+        "speed": "0.00",
+        "bend": "1",
+        "tilt": "1.03",
+        "sway": "0.83",
+        "acceleration": "0.00",
+        "bayStopped": "false",
+        "bayRestarted": "false",
+        "leftTurn": "false",
+        "rightTurn": "false",
+        "focus": "center",
+        "crossTime": "0.000",
+        "crossDuration": "1.45",
+        "orderHint": "",
+        "fruitSway": "4.52",
+        "flagSway": "11.49",
+        "assisting": "false",
+        "crossed": "0",
+        "lookedLeft": "false",
+        "lookedRight": "false",
+        "decision": "false",
+        "confirmed": "false",
+        "confirmDelay": "0",
+        "person": "bike",
+        "doorState": "open"
+      },
+      "hint": "朋友慢慢上車，等一等。",
+      "controls": [
+        {
+          "action": "go",
+          "text": "前進",
+          "color": "rgb(220, 228, 233)"
+        },
+        {
+          "action": "brake",
+          "text": "停穩",
+          "color": "rgb(255, 255, 255)"
+        },
+        {
+          "action": "door",
+          "text": "上車中",
+          "color": "rgb(255, 255, 255)"
+        },
+        {
+          "action": "listen",
+          "text": "再聽一次",
+          "color": "rgb(255, 255, 255)"
+        }
+      ],
+      "geometry": {
+        "people": [
+          {
+            "id": "0",
+            "kind": "boarding-friend",
+            "progress": "0.59",
+            "box": {
+              "x": 250.890625,
+              "y": 456.34375,
+              "width": 44,
+              "height": 78,
+              "right": 294.890625,
+              "bottom": 534.34375
+            }
+          },
+          {
+            "id": "1",
+            "kind": "boarding-friend",
+            "progress": "0.00",
+            "box": {
+              "x": 136.328125,
+              "y": 330.140625,
+              "width": 44,
+              "height": 78,
+              "right": 180.328125,
+              "bottom": 408.140625
+            }
+          },
+          {
+            "id": "2",
+            "kind": "boarding-friend",
+            "progress": "0.00",
+            "box": {
+              "x": 71.890625,
+              "y": 303.625,
+              "width": 44,
+              "height": 78,
+              "right": 115.890625,
+              "bottom": 381.625
+            }
+          }
+        ],
+        "door": {
+          "x": 259.140625,
+          "y": 479.265625,
+          "width": 32.0625,
+          "height": 55.359375,
+          "right": 291.203125,
+          "bottom": 534.625
+        },
+        "signs": [
+          {
+            "id": "0",
+            "box": {
+              "x": 33.6875,
+              "y": 225.65625,
+              "width": 72,
+              "height": 68,
+              "right": 105.6875,
+              "bottom": 293.65625
+            },
+            "pole": "137.844px"
+          },
+          {
+            "id": "1",
+            "box": {
+              "x": 159,
+              "y": 225.0625,
+              "width": 72,
+              "height": 69.1875,
+              "right": 231,
+              "bottom": 294.25
+            },
+            "pole": "137.25px"
+          },
+          {
+            "id": "2",
+            "box": {
+              "x": 284.296875,
+              "y": 225.65625,
+              "width": 72,
+              "height": 68,
+              "right": 356.296875,
+              "bottom": 293.65625
+            },
+            "pole": "137.844px"
+          }
+        ],
+        "checks": []
+      },
+      "native": false,
+      "method": "Original headless runtime PNG; RAF paused during capture only; no game state assignments or pixel edits"
+    },
+    {
+      "path": "docs/content/r10/phone-tickets-stage-3-aisle.png",
+      "width": 390,
+      "height": 844,
+      "sha256": "8a496db280cc7e79a8dc8a28e3387284d75b3920343966531c504c912019ecd8",
+      "phase": "boarding",
+      "state": {
+        "boardTime": "0.315",
+        "cue": "go",
+        "settled": "true",
+        "correction": "",
+        "distance": "30.00",
+        "speed": "0.00",
+        "bend": "1",
+        "tilt": "1.03",
+        "sway": "0.83",
+        "acceleration": "0.00",
+        "bayStopped": "false",
+        "bayRestarted": "false",
+        "leftTurn": "false",
+        "rightTurn": "false",
+        "focus": "center",
+        "crossTime": "0.000",
+        "crossDuration": "1.45",
+        "orderHint": "",
+        "fruitSway": "4.52",
+        "flagSway": "11.49",
+        "assisting": "false",
+        "crossed": "0",
+        "lookedLeft": "false",
+        "lookedRight": "false",
+        "decision": "false",
+        "confirmed": "false",
+        "confirmDelay": "0",
+        "person": "bike",
+        "doorState": "open"
+      },
+      "hint": "朋友慢慢上車，等一等。",
+      "controls": [
+        {
+          "action": "go",
+          "text": "前進",
+          "color": "rgb(220, 228, 233)"
+        },
+        {
+          "action": "brake",
+          "text": "停穩",
+          "color": "rgb(255, 255, 255)"
+        },
+        {
+          "action": "door",
+          "text": "上車中",
+          "color": "rgb(255, 255, 255)"
+        },
+        {
+          "action": "listen",
+          "text": "再聽一次",
+          "color": "rgb(255, 255, 255)"
+        }
+      ],
+      "geometry": {
+        "people": [
+          {
+            "id": "0",
+            "kind": "ticket-seated",
+            "box": {
+              "x": 258.5687561035156,
+              "y": 479.265625,
+              "width": 38.9375,
+              "height": 55.359375,
+              "right": 297.5062561035156,
+              "bottom": 534.625
+            }
+          },
+          {
+            "id": "1",
+            "kind": "boarding-friend",
+            "progress": "0.00",
+            "box": {
+              "x": 136.328125,
+              "y": 330.140625,
+              "width": 44,
+              "height": 78,
+              "right": 180.328125,
+              "bottom": 408.140625
+            }
+          },
+          {
+            "id": "2",
+            "kind": "boarding-friend",
+            "progress": "0.00",
+            "box": {
+              "x": 71.890625,
+              "y": 303.625,
+              "width": 44,
+              "height": 78,
+              "right": 115.890625,
+              "bottom": 381.625
+            }
+          }
+        ],
+        "door": {
+          "x": 259.140625,
+          "y": 479.265625,
+          "width": 32.0625,
+          "height": 55.359375,
+          "right": 291.203125,
+          "bottom": 534.625
+        },
+        "signs": [
+          {
+            "id": "0",
+            "box": {
+              "x": 33.6875,
+              "y": 225.65625,
+              "width": 72,
+              "height": 68,
+              "right": 105.6875,
+              "bottom": 293.65625
+            },
+            "pole": "137.844px"
+          },
+          {
+            "id": "1",
+            "box": {
+              "x": 159,
+              "y": 225.0625,
+              "width": 72,
+              "height": 69.1875,
+              "right": 231,
+              "bottom": 294.25
+            },
+            "pole": "137.25px"
+          },
+          {
+            "id": "2",
+            "box": {
+              "x": 284.296875,
+              "y": 225.65625,
+              "width": 72,
+              "height": 68,
+              "right": 356.296875,
+              "bottom": 293.65625
+            },
+            "pole": "137.844px"
+          }
+        ],
+        "checks": []
+      },
+      "native": false,
+      "method": "Original headless runtime PNG; RAF paused during capture only; no game state assignments or pixel edits"
+    },
+    {
+      "path": "docs/content/r10/phone-tickets-stage-3-doorway-2.png",
+      "width": 390,
+      "height": 844,
+      "sha256": "f32f5f843ba255980eb6972afafb5445c6adbc1d9cc22b8f8789b780ca5b0a57",
+      "phase": "boarding",
+      "state": {
+        "boardTime": "0.585",
+        "cue": "go",
+        "settled": "true",
+        "correction": "",
+        "distance": "30.00",
+        "speed": "0.00",
+        "bend": "1",
+        "tilt": "1.03",
+        "sway": "0.83",
+        "acceleration": "0.00",
+        "bayStopped": "false",
+        "bayRestarted": "false",
+        "leftTurn": "false",
+        "rightTurn": "false",
+        "focus": "center",
+        "crossTime": "0.000",
+        "crossDuration": "1.45",
+        "orderHint": "",
+        "fruitSway": "4.52",
+        "flagSway": "11.49",
+        "assisting": "false",
+        "crossed": "0",
+        "lookedLeft": "false",
+        "lookedRight": "false",
+        "decision": "false",
+        "confirmed": "false",
+        "confirmDelay": "0",
+        "person": "bike",
+        "doorState": "open"
+      },
+      "hint": "朋友慢慢上車，等一等。",
+      "controls": [
+        {
+          "action": "go",
+          "text": "前進",
+          "color": "rgb(220, 228, 233)"
+        },
+        {
+          "action": "brake",
+          "text": "停穩",
+          "color": "rgb(255, 255, 255)"
+        },
+        {
+          "action": "door",
+          "text": "上車中",
+          "color": "rgb(255, 255, 255)"
+        },
+        {
+          "action": "listen",
+          "text": "再聽一次",
+          "color": "rgb(255, 255, 255)"
+        }
+      ],
+      "geometry": {
+        "people": [
+          {
+            "id": "0",
+            "kind": "ticket-seated",
+            "box": {
+              "x": 108.2718734741211,
+              "y": 480.21875,
+              "width": 38.93750762939453,
+              "height": 37.21875,
+              "right": 147.20938110351562,
+              "bottom": 517.4375
+            }
+          },
+          {
+            "id": "1",
+            "kind": "boarding-friend",
+            "progress": "0.60",
+            "box": {
+              "x": 250.890625,
+              "y": 456.34375,
+              "width": 44,
+              "height": 78,
+              "right": 294.890625,
+              "bottom": 534.34375
+            }
+          },
+          {
+            "id": "2",
+            "kind": "boarding-friend",
+            "progress": "0.00",
+            "box": {
+              "x": 71.890625,
+              "y": 303.625,
+              "width": 44,
+              "height": 78,
+              "right": 115.890625,
+              "bottom": 381.625
+            }
+          }
+        ],
+        "door": {
+          "x": 259.140625,
+          "y": 479.265625,
+          "width": 32.0625,
+          "height": 55.359375,
+          "right": 291.203125,
+          "bottom": 534.625
+        },
+        "signs": [
+          {
+            "id": "0",
+            "box": {
+              "x": 33.6875,
+              "y": 225.65625,
+              "width": 72,
+              "height": 68,
+              "right": 105.6875,
+              "bottom": 293.65625
+            },
+            "pole": "137.844px"
+          },
+          {
+            "id": "1",
+            "box": {
+              "x": 159,
+              "y": 225.0625,
+              "width": 72,
+              "height": 69.1875,
+              "right": 231,
+              "bottom": 294.25
+            },
+            "pole": "137.25px"
+          },
+          {
+            "id": "2",
+            "box": {
+              "x": 284.296875,
+              "y": 225.65625,
+              "width": 72,
+              "height": 68,
+              "right": 356.296875,
+              "bottom": 293.65625
+            },
+            "pole": "137.844px"
+          }
+        ],
+        "checks": []
+      },
+      "native": false,
+      "method": "Original headless runtime PNG; RAF paused during capture only; no game state assignments or pixel edits"
+    },
+    {
+      "path": "docs/content/r10/phone-tickets-stage-3-doorway-3.png",
+      "width": 390,
+      "height": 844,
+      "sha256": "2fc7936583d82ed517ff1764cc1dcfc2239b95d8b661472004c92db0a75f61fe",
+      "phase": "boarding",
+      "state": {
+        "boardTime": "0.905",
+        "cue": "go",
+        "settled": "true",
+        "correction": "",
+        "distance": "30.00",
+        "speed": "0.00",
+        "bend": "1",
+        "tilt": "1.03",
+        "sway": "0.83",
+        "acceleration": "0.00",
+        "bayStopped": "false",
+        "bayRestarted": "false",
+        "leftTurn": "false",
+        "rightTurn": "false",
+        "focus": "center",
+        "crossTime": "0.000",
+        "crossDuration": "1.45",
+        "orderHint": "",
+        "fruitSway": "4.52",
+        "flagSway": "11.49",
+        "assisting": "false",
+        "crossed": "0",
+        "lookedLeft": "false",
+        "lookedRight": "false",
+        "decision": "false",
+        "confirmed": "false",
+        "confirmDelay": "0",
+        "person": "bike",
+        "doorState": "open"
+      },
+      "hint": "朋友慢慢上車，等一等。",
+      "controls": [
+        {
+          "action": "go",
+          "text": "前進",
+          "color": "rgb(220, 228, 233)"
+        },
+        {
+          "action": "brake",
+          "text": "停穩",
+          "color": "rgb(255, 255, 255)"
+        },
+        {
+          "action": "door",
+          "text": "上車中",
+          "color": "rgb(255, 255, 255)"
+        },
+        {
+          "action": "listen",
+          "text": "再聽一次",
+          "color": "rgb(255, 255, 255)"
+        }
+      ],
+      "geometry": {
+        "people": [
+          {
+            "id": "0",
+            "kind": "ticket-seated",
+            "box": {
+              "x": 108.2718734741211,
+              "y": 480.21875,
+              "width": 38.93750762939453,
+              "height": 37.21875,
+              "right": 147.20938110351562,
+              "bottom": 517.4375
+            }
+          },
+          {
+            "id": "1",
+            "kind": "ticket-seated",
+            "box": {
+              "x": 156.38125610351562,
+              "y": 480.21875,
+              "width": 38.9375,
+              "height": 37.21875,
+              "right": 195.31875610351562,
+              "bottom": 517.4375
+            }
+          },
+          {
+            "id": "2",
+            "kind": "boarding-friend",
+            "progress": "0.64",
+            "box": {
+              "x": 250.890625,
+              "y": 456.34375,
+              "width": 44,
+              "height": 78,
+              "right": 294.890625,
+              "bottom": 534.34375
+            }
+          }
+        ],
+        "door": {
+          "x": 259.140625,
+          "y": 479.265625,
+          "width": 32.0625,
+          "height": 55.359375,
+          "right": 291.203125,
+          "bottom": 534.625
+        },
+        "signs": [
+          {
+            "id": "0",
+            "box": {
+              "x": 33.6875,
+              "y": 225.65625,
+              "width": 72,
+              "height": 68,
+              "right": 105.6875,
+              "bottom": 293.65625
+            },
+            "pole": "137.844px"
+          },
+          {
+            "id": "1",
+            "box": {
+              "x": 159,
+              "y": 225.0625,
+              "width": 72,
+              "height": 69.1875,
+              "right": 231,
+              "bottom": 294.25
+            },
+            "pole": "137.25px"
+          },
+          {
+            "id": "2",
+            "box": {
+              "x": 284.296875,
+              "y": 225.65625,
+              "width": 72,
+              "height": 68,
+              "right": 356.296875,
+              "bottom": 293.65625
+            },
+            "pole": "137.844px"
+          }
+        ],
+        "checks": []
+      },
+      "native": false,
+      "method": "Original headless runtime PNG; RAF paused during capture only; no game state assignments or pixel edits"
+    },
+    {
+      "path": "docs/content/r10/phone-tickets-stage-3-closed.png",
+      "width": 390,
+      "height": 844,
+      "sha256": "41546629d2da5b8d4fcab7ccfeaf78539688b8d79e8f618e5fd5e16fb2dc648d",
+      "phase": "boarding",
+      "state": {
+        "boardTime": "1.225",
+        "cue": "go",
+        "settled": "true",
+        "correction": "",
+        "distance": "30.00",
+        "speed": "0.00",
+        "bend": "1",
+        "tilt": "1.03",
+        "sway": "0.83",
+        "acceleration": "0.00",
+        "bayStopped": "false",
+        "bayRestarted": "false",
+        "leftTurn": "false",
+        "rightTurn": "false",
+        "focus": "center",
+        "crossTime": "0.000",
+        "crossDuration": "1.45",
+        "orderHint": "",
+        "fruitSway": "4.52",
+        "flagSway": "11.49",
+        "assisting": "false",
+        "crossed": "0",
+        "lookedLeft": "false",
+        "lookedRight": "false",
+        "decision": "false",
+        "confirmed": "false",
+        "confirmDelay": "0",
+        "person": "bike",
+        "doorState": "closed"
+      },
+      "hint": "三位坐好了，門關好了 ✓",
+      "controls": [
+        {
+          "action": "go",
+          "text": "前進",
+          "color": "rgb(220, 228, 233)"
+        },
+        {
+          "action": "brake",
+          "text": "停穩",
+          "color": "rgb(255, 255, 255)"
+        },
+        {
+          "action": "door",
+          "text": "門關好了",
+          "color": "rgb(255, 255, 255)"
+        },
+        {
+          "action": "listen",
+          "text": "再聽一次",
+          "color": "rgb(255, 255, 255)"
+        }
+      ],
+      "geometry": {
+        "people": [
+          {
+            "id": "0",
+            "kind": "ticket-seated",
+            "box": {
+              "x": 108.2718734741211,
+              "y": 480.21875,
+              "width": 38.93750762939453,
+              "height": 37.21875,
+              "right": 147.20938110351562,
+              "bottom": 517.4375
+            }
+          },
+          {
+            "id": "1",
+            "kind": "ticket-seated",
+            "box": {
+              "x": 156.38125610351562,
+              "y": 480.21875,
+              "width": 38.9375,
+              "height": 37.21875,
+              "right": 195.31875610351562,
+              "bottom": 517.4375
+            }
+          },
+          {
+            "id": "2",
+            "kind": "ticket-seated",
+            "box": {
+              "x": 204.49063110351562,
+              "y": 480.21875,
+              "width": 38.9375,
+              "height": 37.21875,
+              "right": 243.42813110351562,
+              "bottom": 517.4375
+            }
+          }
+        ],
+        "door": {
+          "x": 259.140625,
+          "y": 479.265625,
+          "width": 32.0625,
+          "height": 55.359375,
+          "right": 291.203125,
+          "bottom": 534.625
+        },
+        "signs": [
+          {
+            "id": "0",
+            "box": {
+              "x": 33.6875,
+              "y": 225.65625,
+              "width": 72,
+              "height": 68,
+              "right": 105.6875,
+              "bottom": 293.65625
+            },
+            "pole": "137.844px"
+          },
+          {
+            "id": "1",
+            "box": {
+              "x": 159,
+              "y": 225.0625,
+              "width": 72,
+              "height": 69.1875,
+              "right": 231,
+              "bottom": 294.25
+            },
+            "pole": "137.25px"
+          },
+          {
+            "id": "2",
+            "box": {
+              "x": 284.296875,
+              "y": 225.65625,
+              "width": 72,
+              "height": 68,
+              "right": 356.296875,
+              "bottom": 293.65625
+            },
+            "pole": "137.844px"
+          }
+        ],
+        "checks": []
+      },
+      "native": false,
+      "method": "Original headless runtime PNG; RAF paused during capture only; no game state assignments or pixel edits"
+    },
+    {
+      "path": "docs/content/r10/phone-tickets-complete.png",
+      "width": 390,
+      "height": 844,
+      "sha256": "7edcd45eaeb102a96b6de15b057eed490eb21a1a78949ba6cd685a5387c9461c",
+      "phase": "done",
+      "state": {
+        "boardTime": "1.655",
+        "cue": "go",
+        "settled": "true",
+        "correction": "",
+        "distance": "30.00",
+        "speed": "0.00",
+        "bend": "1",
+        "tilt": "1.03",
+        "sway": "0.83",
+        "acceleration": "0.00",
+        "bayStopped": "false",
+        "bayRestarted": "false",
+        "leftTurn": "false",
+        "rightTurn": "false",
+        "focus": "center",
+        "crossTime": "0.000",
+        "crossDuration": "1.45",
+        "orderHint": "",
+        "fruitSway": "4.52",
+        "flagSway": "11.49",
+        "assisting": "false",
+        "crossed": "0",
+        "lookedLeft": "false",
+        "lookedRight": "false",
+        "decision": "false",
+        "confirmed": "false",
+        "confirmDelay": "0",
+        "person": "bike",
+        "doorState": "closed"
+      },
+      "hint": "大家坐好了！一起去旅行。",
+      "controls": [
+        {
+          "action": "replay",
+          "text": "再玩一次",
+          "color": "rgb(255, 255, 255)"
+        },
+        {
+          "action": "picker",
+          "text": "換一課",
+          "color": "rgb(255, 255, 255)"
+        },
+        {
+          "action": "listen",
+          "text": "再聽一次",
+          "color": "rgb(255, 255, 255)"
+        }
+      ],
+      "geometry": {
+        "people": [
+          {
+            "id": "0",
+            "kind": "ticket-seated",
+            "box": {
+              "x": 108.2718734741211,
+              "y": 420.75,
+              "width": 38.93750762939453,
+              "height": 37.21875,
+              "right": 147.20938110351562,
+              "bottom": 457.96875
+            }
+          },
+          {
+            "id": "1",
+            "kind": "ticket-seated",
+            "box": {
+              "x": 156.38125610351562,
+              "y": 420.75,
+              "width": 38.9375,
+              "height": 37.21875,
+              "right": 195.31875610351562,
+              "bottom": 457.96875
+            }
+          },
+          {
+            "id": "2",
+            "kind": "ticket-seated",
+            "box": {
+              "x": 204.49063110351562,
+              "y": 420.75,
+              "width": 38.9375,
+              "height": 37.21875,
+              "right": 243.42813110351562,
+              "bottom": 457.96875
+            }
+          }
+        ],
+        "door": {
+          "x": 259.140625,
+          "y": 419.796875,
+          "width": 32.0625,
+          "height": 55.359375,
+          "right": 291.203125,
+          "bottom": 475.15625
+        },
+        "signs": [
+          {
+            "id": "0",
+            "box": {
+              "x": 33.6875,
+              "y": 204.03125,
+              "width": 72,
+              "height": 68,
+              "right": 105.6875,
+              "bottom": 272.03125
+            },
+            "pole": "115.906px"
+          },
+          {
+            "id": "1",
+            "box": {
+              "x": 159,
+              "y": 203.4375,
+              "width": 72,
+              "height": 69.1875,
+              "right": 231,
+              "bottom": 272.625
+            },
+            "pole": "115.312px"
+          },
+          {
+            "id": "2",
+            "box": {
+              "x": 284.296875,
+              "y": 204.03125,
+              "width": 72,
+              "height": 68,
+              "right": 356.296875,
+              "bottom": 272.03125
+            },
+            "pole": "115.906px"
+          }
+        ],
+        "checks": []
+      },
+      "native": false,
+      "method": "Original headless runtime PNG; RAF paused during capture only; no game state assignments or pixel edits"
+    },
+    {
+      "path": "docs/content/r10/phone-tickets-saved-result.png",
+      "width": 390,
+      "height": 844,
+      "sha256": "33afa4b29088f44583edd49dd5ff252ff81afe9b936427a9dfb1c320d44a2e45",
+      "phase": "done",
+      "state": {
+        "boardTime": "1.200",
+        "cue": "go",
+        "settled": "true",
+        "correction": "",
+        "distance": "30.00",
+        "speed": "0.00",
+        "bend": "1",
+        "tilt": "0.00",
+        "sway": "0.00",
+        "acceleration": "0.00",
+        "bayStopped": "false",
+        "bayRestarted": "false",
+        "leftTurn": "false",
+        "rightTurn": "false",
+        "focus": "center",
+        "crossTime": "0.000",
+        "crossDuration": "1.45",
+        "orderHint": "",
+        "fruitSway": "0.00",
+        "flagSway": "0.00",
+        "assisting": "false",
+        "crossed": "0",
+        "lookedLeft": "false",
+        "lookedRight": "false",
+        "decision": "false",
+        "confirmed": "false",
+        "confirmDelay": "0",
+        "person": "bike",
+        "doorState": "closed"
+      },
+      "hint": "大家坐好了！一起去旅行。",
+      "controls": [
+        {
+          "action": "replay",
+          "text": "再玩一次",
+          "color": "rgb(255, 255, 255)"
+        },
+        {
+          "action": "picker",
+          "text": "換一課",
+          "color": "rgb(255, 255, 255)"
+        },
+        {
+          "action": "listen",
+          "text": "再聽一次",
+          "color": "rgb(255, 255, 255)"
+        }
+      ],
+      "geometry": {
+        "people": [
+          {
+            "id": "0",
+            "kind": "ticket-seated",
+            "box": {
+              "x": 108.2718734741211,
+              "y": 420.75,
+              "width": 38.93750762939453,
+              "height": 37.21875,
+              "right": 147.20938110351562,
+              "bottom": 457.96875
+            }
+          },
+          {
+            "id": "1",
+            "kind": "ticket-seated",
+            "box": {
+              "x": 156.38125610351562,
+              "y": 420.75,
+              "width": 38.9375,
+              "height": 37.21875,
+              "right": 195.31875610351562,
+              "bottom": 457.96875
+            }
+          },
+          {
+            "id": "2",
+            "kind": "ticket-seated",
+            "box": {
+              "x": 204.49063110351562,
+              "y": 420.75,
+              "width": 38.9375,
+              "height": 37.21875,
+              "right": 243.42813110351562,
+              "bottom": 457.96875
+            }
+          }
+        ],
+        "door": {
+          "x": 259.140625,
+          "y": 419.796875,
+          "width": 32.0625,
+          "height": 55.359375,
+          "right": 291.203125,
+          "bottom": 475.15625
+        },
+        "signs": [
+          {
+            "id": "0",
+            "box": {
+              "x": 33.6875,
+              "y": 204.03125,
+              "width": 72,
+              "height": 68,
+              "right": 105.6875,
+              "bottom": 272.03125
+            },
+            "pole": "115.906px"
+          },
+          {
+            "id": "1",
+            "box": {
+              "x": 159,
+              "y": 203.4375,
+              "width": 72,
+              "height": 69.1875,
+              "right": 231,
+              "bottom": 272.625
+            },
+            "pole": "115.312px"
+          },
+          {
+            "id": "2",
+            "box": {
+              "x": 284.296875,
+              "y": 204.03125,
+              "width": 72,
+              "height": 68,
+              "right": 356.296875,
+              "bottom": 272.03125
+            },
+            "pole": "115.906px"
+          }
+        ],
+        "checks": []
+      },
+      "native": false,
+      "method": "Original headless runtime PNG; RAF paused during capture only; no game state assignments or pixel edits"
+    }
+  ],
+  "errors": [],
+  "external": [],
+  "responses": []
+}

@@ -1,0 +1,29 @@
+{
+  "status": "VERIFIED",
+  "version": "2.17.0",
+  "nativeSourceBuild": 13,
+  "branch": "r1-fun-polish",
+  "baseline": "aa28ddc",
+  "unitTests": 190,
+  "baselineTestsUnchanged": 24,
+  "checks": 117,
+  "screenshots": 114,
+  "reviewSet": 15,
+  "reviewSetPerLesson": 5,
+  "regression": {
+    "merge": {
+      "checks": 132,
+      "screenshots": 25
+    },
+    "store": {
+      "checks": 101,
+      "screenshots": 26
+    }
+  },
+  "secretScan": {
+    "textFiles": 869,
+    "hits": 0
+  },
+  "performanceMaxMedianP95": 16.8,
+  "artworkGeneration": 1
+}

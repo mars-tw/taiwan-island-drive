@@ -1,0 +1,535 @@
+{
+  "status": "VERIFIED",
+  "tool": "image_gen.imagegen",
+  "model_slug": null,
+  "model_note": "Tool did not expose the actual model slug.",
+  "generation_calls": 10,
+  "runtime_files": 28,
+  "runtime_bytes": 3038263,
+  "original_visual_designs": 27,
+  "sources": [
+    {
+      "path": "docs/art/source/r5/passenger.png",
+      "sha256": "f334ad010efb38425a720d4106b2c32e44a669258e2e50b72a6b29d38d17b351"
+    },
+    {
+      "path": "docs/art/source/r5/passenger-mask.png",
+      "sha256": "ae2f688638de595252d7a689ae2cfe50a267dc02c9a55cb12e77b6d66a2343a5"
+    },
+    {
+      "path": "docs/art/source/r5/passenger-opaque.png",
+      "sha256": "25fcbcd385da88e916e7c9099f525c0a3724711b8af4e89dee24eac4bd1e27b2"
+    },
+    {
+      "path": "docs/art/source/r5/vehicles.png",
+      "sha256": "ae5b9cfe3e75e501044f67de96d736dce1dd44ba4adfd750190e35a7ab1c8bef"
+    },
+    {
+      "path": "docs/art/source/r5/vehicles-mask.png",
+      "sha256": "ae5135de256fb72b3ec2f9e4753e37f02ddf2ce5a8dc399a230dfa5270a7fd7b"
+    },
+    {
+      "path": "docs/art/source/r5/vehicles-opaque.png",
+      "sha256": "aa2c61a2740680b0cf9112df0115d7f270c1347d4eeb707190192601a0731d73"
+    },
+    {
+      "path": "docs/art/source/r5/coach.png",
+      "sha256": "7e4afe9c0704acaa7e67600155fbd6f0694f42e00a2bced88546a98c9aa2f7e0"
+    },
+    {
+      "path": "docs/art/source/r5/coach-mask.png",
+      "sha256": "d8ff0de7b9219b5fadba035fa5bf7072ac7e9b5f8e7b603dc96ec4931d0b776f"
+    },
+    {
+      "path": "docs/art/source/r5/coach-opaque.png",
+      "sha256": "84b10783fb8af2e366eac982f0dc56d0daf4821ef0df01d56e747fe5e687eba1"
+    },
+    {
+      "path": "docs/art/source/r5/background.png",
+      "sha256": "5ca7f034459b5d9b476934405b0e2ccae6dcd14c5e182ed7d1b2ae1c9fcaa287"
+    },
+    {
+      "path": "docs/art/source/r5/carriages.png",
+      "sha256": "53d1cc59f54c9e9e2ace4150e545d69ea85e68aababecc97e37f42378ee6759c"
+    },
+    {
+      "path": "docs/art/source/r5/carriages-mask.png",
+      "sha256": "57ec4d8fbde71944b80b780d695ab46675cc031c2fb383a5e920a84de170ef07"
+    },
+    {
+      "path": "docs/art/source/r5/carriages-opaque.png",
+      "sha256": "8c7c416115a92444316382f9c34835862639817c3208221f07640b1bf1508a24"
+    },
+    {
+      "path": "docs/art/source/r5/ui.png",
+      "sha256": "bba460e680d38d059a605c66bcfceb82dd0376e983fcf43f79a0330b45e23c5d"
+    },
+    {
+      "path": "docs/art/source/r5/ui-mask.png",
+      "sha256": "c876b4d7b4af19fd05845ad63487e6f1882bef45b444cfc12fecdd7608189ddc"
+    },
+    {
+      "path": "docs/art/source/r5/ui-opaque.png",
+      "sha256": "3de4635a6577d2f14087ecde2eb964718c239ca60b99eb50eb1d251bf7d410fa"
+    },
+    {
+      "path": "docs/art/source/r5/logo.png",
+      "sha256": "4b650235636f899720070c942d9f79df268904938e9b89f0879cd51455d26a82"
+    },
+    {
+      "path": "docs/art/source/r5/logo-mask.png",
+      "sha256": "8f66498a1719ae7bb72123d60d289d33cfbad9537d426b9b4024a94dd4156755"
+    },
+    {
+      "path": "docs/art/source/r5/logo-opaque.png",
+      "sha256": "a7917ccad20b1256336079c869afd97542f1ed0606b16342daabdebbb0f2a970"
+    },
+    {
+      "path": "docs/art/source/r5/icon.png",
+      "sha256": "bcad67e3d01a752f493cce940991396ced04c378eae21080276030d061976177"
+    },
+    {
+      "path": "docs/art/source/r5/sky.png",
+      "sha256": "34b2b0ef7c48be47acb2851c41a7ef6896b5ec09bfd838a4d5229b9b1d2b18ab"
+    },
+    {
+      "path": "docs/art/source/r5/carriages-v2.png",
+      "sha256": "f132135ba94e3b123b0171d04ee19709f64036ff3acf47ae29faef55b75d645a"
+    },
+    {
+      "path": "docs/art/source/r5/carriages-v2-mask.png",
+      "sha256": "5a179bc5f23a8eb918f8fa6a57768024b8c1dd2e9fb4a62e1cce15e74f7ef2a6"
+    },
+    {
+      "path": "docs/art/source/r5/carriages-v2-opaque.png",
+      "sha256": "5c1289d6f42867de2a55c036b638b24e1fa865a5b5651181313222525488ef0b"
+    }
+  ],
+  "outputs": [
+    {
+      "path": "public/art/r5/platform.webp",
+      "size": [
+        1536,
+        1024
+      ],
+      "bytes": 260674,
+      "sha256": "77dfd049f8c9d3fe59ca84e20fe5e245ac01f19846a3cf748373e036c5f6a092"
+    },
+    {
+      "path": "public/art/r5/sky.webp",
+      "size": [
+        1536,
+        864
+      ],
+      "bytes": 138830,
+      "sha256": "df7559bb001dca6533df6a7d4980249bd335a0909eacb0604b488d420504aef0"
+    },
+    {
+      "path": "public/art/r5/car.png",
+      "size": [
+        384,
+        256
+      ],
+      "bytes": 120171,
+      "sha256": "cd6595dac0a119962f05d01d0d716030d95915a59b9f4a59669477c08ce1bc9d",
+      "corners_transparent": true,
+      "occupancy": 0.5476,
+      "mean_luminance": 0.4624,
+      "near_black": 0.0641,
+      "mean_saturation": 0.7872,
+      "low_saturation": 0.0663
+    },
+    {
+      "path": "public/art/r5/train.png",
+      "size": [
+        384,
+        256
+      ],
+      "bytes": 136036,
+      "sha256": "f27dc15b3888ec7617dacb9f05774c0a55da27edb6da017f2cca5bb5f49203f0",
+      "corners_transparent": true,
+      "occupancy": 0.6303,
+      "mean_luminance": 0.4562,
+      "near_black": 0.0439,
+      "mean_saturation": 0.7597,
+      "low_saturation": 0.1625
+    },
+    {
+      "path": "public/art/r5/flight.png",
+      "size": [
+        384,
+        256
+      ],
+      "bytes": 114077,
+      "sha256": "a93db016479a47bdd005b5d4400b7c2364fbc9dfc49c8428cefee21edc83b384",
+      "corners_transparent": true,
+      "occupancy": 0.4242,
+      "mean_luminance": 0.5889,
+      "near_black": 0.0429,
+      "mean_saturation": 0.6468,
+      "low_saturation": 0.2171
+    },
+    {
+      "path": "public/art/r5/coach.png",
+      "size": [
+        384,
+        576
+      ],
+      "bytes": 282338,
+      "sha256": "3e9cea0b91df3f1be961e0ee250439e9b69a21d2531b23c13a16a81f822b6eb3",
+      "corners_transparent": true,
+      "occupancy": 0.5421,
+      "mean_luminance": 0.4861,
+      "near_black": 0.1342,
+      "mean_saturation": 0.7098,
+      "low_saturation": 0.0911,
+      "dual_gate": true
+    },
+    {
+      "path": "public/art/r5/coach-cheer.png",
+      "size": [
+        384,
+        576
+      ],
+      "bytes": 246839,
+      "sha256": "f9f12454f02fe3c9b9c7933d8d5ad9deccd332f651c9f54d250f9d6a4e4732ff",
+      "corners_transparent": true,
+      "occupancy": 0.4578,
+      "mean_luminance": 0.494,
+      "near_black": 0.1288,
+      "mean_saturation": 0.7034,
+      "low_saturation": 0.0858,
+      "dual_gate": true
+    },
+    {
+      "path": "public/art/r5/passenger-1-0.png",
+      "size": [
+        128,
+        192
+      ],
+      "bytes": 32892,
+      "sha256": "35193f9b422366a80bfbb6ce9c5b6f41a0c72dbe91fdf6c2f48519f08cb01937",
+      "corners_transparent": true,
+      "occupancy": 0.4218,
+      "mean_luminance": 0.3851,
+      "near_black": 0.0471,
+      "mean_saturation": 0.6678,
+      "low_saturation": 0.0572,
+      "dual_gate": true
+    },
+    {
+      "path": "public/art/r5/passenger-1-1.png",
+      "size": [
+        128,
+        192
+      ],
+      "bytes": 33336,
+      "sha256": "43febb4c3437bc80d9a7be743e745e4b92a14e705d5fd54ef2992eb97d2af8b2",
+      "corners_transparent": true,
+      "occupancy": 0.4261,
+      "mean_luminance": 0.3807,
+      "near_black": 0.0488,
+      "mean_saturation": 0.6495,
+      "low_saturation": 0.0828,
+      "dual_gate": true
+    },
+    {
+      "path": "public/art/r5/passenger-2-0.png",
+      "size": [
+        128,
+        192
+      ],
+      "bytes": 36083,
+      "sha256": "7867d3eb0a508a5bb8c12ff971e379b43680d4d436c81815d52c179c88a98134",
+      "corners_transparent": true,
+      "occupancy": 0.4684,
+      "mean_luminance": 0.3746,
+      "near_black": 0.0609,
+      "mean_saturation": 0.5798,
+      "low_saturation": 0.1042,
+      "dual_gate": true
+    },
+    {
+      "path": "public/art/r5/passenger-2-1.png",
+      "size": [
+        128,
+        192
+      ],
+      "bytes": 35336,
+      "sha256": "b4eebc0807a6e3538df7f963db92745dd8cbe242fdf7b3d51d3fc740c5a93619",
+      "corners_transparent": true,
+      "occupancy": 0.4458,
+      "mean_luminance": 0.3834,
+      "near_black": 0.062,
+      "mean_saturation": 0.5717,
+      "low_saturation": 0.1303,
+      "dual_gate": true
+    },
+    {
+      "path": "public/art/r5/passenger-3-0.png",
+      "size": [
+        128,
+        192
+      ],
+      "bytes": 34616,
+      "sha256": "0fe3e06db88c87b275566329dd6d2163ec40ae284c16d3015eb80c17def799b4",
+      "corners_transparent": true,
+      "occupancy": 0.4334,
+      "mean_luminance": 0.4305,
+      "near_black": 0.0626,
+      "mean_saturation": 0.662,
+      "low_saturation": 0.158,
+      "dual_gate": true
+    },
+    {
+      "path": "public/art/r5/passenger-3-1.png",
+      "size": [
+        128,
+        192
+      ],
+      "bytes": 34862,
+      "sha256": "40dccb2bfcefaca1d023788a9056056aa22113f3744f96e65297274dc74e99bc",
+      "corners_transparent": true,
+      "occupancy": 0.4366,
+      "mean_luminance": 0.4258,
+      "near_black": 0.0587,
+      "mean_saturation": 0.6609,
+      "low_saturation": 0.1558,
+      "dual_gate": true
+    },
+    {
+      "path": "public/art/r5/passenger-4-0.png",
+      "size": [
+        128,
+        192
+      ],
+      "bytes": 38398,
+      "sha256": "18b182607a34352fb98beaccb24eae05586f0161760a9e4c106d90a233af3c5a",
+      "corners_transparent": true,
+      "occupancy": 0.5064,
+      "mean_luminance": 0.44,
+      "near_black": 0.034,
+      "mean_saturation": 0.5892,
+      "low_saturation": 0.0791,
+      "dual_gate": true
+    },
+    {
+      "path": "public/art/r5/passenger-4-1.png",
+      "size": [
+        128,
+        192
+      ],
+      "bytes": 36960,
+      "sha256": "d010fa12a4032dfe969e6451e5dc615c395a8e8ad7738d54bcc3a6dbb7eef132",
+      "corners_transparent": true,
+      "occupancy": 0.4728,
+      "mean_luminance": 0.4419,
+      "near_black": 0.0358,
+      "mean_saturation": 0.5905,
+      "low_saturation": 0.083,
+      "dual_gate": true
+    },
+    {
+      "path": "public/art/r5/passenger-5-0.png",
+      "size": [
+        128,
+        192
+      ],
+      "bytes": 33980,
+      "sha256": "bc1e0101328a57ff599d987c5bf789efd04aa9d55ee2906dca13fd1406157d3e",
+      "corners_transparent": true,
+      "occupancy": 0.427,
+      "mean_luminance": 0.3732,
+      "near_black": 0.0595,
+      "mean_saturation": 0.6219,
+      "low_saturation": 0.1808,
+      "dual_gate": true
+    },
+    {
+      "path": "public/art/r5/passenger-5-1.png",
+      "size": [
+        128,
+        192
+      ],
+      "bytes": 33541,
+      "sha256": "8a92c9e87ac8de583c11594f153be74688a5b467c426b6c83c3aa26f7aad5328",
+      "corners_transparent": true,
+      "occupancy": 0.4194,
+      "mean_luminance": 0.361,
+      "near_black": 0.0636,
+      "mean_saturation": 0.6254,
+      "low_saturation": 0.1969,
+      "dual_gate": true
+    },
+    {
+      "path": "public/art/r5/passenger-6-0.png",
+      "size": [
+        128,
+        192
+      ],
+      "bytes": 34559,
+      "sha256": "a8ca31fb1d4b34ea967d47c645f5326792299a435ef238eb612741858b64d2a9",
+      "corners_transparent": true,
+      "occupancy": 0.4447,
+      "mean_luminance": 0.3775,
+      "near_black": 0.0355,
+      "mean_saturation": 0.5841,
+      "low_saturation": 0.0942,
+      "dual_gate": true
+    },
+    {
+      "path": "public/art/r5/passenger-6-1.png",
+      "size": [
+        128,
+        192
+      ],
+      "bytes": 33498,
+      "sha256": "c8d6d89dff674cedf3d8898d6a9ccb209547cdbeed441ede0da8a91434e05ac7",
+      "corners_transparent": true,
+      "occupancy": 0.4223,
+      "mean_luminance": 0.3748,
+      "near_black": 0.0372,
+      "mean_saturation": 0.5859,
+      "low_saturation": 0.1016,
+      "dual_gate": true
+    },
+    {
+      "path": "public/art/r5/carriage-blue.png",
+      "size": [
+        768,
+        144
+      ],
+      "bytes": 111857,
+      "sha256": "bfee6e10354f1fdc505e1ac17bac04c23409cbc6e3deb6f14296cfd7ba1d4870",
+      "corners_transparent": true,
+      "occupancy": 0.4781,
+      "mean_luminance": 0.4325,
+      "near_black": 0.0854,
+      "mean_saturation": 0.6364,
+      "low_saturation": 0.1788
+    },
+    {
+      "path": "public/art/r5/carriage-orange.png",
+      "size": [
+        768,
+        144
+      ],
+      "bytes": 110978,
+      "sha256": "26c98e1539767632aed4b3abd27c9ff86dc13e3a6bf68bfaf646ebc518011cef",
+      "corners_transparent": true,
+      "occupancy": 0.4752,
+      "mean_luminance": 0.4604,
+      "near_black": 0.0906,
+      "mean_saturation": 0.6456,
+      "low_saturation": 0.1399
+    },
+    {
+      "path": "public/art/r5/ticket.png",
+      "size": [
+        768,
+        240
+      ],
+      "bytes": 219069,
+      "sha256": "54cfebec85284c89ef6c031ab27d49d877127839e454117128279bda4316793d",
+      "corners_transparent": true,
+      "occupancy": 0.8445,
+      "mean_luminance": 0.8219,
+      "near_black": 0.0,
+      "mean_saturation": 0.2898,
+      "low_saturation": 0.7739
+    },
+    {
+      "path": "public/art/r5/badge.png",
+      "size": [
+        192,
+        192
+      ],
+      "bytes": 52318,
+      "sha256": "94af9b442ea737f37f8b278acef32e4a0af92569e9fa16a93448ca7c95e34787",
+      "corners_transparent": true,
+      "occupancy": 0.5458,
+      "mean_luminance": 0.5603,
+      "near_black": 0.0024,
+      "mean_saturation": 0.842,
+      "low_saturation": 0.0363
+    },
+    {
+      "path": "public/art/r5/flag.png",
+      "size": [
+        192,
+        192
+      ],
+      "bytes": 36249,
+      "sha256": "11eed08b691a15a9b6adfc2968eacb316650656c61f190b0ce146bddbec32767",
+      "corners_transparent": true,
+      "occupancy": 0.3783,
+      "mean_luminance": 0.4669,
+      "near_black": 0.0004,
+      "mean_saturation": 0.7692,
+      "low_saturation": 0.0042
+    },
+    {
+      "path": "public/art/r5/station.png",
+      "size": [
+        192,
+        192
+      ],
+      "bytes": 40607,
+      "sha256": "2f4433b6d07d461f5000fe75ba673764c76962c9d3dce1b45100bff2718090ba",
+      "corners_transparent": true,
+      "occupancy": 0.4988,
+      "mean_luminance": 0.4531,
+      "near_black": 0.0009,
+      "mean_saturation": 0.805,
+      "low_saturation": 0.1016
+    },
+    {
+      "path": "public/art/r5/logo.png",
+      "size": [
+        480,
+        320
+      ],
+      "bytes": 208349,
+      "sha256": "573637121bd7d67751f2e3f2b32f3da3acbd02ec5ba647039bdfe1fc41fa9d9c",
+      "corners_transparent": true,
+      "occupancy": 0.6272,
+      "mean_luminance": 0.5309,
+      "near_black": 0.0083,
+      "mean_saturation": 0.696,
+      "low_saturation": 0.2455
+    },
+    {
+      "path": "public/art/r5/app-icon-192.png",
+      "size": [
+        192,
+        192
+      ],
+      "bytes": 78451,
+      "sha256": "b4febb07af9b1572ec57199d99373b706dffc54cb0e033ae5499a384bbf3199c"
+    },
+    {
+      "path": "public/art/r5/app-icon-512.png",
+      "size": [
+        512,
+        512
+      ],
+      "bytes": 463359,
+      "sha256": "284a7e18ac7360d3b1fba5d36dc5010bd072b51bd1f5c591b852dd7d35a38106"
+    }
+  ],
+  "postprocess": "Pillow native-alpha cleanup (<12 transparent, >240 opaque), transparent RGB zero, crop and LANCZOS resize; RGB WebP q84. Original alpha, mask, opaque master retained. No replacement drawings.",
+  "animation": "Six passengers x two separately generated limb poses; two distinct coach arm/face poses. Runtime interpolates position and changes pose. No skeleton claim.",
+  "license": "Generated with OpenAI built-in image tool for this project. No third-party artwork input except project-owned R4 coach. Not automatically MIT.",
+  "limitations": [
+    "Human thumbnail and cross-title blind tests pending.",
+    "Native catalogs and device validation pending."
+  ],
+  "reference_images": [
+    {
+      "path": "public/art/r4/coach.png",
+      "sha256": "2d3807fa5fcc11cfd4e0f7229e9ef783af40f63ae2423bd401520b70fb54939a",
+      "role": "project-owned mascot identity reference"
+    }
+  ],
+  "all_prompts_share_prefix": true
+}

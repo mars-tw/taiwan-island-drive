@@ -1,0 +1,30 @@
+{
+  "status": "VERIFIED",
+  "version": "2.18.0",
+  "nativeSourceBuild": 14,
+  "branch": "r1-fun-polish",
+  "baseline": "e24b0c1ecdc378c5a487fffc2124f5fdfb53552d",
+  "unitTests": 195,
+  "baselineTestFilesUnchanged": 25,
+  "browserChecks": 152,
+  "originalScreenshots": 218,
+  "reviewSet": 15,
+  "reviewSetPerLesson": 5,
+  "regression": {
+    "merge": {
+      "checks": 132,
+      "screenshots": 25
+    },
+    "store": {
+      "checks": 101,
+      "screenshots": 26
+    }
+  },
+  "secretScan": {
+    "textFiles": 914,
+    "hits": 0
+  },
+  "performanceMaxMedianP95": 16.8,
+  "artGenerationCalls": 1,
+  "newRuntimeImages": 2
+}

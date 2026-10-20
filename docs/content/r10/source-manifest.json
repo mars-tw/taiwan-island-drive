@@ -1,0 +1,83 @@
+{
+  "status": "VERIFIED",
+  "version": "2.22.0",
+  "baseline": "ddaba07",
+  "files": [
+    {
+      "path": "package.json",
+      "sha256": "e551db61694af435cdb2a579079af403dff48bf376e101612fb13b98ef52122d"
+    },
+    {
+      "path": "package-lock.json",
+      "sha256": "f078d3ab9f79eea3fa4942d1d1bf53b49d04fad264c83663dd2fba611680a6a3"
+    },
+    {
+      "path": "src/shared/content-r1.js",
+      "sha256": "e8e74bdb0dc468ae0229dadb6c13ab09f2291afd0f0643c3c32fe0e1771c280f"
+    },
+    {
+      "path": "src/shared/content-r1-ui.js",
+      "sha256": "972033c575478a7f67ab539f086422fd07bcdbc7f61192acd6ff6c165d109145"
+    },
+    {
+      "path": "src/shared/content-r10-scene.js",
+      "sha256": "6b7dc58518a8a7d1b5691c9e59a52a68d0f20fc7a4b13b08c096a50fc59a03e2"
+    },
+    {
+      "path": "src/shared/content-r10.css",
+      "sha256": "04df423a5e6efc1db00aae763eb3e83755e43cedd00c406d61fc281614783a9d"
+    },
+    {
+      "path": "src/shared/content-r5-feedback.js",
+      "sha256": "91d1c1f87c3e9f7385e9e71e1958b4b79063043b9d9c347d12a47c62e3660c04"
+    },
+    {
+      "path": "tests/shared/content-r10.test.js",
+      "sha256": "5735d5d9ac13cdc115774781bae095b4eef5cd7b457c972646a02f5aba07e864"
+    },
+    {
+      "path": "scripts/check-content-r10.mjs",
+      "sha256": "2506b05aa8b331618ceda8405ad75d0479e9a81c8cafefe8c37703c4f6a1b865"
+    },
+    {
+      "path": "src/games/car/config.js",
+      "sha256": "0d517e5ee12142485ced4fcacba93d452320aa25dc5598e40b94029f0df20bd5"
+    },
+    {
+      "path": "public/models/catalog.json",
+      "sha256": "c36508fa1c6eab6837a85cbf0d72a68874b6e510134475d5f3cf66d79727ee1e"
+    },
+    {
+      "path": "android/app/build.gradle",
+      "sha256": "4c5841e8b3951abdfed4ca79aa12e1e80806c9c3b397b71dbe6fd86a11d54986"
+    },
+    {
+      "path": "ios/App/App.xcodeproj/project.pbxproj",
+      "sha256": "f6f791ee86ea8168d48e6c87ae1f117976ba3964ba7a88ed8c7ddd4aaae78bbe"
+    },
+    {
+      "path": "public/art/content-r10/child-waiting.png",
+      "sha256": "8fc2921cd3a07ab2243a82de1142cf852082394ad51fa032a9b1b63ddf939530"
+    },
+    {
+      "path": "public/art/content-r10/grandma-waiting.png",
+      "sha256": "ac12ea1caad31c52cade9de14324f2be2827672c2706c2c490aaac69fa37b1bc"
+    },
+    {
+      "path": "public/art/content-r10/bike-waiting.png",
+      "sha256": "99cc076aeb3d24842ce1713731647247becfc12ed6b1b1206ec5cbdee5fa42bc"
+    },
+    {
+      "path": "public/art/content-r10/open-door.png",
+      "sha256": "d2287edab934b763a8913dd65ab16175068e9cca6e168a0eb57129d137c10540"
+    },
+    {
+      "path": "public/art/content-r10/boarding-step.png",
+      "sha256": "2d16ccc6aa4a43f9032531ff5d5791c9098905f06719760eb7be7242e440f215"
+    },
+    {
+      "path": "public/art/content-r10/station-wide-platform.webp",
+      "sha256": "fe78cbc523d87d0d6c016daa03d8b3de18aa63e4a1ad5f994ed17a5353a4a923"
+    }
+  ]
+}

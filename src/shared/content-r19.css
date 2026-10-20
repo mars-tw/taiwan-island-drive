@@ -1,0 +1,32 @@
+/* R19 only: make physical changes and the current instruction agree. */
+#content-r1[data-kind=cake] .cake-closeup>.cake-stack,#content-r1[data-kind=cake] .content-scene[data-hazard=true] .cake-closeup>.cake-stack{scale:1!important;translate:0 0!important;transform:scale(var(--cake-fit,.65)) translate(30px,var(--cake-inset-y,30px))!important;transform-origin:top left!important}
+#content-r1[data-kind=cake] .cake-timing{top:4%!important;left:50%!important;right:auto!important;translate:-50% 0!important;z-index:4;opacity:1!important}
+#content-r1[data-kind=cake] .cake-timing b{display:block;background:#fff8d9!important;color:#143b61!important;border:2px solid #143b61!important;border-radius:8px;padding:4px 8px;opacity:1!important;box-shadow:0 2px #143b6140}
+#content-r1[data-kind=cake] .cake-timing[data-active=true] b{border-color:#f46b27!important;box-shadow:0 0 0 2px #fff,0 0 0 4px #f46b27}
+#content-r1[data-kind=cake] .cake-timing .cake-lane-arrow{color:#143b61!important}
+#content-r1[data-kind=cake] .content-scene[data-in-bend=true] .cake-road-view::before{background-image:url('/art/content-r19/cake-bends.webp')!important}
+#content-r1[data-guided=false] #content-controls [data-needed=true]:not([data-held=true]):not([data-recovering=true]){background:#f5fbff!important;outline:0!important;box-shadow:inset 0 -4px #b5d8e8!important;animation:none!important}
+#content-r1[data-guided=false] #content-controls [data-needed=true] span::after{content:none!important}
+#content-r1[data-guided=false] #content-controls [data-needed=true] svg{animation:none!important}
+#content-r1[data-kind=cake] #content-controls [data-recovering=true] span{font-size:11px!important}
+#content-r1[data-kind=cake] #content-controls [data-recovering=true] span::after{content:none!important}
+#content-r1[data-kind=crossing] .crossing-traffic b{top:var(--label-top,-34px)!important;left:50%!important;translate:-50% 0!important;border-width:1px;font-size:12px;line-height:14px;padding:0 3px}
+#content-r1[data-kind=crossing] .crossing-direction{position:absolute;inset:0;pointer-events:none;z-index:4}
+.crossing-direction span{position:absolute;top:42%;font-size:12px;line-height:18px;color:#143b61;background:#fff8d9;border:2px solid #143b61;border-radius:6px;translate:-50% 0;padding:0 3px;white-space:nowrap}
+.crossing-direction .crossing-arrow{left:50%;top:47%;background:#fff8d9;font-size:23px;line-height:24px;padding:0 10px}
+#content-r1[data-kind=crossing] #content-controls [data-action^=look-][data-wait=true]{background:#f5fbff;color:#143b61;box-shadow:inset 0 -4px #b5d8e8}
+#content-r1[data-kind=tickets][data-phase] .content-ticket{visibility:visible!important;display:block!important;border-style:solid!important;background:#fff8d9;z-index:8}
+#content-r1[data-kind=tickets] .ticket-platform-segments{display:none!important}
+#content-r1[data-kind=tickets] .ticket-boarding-bridge{z-index:12!important;height:22px!important;border:0!important;background:transparent url('/art/content-r10/boarding-step.png') center/100% 100% no-repeat!important;transform-origin:center top;filter:drop-shadow(0 3px 1px #143b61);pointer-events:none}
+@media(max-width:360px) and (orientation:portrait){
+ #content-r1[data-kind=cake] .cake-timing{top:14%!important}
+ .crossing-direction span{font-size:10px;line-height:14px;padding:0 2px}
+ .crossing-direction .crossing-arrow{font-size:17px;line-height:18px;padding:0 6px}
+ #content-r1[data-kind=tickets] .ticket-boarding-bridge{height:18px!important}
+}
+@media(orientation:landscape) and (max-height:520px){
+ #content-r1[data-kind=cake] .cake-timing{top:4%!important}
+ .crossing-direction span{font-size:10px;line-height:12px;padding:0 2px}
+ .crossing-direction .crossing-arrow{font-size:14px;line-height:14px;padding:0 6px}
+ #content-r1[data-kind=tickets] .ticket-boarding-bridge{height:18px!important}
+}

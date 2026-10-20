@@ -1,0 +1,70 @@
+/* R2: each lesson has a readable place, physical feedback and its own ending. */
+html.art-r8.art-r7.art-r6.art-r5.art-r4 .welcome #content-start{background:#f46b27!important;color:#0c2742!important;display:flex;align-items:center;justify-content:center;gap:4px;font-size:15px!important}
+#content-start img{width:26px;height:36px;object-fit:contain}
+@media(max-height:520px) and (orientation:landscape){
+ html.art-r8.art-r7.art-r6.art-r5.art-r4 body:not([data-game]) .academy-home{grid-template-columns:minmax(0,1fr) minmax(0,1fr)!important}
+ html.art-r8.art-r7.art-r6.art-r5.art-r4 .welcome{min-width:0;white-space:normal}
+ html.art-r8.art-r7.art-r6.art-r5.art-r4 .welcome button{white-space:normal;overflow-wrap:anywhere}
+ html.art-r8.art-r7.art-r6.art-r5.art-r4 .welcome #content-start{font-size:12px!important}
+ #content-start img{display:none}
+}
+.content-coach{display:none!important}
+.content-scene{background-position:center;background-size:cover}
+#content-r1[data-kind=cake][data-stage="0"] .content-scene{background-image:url('/art/r6/route-coast.webp')}
+#content-r1[data-kind=cake][data-stage="1"] .content-scene{background-image:url('/art/r7/coast.webp')}
+#content-r1[data-kind=cake][data-stage="2"] .content-scene{background-image:url('/art/r6/route-valley.webp')}
+#content-r1[data-kind=cake] .content-scene:before{content:'';position:absolute;left:0;right:0;bottom:0;height:25%;background:#f7dea7 url('/art/r8/platform-floor.webp') center/cover no-repeat;border-top:3px solid #1479b8;z-index:1}
+.content-carrier{position:absolute;left:12%;bottom:12%;width:76%;height:58%;z-index:3;transform-origin:50% 90%}
+.content-carrier .content-car{width:100%;height:63%;left:0;bottom:0;object-fit:contain;transform:none!important}
+.content-carrier .content-cake{background:none;border:0;border-radius:0;box-shadow:none;left:35%;bottom:44%;width:42%;height:42%;transform-origin:50% 90%}
+.content-cake>img:first-child{clip-path:inset(42% 0 0)}
+.cake-cream{position:absolute;inset:0;transform-origin:50% 75%}
+.cake-cream img{width:100%;height:100%;object-fit:contain;clip-path:inset(0 0 42%)}
+.content-cake .cake-flag{top:-18%;left:43%;width:58%;height:85%;transform-origin:20% 90%;z-index:5}
+.content-force{display:none;position:absolute;bottom:6px;left:8px;border:3px solid #1479b8;border-radius:10px;background:white;padding:3px 12px;font-size:16px;font-weight:900;z-index:5}
+.content-road-sign{display:none;position:absolute;right:8px;top:105px;width:90px;z-index:4;padding:4px;background:#ffd344;border:3px solid #143b61;border-radius:12px;text-align:center;font-size:13px;font-weight:900}
+.content-road-sign svg{width:100%;height:55px}.content-road-sign span{display:block}
+#content-r1[data-kind=cake] .content-road-sign{display:block}
+@media(max-height:450px) and (orientation:landscape){.content-road-sign{width:58px;top:65px;right:3px;padding:2px;font-size:10px}.content-road-sign svg{height:30px}}
+#content-r1[data-kind=cake] .content-force{display:flex;gap:6px;align-items:center}
+.force-arrow{font-size:40px;line-height:1;color:#58b85b}
+#content-r1[data-rough=true] .content-force{background:#ffd344;border:5px double #143b61}
+#content-r1[data-rough=true] .force-arrow{color:#c84910}
+.content-stamps span{opacity:1;background:#e4f6ff;color:#9bb3c3}.content-stamps .earned{color:#143b61;border-style:double;border-width:4px}
+.content-scene-cue{top:55px;z-index:6;font-size:16px;max-width:95%;box-sizing:border-box}
+#content-r1[data-kind=crossing] .content-carrier{left:calc(50% - 48px);bottom:0;width:96px;height:110px}
+#content-r1[data-kind=crossing] .content-carrier .content-car{width:100%;height:100%;bottom:0;left:0}
+#content-r1[data-kind=crossing] .content-scene{background-size:cover}
+#content-r1[data-kind=crossing][data-stage="1"] .content-scene{background-image:url('/art/content-r2/crossing-banyan.webp');background-position:center}
+#content-r1[data-kind=crossing][data-stage="2"] .content-scene{background-image:url('/art/content-r2/crossing-lighthouse.webp');background-position:center}
+.content-observe{display:none;position:absolute;left:6px;right:6px;top:5px;gap:5px;z-index:7;justify-content:center}
+#content-r1[data-kind=crossing] .content-observe{display:flex}
+.content-observe span{height:36px;min-width:48px;border:3px solid #1479b8;border-radius:10px;display:flex;align-items:center;justify-content:center;background:white;font-weight:900}
+.content-observe svg{height:25px;width:25px}.content-observe .checked{background:#ffd344;border-style:double}
+#content-r1 [data-action=depart]{background:#e4f6ff;color:#617e91}
+#content-r1 [data-action=depart][data-ready=true]{background:#58b85b;color:#143b61;outline:3px solid #143b61;outline-offset:-6px}
+#content-r1[data-kind=crossing] .content-route{top:100px}
+#content-r1[data-kind=tickets] .content-scene{background-image:url('/art/content-r2/station.webp');background-position:center;background-size:100% 100%}
+#content-r1[data-kind=tickets] .content-carrier{display:none}
+#content-r1[data-kind=tickets] .content-train{height:26%;width:60%;bottom:auto;object-position:center;z-index:3}
+.content-stations{position:absolute;inset:0;z-index:5;pointer-events:none}
+#content-r1 .content-stations button{position:absolute;right:2%;transform:translateY(-50%);width:68px;min-height:66px;padding:1px;pointer-events:auto;display:flex;align-items:center;flex-direction:column;gap:0;background:white;box-shadow:0 6px 0 #143b61}
+#content-r1 .content-stations svg{height:44px;width:44px}.content-stations span{font-size:11px}
+#content-r1 .content-stations button[aria-pressed=true]{outline:4px solid #ffd344;outline-offset:1px;background:#fff8d6}
+#content-r1[data-kind=tickets] .content-ticket{height:58px;width:58px;z-index:5;left:6px;top:6px}
+#content-r1[data-kind=tickets] .content-scene-cue{top:10px;left:75px;transform:none;font-size:14px}
+#content-r1[data-kind=tickets] .content-route{top:80px;left:10px;right:auto}
+#content-r1[data-kind=tickets] .content-passengers{position:absolute;right:auto;bottom:auto;height:15%;width:35%;display:block;z-index:4;pointer-events:none}
+.boarding-friend{position:absolute;top:0;left:calc(85% - var(--walk)*57% + var(--seat)*4%);height:85%;width:28px;overflow:hidden}
+.content-passengers .boarding-friend img{width:100%;height:100%;object-fit:contain}
+.boarding-friend.seated{left:calc(36% + var(--seat)*14%);top:-13%;height:35%;width:13%;border:1px solid #143b61;border-radius:4px;background:#b3e8ff}
+.train-open-door{position:absolute;left:28%;top:5%;width:15%;height:72%;background:#143b61;border:3px solid #ffd344;border-radius:5px}
+#content-r1[data-phase=checkpoint] .train-open-door,#content-r1[data-phase=done] .train-open-door{display:none}
+.content-finale{display:none;position:absolute;inset:0;z-index:10;background:#8ed8f0}
+.content-finale img{width:100%;height:100%;object-fit:cover}
+@media(orientation:landscape){.content-finale img{object-fit:contain}}
+#content-r1[data-phase=done] .content-finale{display:block}
+#content-r1[data-phase=done] .content-scene-cue{display:none}
+@media(max-width:360px) and (orientation:portrait){#content-r1{padding:5px;gap:5px}#content-hint{font-size:16px}.content-work{padding:5px;gap:3px}#content-controls{gap:4px}.content-scene-cue{font-size:13px}.content-observe span{min-width:40px;height:30px}.content-observe svg{width:20px}#content-r1 .content-stations button{width:62px;min-height:60px}.content-stations span{font-size:10px}#content-r1 .content-stations svg{height:38px}.content-force{font-size:12px;padding:1px 5px}.force-arrow{font-size:28px}}
+@media(max-height:450px) and (orientation:landscape){.content-scene-cue{top:32px;font-size:11px}.content-carrier{bottom:3%;height:65%}.content-observe span{height:25px;min-width:35px}.content-observe svg{height:19px;width:19px}#content-r1[data-kind=crossing] .content-route{top:62px}#content-r1[data-kind=tickets] .content-ticket{width:40px;height:40px}#content-r1[data-kind=tickets] .content-scene-cue{left:56px;top:5px;font-size:10px}#content-r1 .content-stations button{right:1%;width:60px;min-height:60px}#content-r1 .content-stations svg{height:36px}#content-r1[data-kind=tickets] .content-route{top:52px}.content-force{font-size:11px;padding:0 5px}.force-arrow{font-size:25px}}
+@media(prefers-reduced-motion:reduce){.content-carrier,.cake-cream{transform:none!important}}

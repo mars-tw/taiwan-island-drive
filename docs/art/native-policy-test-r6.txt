@@ -1,0 +1,11 @@
+python : ......
+位於 線路:2 字元:494
++ ... TEXITCODE}; python tests/native-ios/test_screenshot_evidence.py *> do ...
++                 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (......:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+
+----------------------------------------------------------------------
+Ran 6 tests in 0.081s
+
+OK

@@ -1,0 +1,28 @@
+{
+  "status": "VERIFIED",
+  "tool": "image_gen.imagegen",
+  "model_slug": null,
+  "generationCalls": 1,
+  "newDesigns": 1,
+  "newAnimationPoses": 2,
+  "newRuntimeImages": 2,
+  "original": "docs/content/r6/art/grandma-sheet-original.png",
+  "sourceSha256": "c98ce43d6219647f5798054af486de1c1d03760e45e72514fa188f651bb3fe7b",
+  "processing": "Deterministic crop at transparent cell gutter, trim transparent margins, proportional fit to 350x350; alpha preserved; no repainting",
+  "assets": [
+    {
+      "path": "public/art/content-r6/grandma-0.png",
+      "width": 350,
+      "height": 350,
+      "hasAlpha": true,
+      "sha256": "12a527eecf7ed5cde7ffa7cc31aaea9c638d6d20cc5fdaefb02caa17b6975d21"
+    },
+    {
+      "path": "public/art/content-r6/grandma-1.png",
+      "width": 350,
+      "height": 350,
+      "hasAlpha": true,
+      "sha256": "ccabcdd01f073b528ca461a0ee655210386cb9e158936ae67d1a5365653bf7be"
+    }
+  ]
+}

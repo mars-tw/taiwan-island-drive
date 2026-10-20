@@ -1,0 +1,74 @@
+/* R8 keeps the magnifier in its own dashboard, outside the road viewport. */
+#content-start>span{font-size:12px;line-height:1.1}
+#content-home-progress{font-size:10px;line-height:1.1}
+.cake-road-view{display:none;position:absolute;inset:174px 0 0;background:center/100% 100% no-repeat;border-top:3px solid #1479b8;overflow:hidden}
+#content-r1[data-kind=cake][data-phase=playing] .cake-road-view{display:block}
+#content-r1[data-kind=cake][data-phase=playing] .content-scene{background:#e4f6ff}
+#content-r1[data-stage="0"] .cake-road-view{background-image:url('/art/content-r3/cake-slope.webp')}
+#content-r1[data-stage="1"] .cake-road-view{background-image:url('/art/content-r3/cake-bends.webp')}
+#content-r1[data-stage="2"] .cake-road-view{background-image:url('/art/content-r3/cake-bay.webp')}
+#content-r1 .cake-closeup{left:2px;right:auto;top:0;width:174px;height:174px;border-radius:16px}
+.cake-closeup>div{position:absolute;inset:0;width:172px;height:172px;transform:none}
+#content-r1[data-kind=cake][data-phase=playing] .content-force{top:88px;bottom:auto;left:181px;right:3px;min-height:70px;padding:3px;gap:2px!important;border:3px solid #1479b8;background:#fff8de}
+#content-r1[data-kind=cake] .force-coach{width:34px;height:46px}
+.force-readout{grid-template-columns:26px 1fr;font-size:13px}.force-arrow{font-size:24px;line-height:1}.force-arrow svg{width:26px;height:28px}.force-meter{height:12px;grid-column:1/-1}.force-meter i{min-width:0}
+.content-scene[data-settled=true] .force-meter i{background:#58b85b!important}
+#content-r1[data-kind=cake][data-phase=playing] .cake-task{left:181px;right:3px;top:5px;max-width:none;padding:4px;font-size:13px}
+#content-r1[data-kind=cake] .cake-route-map{left:181px;right:3px;top:46px;gap:2px;justify-content:center}
+#content-r1 .cake-route-map span{height:28px;width:32px;font-size:24px}.cake-route-map svg{height:24px;width:24px}
+#content-r1[data-kind=cake] .content-route{display:none}
+#content-r1 .cake-correction{left:5px;bottom:58%;width:42px;height:42px;opacity:1}
+#content-r1 [data-action][data-needed=true]{box-shadow:inset 0 0 0 3px #f46b27;background:#ffd344}
+
+/* The waiting queue stays on the far pavement, above the painted zebra. */
+#content-r1[data-kind=crossing] .crossing-panorama{inset:0;transform:none!important;background-size:100% 100%}
+#content-r1[data-kind=crossing] .crossing-waiting{inset:0;height:100%;width:100%;visibility:visible!important;pointer-events:none}
+.crossing-waiting>div{position:absolute;width:86px;height:138px;bottom:39%;left:0}
+.crossing-waiting>div[data-waiting=grandma]{bottom:57%}
+.crossing-waiting>div[data-waiting=bike]{left:auto;right:0;width:76px}
+#content-r1 .crossing-waiting img{width:100%;height:100%;max-width:none}
+.crossing-waiting::before{display:none}
+.crossing-waiting>div::after{content:'';position:absolute;left:10%;right:10%;bottom:0;height:7px;background:#143b614d;border-radius:50%}
+#content-r1[data-kind=crossing] .content-walker{top:auto;width:156px;height:178px;margin-left:-78px}
+#content-r1[data-kind=crossing] .crossing-lookout{display:none!important}
+#content-r1[data-kind=crossing] .crossing-decision{display:none!important}
+#content-r1 .crossing-arrived>div{width:64px;height:105px}
+.content-walker[data-pose="1"] img{object-position:center bottom}
+
+/* Signs sit behind the people; every queue-to-door path is visible. */
+#content-r1[data-kind=tickets] .content-stations{z-index:3}
+#content-r1[data-kind=tickets] .content-passengers{z-index:7;pointer-events:none}
+#content-r1[data-kind=tickets] .boarding-friend{height:90px;width:49px}
+#content-r1[data-kind=tickets] .ticket-counts{z-index:8}
+.lesson-route-proof{padding:6px;bottom:8px;gap:4px}
+.lesson-route-proof>div{flex-direction:column;gap:3px;align-items:stretch;text-align:center;font-size:13px}
+.lesson-route-proof section{display:flex;align-items:center;justify-content:center;gap:2px;min-height:66px}
+.lesson-route-proof section>span{position:relative;flex:1;min-width:0}
+.lesson-route-proof small{display:block;background:#fff8de;border:1px solid #1479b8;border-radius:5px;font-size:12px}
+.lesson-route-proof img{width:30px;height:56px}.lesson-route-proof .road-thumbnail{width:45px;height:68px}.lesson-route-proof svg{width:56px;height:56px}
+.lesson-route-proof strong{font-size:12px;line-height:1.4}
+
+@media(max-width:360px) and (orientation:portrait){
+ .cake-road-view{inset:140px 0 0}
+ #content-r1 .cake-closeup{width:140px;height:140px;top:0;left:0}.cake-closeup>div{transform:scale(.79);transform-origin:top left}
+ #content-r1[data-kind=cake][data-phase=playing] .content-force{left:145px;top:69px;right:0;min-height:64px}
+ #content-r1[data-kind=cake] .force-coach{display:none}.force-readout{font-size:12px}
+ #content-r1[data-kind=cake][data-phase=playing] .cake-task{left:145px;top:0;font-size:11px}
+ #content-r1[data-kind=cake] .cake-route-map{left:145px;top:35px}
+ .crossing-waiting>div{width:58px;height:90px}.crossing-waiting>div[data-waiting=bike]{width:58px}
+ #content-r1[data-kind=crossing] .content-walker{width:126px;height:122px;margin-left:-63px}
+ #content-r1[data-kind=tickets] .boarding-friend{height:62px;width:35px}
+ .lesson-route-proof{padding:2px;bottom:3px}.lesson-route-proof>div{font-size:10px}.lesson-route-proof section{min-height:42px}.lesson-route-proof img{width:22px;height:36px}.lesson-route-proof .road-thumbnail{width:30px;height:44px}.lesson-route-proof strong{font-size:9px}.lesson-route-proof svg{width:36px;height:36px}
+}
+@media(orientation:landscape) and (max-height:520px){
+ .cake-road-view{inset:0 0 0 146px;border-top:0;border-left:3px solid #1479b8}
+ #content-r1 .cake-closeup{width:142px;height:142px;top:0;left:0}.cake-closeup>div{transform:scale(.79);transform-origin:top left}
+ #content-r1[data-kind=cake][data-phase=playing] .content-force{left:0;top:145px;width:142px;right:auto;min-height:48px}
+ #content-r1[data-kind=cake] .force-coach{display:none}
+ #content-r1[data-kind=cake][data-phase=playing] .cake-task{display:none}
+ #content-r1[data-kind=cake] .cake-route-map{display:none}
+ .crossing-waiting>div{width:48px;height:65px}.crossing-waiting>div[data-waiting=bike]{width:48px}
+ #content-r1[data-kind=crossing] .content-walker{width:110px;height:95px;margin-left:-55px}
+ #content-r1[data-kind=tickets] .boarding-friend{height:48px;width:29px}
+ .lesson-route-proof{padding:1px;bottom:1px}.lesson-route-proof>div{font-size:9px}.lesson-route-proof section{min-height:28px}.lesson-route-proof img{width:18px;height:26px}.lesson-route-proof .road-thumbnail{width:23px;height:30px}.lesson-route-proof small{font-size:9px}.lesson-route-proof strong{font-size:8px}.lesson-route-proof svg{height:28px;width:28px}
+}

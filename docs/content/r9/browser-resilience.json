@@ -1,0 +1,101 @@
+{
+  "status": "VERIFIED",
+  "rows": [
+    {
+      "label": "offline reload, nine decisions and completed local save",
+      "status": "VERIFIED"
+    },
+    {
+      "label": "320px storage denied, reduced motion, pause, successful checkpoint",
+      "status": "VERIFIED",
+      "controls": 4
+    }
+  ],
+  "shots": [
+    {
+      "path": "docs/content/r9/phone-crossing-offline-result.png",
+      "width": 390,
+      "height": 844,
+      "sha256": "4849037e73edb1b7195f25565636cca2d8187b7bfec7bb0f1809f06b075c05ff",
+      "state": {
+        "settled": "true",
+        "correction": "",
+        "distance": "0.00",
+        "speed": "0.00",
+        "bend": "1",
+        "tilt": "0.00",
+        "sway": "0.00",
+        "acceleration": "0.00",
+        "bayStopped": "false",
+        "bayRestarted": "false",
+        "leftTurn": "false",
+        "rightTurn": "false",
+        "focus": "left",
+        "crossTime": "0.000",
+        "crossDuration": "2.1",
+        "orderHint": "",
+        "fruitSway": "0.00",
+        "flagSway": "0.00",
+        "assisting": "false",
+        "crossed": "3",
+        "lookedLeft": "true",
+        "lookedRight": "true",
+        "decision": "false",
+        "confirmed": "false",
+        "confirmDelay": "-0.01659999999999835",
+        "person": "",
+        "doorState": "closed"
+      },
+      "phase": "done",
+      "seats": 0,
+      "offset": "0.00",
+      "summary": "先看左 3 站\n先看右 3 站\n再確認 9 次・等 9 位・出發提醒 0 次",
+      "native": false,
+      "method": "Original headless runtime PNG; RAF suspended during capture only; no gameplay assignments or pixel edits"
+    },
+    {
+      "path": "docs/content/r9/phone-crossing-storage-denied.png",
+      "width": 320,
+      "height": 568,
+      "sha256": "f4bb4d0ea7aa45222b5ae04a79ba41e4d88ea4252643003e053dba8cd4280fc5",
+      "state": {
+        "settled": "true",
+        "correction": "",
+        "distance": "0.00",
+        "speed": "0.00",
+        "bend": "1",
+        "tilt": "0.00",
+        "sway": "0.00",
+        "acceleration": "0.00",
+        "bayStopped": "false",
+        "bayRestarted": "false",
+        "leftTurn": "false",
+        "rightTurn": "false",
+        "focus": "left",
+        "crossTime": "0.000",
+        "crossDuration": "2.1",
+        "orderHint": "",
+        "fruitSway": "0.00",
+        "flagSway": "0.00",
+        "assisting": "false",
+        "crossed": "3",
+        "lookedLeft": "true",
+        "lookedRight": "true",
+        "decision": "false",
+        "confirmed": "false",
+        "confirmDelay": "-3.469446951953614e-17",
+        "person": "",
+        "doorState": "closed"
+      },
+      "phase": "checkpoint",
+      "seats": 0,
+      "offset": "0.00",
+      "summary": "先看左 1 站\n先看右 1 站\n再確認 3 次・等 3 位・出發提醒 0 次",
+      "native": false,
+      "method": "Original headless runtime PNG; RAF suspended during capture only; no gameplay assignments or pixel edits"
+    }
+  ],
+  "errors": [],
+  "external": [],
+  "responses": []
+}

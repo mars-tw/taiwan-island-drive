@@ -1,0 +1,60 @@
+/* R13: stable controls, outward roll, one physical character per identity. */
+#content-r1[data-kind=cake] .force-readout small{font-size:14px!important;line-height:1.3}
+#content-r1[data-kind=cake] .content-force{min-height:88px!important}
+#content-r1[data-kind=cake] .force-readout{font-size:16px}
+#content-r1[data-kind=cake] .force-meter{height:18px}
+#content-r1[data-kind=cake] .cake-task{font-size:14px!important}
+#content-r1[data-kind=cake] .cake-miniature{transform:scale(.72)}
+#content-r1[data-kind=cake] [data-action][data-needed=false]{background:#f5fbff!important;outline:0!important;box-shadow:inset 0 -4px #b5d8e8!important;color:#143b61}
+#content-r1[data-kind=cake] [data-action][data-needed=true]{background:#ffd344!important;outline:3px solid #f46b27!important;box-shadow:none!important}
+#content-r1[data-kind=cake] .cake-road-view{overflow:hidden}
+#content-r1[data-kind=cake][data-stage="1"] .cake-timing{left:16%;top:31%;transform:none;font-size:16px}
+#content-r1[data-kind=crossing] .crossing-panorama{inset:0;transform:none!important}
+#content-r1[data-kind=crossing]{--friend-w:58px;--friend-h:76px}
+#content-r1[data-kind=crossing] .crossing-roster{top:46px;gap:4px}
+#content-r1[data-kind=crossing] .crossing-roster button{display:flex;align-items:center;justify-content:center;gap:3px;width:82px;height:60px;padding:3px;outline:0}
+#content-r1[data-kind=crossing] .crossing-roster span{position:static;font-size:16px;width:20px}
+#content-r1[data-kind=crossing] .crossing-roster small{font-size:13px}
+#content-r1[data-kind=crossing] .crossing-roster [data-passed=true]{opacity:.55}
+.friend-number{position:absolute;left:3px;top:0;font-style:normal;background:#fff8d9;border:2px solid #1479b8;border-radius:50%;color:#143b61;font-size:14px;line-height:18px;width:18px;text-align:center;z-index:4}
+#content-r1[data-kind=crossing] .crossing-arrived b{right:0;top:0;width:18px;height:18px}
+#content-r1[data-kind=crossing] .crossing-waiting b{font-size:14px;bottom:-16px;left:0;right:0}
+#content-r1[data-kind=crossing] .crossing-lookout{top:115px;font-size:14px;max-width:44%;padding:4px}
+#content-r1[data-kind=crossing] .crossing-decision{font-size:14px;max-width:94%;white-space:normal}
+.crossing-traffic{position:absolute;width:66px;height:48px;top:43%;transform:translateX(-50%);z-index:2;pointer-events:none}
+.crossing-traffic img{width:100%;height:100%;object-fit:contain}
+.crossing-traffic b{position:absolute;left:10px;top:-18px;font-size:14px;background:#fff8d9;border:2px solid #1479b8;border-radius:5px;padding:1px 5px}
+#content-r1[data-kind=crossing] .content-scene[data-watch-side=left] .crossing-waiting [data-waiting=grandma],#content-r1[data-kind=crossing] .content-scene[data-watch-side=left] .crossing-waiting [data-waiting=child],#content-r1[data-kind=crossing] .content-scene[data-watch-side=right] .crossing-waiting [data-waiting=bike]{filter:drop-shadow(0 0 3px #ffd344)}
+
+#content-r1[data-kind=tickets] .content-scene{background-image:url('/art/content-r13/station-rail-contact.webp')}
+#content-r1[data-kind=tickets][data-phase] .ticket-vehicle{width:44%;aspect-ratio:2.42}
+#content-r1[data-kind=tickets] .content-stations button{width:68px;top:35%;min-height:68px}
+#content-r1[data-kind=tickets] .content-stations [data-choose=true]{background:#ffd344;outline:3px solid #f46b27;outline-offset:2px}
+#content-r1[data-kind=tickets] .ticket-boarding-bridge{height:8px;border-top:3px solid #ffd344;border-bottom:2px solid #143b61;background:#b5d8e8 url('/art/content-r10/boarding-step.png') center/100% 100% no-repeat;z-index:6}
+#content-r1[data-kind=tickets] .ticket-platform-segments{top:73%;z-index:2}
+#content-r1[data-kind=tickets] .ticket-platform-segments b{width:20px;height:20px;top:-24px;font-size:14px}
+#content-r1[data-kind=tickets] .content-passengers{position:absolute;inset:0;height:auto;width:100%;z-index:10;pointer-events:none}
+#content-r1[data-kind=tickets] .boarding-friend>b{top:-13px;bottom:auto;left:0;font-size:10px;width:13px;height:13px}
+#content-r1[data-kind=tickets] .ticket-counts span{font-size:14px}
+#content-r1[data-kind=tickets] .ticket-comparison>strong{font-size:14px}
+@media(max-width:360px) and (orientation:portrait){
+ #content-r1[data-kind=cake] .content-force{min-height:75px!important;top:38px!important}
+ #content-r1[data-kind=cake] .force-readout{font-size:14px}
+ #content-r1[data-kind=crossing]{--friend-w:44px;--friend-h:58px}
+ #content-r1[data-kind=crossing] .crossing-roster{top:31px}
+ #content-r1[data-kind=crossing] .crossing-roster button{width:66px}
+ #content-r1[data-kind=crossing] .crossing-lookout{top:96px;font-size:12px}
+ #content-r1[data-kind=crossing] .crossing-waiting b{font-size:11px}
+ #content-r1[data-kind=tickets] .content-stations button{width:60px;min-height:60px;top:65px}
+ #content-r1[data-kind=tickets] .ticket-counts span{font-size:11px}
+}
+@media(orientation:landscape) and (max-height:520px){
+ #content-r1[data-kind=cake] .content-force{top:114px!important;min-height:75px!important}
+ #content-r1[data-kind=cake] .force-readout{font-size:14px}
+ #content-r1[data-kind=crossing]{--friend-w:38px;--friend-h:50px}
+ #content-r1[data-kind=crossing] .crossing-roster{top:27px}
+ #content-r1[data-kind=crossing] .crossing-roster button{width:65px}
+ #content-r1[data-kind=crossing] .crossing-lookout{top:93px;font-size:11px}
+ #content-r1[data-kind=tickets] .content-stations button{width:60px;min-height:60px;top:78px}
+ .crossing-traffic{width:42px;height:32px}
+}

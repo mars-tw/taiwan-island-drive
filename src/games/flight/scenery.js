@@ -1,5 +1,6 @@
 import * as THREE from 'three';
 import {getFlightTargets} from './flight-plans.js';
+import {assetUrl} from '../../shared/paths.js';
 
 const clamp=(n,a,b)=>Math.max(a,Math.min(b,n));
 const smooth=(a,b,n)=>{const t=clamp((n-a)/(b-a),0,1);return t*t*(3-2*t);};
@@ -8,10 +9,10 @@ const gaussian=(x,z,cx,cz,sx,sz,h)=>h*Math.exp(-((x-cx)**2/(sx*sx)+(z-cz)**2/(sz
 const material=(color,roughness=.9)=>new THREE.MeshStandardMaterial({color,roughness});
 const EXTENT=Object.freeze({xMin:-18000,xMax:18000,zMin:-18000,zMax:18000,width:36000,depth:36000,unit:'metre'});
 const PALETTES={
- coast:{sky:0xbfcdd3,water:0x3b6d7b,low:0x7d8b69,forest:0x536657,rock:0x7b817b,sand:0xc1b698},
- valley:{sky:0xc7d0d0,water:0x51757b,low:0x83916d,forest:0x4e6353,rock:0x81877c,sand:0xb6ac8c},
- island:{sky:0xc0d5da,water:0x347c8b,low:0x999d77,forest:0x687c67,rock:0x747872,sand:0xd2c4a4},
- metro:{sky:0xbdcbd1,water:0x476e7c,low:0x7d8b70,forest:0x526755,rock:0x808782,sand:0xbdb394}
+ coast:{sky:0x92cdee,water:0x2588ab,low:0x79ad5f,forest:0x4a8450,rock:0x8a8f86,sand:0xe0cf9a},
+ valley:{sky:0x9fd2ea,water:0x3f8f9a,low:0x84b263,forest:0x447d4c,rock:0x8f9384,sand:0xd2c28e},
+ island:{sky:0x8fd3ef,water:0x1c9fb5,low:0x9fb36a,forest:0x5c8f5a,rock:0x86887f,sand:0xeedcae},
+ metro:{sky:0x98c8ec,water:0x3383a6,low:0x7fa968,forest:0x4a7f50,rock:0x8f948f,sand:0xd6c99c}
 };
 
 export class FlightScenery {
@@ -115,6 +116,7 @@ export class FlightScenery {
   this.batchBoxes(airport.id+'_SafetyMargins',[{x:x-46,y:-.02,z:center,w:40,h:.04,d:length+160},{x:x+46,y:-.02,z:center,w:40,h:.04,d:length+160}],earth);
   const marks=[{x:x-23.6,y:.08,z:center,w:.5,h:.02,d:length},{x:x+23.6,y:.08,z:center,w:.5,h:.02,d:length}];for(let z=start+70;z<end-70;z+=72)marks.push({x,y:.08,z,w:.9,h:.025,d:32});for(const threshold of [start+22,end-35])for(let offset=-18;offset<=18;offset+=6)marks.push({x:x+offset,y:.09,z:threshold,w:3.2,h:.02,d:28});for(const z of [start+290,end-290])for(const off of [-12,12])marks.push({x:x+off,y:.09,z,w:5,h:.02,d:28});this.batchBoxes(airport.id+'_WhiteMarkings',marks,white);
   this.runwayLabel('36',x,start+80);this.runwayLabel('18',x,end-90);
+  if(primary){const texture=new THREE.TextureLoader().load(assetUrl('art/r8/coast-sign.png'));texture.colorSpace=THREE.SRGBColorSpace;const mat=new THREE.MeshBasicMaterial({map:texture,transparent:true,depthWrite:false});for(const z of [start+145,start+480,start+900])for(const side of [-1,1]){const crest=new THREE.Mesh(new THREE.PlaneGeometry(26,26),mat);crest.name='PacificAirfieldCrest';crest.rotation.x=-Math.PI/2;crest.position.set(x+side*38,.14,z);this.root.add(crest);}}
   const terminal=[{x:x-145,y:6.1,z:start+160,w:54,h:12,d:32},{x:x-145,y:12.4,z:start+160,w:60,h:.8,d:37},{x:x-94,y:14,z:start+265,w:9,h:28,d:9}],glass=[{x:x-145,y:6,z:start+143.9,w:44,h:7,d:.15},{x:x-94,y:29,z:start+265,w:17,h:5,d:17}];this.batchBoxes(airport.id+'_Terminal',terminal,concrete);this.batchBoxes(airport.id+'_AirportGlazing',glass,material(0x4b6977,.23));
   const geo=new THREE.SphereGeometry(.55,6,4),lights=[];for(let z=start;z<=end;z+=60)for(const side of [-27,27])lights.push({x:x+side,y:.45,z});if(primary)for(let z=-550;z<0;z+=36)lights.push({x,y:.4,z});const lm=new THREE.InstancedMesh(geo,new THREE.MeshBasicMaterial({color:0xf7dca0}),lights.length),dummy=new THREE.Object3D();lights.forEach((p,i)=>{dummy.position.set(p.x,p.y,p.z);dummy.updateMatrix();lm.setMatrixAt(i,dummy.matrix);});this.root.add(lm);
   if(primary){for(let i=0;i<4;i++){const p=new THREE.Mesh(new THREE.BoxGeometry(1.4,.55,1.4),new THREE.MeshBasicMaterial({color:0xffffff}));p.position.set(-36-i*2,.65,210);this.root.add(p);this.papi.push(p);}this.batchBoxes('WindsockMast',[{x:53,y:5,z:190,w:.18,h:10,d:.18}],concrete);const sock=new THREE.Mesh(new THREE.CylinderGeometry(.8,.48,4.4,10),material(0xbf7856));sock.rotation.z=Math.PI/2;sock.position.set(55.2,10,190);this.root.add(sock);}

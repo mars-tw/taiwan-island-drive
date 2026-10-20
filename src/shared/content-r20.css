@@ -1,0 +1,24 @@
+/* R20: local corrections to the existing three lessons. */
+#content-r1[data-kind=cake][data-stage="2"] .cake-road-view{background-image:url('/art/content-r20/cake-bay.webp')!important;background-position:center!important;background-size:100% 100%!important}
+#content-r1[data-kind=cake] .force-meter[data-tone] i{background:#f46b27!important}
+#content-r1[data-kind=cake] .force-meter::after{display:none}
+#content-r1[data-kind=cake] .force-label{display:block;font-size:12px;line-height:16px}
+#content-r1[data-kind=cake] .recovery-ring{display:flex;gap:5px;align-items:center;color:#075985;font-size:12px;line-height:18px}
+#content-r1[data-kind=cake] .recovery-ring i{display:block;width:22px;height:22px;border-radius:50%;background:conic-gradient(#1479b8 var(--recovered),#d7edf5 0);position:relative;flex:none}
+#content-r1[data-kind=cake] .recovery-ring i::after{content:'';position:absolute;inset:5px;background:#fff8d9;border-radius:50%}
+#content-r1[data-kind=cake] #content-controls [data-action][data-held=true][data-wrong-hold=true]{background:#ffe2d5!important;color:#8e2e16;outline:3px solid #c44725!important;box-shadow:inset 0 5px #e29b7b!important}
+#content-r1[data-kind=tickets] .ticket-boarding-bridge{height:32px!important;border:3px solid #143b61!important;border-top:5px solid #ffd344!important;box-shadow:0 2px #fff8d9;background-color:#b5d8e8!important;box-sizing:border-box}
+#content-r1[data-kind=tickets] .boarding-friend[data-progress="0.00"]{z-index:10}
+#content-r1[data-kind=tickets][data-phase] .ticket-counts{display:flex!important;flex-wrap:nowrap;gap:6px!important}
+#content-r1[data-kind=tickets] .ticket-counts span{white-space:nowrap}
+@media(max-width:360px) and (orientation:portrait){
+ #content-r1[data-kind=tickets][data-phase] .ticket-counts{gap:3px!important;right:3px!important}
+ #content-r1[data-kind=tickets] .ticket-counts span{font-size:10px!important;padding:0 3px!important}
+ #content-r1[data-kind=cake] .recovery-ring{font-size:10px;line-height:14px}
+ #content-r1[data-kind=cake] .recovery-ring i{width:18px;height:18px}
+}
+@media(orientation:landscape) and (max-height:520px){
+ #content-r1[data-kind=cake] .force-label{font-size:10px;line-height:12px}
+ #content-r1[data-kind=cake] .recovery-ring{font-size:10px;line-height:14px}
+ #content-r1[data-kind=cake] .recovery-ring i{width:18px;height:18px}
+}

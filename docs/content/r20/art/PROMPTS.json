@@ -1,0 +1,15 @@
+{
+  "tool": "image_gen.imagegen",
+  "model_slug": null,
+  "style_prefix": "Island Traffic Academy sunny Taiwan coastal storybook, chunky ink-navy outlines, rounded toy proportions, warm upper-left light, saturated sea blue sunflower yellow coral orange, gentle paper texture, clean silhouette readable at 64px.",
+  "prompt": "Island Traffic Academy sunny Taiwan coastal storybook, chunky ink-navy outlines, rounded toy proportions, warm upper-left light, saturated sea blue sunflower yellow coral orange, gentle paper texture, clean silhouette readable at 64px. Generate a replacement game background for the third cake driving lesson: a clearly identifiable roadside rest pull-off bay on the Taiwan coast. Use the provided bend painting as style reference and the previous bay painting as composition context only. Portrait 2:3, full scene, no text, no people, no vehicles. A tan coastal road enters from the bottom center-left and curves towards the upper left village shop. A large paved rest bay in the lower right has clear white edge lines and blue-white curbs, open road surface for the player's car centered at 73% width and 73% height. Strong road/bay connection visible. Richly detailed bright blue sea, distant green hills and lighthouse above, red tile shop on upper left, leafy banyan shade on right, a wooden bench, flower planters, stone paving borders and guardrail. Distribute scenery and surface texture throughout at least 70% of the image, avoid large plain sand or oversized blank foreground. Road should occupy no more than 38% of image, rest is scenic detail. Keep upper scene recognizable and full framing when stretched slightly in the game; no debug markings, no icons or sign text. Match the established sunny blue-yellow coastal storybook palette and hand-painted outline quality exactly.",
+  "newGenerationCalls": 1,
+  "newRuntimeAssets": 1,
+  "original": "docs/content/r20/art/cake-bay-original.png",
+  "runtime": "public/art/content-r20/cake-bay.webp",
+  "references": [
+    "public/art/content-r19/cake-bends.webp",
+    "public/art/content-r3/cake-bay.webp"
+  ],
+  "conversion": "Sharp WebP quality92; thumbnail for inspection only; no programmatic painting"
+}

@@ -18,12 +18,12 @@ on:
       marketing_version:
         description: 'CFBundleShortVersionString'
         type: string
-        default: '1.0.0'
+        default: '2.6.0'
         required: true
       build_number:
         description: 'Unique positive build number; increase after every accepted upload'
         type: string
-        default: '1'
+        default: '2'
         required: true
 
 permissions:

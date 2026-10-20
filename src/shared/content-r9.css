@@ -1,0 +1,24 @@
+/* R9: station controls have their own sky band, above all passenger silhouettes. */
+#content-r1[data-kind=tickets] .content-stations button{top:34%;width:68px;min-height:66px}
+#content-r1[data-kind=tickets] .content-stations button::after{display:none}
+#content-r1[data-kind=tickets] .ticket-vehicle{bottom:12%}
+#content-r1[data-kind=tickets] .ticket-seats{z-index:4}
+#content-r1[data-kind=tickets] .boarding-friend{height:90px;width:49px}
+.boarding-friend::before{content:'';position:absolute;left:15%;right:15%;bottom:0;height:5px;border-radius:50%;background:#143b614d}
+#content-r1[data-kind=tickets] .ticket-seated[data-entering=true]{z-index:4}
+#content-r1[data-kind=tickets] .ticket-seated{width:17%;transform:translateX(-5%)}
+@media(max-width:360px) and (orientation:portrait){
+ #content-r1[data-kind=tickets] .content-stations button{top:98px;width:60px;min-height:60px}
+ #content-r1[data-kind=tickets][data-phase] .content-ticket{width:32px;height:32px;left:calc(50% - 20px);top:2px}
+ #content-r1[data-kind=tickets][data-phase] .ticket-counts{top:46px}
+ #content-r1[data-kind=tickets] .ticket-counts span{font-size:10px;padding:2px;border-width:2px}
+ #content-r1[data-kind=tickets] .boarding-friend{height:48px;width:29px}
+ #content-r1[data-kind=tickets] .ticket-vehicle{bottom:10%}
+}
+@media(orientation:landscape) and (max-height:520px){
+ #content-r1[data-kind=tickets] .content-stations button{top:68px;width:60px;min-height:60px}
+ #content-r1[data-kind=tickets][data-phase] .content-ticket{width:24px;height:24px;left:2px;top:2px}
+ #content-r1[data-kind=tickets] .boarding-friend{height:34px;width:22px}
+ #content-r1[data-kind=tickets] .ticket-vehicle{bottom:4%}
+ #content-r1[data-kind=tickets][data-phase] .ticket-counts{top:4px;left:44px;right:auto;transform:none}
+}

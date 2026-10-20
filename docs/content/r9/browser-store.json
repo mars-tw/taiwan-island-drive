@@ -1,0 +1,100 @@
+{
+  "status": "VERIFIED",
+  "rows": [
+    {
+      "label": "store 1290x2796 original runtime",
+      "status": "VERIFIED"
+    },
+    {
+      "label": "store 2064x2752 original runtime",
+      "status": "VERIFIED"
+    }
+  ],
+  "shots": [
+    {
+      "path": "docs/store/screenshots/content-r9/tickets-queue-1290x2796.png",
+      "width": 1290,
+      "height": 2796,
+      "sha256": "d191dd22eeb58bce082070ae636c40439f46b18514fb5d647e676c365a47ef59",
+      "state": {
+        "settled": "false",
+        "correction": "left",
+        "distance": "30.00",
+        "speed": "0.00",
+        "bend": "1",
+        "tilt": "6.29",
+        "sway": "4.73",
+        "acceleration": "0.00",
+        "bayStopped": "false",
+        "bayRestarted": "false",
+        "leftTurn": "false",
+        "rightTurn": "false",
+        "focus": "center",
+        "crossTime": "0.000",
+        "crossDuration": "2.1",
+        "orderHint": "",
+        "fruitSway": "9.55",
+        "flagSway": "20.84",
+        "assisting": "false",
+        "crossed": "0",
+        "lookedLeft": "false",
+        "lookedRight": "false",
+        "decision": "false",
+        "confirmed": "false",
+        "confirmDelay": "0",
+        "person": "child",
+        "doorState": "open"
+      },
+      "phase": "boarding",
+      "seats": 0,
+      "offset": "0.00",
+      "summary": "",
+      "native": false,
+      "method": "Original headless runtime PNG; RAF suspended during capture only; no gameplay assignments or pixel edits"
+    },
+    {
+      "path": "docs/store/screenshots/content-r9/tickets-queue-2064x2752.png",
+      "width": 2064,
+      "height": 2752,
+      "sha256": "94f4a48cc02021a1a0b1a3aeed674582897b30c51d05e4adadf46b0227b13ea4",
+      "state": {
+        "settled": "false",
+        "correction": "left",
+        "distance": "30.00",
+        "speed": "0.00",
+        "bend": "1",
+        "tilt": "6.84",
+        "sway": "5.08",
+        "acceleration": "0.00",
+        "bayStopped": "false",
+        "bayRestarted": "false",
+        "leftTurn": "false",
+        "rightTurn": "false",
+        "focus": "center",
+        "crossTime": "0.000",
+        "crossDuration": "2.1",
+        "orderHint": "",
+        "fruitSway": "9.81",
+        "flagSway": "21.37",
+        "assisting": "false",
+        "crossed": "0",
+        "lookedLeft": "false",
+        "lookedRight": "false",
+        "decision": "false",
+        "confirmed": "false",
+        "confirmDelay": "0",
+        "person": "child",
+        "doorState": "open"
+      },
+      "phase": "boarding",
+      "seats": 0,
+      "offset": "0.00",
+      "summary": "",
+      "native": false,
+      "method": "Original headless runtime PNG; RAF suspended during capture only; no gameplay assignments or pixel edits"
+    }
+  ],
+  "errors": [],
+  "external": [],
+  "responses": []
+}

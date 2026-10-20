@@ -1,0 +1,21 @@
+// Final coupe camera check: conservative mesh bounds at rest and while driving.
+import assert from 'node:assert/strict';
+import {pathToFileURL} from 'node:url';
+import {mkdir,writeFile,readFile} from 'node:fs/promises';
+import {createHash} from 'node:crypto';
+const {chromium}=await import(pathToFileURL(process.env.PLAYWRIGHT_MODULE||'C:/Users/digimkt/Desktop/遊戲/storm-apocalypse/node_modules/playwright/index.mjs').href);
+const base=process.env.BASE_URL||'http://127.0.0.1:5286/',out='docs/art/evidence/r7',store='docs/store/screenshots/art-r7';
+await mkdir(out,{recursive:true});await mkdir(store,{recursive:true});
+const sizes=[['se',320,568,1],['se-landscape',568,320,1],['phone',390,844,1],['phone-landscape',844,390,1],['laptop',1366,600,1],['short-laptop',1280,640,1],['ipad',768,1024,1],['ipad-landscape',1024,768,1],['ipad13-landscape',1376,1032,1],['desktop',1920,1080,1],['iphone-store',430,932,3],['ipad-store',1032,1376,2]];
+const browser=await chromium.launch({headless:true,args:['--use-angle=d3d11','--enable-gpu','--ignore-gpu-blocklist']}),rows=[],shots=[],errors=[];
+async function bounds(page){return page.evaluate(()=>{const g=window.__islandDrive.game;g.car.updateWorldMatrix(true,true);const xs=[],ys=[];g.car.traverse(o=>{if(!o.isMesh)return;o.geometry.computeBoundingBox();const b=o.geometry.boundingBox;for(const x of [b.min.x,b.max.x])for(const y of [b.min.y,b.max.y])for(const z of [b.min.z,b.max.z]){const p=g.vehicleRoot.position.clone().set(x,y,z).applyMatrix4(o.matrixWorld).project(g.camera);xs.push((p.x*.5+.5)*g.canvas.clientWidth);ys.push((-.5*p.y+.5)*g.canvas.clientHeight+g.canvas.getBoundingClientRect().top);}});return {left:Math.min(...xs),right:Math.max(...xs),top:Math.min(...ys),bottom:Math.max(...ys),width:Math.max(...xs)-Math.min(...xs),height:Math.max(...ys)-Math.min(...ys)};});}
+try{for(const [name,width,height,dpr] of sizes){
+ const context=await browser.newContext({viewport:{width,height},deviceScaleFactor:dpr,hasTouch:true,serviceWorkers:'block'}),page=await context.newPage();page.on('pageerror',e=>errors.push(e.message));
+ await page.goto(base+'car/');await page.locator('#start-button:not([disabled])').waitFor();await page.waitForFunction(()=>!document.querySelector('#loading-screen'));await page.locator('#start-button').click();await page.waitForFunction(()=>window.__islandDrive.game.phase==='running');
+ const atRest=await bounds(page);await page.locator('#auto-throttle').click();await page.waitForTimeout(name.endsWith('store')?3800:1200);const moving=await bounds(page);
+ for(const b of [atRest,moving]){assert.ok(b.left>=0&&b.right<=width&&b.top>=64&&b.bottom<=height,`${name}: ${JSON.stringify(b)}`);if(width===390)assert.ok(b.width>=40&&b.height>=40);}
+ const path=`${name.endsWith('store')?store:out}/${name}-02-car-driving.png`;await page.screenshot({path});const bytes=await readFile(path);shots.push({path,width:bytes.readUInt32BE(16),height:bytes.readUInt32BE(20),sha256:createHash('sha256').update(bytes).digest('hex')});rows.push({name,status:'VERIFIED',atRest,moving});await context.close();console.log('VERIFIED '+name+' car fully in frame');
+}}finally{await browser.close();await writeFile('docs/art/car-framing-r7.json',JSON.stringify({status:rows.length===sizes.length&&!errors.length?'VERIFIED':'BLOCKED',rows,shots,errors,method:'Actual UI at rest and normal auto-throttle; conservative projected mesh bounds. No state or screenshot edits.'},null,2));}
+assert.deepEqual(errors,[]);
+const visual=JSON.parse(await readFile('docs/art/visual-r7.json','utf8'));for(const s of shots){const old=visual.shots.find(r=>r.path===s.path);if(old)Object.assign(old,s,{captureSource:'check-car-framing-r7.mjs after final portrait camera correction'});}visual.finalCarFraming='car-framing-r7.json; final camera change affects car only; other 125 full-matrix checks unchanged';await writeFile('docs/art/visual-r7.json',JSON.stringify(visual,null,2));
+const manifest=JSON.parse(await readFile(store+'/manifest.json','utf8'));for(const s of shots){const old=manifest.shots.find(r=>r.path===s.path);if(old)Object.assign(old,s,{captureSource:'check-car-framing-r7.mjs'});}await writeFile(store+'/manifest.json',JSON.stringify(manifest,null,2));

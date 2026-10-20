@@ -1,0 +1,75 @@
+{
+  "status": "VERIFIED",
+  "version": "2.25.0",
+  "baseline": "24cec45a3de585cd5dbf04f538a7010128b309b0",
+  "files": [
+    {
+      "path": "CREDITS.md",
+      "sha256": "548229e22881f1f27f2a64ae247b1a19d7e11c6835d0a5cdea1e0aa818772af8"
+    },
+    {
+      "path": "package.json",
+      "sha256": "54b5dd2a9b43fef45bb814df5f442c323e354251fc8096e08a4248edb0ab83ff"
+    },
+    {
+      "path": "package-lock.json",
+      "sha256": "e8e46311f46878aaf1c68c6085382a6d6f48773c40b075061fcb89c5eaacddb2"
+    },
+    {
+      "path": "src/games/car/config.js",
+      "sha256": "377de52c614eec9fdd1f526f1bbbe9e8835451ad87c46f93eff4308d5b1dc81f"
+    },
+    {
+      "path": "src/shared/content-r1.js",
+      "sha256": "dbd2da5067fb58098f039b857b6a81e2643e5b15b713860e502cdce6a80ced39"
+    },
+    {
+      "path": "src/shared/content-r1-ui.js",
+      "sha256": "f536e667f6ac0cd0f7b82ef55ff733804109b4e855d26b3e43976a80517054fa"
+    },
+    {
+      "path": "src/shared/content-r13-scene.js",
+      "sha256": "f9c0beaa98109a4e6735d8056f50054dfdf0af135c1e7b0305fdf14b68244710"
+    },
+    {
+      "path": "src/shared/content-r13.css",
+      "sha256": "3e68ab2c13e76565fb521cdad75d438ea659876055093a071535c94ab085a6c7"
+    },
+    {
+      "path": "tests/shared/content-r13.test.js",
+      "sha256": "c0b9ff3e1c4d078e6ccc324756158ed376697cf944db882b28abcce3aa860240"
+    },
+    {
+      "path": "scripts/check-content-r13.mjs",
+      "sha256": "776a57b744884a06774a8f2a778d9b9fd1a92737d221d3a24f24a1f96e7f6bf4"
+    },
+    {
+      "path": "scripts/prepare-content-r13.mjs",
+      "sha256": "79b74b8946fd93d78ad79c73befa4abf2b62205fa3bcd596133d5296a59fa057"
+    },
+    {
+      "path": "scripts/verify-content-r13-release.mjs",
+      "sha256": "ce71e2e6a935584ecf774a7a74c83bd9bd9ff45624b48917ed603ef90e30329d"
+    },
+    {
+      "path": "public/art/content-r13/station-rail-contact.webp",
+      "sha256": "9c7078f18d5754a05d99aa3e580df6e082ba493ff49e0c6acfeb9070d4f07fc2"
+    },
+    {
+      "path": "public/models/catalog.json",
+      "sha256": "faa85229d12a525d44dda18f094c50bed51bcae2570aac9dbd61834fd3456387"
+    },
+    {
+      "path": "android/app/build.gradle",
+      "sha256": "be395aec74c0471e7bae90b11275bc486711af48ef49183f2cf0ba0aeaf150ec"
+    },
+    {
+      "path": "ios/App/App.xcodeproj/project.pbxproj",
+      "sha256": "ba6168dc774be0aa1099d62773fe2135b641bc1a637a066e10b200f6d863503d"
+    },
+    {
+      "path": "docs/art/ART_DIRECTION.md",
+      "sha256": "5ad5eaec264995850e0df420df505b2ada02f57c13d929abfa510d1d2f3c4571"
+    }
+  ]
+}

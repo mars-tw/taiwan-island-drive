@@ -1,0 +1,36 @@
+{
+  "status": "VERIFIED",
+  "method": "WCAG sRGB explicit UI tokens; orange CTA preserves R4 #0B2942 text override. Not every screenshot pixel.",
+  "rows": [
+    {
+      "foreground": "#143B61",
+      "background": "#FFFFFF",
+      "ratio": 11.49,
+      "pass": true
+    },
+    {
+      "foreground": "#143B61",
+      "background": "#FFF6D4",
+      "ratio": 10.6,
+      "pass": true
+    },
+    {
+      "foreground": "#0B2942",
+      "background": "#F46B27",
+      "ratio": 4.95,
+      "pass": true
+    },
+    {
+      "foreground": "#143B61",
+      "background": "#FFD344",
+      "ratio": 8.02,
+      "pass": true
+    },
+    {
+      "foreground": "#346184",
+      "background": "#FFFFFF",
+      "ratio": 6.58,
+      "pass": true
+    }
+  ]
+}

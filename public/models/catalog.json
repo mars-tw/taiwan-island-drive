@@ -35,15 +35,15 @@
           "file": "coupe.glb",
           "publicPath": "models/coupe.glb",
           "repositoryPath": "public/models/coupe.glb",
-          "bytes": 4124368,
-          "sha256": "da0705986b4ee8df8e8b4d4ca4396309adddb7148ffac51faf85114cd2ec5cda",
+          "bytes": 4236724,
+          "sha256": "472e3592fd31377318213a2b60c413b8987b9eb068dd038f5f61bd9a5268777b",
           "meshes": 36,
           "nodes": 41,
           "embeddedImages": 1,
           "source": "blender/island-drive.blend",
           "generator": "blender/build_assets.py",
           "drawCalls": 36,
-          "triangles": 22862,
+          "triangles": 26687,
           "texturedMaterials": 18
         },
         {
@@ -315,7 +315,7 @@
       "mapping": "UV 4x4 per-face atlas"
     }
   ],
-  "visualVersion": "2.3.0",
+  "visualVersion": "2.32.0",
   "historicalTextures": [
     "textures/train.png",
     "textures/aircraft.png"

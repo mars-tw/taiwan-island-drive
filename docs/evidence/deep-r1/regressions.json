@@ -1,0 +1,54 @@
+{
+  "status": "VERIFIED",
+  "rows": [
+    {
+      "script": "scripts/check-art-r7.mjs",
+      "sha256": "d1abb8c9f7ad73fc67eac7996238f5d278765b016960a7baa25c5e451a61d4a8",
+      "assertions": "Unchanged; only artifact directory literals redirected",
+      "exitCode": 0,
+      "log": "docs/evidence/deep-r1/check-art-r7.txt"
+    },
+    {
+      "script": "scripts/check-acceptance-r7.mjs",
+      "sha256": "a99333ae8de40e085a719737405663bd0bdb1855648a19b868b20b63e92d9019",
+      "assertions": "Unchanged; only artifact directory literals redirected",
+      "exitCode": 0,
+      "log": "docs/evidence/deep-r1/check-acceptance-r7.txt"
+    },
+    {
+      "script": "scripts/check-car-framing-r7.mjs",
+      "sha256": "ade9ebfc70716fe6d0131f054373c8c5b22f860d7e51e4d04e4743cb3780bfc5",
+      "assertions": "Unchanged; only artifact directory literals redirected",
+      "exitCode": 0,
+      "log": "docs/evidence/deep-r1/check-car-framing-r7.txt"
+    },
+    {
+      "script": "scripts/check-mobile-keyboard-r7.mjs",
+      "sha256": "b798e35d7f7904c4a7b2133499c160a9ecd31e573835d189843f6e0ace91aa3c",
+      "assertions": "Unchanged; only artifact directory literals redirected",
+      "exitCode": 0,
+      "log": "docs/evidence/deep-r1/check-mobile-keyboard-r7.txt"
+    },
+    {
+      "script": "scripts/check-mobile.mjs",
+      "sha256": "4f02ffa53eca896d8601f80e1fde0131d75ec781c218dac9117022d57c685d9c",
+      "assertions": "Unchanged; only artifact directory literals redirected",
+      "exitCode": 0,
+      "log": "docs/evidence/deep-r1/check-mobile.txt"
+    },
+    {
+      "script": "scripts/check-reachability.mjs",
+      "sha256": "bebeb36bfaf0830c63425e6cf0c8bf233692c28c968a6f88696a4e0a972db213",
+      "assertions": "Unchanged; only artifact directory literals redirected",
+      "exitCode": 0,
+      "log": "docs/evidence/deep-r1/check-reachability.txt"
+    },
+    {
+      "script": "scripts/run-flight-layout.mjs",
+      "sha256": "dd6e4697e85514f2da09fafffa9791ffff224851aaaee702974825d3a91635cd",
+      "assertions": "Unchanged; only artifact directory literals redirected",
+      "exitCode": 0,
+      "log": "docs/evidence/deep-r1/run-flight-layout.txt"
+    }
+  ]
+}

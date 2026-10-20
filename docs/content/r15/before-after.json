@@ -1,0 +1,21 @@
+{
+  "status": "VERIFIED",
+  "method": "Unscaled copies; historical R14 before versus current R15 runtime after",
+  "comparisons": [
+    [
+      "phone",
+      "docs/content/r14/phone-cake-left-bend.png",
+      "docs/content/r15/phone-cake-stage-2-left-driving.png"
+    ],
+    [
+      "landscape",
+      "docs/content/r14/device-landscape-cake-layout.png",
+      "docs/content/r15/device-844x390-cake.png"
+    ],
+    [
+      "ipad",
+      "docs/content/r14/device-ipad-cake-layout.png",
+      "docs/content/r15/device-768x1024-cake.png"
+    ]
+  ]
+}

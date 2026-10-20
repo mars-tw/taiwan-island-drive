@@ -1,20 +1,21 @@
 import * as THREE from 'three';
 import { mergeGeometries } from 'three/addons/utils/BufferGeometryUtils.js';
 import { roadCenter, roadHeading, routeAltitude } from './physics.js';
+import {appUrl} from '../../shared/paths.js';
 
 export const ENVIRONMENTS = {
-  coast: { skyTop: '#5a9dbc', skyBottom: '#d7e5dd', fog: '#b8d6d5', fogNear: 190, fogFar: 610,
-    ground: '#799c70', road: '#394348', sun: '#fff0c9', sunIntensity: 3.4, ambient: 1.45,
-    sunDirection: [70, 85, 15], water: '#438f9e', waterLight: '#91bfc1', exposure: 1.12 },
-  alishan: { skyTop: '#688b99', skyBottom: '#c4d5c9', fog: '#9eb9b0', fogNear: 85, fogFar: 330,
-    ground: '#46644b', road: '#414847', sun: '#e6eed4', sunIntensity: 2.4, ambient: 1.35,
-    sunDirection: [-45, 80, 40], water: '#456b65', waterLight: '#91aba2', exposure: 1.12 },
-  taipei: { skyTop: '#11182d', skyBottom: '#4a4567', fog: '#383a55', fogNear: 150, fogFar: 470,
+  coast: { skyTop: '#2f8fd8', skyBottom: '#bfe6f5', fog: '#b9e0ee', fogNear: 230, fogFar: 680,
+    ground: '#4c9a3a', road: '#394348', sun: '#fff0c9', sunIntensity: 3.4, ambient: 1.45,
+    sunDirection: [70, 85, 15], water: '#1f93b5', waterLight: '#6fd0d6', exposure: 1.16 },
+  alishan: { skyTop: '#4f95c9', skyBottom: '#cfe9df', fog: '#b4d6cb', fogNear: 110, fogFar: 380,
+    ground: '#3c7a3e', road: '#414847', sun: '#e6eed4', sunIntensity: 2.4, ambient: 1.35,
+    sunDirection: [-45, 80, 40], water: '#3f8a7f', waterLight: '#8fc4b3', exposure: 1.16 },
+  taipei: { skyTop: '#16214a', skyBottom: '#5a4f86', fog: '#383a55', fogNear: 150, fogFar: 470,
     ground: '#333541', road: '#252830', sun: '#aaaed6', sunIntensity: 0.75, ambient: 0.95,
     sunDirection: [50, 90, -60], water: '#262638', waterLight: '#61516f', exposure: 1.35 },
-  kenting: { skyTop: '#639eb9', skyBottom: '#f8e5c0', fog: '#ecd7b6', fogNear: 215, fogFar: 680,
-    ground: '#b4ae7a', road: '#565453', sun: '#ffe1a5', sunIntensity: 3.8, ambient: 1.4,
-    sunDirection: [-60, 56, 45], water: '#4a9f9e', waterLight: '#a3d6c7', exposure: 1.14 },
+  kenting: { skyTop: '#2d96d6', skyBottom: '#fbe7bf', fog: '#f1dfbd', fogNear: 240, fogFar: 720,
+    ground: '#a3a54c', road: '#565453', sun: '#ffe1a5', sunIntensity: 3.8, ambient: 1.4,
+    sunDirection: [-60, 56, 45], water: '#16a7b8', waterLight: '#7fe0d2', exposure: 1.16 },
 };
 
 const CHUNK = 120;
@@ -186,6 +187,8 @@ export class IslandWorld {
     this.scene = scene; this.assets = assets; this.root = new THREE.Group(); scene.add(this.root);
     this.chunks = []; this.clouds = []; this.obstacles = []; this.mapId = 'coast';
     this.textures = { asphalt: noiseTexture(), gravel: noiseTexture('gravel'), windows: windowTexture(), cloud: cloudTexture() };
+    this.textures.coastSign=new THREE.TextureLoader().load(appUrl('art/r8/coast-sign.png'));this.textures.coastSign.colorSpace=THREE.SRGBColorSpace;
+    this.coastSignMaterial=new THREE.MeshBasicMaterial({map:this.textures.coastSign,transparent:true,depthWrite:false,side:THREE.DoubleSide});
     this.geometry = {
       box: new THREE.BoxGeometry(1, 1, 1), pole: new THREE.CylinderGeometry(0.09, 0.13, 1, 6),
       rock: new THREE.DodecahedronGeometry(1, 0), grass: new THREE.ConeGeometry(0.4, 1.2, 3),
@@ -202,6 +205,7 @@ export class IslandWorld {
       neon: standard('#9edcdd', { emissive: '#66cad4', emissiveIntensity: 2.4 }),
     };
     this.createSky(); this.createWater(); this.createClouds(); this.createFinishGate();
+    this.coastBackdrop=new THREE.TextureLoader().load(appUrl('art/r7/coast.webp'),()=>{if(this.mapId==='coast')this.scene.background=this.coastBackdrop;});this.coastBackdrop.colorSpace=THREE.SRGBColorSpace;this.coastBackdrop.wrapS=THREE.RepeatWrapping;this.coastBackdrop.repeat.x=-1;this.coastBackdrop.offset.x=1;
   }
 
   createSky() {
@@ -212,7 +216,7 @@ export class IslandWorld {
       },
       vertexShader: `varying vec3 direction; void main(){direction=position; gl_Position=projectionMatrix*modelViewMatrix*vec4(position,1.);}`,
       fragmentShader: `varying vec3 direction; uniform vec3 top,bottom,sun,sunDirection; uniform float night;
-        void main(){vec3 dir=normalize(direction); float h=pow(max(dir.y,0.),.58);
+        void main(){vec3 dir=normalize(direction); float h=pow(max(dir.y,0.),.4);
           vec3 col=mix(bottom,top,h); float alignment=max(dot(dir,normalize(sunDirection)),0.);
           col+=sun*pow(alignment,38.)*.18*(1.-night); col+=sun*pow(alignment,1800.)*.8;
           gl_FragColor=vec4(col,1.);
@@ -277,6 +281,9 @@ export class IslandWorld {
     }
     this.chunks = [];
     const e = ENVIRONMENTS[mapId];
+    this.sky.visible=mapId!=='coast';this.scene.background=mapId==='coast'?this.coastBackdrop:null;
+    this.materials.steel.color.set(mapId==='coast'?'#1479b8':'#c1c5bd');this.materials.steel.metalness=mapId==='coast'?0:.6;
+    this.materials.post.color.set(mapId==='coast'?'#fff7df':'#747a73');
     this.scene.fog = new THREE.Fog(e.fog, e.fogNear, e.fogFar);
     this.skyMaterial.uniforms.top.value.set(e.skyTop); this.skyMaterial.uniforms.bottom.value.set(e.skyBottom);
     this.skyMaterial.uniforms.sun.value.set(e.sun); this.skyMaterial.uniforms.sunDirection.value.fromArray(e.sunDirection);
@@ -288,7 +295,7 @@ export class IslandWorld {
     this.cloudMaterial.opacity = mapId === 'taipei' ? 0.11 : mapId === 'alishan' ? 0.35 : 0.6;
     this.materials.road.color.set(e.road);
     this.materials.road.roughness = mapId === 'taipei' ? 0.28 : 0.88;
-    this.materials.grass.color.set(mapId === 'alishan' ? '#48674b' : mapId === 'kenting' ? '#898d57' : '#738b61');
+    this.materials.grass.color.set(mapId === 'alishan' ? '#3f7d42' : mapId === 'kenting' ? '#8a9a45' : '#56a046');
     this.materials.rock.color.set(mapId === 'coast' ? '#8c9186' : '#9a9384');
     for (let start = -360; start < 2760; start += CHUNK) this.createChunk(start);
     this.finish.position.set(roadCenter(2400, mapId), routeAltitude(2400, mapId), 2400);
@@ -332,6 +339,9 @@ export class IslandWorld {
       instanceAsset(this.assets.road_sign, [{ x: roadCenter(z, map) + offset, y: routeAltitude(z, map), z,
         rotation: Math.PI + roadHeading(z, map), scale: 1 }], group);
       this.obstacles.push({ z, lateral: offset, radius: 0.65 });
+      if(map==='coast'){
+        const sign=new THREE.Mesh(new THREE.PlaneGeometry(3.8,3.8),this.coastSignMaterial);sign.name='PacificCoastRouteSign';sign.userData.ownedGeometry=true;sign.position.set(roadCenter(z,map)+offset,routeAltitude(z,map)+3.1,z-.12);sign.rotation.y=Math.PI+roadHeading(z,map);group.add(sign);
+      }
     }
   }
 
@@ -423,6 +433,7 @@ export class IslandWorld {
   }
 
   update(distance, time, camera) {
+    if(camera&&this.coastBackdrop){const x=Math.min(1,camera.aspect/1.5),y=Math.min(1,1.5/camera.aspect);this.coastBackdrop.repeat.set(-x,y);this.coastBackdrop.offset.set((1+x)/2,(1-y)/2);}
     const visible = ENVIRONMENTS[this.mapId].fogFar + 90;
     for (const chunk of this.chunks) chunk.group.visible = chunk.end > distance - 240 && chunk.start < distance + visible;
     this.sky.position.set(roadCenter(distance, this.mapId), 0, distance);
@@ -456,6 +467,7 @@ export class IslandWorld {
     });
     // Imported Blender geometry belongs to the asset cache and is disposed by Game.
     Object.values(this.geometry).forEach(g => geometries.add(g));
+    materials.add(this.coastSignMaterial);
     geometries.forEach(g => { if (!g.userData.importedAsset) g.dispose(); });
     materials.forEach(m => { if (!m.userData.importedAsset) m.dispose(); });
     Object.values(this.textures).forEach(t => t.dispose());

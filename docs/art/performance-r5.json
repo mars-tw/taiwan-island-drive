@@ -1,0 +1,140 @@
+{
+  "renderer": "ANGLE (Intel, Intel(R) Graphics (0x00007D67) Direct3D11 vs_5_0 ps_5_0, D3D11)",
+  "rows": [
+    {
+      "viewport": "desktop",
+      "mode": "math",
+      "p50": 16.7,
+      "p95": 16.7,
+      "runs": [
+        16.7,
+        16.7,
+        16.7
+      ]
+    },
+    {
+      "viewport": "desktop",
+      "mode": "car",
+      "p50": 16.7,
+      "p95": 16.8,
+      "runs": [
+        16.7,
+        16.8,
+        16.8
+      ]
+    },
+    {
+      "viewport": "desktop",
+      "mode": "train",
+      "p50": 16.7,
+      "p95": 16.7,
+      "runs": [
+        16.7,
+        16.7,
+        16.7
+      ]
+    },
+    {
+      "viewport": "desktop",
+      "mode": "flight",
+      "p50": 16.7,
+      "p95": 16.8,
+      "runs": [
+        16.8,
+        16.8,
+        16.8
+      ]
+    },
+    {
+      "viewport": "portrait",
+      "mode": "math",
+      "p50": 16.7,
+      "p95": 16.8,
+      "runs": [
+        16.8,
+        16.7,
+        16.8
+      ]
+    },
+    {
+      "viewport": "portrait",
+      "mode": "car",
+      "p50": 16.7,
+      "p95": 16.8,
+      "runs": [
+        16.8,
+        16.7,
+        16.8
+      ]
+    },
+    {
+      "viewport": "portrait",
+      "mode": "train",
+      "p50": 16.7,
+      "p95": 16.8,
+      "runs": [
+        16.8,
+        16.7,
+        16.8
+      ]
+    },
+    {
+      "viewport": "portrait",
+      "mode": "flight",
+      "p50": 16.7,
+      "p95": 16.7,
+      "runs": [
+        16.7,
+        16.7,
+        16.7
+      ]
+    },
+    {
+      "viewport": "landscape",
+      "mode": "math",
+      "p50": 16.7,
+      "p95": 16.8,
+      "runs": [
+        16.8,
+        16.8,
+        16.7
+      ]
+    },
+    {
+      "viewport": "landscape",
+      "mode": "car",
+      "p50": 16.7,
+      "p95": 16.8,
+      "runs": [
+        16.8,
+        16.7,
+        16.8
+      ]
+    },
+    {
+      "viewport": "landscape",
+      "mode": "train",
+      "p50": 16.7,
+      "p95": 16.8,
+      "runs": [
+        16.8,
+        16.7,
+        16.8
+      ]
+    },
+    {
+      "viewport": "landscape",
+      "mode": "flight",
+      "p50": 16.7,
+      "p95": 16.8,
+      "runs": [
+        16.8,
+        16.8,
+        16.7
+      ]
+    }
+  ],
+  "status": "EXECUTED",
+  "reference_only": true,
+  "method": "rAF intervals; three runs per mode x viewport; 2000ms samples; headless 60Hz, concurrent workstation load. Not CPU/GPU frame times, native performance or a clean-machine release gate."
+}

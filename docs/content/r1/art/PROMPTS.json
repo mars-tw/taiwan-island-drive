@@ -1,0 +1,20 @@
+{
+  "round": "CONTENT_R1",
+  "tool": "image_gen.imagegen",
+  "model_slug": null,
+  "style_prefix": "Island Traffic Academy sunny Taiwan coastal storybook, chunky ink-navy outlines, rounded toy proportions, warm upper-left light, saturated sea blue sunflower yellow coral orange, gentle paper texture, clean silhouette readable at 64px. ",
+  "records": [
+    {
+      "id": "sprite-master",
+      "prompt": "Island Traffic Academy sunny Taiwan coastal storybook, chunky ink-navy outlines, rounded toy proportions, warm upper-left light, saturated sea blue sunflower yellow coral orange, gentle paper texture, clean silhouette readable at 64px. Use case: illustration-story. Asset type: transparent game sprite atlas. Create EXACTLY eight isolated assets in a precise 4 columns by 2 rows grid, all equal cells, overall landscape 2:1, generous transparent padding within each cell, no objects crossing cells. Row1 left to right: (1) a beautiful strawberry birthday cake on a sturdy blue plate, no candles or flag; (2) a small green triangular safety pennant on an upright short navy pole, isolated; (3) cheerful child pedestrian walking toward right, left foot forward right foot back; (4) SAME child same size and clothing walking toward right, right foot forward left foot back, visibly different arm swing. Row2 left to right: (1) friendly helmeted bicycle rider pedaling toward right, left knee high right leg extended; (2) SAME rider and bicycle same size, right knee high left leg extended, clearly different pedal position; (3) smiling Taiwanese grandmother walking toward right with vegetable basket on a little wheeled shopping trolley, left foot forward; (4) SAME grandmother and trolley, right foot forward, opposite arm swing. All full bodies and bicycle wheels and trolley fully contained within cell, aligned feet/wheels to same ground baseline. Child blue shirt orange shorts, rider yellow helmet coral shirt blue pants, grandma silver hair green cardigan yellow skirt. Premium illustrated game assets with friendly faces and deep blue outlines, NOT geometric placeholders, no text, no numerals, no labels, no watermarks, genuine transparent background.",
+      "transparent_background": true,
+      "source": "docs/content/r1/art/sprite-master.png"
+    },
+    {
+      "id": "crossing-master",
+      "prompt": "Island Traffic Academy sunny Taiwan coastal storybook, chunky ink-navy outlines, rounded toy proportions, warm upper-left light, saturated sea blue sunflower yellow coral orange, gentle paper texture, clean silhouette readable at 64px. Use case: illustration-story. Asset type: full-screen offline children's driving lesson background. A friendly Taiwanese seaside pedestrian crossing seen from a slightly elevated driver viewpoint looking FORWARD down a quiet road. Wide rectangular illustration 3:2. A real asphalt path goes from lower foreground center toward distance. Across the MID-LOWER image at y=65 percent there is a correctly foreshortened WHITE ZEBRA CROSSING with short white stripes on warm gray-blue asphalt, narrow crossing band from left sidewalk to right sidewalk, not a wall. Wide SAFE sidewalks on left and right at same level so pedestrian sprites can cross along y=65 percent. Strong white STOP LINE below zebra at y=80 percent. Clear view left AND right, open road empty with no cars and no people, no traffic lights, no words, no text, no numerals, no signs with text. Bright turquoise sea and small lighthouse beyond road on left, distant green Taiwan coastal cliff and lush round banyan tree canopy on right, a little blue-roof coastal station shelter in background. Cheerful detailed storybook, thick navy outlines consistent with rounded toy game cars; foreground has enough quiet space for blue car sprite. No crop of vehicles since no vehicles. Full bleed opaque background, no UI.",
+      "transparent_background": false,
+      "source": "docs/content/r1/art/crossing-master.png"
+    }
+  ]
+}

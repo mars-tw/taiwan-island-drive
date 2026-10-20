@@ -1,0 +1,59 @@
+{
+  "status": "VERIFIED",
+  "tool": "image_gen.imagegen",
+  "model_slug": null,
+  "generationCalls": 6,
+  "designs": 6,
+  "runtimeImages": 6,
+  "transform": "PNG to WebP quality 90 only; runtime CSS/DOM rendering is separate",
+  "outputs": [
+    {
+      "id": "station",
+      "path": "public/art/content-r2/station.webp",
+      "bytes": 628770,
+      "sha256": "96828325cbe370cab907afa22eb5e376240292d19ff8169b7539a67d995ec007",
+      "master": "docs/content/r2/art/station-master.png",
+      "masterSha256": "922586f73d3a5bcd1c3bfb910edba7698e267e9726c7bd263153cbe3eb617b6c"
+    },
+    {
+      "id": "cake",
+      "path": "public/art/content-r2/cake-complete.webp",
+      "bytes": 508188,
+      "sha256": "6e651ddb12724204a8cd0acf7cc39389d17f455942f3faf0557252df468c8658",
+      "master": "docs/content/r2/art/cake-master.png",
+      "masterSha256": "736bb82526e4959b26bf754720b36d9449420444da7a33d7298097781a6e4e72"
+    },
+    {
+      "id": "crossing",
+      "path": "public/art/content-r2/crossing-complete.webp",
+      "bytes": 558424,
+      "sha256": "04524382b1614f5f2f3963e05f7a93d3994dfa6cbcef0ad4a9e3987ba732932a",
+      "master": "docs/content/r2/art/crossing-master.png",
+      "masterSha256": "1ab93863d51325801720fb0d6be7f53aa8b184f6976996201d5cd89e4ac69521"
+    },
+    {
+      "id": "tickets",
+      "path": "public/art/content-r2/tickets-complete.webp",
+      "bytes": 462904,
+      "sha256": "e344d0ebff04d66a14e7f6965d34b273fd167cb8fa18d9a0fe168bcd6bc902b6",
+      "master": "docs/content/r2/art/tickets-master.png",
+      "masterSha256": "167c9923c4ee91e4e33c734fadcfe774071a1478eca6f28935ea7277ed6f8bf1"
+    },
+    {
+      "id": "crossing-banyan",
+      "path": "public/art/content-r2/crossing-banyan.webp",
+      "bytes": 604346,
+      "sha256": "3b2e0d969f37853ede91b29c65cde48b36ca17f4cc10317d011d9f4f5bb3dcfe",
+      "master": "docs/content/r2/art/crossing-banyan-master.png",
+      "masterSha256": "7fb8734b2d807c18702f769786a2a3b22099dcea8599dc0318bc8a086b6acf32"
+    },
+    {
+      "id": "crossing-lighthouse",
+      "path": "public/art/content-r2/crossing-lighthouse.webp",
+      "bytes": 551474,
+      "sha256": "fc23cd540292e60a7bb956897bc53c52d5814779d3a4a132ddff373f2cc0f778",
+      "master": "docs/content/r2/art/crossing-lighthouse-master.png",
+      "masterSha256": "5cd95897b9ecdd14ea4466805487a878be4936d3a50003ac41ba81accd88a610"
+    }
+  ]
+}

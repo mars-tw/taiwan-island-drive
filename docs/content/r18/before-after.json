@@ -1,0 +1,30 @@
+{
+  "status": "VERIFIED",
+  "method": "Unscaled original screenshot copies",
+  "comparisons": [
+    {
+      "source": "docs/content/r17/phone-cake-replay-old-direction.png",
+      "path": "docs/evidence/content-r18/before-cake.png",
+      "sha256": "defa19562ee725023059035e884e0e3491784c0abdceda08095df46b892668fb",
+      "note": "Unmodified R17 original, retained before cleanup",
+      "after": "docs/evidence/content-r18/after-cake.png",
+      "afterSha256": "91335f4bfc8dec079aac512cab9fe59a6450749f34264d7a3975fc61077afbf5"
+    },
+    {
+      "source": "docs/content/r17/phone-crossing-stage-1-child-look-left.png",
+      "path": "docs/evidence/content-r18/before-crossing.png",
+      "sha256": "3f25080386d1cfe8fddef97b1ff945cb187d4b308a70b0464544bb2750ffeae8",
+      "note": "Unmodified R17 original, retained before cleanup",
+      "after": "docs/evidence/content-r18/after-crossing.png",
+      "afterSha256": "3af63b84e5e354bbb963a128d5e50424b3f8bd1347a6bb57ad585bde3dcb3e1e"
+    },
+    {
+      "source": "docs/content/r17/phone-tickets-stage-1-wrong.png",
+      "path": "docs/evidence/content-r18/before-tickets.png",
+      "sha256": "984332b9d11e78c33a650a246af7e3cf22e30cfbfdabd54ab77a25c7b9ef7310",
+      "note": "Unmodified R17 original, retained before cleanup",
+      "after": "docs/evidence/content-r18/after-tickets.png",
+      "afterSha256": "7eff18673682eec2f26621a4d3beef5bed84d6893e5da510623408e305aec503"
+    }
+  ]
+}

@@ -1,0 +1,10 @@
+{
+  "tool": "image_gen.imagegen",
+  "model_slug": null,
+  "prompt": "Island Traffic Academy sunny Taiwan coastal storybook, chunky ink-navy outlines, rounded toy proportions, warm upper-left light, saturated sea blue sunflower yellow coral orange, gentle paper texture, clean silhouette readable at 64px. Use case: scientific-educational. Asset type: art review character turnaround sheet, nine cells, 3 columns by 3 rows, landscape 3:2, opaque white background. Use the supplied sprite atlas as the identity reference for the THREE human characters ONLY. Row1: the same little child with tousled brown hair blue T-shirt orange shorts blue-yellow sneakers and blue backpack, FRONT view, SIDE view facing right, BACK view. Row2: the same little bicycle rider with YELLOW helmet coral-orange shirt blue pants backpack, FRONT view, SIDE view facing right, BACK view, each standing upright NEXT to the same yellow bicycle so legs, whole helmet and bicycle are clearly visible. Row3: the same smiling grandmother with silver hair green cardigan yellow floral skirt brown shoes tan purse with blue gingham vegetable trolley, FRONT view, SIDE view facing right, BACK view. Each head and whole body present and fully framed, consistent scale per row, generous white gaps, clear feet and props. Same identities and costumes as reference, no extra characters, no cake or flag in this sheet, no words or numbers, no panel borders, no shadows covering faces. Premium warm friendly children's game character development board, no violence.",
+  "reference_images": [
+    "docs/content/r1/art/sprite-master.png"
+  ],
+  "transparent_background": false,
+  "output": "docs/content/r1/art/character-turnarounds.png"
+}

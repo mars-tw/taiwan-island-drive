@@ -1,0 +1,94 @@
+{
+  "status": "VERIFIED",
+  "baseline": "7fb33737a16fcf9ad5ae80c3a3b6006ad5af56de",
+  "files": [
+    {
+      "path": "android/app/build.gradle",
+      "sha256": "fdd3cdae934c1b6bd9f985d738cda74fa5031faad67f0bb800c6681cd7684e06"
+    },
+    {
+      "path": "ios/App/App.xcodeproj/project.pbxproj",
+      "sha256": "f1f3aadee2c2871885b2961da33972074b733533bd5982d86f2e58b73981a65e"
+    },
+    {
+      "path": "package-lock.json",
+      "sha256": "fc553fc1dfe1a9486936c047e9c8a83807800df0a216a8da94c918b436d63a76"
+    },
+    {
+      "path": "package.json",
+      "sha256": "974049f0d971c6408851b0fa1a7d99fd1ff3491124f6127187ea8651cf3524e1"
+    },
+    {
+      "path": "public/models/catalog.json",
+      "sha256": "6b233f9a729a61c48be13a37bf3d58717cb123e79c5c23d49962dd3a52e2fb4d"
+    },
+    {
+      "path": "src/games/car/config.js",
+      "sha256": "7edc7e237db9fd0df9f62c271b51045a19aec093b66daa74f406616109d4bc67"
+    },
+    {
+      "path": "src/shared/content-r1-ui.js",
+      "sha256": "7514e28efe92a56cc98ea32f413d45b91a2698a9610b8f7d4bb9f247bcdcb5fb"
+    },
+    {
+      "path": "src/shared/content-r1.js",
+      "sha256": "da6f13451f492cdcac5012096b6744e4664cd2669d9556c1d8df80f36a0bbaee"
+    },
+    {
+      "path": "src/shared/content-r10-scene.js",
+      "sha256": "dca5cc457ea354b69f450c8d98dadd9b1fc4bb6250fc79d44c4111b5edaf7122"
+    },
+    {
+      "path": "src/shared/content-r11-scene.js",
+      "sha256": "61adc327afe7ac0db0c8fab006f3d62c4af1e5acb3d5e7d73a35d93e76bcb3ea"
+    },
+    {
+      "path": "src/shared/content-r12-scene.js",
+      "sha256": "3d184524d9506542ff1b9c815a3c771c97f085b6c1da5b3979b87b94e212cc15"
+    },
+    {
+      "path": "src/shared/content-r5-feedback.js",
+      "sha256": "5172d615d1b54f0b5cbadbfee3c8b072829af5a4e9dbe671658e306fbaec1a4d"
+    },
+    {
+      "path": "docs/art/ART_DIRECTION.md",
+      "sha256": "d036a06d47f5a42377e81f58d95eb5350bbd4ee0e93a165d25df8f6963649cf1"
+    },
+    {
+      "path": "src/shared/content-r14-scene.js",
+      "sha256": "1d1013875ea824a0e73f2f794dd77716b09dce9704f03746331a423538a38f34"
+    },
+    {
+      "path": "src/shared/content-r14.css",
+      "sha256": "30697eea4cfdf9d8add9907b7f8301cace40479b000d7c18de6c928f04acc901"
+    },
+    {
+      "path": "tests/shared/content-r14.test.js",
+      "sha256": "927624b4e6afd005ec8cace7bb465319a1950e2cb6a38666a916387c3cabbf3a"
+    },
+    {
+      "path": "scripts/check-content-r14.mjs",
+      "sha256": "32d2a69721b7ab824399dadb4b99284931e29fccdc354645ad308d5fa4951e66"
+    },
+    {
+      "path": "scripts/measure-content-r14.mjs",
+      "sha256": "eeee8bce44a7937ad6d172cc3bc9cdab7037e57194effe8d88b0269eacbcf173"
+    },
+    {
+      "path": "scripts/verify-content-r14-release.mjs",
+      "sha256": "1eef7df1e37a4ef4808da6bc3c76c61cdde7236635958c5ec4818fa110f89825"
+    },
+    {
+      "path": "docs/OPTIM_PLAN_CONTENT_R14.md",
+      "sha256": "323124ace451c3410aa247ef702c42f63aa511ca6ad952e8c01584b11b8a0e61"
+    },
+    {
+      "path": "docs/CODEX_RESPONSE_CONTENT_R14.md",
+      "sha256": "9438c898b1b9785f1d9de626c6883f9bcc7ddfa1f9bdfaf80368b722e9479b1d"
+    },
+    {
+      "path": "docs/content/r14/review-guide.md",
+      "sha256": "e990a54195af38476247e7ced40b723c260dc0dd342b872ae15e472abcf93476"
+    }
+  ]
+}

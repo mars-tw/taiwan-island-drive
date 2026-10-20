@@ -6,11 +6,11 @@ import assert from 'node:assert/strict';
 import sharp from 'sharp';
 
 const root = path.resolve(fileURLToPath(new URL('../', import.meta.url)));
-const masterFile = 'resources/branding/game-logo-v2-master.png';
-const reportFile = 'resources/branding/native-icons-v2-report.json';
+const masterFile = process.env.NATIVE_ICON_SOURCE || 'resources/branding/game-logo-v2-master.png';
+const reportFile = process.env.NATIVE_ICON_REPORT || 'resources/branding/native-icons-v2-report.json';
 const iosFolder = 'ios/App/App/Assets.xcassets/TransportIconV2.appiconset';
 const androidFolder = 'android/app/src/main/res';
-const background = '#173d47';
+const background = process.env.NATIVE_ICON_BACKGROUND || '#173d47';
 const densities = [
   ['ldpi', .75, 36], ['mdpi', 1, 48], ['hdpi', 1.5, 72],
   ['xhdpi', 2, 96], ['xxhdpi', 3, 144], ['xxxhdpi', 4, 192],

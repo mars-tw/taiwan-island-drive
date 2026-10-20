@@ -1,0 +1,66 @@
+{
+  "status": "VERIFIED",
+  "rows": [
+    {
+      "label": "picker retains started state after inspecting introduction and leaving",
+      "status": "VERIFIED"
+    },
+    {
+      "label": "new original 1290x2796 and 2064x2752 store screenshots",
+      "status": "VERIFIED"
+    }
+  ],
+  "shots": [
+    {
+      "path": "docs/content/r4/phone-picker-new.png",
+      "width": 390,
+      "height": 844,
+      "sha256": "e411e28b47f58bde2f648c20ba634be1f360b72a1cd6538a3b779a0753e304d3",
+      "native": false,
+      "method": "Original headless runtime capture; no resizing, annotation or gameplay-state assignment"
+    },
+    {
+      "path": "docs/content/r4/phone-picker-progress.png",
+      "width": 390,
+      "height": 844,
+      "sha256": "5b1bff2dae40e0b3f90c2f152dae3f29a70393ab4d3a08aaf3e4d88c2ec34a66",
+      "native": false,
+      "method": "Original headless runtime capture; no resizing, annotation or gameplay-state assignment"
+    },
+    {
+      "path": "docs/store/screenshots/content-r4/iphone-coastal-picker.png",
+      "width": 1290,
+      "height": 2796,
+      "sha256": "3bd524c4d387fe96bab3365467048d08652ae43b74267005f8505eea2ab004d7",
+      "native": false,
+      "method": "Original headless runtime capture; no resizing, annotation or gameplay-state assignment"
+    },
+    {
+      "path": "docs/store/screenshots/content-r4/iphone-cake.png",
+      "width": 1290,
+      "height": 2796,
+      "sha256": "22c3fe0d709d49d587cddffaef92f7d2d77e55cbdcf65c593881e9eeb9a3bfcc",
+      "native": false,
+      "method": "Original headless runtime capture; no resizing, annotation or gameplay-state assignment"
+    },
+    {
+      "path": "docs/store/screenshots/content-r4/ipad-coastal-picker.png",
+      "width": 2064,
+      "height": 2752,
+      "sha256": "a605174ff41b0814841019309f2ce18205157c632886c9715a1807c4582ebeb6",
+      "native": false,
+      "method": "Original headless runtime capture; no resizing, annotation or gameplay-state assignment"
+    },
+    {
+      "path": "docs/store/screenshots/content-r4/ipad-cake.png",
+      "width": 2064,
+      "height": 2752,
+      "sha256": "f7df34cdf14a9d126a3e1f3113f754036135e9d8c7e9d17d6a15e1605a11974e",
+      "native": false,
+      "method": "Original headless runtime capture; no resizing, annotation or gameplay-state assignment"
+    }
+  ],
+  "errors": [],
+  "external": [],
+  "responses": []
+}

@@ -1,0 +1,52 @@
+{
+  "status": "VERIFIED",
+  "version": "2.12.0",
+  "native_source_build": 8,
+  "baseline_commit": "bcbba9193665df6a34ecbf787e37069177801a3d",
+  "generation_calls": 8,
+  "new_designs": 8,
+  "runtime_files": 11,
+  "new_image_bytes": 2246041,
+  "web_bytes_including_downloads": 206320990,
+  "web_bytes_excluding_downloads": 70431271,
+  "native_bundle_bytes": 56477514,
+  "native_files": 184,
+  "comparison_pairs": 6,
+  "selected_store_screenshots": 14,
+  "secret_matches": 0,
+  "scanned_text_files": 687,
+  "old_version_production_matches": 0,
+  "existing_tests_modified": false,
+  "new_tests": 2,
+  "new_dependencies": 0,
+  "playtest_seconds": 606.752,
+  "p95_range_ms": [
+    16.7,
+    16.8
+  ],
+  "performance_limit": "Concurrent host load; rAF interval, not CPU/GPU time or native device gate",
+  "review_sources": [
+    {
+      "path": "docs/art/ART_RESCORE4_MUSE.md",
+      "sha256": "f9de7a05c119356a0c75a55685c8cdf3e4401cd59f17afda20aa63d5a9e659e4"
+    },
+    {
+      "path": "docs/art/ART_REVIEW_MUSE.md",
+      "sha256": "5c67f291457ae16c57fc0581038b6e8f2a6255811cae334c5c34dafb0d1431cb"
+    }
+  ],
+  "dist_entries": {
+    "index.html": "0a03c64ef46f3769f7e57b7f35d317874e2024008af32f51a4685463c5ba676b",
+    "car/index.html": "f62f2616d6488b6808f18d5e417b68b850ac5fa71c2d10be19038989c1f1310b",
+    "train/index.html": "2b5044ebac3f3f0e9b7253c3af7d4644d2c213acddc53928f6913f518cbe8942",
+    "flight/index.html": "af508897b9111109884669cbd610147d9d4220d192dc9547a9988d85477d0e2f"
+  },
+  "limits": [
+    "Independent 9/10 not obtained",
+    "No child or parent perception study",
+    "No iOS/Android hardware or WebKit run",
+    "No signed binary",
+    "Native icon catalog retains R7; R8 proposal and web icons only",
+    "No store operation, push, deploy or external delegation"
+  ]
+}

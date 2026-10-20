@@ -1,0 +1,79 @@
+{
+  "status": "VERIFIED",
+  "branch": "r1-fun-polish",
+  "baseline": "baece5c",
+  "version": "2.31.0",
+  "nativeSourceBuild": 27,
+  "unitTests": 254,
+  "unchangedOriginalTestFiles": 39,
+  "browserChecks": 244,
+  "screenshots": 703,
+  "reviewSet": 15,
+  "mergeChecks": 132,
+  "storeChecks": 101,
+  "newGenerationCalls": 1,
+  "newRuntimeAssets": 1,
+  "newDependencies": 0,
+  "secretHits": 0,
+  "p95": [
+    {
+      "viewport": "desktop",
+      "kind": "cake",
+      "p95": 16.7
+    },
+    {
+      "viewport": "desktop",
+      "kind": "crossing",
+      "p95": 16.7
+    },
+    {
+      "viewport": "desktop",
+      "kind": "tickets",
+      "p95": 16.7
+    },
+    {
+      "viewport": "portrait",
+      "kind": "cake",
+      "p95": 16.8
+    },
+    {
+      "viewport": "portrait",
+      "kind": "crossing",
+      "p95": 16.8
+    },
+    {
+      "viewport": "portrait",
+      "kind": "tickets",
+      "p95": 16.7
+    },
+    {
+      "viewport": "landscape",
+      "kind": "cake",
+      "p95": 16.7
+    },
+    {
+      "viewport": "landscape",
+      "kind": "crossing",
+      "p95": 16.8
+    },
+    {
+      "viewport": "landscape",
+      "kind": "tickets",
+      "p95": 16.7
+    }
+  ],
+  "performanceWithinLimit": true,
+  "performanceStatus": "EXECUTED concurrent load reference; clean/device measurement BLOCKED",
+  "cleanup": {
+    "files": 155,
+    "bytes": 99602140,
+    "retainedInputs": 3934
+  },
+  "blocked": [
+    "Physical iPhone/iPad touch and native voice require devices",
+    "Parent-child playtest requires participants",
+    "Clean-machine performance requires exclusive hardware",
+    "Muse >=8 requires independent rescore",
+    "Native signed packages not rebuilt"
+  ]
+}

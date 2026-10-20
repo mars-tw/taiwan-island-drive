@@ -1,0 +1,44 @@
+{
+  "tool": "image_gen.imagegen",
+  "model_slug": null,
+  "style_prefix": "Island Traffic Academy sunny Taiwan coastal storybook, chunky ink-navy outlines, rounded toy proportions, warm upper-left light, saturated sea blue sunflower yellow coral orange, gentle paper texture, clean silhouette readable at 64px. ",
+  "records": [
+    {
+      "id": "waiting",
+      "prompt": "Island Traffic Academy sunny Taiwan coastal storybook, chunky ink-navy outlines, rounded toy proportions, warm upper-left light, saturated sea blue sunflower yellow coral orange, gentle paper texture, clean silhouette readable at 64px. Use case: identity-preserve illustration-story. References are the existing three characters. Create ONE transparent sprite atlas in THREE equal square cells in a single horizontal row, each whole full body at same height and baseline with generous gutters. LEFT cell: exact blue-shirt orange-shorts boy with blue backpack, calmly STANDING STILL with both sneakers planted side by side, arms relaxed, facing right. CENTER cell: exact gray-bun grandmother green cardigan yellow daisy skirt orange purse with blue plaid grocery trolley, STANDING STILL upright, both shoes together planted, hands resting on trolley, facing right. RIGHT cell: exact yellow-helmet coral-shirt blue-pants cycling boy on yellow bicycle STOPPED, both hands on bars, one foot planted on ground and one on pedal, facing left. Preserve exact friendly identities and costumes. Clear stationary waiting posture, no stride, no forward lean, no motion marks. All three characters entire bodies and entire trolley/bicycle, separate cells, equal 350px-style body height. Genuine transparent background, no ground plane or shadows, no words, no interface, no checkerboard. Final game production sprite atlas.",
+      "original": "docs/content/r10/art/waiting-original.png",
+      "references": [
+        "public/art/content-r7/child-0.png",
+        "public/art/content-r7/grandma-0.png",
+        "public/art/content-r1/bike-0.png"
+      ]
+    },
+    {
+      "id": "door",
+      "prompt": "Island Traffic Academy sunny Taiwan coastal storybook, chunky ink-navy outlines, rounded toy proportions, warm upper-left light, saturated sea blue sunflower yellow coral orange, gentle paper texture, clean silhouette readable at 64px. Use case: illustration-story. Asset type: a finished transparent game sprite of ONE OPEN TRAIN DOORWAY fitting the blue and sunflower-yellow side-on toy train in the reference. Entire upright yellow outer jamb with thick ink navy trim, blue side edges, open dark teal doorway with visible softly lit turquoise interior, vertical yellow safety handrail, small cream ceiling light, visible warm wood aisle floor at lower part and striped yellow navy sill. Front orthographic side-view matching train, no perspective of train exterior, no entire train. Include a broad short textured silver boarding step projecting to LEFT from threshold, pale blue tread with yellow safety edging, connected solidly to door bottom. This is an entrance, no white empty rectangle. Wide enough for a child to walk through. Isolated object, transparent exterior, door interior itself opaque, no people, no letters or text, no scenery, no UI, no checkerboard. Preserve simple rounded storybook illustration and exact train palette.",
+      "original": "docs/content/r10/art/door-original.png",
+      "references": [
+        "public/art/content-r3/train-side.webp"
+      ]
+    },
+    {
+      "id": "platform",
+      "prompt": "Island Traffic Academy sunny Taiwan coastal storybook, chunky ink-navy outlines, rounded toy proportions, warm upper-left light, saturated sea blue sunflower yellow coral orange, gentle paper texture, clean silhouette readable at 64px. Use case: precise-object-edit illustration-story. Edit the reference station background only, preserve the exact sunny Taiwan coast, blue sky, ocean, palm, banyan, blue-roof shelter and lighthouse identity and painterly storybook finish. Need a wider SAFE continuous waiting platform for a children's train boarding scene. Portrait 2:3 composition. TOP 0-35 percent is open blue sky exactly as reference for game station signs. Middle background ocean and island, shelter and banyan trunk end at 51 percent image height, all behind the waiting area. Paint a single broad UNBROKEN terracotta brick platform stretching full image width from y=52 percent to y=69 percent, with clear fine natural brick texture and gentle depth perspective, generous unobstructed walking surface from left to right, no pots or furniture on this front walking surface, no bands, no blurry stretched texture. A continuous yellow platform safety edge at y=69 percent. Below it stone platform front and ONE continuous pair of train rails with timber sleepers from y=72 percent to y=85 percent. Bottom y=85-100 percent coastal wildflowers and gravel as original. This is a finished background, no characters, no trains, no station signs, no numbering, no UI, no arrows, no lettering. Match original light direction and palette. Do not add any extra tracks across the walking platform. Crisp polished game art.",
+      "original": "docs/content/r10/art/platform-original.png",
+      "references": [
+        "public/art/content-r3/station-horizontal.webp"
+      ],
+      "accepted": false,
+      "reason": "Walking surface did not cover the required queue depth; replaced by next edit."
+    },
+    {
+      "id": "platform-final",
+      "prompt": "Island Traffic Academy sunny Taiwan coastal storybook, chunky ink-navy outlines, rounded toy proportions, warm upper-left light, saturated sea blue sunflower yellow coral orange, gentle paper texture, clean silhouette readable at 64px. Use case: precise-object-edit. IMPORTANT COMPOSITION FIX to supplied portrait 1024x1536 station background. Make the terracotta waiting platform MUCH DEEPER: its BACK EDGE must be at pixel y=790 (51 percent), its FRONT YELLOW SAFETY EDGE must stay at pixel y=1060 (69 percent). The whole rectangle x=0..1024, y=790..1060 must be clear terracotta brick floor, with perspective brick joints and NO tree trunk, no bench, no railings, no furniture, no sky or ocean inside that floor band. Move and shrink the banyan tree, shelter, fence and background scenery so they all end ABOVE y=790, behind the platform back edge. Preserve generous open blue sky in top 35 percent. Preserve stone platform front, railway, gravel and foreground flowers BELOW y=1060 essentially as supplied. Sunny ocean and lighthouse same identity and paper texture. Three people must be able to stand at y=815, y=905 and y=995 in a diagonal queue ON THE BRICK SURFACE, so all three of these lines must contain floor across the entire width. Render ONLY the finished background; NO people, no trains, no words, no signs, no UI. The deep platform is the primary subject of the edit.",
+      "original": "docs/content/r10/art/platform-final-original.png",
+      "references": [
+        "docs/content/r10/art/platform-original.png"
+      ],
+      "accepted": true
+    }
+  ]
+}
