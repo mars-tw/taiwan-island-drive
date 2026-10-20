@@ -17,7 +17,7 @@ assert not baseline['dirty']
 for f,h in baseline['untracked'].items():assert sha(ROOT/f)==h,f
 for f,h in baseline['existingTests'].items():assert sha(ROOT/f)==h,f
 images={}
-for scope in ['all','layout','offline','store','performance']:
+for scope in ['all','layout','offline','store','performance','approach']:
  p=f'docs/content/r33/{scope+"/" if scope!="all" else ""}browser-{scope}.json';m=read(p)
  assert m['status']=='VERIFIED' and not m['errors'] and not m['external'],p
  for f,h in m['sourceFingerprint'].items():assert sha(ROOT/f)==h,(scope,f)
@@ -61,6 +61,10 @@ assert read('docs/content/r33/art/color-audit.json')['status']=='VERIFIED'
 regressions={}
 for kind,file in [('merge','merge-path.json'),('store-regression','review-path.json')]:
  m=read(f'docs/content/r33/{kind}/{file}');assert not m['errors'] and not m['externalRequests'];assert all(not r['problems'] for r in m['rows']);regressions[kind]=len(m['rows'])
+ capture=read(f'docs/store/screenshots/content-r33/{"merge-regression" if kind=="merge" else "store-regression"}/manifest.json')
+ assert capture['sourceVersion']=='2.45.0'
+ if kind=='store-regression':assert capture['status']=='VERIFIED' and capture['buildWorkerSha256']==sha(ROOT/'dist/sw.js')
+ for row in capture['shots']:assert sha(ROOT/row['path'])==row['sha256']
 perf=read('docs/content/r33/performance/performance.json')
 store=[r for r in images.values() if r['path'].startswith('docs/store/screenshots/content-r33/cabin-')]
 assert sorted((r['width'],r['height']) for r in store)==[(1290,2796),(2064,2752)]

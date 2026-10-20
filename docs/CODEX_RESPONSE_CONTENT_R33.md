@@ -50,7 +50,7 @@ VERIFIED：工單日期2026-10-18，執行日期2026-10-21。僅 `r1-fun-polish`
 
 VERIFIED：`npm test` **331/331**；`npm run build`；5286 `npm run test:merge` **132項**；5113 `npm run test:store` **101項**，全部通過。53個既有測試檔逐位元未改，保留R31單一狀態與文字不矛盾測試。新測試驗證每課可玩／可完成／存檔，兩處停等不得長按跳過、早按退回原點、真站姿／坐姿與計數一致、主路取景與車位、停止線與角色零交疊、形色同源。
 
-最終內容驗證all／layout／offline／store／performance皆實跑，來源雜湊、469張原尺寸截圖與存檔由 `release-verification.json`回讀核對。三課九站正常觸控完成；離線重載後也完成九站。換邊重玩另外跑三個路口。八視口：320×568、568×320、390×844、844×390、768×1024、1024×768、1366×600、1280×640；控制至少60px，文字裁切0、手機鍵盤說明0、外部請求0、執行錯誤0。
+最終內容驗證all／layout／offline／store／performance及補充入灣驗證皆實跑，來源雜湊、472張原尺寸截圖與存檔由 `release-verification.json`回讀核對。補充 `approach/phone-cake-approach-main-road.png` → `phone-cake-approach-entering.png` → `phone-cake-approach-parked.png`，證明入灣前仍在主路，進入車格前已降慢速，格內已停住；取景與彎向一致。三課九站正常觸控完成；離線重載後也完成九站。換邊重玩另外跑三個路口。八視口：320×568、568×320、390×844、844×390、768×1024、1024×768、1366×600、1280×640；控制至少60px，文字裁切0、手機鍵盤說明0、外部請求0、執行錯誤0。
 
 並發載工作站RAF參考：390×844、768×1024、1366×600，各三跑180幀，p95中位 **16.8／16.8／16.8ms**，狀態 `VERIFIED`。各跑與最大值在 `performance/performance.json`；此量測不是乾淨機或原生裝置效能。秘密掃描0命中。Playwright使用當機既有npm快取模組，沒有安裝第三方SDK到遊戲。
 

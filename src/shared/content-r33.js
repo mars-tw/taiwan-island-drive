@@ -5,6 +5,7 @@ const clamp=(v,a,b)=>Math.max(a,Math.min(b,v));
 export const BOARDING_STOPS=Object.freeze([.69,.86]);
 
 export class ContentLesson extends PreviousLesson {
+ get bend(){return this.kind==='cake'&&this.stage===2?((this.layoutSeed||0)%2?1:-1):super.bend;}
  reset(){super.reset();this.escortStop=0;this.escortWaiting=false;this.escortStable=0;this.escortBump=0;this.escortMistakes=0;this.escortWasHeld=false;}
  boardFriend(){const ok=super.boardFriend();if(ok){this.escortStop=0;this.escortWaiting=false;this.escortStable=0;this.escortBump=0;this.escortWasHeld=false;}return ok;}
  depart(){
@@ -34,6 +35,7 @@ export class ContentLesson extends PreviousLesson {
   }
   super.update(seconds);
   if(this.kind==='cake'&&this.stage===2&&this.distance>=40&&this.distance<54.5){this.speed=Math.min(this.speed,1.65);}
+  if(this.kind==='cake'&&this.stage===2&&this.distance>=47&&!this.bayStopped)this.speed=0;
  }
  snapshot(){return {...super.snapshot(),contentVersion:33};}
 }

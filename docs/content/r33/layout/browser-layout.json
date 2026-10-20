@@ -2,8 +2,8 @@
   "status": "VERIFIED",
   "sourceFingerprint": {
     "src/shared/content-r1-ui.js": "77f5f4b2f7d173b092fdb7b6d3db8bc8cc29d3fcb0e5da896832b806f2f70156",
-    "src/shared/content-r33.js": "c3b8a7dec4447f643c759c71d02f50d13b3a00597dcf29a0a5ebf1c08e2ffad6",
-    "src/shared/content-r33-scene.js": "437b67016d794db4014a0fbdfb1f8612ef84502475059f7eff91a7baf8d82bbd",
+    "src/shared/content-r33.js": "53396b14a6bbfa9da07eb2d6a317bc264eb490bf3cde2a7c562e6b440df61580",
+    "src/shared/content-r33-scene.js": "066aef9b49288f1e5d3e287072cf3ec621cf9ed26ce72644c99c8cdfbdce2495",
     "src/shared/content-r33.css": "b16a76c5d84780df6fd8b0613d3f61d4d2ef7cde10de4e830c850b922fd09542",
     "scripts/check-content-r33.mjs": "56e58aa2ea0b9610b5b998fd177351fbee0bfa124045c47a47c4d5d3267f0b28"
   },
@@ -46,7 +46,7 @@
       "path": "docs/content/r33/layout/320x568-phone-cake-select-stations.png",
       "width": 320,
       "height": 568,
-      "sha256": "51aa38b3f0378b2f18cad2dedf0ff92e4c9663e5ef174f52118d34f1735c2c20",
+      "sha256": "c3312020946dc933c6f110824c2ad2bdfefb7d2159f82324a993b47a3e2e0bcc",
       "state": {
         "roadShape": "uphill",
         "cakeStage": "starting",
@@ -194,7 +194,7 @@
       "path": "docs/content/r33/layout/320x568-phone-cake-opening.png",
       "width": 320,
       "height": 568,
-      "sha256": "465f75322c064fa1998eacbe20d0431b4dbda0f5fe7f371257aa61ce58918be0",
+      "sha256": "bfec1182a691028d48e6eaa8daeb9f2a6af21683671252a6c6cfebacfb288f70",
       "state": {
         "roadShape": "uphill",
         "cakeStage": "starting",
@@ -377,7 +377,7 @@
       "path": "docs/content/r33/layout/layout/device-320x568-cake-playing.png",
       "width": 320,
       "height": 568,
-      "sha256": "465f75322c064fa1998eacbe20d0431b4dbda0f5fe7f371257aa61ce58918be0",
+      "sha256": "bfec1182a691028d48e6eaa8daeb9f2a6af21683671252a6c6cfebacfb288f70",
       "state": {
         "roadShape": "uphill",
         "cakeStage": "starting",
@@ -720,7 +720,7 @@
       "path": "docs/content/r33/layout/320x568-phone-crossing-opening.png",
       "width": 320,
       "height": 568,
-      "sha256": "96111c6404bd59041fd1f758038dcc1d858121968bded108a255d1f02ab3c4d2",
+      "sha256": "b40ff6ab38e9dd1e7390a110d6df29eb3e01a88584682cf1a8e26beee1c00dbe",
       "state": {
         "roadShape": "uphill",
         "cakeStage": "",
@@ -893,7 +893,7 @@
       "path": "docs/content/r33/layout/layout/device-320x568-crossing-playing.png",
       "width": 320,
       "height": 568,
-      "sha256": "96111c6404bd59041fd1f758038dcc1d858121968bded108a255d1f02ab3c4d2",
+      "sha256": "b40ff6ab38e9dd1e7390a110d6df29eb3e01a88584682cf1a8e26beee1c00dbe",
       "state": {
         "roadShape": "uphill",
         "cakeStage": "",
@@ -1555,7 +1555,7 @@
       "path": "docs/content/r33/layout/layout/device-320x568-cabin.png",
       "width": 320,
       "height": 568,
-      "sha256": "8d302851fa170d6f23521194c2d7bf03ecba803b8e1672cad15ef13e605a711b",
+      "sha256": "eb714bba19b7801cc2126a0d9f7bcd5cc80e6d67a8e880e9c5c7289cd57566dc",
       "state": {
         "roadShape": "uphill",
         "cakeStage": "",
@@ -1682,7 +1682,7 @@
       "path": "docs/content/r33/layout/568x320-phone-cake-select-stations.png",
       "width": 568,
       "height": 320,
-      "sha256": "93dc7816ad75fa39fa47ac382388d14d48f39f526adfedd87de562e8933bf5fd",
+      "sha256": "aba281710a55d4a4b8f13ebdce091f97fd0974533d6120358d0f16af2cc0994f",
       "state": {
         "roadShape": "uphill",
         "cakeStage": "starting",
@@ -2356,7 +2356,7 @@
       "path": "docs/content/r33/layout/568x320-phone-crossing-opening.png",
       "width": 568,
       "height": 320,
-      "sha256": "eecc526ba49c60050dd281b4bb28c1fa9b3cffadf7c09c235cb42e8b48ebbba9",
+      "sha256": "21ab99b3eafe688c675ac91e71d3a78463f4a99693de62f70971ac596f9d7c5d",
       "state": {
         "roadShape": "uphill",
         "cakeStage": "",
@@ -2529,7 +2529,7 @@
       "path": "docs/content/r33/layout/layout/device-568x320-crossing-playing.png",
       "width": 568,
       "height": 320,
-      "sha256": "eecc526ba49c60050dd281b4bb28c1fa9b3cffadf7c09c235cb42e8b48ebbba9",
+      "sha256": "21ab99b3eafe688c675ac91e71d3a78463f4a99693de62f70971ac596f9d7c5d",
       "state": {
         "roadShape": "uphill",
         "cakeStage": "",
@@ -3318,7 +3318,7 @@
       "path": "docs/content/r33/layout/390x844-phone-cake-select-stations.png",
       "width": 390,
       "height": 844,
-      "sha256": "2828242a01c6daf2fe8e21deb433757b86895ec5c140e92b6c381b9be937bd0a",
+      "sha256": "f1ccc3d49016155840923d1e166a6e52e7182685f501fb21f28d582ca7f2c2d7",
       "state": {
         "roadShape": "uphill",
         "cakeStage": "starting",
@@ -4489,7 +4489,7 @@
       "path": "docs/content/r33/layout/390x844-phone-tickets-opening.png",
       "width": 390,
       "height": 844,
-      "sha256": "13831bed870626dc39ff45280009104e6ed8d5c93de1da1b83294a18598d83d7",
+      "sha256": "f3a201d50109967ac6afeeab1a45d3604c4f212260c998a7ac744ab89e288c30",
       "state": {
         "roadShape": "uphill",
         "cakeStage": "",
@@ -4658,7 +4658,7 @@
       "path": "docs/content/r33/layout/layout/device-390x844-tickets-playing.png",
       "width": 390,
       "height": 844,
-      "sha256": "13831bed870626dc39ff45280009104e6ed8d5c93de1da1b83294a18598d83d7",
+      "sha256": "f3a201d50109967ac6afeeab1a45d3604c4f212260c998a7ac744ab89e288c30",
       "state": {
         "roadShape": "uphill",
         "cakeStage": "",
@@ -4954,7 +4954,7 @@
       "path": "docs/content/r33/layout/844x390-phone-cake-select-stations.png",
       "width": 844,
       "height": 390,
-      "sha256": "f63b713e110c728fbf8714fcca4667ab55b3ef7524555ecce0526a4644f4e9cb",
+      "sha256": "c96003240f90700352b4118abff86fdb8ab4ddfd5977ae52a99016a908277476",
       "state": {
         "roadShape": "uphill",
         "cakeStage": "starting",
@@ -5102,7 +5102,7 @@
       "path": "docs/content/r33/layout/844x390-phone-cake-opening.png",
       "width": 844,
       "height": 390,
-      "sha256": "640674bcc0ad506879cd9943eba07b8440bdfe030fe44d534e319946af59e811",
+      "sha256": "701a05f9a72d5cfb305cf0baa437b87f17436134cd047fa7dae1c6e5388d740e",
       "state": {
         "roadShape": "uphill",
         "cakeStage": "starting",
@@ -5285,7 +5285,7 @@
       "path": "docs/content/r33/layout/layout/device-844x390-cake-playing.png",
       "width": 844,
       "height": 390,
-      "sha256": "640674bcc0ad506879cd9943eba07b8440bdfe030fe44d534e319946af59e811",
+      "sha256": "701a05f9a72d5cfb305cf0baa437b87f17436134cd047fa7dae1c6e5388d740e",
       "state": {
         "roadShape": "uphill",
         "cakeStage": "starting",
@@ -5628,7 +5628,7 @@
       "path": "docs/content/r33/layout/844x390-phone-crossing-opening.png",
       "width": 844,
       "height": 390,
-      "sha256": "19e1cdade21507e9732efd343443fd9e0b5d6723bd7071f3fec0260f6602a620",
+      "sha256": "003125b7bcd5ca844c42089adc6ac0b5e03a905096cfe72fdc401f025fb2c480",
       "state": {
         "roadShape": "uphill",
         "cakeStage": "",
@@ -5801,7 +5801,7 @@
       "path": "docs/content/r33/layout/layout/device-844x390-crossing-playing.png",
       "width": 844,
       "height": 390,
-      "sha256": "19e1cdade21507e9732efd343443fd9e0b5d6723bd7071f3fec0260f6602a620",
+      "sha256": "003125b7bcd5ca844c42089adc6ac0b5e03a905096cfe72fdc401f025fb2c480",
       "state": {
         "roadShape": "uphill",
         "cakeStage": "",
@@ -6463,7 +6463,7 @@
       "path": "docs/content/r33/layout/layout/device-844x390-cabin.png",
       "width": 844,
       "height": 390,
-      "sha256": "71ada16a1c2823d9378a8ac507d7e4b9b361e06ad5cc3a2d43f4498bb1d3a97e",
+      "sha256": "54a1879ab36123072395fb55c5f7a21a9e11e70a39e4d466e38d5038758bdfb3",
       "state": {
         "roadShape": "uphill",
         "cakeStage": "",
@@ -6471,7 +6471,7 @@
         "newTrafficTime": "0",
         "staleSide": "",
         "refreshes": "0",
-        "boardTime": "0.178",
+        "boardTime": "0.179",
         "doorStage": "boarding",
         "boardingIndex": "0",
         "hazard": "false",
@@ -6528,7 +6528,7 @@
         "stateTitle": "",
         "nextAction": "escort",
         "holdState": "paused",
-        "holdProgress": "0.268",
+        "holdProgress": "0.272",
         "recheckTime": "2",
         "hintLevel": "0",
         "forceTarget": "0",
@@ -6590,7 +6590,7 @@
       "path": "docs/content/r33/layout/768x1024-phone-cake-select-stations.png",
       "width": 768,
       "height": 1024,
-      "sha256": "0a94086fb86c04ee954a2dd60f34ca25fbe47d1035c67530b9c6c4167e979f73",
+      "sha256": "33704179316c6d1fa28ed5c32a234d191e6bbdac2e6d25218eb16ac3b107d9c2",
       "state": {
         "roadShape": "uphill",
         "cakeStage": "starting",
@@ -6738,7 +6738,7 @@
       "path": "docs/content/r33/layout/768x1024-phone-cake-opening.png",
       "width": 768,
       "height": 1024,
-      "sha256": "5112bd04cb3402695beeca60bbbfc10fd82f6f610999567545a20b39910e86e3",
+      "sha256": "9d71e7d7c79ac26df5a468b1df8bf91a5bd17336e7a6a066b50115a8bed63f4c",
       "state": {
         "roadShape": "uphill",
         "cakeStage": "starting",
@@ -6921,7 +6921,7 @@
       "path": "docs/content/r33/layout/layout/device-768x1024-cake-playing.png",
       "width": 768,
       "height": 1024,
-      "sha256": "5112bd04cb3402695beeca60bbbfc10fd82f6f610999567545a20b39910e86e3",
+      "sha256": "9d71e7d7c79ac26df5a468b1df8bf91a5bd17336e7a6a066b50115a8bed63f4c",
       "state": {
         "roadShape": "uphill",
         "cakeStage": "starting",
@@ -7104,7 +7104,7 @@
       "path": "docs/content/r33/layout/768x1024-phone-crossing-select-stations.png",
       "width": 768,
       "height": 1024,
-      "sha256": "5fd5dd24802fbe6e4397c377a5323f92ba390179b4a55e9395c4f9f8dfa8a416",
+      "sha256": "cfa81640115a87383781e032691dfa9ee6901331d5af58ed0d06fe636a0cb442",
       "state": {
         "roadShape": "uphill",
         "cakeStage": "",
@@ -7264,7 +7264,7 @@
       "path": "docs/content/r33/layout/768x1024-phone-crossing-opening.png",
       "width": 768,
       "height": 1024,
-      "sha256": "38f2bdba4997931526e29ceb237b7ed6495f74294d78c4bf40d57fd09abb1682",
+      "sha256": "e7844440eda5b5467a651b9d360df2dba27457b2363542e0372ada5a312956ee",
       "state": {
         "roadShape": "uphill",
         "cakeStage": "",
@@ -7437,7 +7437,7 @@
       "path": "docs/content/r33/layout/layout/device-768x1024-crossing-playing.png",
       "width": 768,
       "height": 1024,
-      "sha256": "38f2bdba4997931526e29ceb237b7ed6495f74294d78c4bf40d57fd09abb1682",
+      "sha256": "e7844440eda5b5467a651b9d360df2dba27457b2363542e0372ada5a312956ee",
       "state": {
         "roadShape": "uphill",
         "cakeStage": "",
@@ -7610,7 +7610,7 @@
       "path": "docs/content/r33/layout/768x1024-phone-tickets-select-stations.png",
       "width": 768,
       "height": 1024,
-      "sha256": "c9a4c8040ce52924052c75468186299cf411d450d49ad6e010ee0ed73bad9173",
+      "sha256": "fafc2deab6f0bf5f3786c6514454bc0de143402e808d387d54cf4ea667debc94",
       "state": {
         "roadShape": "uphill",
         "cakeStage": "",
@@ -7761,7 +7761,7 @@
       "path": "docs/content/r33/layout/768x1024-phone-tickets-opening.png",
       "width": 768,
       "height": 1024,
-      "sha256": "b2831f6773fe8a875ec3bdc9ca32737e25f9d35960bca1f3cc79c27f83061143",
+      "sha256": "ba57a8359b916f56324da367df55d0cb894403da137b57239faae41ab9b19179",
       "state": {
         "roadShape": "uphill",
         "cakeStage": "",
@@ -7930,7 +7930,7 @@
       "path": "docs/content/r33/layout/layout/device-768x1024-tickets-playing.png",
       "width": 768,
       "height": 1024,
-      "sha256": "b2831f6773fe8a875ec3bdc9ca32737e25f9d35960bca1f3cc79c27f83061143",
+      "sha256": "ba57a8359b916f56324da367df55d0cb894403da137b57239faae41ab9b19179",
       "state": {
         "roadShape": "uphill",
         "cakeStage": "",
@@ -8099,7 +8099,7 @@
       "path": "docs/content/r33/layout/layout/device-768x1024-cabin.png",
       "width": 768,
       "height": 1024,
-      "sha256": "2313deeb23bdacacbb26d869e2461db88f245c2268b0deb4774d10ef7011fa18",
+      "sha256": "861a3024e94e9c9fd4184f1506de1dac530fbf711e88e828fcfc2338c9161cf8",
       "state": {
         "roadShape": "uphill",
         "cakeStage": "",
@@ -8226,7 +8226,7 @@
       "path": "docs/content/r33/layout/1024x768-phone-cake-select-stations.png",
       "width": 1024,
       "height": 768,
-      "sha256": "19fe38c1438ec83a19a41a747f6f3689f76eae48b298d7978aea0470b72aed86",
+      "sha256": "9d50dfa817c0aabdfff0e13d987789271e1d2d47162fa7db9a28b225054b5746",
       "state": {
         "roadShape": "uphill",
         "cakeStage": "starting",
@@ -8374,7 +8374,7 @@
       "path": "docs/content/r33/layout/1024x768-phone-cake-opening.png",
       "width": 1024,
       "height": 768,
-      "sha256": "b728994ecf688c906b9eecc7663684df77e48981065ba17df9decc63848bb295",
+      "sha256": "247321b7f7ff671fad4e857f54f003188222457212c5d5e0805c313ac63ebee4",
       "state": {
         "roadShape": "uphill",
         "cakeStage": "starting",
@@ -8557,7 +8557,7 @@
       "path": "docs/content/r33/layout/layout/device-1024x768-cake-playing.png",
       "width": 1024,
       "height": 768,
-      "sha256": "b728994ecf688c906b9eecc7663684df77e48981065ba17df9decc63848bb295",
+      "sha256": "247321b7f7ff671fad4e857f54f003188222457212c5d5e0805c313ac63ebee4",
       "state": {
         "roadShape": "uphill",
         "cakeStage": "starting",
@@ -8900,7 +8900,7 @@
       "path": "docs/content/r33/layout/1024x768-phone-crossing-opening.png",
       "width": 1024,
       "height": 768,
-      "sha256": "7757583d6647559b18f76dca050a4a613fefc4d21a650b66a258487bca777e6e",
+      "sha256": "f94b55ae592763f7a9824b9ea4950851e27eeeb4715e4d79dbbadcf948132f78",
       "state": {
         "roadShape": "uphill",
         "cakeStage": "",
@@ -9073,7 +9073,7 @@
       "path": "docs/content/r33/layout/layout/device-1024x768-crossing-playing.png",
       "width": 1024,
       "height": 768,
-      "sha256": "7757583d6647559b18f76dca050a4a613fefc4d21a650b66a258487bca777e6e",
+      "sha256": "f94b55ae592763f7a9824b9ea4950851e27eeeb4715e4d79dbbadcf948132f78",
       "state": {
         "roadShape": "uphill",
         "cakeStage": "",
@@ -9862,7 +9862,7 @@
       "path": "docs/content/r33/layout/1366x600-phone-cake-select-stations.png",
       "width": 1366,
       "height": 600,
-      "sha256": "4bccbd285994cd3873c6ebde316b9acaf7596ce925cb19ecd6caeb3312e1ffaa",
+      "sha256": "3962495966a2e4b7a724639f4f13bdcc8246998238afc431f5cd359b4d6386b2",
       "state": {
         "roadShape": "uphill",
         "cakeStage": "starting",
@@ -10536,7 +10536,7 @@
       "path": "docs/content/r33/layout/1366x600-phone-crossing-opening.png",
       "width": 1366,
       "height": 600,
-      "sha256": "de9c487ec16a2a97d737cb41892cda0dbd59b4a0934a380c614a625dbe597fc3",
+      "sha256": "688627fba64ba08955e993eb4684665c24b657ad875a44aee9c43eeb4e77d34c",
       "state": {
         "roadShape": "uphill",
         "cakeStage": "",
@@ -10709,7 +10709,7 @@
       "path": "docs/content/r33/layout/layout/device-1366x600-crossing-playing.png",
       "width": 1366,
       "height": 600,
-      "sha256": "de9c487ec16a2a97d737cb41892cda0dbd59b4a0934a380c614a625dbe597fc3",
+      "sha256": "688627fba64ba08955e993eb4684665c24b657ad875a44aee9c43eeb4e77d34c",
       "state": {
         "roadShape": "uphill",
         "cakeStage": "",
@@ -11371,7 +11371,7 @@
       "path": "docs/content/r33/layout/layout/device-1366x600-cabin.png",
       "width": 1366,
       "height": 600,
-      "sha256": "953a44a394ae12941952e396e5410a9ea74d5acbc1b0b7e30277632bb76eb0d0",
+      "sha256": "a5ba68f4e1a061f70615d51fcf69c341d01b0750f3a4398807b57b163d22695f",
       "state": {
         "roadShape": "uphill",
         "cakeStage": "",
@@ -11498,7 +11498,7 @@
       "path": "docs/content/r33/layout/1280x640-phone-cake-select-stations.png",
       "width": 1280,
       "height": 640,
-      "sha256": "ded8e8297b57582ed325a0381fca71b9565b6628670d204bd28a927521d72128",
+      "sha256": "3e557ac46882265461f43cd101e0676e1da255f5f0a3791fe977c7fd44a95caa",
       "state": {
         "roadShape": "uphill",
         "cakeStage": "starting",
@@ -11646,7 +11646,7 @@
       "path": "docs/content/r33/layout/1280x640-phone-cake-opening.png",
       "width": 1280,
       "height": 640,
-      "sha256": "bca5e3ea55f77246002faac426a08f25efd96ef342c4df33383ef43837df6361",
+      "sha256": "d418ae08442cc09ab829a71aaf37796e8f8dccbc64d9d79e1eb8ac524940f2b8",
       "state": {
         "roadShape": "uphill",
         "cakeStage": "starting",
@@ -11829,7 +11829,7 @@
       "path": "docs/content/r33/layout/layout/device-1280x640-cake-playing.png",
       "width": 1280,
       "height": 640,
-      "sha256": "bca5e3ea55f77246002faac426a08f25efd96ef342c4df33383ef43837df6361",
+      "sha256": "d418ae08442cc09ab829a71aaf37796e8f8dccbc64d9d79e1eb8ac524940f2b8",
       "state": {
         "roadShape": "uphill",
         "cakeStage": "starting",
@@ -12172,7 +12172,7 @@
       "path": "docs/content/r33/layout/1280x640-phone-crossing-opening.png",
       "width": 1280,
       "height": 640,
-      "sha256": "2bc48121e2a6eb5446ca7582d739f95be0b7071f15441620e3e6b8cbf5bebf5a",
+      "sha256": "b3b217e05e393c5025a5b36efb501b79ab6b19b23ead1a3eb0a136ba5608b1ae",
       "state": {
         "roadShape": "uphill",
         "cakeStage": "",
@@ -12345,7 +12345,7 @@
       "path": "docs/content/r33/layout/layout/device-1280x640-crossing-playing.png",
       "width": 1280,
       "height": 640,
-      "sha256": "2bc48121e2a6eb5446ca7582d739f95be0b7071f15441620e3e6b8cbf5bebf5a",
+      "sha256": "b3b217e05e393c5025a5b36efb501b79ab6b19b23ead1a3eb0a136ba5608b1ae",
       "state": {
         "roadShape": "uphill",
         "cakeStage": "",
@@ -12518,7 +12518,7 @@
       "path": "docs/content/r33/layout/1280x640-phone-tickets-select-stations.png",
       "width": 1280,
       "height": 640,
-      "sha256": "160cf26571cf9819426acae24a8e5d956d8867c66b3d6d5e2ef10ceb99d2397c",
+      "sha256": "14402dade5ad3e6797247febe629fbf744f4558762ecdda13340f87c089e8964",
       "state": {
         "roadShape": "uphill",
         "cakeStage": "",
@@ -12669,7 +12669,7 @@
       "path": "docs/content/r33/layout/1280x640-phone-tickets-opening.png",
       "width": 1280,
       "height": 640,
-      "sha256": "51d5b07f65b850417129524f26869565945037ad06ece6dac40baae58b5c484f",
+      "sha256": "6a5fc20aa4aacb0d3bb3d9b9e313a7ce9249724e78338240a0eddecc70e4f8b9",
       "state": {
         "roadShape": "uphill",
         "cakeStage": "",
@@ -12838,7 +12838,7 @@
       "path": "docs/content/r33/layout/layout/device-1280x640-tickets-playing.png",
       "width": 1280,
       "height": 640,
-      "sha256": "51d5b07f65b850417129524f26869565945037ad06ece6dac40baae58b5c484f",
+      "sha256": "6a5fc20aa4aacb0d3bb3d9b9e313a7ce9249724e78338240a0eddecc70e4f8b9",
       "state": {
         "roadShape": "uphill",
         "cakeStage": "",

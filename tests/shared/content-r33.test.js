@@ -21,6 +21,9 @@ test('R33 bay speed never says high inside parking space, main road uses differe
  for(const distance of [47,50.7,54.6]){Object.assign(g,{distance,bayRestarted:distance>47});poses.push(cakeView(g));}
  assert.notEqual(poses[0].bayPan,poses[2].bayPan);assert.ok(Math.abs(poses[0].pose.x-poses[1].pose.x)>.05&&Math.abs(poses[1].pose.x-poses[2].pose.x)>.05);
  g.distance=49;g.speed=6;g.input.go=true;g.update(.016);assert.ok(g.speed<2);assert.doesNotMatch(cakeView(g).speedText,/高速/);g.speed=0;assert.match(cakeView(g).speedText,/已停住/);
+ const approach=new ContentLesson('cake',{stage:2,layoutSeed});approach.begin();approach.distance=20;approach.speed=6;assert.equal(cakeView(approach).bayPan,0);assert.equal(approach.bend,layoutSeed?1:-1);
+ approach.distance=41;approach.update(.016);assert.ok(cakeView(approach).bayPan>0);assert.ok(approach.speed<2);
+ approach.distance=47;approach.speed=1;approach.update(.016);assert.equal(approach.speed,0);assert.match(cakeView(approach).speedText,/已停住/);
  }
 });
 test('R33 cake roof, meter and closeup share displacement and angle and use three readable tones',()=>{

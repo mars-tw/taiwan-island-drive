@@ -2,8 +2,8 @@
   "status": "VERIFIED",
   "sourceFingerprint": {
     "src/shared/content-r1-ui.js": "77f5f4b2f7d173b092fdb7b6d3db8bc8cc29d3fcb0e5da896832b806f2f70156",
-    "src/shared/content-r33.js": "c3b8a7dec4447f643c759c71d02f50d13b3a00597dcf29a0a5ebf1c08e2ffad6",
-    "src/shared/content-r33-scene.js": "437b67016d794db4014a0fbdfb1f8612ef84502475059f7eff91a7baf8d82bbd",
+    "src/shared/content-r33.js": "53396b14a6bbfa9da07eb2d6a317bc264eb490bf3cde2a7c562e6b440df61580",
+    "src/shared/content-r33-scene.js": "066aef9b49288f1e5d3e287072cf3ec621cf9ed26ce72644c99c8cdfbdce2495",
     "src/shared/content-r33.css": "b16a76c5d84780df6fd8b0613d3f61d4d2ef7cde10de4e830c850b922fd09542",
     "scripts/check-content-r33.mjs": "56e58aa2ea0b9610b5b998fd177351fbee0bfa124045c47a47c4d5d3267f0b28"
   },
@@ -123,7 +123,7 @@
       "path": "docs/content/r33/phone-cake-select-stations.png",
       "width": 390,
       "height": 844,
-      "sha256": "c83fa38536c853b3c955e01f3e9ab2a22177a405c5a8b6acb804087064c08742",
+      "sha256": "f1ccc3d49016155840923d1e166a6e52e7182685f501fb21f28d582ca7f2c2d7",
       "state": {
         "roadShape": "uphill",
         "cakeStage": "starting",
@@ -271,7 +271,7 @@
       "path": "docs/content/r33/phone-cake-opening.png",
       "width": 390,
       "height": 844,
-      "sha256": "92f30d25d99858a7524e202f862f0341457a2cd7865f83ca761e5a4684936d5e",
+      "sha256": "77a33eb06c224e7790484f9790a83f087a4a8cefe55200182b1c96cf53371d85",
       "state": {
         "roadShape": "uphill",
         "cakeStage": "starting",
@@ -454,7 +454,7 @@
       "path": "docs/content/r33/phone-cake-before-wrong.png",
       "width": 390,
       "height": 844,
-      "sha256": "8a02a673e0664db8e3580b980822db2e582e04a61bfef7237ba1c8547a943b3f",
+      "sha256": "0f0923c05abce68fb5fcbf185a3be2d85050a9f8e860f78ddddc326ce352b87b",
       "state": {
         "roadShape": "uphill",
         "cakeStage": "slowing",
@@ -637,7 +637,7 @@
       "path": "docs/content/r33/phone-cake-wrong-support.png",
       "width": 390,
       "height": 844,
-      "sha256": "98b7c851ab2cc14a20154ddd79c90428e858618eb00a23d1605b26fd7bb9f03e",
+      "sha256": "d5ef860e99ab8607982ca5757abe0647d781c06776eeb8523ecfe60041c5b6bc",
       "state": {
         "roadShape": "uphill",
         "cakeStage": "slowing",
@@ -820,7 +820,7 @@
       "path": "docs/content/r33/phone-cake-late-brake-edge.png",
       "width": 390,
       "height": 844,
-      "sha256": "5b1db67e5389086f7f42e86ccc9eb1c4ac0faef7accea3e5e29223367e77e684",
+      "sha256": "cd8b8384041be5e60a377d6879281ca8463ba471493dc69500a92b8dcedac045",
       "state": {
         "roadShape": "right",
         "cakeStage": "slowing",
@@ -1003,7 +1003,7 @@
       "path": "docs/content/r33/phone-cake-rescued.png",
       "width": 390,
       "height": 844,
-      "sha256": "c5e208177b159925825190d89a5a3328c23cf6e256d710cd6fbd27cd21fb1442",
+      "sha256": "5df27041eec0d059945cb4df1ba9ca976b36abf3c4dc5f232024a98532a5a3f2",
       "state": {
         "roadShape": "right",
         "cakeStage": "turning",
@@ -1310,7 +1310,7 @@
       "path": "docs/content/r33/phone-cake-stage-2-finished.png",
       "width": 390,
       "height": 844,
-      "sha256": "8a68c37f3d68d19d2d3f7334cf990e420cf864149694cbc272c75a4d9b850bb0",
+      "sha256": "a7b42f2488f30c1103676fa688f1a135d840616e74e694ba075228c1e232835d",
       "state": {
         "roadShape": "left",
         "cakeStage": "delivered",
@@ -1434,7 +1434,7 @@
       "path": "docs/content/r33/phone-cake-bay-parked.png",
       "width": 390,
       "height": 844,
-      "sha256": "2b4d1752d13588a43e41784f8d50fb6aa02ffbbb7d2f34a7b63bbccda7aede3c",
+      "sha256": "ef29266f117a6efedac863b748f5bfeeb09a72bdce4feb4e1332c979a1a050c1",
       "state": {
         "roadShape": "left",
         "cakeStage": "parked",
@@ -1458,14 +1458,14 @@
         "layoutSeed": "0",
         "distance": "47.00",
         "speed": "0.00",
-        "bend": "1",
+        "bend": "-1",
         "tilt": "0.00",
         "sway": "0.00",
         "acceleration": "0.00",
         "bayStopped": "true",
         "bayRestarted": "false",
-        "leftTurn": "false",
-        "rightTurn": "true",
+        "leftTurn": "true",
+        "rightTurn": "false",
         "focus": "center",
         "crossTime": "0.000",
         "crossDuration": "1.45",
@@ -1617,7 +1617,7 @@
       "path": "docs/content/r33/phone-cake-bay-leaving.png",
       "width": 390,
       "height": 844,
-      "sha256": "d021850d84f2f83e0511b3432e6fc2726122071294d41296099df0bf981fc24d",
+      "sha256": "2203454809ecb8ce0d10de3a9b8a3e5b0094b448672c400330fadd9f81d24d4b",
       "state": {
         "roadShape": "left",
         "cakeStage": "leaving",
@@ -1641,14 +1641,14 @@
         "layoutSeed": "0",
         "distance": "50.52",
         "speed": "1.65",
-        "bend": "1",
+        "bend": "-1",
         "tilt": "0.00",
         "sway": "0.00",
         "acceleration": "4.78",
         "bayStopped": "true",
         "bayRestarted": "true",
-        "leftTurn": "false",
-        "rightTurn": "true",
+        "leftTurn": "true",
+        "rightTurn": "false",
         "focus": "center",
         "crossTime": "0.000",
         "crossDuration": "1.45",
@@ -1800,7 +1800,7 @@
       "path": "docs/content/r33/phone-cake-bay-main-road.png",
       "width": 390,
       "height": 844,
-      "sha256": "d9f27a65c1eae57bc1d851793a11bddbb9c4d344d67fc501d02e3994238d39af",
+      "sha256": "01ea4f3d2d6d18e5d0abd8e7a5973b47daa92fa7e7047923ec37740c67770320",
       "state": {
         "roadShape": "left",
         "cakeStage": "main-road",
@@ -1824,14 +1824,14 @@
         "layoutSeed": "0",
         "distance": "54.68",
         "speed": "2.09",
-        "bend": "1",
+        "bend": "-1",
         "tilt": "0.00",
         "sway": "0.00",
         "acceleration": "4.38",
         "bayStopped": "true",
         "bayRestarted": "true",
-        "leftTurn": "false",
-        "rightTurn": "true",
+        "leftTurn": "true",
+        "rightTurn": "false",
         "focus": "center",
         "crossTime": "0.000",
         "crossDuration": "1.45",
@@ -1983,7 +1983,7 @@
       "path": "docs/content/r33/phone-cake-stage-3-finished.png",
       "width": 390,
       "height": 844,
-      "sha256": "6cbcb747ce057f7ededb3bf983ca2558e90fde316592f8013bb1c88717b74541",
+      "sha256": "8a6cf04e1faaa62103912fd33b5f4d40c1a23a8117df71b15bdbaf52a16ebcdf",
       "state": {
         "roadShape": "left",
         "cakeStage": "delivered",
@@ -2007,14 +2007,14 @@
         "layoutSeed": "0",
         "distance": "55.00",
         "speed": "0.00",
-        "bend": "1",
+        "bend": "-1",
         "tilt": "0.00",
         "sway": "0.00",
         "acceleration": "-7.59",
         "bayStopped": "true",
         "bayRestarted": "true",
-        "leftTurn": "false",
-        "rightTurn": "true",
+        "leftTurn": "true",
+        "rightTurn": "false",
         "focus": "center",
         "crossTime": "0.000",
         "crossDuration": "1.45",
@@ -2107,7 +2107,7 @@
       "path": "docs/content/r33/phone-cake-complete.png",
       "width": 390,
       "height": 844,
-      "sha256": "6cbcb747ce057f7ededb3bf983ca2558e90fde316592f8013bb1c88717b74541",
+      "sha256": "8a6cf04e1faaa62103912fd33b5f4d40c1a23a8117df71b15bdbaf52a16ebcdf",
       "state": {
         "roadShape": "left",
         "cakeStage": "delivered",
@@ -2131,14 +2131,14 @@
         "layoutSeed": "0",
         "distance": "55.00",
         "speed": "0.00",
-        "bend": "1",
+        "bend": "-1",
         "tilt": "0.00",
         "sway": "0.00",
         "acceleration": "-7.59",
         "bayStopped": "true",
         "bayRestarted": "true",
-        "leftTurn": "false",
-        "rightTurn": "true",
+        "leftTurn": "true",
+        "rightTurn": "false",
         "focus": "center",
         "crossTime": "0.000",
         "crossDuration": "1.45",
@@ -2231,7 +2231,7 @@
       "path": "docs/content/r33/phone-cake-saved.png",
       "width": 390,
       "height": 844,
-      "sha256": "c8ae05f8f075c1a1afa0e87eb9458aebdeddbfc9c62b7e8d3387a1837fcef0df",
+      "sha256": "d4d873aaa8ec20d795a58b4cba1cbf28ad39558ebe5dcf95eda5aaa2fa31425d",
       "state": {
         "roadShape": "left",
         "cakeStage": "delivered",
@@ -2255,7 +2255,7 @@
         "layoutSeed": "0",
         "distance": "0.00",
         "speed": "0.00",
-        "bend": "1",
+        "bend": "-1",
         "tilt": "0.00",
         "sway": "0.00",
         "acceleration": "0.00",
@@ -3019,7 +3019,7 @@
       "path": "docs/content/r33/phone-crossing-stage-1-unsafe-start.png",
       "width": 390,
       "height": 844,
-      "sha256": "9b34ef3cb85ad3c91e4b241d3d87242c4a1113edbd5a7568ef3301c7bbfff875",
+      "sha256": "8e20f16f6d5661c91fc26fcf7467d88f3fa4ada271e20c35d174f6eabd0c4991",
       "state": {
         "roadShape": "uphill",
         "cakeStage": "",
@@ -3538,7 +3538,7 @@
       "path": "docs/content/r33/phone-crossing-stage-1-car-leaving.png",
       "width": 390,
       "height": 844,
-      "sha256": "8b2dd59fac7db31f20638fcd29c15a1e68365215a6116f3fb229dcd409237198",
+      "sha256": "817e21174ae3189e81f44f5acc80bc323b5849778c8502a1c663bf6a1ec693c3",
       "state": {
         "roadShape": "uphill",
         "cakeStage": "",
@@ -4057,7 +4057,7 @@
       "path": "docs/content/r33/phone-crossing-stage-1-new-car-yields.png",
       "width": 390,
       "height": 844,
-      "sha256": "682747e6a181662a5e29681a2bf55919fbfbb1579a9f2961052c2dd14f37ffa1",
+      "sha256": "4cfe03ae3dd69b321d9a2019d63b31f89c71cef4a58725db279998d50279e2b2",
       "state": {
         "roadShape": "uphill",
         "cakeStage": "",
@@ -4413,7 +4413,7 @@
       "path": "docs/content/r33/phone-crossing-1-child-arrived.png",
       "width": 390,
       "height": 844,
-      "sha256": "a5cebac33b1937438512c7a2756fb9d07c61ccc4ba3adff6d67bcf7337b669ab",
+      "sha256": "3044956b6222f4590694816609025e2c81ce860bdbadbc539c120b46621aaa79",
       "state": {
         "roadShape": "uphill",
         "cakeStage": "",
@@ -4586,7 +4586,7 @@
       "path": "docs/content/r33/phone-crossing-stage-1-clear-needs-recheck.png",
       "width": 390,
       "height": 844,
-      "sha256": "4b2d5d94a1f6b436ab24eb979339cb7bc938ab6a2b157e34ea8e2519ec393f18",
+      "sha256": "aa1a5c3efad7558ec5d251581aa2e933e89d43380d174d036be8001f07af38b0",
       "state": {
         "roadShape": "uphill",
         "cakeStage": "",
@@ -4759,7 +4759,7 @@
       "path": "docs/content/r33/phone-crossing-1-bike-before.png",
       "width": 390,
       "height": 844,
-      "sha256": "dfa3f0e27a4f661d76efb30a52aed68d1a0eadce5af4cab3783c1cb7b1b20784",
+      "sha256": "0c5e330a13c68afb7c7acba4aa379bf9612665603adb2c0717c8bfdae3cb3b28",
       "state": {
         "roadShape": "uphill",
         "cakeStage": "",
@@ -5105,7 +5105,7 @@
       "path": "docs/content/r33/phone-crossing-1-bike-arrived.png",
       "width": 390,
       "height": 844,
-      "sha256": "b30ec8fd2c859e4a7de8f28f4483a8f69e4c4328f8c5569b7b7a6ab4c8e89d8e",
+      "sha256": "896fea85d4e27975123f6541e10da15c1345ffeb1d069e738860a912162a1ee0",
       "state": {
         "roadShape": "uphill",
         "cakeStage": "",
@@ -5451,7 +5451,7 @@
       "path": "docs/content/r33/phone-crossing-1-grandma-on-zebra.png",
       "width": 390,
       "height": 844,
-      "sha256": "81c76c4c9281036341f5bc70caeadb15977fc8d0680cc9d4808013fab66257f3",
+      "sha256": "d96cab4432376dbac991636674cb538fece93794d72e29c688b23ac937f58a54",
       "state": {
         "roadShape": "uphill",
         "cakeStage": "",
@@ -5624,7 +5624,7 @@
       "path": "docs/content/r33/phone-crossing-1-grandma-arrived.png",
       "width": 390,
       "height": 844,
-      "sha256": "4a85c1212edbc223f633ebfa5b0c4e820baca50a104886134fd637e53f0e96be",
+      "sha256": "c7bbd5898824572f11849a76f04b471df2f59f158753021ab3353e82dbc8493c",
       "state": {
         "roadShape": "uphill",
         "cakeStage": "",
@@ -5779,7 +5779,7 @@
       "path": "docs/content/r33/phone-crossing-stage-1-ready.png",
       "width": 390,
       "height": 844,
-      "sha256": "4a85c1212edbc223f633ebfa5b0c4e820baca50a104886134fd637e53f0e96be",
+      "sha256": "c7bbd5898824572f11849a76f04b471df2f59f158753021ab3353e82dbc8493c",
       "state": {
         "roadShape": "uphill",
         "cakeStage": "",
@@ -5934,7 +5934,7 @@
       "path": "docs/content/r33/phone-crossing-stage-1-departing.png",
       "width": 390,
       "height": 844,
-      "sha256": "b0553df89821921368c7fb4eab1dcd71d600400509e5f9e0de7d043aebfbbfc8",
+      "sha256": "92a7628b2441d6f6cc5b015b5b5646b2a202af15dafa2ed7afc7515aaf99793f",
       "state": {
         "roadShape": "uphill",
         "cakeStage": "",
@@ -6083,7 +6083,7 @@
       "path": "docs/content/r33/phone-crossing-stage-1-finished.png",
       "width": 390,
       "height": 844,
-      "sha256": "cff8878c292bed2a735910f2a577e47fc33f5d615000cc0551307217e1494bfa",
+      "sha256": "b5454a851e7deda35305797ed5b3d66be5606681b16bfb8f7f78729b0a8b8201",
       "state": {
         "roadShape": "uphill",
         "cakeStage": "",
@@ -6238,7 +6238,7 @@
       "path": "docs/content/r33/phone-crossing-stage-2-unsafe-start.png",
       "width": 390,
       "height": 844,
-      "sha256": "45d6f5fe81415a704e693808ca092d9a77264ad760f60979b0f748b96f7dc1b8",
+      "sha256": "7867831ec5490831da79e541019edba18922ce3da641ed6d7d1aaef8106a9a8e",
       "state": {
         "roadShape": "left",
         "cakeStage": "",
@@ -6411,7 +6411,7 @@
       "path": "docs/content/r33/phone-crossing-stage-2-car-approach.png",
       "width": 390,
       "height": 844,
-      "sha256": "f3120ab96b500d504364381ceed60f516e349038595ca2189532e58084385322",
+      "sha256": "189db3bdf84b8a1030a3b121f177280ef41d4339964eda95eacf7e59d52ac061",
       "state": {
         "roadShape": "left",
         "cakeStage": "",
@@ -6584,7 +6584,7 @@
       "path": "docs/content/r33/phone-crossing-stage-2-car-passing.png",
       "width": 390,
       "height": 844,
-      "sha256": "f71ecab201b4dd359d305b121fe8b960927ef39c85b4f7cb821154ae38b83a96",
+      "sha256": "88da82508071a2a2a49e5ae64e30458261d3d023bf8251af049f3d2e840c5287",
       "state": {
         "roadShape": "left",
         "cakeStage": "",
@@ -6757,7 +6757,7 @@
       "path": "docs/content/r33/phone-crossing-stage-2-car-leaving.png",
       "width": 390,
       "height": 844,
-      "sha256": "d163f7ffb379fb2d4362b3f556052918254b3cdac2bb7adc6b143fd4ed1a2674",
+      "sha256": "0c49544f6df18148607ffbcedae75d1a2625d358c655789927138161e6db41e9",
       "state": {
         "roadShape": "left",
         "cakeStage": "",
@@ -6930,7 +6930,7 @@
       "path": "docs/content/r33/phone-crossing-stage-2-car-left.png",
       "width": 390,
       "height": 844,
-      "sha256": "a3ff09f68bc1a3114953864f04d7c52ba40091c94eb5c59f6eb59d893bbdf1b4",
+      "sha256": "071244c65070c25ca054657fe11512207ce8ccf2b4db1bbeca56be3ee6c6ef4b",
       "state": {
         "roadShape": "left",
         "cakeStage": "",
@@ -7103,7 +7103,7 @@
       "path": "docs/content/r33/phone-crossing-2-grandma-before.png",
       "width": 390,
       "height": 844,
-      "sha256": "ee5b88716e8876d0a89dab54e9df4b6d1b9937def9bbf6eafc65abe379bfeb31",
+      "sha256": "5108e5ee041c3b7dd7fe4000d3018e3b61543e55f28988cddd20e8b66970dfde",
       "state": {
         "roadShape": "left",
         "cakeStage": "",
@@ -7276,7 +7276,7 @@
       "path": "docs/content/r33/phone-crossing-stage-2-new-car-yields.png",
       "width": 390,
       "height": 844,
-      "sha256": "82f046c4000f6508bb85e70a0a4eb5e2e69d198a164742b4582625fb75e8ae27",
+      "sha256": "b57f5a6e6929d103c73051c5280a149da6627dac8675072805ef1bb555fa4c4f",
       "state": {
         "roadShape": "left",
         "cakeStage": "",
@@ -7454,7 +7454,7 @@
       "path": "docs/content/r33/phone-crossing-2-grandma-on-zebra.png",
       "width": 390,
       "height": 844,
-      "sha256": "4399a206148ef69729bf1325eb8afe11464384d9177b1b2cb2b892724d8f960e",
+      "sha256": "61b0a662dd210ea622e9b6b7509fbd6f937c26d4525baba2b126b83f613752db",
       "state": {
         "roadShape": "left",
         "cakeStage": "",
@@ -7632,7 +7632,7 @@
       "path": "docs/content/r33/phone-crossing-2-grandma-arrived.png",
       "width": 390,
       "height": 844,
-      "sha256": "d8742ba28afc020d83d60cdbdec0797b12227e42f1dd234e9046b93d4662f5e7",
+      "sha256": "8a6a2ce0f1e544aba19f58932337b0190937c153da75e710a587af2f362cb917",
       "state": {
         "roadShape": "left",
         "cakeStage": "",
@@ -7805,7 +7805,7 @@
       "path": "docs/content/r33/phone-crossing-stage-2-clear-needs-recheck.png",
       "width": 390,
       "height": 844,
-      "sha256": "0b276bfe1478210bf6ca29db4d6cc1dd082f7ab5de1dc9dfef1d0cd6fffdc1ff",
+      "sha256": "cc297853761adbe32f1d3a2db8923e3ae0062f5f9a1977a40fd5edf0f930c24e",
       "state": {
         "roadShape": "left",
         "cakeStage": "",
@@ -7978,7 +7978,7 @@
       "path": "docs/content/r33/phone-crossing-2-child-before.png",
       "width": 390,
       "height": 844,
-      "sha256": "f337e6f557e4528850bd9579846a31c9cf754dfcbbcada3c099727ce57acdae0",
+      "sha256": "4c813f6178a57925271ae898febe9cfee9aaa285b2812d101d97a2b3ff6baeac",
       "state": {
         "roadShape": "left",
         "cakeStage": "",
@@ -8151,7 +8151,7 @@
       "path": "docs/content/r33/phone-crossing-2-child-on-zebra.png",
       "width": 390,
       "height": 844,
-      "sha256": "f61c19e6fa8b3ea1c39b3fb6c7c44db77f2c4306bdb81c2c7c5b115290980067",
+      "sha256": "5485307a5f9074c226cc8500d9a6828ed39d024c6fc438373917047721c0cad7",
       "state": {
         "roadShape": "left",
         "cakeStage": "",
@@ -8324,7 +8324,7 @@
       "path": "docs/content/r33/phone-crossing-2-child-arrived.png",
       "width": 390,
       "height": 844,
-      "sha256": "0078099249604ce4151dc158e4226db852429359482f6852312cd10c8f5ef538",
+      "sha256": "9032a4106e62b0f98873fe7d5c45474e3743ee6a739b9462ea5e86540430d421",
       "state": {
         "roadShape": "left",
         "cakeStage": "",
@@ -8497,7 +8497,7 @@
       "path": "docs/content/r33/phone-crossing-2-bike-before.png",
       "width": 390,
       "height": 844,
-      "sha256": "0f353ce1d5f66d6823c1c3a545de0fd1f168ac8896fe8ebb2437bb0ffe79d5e5",
+      "sha256": "9b383bbd4af559d81dc455b7e39f40640dc670d31bf07ab284cd110453e94d7f",
       "state": {
         "roadShape": "left",
         "cakeStage": "",
@@ -8670,7 +8670,7 @@
       "path": "docs/content/r33/phone-crossing-2-bike-on-zebra.png",
       "width": 390,
       "height": 844,
-      "sha256": "0b286eb3c36d45dd080839b04eb33a4ba1071a5978c91fa0fa15539bad6342d5",
+      "sha256": "fd0c2bc9d837d399d392eb6ba92704ba04d3dc3dbae5855b945289ee6f601bd2",
       "state": {
         "roadShape": "left",
         "cakeStage": "",
@@ -8843,7 +8843,7 @@
       "path": "docs/content/r33/phone-crossing-2-bike-arrived.png",
       "width": 390,
       "height": 844,
-      "sha256": "7ed768367cd2e24d85e4f5e3dbb74217d05402b5c2512be461503a306f65a536",
+      "sha256": "facbf050025f35f85ae50075d0dcedaa170a1fea38ee685517a86ed082a5d622",
       "state": {
         "roadShape": "left",
         "cakeStage": "",
@@ -8998,7 +8998,7 @@
       "path": "docs/content/r33/phone-crossing-stage-2-ready.png",
       "width": 390,
       "height": 844,
-      "sha256": "7ed768367cd2e24d85e4f5e3dbb74217d05402b5c2512be461503a306f65a536",
+      "sha256": "facbf050025f35f85ae50075d0dcedaa170a1fea38ee685517a86ed082a5d622",
       "state": {
         "roadShape": "left",
         "cakeStage": "",
@@ -9153,7 +9153,7 @@
       "path": "docs/content/r33/phone-crossing-stage-2-departing.png",
       "width": 390,
       "height": 844,
-      "sha256": "3025f029be496ba24b1d176614a38725e056950c56cd2e2c622a1d6011475ddd",
+      "sha256": "40f9263017a73e73220af9ef848559f22f5cb523c2011e34c062fe2fd8dcd89a",
       "state": {
         "roadShape": "left",
         "cakeStage": "",
@@ -9302,7 +9302,7 @@
       "path": "docs/content/r33/phone-crossing-stage-2-finished.png",
       "width": 390,
       "height": 844,
-      "sha256": "2a92d2de6041ac66a7199dfc0a986709d68f98688479f766850042cd4989f918",
+      "sha256": "17166794782fce373bc8cbf4a56ef39519fb7d8a455bc1956a23f98c1de041b8",
       "state": {
         "roadShape": "left",
         "cakeStage": "",
@@ -9457,7 +9457,7 @@
       "path": "docs/content/r33/phone-crossing-stage-3-unsafe-start.png",
       "width": 390,
       "height": 844,
-      "sha256": "02b5c360da3213ff485412650e5c94c0cf927d18e20f920868a0a2917d311a69",
+      "sha256": "7a9ff067b65709935bd699d16b89a3efc15b9819074679cf605781abd44c09b5",
       "state": {
         "roadShape": "left",
         "cakeStage": "",
@@ -9630,7 +9630,7 @@
       "path": "docs/content/r33/phone-crossing-stage-3-car-approach.png",
       "width": 390,
       "height": 844,
-      "sha256": "ca970f47fbf2b2d0224316275512ceb163c09e61cde993339497ec6dd5501f5b",
+      "sha256": "d758b7332f6ddc99e635a2ce3391f1363e3c2c7ece72dae469d4d1a8b44e8974",
       "state": {
         "roadShape": "left",
         "cakeStage": "",
@@ -9803,7 +9803,7 @@
       "path": "docs/content/r33/phone-crossing-stage-3-car-passing.png",
       "width": 390,
       "height": 844,
-      "sha256": "da6ce7a92802507dd6788987ea74ce8c1070d7f422ccb6a1ae5a5ef7902d9120",
+      "sha256": "8a7449bf717dbf1a6fb1cc694082d27da7f12c4e1be882d8e5e162a0271da451",
       "state": {
         "roadShape": "left",
         "cakeStage": "",
@@ -9976,7 +9976,7 @@
       "path": "docs/content/r33/phone-crossing-stage-3-car-leaving.png",
       "width": 390,
       "height": 844,
-      "sha256": "1426811632f36b58bac4939a5cc731d8d26d476f847bc2efcf377b254caca70e",
+      "sha256": "f765ae948e12e4d6c46d254a3f5189de3c382099eb22303051d77dbfb2b7f090",
       "state": {
         "roadShape": "left",
         "cakeStage": "",
@@ -10149,7 +10149,7 @@
       "path": "docs/content/r33/phone-crossing-stage-3-car-left.png",
       "width": 390,
       "height": 844,
-      "sha256": "2a62f7a2e1c86f4aed89f378a98cb46b56a3c8586ff5f6cb7896e2153a46d731",
+      "sha256": "db42adce4cd3bce9635fa9c2b39859268b8beef7a8ab2cbece1cf7571295a262",
       "state": {
         "roadShape": "left",
         "cakeStage": "",
@@ -10322,7 +10322,7 @@
       "path": "docs/content/r33/phone-crossing-3-bike-before.png",
       "width": 390,
       "height": 844,
-      "sha256": "1318e6cbb296462ee803833e5cae5ecd0c849d8749ae3e87208f7315d9300b74",
+      "sha256": "c98d41cb254f5ff5c357ee51e9a34fbcddc468afc014fcf6e5e827bf026ac1eb",
       "state": {
         "roadShape": "left",
         "cakeStage": "",
@@ -10495,7 +10495,7 @@
       "path": "docs/content/r33/phone-crossing-stage-3-new-car-yields.png",
       "width": 390,
       "height": 844,
-      "sha256": "7174add9431c6618b9dae6d4911d88f9998498f8eca1ba53699874cf8e0615f1",
+      "sha256": "d91811dc2ccb8a3b8cd1a4f0e2882578aaa524749ced72ddbde098028d6eeb7b",
       "state": {
         "roadShape": "left",
         "cakeStage": "",
@@ -10673,7 +10673,7 @@
       "path": "docs/content/r33/phone-crossing-3-bike-on-zebra.png",
       "width": 390,
       "height": 844,
-      "sha256": "bf818b998d6faa1d322e57a129fcd59858bcc540330e3fe906ef179fcfbbe69e",
+      "sha256": "4d7a033835cd350de8fa79e4fafd8ebe0e6142c1e2c71d9ec8edbaf5486db511",
       "state": {
         "roadShape": "left",
         "cakeStage": "",
@@ -10851,7 +10851,7 @@
       "path": "docs/content/r33/phone-crossing-3-bike-arrived.png",
       "width": 390,
       "height": 844,
-      "sha256": "fa386334b282a8ef201e01ab34533ccd0f1aac3af3b5c5d7c532b6dc2a7c605e",
+      "sha256": "f673099245471703a9d095ebdbe592191dbc73ff0912ffb135ef9c307fde4076",
       "state": {
         "roadShape": "left",
         "cakeStage": "",
@@ -11024,7 +11024,7 @@
       "path": "docs/content/r33/phone-crossing-stage-3-clear-needs-recheck.png",
       "width": 390,
       "height": 844,
-      "sha256": "d26955610c6842a971b8325cc981cd26cabd2674305e1ff8011ad534e1cac694",
+      "sha256": "745e0f19cdf27de0250284222782e22f4db48af7b98cd1bdd9e3d12425341475",
       "state": {
         "roadShape": "left",
         "cakeStage": "",
@@ -11197,7 +11197,7 @@
       "path": "docs/content/r33/phone-crossing-3-grandma-before.png",
       "width": 390,
       "height": 844,
-      "sha256": "4eae13ae54a1c36ca10eec1adfcfb6a5178affbb03346e84817e85d9558c4778",
+      "sha256": "e41ff34497ce22629b53dd880210c3f3a375b1512b6f37b6acb1cbdc04b0f389",
       "state": {
         "roadShape": "left",
         "cakeStage": "",
@@ -11370,7 +11370,7 @@
       "path": "docs/content/r33/phone-crossing-3-grandma-on-zebra.png",
       "width": 390,
       "height": 844,
-      "sha256": "c1f9a3c8ba016af757d7a3652b03f6efebec33d75a9cd817bf6b5b27f50914ba",
+      "sha256": "4bc64285b92b1decccc539b6b0b17b2527f6b83706e3c278ffe03b474c8ac336",
       "state": {
         "roadShape": "left",
         "cakeStage": "",
@@ -11543,7 +11543,7 @@
       "path": "docs/content/r33/phone-crossing-3-grandma-arrived.png",
       "width": 390,
       "height": 844,
-      "sha256": "990958ed8292c474d9290973e287af123d80bd46d7f0fc03471ea02759e6017a",
+      "sha256": "4a9d71b3ec2517fa6682fca3298a151e74ec51215f07f46632b46b48c05ee990",
       "state": {
         "roadShape": "left",
         "cakeStage": "",
@@ -11716,7 +11716,7 @@
       "path": "docs/content/r33/phone-crossing-3-child-before.png",
       "width": 390,
       "height": 844,
-      "sha256": "4b8fc7f9f7076880c3f755887469109a4b6053322a1ca57f143b2921e5752ea2",
+      "sha256": "b08fb36568cc6ca1cd17bf9f4a2d5d8ab1f3441a7378ff4b2205af4b9cfb3245",
       "state": {
         "roadShape": "left",
         "cakeStage": "",
@@ -11889,7 +11889,7 @@
       "path": "docs/content/r33/phone-crossing-3-child-on-zebra.png",
       "width": 390,
       "height": 844,
-      "sha256": "fe28821b2f0c416161cdf67183b505f38b18eb1cb269637ba95a8e713d454f9b",
+      "sha256": "38e0a03afe4962e70efe55c0438af3e729e8b0390879739c2a8ef6920dfb2e60",
       "state": {
         "roadShape": "left",
         "cakeStage": "",
@@ -12062,7 +12062,7 @@
       "path": "docs/content/r33/phone-crossing-3-child-arrived.png",
       "width": 390,
       "height": 844,
-      "sha256": "84df22d40713c8e8c5ff4f7d857039790782997ce8c1f7bf2823ccb24c13a76a",
+      "sha256": "a2006c734499b7e49dfbba6ae576f695f79bd2fb589952b556ab132e9c8e1cb5",
       "state": {
         "roadShape": "left",
         "cakeStage": "",
@@ -12217,7 +12217,7 @@
       "path": "docs/content/r33/phone-crossing-stage-3-ready.png",
       "width": 390,
       "height": 844,
-      "sha256": "84df22d40713c8e8c5ff4f7d857039790782997ce8c1f7bf2823ccb24c13a76a",
+      "sha256": "a2006c734499b7e49dfbba6ae576f695f79bd2fb589952b556ab132e9c8e1cb5",
       "state": {
         "roadShape": "left",
         "cakeStage": "",
@@ -12372,7 +12372,7 @@
       "path": "docs/content/r33/phone-crossing-stage-3-departing.png",
       "width": 390,
       "height": 844,
-      "sha256": "33de1387c0978cec4e3d9c775334023a634e2c6804beed5ff3afc3e916ed7ecd",
+      "sha256": "1f7655836159388b4e44ea24d0cd35406b9b1b9a045c6cd396fc0695e65cc88a",
       "state": {
         "roadShape": "left",
         "cakeStage": "",
@@ -12521,7 +12521,7 @@
       "path": "docs/content/r33/phone-crossing-stage-3-finished.png",
       "width": 390,
       "height": 844,
-      "sha256": "e8c89d2c0bc0ecdd4a8442a536e38aba21fb81c126c4bf954954a49d6d2fb48a",
+      "sha256": "9e0a21d276ca48d899e83cefe595e9ed4cf6fa86fd0cd99b2b2f053103855127",
       "state": {
         "roadShape": "left",
         "cakeStage": "",
@@ -12676,7 +12676,7 @@
       "path": "docs/content/r33/phone-crossing-complete.png",
       "width": 390,
       "height": 844,
-      "sha256": "e8c89d2c0bc0ecdd4a8442a536e38aba21fb81c126c4bf954954a49d6d2fb48a",
+      "sha256": "9e0a21d276ca48d899e83cefe595e9ed4cf6fa86fd0cd99b2b2f053103855127",
       "state": {
         "roadShape": "left",
         "cakeStage": "",
@@ -12982,7 +12982,7 @@
       "path": "docs/content/r33/phone-crossing-replay-new-conditions.png",
       "width": 390,
       "height": 844,
-      "sha256": "3cc8724f122c5ac0a2a9af2f62e127a834b4d89494b2a5dd9543b3c9b1de607c",
+      "sha256": "8eeec9e701b94fbf21e6020c071ed557abd5e7de109a9c1f39ea7f14016497b7",
       "state": {
         "roadShape": "uphill",
         "cakeStage": "",
@@ -13138,7 +13138,7 @@
       "path": "docs/content/r33/phone-crossing-replay-opening.png",
       "width": 390,
       "height": 844,
-      "sha256": "11305736ba6a1ab209f09eefe042fd3c5cac588648ec5fb1e8858a1dcba38677",
+      "sha256": "eed99ee2d582590a73da8db354c3dcf5e791b3f0abf2d83e1a5327ab2e8abb10",
       "state": {
         "roadShape": "uphill",
         "cakeStage": "",
@@ -13307,7 +13307,7 @@
       "path": "docs/content/r33/phone-crossing-mirror-stage-1-unsafe-start.png",
       "width": 390,
       "height": 844,
-      "sha256": "4441b6548c5105847b1ef2d58a05b6629c9582225eb4b5f83a1de6925bf7143e",
+      "sha256": "ca564f7d4392b1f8e5f673e5c4816735e384cfb5f035920bbfd2f88a10966ab1",
       "state": {
         "roadShape": "uphill",
         "cakeStage": "",
@@ -13476,7 +13476,7 @@
       "path": "docs/content/r33/phone-crossing-mirror-stage-1-car-approach.png",
       "width": 390,
       "height": 844,
-      "sha256": "828cef24b069aae6ae293b86344985c9f348d337f512ba1f9bb3a50fbefd118f",
+      "sha256": "33dd5e8151c2d224e28b22b311671dc4ecb69dd820d4db9a95e7b05cde9493e4",
       "state": {
         "roadShape": "uphill",
         "cakeStage": "",
@@ -13645,7 +13645,7 @@
       "path": "docs/content/r33/phone-crossing-mirror-stage-1-car-passing.png",
       "width": 390,
       "height": 844,
-      "sha256": "066d84aa738f08d3ba65e5a0c9c7e86994a24ab7862eca8b6b4f17b6ed90b41f",
+      "sha256": "cfbcffecc296bd3e18e9db23e9502fe6fca2e65b3798cf529da62695e66d82c6",
       "state": {
         "roadShape": "uphill",
         "cakeStage": "",
@@ -13814,7 +13814,7 @@
       "path": "docs/content/r33/phone-crossing-mirror-stage-1-car-leaving.png",
       "width": 390,
       "height": 844,
-      "sha256": "3929946147aae7918a39bf6f49fa93ae2eaa144d709012deae30689c1ea9b0d6",
+      "sha256": "225d1e5751d0943f9fd63a228845338cb587345e4b346398c8229c5d7a90b7a3",
       "state": {
         "roadShape": "uphill",
         "cakeStage": "",
@@ -13983,7 +13983,7 @@
       "path": "docs/content/r33/phone-crossing-mirror-stage-1-car-left.png",
       "width": 390,
       "height": 844,
-      "sha256": "f78ea35f2cf6af47a5597479c9e52341aca0192fc6cbdf80d20d13f78e37a505",
+      "sha256": "cedf50cb48ffc53ac4947cd72d3461797308f0d1b8295eedfa163865e74f9ecd",
       "state": {
         "roadShape": "uphill",
         "cakeStage": "",
@@ -14152,7 +14152,7 @@
       "path": "docs/content/r33/phone-crossing-mirror-1-bike-before.png",
       "width": 390,
       "height": 844,
-      "sha256": "0502c758673ce0ca2b7743ca58af582436826a3aef9ad772671ffa813f0991d7",
+      "sha256": "eee62ebf3748cde8bc1eb57156b9d0a8b63588c54bb00fcb3b96fcf34735b6d3",
       "state": {
         "roadShape": "uphill",
         "cakeStage": "",
@@ -14321,7 +14321,7 @@
       "path": "docs/content/r33/phone-crossing-mirror-stage-1-new-car-yields.png",
       "width": 390,
       "height": 844,
-      "sha256": "e7ae6bcf48987cd2eab8607b2ac9d41a1071f62fd39101086587703c649fed8b",
+      "sha256": "c21f7331413032e7090eb36724c70561d024c266466a76917253480c5e000a16",
       "state": {
         "roadShape": "uphill",
         "cakeStage": "",
@@ -14495,7 +14495,7 @@
       "path": "docs/content/r33/phone-crossing-mirror-1-bike-on-zebra.png",
       "width": 390,
       "height": 844,
-      "sha256": "3a3fc72791791e105e1c53e3fa13da234208ac1e766ba0477292ce7e0a51c034",
+      "sha256": "ab51b22c81a469c381099950b29813b56007680b05b4b54639aae5c59ac1a946",
       "state": {
         "roadShape": "uphill",
         "cakeStage": "",
@@ -14669,7 +14669,7 @@
       "path": "docs/content/r33/phone-crossing-mirror-1-bike-arrived.png",
       "width": 390,
       "height": 844,
-      "sha256": "ed6ab60891fe19c6e65f8947e29eb5304dc2dee5dcb0e86253dc80daa0b4799d",
+      "sha256": "1d6767820a1573986876ec09ca4c36e38f7e33a671aa3b4f347986b1162dc085",
       "state": {
         "roadShape": "uphill",
         "cakeStage": "",
@@ -14838,7 +14838,7 @@
       "path": "docs/content/r33/phone-crossing-mirror-stage-1-clear-needs-recheck.png",
       "width": 390,
       "height": 844,
-      "sha256": "45d872b3ef9baa66003e28921ff2545741f4f0176e44cc9e9b14d3f485de1937",
+      "sha256": "9c014b9aefe6fd6c448779c8901b09d059a06c200924ebe98ca72489c20c3583",
       "state": {
         "roadShape": "uphill",
         "cakeStage": "",
@@ -15007,7 +15007,7 @@
       "path": "docs/content/r33/phone-crossing-mirror-1-grandma-before.png",
       "width": 390,
       "height": 844,
-      "sha256": "a89832d52f03d11e602c4ca08b8a51ca6d0cb0cb0541133525319994230b2307",
+      "sha256": "a03e947f28d082b20fa8b9229698b15c86a75628c827c4892e06e26a92614491",
       "state": {
         "roadShape": "uphill",
         "cakeStage": "",
@@ -15176,7 +15176,7 @@
       "path": "docs/content/r33/phone-crossing-mirror-1-grandma-on-zebra.png",
       "width": 390,
       "height": 844,
-      "sha256": "da5716fc718320ed71f566467e927a027e52f4bad0977c24b8c2b5f05e85f884",
+      "sha256": "fe07d9b0fb2275b845c764f5394ca25135d8e92119c6ec64cce71d50f949aea0",
       "state": {
         "roadShape": "uphill",
         "cakeStage": "",
@@ -15345,7 +15345,7 @@
       "path": "docs/content/r33/phone-crossing-mirror-1-grandma-arrived.png",
       "width": 390,
       "height": 844,
-      "sha256": "99dd1daba604c9b9f31de75151ee3d80f34a6f556032d4cbca6b579d80cf7709",
+      "sha256": "6dc4eaa9949637f4358caf617357c0324317277ef85c21e4b9683288f9b59699",
       "state": {
         "roadShape": "uphill",
         "cakeStage": "",
@@ -15514,7 +15514,7 @@
       "path": "docs/content/r33/phone-crossing-mirror-1-child-before.png",
       "width": 390,
       "height": 844,
-      "sha256": "ab1cf3feb18cfc9377c15b590ef01627c261d2677b696450c378eb5630760072",
+      "sha256": "4dfd9f522fe627741c324af70c28b49702e40f900f4ad9adfd58519ad27cf5a8",
       "state": {
         "roadShape": "uphill",
         "cakeStage": "",
@@ -15683,7 +15683,7 @@
       "path": "docs/content/r33/phone-crossing-mirror-1-child-on-zebra.png",
       "width": 390,
       "height": 844,
-      "sha256": "e5a87260a2dc0433940aa8c01b7204ef67dddd578cf26ae86e9479fb2d6b5ca5",
+      "sha256": "96a27075f4f3aefba530f9b7bf37298ca2db4d2abddacd1cbecf1c83d26be092",
       "state": {
         "roadShape": "uphill",
         "cakeStage": "",
@@ -15852,7 +15852,7 @@
       "path": "docs/content/r33/phone-crossing-mirror-1-child-arrived.png",
       "width": 390,
       "height": 844,
-      "sha256": "778ca5a4ab0762b85d08bcb6d62bd3c0ff3e0648e6cbd8c5db30cb5a08ae3f3c",
+      "sha256": "9b13c94691135c1f135d01e08c659ea06ab21ed643eb953a0bb67278486e4991",
       "state": {
         "roadShape": "uphill",
         "cakeStage": "",
@@ -16003,7 +16003,7 @@
       "path": "docs/content/r33/phone-crossing-mirror-stage-1-ready.png",
       "width": 390,
       "height": 844,
-      "sha256": "778ca5a4ab0762b85d08bcb6d62bd3c0ff3e0648e6cbd8c5db30cb5a08ae3f3c",
+      "sha256": "9b13c94691135c1f135d01e08c659ea06ab21ed643eb953a0bb67278486e4991",
       "state": {
         "roadShape": "uphill",
         "cakeStage": "",
@@ -16154,7 +16154,7 @@
       "path": "docs/content/r33/phone-crossing-mirror-stage-1-departing.png",
       "width": 390,
       "height": 844,
-      "sha256": "abccb65a7426e96ed28757c771313c24b43719da215db07aef1d024ef7df1b8c",
+      "sha256": "bf429d187f2590f88d9e11c44f7c2c14ada7c25793594cc40ce150a6e3eaf0e4",
       "state": {
         "roadShape": "uphill",
         "cakeStage": "",
@@ -16299,7 +16299,7 @@
       "path": "docs/content/r33/phone-crossing-mirror-stage-1-finished.png",
       "width": 390,
       "height": 844,
-      "sha256": "046a2295b09b6e95c575be9c3821d7fc09056cc788eb2308ff31618b6e16eda3",
+      "sha256": "5ca854a1a436f4f4be86114ab6d45a3d827c777dc645772f42da59ec411fa8c3",
       "state": {
         "roadShape": "uphill",
         "cakeStage": "",
@@ -16788,7 +16788,7 @@
       "path": "docs/content/r33/phone-crossing-mirror-stage-2-car-passing.png",
       "width": 390,
       "height": 844,
-      "sha256": "73bc1bc333e620f5cee64262b98e8bbb2e3a4b601d9b66ae0146001724986be2",
+      "sha256": "feba1472726d66d3cc85ac760e986d62d2b19efa8e2a8824f0254cb4ed8d31ef",
       "state": {
         "roadShape": "left",
         "cakeStage": "",
@@ -16957,7 +16957,7 @@
       "path": "docs/content/r33/phone-crossing-mirror-stage-2-car-leaving.png",
       "width": 390,
       "height": 844,
-      "sha256": "6929eecb8e96d43ec9d16ba444e58a6f4011dc6a37a6ade5f03a154802f308b0",
+      "sha256": "28ed3d71f62dc5f3e94b44284659aaffab8df737c74ec8fd731d29905e17b0f0",
       "state": {
         "roadShape": "left",
         "cakeStage": "",
@@ -17126,7 +17126,7 @@
       "path": "docs/content/r33/phone-crossing-mirror-stage-2-car-left.png",
       "width": 390,
       "height": 844,
-      "sha256": "0d70596a91e41f10512a53a145f40915802dd4805e60ece4e1d61fbc4e0d7938",
+      "sha256": "4e4595a278e4c081b638aa60e86413a34b2bbd1c4b4c01c742bdbc9a1b9acb3c",
       "state": {
         "roadShape": "left",
         "cakeStage": "",
@@ -17295,7 +17295,7 @@
       "path": "docs/content/r33/phone-crossing-mirror-2-child-before.png",
       "width": 390,
       "height": 844,
-      "sha256": "8aa4a59402f9393a2c7272b47ce3e098f5d58a2dc81c27c4fcb8decb125d848a",
+      "sha256": "b4d47aae24b7a6f7b29076b8414f71b52cc9a197e541aa89fcae137182f1c358",
       "state": {
         "roadShape": "left",
         "cakeStage": "",
@@ -17464,7 +17464,7 @@
       "path": "docs/content/r33/phone-crossing-mirror-stage-2-new-car-yields.png",
       "width": 390,
       "height": 844,
-      "sha256": "6908978ba155ef784d82e3cd2a0efbb0c69d9b727a6b95ca97db85e391e1aa1c",
+      "sha256": "45678cbba934c07df736e02fe6e3a6d34298f4bfe22bff6fb06d96a87eb6578e",
       "state": {
         "roadShape": "left",
         "cakeStage": "",
@@ -17638,7 +17638,7 @@
       "path": "docs/content/r33/phone-crossing-mirror-2-child-on-zebra.png",
       "width": 390,
       "height": 844,
-      "sha256": "22cf39f068701bc16d59d9669ea32bb282ff92a009031ff491e55e722fadd2a0",
+      "sha256": "fb7bbfb1399a0f5012f97dc9cb41406946c5d82b7ecd3dcf273b36c7e8fca8c6",
       "state": {
         "roadShape": "left",
         "cakeStage": "",
@@ -17812,7 +17812,7 @@
       "path": "docs/content/r33/phone-crossing-mirror-2-child-arrived.png",
       "width": 390,
       "height": 844,
-      "sha256": "786299e3d71b271a9b917d9f14d9f82b6287be14f7297a14c367cff19ab7303d",
+      "sha256": "c2ee841372ea83a9a334eca422c43381565ae822f9b35956658f62be6b2f2a68",
       "state": {
         "roadShape": "left",
         "cakeStage": "",
@@ -17981,7 +17981,7 @@
       "path": "docs/content/r33/phone-crossing-mirror-stage-2-clear-needs-recheck.png",
       "width": 390,
       "height": 844,
-      "sha256": "0900739d9260e595090a02c046337a1837f36d46e879210322e96bb83eab3f4d",
+      "sha256": "81b4fffbc21b23f94710dacfc89f21a0204d36e6e40383d49e499ad38eaddc49",
       "state": {
         "roadShape": "left",
         "cakeStage": "",
@@ -18150,7 +18150,7 @@
       "path": "docs/content/r33/phone-crossing-mirror-2-bike-before.png",
       "width": 390,
       "height": 844,
-      "sha256": "8daa185174cb1dc8f5c67cdafdfbf6d48f96133e8ff4340968388081a70aabe0",
+      "sha256": "8b9c164288a552f61cc0f969074102cb51b94636cbeea2d8a8e41c44e792e302",
       "state": {
         "roadShape": "left",
         "cakeStage": "",
@@ -18319,7 +18319,7 @@
       "path": "docs/content/r33/phone-crossing-mirror-2-bike-on-zebra.png",
       "width": 390,
       "height": 844,
-      "sha256": "2d1631e9df69b371d2024182df92c6bddd1b621f1f74b78e67463917b520a6e8",
+      "sha256": "99f8254f6ae77d43c1f18d043c878763f729029a22cac9b0f3448c88b60f47d4",
       "state": {
         "roadShape": "left",
         "cakeStage": "",
@@ -18657,7 +18657,7 @@
       "path": "docs/content/r33/phone-crossing-mirror-2-grandma-before.png",
       "width": 390,
       "height": 844,
-      "sha256": "0fe208288394355b541c64512c538b6e5c4cd7a79e27d522d48b2f3940fc4391",
+      "sha256": "76070626ca5bb98d754b0c923d42166fc2073abd0aae0d65aca32da379b6a653",
       "state": {
         "roadShape": "left",
         "cakeStage": "",
@@ -18826,7 +18826,7 @@
       "path": "docs/content/r33/phone-crossing-mirror-2-grandma-on-zebra.png",
       "width": 390,
       "height": 844,
-      "sha256": "5a9b53a851fd5738f196eac26ec2e41b91c755471e52cc1bf3a3b015ce9c303c",
+      "sha256": "723f53207ce7077a6c0b1881ee437c342db919a7db1dd2448bb877de6416ad36",
       "state": {
         "roadShape": "left",
         "cakeStage": "",
@@ -18995,7 +18995,7 @@
       "path": "docs/content/r33/phone-crossing-mirror-2-grandma-arrived.png",
       "width": 390,
       "height": 844,
-      "sha256": "6dd6125ac8e455de8dd7b8c611ce32721303ca83c77f28fda7913e76ab640d04",
+      "sha256": "144163e8b461dfc0d742ecd952109b32e44c095c5f86cba555477415127fb448",
       "state": {
         "roadShape": "left",
         "cakeStage": "",
@@ -19146,7 +19146,7 @@
       "path": "docs/content/r33/phone-crossing-mirror-stage-2-ready.png",
       "width": 390,
       "height": 844,
-      "sha256": "6dd6125ac8e455de8dd7b8c611ce32721303ca83c77f28fda7913e76ab640d04",
+      "sha256": "144163e8b461dfc0d742ecd952109b32e44c095c5f86cba555477415127fb448",
       "state": {
         "roadShape": "left",
         "cakeStage": "",
@@ -19297,7 +19297,7 @@
       "path": "docs/content/r33/phone-crossing-mirror-stage-2-departing.png",
       "width": 390,
       "height": 844,
-      "sha256": "e8983e30229454ca216ceeb84a78ee5c6f46f30b28bd83ce84a1f1f1ac38c127",
+      "sha256": "3b75b5447edc8de05f7d6fb3c92b8253e1b431b73dcef90db5b12e085b961363",
       "state": {
         "roadShape": "left",
         "cakeStage": "",
@@ -19442,7 +19442,7 @@
       "path": "docs/content/r33/phone-crossing-mirror-stage-2-finished.png",
       "width": 390,
       "height": 844,
-      "sha256": "78f32ce3c173411886c0b0abe69abcbed4a3e578d8fe537c9ddf26a87d058af2",
+      "sha256": "e481e9c1b3b3eda5fa9da78f3af6e1bc2d802ad68c18966d8e15a95611725436",
       "state": {
         "roadShape": "left",
         "cakeStage": "",
@@ -19593,7 +19593,7 @@
       "path": "docs/content/r33/phone-crossing-mirror-stage-3-unsafe-start.png",
       "width": 390,
       "height": 844,
-      "sha256": "fd18e7c951580a894c872f6d9e20412130d08390b0a6843c07b1eafeee6f5fe6",
+      "sha256": "a2fc38a0e589bc6091103c1f7eae7b57d605a57927ffeb02d63dec1a759f9226",
       "state": {
         "roadShape": "left",
         "cakeStage": "",
@@ -19762,7 +19762,7 @@
       "path": "docs/content/r33/phone-crossing-mirror-stage-3-car-approach.png",
       "width": 390,
       "height": 844,
-      "sha256": "228d377dc8ddbf33b2085269d346675bd749ef0d191747ed3398931ddc42631c",
+      "sha256": "00633178fbbc72f6ea473250cefc16cfceafad86946958a2b32362e6228bdecf",
       "state": {
         "roadShape": "left",
         "cakeStage": "",
@@ -19931,7 +19931,7 @@
       "path": "docs/content/r33/phone-crossing-mirror-stage-3-car-passing.png",
       "width": 390,
       "height": 844,
-      "sha256": "6c254774e27bd23d9631c97b97f3362421780d6e24042263a2abeed867923033",
+      "sha256": "e52ed7ea436a238126780d08fe42fc92d65e3628293a815f91b258dc2520967f",
       "state": {
         "roadShape": "left",
         "cakeStage": "",
@@ -20100,7 +20100,7 @@
       "path": "docs/content/r33/phone-crossing-mirror-stage-3-car-leaving.png",
       "width": 390,
       "height": 844,
-      "sha256": "ce277f74dc814c9d10d220bf9a275792b961ea0c02b0f7921d4bb042cc9d664b",
+      "sha256": "a30944bda2c63bfbe29ecd8e6209fbe11f36cf63b583128d760fe630c8e93cd6",
       "state": {
         "roadShape": "left",
         "cakeStage": "",
@@ -20269,7 +20269,7 @@
       "path": "docs/content/r33/phone-crossing-mirror-stage-3-car-left.png",
       "width": 390,
       "height": 844,
-      "sha256": "6c91d3db30c2045b12c20c84172bbd8dcb615e94c993d2c6fcf7e6b59af8725f",
+      "sha256": "240cdf5c915667c868f1ba7c52c94a0fd696326195200291e9895b165a62f7bc",
       "state": {
         "roadShape": "left",
         "cakeStage": "",
@@ -20607,7 +20607,7 @@
       "path": "docs/content/r33/phone-crossing-mirror-stage-3-new-car-yields.png",
       "width": 390,
       "height": 844,
-      "sha256": "6e84f2763ecfda038a8b831d603aa08a7a55a19ee44f378472c92c0b52fa3739",
+      "sha256": "b4368964bf2ec57f849bac20201bd0dc92134205c7dc547f508fcf24896a5887",
       "state": {
         "roadShape": "left",
         "cakeStage": "",
@@ -20955,7 +20955,7 @@
       "path": "docs/content/r33/phone-crossing-mirror-3-grandma-arrived.png",
       "width": 390,
       "height": 844,
-      "sha256": "e4cd3ff06641fd14110febe07ec7de0de47bf0c7a8b16c649ebe9dc1bc4679f1",
+      "sha256": "51891d4c6bccfec42407a1a9ca9cf4b44a5a2bcd17fcabb16fb2626f93e7f0d9",
       "state": {
         "roadShape": "left",
         "cakeStage": "",
@@ -21124,7 +21124,7 @@
       "path": "docs/content/r33/phone-crossing-mirror-stage-3-clear-needs-recheck.png",
       "width": 390,
       "height": 844,
-      "sha256": "1d0faeb9d230388bf3fa3b2930726977ee7d53f676840ce1533451846c998583",
+      "sha256": "756fb112ebf7df6b3447fa7a51ac958b5b980ef9f6649355d91299ee2ac2b839",
       "state": {
         "roadShape": "left",
         "cakeStage": "",
@@ -21293,7 +21293,7 @@
       "path": "docs/content/r33/phone-crossing-mirror-3-child-before.png",
       "width": 390,
       "height": 844,
-      "sha256": "905873fb3ce5e7adafd155d72d66d4d90f30dbca402c5d470bf4db6e99e5171f",
+      "sha256": "b5201543be90a46f7f36b5bc543a21dc67b6110529c463553a09a5bed35e7482",
       "state": {
         "roadShape": "left",
         "cakeStage": "",
@@ -21462,7 +21462,7 @@
       "path": "docs/content/r33/phone-crossing-mirror-3-child-on-zebra.png",
       "width": 390,
       "height": 844,
-      "sha256": "aeaeac9afd76a8ea7b955f947670afec20e9fdf49491abcff7d8083ff3377aee",
+      "sha256": "0f8d987759ea50fe9f67cf9b686d4bc5378cc5735910efead1f7a9f8633bae55",
       "state": {
         "roadShape": "left",
         "cakeStage": "",
@@ -21631,7 +21631,7 @@
       "path": "docs/content/r33/phone-crossing-mirror-3-child-arrived.png",
       "width": 390,
       "height": 844,
-      "sha256": "f79aefa929bb015306ea31cb4964789c5271d0fa4a6594f4cc66499149dd9955",
+      "sha256": "744610ec615eb72d6bb9540aacddd9306598afa3c6e7c9fb40f8bfeb58cbdcc8",
       "state": {
         "roadShape": "left",
         "cakeStage": "",
@@ -21800,7 +21800,7 @@
       "path": "docs/content/r33/phone-crossing-mirror-3-bike-before.png",
       "width": 390,
       "height": 844,
-      "sha256": "70424084d5fb925d8ffdb24f1c64b390d07e96b4e8271c46dca9965bb47c0c2d",
+      "sha256": "d724533e76aacaf4ba56a55bb70ed1e58ebc0f38752a50457588d368410d1b6c",
       "state": {
         "roadShape": "left",
         "cakeStage": "",
@@ -21969,7 +21969,7 @@
       "path": "docs/content/r33/phone-crossing-mirror-3-bike-on-zebra.png",
       "width": 390,
       "height": 844,
-      "sha256": "3847b5324e4bd30aef72692798ba9f17f2015671dff32bb353ade8d9e84f25da",
+      "sha256": "a1a312094a996eca997a5857571acc2af1b3bdc3775c28f297e72f34fcf162bd",
       "state": {
         "roadShape": "left",
         "cakeStage": "",
@@ -22138,7 +22138,7 @@
       "path": "docs/content/r33/phone-crossing-mirror-3-bike-arrived.png",
       "width": 390,
       "height": 844,
-      "sha256": "01beb710304bf7f50663178008ad3980e204100019b1e89dd4365af3eb330de3",
+      "sha256": "effbee81396a1317c2d94f43b90253160976256d8182edb375e216bd06a56953",
       "state": {
         "roadShape": "left",
         "cakeStage": "",
@@ -22289,7 +22289,7 @@
       "path": "docs/content/r33/phone-crossing-mirror-stage-3-ready.png",
       "width": 390,
       "height": 844,
-      "sha256": "01beb710304bf7f50663178008ad3980e204100019b1e89dd4365af3eb330de3",
+      "sha256": "effbee81396a1317c2d94f43b90253160976256d8182edb375e216bd06a56953",
       "state": {
         "roadShape": "left",
         "cakeStage": "",
@@ -22585,7 +22585,7 @@
       "path": "docs/content/r33/phone-crossing-mirror-stage-3-finished.png",
       "width": 390,
       "height": 844,
-      "sha256": "39ba4140b541fd13079498cd67918c7bbc2581eb0332bd6aa0e99848f145d73e",
+      "sha256": "6b6bcc8e1d0ef1f5734c4eaee663e0fc6b7a0a6c3934d76f0384abe2665d0b33",
       "state": {
         "roadShape": "left",
         "cakeStage": "",
@@ -23378,7 +23378,7 @@
       "path": "docs/content/r33/phone-tickets-stage-1-invitation-0.png",
       "width": 390,
       "height": 844,
-      "sha256": "8dfefe53080cccd649c3dbc6871574833a7a6370375bbefe14bed95506f61900",
+      "sha256": "8c2bb8b41228f73731a96102f255e4a3bbdaad82474af8d30baf66cd55c5de96",
       "state": {
         "roadShape": "uphill",
         "cakeStage": "",
@@ -23708,7 +23708,7 @@
         "escortWaiting": "true",
         "escortStable": "0",
         "escortStop": "0",
-        "escortBump": "0.3539999999999999",
+        "escortBump": "0.3379999999999999",
         "trafficX": "85.00",
         "trafficMotion": "離開",
         "signGround": "446.15"
@@ -23870,7 +23870,7 @@
       "path": "docs/content/r33/phone-tickets-stage-1-aisle-0.png",
       "width": 390,
       "height": 844,
-      "sha256": "75a50c150e4a1587dc28ebe67fdb877d2e19ed6762bd0673a787194840931130",
+      "sha256": "7ab266b9721b1b2bd4e50a5a0a95ecbbba8498f9fcfe2b8e551d4e1afa212393",
       "state": {
         "roadShape": "uphill",
         "cakeStage": "",
@@ -23993,7 +23993,7 @@
       "path": "docs/content/r33/phone-tickets-stage-1-aisle-too-early-0.png",
       "width": 390,
       "height": 844,
-      "sha256": "81d26301561aba57ccdb2f8e0e02b714ad6ac499e99c4c9e1fc46673cc71f57a",
+      "sha256": "b42443a1327c4b37d99f987ddd3dbbe78933c988ee4e76c7811c53d5e482b321",
       "state": {
         "roadShape": "uphill",
         "cakeStage": "",
@@ -24077,7 +24077,7 @@
         "escortWaiting": "true",
         "escortStable": "0",
         "escortStop": "1",
-        "escortBump": "0.3379999999999999",
+        "escortBump": "0.3539999999999999",
         "trafficX": "85.00",
         "trafficMotion": "離開",
         "signGround": "446.15"
@@ -24485,7 +24485,7 @@
       "path": "docs/content/r33/phone-tickets-stage-1-threshold-1.png",
       "width": 390,
       "height": 844,
-      "sha256": "cd2e7dbe79aeaea6e3c6f26f5ae4fedc4a77ca2b2e24e6f958b1c23dfcadf2bf",
+      "sha256": "555a7e11f06d5ed7011d63e820df7478bdb36a0d8a1c9c2697dd8b7888aff38f",
       "state": {
         "roadShape": "uphill",
         "cakeStage": "",
@@ -24608,7 +24608,7 @@
       "path": "docs/content/r33/phone-tickets-stage-1-threshold-too-early-1.png",
       "width": 390,
       "height": 844,
-      "sha256": "2e29f12d83b9efe09827e5bbcbd13434b581ad19821e6ffd45491368bcbac941",
+      "sha256": "0bbc2d12a29bb49d7607c43961885e4aa1431be45db763eadc9bc146c4c9a948",
       "state": {
         "roadShape": "uphill",
         "cakeStage": "",
@@ -24692,7 +24692,7 @@
         "escortWaiting": "true",
         "escortStable": "0",
         "escortStop": "0",
-        "escortBump": "0.3539999999999999",
+        "escortBump": "0.3379999999999999",
         "trafficX": "85.00",
         "trafficMotion": "離開",
         "signGround": "446.15"
@@ -24731,7 +24731,7 @@
       "path": "docs/content/r33/phone-tickets-stage-1-threshold-stable-1.png",
       "width": 390,
       "height": 844,
-      "sha256": "45f7909f83443058fe628ae5d345c412bb225e5a41a0e8ce1bbe3f7e1bd73525",
+      "sha256": "47b5e1ac70737acd51aaf3f9282a576ea16aabcf0c0ea92127cda743891ef780",
       "state": {
         "roadShape": "uphill",
         "cakeStage": "",
@@ -24854,7 +24854,7 @@
       "path": "docs/content/r33/phone-tickets-stage-1-aisle-1.png",
       "width": 390,
       "height": 844,
-      "sha256": "0b9e273a4cc486c652d496d1f18390da81f1e1f9253d5b9c678825d4fc5f8a0a",
+      "sha256": "94277347aba2db6c7df7e26bd5dc8268cc1198eeffce8121be14565953d445cf",
       "state": {
         "roadShape": "uphill",
         "cakeStage": "",
@@ -25061,7 +25061,7 @@
         "escortWaiting": "true",
         "escortStable": "0",
         "escortStop": "1",
-        "escortBump": "0.3379999999999999",
+        "escortBump": "0.3539999999999999",
         "trafficX": "85.00",
         "trafficMotion": "離開",
         "signGround": "446.15"
@@ -25469,7 +25469,7 @@
       "path": "docs/content/r33/phone-tickets-stage-1-threshold-2.png",
       "width": 390,
       "height": 844,
-      "sha256": "c028e770fa56b9649f2cd1fbb8700899b73e94b456fda3990664fa02814a1451",
+      "sha256": "ed595ffd0d6b84574b798e6a0cec1a62d2d31d66f726d42d7f06e45e2aa7f7ca",
       "state": {
         "roadShape": "uphill",
         "cakeStage": "",
@@ -25592,7 +25592,7 @@
       "path": "docs/content/r33/phone-tickets-stage-1-threshold-too-early-2.png",
       "width": 390,
       "height": 844,
-      "sha256": "110f5baf026f13c166c8f5dcfae2721143a4dec9e4742cc30f5a4461bf7518fb",
+      "sha256": "7ce8ee0af8620c12ac02f385cdff04b54cb18e1453c81334133abbe46863d398",
       "state": {
         "roadShape": "uphill",
         "cakeStage": "",
@@ -25676,7 +25676,7 @@
         "escortWaiting": "true",
         "escortStable": "0",
         "escortStop": "0",
-        "escortBump": "0.3539999999999999",
+        "escortBump": "0.3379999999999999",
         "trafficX": "85.00",
         "trafficMotion": "離開",
         "signGround": "446.15"
@@ -25961,7 +25961,7 @@
       "path": "docs/content/r33/phone-tickets-stage-1-aisle-too-early-2.png",
       "width": 390,
       "height": 844,
-      "sha256": "e48794d9dc1beb1f2089019c731b8743e7f8e6ce162284591f1af565eb5381e1",
+      "sha256": "3a2dbe40c4e958753f9ae717fe0ea5a7c571bd60652679845087b6505e2c4973",
       "state": {
         "roadShape": "uphill",
         "cakeStage": "",
@@ -26045,7 +26045,7 @@
         "escortWaiting": "true",
         "escortStable": "0",
         "escortStop": "1",
-        "escortBump": "0.3379999999999999",
+        "escortBump": "0.3539999999999999",
         "trafficX": "85.00",
         "trafficMotion": "離開",
         "signGround": "446.15"
@@ -26084,7 +26084,7 @@
       "path": "docs/content/r33/phone-tickets-stage-1-aisle-stable-2.png",
       "width": 390,
       "height": 844,
-      "sha256": "93f3409b85f8998d27e0e4340593484f7c8267572b8b391f0c179f98b04e543d",
+      "sha256": "de25c1065f49b3d0db2a584098b7fe526d776fcfdc52534dac904c401277c8e4",
       "state": {
         "roadShape": "uphill",
         "cakeStage": "",
@@ -26207,7 +26207,7 @@
       "path": "docs/content/r33/phone-tickets-stage-1-seated-3.png",
       "width": 390,
       "height": 844,
-      "sha256": "0e17232a9fa7c3de306700ec8ac39a97101597b523a75403dfd1cf6f9d4ae50b",
+      "sha256": "3042e977516560f63e97bbde8e52950aaf18b5e46ad1daab3de26e8ef82ffe6f",
       "state": {
         "roadShape": "uphill",
         "cakeStage": "",
@@ -26330,7 +26330,7 @@
       "path": "docs/content/r33/phone-tickets-stage-2-wrong-color.png",
       "width": 390,
       "height": 844,
-      "sha256": "06c937038bb408b17a2d1705e0c92048cc911c23eb12726fe57328fcbfba3469",
+      "sha256": "6d57f55de49bd630f108a9f50d8eec1c216cdc8a5a644cc02a1d09828696d8a5",
       "state": {
         "roadShape": "left",
         "cakeStage": "",
@@ -26783,7 +26783,7 @@
       "path": "docs/content/r33/phone-tickets-stage-2-threshold-0.png",
       "width": 390,
       "height": 844,
-      "sha256": "b72ffdd136ac383d4ab07d7637a1f8f3b0c8779e19566a19a7f73a52c8b4c8d0",
+      "sha256": "e34b015a0f5d2bffcc6abb93c2800c8a509d873d383eb5e6b2797eca61e261a3",
       "state": {
         "roadShape": "left",
         "cakeStage": "",
@@ -26990,7 +26990,7 @@
         "escortWaiting": "true",
         "escortStable": "0",
         "escortStop": "0",
-        "escortBump": "0.3379999999999999",
+        "escortBump": "0.3539999999999999",
         "trafficX": "85.00",
         "trafficMotion": "離開",
         "signGround": "446.15"
@@ -27152,7 +27152,7 @@
       "path": "docs/content/r33/phone-tickets-stage-2-aisle-0.png",
       "width": 390,
       "height": 844,
-      "sha256": "76f7318ea4f05f0606d04c0632a8dab26a0f884a09b51a1c35ebfcd7a84e6bb4",
+      "sha256": "c9ef36e48f0e536f0b590255b831255079409baeef3b31b8ba4c55f455a517c1",
       "state": {
         "roadShape": "left",
         "cakeStage": "",
@@ -27275,7 +27275,7 @@
       "path": "docs/content/r33/phone-tickets-stage-2-aisle-too-early-0.png",
       "width": 390,
       "height": 844,
-      "sha256": "d2231cd0acc8a4f350c515dd5492be7495ba9e1f1dccb776b5f8c4db2ed41509",
+      "sha256": "6bdb0e1636e357ad06acd4875ae794419611a4b3064d529bb20346ee4db3f07a",
       "state": {
         "roadShape": "left",
         "cakeStage": "",
@@ -27359,7 +27359,7 @@
         "escortWaiting": "true",
         "escortStable": "0",
         "escortStop": "1",
-        "escortBump": "0.3539999999999999",
+        "escortBump": "0.3379999999999999",
         "trafficX": "85.00",
         "trafficMotion": "離開",
         "signGround": "446.15"
@@ -27398,7 +27398,7 @@
       "path": "docs/content/r33/phone-tickets-stage-2-aisle-stable-0.png",
       "width": 390,
       "height": 844,
-      "sha256": "f32d86b9cc8301e82fd9d83cc13c02fd2bc64966ad7ba08696215d1b3f3166dc",
+      "sha256": "f00a3f91b1c305fcf78bf707fab03abc7fcd467281f33970014fbc668e7bfbfb",
       "state": {
         "roadShape": "left",
         "cakeStage": "",
@@ -27521,7 +27521,7 @@
       "path": "docs/content/r33/phone-tickets-stage-2-seated-1.png",
       "width": 390,
       "height": 844,
-      "sha256": "4486a33b8a1e24e5204c802be0f6daca433d9d494af7dea0b8d45aec00685d93",
+      "sha256": "44997ab028e263e2fa8c37a0ec3dd0bb0b1e187caa2acd750950daa3130c3b8d",
       "state": {
         "roadShape": "left",
         "cakeStage": "",
@@ -27644,7 +27644,7 @@
       "path": "docs/content/r33/phone-tickets-stage-2-invitation-1.png",
       "width": 390,
       "height": 844,
-      "sha256": "c31d5ad83fdaa7d0718fe5203f5a7c44bf86e347dccfcf629ae42ba8d21b3f8c",
+      "sha256": "afff7c79b233cc9ff7faacc6abc9436a51dabcb090a40a95c86042a907c476a2",
       "state": {
         "roadShape": "left",
         "cakeStage": "",
@@ -27750,7 +27750,7 @@
         {
           "id": "",
           "w": 60,
-          "h": 77.99996948242188,
+          "h": 78,
           "bad": false
         },
         {
@@ -27890,7 +27890,7 @@
       "path": "docs/content/r33/phone-tickets-stage-2-threshold-too-early-1.png",
       "width": 390,
       "height": 844,
-      "sha256": "5038f4ecfe989a3a71092137a694687be2557ed304116f3e8ec04172f3639fb1",
+      "sha256": "301b8492496e65c223fd9b241b3452e89f127d50874fefd8ad2a0e6c84f49fed",
       "state": {
         "roadShape": "left",
         "cakeStage": "",
@@ -27974,7 +27974,7 @@
         "escortWaiting": "true",
         "escortStable": "0",
         "escortStop": "0",
-        "escortBump": "0.3379999999999999",
+        "escortBump": "0.3539999999999999",
         "trafficX": "85.00",
         "trafficMotion": "離開",
         "signGround": "446.15"
@@ -28013,7 +28013,7 @@
       "path": "docs/content/r33/phone-tickets-stage-2-threshold-stable-1.png",
       "width": 390,
       "height": 844,
-      "sha256": "b43b30aab01456c8a52e8f287b1b9eb041ea90910306d48005dcc3f23f5f29c1",
+      "sha256": "d574f99b819a5937b0561a70989458da0e1e422ec9f7f35b6587f1c77b0f0874",
       "state": {
         "roadShape": "left",
         "cakeStage": "",
@@ -28136,7 +28136,7 @@
       "path": "docs/content/r33/phone-tickets-stage-2-aisle-1.png",
       "width": 390,
       "height": 844,
-      "sha256": "b95f1c8ff42521a9e23a96c643d7c8882dddfd158d0188e0edc9314abb197b45",
+      "sha256": "19e243ecd82febd3230bf7bf293d6bc159c785b075faece115dc816301faa03b",
       "state": {
         "roadShape": "left",
         "cakeStage": "",
@@ -28259,7 +28259,7 @@
       "path": "docs/content/r33/phone-tickets-stage-2-aisle-too-early-1.png",
       "width": 390,
       "height": 844,
-      "sha256": "c0474edfa1227e508de11163e2f1b67fdff4c5ab85cdc55adf905348e4ca0920",
+      "sha256": "4800a35c3c56fcd495832f3acbd6735d322e8f85c906f345265a4132195ca07f",
       "state": {
         "roadShape": "left",
         "cakeStage": "",
@@ -28343,7 +28343,7 @@
         "escortWaiting": "true",
         "escortStable": "0",
         "escortStop": "1",
-        "escortBump": "0.3539999999999999",
+        "escortBump": "0.3379999999999999",
         "trafficX": "85.00",
         "trafficMotion": "離開",
         "signGround": "446.15"
@@ -28628,7 +28628,7 @@
       "path": "docs/content/r33/phone-tickets-stage-2-invitation-2.png",
       "width": 390,
       "height": 844,
-      "sha256": "8a5afba4cef84d545f4ea54a8de9d11481d57e26c9cd4e969321e4cf039127d5",
+      "sha256": "821659f5a71730c5673e86c0b4fca44c22e9b49e48910b7fef8b50bc3edc6bbe",
       "state": {
         "roadShape": "left",
         "cakeStage": "",
@@ -28734,7 +28734,7 @@
         {
           "id": "",
           "w": 60,
-          "h": 78.00003051757812,
+          "h": 78,
           "bad": false
         },
         {
@@ -28751,7 +28751,7 @@
       "path": "docs/content/r33/phone-tickets-stage-2-threshold-2.png",
       "width": 390,
       "height": 844,
-      "sha256": "489689f8508c2a064eb871d7763dbd48e0859abb743b95d2c2251aeeb1f95229",
+      "sha256": "c26f7076c8c7a00f7c43a4234b1570d4450feb719d48da183c901b4a8a9bc149",
       "state": {
         "roadShape": "left",
         "cakeStage": "",
@@ -28958,7 +28958,7 @@
         "escortWaiting": "true",
         "escortStable": "0",
         "escortStop": "0",
-        "escortBump": "0.3379999999999999",
+        "escortBump": "0.3539999999999999",
         "trafficX": "85.00",
         "trafficMotion": "離開",
         "signGround": "446.15"
@@ -28997,7 +28997,7 @@
       "path": "docs/content/r33/phone-tickets-stage-2-threshold-stable-2.png",
       "width": 390,
       "height": 844,
-      "sha256": "f3c020a158d2bcff4cb1058aa9c39ff00ed4c71eddb412897a109705566c38cb",
+      "sha256": "659c6d8c9d62174d1586a678c9cc49bb9136bd92d97016c1ef1358761f98ac1a",
       "state": {
         "roadShape": "left",
         "cakeStage": "",
@@ -29120,7 +29120,7 @@
       "path": "docs/content/r33/phone-tickets-stage-2-aisle-2.png",
       "width": 390,
       "height": 844,
-      "sha256": "f3594a8235b65475d28a22f1c06aaa492e04277f67cef4ecf0a737294fbd38c3",
+      "sha256": "42ccda990ff3b2bead9327758fcb379fb7e0bcb774f9a8f6112d6ba17d2f1ded",
       "state": {
         "roadShape": "left",
         "cakeStage": "",
@@ -29243,7 +29243,7 @@
       "path": "docs/content/r33/phone-tickets-stage-2-aisle-too-early-2.png",
       "width": 390,
       "height": 844,
-      "sha256": "a1ab96d984cb17982de1fb36714b5c2d2a2f0a94b4b1b8b2bd57d1a0a011898c",
+      "sha256": "a3a183609a67bbaefbdcf7bedf4ad6047d4efc990ab777f0ecdd3b7d50fff172",
       "state": {
         "roadShape": "left",
         "cakeStage": "",
@@ -29327,7 +29327,7 @@
         "escortWaiting": "true",
         "escortStable": "0",
         "escortStop": "1",
-        "escortBump": "0.3539999999999999",
+        "escortBump": "0.3379999999999999",
         "trafficX": "85.00",
         "trafficMotion": "離開",
         "signGround": "446.15"
@@ -29366,7 +29366,7 @@
       "path": "docs/content/r33/phone-tickets-stage-2-aisle-stable-2.png",
       "width": 390,
       "height": 844,
-      "sha256": "dfe1ea23eb4fdbaa592621458e7181f7cfdeade3f5de288d9389ea42437cc4dc",
+      "sha256": "2b215fb2cb694c70ca02c091ae7fc09aeef720ffd26c58dbf4661532e04229b3",
       "state": {
         "roadShape": "left",
         "cakeStage": "",
@@ -29489,7 +29489,7 @@
       "path": "docs/content/r33/phone-tickets-stage-2-seated-3.png",
       "width": 390,
       "height": 844,
-      "sha256": "bcda16eb0c41c70dc397f0ee1fa04dae35b66d093cdd76c696ca85ed6141d37a",
+      "sha256": "d32895c0367e92f13107ee3a0f79e834b70e5b28781260da84679ffb664b051c",
       "state": {
         "roadShape": "left",
         "cakeStage": "",
@@ -29612,7 +29612,7 @@
       "path": "docs/content/r33/phone-tickets-stage-3-wrong-shape.png",
       "width": 390,
       "height": 844,
-      "sha256": "5b1e447a3dcfbeaba95916d290da79875dc2a7c1671adecc4d0d7b230955823b",
+      "sha256": "f2fd1f26d59f50b86ac421e39301da6bdbe71b6e19f01b17ddc7e1ccb2277f88",
       "state": {
         "roadShape": "left",
         "cakeStage": "",
@@ -29777,7 +29777,7 @@
       "path": "docs/content/r33/phone-tickets-stage-3-wrong-color.png",
       "width": 390,
       "height": 844,
-      "sha256": "8b9159731a05f07f72be62efddc4dc4f73f764b9525d01958a07e2b006e0ae17",
+      "sha256": "a5e1170d6f508c74c9e491107b0716945daeafae632366f5cc52d66045b892ff",
       "state": {
         "roadShape": "left",
         "cakeStage": "",
@@ -30065,7 +30065,7 @@
       "path": "docs/content/r33/phone-tickets-stage-3-threshold-0.png",
       "width": 390,
       "height": 844,
-      "sha256": "58d619c794b76ee7bd85923458bb036b5e4078392943a4f9654b90fa0b0ed97c",
+      "sha256": "07836ac15549073b2d323dc169f1042148b96493b73b3f5f752ad649e5e4f7a3",
       "state": {
         "roadShape": "left",
         "cakeStage": "",
@@ -30188,7 +30188,7 @@
       "path": "docs/content/r33/phone-tickets-stage-3-threshold-too-early-0.png",
       "width": 390,
       "height": 844,
-      "sha256": "c8295bf6512095a26e4fb2c4ed6d427ee151744d43dcd8bacc6443fafc6192aa",
+      "sha256": "172f3cb2580bcf2be26800b1d5188971a13524831565f558fff2437c841b9747",
       "state": {
         "roadShape": "left",
         "cakeStage": "",
@@ -30272,7 +30272,7 @@
         "escortWaiting": "true",
         "escortStable": "0",
         "escortStop": "0",
-        "escortBump": "0.3539999999999999",
+        "escortBump": "0.3379999999999999",
         "trafficX": "85.00",
         "trafficMotion": "離開",
         "signGround": "446.15"
@@ -30641,7 +30641,7 @@
         "escortWaiting": "true",
         "escortStable": "0",
         "escortStop": "1",
-        "escortBump": "0.3379999999999999",
+        "escortBump": "0.3539999999999999",
         "trafficX": "85.00",
         "trafficMotion": "離開",
         "signGround": "446.15"
@@ -30803,7 +30803,7 @@
       "path": "docs/content/r33/phone-tickets-stage-3-seated-1.png",
       "width": 390,
       "height": 844,
-      "sha256": "9ef743d34f874c105b73483afff34356783b57a3eca320ca51ee5ec3dda4c079",
+      "sha256": "4d4d96e7e0839f7af30fbc868264a4efc35ac44ab0bda433ea2d455a93505b8b",
       "state": {
         "roadShape": "left",
         "cakeStage": "",
@@ -31256,7 +31256,7 @@
         "escortWaiting": "true",
         "escortStable": "0",
         "escortStop": "0",
-        "escortBump": "0.3539999999999999",
+        "escortBump": "0.3379999999999999",
         "trafficX": "85.00",
         "trafficMotion": "離開",
         "signGround": "446.15"
@@ -31295,7 +31295,7 @@
       "path": "docs/content/r33/phone-tickets-stage-3-threshold-stable-1.png",
       "width": 390,
       "height": 844,
-      "sha256": "aeab00a6a4ce1937186cba95188b30b63e52d41d232912d13f1f0dff87804a87",
+      "sha256": "cd728ca23be76caf8161e4e8010b4536ccb57d8af896286260fd4470badc0d69",
       "state": {
         "roadShape": "left",
         "cakeStage": "",
@@ -31418,7 +31418,7 @@
       "path": "docs/content/r33/phone-tickets-stage-3-aisle-1.png",
       "width": 390,
       "height": 844,
-      "sha256": "7e297b74ff4722890b3ded862fee113a9d3919d4a4735754a17f2841a0d66f5c",
+      "sha256": "816a5351c2622c5229d29cfcee5c1de327c54ebd2b6355fdde1c762ee97c8556",
       "state": {
         "roadShape": "left",
         "cakeStage": "",
@@ -31541,7 +31541,7 @@
       "path": "docs/content/r33/phone-tickets-stage-3-aisle-too-early-1.png",
       "width": 390,
       "height": 844,
-      "sha256": "7c237a9927997d8f27c8b079273848b47379e4cb5c7dc7d8bea12afea1d9616d",
+      "sha256": "34a80edc9f377f33656db0303cfc5fb7ca87f2d92941143ab96fa37be6c7bfe4",
       "state": {
         "roadShape": "left",
         "cakeStage": "",
@@ -31625,7 +31625,7 @@
         "escortWaiting": "true",
         "escortStable": "0",
         "escortStop": "1",
-        "escortBump": "0.3379999999999999",
+        "escortBump": "0.3539999999999999",
         "trafficX": "85.00",
         "trafficMotion": "離開",
         "signGround": "446.15"
@@ -31787,7 +31787,7 @@
       "path": "docs/content/r33/phone-tickets-stage-3-seated-2.png",
       "width": 390,
       "height": 844,
-      "sha256": "9041e7f4eebace73d3e8f662d8d090c10459284d13890c64e58f29a2e2183f1a",
+      "sha256": "c0eedfb1f665ab09491e4cf1d45cc3fcf122b05ed5bef30202162766e9fde2f1",
       "state": {
         "roadShape": "left",
         "cakeStage": "",
@@ -31910,7 +31910,7 @@
       "path": "docs/content/r33/phone-tickets-stage-3-invitation-2.png",
       "width": 390,
       "height": 844,
-      "sha256": "217df3e1b3db3baaf3f7abd78897ff41890c23ac0a80001604fef77591652563",
+      "sha256": "2d8c066114c949c34aa5bca2b335fb272ef6edbde744fa4446b4a331d02f26de",
       "state": {
         "roadShape": "left",
         "cakeStage": "",
@@ -32016,7 +32016,7 @@
         {
           "id": "",
           "w": 60,
-          "h": 78,
+          "h": 78.00003051757812,
           "bad": false
         },
         {
@@ -32156,7 +32156,7 @@
       "path": "docs/content/r33/phone-tickets-stage-3-threshold-too-early-2.png",
       "width": 390,
       "height": 844,
-      "sha256": "67957371df49ee2ac7b68cd4555c066a0942d1657d7302cc3adee70e34376fe2",
+      "sha256": "5a51ab167a72ac571d4b01f3c9e46b03618a7b2b733b66cd2079b8b2398913f5",
       "state": {
         "roadShape": "left",
         "cakeStage": "",
@@ -32240,7 +32240,7 @@
         "escortWaiting": "true",
         "escortStable": "0",
         "escortStop": "0",
-        "escortBump": "0.3539999999999999",
+        "escortBump": "0.3379999999999999",
         "trafficX": "85.00",
         "trafficMotion": "離開",
         "signGround": "446.15"
@@ -32279,7 +32279,7 @@
       "path": "docs/content/r33/phone-tickets-stage-3-threshold-stable-2.png",
       "width": 390,
       "height": 844,
-      "sha256": "5595ac87c954e5845b2208d0c6445ede77b2be0b2d224f036557f3e91eccbeeb",
+      "sha256": "32ce32e99c9f873b58428bba86ad2f2dd2a1f05c8c256a4dce1f3b756fb3bac8",
       "state": {
         "roadShape": "left",
         "cakeStage": "",
@@ -32402,7 +32402,7 @@
       "path": "docs/content/r33/phone-tickets-stage-3-aisle-2.png",
       "width": 390,
       "height": 844,
-      "sha256": "d9a4d8f127023abd6d401b8e8056f582ecd76f0b3cfa61e42cd5601a808310da",
+      "sha256": "05236315f6eab5c11c3a15896ebb0116f2a529220a30f63ce120c02517e669ea",
       "state": {
         "roadShape": "left",
         "cakeStage": "",
@@ -32525,7 +32525,7 @@
       "path": "docs/content/r33/phone-tickets-stage-3-aisle-too-early-2.png",
       "width": 390,
       "height": 844,
-      "sha256": "2ffcd8163d13c8a197ad19501586ede9c2a748d7c5e7be4c9db6ed7d41cc6d30",
+      "sha256": "d2bc11ab0c6f8ec231bd01743389625fcd54222d317404263f37e7c58a313353",
       "state": {
         "roadShape": "left",
         "cakeStage": "",
@@ -32609,7 +32609,7 @@
         "escortWaiting": "true",
         "escortStable": "0",
         "escortStop": "1",
-        "escortBump": "0.3379999999999999",
+        "escortBump": "0.3539999999999999",
         "trafficX": "85.00",
         "trafficMotion": "離開",
         "signGround": "446.15"
@@ -32648,7 +32648,7 @@
       "path": "docs/content/r33/phone-tickets-stage-3-aisle-stable-2.png",
       "width": 390,
       "height": 844,
-      "sha256": "d39a17f325a191425853e2d976099d6916a4aada28fbeff45f8fadac44fdfcfd",
+      "sha256": "a17e0ee304889b53d411861a666feee093dcbe5f4be0c7abcdc97aebe316d5ad",
       "state": {
         "roadShape": "left",
         "cakeStage": "",
@@ -32771,7 +32771,7 @@
       "path": "docs/content/r33/phone-tickets-stage-3-seated-3.png",
       "width": 390,
       "height": 844,
-      "sha256": "d67920b6f96925035f0285928f6919228835e691b633c1d5dca26c697845ca92",
+      "sha256": "c31686bd3494d9e2f45cd415896791df7b88b757ba3450e6056ae371814730cc",
       "state": {
         "roadShape": "left",
         "cakeStage": "",
@@ -33137,7 +33137,7 @@
       "path": "docs/content/r33/phone-tickets-replay-new-conditions.png",
       "width": 390,
       "height": 844,
-      "sha256": "4e94721fa5dabde7f1689207a426007199f1e9839947423f87cd5493362c44c9",
+      "sha256": "2bcbc91d6b4d019900eb413cba61b5d387a751f808c81b0ad17ebbddeb8ccfaf",
       "state": {
         "roadShape": "uphill",
         "cakeStage": "",
@@ -33282,7 +33282,7 @@
       "path": "docs/content/r33/phone-tickets-replay-opening.png",
       "width": 390,
       "height": 844,
-      "sha256": "5a8b51e9805478de40a63076b5bc9319c71d068f04ca9e0738151c04359491ab",
+      "sha256": "84886ca72726ee79f1dfc0af7a044025c8f4b032d4e27789dc6f77ddbab1d82e",
       "state": {
         "roadShape": "uphill",
         "cakeStage": "",

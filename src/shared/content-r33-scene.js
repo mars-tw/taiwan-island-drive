@@ -9,10 +9,11 @@ export function roadPicture(g,preview=false){
 }
 export function cakeView(g){
  const v=oldCake(g),exit=g.stage===2&&g.bayRestarted?clamp((g.distance-47)/7.5):0;
- const pose={...v.pose,x:g.stage===2?(.045+.13*exit)*(g.layoutSeed%2?-1:1):.17+v.pose.x*.2,y:g.stage===2?-.16-.02*exit:v.pose.y,scale:g.stage===2?.64+.12*exit:.76};
+ const entry=clamp((g.distance-40)/2),main=g.stage===2?(g.bayRestarted?exit:1-entry):0,parkX=(g.layoutSeed%2?-.045:.045);
+ const pose={...v.pose,x:g.stage===2?parkX+(.175-parkX)*main:.17+v.pose.x*.2,y:g.stage===2?-.16-.02*main:v.pose.y,scale:g.stage===2?.64+.12*main:.76};
  const speed=g.speed<.05?'已停住':g.speed<2?'慢速':g.speed<4?'中速':'高速';
  const fill=Math.min(v.fill,Math.round(100-Math.abs(v.shift)/32*96)),tone=fill<30?'red':fill<80?'yellow':'green';
- return Object.freeze({...v,fill,tone,pose:Object.freeze(pose),ground:pose,roofShift:v.shift*1.8,roadArt:roadPicture(g),bayExit:exit,bayPan:(1-exit)*100,
+ return Object.freeze({...v,fill,tone,pose:Object.freeze(pose),ground:pose,roofShift:v.shift*1.8,roadArt:roadPicture(g),bayExit:exit,bayPan:(1-main)*100,
   text:exit>0&&exit<1?'沿出口慢慢離灣。':exit===1?'回到主路了，慢慢前進。':v.text,
   speedText:`車速：${speed}・傾角 ${Math.abs(v.angle)}°`,status:'',mirrored:roadPicture(g).mirror});
 }
