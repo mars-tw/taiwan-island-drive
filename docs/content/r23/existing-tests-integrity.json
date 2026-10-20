@@ -1,0 +1,222 @@
+{
+  "status": "VERIFIED",
+  "baseline": "667cf118df8a23ac97ad14ac7d5407c7f8256610",
+  "method": "Compare baseline and working-tree Git blob IDs using repository line-ending filters; also retain raw SHA256",
+  "files": [
+    {
+      "path": "tests/car/collectibles.test.js",
+      "sha256": "ef9a093aa06d97c4f9c3639fa80043dbaf628ad1ca8914ed80bbe5babcbf464a",
+      "gitBlob": "92d6d89462939ad84b428c040195f34b340a90d3"
+    },
+    {
+      "path": "tests/car/physics.test.js",
+      "sha256": "de387b9c83c32e1d8f713385a290daac59e2cab8c14a51dc710b834e06e63d5e",
+      "gitBlob": "cf600189a12e865f60a80b09d5829187d14b1cdf"
+    },
+    {
+      "path": "tests/car/tilt.test.js",
+      "sha256": "d96b0068992c6ff3fc05d5d753e292cefe0aa3cedf24c66382b9604278108018",
+      "gitBlob": "03f51b2e743aa6a88cf87ccc1353b45dbf4f6735"
+    },
+    {
+      "path": "tests/flight/child-pilot.test.js",
+      "sha256": "67beb50ccbd359021e9f57da2e6de555fba862a404efcf2ac8229f6a2a8c30b0",
+      "gitBlob": "fa6006e371a631ddd9ee619c78daed50f790a6d9"
+    },
+    {
+      "path": "tests/flight/flight.test.js",
+      "sha256": "0baafb3a5f2eec3de5e98551b322389beb33e4bab5aaacee40b016540e02fcfd",
+      "gitBlob": "3d7f3c7441398c1c507f8966b49d826111786826"
+    },
+    {
+      "path": "tests/flight/rewards.test.js",
+      "sha256": "fe795bc55623d8b6177bbe8a28e62cc0a9ba82ca44a1292a74da5dfd79988a50",
+      "gitBlob": "553003b93d51ac669a74111b9b14992fd3d0173d"
+    },
+    {
+      "path": "tests/helpers/crossing-actions.js",
+      "sha256": "bb6f09a06242cd02acce105a6cf42b82b370000cd44cebb2369dbd7553d2b9c2",
+      "gitBlob": "7a172754ecce414af32002eff5148c6378f737fc"
+    },
+    {
+      "path": "tests/native-ios/NativeScreenshotTests.swift",
+      "sha256": "efff09c68cb9d9b9ed400d813788e3e11bf381b5bf9c455b6bf782267196f83a",
+      "gitBlob": "df45a890758d14cd31e769d3d2e6773f9ee8ebdf"
+    },
+    {
+      "path": "tests/native-ios/test_screenshot_evidence.py",
+      "sha256": "10631412d59835aa7ec49cd6b8621590fea9b35aa85c2f5656df74155849717f",
+      "gitBlob": "daa2b2e51cf2df31bb79b72b18e4e797d1c4222d"
+    },
+    {
+      "path": "tests/native/native.test.js",
+      "sha256": "de6ff7fc54f501cb18517f3526f626b9eb44d655443020cdd1807081d8e7c790",
+      "gitBlob": "681d2139dbf52c2b571a50903f181688e9a3d86e"
+    },
+    {
+      "path": "tests/native/speech-stop.test.js",
+      "sha256": "8f43da7ebfe4f593ede5f725b7094247d8930e08ad17ab76c56a512fcfcd8633",
+      "gitBlob": "1749b77037cf792177ea80c1b14c475f8da26058"
+    },
+    {
+      "path": "tests/shared/academy.test.js",
+      "sha256": "82a68e482eadc915c51cb285f877db8f0cfc848277b58e6aa24480581ab8f384",
+      "gitBlob": "4a0264bdafc78af735ca0241ddc8f056524a0310"
+    },
+    {
+      "path": "tests/shared/child-display.test.js",
+      "sha256": "3f9320bf828e106e0725a33ede081315ab0fa92fd3d76bd1c9e2cbb03d3c7541",
+      "gitBlob": "8f3059c376ad0bc5c2ad4b33dd63844bcf996033"
+    },
+    {
+      "path": "tests/shared/content-r1.test.js",
+      "sha256": "15aa94d012c48235bbfb39d8b99ca0e2bf37a92ba7ab3e8a9a34030b4965a50d",
+      "gitBlob": "a68db9ba23aedd18ea762947b035652ddca7c4c1"
+    },
+    {
+      "path": "tests/shared/content-r10.test.js",
+      "sha256": "5735d5d9ac13cdc115774781bae095b4eef5cd7b457c972646a02f5aba07e864",
+      "gitBlob": "70bd9c8a5e1f77ccf6167c874c2c81c026a6ae6b"
+    },
+    {
+      "path": "tests/shared/content-r11.test.js",
+      "sha256": "a71031663e0fc2c044d69505d538cb82f57f428544dac2f587387b2454a766e2",
+      "gitBlob": "f81fa99eae1cc181c5e19af8d57b52d7e33325a7"
+    },
+    {
+      "path": "tests/shared/content-r12.test.js",
+      "sha256": "a74c53092b093150f13259ae16106cdab4d3fe070590490d991d26dedd367d23",
+      "gitBlob": "1134c7a3b288ffd9dd732a9cfaac2e1f8d7b16be"
+    },
+    {
+      "path": "tests/shared/content-r13.test.js",
+      "sha256": "c0b9ff3e1c4d078e6ccc324756158ed376697cf944db882b28abcce3aa860240",
+      "gitBlob": "de7823ed56467729c69585f434389fc3a0b98c11"
+    },
+    {
+      "path": "tests/shared/content-r14.test.js",
+      "sha256": "927624b4e6afd005ec8cace7bb465319a1950e2cb6a38666a916387c3cabbf3a",
+      "gitBlob": "22a753c6d25d6c86365c385d04501ecfce8b54af"
+    },
+    {
+      "path": "tests/shared/content-r15.test.js",
+      "sha256": "f79bee6daca802f45968bc4669d31d364153e4e45822b79b5c3901b98e1b2c4a",
+      "gitBlob": "9d58bffa6425e2906ba0c23c22ad07bb1334e8dd"
+    },
+    {
+      "path": "tests/shared/content-r16.test.js",
+      "sha256": "dd8b163d64e9b1bc4e1522c2557d807ac3f8b8a67a96b3ec9ec15e540ef2de97",
+      "gitBlob": "06e78dd14f54adcfe0b45ccf5b8c25dc8da02b08"
+    },
+    {
+      "path": "tests/shared/content-r17.test.js",
+      "sha256": "14749dcc62b189b9082047eff5a4afdf7b3eeecd27ae2e26899dd0a306aeb3d1",
+      "gitBlob": "5a7b8fd6392992132bc6c786e990c2bac3a8c7f9"
+    },
+    {
+      "path": "tests/shared/content-r18.test.js",
+      "sha256": "f1f21b9f985c9b039cfb20459d883804db44d19498f11f47f95b8c954683dfb8",
+      "gitBlob": "532a066bb79151a4d3f37753cc4e480aa2b3f8dc"
+    },
+    {
+      "path": "tests/shared/content-r19.test.js",
+      "sha256": "639a17a0854c8df6e6c7968d36c9996124533917fe63bced6bb765f88eb4d8fe",
+      "gitBlob": "7aaca69b111e5cd2a0ac34ba4a64ccd0ca46ea89"
+    },
+    {
+      "path": "tests/shared/content-r2.test.js",
+      "sha256": "faa798adf6ae14453cee60001e890282c7a3fb17df8bcf34a0747299c6a36e54",
+      "gitBlob": "818203feeadeab7fca431201284891319f8af7ad"
+    },
+    {
+      "path": "tests/shared/content-r20.test.js",
+      "sha256": "43cb3617924df7bbae9f9dd0fdfbbfe70924d34bc990d725c5b69d2ee01dd93a",
+      "gitBlob": "320f3484195a60fa93de4bbcc1ea5e3eac7a6100"
+    },
+    {
+      "path": "tests/shared/content-r21.test.js",
+      "sha256": "2c12f507e1f61f47a94a0b2f65d91ede958862755df6977474af690b9cc28a70",
+      "gitBlob": "e8d1bbeb7f00315278fc3d7574c04c6b609c0edf"
+    },
+    {
+      "path": "tests/shared/content-r22.test.js",
+      "sha256": "f3535d284f1191e4f6e9614f8f310f4d79fb0282ceaa24dc408638450e05918d",
+      "gitBlob": "640a6c080d3e9e4c2fec05c6a23abce5735e064e"
+    },
+    {
+      "path": "tests/shared/content-r3.test.js",
+      "sha256": "d2fa554ea4f1808c3eb2da9459d580568a1949c1d562175ac683c9db3d5f24a1",
+      "gitBlob": "beddca98d6f2d5d33a4b69ac7b3af8eff4f01575"
+    },
+    {
+      "path": "tests/shared/content-r4.test.js",
+      "sha256": "ffcc76e8ea28f1209d07d8ff4cd464f6009e42f89b8b2f13a11e9b27f2005349",
+      "gitBlob": "953a9f965934c36c86192b08deba5e9f94fef15d"
+    },
+    {
+      "path": "tests/shared/content-r5.test.js",
+      "sha256": "54507ea1f3d45bda42c03b46979fad745f948e2e14390907445b78bc48df16b6",
+      "gitBlob": "fe06f8cba344df98a9c67cd89c921a5a2a5bdb3b"
+    },
+    {
+      "path": "tests/shared/content-r6.test.js",
+      "sha256": "03a161c2a1e9635eff33601e8732303a0315526fb7fd109d69b31df8cdc69b5d",
+      "gitBlob": "ac7962fb45f04c1522d745c7d24b9fea49c893a3"
+    },
+    {
+      "path": "tests/shared/content-r7.test.js",
+      "sha256": "f2adc131e2e35aed757a422489a76b6fefb7d0550c6782be30bf840407ba2797",
+      "gitBlob": "624e19e8c45a35b118298be86875064238c2430e"
+    },
+    {
+      "path": "tests/shared/content-r8.test.js",
+      "sha256": "b7fc7c68b97c878c710c4787e8801e0fd011a7c66132b87cbfba248d6f19145f",
+      "gitBlob": "535f8961fce8ab67103ca4000b74cef45389472b"
+    },
+    {
+      "path": "tests/shared/content-r9.test.js",
+      "sha256": "267f2fb8c63f9f802597ecfeb9543a3e84d02fbf1c158eda12215b105c0b4404",
+      "gitBlob": "02b138ed7b2a831def173e1752765416229ae54a"
+    },
+    {
+      "path": "tests/shared/dispatch-ported.test.js",
+      "sha256": "73f0dda2d069523dd06a9d100dbd7d7e26d418021f70fe8ef8c0c39aee3bc81c",
+      "gitBlob": "8b3f77f9f94b84b2af7066dbad2e6847e5c0b407"
+    },
+    {
+      "path": "tests/shared/integration.test.js",
+      "sha256": "a942b75ef6c86ef733755d079e6683a2e190d43fa415a21cc061a96ca041b954",
+      "gitBlob": "4d9fa60bb1521325a9ccd408b1e20759721d674f"
+    },
+    {
+      "path": "tests/shared/journeys.test.js",
+      "sha256": "aa9021f6fa5a1b0c34e0f9c341a2642c3963b75eb029002093fda5a60e7a3d82",
+      "gitBlob": "69ca13d45f8fa86aa6117305e0bf5b07c9d830f3"
+    },
+    {
+      "path": "tests/shared/offline-cache.test.js",
+      "sha256": "215567987468ef07dd62d5f46f0815485571c6023a3712afdf075f56b2f2a510",
+      "gitBlob": "bd45b80dcbb711439bac246ebdef9c431c540c58"
+    },
+    {
+      "path": "tests/shared/rewards.test.js",
+      "sha256": "715f837a0dbb8d1ee700eb549f7fb8436feffdb5737caa87b566a175030eab1b",
+      "gitBlob": "7753857ac62dd7ae6f380e3eaf7b3ca2fcc85806"
+    },
+    {
+      "path": "tests/shared/safety.test.js",
+      "sha256": "273aa38504b74bafca4086af97641f7072c91ab07fccfc132e3b0e68d781192f",
+      "gitBlob": "49ff2ea91a732f4f40dcb9488d035e85bcdee804"
+    },
+    {
+      "path": "tests/train/physics.test.js",
+      "sha256": "592097f161874d9b570f842daaa87c0ec1b71ae9b7f9e63f672b0111ffc92c1a",
+      "gitBlob": "dfef520b90357a8ce8787ba3fdf2bb4e46153953"
+    },
+    {
+      "path": "tests/train/rewards.test.js",
+      "sha256": "349c69ef084cee1689b9b54e4732b84d1376af203b38820e526f498354b87886",
+      "gitBlob": "41517010fbdb0c91e906d9a16cb9685b77a68d3b"
+    }
+  ]
+}

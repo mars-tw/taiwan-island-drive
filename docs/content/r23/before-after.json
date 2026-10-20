@@ -1,0 +1,30 @@
+{
+  "status": "VERIFIED",
+  "method": "Before: exact tracked R22 capture from baseline Git blob. After: exact current original capture. No montage or image editing.",
+  "comparisons": [
+    {
+      "kind": "cake",
+      "before": "docs/content/r23/before-cake.png",
+      "after": "docs/content/r23/after-cake.png",
+      "baselineSource": "667cf118df8a23ac97ad14ac7d5407c7f8256610:docs/content/r22/phone-cake-stage-3-restart.png",
+      "beforeSha256": "dd83dcecbd6da339c79712e8bad842ab25a415af7844704a763a5520d8f06bb9",
+      "afterSha256": "30ea181db5c744153f68e90d5b4d7237a046b44ce17698d4721bff3703777e32"
+    },
+    {
+      "kind": "crossing",
+      "before": "docs/content/r23/before-crossing.png",
+      "after": "docs/content/r23/after-crossing.png",
+      "baselineSource": "667cf118df8a23ac97ad14ac7d5407c7f8256610:docs/content/r22/phone-crossing-stage-3-recheck.png",
+      "beforeSha256": "e883b7e10d6bb4ed78aacc995e3defcd4e3dfca8fbd80d7bdc9576fd64aa9b74",
+      "afterSha256": "8cfc2be2efb10983b038aa6ded187191a040f9cbd3944959acf6a41871a70377"
+    },
+    {
+      "kind": "tickets",
+      "before": "docs/content/r23/before-tickets.png",
+      "after": "docs/content/r23/after-tickets.png",
+      "baselineSource": "667cf118df8a23ac97ad14ac7d5407c7f8256610:docs/content/r22/phone-tickets-stage-2-boarding-2.png",
+      "beforeSha256": "f931c713445761585337435e084bde666b32bf92b8ce4eed0d53f537071e5bf1",
+      "afterSha256": "9c83e692d101bfcdc7bf6c92fd31af4de83f6db7a87f4f97bcf932bb5bf7a4ec"
+    }
+  ]
+}

@@ -1,0 +1,25 @@
+import assert from 'node:assert/strict';
+import {pathToFileURL} from 'node:url';
+import {mkdir,writeFile} from 'node:fs/promises';
+const {chromium}=await import(pathToFileURL(process.env.PLAYWRIGHT_MODULE).href),browser=await chromium.launch({headless:true}),out='docs/content/r23/negative',rows=[];
+await mkdir(out,{recursive:true});
+const base=process.env.BASE_URL||'http://127.0.0.1:5286/',a=(p,id)=>p.locator(`[data-action="${id}"]`),d=p=>p.locator('.content-scene').evaluate(e=>({...e.dataset}));
+const tick=(p,n)=>p.clock.runFor(n),check=label=>{rows.push({status:'VERIFIED',label});console.log('VERIFIED '+label);};
+async function hold(p,id,ms){const b=await a(p,id).boundingBox();await p.mouse.move(b.x+b.width/2,b.y+b.height/2);await p.mouse.down();await tick(p,ms);await p.mouse.up();await tick(p,96);}
+try{
+ const c=await browser.newContext({viewport:{width:390,height:844},hasTouch:true,reducedMotion:'reduce'}),p=await c.newPage();await p.clock.install();await p.goto(base);await p.locator('#content-start').waitFor();await p.clock.pauseAt(await p.evaluate(()=>Date.now()+100));await p.locator('#content-start').click();await p.locator('[data-content=cake]').click();await a(p,'begin').click();await tick(p,96);await hold(p,'go',700);assert.equal((await d(p)).recoveryActive,'true');const before=await d(p);await p.locator('#content-pause').click();await tick(p,2000);await p.screenshot({path:`${out}/phone-cake-rest.png`});await p.locator('#content-resume').click();await tick(p,96);assert.equal((await d(p)).balanceLean,before.balanceLean);assert.equal((await d(p)).distance,before.distance);check('rest freezes actual recovery and movement');
+ const correct=+(await d(p)).balanceLean>0?'recover-left':'recover-right';const b=await a(p,correct).boundingBox();await p.mouse.move(b.x+b.width/2,b.y+b.height/2);await p.mouse.down();await tick(p,200);await a(p,correct).dispatchEvent('pointercancel',{pointerId:1});await p.mouse.up();await tick(p,96);const stopped=(await d(p)).balanceLean;await tick(p,1000);assert.equal((await d(p)).balanceLean,stopped);check('touch cancellation releases recovery input');
+ const animations=await p.locator('#content-controls svg').evaluateAll(es=>es.map(e=>getComputedStyle(e).animationName));assert.ok(animations.every(x=>x==='none'));await p.screenshot({path:`${out}/phone-cake-reduced-motion.png`});check('reduced motion keeps recovery playable without answer animation');await c.close();
+ const late=await browser.newContext({viewport:{width:390,height:844},hasTouch:true}),l=await late.newPage();await l.clock.install();await l.goto(base);await l.locator('#content-start').waitFor();await l.clock.pauseAt(await l.evaluate(()=>Date.now()+100));await l.locator('#content-start').click();await l.locator('[data-content=crossing]').click();await a(l,'begin').click();
+ for(let stage=0;stage<2;stage++){
+  await hold(l,'brake',1500);
+  for(let person=0;person<3;person++){
+   for(const side of (stage===0?['left','right']:['right','left'])){await a(l,'look-'+side).click();await tick(l,96);}
+   for(let n=0;n<400&&+(await d(l)).crossed<=person;n++)await tick(l,96);
+  }
+  await a(l,'depart').click();await tick(l,2000);await a(l,'next').click();await tick(l,96);
+ }
+ await hold(l,'brake',1500);await a(l,'look-left').click();await tick(l,96);await a(l,'look-right').click();await tick(l,2000);assert.equal(await l.locator('#content-hint').innerText(),'左邊還要再確認。');for(let n=0;n<80&&(await d(l)).trafficActive==='true';n++)await tick(l,96);
+ assert.equal((await d(l)).trafficActive,'false');assert.equal((await d(l)).lookedLeft,'false');assert.equal(await l.locator('#content-hint').innerText(),'左邊還要再確認。');assert.equal(await l.locator('.crossing-traffic').isVisible(),false);await l.screenshot({path:`${out}/phone-crossing-late-recheck.png`});await a(l,'look-left').click();await tick(l,96);assert.equal((await d(l)).confirmed,'true');check('late left recheck names observation after the visible car has left');await late.close();
+ const blocked=await browser.newContext({viewport:{width:390,height:844}});await blocked.addInitScript(()=>{Storage.prototype.setItem=function(){throw new DOMException('Storage unavailable','QuotaExceededError');};});const q=await blocked.newPage();await q.goto(base);await q.locator('#content-start').click();await q.locator('[data-content=crossing]').click();await a(q,'begin').click();assert.match(await q.locator('#content-save').innerText(),/無法儲存/);await q.screenshot({path:`${out}/phone-storage-unavailable.png`});assert.equal(await a(q,'brake').isEnabled(),true);await q.locator('#content-pause').click();await q.locator('#content-leave').click();assert.equal(await q.locator('#content-r1').isVisible(),false);check('blocked storage explains unsaved state and keeps play/exit reachable');await blocked.close();
+}finally{await browser.close();await writeFile(`${out}/checks.json`,JSON.stringify({status:rows.length===5?'VERIFIED':'BLOCKED',rows},null,2));}

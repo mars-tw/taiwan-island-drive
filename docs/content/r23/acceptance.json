@@ -1,0 +1,87 @@
+{
+  "status": "VERIFIED",
+  "scope": "Four explicitly requested R23 corrections",
+  "tickets": {
+    "stations": [
+      {
+        "path": "docs/content/r23/phone-tickets-stage-1-step-out.png",
+        "step": {
+          "x": 248.6875,
+          "y": 492.40625,
+          "width": 107.390625,
+          "height": 47,
+          "right": 356.078125,
+          "bottom": 539.40625
+        }
+      },
+      {
+        "path": "docs/content/r23/phone-tickets-stage-2-step-out.png",
+        "step": {
+          "x": 33.890625,
+          "y": 492.40625,
+          "width": 107.390625,
+          "height": 47,
+          "right": 141.28125,
+          "bottom": 539.40625
+        }
+      },
+      {
+        "path": "docs/content/r23/phone-tickets-stage-3-step-out.png",
+        "step": {
+          "x": 141.296875,
+          "y": 499.140625,
+          "width": 107.390625,
+          "height": 47,
+          "right": 248.6875,
+          "bottom": 546.140625
+        }
+      }
+    ],
+    "boarding": [
+      [
+        "docs/content/r23/phone-tickets-stage-2-boarding-1.png",
+        "docs/content/r23/phone-tickets-stage-2-boarding-2.png",
+        "docs/content/r23/phone-tickets-stage-2-boarding-3.png"
+      ],
+      [
+        "docs/content/r23/phone-tickets-stage-3-boarding-1.png",
+        "docs/content/r23/phone-tickets-stage-3-boarding-2.png",
+        "docs/content/r23/phone-tickets-stage-3-boarding-3.png"
+      ]
+    ],
+    "checks": "Actual UI assertions: front paving, contact overlap, foot path through the door step"
+  },
+  "traffic": {
+    "threeStationCars": [
+      "docs/content/r23/phone-crossing-stage-1-car.png",
+      "docs/content/r23/phone-crossing-stage-2-car.png",
+      "docs/content/r23/phone-crossing-stage-3-car.png"
+    ],
+    "leftRecheck": [
+      {
+        "path": "docs/content/r23/phone-crossing-stage-3-recheck.png",
+        "hint": "左邊又有車，請再看左邊。"
+      },
+      {
+        "path": "docs/content/r23/phone-crossing-stage-3-recheck-2.png",
+        "hint": "左邊又有車，請再看左邊。"
+      },
+      {
+        "path": "docs/content/r23/phone-crossing-stage-3-recheck-3.png",
+        "hint": "左邊又有車，請再看左邊。"
+      }
+    ],
+    "checks": "Actual UI assertions: zero rotation, directional sprite scale, horizontal lane, fresh left car center <50%"
+  },
+  "cake": {
+    "rest": "docs/content/r23/phone-cake-stage-3-bay.png",
+    "restart": "docs/content/r23/phone-cake-stage-3-restart.png",
+    "hint": "前方左彎，照顧蛋糕。",
+    "checks": "Every screenshot prompt/sign agrees with roadShape; unit sweep checks every 0.25 distance"
+  },
+  "arrival": {
+    "zero": "docs/content/r23/phone-crossing-stage-2-car.png",
+    "all": "docs/content/r23/phone-crossing-stage-3-ready-depart.png",
+    "checks": "Destination check iff 3/3; arrow intersects neither people nor state labels"
+  }
+}
