@@ -1,0 +1,30 @@
+{
+  "status": "VERIFIED",
+  "method": "Unmodified Git baseline captures compared to current UI; not synchronized pixel differences",
+  "comparisons": [
+    {
+      "baseline": "22b0ecaae4d4f88e125b22bc2baa48562f57ad9c",
+      "baselinePath": "docs/content/r21/phone-cake-stage-2-recovery-2.png",
+      "before": "docs/content/r22/before-cake.png",
+      "beforeSha256": "560666271a96c94112c2ccdc6de15ecb474a62f6dc2d99d4713f432cfd5440f8",
+      "after": "docs/content/r22/after-cake.png",
+      "afterSha256": "677df0120bbe96ec8ad70dda7c12a2114a4826d768a54f49343550d5ee471c33"
+    },
+    {
+      "baseline": "22b0ecaae4d4f88e125b22bc2baa48562f57ad9c",
+      "baselinePath": "docs/content/r21/phone-crossing-stage-3-grandma-3.png",
+      "before": "docs/content/r22/before-crossing.png",
+      "beforeSha256": "6a30e1ec6f2913dd50f8b6e16048205a0b0fd0262d3519dc4b2255f896e4ac61",
+      "after": "docs/content/r22/after-crossing.png",
+      "afterSha256": "f12a0cec918cc065cbea6fb62ea74d70bf2a1cfe80bebd9a8331e165cde1758e"
+    },
+    {
+      "baseline": "22b0ecaae4d4f88e125b22bc2baa48562f57ad9c",
+      "baselinePath": "docs/content/r21/phone-tickets-stage-3-step-out.png",
+      "before": "docs/content/r22/before-tickets.png",
+      "beforeSha256": "e03a181489f363f2320a3c5075e133b3ec2dc633ca9693267516b3d1168b287e",
+      "after": "docs/content/r22/after-tickets.png",
+      "afterSha256": "4fbc874ee87b1fe3514313be06be820bd8c7bbdc5e7cbb30873f680f08038172"
+    }
+  ]
+}

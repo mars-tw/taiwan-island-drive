@@ -1,0 +1,29 @@
+{
+  "status": "VERIFIED",
+  "newGenerationCalls": 0,
+  "newRuntimeAssets": 0,
+  "tool": null,
+  "method": "Reuse managed R7 cake layers, existing character poses, R21 generated boarding step. Code changes pose, size and UI only; no procedural character/background art.",
+  "files": [
+    {
+      "path": "public/art/content-r21/boarding-step.webp",
+      "sha256": "3aaafa04ed7439d2a4a2786b7e36b078fe3bc7c50c8c879fd4ed242cce44aa5b"
+    },
+    {
+      "path": "public/art/content-r7/cake-base.png",
+      "sha256": "125e8dce5834f8ed75a48969af3c4e3b24b969df15b7fff937041442f192b6ff"
+    },
+    {
+      "path": "public/art/content-r7/cake-middle.png",
+      "sha256": "8e16ea25b91aeb15769a16cbdd6680ca868ca5c36c3329ee437bdcce31e3a2f1"
+    },
+    {
+      "path": "public/art/content-r7/cake-top.png",
+      "sha256": "99a156e487fc331a713e9f639ffddac3498cccd1dc5d3ac1b67f2215a1779884"
+    },
+    {
+      "path": "public/art/content-r7/cake-pick.png",
+      "sha256": "0a91a7b88740839f262a3591896f55ac854d1e2480010a4e5238130df64cea9b"
+    }
+  ]
+}

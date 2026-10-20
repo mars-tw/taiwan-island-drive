@@ -1,0 +1,102 @@
+{
+  "status": "VERIFIED",
+  "renderArgs": [
+    "--use-angle=d3d11",
+    "--enable-gpu",
+    "--ignore-gpu-blocklist"
+  ],
+  "method": "Same hardware-rendering arguments as the existing R20 measurement. Three real 2000ms RAF samples per lesson/viewport; median p95. Concurrent host load, one browser/context at a time; reference only, not clean hardware or native-device performance.",
+  "limitMs": 18,
+  "rows": [
+    {
+      "viewport": "desktop",
+      "kind": "cake",
+      "runs": [
+        16.7,
+        16.7,
+        16.7
+      ],
+      "p95": 16.7
+    },
+    {
+      "viewport": "desktop",
+      "kind": "crossing",
+      "runs": [
+        16.8,
+        16.8,
+        16.7
+      ],
+      "p95": 16.8
+    },
+    {
+      "viewport": "desktop",
+      "kind": "tickets",
+      "runs": [
+        16.8,
+        16.7,
+        16.7
+      ],
+      "p95": 16.7
+    },
+    {
+      "viewport": "portrait",
+      "kind": "cake",
+      "runs": [
+        16.7,
+        16.8,
+        16.7
+      ],
+      "p95": 16.7
+    },
+    {
+      "viewport": "portrait",
+      "kind": "crossing",
+      "runs": [
+        16.7,
+        16.8,
+        16.8
+      ],
+      "p95": 16.8
+    },
+    {
+      "viewport": "portrait",
+      "kind": "tickets",
+      "runs": [
+        16.7,
+        16.7,
+        16.8
+      ],
+      "p95": 16.7
+    },
+    {
+      "viewport": "landscape",
+      "kind": "cake",
+      "runs": [
+        16.8,
+        16.8,
+        16.7
+      ],
+      "p95": 16.8
+    },
+    {
+      "viewport": "landscape",
+      "kind": "crossing",
+      "runs": [
+        16.7,
+        16.8,
+        16.8
+      ],
+      "p95": 16.8
+    },
+    {
+      "viewport": "landscape",
+      "kind": "tickets",
+      "runs": [
+        16.7,
+        16.7,
+        16.7
+      ],
+      "p95": 16.7
+    }
+  ]
+}

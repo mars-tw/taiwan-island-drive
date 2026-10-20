@@ -1,0 +1,131 @@
+{
+  "status": "VERIFIED",
+  "baseline": "22b0ecaae4d4f88e125b22bc2baa48562f57ad9c",
+  "branch": "r1-fun-polish",
+  "version": "2.34.0",
+  "sourceBuild": 30,
+  "unitTests": 267,
+  "existingTestFilesUnchanged": 42,
+  "courseBrowserChecks": 62,
+  "negativeChecks": 4,
+  "mergeChecks": 132,
+  "storeChecks": 101,
+  "screenshots": 290,
+  "reviewSet": 15,
+  "newArt": 0,
+  "secretHits": 0,
+  "cleanup": {
+    "files": 65,
+    "bytes": 90006605,
+    "retained": 5398
+  },
+  "performance": {
+    "status": "VERIFIED",
+    "renderArgs": [
+      "--use-angle=d3d11",
+      "--enable-gpu",
+      "--ignore-gpu-blocklist"
+    ],
+    "method": "Same hardware-rendering arguments as the existing R20 measurement. Three real 2000ms RAF samples per lesson/viewport; median p95. Concurrent host load, one browser/context at a time; reference only, not clean hardware or native-device performance.",
+    "limitMs": 18,
+    "rows": [
+      {
+        "viewport": "desktop",
+        "kind": "cake",
+        "runs": [
+          16.7,
+          16.7,
+          16.7
+        ],
+        "p95": 16.7
+      },
+      {
+        "viewport": "desktop",
+        "kind": "crossing",
+        "runs": [
+          16.8,
+          16.8,
+          16.7
+        ],
+        "p95": 16.8
+      },
+      {
+        "viewport": "desktop",
+        "kind": "tickets",
+        "runs": [
+          16.8,
+          16.7,
+          16.7
+        ],
+        "p95": 16.7
+      },
+      {
+        "viewport": "portrait",
+        "kind": "cake",
+        "runs": [
+          16.7,
+          16.8,
+          16.7
+        ],
+        "p95": 16.7
+      },
+      {
+        "viewport": "portrait",
+        "kind": "crossing",
+        "runs": [
+          16.7,
+          16.8,
+          16.8
+        ],
+        "p95": 16.8
+      },
+      {
+        "viewport": "portrait",
+        "kind": "tickets",
+        "runs": [
+          16.7,
+          16.7,
+          16.8
+        ],
+        "p95": 16.7
+      },
+      {
+        "viewport": "landscape",
+        "kind": "cake",
+        "runs": [
+          16.8,
+          16.8,
+          16.7
+        ],
+        "p95": 16.8
+      },
+      {
+        "viewport": "landscape",
+        "kind": "crossing",
+        "runs": [
+          16.7,
+          16.8,
+          16.8
+        ],
+        "p95": 16.8
+      },
+      {
+        "viewport": "landscape",
+        "kind": "tickets",
+        "runs": [
+          16.7,
+          16.7,
+          16.7
+        ],
+        "p95": 16.7
+      }
+    ]
+  },
+  "blocked": [
+    "Physical iPhone/iPad touch and native voice need devices",
+    "Parent-child play and blind visual tests need participants",
+    "Clean-hardware performance needs exclusive hardware",
+    "Muse >=8 needs independent review",
+    "Native signed packages not rebuilt"
+  ]
+}

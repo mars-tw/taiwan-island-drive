@@ -1,0 +1,166 @@
+{
+  "status": "VERIFIED",
+  "cake": [
+    {
+      "path": "docs/content/r22/phone-cake-stage-2-centre-62.png",
+      "lean": "12.00",
+      "fill": "回中央 62%"
+    },
+    {
+      "path": "docs/content/r22/phone-cake-stage-2-centre-80.png",
+      "lean": "6.53",
+      "fill": "回中央 80%"
+    },
+    {
+      "path": "docs/content/r22/phone-cake-stage-2-centre-100.png",
+      "lean": "0.00",
+      "fill": "回中央 100%"
+    }
+  ],
+  "crossing": "9 named friends: start/middle/pavement, no early count, same identity and synchronous arrival text",
+  "doorAlignment": [
+    {
+      "status": "VERIFIED",
+      "label": "platform 1 door alignment",
+      "errorPx": 0.0234375
+    },
+    {
+      "status": "VERIFIED",
+      "label": "platform 2 door alignment",
+      "errorPx": 0.0234375
+    },
+    {
+      "status": "VERIFIED",
+      "label": "platform 3 door alignment",
+      "errorPx": 0.0234375
+    }
+  ],
+  "step": {
+    "extended": "docs/content/r22/phone-tickets-stage-3-step-out.png",
+    "retracted": "docs/content/r22/phone-tickets-stage-3-step-in.png",
+    "width": 107.390625,
+    "height": 54
+  },
+  "reviewSet": [
+    {
+      "path": "docs/content/r22/review-set/01-cake-stage-2-wrong.png",
+      "source": "docs/content/r22/phone-cake-stage-2-wrong.png",
+      "purpose": "第二站轉錯彎：四鍵仍可選，短句只談轉彎",
+      "width": 390,
+      "height": 844,
+      "sha256": "b9d2440fe9675ec78c194ec860141d8a0704ed72ae0817f0a46a622b1aecd973"
+    },
+    {
+      "path": "docs/content/r22/review-set/02-cake-stage-2-centre-62.png",
+      "source": "docs/content/r22/phone-cake-stage-2-centre-62.png",
+      "purpose": "同站回中央62%：主畫面與特寫一起偏右",
+      "width": 390,
+      "height": 844,
+      "sha256": "215464e62a78e4368cd4f9d46f5df673319df470b8e502985e31dd3bc05dcc2a"
+    },
+    {
+      "path": "docs/content/r22/review-set/03-cake-stage-2-centre-80.png",
+      "source": "docs/content/r22/phone-cake-stage-2-centre-80.png",
+      "purpose": "同站回中央80%：兩處蛋糕同步扶正",
+      "width": 390,
+      "height": 844,
+      "sha256": "677df0120bbe96ec8ad70dda7c12a2114a4826d768a54f49343550d5ee471c33"
+    },
+    {
+      "path": "docs/content/r22/review-set/04-cake-stage-2-centre-100.png",
+      "source": "docs/content/r22/phone-cake-stage-2-centre-100.png",
+      "purpose": "同站回中央100%：蛋糕、草莓與旗子回正",
+      "width": 390,
+      "height": 844,
+      "sha256": "a35abd4d3c3b30e7f46ace01a63deabac7e4a3169c335fb4ed121ce402360113"
+    },
+    {
+      "path": "docs/content/r22/review-set/05-cake-stage-3-restart.png",
+      "source": "docs/content/r22/phone-cake-stage-3-restart.png",
+      "purpose": "第三站在路旁休息區停穩後，實際重新起步",
+      "width": 390,
+      "height": 844,
+      "sha256": "dd83dcecbd6da339c79712e8bad842ab25a415af7844704a763a5520d8f06bb9"
+    },
+    {
+      "path": "docs/content/r22/review-set/06-crossing-stage-2-right-first.png",
+      "source": "docs/content/r22/phone-crossing-stage-2-right-first.png",
+      "purpose": "第二站右先看：固定動作按鈕，已看狀態分開顯示",
+      "width": 390,
+      "height": 844,
+      "sha256": "e6d77089f70312a641d750951f3b329f9baa4fe048b12cddfdb53b154a61ee62"
+    },
+    {
+      "path": "docs/content/r22/review-set/07-crossing-stage-3-recheck.png",
+      "source": "docs/content/r22/phone-crossing-stage-3-recheck.png",
+      "purpose": "第三站新來車：左側待確認，右側看過，提示一致",
+      "width": 390,
+      "height": 844,
+      "sha256": "e883b7e10d6bb4ed78aacc995e3defcd4e3dfca8fbd80d7bdc9576fd64aa9b74"
+    },
+    {
+      "path": "docs/content/r22/review-set/08-crossing-stage-3-2-start.png",
+      "source": "docs/content/r22/phone-crossing-stage-3-2-start.png",
+      "purpose": "同一位3號奶奶起步：已到岸1/3",
+      "width": 390,
+      "height": 844,
+      "sha256": "33954047d713ca292dcb5650077cfa5777d056786ba4ce94341193a606964549"
+    },
+    {
+      "path": "docs/content/r22/review-set/09-crossing-stage-3-2-middle.png",
+      "source": "docs/content/r22/phone-crossing-stage-3-2-middle.png",
+      "purpose": "奶奶仍在斑馬線：已到岸仍1/3",
+      "width": 390,
+      "height": 844,
+      "sha256": "af79a8a2a7ece6ab4d0839076d25558142a65c0b20d772e3f9e7f2cebe722f50"
+    },
+    {
+      "path": "docs/content/r22/review-set/10-crossing-stage-3-2-pavement.png",
+      "source": "docs/content/r22/phone-crossing-stage-3-2-pavement.png",
+      "purpose": "奶奶踏上對岸：同一人物勾選、計數2/3與提示同步",
+      "width": 390,
+      "height": 844,
+      "sha256": "f12a0cec918cc065cbea6fb62ea74d70bf2a1cfe80bebd9a8331e165cde1758e"
+    },
+    {
+      "path": "docs/content/r22/review-set/11-tickets-stage-2-boarding-1.png",
+      "source": "docs/content/r22/phone-tickets-stage-2-boarding-1.png",
+      "purpose": "第二站按住陪小安上車；地名、無人物編號、車門對齊1號牌",
+      "width": 390,
+      "height": 844,
+      "sha256": "9b85a5afaf54cc5c1b5032b13f85083d3da03ed2e2f4fcb1284cf9d8a57a0b8a"
+    },
+    {
+      "path": "docs/content/r22/review-set/12-tickets-stage-2-boarding-2.png",
+      "source": "docs/content/r22/phone-tickets-stage-2-boarding-2.png",
+      "purpose": "同一乘客連續上車第二格；唯一已入座進度、同伴仍在候車區",
+      "width": 390,
+      "height": 844,
+      "sha256": "f931c713445761585337435e084bde666b32bf92b8ce4eed0d53f537071e5bf1"
+    },
+    {
+      "path": "docs/content/r22/review-set/13-tickets-stage-3-boarding-2.png",
+      "source": "docs/content/r22/phone-tickets-stage-3-boarding-2.png",
+      "purpose": "第三站隊形不同，車門對齊2號牌，人物旁顯示上車中",
+      "width": 390,
+      "height": 844,
+      "sha256": "dd53ce9aa16aed3f6c9f492eb16bb8081ec0df2420d7e408982386351973cb3d"
+    },
+    {
+      "path": "docs/content/r22/review-set/14-tickets-stage-3-step-out.png",
+      "source": "docs/content/r22/phone-tickets-stage-3-step-out.png",
+      "purpose": "同站同門：三人入座，寬踏階仍伸出，需先收階",
+      "width": 390,
+      "height": 844,
+      "sha256": "4fbc874ee87b1fe3514313be06be820bd8c7bbdc5e7cbb30873f680f08038172"
+    },
+    {
+      "path": "docs/content/r22/review-set/15-tickets-stage-3-step-in.png",
+      "source": "docs/content/r22/phone-tickets-stage-3-step-in.png",
+      "purpose": "同站同門：階面及引導標籤收回，才出現關門",
+      "width": 390,
+      "height": 844,
+      "sha256": "33f689318800e091d54a210fc7c0a3da195eccfc322616a9be67cc79c294e5bc"
+    }
+  ]
+}
