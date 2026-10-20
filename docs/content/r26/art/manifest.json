@@ -1,0 +1,20 @@
+{
+  "status": "VERIFIED",
+  "tool": "image_gen.imagegen",
+  "model_slug": null,
+  "generationCalls": 1,
+  "newRuntimeImages": 2,
+  "source": "docs/content/r26/art/bike-walk-original.png",
+  "method": "Generated two off-bike walking poses; sharp only splits the sheet, preserves alpha and resizes. No local GPU.",
+  "assets": [
+    {
+      "path": "public/art/content-r26/bike-walk-0.webp",
+      "sha256": "489cc775e02320b67171c95f7943707669c27c5921560d5a7369c848c5c93823"
+    },
+    {
+      "path": "public/art/content-r26/bike-walk-1.webp",
+      "sha256": "8a34d1ed991959f650961c8b2ad1ba4617d8d38c884881d9db9501eb7accd3a1"
+    }
+  ],
+  "sourceSha256": "04c4cc3c94d6c4836bbd26879233787d0d999d312aba1e422105d572483a2bf0"
+}

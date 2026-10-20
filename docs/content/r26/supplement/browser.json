@@ -1,0 +1,5116 @@
+{
+  "status": "VERIFIED",
+  "scope": "supplement",
+  "method": "Headless Chromium; public UI; real timers/RAF advanced by Playwright clock; no game-state assignments or synthetic saves",
+  "rows": [
+    {
+      "status": "VERIFIED",
+      "label": "cake stage 1 driven by controls"
+    },
+    {
+      "status": "VERIFIED",
+      "label": "cake stage 2 driven by controls"
+    },
+    {
+      "status": "VERIFIED",
+      "label": "cake stage 3 driven by controls"
+    },
+    {
+      "status": "VERIFIED",
+      "label": "cake three stops complete and restore exact saved facts",
+      "stage": 2,
+      "completed": true,
+      "started": true,
+      "skills": {
+        "start": true,
+        "turn": true,
+        "stop": true
+      },
+      "facts": {
+        "recoveries": 11,
+        "assists": 6,
+        "bayStops": 1,
+        "bayRestarts": 1,
+        "leftViews": 0,
+        "rightViews": 0,
+        "waited": 0,
+        "wrongStops": 0,
+        "reselections": 0,
+        "boarded": 0,
+        "blockedStarts": 0,
+        "orderReminders": 0,
+        "confirmations": 0
+      },
+      "layoutSeed": 0
+    },
+    {
+      "status": "VERIFIED",
+      "label": "no script errors, failed local requests, or external network"
+    }
+  ],
+  "shots": [
+    {
+      "path": "docs/content/r26/supplement/phone-cake-instructions.png",
+      "width": 390,
+      "height": 844,
+      "sha256": "a8463803b65a5439e401abb57c5023a40f486b36f3fd63bfec9bbfc986a484b2",
+      "state": {
+        "roadShape": "uphill",
+        "boardTime": "0.000",
+        "doorStage": "closed",
+        "boardingIndex": "0",
+        "hazard": "false",
+        "wrongTurn": "false",
+        "inBend": "false",
+        "cue": "go",
+        "settled": "true",
+        "correction": "",
+        "compact": "false",
+        "recoveryActive": "false",
+        "lookStep": "0",
+        "targetName": "藍圓形",
+        "layoutSeed": "0",
+        "distance": "0.00",
+        "speed": "0.00",
+        "bend": "1",
+        "tilt": "0.00",
+        "sway": "0.00",
+        "acceleration": "0.00",
+        "bayStopped": "false",
+        "bayRestarted": "false",
+        "leftTurn": "false",
+        "rightTurn": "false",
+        "focus": "center",
+        "crossTime": "0.000",
+        "crossDuration": "2.1",
+        "orderHint": "",
+        "fruitSway": "0.00",
+        "flagSway": "0.00",
+        "balanceLean": "0.00",
+        "balanceStatus": "steady",
+        "recoveries": "0",
+        "assists": "0",
+        "assisting": "false",
+        "crossed": "0",
+        "lookedLeft": "false",
+        "lookedRight": "false",
+        "decision": "false",
+        "confirmed": "false",
+        "confirmDelay": "0",
+        "person": "child",
+        "trafficActive": "false",
+        "trafficTime": "0.00",
+        "watchSide": "",
+        "platformSide": "front",
+        "doorState": "closed",
+        "step": "0",
+        "semanticStatus": "坐穩了",
+        "nextAction": "go",
+        "holdState": "paused",
+        "holdProgress": "0.000",
+        "recheckTime": "2"
+      },
+      "phase": "ready",
+      "hint": "按住起步。蛋糕歪了，放開再向中央扶。",
+      "proof": {
+        "controls": [
+          {
+            "id": "content-back",
+            "w": 68,
+            "h": 60,
+            "bad": false
+          },
+          {
+            "id": "content-pause",
+            "w": 68,
+            "h": 60,
+            "bad": false
+          },
+          {
+            "id": "begin",
+            "w": 81,
+            "h": 64,
+            "bad": false
+          },
+          {
+            "id": "listen",
+            "w": 342,
+            "h": 64,
+            "bad": false
+          }
+        ],
+        "clipping": [],
+        "kind": "cake",
+        "phase": "ready",
+        "text": "回學院\n把蛋糕平穩送到\n暫停\n第 1 站・海岸坡・慢慢上坡\n阿路陪你練習\n\n按住起步。蛋糕歪了，放開再向中央扶。\n\n一起出發\n再聽一次",
+        "metres": 1,
+        "rings": 0,
+        "progress": "",
+        "needed": [],
+        "riders": [],
+        "step": null,
+        "numbers": [],
+        "counts": "",
+        "highlights": [],
+        "actualYellow": [],
+        "semantic": {
+          "status": "坐穩了",
+          "next": "go",
+          "hint": "按住起步。蛋糕歪了，放開再向中央扶。",
+          "highlights": []
+        },
+        "layout": {
+          "labels": [
+            {
+              "id": "content-back:回學院",
+              "x": 16,
+              "y": 16,
+              "right": 84,
+              "bottom": 76,
+              "width": 68,
+              "height": 60
+            },
+            {
+              "id": "content-title:把蛋糕平穩送到",
+              "x": 92,
+              "y": 35.5,
+              "right": 298,
+              "bottom": 56.5,
+              "width": 206,
+              "height": 21
+            },
+            {
+              "id": "content-pause:暫停",
+              "x": 306,
+              "y": 16,
+              "right": 374,
+              "bottom": 76,
+              "width": 68,
+              "height": 60
+            },
+            {
+              "id": "content-scene-cue:第 1 站・海岸坡・慢慢上坡",
+              "x": 210.84375,
+              "y": 94,
+              "right": 370,
+              "bottom": 122,
+              "width": 159.15625,
+              "height": 28
+            },
+            {
+              "id": "SPAN:阿路陪你練習",
+              "x": 147,
+              "y": 312.390625,
+              "right": 243,
+              "bottom": 333.390625,
+              "width": 96,
+              "height": 21
+            },
+            {
+              "id": "content-hint:按住起步。蛋糕歪了，放開再向中央扶。",
+              "x": 24,
+              "y": 636.40625,
+              "right": 366,
+              "bottom": 657.203125,
+              "width": 342,
+              "height": 20.796875
+            },
+            {
+              "id": "BUTTON:一起出發",
+              "x": 24,
+              "y": 663.203125,
+              "right": 105,
+              "bottom": 727.203125,
+              "width": 81,
+              "height": 64
+            },
+            {
+              "id": "BUTTON:再聽一次",
+              "x": 24,
+              "y": 733.203125,
+              "right": 366,
+              "bottom": 797.203125,
+              "width": 342,
+              "height": 64
+            }
+          ],
+          "overlaps": [],
+          "iconOverlaps": [],
+          "signOcclusion": [],
+          "counterOcclusion": [],
+          "carOffset": null,
+          "recovery": []
+        }
+      }
+    },
+    {
+      "path": "docs/content/r26/supplement/phone-cake-stage-1-playing.png",
+      "width": 390,
+      "height": 844,
+      "sha256": "3ffc3a4d004162cc2ef724b4595ba88b89502459e8646db85f1818f82f8676a5",
+      "state": {
+        "roadShape": "uphill",
+        "boardTime": "0.000",
+        "doorStage": "closed",
+        "boardingIndex": "0",
+        "hazard": "false",
+        "wrongTurn": "false",
+        "inBend": "false",
+        "cue": "go",
+        "settled": "false",
+        "correction": "right",
+        "compact": "false",
+        "recoveryActive": "false",
+        "lookStep": "0",
+        "targetName": "藍圓形",
+        "layoutSeed": "0",
+        "distance": "3.65",
+        "speed": "5.15",
+        "bend": "1",
+        "tilt": "-9.00",
+        "sway": "-3.78",
+        "acceleration": "1.57",
+        "bayStopped": "false",
+        "bayRestarted": "false",
+        "leftTurn": "false",
+        "rightTurn": "false",
+        "focus": "center",
+        "crossTime": "0.000",
+        "crossDuration": "2.1",
+        "orderHint": "",
+        "fruitSway": "0.00",
+        "flagSway": "-9.00",
+        "balanceLean": "-9.00",
+        "balanceStatus": "leaning",
+        "recoveries": "0",
+        "assists": "0",
+        "assisting": "false",
+        "crossed": "0",
+        "lookedLeft": "false",
+        "lookedRight": "false",
+        "decision": "false",
+        "confirmed": "false",
+        "confirmDelay": "0",
+        "person": "child",
+        "trafficActive": "false",
+        "trafficTime": "0.00",
+        "watchSide": "",
+        "platformSide": "front",
+        "doorState": "closed",
+        "step": "0",
+        "semanticStatus": "傾斜中",
+        "nextAction": "go",
+        "holdState": "holding",
+        "holdProgress": "0.066",
+        "recheckTime": "2"
+      },
+      "phase": "playing",
+      "hint": "前方上坡，照顧蛋糕。",
+      "proof": {
+        "controls": [
+          {
+            "id": "content-back",
+            "w": 68,
+            "h": 60,
+            "bad": false
+          },
+          {
+            "id": "content-pause",
+            "w": 68,
+            "h": 60,
+            "bad": false
+          },
+          {
+            "id": "left",
+            "w": 81,
+            "h": 64,
+            "bad": false
+          },
+          {
+            "id": "right",
+            "w": 81,
+            "h": 64,
+            "bad": false
+          },
+          {
+            "id": "go",
+            "w": 81,
+            "h": 64,
+            "bad": false
+          },
+          {
+            "id": "brake",
+            "w": 81,
+            "h": 64,
+            "bad": false
+          },
+          {
+            "id": "listen",
+            "w": 342,
+            "h": 64,
+            "bad": false
+          }
+        ],
+        "clipping": [],
+        "kind": "cake",
+        "phase": "playing",
+        "text": "回學院\n把蛋糕平穩送到\n暫停\n第 1 站・海岸坡・慢慢上坡\n傾斜中\n回中央 72%\n↑上坡\n\n前方上坡，照顧蛋糕。\n\n左轉\n右轉\n踏板\n煞車\n再聽一次",
+        "metres": 1,
+        "rings": 0,
+        "progress": "",
+        "needed": [
+          "go"
+        ],
+        "riders": [],
+        "step": null,
+        "numbers": [],
+        "counts": "",
+        "highlights": [
+          {
+            "id": "go",
+            "color": "rgb(255, 211, 68)"
+          }
+        ],
+        "actualYellow": [
+          "go"
+        ],
+        "semantic": {
+          "status": "傾斜中",
+          "next": "go",
+          "hint": "前方上坡，照顧蛋糕。",
+          "highlights": [
+            "go"
+          ]
+        },
+        "layout": {
+          "labels": [
+            {
+              "id": "content-back:回學院",
+              "x": 16,
+              "y": 16,
+              "right": 84,
+              "bottom": 76,
+              "width": 68,
+              "height": 60
+            },
+            {
+              "id": "content-title:把蛋糕平穩送到",
+              "x": 92,
+              "y": 35.5,
+              "right": 298,
+              "bottom": 56.5,
+              "width": 206,
+              "height": 21
+            },
+            {
+              "id": "content-pause:暫停",
+              "x": 306,
+              "y": 16,
+              "right": 374,
+              "bottom": 76,
+              "width": 68,
+              "height": 60
+            },
+            {
+              "id": "content-scene-cue:第 1 站・海岸坡・慢慢上坡",
+              "x": 210.84375,
+              "y": 94,
+              "right": 370,
+              "bottom": 122,
+              "width": 159.15625,
+              "height": 28
+            },
+            {
+              "id": "content-hint:前方上坡，照顧蛋糕。",
+              "x": 24,
+              "y": 659.203125,
+              "right": 366,
+              "bottom": 680,
+              "width": 342,
+              "height": 20.796875
+            },
+            {
+              "id": "BUTTON:左轉",
+              "x": 24,
+              "y": 686,
+              "right": 105,
+              "bottom": 750,
+              "width": 81,
+              "height": 64
+            },
+            {
+              "id": "BUTTON:右轉",
+              "x": 111,
+              "y": 686,
+              "right": 192,
+              "bottom": 750,
+              "width": 81,
+              "height": 64
+            },
+            {
+              "id": "BUTTON:踏板",
+              "x": 198,
+              "y": 689,
+              "right": 279,
+              "bottom": 753,
+              "width": 81,
+              "height": 64
+            },
+            {
+              "id": "BUTTON:煞車",
+              "x": 285,
+              "y": 686,
+              "right": 366,
+              "bottom": 750,
+              "width": 81,
+              "height": 64
+            },
+            {
+              "id": "BUTTON:再聽一次",
+              "x": 24,
+              "y": 756,
+              "right": 366,
+              "bottom": 820,
+              "width": 342,
+              "height": 64
+            },
+            {
+              "id": "content-force:傾斜中\n回中央 72%",
+              "x": 197,
+              "y": 136,
+              "right": 371,
+              "bottom": 240,
+              "width": 174,
+              "height": 104
+            },
+            {
+              "id": "cake-timing:↑上坡",
+              "x": 158,
+              "y": 283.71875,
+              "right": 232,
+              "bottom": 319.390625,
+              "width": 74,
+              "height": 35.671875
+            }
+          ],
+          "overlaps": [],
+          "iconOverlaps": [],
+          "signOcclusion": [],
+          "counterOcclusion": [],
+          "carOffset": null,
+          "recovery": []
+        }
+      }
+    },
+    {
+      "path": "docs/content/r26/supplement/phone-cake-stage-1-delivery-1.png",
+      "width": 390,
+      "height": 844,
+      "sha256": "c46865f769ce6184fe462df3f971f645864f34d4a4fbdbcfd457722cda1adb50",
+      "state": {
+        "roadShape": "uphill",
+        "boardTime": "0.000",
+        "doorStage": "closed",
+        "boardingIndex": "0",
+        "hazard": "false",
+        "wrongTurn": "false",
+        "inBend": "false",
+        "cue": "",
+        "settled": "false",
+        "correction": "",
+        "compact": "false",
+        "recoveryActive": "false",
+        "lookStep": "0",
+        "targetName": "藍圓形",
+        "layoutSeed": "0",
+        "distance": "55.00",
+        "speed": "0.00",
+        "bend": "1",
+        "tilt": "-0.00",
+        "sway": "-0.00",
+        "acceleration": "-7.98",
+        "bayStopped": "false",
+        "bayRestarted": "false",
+        "leftTurn": "false",
+        "rightTurn": "true",
+        "focus": "center",
+        "crossTime": "0.000",
+        "crossDuration": "2.1",
+        "orderHint": "",
+        "fruitSway": "0.00",
+        "flagSway": "-0.00",
+        "balanceLean": "-0.00",
+        "balanceStatus": "steady",
+        "recoveries": "3",
+        "assists": "2",
+        "assisting": "false",
+        "crossed": "0",
+        "lookedLeft": "false",
+        "lookedRight": "false",
+        "decision": "false",
+        "confirmed": "false",
+        "confirmDelay": "0",
+        "person": "child",
+        "trafficActive": "false",
+        "trafficTime": "0.00",
+        "watchSide": "",
+        "platformSide": "front",
+        "doorState": "closed",
+        "step": "0",
+        "semanticStatus": "快扶正了",
+        "nextAction": "",
+        "holdState": "paused",
+        "holdProgress": "1.000",
+        "recheckTime": "2"
+      },
+      "phase": "delivering",
+      "hint": "蛋糕送到了，一起分享。",
+      "proof": {
+        "controls": [
+          {
+            "id": "content-back",
+            "w": 68,
+            "h": 60,
+            "bad": false
+          },
+          {
+            "id": "content-pause",
+            "w": 68,
+            "h": 60,
+            "bad": false
+          },
+          {
+            "id": "listen",
+            "w": 342,
+            "h": 64,
+            "bad": false
+          }
+        ],
+        "clipping": [],
+        "kind": "cake",
+        "phase": "delivering",
+        "text": "回學院\n把蛋糕平穩送到\n暫停\n第 1 站・海岸坡・慢慢上坡\n快扶正了\n回中央 99%\n\n蛋糕送到了，一起分享。\n\n正在送達\n再聽一次",
+        "metres": 1,
+        "rings": 0,
+        "progress": "",
+        "needed": [],
+        "riders": [],
+        "step": null,
+        "numbers": [],
+        "counts": "",
+        "highlights": [],
+        "actualYellow": [],
+        "semantic": {
+          "status": "快扶正了",
+          "next": "",
+          "hint": "蛋糕送到了，一起分享。",
+          "highlights": []
+        },
+        "layout": {
+          "labels": [
+            {
+              "id": "content-back:回學院",
+              "x": 16,
+              "y": 16,
+              "right": 84,
+              "bottom": 76,
+              "width": 68,
+              "height": 60
+            },
+            {
+              "id": "content-title:把蛋糕平穩送到",
+              "x": 92,
+              "y": 35.5,
+              "right": 298,
+              "bottom": 56.5,
+              "width": 206,
+              "height": 21
+            },
+            {
+              "id": "content-pause:暫停",
+              "x": 306,
+              "y": 16,
+              "right": 374,
+              "bottom": 76,
+              "width": 68,
+              "height": 60
+            },
+            {
+              "id": "content-scene-cue:第 1 站・海岸坡・慢慢上坡",
+              "x": 210.84375,
+              "y": 94,
+              "right": 370,
+              "bottom": 122,
+              "width": 159.15625,
+              "height": 28
+            },
+            {
+              "id": "content-hint:蛋糕送到了，一起分享。",
+              "x": 24,
+              "y": 659.203125,
+              "right": 366,
+              "bottom": 680,
+              "width": 342,
+              "height": 20.796875
+            },
+            {
+              "id": "BUTTON:正在送達",
+              "x": 24,
+              "y": 686,
+              "right": 105,
+              "bottom": 750,
+              "width": 81,
+              "height": 64
+            },
+            {
+              "id": "BUTTON:再聽一次",
+              "x": 24,
+              "y": 756,
+              "right": 366,
+              "bottom": 820,
+              "width": 342,
+              "height": 64
+            },
+            {
+              "id": "content-force:快扶正了\n回中央 99%",
+              "x": 24,
+              "y": 525.203125,
+              "right": 366,
+              "bottom": 629.203125,
+              "width": 342,
+              "height": 104
+            }
+          ],
+          "overlaps": [],
+          "iconOverlaps": [],
+          "signOcclusion": [],
+          "counterOcclusion": [],
+          "carOffset": null,
+          "recovery": []
+        }
+      }
+    },
+    {
+      "path": "docs/content/r26/supplement/phone-cake-stage-1-delivery-2.png",
+      "width": 390,
+      "height": 844,
+      "sha256": "a5da619d25519f334bb4b61a5fca8a7a34ac71a34db742ed4159162c7941f2be",
+      "state": {
+        "roadShape": "uphill",
+        "boardTime": "0.000",
+        "doorStage": "closed",
+        "boardingIndex": "0",
+        "hazard": "false",
+        "wrongTurn": "false",
+        "inBend": "false",
+        "cue": "",
+        "settled": "false",
+        "correction": "",
+        "compact": "false",
+        "recoveryActive": "false",
+        "lookStep": "0",
+        "targetName": "藍圓形",
+        "layoutSeed": "0",
+        "distance": "55.00",
+        "speed": "0.00",
+        "bend": "1",
+        "tilt": "-0.00",
+        "sway": "-0.00",
+        "acceleration": "-7.98",
+        "bayStopped": "false",
+        "bayRestarted": "false",
+        "leftTurn": "false",
+        "rightTurn": "true",
+        "focus": "center",
+        "crossTime": "0.000",
+        "crossDuration": "2.1",
+        "orderHint": "",
+        "fruitSway": "0.00",
+        "flagSway": "-0.00",
+        "balanceLean": "-0.00",
+        "balanceStatus": "steady",
+        "recoveries": "3",
+        "assists": "2",
+        "assisting": "false",
+        "crossed": "0",
+        "lookedLeft": "false",
+        "lookedRight": "false",
+        "decision": "false",
+        "confirmed": "false",
+        "confirmDelay": "0",
+        "person": "child",
+        "trafficActive": "false",
+        "trafficTime": "0.00",
+        "watchSide": "",
+        "platformSide": "front",
+        "doorState": "closed",
+        "step": "0",
+        "semanticStatus": "快扶正了",
+        "nextAction": "",
+        "holdState": "paused",
+        "holdProgress": "1.000",
+        "recheckTime": "2"
+      },
+      "phase": "delivering",
+      "hint": "蛋糕送到了，一起分享。",
+      "proof": {
+        "controls": [
+          {
+            "id": "content-back",
+            "w": 68,
+            "h": 60,
+            "bad": false
+          },
+          {
+            "id": "content-pause",
+            "w": 68,
+            "h": 60,
+            "bad": false
+          },
+          {
+            "id": "listen",
+            "w": 342,
+            "h": 64,
+            "bad": false
+          }
+        ],
+        "clipping": [],
+        "kind": "cake",
+        "phase": "delivering",
+        "text": "回學院\n把蛋糕平穩送到\n暫停\n第 1 站・海岸坡・慢慢上坡\n快扶正了\n回中央 99%\n\n蛋糕送到了，一起分享。\n\n正在送達\n再聽一次",
+        "metres": 1,
+        "rings": 0,
+        "progress": "",
+        "needed": [],
+        "riders": [],
+        "step": null,
+        "numbers": [],
+        "counts": "",
+        "highlights": [],
+        "actualYellow": [],
+        "semantic": {
+          "status": "快扶正了",
+          "next": "",
+          "hint": "蛋糕送到了，一起分享。",
+          "highlights": []
+        },
+        "layout": {
+          "labels": [
+            {
+              "id": "content-back:回學院",
+              "x": 16,
+              "y": 16,
+              "right": 84,
+              "bottom": 76,
+              "width": 68,
+              "height": 60
+            },
+            {
+              "id": "content-title:把蛋糕平穩送到",
+              "x": 92,
+              "y": 35.5,
+              "right": 298,
+              "bottom": 56.5,
+              "width": 206,
+              "height": 21
+            },
+            {
+              "id": "content-pause:暫停",
+              "x": 306,
+              "y": 16,
+              "right": 374,
+              "bottom": 76,
+              "width": 68,
+              "height": 60
+            },
+            {
+              "id": "content-scene-cue:第 1 站・海岸坡・慢慢上坡",
+              "x": 210.84375,
+              "y": 94,
+              "right": 370,
+              "bottom": 122,
+              "width": 159.15625,
+              "height": 28
+            },
+            {
+              "id": "content-hint:蛋糕送到了，一起分享。",
+              "x": 24,
+              "y": 659.203125,
+              "right": 366,
+              "bottom": 680,
+              "width": 342,
+              "height": 20.796875
+            },
+            {
+              "id": "BUTTON:正在送達",
+              "x": 24,
+              "y": 686,
+              "right": 105,
+              "bottom": 750,
+              "width": 81,
+              "height": 64
+            },
+            {
+              "id": "BUTTON:再聽一次",
+              "x": 24,
+              "y": 756,
+              "right": 366,
+              "bottom": 820,
+              "width": 342,
+              "height": 64
+            },
+            {
+              "id": "content-force:快扶正了\n回中央 99%",
+              "x": 24,
+              "y": 525.203125,
+              "right": 366,
+              "bottom": 629.203125,
+              "width": 342,
+              "height": 104
+            }
+          ],
+          "overlaps": [],
+          "iconOverlaps": [],
+          "signOcclusion": [],
+          "counterOcclusion": [],
+          "carOffset": null,
+          "recovery": []
+        }
+      }
+    },
+    {
+      "path": "docs/content/r26/supplement/phone-cake-stage-1-delivery-3.png",
+      "width": 390,
+      "height": 844,
+      "sha256": "0d99fe2d2ece143eae0513b0d0a479b7af342d27707a7201be6134f3674a8a3a",
+      "state": {
+        "roadShape": "uphill",
+        "boardTime": "0.000",
+        "doorStage": "closed",
+        "boardingIndex": "0",
+        "hazard": "false",
+        "wrongTurn": "false",
+        "inBend": "false",
+        "cue": "",
+        "settled": "false",
+        "correction": "",
+        "compact": "false",
+        "recoveryActive": "false",
+        "lookStep": "0",
+        "targetName": "藍圓形",
+        "layoutSeed": "0",
+        "distance": "55.00",
+        "speed": "0.00",
+        "bend": "1",
+        "tilt": "-0.00",
+        "sway": "-0.00",
+        "acceleration": "-7.98",
+        "bayStopped": "false",
+        "bayRestarted": "false",
+        "leftTurn": "false",
+        "rightTurn": "true",
+        "focus": "center",
+        "crossTime": "0.000",
+        "crossDuration": "2.1",
+        "orderHint": "",
+        "fruitSway": "0.00",
+        "flagSway": "-0.00",
+        "balanceLean": "-0.00",
+        "balanceStatus": "steady",
+        "recoveries": "3",
+        "assists": "2",
+        "assisting": "false",
+        "crossed": "0",
+        "lookedLeft": "false",
+        "lookedRight": "false",
+        "decision": "false",
+        "confirmed": "false",
+        "confirmDelay": "0",
+        "person": "child",
+        "trafficActive": "false",
+        "trafficTime": "0.00",
+        "watchSide": "",
+        "platformSide": "front",
+        "doorState": "closed",
+        "step": "0",
+        "semanticStatus": "快扶正了",
+        "nextAction": "",
+        "holdState": "paused",
+        "holdProgress": "1.000",
+        "recheckTime": "2"
+      },
+      "phase": "delivering",
+      "hint": "蛋糕送到了，一起分享。",
+      "proof": {
+        "controls": [
+          {
+            "id": "content-back",
+            "w": 68,
+            "h": 60,
+            "bad": false
+          },
+          {
+            "id": "content-pause",
+            "w": 68,
+            "h": 60,
+            "bad": false
+          },
+          {
+            "id": "listen",
+            "w": 342,
+            "h": 64,
+            "bad": false
+          }
+        ],
+        "clipping": [],
+        "kind": "cake",
+        "phase": "delivering",
+        "text": "回學院\n把蛋糕平穩送到\n暫停\n第 1 站・海岸坡・慢慢上坡\n快扶正了\n回中央 99%\n\n蛋糕送到了，一起分享。\n\n正在送達\n再聽一次",
+        "metres": 1,
+        "rings": 0,
+        "progress": "",
+        "needed": [],
+        "riders": [],
+        "step": null,
+        "numbers": [],
+        "counts": "",
+        "highlights": [],
+        "actualYellow": [],
+        "semantic": {
+          "status": "快扶正了",
+          "next": "",
+          "hint": "蛋糕送到了，一起分享。",
+          "highlights": []
+        },
+        "layout": {
+          "labels": [
+            {
+              "id": "content-back:回學院",
+              "x": 16,
+              "y": 16,
+              "right": 84,
+              "bottom": 76,
+              "width": 68,
+              "height": 60
+            },
+            {
+              "id": "content-title:把蛋糕平穩送到",
+              "x": 92,
+              "y": 35.5,
+              "right": 298,
+              "bottom": 56.5,
+              "width": 206,
+              "height": 21
+            },
+            {
+              "id": "content-pause:暫停",
+              "x": 306,
+              "y": 16,
+              "right": 374,
+              "bottom": 76,
+              "width": 68,
+              "height": 60
+            },
+            {
+              "id": "content-scene-cue:第 1 站・海岸坡・慢慢上坡",
+              "x": 210.84375,
+              "y": 94,
+              "right": 370,
+              "bottom": 122,
+              "width": 159.15625,
+              "height": 28
+            },
+            {
+              "id": "content-hint:蛋糕送到了，一起分享。",
+              "x": 24,
+              "y": 659.203125,
+              "right": 366,
+              "bottom": 680,
+              "width": 342,
+              "height": 20.796875
+            },
+            {
+              "id": "BUTTON:正在送達",
+              "x": 24,
+              "y": 686,
+              "right": 105,
+              "bottom": 750,
+              "width": 81,
+              "height": 64
+            },
+            {
+              "id": "BUTTON:再聽一次",
+              "x": 24,
+              "y": 756,
+              "right": 366,
+              "bottom": 820,
+              "width": 342,
+              "height": 64
+            },
+            {
+              "id": "content-force:快扶正了\n回中央 99%",
+              "x": 24,
+              "y": 525.203125,
+              "right": 366,
+              "bottom": 629.203125,
+              "width": 342,
+              "height": 104
+            }
+          ],
+          "overlaps": [],
+          "iconOverlaps": [],
+          "signOcclusion": [],
+          "counterOcclusion": [],
+          "carOffset": null,
+          "recovery": []
+        }
+      }
+    },
+    {
+      "path": "docs/content/r26/supplement/phone-cake-stage-2-wrong.png",
+      "width": 390,
+      "height": 844,
+      "sha256": "0a9096498a86a410b271be3d28b607224d2fe725eafee44aab7e7d260d07ae26",
+      "state": {
+        "roadShape": "left",
+        "boardTime": "0.000",
+        "doorStage": "closed",
+        "boardingIndex": "0",
+        "hazard": "false",
+        "wrongTurn": "true",
+        "inBend": "true",
+        "cue": "",
+        "settled": "false",
+        "correction": "left",
+        "compact": "false",
+        "recoveryActive": "false",
+        "lookStep": "0",
+        "targetName": "橘三角形",
+        "layoutSeed": "0",
+        "distance": "15.00",
+        "speed": "0.00",
+        "bend": "-1",
+        "tilt": "12.00",
+        "sway": "5.04",
+        "acceleration": "0.00",
+        "bayStopped": "false",
+        "bayRestarted": "false",
+        "leftTurn": "false",
+        "rightTurn": "false",
+        "focus": "center",
+        "crossTime": "0.000",
+        "crossDuration": "2.4",
+        "orderHint": "",
+        "fruitSway": "0.00",
+        "flagSway": "12.00",
+        "balanceLean": "12.00",
+        "balanceStatus": "leaning",
+        "recoveries": "3",
+        "assists": "2",
+        "assisting": "false",
+        "crossed": "0",
+        "lookedLeft": "false",
+        "lookedRight": "false",
+        "decision": "false",
+        "confirmed": "false",
+        "confirmDelay": "0",
+        "person": "grandma",
+        "trafficActive": "false",
+        "trafficTime": "0.00",
+        "watchSide": "",
+        "platformSide": "front",
+        "doorState": "closed",
+        "step": "0",
+        "semanticStatus": "傾斜中",
+        "nextAction": "",
+        "holdState": "holding",
+        "holdProgress": "0.273",
+        "recheckTime": "2"
+      },
+      "phase": "playing",
+      "hint": "這裡是左彎喔，再選一次。",
+      "proof": {
+        "controls": [
+          {
+            "id": "content-back",
+            "w": 68,
+            "h": 60,
+            "bad": false
+          },
+          {
+            "id": "content-pause",
+            "w": 68,
+            "h": 60,
+            "bad": false
+          },
+          {
+            "id": "left",
+            "w": 81,
+            "h": 64,
+            "bad": false
+          },
+          {
+            "id": "right",
+            "w": 81,
+            "h": 64,
+            "bad": false
+          },
+          {
+            "id": "go",
+            "w": 81,
+            "h": 64,
+            "bad": false
+          },
+          {
+            "id": "brake",
+            "w": 81,
+            "h": 64,
+            "bad": false
+          },
+          {
+            "id": "listen",
+            "w": 342,
+            "h": 64,
+            "bad": false
+          }
+        ],
+        "clipping": [],
+        "kind": "cake",
+        "phase": "playing",
+        "text": "回學院\n把蛋糕平穩送到\n暫停\n第 2 站・燈塔彎・兩個彎\n傾斜中\n回中央 62%\n↰左彎\n\n這裡是左彎喔，再選一次。\n\n左轉\n右轉\n踏板\n煞車\n再聽一次",
+        "metres": 1,
+        "rings": 0,
+        "progress": "",
+        "needed": [],
+        "riders": [],
+        "step": null,
+        "numbers": [],
+        "counts": "",
+        "highlights": [],
+        "actualYellow": [],
+        "semantic": {
+          "status": "傾斜中",
+          "next": "",
+          "hint": "這裡是左彎喔，再選一次。",
+          "highlights": []
+        },
+        "layout": {
+          "labels": [
+            {
+              "id": "content-back:回學院",
+              "x": 16,
+              "y": 16,
+              "right": 84,
+              "bottom": 76,
+              "width": 68,
+              "height": 60
+            },
+            {
+              "id": "content-title:把蛋糕平穩送到",
+              "x": 92,
+              "y": 35.5,
+              "right": 298,
+              "bottom": 56.5,
+              "width": 206,
+              "height": 21
+            },
+            {
+              "id": "content-pause:暫停",
+              "x": 306,
+              "y": 16,
+              "right": 374,
+              "bottom": 76,
+              "width": 68,
+              "height": 60
+            },
+            {
+              "id": "content-scene-cue:第 2 站・燈塔彎・兩個彎",
+              "x": 222.84375,
+              "y": 94,
+              "right": 370,
+              "bottom": 122,
+              "width": 147.15625,
+              "height": 28
+            },
+            {
+              "id": "content-hint:這裡是左彎喔，再選一次。",
+              "x": 24,
+              "y": 659.203125,
+              "right": 366,
+              "bottom": 680,
+              "width": 342,
+              "height": 20.796875
+            },
+            {
+              "id": "BUTTON:左轉",
+              "x": 24,
+              "y": 686,
+              "right": 105,
+              "bottom": 750,
+              "width": 81,
+              "height": 64
+            },
+            {
+              "id": "BUTTON:右轉",
+              "x": 111,
+              "y": 686,
+              "right": 192,
+              "bottom": 750,
+              "width": 81,
+              "height": 64
+            },
+            {
+              "id": "BUTTON:踏板",
+              "x": 198,
+              "y": 686,
+              "right": 279,
+              "bottom": 750,
+              "width": 81,
+              "height": 64
+            },
+            {
+              "id": "BUTTON:煞車",
+              "x": 285,
+              "y": 686,
+              "right": 366,
+              "bottom": 750,
+              "width": 81,
+              "height": 64
+            },
+            {
+              "id": "BUTTON:再聽一次",
+              "x": 24,
+              "y": 756,
+              "right": 366,
+              "bottom": 820,
+              "width": 342,
+              "height": 64
+            },
+            {
+              "id": "content-force:傾斜中\n回中央 62%",
+              "x": 197,
+              "y": 136,
+              "right": 371,
+              "bottom": 240,
+              "width": 174,
+              "height": 104
+            },
+            {
+              "id": "cake-timing:↰左彎",
+              "x": 162.5546875,
+              "y": 283.71875,
+              "right": 227.4453125,
+              "bottom": 319.390625,
+              "width": 64.890625,
+              "height": 35.671875
+            }
+          ],
+          "overlaps": [],
+          "iconOverlaps": [],
+          "signOcclusion": [],
+          "counterOcclusion": [],
+          "carOffset": null,
+          "recovery": []
+        }
+      }
+    },
+    {
+      "path": "docs/content/r26/supplement/phone-cake-wrong-recovery.png",
+      "width": 390,
+      "height": 844,
+      "sha256": "3afe54ed4999a6492afbfcc91bf0b8060ad6db6f880160f1d99d1c112a6b1f38",
+      "state": {
+        "roadShape": "left",
+        "boardTime": "0.000",
+        "doorStage": "closed",
+        "boardingIndex": "0",
+        "hazard": "false",
+        "wrongTurn": "true",
+        "inBend": "true",
+        "cue": "recover-left",
+        "settled": "false",
+        "correction": "left",
+        "compact": "false",
+        "recoveryActive": "true",
+        "lookStep": "0",
+        "targetName": "橘三角形",
+        "layoutSeed": "0",
+        "distance": "15.00",
+        "speed": "0.00",
+        "bend": "-1",
+        "tilt": "17.00",
+        "sway": "7.14",
+        "acceleration": "0.00",
+        "bayStopped": "false",
+        "bayRestarted": "false",
+        "leftTurn": "false",
+        "rightTurn": "false",
+        "focus": "center",
+        "crossTime": "0.000",
+        "crossDuration": "2.4",
+        "orderHint": "",
+        "fruitSway": "0.00",
+        "flagSway": "17.00",
+        "balanceLean": "17.00",
+        "balanceStatus": "leaning",
+        "recoveries": "3",
+        "assists": "2",
+        "assisting": "false",
+        "crossed": "0",
+        "lookedLeft": "false",
+        "lookedRight": "false",
+        "decision": "false",
+        "confirmed": "false",
+        "confirmDelay": "0",
+        "person": "grandma",
+        "trafficActive": "false",
+        "trafficTime": "0.00",
+        "watchSide": "",
+        "platformSide": "front",
+        "doorState": "closed",
+        "step": "0",
+        "semanticStatus": "越來越歪",
+        "nextAction": "recover-left",
+        "holdState": "blocked",
+        "holdProgress": "0.470",
+        "recheckTime": "2"
+      },
+      "phase": "playing",
+      "hint": "越扶越歪，改按左邊。",
+      "proof": {
+        "controls": [
+          {
+            "id": "content-back",
+            "w": 68,
+            "h": 60,
+            "bad": false
+          },
+          {
+            "id": "content-pause",
+            "w": 68,
+            "h": 60,
+            "bad": false
+          },
+          {
+            "id": "recover-left",
+            "w": 168,
+            "h": 64,
+            "bad": false
+          },
+          {
+            "id": "recover-right",
+            "w": 168,
+            "h": 64,
+            "bad": false
+          },
+          {
+            "id": "listen",
+            "w": 342,
+            "h": 64,
+            "bad": false
+          }
+        ],
+        "clipping": [],
+        "kind": "cake",
+        "phase": "playing",
+        "text": "回學院\n把蛋糕平穩送到\n暫停\n第 2 站・燈塔彎・兩個彎\n越來越歪\n回中央 47%\n↰左彎\n\n越扶越歪，改按左邊。\n\n向左扶\n向右扶\n再聽一次",
+        "metres": 1,
+        "rings": 0,
+        "progress": "",
+        "needed": [
+          "recover-left"
+        ],
+        "riders": [],
+        "step": null,
+        "numbers": [],
+        "counts": "",
+        "highlights": [
+          {
+            "id": "recover-left",
+            "color": "rgb(255, 211, 68)"
+          }
+        ],
+        "actualYellow": [
+          "recover-left"
+        ],
+        "semantic": {
+          "status": "越來越歪",
+          "next": "recover-left",
+          "hint": "越扶越歪，改按左邊。",
+          "highlights": [
+            "recover-left"
+          ]
+        },
+        "layout": {
+          "labels": [
+            {
+              "id": "content-back:回學院",
+              "x": 16,
+              "y": 16,
+              "right": 84,
+              "bottom": 76,
+              "width": 68,
+              "height": 60
+            },
+            {
+              "id": "content-title:把蛋糕平穩送到",
+              "x": 92,
+              "y": 35.5,
+              "right": 298,
+              "bottom": 56.5,
+              "width": 206,
+              "height": 21
+            },
+            {
+              "id": "content-pause:暫停",
+              "x": 306,
+              "y": 16,
+              "right": 374,
+              "bottom": 76,
+              "width": 68,
+              "height": 60
+            },
+            {
+              "id": "content-scene-cue:第 2 站・燈塔彎・兩個彎",
+              "x": 222.84375,
+              "y": 94,
+              "right": 370,
+              "bottom": 122,
+              "width": 147.15625,
+              "height": 28
+            },
+            {
+              "id": "content-hint:越扶越歪，改按左邊。",
+              "x": 24,
+              "y": 659.203125,
+              "right": 366,
+              "bottom": 680,
+              "width": 342,
+              "height": 20.796875
+            },
+            {
+              "id": "BUTTON:向左扶",
+              "x": 24,
+              "y": 686,
+              "right": 192,
+              "bottom": 750,
+              "width": 168,
+              "height": 64
+            },
+            {
+              "id": "BUTTON:向右扶",
+              "x": 198,
+              "y": 686,
+              "right": 366,
+              "bottom": 750,
+              "width": 168,
+              "height": 64
+            },
+            {
+              "id": "BUTTON:再聽一次",
+              "x": 24,
+              "y": 756,
+              "right": 366,
+              "bottom": 820,
+              "width": 342,
+              "height": 64
+            },
+            {
+              "id": "content-force:越來越歪\n回中央 47%",
+              "x": 197,
+              "y": 136,
+              "right": 371,
+              "bottom": 240,
+              "width": 174,
+              "height": 104
+            },
+            {
+              "id": "cake-timing:↰左彎",
+              "x": 162.5546875,
+              "y": 283.71875,
+              "right": 227.4453125,
+              "bottom": 319.390625,
+              "width": 64.890625,
+              "height": 35.671875
+            }
+          ],
+          "overlaps": [],
+          "iconOverlaps": [],
+          "signOcclusion": [],
+          "counterOcclusion": [],
+          "carOffset": null,
+          "recovery": [
+            {
+              "action": "recover-left",
+              "needed": "true",
+              "held": "false",
+              "background": "rgb(255, 211, 68)"
+            },
+            {
+              "action": "recover-right",
+              "needed": "false",
+              "held": "true",
+              "background": "rgb(229, 237, 241)"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "path": "docs/content/r26/supplement/phone-cake-stage-2-centre-62.png",
+      "width": 390,
+      "height": 844,
+      "sha256": "a099983f5a2fe8fe295b60d12d876f48b544e35952f3e9fc0c42e65a8e322519",
+      "state": {
+        "roadShape": "left",
+        "boardTime": "0.000",
+        "doorStage": "closed",
+        "boardingIndex": "0",
+        "hazard": "false",
+        "wrongTurn": "true",
+        "inBend": "true",
+        "cue": "recover-left",
+        "settled": "false",
+        "correction": "left",
+        "compact": "false",
+        "recoveryActive": "true",
+        "lookStep": "0",
+        "targetName": "橘三角形",
+        "layoutSeed": "0",
+        "distance": "15.00",
+        "speed": "0.00",
+        "bend": "-1",
+        "tilt": "12.10",
+        "sway": "5.08",
+        "acceleration": "0.00",
+        "bayStopped": "false",
+        "bayRestarted": "false",
+        "leftTurn": "false",
+        "rightTurn": "false",
+        "focus": "center",
+        "crossTime": "0.000",
+        "crossDuration": "2.4",
+        "orderHint": "",
+        "fruitSway": "0.00",
+        "flagSway": "12.10",
+        "balanceLean": "12.10",
+        "balanceStatus": "leaning",
+        "recoveries": "3",
+        "assists": "2",
+        "assisting": "false",
+        "crossed": "0",
+        "lookedLeft": "false",
+        "lookedRight": "false",
+        "decision": "false",
+        "confirmed": "false",
+        "confirmDelay": "0",
+        "person": "grandma",
+        "trafficActive": "false",
+        "trafficTime": "0.00",
+        "watchSide": "",
+        "platformSide": "front",
+        "doorState": "closed",
+        "step": "0",
+        "semanticStatus": "等你扶正",
+        "nextAction": "recover-left",
+        "holdState": "paused",
+        "holdProgress": "0.620",
+        "recheckTime": "2"
+      },
+      "phase": "playing",
+      "hint": "等你扶正，按住左邊。",
+      "proof": {
+        "controls": [
+          {
+            "id": "content-back",
+            "w": 68,
+            "h": 60,
+            "bad": false
+          },
+          {
+            "id": "content-pause",
+            "w": 68,
+            "h": 60,
+            "bad": false
+          },
+          {
+            "id": "recover-left",
+            "w": 168,
+            "h": 64,
+            "bad": false
+          },
+          {
+            "id": "recover-right",
+            "w": 168,
+            "h": 64,
+            "bad": false
+          },
+          {
+            "id": "listen",
+            "w": 342,
+            "h": 64,
+            "bad": false
+          }
+        ],
+        "clipping": [],
+        "kind": "cake",
+        "phase": "playing",
+        "text": "回學院\n把蛋糕平穩送到\n暫停\n第 2 站・燈塔彎・兩個彎\n等你扶正\n回中央 62%\n↰左彎\n\n等你扶正，按住左邊。\n\n向左扶\n向右扶\n再聽一次",
+        "metres": 1,
+        "rings": 0,
+        "progress": "",
+        "needed": [
+          "recover-left"
+        ],
+        "riders": [],
+        "step": null,
+        "numbers": [],
+        "counts": "",
+        "highlights": [
+          {
+            "id": "recover-left",
+            "color": "rgb(255, 211, 68)"
+          }
+        ],
+        "actualYellow": [
+          "recover-left"
+        ],
+        "semantic": {
+          "status": "等你扶正",
+          "next": "recover-left",
+          "hint": "等你扶正，按住左邊。",
+          "highlights": [
+            "recover-left"
+          ]
+        },
+        "layout": {
+          "labels": [
+            {
+              "id": "content-back:回學院",
+              "x": 16,
+              "y": 16,
+              "right": 84,
+              "bottom": 76,
+              "width": 68,
+              "height": 60
+            },
+            {
+              "id": "content-title:把蛋糕平穩送到",
+              "x": 92,
+              "y": 35.5,
+              "right": 298,
+              "bottom": 56.5,
+              "width": 206,
+              "height": 21
+            },
+            {
+              "id": "content-pause:暫停",
+              "x": 306,
+              "y": 16,
+              "right": 374,
+              "bottom": 76,
+              "width": 68,
+              "height": 60
+            },
+            {
+              "id": "content-scene-cue:第 2 站・燈塔彎・兩個彎",
+              "x": 222.84375,
+              "y": 94,
+              "right": 370,
+              "bottom": 122,
+              "width": 147.15625,
+              "height": 28
+            },
+            {
+              "id": "content-hint:等你扶正，按住左邊。",
+              "x": 24,
+              "y": 659.203125,
+              "right": 366,
+              "bottom": 680,
+              "width": 342,
+              "height": 20.796875
+            },
+            {
+              "id": "BUTTON:向左扶",
+              "x": 24,
+              "y": 686,
+              "right": 192,
+              "bottom": 750,
+              "width": 168,
+              "height": 64
+            },
+            {
+              "id": "BUTTON:向右扶",
+              "x": 198,
+              "y": 686,
+              "right": 366,
+              "bottom": 750,
+              "width": 168,
+              "height": 64
+            },
+            {
+              "id": "BUTTON:再聽一次",
+              "x": 24,
+              "y": 756,
+              "right": 366,
+              "bottom": 820,
+              "width": 342,
+              "height": 64
+            },
+            {
+              "id": "content-force:等你扶正\n回中央 62%",
+              "x": 197,
+              "y": 136,
+              "right": 371,
+              "bottom": 240,
+              "width": 174,
+              "height": 104
+            },
+            {
+              "id": "cake-timing:↰左彎",
+              "x": 162.5546875,
+              "y": 283.71875,
+              "right": 227.4453125,
+              "bottom": 319.390625,
+              "width": 64.890625,
+              "height": 35.671875
+            }
+          ],
+          "overlaps": [],
+          "iconOverlaps": [],
+          "signOcclusion": [],
+          "counterOcclusion": [],
+          "carOffset": null,
+          "recovery": [
+            {
+              "action": "recover-left",
+              "needed": "true",
+              "held": "false",
+              "background": "rgb(255, 211, 68)"
+            },
+            {
+              "action": "recover-right",
+              "needed": "false",
+              "held": "false",
+              "background": "rgb(245, 251, 255)"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "path": "docs/content/r26/supplement/phone-cake-stage-2-centre-80.png",
+      "width": 390,
+      "height": 844,
+      "sha256": "6a2f82327b974729768735119bf9774bd968816f2514028610616e4bdf2c2a7f",
+      "state": {
+        "roadShape": "left",
+        "boardTime": "0.000",
+        "doorStage": "closed",
+        "boardingIndex": "0",
+        "hazard": "false",
+        "wrongTurn": "true",
+        "inBend": "true",
+        "cue": "recover-left",
+        "settled": "false",
+        "correction": "left",
+        "compact": "false",
+        "recoveryActive": "true",
+        "lookStep": "0",
+        "targetName": "橘三角形",
+        "layoutSeed": "0",
+        "distance": "15.00",
+        "speed": "0.00",
+        "bend": "-1",
+        "tilt": "6.34",
+        "sway": "2.66",
+        "acceleration": "0.00",
+        "bayStopped": "false",
+        "bayRestarted": "false",
+        "leftTurn": "false",
+        "rightTurn": "false",
+        "focus": "center",
+        "crossTime": "0.000",
+        "crossDuration": "2.4",
+        "orderHint": "",
+        "fruitSway": "0.00",
+        "flagSway": "6.34",
+        "balanceLean": "6.34",
+        "balanceStatus": "leaning",
+        "recoveries": "3",
+        "assists": "2",
+        "assisting": "false",
+        "crossed": "0",
+        "lookedLeft": "false",
+        "lookedRight": "false",
+        "decision": "false",
+        "confirmed": "false",
+        "confirmDelay": "0",
+        "person": "grandma",
+        "trafficActive": "false",
+        "trafficTime": "0.00",
+        "watchSide": "",
+        "platformSide": "front",
+        "doorState": "closed",
+        "step": "0",
+        "semanticStatus": "等你扶正",
+        "nextAction": "recover-left",
+        "holdState": "paused",
+        "holdProgress": "0.800",
+        "recheckTime": "2"
+      },
+      "phase": "playing",
+      "hint": "等你扶正，按住左邊。",
+      "proof": {
+        "controls": [
+          {
+            "id": "content-back",
+            "w": 68,
+            "h": 60,
+            "bad": false
+          },
+          {
+            "id": "content-pause",
+            "w": 68,
+            "h": 60,
+            "bad": false
+          },
+          {
+            "id": "recover-left",
+            "w": 168,
+            "h": 64,
+            "bad": false
+          },
+          {
+            "id": "recover-right",
+            "w": 168,
+            "h": 64,
+            "bad": false
+          },
+          {
+            "id": "listen",
+            "w": 342,
+            "h": 64,
+            "bad": false
+          }
+        ],
+        "clipping": [],
+        "kind": "cake",
+        "phase": "playing",
+        "text": "回學院\n把蛋糕平穩送到\n暫停\n第 2 站・燈塔彎・兩個彎\n等你扶正\n回中央 80%\n↰左彎\n\n等你扶正，按住左邊。\n\n向左扶\n向右扶\n再聽一次",
+        "metres": 1,
+        "rings": 0,
+        "progress": "",
+        "needed": [
+          "recover-left"
+        ],
+        "riders": [],
+        "step": null,
+        "numbers": [],
+        "counts": "",
+        "highlights": [
+          {
+            "id": "recover-left",
+            "color": "rgb(255, 211, 68)"
+          }
+        ],
+        "actualYellow": [
+          "recover-left"
+        ],
+        "semantic": {
+          "status": "等你扶正",
+          "next": "recover-left",
+          "hint": "等你扶正，按住左邊。",
+          "highlights": [
+            "recover-left"
+          ]
+        },
+        "layout": {
+          "labels": [
+            {
+              "id": "content-back:回學院",
+              "x": 16,
+              "y": 16,
+              "right": 84,
+              "bottom": 76,
+              "width": 68,
+              "height": 60
+            },
+            {
+              "id": "content-title:把蛋糕平穩送到",
+              "x": 92,
+              "y": 35.5,
+              "right": 298,
+              "bottom": 56.5,
+              "width": 206,
+              "height": 21
+            },
+            {
+              "id": "content-pause:暫停",
+              "x": 306,
+              "y": 16,
+              "right": 374,
+              "bottom": 76,
+              "width": 68,
+              "height": 60
+            },
+            {
+              "id": "content-scene-cue:第 2 站・燈塔彎・兩個彎",
+              "x": 222.84375,
+              "y": 94,
+              "right": 370,
+              "bottom": 122,
+              "width": 147.15625,
+              "height": 28
+            },
+            {
+              "id": "content-hint:等你扶正，按住左邊。",
+              "x": 24,
+              "y": 659.203125,
+              "right": 366,
+              "bottom": 680,
+              "width": 342,
+              "height": 20.796875
+            },
+            {
+              "id": "BUTTON:向左扶",
+              "x": 24,
+              "y": 686,
+              "right": 192,
+              "bottom": 750,
+              "width": 168,
+              "height": 64
+            },
+            {
+              "id": "BUTTON:向右扶",
+              "x": 198,
+              "y": 686,
+              "right": 366,
+              "bottom": 750,
+              "width": 168,
+              "height": 64
+            },
+            {
+              "id": "BUTTON:再聽一次",
+              "x": 24,
+              "y": 756,
+              "right": 366,
+              "bottom": 820,
+              "width": 342,
+              "height": 64
+            },
+            {
+              "id": "content-force:等你扶正\n回中央 80%",
+              "x": 197,
+              "y": 136,
+              "right": 371,
+              "bottom": 240,
+              "width": 174,
+              "height": 104
+            },
+            {
+              "id": "cake-timing:↰左彎",
+              "x": 162.5546875,
+              "y": 283.71875,
+              "right": 227.4453125,
+              "bottom": 319.390625,
+              "width": 64.890625,
+              "height": 35.671875
+            }
+          ],
+          "overlaps": [],
+          "iconOverlaps": [],
+          "signOcclusion": [],
+          "counterOcclusion": [],
+          "carOffset": null,
+          "recovery": [
+            {
+              "action": "recover-left",
+              "needed": "true",
+              "held": "false",
+              "background": "rgb(255, 211, 68)"
+            },
+            {
+              "action": "recover-right",
+              "needed": "false",
+              "held": "false",
+              "background": "rgb(245, 251, 255)"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "path": "docs/content/r26/supplement/phone-cake-stage-2-correct-recovery.png",
+      "width": 390,
+      "height": 844,
+      "sha256": "4c14e2fc0e7a84784126b7917c92f778f648389c45925549f2c9f142e696493f",
+      "state": {
+        "roadShape": "left",
+        "boardTime": "0.000",
+        "doorStage": "closed",
+        "boardingIndex": "0",
+        "hazard": "false",
+        "wrongTurn": "true",
+        "inBend": "true",
+        "cue": "recover-left",
+        "settled": "false",
+        "correction": "left",
+        "compact": "false",
+        "recoveryActive": "true",
+        "lookStep": "0",
+        "targetName": "橘三角形",
+        "layoutSeed": "0",
+        "distance": "15.00",
+        "speed": "0.00",
+        "bend": "-1",
+        "tilt": "4.62",
+        "sway": "1.94",
+        "acceleration": "0.00",
+        "bayStopped": "false",
+        "bayRestarted": "false",
+        "leftTurn": "false",
+        "rightTurn": "false",
+        "focus": "center",
+        "crossTime": "0.000",
+        "crossDuration": "2.4",
+        "orderHint": "",
+        "fruitSway": "0.00",
+        "flagSway": "4.62",
+        "balanceLean": "4.62",
+        "balanceStatus": "steady",
+        "recoveries": "3",
+        "assists": "2",
+        "assisting": "false",
+        "crossed": "0",
+        "lookedLeft": "false",
+        "lookedRight": "false",
+        "decision": "false",
+        "confirmed": "false",
+        "confirmDelay": "0",
+        "person": "grandma",
+        "trafficActive": "false",
+        "trafficTime": "0.00",
+        "watchSide": "",
+        "platformSide": "front",
+        "doorState": "closed",
+        "step": "0",
+        "semanticStatus": "回穩中",
+        "nextAction": "recover-left",
+        "holdState": "holding",
+        "holdProgress": "0.860",
+        "recheckTime": "2"
+      },
+      "phase": "playing",
+      "hint": "向左扶，慢慢回中央。",
+      "proof": {
+        "controls": [
+          {
+            "id": "content-back",
+            "w": 68,
+            "h": 60,
+            "bad": false
+          },
+          {
+            "id": "content-pause",
+            "w": 68,
+            "h": 60,
+            "bad": false
+          },
+          {
+            "id": "recover-left",
+            "w": 168,
+            "h": 64,
+            "bad": false
+          },
+          {
+            "id": "recover-right",
+            "w": 168,
+            "h": 64,
+            "bad": false
+          },
+          {
+            "id": "listen",
+            "w": 342,
+            "h": 64,
+            "bad": false
+          }
+        ],
+        "clipping": [],
+        "kind": "cake",
+        "phase": "playing",
+        "text": "回學院\n把蛋糕平穩送到\n暫停\n第 2 站・燈塔彎・兩個彎\n回穩中\n回中央 86%\n↰左彎\n\n向左扶，慢慢回中央。\n\n向左扶\n向右扶\n再聽一次",
+        "metres": 1,
+        "rings": 0,
+        "progress": "",
+        "needed": [
+          "recover-left"
+        ],
+        "riders": [],
+        "step": null,
+        "numbers": [],
+        "counts": "",
+        "highlights": [
+          {
+            "id": "recover-left",
+            "color": "rgb(255, 211, 68)"
+          }
+        ],
+        "actualYellow": [
+          "recover-left"
+        ],
+        "semantic": {
+          "status": "回穩中",
+          "next": "recover-left",
+          "hint": "向左扶，慢慢回中央。",
+          "highlights": [
+            "recover-left"
+          ]
+        },
+        "layout": {
+          "labels": [
+            {
+              "id": "content-back:回學院",
+              "x": 16,
+              "y": 16,
+              "right": 84,
+              "bottom": 76,
+              "width": 68,
+              "height": 60
+            },
+            {
+              "id": "content-title:把蛋糕平穩送到",
+              "x": 92,
+              "y": 35.5,
+              "right": 298,
+              "bottom": 56.5,
+              "width": 206,
+              "height": 21
+            },
+            {
+              "id": "content-pause:暫停",
+              "x": 306,
+              "y": 16,
+              "right": 374,
+              "bottom": 76,
+              "width": 68,
+              "height": 60
+            },
+            {
+              "id": "content-scene-cue:第 2 站・燈塔彎・兩個彎",
+              "x": 222.84375,
+              "y": 94,
+              "right": 370,
+              "bottom": 122,
+              "width": 147.15625,
+              "height": 28
+            },
+            {
+              "id": "content-hint:向左扶，慢慢回中央。",
+              "x": 24,
+              "y": 659.203125,
+              "right": 366,
+              "bottom": 680,
+              "width": 342,
+              "height": 20.796875
+            },
+            {
+              "id": "BUTTON:向左扶",
+              "x": 24,
+              "y": 686,
+              "right": 192,
+              "bottom": 750,
+              "width": 168,
+              "height": 64
+            },
+            {
+              "id": "BUTTON:向右扶",
+              "x": 198,
+              "y": 686,
+              "right": 366,
+              "bottom": 750,
+              "width": 168,
+              "height": 64
+            },
+            {
+              "id": "BUTTON:再聽一次",
+              "x": 24,
+              "y": 756,
+              "right": 366,
+              "bottom": 820,
+              "width": 342,
+              "height": 64
+            },
+            {
+              "id": "content-force:回穩中\n回中央 86%",
+              "x": 197,
+              "y": 136,
+              "right": 371,
+              "bottom": 240,
+              "width": 174,
+              "height": 104
+            },
+            {
+              "id": "cake-timing:↰左彎",
+              "x": 162.5546875,
+              "y": 283.71875,
+              "right": 227.4453125,
+              "bottom": 319.390625,
+              "width": 64.890625,
+              "height": 35.671875
+            }
+          ],
+          "overlaps": [],
+          "iconOverlaps": [],
+          "signOcclusion": [],
+          "counterOcclusion": [],
+          "carOffset": null,
+          "recovery": [
+            {
+              "action": "recover-left",
+              "needed": "true",
+              "held": "true",
+              "background": "rgb(255, 211, 68)"
+            },
+            {
+              "action": "recover-right",
+              "needed": "false",
+              "held": "false",
+              "background": "rgb(245, 251, 255)"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "path": "docs/content/r26/supplement/phone-cake-stage-2-centre-100.png",
+      "width": 390,
+      "height": 844,
+      "sha256": "064b441184421d2fc1218f2243b9997ed391c5e6859788876bac8d637878ba61",
+      "state": {
+        "roadShape": "left",
+        "boardTime": "0.000",
+        "doorStage": "closed",
+        "boardingIndex": "0",
+        "hazard": "false",
+        "wrongTurn": "false",
+        "inBend": "true",
+        "cue": "left",
+        "settled": "true",
+        "correction": "",
+        "compact": "false",
+        "recoveryActive": "false",
+        "lookStep": "0",
+        "targetName": "橘三角形",
+        "layoutSeed": "0",
+        "distance": "15.00",
+        "speed": "0.00",
+        "bend": "-1",
+        "tilt": "0.00",
+        "sway": "0.00",
+        "acceleration": "0.00",
+        "bayStopped": "false",
+        "bayRestarted": "false",
+        "leftTurn": "false",
+        "rightTurn": "false",
+        "focus": "center",
+        "crossTime": "0.000",
+        "crossDuration": "2.4",
+        "orderHint": "",
+        "fruitSway": "0.00",
+        "flagSway": "0.00",
+        "balanceLean": "0.00",
+        "balanceStatus": "steady",
+        "recoveries": "4",
+        "assists": "2",
+        "assisting": "false",
+        "crossed": "0",
+        "lookedLeft": "false",
+        "lookedRight": "false",
+        "decision": "false",
+        "confirmed": "false",
+        "confirmDelay": "0",
+        "person": "grandma",
+        "trafficActive": "false",
+        "trafficTime": "0.00",
+        "watchSide": "",
+        "platformSide": "front",
+        "doorState": "closed",
+        "step": "0",
+        "semanticStatus": "坐穩了",
+        "nextAction": "left",
+        "holdState": "paused",
+        "holdProgress": "0.273",
+        "recheckTime": "2"
+      },
+      "phase": "playing",
+      "hint": "前方左彎，看路牌。",
+      "proof": {
+        "controls": [
+          {
+            "id": "content-back",
+            "w": 68,
+            "h": 60,
+            "bad": false
+          },
+          {
+            "id": "content-pause",
+            "w": 68,
+            "h": 60,
+            "bad": false
+          },
+          {
+            "id": "left",
+            "w": 81,
+            "h": 64,
+            "bad": false
+          },
+          {
+            "id": "right",
+            "w": 81,
+            "h": 64,
+            "bad": false
+          },
+          {
+            "id": "go",
+            "w": 81,
+            "h": 64,
+            "bad": false
+          },
+          {
+            "id": "brake",
+            "w": 81,
+            "h": 64,
+            "bad": false
+          },
+          {
+            "id": "listen",
+            "w": 342,
+            "h": 64,
+            "bad": false
+          }
+        ],
+        "clipping": [],
+        "kind": "cake",
+        "phase": "playing",
+        "text": "回學院\n把蛋糕平穩送到\n暫停\n第 2 站・燈塔彎・兩個彎\n坐穩了\n回中央 100%\n↰左彎\n✓ 蛋糕坐穩了\n\n前方左彎，看路牌。\n\n左轉\n右轉\n踏板\n煞車\n再聽一次",
+        "metres": 1,
+        "rings": 0,
+        "progress": "",
+        "needed": [
+          "left"
+        ],
+        "riders": [],
+        "step": null,
+        "numbers": [],
+        "counts": "",
+        "highlights": [
+          {
+            "id": "left",
+            "color": "rgb(255, 211, 68)"
+          }
+        ],
+        "actualYellow": [
+          "left"
+        ],
+        "semantic": {
+          "status": "坐穩了",
+          "next": "left",
+          "hint": "前方左彎，看路牌。",
+          "highlights": [
+            "left"
+          ]
+        },
+        "layout": {
+          "labels": [
+            {
+              "id": "content-back:回學院",
+              "x": 16,
+              "y": 16,
+              "right": 84,
+              "bottom": 76,
+              "width": 68,
+              "height": 60
+            },
+            {
+              "id": "content-title:把蛋糕平穩送到",
+              "x": 92,
+              "y": 35.5,
+              "right": 298,
+              "bottom": 56.5,
+              "width": 206,
+              "height": 21
+            },
+            {
+              "id": "content-pause:暫停",
+              "x": 306,
+              "y": 16,
+              "right": 374,
+              "bottom": 76,
+              "width": 68,
+              "height": 60
+            },
+            {
+              "id": "content-scene-cue:第 2 站・燈塔彎・兩個彎",
+              "x": 222.84375,
+              "y": 94,
+              "right": 370,
+              "bottom": 122,
+              "width": 147.15625,
+              "height": 28
+            },
+            {
+              "id": "cake-recovery:✓ 蛋糕坐穩了",
+              "x": 73.265625,
+              "y": 331.59375,
+              "right": 316.734375,
+              "bottom": 359.59375,
+              "width": 243.46875,
+              "height": 28
+            },
+            {
+              "id": "content-hint:前方左彎，看路牌。",
+              "x": 24,
+              "y": 659.203125,
+              "right": 366,
+              "bottom": 680,
+              "width": 342,
+              "height": 20.796875
+            },
+            {
+              "id": "BUTTON:左轉",
+              "x": 24,
+              "y": 686,
+              "right": 105,
+              "bottom": 750,
+              "width": 81,
+              "height": 64
+            },
+            {
+              "id": "BUTTON:右轉",
+              "x": 111,
+              "y": 686,
+              "right": 192,
+              "bottom": 750,
+              "width": 81,
+              "height": 64
+            },
+            {
+              "id": "BUTTON:踏板",
+              "x": 198,
+              "y": 686,
+              "right": 279,
+              "bottom": 750,
+              "width": 81,
+              "height": 64
+            },
+            {
+              "id": "BUTTON:煞車",
+              "x": 285,
+              "y": 686,
+              "right": 366,
+              "bottom": 750,
+              "width": 81,
+              "height": 64
+            },
+            {
+              "id": "BUTTON:再聽一次",
+              "x": 24,
+              "y": 756,
+              "right": 366,
+              "bottom": 820,
+              "width": 342,
+              "height": 64
+            },
+            {
+              "id": "content-force:坐穩了\n回中央 100%",
+              "x": 197,
+              "y": 136,
+              "right": 371,
+              "bottom": 240,
+              "width": 174,
+              "height": 104
+            },
+            {
+              "id": "cake-timing:↰左彎",
+              "x": 162.5546875,
+              "y": 283.71875,
+              "right": 227.4453125,
+              "bottom": 319.390625,
+              "width": 64.890625,
+              "height": 35.671875
+            }
+          ],
+          "overlaps": [],
+          "iconOverlaps": [],
+          "signOcclusion": [],
+          "counterOcclusion": [],
+          "carOffset": null,
+          "recovery": []
+        }
+      }
+    },
+    {
+      "path": "docs/content/r26/supplement/phone-cake-stage-2-delivery-1.png",
+      "width": 390,
+      "height": 844,
+      "sha256": "47b921692ef3e22e95c7ea02d99ea0a214a365e17f14fc37fdd35103c91c6d38",
+      "state": {
+        "roadShape": "left",
+        "boardTime": "0.000",
+        "doorStage": "closed",
+        "boardingIndex": "0",
+        "hazard": "false",
+        "wrongTurn": "false",
+        "inBend": "false",
+        "cue": "",
+        "settled": "false",
+        "correction": "",
+        "compact": "false",
+        "recoveryActive": "false",
+        "lookStep": "0",
+        "targetName": "橘三角形",
+        "layoutSeed": "0",
+        "distance": "55.00",
+        "speed": "0.00",
+        "bend": "1",
+        "tilt": "-0.00",
+        "sway": "-0.00",
+        "acceleration": "-8.02",
+        "bayStopped": "false",
+        "bayRestarted": "false",
+        "leftTurn": "true",
+        "rightTurn": "true",
+        "focus": "center",
+        "crossTime": "0.000",
+        "crossDuration": "2.4",
+        "orderHint": "",
+        "fruitSway": "0.00",
+        "flagSway": "-0.00",
+        "balanceLean": "-0.00",
+        "balanceStatus": "steady",
+        "recoveries": "8",
+        "assists": "4",
+        "assisting": "false",
+        "crossed": "0",
+        "lookedLeft": "false",
+        "lookedRight": "false",
+        "decision": "false",
+        "confirmed": "false",
+        "confirmDelay": "0",
+        "person": "grandma",
+        "trafficActive": "false",
+        "trafficTime": "0.00",
+        "watchSide": "",
+        "platformSide": "front",
+        "doorState": "closed",
+        "step": "0",
+        "semanticStatus": "快扶正了",
+        "nextAction": "",
+        "holdState": "paused",
+        "holdProgress": "1.000",
+        "recheckTime": "2"
+      },
+      "phase": "delivering",
+      "hint": "蛋糕送到了，一起分享。",
+      "proof": {
+        "controls": [
+          {
+            "id": "content-back",
+            "w": 68,
+            "h": 60,
+            "bad": false
+          },
+          {
+            "id": "content-pause",
+            "w": 68,
+            "h": 60,
+            "bad": false
+          },
+          {
+            "id": "listen",
+            "w": 342,
+            "h": 64,
+            "bad": false
+          }
+        ],
+        "clipping": [],
+        "kind": "cake",
+        "phase": "delivering",
+        "text": "回學院\n把蛋糕平穩送到\n暫停\n第 2 站・燈塔彎・兩個彎\n快扶正了\n回中央 99%\n\n蛋糕送到了，一起分享。\n\n正在送達\n再聽一次",
+        "metres": 1,
+        "rings": 0,
+        "progress": "",
+        "needed": [],
+        "riders": [],
+        "step": null,
+        "numbers": [],
+        "counts": "",
+        "highlights": [],
+        "actualYellow": [],
+        "semantic": {
+          "status": "快扶正了",
+          "next": "",
+          "hint": "蛋糕送到了，一起分享。",
+          "highlights": []
+        },
+        "layout": {
+          "labels": [
+            {
+              "id": "content-back:回學院",
+              "x": 16,
+              "y": 16,
+              "right": 84,
+              "bottom": 76,
+              "width": 68,
+              "height": 60
+            },
+            {
+              "id": "content-title:把蛋糕平穩送到",
+              "x": 92,
+              "y": 35.5,
+              "right": 298,
+              "bottom": 56.5,
+              "width": 206,
+              "height": 21
+            },
+            {
+              "id": "content-pause:暫停",
+              "x": 306,
+              "y": 16,
+              "right": 374,
+              "bottom": 76,
+              "width": 68,
+              "height": 60
+            },
+            {
+              "id": "content-scene-cue:第 2 站・燈塔彎・兩個彎",
+              "x": 222.84375,
+              "y": 94,
+              "right": 370,
+              "bottom": 122,
+              "width": 147.15625,
+              "height": 28
+            },
+            {
+              "id": "content-hint:蛋糕送到了，一起分享。",
+              "x": 24,
+              "y": 659.203125,
+              "right": 366,
+              "bottom": 680,
+              "width": 342,
+              "height": 20.796875
+            },
+            {
+              "id": "BUTTON:正在送達",
+              "x": 24,
+              "y": 686,
+              "right": 105,
+              "bottom": 750,
+              "width": 81,
+              "height": 64
+            },
+            {
+              "id": "BUTTON:再聽一次",
+              "x": 24,
+              "y": 756,
+              "right": 366,
+              "bottom": 820,
+              "width": 342,
+              "height": 64
+            },
+            {
+              "id": "content-force:快扶正了\n回中央 99%",
+              "x": 24,
+              "y": 525.203125,
+              "right": 366,
+              "bottom": 629.203125,
+              "width": 342,
+              "height": 104
+            }
+          ],
+          "overlaps": [],
+          "iconOverlaps": [],
+          "signOcclusion": [],
+          "counterOcclusion": [],
+          "carOffset": null,
+          "recovery": []
+        }
+      }
+    },
+    {
+      "path": "docs/content/r26/supplement/phone-cake-stage-2-delivery-2.png",
+      "width": 390,
+      "height": 844,
+      "sha256": "1356f483230bfb641c4bc01a49bfefbda9e0b7d5332d2ed38e9fcde160834128",
+      "state": {
+        "roadShape": "left",
+        "boardTime": "0.000",
+        "doorStage": "closed",
+        "boardingIndex": "0",
+        "hazard": "false",
+        "wrongTurn": "false",
+        "inBend": "false",
+        "cue": "",
+        "settled": "false",
+        "correction": "",
+        "compact": "false",
+        "recoveryActive": "false",
+        "lookStep": "0",
+        "targetName": "橘三角形",
+        "layoutSeed": "0",
+        "distance": "55.00",
+        "speed": "0.00",
+        "bend": "1",
+        "tilt": "-0.00",
+        "sway": "-0.00",
+        "acceleration": "-8.02",
+        "bayStopped": "false",
+        "bayRestarted": "false",
+        "leftTurn": "true",
+        "rightTurn": "true",
+        "focus": "center",
+        "crossTime": "0.000",
+        "crossDuration": "2.4",
+        "orderHint": "",
+        "fruitSway": "0.00",
+        "flagSway": "-0.00",
+        "balanceLean": "-0.00",
+        "balanceStatus": "steady",
+        "recoveries": "8",
+        "assists": "4",
+        "assisting": "false",
+        "crossed": "0",
+        "lookedLeft": "false",
+        "lookedRight": "false",
+        "decision": "false",
+        "confirmed": "false",
+        "confirmDelay": "0",
+        "person": "grandma",
+        "trafficActive": "false",
+        "trafficTime": "0.00",
+        "watchSide": "",
+        "platformSide": "front",
+        "doorState": "closed",
+        "step": "0",
+        "semanticStatus": "快扶正了",
+        "nextAction": "",
+        "holdState": "paused",
+        "holdProgress": "1.000",
+        "recheckTime": "2"
+      },
+      "phase": "delivering",
+      "hint": "蛋糕送到了，一起分享。",
+      "proof": {
+        "controls": [
+          {
+            "id": "content-back",
+            "w": 68,
+            "h": 60,
+            "bad": false
+          },
+          {
+            "id": "content-pause",
+            "w": 68,
+            "h": 60,
+            "bad": false
+          },
+          {
+            "id": "listen",
+            "w": 342,
+            "h": 64,
+            "bad": false
+          }
+        ],
+        "clipping": [],
+        "kind": "cake",
+        "phase": "delivering",
+        "text": "回學院\n把蛋糕平穩送到\n暫停\n第 2 站・燈塔彎・兩個彎\n快扶正了\n回中央 99%\n\n蛋糕送到了，一起分享。\n\n正在送達\n再聽一次",
+        "metres": 1,
+        "rings": 0,
+        "progress": "",
+        "needed": [],
+        "riders": [],
+        "step": null,
+        "numbers": [],
+        "counts": "",
+        "highlights": [],
+        "actualYellow": [],
+        "semantic": {
+          "status": "快扶正了",
+          "next": "",
+          "hint": "蛋糕送到了，一起分享。",
+          "highlights": []
+        },
+        "layout": {
+          "labels": [
+            {
+              "id": "content-back:回學院",
+              "x": 16,
+              "y": 16,
+              "right": 84,
+              "bottom": 76,
+              "width": 68,
+              "height": 60
+            },
+            {
+              "id": "content-title:把蛋糕平穩送到",
+              "x": 92,
+              "y": 35.5,
+              "right": 298,
+              "bottom": 56.5,
+              "width": 206,
+              "height": 21
+            },
+            {
+              "id": "content-pause:暫停",
+              "x": 306,
+              "y": 16,
+              "right": 374,
+              "bottom": 76,
+              "width": 68,
+              "height": 60
+            },
+            {
+              "id": "content-scene-cue:第 2 站・燈塔彎・兩個彎",
+              "x": 222.84375,
+              "y": 94,
+              "right": 370,
+              "bottom": 122,
+              "width": 147.15625,
+              "height": 28
+            },
+            {
+              "id": "content-hint:蛋糕送到了，一起分享。",
+              "x": 24,
+              "y": 659.203125,
+              "right": 366,
+              "bottom": 680,
+              "width": 342,
+              "height": 20.796875
+            },
+            {
+              "id": "BUTTON:正在送達",
+              "x": 24,
+              "y": 686,
+              "right": 105,
+              "bottom": 750,
+              "width": 81,
+              "height": 64
+            },
+            {
+              "id": "BUTTON:再聽一次",
+              "x": 24,
+              "y": 756,
+              "right": 366,
+              "bottom": 820,
+              "width": 342,
+              "height": 64
+            },
+            {
+              "id": "content-force:快扶正了\n回中央 99%",
+              "x": 24,
+              "y": 525.203125,
+              "right": 366,
+              "bottom": 629.203125,
+              "width": 342,
+              "height": 104
+            }
+          ],
+          "overlaps": [],
+          "iconOverlaps": [],
+          "signOcclusion": [],
+          "counterOcclusion": [],
+          "carOffset": null,
+          "recovery": []
+        }
+      }
+    },
+    {
+      "path": "docs/content/r26/supplement/phone-cake-stage-2-delivery-3.png",
+      "width": 390,
+      "height": 844,
+      "sha256": "d9a4fe8a2a634f9cf35bd38f03cd4e2108eae304fd9768d9cf4e05e8b56e4cf5",
+      "state": {
+        "roadShape": "left",
+        "boardTime": "0.000",
+        "doorStage": "closed",
+        "boardingIndex": "0",
+        "hazard": "false",
+        "wrongTurn": "false",
+        "inBend": "false",
+        "cue": "",
+        "settled": "false",
+        "correction": "",
+        "compact": "false",
+        "recoveryActive": "false",
+        "lookStep": "0",
+        "targetName": "橘三角形",
+        "layoutSeed": "0",
+        "distance": "55.00",
+        "speed": "0.00",
+        "bend": "1",
+        "tilt": "-0.00",
+        "sway": "-0.00",
+        "acceleration": "-8.02",
+        "bayStopped": "false",
+        "bayRestarted": "false",
+        "leftTurn": "true",
+        "rightTurn": "true",
+        "focus": "center",
+        "crossTime": "0.000",
+        "crossDuration": "2.4",
+        "orderHint": "",
+        "fruitSway": "0.00",
+        "flagSway": "-0.00",
+        "balanceLean": "-0.00",
+        "balanceStatus": "steady",
+        "recoveries": "8",
+        "assists": "4",
+        "assisting": "false",
+        "crossed": "0",
+        "lookedLeft": "false",
+        "lookedRight": "false",
+        "decision": "false",
+        "confirmed": "false",
+        "confirmDelay": "0",
+        "person": "grandma",
+        "trafficActive": "false",
+        "trafficTime": "0.00",
+        "watchSide": "",
+        "platformSide": "front",
+        "doorState": "closed",
+        "step": "0",
+        "semanticStatus": "快扶正了",
+        "nextAction": "",
+        "holdState": "paused",
+        "holdProgress": "1.000",
+        "recheckTime": "2"
+      },
+      "phase": "delivering",
+      "hint": "蛋糕送到了，一起分享。",
+      "proof": {
+        "controls": [
+          {
+            "id": "content-back",
+            "w": 68,
+            "h": 60,
+            "bad": false
+          },
+          {
+            "id": "content-pause",
+            "w": 68,
+            "h": 60,
+            "bad": false
+          },
+          {
+            "id": "listen",
+            "w": 342,
+            "h": 64,
+            "bad": false
+          }
+        ],
+        "clipping": [],
+        "kind": "cake",
+        "phase": "delivering",
+        "text": "回學院\n把蛋糕平穩送到\n暫停\n第 2 站・燈塔彎・兩個彎\n快扶正了\n回中央 99%\n\n蛋糕送到了，一起分享。\n\n正在送達\n再聽一次",
+        "metres": 1,
+        "rings": 0,
+        "progress": "",
+        "needed": [],
+        "riders": [],
+        "step": null,
+        "numbers": [],
+        "counts": "",
+        "highlights": [],
+        "actualYellow": [],
+        "semantic": {
+          "status": "快扶正了",
+          "next": "",
+          "hint": "蛋糕送到了，一起分享。",
+          "highlights": []
+        },
+        "layout": {
+          "labels": [
+            {
+              "id": "content-back:回學院",
+              "x": 16,
+              "y": 16,
+              "right": 84,
+              "bottom": 76,
+              "width": 68,
+              "height": 60
+            },
+            {
+              "id": "content-title:把蛋糕平穩送到",
+              "x": 92,
+              "y": 35.5,
+              "right": 298,
+              "bottom": 56.5,
+              "width": 206,
+              "height": 21
+            },
+            {
+              "id": "content-pause:暫停",
+              "x": 306,
+              "y": 16,
+              "right": 374,
+              "bottom": 76,
+              "width": 68,
+              "height": 60
+            },
+            {
+              "id": "content-scene-cue:第 2 站・燈塔彎・兩個彎",
+              "x": 222.84375,
+              "y": 94,
+              "right": 370,
+              "bottom": 122,
+              "width": 147.15625,
+              "height": 28
+            },
+            {
+              "id": "content-hint:蛋糕送到了，一起分享。",
+              "x": 24,
+              "y": 659.203125,
+              "right": 366,
+              "bottom": 680,
+              "width": 342,
+              "height": 20.796875
+            },
+            {
+              "id": "BUTTON:正在送達",
+              "x": 24,
+              "y": 686,
+              "right": 105,
+              "bottom": 750,
+              "width": 81,
+              "height": 64
+            },
+            {
+              "id": "BUTTON:再聽一次",
+              "x": 24,
+              "y": 756,
+              "right": 366,
+              "bottom": 820,
+              "width": 342,
+              "height": 64
+            },
+            {
+              "id": "content-force:快扶正了\n回中央 99%",
+              "x": 24,
+              "y": 525.203125,
+              "right": 366,
+              "bottom": 629.203125,
+              "width": 342,
+              "height": 104
+            }
+          ],
+          "overlaps": [],
+          "iconOverlaps": [],
+          "signOcclusion": [],
+          "counterOcclusion": [],
+          "carOffset": null,
+          "recovery": []
+        }
+      }
+    },
+    {
+      "path": "docs/content/r26/supplement/phone-cake-stage-3-braking.png",
+      "width": 390,
+      "height": 844,
+      "sha256": "431c4900652f59c48769fbabfc2a01b85e1664c51d032004287abd2201e0f667",
+      "state": {
+        "roadShape": "left",
+        "boardTime": "0.000",
+        "doorStage": "closed",
+        "boardingIndex": "0",
+        "hazard": "false",
+        "wrongTurn": "false",
+        "inBend": "false",
+        "cue": "brake",
+        "settled": "false",
+        "correction": "",
+        "compact": "false",
+        "recoveryActive": "false",
+        "lookStep": "0",
+        "targetName": "綠正方形",
+        "layoutSeed": "0",
+        "distance": "42.28",
+        "speed": "3.65",
+        "bend": "1",
+        "tilt": "-0.87",
+        "sway": "-0.37",
+        "acceleration": "0.66",
+        "bayStopped": "false",
+        "bayRestarted": "false",
+        "leftTurn": "false",
+        "rightTurn": "true",
+        "focus": "center",
+        "crossTime": "0.000",
+        "crossDuration": "1.45",
+        "orderHint": "",
+        "fruitSway": "0.00",
+        "flagSway": "-0.87",
+        "balanceLean": "-0.87",
+        "balanceStatus": "steady",
+        "recoveries": "11",
+        "assists": "6",
+        "assisting": "false",
+        "crossed": "0",
+        "lookedLeft": "false",
+        "lookedRight": "false",
+        "decision": "false",
+        "confirmed": "false",
+        "confirmDelay": "0",
+        "person": "bike",
+        "trafficActive": "false",
+        "trafficTime": "0.00",
+        "watchSide": "",
+        "platformSide": "front",
+        "doorState": "closed",
+        "step": "0",
+        "semanticStatus": "快扶正了",
+        "nextAction": "brake",
+        "holdState": "holding",
+        "holdProgress": "1.000",
+        "recheckTime": "2"
+      },
+      "phase": "playing",
+      "hint": "休息灣到了，按住煞車停穩。",
+      "proof": {
+        "controls": [
+          {
+            "id": "content-back",
+            "w": 68,
+            "h": 60,
+            "bad": false
+          },
+          {
+            "id": "content-pause",
+            "w": 68,
+            "h": 60,
+            "bad": false
+          },
+          {
+            "id": "left",
+            "w": 81,
+            "h": 64,
+            "bad": false
+          },
+          {
+            "id": "right",
+            "w": 81,
+            "h": 64,
+            "bad": false
+          },
+          {
+            "id": "go",
+            "w": 81,
+            "h": 64,
+            "bad": false
+          },
+          {
+            "id": "brake",
+            "w": 81,
+            "h": 64,
+            "bad": false
+          },
+          {
+            "id": "listen",
+            "w": 342,
+            "h": 64,
+            "bad": false
+          }
+        ],
+        "clipping": [],
+        "kind": "cake",
+        "phase": "playing",
+        "text": "回學院\n把蛋糕平穩送到\n暫停\n第 3 站・休息灣・停穩再起步\n快扶正了\n回中央 97%\n↰左彎\n\n休息灣到了，按住煞車停穩。\n\n左轉\n右轉\n踏板\n煞車\n再聽一次",
+        "metres": 1,
+        "rings": 0,
+        "progress": "",
+        "needed": [
+          "brake"
+        ],
+        "riders": [],
+        "step": null,
+        "numbers": [],
+        "counts": "",
+        "highlights": [
+          {
+            "id": "brake",
+            "color": "rgb(255, 211, 68)"
+          }
+        ],
+        "actualYellow": [
+          "brake"
+        ],
+        "semantic": {
+          "status": "快扶正了",
+          "next": "brake",
+          "hint": "休息灣到了，按住煞車停穩。",
+          "highlights": [
+            "brake"
+          ]
+        },
+        "layout": {
+          "labels": [
+            {
+              "id": "content-back:回學院",
+              "x": 16,
+              "y": 16,
+              "right": 84,
+              "bottom": 76,
+              "width": 68,
+              "height": 60
+            },
+            {
+              "id": "content-title:把蛋糕平穩送到",
+              "x": 92,
+              "y": 35.5,
+              "right": 298,
+              "bottom": 56.5,
+              "width": 206,
+              "height": 21
+            },
+            {
+              "id": "content-pause:暫停",
+              "x": 306,
+              "y": 16,
+              "right": 374,
+              "bottom": 76,
+              "width": 68,
+              "height": 60
+            },
+            {
+              "id": "content-scene-cue:第 3 站・休息灣・停穩再起步",
+              "x": 198.84375,
+              "y": 94,
+              "right": 370,
+              "bottom": 122,
+              "width": 171.15625,
+              "height": 28
+            },
+            {
+              "id": "content-hint:休息灣到了，按住煞車停穩。",
+              "x": 24,
+              "y": 659.203125,
+              "right": 366,
+              "bottom": 680,
+              "width": 342,
+              "height": 20.796875
+            },
+            {
+              "id": "BUTTON:左轉",
+              "x": 24,
+              "y": 686,
+              "right": 105,
+              "bottom": 750,
+              "width": 81,
+              "height": 64
+            },
+            {
+              "id": "BUTTON:右轉",
+              "x": 111,
+              "y": 686,
+              "right": 192,
+              "bottom": 750,
+              "width": 81,
+              "height": 64
+            },
+            {
+              "id": "BUTTON:踏板",
+              "x": 198,
+              "y": 689,
+              "right": 279,
+              "bottom": 753,
+              "width": 81,
+              "height": 64
+            },
+            {
+              "id": "BUTTON:煞車",
+              "x": 285,
+              "y": 686,
+              "right": 366,
+              "bottom": 750,
+              "width": 81,
+              "height": 64
+            },
+            {
+              "id": "BUTTON:再聽一次",
+              "x": 24,
+              "y": 756,
+              "right": 366,
+              "bottom": 820,
+              "width": 342,
+              "height": 64
+            },
+            {
+              "id": "content-force:快扶正了\n回中央 97%",
+              "x": 197,
+              "y": 136,
+              "right": 371,
+              "bottom": 240,
+              "width": 174,
+              "height": 104
+            },
+            {
+              "id": "cake-timing:↰左彎",
+              "x": 162.5546875,
+              "y": 283.71875,
+              "right": 227.4453125,
+              "bottom": 319.390625,
+              "width": 64.890625,
+              "height": 35.671875
+            }
+          ],
+          "overlaps": [],
+          "iconOverlaps": [],
+          "signOcclusion": [],
+          "counterOcclusion": [],
+          "carOffset": null,
+          "recovery": []
+        }
+      }
+    },
+    {
+      "path": "docs/content/r26/supplement/phone-cake-stage-3-resting.png",
+      "width": 390,
+      "height": 844,
+      "sha256": "ea8626216863b8ed8a6d429e774fc902e1c971e2b5f274f99c16116a694ee204",
+      "state": {
+        "roadShape": "left",
+        "boardTime": "0.000",
+        "doorStage": "closed",
+        "boardingIndex": "0",
+        "hazard": "false",
+        "wrongTurn": "false",
+        "inBend": "false",
+        "cue": "",
+        "settled": "false",
+        "correction": "",
+        "compact": "false",
+        "recoveryActive": "false",
+        "lookStep": "0",
+        "targetName": "綠正方形",
+        "layoutSeed": "0",
+        "distance": "43.68",
+        "speed": "0.00",
+        "bend": "1",
+        "tilt": "-0.21",
+        "sway": "-0.09",
+        "acceleration": "0.00",
+        "bayStopped": "true",
+        "bayRestarted": "false",
+        "leftTurn": "false",
+        "rightTurn": "true",
+        "focus": "center",
+        "crossTime": "0.000",
+        "crossDuration": "1.45",
+        "orderHint": "",
+        "fruitSway": "0.00",
+        "flagSway": "-0.21",
+        "balanceLean": "-0.21",
+        "balanceStatus": "steady",
+        "recoveries": "11",
+        "assists": "6",
+        "assisting": "false",
+        "crossed": "0",
+        "lookedLeft": "false",
+        "lookedRight": "false",
+        "decision": "false",
+        "confirmed": "false",
+        "confirmDelay": "0",
+        "person": "bike",
+        "trafficActive": "false",
+        "trafficTime": "0.00",
+        "watchSide": "",
+        "platformSide": "front",
+        "doorState": "closed",
+        "step": "0",
+        "semanticStatus": "快扶正了",
+        "nextAction": "",
+        "holdState": "holding",
+        "holdProgress": "0.794",
+        "recheckTime": "2"
+      },
+      "phase": "playing",
+      "hint": "停穩了，讓蛋糕休息一下。",
+      "proof": {
+        "controls": [
+          {
+            "id": "content-back",
+            "w": 68,
+            "h": 60,
+            "bad": false
+          },
+          {
+            "id": "content-pause",
+            "w": 68,
+            "h": 60,
+            "bad": false
+          },
+          {
+            "id": "left",
+            "w": 81,
+            "h": 64,
+            "bad": false
+          },
+          {
+            "id": "right",
+            "w": 81,
+            "h": 64,
+            "bad": false
+          },
+          {
+            "id": "go",
+            "w": 81,
+            "h": 64,
+            "bad": false
+          },
+          {
+            "id": "brake",
+            "w": 81,
+            "h": 64,
+            "bad": false
+          },
+          {
+            "id": "listen",
+            "w": 342,
+            "h": 64,
+            "bad": false
+          }
+        ],
+        "clipping": [],
+        "kind": "cake",
+        "phase": "playing",
+        "text": "回學院\n把蛋糕平穩送到\n暫停\n第 3 站・休息灣・停穩再起步\n快扶正了\n回中央 99%\n休息灣\n\n停穩了，讓蛋糕休息一下。\n\n左轉\n右轉\n踏板\n煞車\n再聽一次",
+        "metres": 1,
+        "rings": 0,
+        "progress": "",
+        "needed": [],
+        "riders": [],
+        "step": null,
+        "numbers": [],
+        "counts": "",
+        "highlights": [],
+        "actualYellow": [],
+        "semantic": {
+          "status": "快扶正了",
+          "next": "",
+          "hint": "停穩了，讓蛋糕休息一下。",
+          "highlights": []
+        },
+        "layout": {
+          "labels": [
+            {
+              "id": "content-back:回學院",
+              "x": 16,
+              "y": 16,
+              "right": 84,
+              "bottom": 76,
+              "width": 68,
+              "height": 60
+            },
+            {
+              "id": "content-title:把蛋糕平穩送到",
+              "x": 92,
+              "y": 35.5,
+              "right": 298,
+              "bottom": 56.5,
+              "width": 206,
+              "height": 21
+            },
+            {
+              "id": "content-pause:暫停",
+              "x": 306,
+              "y": 16,
+              "right": 374,
+              "bottom": 76,
+              "width": 68,
+              "height": 60
+            },
+            {
+              "id": "content-scene-cue:第 3 站・休息灣・停穩再起步",
+              "x": 198.84375,
+              "y": 94,
+              "right": 370,
+              "bottom": 122,
+              "width": 171.15625,
+              "height": 28
+            },
+            {
+              "id": "content-hint:停穩了，讓蛋糕休息一下。",
+              "x": 24,
+              "y": 659.203125,
+              "right": 366,
+              "bottom": 680,
+              "width": 342,
+              "height": 20.796875
+            },
+            {
+              "id": "BUTTON:左轉",
+              "x": 24,
+              "y": 686,
+              "right": 105,
+              "bottom": 750,
+              "width": 81,
+              "height": 64
+            },
+            {
+              "id": "BUTTON:右轉",
+              "x": 111,
+              "y": 686,
+              "right": 192,
+              "bottom": 750,
+              "width": 81,
+              "height": 64
+            },
+            {
+              "id": "BUTTON:踏板",
+              "x": 198,
+              "y": 686,
+              "right": 279,
+              "bottom": 750,
+              "width": 81,
+              "height": 64
+            },
+            {
+              "id": "BUTTON:煞車",
+              "x": 285,
+              "y": 686,
+              "right": 366,
+              "bottom": 750,
+              "width": 81,
+              "height": 64
+            },
+            {
+              "id": "BUTTON:再聽一次",
+              "x": 24,
+              "y": 756,
+              "right": 366,
+              "bottom": 820,
+              "width": 342,
+              "height": 64
+            },
+            {
+              "id": "content-force:快扶正了\n回中央 99%",
+              "x": 197,
+              "y": 136,
+              "right": 371,
+              "bottom": 240,
+              "width": 174,
+              "height": 104
+            },
+            {
+              "id": "cake-timing:休息灣",
+              "x": 161,
+              "y": 283.71875,
+              "right": 229,
+              "bottom": 316.71875,
+              "width": 68,
+              "height": 33
+            }
+          ],
+          "overlaps": [],
+          "iconOverlaps": [],
+          "signOcclusion": [],
+          "counterOcclusion": [],
+          "carOffset": null,
+          "recovery": []
+        }
+      }
+    },
+    {
+      "path": "docs/content/r26/supplement/phone-cake-stage-3-bay.png",
+      "width": 390,
+      "height": 844,
+      "sha256": "df2783346769eff50b73a08fedfda37e5542fcce67e89a55dcc34b97e921a91f",
+      "state": {
+        "roadShape": "left",
+        "boardTime": "0.000",
+        "doorStage": "closed",
+        "boardingIndex": "0",
+        "hazard": "false",
+        "wrongTurn": "false",
+        "inBend": "false",
+        "cue": "go",
+        "settled": "false",
+        "correction": "",
+        "compact": "false",
+        "recoveryActive": "false",
+        "lookStep": "0",
+        "targetName": "綠正方形",
+        "layoutSeed": "0",
+        "distance": "43.68",
+        "speed": "0.00",
+        "bend": "1",
+        "tilt": "-0.08",
+        "sway": "-0.03",
+        "acceleration": "0.00",
+        "bayStopped": "true",
+        "bayRestarted": "false",
+        "leftTurn": "false",
+        "rightTurn": "true",
+        "focus": "center",
+        "crossTime": "0.000",
+        "crossDuration": "1.45",
+        "orderHint": "",
+        "fruitSway": "0.00",
+        "flagSway": "-0.08",
+        "balanceLean": "-0.08",
+        "balanceStatus": "steady",
+        "recoveries": "11",
+        "assists": "6",
+        "assisting": "false",
+        "crossed": "0",
+        "lookedLeft": "false",
+        "lookedRight": "false",
+        "decision": "false",
+        "confirmed": "false",
+        "confirmDelay": "0",
+        "person": "bike",
+        "trafficActive": "false",
+        "trafficTime": "0.00",
+        "watchSide": "",
+        "platformSide": "front",
+        "doorState": "closed",
+        "step": "0",
+        "semanticStatus": "快扶正了",
+        "nextAction": "go",
+        "holdState": "paused",
+        "holdProgress": "0.794",
+        "recheckTime": "2"
+      },
+      "phase": "playing",
+      "hint": "休息好了，可以出發了。",
+      "proof": {
+        "controls": [
+          {
+            "id": "content-back",
+            "w": 68,
+            "h": 60,
+            "bad": false
+          },
+          {
+            "id": "content-pause",
+            "w": 68,
+            "h": 60,
+            "bad": false
+          },
+          {
+            "id": "left",
+            "w": 81,
+            "h": 64,
+            "bad": false
+          },
+          {
+            "id": "right",
+            "w": 81,
+            "h": 64,
+            "bad": false
+          },
+          {
+            "id": "go",
+            "w": 81,
+            "h": 64,
+            "bad": false
+          },
+          {
+            "id": "brake",
+            "w": 81,
+            "h": 64,
+            "bad": false
+          },
+          {
+            "id": "listen",
+            "w": 342,
+            "h": 64,
+            "bad": false
+          }
+        ],
+        "clipping": [],
+        "kind": "cake",
+        "phase": "playing",
+        "text": "回學院\n把蛋糕平穩送到\n暫停\n第 3 站・休息灣・停穩再起步\n快扶正了\n回中央 99%\n休息灣\n\n休息好了，可以出發了。\n\n左轉\n右轉\n踏板\n煞車\n再聽一次",
+        "metres": 1,
+        "rings": 0,
+        "progress": "",
+        "needed": [
+          "go"
+        ],
+        "riders": [],
+        "step": null,
+        "numbers": [],
+        "counts": "",
+        "highlights": [
+          {
+            "id": "go",
+            "color": "rgb(255, 211, 68)"
+          }
+        ],
+        "actualYellow": [
+          "go"
+        ],
+        "semantic": {
+          "status": "快扶正了",
+          "next": "go",
+          "hint": "休息好了，可以出發了。",
+          "highlights": [
+            "go"
+          ]
+        },
+        "layout": {
+          "labels": [
+            {
+              "id": "content-back:回學院",
+              "x": 16,
+              "y": 16,
+              "right": 84,
+              "bottom": 76,
+              "width": 68,
+              "height": 60
+            },
+            {
+              "id": "content-title:把蛋糕平穩送到",
+              "x": 92,
+              "y": 35.5,
+              "right": 298,
+              "bottom": 56.5,
+              "width": 206,
+              "height": 21
+            },
+            {
+              "id": "content-pause:暫停",
+              "x": 306,
+              "y": 16,
+              "right": 374,
+              "bottom": 76,
+              "width": 68,
+              "height": 60
+            },
+            {
+              "id": "content-scene-cue:第 3 站・休息灣・停穩再起步",
+              "x": 198.84375,
+              "y": 94,
+              "right": 370,
+              "bottom": 122,
+              "width": 171.15625,
+              "height": 28
+            },
+            {
+              "id": "content-hint:休息好了，可以出發了。",
+              "x": 24,
+              "y": 659.203125,
+              "right": 366,
+              "bottom": 680,
+              "width": 342,
+              "height": 20.796875
+            },
+            {
+              "id": "BUTTON:左轉",
+              "x": 24,
+              "y": 686,
+              "right": 105,
+              "bottom": 750,
+              "width": 81,
+              "height": 64
+            },
+            {
+              "id": "BUTTON:右轉",
+              "x": 111,
+              "y": 686,
+              "right": 192,
+              "bottom": 750,
+              "width": 81,
+              "height": 64
+            },
+            {
+              "id": "BUTTON:踏板",
+              "x": 198,
+              "y": 686,
+              "right": 279,
+              "bottom": 750,
+              "width": 81,
+              "height": 64
+            },
+            {
+              "id": "BUTTON:煞車",
+              "x": 285,
+              "y": 686,
+              "right": 366,
+              "bottom": 750,
+              "width": 81,
+              "height": 64
+            },
+            {
+              "id": "BUTTON:再聽一次",
+              "x": 24,
+              "y": 756,
+              "right": 366,
+              "bottom": 820,
+              "width": 342,
+              "height": 64
+            },
+            {
+              "id": "content-force:快扶正了\n回中央 99%",
+              "x": 197,
+              "y": 136,
+              "right": 371,
+              "bottom": 240,
+              "width": 174,
+              "height": 104
+            },
+            {
+              "id": "cake-timing:休息灣",
+              "x": 161,
+              "y": 283.71875,
+              "right": 229,
+              "bottom": 316.71875,
+              "width": 68,
+              "height": 33
+            }
+          ],
+          "overlaps": [],
+          "iconOverlaps": [],
+          "signOcclusion": [],
+          "counterOcclusion": [],
+          "carOffset": null,
+          "recovery": []
+        }
+      }
+    },
+    {
+      "path": "docs/content/r26/supplement/phone-cake-stage-3-restart.png",
+      "width": 390,
+      "height": 844,
+      "sha256": "da24529479255f59513df9ef1fd4a2640b56781973678e1b4533de624428e87a",
+      "state": {
+        "roadShape": "left",
+        "boardTime": "0.000",
+        "doorStage": "closed",
+        "boardingIndex": "0",
+        "hazard": "false",
+        "wrongTurn": "false",
+        "inBend": "false",
+        "cue": "go",
+        "settled": "false",
+        "correction": "",
+        "compact": "false",
+        "recoveryActive": "false",
+        "lookStep": "0",
+        "targetName": "綠正方形",
+        "layoutSeed": "0",
+        "distance": "44.26",
+        "speed": "2.24",
+        "bend": "1",
+        "tilt": "-0.02",
+        "sway": "-0.01",
+        "acceleration": "3.27",
+        "bayStopped": "true",
+        "bayRestarted": "true",
+        "leftTurn": "false",
+        "rightTurn": "true",
+        "focus": "center",
+        "crossTime": "0.000",
+        "crossDuration": "1.45",
+        "orderHint": "",
+        "fruitSway": "0.00",
+        "flagSway": "-0.02",
+        "balanceLean": "-0.02",
+        "balanceStatus": "steady",
+        "recoveries": "11",
+        "assists": "6",
+        "assisting": "false",
+        "crossed": "0",
+        "lookedLeft": "false",
+        "lookedRight": "false",
+        "decision": "false",
+        "confirmed": "false",
+        "confirmDelay": "0",
+        "person": "bike",
+        "trafficActive": "false",
+        "trafficTime": "0.00",
+        "watchSide": "",
+        "platformSide": "front",
+        "doorState": "closed",
+        "step": "0",
+        "semanticStatus": "快扶正了",
+        "nextAction": "go",
+        "holdState": "holding",
+        "holdProgress": "0.805",
+        "recheckTime": "2"
+      },
+      "phase": "playing",
+      "hint": "前方左彎，照顧蛋糕。",
+      "proof": {
+        "controls": [
+          {
+            "id": "content-back",
+            "w": 68,
+            "h": 60,
+            "bad": false
+          },
+          {
+            "id": "content-pause",
+            "w": 68,
+            "h": 60,
+            "bad": false
+          },
+          {
+            "id": "left",
+            "w": 81,
+            "h": 64,
+            "bad": false
+          },
+          {
+            "id": "right",
+            "w": 81,
+            "h": 64,
+            "bad": false
+          },
+          {
+            "id": "go",
+            "w": 81,
+            "h": 64,
+            "bad": false
+          },
+          {
+            "id": "brake",
+            "w": 81,
+            "h": 64,
+            "bad": false
+          },
+          {
+            "id": "listen",
+            "w": 342,
+            "h": 64,
+            "bad": false
+          }
+        ],
+        "clipping": [],
+        "kind": "cake",
+        "phase": "playing",
+        "text": "回學院\n把蛋糕平穩送到\n暫停\n第 3 站・休息灣・停穩再起步\n快扶正了\n回中央 99%\n↰左彎\n\n前方左彎，照顧蛋糕。\n\n左轉\n右轉\n踏板\n煞車\n再聽一次",
+        "metres": 1,
+        "rings": 0,
+        "progress": "",
+        "needed": [
+          "go"
+        ],
+        "riders": [],
+        "step": null,
+        "numbers": [],
+        "counts": "",
+        "highlights": [
+          {
+            "id": "go",
+            "color": "rgb(255, 211, 68)"
+          }
+        ],
+        "actualYellow": [
+          "go"
+        ],
+        "semantic": {
+          "status": "快扶正了",
+          "next": "go",
+          "hint": "前方左彎，照顧蛋糕。",
+          "highlights": [
+            "go"
+          ]
+        },
+        "layout": {
+          "labels": [
+            {
+              "id": "content-back:回學院",
+              "x": 16,
+              "y": 16,
+              "right": 84,
+              "bottom": 76,
+              "width": 68,
+              "height": 60
+            },
+            {
+              "id": "content-title:把蛋糕平穩送到",
+              "x": 92,
+              "y": 35.5,
+              "right": 298,
+              "bottom": 56.5,
+              "width": 206,
+              "height": 21
+            },
+            {
+              "id": "content-pause:暫停",
+              "x": 306,
+              "y": 16,
+              "right": 374,
+              "bottom": 76,
+              "width": 68,
+              "height": 60
+            },
+            {
+              "id": "content-scene-cue:第 3 站・休息灣・停穩再起步",
+              "x": 198.84375,
+              "y": 94,
+              "right": 370,
+              "bottom": 122,
+              "width": 171.15625,
+              "height": 28
+            },
+            {
+              "id": "content-hint:前方左彎，照顧蛋糕。",
+              "x": 24,
+              "y": 659.203125,
+              "right": 366,
+              "bottom": 680,
+              "width": 342,
+              "height": 20.796875
+            },
+            {
+              "id": "BUTTON:左轉",
+              "x": 24,
+              "y": 686,
+              "right": 105,
+              "bottom": 750,
+              "width": 81,
+              "height": 64
+            },
+            {
+              "id": "BUTTON:右轉",
+              "x": 111,
+              "y": 686,
+              "right": 192,
+              "bottom": 750,
+              "width": 81,
+              "height": 64
+            },
+            {
+              "id": "BUTTON:踏板",
+              "x": 198,
+              "y": 689,
+              "right": 279,
+              "bottom": 753,
+              "width": 81,
+              "height": 64
+            },
+            {
+              "id": "BUTTON:煞車",
+              "x": 285,
+              "y": 686,
+              "right": 366,
+              "bottom": 750,
+              "width": 81,
+              "height": 64
+            },
+            {
+              "id": "BUTTON:再聽一次",
+              "x": 24,
+              "y": 756,
+              "right": 366,
+              "bottom": 820,
+              "width": 342,
+              "height": 64
+            },
+            {
+              "id": "content-force:快扶正了\n回中央 99%",
+              "x": 197,
+              "y": 136,
+              "right": 371,
+              "bottom": 240,
+              "width": 174,
+              "height": 104
+            },
+            {
+              "id": "cake-timing:↰左彎",
+              "x": 162.5546875,
+              "y": 283.71875,
+              "right": 227.4453125,
+              "bottom": 319.390625,
+              "width": 64.890625,
+              "height": 35.671875
+            }
+          ],
+          "overlaps": [],
+          "iconOverlaps": [],
+          "signOcclusion": [],
+          "counterOcclusion": [],
+          "carOffset": null,
+          "recovery": []
+        }
+      }
+    },
+    {
+      "path": "docs/content/r26/supplement/phone-cake-stage-3-delivery-1.png",
+      "width": 390,
+      "height": 844,
+      "sha256": "aea805386e0fc292815312929cb113c4c13fa6b646b942f3e537a4bad05c1c82",
+      "state": {
+        "roadShape": "left",
+        "boardTime": "0.000",
+        "doorStage": "closed",
+        "boardingIndex": "0",
+        "hazard": "false",
+        "wrongTurn": "false",
+        "inBend": "false",
+        "cue": "",
+        "settled": "false",
+        "correction": "",
+        "compact": "false",
+        "recoveryActive": "false",
+        "lookStep": "0",
+        "targetName": "綠正方形",
+        "layoutSeed": "0",
+        "distance": "55.00",
+        "speed": "0.00",
+        "bend": "1",
+        "tilt": "-0.00",
+        "sway": "-0.00",
+        "acceleration": "-3.60",
+        "bayStopped": "true",
+        "bayRestarted": "true",
+        "leftTurn": "false",
+        "rightTurn": "true",
+        "focus": "center",
+        "crossTime": "0.000",
+        "crossDuration": "1.45",
+        "orderHint": "",
+        "fruitSway": "0.00",
+        "flagSway": "-0.00",
+        "balanceLean": "-0.00",
+        "balanceStatus": "steady",
+        "recoveries": "11",
+        "assists": "6",
+        "assisting": "false",
+        "crossed": "0",
+        "lookedLeft": "false",
+        "lookedRight": "false",
+        "decision": "false",
+        "confirmed": "false",
+        "confirmDelay": "0",
+        "person": "bike",
+        "trafficActive": "false",
+        "trafficTime": "0.00",
+        "watchSide": "",
+        "platformSide": "front",
+        "doorState": "closed",
+        "step": "0",
+        "semanticStatus": "快扶正了",
+        "nextAction": "",
+        "holdState": "paused",
+        "holdProgress": "1.000",
+        "recheckTime": "2"
+      },
+      "phase": "delivering",
+      "hint": "蛋糕送到了，一起分享。",
+      "proof": {
+        "controls": [
+          {
+            "id": "content-back",
+            "w": 68,
+            "h": 60,
+            "bad": false
+          },
+          {
+            "id": "content-pause",
+            "w": 68,
+            "h": 60,
+            "bad": false
+          },
+          {
+            "id": "listen",
+            "w": 342,
+            "h": 64,
+            "bad": false
+          }
+        ],
+        "clipping": [],
+        "kind": "cake",
+        "phase": "delivering",
+        "text": "回學院\n把蛋糕平穩送到\n暫停\n第 3 站・休息灣・停穩再起步\n快扶正了\n回中央 99%\n\n蛋糕送到了，一起分享。\n\n正在送達\n再聽一次",
+        "metres": 1,
+        "rings": 0,
+        "progress": "",
+        "needed": [],
+        "riders": [],
+        "step": null,
+        "numbers": [],
+        "counts": "",
+        "highlights": [],
+        "actualYellow": [],
+        "semantic": {
+          "status": "快扶正了",
+          "next": "",
+          "hint": "蛋糕送到了，一起分享。",
+          "highlights": []
+        },
+        "layout": {
+          "labels": [
+            {
+              "id": "content-back:回學院",
+              "x": 16,
+              "y": 16,
+              "right": 84,
+              "bottom": 76,
+              "width": 68,
+              "height": 60
+            },
+            {
+              "id": "content-title:把蛋糕平穩送到",
+              "x": 92,
+              "y": 35.5,
+              "right": 298,
+              "bottom": 56.5,
+              "width": 206,
+              "height": 21
+            },
+            {
+              "id": "content-pause:暫停",
+              "x": 306,
+              "y": 16,
+              "right": 374,
+              "bottom": 76,
+              "width": 68,
+              "height": 60
+            },
+            {
+              "id": "content-scene-cue:第 3 站・休息灣・停穩再起步",
+              "x": 198.84375,
+              "y": 94,
+              "right": 370,
+              "bottom": 122,
+              "width": 171.15625,
+              "height": 28
+            },
+            {
+              "id": "content-hint:蛋糕送到了，一起分享。",
+              "x": 24,
+              "y": 659.203125,
+              "right": 366,
+              "bottom": 680,
+              "width": 342,
+              "height": 20.796875
+            },
+            {
+              "id": "BUTTON:正在送達",
+              "x": 24,
+              "y": 686,
+              "right": 105,
+              "bottom": 750,
+              "width": 81,
+              "height": 64
+            },
+            {
+              "id": "BUTTON:再聽一次",
+              "x": 24,
+              "y": 756,
+              "right": 366,
+              "bottom": 820,
+              "width": 342,
+              "height": 64
+            },
+            {
+              "id": "content-force:快扶正了\n回中央 99%",
+              "x": 24,
+              "y": 525.203125,
+              "right": 366,
+              "bottom": 629.203125,
+              "width": 342,
+              "height": 104
+            }
+          ],
+          "overlaps": [],
+          "iconOverlaps": [],
+          "signOcclusion": [],
+          "counterOcclusion": [],
+          "carOffset": null,
+          "recovery": []
+        }
+      }
+    },
+    {
+      "path": "docs/content/r26/supplement/phone-cake-stage-3-delivery-2.png",
+      "width": 390,
+      "height": 844,
+      "sha256": "8a408eea15de88f7204577a8df594e20c62038d73e1bf38edb9d7c57344feaa8",
+      "state": {
+        "roadShape": "left",
+        "boardTime": "0.000",
+        "doorStage": "closed",
+        "boardingIndex": "0",
+        "hazard": "false",
+        "wrongTurn": "false",
+        "inBend": "false",
+        "cue": "",
+        "settled": "false",
+        "correction": "",
+        "compact": "false",
+        "recoveryActive": "false",
+        "lookStep": "0",
+        "targetName": "綠正方形",
+        "layoutSeed": "0",
+        "distance": "55.00",
+        "speed": "0.00",
+        "bend": "1",
+        "tilt": "-0.00",
+        "sway": "-0.00",
+        "acceleration": "-3.60",
+        "bayStopped": "true",
+        "bayRestarted": "true",
+        "leftTurn": "false",
+        "rightTurn": "true",
+        "focus": "center",
+        "crossTime": "0.000",
+        "crossDuration": "1.45",
+        "orderHint": "",
+        "fruitSway": "0.00",
+        "flagSway": "-0.00",
+        "balanceLean": "-0.00",
+        "balanceStatus": "steady",
+        "recoveries": "11",
+        "assists": "6",
+        "assisting": "false",
+        "crossed": "0",
+        "lookedLeft": "false",
+        "lookedRight": "false",
+        "decision": "false",
+        "confirmed": "false",
+        "confirmDelay": "0",
+        "person": "bike",
+        "trafficActive": "false",
+        "trafficTime": "0.00",
+        "watchSide": "",
+        "platformSide": "front",
+        "doorState": "closed",
+        "step": "0",
+        "semanticStatus": "快扶正了",
+        "nextAction": "",
+        "holdState": "paused",
+        "holdProgress": "1.000",
+        "recheckTime": "2"
+      },
+      "phase": "delivering",
+      "hint": "蛋糕送到了，一起分享。",
+      "proof": {
+        "controls": [
+          {
+            "id": "content-back",
+            "w": 68,
+            "h": 60,
+            "bad": false
+          },
+          {
+            "id": "content-pause",
+            "w": 68,
+            "h": 60,
+            "bad": false
+          },
+          {
+            "id": "listen",
+            "w": 342,
+            "h": 64,
+            "bad": false
+          }
+        ],
+        "clipping": [],
+        "kind": "cake",
+        "phase": "delivering",
+        "text": "回學院\n把蛋糕平穩送到\n暫停\n第 3 站・休息灣・停穩再起步\n快扶正了\n回中央 99%\n\n蛋糕送到了，一起分享。\n\n正在送達\n再聽一次",
+        "metres": 1,
+        "rings": 0,
+        "progress": "",
+        "needed": [],
+        "riders": [],
+        "step": null,
+        "numbers": [],
+        "counts": "",
+        "highlights": [],
+        "actualYellow": [],
+        "semantic": {
+          "status": "快扶正了",
+          "next": "",
+          "hint": "蛋糕送到了，一起分享。",
+          "highlights": []
+        },
+        "layout": {
+          "labels": [
+            {
+              "id": "content-back:回學院",
+              "x": 16,
+              "y": 16,
+              "right": 84,
+              "bottom": 76,
+              "width": 68,
+              "height": 60
+            },
+            {
+              "id": "content-title:把蛋糕平穩送到",
+              "x": 92,
+              "y": 35.5,
+              "right": 298,
+              "bottom": 56.5,
+              "width": 206,
+              "height": 21
+            },
+            {
+              "id": "content-pause:暫停",
+              "x": 306,
+              "y": 16,
+              "right": 374,
+              "bottom": 76,
+              "width": 68,
+              "height": 60
+            },
+            {
+              "id": "content-scene-cue:第 3 站・休息灣・停穩再起步",
+              "x": 198.84375,
+              "y": 94,
+              "right": 370,
+              "bottom": 122,
+              "width": 171.15625,
+              "height": 28
+            },
+            {
+              "id": "content-hint:蛋糕送到了，一起分享。",
+              "x": 24,
+              "y": 659.203125,
+              "right": 366,
+              "bottom": 680,
+              "width": 342,
+              "height": 20.796875
+            },
+            {
+              "id": "BUTTON:正在送達",
+              "x": 24,
+              "y": 686,
+              "right": 105,
+              "bottom": 750,
+              "width": 81,
+              "height": 64
+            },
+            {
+              "id": "BUTTON:再聽一次",
+              "x": 24,
+              "y": 756,
+              "right": 366,
+              "bottom": 820,
+              "width": 342,
+              "height": 64
+            },
+            {
+              "id": "content-force:快扶正了\n回中央 99%",
+              "x": 24,
+              "y": 525.203125,
+              "right": 366,
+              "bottom": 629.203125,
+              "width": 342,
+              "height": 104
+            }
+          ],
+          "overlaps": [],
+          "iconOverlaps": [],
+          "signOcclusion": [],
+          "counterOcclusion": [],
+          "carOffset": null,
+          "recovery": []
+        }
+      }
+    },
+    {
+      "path": "docs/content/r26/supplement/phone-cake-stage-3-delivery-3.png",
+      "width": 390,
+      "height": 844,
+      "sha256": "ca34cdf4f912234a7ed4d80cc723a3c3c8378dcef3a29a4542feb4be66f7dcb2",
+      "state": {
+        "roadShape": "left",
+        "boardTime": "0.000",
+        "doorStage": "closed",
+        "boardingIndex": "0",
+        "hazard": "false",
+        "wrongTurn": "false",
+        "inBend": "false",
+        "cue": "",
+        "settled": "false",
+        "correction": "",
+        "compact": "false",
+        "recoveryActive": "false",
+        "lookStep": "0",
+        "targetName": "綠正方形",
+        "layoutSeed": "0",
+        "distance": "55.00",
+        "speed": "0.00",
+        "bend": "1",
+        "tilt": "-0.00",
+        "sway": "-0.00",
+        "acceleration": "-3.60",
+        "bayStopped": "true",
+        "bayRestarted": "true",
+        "leftTurn": "false",
+        "rightTurn": "true",
+        "focus": "center",
+        "crossTime": "0.000",
+        "crossDuration": "1.45",
+        "orderHint": "",
+        "fruitSway": "0.00",
+        "flagSway": "-0.00",
+        "balanceLean": "-0.00",
+        "balanceStatus": "steady",
+        "recoveries": "11",
+        "assists": "6",
+        "assisting": "false",
+        "crossed": "0",
+        "lookedLeft": "false",
+        "lookedRight": "false",
+        "decision": "false",
+        "confirmed": "false",
+        "confirmDelay": "0",
+        "person": "bike",
+        "trafficActive": "false",
+        "trafficTime": "0.00",
+        "watchSide": "",
+        "platformSide": "front",
+        "doorState": "closed",
+        "step": "0",
+        "semanticStatus": "快扶正了",
+        "nextAction": "",
+        "holdState": "paused",
+        "holdProgress": "1.000",
+        "recheckTime": "2"
+      },
+      "phase": "delivering",
+      "hint": "蛋糕送到了，一起分享。",
+      "proof": {
+        "controls": [
+          {
+            "id": "content-back",
+            "w": 68,
+            "h": 60,
+            "bad": false
+          },
+          {
+            "id": "content-pause",
+            "w": 68,
+            "h": 60,
+            "bad": false
+          },
+          {
+            "id": "listen",
+            "w": 342,
+            "h": 64,
+            "bad": false
+          }
+        ],
+        "clipping": [],
+        "kind": "cake",
+        "phase": "delivering",
+        "text": "回學院\n把蛋糕平穩送到\n暫停\n第 3 站・休息灣・停穩再起步\n快扶正了\n回中央 99%\n\n蛋糕送到了，一起分享。\n\n正在送達\n再聽一次",
+        "metres": 1,
+        "rings": 0,
+        "progress": "",
+        "needed": [],
+        "riders": [],
+        "step": null,
+        "numbers": [],
+        "counts": "",
+        "highlights": [],
+        "actualYellow": [],
+        "semantic": {
+          "status": "快扶正了",
+          "next": "",
+          "hint": "蛋糕送到了，一起分享。",
+          "highlights": []
+        },
+        "layout": {
+          "labels": [
+            {
+              "id": "content-back:回學院",
+              "x": 16,
+              "y": 16,
+              "right": 84,
+              "bottom": 76,
+              "width": 68,
+              "height": 60
+            },
+            {
+              "id": "content-title:把蛋糕平穩送到",
+              "x": 92,
+              "y": 35.5,
+              "right": 298,
+              "bottom": 56.5,
+              "width": 206,
+              "height": 21
+            },
+            {
+              "id": "content-pause:暫停",
+              "x": 306,
+              "y": 16,
+              "right": 374,
+              "bottom": 76,
+              "width": 68,
+              "height": 60
+            },
+            {
+              "id": "content-scene-cue:第 3 站・休息灣・停穩再起步",
+              "x": 198.84375,
+              "y": 94,
+              "right": 370,
+              "bottom": 122,
+              "width": 171.15625,
+              "height": 28
+            },
+            {
+              "id": "content-hint:蛋糕送到了，一起分享。",
+              "x": 24,
+              "y": 659.203125,
+              "right": 366,
+              "bottom": 680,
+              "width": 342,
+              "height": 20.796875
+            },
+            {
+              "id": "BUTTON:正在送達",
+              "x": 24,
+              "y": 686,
+              "right": 105,
+              "bottom": 750,
+              "width": 81,
+              "height": 64
+            },
+            {
+              "id": "BUTTON:再聽一次",
+              "x": 24,
+              "y": 756,
+              "right": 366,
+              "bottom": 820,
+              "width": 342,
+              "height": 64
+            },
+            {
+              "id": "content-force:快扶正了\n回中央 99%",
+              "x": 24,
+              "y": 525.203125,
+              "right": 366,
+              "bottom": 629.203125,
+              "width": 342,
+              "height": 104
+            }
+          ],
+          "overlaps": [],
+          "iconOverlaps": [],
+          "signOcclusion": [],
+          "counterOcclusion": [],
+          "carOffset": null,
+          "recovery": []
+        }
+      }
+    },
+    {
+      "path": "docs/content/r26/supplement/phone-cake-complete.png",
+      "width": 390,
+      "height": 844,
+      "sha256": "720cfe618fa92ee673043aa1c01b3c9d6754fade5d50d8b653f777b4a4fde654",
+      "state": {
+        "roadShape": "left",
+        "boardTime": "0.000",
+        "doorStage": "closed",
+        "boardingIndex": "0",
+        "hazard": "false",
+        "wrongTurn": "false",
+        "inBend": "false",
+        "cue": "brake",
+        "settled": "false",
+        "correction": "",
+        "compact": "false",
+        "recoveryActive": "false",
+        "lookStep": "0",
+        "targetName": "綠正方形",
+        "layoutSeed": "0",
+        "distance": "55.00",
+        "speed": "0.00",
+        "bend": "1",
+        "tilt": "-0.00",
+        "sway": "-0.00",
+        "acceleration": "-3.60",
+        "bayStopped": "true",
+        "bayRestarted": "true",
+        "leftTurn": "false",
+        "rightTurn": "true",
+        "focus": "center",
+        "crossTime": "0.000",
+        "crossDuration": "1.45",
+        "orderHint": "",
+        "fruitSway": "0.00",
+        "flagSway": "-0.00",
+        "balanceLean": "-0.00",
+        "balanceStatus": "steady",
+        "recoveries": "11",
+        "assists": "6",
+        "assisting": "false",
+        "crossed": "0",
+        "lookedLeft": "false",
+        "lookedRight": "false",
+        "decision": "false",
+        "confirmed": "false",
+        "confirmDelay": "0",
+        "person": "bike",
+        "trafficActive": "false",
+        "trafficTime": "0.00",
+        "watchSide": "",
+        "platformSide": "front",
+        "doorState": "closed",
+        "step": "0",
+        "semanticStatus": "快扶正了",
+        "nextAction": "brake",
+        "holdState": "paused",
+        "holdProgress": "1.000",
+        "recheckTime": "2"
+      },
+      "phase": "done",
+      "hint": "",
+      "proof": {
+        "controls": [
+          {
+            "id": "content-back",
+            "w": 68,
+            "h": 60,
+            "bad": false
+          },
+          {
+            "id": "content-pause",
+            "w": 68,
+            "h": 60,
+            "bad": false
+          },
+          {
+            "id": "replay",
+            "w": 168,
+            "h": 64,
+            "bad": false
+          },
+          {
+            "id": "picker",
+            "w": 168,
+            "h": 64,
+            "bad": false
+          }
+        ],
+        "clipping": [],
+        "kind": "cake",
+        "phase": "done",
+        "text": "回學院\n把蛋糕平穩送到\n暫停\n三站完成・蛋糕送到了\n✓\n起步\n✓\n轉彎\n✓\n臨停\n看彎道、扶回中央、臨停再起步。\n再送一次\n換一課\n\n旅程已保存",
+        "metres": 1,
+        "rings": 0,
+        "progress": "",
+        "needed": [],
+        "riders": [],
+        "step": null,
+        "numbers": [],
+        "counts": "",
+        "highlights": [],
+        "actualYellow": [],
+        "semantic": {
+          "status": "快扶正了",
+          "next": "brake",
+          "hint": "",
+          "highlights": []
+        },
+        "layout": {
+          "labels": [
+            {
+              "id": "content-back:回學院",
+              "x": 16,
+              "y": 16,
+              "right": 84,
+              "bottom": 76,
+              "width": 68,
+              "height": 60
+            },
+            {
+              "id": "content-title:把蛋糕平穩送到",
+              "x": 92,
+              "y": 35.5,
+              "right": 298,
+              "bottom": 56.5,
+              "width": 206,
+              "height": 21
+            },
+            {
+              "id": "content-pause:暫停",
+              "x": 306,
+              "y": 16,
+              "right": 374,
+              "bottom": 76,
+              "width": 68,
+              "height": 60
+            },
+            {
+              "id": "content-scene-cue:三站完成・蛋糕送到了",
+              "x": 117,
+              "y": 100,
+              "right": 273,
+              "bottom": 135,
+              "width": 156,
+              "height": 35
+            },
+            {
+              "id": "STRONG:看彎道、扶回中央、臨停再起步。",
+              "x": 30,
+              "y": 702.8125,
+              "right": 360,
+              "bottom": 725.203125,
+              "width": 330,
+              "height": 22.390625
+            },
+            {
+              "id": "BUTTON:再送一次",
+              "x": 24,
+              "y": 735.203125,
+              "right": 192,
+              "bottom": 799.203125,
+              "width": 168,
+              "height": 64
+            },
+            {
+              "id": "BUTTON:換一課",
+              "x": 198,
+              "y": 735.203125,
+              "right": 366,
+              "bottom": 799.203125,
+              "width": 168,
+              "height": 64
+            },
+            {
+              "id": "content-save:旅程已保存",
+              "x": 24,
+              "y": 803.203125,
+              "right": 366,
+              "bottom": 820,
+              "width": 342,
+              "height": 16.796875
+            },
+            {
+              "id": "lesson-route-proof:✓\n起步\n✓\n轉彎\n✓\n臨停",
+              "x": 24,
+              "y": 612.8125,
+              "right": 366,
+              "bottom": 666.8125,
+              "width": 342,
+              "height": 54
+            }
+          ],
+          "overlaps": [],
+          "iconOverlaps": [],
+          "signOcclusion": [],
+          "counterOcclusion": [],
+          "carOffset": null,
+          "recovery": []
+        }
+      }
+    },
+    {
+      "path": "docs/content/r26/supplement/phone-cake-saved.png",
+      "width": 390,
+      "height": 844,
+      "sha256": "3ba0ce2c72dc8bf48115af5e69ff928dd5e20282d661f0de6e67528ee064ecdc",
+      "state": {
+        "roadShape": "left",
+        "boardTime": "0.000",
+        "doorStage": "closed",
+        "boardingIndex": "0",
+        "hazard": "false",
+        "wrongTurn": "false",
+        "inBend": "false",
+        "cue": "go",
+        "settled": "true",
+        "correction": "",
+        "compact": "false",
+        "recoveryActive": "false",
+        "lookStep": "0",
+        "targetName": "綠正方形",
+        "layoutSeed": "0",
+        "distance": "0.00",
+        "speed": "0.00",
+        "bend": "1",
+        "tilt": "0.00",
+        "sway": "0.00",
+        "acceleration": "0.00",
+        "bayStopped": "false",
+        "bayRestarted": "false",
+        "leftTurn": "false",
+        "rightTurn": "false",
+        "focus": "center",
+        "crossTime": "0.000",
+        "crossDuration": "1.45",
+        "orderHint": "",
+        "fruitSway": "0.00",
+        "flagSway": "0.00",
+        "balanceLean": "0.00",
+        "balanceStatus": "steady",
+        "recoveries": "11",
+        "assists": "6",
+        "assisting": "false",
+        "crossed": "0",
+        "lookedLeft": "false",
+        "lookedRight": "false",
+        "decision": "false",
+        "confirmed": "false",
+        "confirmDelay": "0",
+        "person": "bike",
+        "trafficActive": "false",
+        "trafficTime": "0.00",
+        "watchSide": "",
+        "platformSide": "front",
+        "doorState": "closed",
+        "step": "0",
+        "semanticStatus": "坐穩了",
+        "nextAction": "go",
+        "holdState": "paused",
+        "holdProgress": "0.000",
+        "recheckTime": "2"
+      },
+      "phase": "done",
+      "hint": "",
+      "proof": {
+        "controls": [
+          {
+            "id": "content-back",
+            "w": 68,
+            "h": 60,
+            "bad": false
+          },
+          {
+            "id": "content-pause",
+            "w": 68,
+            "h": 60,
+            "bad": false
+          },
+          {
+            "id": "replay",
+            "w": 168,
+            "h": 64,
+            "bad": false
+          },
+          {
+            "id": "picker",
+            "w": 168,
+            "h": 64,
+            "bad": false
+          }
+        ],
+        "clipping": [],
+        "kind": "cake",
+        "phase": "done",
+        "text": "回學院\n把蛋糕平穩送到\n暫停\n三站完成・蛋糕送到了\n✓\n起步\n✓\n轉彎\n✓\n臨停\n看彎道、扶回中央、臨停再起步。\n再送一次\n換一課\n\n旅程已保存",
+        "metres": 1,
+        "rings": 0,
+        "progress": "",
+        "needed": [],
+        "riders": [],
+        "step": null,
+        "numbers": [],
+        "counts": "",
+        "highlights": [],
+        "actualYellow": [],
+        "semantic": {
+          "status": "坐穩了",
+          "next": "go",
+          "hint": "",
+          "highlights": []
+        },
+        "layout": {
+          "labels": [
+            {
+              "id": "content-back:回學院",
+              "x": 16,
+              "y": 16,
+              "right": 84,
+              "bottom": 76,
+              "width": 68,
+              "height": 60
+            },
+            {
+              "id": "content-title:把蛋糕平穩送到",
+              "x": 92,
+              "y": 35.5,
+              "right": 298,
+              "bottom": 56.5,
+              "width": 206,
+              "height": 21
+            },
+            {
+              "id": "content-pause:暫停",
+              "x": 306,
+              "y": 16,
+              "right": 374,
+              "bottom": 76,
+              "width": 68,
+              "height": 60
+            },
+            {
+              "id": "content-scene-cue:三站完成・蛋糕送到了",
+              "x": 117,
+              "y": 100,
+              "right": 273,
+              "bottom": 135,
+              "width": 156,
+              "height": 35
+            },
+            {
+              "id": "STRONG:看彎道、扶回中央、臨停再起步。",
+              "x": 30,
+              "y": 702.8125,
+              "right": 360,
+              "bottom": 725.203125,
+              "width": 330,
+              "height": 22.390625
+            },
+            {
+              "id": "BUTTON:再送一次",
+              "x": 24,
+              "y": 735.203125,
+              "right": 192,
+              "bottom": 799.203125,
+              "width": 168,
+              "height": 64
+            },
+            {
+              "id": "BUTTON:換一課",
+              "x": 198,
+              "y": 735.203125,
+              "right": 366,
+              "bottom": 799.203125,
+              "width": 168,
+              "height": 64
+            },
+            {
+              "id": "content-save:旅程已保存",
+              "x": 24,
+              "y": 803.203125,
+              "right": 366,
+              "bottom": 820,
+              "width": 342,
+              "height": 16.796875
+            },
+            {
+              "id": "lesson-route-proof:✓\n起步\n✓\n轉彎\n✓\n臨停",
+              "x": 24,
+              "y": 612.8125,
+              "right": 366,
+              "bottom": 666.8125,
+              "width": 342,
+              "height": 54
+            }
+          ],
+          "overlaps": [],
+          "iconOverlaps": [],
+          "signOcclusion": [],
+          "counterOcclusion": [],
+          "carOffset": null,
+          "recovery": []
+        }
+      }
+    }
+  ],
+  "errors": [],
+  "http": [],
+  "external": []
+}

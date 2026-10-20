@@ -1,0 +1,138 @@
+{
+  "status": "VERIFIED",
+  "baseline": "3d036b8",
+  "branch": "r1-fun-polish",
+  "version": "2.38.0",
+  "sourceBuild": 34,
+  "unitTests": 285,
+  "unchangedExistingTestFiles": 46,
+  "mergeChecks": 132,
+  "storeChecks": 101,
+  "screenshots": 373,
+  "reviewSet": 15,
+  "newRuntimeArt": 2,
+  "generationCalls": 1,
+  "secretHits": 0,
+  "cleanup": {
+    "files": 65,
+    "bytes": 90312991,
+    "retained": 6681
+  },
+  "performance": {
+    "status": "VERIFIED",
+    "renderArgs": [
+      "--use-angle=d3d11",
+      "--enable-gpu",
+      "--ignore-gpu-blocklist"
+    ],
+    "method": "Same D3D11 browser rendering arguments as the required merge/store regressions. Three real 2000ms RAF samples per lesson/viewport; median p95. Concurrent host load, one browser/context at a time; reference only, not clean hardware or native-device performance.",
+    "limitMs": 18,
+    "rows": [
+      {
+        "viewport": "desktop",
+        "kind": "cake",
+        "runs": [
+          16.7,
+          16.8,
+          16.7
+        ],
+        "p95": 16.7
+      },
+      {
+        "viewport": "desktop",
+        "kind": "crossing",
+        "runs": [
+          16.8,
+          16.8,
+          16.7
+        ],
+        "p95": 16.8
+      },
+      {
+        "viewport": "desktop",
+        "kind": "tickets",
+        "runs": [
+          16.7,
+          16.8,
+          16.8
+        ],
+        "p95": 16.8
+      },
+      {
+        "viewport": "portrait",
+        "kind": "cake",
+        "runs": [
+          16.7,
+          16.7,
+          16.8
+        ],
+        "p95": 16.7
+      },
+      {
+        "viewport": "portrait",
+        "kind": "crossing",
+        "runs": [
+          16.7,
+          16.7,
+          16.8
+        ],
+        "p95": 16.7
+      },
+      {
+        "viewport": "portrait",
+        "kind": "tickets",
+        "runs": [
+          16.8,
+          16.7,
+          16.8
+        ],
+        "p95": 16.8
+      },
+      {
+        "viewport": "landscape",
+        "kind": "cake",
+        "runs": [
+          16.7,
+          16.8,
+          16.7
+        ],
+        "p95": 16.7
+      },
+      {
+        "viewport": "landscape",
+        "kind": "crossing",
+        "runs": [
+          16.7,
+          16.8,
+          16.8
+        ],
+        "p95": 16.8
+      },
+      {
+        "viewport": "landscape",
+        "kind": "tickets",
+        "runs": [
+          16.7,
+          16.7,
+          16.8
+        ],
+        "p95": 16.7
+      }
+    ]
+  },
+  "sourceSha256": {
+    "src/shared/content-r1-ui.js": "c409cae93b75e7ba0a33cd0c986402b2957a77b3de72a46d163f884bfe87129f",
+    "src/shared/content-r26.js": "b51524b6ca6ab51ec6edf2222a71faff62343e8326ea36fa4536d1614fd8d8d9",
+    "src/shared/content-r26-scene.js": "2f8195a970bc66a15044faadb0409ed5b339849de6e7f4ef7b7c804e43e86aff",
+    "src/shared/content-r26.css": "ca0a5aad6a99668652c2564afac16728fcdd911afb0924dbba5d2f1e103f6f9a",
+    "package.json": "33bee825e2185f26e007d58814e3c47741076e42bd183d7985fa4219eff0a88f",
+    "dist/sw.js": "5a2742801ef02c591d5505c10f6adaef386280e2c16024522ad43fede897784a"
+  },
+  "blocked": [
+    "Physical iPhone/iPad and native touch/speech require devices",
+    "Parent-child play requires participants",
+    "Exclusive hardware required for clean performance",
+    "Independent Muse rescore not yet received",
+    "Signed native builds not produced"
+  ]
+}

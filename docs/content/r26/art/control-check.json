@@ -1,0 +1,32 @@
+{
+  "status": "VERIFIED",
+  "method": "Sharp inspection thumbnails from the original rendered screenshot. Crop contains glyphs only; text is excluded. No runtime artwork changed.",
+  "glyphs": [
+    {
+      "action": "go",
+      "path": "docs/content/r26/art/go-glyph-64.png",
+      "source": "docs/content/r26/phone-cake-stage-3-bay.png",
+      "crop": {
+        "left": 224,
+        "top": 692,
+        "width": 30,
+        "height": 28
+      },
+      "sha256": "de37973090bb7cc535e12c4593d8a56a3754127805db713cf20ea6fb50c66c48",
+      "colorPixels": 130
+    },
+    {
+      "action": "brake",
+      "path": "docs/content/r26/art/brake-glyph-64.png",
+      "source": "docs/content/r26/phone-cake-stage-3-bay.png",
+      "crop": {
+        "left": 311,
+        "top": 692,
+        "width": 30,
+        "height": 28
+      },
+      "sha256": "4e754d26f2fbda51cc3730f3397bc09aa7f67f0a3345123c4592aede640f35b7",
+      "colorPixels": 184
+    }
+  ]
+}

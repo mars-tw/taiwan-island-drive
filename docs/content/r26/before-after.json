@@ -1,0 +1,29 @@
+{
+  "status": "VERIFIED",
+  "comparisons": [
+    {
+      "kind": "cake",
+      "before": "docs/evidence/content-r26/before-cake.png",
+      "after": "docs/evidence/content-r26/after-cake.png",
+      "beforeSha256": "630bed6a7136ccbd1ffce84776cf8baeb9fa1c5146bc29c0973d5b9acf2a9e02",
+      "afterSha256": "7f2306a0054703df7b36f613bff9b327111bdca0957ce94aea78c7ee06013765",
+      "source": "3d036b8:docs/content/r25/review-set/04-cake-stage-3-bay.png"
+    },
+    {
+      "kind": "crossing",
+      "before": "docs/evidence/content-r26/before-crossing.png",
+      "after": "docs/evidence/content-r26/after-crossing.png",
+      "beforeSha256": "19f398775797434544024f3fcbcc8509c0c79435988d856ab59139c3372c67b6",
+      "afterSha256": "057788f4b4408eb001001e67aa3ca0abffd12b405cf120add9faf014851f792b",
+      "source": "3d036b8:docs/content/r25/review-set/07-crossing-stage-3-1-middle.png"
+    },
+    {
+      "kind": "tickets",
+      "before": "docs/evidence/content-r26/before-tickets.png",
+      "after": "docs/evidence/content-r26/after-tickets.png",
+      "beforeSha256": "d5666ad9088b122b1298d3f01aa2af97b26a22e103c442f8639b6d4916e278f2",
+      "afterSha256": "236366875607b3b0a4e65553f15ddc9d391e19ef1a959d30b4de95ace41e8378",
+      "source": "3d036b8:docs/content/r25/review-set/15-tickets-complete.png"
+    }
+  ]
+}
