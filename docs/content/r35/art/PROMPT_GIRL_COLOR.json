@@ -1,0 +1,13 @@
+{
+  "tool": "image_gen.imagegen",
+  "model_slug": null,
+  "prompt": "Island Transport Academy — sunny Taiwan coastal picture-book, premium preschool game art for ages 3–8. Rounded hand-painted gouache shapes with subtle paper texture, confident midnight-blue contours, toy-like proportions, warm sunlight. Palette sea blue #1479B8, ink #143B61, vivid orange #F46B27, signal yellow #FFD344, leaf green #58B85B. Cheerful clean composition, readable large silhouettes, no generic dark teal UI, no photorealism, no watermark.\nUse case: precise-object-edit. Edit target image 1 is the locked girl game sprite. Preserve EXACT pose, silhouette, face, expression, ponytail, red bow, yellow shirt, red skirt with white flowers, red backpack, red shoes, white socks, both outstretched hands and planted feet. Change ONLY the hair and outline color treatment: replace dull neutral gray-black hair shades with CHROMATIC deep midnight blue-black shadows (#143B61 family) and saturated cobalt/indigo blue highlight strokes, still clearly reading as dark black hair, not a brightly colored hairstyle. Every dark hair shade should have a definite deep blue hue with high color saturation (HSV saturation >0.45), including shadowed parts of the ponytail. Maintain dark values, paper-painted texture and the original character identity. Keep clothing colors, white sock and flower areas untouched. This is a color polish for tiny 64px sprite readability; no pose or face redesign. Output exactly one isolated full-body child with complete hands and shoes inside generous transparent margins. Real transparent alpha, no background, no glow, no floor, no shadow, no text. Return local generated file path.",
+  "source": "docs/content/r35/art/girl-color-source.png",
+  "reference": "public/art/content-r35/passenger-2-balancing.png (atlas v2 before color correction)",
+  "runtime": "public/art/content-r35/passenger-2-balancing.png",
+  "processing": "Sharp alpha trim and resize to height400 only",
+  "reason": "The original atlas girl's low-saturation fraction was 26.77%, above the existing 20% art gate. Recolor only hair shadows with the established midnight-blue hue; retain full opaque-pixel measurement and original thresholds.",
+  "referenceAtCall": "public/art/content-r35/passenger-2-balancing.png",
+  "referenceCopy": "docs/content/r35/art/girl-before-color.png",
+  "referenceSha256": "99f75fb97ef0b6b5c7f0244fdfbbd5e3d34086eb11ca4945e762b123809d07ab"
+}

@@ -31,21 +31,23 @@ import './content-r30.css';
 import './content-r31.css';
 import './content-r32.css';
 import './content-r33.css';
-import {cakeView,crossingView,boardingScene,roadPicture} from './content-r33-scene.js';
-import {stageBrief,departReasons,cakeStage,ticketDifference} from './content-r33-scene.js';
+import './content-r35.css';
+import {renderR35} from './content-r35-ui.js';
+import {cakeView,crossingView,boardingScene,roadPicture} from './content-r35-scene.js';
+import {stageBrief,departReasons,cakeStage,ticketDifference} from './content-r35-scene.js';
 import {ticketHint,cakeStatus} from './content-r11-scene.js';
 import {queueFrame} from './content-r10-scene.js';
-import {carGround,cakeRoadState as currentRoadState} from './content-r33-scene.js';
+import {carGround,cakeRoadState as currentRoadState} from './content-r35-scene.js';
 import {rigidCakePose,showQueue} from './content-r12-scene.js';
-import {TICKET_STATIONS,pedalState,drivingCue,crossingCue,crossingLocation,crossingTraffic,ticketMismatch,ticketSceneGeometry,queuePosition,stability,ticketDoorState,boardingCue,lessonResult,bendTravel,observation,trafficLabelPosition,landedFriends,completedCrossings,cakeShift,cakeAngle,departLabel,STOP_X,FRONT_RAIL,WHEEL_BOTTOM,DOOR_SILL,holdFeedback,CROSSING_ROADS} from './content-r33-scene.js';
-import {STOP_RULES} from './content-r33-scene.js';
+import {TICKET_STATIONS,pedalState,drivingCue,crossingCue,crossingLocation,crossingTraffic,ticketMismatch,ticketSceneGeometry,queuePosition,stability,ticketDoorState,boardingCue,lessonResult,bendTravel,observation,trafficLabelPosition,landedFriends,completedCrossings,cakeShift,cakeAngle,departLabel,STOP_X,FRONT_RAIL,WHEEL_BOTTOM,DOOR_SILL,holdFeedback,CROSSING_ROADS} from './content-r35-scene.js';
+import {STOP_RULES} from './content-r35-scene.js';
 import {cakeRoadState,crossingDestination,boardingGeometry} from './content-r23-scene.js';
 import {grandmaFrame} from './content-r9-scene.js';
 import {cakeFeedback} from './content-r7-scene.js';
 import {lessonFacts} from './content-r5-feedback.js';
 import {cakePose,sideWatch,cakeTask} from './content-r4-scene.js';
 import {CONTENT_LESSONS,CAKE_ROUTES,CROSSING_ORDERS} from './content-r1.js';
-import {ContentLesson,FRIEND_NAMES,PASSENGER_NAMES,FRIEND_NUMBERS} from './content-r33.js';
+import {ContentLesson,FRIEND_NAMES,PASSENGER_NAMES,FRIEND_NUMBERS} from './content-r35.js';
 
 import {readStudent,updateStudentSection,studentSaved} from './student-save.js';
 import {readSettings} from './settings.js';
@@ -207,8 +209,8 @@ export function installContentLessons(){
   correction.innerHTML=lesson.kind==='cake'?(!feedback.settled?curve(feedback.direction):'<svg viewBox="0 0 32 32"><path d="M5 17l8 8L27 7" fill="none" stroke="currentColor" stroke-width="5"/></svg>'): '';correction.dataset.warning=String(!feedback.settled);correction.dataset.direction=feedback.direction;
   route.innerHTML=lesson.kind==='cake'?(lesson.stage===1?`<span data-met="${lesson.turns.left>=.2}">←</span><b>→</b><span data-met="${lesson.turns.right>=.2}">→</span>`:lesson.stage===2?`<span data-met="${lesson.bayStopped}">${icon('brake')}</span><b>→</b><span data-met="${lesson.bayRestarted}">${icon('go')}</span>`:''):'';
   const departing=Math.min(1,(lesson.departureTime||0)/1.5);
-  carrier.style.transform=lesson.kind==='cake'?`translate(${pose.x*roadView.clientWidth}px,${pose.y*roadView.clientHeight-(lesson.phase==='delivering'?departing*Math.max(150,roadView.clientHeight*.48):0)}px) scale(${pose.scale}) rotate(${view.wobble}deg)`:lesson.kind==='crossing'&&lesson.phase==='departing'?`translateY(${-departing*Math.max(150,scene.clientHeight*.48)}px)`:`translateX(${lesson.steer*18}px)`;
-  car.style.setProperty('--car-turn',`${lesson.kind==='cake'?view.carTurn:0}deg`);
+  carrier.style.transform=lesson.kind==='cake'?`translate(${pose.x*roadView.clientWidth}px,${pose.y*roadView.clientHeight-(lesson.phase==='delivering'?departing*Math.max(150,roadView.clientHeight*.48):0)}px) scale(${pose.scale})`:lesson.kind==='crossing'&&lesson.phase==='departing'?`translateY(${-departing*Math.max(150,scene.clientHeight*.48)}px)`:`translateX(${lesson.steer*18}px)`;
+  car.style.setProperty('--car-turn',`${lesson.kind==='cake'?view.carTurn+view.wobble:0}deg`);
   roadView.style.setProperty('--road-travel',`${-lesson.distance*5}px`);
   if(lesson.kind==='cake'){roadView.style.setProperty('--r31-travel',`${view.travel}px`);roadView.dataset.speedLines=String(view.speedLines);roadView.style.setProperty('--r31-speed',String(view.speedLines));carrier.dataset.wobble=String(view.wobble);}
   task.textContent='';
@@ -310,7 +312,7 @@ export function installContentLessons(){
   ticketZoom.hidden=true;ticketZoom.replaceChildren();
   cabin.hidden=!(lesson.kind==='tickets'&&boarding&&['awaiting','boarding','retract','retract-ready','retracting','close-ready','closing','closed'].includes(doorMode));
   scene.dataset.cabin=String(!cabin.hidden);
-  if(!cabin.hidden){const frames=boardingScene(lesson);cabin.innerHTML=`<div class="r33-cabin-caption">${lesson.selected+1} 號月台 ${shape(lesson.target)}<span>${lesson.target.name}車票・車廂內</span></div><div class="r32-cabin-art">${image('art/content-r32/train-cabin.webp','右邊門檻、中央走道、三個座位')}${frames.filter(f=>f.seated||f.current&&doorMode==='boarding').map(f=>`<div class="r32-cabin-friend" data-cabin-friend="${f.index}" data-surface="${f.surface}" data-seated="${f.seated}" data-bump="${f.bump}" data-pose="${f.pose}" style="left:${f.x}%;bottom:${f.bottom}%;">${image(f.seated||f.pose==='standing'?'art/content-r33/passenger-'+(f.index+1)+'-'+f.pose+'.png':'art/r5/passenger-'+(f.index+1)+'-'+f.pose+'.png',PASSENGER_NAMES[f.index]+(f.seated?'坐好了':'走進車廂'))}<b>${PASSENGER_NAMES[f.index]}${f.seated?' ✓':''}</b></div>`).join('')}</div>`;}
+
 
   if(!ticketZoom.hidden){const names=PASSENGER_NAMES;ticketZoom.innerHTML=`<strong>${doorMode==='awaiting'?'點朋友，邀請上車':doorMode==='boarding'?PASSENGER_NAMES[lesson.boardingIndex]+'正在上車':doorMode==='closed'?'門關好了':boardingCue(lesson).label}</strong><div class="ticket-closeup-world"><div class="zoom-train">${image('art/content-r3/train-side.webp')}</div><div class="zoom-door" style="--door-open:${doors.open}"><i></i><i></i></div><div class="zoom-paving"></div><div class="zoom-step" ${doors.step===0?'hidden':''} style="transform:translateX(${(1-doors.step)*45}px) scaleX(${doors.step})"></div>${[0,1,2].map(n=>{const state=queueFrame(lesson.boardTime,n,false),p=state.progress;if(!state.inside&&n!==lesson.boardingIndex)return '';if(state.inside)return `<div class="zoom-seat" data-zoom-seat="${n}" style="left:${12+n*46}px">${image(`art/r5/passenger-${n+1}-0.png`,names[n]+'已入座')}</div>`;return `<div class="zoom-friend" data-zoom-friend="${n}" data-progress="${p.toFixed(2)}" style="left:${202-(45+n*18)*(1-Math.min(1,p/.58))}px;bottom:${15+26*Math.min(1,p/.58)}px">${image(`art/r5/passenger-${n+1}-${reduced?0:state.pose}.png`,names[n]+'跨過門檻')}<b>${n+1} ${names[n]}</b></div>`;}).join('')}</div>`;}
   for(const name of seats.querySelectorAll('b')){const b=name.getBoundingClientRect(),s=scene.getBoundingClientRect();name.hidden=b.left<s.left+2||b.right>s.right-2;}
@@ -374,6 +376,7 @@ export function installContentLessons(){
    stopLine.hidden=!view.stop.visible;stopLine.style.cssText=`left:${view.stop.x}%;top:${view.stop.top}%;height:${view.stop.height}%;`;traffic.dataset.lane=view.traffic.lane;traffic.dataset.motion=view.traffic.motion;traffic.dataset.yielding=String(view.traffic.yielding);traffic.querySelector('b').textContent=view.traffic.yielding?'停在線前等':'來車'+view.traffic.motion;
    traffic.style.setProperty('--label-shift',Math.max(46,Math.min(scene.clientWidth-46,view.traffic.x*scene.clientWidth/100))-view.traffic.x*scene.clientWidth/100+'px');scene.dataset.trafficX=view.traffic.x.toFixed(2);scene.dataset.trafficMotion=view.traffic.motion;
   }
+  renderR35({g:lesson,view,dialog,scene,miniature,closeup,cabin,sideView,image,shape});
   laneDirection.hidden=true;laneDirection.textContent=trafficPose.heading==='right'?'→':'←';laneDirection.style.cssText=`left:${trafficPose.source==='left'?2:87}%;top:${CROSSING_ROADS[lesson.stage].center+6}%;`;
  }
  function release(){lesson?.release();dialog.querySelectorAll('[data-hold]').forEach(b=>b.setAttribute('aria-pressed','false'));}

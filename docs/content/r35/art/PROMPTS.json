@@ -1,0 +1,17 @@
+{
+  "style_prefix": "Island Transport Academy — sunny Taiwan coastal picture-book, premium preschool game art for ages 3–8. Rounded hand-painted gouache shapes with subtle paper texture, confident midnight-blue contours, toy-like proportions, warm sunlight. Palette sea blue #1479B8, ink #143B61, vivid orange #F46B27, signal yellow #FFD344, leaf green #58B85B. Cheerful clean composition, readable large silhouettes, no generic dark teal UI, no photorealism, no watermark.",
+  "records": [
+    {
+      "id": "push-hand",
+      "tool": "image_gen.imagegen",
+      "model_slug": null,
+      "prompt": "Island Transport Academy — sunny Taiwan coastal picture-book, premium preschool game art for ages 3–8. Rounded hand-painted gouache shapes with subtle paper texture, confident midnight-blue contours, toy-like proportions, warm sunlight. Palette sea blue #1479B8, ink #143B61, vivid orange #F46B27, signal yellow #FFD344, leaf green #58B85B. Cheerful clean composition, readable large silhouettes, no generic dark teal UI, no photorealism, no watermark.\nUse case: illustration-story. Asset type: transparent game control illustration. ONE single friendly rounded child's hand viewed from the side, entering horizontally from the LEFT edge and pushing gently toward the RIGHT. Clear vertical open palm facing right, thumb up, four rounded fingers together, wrist with blue sleeve at left. Small soft cream contact pad at the palm, no other object. The silhouette must unmistakably show a gentle SIDEWAYS PUSH to the right at 64px. The hand occupies most of canvas with generous transparent margins. No cake, no second hand, no text, no lettering, no emoji, no arrows, no border, no background, no scene, no shadow. Native transparent alpha. Return local generated file path for saving in the game repository.",
+      "transparent_background": true,
+      "source": "docs/content/r35/art/push-hand-source.png",
+      "runtime": [
+        "public/art/content-r35/push-hand.png"
+      ],
+      "processing": "Sharp alpha trim and equal-aspect resize only; leftward push mirrors the same rightward hand."
+    }
+  ]
+}

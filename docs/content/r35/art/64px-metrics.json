@@ -1,0 +1,51 @@
+{
+  "status": "VERIFIED",
+  "method": "opaque alpha>=128 pixels; sRGB weighted luma; HSV saturation; near-black<.12; low saturation<.32",
+  "thresholds": {
+    "luminance": [
+      0.3,
+      0.75
+    ],
+    "nearBlackMax": 0.35,
+    "saturationMin": 0.32,
+    "lowSaturationMax": 0.2
+  },
+  "rows": [
+    {
+      "path": "public/art/content-r35/push-hand.png",
+      "thumb": "docs/content/r35/art/64px/push-hand.png",
+      "pixels": 28472,
+      "luminance": 0.590059095223923,
+      "saturation": 0.688304949689585,
+      "nearBlack": 0,
+      "lowSaturation": 0.06585417252037089
+    },
+    {
+      "path": "public/art/content-r35/passenger-1-balancing.png",
+      "thumb": "docs/content/r35/art/64px/passenger-1-balancing.png",
+      "pixels": 53602,
+      "luminance": 0.3788094812528962,
+      "saturation": 0.7071131219963444,
+      "nearBlack": 0.20590649602626768,
+      "lowSaturation": 0.08658259020185814
+    },
+    {
+      "path": "public/art/content-r35/passenger-2-balancing.png",
+      "thumb": "docs/content/r35/art/64px/passenger-2-balancing.png",
+      "pixels": 57496,
+      "luminance": 0.372974279840781,
+      "saturation": 0.7644932426039291,
+      "nearBlack": 0.3336927786280785,
+      "lowSaturation": 0.07993599554751635
+    },
+    {
+      "path": "public/art/content-r35/passenger-3-balancing.png",
+      "thumb": "docs/content/r35/art/64px/passenger-3-balancing.png",
+      "pixels": 55596,
+      "luminance": 0.4321227081226016,
+      "saturation": 0.6849421099648626,
+      "nearBlack": 0.21440391395064393,
+      "lowSaturation": 0.1887905604719764
+    }
+  ]
+}

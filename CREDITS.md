@@ -1,5 +1,10 @@
 # CREDITS
 
+## 2.47.0 新內容第35輪
+
+- `image_gen.imagegen`四次生成：單手側推一稿、三位乘客扶門框姿勢兩稿、女孩髮色修整一稿，採用三張來源圖與四張runtime PNG。首稿姿勢圖集保留為製作紀錄；遊戲使用第二稿男孩與修色後女孩。模型slug未揭露，manifest記null；提示、原圖與SHA在 `docs/content/r35/art/`、`art-manifest.json`。Sharp只裁切及等比縮圖，沒有下載第三方美術。
+- 沿用同一車廂、三位朋友走路／站穩／坐姿、道路、載具、字型與聲音。沒有新增骨架動畫、SDK、帳號或連網功能；既有MIT程式碼及第三方授權完整保留，不主張AI素材具有排他權。
+
 ## 2.29.0 新內容第17輪
 
 - 新增一張海岸T字路口背景，工具 `image_gen.imagegen` 一次；實際模型slug未揭露，記null。原尺寸來源、完整提示、來源SHA與WebP在 `docs/content/r17/art/` 及 `public/art/content-r17/`。

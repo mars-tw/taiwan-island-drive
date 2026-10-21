@@ -1,0 +1,111 @@
+{
+  "status": "VERIFIED",
+  "tool": "image_gen.imagegen",
+  "generationCalls": 4,
+  "acceptedSourceImages": 3,
+  "supersededSourceImages": 1,
+  "newRuntimeArt": 4,
+  "files": [
+    {
+      "path": "public/art/content-r35/passenger-1-balancing.png",
+      "bytes": 159395,
+      "sha256": "ccb630a22b381948859400bc01307236b689fa7055e2000a2931fb2334a43c88"
+    },
+    {
+      "path": "public/art/content-r35/passenger-2-balancing.png",
+      "bytes": 168881,
+      "sha256": "2d605d870c0619985c2311372bffe3c52b9fe671664c14be41e513ea0089a2ba"
+    },
+    {
+      "path": "public/art/content-r35/passenger-3-balancing.png",
+      "bytes": 172008,
+      "sha256": "c9d6c36590524089c4064bbc3206f5aba7fc074934aa3602b1dfac97f26a8ce9"
+    },
+    {
+      "path": "public/art/content-r35/push-hand.png",
+      "bytes": 69130,
+      "sha256": "e36917ac5614585b43e488cb28aa4e9537f1a50110799b08e346a6d08816187c"
+    },
+    {
+      "path": "docs/content/r35/art/balancing-atlas-source.png",
+      "bytes": 2203698,
+      "sha256": "04fe3d3417a8344239d87fda4c62211138a7f1e598f7c7acdb3371e212eccf46"
+    },
+    {
+      "path": "docs/content/r35/art/balancing-atlas-v2-source.png",
+      "bytes": 2024360,
+      "sha256": "f4b309e46bef69244efbe8a3070f21c1b0a2ac25e02d99ef147c6156559f1961"
+    },
+    {
+      "path": "docs/content/r35/art/push-hand-source.png",
+      "bytes": 1511508,
+      "sha256": "bca842ca0abad3ad829c8e41b47894daeb32c2d3d18d7283a5bb9144cc7e78cc"
+    },
+    {
+      "path": "public/art/content-r3/cake-slope.webp",
+      "bytes": 421128,
+      "sha256": "559f4d30a61c63ce9c32fc2509dd9d2da9ebf84ec3da537d48644b8229555ffb"
+    },
+    {
+      "path": "public/art/content-r19/cake-bends.webp",
+      "bytes": 445838,
+      "sha256": "92f3a9eaf2f0af9f9e6dc009fcb05990a83d626343194485660ca2e3f82dfaf4"
+    },
+    {
+      "path": "public/art/content-r33/bay-panorama.webp",
+      "bytes": 532532,
+      "sha256": "cbb15b5d81f4b084a1414a484648c52bbe6e6d932ff5b71904305d1992359f30"
+    },
+    {
+      "path": "public/art/content-r32/train-cabin.webp",
+      "bytes": 294764,
+      "sha256": "10d6c05bb5d735ee978181f3256ee54160a8ed24360b67e10108ebfbe28e3490"
+    },
+    {
+      "path": "public/art/content-r29/traffic-car.webp",
+      "bytes": 13560,
+      "sha256": "e08b7f8970430ec89a335df4d957646496b02c9533916ce76f8647d975d7105b"
+    },
+    {
+      "path": "public/art/content-r11/car-rear.png",
+      "bytes": 339107,
+      "sha256": "8806b426e515bcfea18026065ede62a04ef9fbe2acbd301270a3286554b97bc9"
+    },
+    {
+      "path": "public/art/content-r11/crossing-complete.webp",
+      "bytes": 604284,
+      "sha256": "22dabbabe6f66e0834bdcfeb83e0fb0b7e5dd40a6497dcd2e96dc689cbfad6af"
+    },
+    {
+      "path": "docs/content/r35/art/girl-color-source.png",
+      "bytes": 1660882,
+      "sha256": "8b3ae9a3ee5a11d531759888547cd4d28a861805523d209a7268d911ffd3b867"
+    },
+    {
+      "path": "docs/content/r35/art/girl-before-color.png",
+      "bytes": 174744,
+      "sha256": "99f75fb97ef0b6b5c7f0244fdfbbd5e3d34086eb11ca4945e762b123809d07ab"
+    },
+    {
+      "path": "docs/content/r35/art/64px/passenger-1-balancing.png",
+      "bytes": 6177,
+      "sha256": "336bbb6cebd6c914a59ff7e7fd0b22f112186a1db68fdb1b362f321d05f9a03e"
+    },
+    {
+      "path": "docs/content/r35/art/64px/passenger-2-balancing.png",
+      "bytes": 6588,
+      "sha256": "c8df2fcf3eee8d45870397d25d785b314fc2b679b884bed154d3c56cea5bc4fe"
+    },
+    {
+      "path": "docs/content/r35/art/64px/passenger-3-balancing.png",
+      "bytes": 6437,
+      "sha256": "ded3789d31eedcfbfc36c4ffa13e8d55810b01052d35004215616aa12a67ff0e"
+    },
+    {
+      "path": "docs/content/r35/art/64px/push-hand.png",
+      "bytes": 6438,
+      "sha256": "22b42df287b87c7c4f1cd094ea46bc19cbbfddece3c0a6d98e6e5b86afd4e2c2"
+    }
+  ],
+  "colorCorrection": "Girl atlas hair was repainted by image_gen.imagegen after fixed whole-opaque-pixel saturation gate failed; thresholds unchanged; old color reference preserved."
+}

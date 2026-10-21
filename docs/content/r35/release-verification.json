@@ -1,0 +1,32 @@
+{
+  "status": "VERIFIED",
+  "version": "2.47.0",
+  "nativeSourceBuild": 43,
+  "unitTests": 337,
+  "regressions": {
+    "merge": 132,
+    "store-regression": 101
+  },
+  "rawImages": 555,
+  "reviewImages": 15,
+  "preexistingUntrackedUnchanged": 108,
+  "existingValidationSourcesUnchanged": 60,
+  "deletedFiles": 20,
+  "releasedBytes": 9057858,
+  "retainedInputs": 10549,
+  "newRuntimeArt": 4,
+  "generationCalls": 4,
+  "p95": [
+    16.700000000000728,
+    16.700000000000728,
+    16.799999999999272
+  ],
+  "performanceStatus": "VERIFIED",
+  "renderer": "headless Chromium --disable-gpu --use-angle=swiftshader",
+  "blocked": [
+    "physical iPhone/iPad and native speech",
+    "family playtest",
+    "clean-machine performance",
+    "independent Muse score >=8"
+  ]
+}

@@ -1,0 +1,51 @@
+{
+  "status": "VERIFIED",
+  "method": "byte-identical runtime captures; not a collage",
+  "shots": [
+    {
+      "path": "docs/evidence/content-r35/phone-cake-before.png",
+      "source": "docs/content/r35/before/phone-cake-playing.png",
+      "sha256": "29646be41ff91d872788d0175249f52a79dfa6a9321eeae3df435eeb670de972"
+    },
+    {
+      "path": "docs/evidence/content-r35/phone-cake-after.png",
+      "source": "docs/content/r35/phone-cake-wrong-support.png",
+      "sha256": "52d95e9f86d7be8f1cdabd96e5ccae9420e0f1f339f2945c3cfa3784bc0afe44"
+    },
+    {
+      "path": "docs/evidence/content-r35/phone-crossing-before.png",
+      "source": "docs/content/r35/before/phone-crossing-playing.png",
+      "sha256": "62aa519633103a1904413ad40167a1ddfd38c770bb8cb5df232d59cc0d01ec76"
+    },
+    {
+      "path": "docs/evidence/content-r35/phone-crossing-after.png",
+      "source": "docs/content/r35/phone-crossing-stage-2-car-passing.png",
+      "sha256": "d6818cb70e26cdcdbf28c71fadbf43f9bea97f54f270394ee61a25329b092cb2"
+    },
+    {
+      "path": "docs/evidence/content-r35/phone-tickets-before.png",
+      "source": "docs/content/r35/before/phone-tickets-playing.png",
+      "sha256": "f3a201d50109967ac6afeeab1a45d3604c4f212260c998a7ac744ab89e288c30"
+    },
+    {
+      "path": "docs/evidence/content-r35/phone-tickets-after.png",
+      "source": "docs/content/r35/phone-tickets-stage-3-hold-half-0.png",
+      "sha256": "18e9a3eb762330bf0f4432ae562694b59c0b72f7c14c93b798b0a2e3b72f1f53"
+    },
+    {
+      "path": "docs/evidence/content-r35/device-390x844-cabin.png",
+      "source": "docs/content/r35/layout/layout/device-390x844-cabin.png",
+      "sha256": "d6ab14ab08e234556530f025766947d99dfb61642b9d5172c5b074e7475b2fc9"
+    },
+    {
+      "path": "docs/evidence/content-r35/device-768x1024-cabin.png",
+      "source": "docs/content/r35/layout/layout/device-768x1024-cabin.png",
+      "sha256": "d787d978775f2ca41ed59160012f31bcd710b082e9e41f5ae79946ae7332015a"
+    },
+    {
+      "path": "docs/evidence/content-r35/device-1366x600-cabin.png",
+      "source": "docs/content/r35/layout/layout/device-1366x600-cabin.png",
+      "sha256": "5456f9c18a5427248a57dad3b696d2a626be8a16607ec80ed13cc7bd3c3b15dd"
+    }
+  ]
+}
