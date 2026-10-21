@@ -42,7 +42,7 @@ verification_policy_diagnostic() {
   # Match entire lines against constants; never echo a raw line or captured value.
   python3 - "$1" <<'PY'
 import pathlib,sys
-labels='profile UUID|profile team|explicit application identifier|App Store profile|iOS platform|profile expiry|profile certificates|bundle ID|marketing version|build number|device platform|device families|SDK|compiler build|distribution certificate|signing team|embedded profile certificate|application entitlement|release entitlements|profile entitlement coverage|not internal-only|required privacy manifest|native bundle configuration'.split('|')
+labels='profile UUID|profile team|explicit application identifier|App Store profile|iOS platform|profile expiry|profile certificates|bundle ID|marketing version|build number|device platform|device families|SDK|compiler build|distribution certificate|signing team|embedded profile certificate|application entitlement|release entitlements|profile entitlement coverage|not internal-only|required privacy manifest|native bundle configuration|kids advertising or tracking|export compliance'.split('|')
 resources='index.html|car/index.html|train/index.html|flight/index.html|privacy.html|support.html|models/coupe.glb|models/train.glb|models/aircraft.glb'.split('|')
 try:
     with pathlib.Path(sys.argv[1]).open('r',errors='replace') as stream: lines=set(stream.read(65536).splitlines())
@@ -249,11 +249,21 @@ checks={
 for label,ok in checks.items():
     if not ok: raise SystemExit('Rejected '+label)
 manifest=plistlib.load(open(app/'PrivacyInfo.xcprivacy','rb'))
-if manifest.get('NSPrivacyTracking') is not False or not any(v.get('NSPrivacyAccessedAPIType')=='NSPrivacyAccessedAPICategoryUserDefaults' and 'CA92.1' in v.get('NSPrivacyAccessedAPITypeReasons',[]) for v in manifest.get('NSPrivacyAccessedAPITypes',[])): raise SystemExit('Rejected required privacy manifest')
+if (manifest.get('NSPrivacyTracking') is not False or manifest.get('NSPrivacyTrackingDomains')!=[] or manifest.get('NSPrivacyCollectedDataTypes')!=[] or not any(v.get('NSPrivacyAccessedAPIType')=='NSPrivacyAccessedAPICategoryUserDefaults' and 'CA92.1' in v.get('NSPrivacyAccessedAPITypeReasons',[]) for v in manifest.get('NSPrivacyAccessedAPITypes',[]))): raise SystemExit('Rejected required privacy manifest')
+if info.get('ITSAppUsesNonExemptEncryption') is not False: raise SystemExit('Rejected export compliance')
 for f in ['index.html','car/index.html','train/index.html','flight/index.html','privacy.html','support.html','models/coupe.glb','models/train.glb','models/aircraft.glb']:
     if not (app/'public'/f).is_file() or not (app/'public'/f).stat().st_size: raise SystemExit('Missing bundled game resource: '+f)
 config=json.loads((app/'capacitor.config.json').read_text())
-if config.get('appId')!='tw.mars.islandtransport' or config.get('server',{}).get('url'): raise SystemExit('Rejected native bundle configuration')
+if (config.get('appId')!='tw.mars.islandtransport' or config.get('server',{}).get('url') or config.get('server',{}).get('allowNavigation') or config.get('loggingBehavior')!='none'): raise SystemExit('Rejected native bundle configuration')
+# Check the actual archived/exported payload, including embedded dependencies.
+sdk=re.compile(r'GoogleMobileAds|AppLovin|FBAudienceNetwork|FBSDK|Firebase|Flurry|AppsFlyer|Amplitude|OneSignal|MoPub|UnityAds|IronSource|Tapjoy',re.I)
+tracking=re.compile(rb'(?:google-analytics\.com|googletagmanager\.com|doubleclick\.net|app-measurement\.com|connect\.facebook\.net|api\.segment\.io|api2?\.amplitude\.com|appsflyer\.com|flurry\.com)',re.I)
+for file in app.rglob('*'):
+    if (file.suffix.lower() in ('.framework','.dylib','.bundle') or 'Frameworks' in file.parts or 'PlugIns' in file.parts) and sdk.search(file.name): raise SystemExit('Rejected kids advertising or tracking')
+    if file.is_file() and file.suffix.lower() in ('.js','.html','.json','.plist') and tracking.search(file.read_bytes()): raise SystemExit('Rejected kids advertising or tracking')
+    if file.is_file() and file.name=='PrivacyInfo.xcprivacy':
+        privacy=plistlib.loads(file.read_bytes())
+        if privacy.get('NSPrivacyTracking',False) or privacy.get('NSPrivacyTrackingDomains') or privacy.get('NSPrivacyCollectedDataTypes'): raise SystemExit('Rejected kids advertising or tracking')
 PY
   then
     verification_policy_diagnostic "$check_dir/policy-verification.log" || true
@@ -402,7 +412,7 @@ python3 - "$OUT" "$TASK_TMP/ExportOptions.plist" <<'PY'
 import datetime,hashlib,json,os,pathlib,plistlib,sys
 d=pathlib.Path(sys.argv[1]); options=plistlib.load(open(sys.argv[2],'rb'))
 if options['method']!='app-store-connect' or options['destination']!='export' or options['testFlightInternalTestingOnly'] is not False: raise SystemExit('Rejected export policy')
-report={'schemaVersion':1,'generatedAt':datetime.datetime.now(datetime.timezone.utc).isoformat(),'bundleId':'tw.mars.islandtransport','teamId':os.environ['APPLE_TEAM_ID'],'marketingVersion':os.environ['APPLE_MARKETING_VERSION'],'buildNumber':os.environ['APPLE_BUILD_NUMBER'],'xcode':os.environ['APPLE_XCODE_VERSION'],'xcodeBuild':os.environ['APPLE_XCODE_BUILD'],'sdk':os.environ['APPLE_IPHONEOS_SDK'],'signed':True,'signatureVerified':True,'profileVerified':True,'entitlementsVerified':True,'bundledResourcesVerified':True,'exportMethod':'app-store-connect','internalOnly':False,'sha256':hashlib.sha256((d/'IslandTransport.ipa').read_bytes()).hexdigest(),'appleValidated':False,'uploaded':False,'appStoreApproved':False}
+report={'schemaVersion':1,'generatedAt':datetime.datetime.now(datetime.timezone.utc).isoformat(),'bundleId':'tw.mars.islandtransport','teamId':os.environ['APPLE_TEAM_ID'],'marketingVersion':os.environ['APPLE_MARKETING_VERSION'],'buildNumber':os.environ['APPLE_BUILD_NUMBER'],'xcode':os.environ['APPLE_XCODE_VERSION'],'xcodeBuild':os.environ['APPLE_XCODE_BUILD'],'sdk':os.environ['APPLE_IPHONEOS_SDK'],'signed':True,'signatureVerified':True,'profileVerified':True,'entitlementsVerified':True,'bundledResourcesVerified':True,'kidsPrivacyStaticChecksPassed':True,'kidsPrivacyCheckScope':'root and embedded manifests; known SDK names and tracking domains in shipped text; does not prove absence of unknown SDKs or runtime traffic','encryptionDeclarationChecked':True,'usesNonExemptEncryption':False,'loggingBehavior':'none','sourceCommit':os.environ.get('GITHUB_SHA'),'exportMethod':'app-store-connect','internalOnly':False,'sha256':hashlib.sha256((d/'IslandTransport.ipa').read_bytes()).hexdigest(),'appleValidated':False,'uploaded':False,'appStoreApproved':False}
 (d/'verification.json').write_text(json.dumps(report,indent=2)+'\n')
 PY
 printf 'Signed IPA exported and verified locally. No Apple validation or upload was performed.\n'

@@ -1,0 +1,75 @@
+{
+  "appId": "6819605203",
+  "bundleId": "tw.mars.islandtransport",
+  "events": [],
+  "appStoreVersions": [
+    {
+      "id": "2de7ed7c-0381-41b8-a340-0d7ef39bfa7d",
+      "version": "2.32.0",
+      "state": "READY_FOR_SALE"
+    },
+    {
+      "id": "f3892e9e-63cf-436f-9f5d-24d152ab3fd1",
+      "version": "1.0.0",
+      "state": "READY_FOR_SALE"
+    }
+  ],
+  "initialAppStoreVersions": [
+    {
+      "id": "2de7ed7c-0381-41b8-a340-0d7ef39bfa7d",
+      "version": "2.32.0",
+      "state": "READY_FOR_SALE"
+    },
+    {
+      "id": "f3892e9e-63cf-436f-9f5d-24d152ab3fd1",
+      "version": "1.0.0",
+      "state": "READY_FOR_SALE"
+    }
+  ],
+  "group": {
+    "id": "4667fcd7-7b8e-4351-a4ca-69a804983089",
+    "name": "MARS Games Testers",
+    "createdDate": "2026-10-08T06:09:57.767Z",
+    "isInternalGroup": false,
+    "hasAccessToAllBuilds": null,
+    "publicLinkEnabled": true,
+    "publicLinkId": "pUHeJZFG",
+    "publicLinkLimitEnabled": true,
+    "publicLinkLimit": 20,
+    "publicLink": "https://testflight.apple.com/join/pUHeJZFG",
+    "feedbackEnabled": true,
+    "iosBuildsAvailableForAppleSiliconMac": false,
+    "iosBuildsAvailableForAppleVision": false
+  },
+  "build": null,
+  "publicPage": {
+    "url": "https://testflight.apple.com/join/pUHeJZFG",
+    "httpStatus": 200,
+    "sha256": "4b88583ef2620ee89673912d7219c17c6d7052d93704b9c6b621719c3d1360a9",
+    "unavailableMessage": "This beta isn't accepting any new testers right now.",
+    "joinAvailability": "UNAVAILABLE"
+  },
+  "readAt": "2026-10-21T05:11:10.050636+00:00",
+  "versionSelection": {
+    "readAt": "2026-10-21T05:35:59.307238+00:00",
+    "uploadedBuilds": [
+      {
+        "version": "2.32.0",
+        "build": "28",
+        "state": "COMPLETE"
+      },
+      {
+        "version": "1.0.0",
+        "build": "1",
+        "state": "COMPLETE"
+      }
+    ],
+    "paginationExhausted": true,
+    "highestUploadedVersion": "2.32.0",
+    "highestUploadedBuild": 28,
+    "selectedVersion": "2.47.3",
+    "selectedBuild": "46",
+    "localBeforeVersion": "2.47.2",
+    "localBeforeBuild": "45"
+  }
+}

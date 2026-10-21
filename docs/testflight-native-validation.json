@@ -1,0 +1,75 @@
+{
+  "baseCommit": "63e76be",
+  "rows": [
+    {
+      "name": "native-build-baseline",
+      "exitCode": 0,
+      "seconds": 1.9,
+      "outputTail": "                                23.30 kB │ gzip:   6.16 kB\ndist-native/assets/car-B6jqhxAy.css                                        36.29 kB │ gzip:   8.48 kB\ndist-native/assets/art-refresh-BqcyTXDK.css                               114.10 kB │ gzip:  17.87 kB\ndist-native/assets/home-CtdMwkqn.css                                      236.89 kB │ gzip:  35.72 kB\ndist-native/assets/web-MPULguoa.js                                          0.22 kB │ gzip:   0.16 kB\ndist-native/assets/esm-XwcIPNL0.js                                          0.34 kB │ gzip:   0.24 kB\ndist-native/assets/esm-70Zcsyxe.js                                          0.36 kB │ gzip:   0.25 kB\ndist-native/assets/child-display-IY3y2Dnk.js                                0.48 kB │ gzip:   0.34 kB\ndist-native/assets/esm-DhhIhiJu.js                                          0.48 kB │ gzip:   0.32 kB\ndist-native/assets/esm-BbLka8Bb.js                                          0.56 kB │ gzip:   0.26 kB\ndist-native/assets/web-BNWoiS4w.js                                          0.84 kB │ gzip:   0.39 kB\ndist-native/assets/web-BY3ZXy4Z.js                                          1.19 kB │ gzip:   0.54 kB\ndist-native/assets/preload-helper-BaNbYf_w.js                               1.39 kB │ gzip:   0.75 kB\ndist-native/assets/web-Qp_aNGV2.js                                          1.68 kB │ gzip:   0.69 kB\ndist-native/assets/dist-CgbWuuq4.js                                         7.74 kB │ gzip:   3.09 kB\ndist-native/assets/train-mTPAiPSa.js                                       38.85 kB │ gzip:  14.25 kB\ndist-native/assets/art-refresh-TeXkTw_o.js                                 46.76 kB │ gzip:  18.19 kB\ndist-native/assets/car-awX4qKzK.js                                         64.18 kB │ gzip:  22.84 kB\ndist-native/assets/flight-BeTD52-v.js                                      79.36 kB │ gzip:  29.42 kB\ndist-native/assets/home-BF-KevYZ.js                                       162.82 kB │ gzip:  49.33 kB\ndist-native/assets/three-D3Q7bX1O.js                                      660.56 kB │ gzip: 167.40 kB\n\n✓ built in 782ms\n{\"native\":\"BUILT\",\"files\":260,\"bytes\":79014263,\"appId\":\"tw.mars.islandtransport\"}\n\n"
+    },
+    {
+      "name": "native-package-baseline",
+      "exitCode": 0,
+      "seconds": 0.82,
+      "outputTail": "{\"status\":\"PASS\",\"checks\":28,\"appId\":\"tw.mars.islandtransport\",\"binarySigningVerifiedByThisCheck\":false,\"submissionReady\":false}\n\n"
+    },
+    {
+      "name": "historical-source-evidence",
+      "exitCode": 1,
+      "seconds": 0.07,
+      "outputTail": "\nnode:internal/fs/promises:640\n  return new FileHandle(await PromisePrototypeThen(\n                        ^\n\nError: ENOENT: no such file or directory, open 'C:\\Users\\digimkt\\Desktop\\遊戲\\taiwan-train-math\\src\\dispatch.js'\n    at async open (node:internal/fs/promises:640:25)\n    at async readFile (node:internal/fs/promises:1287:14)\n    at async file:///C:/Users/digimkt/Desktop/%E9%81%8A%E6%88%B2/taiwan-island-drive/scripts/verify-merge-evidence.mjs:11:57 {\n  errno: -4058,\n  code: 'ENOENT',\n  syscall: 'open',\n  path: 'C:\\\\Users\\\\digimkt\\\\Desktop\\\\遊戲\\\\taiwan-train-math\\\\src\\\\dispatch.js'\n}\n\nNode.js v24.15.0\n"
+    },
+    {
+      "name": "unit-version-2.47.3",
+      "exitCode": 0,
+      "seconds": 1.45,
+      "outputTail": " caching (0.9973ms)\n✔ offline anonymous module preload reuses a cached Vary-Origin bundle (1.2644ms)\n✔ shared stars add up per mode, ignore bad input and survive missing storage (2.234ms)\n✔ best ratings only improve and are capped at three stars (0.4651ms)\n✔ finishing always earns at least one star; collecting most stars earns three (0.1589ms)\n✔ celebration chimes are rising major-chord notes and respect mute (0.7628ms)\n✔ lobby music needs sound on, family consent and a real audio file (0.3372ms)\n✔ Safety: stopped vehicle and four-second clear crossing are required (15.2884ms)\n✔ Safety: moving train cannot open doors; boarding cannot be skipped (0.2777ms)\n✔ Safety: runway needs deliberate waiting plus elapsed observation (0.2059ms)\n✔ Safety: pause freezes observation and releases held brake (0.215ms)\n✔ Safety: pointer/key cancellation can release input while paused (0.113ms)\n✔ Safety: long stalls and invalid dt never skip waiting (0.0919ms)\n✔ Safety: complete three actual systems, save checkpoints once, then replay all (0.9986ms)\n✔ Safety: storage survives recreation; corrupt and out-of-range values are rejected (0.4532ms)\n✔ Safety: unavailable storage retains session and reports unsaved (0.2002ms)\n✔ Safety: reopening starts at last completed checkpoint, no partial credit (0.2546ms)\n✔ traction interlocks: open doors, neutral and power-off all prevent movement (3.1032ms)\n✔ train builds speed gradually and keeps coasting when traction is removed (1.115ms)\n✔ service braking builds after a delay, then stops without reversing (1.82ms)\n✔ emergency braking stops earlier than service braking (4.878ms)\n✔ downhill extends stopping distance; higher speed requires more than linear distance (0.207ms)\n✔ invalid delta times cannot poison physics or move lesson time backward (0.5541ms)\n✔ doors cannot open while moving; reverser cannot change direction (0.1871ms)\n✔ red signal stop before signal clears after four seconds (0.7366ms)\n✔ red-signal overrun applies protection and can recover after a complete stop (2.7031ms)\n✔ each lesson can complete all station service stages, and pause/reset preserve state correctly (1.9245ms)\n✔ toddler stop assistance physically completes every lesson on every route without repositioning (42.7806ms)\n✔ stop assistance first halts an overrun, reverses only when stationary and returns at low speed (1.2893ms)\n✔ overrun beyond the course boundary can release protection and physically reverse to the stop (3.373ms)\n✔ each newly served station earns one star; restarts never award negative stars (1.4986ms)\n✔ lesson rating never drops below one star (0.1714ms)\n✔ the toddler hint always names exactly one existing child button or none (11.1588ms)\nℹ tests 342\nℹ suites 0\nℹ pass 342\nℹ fail 0\nℹ cancelled 0\nℹ skipped 0\nℹ todo 0\nℹ duration_ms 1000.3131\n\n"
+    },
+    {
+      "name": "web-build-version-2.47.3",
+      "exitCode": 0,
+      "seconds": 2.6,
+      "outputTail": "condensed-latin-600-normal-BFJEwTuo.woff         18.89 kB\ndist/assets/barlow-condensed-latin-500-normal-BgYH2mbd.woff2        21.42 kB\ndist/assets/barlow-condensed-latin-600-normal-DepVgxBB.woff2        22.30 kB\ndist/assets/barlow-condensed-latin-700-normal-v1xN8_Wq.woff2        22.44 kB\ndist/assets/barlow-condensed-latin-800-normal-BKzMuPgK.woff2        22.46 kB\ndist/assets/latin-600-CS9_O-UL.css                                   0.23 kB │ gzip:   0.16 kB\ndist/assets/content-r1-driving-BtCGiLcf.css                          4.80 kB │ gzip:   1.04 kB\ndist/assets/mobile-controls-C37lQrTQ.css                            15.66 kB │ gzip:   3.11 kB\ndist/assets/flight-Dobgmyho.css                                     20.82 kB │ gzip:   5.17 kB\ndist/assets/train-CY0TUzP9.css                                      23.30 kB │ gzip:   6.16 kB\ndist/assets/car-B6jqhxAy.css                                        36.29 kB │ gzip:   8.48 kB\ndist/assets/art-refresh-BqcyTXDK.css                               114.10 kB │ gzip:  17.87 kB\ndist/assets/home-CtdMwkqn.css                                      236.89 kB │ gzip:  35.72 kB\ndist/assets/web-MPULguoa.js                                          0.22 kB │ gzip:   0.16 kB\ndist/assets/esm-XwcIPNL0.js                                          0.34 kB │ gzip:   0.24 kB\ndist/assets/esm-70Zcsyxe.js                                          0.36 kB │ gzip:   0.25 kB\ndist/assets/child-display-IY3y2Dnk.js                                0.48 kB │ gzip:   0.34 kB\ndist/assets/esm-DhhIhiJu.js                                          0.48 kB │ gzip:   0.32 kB\ndist/assets/esm-BbLka8Bb.js                                          0.56 kB │ gzip:   0.26 kB\ndist/assets/web-BNWoiS4w.js                                          0.84 kB │ gzip:   0.39 kB\ndist/assets/web-BY3ZXy4Z.js                                          1.19 kB │ gzip:   0.54 kB\ndist/assets/preload-helper-BaNbYf_w.js                               1.39 kB │ gzip:   0.75 kB\ndist/assets/web-Qp_aNGV2.js                                          1.68 kB │ gzip:   0.69 kB\ndist/assets/dist-CgbWuuq4.js                                         7.74 kB │ gzip:   3.09 kB\ndist/assets/train-BhYgSxQW.js                                       38.85 kB │ gzip:  14.25 kB\ndist/assets/art-refresh-DvyoBEq9.js                                 46.76 kB │ gzip:  18.20 kB\ndist/assets/car-Coi0dudV.js                                         64.18 kB │ gzip:  22.84 kB\ndist/assets/flight-KNjD56mk.js                                      79.36 kB │ gzip:  29.43 kB\ndist/assets/home-CQgLc3Kb.js                                       162.82 kB │ gzip:  49.33 kB\ndist/assets/three-D3Q7bX1O.js                                      660.56 kB │ gzip: 167.40 kB\n\n✓ built in 1.17s\nPWA precache manifest: 265 local files.\n\n"
+    },
+    {
+      "name": "native-build-version-2.47.3",
+      "exitCode": 0,
+      "seconds": 1.91,
+      "outputTail": "barlow-condensed-latin-700-normal-v1xN8_Wq.woff2        22.44 kB\ndist-native/assets/barlow-condensed-latin-800-normal-BKzMuPgK.woff2        22.46 kB\ndist-native/assets/latin-600-CS9_O-UL.css                                   0.23 kB │ gzip:   0.16 kB\ndist-native/assets/content-r1-driving-BtCGiLcf.css                          4.80 kB │ gzip:   1.04 kB\ndist-native/assets/mobile-controls-C37lQrTQ.css                            15.66 kB │ gzip:   3.11 kB\ndist-native/assets/flight-Dobgmyho.css                                     20.82 kB │ gzip:   5.17 kB\ndist-native/assets/train-CY0TUzP9.css                                      23.30 kB │ gzip:   6.16 kB\ndist-native/assets/car-B6jqhxAy.css                                        36.29 kB │ gzip:   8.48 kB\ndist-native/assets/art-refresh-BqcyTXDK.css                               114.10 kB │ gzip:  17.87 kB\ndist-native/assets/home-CtdMwkqn.css                                      236.89 kB │ gzip:  35.72 kB\ndist-native/assets/web-MPULguoa.js                                          0.22 kB │ gzip:   0.16 kB\ndist-native/assets/esm-XwcIPNL0.js                                          0.34 kB │ gzip:   0.24 kB\ndist-native/assets/esm-70Zcsyxe.js                                          0.36 kB │ gzip:   0.25 kB\ndist-native/assets/child-display-IY3y2Dnk.js                                0.48 kB │ gzip:   0.34 kB\ndist-native/assets/esm-DhhIhiJu.js                                          0.48 kB │ gzip:   0.32 kB\ndist-native/assets/esm-BbLka8Bb.js                                          0.56 kB │ gzip:   0.26 kB\ndist-native/assets/web-BNWoiS4w.js                                          0.84 kB │ gzip:   0.39 kB\ndist-native/assets/web-BY3ZXy4Z.js                                          1.19 kB │ gzip:   0.54 kB\ndist-native/assets/preload-helper-BaNbYf_w.js                               1.39 kB │ gzip:   0.75 kB\ndist-native/assets/web-Qp_aNGV2.js                                          1.68 kB │ gzip:   0.69 kB\ndist-native/assets/dist-CgbWuuq4.js                                         7.74 kB │ gzip:   3.09 kB\ndist-native/assets/train-mTPAiPSa.js                                       38.85 kB │ gzip:  14.25 kB\ndist-native/assets/art-refresh-TeXkTw_o.js                                 46.76 kB │ gzip:  18.19 kB\ndist-native/assets/car-awX4qKzK.js                                         64.18 kB │ gzip:  22.84 kB\ndist-native/assets/flight-BeTD52-v.js                                      79.36 kB │ gzip:  29.42 kB\ndist-native/assets/home-BF-KevYZ.js                                       162.82 kB │ gzip:  49.33 kB\ndist-native/assets/three-D3Q7bX1O.js                                      660.56 kB │ gzip: 167.40 kB\n\n✓ built in 782ms\n{\"native\":\"BUILT\",\"files\":260,\"bytes\":79014263,\"appId\":\"tw.mars.islandtransport\"}\n\n"
+    },
+    {
+      "name": "native-package-version-2.47.3",
+      "exitCode": 0,
+      "seconds": 0.2,
+      "outputTail": "{\"status\":\"PASS\",\"checks\":28,\"appId\":\"tw.mars.islandtransport\",\"binarySigningVerifiedByThisCheck\":false,\"submissionReady\":false}\n\n"
+    },
+    {
+      "name": "capacitor-sync-ios",
+      "exitCode": 1,
+      "seconds": 12.22,
+      "outputTail": "\nnpm error could not determine executable to run\nnpm error A complete log of this run can be found in: C:\\Users\\digimkt\\AppData\\Local\\npm-cache\\_logs\\2026-10-21T05_44_12_115Z-debug-0.log\n"
+    },
+    {
+      "name": "capacitor-sync-ios-direct-pinned-cli-8.5.2",
+      "exitCode": 0,
+      "seconds": 4.15,
+      "outputTail": "√ Copying web assets from dist-native to ios\\App\\App\\public in 101.07ms\n√ Creating capacitor.config.json in ios\\App\\App in 714.80μs\n√ copy ios in 127.16ms\n√ Updating iOS plugins in 1.55ms\n[info] All Capacitor plugins have a Package.swift file and will be included in Package.swift\n[info] Writing Package.swift\n[info] Found 3 Capacitor plugins for ios:\n       @capacitor-community/text-to-speech@8.0.2\n       @capacitor/app@8.1.2\n       @capacitor/preferences@8.0.1\n√ update ios in 29.85ms\n[info] Sync finished in 0.18s\n\n"
+    }
+  ],
+  "finalTargetReadback": {
+    "marketingVersions": [
+      "2.47.3",
+      "2.47.3"
+    ],
+    "buildNumbers": [
+      "46",
+      "46"
+    ],
+    "loggingBehavior": "none",
+    "plugins": [
+      "TextToSpeechPlugin",
+      "AppPlugin",
+      "PreferencesPlugin"
+    ]
+  }
+}

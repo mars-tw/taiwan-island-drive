@@ -1,0 +1,535 @@
+{
+  "baseCommit": "63e76be",
+  "rows": [
+    {
+      "name": "npm test",
+      "exitCode": 0,
+      "tests": 342,
+      "passed": 342,
+      "skipped": 0
+    },
+    {
+      "name": "npm run build",
+      "exitCode": 0,
+      "precacheFiles": 265
+    },
+    {
+      "name": "python -B tests/native-ios/test_screenshot_evidence.py",
+      "exitCode": 0,
+      "tests": 6,
+      "passed": 6
+    },
+    {
+      "name": "test:content:r37",
+      "exitCode": 0,
+      "seconds": 142.88,
+      "outputTail": "VERIFIED wrong direction worsens, late brake slides to edge, opposite support rescues to 100\nVERIFIED cake completed all stations; exact save reload and actual replay opening\nVERIFIED crossing completed all stations; exact save reload and actual replay opening\nVERIFIED tickets completed all stations; exact save reload and actual replay opening\nVERIFIED 4 checks, 271 raw captures\n\n"
+    },
+    {
+      "name": "R37 layout",
+      "exitCode": 0,
+      "seconds": 147.13,
+      "outputTail": "VERIFIED responsive 320x568\nVERIFIED responsive 568x320\nVERIFIED responsive 390x844\nVERIFIED responsive 844x390\nVERIFIED responsive 768x1024\nVERIFIED responsive 1024x768\nVERIFIED responsive 1366x600\nVERIFIED responsive 1280x640\nVERIFIED 8 checks, 112 raw captures\n\n"
+    },
+    {
+      "name": "R37 offline",
+      "exitCode": 0,
+      "seconds": 126.15,
+      "outputTail": "VERIFIED offline service-worker reload\nVERIFIED wrong direction worsens, late brake slides to edge, opposite support rescues to 100\nVERIFIED cake completed all stations; exact save reload and actual replay opening\nVERIFIED crossing completed all stations; exact save reload and actual replay opening\nVERIFIED tickets completed all stations; exact save reload and actual replay opening\nVERIFIED 5 checks, 190 raw captures\n\n"
+    },
+    {
+      "name": "R37 performance",
+      "exitCode": 0,
+      "seconds": 30.64,
+      "outputTail": "VERIFIED 0 checks, 0 raw captures\n\n",
+      "performanceEvidence": {
+        "status": "VERIFIED",
+        "method": "concurrent workstation RAF; three samples x180 frames per viewport",
+        "rows": [
+          {
+            "w": 390,
+            "h": 844,
+            "p95": 16.799999999999272,
+            "runs": [
+              {
+                "p95": 16.799999999999955,
+                "max": 33.40000000000009
+              },
+              {
+                "p95": 16.700000000000728,
+                "max": 16.800000000000182
+              },
+              {
+                "p95": 16.799999999999272,
+                "max": 16.80000000000109
+              }
+            ]
+          },
+          {
+            "w": 768,
+            "h": 1024,
+            "p95": 16.800000000000182,
+            "runs": [
+              {
+                "p95": 33.30000000000018,
+                "max": 49.99999999999977
+              },
+              {
+                "p95": 16.800000000000182,
+                "max": 16.800000000000182
+              },
+              {
+                "p95": 16.700000000000728,
+                "max": 16.800000000000182
+              }
+            ]
+          },
+          {
+            "w": 1366,
+            "h": 600,
+            "p95": 16.799999999999272,
+            "runs": [
+              {
+                "p95": 33.40000000000009,
+                "max": 100.10000000000036
+              },
+              {
+                "p95": 16.700000000000728,
+                "max": 83.29999999999927
+              },
+              {
+                "p95": 16.799999999999272,
+                "max": 33.30000000000109
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "name": "R37 switching",
+      "exitCode": 0,
+      "seconds": 2.46,
+      "outputTail": "VERIFIED leaving unfinished crossing never leaks its labels into the protected lessons\nVERIFIED 1 checks, 10 raw captures\n\n"
+    },
+    {
+      "name": "R37 store",
+      "exitCode": 0,
+      "seconds": 8.46,
+      "outputTail": "VERIFIED store 1290x2796\nVERIFIED store 2064x2752\nVERIFIED 2 checks, 6 raw captures\n\n"
+    },
+    {
+      "name": "test:merge",
+      "exitCode": 0,
+      "seconds": 338.53,
+      "outputTail": "PASS se: math → train → car → flight → persisted student badge\nPASS se-landscape: math → train → car → flight → persisted student badge\nPASS phone: math → train → car → flight → persisted student badge\nPASS phone-landscape: math → train → car → flight → persisted student badge\nPASS laptop: math → train → car → flight → persisted student badge\nPASS short-laptop: math → train → car → flight → persisted student badge\nPASS ipad: math → train → car → flight → persisted student badge\nPASS ipad-landscape: math → train → car → flight → persisted student badge\nPASS ipad13-landscape: math → train → car → flight → persisted student badge\nPASS iphone-store: math → train → car → flight → persisted student badge\nPASS ipad13-store: math → train → car → flight → persisted student badge\nPASS 132 integration checks; 25 screenshots; 0 runtime errors / external requests\n\n"
+    },
+    {
+      "name": "test:store",
+      "exitCode": 0,
+      "seconds": 273.02,
+      "outputTail": "vation / first goal / resume / persistence path\nPASS se-landscape: full cold-start / observation / first goal / resume / persistence path\nPASS phone: full cold-start / observation / first goal / resume / persistence path\nPASS phone-landscape: full cold-start / observation / first goal / resume / persistence path\nPASS large: full cold-start / observation / first goal / resume / persistence path\nPASS laptop: full cold-start / observation / first goal / resume / persistence path\nPASS short-laptop: full cold-start / observation / first goal / resume / persistence path\nPASS ipad: full cold-start / observation / first goal / resume / persistence path\nPASS ipad-landscape: full cold-start / observation / first goal / resume / persistence path\nPASS ipad13-landscape: full cold-start / observation / first goal / resume / persistence path\niphone-store: checking installed offline cache\nPASS iphone-store: full cold-start / observation / first goal / resume / persistence path\nipad13-store: checking installed offline cache\nPASS ipad13-store: full cold-start / observation / first goal / resume / persistence path\nPASS 101 checks; 26 unmodified screenshots; zero runtime errors and external requests\n\n"
+    },
+    {
+      "name": "check-mobile",
+      "exitCode": 1,
+      "seconds": 174.3,
+      "outputTail": "\n390x844 car-menu [data-mode]: 0.0x0.0 < 60\n[data-mode]: covered at 0,0 by NAV#\n[data-mode]: covered at 10,10 by A#\n[data-mode]: covered at -10,-10 by undefined#undefined\n[data-mode]: covered at 0,-2 by undefined#undefined\n[data-mode]: covered at 0,2 by NAV#\n[data-mode]: covered at 2,0 by NAV#\n[data-mode]: covered at -2,0 by undefined#undefined\n844x390 car-menu [data-mode]: 0.0x0.0 < 60\n[data-mode]: covered at 0,0 by NAV#\n[data-mode]: covered at 10,10 by A#\n[data-mode]: covered at -10,-10 by undefined#undefined\n[data-mode]: covered at 0,-2 by undefined#undefined\n[data-mode]: covered at 0,2 by NAV#\n[data-mode]: covered at 2,0 by NAV#\n[data-mode]: covered at -2,0 by undefined#undefined\n1366x600 car-menu [data-mode]: 0.0x0.0 < 60\n[data-mode]: covered at 0,0 by NAV#\n[data-mode]: covered at 10,10 by A#\n[data-mode]: covered at -10,-10 by undefined#undefined\n[data-mode]: covered at 0,-2 by undefined#undefined\n[data-mode]: covered at 0,2 by NAV#\n[data-mode]: covered at 2,0 by NAV#\n[data-mode]: covered at -2,0 by undefined#undefined\n1280x640 car-menu [data-mode]: 0.0x0.0 < 60\n[data-mode]: covered at 0,0 by NAV#\n[data-mode]: covered at 10,10 by A#\n[data-mode]: covered at -10,-10 by undefined#undefined\n[data-mode]: covered at 0,-2 by undefined#undefined\n[data-mode]: covered at 0,2 by NAV#\n[data-mode]: covered at 2,0 by NAV#\n[data-mode]: covered at -2,0 by undefined#undefined\nnode:internal/modules/run_main:107\n    triggerUncaughtException(\n    ^\n\nAssertionError [ERR_ASSERTION]: See mobile-check.json\n\n32 !== 0\n\n    at file:///C:/Users/digimkt/Desktop/%E9%81%8A%E6%88%B2/taiwan-island-drive/scripts/check-mobile.mjs:83:118 {\n  generatedMessage: false,\n  code: 'ERR_ASSERTION',\n  actual: 32,\n  expected: 0,\n  operator: 'strictEqual',\n  diff: 'simple'\n}\n\nNode.js v24.15.0\n"
+    },
+    {
+      "name": "test:content:r3",
+      "exitCode": 1,
+      "seconds": 1.8,
+      "outputTail": "VERIFIED se picker\nVERIFIED se cake intro\nVERIFIED se cake controls\nVERIFIED se cake pause\nVERIFIED se crossing intro\nVERIFIED se crossing controls\nVERIFIED se crossing pause\nVERIFIED se tickets intro\n\nnode:internal/modules/run_main:107\n    triggerUncaughtException(\n    ^\n\nAssertionError [ERR_ASSERTION]: se tickets controls\n+ actual - expected\n\n+ [\n+   {\n+     bad: true,\n+     id: '0',\n+     size: [\n+       64,\n+       64\n+     ]\n+   },\n+   {\n+     bad: true,\n+     id: '1',\n+     size: [\n+       64,\n+       64\n+     ]\n+   },\n+   {\n+     bad: true,\n+     id: '2',\n+     size: [\n+       64,\n+       64\n+     ]\n+   }\n+ ]\n- []\n\n    at reach (file:///C:/Users/digimkt/Desktop/%E9%81%8A%E6%88%B2/taiwan-island-drive/scripts/check-content-r3.mjs:16:567)\n    at async file:///C:/Users/digimkt/Desktop/%E9%81%8A%E6%88%B2/taiwan-island-drive/scripts/check-content-r3.mjs:35:160 {\n  generatedMessage: false,\n  code: 'ERR_ASSERTION',\n  actual: [\n    { id: '0', size: [ 64, 64 ], bad: true },\n    { id: '1', size: [ 64, 64 ], bad: true },\n    { id: '2', size: [ 64, 64 ], bad: true }\n  ],\n  expected: [],\n  operator: 'deepStrictEqual',\n  diff: 'simple'\n}\n\nNode.js v24.15.0\n"
+    },
+    {
+      "name": "test:content:r4",
+      "exitCode": 1,
+      "seconds": 1.54,
+      "outputTail": "VERIFIED se picker\nVERIFIED se cake intro\nVERIFIED se cake playing\nVERIFIED se cake rest\nVERIFIED se crossing intro\nVERIFIED se crossing playing\nVERIFIED se crossing rest\nVERIFIED se tickets intro\n\nnode:internal/modules/run_main:107\n    triggerUncaughtException(\n    ^\n\nAssertionError [ERR_ASSERTION]: se tickets playing\n+ actual - expected\n\n+ [\n+   {\n+     bad: true,\n+     id: '0',\n+     size: [\n+       64,\n+       64\n+     ]\n+   },\n+   {\n+     bad: true,\n+     id: '1',\n+     size: [\n+       64,\n+       64\n+     ]\n+   },\n+   {\n+     bad: true,\n+     id: '2',\n+     size: [\n+       64,\n+       64\n+     ]\n+   }\n+ ]\n- []\n\n    at reach (file:///C:/Users/digimkt/Desktop/%E9%81%8A%E6%88%B2/taiwan-island-drive/scripts/check-content-r4.mjs:15:567)\n    at async file:///C:/Users/digimkt/Desktop/%E9%81%8A%E6%88%B2/taiwan-island-drive/scripts/check-content-r4.mjs:24:160 {\n  generatedMessage: false,\n  code: 'ERR_ASSERTION',\n  actual: [\n    { id: '0', size: [ 64, 64 ], bad: true },\n    { id: '1', size: [ 64, 64 ], bad: true },\n    { id: '2', size: [ 64, 64 ], bad: true }\n  ],\n  expected: [],\n  operator: 'deepStrictEqual',\n  diff: 'simple'\n}\n\nNode.js v24.15.0\n"
+    },
+    {
+      "name": "test:content:r5",
+      "exitCode": 1,
+      "seconds": 1.5,
+      "outputTail": "VERIFIED se picker\nVERIFIED se cake intro\nVERIFIED se cake playing\nVERIFIED se cake rest\nVERIFIED se crossing intro\nVERIFIED se crossing playing\nVERIFIED se crossing rest\nVERIFIED se tickets intro\n\nnode:internal/modules/run_main:107\n    triggerUncaughtException(\n    ^\n\nAssertionError [ERR_ASSERTION]: se tickets playing\n+ actual - expected\n\n+ [\n+   {\n+     bad: true,\n+     id: '0',\n+     size: [\n+       64,\n+       64\n+     ]\n+   },\n+   {\n+     bad: true,\n+     id: '1',\n+     size: [\n+       64,\n+       64\n+     ]\n+   },\n+   {\n+     bad: true,\n+     id: '2',\n+     size: [\n+       64,\n+       64\n+     ]\n+   }\n+ ]\n- []\n\n    at reach (file:///C:/Users/digimkt/Desktop/%E9%81%8A%E6%88%B2/taiwan-island-drive/scripts/check-content-r5.mjs:15:567)\n    at async file:///C:/Users/digimkt/Desktop/%E9%81%8A%E6%88%B2/taiwan-island-drive/scripts/check-content-r5.mjs:45:159 {\n  generatedMessage: false,\n  code: 'ERR_ASSERTION',\n  actual: [\n    { id: '0', size: [ 64, 64 ], bad: true },\n    { id: '1', size: [ 64, 64 ], bad: true },\n    { id: '2', size: [ 64, 64 ], bad: true }\n  ],\n  expected: [],\n  operator: 'deepStrictEqual',\n  diff: 'simple'\n}\n\nNode.js v24.15.0\n"
+    },
+    {
+      "name": "test:content:r6",
+      "exitCode": 1,
+      "seconds": 1.52,
+      "outputTail": "VERIFIED se picker\nVERIFIED se cake intro\nVERIFIED se cake playing\nVERIFIED se cake rest\nVERIFIED se crossing intro\nVERIFIED se crossing playing\nVERIFIED se crossing rest\nVERIFIED se tickets intro\n\nnode:internal/modules/run_main:107\n    triggerUncaughtException(\n    ^\n\nAssertionError [ERR_ASSERTION]: se tickets playing\n+ actual - expected\n\n+ [\n+   {\n+     bad: true,\n+     id: '0',\n+     size: [\n+       64,\n+       64\n+     ]\n+   },\n+   {\n+     bad: true,\n+     id: '1',\n+     size: [\n+       64,\n+       64\n+     ]\n+   },\n+   {\n+     bad: true,\n+     id: '2',\n+     size: [\n+       64,\n+       64\n+     ]\n+   }\n+ ]\n- []\n\n    at reach (file:///C:/Users/digimkt/Desktop/%E9%81%8A%E6%88%B2/taiwan-island-drive/scripts/check-content-r6.mjs:16:567)\n    at async file:///C:/Users/digimkt/Desktop/%E9%81%8A%E6%88%B2/taiwan-island-drive/scripts/check-content-r6.mjs:79:159 {\n  generatedMessage: false,\n  code: 'ERR_ASSERTION',\n  actual: [\n    { id: '0', size: [ 64, 64 ], bad: true },\n    { id: '1', size: [ 64, 64 ], bad: true },\n    { id: '2', size: [ 64, 64 ], bad: true }\n  ],\n  expected: [],\n  operator: 'deepStrictEqual',\n  diff: 'simple'\n}\n\nNode.js v24.15.0\n"
+    },
+    {
+      "name": "test:content:r8",
+      "exitCode": 1,
+      "seconds": 1.72,
+      "outputTail": "\nnode:internal/modules/run_main:107\n    triggerUncaughtException(\n    ^\n\nAssertionError [ERR_ASSERTION]: Expected values to be strictly equal:\n\n'' !== 'right'\n\n    at file:///C:/Users/digimkt/Desktop/%E9%81%8A%E6%88%B2/taiwan-island-drive/scripts/check-content-r8.mjs:34:160 {\n  generatedMessage: true,\n  code: 'ERR_ASSERTION',\n  actual: '',\n  expected: 'right',\n  operator: 'strictEqual',\n  diff: 'simple'\n}\n\nNode.js v24.15.0\n"
+    },
+    {
+      "name": "test:content:r7",
+      "exitCode": 1,
+      "seconds": 15.8,
+      "outputTail": "\nnode:internal/modules/run_main:107\n    triggerUncaughtException(\n    ^\n\nAssertionError [ERR_ASSERTION]: The expression evaluated to a falsy value:\n\n  assert.ok(+start.offset< -27)\n\n    at file:///C:/Users/digimkt/Desktop/%E9%81%8A%E6%88%B2/taiwan-island-drive/scripts/check-content-r7.mjs:35:10 {\n  generatedMessage: true,\n  code: 'ERR_ASSERTION',\n  actual: false,\n  expected: true,\n  operator: '==',\n  diff: 'simple'\n}\n\nNode.js v24.15.0\n"
+    },
+    {
+      "name": "test:content:r9",
+      "exitCode": 1,
+      "seconds": 31.61,
+      "outputTail": "\nnode:internal/modules/run_main:107\n    triggerUncaughtException(\n    ^\n\npage.waitForFunction: Timeout 30000ms exceeded.\n    at p.waitForFunction (C:\\Users\\digimkt\\Desktop\\遊戲\\taiwan-island-drive\\scripts\\check-content-r9.mjs:10:95)\n    at C:\\Users\\digimkt\\Desktop\\遊戲\\taiwan-island-drive\\scripts\\check-content-r9.mjs:54:34 {\n  log: [],\n  name: 'TimeoutError'\n}\n\nNode.js v24.15.0\n"
+    },
+    {
+      "name": "test:content:r10",
+      "exitCode": 1,
+      "seconds": 1.58,
+      "outputTail": "\nnode:internal/modules/run_main:107\n    triggerUncaughtException(\n    ^\n\nAssertionError [ERR_ASSERTION]: The input did not match the regular expression /鬆踏板/. Input:\n\n'輕踩踏板，慢慢前進。'\n\n    at file:///C:/Users/digimkt/Desktop/%E9%81%8A%E6%88%B2/taiwan-island-drive/scripts/check-content-r10.mjs:35:373 {\n  generatedMessage: true,\n  code: 'ERR_ASSERTION',\n  actual: '輕踩踏板，慢慢前進。',\n  expected: /鬆踏板/,\n  operator: 'match',\n  diff: 'simple'\n}\n\nNode.js v24.15.0\n"
+    },
+    {
+      "name": "test:content:r11",
+      "exitCode": 1,
+      "seconds": 7.98,
+      "outputTail": "\nnode:internal/modules/run_main:107\n    triggerUncaughtException(\n    ^\n\npage.waitForFunction: Timeout 5000ms exceeded.\n    at C:\\Users\\digimkt\\Desktop\\遊戲\\taiwan-island-drive\\scripts\\check-content-r11.mjs:38:12 {\n  log: [],\n  name: 'TimeoutError'\n}\n\nNode.js v24.15.0\n"
+    },
+    {
+      "name": "test:content:r12",
+      "exitCode": 1,
+      "seconds": 7.71,
+      "outputTail": "\nnode:internal/modules/run_main:107\n    triggerUncaughtException(\n    ^\n\npage.waitForFunction: Timeout 5000ms exceeded.\n    at C:\\Users\\digimkt\\Desktop\\遊戲\\taiwan-island-drive\\scripts\\check-content-r12.mjs:39:12 {\n  log: [],\n  name: 'TimeoutError'\n}\n\nNode.js v24.15.0\n"
+    },
+    {
+      "name": "test:content:r13",
+      "exitCode": 1,
+      "seconds": 6.59,
+      "outputTail": "{\n  roadShape: 'right',\n  cakeStage: 'turning',\n  newTraffic: 'false',\n  newTrafficTime: '0',\n  staleSide: '',\n  refreshes: '0',\n  boardTime: '0.000',\n  doorStage: 'closed',\n  boardingIndex: '0',\n  hazard: 'false',\n  wrongTurn: 'false',\n  inBend: 'true',\n  cue: 'right',\n  settled: 'true',\n  correction: '',\n  compact: 'false',\n  recoveryActive: 'false',\n  lookStep: '0',\n  targetName: '藍圓形',\n  layoutSeed: '0',\n  distance: '15.00',\n  speed: '1.05',\n  bend: '1',\n  tilt: '-0.57',\n  sway: '-0.24',\n  acceleration: '-1.17',\n  bayStopped: 'false',\n  bayRestarted: 'false',\n  leftTurn: 'false',\n  rightTurn: 'false',\n  focus: 'center',\n  crossTime: '0.000',\n  crossDuration: '2.1',\n  orderHint: '',\n  fruitSway: '-0.28',\n  flagSway: '-0.57',\n  hintVisible: 'false',\n  crossingOrder: 'child,bike,grandma',\n  balanceLean: '-0.57',\n  balanceStatus: 'steady',\n  recoveries: '0',\n  assists: '0',\n  assisting: 'false',\n  crossed: '0',\n  lookedLeft: 'false',\n  lookedRight: 'false',\n  decision: 'false',\n  confirmed: 'false',\n  confirmDelay: '0',\n  person: 'child',\n  trafficActive: 'false',\n  trafficTime: '0.00',\n  ticketWrong: 'false',\n  watchSide: '',\n  platformSide: 'front',\n  doorState: 'closed',\n  step: '0',\n  cabin: 'false',\n  semanticStatus: '',\n  stateText: '看路彎向哪邊，慢慢轉。',\n  stateTitle: '第 1 站・海岸坡',\n  nextAction: 'right',\n  holdState: 'holding',\n  holdProgress: '0.982',\n  recheckTime: '2',\n  hintLevel: '0',\n  forceTarget: '0',\n  forceLag: '-0.15264963027296505',\n  recoveryRate: '0',\n  trafficConfirmed: 'false',\n  trafficSource: 'left',\n  lookSequence: 'left,right',\n  escortGate: 'false',\n  escortGateReleased: 'false',\n  restReady: 'false',\n  visited: '',\n  steering: 'false',\n  steadying: 'false',\n  standStillTime: '0',\n  escortWaiting: 'false',\n  escortStable: '0',\n  escortStop: '0',\n  escortBump: '0',\n  bayExit: '0',\n  roofShift: '0',\n  slide: '0.00',\n  edge: 'false',\n  support: '',\n  stateAngle: '0'\n} []\n\nnode:internal/modules/run_main:107\n    triggerUncaughtException(\n    ^\n\npage.waitForFunction: Timeout 5000ms exceeded.\n    at cakeRun (C:\\Users\\digimkt\\Desktop\\遊戲\\taiwan-island-drive\\scripts\\check-content-r13.mjs:35:33)\n    at async file:///C:/Users/digimkt/Desktop/%E9%81%8A%E6%88%B2/taiwan-island-drive/scripts/check-content-r13.mjs:108:617 {\n  log: [],\n  name: 'TimeoutError'\n}\n\nNode.js v24.15.0\n"
+    },
+    {
+      "name": "test:content:r14",
+      "exitCode": 1,
+      "seconds": 6.48,
+      "outputTail": "{\n  roadShape: 'right',\n  cakeStage: 'turning',\n  newTraffic: 'false',\n  newTrafficTime: '0',\n  staleSide: '',\n  refreshes: '0',\n  boardTime: '0.000',\n  doorStage: 'closed',\n  boardingIndex: '0',\n  hazard: 'false',\n  wrongTurn: 'false',\n  inBend: 'true',\n  cue: 'right',\n  settled: 'true',\n  correction: '',\n  compact: 'false',\n  recoveryActive: 'false',\n  lookStep: '0',\n  targetName: '藍圓形',\n  layoutSeed: '0',\n  distance: '15.00',\n  speed: '0.97',\n  bend: '1',\n  tilt: '-0.56',\n  sway: '-0.24',\n  acceleration: '-1.09',\n  bayStopped: 'false',\n  bayRestarted: 'false',\n  leftTurn: 'false',\n  rightTurn: 'false',\n  focus: 'center',\n  crossTime: '0.000',\n  crossDuration: '2.1',\n  orderHint: '',\n  fruitSway: '-0.28',\n  flagSway: '-0.56',\n  hintVisible: 'false',\n  crossingOrder: 'child,bike,grandma',\n  balanceLean: '-0.56',\n  balanceStatus: 'steady',\n  recoveries: '0',\n  assists: '0',\n  assisting: 'false',\n  crossed: '0',\n  lookedLeft: 'false',\n  lookedRight: 'false',\n  decision: 'false',\n  confirmed: 'false',\n  confirmDelay: '0',\n  person: 'child',\n  trafficActive: 'false',\n  trafficTime: '0.00',\n  ticketWrong: 'false',\n  watchSide: '',\n  platformSide: 'front',\n  doorState: 'closed',\n  step: '0',\n  cabin: 'false',\n  semanticStatus: '',\n  stateText: '看路彎向哪邊，慢慢轉。',\n  stateTitle: '第 1 站・海岸坡',\n  nextAction: 'right',\n  holdState: 'holding',\n  holdProgress: '0.982',\n  recheckTime: '2',\n  hintLevel: '0',\n  forceTarget: '0',\n  forceLag: '-0.1401037497428258',\n  recoveryRate: '0',\n  trafficConfirmed: 'false',\n  trafficSource: 'left',\n  lookSequence: 'left,right',\n  escortGate: 'false',\n  escortGateReleased: 'false',\n  restReady: 'false',\n  visited: '',\n  steering: 'false',\n  steadying: 'false',\n  standStillTime: '0',\n  escortWaiting: 'false',\n  escortStable: '0',\n  escortStop: '0',\n  escortBump: '0',\n  bayExit: '0',\n  roofShift: '0',\n  slide: '0.00',\n  edge: 'false',\n  support: '',\n  stateAngle: '0'\n} []\n\nnode:internal/modules/run_main:107\n    triggerUncaughtException(\n    ^\n\npage.waitForFunction: Timeout 5000ms exceeded.\n    at cakeRun (C:\\Users\\digimkt\\Desktop\\遊戲\\taiwan-island-drive\\scripts\\check-content-r14.mjs:36:33)\n    at async file:///C:/Users/digimkt/Desktop/%E9%81%8A%E6%88%B2/taiwan-island-drive/scripts/check-content-r14.mjs:114:900 {\n  log: [],\n  name: 'TimeoutError'\n}\n\nNode.js v24.15.0\n"
+    },
+    {
+      "name": "test:content:r15",
+      "exitCode": 1,
+      "seconds": 11.46,
+      "outputTail": "VERIFIED cake controls\nVERIFIED cake stage 1 continuous departure\nVERIFIED cake stage 1 driven with real controls\n\nnode:internal/modules/run_main:107\n    triggerUncaughtException(\n    ^\n\nAssertionError [ERR_ASSERTION]: The expression evaluated to a falsy value:\n\n  assert.ok(Math.abs(+wrong.state.balanceLean)>=12)\n\n    at cake (file:///C:/Users/digimkt/Desktop/%E9%81%8A%E6%88%B2/taiwan-island-drive/scripts/check-content-r15.mjs:41:197)\n    at async file:///C:/Users/digimkt/Desktop/%E9%81%8A%E6%88%B2/taiwan-island-drive/scripts/check-content-r15.mjs:105:183 {\n  generatedMessage: true,\n  code: 'ERR_ASSERTION',\n  actual: false,\n  expected: true,\n  operator: '==',\n  diff: 'simple'\n}\n\nNode.js v24.15.0\n"
+    },
+    {
+      "name": "test:content:r16",
+      "exitCode": 1,
+      "seconds": 11.81,
+      "outputTail": "VERIFIED cake controls\nVERIFIED cake stage 1 continuous departure\nVERIFIED cake stage 1 driven with real controls\n\nnode:internal/modules/run_main:107\n    triggerUncaughtException(\n    ^\n\nAssertionError [ERR_ASSERTION]: The expression evaluated to a falsy value:\n\n  assert.ok(Math.abs(+wrong.state.balanceLean)>=12)\n\n    at cake (file:///C:/Users/digimkt/Desktop/%E9%81%8A%E6%88%B2/taiwan-island-drive/scripts/check-content-r16.mjs:41:197)\n    at async file:///C:/Users/digimkt/Desktop/%E9%81%8A%E6%88%B2/taiwan-island-drive/scripts/check-content-r16.mjs:130:183 {\n  generatedMessage: true,\n  code: 'ERR_ASSERTION',\n  actual: false,\n  expected: true,\n  operator: '==',\n  diff: 'simple'\n}\n\nNode.js v24.15.0\n"
+    },
+    {
+      "name": "test:content:r17",
+      "exitCode": 1,
+      "seconds": 11.79,
+      "outputTail": "VERIFIED cake controls\nVERIFIED cake stage 1 continuous departure\nVERIFIED cake stage 1 driven with real controls\n\nnode:internal/modules/run_main:107\n    triggerUncaughtException(\n    ^\n\nAssertionError [ERR_ASSERTION]: The expression evaluated to a falsy value:\n\n  assert.ok(Math.abs(+wrong.state.balanceLean)>=12)\n\n    at cake (file:///C:/Users/digimkt/Desktop/%E9%81%8A%E6%88%B2/taiwan-island-drive/scripts/check-content-r17.mjs:72:197)\n    at async file:///C:/Users/digimkt/Desktop/%E9%81%8A%E6%88%B2/taiwan-island-drive/scripts/check-content-r17.mjs:161:183 {\n  generatedMessage: true,\n  code: 'ERR_ASSERTION',\n  actual: false,\n  expected: true,\n  operator: '==',\n  diff: 'simple'\n}\n\nNode.js v24.15.0\n"
+    },
+    {
+      "name": "test:content:r18",
+      "exitCode": 1,
+      "seconds": 12.18,
+      "outputTail": "VERIFIED cake controls\nVERIFIED cake stage 1 continuous departure\nVERIFIED cake stage 1 driven with real controls\n\nnode:internal/modules/run_main:107\n    triggerUncaughtException(\n    ^\n\nAssertionError [ERR_ASSERTION]: The expression evaluated to a falsy value:\n\n  assert.ok(Math.abs(+wrong.state.balanceLean)>=12)\n\n    at cake (file:///C:/Users/digimkt/Desktop/%E9%81%8A%E6%88%B2/taiwan-island-drive/scripts/check-content-r18.mjs:104:197)\n    at async file:///C:/Users/digimkt/Desktop/%E9%81%8A%E6%88%B2/taiwan-island-drive/scripts/check-content-r18.mjs:193:214 {\n  generatedMessage: true,\n  code: 'ERR_ASSERTION',\n  actual: false,\n  expected: true,\n  operator: '==',\n  diff: 'simple'\n}\n\nNode.js v24.15.0\n"
+    },
+    {
+      "name": "test:content:r19",
+      "exitCode": 1,
+      "seconds": 1.23,
+      "outputTail": "\nnode:internal/modules/run_main:107\n    triggerUncaughtException(\n    ^\n\nAssertionError [ERR_ASSERTION]: whole cake and flag stay inside the fixed inset\n+ actual - expected\n\n+ [\n+   {\n+     asset: 'http://127.0.0.1:50184/art/content-r7/cake-base.png',\n+     bottom: 0,\n+     right: 0,\n+     x: 0,\n+     y: 0\n+   },\n+   {\n+     asset: 'http://127.0.0.1:50184/art/content-r7/cake-middle.png',\n+     bottom: 0,\n+     right: 0,\n+     x: 0,\n+     y: 0\n+   },\n+   {\n+     asset: 'http://127.0.0.1:50184/art/content-r7/cake-top.png',\n+     bottom: 0,\n+     right: 0,\n+     x: 0,\n+     y: 0\n+   },\n+   {\n+     asset: 'http://127.0.0.1:50184/art/content-r7/cake-pick.png',\n+     bottom: 0,\n+     right: 0,\n+     x: 0,\n+     y: 0\n+   }\n+ ]\n- []\n\n    at r19Contracts (file:///C:/Users/digimkt/Desktop/%E9%81%8A%E6%88%B2/taiwan-island-drive/scripts/check-content-r19.mjs:30:10)\n    at async shot (file:///C:/Users/digimkt/Desktop/%E9%81%8A%E6%88%B2/taiwan-island-drive/scripts/check-content-r19.mjs:21:1192)\n    at async cake (file:///C:/Users/digimkt/Desktop/%E9%81%8A%E6%88%B2/taiwan-island-drive/scripts/check-content-r19.mjs:120:24)\n    at async file:///C:/Users/digimkt/Desktop/%E9%81%8A%E6%88%B2/taiwan-island-drive/scripts/check-content-r19.mjs:218:214 {\n  generatedMessage: false,\n  code: 'ERR_ASSERTION',\n  actual: [\n    {\n      asset: 'http://127.0.0.1:50184/art/content-r7/cake-base.png',\n      x: 0,\n      y: 0,\n      right: 0,\n      bottom: 0\n    },\n    {\n      asset: 'http://127.0.0.1:50184/art/content-r7/cake-middle.png',\n      x: 0,\n      y: 0,\n      right: 0,\n      bottom: 0\n    },\n    {\n      asset: 'http://127.0.0.1:50184/art/content-r7/cake-top.png',\n      x: 0,\n      y: 0,\n      right: 0,\n      bottom: 0\n    },\n    {\n      asset: 'http://127.0.0.1:50184/art/content-r7/cake-pick.png',\n      x: 0,\n      y: 0,\n      right: 0,\n      bottom: 0\n    }\n  ],\n  expected: [],\n  operator: 'deepStrictEqual',\n  diff: 'simple'\n}\n\nNode.js v24.15.0\n"
+    },
+    {
+      "name": "test:content:r20",
+      "exitCode": 1,
+      "seconds": 1.26,
+      "outputTail": "\nnode:internal/modules/run_main:107\n    triggerUncaughtException(\n    ^\n\nAssertionError [ERR_ASSERTION]: whole cake and flag stay inside the fixed inset\n+ actual - expected\n\n+ [\n+   {\n+     asset: 'http://127.0.0.1:50184/art/content-r7/cake-base.png',\n+     bottom: 0,\n+     right: 0,\n+     x: 0,\n+     y: 0\n+   },\n+   {\n+     asset: 'http://127.0.0.1:50184/art/content-r7/cake-middle.png',\n+     bottom: 0,\n+     right: 0,\n+     x: 0,\n+     y: 0\n+   },\n+   {\n+     asset: 'http://127.0.0.1:50184/art/content-r7/cake-top.png',\n+     bottom: 0,\n+     right: 0,\n+     x: 0,\n+     y: 0\n+   },\n+   {\n+     asset: 'http://127.0.0.1:50184/art/content-r7/cake-pick.png',\n+     bottom: 0,\n+     right: 0,\n+     x: 0,\n+     y: 0\n+   }\n+ ]\n- []\n\n    at r20Contracts (file:///C:/Users/digimkt/Desktop/%E9%81%8A%E6%88%B2/taiwan-island-drive/scripts/check-content-r20.mjs:56:10)\n    at async shot (file:///C:/Users/digimkt/Desktop/%E9%81%8A%E6%88%B2/taiwan-island-drive/scripts/check-content-r20.mjs:21:1344)\n    at async cake (file:///C:/Users/digimkt/Desktop/%E9%81%8A%E6%88%B2/taiwan-island-drive/scripts/check-content-r20.mjs:146:24)\n    at async file:///C:/Users/digimkt/Desktop/%E9%81%8A%E6%88%B2/taiwan-island-drive/scripts/check-content-r20.mjs:244:214 {\n  generatedMessage: false,\n  code: 'ERR_ASSERTION',\n  actual: [\n    {\n      asset: 'http://127.0.0.1:50184/art/content-r7/cake-base.png',\n      x: 0,\n      y: 0,\n      right: 0,\n      bottom: 0\n    },\n    {\n      asset: 'http://127.0.0.1:50184/art/content-r7/cake-middle.png',\n      x: 0,\n      y: 0,\n      right: 0,\n      bottom: 0\n    },\n    {\n      asset: 'http://127.0.0.1:50184/art/content-r7/cake-top.png',\n      x: 0,\n      y: 0,\n      right: 0,\n      bottom: 0\n    },\n    {\n      asset: 'http://127.0.0.1:50184/art/content-r7/cake-pick.png',\n      x: 0,\n      y: 0,\n      right: 0,\n      bottom: 0\n    }\n  ],\n  expected: [],\n  operator: 'deepStrictEqual',\n  diff: 'simple'\n}\n\nNode.js v24.15.0\n"
+    },
+    {
+      "name": "test:content:r21",
+      "exitCode": 1,
+      "seconds": 1.8,
+      "outputTail": "\nnode:internal/modules/run_main:107\n    triggerUncaughtException(\n    ^\n\nAssertionError [ERR_ASSERTION]: no pre-highlighted answer\n+ actual - expected\n\n+ [\n+   'recover-right'\n+ ]\n- []\n\n    at contracts (file:///C:/Users/digimkt/Desktop/%E9%81%8A%E6%88%B2/taiwan-island-drive/scripts/check-content-r21.mjs:26:246)\n    at async shot (file:///C:/Users/digimkt/Desktop/%E9%81%8A%E6%88%B2/taiwan-island-drive/scripts/check-content-r21.mjs:32:323)\n    at async Object.cake (file:///C:/Users/digimkt/Desktop/%E9%81%8A%E6%88%B2/taiwan-island-drive/scripts/check-content-r21.mjs:54:24)\n    at async file:///C:/Users/digimkt/Desktop/%E9%81%8A%E6%88%B2/taiwan-island-drive/scripts/check-content-r21.mjs:100:363 {\n  generatedMessage: false,\n  code: 'ERR_ASSERTION',\n  actual: [ 'recover-right' ],\n  expected: [],\n  operator: 'deepStrictEqual',\n  diff: 'simple'\n}\n\nNode.js v24.15.0\n"
+    },
+    {
+      "name": "test:content:r22",
+      "exitCode": 1,
+      "seconds": 1.79,
+      "outputTail": "\nnode:internal/modules/run_main:107\n    triggerUncaughtException(\n    ^\n\nAssertionError [ERR_ASSERTION]: no pre-highlighted answer\n+ actual - expected\n\n+ [\n+   'recover-right'\n+ ]\n- []\n\n    at contracts (file:///C:/Users/digimkt/Desktop/%E9%81%8A%E6%88%B2/taiwan-island-drive/scripts/check-content-r22.mjs:26:246)\n    at async shot (file:///C:/Users/digimkt/Desktop/%E9%81%8A%E6%88%B2/taiwan-island-drive/scripts/check-content-r22.mjs:32:323)\n    at async Object.cake (file:///C:/Users/digimkt/Desktop/%E9%81%8A%E6%88%B2/taiwan-island-drive/scripts/check-content-r22.mjs:60:24)\n    at async file:///C:/Users/digimkt/Desktop/%E9%81%8A%E6%88%B2/taiwan-island-drive/scripts/check-content-r22.mjs:107:363 {\n  generatedMessage: false,\n  code: 'ERR_ASSERTION',\n  actual: [ 'recover-right' ],\n  expected: [],\n  operator: 'deepStrictEqual',\n  diff: 'simple'\n}\n\nNode.js v24.15.0\n"
+    },
+    {
+      "name": "test:content:r25",
+      "exitCode": 1,
+      "seconds": 12.08,
+      "outputTail": "VERIFIED cake stage 1 driven by controls\n\nnode:internal/modules/run_main:107\n    triggerUncaughtException(\n    ^\n\nAssertionError [ERR_ASSERTION]: only current recovery or safe departure is highlighted\n    at contracts (file:///C:/Users/digimkt/Desktop/%E9%81%8A%E6%88%B2/taiwan-island-drive/scripts/check-content-r25.mjs:27:246)\n    at async shot (file:///C:/Users/digimkt/Desktop/%E9%81%8A%E6%88%B2/taiwan-island-drive/scripts/check-content-r25.mjs:76:323)\n    at async Object.cake (file:///C:/Users/digimkt/Desktop/%E9%81%8A%E6%88%B2/taiwan-island-drive/scripts/check-content-r25.mjs:86:88)\n    at async file:///C:/Users/digimkt/Desktop/%E9%81%8A%E6%88%B2/taiwan-island-drive/scripts/check-content-r25.mjs:151:363 {\n  generatedMessage: false,\n  code: 'ERR_ASSERTION',\n  actual: false,\n  expected: true,\n  operator: '==',\n  diff: 'simple'\n}\n\nNode.js v24.15.0\n"
+    },
+    {
+      "name": "test:content:r26",
+      "exitCode": 1,
+      "seconds": 12.72,
+      "outputTail": "VERIFIED cake stage 1 driven by controls\n\nnode:internal/modules/run_main:107\n    triggerUncaughtException(\n    ^\n\nAssertionError [ERR_ASSERTION]: Expected values to be strictly equal:\n\n'' !== '坐穩了'\n\n    at contracts (file:///C:/Users/digimkt/Desktop/%E9%81%8A%E6%88%B2/taiwan-island-drive/scripts/check-content-r26.mjs:39:32)\n    at async shot (file:///C:/Users/digimkt/Desktop/%E9%81%8A%E6%88%B2/taiwan-island-drive/scripts/check-content-r26.mjs:94:323)\n    at async Object.cake (file:///C:/Users/digimkt/Desktop/%E9%81%8A%E6%88%B2/taiwan-island-drive/scripts/check-content-r26.mjs:104:88)\n    at async file:///C:/Users/digimkt/Desktop/%E9%81%8A%E6%88%B2/taiwan-island-drive/scripts/check-content-r26.mjs:176:393 {\n  generatedMessage: true,\n  code: 'ERR_ASSERTION',\n  actual: '',\n  expected: '坐穩了',\n  operator: 'strictEqual',\n  diff: 'simple'\n}\n\nNode.js v24.15.0\n"
+    },
+    {
+      "name": "test:content:r24",
+      "exitCode": 1,
+      "seconds": 12.76,
+      "outputTail": "VERIFIED cake stage 1 driven by controls\n\nnode:internal/modules/run_main:107\n    triggerUncaughtException(\n    ^\n\nAssertionError [ERR_ASSERTION]: only current recovery or safe departure is highlighted\n    at contracts (file:///C:/Users/digimkt/Desktop/%E9%81%8A%E6%88%B2/taiwan-island-drive/scripts/check-content-r24.mjs:26:246)\n    at async shot (file:///C:/Users/digimkt/Desktop/%E9%81%8A%E6%88%B2/taiwan-island-drive/scripts/check-content-r24.mjs:74:323)\n    at async Object.cake (file:///C:/Users/digimkt/Desktop/%E9%81%8A%E6%88%B2/taiwan-island-drive/scripts/check-content-r24.mjs:84:88)\n    at async file:///C:/Users/digimkt/Desktop/%E9%81%8A%E6%88%B2/taiwan-island-drive/scripts/check-content-r24.mjs:149:363 {\n  generatedMessage: false,\n  code: 'ERR_ASSERTION',\n  actual: false,\n  expected: true,\n  operator: '==',\n  diff: 'simple'\n}\n\nNode.js v24.15.0\n"
+    },
+    {
+      "name": "test:content:r23",
+      "exitCode": 1,
+      "seconds": 2.0,
+      "outputTail": "\nnode:internal/modules/run_main:107\n    triggerUncaughtException(\n    ^\n\nAssertionError [ERR_ASSERTION]: no pre-highlighted answer\n+ actual - expected\n\n+ [\n+   'recover-right'\n+ ]\n- []\n\n    at contracts (file:///C:/Users/digimkt/Desktop/%E9%81%8A%E6%88%B2/taiwan-island-drive/scripts/check-content-r23.mjs:26:246)\n    at async shot (file:///C:/Users/digimkt/Desktop/%E9%81%8A%E6%88%B2/taiwan-island-drive/scripts/check-content-r23.mjs:69:323)\n    at async Object.cake (file:///C:/Users/digimkt/Desktop/%E9%81%8A%E6%88%B2/taiwan-island-drive/scripts/check-content-r23.mjs:97:24)\n    at async file:///C:/Users/digimkt/Desktop/%E9%81%8A%E6%88%B2/taiwan-island-drive/scripts/check-content-r23.mjs:144:363 {\n  generatedMessage: false,\n  code: 'ERR_ASSERTION',\n  actual: [ 'recover-right' ],\n  expected: [],\n  operator: 'deepStrictEqual',\n  diff: 'simple'\n}\n\nNode.js v24.15.0\n"
+    },
+    {
+      "name": "test:content:r28",
+      "exitCode": 1,
+      "seconds": 1.18,
+      "outputTail": "\nnode:internal/modules/run_main:107\n    triggerUncaughtException(\n    ^\n\nAssertionError [ERR_ASSERTION]: Expected values to be strictly equal:\n\n1 !== 0\n\n    at enter (file:///C:/Users/digimkt/Desktop/%E9%81%8A%E6%88%B2/taiwan-island-drive/scripts/check-content-r28.mjs:34:245)\n    at async cake (file:///C:/Users/digimkt/Desktop/%E9%81%8A%E6%88%B2/taiwan-island-drive/scripts/check-content-r28.mjs:36:24)\n    at async file:///C:/Users/digimkt/Desktop/%E9%81%8A%E6%88%B2/taiwan-island-drive/scripts/check-content-r28.mjs:91:467 {\n  generatedMessage: true,\n  code: 'ERR_ASSERTION',\n  actual: 1,\n  expected: 0,\n  operator: 'strictEqual',\n  diff: 'simple'\n}\n\nNode.js v24.15.0\n"
+    },
+    {
+      "name": "test:content:r27",
+      "exitCode": 1,
+      "seconds": 1.35,
+      "outputTail": "\nnode:internal/modules/run_main:107\n    triggerUncaughtException(\n    ^\n\nAssertionError [ERR_ASSERTION]: no answer marker before first input\n\n1 !== 0\n\n    at enter (file:///C:/Users/digimkt/Desktop/%E9%81%8A%E6%88%B2/taiwan-island-drive/scripts/check-content-r27.mjs:19:323)\n    at async Object.cake (file:///C:/Users/digimkt/Desktop/%E9%81%8A%E6%88%B2/taiwan-island-drive/scripts/check-content-r27.mjs:104:2)\n    at async file:///C:/Users/digimkt/Desktop/%E9%81%8A%E6%88%B2/taiwan-island-drive/scripts/check-content-r27.mjs:205:514 {\n  generatedMessage: false,\n  code: 'ERR_ASSERTION',\n  actual: 1,\n  expected: 0,\n  operator: 'strictEqual',\n  diff: 'simple'\n}\n\nNode.js v24.15.0\n"
+    },
+    {
+      "name": "test:content:r29",
+      "exitCode": 1,
+      "seconds": 1.46,
+      "outputTail": "\nnode:internal/modules/run_main:107\n    triggerUncaughtException(\n    ^\n\nAssertionError [ERR_ASSERTION]: Expected values to be strictly equal:\n\n1 !== 0\n\n    at enter (file:///C:/Users/digimkt/Desktop/%E9%81%8A%E6%88%B2/taiwan-island-drive/scripts/check-content-r29.mjs:36:245)\n    at async cake (file:///C:/Users/digimkt/Desktop/%E9%81%8A%E6%88%B2/taiwan-island-drive/scripts/check-content-r29.mjs:38:24)\n    at async file:///C:/Users/digimkt/Desktop/%E9%81%8A%E6%88%B2/taiwan-island-drive/scripts/check-content-r29.mjs:94:467 {\n  generatedMessage: true,\n  code: 'ERR_ASSERTION',\n  actual: 1,\n  expected: 0,\n  operator: 'strictEqual',\n  diff: 'simple'\n}\n\nNode.js v24.15.0\n"
+    },
+    {
+      "name": "test:content:r31",
+      "exitCode": 1,
+      "seconds": 24.03,
+      "outputTail": "VERIFIED cake station 1\nVERIFIED cake station 2\nVERIFIED cake station 3\n\nnode:internal/modules/run_main:107\n    triggerUncaughtException(\n    ^\n\nAssertionError [ERR_ASSERTION]: Expected values to be strictly equal:\n\n33 !== 31\n\n    at save (file:///C:/Users/digimkt/Desktop/%E9%81%8A%E6%88%B2/taiwan-island-drive/scripts/check-content-r31.mjs:56:307)\n    at async cake (file:///C:/Users/digimkt/Desktop/%E9%81%8A%E6%88%B2/taiwan-island-drive/scripts/check-content-r31.mjs:73:3)\n    at async file:///C:/Users/digimkt/Desktop/%E9%81%8A%E6%88%B2/taiwan-island-drive/scripts/check-content-r31.mjs:107:47 {\n  generatedMessage: true,\n  code: 'ERR_ASSERTION',\n  actual: 33,\n  expected: 31,\n  operator: 'strictEqual',\n  diff: 'simple'\n}\n\nNode.js v24.15.0\n"
+    },
+    {
+      "name": "test:content:r30",
+      "exitCode": 1,
+      "seconds": 21.45,
+      "outputTail": "VERIFIED cake station 1\nVERIFIED cake station 2\nVERIFIED cake station 3\n\nnode:internal/modules/run_main:107\n    triggerUncaughtException(\n    ^\n\nAssertionError [ERR_ASSERTION]: Expected values to be strictly equal:\n\n33 !== 30\n\n    at save (file:///C:/Users/digimkt/Desktop/%E9%81%8A%E6%88%B2/taiwan-island-drive/scripts/check-content-r30.mjs:42:307)\n    at async cake (file:///C:/Users/digimkt/Desktop/%E9%81%8A%E6%88%B2/taiwan-island-drive/scripts/check-content-r30.mjs:59:3)\n    at async file:///C:/Users/digimkt/Desktop/%E9%81%8A%E6%88%B2/taiwan-island-drive/scripts/check-content-r30.mjs:93:47 {\n  generatedMessage: true,\n  code: 'ERR_ASSERTION',\n  actual: 33,\n  expected: 30,\n  operator: 'strictEqual',\n  diff: 'simple'\n}\n\nNode.js v24.15.0\n"
+    },
+    {
+      "name": "test:content:r32",
+      "exitCode": 1,
+      "seconds": 20.85,
+      "outputTail": "VERIFIED wrong direction worsens, late brake slides to edge, opposite support rescues to 100\n\nnode:internal/modules/run_main:107\n    triggerUncaughtException(\n    ^\n\nAssertionError [ERR_ASSERTION]: Expected values to be strictly equal:\n\n33 !== 32\n\n    at save (file:///C:/Users/digimkt/Desktop/%E9%81%8A%E6%88%B2/taiwan-island-drive/scripts/check-content-r32.mjs:28:270)\n    at async cake (file:///C:/Users/digimkt/Desktop/%E9%81%8A%E6%88%B2/taiwan-island-drive/scripts/check-content-r32.mjs:48:3)\n    at async file:///C:/Users/digimkt/Desktop/%E9%81%8A%E6%88%B2/taiwan-island-drive/scripts/check-content-r32.mjs:83:440 {\n  generatedMessage: true,\n  code: 'ERR_ASSERTION',\n  actual: 33,\n  expected: 32,\n  operator: 'strictEqual',\n  diff: 'simple'\n}\n\nNode.js v24.15.0\n"
+    },
+    {
+      "name": "test:content:r33",
+      "exitCode": 1,
+      "seconds": 52.32,
+      "outputTail": "VERIFIED wrong direction worsens, late brake slides to edge, opposite support rescues to 100\nVERIFIED cake completed all stations; exact save reload and actual replay opening\nVERIFIED crossing completed all stations; exact save reload and actual replay opening\n\nnode:internal/modules/run_main:107\n    triggerUncaughtException(\n    ^\n\nlocator.boundingBox: Error: strict mode violation: locator('[data-passenger=\"0\"]') resolved to 2 elements:\n    1) <button data-friend=\"0\" aria-label=\"選小安\" data-passenger=\"0\" data-active=\"false\" data-current=\"true\" aria-pressed=\"false\" data-progress=\"0.00\" data-decision=\"false\" data-entering=\"false\" data-surface=\"waiting\" class=\"boarding-friend\">…</button> aka locator('button').filter({ hasText: '輪到小安' })\n    2) <button aria-label=\"選小安\" data-passenger=\"0\">…</button> aka getByRole('button', { name: '選小安' })\n\nCall log:\n\u001b[2m  - waiting for locator('[data-passenger=\"0\"]')\u001b[22m\n\n    at tapLocator (C:\\Users\\digimkt\\Desktop\\遊戲\\taiwan-island-drive\\scripts\\check-content-r33.mjs:14:52)\n    at tickets (C:\\Users\\digimkt\\Desktop\\遊戲\\taiwan-island-drive\\scripts\\check-content-r33.mjs:88:152)\n    at async file:///C:/Users/digimkt/Desktop/%E9%81%8A%E6%88%B2/taiwan-island-drive/scripts/check-content-r33.mjs:103:567 {\n  log: [ `  - waiting for locator('[data-passenger=\"0\"]')` ]\n}\n\nNode.js v24.15.0\n"
+    },
+    {
+      "name": "test:content:r34",
+      "exitCode": 1,
+      "seconds": 26.55,
+      "outputTail": "VERIFIED wrong direction worsens, late brake slides to edge, opposite support rescues to 100\nVERIFIED cake completed all stations; exact save reload and actual replay opening\n\nnode:internal/modules/run_main:107\n    triggerUncaughtException(\n    ^\n\nAssertionError [ERR_ASSERTION]: The input did not match the regular expression /traffic-car/. Input:\n\n'http://127.0.0.1:50184/art/content-r11/car-rear.png'\n\n    at shot (file:///C:/Users/digimkt/Desktop/%E9%81%8A%E6%88%B2/taiwan-island-drive/scripts/check-content-r34.mjs:42:504)\n    at async crossing (file:///C:/Users/digimkt/Desktop/%E9%81%8A%E6%88%B2/taiwan-island-drive/scripts/check-content-r34.mjs:97:220)\n    at async file:///C:/Users/digimkt/Desktop/%E9%81%8A%E6%88%B2/taiwan-island-drive/scripts/check-content-r34.mjs:136:502 {\n  generatedMessage: true,\n  code: 'ERR_ASSERTION',\n  actual: 'http://127.0.0.1:50184/art/content-r11/car-rear.png',\n  expected: /traffic-car/,\n  operator: 'match',\n  diff: 'simple'\n}\n\nNode.js v24.15.0\n"
+    },
+    {
+      "name": "test:content:r35",
+      "exitCode": 1,
+      "seconds": 27.33,
+      "outputTail": "VERIFIED wrong direction worsens, late brake slides to edge, opposite support rescues to 100\nVERIFIED cake completed all stations; exact save reload and actual replay opening\n\nnode:internal/modules/run_main:107\n    triggerUncaughtException(\n    ^\n\nAssertionError [ERR_ASSERTION]: The input did not match the regular expression /traffic-car/. Input:\n\n'http://127.0.0.1:50184/art/content-r11/car-rear.png'\n\n    at shot (file:///C:/Users/digimkt/Desktop/%E9%81%8A%E6%88%B2/taiwan-island-drive/scripts/check-content-r35.mjs:48:504)\n    at async crossing (file:///C:/Users/digimkt/Desktop/%E9%81%8A%E6%88%B2/taiwan-island-drive/scripts/check-content-r35.mjs:121:220)\n    at async file:///C:/Users/digimkt/Desktop/%E9%81%8A%E6%88%B2/taiwan-island-drive/scripts/check-content-r35.mjs:158:502 {\n  generatedMessage: true,\n  code: 'ERR_ASSERTION',\n  actual: 'http://127.0.0.1:50184/art/content-r11/car-rear.png',\n  expected: /traffic-car/,\n  operator: 'match',\n  diff: 'simple'\n}\n\nNode.js v24.15.0\n"
+    },
+    {
+      "name": "test:content:r36",
+      "exitCode": 1,
+      "seconds": 28.65,
+      "outputTail": "VERIFIED wrong direction worsens, late brake slides to edge, opposite support rescues to 100\nVERIFIED cake completed all stations; exact save reload and actual replay opening\n\nnode:internal/modules/run_main:107\n    triggerUncaughtException(\n    ^\n\nAssertionError [ERR_ASSERTION]: The input did not match the regular expression /traffic-car/. Input:\n\n'http://127.0.0.1:50184/art/content-r11/car-rear.png'\n\n    at shot (file:///C:/Users/digimkt/Desktop/%E9%81%8A%E6%88%B2/taiwan-island-drive/scripts/check-content-r36.mjs:50:504)\n    at async crossing (file:///C:/Users/digimkt/Desktop/%E9%81%8A%E6%88%B2/taiwan-island-drive/scripts/check-content-r36.mjs:130:220)\n    at async file:///C:/Users/digimkt/Desktop/%E9%81%8A%E6%88%B2/taiwan-island-drive/scripts/check-content-r36.mjs:167:502 {\n  generatedMessage: true,\n  code: 'ERR_ASSERTION',\n  actual: 'http://127.0.0.1:50184/art/content-r11/car-rear.png',\n  expected: /traffic-car/,\n  operator: 'match',\n  diff: 'simple'\n}\n\nNode.js v24.15.0\n"
+    }
+  ],
+  "silent": true,
+  "gpu": "software rendering",
+  "assertionsChanged": false,
+  "cleanup": {
+    "generatedFilesRemoved": 619,
+    "testOutputRestores": 567,
+    "existingUntrackedPreserved": true
+  },
+  "infrastructureAttempts": [
+    {
+      "name": "R37 layout",
+      "exitCode": 1,
+      "seconds": 54.43,
+      "outputTail": "VERIFIED responsive 320x568\nVERIFIED responsive 568x320\nVERIFIED responsive 390x844\n\nnode:internal/modules/run_main:107\n    triggerUncaughtException(\n    ^\n\npage.goto: net::ERR_CONNECTION_REFUSED at http://127.0.0.1:5286/\nCall log:\n\u001b[2m  - navigating to \"http://127.0.0.1:5286/\", waiting until \"load\"\u001b[22m\n\n    at make (C:\\Users\\digimkt\\Desktop\\遊戲\\taiwan-island-drive\\scripts\\check-content-r37.mjs:15:435)\n    at async file:///C:/Users/digimkt/Desktop/%E9%81%8A%E6%88%B2/taiwan-island-drive/scripts/check-content-r37.mjs:189:145 {\n  log: [\n    '  - navigating to \"http://127.0.0.1:5286/\", waiting until \"load\"'\n  ],\n  name: 'Error'\n}\n\nNode.js v24.15.0\n"
+    },
+    {
+      "name": "R37 offline",
+      "exitCode": 1,
+      "seconds": 2.64,
+      "outputTail": "\nnode:internal/modules/run_main:107\n    triggerUncaughtException(\n    ^\n\npage.goto: net::ERR_CONNECTION_REFUSED at http://127.0.0.1:5286/\nCall log:\n\u001b[2m  - navigating to \"http://127.0.0.1:5286/\", waiting until \"load\"\u001b[22m\n\n    at make (C:\\Users\\digimkt\\Desktop\\遊戲\\taiwan-island-drive\\scripts\\check-content-r37.mjs:15:435)\n    at async file:///C:/Users/digimkt/Desktop/%E9%81%8A%E6%88%B2/taiwan-island-drive/scripts/check-content-r37.mjs:188:80 {\n  log: [\n    '  - navigating to \"http://127.0.0.1:5286/\", waiting until \"load\"'\n  ],\n  name: 'Error'\n}\n\nNode.js v24.15.0\n"
+    },
+    {
+      "name": "R37 performance",
+      "exitCode": 1,
+      "seconds": 2.5,
+      "outputTail": "\nnode:internal/modules/run_main:107\n    triggerUncaughtException(\n    ^\n\npage.goto: net::ERR_CONNECTION_REFUSED at http://127.0.0.1:5286/\nCall log:\n\u001b[2m  - navigating to \"http://127.0.0.1:5286/\", waiting until \"load\"\u001b[22m\n\n    at C:\\Users\\digimkt\\Desktop\\遊戲\\taiwan-island-drive\\scripts\\check-content-r37.mjs:200:193 {\n  log: [\n    '  - navigating to \"http://127.0.0.1:5286/\", waiting until \"load\"'\n  ],\n  name: 'Error'\n}\n\nNode.js v24.15.0\n"
+    },
+    {
+      "name": "R37 switching",
+      "exitCode": 1,
+      "seconds": 2.51,
+      "outputTail": "\nnode:internal/modules/run_main:107\n    triggerUncaughtException(\n    ^\n\npage.goto: net::ERR_CONNECTION_REFUSED at http://127.0.0.1:5286/\nCall log:\n\u001b[2m  - navigating to \"http://127.0.0.1:5286/\", waiting until \"load\"\u001b[22m\n\n    at make (C:\\Users\\digimkt\\Desktop\\遊戲\\taiwan-island-drive\\scripts\\check-content-r37.mjs:15:435)\n    at async file:///C:/Users/digimkt/Desktop/%E9%81%8A%E6%88%B2/taiwan-island-drive/scripts/check-content-r37.mjs:192:15 {\n  log: [\n    '  - navigating to \"http://127.0.0.1:5286/\", waiting until \"load\"'\n  ],\n  name: 'Error'\n}\n\nNode.js v24.15.0\n"
+    },
+    {
+      "name": "R37 store",
+      "exitCode": 1,
+      "seconds": 2.56,
+      "outputTail": "\nnode:internal/modules/run_main:107\n    triggerUncaughtException(\n    ^\n\npage.goto: net::ERR_CONNECTION_REFUSED at http://127.0.0.1:5286/\nCall log:\n\u001b[2m  - navigating to \"http://127.0.0.1:5286/\", waiting until \"load\"\u001b[22m\n\n    at make (C:\\Users\\digimkt\\Desktop\\遊戲\\taiwan-island-drive\\scripts\\check-content-r37.mjs:15:435)\n    at async file:///C:/Users/digimkt/Desktop/%E9%81%8A%E6%88%B2/taiwan-island-drive/scripts/check-content-r37.mjs:190:90 {\n  log: [\n    '  - navigating to \"http://127.0.0.1:5286/\", waiting until \"load\"'\n  ],\n  name: 'Error'\n}\n\nNode.js v24.15.0\n"
+    },
+    {
+      "name": "test:merge",
+      "exitCode": 1,
+      "seconds": 2.69,
+      "outputTail": "\nnode:internal/modules/run_main:107\n    triggerUncaughtException(\n    ^\n\npage.goto: net::ERR_CONNECTION_REFUSED at http://127.0.0.1:5286/\nCall log:\n\u001b[2m  - navigating to \"http://127.0.0.1:5286/\", waiting until \"load\"\u001b[22m\n\n    at C:\\Users\\digimkt\\Desktop\\遊戲\\taiwan-island-drive\\scripts\\check-merge.mjs:40:68 {\n  log: [\n    '  - navigating to \"http://127.0.0.1:5286/\", waiting until \"load\"'\n  ],\n  name: 'Error'\n}\n\nNode.js v24.15.0\n"
+    },
+    {
+      "name": "test:store",
+      "exitCode": 1,
+      "seconds": 2.48,
+      "outputTail": "\nnode:internal/modules/run_main:107\n    triggerUncaughtException(\n    ^\n\npage.goto: net::ERR_CONNECTION_REFUSED at http://127.0.0.1:5286/\nCall log:\n\u001b[2m  - navigating to \"http://127.0.0.1:5286/\", waiting until \"load\"\u001b[22m\n\n    at C:\\Users\\digimkt\\Desktop\\遊戲\\taiwan-island-drive\\scripts\\check-store-review.mjs:32:68 {\n  log: [\n    '  - navigating to \"http://127.0.0.1:5286/\", waiting until \"load\"'\n  ],\n  name: 'Error'\n}\n\nNode.js v24.15.0\n"
+    },
+    {
+      "name": "check-mobile",
+      "exitCode": 1,
+      "seconds": 2.55,
+      "outputTail": "\nnode:internal/modules/run_main:107\n    triggerUncaughtException(\n    ^\n\npage.goto: net::ERR_CONNECTION_REFUSED at http://127.0.0.1:5286/\nCall log:\n\u001b[2m  - navigating to \"http://127.0.0.1:5286/\", waiting until \"load\"\u001b[22m\n\n    at C:\\Users\\digimkt\\Desktop\\遊戲\\taiwan-island-drive\\scripts\\check-mobile.mjs:31:15 {\n  log: [\n    '  - navigating to \"http://127.0.0.1:5286/\", waiting until \"load\"'\n  ],\n  name: 'Error'\n}\n\nNode.js v24.15.0\n"
+    },
+    {
+      "name": "test:content:r3",
+      "exitCode": 1,
+      "seconds": 3.11,
+      "outputTail": "\nnode:internal/modules/run_main:107\n    triggerUncaughtException(\n    ^\n\npage.goto: net::ERR_CONNECTION_REFUSED at http://127.0.0.1:5286/\nCall log:\n\u001b[2m  - navigating to \"http://127.0.0.1:5286/\", waiting until \"load\"\u001b[22m\n\n    at C:\\Users\\digimkt\\Desktop\\遊戲\\taiwan-island-drive\\scripts\\check-content-r3.mjs:33:119 {\n  log: [\n    '  - navigating to \"http://127.0.0.1:5286/\", waiting until \"load\"'\n  ],\n  name: 'Error'\n}\n\nNode.js v24.15.0\n"
+    },
+    {
+      "name": "test:content:r4",
+      "exitCode": 1,
+      "seconds": 2.48,
+      "outputTail": "\nnode:internal/modules/run_main:107\n    triggerUncaughtException(\n    ^\n\npage.goto: net::ERR_CONNECTION_REFUSED at http://127.0.0.1:5286/\nCall log:\n\u001b[2m  - navigating to \"http://127.0.0.1:5286/\", waiting until \"load\"\u001b[22m\n\n    at C:\\Users\\digimkt\\Desktop\\遊戲\\taiwan-island-drive\\scripts\\check-content-r4.mjs:23:119 {\n  log: [\n    '  - navigating to \"http://127.0.0.1:5286/\", waiting until \"load\"'\n  ],\n  name: 'Error'\n}\n\nNode.js v24.15.0\n"
+    },
+    {
+      "name": "test:content:r5",
+      "exitCode": 1,
+      "seconds": 2.58,
+      "outputTail": "\nnode:internal/modules/run_main:107\n    triggerUncaughtException(\n    ^\n\npage.goto: net::ERR_CONNECTION_REFUSED at http://127.0.0.1:5286/\nCall log:\n\u001b[2m  - navigating to \"http://127.0.0.1:5286/\", waiting until \"load\"\u001b[22m\n\n    at C:\\Users\\digimkt\\Desktop\\遊戲\\taiwan-island-drive\\scripts\\check-content-r5.mjs:44:118 {\n  log: [\n    '  - navigating to \"http://127.0.0.1:5286/\", waiting until \"load\"'\n  ],\n  name: 'Error'\n}\n\nNode.js v24.15.0\n"
+    },
+    {
+      "name": "test:content:r6",
+      "exitCode": 1,
+      "seconds": 2.55,
+      "outputTail": "\nnode:internal/modules/run_main:107\n    triggerUncaughtException(\n    ^\n\npage.goto: net::ERR_CONNECTION_REFUSED at http://127.0.0.1:5286/\nCall log:\n\u001b[2m  - navigating to \"http://127.0.0.1:5286/\", waiting until \"load\"\u001b[22m\n\n    at C:\\Users\\digimkt\\Desktop\\遊戲\\taiwan-island-drive\\scripts\\check-content-r6.mjs:78:118 {\n  log: [\n    '  - navigating to \"http://127.0.0.1:5286/\", waiting until \"load\"'\n  ],\n  name: 'Error'\n}\n\nNode.js v24.15.0\n"
+    },
+    {
+      "name": "test:content:r8",
+      "exitCode": 1,
+      "seconds": 2.63,
+      "outputTail": "\nnode:internal/modules/run_main:107\n    triggerUncaughtException(\n    ^\n\npage.goto: net::ERR_CONNECTION_REFUSED at http://127.0.0.1:5286/\nCall log:\n\u001b[2m  - navigating to \"http://127.0.0.1:5286/\", waiting until \"load\"\u001b[22m\n\n    at C:\\Users\\digimkt\\Desktop\\遊戲\\taiwan-island-drive\\scripts\\check-content-r8.mjs:33:122 {\n  log: [\n    '  - navigating to \"http://127.0.0.1:5286/\", waiting until \"load\"'\n  ],\n  name: 'Error'\n}\n\nNode.js v24.15.0\n"
+    },
+    {
+      "name": "test:content:r7",
+      "exitCode": 1,
+      "seconds": 2.71,
+      "outputTail": "\nnode:internal/modules/run_main:107\n    triggerUncaughtException(\n    ^\n\npage.goto: net::ERR_CONNECTION_REFUSED at http://127.0.0.1:5286/\nCall log:\n\u001b[2m  - navigating to \"http://127.0.0.1:5286/\", waiting until \"load\"\u001b[22m\n\n    at C:\\Users\\digimkt\\Desktop\\遊戲\\taiwan-island-drive\\scripts\\check-content-r7.mjs:33:122 {\n  log: [\n    '  - navigating to \"http://127.0.0.1:5286/\", waiting until \"load\"'\n  ],\n  name: 'Error'\n}\n\nNode.js v24.15.0\n"
+    },
+    {
+      "name": "test:content:r9",
+      "exitCode": 1,
+      "seconds": 3.43,
+      "outputTail": "\nnode:internal/modules/run_main:107\n    triggerUncaughtException(\n    ^\n\npage.goto: net::ERR_CONNECTION_REFUSED at http://127.0.0.1:5286/\nCall log:\n\u001b[2m  - navigating to \"http://127.0.0.1:5286/\", waiting until \"load\"\u001b[22m\n\n    at C:\\Users\\digimkt\\Desktop\\遊戲\\taiwan-island-drive\\scripts\\check-content-r9.mjs:53:122 {\n  log: [\n    '  - navigating to \"http://127.0.0.1:5286/\", waiting until \"load\"'\n  ],\n  name: 'Error'\n}\n\nNode.js v24.15.0\n"
+    },
+    {
+      "name": "test:content:r10",
+      "exitCode": 1,
+      "seconds": 2.93,
+      "outputTail": "\nnode:internal/modules/run_main:107\n    triggerUncaughtException(\n    ^\n\npage.goto: net::ERR_CONNECTION_REFUSED at http://127.0.0.1:5286/\nCall log:\n\u001b[2m  - navigating to \"http://127.0.0.1:5286/\", waiting until \"load\"\u001b[22m\n\n    at C:\\Users\\digimkt\\Desktop\\遊戲\\taiwan-island-drive\\scripts\\check-content-r10.mjs:33:122 {\n  log: [\n    '  - navigating to \"http://127.0.0.1:5286/\", waiting until \"load\"'\n  ],\n  name: 'Error'\n}\n\nNode.js v24.15.0\n"
+    },
+    {
+      "name": "test:content:r11",
+      "exitCode": 1,
+      "seconds": 2.53,
+      "outputTail": "\nnode:internal/modules/run_main:107\n    triggerUncaughtException(\n    ^\n\npage.goto: net::ERR_CONNECTION_REFUSED at http://127.0.0.1:5286/\nCall log:\n\u001b[2m  - navigating to \"http://127.0.0.1:5286/\", waiting until \"load\"\u001b[22m\n\n    at C:\\Users\\digimkt\\Desktop\\遊戲\\taiwan-island-drive\\scripts\\check-content-r11.mjs:33:122 {\n  log: [\n    '  - navigating to \"http://127.0.0.1:5286/\", waiting until \"load\"'\n  ],\n  name: 'Error'\n}\n\nNode.js v24.15.0\n"
+    },
+    {
+      "name": "test:content:r12",
+      "exitCode": 1,
+      "seconds": 2.43,
+      "outputTail": "\nnode:internal/modules/run_main:107\n    triggerUncaughtException(\n    ^\n\npage.goto: net::ERR_CONNECTION_REFUSED at http://127.0.0.1:5286/\nCall log:\n\u001b[2m  - navigating to \"http://127.0.0.1:5286/\", waiting until \"load\"\u001b[22m\n\n    at C:\\Users\\digimkt\\Desktop\\遊戲\\taiwan-island-drive\\scripts\\check-content-r12.mjs:34:122 {\n  log: [\n    '  - navigating to \"http://127.0.0.1:5286/\", waiting until \"load\"'\n  ],\n  name: 'Error'\n}\n\nNode.js v24.15.0\n"
+    },
+    {
+      "name": "test:content:r13",
+      "exitCode": 1,
+      "seconds": 2.66,
+      "outputTail": "\nnode:internal/modules/run_main:107\n    triggerUncaughtException(\n    ^\n\npage.goto: net::ERR_CONNECTION_REFUSED at http://127.0.0.1:5286/\nCall log:\n\u001b[2m  - navigating to \"http://127.0.0.1:5286/\", waiting until \"load\"\u001b[22m\n\n    at C:\\Users\\digimkt\\Desktop\\遊戲\\taiwan-island-drive\\scripts\\check-content-r13.mjs:108:186 {\n  log: [\n    '  - navigating to \"http://127.0.0.1:5286/\", waiting until \"load\"'\n  ],\n  name: 'Error'\n}\n\nNode.js v24.15.0\n"
+    },
+    {
+      "name": "test:content:r14",
+      "exitCode": 1,
+      "seconds": 2.7,
+      "outputTail": "\nnode:internal/modules/run_main:107\n    triggerUncaughtException(\n    ^\n\npage.goto: net::ERR_CONNECTION_REFUSED at http://127.0.0.1:5286/\nCall log:\n\u001b[2m  - navigating to \"http://127.0.0.1:5286/\", waiting until \"load\"\u001b[22m\n\n    at C:\\Users\\digimkt\\Desktop\\遊戲\\taiwan-island-drive\\scripts\\check-content-r14.mjs:114:186 {\n  log: [\n    '  - navigating to \"http://127.0.0.1:5286/\", waiting until \"load\"'\n  ],\n  name: 'Error'\n}\n\nNode.js v24.15.0\n"
+    },
+    {
+      "name": "test:content:r15",
+      "exitCode": 1,
+      "seconds": 2.44,
+      "outputTail": "\nnode:internal/modules/run_main:107\n    triggerUncaughtException(\n    ^\n\npage.goto: net::ERR_CONNECTION_REFUSED at http://127.0.0.1:5286/\nCall log:\n\u001b[2m  - navigating to \"http://127.0.0.1:5286/\", waiting until \"load\"\u001b[22m\n\n    at make (C:\\Users\\digimkt\\Desktop\\遊戲\\taiwan-island-drive\\scripts\\check-content-r15.mjs:14:453)\n    at async file:///C:/Users/digimkt/Desktop/%E9%81%8A%E6%88%B2/taiwan-island-drive/scripts/check-content-r15.mjs:105:70 {\n  log: [\n    '  - navigating to \"http://127.0.0.1:5286/\", waiting until \"load\"'\n  ],\n  name: 'Error'\n}\n\nNode.js v24.15.0\n"
+    },
+    {
+      "name": "test:content:r16",
+      "exitCode": 1,
+      "seconds": 2.45,
+      "outputTail": "\nnode:internal/modules/run_main:107\n    triggerUncaughtException(\n    ^\n\npage.goto: net::ERR_CONNECTION_REFUSED at http://127.0.0.1:5286/\nCall log:\n\u001b[2m  - navigating to \"http://127.0.0.1:5286/\", waiting until \"load\"\u001b[22m\n\n    at make (C:\\Users\\digimkt\\Desktop\\遊戲\\taiwan-island-drive\\scripts\\check-content-r16.mjs:14:453)\n    at async file:///C:/Users/digimkt/Desktop/%E9%81%8A%E6%88%B2/taiwan-island-drive/scripts/check-content-r16.mjs:130:70 {\n  log: [\n    '  - navigating to \"http://127.0.0.1:5286/\", waiting until \"load\"'\n  ],\n  name: 'Error'\n}\n\nNode.js v24.15.0\n"
+    },
+    {
+      "name": "test:content:r17",
+      "exitCode": 1,
+      "seconds": 2.62,
+      "outputTail": "\nnode:internal/modules/run_main:107\n    triggerUncaughtException(\n    ^\n\npage.goto: net::ERR_CONNECTION_REFUSED at http://127.0.0.1:5286/\nCall log:\n\u001b[2m  - navigating to \"http://127.0.0.1:5286/\", waiting until \"load\"\u001b[22m\n\n    at make (C:\\Users\\digimkt\\Desktop\\遊戲\\taiwan-island-drive\\scripts\\check-content-r17.mjs:14:453)\n    at async file:///C:/Users/digimkt/Desktop/%E9%81%8A%E6%88%B2/taiwan-island-drive/scripts/check-content-r17.mjs:161:70 {\n  log: [\n    '  - navigating to \"http://127.0.0.1:5286/\", waiting until \"load\"'\n  ],\n  name: 'Error'\n}\n\nNode.js v24.15.0\n"
+    },
+    {
+      "name": "test:content:r18",
+      "exitCode": 1,
+      "seconds": 2.57,
+      "outputTail": "\nnode:internal/modules/run_main:107\n    triggerUncaughtException(\n    ^\n\npage.goto: net::ERR_CONNECTION_REFUSED at http://127.0.0.1:5286/\nCall log:\n\u001b[2m  - navigating to \"http://127.0.0.1:5286/\", waiting until \"load\"\u001b[22m\n\n    at make (C:\\Users\\digimkt\\Desktop\\遊戲\\taiwan-island-drive\\scripts\\check-content-r18.mjs:14:506)\n    at async file:///C:/Users/digimkt/Desktop/%E9%81%8A%E6%88%B2/taiwan-island-drive/scripts/check-content-r18.mjs:193:81 {\n  log: [\n    '  - navigating to \"http://127.0.0.1:5286/\", waiting until \"load\"'\n  ],\n  name: 'Error'\n}\n\nNode.js v24.15.0\n"
+    },
+    {
+      "name": "test:content:r19",
+      "exitCode": 1,
+      "seconds": 2.94,
+      "outputTail": "\nnode:internal/modules/run_main:107\n    triggerUncaughtException(\n    ^\n\npage.goto: net::ERR_CONNECTION_REFUSED at http://127.0.0.1:5286/\nCall log:\n\u001b[2m  - navigating to \"http://127.0.0.1:5286/\", waiting until \"load\"\u001b[22m\n\n    at make (C:\\Users\\digimkt\\Desktop\\遊戲\\taiwan-island-drive\\scripts\\check-content-r19.mjs:14:506)\n    at async file:///C:/Users/digimkt/Desktop/%E9%81%8A%E6%88%B2/taiwan-island-drive/scripts/check-content-r19.mjs:218:81 {\n  log: [\n    '  - navigating to \"http://127.0.0.1:5286/\", waiting until \"load\"'\n  ],\n  name: 'Error'\n}\n\nNode.js v24.15.0\n"
+    },
+    {
+      "name": "test:content:r20",
+      "exitCode": 1,
+      "seconds": 2.86,
+      "outputTail": "\nnode:internal/modules/run_main:107\n    triggerUncaughtException(\n    ^\n\npage.goto: net::ERR_CONNECTION_REFUSED at http://127.0.0.1:5286/\nCall log:\n\u001b[2m  - navigating to \"http://127.0.0.1:5286/\", waiting until \"load\"\u001b[22m\n\n    at make (C:\\Users\\digimkt\\Desktop\\遊戲\\taiwan-island-drive\\scripts\\check-content-r20.mjs:14:506)\n    at async file:///C:/Users/digimkt/Desktop/%E9%81%8A%E6%88%B2/taiwan-island-drive/scripts/check-content-r20.mjs:244:81 {\n  log: [\n    '  - navigating to \"http://127.0.0.1:5286/\", waiting until \"load\"'\n  ],\n  name: 'Error'\n}\n\nNode.js v24.15.0\n"
+    },
+    {
+      "name": "test:content:r21",
+      "exitCode": 1,
+      "seconds": 2.53,
+      "outputTail": "\nnode:internal/modules/run_main:107\n    triggerUncaughtException(\n    ^\n\npage.goto: net::ERR_CONNECTION_REFUSED at http://127.0.0.1:5286/\nCall log:\n\u001b[2m  - navigating to \"http://127.0.0.1:5286/\", waiting until \"load\"\u001b[22m\n\n    at make (C:\\Users\\digimkt\\Desktop\\遊戲\\taiwan-island-drive\\scripts\\check-content-r21.mjs:12:442)\n    at async file:///C:/Users/digimkt/Desktop/%E9%81%8A%E6%88%B2/taiwan-island-drive/scripts/check-content-r21.mjs:100:20 {\n  log: [\n    '  - navigating to \"http://127.0.0.1:5286/\", waiting until \"load\"'\n  ],\n  name: 'Error'\n}\n\nNode.js v24.15.0\n"
+    },
+    {
+      "name": "test:content:r22",
+      "exitCode": 1,
+      "seconds": 2.8,
+      "outputTail": "\nnode:internal/modules/run_main:107\n    triggerUncaughtException(\n    ^\n\npage.goto: net::ERR_CONNECTION_REFUSED at http://127.0.0.1:5286/\nCall log:\n\u001b[2m  - navigating to \"http://127.0.0.1:5286/\", waiting until \"load\"\u001b[22m\n\n    at make (C:\\Users\\digimkt\\Desktop\\遊戲\\taiwan-island-drive\\scripts\\check-content-r22.mjs:12:442)\n    at async file:///C:/Users/digimkt/Desktop/%E9%81%8A%E6%88%B2/taiwan-island-drive/scripts/check-content-r22.mjs:107:20 {\n  log: [\n    '  - navigating to \"http://127.0.0.1:5286/\", waiting until \"load\"'\n  ],\n  name: 'Error'\n}\n\nNode.js v24.15.0\n"
+    },
+    {
+      "name": "test:content:r25",
+      "exitCode": 1,
+      "seconds": 3.4,
+      "outputTail": "\nnode:internal/modules/run_main:107\n    triggerUncaughtException(\n    ^\n\npage.goto: net::ERR_CONNECTION_REFUSED at http://127.0.0.1:5286/\nCall log:\n\u001b[2m  - navigating to \"http://127.0.0.1:5286/\", waiting until \"load\"\u001b[22m\n\n    at make (C:\\Users\\digimkt\\Desktop\\遊戲\\taiwan-island-drive\\scripts\\check-content-r25.mjs:13:442)\n    at async file:///C:/Users/digimkt/Desktop/%E9%81%8A%E6%88%B2/taiwan-island-drive/scripts/check-content-r25.mjs:151:20 {\n  log: [\n    '  - navigating to \"http://127.0.0.1:5286/\", waiting until \"load\"'\n  ],\n  name: 'Error'\n}\n\nNode.js v24.15.0\n"
+    },
+    {
+      "name": "test:merge",
+      "exitCode": 1,
+      "seconds": 187.71,
+      "outputTail": "PASS se: math → train → car → flight → persisted student badge\nPASS se-landscape: math → train → car → flight → persisted student badge\nPASS phone: math → train → car → flight → persisted student badge\nPASS phone-landscape: math → train → car → flight → persisted student badge\nPASS laptop: math → train → car → flight → persisted student badge\nPASS short-laptop: math → train → car → flight → persisted student badge\nPASS ipad: math → train → car → flight → persisted student badge\n\nnode:internal/modules/run_main:107\n    triggerUncaughtException(\n    ^\n\npage.goto: net::ERR_CONNECTION_REFUSED at http://127.0.0.1:5286/\nCall log:\n\u001b[2m  - navigating to \"http://127.0.0.1:5286/\", waiting until \"load\"\u001b[22m\n\n    at C:\\Users\\digimkt\\Desktop\\遊戲\\taiwan-island-drive\\scripts\\check-merge.mjs:40:68 {\n  log: [\n    '  - navigating to \"http://127.0.0.1:5286/\", waiting until \"load\"'\n  ],\n  name: 'Error'\n}\n\nNode.js v24.15.0\n"
+    }
+  ],
+  "allRegisteredTestCommandsExecuted": true
+}
