@@ -7,7 +7,7 @@ const {chromium}=await import(process.env.PLAYWRIGHT_MODULE?pathToFileURL(proces
 const base=process.env.BASE_URL||'http://127.0.0.1:5113/';
 const out=process.env.EVIDENCE_FOLDER||'docs/evidence/merge',screens=process.env.SCREENSHOT_FOLDER||'docs/store/screenshots';
 await mkdir(`${out}/after`,{recursive:true});await mkdir(screens,{recursive:true});
-const browser=await chromium.launch({headless:true,args:['--use-angle=d3d11','--enable-gpu','--ignore-gpu-blocklist']});
+const browser=await chromium.launch({headless:true,args:['--mute-audio','--use-angle=d3d11','--enable-gpu','--ignore-gpu-blocklist']});
 const rows=[],errors=[],external=[],shots=[];
 function watch(page){page.on('pageerror',e=>errors.push(e.message));page.on('request',r=>{if(/^https?:/.test(r.url())&&new URL(r.url()).origin!==new URL(base).origin)external.push(r.url());});}
 async function reachable(page,label,selector,min=60){

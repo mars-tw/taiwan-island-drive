@@ -32,7 +32,7 @@ export function crossingView(g){
  const t=clamp(time/total),travel=yielding?clamp(time/.3)*.16:clamp((t-.09)/.91)*.84+.16;
  const x=side==='left'?4+92*travel:96-92*travel;
  const traffic=Object.freeze({...old.traffic,x,top:CROSSING_ROADS[g.stage].center-5,yielding,motion:yielding?'讓行':t<.28?'接近':t>.78?'離開':'通過'});
- const sides=Object.freeze(Object.fromEntries(Object.entries(old.sides).map(([s,v])=>[s,Object.freeze({...v,road:v.car?(yielding?'車停在線前':'車正在'+traffic.motion):'路面淨空'})])));
+ const sides=Object.freeze(Object.fromEntries(Object.entries(old.sides).map(([s,v])=>[s,Object.freeze({...v,road:!v.observed?v.road:v.car?(yielding?'車停在線前':'車正在'+traffic.motion):'路面淨空'})])));
  let text=old.text;
  if(yielding)text='車在線前等，朋友先過。';
  if(g.practice&&g.safetyNotice>0&&g.choiceHint)text=g.choiceHint;

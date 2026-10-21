@@ -1,4 +1,7 @@
 /* Current round: cues are projections of the same playable state. */
+/* R36: do not paint a road or lane markings before that side is observed. */
+#content-r1[data-kind=crossing] .r32-road-thumb[data-observed=false]{background:#dce4e8!important}
+#content-r1[data-kind=crossing] .r32-road-thumb[data-observed=false]::after{display:none!important}
 #content-r1[data-kind=cake] .r33-tray::before,#content-r1[data-kind=cake] .r33-tray::after{content:'';position:absolute;top:-7px;width:20px;height:20px;border:5px solid transparent;border-radius:50%;box-sizing:border-box}
 #content-r1 .r33-tray::before{left:-9px}#content-r1 .r33-tray::after{right:-9px}
 #content-r1[data-kind=cake] .r33-tray[data-warning=left]::before,#content-r1[data-kind=cake] .r33-tray[data-warning=right]::after{border-color:#d54a32;background:#ffd344;box-shadow:0 0 0 4px #fff8d9}

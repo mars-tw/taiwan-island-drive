@@ -1,0 +1,278 @@
+{
+  "status": "VERIFIED",
+  "method": "same fixed clock, same public controls, CSS animations disabled only during comparison screenshots; R35 runtime from Git with normalized version label; exact rendered text, geometry, image source and 35 computed style properties outside unobserved cards; RGB pixels reported separately without an equality claim",
+  "baselineCommit": "db8bbe90cd74b1b32984d4e375ba5d13b022b7eb",
+  "baselineBuild": "R35 runtime read directly from Git, R36 version label on both builds",
+  "pairs": 15,
+  "exactImages": 5,
+  "changedOnlyInUnobservedCards": 2,
+  "imagesWithOutsideMaskPixelDifferences": 8,
+  "rows": [
+    {
+      "path": "docs/content/r36/visual-comparison/r36/01-cake-moving.png",
+      "baseline": "docs/content/r36/visual-comparison/r35/01-cake-moving.png",
+      "baselineSha256": "bdd457a7bc8d9d79182e7a6a57670f24c98a3122d5fc92545ba03174b270d762",
+      "sha256": "45b2546c1c6f33ef3aa62e32387514810ec833fb51ce5290706cd7b23f2ea52c",
+      "changedPixels": 65,
+      "outsideMaskPixelDifferences": 65,
+      "outsideMaskMaxChannelDelta": 9,
+      "stateDifferences": {},
+      "presentationEqual": true,
+      "presentationSha256": "28131e1a709e3af16fb2a2c669dc0f45b51483f3d200582f0a512262c51763ef",
+      "comparedElements": 74,
+      "allowedUnobservedCards": [],
+      "status": "VERIFIED"
+    },
+    {
+      "path": "docs/content/r36/visual-comparison/r36/02-cake-wrong.png",
+      "baseline": "docs/content/r36/visual-comparison/r35/02-cake-wrong.png",
+      "baselineSha256": "832d395d7176f098e9c61e4ffb944b2b8844eebef2c22ee6e35d646116690538",
+      "sha256": "fb50ff89e84543d314c6f2285e6f6b6532522e088828c78d2c8237a1a5814efa",
+      "changedPixels": 23,
+      "outsideMaskPixelDifferences": 23,
+      "outsideMaskMaxChannelDelta": 9,
+      "stateDifferences": {},
+      "presentationEqual": true,
+      "presentationSha256": "9b89def7b024cacdaa4a55dbb53b68d52dc25ac5759a74840e11eb3122d63c86",
+      "comparedElements": 74,
+      "allowedUnobservedCards": [],
+      "status": "VERIFIED"
+    },
+    {
+      "path": "docs/content/r36/visual-comparison/r36/03-cake-edge.png",
+      "baseline": "docs/content/r36/visual-comparison/r35/03-cake-edge.png",
+      "baselineSha256": "650ca71c7d76f5a47937bff7c1581959ec3576be69c05d2c43d3fbac734722a7",
+      "sha256": "45d6c21341464fde21438c8d09bfa5a5b6b4cd7b1a37763d1b1a5d7a4bec1de4",
+      "changedPixels": 108,
+      "outsideMaskPixelDifferences": 108,
+      "outsideMaskMaxChannelDelta": 9,
+      "stateDifferences": {},
+      "presentationEqual": true,
+      "presentationSha256": "317b244efdb74372886afa059b85970c35f197652842d61e426c46bf3cafff17",
+      "comparedElements": 74,
+      "allowedUnobservedCards": [],
+      "status": "VERIFIED"
+    },
+    {
+      "path": "docs/content/r36/visual-comparison/r36/04-cake-rescued.png",
+      "baseline": "docs/content/r36/visual-comparison/r35/04-cake-rescued.png",
+      "baselineSha256": "76c9692dd74ec3c2235da4c7d2ef6301e66b59f08b6e249f680193f35aa73a89",
+      "sha256": "fce131eb4f20f35cb47c47097f170f6f132410b3bd030ebcf568a7e975ff3484",
+      "changedPixels": 4,
+      "outsideMaskPixelDifferences": 4,
+      "outsideMaskMaxChannelDelta": 6,
+      "stateDifferences": {},
+      "presentationEqual": true,
+      "presentationSha256": "bb0d5a49e69caf4c0485c7a8b926f8af9512b395b99c87bf98c8a3e3d6cc501a",
+      "comparedElements": 74,
+      "allowedUnobservedCards": [],
+      "status": "VERIFIED"
+    },
+    {
+      "path": "docs/content/r36/visual-comparison/r36/05-cake-second-station.png",
+      "baseline": "docs/content/r36/visual-comparison/r35/05-cake-second-station.png",
+      "baselineSha256": "75d6951cf6c5eb85a343ccd54dc8431cf4e8381c40cbcfca5cdf2bdfe4cd780b",
+      "sha256": "75d6951cf6c5eb85a343ccd54dc8431cf4e8381c40cbcfca5cdf2bdfe4cd780b",
+      "changedPixels": 0,
+      "outsideMaskPixelDifferences": 0,
+      "outsideMaskMaxChannelDelta": 0,
+      "stateDifferences": {},
+      "presentationEqual": true,
+      "presentationSha256": "8f2da4c8889e52c25c95fc0bd8b04ff7f1165d64f47f031d9042a745fafec5d1",
+      "comparedElements": 84,
+      "allowedUnobservedCards": [],
+      "status": "VERIFIED"
+    },
+    {
+      "path": "docs/content/r36/visual-comparison/r36/06-crossing-unobserved.png",
+      "baseline": "docs/content/r36/visual-comparison/r35/06-crossing-unobserved.png",
+      "baselineSha256": "7bc726cdf1d1bd67ea7fcdf94975ddf603491d2399198592f55dbabb31833971",
+      "sha256": "ef9eb6e7ca72d8ea63d166568afffaa6af94f580e9d8ce2fc726835154750cb5",
+      "changedPixels": 17987,
+      "outsideMaskPixelDifferences": 0,
+      "outsideMaskMaxChannelDelta": 0,
+      "stateDifferences": {},
+      "presentationEqual": true,
+      "presentationSha256": "099204d33d656fc71afffa9cca5af02080091da78464d996b485d9bcb225c5c0",
+      "comparedElements": 57,
+      "allowedUnobservedCards": [
+        {
+          "side": "left",
+          "box": [
+            22,
+            530,
+            194,
+            629
+          ]
+        },
+        {
+          "side": "right",
+          "box": [
+            196,
+            530,
+            368,
+            629
+          ]
+        }
+      ],
+      "status": "VERIFIED"
+    },
+    {
+      "path": "docs/content/r36/visual-comparison/r36/07-crossing-only-right.png",
+      "baseline": "docs/content/r36/visual-comparison/r35/07-crossing-only-right.png",
+      "baselineSha256": "f9a8fc1f3d8f4970231a5b59c908626828f89cc29f66a2dce8054155a7d84c1a",
+      "sha256": "1f262b264ece2add52aa0002ac1b8602c22475c626568adb977add13039653e1",
+      "changedPixels": 8019,
+      "outsideMaskPixelDifferences": 0,
+      "outsideMaskMaxChannelDelta": 0,
+      "stateDifferences": {},
+      "presentationEqual": true,
+      "presentationSha256": "6f17874840f4df0710212ca7c6060d9115f4a722b8bad625a25d5a8253477e60",
+      "comparedElements": 67,
+      "allowedUnobservedCards": [
+        {
+          "side": "left",
+          "box": [
+            22,
+            530,
+            194,
+            629
+          ]
+        }
+      ],
+      "status": "VERIFIED"
+    },
+    {
+      "path": "docs/content/r36/visual-comparison/r36/08-crossing-right-car.png",
+      "baseline": "docs/content/r36/visual-comparison/r35/08-crossing-right-car.png",
+      "baselineSha256": "bcdbff6e802f2c3e43498301b1560a1a6bfa89885fb89ab54dfef8fe45f23a80",
+      "sha256": "69a991eb55a490de6eb9e8220afba829d5caec275d28a2c244f3bfb3ba720678",
+      "changedPixels": 8021,
+      "outsideMaskPixelDifferences": 2,
+      "outsideMaskMaxChannelDelta": 6,
+      "stateDifferences": {},
+      "presentationEqual": true,
+      "presentationSha256": "21347f5d8435b3aa4d79af56da63bc42da8c479e19fc9393e810e8776e5240d1",
+      "comparedElements": 67,
+      "allowedUnobservedCards": [
+        {
+          "side": "left",
+          "box": [
+            22,
+            530,
+            194,
+            629
+          ]
+        }
+      ],
+      "status": "VERIFIED"
+    },
+    {
+      "path": "docs/content/r36/visual-comparison/r36/09-crossing-both-observed.png",
+      "baseline": "docs/content/r36/visual-comparison/r35/09-crossing-both-observed.png",
+      "baselineSha256": "4121ecea5ae2dff353dc6b527d09573a8555e9c13c55ece14f9845ffa41d2d33",
+      "sha256": "30ee2e7805365a865d30fcf85b8bef420f67efc70b4993f0c16653a3aabe2b94",
+      "changedPixels": 1,
+      "outsideMaskPixelDifferences": 1,
+      "outsideMaskMaxChannelDelta": 6,
+      "stateDifferences": {},
+      "presentationEqual": true,
+      "presentationSha256": "5194722f5aa223629a5cfd3fb00efe1019211727afb861a6b1e317ac5b019c30",
+      "comparedElements": 70,
+      "allowedUnobservedCards": [],
+      "status": "VERIFIED"
+    },
+    {
+      "path": "docs/content/r36/visual-comparison/r36/10-crossing-wait.png",
+      "baseline": "docs/content/r36/visual-comparison/r35/10-crossing-wait.png",
+      "baselineSha256": "cfd8400966e999add19851a8c0f7d418714eb0785be3c585e485224778492748",
+      "sha256": "cfd8400966e999add19851a8c0f7d418714eb0785be3c585e485224778492748",
+      "changedPixels": 0,
+      "outsideMaskPixelDifferences": 0,
+      "outsideMaskMaxChannelDelta": 0,
+      "stateDifferences": {},
+      "presentationEqual": true,
+      "presentationSha256": "29ff82c1d67ce73449ba444088ae5d3597f0dfb59ba91b99d54320e09890f0d4",
+      "comparedElements": 66,
+      "allowedUnobservedCards": [],
+      "status": "VERIFIED"
+    },
+    {
+      "path": "docs/content/r36/visual-comparison/r36/11-tickets-wrong-shape.png",
+      "baseline": "docs/content/r36/visual-comparison/r35/11-tickets-wrong-shape.png",
+      "baselineSha256": "2b30566dfc0a0c53b95fd3b2c1d0a4089cf290958a80bd9dbe1b3e5b947bdf56",
+      "sha256": "bb746d68f8b0136e0e73dca5a79f2449234ff09020927f2587e45448bb201911",
+      "changedPixels": 1,
+      "outsideMaskPixelDifferences": 1,
+      "outsideMaskMaxChannelDelta": 6,
+      "stateDifferences": {},
+      "presentationEqual": true,
+      "presentationSha256": "28a120612b3138676de15bb2716a1a8e15b09ab070064eb6098728306e952750",
+      "comparedElements": 102,
+      "allowedUnobservedCards": [],
+      "status": "VERIFIED"
+    },
+    {
+      "path": "docs/content/r36/visual-comparison/r36/12-tickets-wrong-color.png",
+      "baseline": "docs/content/r36/visual-comparison/r35/12-tickets-wrong-color.png",
+      "baselineSha256": "cc8b7a5a7d8976f2acc8c83015f82d9222f756aebfa7c31aa7860b409849823b",
+      "sha256": "7929eccee44772543a6c57152889069e6e9f93ac4a59c9c9b548ea452746b6b6",
+      "changedPixels": 1,
+      "outsideMaskPixelDifferences": 1,
+      "outsideMaskMaxChannelDelta": 6,
+      "stateDifferences": {},
+      "presentationEqual": true,
+      "presentationSha256": "288e596dbd22276b5ef8dce5c2a0d4650b23f95d9f90be99a0d079e9e87efb92",
+      "comparedElements": 102,
+      "allowedUnobservedCards": [],
+      "status": "VERIFIED"
+    },
+    {
+      "path": "docs/content/r36/visual-comparison/r36/13-tickets-matched.png",
+      "baseline": "docs/content/r36/visual-comparison/r35/13-tickets-matched.png",
+      "baselineSha256": "de7e21556f755646bc5c98188364ff2eb8c49a63bdeb1f8a8941a4bc94a28a06",
+      "sha256": "de7e21556f755646bc5c98188364ff2eb8c49a63bdeb1f8a8941a4bc94a28a06",
+      "changedPixels": 0,
+      "outsideMaskPixelDifferences": 0,
+      "outsideMaskMaxChannelDelta": 0,
+      "stateDifferences": {},
+      "presentationEqual": true,
+      "presentationSha256": "ad94bebfbc1decba885ca16329d2295ae458e711ee5fc512ab7433292aa17f4b",
+      "comparedElements": 102,
+      "allowedUnobservedCards": [],
+      "status": "VERIFIED"
+    },
+    {
+      "path": "docs/content/r36/visual-comparison/r36/14-tickets-partial.png",
+      "baseline": "docs/content/r36/visual-comparison/r35/14-tickets-partial.png",
+      "baselineSha256": "c6c48198c71868a7db190f33e8541938239d31761f497d06dab868b9db5f0932",
+      "sha256": "c6c48198c71868a7db190f33e8541938239d31761f497d06dab868b9db5f0932",
+      "changedPixels": 0,
+      "outsideMaskPixelDifferences": 0,
+      "outsideMaskMaxChannelDelta": 0,
+      "stateDifferences": {},
+      "presentationEqual": true,
+      "presentationSha256": "1a92b77b7665cedabff5d8447a31fcd9c4b17b58e53c023a1a80d2eecc1e7755",
+      "comparedElements": 59,
+      "allowedUnobservedCards": [],
+      "status": "VERIFIED"
+    },
+    {
+      "path": "docs/content/r36/visual-comparison/r36/15-tickets-paused.png",
+      "baseline": "docs/content/r36/visual-comparison/r35/15-tickets-paused.png",
+      "baselineSha256": "257abee436454fb62310c19c8d1a43d18551d73c277b4153bdb6ca1aa99fc1eb",
+      "sha256": "257abee436454fb62310c19c8d1a43d18551d73c277b4153bdb6ca1aa99fc1eb",
+      "changedPixels": 0,
+      "outsideMaskPixelDifferences": 0,
+      "outsideMaskMaxChannelDelta": 0,
+      "stateDifferences": {},
+      "presentationEqual": true,
+      "presentationSha256": "e7f3c63ec5f7ba49cc611419386e341426d63230f4e24fe4de217feb6bb6d802",
+      "comparedElements": 59,
+      "allowedUnobservedCards": [],
+      "status": "VERIFIED"
+    }
+  ],
+  "pixelComparisonStatus": "EXECUTED: raw pixels retain small compositing edge differences; these are not reported as byte-identical screenshots",
+  "identicalPresentationPairs": 15
+}

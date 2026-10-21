@@ -8,7 +8,7 @@ const base=process.env.BASE_URL||'http://127.0.0.1:5286/';
 const folder=process.env.EVIDENCE_FOLDER||'docs/evidence/merge',screens=process.env.SCREENSHOT_FOLDER||'docs/store/screenshots/merge';
 await mkdir(`${folder}/after`,{recursive:true});await mkdir(screens,{recursive:true});
 const rows=[],shots=[],errors=[],external=[];
-const browser=await chromium.launch({headless:true,args:['--use-angle=d3d11','--enable-gpu','--ignore-gpu-blocklist']});
+const browser=await chromium.launch({headless:true,args:['--mute-audio','--use-angle=d3d11','--enable-gpu','--ignore-gpu-blocklist']});
 const key='island-transport:student:v2';
 async function check(page,label,selectors){
  const result=await page.locator(selectors).evaluateAll(els=>els.filter(e=>!e.hidden&&e.getClientRects().length&&!e.disabled).map(e=>{

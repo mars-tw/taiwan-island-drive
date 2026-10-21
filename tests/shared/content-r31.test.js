@@ -2,6 +2,9 @@ import test from 'node:test';
 import assert from 'node:assert/strict';
 import {ContentLesson} from '../../src/shared/content-r31.js';
 import {cakeView,crossingView,boardingCue} from '../../src/shared/content-r31-scene.js';
+import {crossingView as crossingR32} from '../../src/shared/content-r32-scene.js';
+import {crossingView as crossingR33} from '../../src/shared/content-r33-scene.js';
+import {crossingView as crossingCurrent} from '../../src/shared/content-r35-scene.js';
 const run=(g,n)=>{for(let i=0;i<n;i++)g.update(.016);};
 
 test('R31 cake projects every visible interpretation from one state, including every bay and input state',()=>{
@@ -31,6 +34,20 @@ test('R31 all crossing stages preserve the other lane and one recheck unlocks th
 });
 test('R31 observed occupied lane never projects a safe check',()=>{
  const g=new ContentLesson('crossing',{}, {observeTraffic:true});g.begin();g.speed=0;g.look(g.trafficSource);const v=crossingView(g),s=v.sides[g.trafficSource];assert.equal(s.car,true);assert.equal(s.confirmed,false);assert.doesNotMatch(s.check,/✓/);assert.equal(v.traffic.source,g.trafficSource);
+});
+test('R36 single crossing projection never reveals an unobserved side or contradicts its check text',()=>{
+ for(const project of [crossingView,crossingR32,crossingR33,crossingCurrent])for(let stage=0;stage<3;stage++)for(const layoutSeed of [0,1])for(const first of ['left','right']){
+  const g=new ContentLesson('crossing',{stage,layoutSeed},{observeTraffic:true});g.begin();g.speed=0;
+  const unknown=side=>{const v=project(g).sides[side];assert.equal(v.observed,false);assert.equal(v.car,false);assert.equal(v.confirmed,false);assert.equal(v.road,'還沒看');assert.match(v.check,/還沒看/);assert.doesNotMatch(v.road+' '+v.check,/淨空|有車|來車|接近|通過|離開|停在線前|讓行|我看過|✓/);assert.ok(Object.isFrozen(v));};
+  unknown('left');unknown('right');
+  // Looking while moving or paused does not reveal either thumbnail.
+  g.speed=1;g.look(first);unknown(first);g.speed=0;g.paused=true;g.look(first);unknown(first);g.paused=false;
+  g.look(first);const viewed=project(g).sides[first];assert.equal(viewed.observed,true);assert.doesNotMatch(viewed.check,/還沒看/);
+  assert.equal(viewed.car,first===g.trafficSource);assert.equal(viewed.confirmed,first!==g.trafficSource);
+  if(viewed.car){assert.doesNotMatch(viewed.check,/✓|我看過/);assert.match(viewed.road,/車/);}else assert.equal(viewed.road,'路面淨空');
+  const other=first==='left'?'right':'left';unknown(other);g.look(other);assert.equal(project(g).sides[other].observed,true);
+  assert.equal(project(g).traffic.source,g.trafficSource);assert.equal(g.canDepart,false);
+ }
 });
 test('R31 invitation names the selected child and each lesson completion survives snapshot',()=>{
  const g=new ContentLesson('tickets');g.phase='boarding';g.doorStage='awaiting';assert.equal(g.choosePassenger(2),false);assert.equal(boardingCue(g).label,'點小安的車票');assert.equal(g.choosePassenger(0),true);assert.equal(boardingCue(g).label,'邀小安上車');g.boardingIndex=2;g.chosenPassenger=2;assert.equal(boardingCue(g).label,'邀小宇上車');

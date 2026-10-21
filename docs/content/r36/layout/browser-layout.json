@@ -1,0 +1,5022 @@
+{
+  "status": "VERIFIED",
+  "sourceFingerprint": {
+    "src/shared/content-r31.js": "cbdfc6c5829966796338fc028f449d5412d40e08daa0660b0733c2cc45e57903",
+    "tests/shared/content-r31.test.js": "a1166090b506ea2b6f96100697010152da5a9181596bd0eea45706ba903c4c1a",
+    "src/shared/content-r31-scene.js": "305454cbd4c29f6f401f6f8f965bd6b858472c65e8afb16817b791f3e05d3571",
+    "src/shared/content-r32-scene.js": "230d74cdc2ec16d3dfc438d6c81df12c390011b2a058f0000f6e88de93fee764",
+    "src/shared/content-r1-ui.js": "638f2b1118553a167e01e837152fcf4f5f96f10c55c993f34a9500d845bfea8a",
+    "src/shared/content-r35.js": "a0ae6b128fee45bccb2eae6b8cfa4bdf6bc770bdaee0d0f8d7e491f932e78bb9",
+    "src/shared/content-r35-scene.js": "62fc2dcb5612107234e9f110fd9ec3e42f18fa9e92aa16fff06b8155692d598c",
+    "src/shared/content-r35-ui.js": "d9b08de29c0fba32af5aa12173327fbbfb40de0361a1717ef145fd43aca4e806",
+    "src/shared/content-r35.css": "498d7369faa88de55d1be7596cb9638be26ca75f23b768f43bb96929ab2fca74",
+    "scripts/check-content-r36.mjs": "3cf4f952c734d8bb5e40c6a7bd999b8cd60b86b82dc9575f044b41f92febc811",
+    "scripts/playwright-cpu-r34.mjs": "95b3b78b4661a0400b3de95026e1851ee99cffb5710ce8b4d89ffdb0dc6336b2"
+  },
+  "checks": [
+    {
+      "status": "VERIFIED",
+      "label": "responsive 320x568"
+    },
+    {
+      "status": "VERIFIED",
+      "label": "responsive 568x320"
+    },
+    {
+      "status": "VERIFIED",
+      "label": "responsive 390x844"
+    },
+    {
+      "status": "VERIFIED",
+      "label": "responsive 844x390"
+    },
+    {
+      "status": "VERIFIED",
+      "label": "responsive 768x1024"
+    },
+    {
+      "status": "VERIFIED",
+      "label": "responsive 1024x768"
+    },
+    {
+      "status": "VERIFIED",
+      "label": "responsive 1366x600"
+    },
+    {
+      "status": "VERIFIED",
+      "label": "responsive 1280x640"
+    }
+  ],
+  "shots": [
+    {
+      "path": "docs/content/r36/layout/layout/device-320x568-cake-playing.png",
+      "width": 320,
+      "height": 568,
+      "sha256": "23f61eb28db359c7448f9064fb000d89c4f111bd12d4fbfdf045ea69bec6c788",
+      "state": {
+        "roadShape": "uphill",
+        "cakeStage": "starting",
+        "newTraffic": "false",
+        "newTrafficTime": "0",
+        "staleSide": "",
+        "refreshes": "0",
+        "boardTime": "0.000",
+        "doorStage": "closed",
+        "boardingIndex": "0",
+        "hazard": "false",
+        "wrongTurn": "false",
+        "inBend": "false",
+        "cue": "",
+        "settled": "true",
+        "correction": "",
+        "compact": "true",
+        "recoveryActive": "false",
+        "lookStep": "0",
+        "targetName": "藍圓形",
+        "layoutSeed": "0",
+        "distance": "0.00",
+        "speed": "0.00",
+        "bend": "1",
+        "tilt": "0.00",
+        "sway": "0.00",
+        "acceleration": "0.00",
+        "bayStopped": "false",
+        "bayRestarted": "false",
+        "leftTurn": "false",
+        "rightTurn": "false",
+        "focus": "center",
+        "crossTime": "0.000",
+        "crossDuration": "2.1",
+        "orderHint": "",
+        "fruitSway": "0.00",
+        "flagSway": "0.00",
+        "hintVisible": "false",
+        "crossingOrder": "child,bike,grandma",
+        "balanceLean": "0.00",
+        "balanceStatus": "steady",
+        "recoveries": "0",
+        "assists": "0",
+        "assisting": "false",
+        "crossed": "0",
+        "lookedLeft": "false",
+        "lookedRight": "false",
+        "decision": "false",
+        "confirmed": "false",
+        "confirmDelay": "0",
+        "person": "child",
+        "trafficActive": "false",
+        "trafficTime": "0.00",
+        "ticketWrong": "false",
+        "watchSide": "",
+        "platformSide": "front",
+        "doorState": "closed",
+        "step": "0",
+        "cabin": "false",
+        "semanticStatus": "",
+        "stateText": "已停住，輕踩踏板起步。",
+        "stateTitle": "第 1 站・海岸坡",
+        "nextAction": "",
+        "holdState": "paused",
+        "holdProgress": "1.000",
+        "recheckTime": "2",
+        "hintLevel": "0",
+        "forceTarget": "0",
+        "forceLag": "0",
+        "recoveryRate": "0",
+        "trafficConfirmed": "false",
+        "trafficSource": "left",
+        "lookSequence": "left,right",
+        "escortGate": "false",
+        "escortGateReleased": "false",
+        "restReady": "false",
+        "visited": "",
+        "steering": "false",
+        "steadying": "false",
+        "standStillTime": "0",
+        "escortWaiting": "false",
+        "escortStable": "0",
+        "escortStop": "0",
+        "escortBump": "0",
+        "bayExit": "0",
+        "roofShift": "0",
+        "slide": "0.00",
+        "edge": "false",
+        "support": "",
+        "stateAngle": "0"
+      },
+      "text": "回學院\n把蛋糕平穩送到\n暫停\n第 1 站・海岸坡\n穩定度 100%\n車速：已停住・傾角 0°\n✓ 坐穩參照\n收起特寫\n\n已停住，輕踩踏板起步。\n\n左轉\n右轉\n踏板\n煞車\n推向左\n推向右\n再聽一次",
+      "controls": [
+        {
+          "id": "content-back",
+          "w": 68,
+          "h": 60,
+          "bad": false
+        },
+        {
+          "id": "content-pause",
+          "w": 68,
+          "h": 60,
+          "bad": false
+        },
+        {
+          "id": "magnify",
+          "w": 80,
+          "h": 60,
+          "bad": false
+        },
+        {
+          "id": "left",
+          "w": 69,
+          "h": 64,
+          "bad": false
+        },
+        {
+          "id": "right",
+          "w": 69,
+          "h": 64,
+          "bad": false
+        },
+        {
+          "id": "go",
+          "w": 69,
+          "h": 64,
+          "bad": false
+        },
+        {
+          "id": "brake",
+          "w": 69,
+          "h": 64,
+          "bad": false
+        },
+        {
+          "id": "recover-left",
+          "w": 142,
+          "h": 64,
+          "bad": false
+        },
+        {
+          "id": "recover-right",
+          "w": 142,
+          "h": 64,
+          "bad": false
+        },
+        {
+          "id": "listen",
+          "w": 288,
+          "h": 64,
+          "bad": false
+        }
+      ],
+      "clipping": [],
+      "geometry": {
+        "car": {
+          "x": 142.70938110351562,
+          "y": 261.58563232421875,
+          "w": 135.8856201171875,
+          "h": 43.40313720703125
+        },
+        "tray": {
+          "x": 177.2893829345703,
+          "y": 273.1400146484375,
+          "w": 63.08000183105469,
+          "h": 5.319976806640625
+        },
+        "cake": {
+          "x": 175.76937866210938,
+          "y": 212.72000122070312,
+          "w": 68.39999389648438,
+          "h": 68.39999389648438
+        },
+        "displacement": 1.1399917602539062,
+        "angle": "0",
+        "road": "url(\"http://127.0.0.1:5286/art/content-r3/cake-slope.webp\")",
+        "pan": "100%",
+        "rotation": [
+          0,
+          0
+        ]
+      },
+      "audio": {
+        "harness": {
+          "suppressed": true,
+          "speechRequests": 2,
+          "mediaRequests": 1
+        },
+        "speech": false,
+        "pending": false,
+        "media": [],
+        "calls": {
+          "speechCalls": 2,
+          "mediaPlayCalls": 1
+        }
+      }
+    },
+    {
+      "path": "docs/content/r36/layout/layout/device-320x568-crossing-playing.png",
+      "width": 320,
+      "height": 568,
+      "sha256": "511a6c789769bbedd6b0059e5abae35b5107b22dadc53aaca6b1fb306c37e357",
+      "state": {
+        "roadShape": "uphill",
+        "cakeStage": "",
+        "newTraffic": "false",
+        "newTrafficTime": "0",
+        "staleSide": "",
+        "refreshes": "0",
+        "boardTime": "0.000",
+        "doorStage": "closed",
+        "boardingIndex": "0",
+        "hazard": "false",
+        "wrongTurn": "false",
+        "inBend": "false",
+        "cue": "go",
+        "settled": "true",
+        "correction": "",
+        "compact": "true",
+        "recoveryActive": "false",
+        "lookStep": "0",
+        "targetName": "藍圓形",
+        "layoutSeed": "0",
+        "distance": "0.00",
+        "speed": "5.00",
+        "bend": "1",
+        "tilt": "0.00",
+        "sway": "0.00",
+        "acceleration": "0.00",
+        "bayStopped": "false",
+        "bayRestarted": "false",
+        "leftTurn": "false",
+        "rightTurn": "false",
+        "focus": "center",
+        "crossTime": "0.000",
+        "crossDuration": "2.1",
+        "orderHint": "",
+        "fruitSway": "0.00",
+        "flagSway": "0.00",
+        "hintVisible": "false",
+        "crossingOrder": "child,bike,grandma",
+        "balanceLean": "0.00",
+        "balanceStatus": "steady",
+        "recoveries": "0",
+        "assists": "0",
+        "assisting": "false",
+        "crossed": "0",
+        "lookedLeft": "false",
+        "lookedRight": "false",
+        "decision": "false",
+        "confirmed": "false",
+        "confirmDelay": "0",
+        "person": "child",
+        "trafficActive": "true",
+        "trafficTime": "0.00",
+        "ticketWrong": "false",
+        "watchSide": "",
+        "platformSide": "front",
+        "doorState": "closed",
+        "step": "0",
+        "cabin": "false",
+        "semanticStatus": "按住煞車，停在線前。",
+        "stateText": "按住煞車，停在線前。",
+        "stateTitle": "第 1 站・海風路口",
+        "nextAction": "",
+        "holdState": "",
+        "holdProgress": "0.000",
+        "recheckTime": "2",
+        "hintLevel": "0",
+        "forceTarget": "0",
+        "forceLag": "0",
+        "recoveryRate": "0",
+        "trafficConfirmed": "false",
+        "trafficSource": "left",
+        "lookSequence": "left,right",
+        "escortGate": "false",
+        "escortGateReleased": "false",
+        "restReady": "false",
+        "visited": "",
+        "steering": "false",
+        "steadying": "false",
+        "standStillTime": "0",
+        "escortWaiting": "false",
+        "escortStable": "0",
+        "escortStop": "0",
+        "escortBump": "0",
+        "bayExit": "0",
+        "roofShift": "0",
+        "slide": "0.00",
+        "edge": "false",
+        "support": "",
+        "stateAngle": "0",
+        "trafficX": "18.72",
+        "trafficMotion": "接近"
+      },
+      "text": "回學院\n路口停看等\n暫停\n小安\n小柏\n阿嬤\n← 左邊・還沒看\n○ 還沒看\n右邊 →・還沒看\n○ 還沒看\n\n按住煞車，停在線前。\n\n停下\n看左邊\n看右邊\n出發\n再聽一次",
+      "controls": [
+        {
+          "id": "content-back",
+          "w": 68,
+          "h": 60,
+          "bad": false
+        },
+        {
+          "id": "content-pause",
+          "w": 68,
+          "h": 60,
+          "bad": false
+        },
+        {
+          "id": "brake",
+          "w": 69,
+          "h": 64,
+          "bad": false
+        },
+        {
+          "id": "look-left",
+          "w": 69,
+          "h": 64,
+          "bad": false
+        },
+        {
+          "id": "look-right",
+          "w": 69,
+          "h": 64,
+          "bad": false
+        },
+        {
+          "id": "depart",
+          "w": 69,
+          "h": 64,
+          "bad": false
+        },
+        {
+          "id": "listen",
+          "w": 288,
+          "h": 64,
+          "bad": false
+        }
+      ],
+      "clipping": [],
+      "geometry": {
+        "line": null,
+        "car": {
+          "x": 25.0625,
+          "y": 192.125,
+          "w": 83.4375,
+          "h": 14.875
+        },
+        "actors": [
+          {
+            "x": 128,
+            "y": 151.890625,
+            "w": 64,
+            "h": 72
+          },
+          {
+            "x": 11.71875,
+            "y": 155.890625,
+            "w": 82,
+            "h": 68
+          },
+          {
+            "x": 235.265625,
+            "y": 151.890625,
+            "w": 64,
+            "h": 72
+          }
+        ],
+        "overlaps": [],
+        "lane": {
+          "visible": true,
+          "lane": "lower",
+          "source": "left",
+          "heading": "right",
+          "top": 54,
+          "height": 14.875,
+          "scene": 204.40625,
+          "scale": "1"
+        },
+        "player": {
+          "translate": "none",
+          "rotate": "0deg",
+          "scale": "1",
+          "joined": false,
+          "heading": "junction",
+          "asset": "http://127.0.0.1:5286/art/content-r11/car-rear.png",
+          "centerY": 89.8094188061112,
+          "top": 76.2954796030871,
+          "bottom": 103.3233580091353
+        },
+        "observationCards": [
+          {
+            "side": "left",
+            "observed": "false",
+            "x": 16,
+            "y": 302.40625,
+            "width": 142,
+            "height": 64,
+            "text": "← 左邊・還沒看\n○ 還沒看",
+            "images": 0
+          },
+          {
+            "side": "right",
+            "observed": "false",
+            "x": 162,
+            "y": 302.40625,
+            "width": 142,
+            "height": 64,
+            "text": "右邊 →・還沒看\n○ 還沒看",
+            "images": 0
+          }
+        ]
+      },
+      "audio": {
+        "harness": {
+          "suppressed": true,
+          "speechRequests": 4,
+          "mediaRequests": 1
+        },
+        "speech": false,
+        "pending": false,
+        "media": [],
+        "calls": {
+          "speechCalls": 4,
+          "mediaPlayCalls": 1
+        }
+      }
+    },
+    {
+      "path": "docs/content/r36/layout/layout/device-320x568-tickets-playing.png",
+      "width": 320,
+      "height": 568,
+      "sha256": "e605180fe765910df7bb3859056803ac378657d6c9e86c7c71f41bae486748da",
+      "state": {
+        "roadShape": "uphill",
+        "cakeStage": "",
+        "newTraffic": "false",
+        "newTrafficTime": "0",
+        "staleSide": "",
+        "refreshes": "0",
+        "boardTime": "0.000",
+        "doorStage": "closed",
+        "boardingIndex": "0",
+        "hazard": "false",
+        "wrongTurn": "false",
+        "inBend": "false",
+        "cue": "go",
+        "settled": "true",
+        "correction": "",
+        "compact": "true",
+        "recoveryActive": "false",
+        "lookStep": "0",
+        "targetName": "藍圓形",
+        "layoutSeed": "0",
+        "distance": "0.00",
+        "speed": "0.00",
+        "bend": "1",
+        "tilt": "0.00",
+        "sway": "0.00",
+        "acceleration": "0.00",
+        "bayStopped": "false",
+        "bayRestarted": "false",
+        "leftTurn": "false",
+        "rightTurn": "false",
+        "focus": "center",
+        "crossTime": "0.000",
+        "crossDuration": "2.1",
+        "orderHint": "",
+        "fruitSway": "0.00",
+        "flagSway": "0.00",
+        "hintVisible": "false",
+        "crossingOrder": "child,bike,grandma",
+        "balanceLean": "0.00",
+        "balanceStatus": "steady",
+        "recoveries": "0",
+        "assists": "0",
+        "assisting": "false",
+        "crossed": "0",
+        "lookedLeft": "false",
+        "lookedRight": "false",
+        "decision": "false",
+        "confirmed": "false",
+        "confirmDelay": "0",
+        "person": "child",
+        "trafficActive": "false",
+        "trafficTime": "0.00",
+        "ticketWrong": "false",
+        "watchSide": "",
+        "platformSide": "front",
+        "doorState": "closed",
+        "step": "0",
+        "cabin": "false",
+        "semanticStatus": "看車票，找一樣的月台。",
+        "stateText": "",
+        "stateTitle": "",
+        "nextAction": "",
+        "holdState": "holding",
+        "holdProgress": "0.000",
+        "recheckTime": "2",
+        "hintLevel": "0",
+        "forceTarget": "0",
+        "forceLag": "0",
+        "recoveryRate": "0",
+        "trafficConfirmed": "false",
+        "trafficSource": "left",
+        "lookSequence": "left,right",
+        "escortGate": "false",
+        "escortGateReleased": "false",
+        "restReady": "false",
+        "visited": "",
+        "steering": "false",
+        "steadying": "false",
+        "standStillTime": "0",
+        "escortWaiting": "false",
+        "escortStable": "0",
+        "escortStop": "0",
+        "escortBump": "0",
+        "bayExit": "0",
+        "roofShift": "0",
+        "slide": "0.00",
+        "edge": "false",
+        "support": "",
+        "stateAngle": "0",
+        "trafficX": "15.00",
+        "trafficMotion": "離開",
+        "signGround": "213"
+      },
+      "text": "回學院\n形狀車票，找對月台\n暫停\n↓ 小安\n↓ 小晴\n↓ 小宇\n第 1 站・海風站\n1 號月台\n2 號月台\n3 號月台\n這班三位，用同一種車票\n形狀\n→\n？\n選月台\n顏色\n→\n再比顏色\n\n看車票，找一樣的月台。\n\n已入座 0/3 人\n前進\n停穩\n開門\n再聽一次",
+      "controls": [
+        {
+          "id": "content-back",
+          "w": 68,
+          "h": 60,
+          "bad": false
+        },
+        {
+          "id": "content-pause",
+          "w": 68,
+          "h": 60,
+          "bad": false
+        },
+        {
+          "id": "",
+          "w": 60,
+          "h": 64,
+          "bad": false
+        },
+        {
+          "id": "",
+          "w": 60,
+          "h": 64,
+          "bad": false
+        },
+        {
+          "id": "",
+          "w": 60,
+          "h": 64,
+          "bad": false
+        },
+        {
+          "id": "0",
+          "w": 64,
+          "h": 64,
+          "bad": false
+        },
+        {
+          "id": "1",
+          "w": 64,
+          "h": 64,
+          "bad": false
+        },
+        {
+          "id": "2",
+          "w": 64,
+          "h": 64,
+          "bad": false
+        },
+        {
+          "id": "go",
+          "w": 69,
+          "h": 64,
+          "bad": false
+        },
+        {
+          "id": "brake",
+          "w": 69,
+          "h": 64,
+          "bad": false
+        },
+        {
+          "id": "listen",
+          "w": 288,
+          "h": 64,
+          "bad": false
+        }
+      ],
+      "clipping": [],
+      "geometry": {},
+      "audio": {
+        "harness": {
+          "suppressed": true,
+          "speechRequests": 46,
+          "mediaRequests": 1
+        },
+        "speech": false,
+        "pending": false,
+        "media": [],
+        "calls": {
+          "speechCalls": 46,
+          "mediaPlayCalls": 1
+        }
+      }
+    },
+    {
+      "path": "docs/content/r36/layout/layout/device-568x320-cake-playing.png",
+      "width": 568,
+      "height": 320,
+      "sha256": "a5d3ca02e62ac25d0c798c2b8dd4b384fc7cc1a38f760de2c53dc49ec9d6334a",
+      "state": {
+        "roadShape": "uphill",
+        "cakeStage": "starting",
+        "newTraffic": "false",
+        "newTrafficTime": "0",
+        "staleSide": "",
+        "refreshes": "0",
+        "boardTime": "0.000",
+        "doorStage": "closed",
+        "boardingIndex": "0",
+        "hazard": "false",
+        "wrongTurn": "false",
+        "inBend": "false",
+        "cue": "",
+        "settled": "true",
+        "correction": "",
+        "compact": "true",
+        "recoveryActive": "false",
+        "lookStep": "0",
+        "targetName": "藍圓形",
+        "layoutSeed": "0",
+        "distance": "0.00",
+        "speed": "0.00",
+        "bend": "1",
+        "tilt": "0.00",
+        "sway": "0.00",
+        "acceleration": "0.00",
+        "bayStopped": "false",
+        "bayRestarted": "false",
+        "leftTurn": "false",
+        "rightTurn": "false",
+        "focus": "center",
+        "crossTime": "0.000",
+        "crossDuration": "2.1",
+        "orderHint": "",
+        "fruitSway": "0.00",
+        "flagSway": "0.00",
+        "hintVisible": "false",
+        "crossingOrder": "child,bike,grandma",
+        "balanceLean": "0.00",
+        "balanceStatus": "steady",
+        "recoveries": "0",
+        "assists": "0",
+        "assisting": "false",
+        "crossed": "0",
+        "lookedLeft": "false",
+        "lookedRight": "false",
+        "decision": "false",
+        "confirmed": "false",
+        "confirmDelay": "0",
+        "person": "child",
+        "trafficActive": "false",
+        "trafficTime": "0.00",
+        "ticketWrong": "false",
+        "watchSide": "",
+        "platformSide": "front",
+        "doorState": "closed",
+        "step": "0",
+        "cabin": "false",
+        "semanticStatus": "",
+        "stateText": "已停住，輕踩踏板起步。",
+        "stateTitle": "第 1 站・海岸坡",
+        "nextAction": "",
+        "holdState": "paused",
+        "holdProgress": "1.000",
+        "recheckTime": "2",
+        "hintLevel": "0",
+        "forceTarget": "0",
+        "forceLag": "0",
+        "recoveryRate": "0",
+        "trafficConfirmed": "false",
+        "trafficSource": "left",
+        "lookSequence": "left,right",
+        "escortGate": "false",
+        "escortGateReleased": "false",
+        "restReady": "false",
+        "visited": "",
+        "steering": "false",
+        "steadying": "false",
+        "standStillTime": "0",
+        "escortWaiting": "false",
+        "escortStable": "0",
+        "escortStop": "0",
+        "escortBump": "0",
+        "bayExit": "0",
+        "roofShift": "0",
+        "slide": "0.00",
+        "edge": "false",
+        "support": "",
+        "stateAngle": "0"
+      },
+      "text": "回學院\n把蛋糕平穩送到\n暫停\n第 1 站・海岸坡\n穩定度 100%\n車速：已停住・傾角 0°\n✓ 坐穩參照\n收起特寫\n\n已停住，輕踩踏板起步。\n\n左轉\n右轉\n踏板\n煞車\n推向左\n推向右\n再聽一次",
+      "controls": [
+        {
+          "id": "content-back",
+          "w": 68,
+          "h": 60,
+          "bad": false
+        },
+        {
+          "id": "content-pause",
+          "w": 68,
+          "h": 60,
+          "bad": false
+        },
+        {
+          "id": "magnify",
+          "w": 90,
+          "h": 60,
+          "bad": false
+        },
+        {
+          "id": "left",
+          "w": 67.03125,
+          "h": 64,
+          "bad": false
+        },
+        {
+          "id": "right",
+          "w": 67.046875,
+          "h": 64,
+          "bad": false
+        },
+        {
+          "id": "go",
+          "w": 67.03125,
+          "h": 64,
+          "bad": false
+        },
+        {
+          "id": "brake",
+          "w": 67.046875,
+          "h": 64,
+          "bad": false
+        },
+        {
+          "id": "recover-left",
+          "w": 67.03125,
+          "h": 64,
+          "bad": false
+        },
+        {
+          "id": "recover-right",
+          "w": 67.046875,
+          "h": 64,
+          "bad": false
+        },
+        {
+          "id": "listen",
+          "w": 137.078125,
+          "h": 64,
+          "bad": false
+        }
+      ],
+      "clipping": [],
+      "geometry": {
+        "car": {
+          "x": 188.94686889648438,
+          "y": 196.92312622070312,
+          "w": 62.85438537597656,
+          "h": 103.96560668945312
+        },
+        "tray": {
+          "x": 170.38577270507812,
+          "y": 231.58102416992188,
+          "w": 95.881591796875,
+          "h": 8.086395263671875
+        },
+        "cake": {
+          "x": 168.07537841796875,
+          "y": 139.7426300048828,
+          "w": 103.96798706054688,
+          "h": 103.96800231933594
+        },
+        "displacement": 1.7328033447265625,
+        "angle": "0",
+        "road": "url(\"http://127.0.0.1:5286/art/content-r3/cake-slope.webp\")",
+        "pan": "100%",
+        "rotation": [
+          0,
+          0
+        ]
+      },
+      "audio": {
+        "harness": {
+          "suppressed": true,
+          "speechRequests": 2,
+          "mediaRequests": 1
+        },
+        "speech": false,
+        "pending": false,
+        "media": [],
+        "calls": {
+          "speechCalls": 2,
+          "mediaPlayCalls": 1
+        }
+      }
+    },
+    {
+      "path": "docs/content/r36/layout/layout/device-568x320-crossing-playing.png",
+      "width": 568,
+      "height": 320,
+      "sha256": "5eef2a96a64c54d2a5c70f525d6658ce9b392b620cdaa8d831d8ed960bed6b95",
+      "state": {
+        "roadShape": "uphill",
+        "cakeStage": "",
+        "newTraffic": "false",
+        "newTrafficTime": "0",
+        "staleSide": "",
+        "refreshes": "0",
+        "boardTime": "0.000",
+        "doorStage": "closed",
+        "boardingIndex": "0",
+        "hazard": "false",
+        "wrongTurn": "false",
+        "inBend": "false",
+        "cue": "go",
+        "settled": "true",
+        "correction": "",
+        "compact": "true",
+        "recoveryActive": "false",
+        "lookStep": "0",
+        "targetName": "藍圓形",
+        "layoutSeed": "0",
+        "distance": "0.00",
+        "speed": "5.00",
+        "bend": "1",
+        "tilt": "0.00",
+        "sway": "0.00",
+        "acceleration": "0.00",
+        "bayStopped": "false",
+        "bayRestarted": "false",
+        "leftTurn": "false",
+        "rightTurn": "false",
+        "focus": "center",
+        "crossTime": "0.000",
+        "crossDuration": "2.1",
+        "orderHint": "",
+        "fruitSway": "0.00",
+        "flagSway": "0.00",
+        "hintVisible": "false",
+        "crossingOrder": "child,bike,grandma",
+        "balanceLean": "0.00",
+        "balanceStatus": "steady",
+        "recoveries": "0",
+        "assists": "0",
+        "assisting": "false",
+        "crossed": "0",
+        "lookedLeft": "false",
+        "lookedRight": "false",
+        "decision": "false",
+        "confirmed": "false",
+        "confirmDelay": "0",
+        "person": "child",
+        "trafficActive": "true",
+        "trafficTime": "0.00",
+        "ticketWrong": "false",
+        "watchSide": "",
+        "platformSide": "front",
+        "doorState": "closed",
+        "step": "0",
+        "cabin": "false",
+        "semanticStatus": "按住煞車，停在線前。",
+        "stateText": "按住煞車，停在線前。",
+        "stateTitle": "第 1 站・海風路口",
+        "nextAction": "",
+        "holdState": "",
+        "holdProgress": "0.000",
+        "recheckTime": "2",
+        "hintLevel": "0",
+        "forceTarget": "0",
+        "forceLag": "0",
+        "recoveryRate": "0",
+        "trafficConfirmed": "false",
+        "trafficSource": "left",
+        "lookSequence": "left,right",
+        "escortGate": "false",
+        "escortGateReleased": "false",
+        "restReady": "false",
+        "visited": "",
+        "steering": "false",
+        "steadying": "false",
+        "standStillTime": "0",
+        "escortWaiting": "false",
+        "escortStable": "0",
+        "escortStop": "0",
+        "escortBump": "0",
+        "bayExit": "0",
+        "roofShift": "0",
+        "slide": "0.00",
+        "edge": "false",
+        "support": "",
+        "stateAngle": "0",
+        "trafficX": "18.72",
+        "trafficMotion": "接近"
+      },
+      "text": "回學院\n路口停看等\n暫停\n小安\n小柏\n阿嬤\n← 左邊・還沒看\n○ 還沒看\n右邊 →・還沒看\n○ 還沒看\n\n按住煞車，停在線前。\n\n停下\n看左邊\n看右邊\n出發\n再聽一次",
+      "controls": [
+        {
+          "id": "content-back",
+          "w": 68,
+          "h": 60,
+          "bad": false
+        },
+        {
+          "id": "content-pause",
+          "w": 68,
+          "h": 60,
+          "bad": false
+        },
+        {
+          "id": "brake",
+          "w": 90.375,
+          "h": 64,
+          "bad": false
+        },
+        {
+          "id": "look-left",
+          "w": 90.390625,
+          "h": 60,
+          "bad": false
+        },
+        {
+          "id": "look-right",
+          "w": 90.375,
+          "h": 60,
+          "bad": false
+        },
+        {
+          "id": "depart",
+          "w": 90.375,
+          "h": 60,
+          "bad": false
+        },
+        {
+          "id": "listen",
+          "w": 90.390625,
+          "h": 60,
+          "bad": false
+        }
+      ],
+      "clipping": [],
+      "geometry": {
+        "line": null,
+        "car": {
+          "x": 21.125,
+          "y": 206.109375,
+          "w": 71.90625,
+          "h": 17.09375
+        },
+        "actors": [
+          {
+            "x": 105.421875,
+            "y": 170.609375,
+            "w": 64,
+            "h": 72
+          },
+          {
+            "x": 3.953125,
+            "y": 174.609375,
+            "w": 82,
+            "h": 68
+          },
+          {
+            "x": 197.875,
+            "y": 170.609375,
+            "w": 64,
+            "h": 72
+          }
+        ],
+        "overlaps": [],
+        "lane": {
+          "visible": true,
+          "lane": "lower",
+          "source": "left",
+          "heading": "right",
+          "top": 54,
+          "height": 17.09375,
+          "scene": 234,
+          "scale": "1"
+        },
+        "player": {
+          "translate": "none",
+          "rotate": "0deg",
+          "scale": "1",
+          "joined": false,
+          "heading": "junction",
+          "asset": "http://127.0.0.1:5286/art/content-r11/car-rear.png",
+          "centerY": 89.99451754385966,
+          "top": 79.85197368421053,
+          "bottom": 100.13706140350878
+        },
+        "observationCards": [
+          {
+            "side": "left",
+            "observed": "false",
+            "x": 278.84375,
+            "y": 78.3125,
+            "width": 136.578125,
+            "height": 62,
+            "text": "← 左邊・還沒看\n○ 還沒看",
+            "images": 0
+          },
+          {
+            "side": "right",
+            "observed": "false",
+            "x": 419.421875,
+            "y": 78.3125,
+            "width": 136.578125,
+            "height": 62,
+            "text": "右邊 →・還沒看\n○ 還沒看",
+            "images": 0
+          }
+        ]
+      },
+      "audio": {
+        "harness": {
+          "suppressed": true,
+          "speechRequests": 4,
+          "mediaRequests": 1
+        },
+        "speech": false,
+        "pending": false,
+        "media": [],
+        "calls": {
+          "speechCalls": 4,
+          "mediaPlayCalls": 1
+        }
+      }
+    },
+    {
+      "path": "docs/content/r36/layout/layout/device-568x320-tickets-playing.png",
+      "width": 568,
+      "height": 320,
+      "sha256": "02193480c3a31a9e9d3fba4664ad4c21240001dcd619d79a66aedd0433c266d1",
+      "state": {
+        "roadShape": "uphill",
+        "cakeStage": "",
+        "newTraffic": "false",
+        "newTrafficTime": "0",
+        "staleSide": "",
+        "refreshes": "0",
+        "boardTime": "0.000",
+        "doorStage": "closed",
+        "boardingIndex": "0",
+        "hazard": "false",
+        "wrongTurn": "false",
+        "inBend": "false",
+        "cue": "go",
+        "settled": "true",
+        "correction": "",
+        "compact": "true",
+        "recoveryActive": "false",
+        "lookStep": "0",
+        "targetName": "藍圓形",
+        "layoutSeed": "0",
+        "distance": "0.00",
+        "speed": "0.00",
+        "bend": "1",
+        "tilt": "0.00",
+        "sway": "0.00",
+        "acceleration": "0.00",
+        "bayStopped": "false",
+        "bayRestarted": "false",
+        "leftTurn": "false",
+        "rightTurn": "false",
+        "focus": "center",
+        "crossTime": "0.000",
+        "crossDuration": "2.1",
+        "orderHint": "",
+        "fruitSway": "0.00",
+        "flagSway": "0.00",
+        "hintVisible": "false",
+        "crossingOrder": "child,bike,grandma",
+        "balanceLean": "0.00",
+        "balanceStatus": "steady",
+        "recoveries": "0",
+        "assists": "0",
+        "assisting": "false",
+        "crossed": "0",
+        "lookedLeft": "false",
+        "lookedRight": "false",
+        "decision": "false",
+        "confirmed": "false",
+        "confirmDelay": "0",
+        "person": "child",
+        "trafficActive": "false",
+        "trafficTime": "0.00",
+        "ticketWrong": "false",
+        "watchSide": "",
+        "platformSide": "front",
+        "doorState": "closed",
+        "step": "0",
+        "cabin": "false",
+        "semanticStatus": "看車票，找一樣的月台。",
+        "stateText": "",
+        "stateTitle": "",
+        "nextAction": "",
+        "holdState": "holding",
+        "holdProgress": "0.000",
+        "recheckTime": "2",
+        "hintLevel": "0",
+        "forceTarget": "0",
+        "forceLag": "0",
+        "recoveryRate": "0",
+        "trafficConfirmed": "false",
+        "trafficSource": "left",
+        "lookSequence": "left,right",
+        "escortGate": "false",
+        "escortGateReleased": "false",
+        "restReady": "false",
+        "visited": "",
+        "steering": "false",
+        "steadying": "false",
+        "standStillTime": "0",
+        "escortWaiting": "false",
+        "escortStable": "0",
+        "escortStop": "0",
+        "escortBump": "0",
+        "bayExit": "0",
+        "roofShift": "0",
+        "slide": "0.00",
+        "edge": "false",
+        "support": "",
+        "stateAngle": "0",
+        "trafficX": "15.00",
+        "trafficMotion": "離開",
+        "signGround": "131"
+      },
+      "text": "回學院\n形狀車票，找對月台\n暫停\n↓ 小安\n↓ 小晴\n↓ 小宇\n第 1 站・海風站\n1 號月台\n2 號月台\n3 號月台\n這班三位，用同一種車票\n形狀\n→\n？\n選月台\n顏色\n→\n再比顏色\n\n看車票，找一樣的月台。\n\n已入座 0/3 人\n前進\n停穩\n開門\n再聽一次",
+      "controls": [
+        {
+          "id": "content-back",
+          "w": 68,
+          "h": 60,
+          "bad": false
+        },
+        {
+          "id": "content-pause",
+          "w": 68,
+          "h": 60,
+          "bad": false
+        },
+        {
+          "id": "",
+          "w": 60,
+          "h": 61,
+          "bad": false
+        },
+        {
+          "id": "",
+          "w": 60,
+          "h": 61,
+          "bad": false
+        },
+        {
+          "id": "",
+          "w": 60,
+          "h": 61,
+          "bad": false
+        },
+        {
+          "id": "0",
+          "w": 64,
+          "h": 64,
+          "bad": false
+        },
+        {
+          "id": "1",
+          "w": 64,
+          "h": 64,
+          "bad": false
+        },
+        {
+          "id": "2",
+          "w": 64,
+          "h": 64,
+          "bad": false
+        },
+        {
+          "id": "go",
+          "w": 90.375,
+          "h": 64,
+          "bad": false
+        },
+        {
+          "id": "brake",
+          "w": 90.390625,
+          "h": 64,
+          "bad": false
+        },
+        {
+          "id": "listen",
+          "w": 90.375,
+          "h": 60,
+          "bad": false
+        }
+      ],
+      "clipping": [],
+      "geometry": {},
+      "audio": {
+        "harness": {
+          "suppressed": true,
+          "speechRequests": 46,
+          "mediaRequests": 1
+        },
+        "speech": false,
+        "pending": false,
+        "media": [],
+        "calls": {
+          "speechCalls": 46,
+          "mediaPlayCalls": 1
+        }
+      }
+    },
+    {
+      "path": "docs/content/r36/layout/layout/device-390x844-cake-playing.png",
+      "width": 390,
+      "height": 844,
+      "sha256": "59959256fb8c8d5f26aeadf9646cb05c6bc5031d62beed58b554a7c8fc53e9ef",
+      "state": {
+        "roadShape": "uphill",
+        "cakeStage": "starting",
+        "newTraffic": "false",
+        "newTrafficTime": "0",
+        "staleSide": "",
+        "refreshes": "0",
+        "boardTime": "0.000",
+        "doorStage": "closed",
+        "boardingIndex": "0",
+        "hazard": "false",
+        "wrongTurn": "false",
+        "inBend": "false",
+        "cue": "",
+        "settled": "true",
+        "correction": "",
+        "compact": "false",
+        "recoveryActive": "false",
+        "lookStep": "0",
+        "targetName": "藍圓形",
+        "layoutSeed": "0",
+        "distance": "0.00",
+        "speed": "0.00",
+        "bend": "1",
+        "tilt": "0.00",
+        "sway": "0.00",
+        "acceleration": "0.00",
+        "bayStopped": "false",
+        "bayRestarted": "false",
+        "leftTurn": "false",
+        "rightTurn": "false",
+        "focus": "center",
+        "crossTime": "0.000",
+        "crossDuration": "2.1",
+        "orderHint": "",
+        "fruitSway": "0.00",
+        "flagSway": "0.00",
+        "hintVisible": "false",
+        "crossingOrder": "child,bike,grandma",
+        "balanceLean": "0.00",
+        "balanceStatus": "steady",
+        "recoveries": "0",
+        "assists": "0",
+        "assisting": "false",
+        "crossed": "0",
+        "lookedLeft": "false",
+        "lookedRight": "false",
+        "decision": "false",
+        "confirmed": "false",
+        "confirmDelay": "0",
+        "person": "child",
+        "trafficActive": "false",
+        "trafficTime": "0.00",
+        "ticketWrong": "false",
+        "watchSide": "",
+        "platformSide": "front",
+        "doorState": "closed",
+        "step": "0",
+        "cabin": "false",
+        "semanticStatus": "",
+        "stateText": "已停住，輕踩踏板起步。",
+        "stateTitle": "第 1 站・海岸坡",
+        "nextAction": "",
+        "holdState": "paused",
+        "holdProgress": "1.000",
+        "recheckTime": "2",
+        "hintLevel": "0",
+        "forceTarget": "0",
+        "forceLag": "0",
+        "recoveryRate": "0",
+        "trafficConfirmed": "false",
+        "trafficSource": "left",
+        "lookSequence": "left,right",
+        "escortGate": "false",
+        "escortGateReleased": "false",
+        "restReady": "false",
+        "visited": "",
+        "steering": "false",
+        "steadying": "false",
+        "standStillTime": "0",
+        "escortWaiting": "false",
+        "escortStable": "0",
+        "escortStop": "0",
+        "escortBump": "0",
+        "bayExit": "0",
+        "roofShift": "0",
+        "slide": "0.00",
+        "edge": "false",
+        "support": "",
+        "stateAngle": "0"
+      },
+      "text": "回學院\n把蛋糕平穩送到\n暫停\n第 1 站・海岸坡\n穩定度 100%\n車速：已停住・傾角 0°\n✓ 坐穩參照\n收起特寫\n\n已停住，輕踩踏板起步。\n\n左轉\n右轉\n踏板\n煞車\n推向左\n推向右\n再聽一次",
+      "controls": [
+        {
+          "id": "content-back",
+          "w": 68,
+          "h": 60,
+          "bad": false
+        },
+        {
+          "id": "content-pause",
+          "w": 68,
+          "h": 60,
+          "bad": false
+        },
+        {
+          "id": "magnify",
+          "w": 92,
+          "h": 60,
+          "bad": false
+        },
+        {
+          "id": "left",
+          "w": 81,
+          "h": 64,
+          "bad": false
+        },
+        {
+          "id": "right",
+          "w": 81,
+          "h": 64,
+          "bad": false
+        },
+        {
+          "id": "go",
+          "w": 81,
+          "h": 64,
+          "bad": false
+        },
+        {
+          "id": "brake",
+          "w": 81,
+          "h": 64,
+          "bad": false
+        },
+        {
+          "id": "recover-left",
+          "w": 168,
+          "h": 64,
+          "bad": false
+        },
+        {
+          "id": "recover-right",
+          "w": 168,
+          "h": 64,
+          "bad": false
+        },
+        {
+          "id": "listen",
+          "w": 342,
+          "h": 64,
+          "bad": false
+        }
+      ],
+      "clipping": [],
+      "geometry": {
+        "car": {
+          "x": 174.2293701171875,
+          "y": 417.9908752441406,
+          "w": 163.24560546875,
+          "h": 135.98062133789062
+        },
+        "tray": {
+          "x": 192.94674682617188,
+          "y": 464.020751953125,
+          "w": 119.85198974609375,
+          "h": 10.10797119140625
+        },
+        "cake": {
+          "x": 190.05874633789062,
+          "y": 349.2227478027344,
+          "w": 129.95999145507812,
+          "h": 129.95999145507812
+        },
+        "displacement": 2.1660003662109375,
+        "angle": "0",
+        "road": "url(\"http://127.0.0.1:5286/art/content-r3/cake-slope.webp\")",
+        "pan": "100%",
+        "rotation": [
+          0,
+          0
+        ]
+      },
+      "audio": {
+        "harness": {
+          "suppressed": true,
+          "speechRequests": 2,
+          "mediaRequests": 1
+        },
+        "speech": false,
+        "pending": false,
+        "media": [],
+        "calls": {
+          "speechCalls": 2,
+          "mediaPlayCalls": 1
+        }
+      }
+    },
+    {
+      "path": "docs/content/r36/layout/layout/device-390x844-crossing-playing.png",
+      "width": 390,
+      "height": 844,
+      "sha256": "f5c0dad5ec422dbcb6b5b8ad72df972ed21ccbe38b00b0c3a5ee7ba5e1299b21",
+      "state": {
+        "roadShape": "uphill",
+        "cakeStage": "",
+        "newTraffic": "false",
+        "newTrafficTime": "0",
+        "staleSide": "",
+        "refreshes": "0",
+        "boardTime": "0.000",
+        "doorStage": "closed",
+        "boardingIndex": "0",
+        "hazard": "false",
+        "wrongTurn": "false",
+        "inBend": "false",
+        "cue": "go",
+        "settled": "true",
+        "correction": "",
+        "compact": "false",
+        "recoveryActive": "false",
+        "lookStep": "0",
+        "targetName": "藍圓形",
+        "layoutSeed": "0",
+        "distance": "0.00",
+        "speed": "5.00",
+        "bend": "1",
+        "tilt": "0.00",
+        "sway": "0.00",
+        "acceleration": "0.00",
+        "bayStopped": "false",
+        "bayRestarted": "false",
+        "leftTurn": "false",
+        "rightTurn": "false",
+        "focus": "center",
+        "crossTime": "0.000",
+        "crossDuration": "2.1",
+        "orderHint": "",
+        "fruitSway": "0.00",
+        "flagSway": "0.00",
+        "hintVisible": "false",
+        "crossingOrder": "child,bike,grandma",
+        "balanceLean": "0.00",
+        "balanceStatus": "steady",
+        "recoveries": "0",
+        "assists": "0",
+        "assisting": "false",
+        "crossed": "0",
+        "lookedLeft": "false",
+        "lookedRight": "false",
+        "decision": "false",
+        "confirmed": "false",
+        "confirmDelay": "0",
+        "person": "child",
+        "trafficActive": "true",
+        "trafficTime": "0.00",
+        "ticketWrong": "false",
+        "watchSide": "",
+        "platformSide": "front",
+        "doorState": "closed",
+        "step": "0",
+        "cabin": "false",
+        "semanticStatus": "按住煞車，停在線前。",
+        "stateText": "按住煞車，停在線前。",
+        "stateTitle": "第 1 站・海風路口",
+        "nextAction": "",
+        "holdState": "",
+        "holdProgress": "0.000",
+        "recheckTime": "2",
+        "hintLevel": "0",
+        "forceTarget": "0",
+        "forceLag": "0",
+        "recoveryRate": "0",
+        "trafficConfirmed": "false",
+        "trafficSource": "left",
+        "lookSequence": "left,right",
+        "escortGate": "false",
+        "escortGateReleased": "false",
+        "restReady": "false",
+        "visited": "",
+        "steering": "false",
+        "steadying": "false",
+        "standStillTime": "0",
+        "escortWaiting": "false",
+        "escortStable": "0",
+        "escortStop": "0",
+        "escortBump": "0",
+        "bayExit": "0",
+        "roofShift": "0",
+        "slide": "0.00",
+        "edge": "false",
+        "support": "",
+        "stateAngle": "0",
+        "trafficX": "18.72",
+        "trafficMotion": "接近"
+      },
+      "text": "回學院\n路口停看等\n暫停\n小安\n小柏\n阿嬤\n第 1 站・海風路口\n已到對岸 0/3 人\n← 左邊・還沒看\n○ 還沒看\n右邊 →・還沒看\n○ 還沒看\n\n按住煞車，停在線前。\n\n停下\n看左邊\n看右邊\n出發\n再聽一次",
+      "controls": [
+        {
+          "id": "content-back",
+          "w": 68,
+          "h": 60,
+          "bad": false
+        },
+        {
+          "id": "content-pause",
+          "w": 68,
+          "h": 60,
+          "bad": false
+        },
+        {
+          "id": "brake",
+          "w": 81,
+          "h": 64,
+          "bad": false
+        },
+        {
+          "id": "look-left",
+          "w": 81,
+          "h": 64,
+          "bad": false
+        },
+        {
+          "id": "look-right",
+          "w": 81,
+          "h": 64,
+          "bad": false
+        },
+        {
+          "id": "depart",
+          "w": 81,
+          "h": 64,
+          "bad": false
+        },
+        {
+          "id": "listen",
+          "w": 342,
+          "h": 64,
+          "bad": false
+        }
+      ],
+      "clipping": [],
+      "geometry": {
+        "line": null,
+        "car": {
+          "x": 33.015625,
+          "y": 317.015625,
+          "w": 100,
+          "h": 31.515625
+        },
+        "actors": [
+          {
+            "x": 157,
+            "y": 312.296875,
+            "w": 76,
+            "h": 72
+          },
+          {
+            "x": 25.109375,
+            "y": 316.296875,
+            "w": 82,
+            "h": 68
+          },
+          {
+            "x": 285.875,
+            "y": 312.296875,
+            "w": 76,
+            "h": 72
+          }
+        ],
+        "overlaps": [],
+        "lane": {
+          "visible": true,
+          "lane": "lower",
+          "source": "left",
+          "heading": "right",
+          "top": 54,
+          "height": 31.515625,
+          "scene": 426.40625,
+          "scale": "1"
+        },
+        "player": {
+          "translate": "none",
+          "rotate": "0deg",
+          "scale": "1",
+          "joined": false,
+          "heading": "junction",
+          "asset": "http://127.0.0.1:5286/art/content-r11/car-rear.png",
+          "centerY": 89.9093139076786,
+          "top": 82.24559577789341,
+          "bottom": 97.57303203746376
+        },
+        "observationCards": [
+          {
+            "side": "left",
+            "observed": "false",
+            "x": 24,
+            "y": 532.40625,
+            "width": 168,
+            "height": 94,
+            "text": "← 左邊・還沒看\n○ 還沒看",
+            "images": 0
+          },
+          {
+            "side": "right",
+            "observed": "false",
+            "x": 198,
+            "y": 532.40625,
+            "width": 168,
+            "height": 94,
+            "text": "右邊 →・還沒看\n○ 還沒看",
+            "images": 0
+          }
+        ]
+      },
+      "audio": {
+        "harness": {
+          "suppressed": true,
+          "speechRequests": 4,
+          "mediaRequests": 1
+        },
+        "speech": false,
+        "pending": false,
+        "media": [],
+        "calls": {
+          "speechCalls": 4,
+          "mediaPlayCalls": 1
+        }
+      }
+    },
+    {
+      "path": "docs/content/r36/layout/layout/device-390x844-tickets-playing.png",
+      "width": 390,
+      "height": 844,
+      "sha256": "c3bf02733fd02a3b98ebd2df6633345976fd0fb70e49bc780940fda9e486f2f0",
+      "state": {
+        "roadShape": "uphill",
+        "cakeStage": "",
+        "newTraffic": "false",
+        "newTrafficTime": "0",
+        "staleSide": "",
+        "refreshes": "0",
+        "boardTime": "0.000",
+        "doorStage": "closed",
+        "boardingIndex": "0",
+        "hazard": "false",
+        "wrongTurn": "false",
+        "inBend": "false",
+        "cue": "go",
+        "settled": "true",
+        "correction": "",
+        "compact": "false",
+        "recoveryActive": "false",
+        "lookStep": "0",
+        "targetName": "藍圓形",
+        "layoutSeed": "0",
+        "distance": "0.00",
+        "speed": "0.00",
+        "bend": "1",
+        "tilt": "0.00",
+        "sway": "0.00",
+        "acceleration": "0.00",
+        "bayStopped": "false",
+        "bayRestarted": "false",
+        "leftTurn": "false",
+        "rightTurn": "false",
+        "focus": "center",
+        "crossTime": "0.000",
+        "crossDuration": "2.1",
+        "orderHint": "",
+        "fruitSway": "0.00",
+        "flagSway": "0.00",
+        "hintVisible": "false",
+        "crossingOrder": "child,bike,grandma",
+        "balanceLean": "0.00",
+        "balanceStatus": "steady",
+        "recoveries": "0",
+        "assists": "0",
+        "assisting": "false",
+        "crossed": "0",
+        "lookedLeft": "false",
+        "lookedRight": "false",
+        "decision": "false",
+        "confirmed": "false",
+        "confirmDelay": "0",
+        "person": "child",
+        "trafficActive": "false",
+        "trafficTime": "0.00",
+        "ticketWrong": "false",
+        "watchSide": "",
+        "platformSide": "front",
+        "doorState": "closed",
+        "step": "0",
+        "cabin": "false",
+        "semanticStatus": "看車票，找一樣的月台。",
+        "stateText": "",
+        "stateTitle": "",
+        "nextAction": "",
+        "holdState": "holding",
+        "holdProgress": "0.000",
+        "recheckTime": "2",
+        "hintLevel": "0",
+        "forceTarget": "0",
+        "forceLag": "0",
+        "recoveryRate": "0",
+        "trafficConfirmed": "false",
+        "trafficSource": "left",
+        "lookSequence": "left,right",
+        "escortGate": "false",
+        "escortGateReleased": "false",
+        "restReady": "false",
+        "visited": "",
+        "steering": "false",
+        "steadying": "false",
+        "standStillTime": "0",
+        "escortWaiting": "false",
+        "escortStable": "0",
+        "escortStop": "0",
+        "escortBump": "0",
+        "bayExit": "0",
+        "roofShift": "0",
+        "slide": "0.00",
+        "edge": "false",
+        "support": "",
+        "stateAngle": "0",
+        "trafficX": "15.00",
+        "trafficMotion": "離開",
+        "signGround": "446.15"
+      },
+      "text": "回學院\n形狀車票，找對月台\n暫停\n↓ 小安\n↓ 小晴\n↓ 小宇\n第 1 站・海風站\n已入座 0/3 人\n1 號月台\n2 號月台\n3 號月台\n這班三位，用同一種車票\n形狀\n→\n？\n選月台\n顏色\n→\n再比顏色\n找相同形狀＋顏色\n\n看車票，找一樣的月台。\n\n前進\n停穩\n開門\n再聽一次",
+      "controls": [
+        {
+          "id": "content-back",
+          "w": 68,
+          "h": 60,
+          "bad": false
+        },
+        {
+          "id": "content-pause",
+          "w": 68,
+          "h": 60,
+          "bad": false
+        },
+        {
+          "id": "",
+          "w": 70,
+          "h": 90,
+          "bad": false
+        },
+        {
+          "id": "",
+          "w": 70,
+          "h": 90,
+          "bad": false
+        },
+        {
+          "id": "",
+          "w": 70,
+          "h": 90,
+          "bad": false
+        },
+        {
+          "id": "0",
+          "w": 64,
+          "h": 64,
+          "bad": false
+        },
+        {
+          "id": "1",
+          "w": 64,
+          "h": 64,
+          "bad": false
+        },
+        {
+          "id": "2",
+          "w": 64,
+          "h": 64,
+          "bad": false
+        },
+        {
+          "id": "go",
+          "w": 81,
+          "h": 64,
+          "bad": false
+        },
+        {
+          "id": "brake",
+          "w": 81,
+          "h": 64,
+          "bad": false
+        },
+        {
+          "id": "listen",
+          "w": 342,
+          "h": 64,
+          "bad": false
+        }
+      ],
+      "clipping": [],
+      "geometry": {},
+      "audio": {
+        "harness": {
+          "suppressed": true,
+          "speechRequests": 46,
+          "mediaRequests": 1
+        },
+        "speech": false,
+        "pending": false,
+        "media": [],
+        "calls": {
+          "speechCalls": 46,
+          "mediaPlayCalls": 1
+        }
+      }
+    },
+    {
+      "path": "docs/content/r36/layout/layout/device-844x390-cake-playing.png",
+      "width": 844,
+      "height": 390,
+      "sha256": "49d913c0c3081c87d9ae8b640ddd6f75620bf0514bd972546e8ba6e2accaa682",
+      "state": {
+        "roadShape": "uphill",
+        "cakeStage": "starting",
+        "newTraffic": "false",
+        "newTrafficTime": "0",
+        "staleSide": "",
+        "refreshes": "0",
+        "boardTime": "0.000",
+        "doorStage": "closed",
+        "boardingIndex": "0",
+        "hazard": "false",
+        "wrongTurn": "false",
+        "inBend": "false",
+        "cue": "",
+        "settled": "true",
+        "correction": "",
+        "compact": "true",
+        "recoveryActive": "false",
+        "lookStep": "0",
+        "targetName": "藍圓形",
+        "layoutSeed": "0",
+        "distance": "0.00",
+        "speed": "0.00",
+        "bend": "1",
+        "tilt": "0.00",
+        "sway": "0.00",
+        "acceleration": "0.00",
+        "bayStopped": "false",
+        "bayRestarted": "false",
+        "leftTurn": "false",
+        "rightTurn": "false",
+        "focus": "center",
+        "crossTime": "0.000",
+        "crossDuration": "2.1",
+        "orderHint": "",
+        "fruitSway": "0.00",
+        "flagSway": "0.00",
+        "hintVisible": "false",
+        "crossingOrder": "child,bike,grandma",
+        "balanceLean": "0.00",
+        "balanceStatus": "steady",
+        "recoveries": "0",
+        "assists": "0",
+        "assisting": "false",
+        "crossed": "0",
+        "lookedLeft": "false",
+        "lookedRight": "false",
+        "decision": "false",
+        "confirmed": "false",
+        "confirmDelay": "0",
+        "person": "child",
+        "trafficActive": "false",
+        "trafficTime": "0.00",
+        "ticketWrong": "false",
+        "watchSide": "",
+        "platformSide": "front",
+        "doorState": "closed",
+        "step": "0",
+        "cabin": "false",
+        "semanticStatus": "",
+        "stateText": "已停住，輕踩踏板起步。",
+        "stateTitle": "第 1 站・海岸坡",
+        "nextAction": "",
+        "holdState": "paused",
+        "holdProgress": "1.000",
+        "recheckTime": "2",
+        "hintLevel": "0",
+        "forceTarget": "0",
+        "forceLag": "0",
+        "recoveryRate": "0",
+        "trafficConfirmed": "false",
+        "trafficSource": "left",
+        "lookSequence": "left,right",
+        "escortGate": "false",
+        "escortGateReleased": "false",
+        "restReady": "false",
+        "visited": "",
+        "steering": "false",
+        "steadying": "false",
+        "standStillTime": "0",
+        "escortWaiting": "false",
+        "escortStable": "0",
+        "escortStop": "0",
+        "escortBump": "0",
+        "bayExit": "0",
+        "roofShift": "0",
+        "slide": "0.00",
+        "edge": "false",
+        "support": "",
+        "stateAngle": "0"
+      },
+      "text": "回學院\n把蛋糕平穩送到\n暫停\n第 1 站・海岸坡\n穩定度 100%\n車速：已停住・傾角 0°\n✓ 坐穩參照\n收起特寫\n\n已停住，輕踩踏板起步。\n\n左轉\n右轉\n踏板\n煞車\n推向左\n推向右\n再聽一次",
+      "controls": [
+        {
+          "id": "content-back",
+          "w": 68,
+          "h": 60,
+          "bad": false
+        },
+        {
+          "id": "content-pause",
+          "w": 68,
+          "h": 60,
+          "bad": false
+        },
+        {
+          "id": "magnify",
+          "w": 90,
+          "h": 60,
+          "bad": false
+        },
+        {
+          "id": "left",
+          "w": 103.171875,
+          "h": 64,
+          "bad": false
+        },
+        {
+          "id": "right",
+          "w": 103.1875,
+          "h": 64,
+          "bad": false
+        },
+        {
+          "id": "go",
+          "w": 103.171875,
+          "h": 64,
+          "bad": false
+        },
+        {
+          "id": "brake",
+          "w": 103.1875,
+          "h": 64,
+          "bad": false
+        },
+        {
+          "id": "recover-left",
+          "w": 103.171875,
+          "h": 64,
+          "bad": false
+        },
+        {
+          "id": "recover-right",
+          "w": 103.1875,
+          "h": 64,
+          "bad": false
+        },
+        {
+          "id": "listen",
+          "w": 209.359375,
+          "h": 64,
+          "bad": false
+        }
+      ],
+      "clipping": [],
+      "geometry": {
+        "car": {
+          "x": 246.96124267578125,
+          "y": 231.8857421875,
+          "w": 122.78750610351562,
+          "h": 135.8856201171875
+        },
+        "tray": {
+          "x": 245.64549255371094,
+          "y": 277.8800048828125,
+          "w": 119.85200500488281,
+          "h": 10.10797119140625
+        },
+        "cake": {
+          "x": 242.7574920654297,
+          "y": 163.08200073242188,
+          "w": 129.9600067138672,
+          "h": 129.95999145507812
+        },
+        "displacement": 2.1660003662109375,
+        "angle": "0",
+        "road": "url(\"http://127.0.0.1:5286/art/content-r3/cake-slope.webp\")",
+        "pan": "100%",
+        "rotation": [
+          0,
+          0
+        ]
+      },
+      "audio": {
+        "harness": {
+          "suppressed": true,
+          "speechRequests": 2,
+          "mediaRequests": 1
+        },
+        "speech": false,
+        "pending": false,
+        "media": [],
+        "calls": {
+          "speechCalls": 2,
+          "mediaPlayCalls": 1
+        }
+      }
+    },
+    {
+      "path": "docs/content/r36/layout/layout/device-844x390-crossing-playing.png",
+      "width": 844,
+      "height": 390,
+      "sha256": "117e2a2228bf4f6c6a44fdccc2f789887ddf4f80023224b3b7096c11c8c46308",
+      "state": {
+        "roadShape": "uphill",
+        "cakeStage": "",
+        "newTraffic": "false",
+        "newTrafficTime": "0",
+        "staleSide": "",
+        "refreshes": "0",
+        "boardTime": "0.000",
+        "doorStage": "closed",
+        "boardingIndex": "0",
+        "hazard": "false",
+        "wrongTurn": "false",
+        "inBend": "false",
+        "cue": "go",
+        "settled": "true",
+        "correction": "",
+        "compact": "true",
+        "recoveryActive": "false",
+        "lookStep": "0",
+        "targetName": "藍圓形",
+        "layoutSeed": "0",
+        "distance": "0.00",
+        "speed": "5.00",
+        "bend": "1",
+        "tilt": "0.00",
+        "sway": "0.00",
+        "acceleration": "0.00",
+        "bayStopped": "false",
+        "bayRestarted": "false",
+        "leftTurn": "false",
+        "rightTurn": "false",
+        "focus": "center",
+        "crossTime": "0.000",
+        "crossDuration": "2.1",
+        "orderHint": "",
+        "fruitSway": "0.00",
+        "flagSway": "0.00",
+        "hintVisible": "false",
+        "crossingOrder": "child,bike,grandma",
+        "balanceLean": "0.00",
+        "balanceStatus": "steady",
+        "recoveries": "0",
+        "assists": "0",
+        "assisting": "false",
+        "crossed": "0",
+        "lookedLeft": "false",
+        "lookedRight": "false",
+        "decision": "false",
+        "confirmed": "false",
+        "confirmDelay": "0",
+        "person": "child",
+        "trafficActive": "true",
+        "trafficTime": "0.00",
+        "ticketWrong": "false",
+        "watchSide": "",
+        "platformSide": "front",
+        "doorState": "closed",
+        "step": "0",
+        "cabin": "false",
+        "semanticStatus": "按住煞車，停在線前。",
+        "stateText": "按住煞車，停在線前。",
+        "stateTitle": "第 1 站・海風路口",
+        "nextAction": "",
+        "holdState": "",
+        "holdProgress": "0.000",
+        "recheckTime": "2",
+        "hintLevel": "0",
+        "forceTarget": "0",
+        "forceLag": "0",
+        "recoveryRate": "0",
+        "trafficConfirmed": "false",
+        "trafficSource": "left",
+        "lookSequence": "left,right",
+        "escortGate": "false",
+        "escortGateReleased": "false",
+        "restReady": "false",
+        "visited": "",
+        "steering": "false",
+        "steadying": "false",
+        "standStillTime": "0",
+        "escortWaiting": "false",
+        "escortStable": "0",
+        "escortStop": "0",
+        "escortBump": "0",
+        "bayExit": "0",
+        "roofShift": "0",
+        "slide": "0.00",
+        "edge": "false",
+        "support": "",
+        "stateAngle": "0",
+        "trafficX": "18.72",
+        "trafficMotion": "接近"
+      },
+      "text": "回學院\n路口停看等\n暫停\n小安\n小柏\n阿嬤\n← 左邊・還沒看\n○ 還沒看\n右邊 →・還沒看\n○ 還沒看\n\n按住煞車，停在線前。\n\n停下\n看左邊\n看右邊\n出發\n再聽一次",
+      "controls": [
+        {
+          "id": "content-back",
+          "w": 68,
+          "h": 60,
+          "bad": false
+        },
+        {
+          "id": "content-pause",
+          "w": 68,
+          "h": 60,
+          "bad": false
+        },
+        {
+          "id": "brake",
+          "w": 138.5625,
+          "h": 64,
+          "bad": false
+        },
+        {
+          "id": "look-left",
+          "w": 138.578125,
+          "h": 60,
+          "bad": false
+        },
+        {
+          "id": "look-right",
+          "w": 138.578125,
+          "h": 60,
+          "bad": false
+        },
+        {
+          "id": "depart",
+          "w": 138.5625,
+          "h": 60,
+          "bad": false
+        },
+        {
+          "id": "listen",
+          "w": 138.578125,
+          "h": 60,
+          "bad": false
+        }
+      ],
+      "clipping": [],
+      "geometry": {
+        "line": null,
+        "car": {
+          "x": 31.671875,
+          "y": 243.90625,
+          "w": 100,
+          "h": 22.34375
+        },
+        "actors": [
+          {
+            "x": 171.140625,
+            "y": 219.609375,
+            "w": 64,
+            "h": 72
+          },
+          {
+            "x": 22.359375,
+            "y": 223.609375,
+            "w": 82,
+            "h": 68
+          },
+          {
+            "x": 310.921875,
+            "y": 219.609375,
+            "w": 64,
+            "h": 72
+          }
+        ],
+        "overlaps": [],
+        "lane": {
+          "visible": true,
+          "lane": "lower",
+          "source": "left",
+          "heading": "right",
+          "top": 54,
+          "height": 22.34375,
+          "scene": 304,
+          "scale": "1"
+        },
+        "player": {
+          "translate": "none",
+          "rotate": "0deg",
+          "scale": "1",
+          "joined": false,
+          "heading": "junction",
+          "asset": "http://127.0.0.1:5286/art/content-r11/car-rear.png",
+          "centerY": 89.99318372483222,
+          "top": 78.27705536912751,
+          "bottom": 101.7093120805369
+        },
+        "observationCards": [
+          {
+            "side": "left",
+            "observed": "false",
+            "x": 410.28125,
+            "y": 113.296875,
+            "width": 208.859375,
+            "height": 62,
+            "text": "← 左邊・還沒看\n○ 還沒看",
+            "images": 0
+          },
+          {
+            "side": "right",
+            "observed": "false",
+            "x": 623.140625,
+            "y": 113.296875,
+            "width": 208.859375,
+            "height": 62,
+            "text": "右邊 →・還沒看\n○ 還沒看",
+            "images": 0
+          }
+        ]
+      },
+      "audio": {
+        "harness": {
+          "suppressed": true,
+          "speechRequests": 4,
+          "mediaRequests": 1
+        },
+        "speech": false,
+        "pending": false,
+        "media": [],
+        "calls": {
+          "speechCalls": 4,
+          "mediaPlayCalls": 1
+        }
+      }
+    },
+    {
+      "path": "docs/content/r36/layout/layout/device-844x390-tickets-playing.png",
+      "width": 844,
+      "height": 390,
+      "sha256": "7b97ff3f35209bf247e27e9f2a3ab7f59904250e77746e3d071b52782062293b",
+      "state": {
+        "roadShape": "uphill",
+        "cakeStage": "",
+        "newTraffic": "false",
+        "newTrafficTime": "0",
+        "staleSide": "",
+        "refreshes": "0",
+        "boardTime": "0.000",
+        "doorStage": "closed",
+        "boardingIndex": "0",
+        "hazard": "false",
+        "wrongTurn": "false",
+        "inBend": "false",
+        "cue": "go",
+        "settled": "true",
+        "correction": "",
+        "compact": "true",
+        "recoveryActive": "false",
+        "lookStep": "0",
+        "targetName": "藍圓形",
+        "layoutSeed": "0",
+        "distance": "0.00",
+        "speed": "0.00",
+        "bend": "1",
+        "tilt": "0.00",
+        "sway": "0.00",
+        "acceleration": "0.00",
+        "bayStopped": "false",
+        "bayRestarted": "false",
+        "leftTurn": "false",
+        "rightTurn": "false",
+        "focus": "center",
+        "crossTime": "0.000",
+        "crossDuration": "2.1",
+        "orderHint": "",
+        "fruitSway": "0.00",
+        "flagSway": "0.00",
+        "hintVisible": "false",
+        "crossingOrder": "child,bike,grandma",
+        "balanceLean": "0.00",
+        "balanceStatus": "steady",
+        "recoveries": "0",
+        "assists": "0",
+        "assisting": "false",
+        "crossed": "0",
+        "lookedLeft": "false",
+        "lookedRight": "false",
+        "decision": "false",
+        "confirmed": "false",
+        "confirmDelay": "0",
+        "person": "child",
+        "trafficActive": "false",
+        "trafficTime": "0.00",
+        "ticketWrong": "false",
+        "watchSide": "",
+        "platformSide": "front",
+        "doorState": "closed",
+        "step": "0",
+        "cabin": "false",
+        "semanticStatus": "看車票，找一樣的月台。",
+        "stateText": "",
+        "stateTitle": "",
+        "nextAction": "",
+        "holdState": "holding",
+        "holdProgress": "0.000",
+        "recheckTime": "2",
+        "hintLevel": "0",
+        "forceTarget": "0",
+        "forceLag": "0",
+        "recoveryRate": "0",
+        "trafficConfirmed": "false",
+        "trafficSource": "left",
+        "lookSequence": "left,right",
+        "escortGate": "false",
+        "escortGateReleased": "false",
+        "restReady": "false",
+        "visited": "",
+        "steering": "false",
+        "steadying": "false",
+        "standStillTime": "0",
+        "escortWaiting": "false",
+        "escortStable": "0",
+        "escortStop": "0",
+        "escortBump": "0",
+        "bayExit": "0",
+        "roofShift": "0",
+        "slide": "0.00",
+        "edge": "false",
+        "support": "",
+        "stateAngle": "0",
+        "trafficX": "15.00",
+        "trafficMotion": "離開",
+        "signGround": "201"
+      },
+      "text": "回學院\n形狀車票，找對月台\n暫停\n↓ 小安\n↓ 小晴\n↓ 小宇\n第 1 站・海風站\n1 號月台\n2 號月台\n3 號月台\n這班三位，用同一種車票\n形狀\n→\n？\n選月台\n顏色\n→\n再比顏色\n\n看車票，找一樣的月台。\n\n已入座 0/3 人\n前進\n停穩\n開門\n再聽一次",
+      "controls": [
+        {
+          "id": "content-back",
+          "w": 68,
+          "h": 60,
+          "bad": false
+        },
+        {
+          "id": "content-pause",
+          "w": 68,
+          "h": 60,
+          "bad": false
+        },
+        {
+          "id": "",
+          "w": 60,
+          "h": 61,
+          "bad": false
+        },
+        {
+          "id": "",
+          "w": 60,
+          "h": 61,
+          "bad": false
+        },
+        {
+          "id": "",
+          "w": 60,
+          "h": 61,
+          "bad": false
+        },
+        {
+          "id": "0",
+          "w": 64,
+          "h": 64,
+          "bad": false
+        },
+        {
+          "id": "1",
+          "w": 64,
+          "h": 64,
+          "bad": false
+        },
+        {
+          "id": "2",
+          "w": 64,
+          "h": 64,
+          "bad": false
+        },
+        {
+          "id": "go",
+          "w": 138.5625,
+          "h": 64,
+          "bad": false
+        },
+        {
+          "id": "brake",
+          "w": 138.578125,
+          "h": 64,
+          "bad": false
+        },
+        {
+          "id": "listen",
+          "w": 138.5625,
+          "h": 60,
+          "bad": false
+        }
+      ],
+      "clipping": [],
+      "geometry": {},
+      "audio": {
+        "harness": {
+          "suppressed": true,
+          "speechRequests": 46,
+          "mediaRequests": 1
+        },
+        "speech": false,
+        "pending": false,
+        "media": [],
+        "calls": {
+          "speechCalls": 46,
+          "mediaPlayCalls": 1
+        }
+      }
+    },
+    {
+      "path": "docs/content/r36/layout/layout/device-768x1024-cake-playing.png",
+      "width": 768,
+      "height": 1024,
+      "sha256": "e0f3cba339d8e6c13c1b4dfb79f595c732f598ab41338b6478be8f7ff1ba9398",
+      "state": {
+        "roadShape": "uphill",
+        "cakeStage": "starting",
+        "newTraffic": "false",
+        "newTrafficTime": "0",
+        "staleSide": "",
+        "refreshes": "0",
+        "boardTime": "0.000",
+        "doorStage": "closed",
+        "boardingIndex": "0",
+        "hazard": "false",
+        "wrongTurn": "false",
+        "inBend": "false",
+        "cue": "",
+        "settled": "true",
+        "correction": "",
+        "compact": "false",
+        "recoveryActive": "false",
+        "lookStep": "0",
+        "targetName": "藍圓形",
+        "layoutSeed": "0",
+        "distance": "0.00",
+        "speed": "0.00",
+        "bend": "1",
+        "tilt": "0.00",
+        "sway": "0.00",
+        "acceleration": "0.00",
+        "bayStopped": "false",
+        "bayRestarted": "false",
+        "leftTurn": "false",
+        "rightTurn": "false",
+        "focus": "center",
+        "crossTime": "0.000",
+        "crossDuration": "2.1",
+        "orderHint": "",
+        "fruitSway": "0.00",
+        "flagSway": "0.00",
+        "hintVisible": "false",
+        "crossingOrder": "child,bike,grandma",
+        "balanceLean": "0.00",
+        "balanceStatus": "steady",
+        "recoveries": "0",
+        "assists": "0",
+        "assisting": "false",
+        "crossed": "0",
+        "lookedLeft": "false",
+        "lookedRight": "false",
+        "decision": "false",
+        "confirmed": "false",
+        "confirmDelay": "0",
+        "person": "child",
+        "trafficActive": "false",
+        "trafficTime": "0.00",
+        "ticketWrong": "false",
+        "watchSide": "",
+        "platformSide": "front",
+        "doorState": "closed",
+        "step": "0",
+        "cabin": "false",
+        "semanticStatus": "",
+        "stateText": "已停住，輕踩踏板起步。",
+        "stateTitle": "第 1 站・海岸坡",
+        "nextAction": "",
+        "holdState": "paused",
+        "holdProgress": "1.000",
+        "recheckTime": "2",
+        "hintLevel": "0",
+        "forceTarget": "0",
+        "forceLag": "0",
+        "recoveryRate": "0",
+        "trafficConfirmed": "false",
+        "trafficSource": "left",
+        "lookSequence": "left,right",
+        "escortGate": "false",
+        "escortGateReleased": "false",
+        "restReady": "false",
+        "visited": "",
+        "steering": "false",
+        "steadying": "false",
+        "standStillTime": "0",
+        "escortWaiting": "false",
+        "escortStable": "0",
+        "escortStop": "0",
+        "escortBump": "0",
+        "bayExit": "0",
+        "roofShift": "0",
+        "slide": "0.00",
+        "edge": "false",
+        "support": "",
+        "stateAngle": "0"
+      },
+      "text": "回學院\n把蛋糕平穩送到\n暫停\n第 1 站・海岸坡\n穩定度 100%\n車速：已停住・傾角 0°\n✓ 坐穩參照\n收起特寫\n\n已停住，輕踩踏板起步。\n\n左轉\n右轉\n踏板\n煞車\n推向左\n推向右\n再聽一次",
+      "controls": [
+        {
+          "id": "content-back",
+          "w": 68,
+          "h": 60,
+          "bad": false
+        },
+        {
+          "id": "content-pause",
+          "w": 68,
+          "h": 60,
+          "bad": false
+        },
+        {
+          "id": "magnify",
+          "w": 92,
+          "h": 60,
+          "bad": false
+        },
+        {
+          "id": "left",
+          "w": 66.453125,
+          "h": 64,
+          "bad": false
+        },
+        {
+          "id": "right",
+          "w": 66.453125,
+          "h": 64,
+          "bad": false
+        },
+        {
+          "id": "go",
+          "w": 66.453125,
+          "h": 64,
+          "bad": false
+        },
+        {
+          "id": "brake",
+          "w": 66.46875,
+          "h": 64,
+          "bad": false
+        },
+        {
+          "id": "recover-left",
+          "w": 138.90625,
+          "h": 64,
+          "bad": false
+        },
+        {
+          "id": "recover-right",
+          "w": 138.921875,
+          "h": 64,
+          "bad": false
+        },
+        {
+          "id": "listen",
+          "w": 283.828125,
+          "h": 64,
+          "bad": false
+        }
+      ],
+      "clipping": [],
+      "geometry": {
+        "car": {
+          "x": 202.5556182861328,
+          "y": 638.2664794921875,
+          "w": 192.49375915527344,
+          "h": 280.4400634765625
+        },
+        "tray": {
+          "x": 235.7367401123047,
+          "y": 749.31201171875,
+          "w": 119.85200500488281,
+          "h": 10.10797119140625
+        },
+        "cake": {
+          "x": 232.84873962402344,
+          "y": 634.5140380859375,
+          "w": 129.9600067138672,
+          "h": 129.9599609375
+        },
+        "displacement": 2.1660003662109375,
+        "angle": "0",
+        "road": "url(\"http://127.0.0.1:5286/art/content-r3/cake-slope.webp\")",
+        "pan": "100%",
+        "rotation": [
+          0,
+          0
+        ]
+      },
+      "audio": {
+        "harness": {
+          "suppressed": true,
+          "speechRequests": 2,
+          "mediaRequests": 1
+        },
+        "speech": false,
+        "pending": false,
+        "media": [],
+        "calls": {
+          "speechCalls": 2,
+          "mediaPlayCalls": 1
+        }
+      }
+    },
+    {
+      "path": "docs/content/r36/layout/layout/device-768x1024-crossing-playing.png",
+      "width": 768,
+      "height": 1024,
+      "sha256": "ec230dc30540b26a047041a785af2bb1d2c5583b5619dad94348b9c0eb524c50",
+      "state": {
+        "roadShape": "uphill",
+        "cakeStage": "",
+        "newTraffic": "false",
+        "newTrafficTime": "0",
+        "staleSide": "",
+        "refreshes": "0",
+        "boardTime": "0.000",
+        "doorStage": "closed",
+        "boardingIndex": "0",
+        "hazard": "false",
+        "wrongTurn": "false",
+        "inBend": "false",
+        "cue": "go",
+        "settled": "true",
+        "correction": "",
+        "compact": "false",
+        "recoveryActive": "false",
+        "lookStep": "0",
+        "targetName": "藍圓形",
+        "layoutSeed": "0",
+        "distance": "0.00",
+        "speed": "5.00",
+        "bend": "1",
+        "tilt": "0.00",
+        "sway": "0.00",
+        "acceleration": "0.00",
+        "bayStopped": "false",
+        "bayRestarted": "false",
+        "leftTurn": "false",
+        "rightTurn": "false",
+        "focus": "center",
+        "crossTime": "0.000",
+        "crossDuration": "2.1",
+        "orderHint": "",
+        "fruitSway": "0.00",
+        "flagSway": "0.00",
+        "hintVisible": "false",
+        "crossingOrder": "child,bike,grandma",
+        "balanceLean": "0.00",
+        "balanceStatus": "steady",
+        "recoveries": "0",
+        "assists": "0",
+        "assisting": "false",
+        "crossed": "0",
+        "lookedLeft": "false",
+        "lookedRight": "false",
+        "decision": "false",
+        "confirmed": "false",
+        "confirmDelay": "0",
+        "person": "child",
+        "trafficActive": "true",
+        "trafficTime": "0.00",
+        "ticketWrong": "false",
+        "watchSide": "",
+        "platformSide": "front",
+        "doorState": "closed",
+        "step": "0",
+        "cabin": "false",
+        "semanticStatus": "按住煞車，停在線前。",
+        "stateText": "按住煞車，停在線前。",
+        "stateTitle": "第 1 站・海風路口",
+        "nextAction": "",
+        "holdState": "",
+        "holdProgress": "0.000",
+        "recheckTime": "2",
+        "hintLevel": "0",
+        "forceTarget": "0",
+        "forceLag": "0",
+        "recoveryRate": "0",
+        "trafficConfirmed": "false",
+        "trafficSource": "left",
+        "lookSequence": "left,right",
+        "escortGate": "false",
+        "escortGateReleased": "false",
+        "restReady": "false",
+        "visited": "",
+        "steering": "false",
+        "steadying": "false",
+        "standStillTime": "0",
+        "escortWaiting": "false",
+        "escortStable": "0",
+        "escortStop": "0",
+        "escortBump": "0",
+        "bayExit": "0",
+        "roofShift": "0",
+        "slide": "0.00",
+        "edge": "false",
+        "support": "",
+        "stateAngle": "0",
+        "trafficX": "18.72",
+        "trafficMotion": "接近"
+      },
+      "text": "回學院\n路口停看等\n暫停\n小安\n小柏\n阿嬤\n第 1 站・海風路口\n已到對岸 0/3 人\n← 左邊・還沒看\n○ 還沒看\n右邊 →・還沒看\n○ 還沒看\n\n按住煞車，停在線前。\n\n停下\n看左邊\n看右邊\n出發\n再聽一次",
+      "controls": [
+        {
+          "id": "content-back",
+          "w": 68,
+          "h": 60,
+          "bad": false
+        },
+        {
+          "id": "content-pause",
+          "w": 68,
+          "h": 60,
+          "bad": false
+        },
+        {
+          "id": "brake",
+          "w": 66.453125,
+          "h": 64,
+          "bad": false
+        },
+        {
+          "id": "look-left",
+          "w": 66.453125,
+          "h": 64,
+          "bad": false
+        },
+        {
+          "id": "look-right",
+          "w": 66.453125,
+          "h": 64,
+          "bad": false
+        },
+        {
+          "id": "depart",
+          "w": 66.46875,
+          "h": 64,
+          "bad": false
+        },
+        {
+          "id": "listen",
+          "w": 283.828125,
+          "h": 64,
+          "bad": false
+        }
+      ],
+      "clipping": [],
+      "geometry": {
+        "line": null,
+        "car": {
+          "x": 45.015625,
+          "y": 580.75,
+          "w": 100,
+          "h": 40
+        },
+        "actors": [
+          {
+            "x": 189.078125,
+            "y": 635.8125,
+            "w": 76,
+            "h": 72
+          },
+          {
+            "x": 34.09375,
+            "y": 639.8125,
+            "w": 82,
+            "h": 68
+          },
+          {
+            "x": 341.046875,
+            "y": 635.8125,
+            "w": 76,
+            "h": 72
+          }
+        ],
+        "overlaps": [],
+        "lane": {
+          "visible": true,
+          "lane": "lower",
+          "source": "left",
+          "heading": "right",
+          "top": 54,
+          "height": 40,
+          "scene": 800,
+          "scale": "1"
+        },
+        "player": {
+          "translate": "none",
+          "rotate": "0deg",
+          "scale": "1",
+          "joined": false,
+          "heading": "junction",
+          "asset": "http://127.0.0.1:5286/art/content-r11/car-rear.png",
+          "centerY": 89.9992128463476,
+          "top": 85.33926322418137,
+          "bottom": 94.65916246851386
+        },
+        "observationCards": [
+          {
+            "side": "left",
+            "observed": "false",
+            "x": 460.15625,
+            "y": 404.03125,
+            "width": 138.90625,
+            "height": 94,
+            "text": "← 左邊・還沒看\n○ 還沒看",
+            "images": 0
+          },
+          {
+            "side": "right",
+            "observed": "false",
+            "x": 605.0625,
+            "y": 404.03125,
+            "width": 138.921875,
+            "height": 94,
+            "text": "右邊 →・還沒看\n○ 還沒看",
+            "images": 0
+          }
+        ]
+      },
+      "audio": {
+        "harness": {
+          "suppressed": true,
+          "speechRequests": 4,
+          "mediaRequests": 1
+        },
+        "speech": false,
+        "pending": false,
+        "media": [],
+        "calls": {
+          "speechCalls": 4,
+          "mediaPlayCalls": 1
+        }
+      }
+    },
+    {
+      "path": "docs/content/r36/layout/layout/device-768x1024-tickets-playing.png",
+      "width": 768,
+      "height": 1024,
+      "sha256": "7f741437dbbff38a2f5656ade0ea8e335f3cf97233a44484c7b5bb52b8aca4b5",
+      "state": {
+        "roadShape": "uphill",
+        "cakeStage": "",
+        "newTraffic": "false",
+        "newTrafficTime": "0",
+        "staleSide": "",
+        "refreshes": "0",
+        "boardTime": "0.000",
+        "doorStage": "closed",
+        "boardingIndex": "0",
+        "hazard": "false",
+        "wrongTurn": "false",
+        "inBend": "false",
+        "cue": "go",
+        "settled": "true",
+        "correction": "",
+        "compact": "false",
+        "recoveryActive": "false",
+        "lookStep": "0",
+        "targetName": "藍圓形",
+        "layoutSeed": "0",
+        "distance": "0.00",
+        "speed": "0.00",
+        "bend": "1",
+        "tilt": "0.00",
+        "sway": "0.00",
+        "acceleration": "0.00",
+        "bayStopped": "false",
+        "bayRestarted": "false",
+        "leftTurn": "false",
+        "rightTurn": "false",
+        "focus": "center",
+        "crossTime": "0.000",
+        "crossDuration": "2.1",
+        "orderHint": "",
+        "fruitSway": "0.00",
+        "flagSway": "0.00",
+        "hintVisible": "false",
+        "crossingOrder": "child,bike,grandma",
+        "balanceLean": "0.00",
+        "balanceStatus": "steady",
+        "recoveries": "0",
+        "assists": "0",
+        "assisting": "false",
+        "crossed": "0",
+        "lookedLeft": "false",
+        "lookedRight": "false",
+        "decision": "false",
+        "confirmed": "false",
+        "confirmDelay": "0",
+        "person": "child",
+        "trafficActive": "false",
+        "trafficTime": "0.00",
+        "ticketWrong": "false",
+        "watchSide": "",
+        "platformSide": "front",
+        "doorState": "closed",
+        "step": "0",
+        "cabin": "false",
+        "semanticStatus": "看車票，找一樣的月台。",
+        "stateText": "",
+        "stateTitle": "",
+        "nextAction": "",
+        "holdState": "holding",
+        "holdProgress": "0.000",
+        "recheckTime": "2",
+        "hintLevel": "0",
+        "forceTarget": "0",
+        "forceLag": "0",
+        "recoveryRate": "0",
+        "trafficConfirmed": "false",
+        "trafficSource": "left",
+        "lookSequence": "left,right",
+        "escortGate": "false",
+        "escortGateReleased": "false",
+        "restReady": "false",
+        "visited": "",
+        "steering": "false",
+        "steadying": "false",
+        "standStillTime": "0",
+        "escortWaiting": "false",
+        "escortStable": "0",
+        "escortStop": "0",
+        "escortBump": "0",
+        "bayExit": "0",
+        "roofShift": "0",
+        "slide": "0.00",
+        "edge": "false",
+        "support": "",
+        "stateAngle": "0",
+        "trafficX": "15.00",
+        "trafficMotion": "離開",
+        "signGround": "675.24"
+      },
+      "text": "回學院\n形狀車票，找對月台\n暫停\n↓ 小安\n↓ 小晴\n↓ 小宇\n第 1 站・海風站\n已入座 0/3 人\n1 號月台\n2 號月台\n3 號月台\n這班三位，用同一種車票\n形狀\n→\n？\n選月台\n顏色\n→\n再比顏色\n找相同形狀＋顏色\n\n看車票，找一樣的月台。\n\n前進\n停穩\n開門\n再聽一次",
+      "controls": [
+        {
+          "id": "content-back",
+          "w": 68,
+          "h": 60,
+          "bad": false
+        },
+        {
+          "id": "content-pause",
+          "w": 68,
+          "h": 60,
+          "bad": false
+        },
+        {
+          "id": "",
+          "w": 70,
+          "h": 90,
+          "bad": false
+        },
+        {
+          "id": "",
+          "w": 70,
+          "h": 90,
+          "bad": false
+        },
+        {
+          "id": "",
+          "w": 70,
+          "h": 90,
+          "bad": false
+        },
+        {
+          "id": "0",
+          "w": 64,
+          "h": 64,
+          "bad": false
+        },
+        {
+          "id": "1",
+          "w": 64,
+          "h": 64,
+          "bad": false
+        },
+        {
+          "id": "2",
+          "w": 64,
+          "h": 64,
+          "bad": false
+        },
+        {
+          "id": "go",
+          "w": 66.453125,
+          "h": 64,
+          "bad": false
+        },
+        {
+          "id": "brake",
+          "w": 66.453125,
+          "h": 64,
+          "bad": false
+        },
+        {
+          "id": "listen",
+          "w": 283.828125,
+          "h": 64,
+          "bad": false
+        }
+      ],
+      "clipping": [],
+      "geometry": {},
+      "audio": {
+        "harness": {
+          "suppressed": true,
+          "speechRequests": 46,
+          "mediaRequests": 1
+        },
+        "speech": false,
+        "pending": false,
+        "media": [],
+        "calls": {
+          "speechCalls": 46,
+          "mediaPlayCalls": 1
+        }
+      }
+    },
+    {
+      "path": "docs/content/r36/layout/layout/device-1024x768-cake-playing.png",
+      "width": 1024,
+      "height": 768,
+      "sha256": "cc00f8e5f606441008dafa1107b2e4aa671986fca6ba23d4c8f5eb0dc77c10d6",
+      "state": {
+        "roadShape": "uphill",
+        "cakeStage": "starting",
+        "newTraffic": "false",
+        "newTrafficTime": "0",
+        "staleSide": "",
+        "refreshes": "0",
+        "boardTime": "0.000",
+        "doorStage": "closed",
+        "boardingIndex": "0",
+        "hazard": "false",
+        "wrongTurn": "false",
+        "inBend": "false",
+        "cue": "",
+        "settled": "true",
+        "correction": "",
+        "compact": "false",
+        "recoveryActive": "false",
+        "lookStep": "0",
+        "targetName": "藍圓形",
+        "layoutSeed": "0",
+        "distance": "0.00",
+        "speed": "0.00",
+        "bend": "1",
+        "tilt": "0.00",
+        "sway": "0.00",
+        "acceleration": "0.00",
+        "bayStopped": "false",
+        "bayRestarted": "false",
+        "leftTurn": "false",
+        "rightTurn": "false",
+        "focus": "center",
+        "crossTime": "0.000",
+        "crossDuration": "2.1",
+        "orderHint": "",
+        "fruitSway": "0.00",
+        "flagSway": "0.00",
+        "hintVisible": "false",
+        "crossingOrder": "child,bike,grandma",
+        "balanceLean": "0.00",
+        "balanceStatus": "steady",
+        "recoveries": "0",
+        "assists": "0",
+        "assisting": "false",
+        "crossed": "0",
+        "lookedLeft": "false",
+        "lookedRight": "false",
+        "decision": "false",
+        "confirmed": "false",
+        "confirmDelay": "0",
+        "person": "child",
+        "trafficActive": "false",
+        "trafficTime": "0.00",
+        "ticketWrong": "false",
+        "watchSide": "",
+        "platformSide": "front",
+        "doorState": "closed",
+        "step": "0",
+        "cabin": "false",
+        "semanticStatus": "",
+        "stateText": "已停住，輕踩踏板起步。",
+        "stateTitle": "第 1 站・海岸坡",
+        "nextAction": "",
+        "holdState": "paused",
+        "holdProgress": "1.000",
+        "recheckTime": "2",
+        "hintLevel": "0",
+        "forceTarget": "0",
+        "forceLag": "0",
+        "recoveryRate": "0",
+        "trafficConfirmed": "false",
+        "trafficSource": "left",
+        "lookSequence": "left,right",
+        "escortGate": "false",
+        "escortGateReleased": "false",
+        "restReady": "false",
+        "visited": "",
+        "steering": "false",
+        "steadying": "false",
+        "standStillTime": "0",
+        "escortWaiting": "false",
+        "escortStable": "0",
+        "escortStop": "0",
+        "escortBump": "0",
+        "bayExit": "0",
+        "roofShift": "0",
+        "slide": "0.00",
+        "edge": "false",
+        "support": "",
+        "stateAngle": "0"
+      },
+      "text": "回學院\n把蛋糕平穩送到\n暫停\n第 1 站・海岸坡\n穩定度 100%\n車速：已停住・傾角 0°\n✓ 坐穩參照\n收起特寫\n\n已停住，輕踩踏板起步。\n\n左轉\n右轉\n踏板\n煞車\n推向左\n推向右\n再聽一次",
+      "controls": [
+        {
+          "id": "content-back",
+          "w": 68,
+          "h": 60,
+          "bad": false
+        },
+        {
+          "id": "content-pause",
+          "w": 68,
+          "h": 60,
+          "bad": false
+        },
+        {
+          "id": "magnify",
+          "w": 92,
+          "h": 60,
+          "bad": false
+        },
+        {
+          "id": "left",
+          "w": 93.125,
+          "h": 64,
+          "bad": false
+        },
+        {
+          "id": "right",
+          "w": 93.125,
+          "h": 64,
+          "bad": false
+        },
+        {
+          "id": "go",
+          "w": 93.125,
+          "h": 64,
+          "bad": false
+        },
+        {
+          "id": "brake",
+          "w": 93.125,
+          "h": 64,
+          "bad": false
+        },
+        {
+          "id": "recover-left",
+          "w": 192.25,
+          "h": 64,
+          "bad": false
+        },
+        {
+          "id": "recover-right",
+          "w": 192.25,
+          "h": 64,
+          "bad": false
+        },
+        {
+          "id": "listen",
+          "w": 390.5,
+          "h": 64,
+          "bad": false
+        }
+      ],
+      "clipping": [],
+      "geometry": {
+        "car": {
+          "x": 268.5137634277344,
+          "y": 510.31488037109375,
+          "w": 260.5968322753906,
+          "h": 220.24560546875
+        },
+        "tray": {
+          "x": 335.40802001953125,
+          "y": 594.2734985351562,
+          "w": 119.85198974609375,
+          "h": 10.10797119140625
+        },
+        "cake": {
+          "x": 332.52001953125,
+          "y": 479.47552490234375,
+          "w": 129.95999145507812,
+          "h": 129.9599609375
+        },
+        "displacement": 2.1660003662109375,
+        "angle": "0",
+        "road": "url(\"http://127.0.0.1:5286/art/content-r3/cake-slope.webp\")",
+        "pan": "100%",
+        "rotation": [
+          0,
+          0
+        ]
+      },
+      "audio": {
+        "harness": {
+          "suppressed": true,
+          "speechRequests": 2,
+          "mediaRequests": 1
+        },
+        "speech": false,
+        "pending": false,
+        "media": [],
+        "calls": {
+          "speechCalls": 2,
+          "mediaPlayCalls": 1
+        }
+      }
+    },
+    {
+      "path": "docs/content/r36/layout/layout/device-1024x768-crossing-playing.png",
+      "width": 1024,
+      "height": 768,
+      "sha256": "cee9a51059f641bbe632276f5976b2d4560b06bd9b3a258ac6fccd63ea6ba95d",
+      "state": {
+        "roadShape": "uphill",
+        "cakeStage": "",
+        "newTraffic": "false",
+        "newTrafficTime": "0",
+        "staleSide": "",
+        "refreshes": "0",
+        "boardTime": "0.000",
+        "doorStage": "closed",
+        "boardingIndex": "0",
+        "hazard": "false",
+        "wrongTurn": "false",
+        "inBend": "false",
+        "cue": "go",
+        "settled": "true",
+        "correction": "",
+        "compact": "false",
+        "recoveryActive": "false",
+        "lookStep": "0",
+        "targetName": "藍圓形",
+        "layoutSeed": "0",
+        "distance": "0.00",
+        "speed": "5.00",
+        "bend": "1",
+        "tilt": "0.00",
+        "sway": "0.00",
+        "acceleration": "0.00",
+        "bayStopped": "false",
+        "bayRestarted": "false",
+        "leftTurn": "false",
+        "rightTurn": "false",
+        "focus": "center",
+        "crossTime": "0.000",
+        "crossDuration": "2.1",
+        "orderHint": "",
+        "fruitSway": "0.00",
+        "flagSway": "0.00",
+        "hintVisible": "false",
+        "crossingOrder": "child,bike,grandma",
+        "balanceLean": "0.00",
+        "balanceStatus": "steady",
+        "recoveries": "0",
+        "assists": "0",
+        "assisting": "false",
+        "crossed": "0",
+        "lookedLeft": "false",
+        "lookedRight": "false",
+        "decision": "false",
+        "confirmed": "false",
+        "confirmDelay": "0",
+        "person": "child",
+        "trafficActive": "true",
+        "trafficTime": "0.00",
+        "ticketWrong": "false",
+        "watchSide": "",
+        "platformSide": "front",
+        "doorState": "closed",
+        "step": "0",
+        "cabin": "false",
+        "semanticStatus": "按住煞車，停在線前。",
+        "stateText": "按住煞車，停在線前。",
+        "stateTitle": "第 1 站・海風路口",
+        "nextAction": "",
+        "holdState": "",
+        "holdProgress": "0.000",
+        "recheckTime": "2",
+        "hintLevel": "0",
+        "forceTarget": "0",
+        "forceLag": "0",
+        "recoveryRate": "0",
+        "trafficConfirmed": "false",
+        "trafficSource": "left",
+        "lookSequence": "left,right",
+        "escortGate": "false",
+        "escortGateReleased": "false",
+        "restReady": "false",
+        "visited": "",
+        "steering": "false",
+        "steadying": "false",
+        "standStillTime": "0",
+        "escortWaiting": "false",
+        "escortStable": "0",
+        "escortStop": "0",
+        "escortBump": "0",
+        "bayExit": "0",
+        "roofShift": "0",
+        "slide": "0.00",
+        "edge": "false",
+        "support": "",
+        "stateAngle": "0",
+        "trafficX": "18.72",
+        "trafficMotion": "接近"
+      },
+      "text": "回學院\n路口停看等\n暫停\n小安\n小柏\n阿嬤\n第 1 站・海風路口\n已到對岸 0/3 人\n← 左邊・還沒看\n○ 還沒看\n右邊 →・還沒看\n○ 還沒看\n\n按住煞車，停在線前。\n\n停下\n看左邊\n看右邊\n出發\n再聽一次",
+      "controls": [
+        {
+          "id": "content-back",
+          "w": 68,
+          "h": 60,
+          "bad": false
+        },
+        {
+          "id": "content-pause",
+          "w": 68,
+          "h": 60,
+          "bad": false
+        },
+        {
+          "id": "brake",
+          "w": 93.125,
+          "h": 64,
+          "bad": false
+        },
+        {
+          "id": "look-left",
+          "w": 93.125,
+          "h": 64,
+          "bad": false
+        },
+        {
+          "id": "look-right",
+          "w": 93.125,
+          "h": 64,
+          "bad": false
+        },
+        {
+          "id": "depart",
+          "w": 93.125,
+          "h": 64,
+          "bad": false
+        },
+        {
+          "id": "listen",
+          "w": 390.5,
+          "h": 64,
+          "bad": false
+        }
+      ],
+      "clipping": [],
+      "geometry": {
+        "line": null,
+        "car": {
+          "x": 72.96875,
+          "y": 447.46875,
+          "w": 100,
+          "h": 40
+        },
+        "actors": [
+          {
+            "x": 263.734375,
+            "y": 481.40625,
+            "w": 76,
+            "h": 72
+          },
+          {
+            "x": 55,
+            "y": 485.40625,
+            "w": 82,
+            "h": 68
+          },
+          {
+            "x": 469.46875,
+            "y": 481.40625,
+            "w": 76,
+            "h": 72
+          }
+        ],
+        "overlaps": [],
+        "lane": {
+          "visible": true,
+          "lane": "lower",
+          "source": "left",
+          "heading": "right",
+          "top": 54,
+          "height": 40,
+          "scene": 668,
+          "scale": "1"
+        },
+        "player": {
+          "translate": "none",
+          "rotate": "0deg",
+          "scale": "1",
+          "joined": false,
+          "heading": "junction",
+          "asset": "http://127.0.0.1:5286/art/content-r11/car-rear.png",
+          "centerY": 89.99952794561933,
+          "top": 84.41040407854985,
+          "bottom": 95.58865181268882
+        },
+        "observationCards": [
+          {
+            "side": "left",
+            "observed": "false",
+            "x": 609.484375,
+            "y": 268.71875,
+            "width": 192.25,
+            "height": 94,
+            "text": "← 左邊・還沒看\n○ 還沒看",
+            "images": 0
+          },
+          {
+            "side": "right",
+            "observed": "false",
+            "x": 807.734375,
+            "y": 268.71875,
+            "width": 192.25,
+            "height": 94,
+            "text": "右邊 →・還沒看\n○ 還沒看",
+            "images": 0
+          }
+        ]
+      },
+      "audio": {
+        "harness": {
+          "suppressed": true,
+          "speechRequests": 4,
+          "mediaRequests": 1
+        },
+        "speech": false,
+        "pending": false,
+        "media": [],
+        "calls": {
+          "speechCalls": 4,
+          "mediaPlayCalls": 1
+        }
+      }
+    },
+    {
+      "path": "docs/content/r36/layout/layout/device-1024x768-tickets-playing.png",
+      "width": 1024,
+      "height": 768,
+      "sha256": "094e662500d9c10a655ff55d9809c79a3ce701b08bdb691c676ebbd0cd149eec",
+      "state": {
+        "roadShape": "uphill",
+        "cakeStage": "",
+        "newTraffic": "false",
+        "newTrafficTime": "0",
+        "staleSide": "",
+        "refreshes": "0",
+        "boardTime": "0.000",
+        "doorStage": "closed",
+        "boardingIndex": "0",
+        "hazard": "false",
+        "wrongTurn": "false",
+        "inBend": "false",
+        "cue": "go",
+        "settled": "true",
+        "correction": "",
+        "compact": "false",
+        "recoveryActive": "false",
+        "lookStep": "0",
+        "targetName": "藍圓形",
+        "layoutSeed": "0",
+        "distance": "0.00",
+        "speed": "0.00",
+        "bend": "1",
+        "tilt": "0.00",
+        "sway": "0.00",
+        "acceleration": "0.00",
+        "bayStopped": "false",
+        "bayRestarted": "false",
+        "leftTurn": "false",
+        "rightTurn": "false",
+        "focus": "center",
+        "crossTime": "0.000",
+        "crossDuration": "2.1",
+        "orderHint": "",
+        "fruitSway": "0.00",
+        "flagSway": "0.00",
+        "hintVisible": "false",
+        "crossingOrder": "child,bike,grandma",
+        "balanceLean": "0.00",
+        "balanceStatus": "steady",
+        "recoveries": "0",
+        "assists": "0",
+        "assisting": "false",
+        "crossed": "0",
+        "lookedLeft": "false",
+        "lookedRight": "false",
+        "decision": "false",
+        "confirmed": "false",
+        "confirmDelay": "0",
+        "person": "child",
+        "trafficActive": "false",
+        "trafficTime": "0.00",
+        "ticketWrong": "false",
+        "watchSide": "",
+        "platformSide": "front",
+        "doorState": "closed",
+        "step": "0",
+        "cabin": "false",
+        "semanticStatus": "看車票，找一樣的月台。",
+        "stateText": "",
+        "stateTitle": "",
+        "nextAction": "",
+        "holdState": "holding",
+        "holdProgress": "0.000",
+        "recheckTime": "2",
+        "hintLevel": "0",
+        "forceTarget": "0",
+        "forceLag": "0",
+        "recoveryRate": "0",
+        "trafficConfirmed": "false",
+        "trafficSource": "left",
+        "lookSequence": "left,right",
+        "escortGate": "false",
+        "escortGateReleased": "false",
+        "restReady": "false",
+        "visited": "",
+        "steering": "false",
+        "steadying": "false",
+        "standStillTime": "0",
+        "escortWaiting": "false",
+        "escortStable": "0",
+        "escortStop": "0",
+        "escortBump": "0",
+        "bayExit": "0",
+        "roofShift": "0",
+        "slide": "0.00",
+        "edge": "false",
+        "support": "",
+        "stateAngle": "0",
+        "trafficX": "15.00",
+        "trafficMotion": "離開",
+        "signGround": "565"
+      },
+      "text": "回學院\n形狀車票，找對月台\n暫停\n↓ 小安\n↓ 小晴\n↓ 小宇\n第 1 站・海風站\n已入座 0/3 人\n1 號月台\n2 號月台\n3 號月台\n這班三位，用同一種車票\n形狀\n→\n？\n選月台\n顏色\n→\n再比顏色\n找相同形狀＋顏色\n\n看車票，找一樣的月台。\n\n前進\n停穩\n開門\n再聽一次",
+      "controls": [
+        {
+          "id": "content-back",
+          "w": 68,
+          "h": 60,
+          "bad": false
+        },
+        {
+          "id": "content-pause",
+          "w": 68,
+          "h": 60,
+          "bad": false
+        },
+        {
+          "id": "",
+          "w": 70,
+          "h": 90,
+          "bad": false
+        },
+        {
+          "id": "",
+          "w": 70,
+          "h": 90,
+          "bad": false
+        },
+        {
+          "id": "",
+          "w": 70,
+          "h": 90,
+          "bad": false
+        },
+        {
+          "id": "0",
+          "w": 64,
+          "h": 64,
+          "bad": false
+        },
+        {
+          "id": "1",
+          "w": 64,
+          "h": 64,
+          "bad": false
+        },
+        {
+          "id": "2",
+          "w": 64,
+          "h": 64,
+          "bad": false
+        },
+        {
+          "id": "go",
+          "w": 93.125,
+          "h": 64,
+          "bad": false
+        },
+        {
+          "id": "brake",
+          "w": 93.125,
+          "h": 64,
+          "bad": false
+        },
+        {
+          "id": "listen",
+          "w": 390.5,
+          "h": 64,
+          "bad": false
+        }
+      ],
+      "clipping": [],
+      "geometry": {},
+      "audio": {
+        "harness": {
+          "suppressed": true,
+          "speechRequests": 46,
+          "mediaRequests": 1
+        },
+        "speech": false,
+        "pending": false,
+        "media": [],
+        "calls": {
+          "speechCalls": 46,
+          "mediaPlayCalls": 1
+        }
+      }
+    },
+    {
+      "path": "docs/content/r36/layout/layout/device-1366x600-cake-playing.png",
+      "width": 1366,
+      "height": 600,
+      "sha256": "6912a36f2080cf4b5f8da3dcf6193e99fde3625f01b4bd6c0f468f6da3b9ba7f",
+      "state": {
+        "roadShape": "uphill",
+        "cakeStage": "starting",
+        "newTraffic": "false",
+        "newTrafficTime": "0",
+        "staleSide": "",
+        "refreshes": "0",
+        "boardTime": "0.000",
+        "doorStage": "closed",
+        "boardingIndex": "0",
+        "hazard": "false",
+        "wrongTurn": "false",
+        "inBend": "false",
+        "cue": "",
+        "settled": "true",
+        "correction": "",
+        "compact": "false",
+        "recoveryActive": "false",
+        "lookStep": "0",
+        "targetName": "藍圓形",
+        "layoutSeed": "0",
+        "distance": "0.00",
+        "speed": "0.00",
+        "bend": "1",
+        "tilt": "0.00",
+        "sway": "0.00",
+        "acceleration": "0.00",
+        "bayStopped": "false",
+        "bayRestarted": "false",
+        "leftTurn": "false",
+        "rightTurn": "false",
+        "focus": "center",
+        "crossTime": "0.000",
+        "crossDuration": "2.1",
+        "orderHint": "",
+        "fruitSway": "0.00",
+        "flagSway": "0.00",
+        "hintVisible": "false",
+        "crossingOrder": "child,bike,grandma",
+        "balanceLean": "0.00",
+        "balanceStatus": "steady",
+        "recoveries": "0",
+        "assists": "0",
+        "assisting": "false",
+        "crossed": "0",
+        "lookedLeft": "false",
+        "lookedRight": "false",
+        "decision": "false",
+        "confirmed": "false",
+        "confirmDelay": "0",
+        "person": "child",
+        "trafficActive": "false",
+        "trafficTime": "0.00",
+        "ticketWrong": "false",
+        "watchSide": "",
+        "platformSide": "front",
+        "doorState": "closed",
+        "step": "0",
+        "cabin": "false",
+        "semanticStatus": "",
+        "stateText": "已停住，輕踩踏板起步。",
+        "stateTitle": "第 1 站・海岸坡",
+        "nextAction": "",
+        "holdState": "paused",
+        "holdProgress": "1.000",
+        "recheckTime": "2",
+        "hintLevel": "0",
+        "forceTarget": "0",
+        "forceLag": "0",
+        "recoveryRate": "0",
+        "trafficConfirmed": "false",
+        "trafficSource": "left",
+        "lookSequence": "left,right",
+        "escortGate": "false",
+        "escortGateReleased": "false",
+        "restReady": "false",
+        "visited": "",
+        "steering": "false",
+        "steadying": "false",
+        "standStillTime": "0",
+        "escortWaiting": "false",
+        "escortStable": "0",
+        "escortStop": "0",
+        "escortBump": "0",
+        "bayExit": "0",
+        "roofShift": "0",
+        "slide": "0.00",
+        "edge": "false",
+        "support": "",
+        "stateAngle": "0"
+      },
+      "text": "回學院\n把蛋糕平穩送到\n暫停\n第 1 站・海岸坡\n穩定度 100%\n車速：已停住・傾角 0°\n✓ 坐穩參照\n收起特寫\n\n已停住，輕踩踏板起步。\n\n左轉\n右轉\n踏板\n煞車\n推向左\n推向右\n再聽一次",
+      "controls": [
+        {
+          "id": "content-back",
+          "w": 68,
+          "h": 60,
+          "bad": false
+        },
+        {
+          "id": "content-pause",
+          "w": 68,
+          "h": 60,
+          "bad": false
+        },
+        {
+          "id": "magnify",
+          "w": 92,
+          "h": 60,
+          "bad": false
+        },
+        {
+          "id": "left",
+          "w": 101.03125,
+          "h": 64,
+          "bad": false
+        },
+        {
+          "id": "right",
+          "w": 101.046875,
+          "h": 64,
+          "bad": false
+        },
+        {
+          "id": "go",
+          "w": 101.03125,
+          "h": 64,
+          "bad": false
+        },
+        {
+          "id": "brake",
+          "w": 101.046875,
+          "h": 64,
+          "bad": false
+        },
+        {
+          "id": "recover-left",
+          "w": 208.078125,
+          "h": 64,
+          "bad": false
+        },
+        {
+          "id": "recover-right",
+          "w": 208.078125,
+          "h": 64,
+          "bad": false
+        },
+        {
+          "id": "listen",
+          "w": 422.15625,
+          "h": 64,
+          "bad": false
+        }
+      ],
+      "clipping": [],
+      "geometry": {
+        "car": {
+          "x": 421.21435546875,
+          "y": 426.3865051269531,
+          "w": 280.80810546875,
+          "h": 143.63998413085938
+        },
+        "tray": {
+          "x": 498.1192321777344,
+          "y": 475.87200927734375,
+          "w": 119.85195922851562,
+          "h": 10.10797119140625
+        },
+        "cake": {
+          "x": 495.2312316894531,
+          "y": 361.0740051269531,
+          "w": 129.95999145507812,
+          "h": 129.95999145507812
+        },
+        "displacement": 2.166015625,
+        "angle": "0",
+        "road": "url(\"http://127.0.0.1:5286/art/content-r3/cake-slope.webp\")",
+        "pan": "100%",
+        "rotation": [
+          0,
+          0
+        ]
+      },
+      "audio": {
+        "harness": {
+          "suppressed": true,
+          "speechRequests": 2,
+          "mediaRequests": 1
+        },
+        "speech": false,
+        "pending": false,
+        "media": [],
+        "calls": {
+          "speechCalls": 2,
+          "mediaPlayCalls": 1
+        }
+      }
+    },
+    {
+      "path": "docs/content/r36/layout/layout/device-1366x600-crossing-playing.png",
+      "width": 1366,
+      "height": 600,
+      "sha256": "ea2eb5e60e1994a0bdf5418a329607f9c4afbdc209b27d954e50e39ef9d32997",
+      "state": {
+        "roadShape": "uphill",
+        "cakeStage": "",
+        "newTraffic": "false",
+        "newTrafficTime": "0",
+        "staleSide": "",
+        "refreshes": "0",
+        "boardTime": "0.000",
+        "doorStage": "closed",
+        "boardingIndex": "0",
+        "hazard": "false",
+        "wrongTurn": "false",
+        "inBend": "false",
+        "cue": "go",
+        "settled": "true",
+        "correction": "",
+        "compact": "false",
+        "recoveryActive": "false",
+        "lookStep": "0",
+        "targetName": "藍圓形",
+        "layoutSeed": "0",
+        "distance": "0.00",
+        "speed": "5.00",
+        "bend": "1",
+        "tilt": "0.00",
+        "sway": "0.00",
+        "acceleration": "0.00",
+        "bayStopped": "false",
+        "bayRestarted": "false",
+        "leftTurn": "false",
+        "rightTurn": "false",
+        "focus": "center",
+        "crossTime": "0.000",
+        "crossDuration": "2.1",
+        "orderHint": "",
+        "fruitSway": "0.00",
+        "flagSway": "0.00",
+        "hintVisible": "false",
+        "crossingOrder": "child,bike,grandma",
+        "balanceLean": "0.00",
+        "balanceStatus": "steady",
+        "recoveries": "0",
+        "assists": "0",
+        "assisting": "false",
+        "crossed": "0",
+        "lookedLeft": "false",
+        "lookedRight": "false",
+        "decision": "false",
+        "confirmed": "false",
+        "confirmDelay": "0",
+        "person": "child",
+        "trafficActive": "true",
+        "trafficTime": "0.00",
+        "ticketWrong": "false",
+        "watchSide": "",
+        "platformSide": "front",
+        "doorState": "closed",
+        "step": "0",
+        "cabin": "false",
+        "semanticStatus": "按住煞車，停在線前。",
+        "stateText": "按住煞車，停在線前。",
+        "stateTitle": "第 1 站・海風路口",
+        "nextAction": "",
+        "holdState": "",
+        "holdProgress": "0.000",
+        "recheckTime": "2",
+        "hintLevel": "0",
+        "forceTarget": "0",
+        "forceLag": "0",
+        "recoveryRate": "0",
+        "trafficConfirmed": "false",
+        "trafficSource": "left",
+        "lookSequence": "left,right",
+        "escortGate": "false",
+        "escortGateReleased": "false",
+        "restReady": "false",
+        "visited": "",
+        "steering": "false",
+        "steadying": "false",
+        "standStillTime": "0",
+        "escortWaiting": "false",
+        "escortStable": "0",
+        "escortStop": "0",
+        "escortBump": "0",
+        "bayExit": "0",
+        "roofShift": "0",
+        "slide": "0.00",
+        "edge": "false",
+        "support": "",
+        "stateAngle": "0",
+        "trafficX": "18.72",
+        "trafficMotion": "接近"
+      },
+      "text": "回學院\n路口停看等\n暫停\n小安\n小柏\n阿嬤\n第 1 站・海風路口\n已到對岸 0/3 人\n← 左邊・還沒看\n○ 還沒看\n右邊 →・還沒看\n○ 還沒看\n\n按住煞車，停在線前。\n\n停下\n看左邊\n看右邊\n出發\n再聽一次",
+      "controls": [
+        {
+          "id": "content-back",
+          "w": 68,
+          "h": 60,
+          "bad": false
+        },
+        {
+          "id": "content-pause",
+          "w": 68,
+          "h": 60,
+          "bad": false
+        },
+        {
+          "id": "brake",
+          "w": 101.03125,
+          "h": 64,
+          "bad": false
+        },
+        {
+          "id": "look-left",
+          "w": 101.046875,
+          "h": 64,
+          "bad": false
+        },
+        {
+          "id": "look-right",
+          "w": 101.03125,
+          "h": 64,
+          "bad": false
+        },
+        {
+          "id": "depart",
+          "w": 101.046875,
+          "h": 64,
+          "bad": false
+        },
+        {
+          "id": "listen",
+          "w": 422.15625,
+          "h": 64,
+          "bad": false
+        }
+      ],
+      "clipping": [],
+      "geometry": {
+        "line": null,
+        "car": {
+          "x": 214.28125,
+          "y": 356.75,
+          "w": 100,
+          "h": 37.046875
+        },
+        "actors": [
+          {
+            "x": 418.90625,
+            "y": 363.8125,
+            "w": 76,
+            "h": 72
+          },
+          {
+            "x": 194.203125,
+            "y": 367.8125,
+            "w": 82,
+            "h": 68
+          },
+          {
+            "x": 640.609375,
+            "y": 363.8125,
+            "w": 76,
+            "h": 72
+          }
+        ],
+        "overlaps": [],
+        "lane": {
+          "visible": true,
+          "lane": "lower",
+          "source": "left",
+          "heading": "right",
+          "top": 54,
+          "height": 37.046875,
+          "scene": 500,
+          "scale": "1"
+        },
+        "player": {
+          "translate": "none",
+          "rotate": "0deg",
+          "scale": "1",
+          "joined": false,
+          "heading": "junction",
+          "asset": "http://127.0.0.1:5286/art/content-r11/car-rear.png",
+          "centerY": 89.99873481781377,
+          "top": 82.50885627530364,
+          "bottom": 97.48861336032388
+        },
+        "observationCards": [
+          {
+            "side": "left",
+            "observed": "false",
+            "x": 786.828125,
+            "y": 184.09375,
+            "width": 208.078125,
+            "height": 94,
+            "text": "← 左邊・還沒看\n○ 還沒看",
+            "images": 0
+          },
+          {
+            "side": "right",
+            "observed": "false",
+            "x": 1000.90625,
+            "y": 184.09375,
+            "width": 208.078125,
+            "height": 94,
+            "text": "右邊 →・還沒看\n○ 還沒看",
+            "images": 0
+          }
+        ]
+      },
+      "audio": {
+        "harness": {
+          "suppressed": true,
+          "speechRequests": 4,
+          "mediaRequests": 1
+        },
+        "speech": false,
+        "pending": false,
+        "media": [],
+        "calls": {
+          "speechCalls": 4,
+          "mediaPlayCalls": 1
+        }
+      }
+    },
+    {
+      "path": "docs/content/r36/layout/layout/device-1366x600-tickets-playing.png",
+      "width": 1366,
+      "height": 600,
+      "sha256": "199da48f2ffb39f790ee637e83196d90da352ffdb79c02bfbdf504e849b49b55",
+      "state": {
+        "roadShape": "uphill",
+        "cakeStage": "",
+        "newTraffic": "false",
+        "newTrafficTime": "0",
+        "staleSide": "",
+        "refreshes": "0",
+        "boardTime": "0.000",
+        "doorStage": "closed",
+        "boardingIndex": "0",
+        "hazard": "false",
+        "wrongTurn": "false",
+        "inBend": "false",
+        "cue": "go",
+        "settled": "true",
+        "correction": "",
+        "compact": "true",
+        "recoveryActive": "false",
+        "lookStep": "0",
+        "targetName": "藍圓形",
+        "layoutSeed": "0",
+        "distance": "0.00",
+        "speed": "0.00",
+        "bend": "1",
+        "tilt": "0.00",
+        "sway": "0.00",
+        "acceleration": "0.00",
+        "bayStopped": "false",
+        "bayRestarted": "false",
+        "leftTurn": "false",
+        "rightTurn": "false",
+        "focus": "center",
+        "crossTime": "0.000",
+        "crossDuration": "2.1",
+        "orderHint": "",
+        "fruitSway": "0.00",
+        "flagSway": "0.00",
+        "hintVisible": "false",
+        "crossingOrder": "child,bike,grandma",
+        "balanceLean": "0.00",
+        "balanceStatus": "steady",
+        "recoveries": "0",
+        "assists": "0",
+        "assisting": "false",
+        "crossed": "0",
+        "lookedLeft": "false",
+        "lookedRight": "false",
+        "decision": "false",
+        "confirmed": "false",
+        "confirmDelay": "0",
+        "person": "child",
+        "trafficActive": "false",
+        "trafficTime": "0.00",
+        "ticketWrong": "false",
+        "watchSide": "",
+        "platformSide": "front",
+        "doorState": "closed",
+        "step": "0",
+        "cabin": "false",
+        "semanticStatus": "看車票，找一樣的月台。",
+        "stateText": "",
+        "stateTitle": "",
+        "nextAction": "",
+        "holdState": "holding",
+        "holdProgress": "0.000",
+        "recheckTime": "2",
+        "hintLevel": "0",
+        "forceTarget": "0",
+        "forceLag": "0",
+        "recoveryRate": "0",
+        "trafficConfirmed": "false",
+        "trafficSource": "left",
+        "lookSequence": "left,right",
+        "escortGate": "false",
+        "escortGateReleased": "false",
+        "restReady": "false",
+        "visited": "",
+        "steering": "false",
+        "steadying": "false",
+        "standStillTime": "0",
+        "escortWaiting": "false",
+        "escortStable": "0",
+        "escortStop": "0",
+        "escortBump": "0",
+        "bayExit": "0",
+        "roofShift": "0",
+        "slide": "0.00",
+        "edge": "false",
+        "support": "",
+        "stateAngle": "0",
+        "trafficX": "15.00",
+        "trafficMotion": "離開",
+        "signGround": "397"
+      },
+      "text": "回學院\n形狀車票，找對月台\n暫停\n↓ 小安\n↓ 小晴\n↓ 小宇\n第 1 站・海風站\n1 號月台\n2 號月台\n3 號月台\n這班三位，用同一種車票\n形狀\n→\n？\n選月台\n顏色\n→\n再比顏色\n\n看車票，找一樣的月台。\n\n已入座 0/3 人\n前進\n停穩\n開門\n再聽一次",
+      "controls": [
+        {
+          "id": "content-back",
+          "w": 68,
+          "h": 60,
+          "bad": false
+        },
+        {
+          "id": "content-pause",
+          "w": 68,
+          "h": 60,
+          "bad": false
+        },
+        {
+          "id": "",
+          "w": 70,
+          "h": 90,
+          "bad": false
+        },
+        {
+          "id": "",
+          "w": 70,
+          "h": 90,
+          "bad": false
+        },
+        {
+          "id": "",
+          "w": 70,
+          "h": 90,
+          "bad": false
+        },
+        {
+          "id": "0",
+          "w": 64,
+          "h": 64,
+          "bad": false
+        },
+        {
+          "id": "1",
+          "w": 64,
+          "h": 64,
+          "bad": false
+        },
+        {
+          "id": "2",
+          "w": 64,
+          "h": 64,
+          "bad": false
+        },
+        {
+          "id": "go",
+          "w": 101.03125,
+          "h": 64,
+          "bad": false
+        },
+        {
+          "id": "brake",
+          "w": 101.046875,
+          "h": 64,
+          "bad": false
+        },
+        {
+          "id": "listen",
+          "w": 422.15625,
+          "h": 64,
+          "bad": false
+        }
+      ],
+      "clipping": [],
+      "geometry": {},
+      "audio": {
+        "harness": {
+          "suppressed": true,
+          "speechRequests": 46,
+          "mediaRequests": 1
+        },
+        "speech": false,
+        "pending": false,
+        "media": [],
+        "calls": {
+          "speechCalls": 46,
+          "mediaPlayCalls": 1
+        }
+      }
+    },
+    {
+      "path": "docs/content/r36/layout/layout/device-1280x640-cake-playing.png",
+      "width": 1280,
+      "height": 640,
+      "sha256": "24128f6a359d58dbc2c5ef94b2f2d5e856ac7d3b770ba0167ce22ae387159e89",
+      "state": {
+        "roadShape": "uphill",
+        "cakeStage": "starting",
+        "newTraffic": "false",
+        "newTrafficTime": "0",
+        "staleSide": "",
+        "refreshes": "0",
+        "boardTime": "0.000",
+        "doorStage": "closed",
+        "boardingIndex": "0",
+        "hazard": "false",
+        "wrongTurn": "false",
+        "inBend": "false",
+        "cue": "",
+        "settled": "true",
+        "correction": "",
+        "compact": "false",
+        "recoveryActive": "false",
+        "lookStep": "0",
+        "targetName": "藍圓形",
+        "layoutSeed": "0",
+        "distance": "0.00",
+        "speed": "0.00",
+        "bend": "1",
+        "tilt": "0.00",
+        "sway": "0.00",
+        "acceleration": "0.00",
+        "bayStopped": "false",
+        "bayRestarted": "false",
+        "leftTurn": "false",
+        "rightTurn": "false",
+        "focus": "center",
+        "crossTime": "0.000",
+        "crossDuration": "2.1",
+        "orderHint": "",
+        "fruitSway": "0.00",
+        "flagSway": "0.00",
+        "hintVisible": "false",
+        "crossingOrder": "child,bike,grandma",
+        "balanceLean": "0.00",
+        "balanceStatus": "steady",
+        "recoveries": "0",
+        "assists": "0",
+        "assisting": "false",
+        "crossed": "0",
+        "lookedLeft": "false",
+        "lookedRight": "false",
+        "decision": "false",
+        "confirmed": "false",
+        "confirmDelay": "0",
+        "person": "child",
+        "trafficActive": "false",
+        "trafficTime": "0.00",
+        "ticketWrong": "false",
+        "watchSide": "",
+        "platformSide": "front",
+        "doorState": "closed",
+        "step": "0",
+        "cabin": "false",
+        "semanticStatus": "",
+        "stateText": "已停住，輕踩踏板起步。",
+        "stateTitle": "第 1 站・海岸坡",
+        "nextAction": "",
+        "holdState": "paused",
+        "holdProgress": "1.000",
+        "recheckTime": "2",
+        "hintLevel": "0",
+        "forceTarget": "0",
+        "forceLag": "0",
+        "recoveryRate": "0",
+        "trafficConfirmed": "false",
+        "trafficSource": "left",
+        "lookSequence": "left,right",
+        "escortGate": "false",
+        "escortGateReleased": "false",
+        "restReady": "false",
+        "visited": "",
+        "steering": "false",
+        "steadying": "false",
+        "standStillTime": "0",
+        "escortWaiting": "false",
+        "escortStable": "0",
+        "escortStop": "0",
+        "escortBump": "0",
+        "bayExit": "0",
+        "roofShift": "0",
+        "slide": "0.00",
+        "edge": "false",
+        "support": "",
+        "stateAngle": "0"
+      },
+      "text": "回學院\n把蛋糕平穩送到\n暫停\n第 1 站・海岸坡\n穩定度 100%\n車速：已停住・傾角 0°\n✓ 坐穩參照\n收起特寫\n\n已停住，輕踩踏板起步。\n\n左轉\n右轉\n踏板\n煞車\n推向左\n推向右\n再聽一次",
+      "controls": [
+        {
+          "id": "content-back",
+          "w": 68,
+          "h": 60,
+          "bad": false
+        },
+        {
+          "id": "content-pause",
+          "w": 68,
+          "h": 60,
+          "bad": false
+        },
+        {
+          "id": "magnify",
+          "w": 92,
+          "h": 60,
+          "bad": false
+        },
+        {
+          "id": "left",
+          "w": 101.03125,
+          "h": 64,
+          "bad": false
+        },
+        {
+          "id": "right",
+          "w": 101.046875,
+          "h": 64,
+          "bad": false
+        },
+        {
+          "id": "go",
+          "w": 101.03125,
+          "h": 64,
+          "bad": false
+        },
+        {
+          "id": "brake",
+          "w": 101.046875,
+          "h": 64,
+          "bad": false
+        },
+        {
+          "id": "recover-left",
+          "w": 208.078125,
+          "h": 64,
+          "bad": false
+        },
+        {
+          "id": "recover-right",
+          "w": 208.078125,
+          "h": 64,
+          "bad": false
+        },
+        {
+          "id": "listen",
+          "w": 422.15625,
+          "h": 64,
+          "bad": false
+        }
+      ],
+      "clipping": [],
+      "geometry": {
+        "car": {
+          "x": 378.21435546875,
+          "y": 446.36737060546875,
+          "w": 280.80810546875,
+          "h": 161.8800048828125
+        },
+        "tray": {
+          "x": 455.1192321777344,
+          "y": 504.0585021972656,
+          "w": 119.85195922851562,
+          "h": 10.108001708984375
+        },
+        "cake": {
+          "x": 452.2312316894531,
+          "y": 389.260498046875,
+          "w": 129.95999145507812,
+          "h": 129.9599609375
+        },
+        "displacement": 2.166015625,
+        "angle": "0",
+        "road": "url(\"http://127.0.0.1:5286/art/content-r3/cake-slope.webp\")",
+        "pan": "100%",
+        "rotation": [
+          0,
+          0
+        ]
+      },
+      "audio": {
+        "harness": {
+          "suppressed": true,
+          "speechRequests": 2,
+          "mediaRequests": 1
+        },
+        "speech": false,
+        "pending": false,
+        "media": [],
+        "calls": {
+          "speechCalls": 2,
+          "mediaPlayCalls": 1
+        }
+      }
+    },
+    {
+      "path": "docs/content/r36/layout/layout/device-1280x640-crossing-playing.png",
+      "width": 1280,
+      "height": 640,
+      "sha256": "08cdd3a6332bc1378e1f2e2be66b15ff896754ea66cc3e9f97a5c229fb318931",
+      "state": {
+        "roadShape": "uphill",
+        "cakeStage": "",
+        "newTraffic": "false",
+        "newTrafficTime": "0",
+        "staleSide": "",
+        "refreshes": "0",
+        "boardTime": "0.000",
+        "doorStage": "closed",
+        "boardingIndex": "0",
+        "hazard": "false",
+        "wrongTurn": "false",
+        "inBend": "false",
+        "cue": "go",
+        "settled": "true",
+        "correction": "",
+        "compact": "false",
+        "recoveryActive": "false",
+        "lookStep": "0",
+        "targetName": "藍圓形",
+        "layoutSeed": "0",
+        "distance": "0.00",
+        "speed": "5.00",
+        "bend": "1",
+        "tilt": "0.00",
+        "sway": "0.00",
+        "acceleration": "0.00",
+        "bayStopped": "false",
+        "bayRestarted": "false",
+        "leftTurn": "false",
+        "rightTurn": "false",
+        "focus": "center",
+        "crossTime": "0.000",
+        "crossDuration": "2.1",
+        "orderHint": "",
+        "fruitSway": "0.00",
+        "flagSway": "0.00",
+        "hintVisible": "false",
+        "crossingOrder": "child,bike,grandma",
+        "balanceLean": "0.00",
+        "balanceStatus": "steady",
+        "recoveries": "0",
+        "assists": "0",
+        "assisting": "false",
+        "crossed": "0",
+        "lookedLeft": "false",
+        "lookedRight": "false",
+        "decision": "false",
+        "confirmed": "false",
+        "confirmDelay": "0",
+        "person": "child",
+        "trafficActive": "true",
+        "trafficTime": "0.00",
+        "ticketWrong": "false",
+        "watchSide": "",
+        "platformSide": "front",
+        "doorState": "closed",
+        "step": "0",
+        "cabin": "false",
+        "semanticStatus": "按住煞車，停在線前。",
+        "stateText": "按住煞車，停在線前。",
+        "stateTitle": "第 1 站・海風路口",
+        "nextAction": "",
+        "holdState": "",
+        "holdProgress": "0.000",
+        "recheckTime": "2",
+        "hintLevel": "0",
+        "forceTarget": "0",
+        "forceLag": "0",
+        "recoveryRate": "0",
+        "trafficConfirmed": "false",
+        "trafficSource": "left",
+        "lookSequence": "left,right",
+        "escortGate": "false",
+        "escortGateReleased": "false",
+        "restReady": "false",
+        "visited": "",
+        "steering": "false",
+        "steadying": "false",
+        "standStillTime": "0",
+        "escortWaiting": "false",
+        "escortStable": "0",
+        "escortStop": "0",
+        "escortBump": "0",
+        "bayExit": "0",
+        "roofShift": "0",
+        "slide": "0.00",
+        "edge": "false",
+        "support": "",
+        "stateAngle": "0",
+        "trafficX": "18.72",
+        "trafficMotion": "接近"
+      },
+      "text": "回學院\n路口停看等\n暫停\n小安\n小柏\n阿嬤\n第 1 站・海風路口\n已到對岸 0/3 人\n← 左邊・還沒看\n○ 還沒看\n右邊 →・還沒看\n○ 還沒看\n\n按住煞車，停在線前。\n\n停下\n看左邊\n看右邊\n出發\n再聽一次",
+      "controls": [
+        {
+          "id": "content-back",
+          "w": 68,
+          "h": 60,
+          "bad": false
+        },
+        {
+          "id": "content-pause",
+          "w": 68,
+          "h": 60,
+          "bad": false
+        },
+        {
+          "id": "brake",
+          "w": 101.03125,
+          "h": 64,
+          "bad": false
+        },
+        {
+          "id": "look-left",
+          "w": 101.046875,
+          "h": 64,
+          "bad": false
+        },
+        {
+          "id": "look-right",
+          "w": 101.03125,
+          "h": 64,
+          "bad": false
+        },
+        {
+          "id": "depart",
+          "w": 101.046875,
+          "h": 64,
+          "bad": false
+        },
+        {
+          "id": "listen",
+          "w": 422.15625,
+          "h": 64,
+          "bad": false
+        }
+      ],
+      "clipping": [],
+      "geometry": {
+        "line": null,
+        "car": {
+          "x": 171.28125,
+          "y": 378.359375,
+          "w": 100,
+          "h": 40
+        },
+        "actors": [
+          {
+            "x": 375.90625,
+            "y": 391.8125,
+            "w": 76,
+            "h": 72
+          },
+          {
+            "x": 151.203125,
+            "y": 395.8125,
+            "w": 82,
+            "h": 68
+          },
+          {
+            "x": 597.609375,
+            "y": 391.8125,
+            "w": 76,
+            "h": 72
+          }
+        ],
+        "overlaps": [],
+        "lane": {
+          "visible": true,
+          "lane": "lower",
+          "source": "left",
+          "heading": "right",
+          "top": 54,
+          "height": 40,
+          "scene": 540,
+          "scale": "1"
+        },
+        "player": {
+          "translate": "none",
+          "rotate": "0deg",
+          "scale": "1",
+          "joined": false,
+          "heading": "junction",
+          "asset": "http://127.0.0.1:5286/art/content-r11/car-rear.png",
+          "centerY": 89.99882958801498,
+          "top": 83.06999063670412,
+          "bottom": 96.92766853932584
+        },
+        "observationCards": [
+          {
+            "side": "left",
+            "observed": "false",
+            "x": 743.828125,
+            "y": 204.09375,
+            "width": 208.078125,
+            "height": 94,
+            "text": "← 左邊・還沒看\n○ 還沒看",
+            "images": 0
+          },
+          {
+            "side": "right",
+            "observed": "false",
+            "x": 957.90625,
+            "y": 204.09375,
+            "width": 208.078125,
+            "height": 94,
+            "text": "右邊 →・還沒看\n○ 還沒看",
+            "images": 0
+          }
+        ]
+      },
+      "audio": {
+        "harness": {
+          "suppressed": true,
+          "speechRequests": 4,
+          "mediaRequests": 1
+        },
+        "speech": false,
+        "pending": false,
+        "media": [],
+        "calls": {
+          "speechCalls": 4,
+          "mediaPlayCalls": 1
+        }
+      }
+    },
+    {
+      "path": "docs/content/r36/layout/layout/device-1280x640-tickets-playing.png",
+      "width": 1280,
+      "height": 640,
+      "sha256": "55657d10a2c012aa27e26f69f61de2f0334e12b2d5a1858e3604f21d777ec91d",
+      "state": {
+        "roadShape": "uphill",
+        "cakeStage": "",
+        "newTraffic": "false",
+        "newTrafficTime": "0",
+        "staleSide": "",
+        "refreshes": "0",
+        "boardTime": "0.000",
+        "doorStage": "closed",
+        "boardingIndex": "0",
+        "hazard": "false",
+        "wrongTurn": "false",
+        "inBend": "false",
+        "cue": "go",
+        "settled": "true",
+        "correction": "",
+        "compact": "false",
+        "recoveryActive": "false",
+        "lookStep": "0",
+        "targetName": "藍圓形",
+        "layoutSeed": "0",
+        "distance": "0.00",
+        "speed": "0.00",
+        "bend": "1",
+        "tilt": "0.00",
+        "sway": "0.00",
+        "acceleration": "0.00",
+        "bayStopped": "false",
+        "bayRestarted": "false",
+        "leftTurn": "false",
+        "rightTurn": "false",
+        "focus": "center",
+        "crossTime": "0.000",
+        "crossDuration": "2.1",
+        "orderHint": "",
+        "fruitSway": "0.00",
+        "flagSway": "0.00",
+        "hintVisible": "false",
+        "crossingOrder": "child,bike,grandma",
+        "balanceLean": "0.00",
+        "balanceStatus": "steady",
+        "recoveries": "0",
+        "assists": "0",
+        "assisting": "false",
+        "crossed": "0",
+        "lookedLeft": "false",
+        "lookedRight": "false",
+        "decision": "false",
+        "confirmed": "false",
+        "confirmDelay": "0",
+        "person": "child",
+        "trafficActive": "false",
+        "trafficTime": "0.00",
+        "ticketWrong": "false",
+        "watchSide": "",
+        "platformSide": "front",
+        "doorState": "closed",
+        "step": "0",
+        "cabin": "false",
+        "semanticStatus": "看車票，找一樣的月台。",
+        "stateText": "",
+        "stateTitle": "",
+        "nextAction": "",
+        "holdState": "holding",
+        "holdProgress": "0.000",
+        "recheckTime": "2",
+        "hintLevel": "0",
+        "forceTarget": "0",
+        "forceLag": "0",
+        "recoveryRate": "0",
+        "trafficConfirmed": "false",
+        "trafficSource": "left",
+        "lookSequence": "left,right",
+        "escortGate": "false",
+        "escortGateReleased": "false",
+        "restReady": "false",
+        "visited": "",
+        "steering": "false",
+        "steadying": "false",
+        "standStillTime": "0",
+        "escortWaiting": "false",
+        "escortStable": "0",
+        "escortStop": "0",
+        "escortBump": "0",
+        "bayExit": "0",
+        "roofShift": "0",
+        "slide": "0.00",
+        "edge": "false",
+        "support": "",
+        "stateAngle": "0",
+        "trafficX": "15.00",
+        "trafficMotion": "離開",
+        "signGround": "458.53"
+      },
+      "text": "回學院\n形狀車票，找對月台\n暫停\n↓ 小安\n↓ 小晴\n↓ 小宇\n第 1 站・海風站\n已入座 0/3 人\n1 號月台\n2 號月台\n3 號月台\n這班三位，用同一種車票\n形狀\n→\n？\n選月台\n顏色\n→\n再比顏色\n找相同形狀＋顏色\n\n看車票，找一樣的月台。\n\n前進\n停穩\n開門\n再聽一次",
+      "controls": [
+        {
+          "id": "content-back",
+          "w": 68,
+          "h": 60,
+          "bad": false
+        },
+        {
+          "id": "content-pause",
+          "w": 68,
+          "h": 60,
+          "bad": false
+        },
+        {
+          "id": "",
+          "w": 70,
+          "h": 90,
+          "bad": false
+        },
+        {
+          "id": "",
+          "w": 70,
+          "h": 90,
+          "bad": false
+        },
+        {
+          "id": "",
+          "w": 70,
+          "h": 90,
+          "bad": false
+        },
+        {
+          "id": "0",
+          "w": 64,
+          "h": 64,
+          "bad": false
+        },
+        {
+          "id": "1",
+          "w": 64,
+          "h": 64,
+          "bad": false
+        },
+        {
+          "id": "2",
+          "w": 64,
+          "h": 64,
+          "bad": false
+        },
+        {
+          "id": "go",
+          "w": 101.03125,
+          "h": 64,
+          "bad": false
+        },
+        {
+          "id": "brake",
+          "w": 101.046875,
+          "h": 64,
+          "bad": false
+        },
+        {
+          "id": "listen",
+          "w": 422.15625,
+          "h": 64,
+          "bad": false
+        }
+      ],
+      "clipping": [],
+      "geometry": {},
+      "audio": {
+        "harness": {
+          "suppressed": true,
+          "speechRequests": 46,
+          "mediaRequests": 1
+        },
+        "speech": false,
+        "pending": false,
+        "media": [],
+        "calls": {
+          "speechCalls": 46,
+          "mediaPlayCalls": 1
+        }
+      }
+    }
+  ],
+  "errors": [],
+  "external": [],
+  "capturedShots": 112,
+  "verifiedBeforeCleanup": {
+    "shots": 112,
+    "allAudioSuppressed": true,
+    "minimumControlsChecked": true,
+    "sourceManifestSha256": "8c4cfbdae8f5cd984c893413a9fb60f1aa6281fbfee59bc6cc622f0cfa91222e"
+  },
+  "removedIntermediateShots": 88
+}

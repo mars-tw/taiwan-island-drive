@@ -1,0 +1,76 @@
+{
+  "status": "VERIFIED",
+  "version": "2.47.1",
+  "nativeSourceBuild": 44,
+  "branch": "r1-fun-polish",
+  "unitTests": 338,
+  "regressions": {
+    "merge": 132,
+    "store-regression": 101
+  },
+  "scopes": {
+    "all": {
+      "captured": 262,
+      "retained": 89,
+      "checks": 4
+    },
+    "layout": {
+      "captured": 112,
+      "retained": 24,
+      "checks": 8
+    },
+    "offline": {
+      "captured": 184,
+      "retained": 3,
+      "checks": 5
+    },
+    "store": {
+      "captured": 6,
+      "retained": 2,
+      "checks": 2
+    },
+    "performance": {
+      "captured": 0,
+      "retained": 0,
+      "checks": 0
+    }
+  },
+  "reviewImages": 15,
+  "comparisonPairs": 15,
+  "identicalPresentationPairs": 15,
+  "rgbExactComparisonImages": 5,
+  "pixelComparisonStatus": "EXECUTED: raw pixels retain small compositing edge differences; these are not reported as byte-identical screenshots",
+  "preservedPreexistingUntracked": 111,
+  "unchangedExistingSources": 439,
+  "changedSourceAllowlist": [
+    "scripts/check-merge.mjs",
+    "scripts/check-store-review.mjs",
+    "scripts/playwright-cpu-r34.mjs",
+    "src/games/car/config.js",
+    "src/shared/content-r1-ui.js",
+    "src/shared/content-r31-scene.js",
+    "src/shared/content-r31.js",
+    "src/shared/content-r32-scene.js",
+    "src/shared/content-r35.css",
+    "tests/shared/content-r31.test.js"
+  ],
+  "newRuntimeArt": 0,
+  "generatedArtCalls": 0,
+  "oldMediaDeleted": 18,
+  "oldMediaReleasedBytes": 8916489,
+  "intermediatesDeleted": 1008,
+  "intermediateReleasedBytes": 508651332,
+  "retainedHistoricalInputs": 11140,
+  "p95": [
+    16.800000000000182,
+    16.800000000000182,
+    16.700000000000728
+  ],
+  "renderer": "silent headless Chromium; --mute-audio; software rendering",
+  "blocked": [
+    "physical iPhone/iPad and native sound",
+    "family playtest",
+    "clean-machine performance",
+    "independent Muse score >=8"
+  ]
+}

@@ -19,8 +19,10 @@ export function cakeView(g){
 }
 export function crossingView(g){
  const active=g.trafficActive,side=g.trafficSource,stale=g.staleSide;
- const sides=Object.fromEntries(['left','right'].map(s=>{const car=active&&side===s,confirmed=!!g.looked[s]&&!car&&stale!==s;
-  return [s,Object.freeze({car,confirmed,stale:stale===s,road:car?(g.newTraffic&&g.crossTime>0?'車在線前等':'有車通過'):'路面淨空',check:car?'等車過':stale===s?'↻ 要重看':confirmed?'✓ 我看過了':'○ 還沒看'})];}));
+ const sides=Object.fromEntries(['left','right'].map(s=>{const observed=!!(g.looked[s]||g.viewVisit?.[s]),car=observed&&active&&side===s,confirmed=!!g.looked[s]&&!car&&stale!==s;
+  // The scene may contain traffic; an unvisited thumbnail knows only that
+  // the child has not looked. All later projections retain this boundary.
+  return [s,Object.freeze({observed,car,confirmed,stale:stale===s,road:!observed?'還沒看':car?(g.newTraffic&&g.crossTime>0?'車在線前等':'有車通過'):'路面淨空',check:!observed?'○ 還沒看':car?'等車過':stale===s?'↻ 要重看':confirmed?'✓ 我看過了':'○ 還沒看'})];}));
  let id='waiting',action='',text='看清楚了，讓朋友先過。';
  if(g.phase==='departing'){id='departing';text='路面淨空，慢慢出發。';}
  else if(g.speed>.05){id='stopping';action='brake';text='按住煞車，停在線前。';}
