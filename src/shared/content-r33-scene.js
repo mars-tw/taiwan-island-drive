@@ -21,10 +21,19 @@ export function crossingView(g){
  const v=oldCrossing(g),t=v.traffic;
  const stopX=t.source==='left'?32:68;
  const afterYield=clamp((g.newTrafficTime-.3)/2.9);
- const traffic=Object.freeze({...t,x:g.newTraffic?(t.source==='left'?15+70*afterYield:85-70*afterYield):t.x,top:CROSSING_ROADS[g.stage].center-10});
+ // Taiwan keeps right: eastbound cars use the near (lower) lane, westbound
+ // cars the far (upper) lane. Yielding never changes lanes. All consumers,
+ // including the stop line and observation windows, share this projection.
+ const lane=t.source==='left'?'lower':'upper';
+ const road=CROSSING_ROADS[g.stage],top=lane==='lower'?road.center+2:Math.max(road.top+1,road.center-10);
+ const traffic=Object.freeze({...t,x:g.newTraffic?(t.source==='left'?15+70*afterYield:85-70*afterYield):t.x,top,lane});
  const sides=Object.freeze(Object.fromEntries(Object.entries(v.sides).map(([s,c])=>[s,Object.freeze({...c,check:c.car?(t.yielding?'等朋友過街':'等車通過'):c.check})])));
  const text=g.safetyNotice>0&&g.choiceHint?g.choiceHint:v.text;
- return Object.freeze({...v,text,note:text,sides,traffic,stop:Object.freeze({x:stopX,top:traffic.top-1,height:7,visible:t.active&&t.yielding})});
+ const joinProgress=g.phase==='departing'?clamp((g.departureTime||0)/.6):0;
+ // The player's right turn joins the same lower eastbound lane. The UI maps
+ // this absolute lane centre from its real car baseline, for every viewport.
+ const player=Object.freeze({across:v.player.across,turn:v.player.turn,joinProgress,laneY:(road.center+road.bottom)/200,laneHeight:(road.bottom-road.center)/100,profile:joinProgress===1?'side':'rear',heading:joinProgress===1?'right':'junction'});
+ return Object.freeze({...v,text,note:text,sides,traffic,player,stop:Object.freeze({x:stopX,top:traffic.top-1,height:7,visible:t.active&&t.yielding})});
 }
 export function boardingScene(g){return Object.freeze(oldBoarding(g).map(f=>Object.freeze({...f,x:f.seated?[14,40,65][f.index]:f.x,bottom:f.seated?27:f.bottom,pose:f.seated?'seated':f.current&&g.escortWaiting?'standing':f.pose,bump:f.current&&g.escortBump>0})));}
 export function boardingCue(g){

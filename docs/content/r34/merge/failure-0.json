@@ -1,0 +1,32 @@
+{
+  "url": "http://127.0.0.1:5286/car/?journey=car-1&academy=1",
+  "hidden": false,
+  "text": "回學院\n補給運送\n火車\n飛機\n學生證\n自由駕駛\n花蓮・東海岸\n6\n/12\n自動油門\n海岸公路\n前進中\n煞車\n油門\n星星收好了！\n到終點囉，好棒！\n★\n★\n★\n收集到 6 / 12 顆星星\n再開一次\n選另一條路\n\n海風吹來了！第一枚公路章收好了。 護照 2／12 關。\n\n下一章：空中找路標\n🏆\n到終點了！",
+  "car": {
+    "phase": "finished",
+    "physics": {
+      "distance": 360.13108252713204,
+      "speed": 18.514886876497712,
+      "lateral": -2.572698467344233,
+      "yaw": 0,
+      "steer": 0,
+      "elapsed": 21.566666666666723,
+      "boost": 1,
+      "offRoad": false,
+      "collisions": 0,
+      "cleanTime": 21.566666666666723,
+      "boostTime": 0,
+      "collisionCooldown": 0,
+      "collision": false,
+      "completed": false
+    },
+    "input": {
+      "steer": 0,
+      "throttle": 0,
+      "brake": 0,
+      "boost": false
+    },
+    "journeyDistance": 360,
+    "contextLost": false
+  }
+}

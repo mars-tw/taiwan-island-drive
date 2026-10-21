@@ -1,0 +1,64 @@
+{
+  "before": {
+    "phase": "running",
+    "physics": {
+      "distance": 0.18460837861328422,
+      "speed": 1.5796699443067932,
+      "lateral": -2.6999982021084397,
+      "yaw": 0,
+      "steer": 0,
+      "elapsed": 0.9333333333333346,
+      "boost": 1,
+      "offRoad": false,
+      "collisions": 0,
+      "cleanTime": 0.9333333333333346,
+      "boostTime": 0,
+      "collisionCooldown": 0,
+      "collision": false,
+      "completed": false
+    },
+    "input": {
+      "steer": 0,
+      "throttle": 1,
+      "brake": 0,
+      "boost": false
+    },
+    "journeyDistance": 360,
+    "canvas": [
+      320,
+      504
+    ],
+    "contextLost": false
+  },
+  "after": {
+    "phase": "finished",
+    "physics": {
+      "distance": 360.1309628371954,
+      "speed": 18.514886876497723,
+      "lateral": -2.5726985227083587,
+      "yaw": 0,
+      "steer": 0,
+      "elapsed": 21.566666666666723,
+      "boost": 1,
+      "offRoad": false,
+      "collisions": 0,
+      "cleanTime": 21.566666666666723,
+      "boostTime": 0,
+      "collisionCooldown": 0,
+      "collision": false,
+      "completed": false
+    },
+    "input": {
+      "steer": 0,
+      "throttle": 0,
+      "brake": 0,
+      "boost": false
+    },
+    "journeyDistance": 360,
+    "canvas": [
+      320,
+      504
+    ],
+    "contextLost": false
+  }
+}

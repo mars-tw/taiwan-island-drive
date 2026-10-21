@@ -1,0 +1,37 @@
+{
+  "status": "VERIFIED",
+  "version": "2.46.0",
+  "nativeSourceBuild": 42,
+  "unitTests": 333,
+  "regressions": {
+    "merge": 132,
+    "store-regression": 101
+  },
+  "rawImages": 541,
+  "reviewImages": 15,
+  "renderer": "headless Chromium with --disable-gpu --use-angle=swiftshader; physical GPU reserved for H3",
+  "harnessFingerprint": {
+    "scripts/check-merge.mjs": "c98cb8910fb612fb5a318caaa53310eee5563554fcc303eb88d825015619f63e",
+    "scripts/check-store-review.mjs": "8b5afe4f9f50c259bdcdb7ba57a2eee0562fc941a19abd00e2a27a9534bb5d19",
+    "scripts/playwright-cpu-r34.mjs": "a0b592ab949139715a95aca986e9578295a6c4c652a55f2d4f40f1949304492a",
+    "scripts/playwright-regression-r34.mjs": "3e2c040066f194b7715003ce87ea64c17cd027b6d0f7b6c0a76ee07fd167bd85"
+  },
+  "preexistingUntrackedUnchanged": 105,
+  "existingTestsUnchanged": 54,
+  "deletedFiles": 18,
+  "releasedBytes": 8941745,
+  "retainedInputs": 9988,
+  "p95": [
+    16.700000000000728,
+    16.700000000000728,
+    16.799999999999272
+  ],
+  "performanceStatus": "VERIFIED",
+  "newRuntimeArt": 0,
+  "blocked": [
+    "physical iPhone/iPad",
+    "family playtest",
+    "clean-machine performance",
+    "independent Muse score >=8"
+  ]
+}
