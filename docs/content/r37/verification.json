@@ -1,0 +1,20 @@
+{
+  "status": "VERIFIED",
+  "branch": "r1-fun-polish",
+  "version": "2.47.2",
+  "nativeSourceBuild": 45,
+  "unitTests": 342,
+  "mergeChecks": 132,
+  "storeChecks": 101,
+  "reviewOriginals": 15,
+  "hashedTestMedia": 184,
+  "generatedArt": 0,
+  "scope": "R37 crossing presentation; R35 cake and ticket implementation preserved",
+  "limitations": [
+    "physical devices",
+    "parent-child playtest",
+    "clean workstation timing",
+    "independent Muse re-review",
+    "protected cake/ticket requested redesigns"
+  ]
+}

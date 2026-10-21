@@ -1,0 +1,24 @@
+{
+  "status": "VERIFIED",
+  "deletedFiles": 3,
+  "releasedBytes": 577298,
+  "files": [
+    {
+      "path": "docs/content/r37/review-set/07-crossing-stage-2-car-approach.png",
+      "bytes": 364951,
+      "sha256": "a7c439755471e065bfdba2ed3a56eb9cfbe2fb582684c2b065a968056f444714"
+    },
+    {
+      "path": "docs/content/r37/review-set/04-cake-stage-2-finished.png",
+      "bytes": 211571,
+      "sha256": "a7b42f2488f30c1103676fa688f1a135d840616e74e694ba075228c1e232835d",
+      "note": "Earlier copy removed after visual inspection; original remains until intermediate cleanup."
+    },
+    {
+      "path": "docs/content/r37/browser-output.txt",
+      "bytes": 776,
+      "sha256": "46bf4241bbf8edd0cd0ecc9509db00a40f8f9a3cd33128d7d70f10ad161ff88c",
+      "note": "Superseded by final all-output.txt and serial-checks.json"
+    }
+  ]
+}

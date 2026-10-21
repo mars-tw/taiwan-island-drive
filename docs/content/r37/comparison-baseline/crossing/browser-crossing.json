@@ -1,0 +1,1114 @@
+{
+  "status": "VERIFIED",
+  "sourceFingerprint": {
+    "src/shared/content-r31.js": "cbdfc6c5829966796338fc028f449d5412d40e08daa0660b0733c2cc45e57903",
+    "tests/shared/content-r31.test.js": "a1166090b506ea2b6f96100697010152da5a9181596bd0eea45706ba903c4c1a",
+    "src/shared/content-r31-scene.js": "305454cbd4c29f6f401f6f8f965bd6b858472c65e8afb16817b791f3e05d3571",
+    "src/shared/content-r32-scene.js": "230d74cdc2ec16d3dfc438d6c81df12c390011b2a058f0000f6e88de93fee764",
+    "src/shared/content-r1-ui.js": "31d9e33dc2805c79a7a75f03c2232c1d853b2a769f70a2d4624f87aabb1adb97",
+    "src/shared/content-r35.js": "a0ae6b128fee45bccb2eae6b8cfa4bdf6bc770bdaee0d0f8d7e491f932e78bb9",
+    "src/shared/content-r35-scene.js": "62fc2dcb5612107234e9f110fd9ec3e42f18fa9e92aa16fff06b8155692d598c",
+    "src/shared/content-r35-ui.js": "d9b08de29c0fba32af5aa12173327fbbfb40de0361a1717ef145fd43aca4e806",
+    "src/shared/content-r35.css": "498d7369faa88de55d1be7596cb9638be26ca75f23b768f43bb96929ab2fca74",
+    "scripts/check-content-r37-reference.mjs": "2386f0d65bd2c4b1c3833310490728b8679947090110582864866d8ef7071a9b",
+    "src/shared/content-r37-scene.js": "96cd2e6eba3ad72a734133de2800d8fc94677f3a52913360acc218302cb048c2",
+    "src/shared/content-r37-ui.js": "92d6cb7ab43b5be1dd692112b17a1739e780522af196226f70d673851be98acb",
+    "src/shared/content-r37.css": "2d29521d16bfdab16d149918330a845a567b19a40a65190bd1137dd5023e7400",
+    "scripts/playwright-cpu-r34.mjs": "95b3b78b4661a0400b3de95026e1851ee99cffb5710ce8b4d89ffdb0dc6336b2"
+  },
+  "checks": [
+    {
+      "status": "VERIFIED",
+      "label": "crossing completed all stations; exact save reload and actual replay opening",
+      "stage": 2,
+      "completed": true,
+      "started": true,
+      "skills": {
+        "start": false,
+        "turn": false,
+        "stop": false
+      },
+      "facts": {
+        "recoveries": 0,
+        "assists": 0,
+        "bayStops": 0,
+        "bayRestarts": 0,
+        "leftViews": 4,
+        "rightViews": 5,
+        "waited": 9,
+        "wrongStops": 0,
+        "reselections": 0,
+        "boarded": 0,
+        "blockedStarts": 15,
+        "orderReminders": 0,
+        "confirmations": 6
+      },
+      "layoutSeed": 0,
+      "visited": [
+        0,
+        1,
+        2
+      ],
+      "contentVersion": 33,
+      "practice": true
+    }
+  ],
+  "shots": [
+    {
+      "path": "docs/content/r37/comparison-baseline/crossing/phone-crossing-stage-2-unobserved.png",
+      "width": 390,
+      "height": 844,
+      "sha256": "c511790a2f66de2180fce7fd3c1edbe2a1875c2d09a531ff4ba09b01b4005350",
+      "state": {
+        "roadShape": "left",
+        "cakeStage": "",
+        "newTraffic": "false",
+        "newTrafficTime": "0",
+        "staleSide": "",
+        "refreshes": "0",
+        "boardTime": "0.000",
+        "doorStage": "closed",
+        "boardingIndex": "0",
+        "hazard": "false",
+        "wrongTurn": "false",
+        "inBend": "false",
+        "cue": "go",
+        "settled": "true",
+        "correction": "",
+        "compact": "false",
+        "recoveryActive": "false",
+        "lookStep": "0",
+        "targetName": "橘三角形",
+        "layoutSeed": "0",
+        "distance": "0.00",
+        "speed": "4.58",
+        "bend": "-1",
+        "tilt": "0.00",
+        "sway": "0.00",
+        "acceleration": "0.00",
+        "bayStopped": "false",
+        "bayRestarted": "false",
+        "leftTurn": "false",
+        "rightTurn": "false",
+        "focus": "center",
+        "crossTime": "0.000",
+        "crossDuration": "2.4",
+        "orderHint": "",
+        "fruitSway": "0.00",
+        "flagSway": "0.00",
+        "hintVisible": "false",
+        "crossingOrder": "grandma,child,bike",
+        "balanceLean": "0.00",
+        "balanceStatus": "steady",
+        "recoveries": "0",
+        "assists": "0",
+        "assisting": "false",
+        "crossed": "0",
+        "lookedLeft": "false",
+        "lookedRight": "false",
+        "decision": "false",
+        "confirmed": "false",
+        "confirmDelay": "0",
+        "person": "grandma",
+        "trafficActive": "true",
+        "trafficTime": "0.00",
+        "ticketWrong": "false",
+        "watchSide": "",
+        "platformSide": "front",
+        "doorState": "closed",
+        "step": "0",
+        "cabin": "false",
+        "semanticStatus": "先煞車停穩。",
+        "stateText": "先煞車停穩。",
+        "stateTitle": "第 2 站・榕樹路口",
+        "nextAction": "",
+        "holdState": "",
+        "holdProgress": "0.000",
+        "recheckTime": "2",
+        "hintLevel": "0",
+        "forceTarget": "0",
+        "forceLag": "0",
+        "recoveryRate": "0",
+        "trafficConfirmed": "false",
+        "trafficSource": "right",
+        "lookSequence": "right,left",
+        "escortGate": "false",
+        "escortGateReleased": "false",
+        "restReady": "false",
+        "visited": "0",
+        "steering": "false",
+        "steadying": "false",
+        "standStillTime": "0",
+        "escortWaiting": "false",
+        "escortStable": "0",
+        "escortStop": "0",
+        "escortBump": "0",
+        "trafficX": "81.28",
+        "trafficMotion": "接近"
+      },
+      "text": "回學院\n路口停看等\n暫停\n阿嬤\n小安\n小柏\n第 2 站・榕樹路口\n已到對岸 0/3 人\n← 左邊・路面淨空\n○ 還沒看\n右邊 →・車正在接近\n等車通過\n\n先煞車停穩。\n\n停下\n看左邊\n看右邊\n出發\n再聽一次",
+      "controls": [
+        {
+          "id": "content-back",
+          "w": 68,
+          "h": 60,
+          "bad": false
+        },
+        {
+          "id": "content-pause",
+          "w": 68,
+          "h": 60,
+          "bad": false
+        },
+        {
+          "id": "brake",
+          "w": 81,
+          "h": 64,
+          "bad": false
+        },
+        {
+          "id": "look-left",
+          "w": 81,
+          "h": 64,
+          "bad": false
+        },
+        {
+          "id": "look-right",
+          "w": 81,
+          "h": 64,
+          "bad": false
+        },
+        {
+          "id": "depart",
+          "w": 81,
+          "h": 64,
+          "bad": false
+        },
+        {
+          "id": "listen",
+          "w": 342,
+          "h": 64,
+          "bad": false
+        }
+      ],
+      "clipping": [],
+      "geometry": {
+        "line": null,
+        "car": {
+          "x": 256.96875,
+          "y": 270.765625,
+          "w": 100,
+          "h": 31.515625
+        },
+        "actors": [
+          {
+            "x": 157,
+            "y": 308.09375,
+            "w": 76,
+            "h": 72
+          },
+          {
+            "x": 28.109375,
+            "y": 308.09375,
+            "w": 76,
+            "h": 72
+          },
+          {
+            "x": 282.875,
+            "y": 312.09375,
+            "w": 82,
+            "h": 68
+          }
+        ],
+        "overlaps": [],
+        "lane": {
+          "visible": true,
+          "lane": "upper",
+          "source": "right",
+          "heading": "left",
+          "top": 43,
+          "height": 31.515625,
+          "scene": 426.40625,
+          "scale": "-1 1"
+        },
+        "player": {
+          "translate": "none",
+          "rotate": "0deg",
+          "scale": "1",
+          "joined": false,
+          "heading": "junction",
+          "asset": "http://127.0.0.1:5286/r37-reference/art/content-r11/car-rear.png",
+          "centerY": 89.9093139076786,
+          "top": 82.24559577789341,
+          "bottom": 97.57303203746376
+        },
+        "observationCards": [
+          {
+            "side": "left",
+            "x": 24,
+            "y": 532.40625,
+            "width": 168,
+            "height": 94,
+            "text": "← 左邊・路面淨空\n○ 還沒看",
+            "images": 0
+          },
+          {
+            "side": "right",
+            "x": 198,
+            "y": 532.40625,
+            "width": 168,
+            "height": 94,
+            "text": "右邊 →・車正在接近\n等車通過",
+            "images": 1
+          }
+        ]
+      },
+      "audio": {
+        "harness": {
+          "suppressed": true,
+          "speechRequests": 22,
+          "mediaRequests": 1
+        },
+        "speech": false,
+        "pending": false,
+        "media": [],
+        "calls": {
+          "speechCalls": 22,
+          "mediaPlayCalls": 1
+        }
+      }
+    },
+    {
+      "path": "docs/content/r37/comparison-baseline/crossing/phone-crossing-stage-2-only-source-main.png",
+      "width": 390,
+      "height": 844,
+      "sha256": "b81e1bc3f157332c51dc05a8e1f691a958314adbf49d459a002d5bcd13c1429c",
+      "state": {
+        "roadShape": "left",
+        "cakeStage": "",
+        "newTraffic": "false",
+        "newTrafficTime": "0",
+        "staleSide": "",
+        "refreshes": "0",
+        "boardTime": "0.000",
+        "doorStage": "closed",
+        "boardingIndex": "0",
+        "hazard": "false",
+        "wrongTurn": "false",
+        "inBend": "false",
+        "cue": "go",
+        "settled": "true",
+        "correction": "",
+        "compact": "false",
+        "recoveryActive": "false",
+        "lookStep": "1",
+        "targetName": "橘三角形",
+        "layoutSeed": "0",
+        "distance": "0.00",
+        "speed": "0.00",
+        "bend": "-1",
+        "tilt": "0.00",
+        "sway": "0.00",
+        "acceleration": "0.00",
+        "bayStopped": "false",
+        "bayRestarted": "false",
+        "leftTurn": "false",
+        "rightTurn": "false",
+        "focus": "right",
+        "crossTime": "0.000",
+        "crossDuration": "2.4",
+        "orderHint": "",
+        "fruitSway": "0.00",
+        "flagSway": "0.00",
+        "hintVisible": "false",
+        "crossingOrder": "grandma,child,bike",
+        "balanceLean": "0.00",
+        "balanceStatus": "steady",
+        "recoveries": "0",
+        "assists": "0",
+        "assisting": "false",
+        "crossed": "0",
+        "lookedLeft": "false",
+        "lookedRight": "true",
+        "decision": "false",
+        "confirmed": "false",
+        "confirmDelay": "0",
+        "person": "grandma",
+        "trafficActive": "true",
+        "trafficTime": "1.54",
+        "ticketWrong": "false",
+        "watchSide": "right",
+        "platformSide": "front",
+        "doorState": "closed",
+        "step": "0",
+        "cabin": "false",
+        "semanticStatus": "有車通過，等一等。",
+        "stateText": "有車通過，等一等。",
+        "stateTitle": "第 2 站・榕樹路口",
+        "nextAction": "",
+        "holdState": "",
+        "holdProgress": "0.000",
+        "recheckTime": "2",
+        "hintLevel": "0",
+        "forceTarget": "0",
+        "forceLag": "0",
+        "recoveryRate": "0",
+        "trafficConfirmed": "true",
+        "trafficSource": "right",
+        "lookSequence": "right,left",
+        "escortGate": "false",
+        "escortGateReleased": "false",
+        "restReady": "false",
+        "visited": "0",
+        "steering": "false",
+        "steadying": "false",
+        "standStillTime": "0",
+        "escortWaiting": "false",
+        "escortStable": "0",
+        "escortStop": "0",
+        "escortBump": "0",
+        "trafficX": "54.60",
+        "trafficMotion": "通過"
+      },
+      "text": "回學院\n路口停看等\n暫停\n阿嬤\n小安\n小柏\n第 2 站・榕樹路口\n已到對岸 0/3 人\n← 左邊・路面淨空\n○ 還沒看\n右邊 →・車正在通過\n等車通過\n\n有車通過，等一等。\n\n停下\n看左邊\n看右邊\n出發\n再聽一次",
+      "controls": [
+        {
+          "id": "content-back",
+          "w": 68,
+          "h": 60,
+          "bad": false
+        },
+        {
+          "id": "content-pause",
+          "w": 68,
+          "h": 60,
+          "bad": false
+        },
+        {
+          "id": "brake",
+          "w": 81,
+          "h": 64,
+          "bad": false
+        },
+        {
+          "id": "look-left",
+          "w": 81,
+          "h": 64,
+          "bad": false
+        },
+        {
+          "id": "look-right",
+          "w": 81,
+          "h": 64,
+          "bad": false
+        },
+        {
+          "id": "depart",
+          "w": 81,
+          "h": 64,
+          "bad": false
+        },
+        {
+          "id": "listen",
+          "w": 342,
+          "h": 64,
+          "bad": false
+        }
+      ],
+      "clipping": [],
+      "geometry": {
+        "line": null,
+        "car": {
+          "x": 161.453125,
+          "y": 270.765625,
+          "w": 100,
+          "h": 31.515625
+        },
+        "actors": [
+          {
+            "x": 157,
+            "y": 308.09375,
+            "w": 76,
+            "h": 72
+          },
+          {
+            "x": 28.109375,
+            "y": 308.09375,
+            "w": 76,
+            "h": 72
+          },
+          {
+            "x": 282.875,
+            "y": 312.09375,
+            "w": 82,
+            "h": 68
+          }
+        ],
+        "overlaps": [],
+        "lane": {
+          "visible": true,
+          "lane": "upper",
+          "source": "right",
+          "heading": "left",
+          "top": 43,
+          "height": 31.515625,
+          "scene": 426.40625,
+          "scale": "-1 1"
+        },
+        "player": {
+          "translate": "none",
+          "rotate": "0deg",
+          "scale": "1",
+          "joined": false,
+          "heading": "junction",
+          "asset": "http://127.0.0.1:5286/r37-reference/art/content-r11/car-rear.png",
+          "centerY": 89.9093139076786,
+          "top": 82.24559577789341,
+          "bottom": 97.57303203746376
+        },
+        "observationCards": [
+          {
+            "side": "left",
+            "x": 24,
+            "y": 532.40625,
+            "width": 168,
+            "height": 94,
+            "text": "← 左邊・路面淨空\n○ 還沒看",
+            "images": 0
+          },
+          {
+            "side": "right",
+            "x": 198,
+            "y": 532.40625,
+            "width": 168,
+            "height": 94,
+            "text": "右邊 →・車正在通過\n等車通過",
+            "images": 1
+          }
+        ]
+      },
+      "audio": {
+        "harness": {
+          "suppressed": true,
+          "speechRequests": 23,
+          "mediaRequests": 1
+        },
+        "speech": false,
+        "pending": false,
+        "media": [],
+        "calls": {
+          "speechCalls": 23,
+          "mediaPlayCalls": 1
+        }
+      }
+    },
+    {
+      "path": "docs/content/r37/comparison-baseline/crossing/phone-crossing-stage-2-turning-right.png",
+      "width": 390,
+      "height": 844,
+      "sha256": "9056bec189170a3836cf5032f0489b4331abdbfcc0fbdf4117438fab32041887",
+      "state": {
+        "roadShape": "left",
+        "cakeStage": "",
+        "newTraffic": "true",
+        "newTrafficTime": "3.2",
+        "staleSide": "",
+        "refreshes": "1",
+        "boardTime": "0.000",
+        "doorStage": "closed",
+        "boardingIndex": "0",
+        "hazard": "false",
+        "wrongTurn": "false",
+        "inBend": "false",
+        "cue": "go",
+        "settled": "true",
+        "correction": "",
+        "compact": "false",
+        "recoveryActive": "false",
+        "lookStep": "2",
+        "targetName": "橘三角形",
+        "layoutSeed": "0",
+        "distance": "0.00",
+        "speed": "0.00",
+        "bend": "-1",
+        "tilt": "0.00",
+        "sway": "0.00",
+        "acceleration": "0.00",
+        "bayStopped": "false",
+        "bayRestarted": "false",
+        "leftTurn": "false",
+        "rightTurn": "false",
+        "focus": "left",
+        "crossTime": "0.000",
+        "crossDuration": "2.1",
+        "orderHint": "",
+        "fruitSway": "0.00",
+        "flagSway": "0.00",
+        "hintVisible": "false",
+        "crossingOrder": "grandma,child,bike",
+        "balanceLean": "0.00",
+        "balanceStatus": "steady",
+        "recoveries": "0",
+        "assists": "0",
+        "assisting": "false",
+        "crossed": "3",
+        "lookedLeft": "true",
+        "lookedRight": "true",
+        "decision": "false",
+        "confirmed": "false",
+        "confirmDelay": "0",
+        "person": "",
+        "trafficActive": "false",
+        "trafficTime": "4.96",
+        "ticketWrong": "false",
+        "watchSide": "left",
+        "platformSide": "front",
+        "doorState": "closed",
+        "step": "0",
+        "cabin": "false",
+        "semanticStatus": "已出發，沿下方車道前進。",
+        "stateText": "已出發，沿下方車道前進。",
+        "stateTitle": "第 2 站・榕樹路口",
+        "nextAction": "",
+        "holdState": "",
+        "holdProgress": "0.000",
+        "recheckTime": "2",
+        "hintLevel": "0",
+        "forceTarget": "0",
+        "forceLag": "0",
+        "recoveryRate": "0",
+        "trafficConfirmed": "true",
+        "trafficSource": "left",
+        "lookSequence": "left,right",
+        "escortGate": "false",
+        "escortGateReleased": "false",
+        "restReady": "false",
+        "visited": "0",
+        "steering": "false",
+        "steadying": "false",
+        "standStillTime": "0",
+        "escortWaiting": "false",
+        "escortStable": "0",
+        "escortStop": "0",
+        "escortBump": "0",
+        "trafficX": "85.00",
+        "trafficMotion": "離開"
+      },
+      "text": "回學院\n路口停看等\n暫停\n第 2 站・榕樹路口・已出發\n阿嬤\n小安\n小柏\n已到對岸 3/3 人\n← 左邊・路面淨空\n✓ 我看過了\n右邊 →・路面淨空\n✓ 我看過了\n\n已出發，沿下方車道前進。\n\n停下\n看左邊\n看右邊\n已出發\n再聽一次",
+      "controls": [
+        {
+          "id": "content-back",
+          "w": 68,
+          "h": 60,
+          "bad": false
+        },
+        {
+          "id": "content-pause",
+          "w": 68,
+          "h": 60,
+          "bad": false
+        },
+        {
+          "id": "listen",
+          "w": 342,
+          "h": 64,
+          "bad": false
+        }
+      ],
+      "clipping": [],
+      "geometry": {
+        "line": null,
+        "car": {
+          "x": 0,
+          "y": 0,
+          "w": 0,
+          "h": 0
+        },
+        "actors": [
+          {
+            "x": 28.109375,
+            "y": 186.171875,
+            "w": 76,
+            "h": 72
+          },
+          {
+            "x": 285.875,
+            "y": 186.171875,
+            "w": 76,
+            "h": 72
+          },
+          {
+            "x": 154,
+            "y": 190.171875,
+            "w": 82,
+            "h": 68
+          }
+        ],
+        "overlaps": [],
+        "lane": {
+          "visible": false,
+          "lane": "lower",
+          "source": "left",
+          "heading": "right",
+          "top": 53,
+          "height": 0,
+          "scene": 426.40625,
+          "scale": "1"
+        },
+        "player": {
+          "translate": "none",
+          "rotate": "0deg",
+          "scale": "1",
+          "joined": false,
+          "heading": "junction",
+          "asset": "http://127.0.0.1:5286/r37-reference/art/content-r11/car-rear.png",
+          "centerY": 80.09180108525979,
+          "top": 73.57838400356798,
+          "bottom": 86.60521816695162
+        },
+        "exitArrow": "M72 56.5 H94",
+        "observationCards": [
+          {
+            "side": "left",
+            "x": 24,
+            "y": 532.40625,
+            "width": 168,
+            "height": 94,
+            "text": "← 左邊・路面淨空\n✓ 我看過了",
+            "images": 0
+          },
+          {
+            "side": "right",
+            "x": 198,
+            "y": 532.40625,
+            "width": 168,
+            "height": 94,
+            "text": "右邊 →・路面淨空\n✓ 我看過了",
+            "images": 0
+          }
+        ]
+      },
+      "audio": {
+        "harness": {
+          "suppressed": true,
+          "speechRequests": 38,
+          "mediaRequests": 1
+        },
+        "speech": false,
+        "pending": false,
+        "media": [],
+        "calls": {
+          "speechCalls": 38,
+          "mediaPlayCalls": 1
+        }
+      }
+    },
+    {
+      "path": "docs/content/r37/comparison-baseline/crossing/phone-crossing-stage-2-departing.png",
+      "width": 390,
+      "height": 844,
+      "sha256": "a2bcf2009659ad5c8b03434f3d35826aede7e14630aa85048edd9d8ca78ca84c",
+      "state": {
+        "roadShape": "left",
+        "cakeStage": "",
+        "newTraffic": "true",
+        "newTrafficTime": "3.2",
+        "staleSide": "",
+        "refreshes": "1",
+        "boardTime": "0.000",
+        "doorStage": "closed",
+        "boardingIndex": "0",
+        "hazard": "false",
+        "wrongTurn": "false",
+        "inBend": "false",
+        "cue": "go",
+        "settled": "true",
+        "correction": "",
+        "compact": "false",
+        "recoveryActive": "false",
+        "lookStep": "2",
+        "targetName": "橘三角形",
+        "layoutSeed": "0",
+        "distance": "0.00",
+        "speed": "0.00",
+        "bend": "-1",
+        "tilt": "0.00",
+        "sway": "0.00",
+        "acceleration": "0.00",
+        "bayStopped": "false",
+        "bayRestarted": "false",
+        "leftTurn": "false",
+        "rightTurn": "false",
+        "focus": "left",
+        "crossTime": "0.000",
+        "crossDuration": "2.1",
+        "orderHint": "",
+        "fruitSway": "0.00",
+        "flagSway": "0.00",
+        "hintVisible": "false",
+        "crossingOrder": "grandma,child,bike",
+        "balanceLean": "0.00",
+        "balanceStatus": "steady",
+        "recoveries": "0",
+        "assists": "0",
+        "assisting": "false",
+        "crossed": "3",
+        "lookedLeft": "true",
+        "lookedRight": "true",
+        "decision": "false",
+        "confirmed": "false",
+        "confirmDelay": "0",
+        "person": "",
+        "trafficActive": "false",
+        "trafficTime": "4.96",
+        "ticketWrong": "false",
+        "watchSide": "left",
+        "platformSide": "front",
+        "doorState": "closed",
+        "step": "0",
+        "cabin": "false",
+        "semanticStatus": "已出發，沿下方車道前進。",
+        "stateText": "已出發，沿下方車道前進。",
+        "stateTitle": "第 2 站・榕樹路口",
+        "nextAction": "",
+        "holdState": "",
+        "holdProgress": "0.000",
+        "recheckTime": "2",
+        "hintLevel": "0",
+        "forceTarget": "0",
+        "forceLag": "0",
+        "recoveryRate": "0",
+        "trafficConfirmed": "true",
+        "trafficSource": "left",
+        "lookSequence": "left,right",
+        "escortGate": "false",
+        "escortGateReleased": "false",
+        "restReady": "false",
+        "visited": "0",
+        "steering": "false",
+        "steadying": "false",
+        "standStillTime": "0",
+        "escortWaiting": "false",
+        "escortStable": "0",
+        "escortStop": "0",
+        "escortBump": "0",
+        "trafficX": "85.00",
+        "trafficMotion": "離開"
+      },
+      "text": "回學院\n路口停看等\n暫停\n第 2 站・榕樹路口・已出發\n阿嬤\n小安\n小柏\n已到對岸 3/3 人\n← 左邊・路面淨空\n✓ 我看過了\n右邊 →・路面淨空\n✓ 我看過了\n\n已出發，沿下方車道前進。\n\n停下\n看左邊\n看右邊\n已出發\n再聽一次",
+      "controls": [
+        {
+          "id": "content-back",
+          "w": 68,
+          "h": 60,
+          "bad": false
+        },
+        {
+          "id": "content-pause",
+          "w": 68,
+          "h": 60,
+          "bad": false
+        },
+        {
+          "id": "listen",
+          "w": 342,
+          "h": 64,
+          "bad": false
+        }
+      ],
+      "clipping": [],
+      "geometry": {
+        "line": null,
+        "car": {
+          "x": 0,
+          "y": 0,
+          "w": 0,
+          "h": 0
+        },
+        "actors": [
+          {
+            "x": 28.109375,
+            "y": 186.171875,
+            "w": 76,
+            "h": 72
+          },
+          {
+            "x": 285.875,
+            "y": 186.171875,
+            "w": 76,
+            "h": 72
+          },
+          {
+            "x": 154,
+            "y": 190.171875,
+            "w": 82,
+            "h": 68
+          }
+        ],
+        "overlaps": [],
+        "lane": {
+          "visible": false,
+          "lane": "lower",
+          "source": "left",
+          "heading": "right",
+          "top": 53,
+          "height": 0,
+          "scene": 426.40625,
+          "scale": "1"
+        },
+        "player": {
+          "translate": "none",
+          "rotate": "0deg",
+          "scale": "1",
+          "joined": false,
+          "heading": "junction",
+          "asset": "http://127.0.0.1:5286/r37-reference/art/content-r11/car-rear.png",
+          "centerY": 69.38415223370252,
+          "top": 64.12324388612205,
+          "bottom": 74.64506058128299
+        },
+        "exitArrow": "M72 56.5 H94",
+        "observationCards": [
+          {
+            "side": "left",
+            "x": 24,
+            "y": 532.40625,
+            "width": 168,
+            "height": 94,
+            "text": "← 左邊・路面淨空\n✓ 我看過了",
+            "images": 0
+          },
+          {
+            "side": "right",
+            "x": 198,
+            "y": 532.40625,
+            "width": 168,
+            "height": 94,
+            "text": "右邊 →・路面淨空\n✓ 我看過了",
+            "images": 0
+          }
+        ]
+      },
+      "audio": {
+        "harness": {
+          "suppressed": true,
+          "speechRequests": 38,
+          "mediaRequests": 1
+        },
+        "speech": false,
+        "pending": false,
+        "media": [],
+        "calls": {
+          "speechCalls": 38,
+          "mediaPlayCalls": 1
+        }
+      }
+    },
+    {
+      "path": "docs/content/r37/comparison-baseline/crossing/phone-crossing-stage-2-joined-right-lane.png",
+      "width": 390,
+      "height": 844,
+      "sha256": "0c78a71294bf3a3ad0b4a4f46aac06626260c3d6a94d3d0626b44afb0e00e330",
+      "state": {
+        "roadShape": "left",
+        "cakeStage": "",
+        "newTraffic": "true",
+        "newTrafficTime": "3.2",
+        "staleSide": "",
+        "refreshes": "1",
+        "boardTime": "0.000",
+        "doorStage": "closed",
+        "boardingIndex": "0",
+        "hazard": "false",
+        "wrongTurn": "false",
+        "inBend": "false",
+        "cue": "go",
+        "settled": "true",
+        "correction": "",
+        "compact": "false",
+        "recoveryActive": "false",
+        "lookStep": "2",
+        "targetName": "橘三角形",
+        "layoutSeed": "0",
+        "distance": "0.00",
+        "speed": "0.00",
+        "bend": "-1",
+        "tilt": "0.00",
+        "sway": "0.00",
+        "acceleration": "0.00",
+        "bayStopped": "false",
+        "bayRestarted": "false",
+        "leftTurn": "false",
+        "rightTurn": "false",
+        "focus": "left",
+        "crossTime": "0.000",
+        "crossDuration": "2.1",
+        "orderHint": "",
+        "fruitSway": "0.00",
+        "flagSway": "0.00",
+        "hintVisible": "false",
+        "crossingOrder": "grandma,child,bike",
+        "balanceLean": "0.00",
+        "balanceStatus": "steady",
+        "recoveries": "0",
+        "assists": "0",
+        "assisting": "false",
+        "crossed": "3",
+        "lookedLeft": "true",
+        "lookedRight": "true",
+        "decision": "false",
+        "confirmed": "false",
+        "confirmDelay": "0",
+        "person": "",
+        "trafficActive": "false",
+        "trafficTime": "4.96",
+        "ticketWrong": "false",
+        "watchSide": "left",
+        "platformSide": "front",
+        "doorState": "closed",
+        "step": "0",
+        "cabin": "false",
+        "semanticStatus": "已出發，沿下方車道前進。",
+        "stateText": "已出發，沿下方車道前進。",
+        "stateTitle": "第 2 站・榕樹路口",
+        "nextAction": "",
+        "holdState": "",
+        "holdProgress": "0.000",
+        "recheckTime": "2",
+        "hintLevel": "0",
+        "forceTarget": "0",
+        "forceLag": "0",
+        "recoveryRate": "0",
+        "trafficConfirmed": "true",
+        "trafficSource": "left",
+        "lookSequence": "left,right",
+        "escortGate": "false",
+        "escortGateReleased": "false",
+        "restReady": "false",
+        "visited": "0",
+        "steering": "false",
+        "steadying": "false",
+        "standStillTime": "0",
+        "escortWaiting": "false",
+        "escortStable": "0",
+        "escortStop": "0",
+        "escortBump": "0",
+        "trafficX": "85.00",
+        "trafficMotion": "離開"
+      },
+      "text": "回學院\n路口停看等\n暫停\n第 2 站・榕樹路口・已出發\n阿嬤\n小安\n小柏\n已到對岸 3/3 人\n← 左邊・路面淨空\n✓ 我看過了\n右邊 →・路面淨空\n✓ 我看過了\n\n已出發，沿下方車道前進。\n\n停下\n看左邊\n看右邊\n已出發\n再聽一次",
+      "controls": [
+        {
+          "id": "content-back",
+          "w": 68,
+          "h": 60,
+          "bad": false
+        },
+        {
+          "id": "content-pause",
+          "w": 68,
+          "h": 60,
+          "bad": false
+        },
+        {
+          "id": "listen",
+          "w": 342,
+          "h": 64,
+          "bad": false
+        }
+      ],
+      "clipping": [],
+      "geometry": {
+        "line": null,
+        "car": {
+          "x": 0,
+          "y": 0,
+          "w": 0,
+          "h": 0
+        },
+        "actors": [
+          {
+            "x": 28.109375,
+            "y": 186.171875,
+            "w": 76,
+            "h": 72
+          },
+          {
+            "x": 285.875,
+            "y": 186.171875,
+            "w": 76,
+            "h": 72
+          },
+          {
+            "x": 154,
+            "y": 190.171875,
+            "w": 82,
+            "h": 68
+          }
+        ],
+        "overlaps": [],
+        "lane": {
+          "visible": false,
+          "lane": "lower",
+          "source": "left",
+          "heading": "right",
+          "top": 53,
+          "height": 0,
+          "scene": 426.40625,
+          "scale": "1"
+        },
+        "player": {
+          "translate": "none",
+          "rotate": "0deg",
+          "scale": "1",
+          "joined": true,
+          "heading": "right",
+          "asset": "http://127.0.0.1:5286/r37-reference/art/content-r29/traffic-car.webp",
+          "centerY": 56.44465918382517,
+          "top": 52.698282910874894,
+          "bottom": 60.191035456775445
+        },
+        "exitArrow": "M72 56.5 H94",
+        "observationCards": [
+          {
+            "side": "left",
+            "x": 24,
+            "y": 532.40625,
+            "width": 168,
+            "height": 94,
+            "text": "← 左邊・路面淨空\n✓ 我看過了",
+            "images": 0
+          },
+          {
+            "side": "right",
+            "x": 198,
+            "y": 532.40625,
+            "width": 168,
+            "height": 94,
+            "text": "右邊 →・路面淨空\n✓ 我看過了",
+            "images": 0
+          }
+        ]
+      },
+      "audio": {
+        "harness": {
+          "suppressed": true,
+          "speechRequests": 38,
+          "mediaRequests": 1
+        },
+        "speech": false,
+        "pending": false,
+        "media": [],
+        "calls": {
+          "speechCalls": 38,
+          "mediaPlayCalls": 1
+        }
+      }
+    }
+  ],
+  "errors": [],
+  "external": [],
+  "capturedShotCount": 6,
+  "retainedShotCount": 5,
+  "captureRetention": "Only selected review originals, supplemental proof and validation inputs retained; others were intermediate captures."
+}

@@ -1,0 +1,49 @@
+{
+  "status": "VERIFIED",
+  "baseline": "db8bbe9",
+  "method": "R35 gameplay files unchanged; existing R36 changes in R31/R32/R35 CSS exclusively crossing branch; R37 additive crossing renderer",
+  "rows": [
+    {
+      "path": "src/shared/content-r35.js",
+      "r35sha256": "a0ae6b128fee45bccb2eae6b8cfa4bdf6bc770bdaee0d0f8d7e491f932e78bb9",
+      "sha256": "a0ae6b128fee45bccb2eae6b8cfa4bdf6bc770bdaee0d0f8d7e491f932e78bb9",
+      "byteEqual": true,
+      "diff": ""
+    },
+    {
+      "path": "src/shared/content-r35-ui.js",
+      "r35sha256": "d9b08de29c0fba32af5aa12173327fbbfb40de0361a1717ef145fd43aca4e806",
+      "sha256": "d9b08de29c0fba32af5aa12173327fbbfb40de0361a1717ef145fd43aca4e806",
+      "byteEqual": true,
+      "diff": ""
+    },
+    {
+      "path": "src/shared/content-r35-scene.js",
+      "r35sha256": "62fc2dcb5612107234e9f110fd9ec3e42f18fa9e92aa16fff06b8155692d598c",
+      "sha256": "62fc2dcb5612107234e9f110fd9ec3e42f18fa9e92aa16fff06b8155692d598c",
+      "byteEqual": true,
+      "diff": ""
+    },
+    {
+      "path": "src/shared/content-r35.css",
+      "r35sha256": "fdbdd6ef1f18319b7ba42762e44e4ec95a607294de699b0fe96d15c5d159a037",
+      "sha256": "498d7369faa88de55d1be7596cb9638be26ca75f23b768f43bb96929ab2fca74",
+      "byteEqual": false,
+      "diff": "diff --git a/src/shared/content-r35.css b/src/shared/content-r35.css\nindex bbd02e5..7a72cf2 100644\n--- a/src/shared/content-r35.css\n+++ b/src/shared/content-r35.css\n@@ -1,4 +1,7 @@\n /* Current round: cues are projections of the same playable state. */\n+/* R36: do not paint a road or lane markings before that side is observed. */\n+#content-r1[data-kind=crossing] .r32-road-thumb[data-observed=false]{background:#dce4e8!important}\n+#content-r1[data-kind=crossing] .r32-road-thumb[data-observed=false]::after{display:none!important}\n #content-r1[data-kind=cake] .r33-tray::before,#content-r1[data-kind=cake] .r33-tray::after{content:'';position:absolute;top:-7px;width:20px;height:20px;border:5px solid transparent;border-radius:50%;box-sizing:border-box}\n #content-r1 .r33-tray::before{left:-9px}#content-r1 .r33-tray::after{right:-9px}\n #content-r1[data-kind=cake] .r33-tray[data-warning=left]::before,#content-r1[data-kind=cake] .r33-tray[data-warning=right]::after{border-color:#d54a32;background:#ffd344;box-shadow:0 0 0 4px #fff8d9}\n"
+    },
+    {
+      "path": "src/shared/content-r31-scene.js",
+      "r35sha256": "ff51343d3c231fd5b5f0c99bc0b780787f57579230e36825ab401dba422193af",
+      "sha256": "305454cbd4c29f6f401f6f8f965bd6b858472c65e8afb16817b791f3e05d3571",
+      "byteEqual": false,
+      "diff": "diff --git a/src/shared/content-r31-scene.js b/src/shared/content-r31-scene.js\nindex 56fc03f..787a1e1 100644\n--- a/src/shared/content-r31-scene.js\n+++ b/src/shared/content-r31-scene.js\n@@ -19,8 +19,10 @@ export function cakeView(g){\n }\n export function crossingView(g){\n  const active=g.trafficActive,side=g.trafficSource,stale=g.staleSide;\n- const sides=Object.fromEntries(['left','right'].map(s=>{const car=active&&side===s,confirmed=!!g.looked[s]&&!car&&stale!==s;\n-  return [s,Object.freeze({car,confirmed,stale:stale===s,road:car?(g.newTraffic&&g.crossTime>0?'車在線前等':'有車通過'):'路面淨空',check:car?'等車過':stale===s?'↻ 要重看':confirmed?'✓ 我看過了':'○ 還沒看'})];}));\n+ const sides=Object.fromEntries(['left','right'].map(s=>{const observed=!!(g.looked[s]||g.viewVisit?.[s]),car=observed&&active&&side===s,confirmed=!!g.looked[s]&&!car&&stale!==s;\n+  // The scene may contain traffic; an unvisited thumbnail knows only that\n+  // the child has not looked. All later projections retain this boundary.\n+  return [s,Object.freeze({observed,car,confirmed,stale:stale===s,road:!observed?'還沒看':car?(g.newTraffic&&g.crossTime>0?'車在線前等':'有車通過'):'路面淨空',check:!observed?'○ 還沒看':car?'等車過':stale===s?'↻ 要重看':confirmed?'✓ 我看過了':'○ 還沒看'})];}));\n  let id='waiting',action='',text='看清楚了，讓朋友先過。';\n  if(g.phase==='departing'){id='departing';text='路面淨空，慢慢出發。';}\n  else if(g.speed>.05){id='stopping';action='brake';text='按住煞車，停在線前。';}\n"
+    },
+    {
+      "path": "src/shared/content-r32-scene.js",
+      "r35sha256": "9dd3582125cceaaeea5ed32bc0ac9a86c12aa673e6e41cd0b14575dc7aa28e7b",
+      "sha256": "230d74cdc2ec16d3dfc438d6c81df12c390011b2a058f0000f6e88de93fee764",
+      "byteEqual": false,
+      "diff": "diff --git a/src/shared/content-r32-scene.js b/src/shared/content-r32-scene.js\nindex 87e3a7a..ae20e6d 100644\n--- a/src/shared/content-r32-scene.js\n+++ b/src/shared/content-r32-scene.js\n@@ -32,7 +32,7 @@ export function crossingView(g){\n  const t=clamp(time/total),travel=yielding?clamp(time/.3)*.16:clamp((t-.09)/.91)*.84+.16;\n  const x=side==='left'?4+92*travel:96-92*travel;\n  const traffic=Object.freeze({...old.traffic,x,top:CROSSING_ROADS[g.stage].center-5,yielding,motion:yielding?'讓行':t<.28?'接近':t>.78?'離開':'通過'});\n- const sides=Object.freeze(Object.fromEntries(Object.entries(old.sides).map(([s,v])=>[s,Object.freeze({...v,road:v.car?(yielding?'車停在線前':'車正在'+traffic.motion):'路面淨空'})])));\n+ const sides=Object.freeze(Object.fromEntries(Object.entries(old.sides).map(([s,v])=>[s,Object.freeze({...v,road:!v.observed?v.road:v.car?(yielding?'車停在線前':'車正在'+traffic.motion):'路面淨空'})])));\n  let text=old.text;\n  if(yielding)text='車在線前等，朋友先過。';\n  if(g.practice&&g.safetyNotice>0&&g.choiceHint)text=g.choiceHint;\n"
+    }
+  ]
+}

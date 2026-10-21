@@ -1,0 +1,41 @@
+{
+  "status": "VERIFIED",
+  "rows": [
+    {
+      "scope": "all",
+      "exitCode": 0,
+      "seconds": 110.56,
+      "log": "docs/content/r37/all-output.txt"
+    },
+    {
+      "scope": "switching",
+      "exitCode": 0,
+      "seconds": 2.19,
+      "log": "docs/content/r37/switching-output.txt"
+    },
+    {
+      "scope": "layout",
+      "exitCode": 0,
+      "seconds": 106.39,
+      "log": "docs/content/r37/layout-output.txt"
+    },
+    {
+      "scope": "store",
+      "exitCode": 0,
+      "seconds": 8.27,
+      "log": "docs/content/r37/store-output.txt"
+    },
+    {
+      "scope": "performance",
+      "exitCode": 0,
+      "seconds": 29.24,
+      "log": "docs/content/r37/performance-output.txt"
+    },
+    {
+      "scope": "offline",
+      "exitCode": 0,
+      "seconds": 84.95,
+      "log": "docs/content/r37/offline-output.txt"
+    }
+  ]
+}

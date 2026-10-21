@@ -32,8 +32,10 @@ import './content-r31.css';
 import './content-r32.css';
 import './content-r33.css';
 import './content-r35.css';
+import './content-r37.css';
+import {renderR37} from './content-r37-ui.js';
 import {renderR35} from './content-r35-ui.js';
-import {cakeView,crossingView,boardingScene,roadPicture} from './content-r35-scene.js';
+import {cakeView,crossingView,boardingScene,roadPicture} from './content-r37-scene.js';
 import {stageBrief,departReasons,cakeStage,ticketDifference} from './content-r35-scene.js';
 import {ticketHint,cakeStatus} from './content-r11-scene.js';
 import {queueFrame} from './content-r10-scene.js';
@@ -377,6 +379,7 @@ export function installContentLessons(){
    traffic.style.setProperty('--label-shift',Math.max(46,Math.min(scene.clientWidth-46,view.traffic.x*scene.clientWidth/100))-view.traffic.x*scene.clientWidth/100+'px');scene.dataset.trafficX=view.traffic.x.toFixed(2);scene.dataset.trafficMotion=view.traffic.motion;
   }
   renderR35({g:lesson,view,dialog,scene,miniature,closeup,cabin,sideView,image,shape});
+  renderR37({g:lesson,view,scene,appUrl});
   laneDirection.hidden=true;laneDirection.textContent=trafficPose.heading==='right'?'→':'←';laneDirection.style.cssText=`left:${trafficPose.source==='left'?2:87}%;top:${CROSSING_ROADS[lesson.stage].center+6}%;`;
  }
  function release(){lesson?.release();dialog.querySelectorAll('[data-hold]').forEach(b=>b.setAttribute('aria-pressed','false'));}

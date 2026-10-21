@@ -1,0 +1,99 @@
+{
+  "status": "EXECUTED",
+  "plan": "docs/content/r37/cleanup-plan.json",
+  "deletedFiles": 18,
+  "releasedBytes": 8916426,
+  "retainedFiles": 11272,
+  "files": [
+    {
+      "path": "docs/content/r36/merge/after/ipad-01-mainline.png",
+      "bytes": 577749,
+      "sha256": "edbe90785ffcb93aa9833f622034e19ee18600bf22b2e99f70c0ade9f1a57322"
+    },
+    {
+      "path": "docs/content/r36/merge/after/ipad-landscape-01-mainline.png",
+      "bytes": 590964,
+      "sha256": "849ecfd4ae13455a8af779886528374c513e907d0a39a981d92ff72273872267"
+    },
+    {
+      "path": "docs/content/r36/merge/after/ipad13-landscape-01-mainline.png",
+      "bytes": 1052324,
+      "sha256": "d9e4d80b68342feaff17dc5ba62a5c4bd3db7a7257ae04a93aa50984338cd9d6"
+    },
+    {
+      "path": "docs/content/r36/merge/after/laptop-01-mainline.png",
+      "bytes": 671956,
+      "sha256": "dfccc522406c217a6a5395967c038ad61d478f3c80926f701d62e465e9ad9a06"
+    },
+    {
+      "path": "docs/content/r36/merge/after/phone-01-mainline.png",
+      "bytes": 237299,
+      "sha256": "23398189022db7d074841345b6d9164784d8be16af585f2f5c1e9eec296dc6aa"
+    },
+    {
+      "path": "docs/content/r36/merge/after/phone-landscape-01-mainline.png",
+      "bytes": 313150,
+      "sha256": "b637809b781445eb73eed42df31d44760d3c0cb1538df93ec9741b1714fe284b"
+    },
+    {
+      "path": "docs/content/r36/merge/after/se-01-mainline.png",
+      "bytes": 142700,
+      "sha256": "a1b10cef70a2ade1c9e3874780340bb165aac66b4124782aea1f81993c17854e"
+    },
+    {
+      "path": "docs/content/r36/merge/after/se-landscape-01-mainline.png",
+      "bytes": 185185,
+      "sha256": "e136879e254678fcb1d1b5b86d9ba83597713600e819e442a90877c70f83b407"
+    },
+    {
+      "path": "docs/content/r36/merge/after/short-laptop-01-mainline.png",
+      "bytes": 673423,
+      "sha256": "13b6f1a77084ab0502d17ca21508a92a07af2ca7c55e96b4160b6b875b187cee"
+    },
+    {
+      "path": "docs/content/r36/store-regression/after/ipad-01-home.png",
+      "bytes": 577749,
+      "sha256": "edbe90785ffcb93aa9833f622034e19ee18600bf22b2e99f70c0ade9f1a57322"
+    },
+    {
+      "path": "docs/content/r36/store-regression/after/ipad-landscape-01-home.png",
+      "bytes": 590920,
+      "sha256": "f4d0e16585abe9f6955cfee15a394d21b1eedf33cbdd24fda892fbe953ba2ecb"
+    },
+    {
+      "path": "docs/content/r36/store-regression/after/ipad13-landscape-01-home.png",
+      "bytes": 1052324,
+      "sha256": "d9e4d80b68342feaff17dc5ba62a5c4bd3db7a7257ae04a93aa50984338cd9d6"
+    },
+    {
+      "path": "docs/content/r36/store-regression/after/laptop-01-home.png",
+      "bytes": 671956,
+      "sha256": "dfccc522406c217a6a5395967c038ad61d478f3c80926f701d62e465e9ad9a06"
+    },
+    {
+      "path": "docs/content/r36/store-regression/after/large-01-home.png",
+      "bytes": 264269,
+      "sha256": "c847a3b94e91aca99f01c7630500b9edd2d4dd846756716101dc083c8bd319fa"
+    },
+    {
+      "path": "docs/content/r36/store-regression/after/phone-landscape-01-home.png",
+      "bytes": 313150,
+      "sha256": "b637809b781445eb73eed42df31d44760d3c0cb1538df93ec9741b1714fe284b"
+    },
+    {
+      "path": "docs/content/r36/store-regression/after/se-01-home.png",
+      "bytes": 142700,
+      "sha256": "a1b10cef70a2ade1c9e3874780340bb165aac66b4124782aea1f81993c17854e"
+    },
+    {
+      "path": "docs/content/r36/store-regression/after/se-landscape-01-home.png",
+      "bytes": 185185,
+      "sha256": "e136879e254678fcb1d1b5b86d9ba83597713600e819e442a90877c70f83b407"
+    },
+    {
+      "path": "docs/content/r36/store-regression/after/short-laptop-01-home.png",
+      "bytes": 673423,
+      "sha256": "13b6f1a77084ab0502d17ca21508a92a07af2ca7c55e96b4160b6b875b187cee"
+    }
+  ]
+}

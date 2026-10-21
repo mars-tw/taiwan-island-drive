@@ -1,0 +1,402 @@
+{
+  "status": "VERIFIED",
+  "baselineCommit": "db8bbe90cd74b1b32984d4e375ba5d13b022b7eb",
+  "method": "same public operations and simulated durations; original pixels and model deltas reported without equality claim; initial RAF alignment varies with navigation; reference asset URLs differ by /r37-reference/; protected R35 source files and visible text must be identical",
+  "protectedSources": [
+    "src/shared/content-r35.js",
+    "src/shared/content-r35-ui.js",
+    "src/shared/content-r35-scene.js"
+  ],
+  "pairs": 15,
+  "rows": [
+    {
+      "path": "docs/content/r37/review-set/01-cake-wrong-support.png",
+      "source": "docs/content/r37/phone-cake-wrong-support.png",
+      "r35": "docs/content/r37/comparison-baseline/phone-cake-wrong-support.png",
+      "r35sha256": "89731f21258fa6ee55e28897318c4b2a66f4917043b7c79dd30f9c694c235feb",
+      "sha256": "e38ebb4753dbee8213538c27e36096899c2f96d853312f4a2468c8264f4b292b",
+      "changedPixels": 25,
+      "stateDifferences": {},
+      "protectedR35Lesson": true,
+      "textEqual": true,
+      "geometryEqual": false,
+      "status": "VERIFIED"
+    },
+    {
+      "path": "docs/content/r37/review-set/02-cake-late-brake-edge.png",
+      "source": "docs/content/r37/phone-cake-late-brake-edge.png",
+      "r35": "docs/content/r37/comparison-baseline/phone-cake-late-brake-edge.png",
+      "r35sha256": "d89d020e85d41a582611780f8725cd7ddd38a6f327dbd62834fd3e7e91c574fa",
+      "sha256": "7e8dfd5e75b43ddba1b9e14cb8dcdeacd4d8221abef24a9efe96bb4855c8f776",
+      "changedPixels": 10,
+      "stateDifferences": {},
+      "protectedR35Lesson": true,
+      "textEqual": true,
+      "geometryEqual": false,
+      "status": "VERIFIED"
+    },
+    {
+      "path": "docs/content/r37/review-set/03-cake-rescued.png",
+      "source": "docs/content/r37/phone-cake-rescued.png",
+      "r35": "docs/content/r37/comparison-baseline/phone-cake-rescued.png",
+      "r35sha256": "76cb5a45d527518e0207fca2a1c74303d8e4c8d2bd0ddbf3334b064ee1619084",
+      "sha256": "4f0ab0d641f768b5603acb23c4fe51d3837edb6760742b8942a0f87a23747d7f",
+      "changedPixels": 25,
+      "stateDifferences": {},
+      "protectedR35Lesson": true,
+      "textEqual": true,
+      "geometryEqual": false,
+      "status": "VERIFIED"
+    },
+    {
+      "path": "docs/content/r37/review-set/04-cake-stage-2-tray-edge.png",
+      "source": "docs/content/r37/phone-cake-stage-2-tray-edge.png",
+      "r35": "docs/content/r35/phone-cake-stage-2-tray-edge.png",
+      "r35sha256": "7b6dd670d7fcf79fd9b1f32046daa5fd96d3d25ae8d4a1fb9ecab90076a6f7f3",
+      "sha256": "f9e2a4b684ab2a9378f479c14b4eb64f32a9343cdba441d42a3b0b7261317d3e",
+      "changedPixels": 54,
+      "stateDifferences": {},
+      "protectedR35Lesson": true,
+      "textEqual": true,
+      "geometryEqual": false,
+      "status": "VERIFIED"
+    },
+    {
+      "path": "docs/content/r37/review-set/05-cake-complete.png",
+      "source": "docs/content/r37/phone-cake-complete.png",
+      "r35": "docs/content/r37/comparison-baseline/phone-cake-complete.png",
+      "r35sha256": "db0c376f04996c9c10f9070c2521710677affa365bd90a98ac54c67e272d313e",
+      "sha256": "855a647546e743456afb2827716cb69a12c6e56e02d802dfb3ae296d80cedbb6",
+      "changedPixels": 1,
+      "stateDifferences": {},
+      "protectedR35Lesson": true,
+      "textEqual": true,
+      "geometryEqual": true,
+      "status": "VERIFIED"
+    },
+    {
+      "path": "docs/content/r37/review-set/06-crossing-stage-2-unobserved.png",
+      "source": "docs/content/r37/phone-crossing-stage-2-unobserved.png",
+      "r35": "docs/content/r37/comparison-baseline/crossing/phone-crossing-stage-2-unobserved.png",
+      "r35sha256": "c511790a2f66de2180fce7fd3c1edbe2a1875c2d09a531ff4ba09b01b4005350",
+      "sha256": "1dd54964b2488914ae27587e662a7e81b9b59fd28fcace5f1f1aa1165bac353f",
+      "changedPixels": 41921,
+      "stateDifferences": {
+        "bayExit": [
+          null,
+          "0"
+        ],
+        "stateAngle": [
+          null,
+          "0"
+        ],
+        "support": [
+          null,
+          ""
+        ],
+        "speed": [
+          "4.58",
+          "4.75"
+        ],
+        "slide": [
+          null,
+          "0.00"
+        ],
+        "roofShift": [
+          null,
+          "0"
+        ],
+        "edge": [
+          null,
+          "false"
+        ]
+      },
+      "protectedR35Lesson": false,
+      "textEqual": false,
+      "geometryEqual": false,
+      "status": "VERIFIED"
+    },
+    {
+      "path": "docs/content/r37/review-set/07-crossing-stage-2-only-source-main.png",
+      "source": "docs/content/r37/phone-crossing-stage-2-only-source-main.png",
+      "r35": "docs/content/r37/comparison-baseline/crossing/phone-crossing-stage-2-only-source-main.png",
+      "r35sha256": "b81e1bc3f157332c51dc05a8e1f691a958314adbf49d459a002d5bcd13c1429c",
+      "sha256": "824e06582fcb0f936ba8b57f319c5e351dd32eb7c55c42d6c3ecf0ac123c3db5",
+      "changedPixels": 22731,
+      "stateDifferences": {
+        "bayExit": [
+          null,
+          "0"
+        ],
+        "trafficTime": [
+          "1.54",
+          "1.49"
+        ],
+        "trafficX": [
+          "54.60",
+          "55.67"
+        ],
+        "stateAngle": [
+          null,
+          "0"
+        ],
+        "support": [
+          null,
+          ""
+        ],
+        "slide": [
+          null,
+          "0.00"
+        ],
+        "roofShift": [
+          null,
+          "0"
+        ],
+        "edge": [
+          null,
+          "false"
+        ]
+      },
+      "protectedR35Lesson": false,
+      "textEqual": false,
+      "geometryEqual": false,
+      "status": "VERIFIED"
+    },
+    {
+      "path": "docs/content/r37/review-set/08-crossing-stage-2-turning-right.png",
+      "source": "docs/content/r37/phone-crossing-stage-2-turning-right.png",
+      "r35": "docs/content/r37/comparison-baseline/crossing/phone-crossing-stage-2-turning-right.png",
+      "r35sha256": "9056bec189170a3836cf5032f0489b4331abdbfcc0fbdf4117438fab32041887",
+      "sha256": "e6dafd976dadb5c8fd07116fe27ab5b3316490302f06f0bbf12e0b13c1088721",
+      "changedPixels": 4498,
+      "stateDifferences": {
+        "bayExit": [
+          null,
+          "0"
+        ],
+        "trafficTime": [
+          "4.96",
+          "5.04"
+        ],
+        "stateAngle": [
+          null,
+          "0"
+        ],
+        "support": [
+          null,
+          ""
+        ],
+        "slide": [
+          null,
+          "0.00"
+        ],
+        "roofShift": [
+          null,
+          "0"
+        ],
+        "edge": [
+          null,
+          "false"
+        ]
+      },
+      "protectedR35Lesson": false,
+      "textEqual": false,
+      "geometryEqual": false,
+      "status": "VERIFIED"
+    },
+    {
+      "path": "docs/content/r37/review-set/09-crossing-stage-2-departing.png",
+      "source": "docs/content/r37/phone-crossing-stage-2-departing.png",
+      "r35": "docs/content/r37/comparison-baseline/crossing/phone-crossing-stage-2-departing.png",
+      "r35sha256": "a2bcf2009659ad5c8b03434f3d35826aede7e14630aa85048edd9d8ca78ca84c",
+      "sha256": "6d8dc1ffe6f3ccc619935968b5e57b76cdd91100f60be599cadc81183b805c02",
+      "changedPixels": 2712,
+      "stateDifferences": {
+        "bayExit": [
+          null,
+          "0"
+        ],
+        "trafficTime": [
+          "4.96",
+          "5.04"
+        ],
+        "stateAngle": [
+          null,
+          "0"
+        ],
+        "support": [
+          null,
+          ""
+        ],
+        "slide": [
+          null,
+          "0.00"
+        ],
+        "roofShift": [
+          null,
+          "0"
+        ],
+        "edge": [
+          null,
+          "false"
+        ]
+      },
+      "protectedR35Lesson": false,
+      "textEqual": false,
+      "geometryEqual": false,
+      "status": "VERIFIED"
+    },
+    {
+      "path": "docs/content/r37/review-set/10-crossing-stage-2-joined-right-lane.png",
+      "source": "docs/content/r37/phone-crossing-stage-2-joined-right-lane.png",
+      "r35": "docs/content/r37/comparison-baseline/crossing/phone-crossing-stage-2-joined-right-lane.png",
+      "r35sha256": "0c78a71294bf3a3ad0b4a4f46aac06626260c3d6a94d3d0626b44afb0e00e330",
+      "sha256": "b13ed8c13491b8bff4f8dccf8893461080b63cfb9f9c324c206b0b70126659fa",
+      "changedPixels": 1861,
+      "stateDifferences": {
+        "bayExit": [
+          null,
+          "0"
+        ],
+        "trafficTime": [
+          "4.96",
+          "5.04"
+        ],
+        "stateAngle": [
+          null,
+          "0"
+        ],
+        "support": [
+          null,
+          ""
+        ],
+        "slide": [
+          null,
+          "0.00"
+        ],
+        "roofShift": [
+          null,
+          "0"
+        ],
+        "edge": [
+          null,
+          "false"
+        ]
+      },
+      "protectedR35Lesson": false,
+      "textEqual": false,
+      "geometryEqual": false,
+      "status": "VERIFIED"
+    },
+    {
+      "path": "docs/content/r37/review-set/11-tickets-stage-3-wrong-shape.png",
+      "source": "docs/content/r37/phone-tickets-stage-3-wrong-shape.png",
+      "r35": "docs/content/r37/comparison-baseline/phone-tickets-stage-3-wrong-shape.png",
+      "r35sha256": "c28978acd19bf2ebe81b86a299df4b2657f35075c1f87d9cb026e6aa32faea7b",
+      "sha256": "9f7ab8e99318a4bc1312be913c1e4eeb6c185b5762c53eb640758331fa29f861",
+      "changedPixels": 79435,
+      "stateDifferences": {
+        "trafficX": [
+          "81.28",
+          "85.00"
+        ],
+        "trafficMotion": [
+          "接近",
+          "離開"
+        ]
+      },
+      "protectedR35Lesson": true,
+      "textEqual": true,
+      "geometryEqual": true,
+      "status": "VERIFIED"
+    },
+    {
+      "path": "docs/content/r37/review-set/12-tickets-stage-3-wrong-color.png",
+      "source": "docs/content/r37/phone-tickets-stage-3-wrong-color.png",
+      "r35": "docs/content/r37/comparison-baseline/phone-tickets-stage-3-wrong-color.png",
+      "r35sha256": "044374793591525e10da1276241dae84e112a6a466f23d7397fd25b45d6d291c",
+      "sha256": "58d29d4ca966f712b8d0d4fcfa6a386597a5243e27fa35798b9a660897d748d8",
+      "changedPixels": 33,
+      "stateDifferences": {
+        "trafficX": [
+          "81.28",
+          "85.00"
+        ],
+        "trafficMotion": [
+          "接近",
+          "離開"
+        ]
+      },
+      "protectedR35Lesson": true,
+      "textEqual": true,
+      "geometryEqual": true,
+      "status": "VERIFIED"
+    },
+    {
+      "path": "docs/content/r37/review-set/13-tickets-stage-3-hold-half-0.png",
+      "source": "docs/content/r37/phone-tickets-stage-3-hold-half-0.png",
+      "r35": "docs/content/r37/comparison-baseline/phone-tickets-stage-3-hold-half-0.png",
+      "r35sha256": "18e9a3eb762330bf0f4432ae562694b59c0b72f7c14c93b798b0a2e3b72f1f53",
+      "sha256": "18e9a3eb762330bf0f4432ae562694b59c0b72f7c14c93b798b0a2e3b72f1f53",
+      "changedPixels": 0,
+      "stateDifferences": {
+        "trafficX": [
+          "81.28",
+          "85.00"
+        ],
+        "trafficMotion": [
+          "接近",
+          "離開"
+        ]
+      },
+      "protectedR35Lesson": true,
+      "textEqual": true,
+      "geometryEqual": true,
+      "status": "VERIFIED"
+    },
+    {
+      "path": "docs/content/r37/review-set/14-tickets-stage-3-hold-paused-0.png",
+      "source": "docs/content/r37/phone-tickets-stage-3-hold-paused-0.png",
+      "r35": "docs/content/r37/comparison-baseline/phone-tickets-stage-3-hold-paused-0.png",
+      "r35sha256": "7960ee1367a1102f80e26c8ca10b0ab133116535e369bbc45d70f42ade02f2f5",
+      "sha256": "7960ee1367a1102f80e26c8ca10b0ab133116535e369bbc45d70f42ade02f2f5",
+      "changedPixels": 0,
+      "stateDifferences": {
+        "trafficX": [
+          "81.28",
+          "85.00"
+        ],
+        "trafficMotion": [
+          "接近",
+          "離開"
+        ]
+      },
+      "protectedR35Lesson": true,
+      "textEqual": true,
+      "geometryEqual": true,
+      "status": "VERIFIED"
+    },
+    {
+      "path": "docs/content/r37/review-set/15-tickets-stage-3-closed-departing.png",
+      "source": "docs/content/r37/phone-tickets-stage-3-closed-departing.png",
+      "r35": "docs/content/r37/comparison-baseline/phone-tickets-stage-3-closed-departing.png",
+      "r35sha256": "f9b6fbcb4b5cffb918a578ce9263d80f76aa89bfa4069e2cbb8df70b8b86f5f2",
+      "sha256": "f9b6fbcb4b5cffb918a578ce9263d80f76aa89bfa4069e2cbb8df70b8b86f5f2",
+      "changedPixels": 0,
+      "stateDifferences": {
+        "trafficX": [
+          "81.28",
+          "85.00"
+        ],
+        "trafficMotion": [
+          "接近",
+          "離開"
+        ]
+      },
+      "protectedR35Lesson": true,
+      "textEqual": true,
+      "geometryEqual": true,
+      "status": "VERIFIED"
+    }
+  ]
+}
