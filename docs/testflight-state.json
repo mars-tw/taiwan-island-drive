@@ -1,7 +1,42 @@
 {
   "appId": "6819605203",
   "bundleId": "tw.mars.islandtransport",
-  "events": [],
+  "events": [
+    {
+      "at": "2026-10-21T06:15:24.534743+00:00",
+      "method": "PATCH",
+      "resource": "betaBuildLocalizations/8c97eb3b-4e5b-4add-9557-67ec79c5a0ce",
+      "outcome": "ACCEPTED",
+      "resourceId": "8c97eb3b-4e5b-4add-9557-67ec79c5a0ce"
+    },
+    {
+      "at": "2026-10-21T06:15:25.731274+00:00",
+      "method": "PATCH",
+      "resource": "betaAppLocalizations/0d25593c-1142-4fd6-90b5-00bf6123ac23",
+      "outcome": "ACCEPTED",
+      "resourceId": "0d25593c-1142-4fd6-90b5-00bf6123ac23"
+    },
+    {
+      "at": "2026-10-21T06:15:27.288510+00:00",
+      "method": "PATCH",
+      "resource": "betaAppReviewDetails/6819605203",
+      "outcome": "ACCEPTED",
+      "resourceId": "6819605203"
+    },
+    {
+      "at": "2026-10-21T06:15:29.733258+00:00",
+      "method": "POST",
+      "resource": "betaGroups/4667fcd7-7b8e-4351-a4ca-69a804983089/relationships/builds",
+      "outcome": "ACCEPTED"
+    },
+    {
+      "at": "2026-10-21T06:16:23.001064+00:00",
+      "method": "POST",
+      "resource": "betaAppReviewSubmissions",
+      "outcome": "ACCEPTED",
+      "resourceId": "af3989ae-afeb-4ec6-b0fa-bbda53ae8b98"
+    }
+  ],
   "appStoreVersions": [
     {
       "id": "2de7ed7c-0381-41b8-a340-0d7ef39bfa7d",
@@ -41,7 +76,16 @@
     "iosBuildsAvailableForAppleSiliconMac": false,
     "iosBuildsAvailableForAppleVision": false
   },
-  "build": null,
+  "build": {
+    "id": "af3989ae-afeb-4ec6-b0fa-bbda53ae8b98",
+    "marketingVersion": "2.47.3",
+    "version": "46",
+    "processingState": "VALID",
+    "expired": false,
+    "usesNonExemptEncryption": false,
+    "uploadedDate": "2026-10-20T23:11:34-07:00",
+    "expirationDate": "2027-01-18T22:11:34-08:00"
+  },
   "publicPage": {
     "url": "https://testflight.apple.com/join/pUHeJZFG",
     "httpStatus": 200,
@@ -49,7 +93,7 @@
     "unavailableMessage": "This beta isn't accepting any new testers right now.",
     "joinAvailability": "UNAVAILABLE"
   },
-  "readAt": "2026-10-21T05:11:10.050636+00:00",
+  "readAt": "2026-10-21T06:26:21.172644+00:00",
   "versionSelection": {
     "readAt": "2026-10-21T05:35:59.307238+00:00",
     "uploadedBuilds": [
@@ -71,5 +115,278 @@
     "selectedBuild": "46",
     "localBeforeVersion": "2.47.2",
     "localBeforeBuild": "45"
+  },
+  "sourcePush": {
+    "initialAttempt": "RPC HTTP 500; remote readback remained at original 99becd2ba4ea8edc50daa9ad336814bee9239632",
+    "outgoingRawBlobBytes": 2779024835,
+    "strategy": "fast-forward batches on r1-fun-polish only",
+    "batches": [
+      {
+        "target": "d53b6f9bc42586dcac032991db23153ba740ccb2",
+        "commits": 4,
+        "rawBlobBytes": 541434560,
+        "exitCode": 0,
+        "remoteReadback": "d53b6f9bc42586dcac032991db23153ba740ccb2",
+        "seconds": 62.52,
+        "verified": true
+      },
+      {
+        "target": "906fd1017229b396d8830d12b67530e92c75965c",
+        "commits": 3,
+        "rawBlobBytes": 627915281,
+        "exitCode": 0,
+        "remoteReadback": "906fd1017229b396d8830d12b67530e92c75965c",
+        "seconds": 73.11,
+        "verified": true
+      },
+      {
+        "target": "55167ebf635c45d2e2350e08bec60e4ff7eb663d",
+        "commits": 4,
+        "rawBlobBytes": 597658576,
+        "exitCode": 0,
+        "remoteReadback": "55167ebf635c45d2e2350e08bec60e4ff7eb663d",
+        "seconds": 64.67,
+        "verified": true
+      },
+      {
+        "target": "6a3ff1239aeeb49f02b1a6a384c6e9962322afc6",
+        "commits": 3,
+        "rawBlobBytes": 434124581,
+        "exitCode": 0,
+        "remoteReadback": "6a3ff1239aeeb49f02b1a6a384c6e9962322afc6",
+        "seconds": 58.65,
+        "verified": true
+      },
+      {
+        "target": "cb7f6fd1f22e7c602ceff5e149fb9aae4457361f",
+        "commits": 5,
+        "rawBlobBytes": 628786925,
+        "exitCode": 0,
+        "remoteReadback": "cb7f6fd1f22e7c602ceff5e149fb9aae4457361f",
+        "seconds": 127.78,
+        "verified": true
+      }
+    ],
+    "finalVerifiedCommit": "cb7f6fd1f22e7c602ceff5e149fb9aae4457361f"
+  },
+  "ci": {
+    "workflow": "apple-release.yml",
+    "mode": "upload-testflight",
+    "runnerImage": "macos-26",
+    "sourceCommit": "cb7f6fd1f22e7c602ceff5e149fb9aae4457361f",
+    "branch": "r1-fun-polish",
+    "marketingVersion": "2.47.3",
+    "buildNumber": "46",
+    "dispatchAt": "2026-10-21T06:01:18.616176+00:00",
+    "dispatchOutcome": "ACCEPTED",
+    "dispatchCliExitCode": 0,
+    "runId": 39552886681,
+    "url": "https://github.com/mars-tw/taiwan-island-drive/actions/runs/39552886681",
+    "status": "completed",
+    "conclusion": "success",
+    "jobs": [
+      {
+        "id": 119065850650,
+        "name": "release",
+        "status": "completed",
+        "conclusion": "success",
+        "steps": [
+          {
+            "name": "Set up job",
+            "status": "completed",
+            "conclusion": "success"
+          },
+          {
+            "name": "Run actions/checkout@d23441a48e516b6c34aea4fa41551a30e30af803",
+            "status": "completed",
+            "conclusion": "success"
+          },
+          {
+            "name": "Run actions/setup-node@820762786026740c76f36085b0efc47a31fe5020",
+            "status": "completed",
+            "conclusion": "success"
+          },
+          {
+            "name": "Select and verify installed stable Xcode and iPhoneOS SDK",
+            "status": "completed",
+            "conclusion": "success"
+          },
+          {
+            "name": "Run npm ci",
+            "status": "completed",
+            "conclusion": "success"
+          },
+          {
+            "name": "Run npm test",
+            "status": "completed",
+            "conclusion": "success"
+          },
+          {
+            "name": "Run npm run native:build",
+            "status": "completed",
+            "conclusion": "success"
+          },
+          {
+            "name": "Run node scripts/verify-native-package.mjs",
+            "status": "completed",
+            "conclusion": "success"
+          },
+          {
+            "name": "Run npx cap sync ios",
+            "status": "completed",
+            "conclusion": "success"
+          },
+          {
+            "name": "Sign, export and locally verify App Store IPA",
+            "status": "completed",
+            "conclusion": "success"
+          },
+          {
+            "name": "Validate or upload with official Apple tools",
+            "status": "completed",
+            "conclusion": "success"
+          },
+          {
+            "name": "Keep only IPA and non-secret verification reports",
+            "status": "completed",
+            "conclusion": "success"
+          },
+          {
+            "name": "Post Run actions/setup-node@820762786026740c76f36085b0efc47a31fe5020",
+            "status": "completed",
+            "conclusion": "success"
+          },
+          {
+            "name": "Post Run actions/checkout@d23441a48e516b6c34aea4fa41551a30e30af803",
+            "status": "completed",
+            "conclusion": "success"
+          },
+          {
+            "name": "Complete job",
+            "status": "completed",
+            "conclusion": "success"
+          }
+        ]
+      }
+    ],
+    "lastReadAt": "2026-10-21T06:11:02.210898+00:00"
+  },
+  "ipaVerification": {
+    "artifactId": 12324623054,
+    "artifactSha256": "411d41c79c84c410827b1b6683871b7d3750f2a8c559c945b5ea6b5f4e8cf0da",
+    "artifactBytes": 75580865,
+    "ipaSha256": "7733df00e6ac2a8aba023d992e6e936069c74a45e95801ecb935a1b5b145857f",
+    "ipaBytes": 75759880,
+    "ciVerification": {
+      "sourceCommit": "cb7f6fd1f22e7c602ceff5e149fb9aae4457361f",
+      "marketingVersion": "2.47.3",
+      "buildNumber": "46",
+      "xcode": "26.6",
+      "xcodeBuild": "17F113",
+      "sdk": "26.5",
+      "signed": true,
+      "signatureVerified": true,
+      "profileVerified": true,
+      "entitlementsVerified": true,
+      "bundledResourcesVerified": true,
+      "kidsPrivacyStaticChecksPassed": true,
+      "kidsPrivacyCheckScope": "root and embedded manifests; known SDK names and tracking domains in shipped text; does not prove absence of unknown SDKs or runtime traffic",
+      "encryptionDeclarationChecked": true,
+      "usesNonExemptEncryption": false,
+      "loggingBehavior": "none",
+      "exportMethod": "app-store-connect",
+      "internalOnly": false
+    },
+    "applePlatformResult": {
+      "generatedAt": "2026-10-21T06:10:43.541732+00:00",
+      "mode": "upload-testflight",
+      "uploadTool": "altool",
+      "sha256": "7733df00e6ac2a8aba023d992e6e936069c74a45e95801ecb935a1b5b145857f",
+      "appleValidated": true,
+      "uploadCommandAccepted": true,
+      "status": "upload_accepted_processing_unverified",
+      "appleProcessingVerified": false,
+      "testFlightAvailableVerified": false,
+      "appStoreApproved": false
+    },
+    "localReadback": {
+      "crcValid": true,
+      "bundleId": "tw.mars.islandtransport",
+      "version": "2.47.3",
+      "build": "46",
+      "minimumOS": "16.4",
+      "architectures": [
+        "arm64"
+      ],
+      "deviceFamilies": [
+        1,
+        2
+      ],
+      "nonExemptEncryption": false,
+      "loggingBehavior": "none",
+      "pluginClasses": [
+        "TextToSpeechPlugin",
+        "AppPlugin",
+        "PreferencesPlugin"
+      ],
+      "privacyManifestCount": 3,
+      "selectedTextFilesScanned": 35,
+      "knownTrackingDomainMatches": 0,
+      "frameworks": [
+        "Capacitor.framework",
+        "Cordova.framework"
+      ],
+      "knownAdvertisingSdkNameMatches": 0
+    },
+    "downloadSavedToDisk": false
+  },
+  "betaReview": [
+    {
+      "id": "af3989ae-afeb-4ec6-b0fa-bbda53ae8b98",
+      "betaReviewState": "WAITING_FOR_REVIEW",
+      "submittedDate": "2026-10-20T23:16:23-07:00"
+    }
+  ],
+  "betaDetail": {
+    "autoNotifyEnabled": true,
+    "internalBuildState": "READY_FOR_BETA_TESTING",
+    "externalBuildState": "WAITING_FOR_BETA_REVIEW"
+  },
+  "localizations": [
+    {
+      "whatsNew": "請協助測試這次的三堂交通互動課程：\n・蛋糕平安送：觀察蛋糕傾斜，配合扶正與煞車，完成三站配送。\n・路口停看讓：停穩後看左右、等待行人到對岸；有新車經過時重新觀察，再讓同一台深藍車出發。\n・形狀車票：比較車票與月台的形狀、顏色，邀請乘客上車，按住陪同站穩，再關門出發。\n\n請留意手機與 iPad 直向、橫向操作，暫停與返回學院後再進入課程，以及完成紀錄在關閉、重開 App 後是否保留。安裝後可離線遊玩，不需登入。\n若遇到卡住、畫面遮擋或按鈕沒有反應，請透過 TestFlight 回饋附上畫面、裝置型號與操作步驟。這是測試版本，請家長陪同操作。",
+      "locale": "zh-Hant"
+    }
+  ],
+  "groupBuildIds": [
+    "af3989ae-afeb-4ec6-b0fa-bbda53ae8b98",
+    "bb1100e4-d60f-43eb-ad70-61db7b3efcd0",
+    "a44aa9ee-f444-4a6d-9bd9-2d06cb9c6dcf"
+  ],
+  "appleUploadReadback": {
+    "readAt": "2026-10-21T06:14:57.553324+00:00",
+    "rows": [
+      {
+        "id": "af3989ae-afeb-4ec6-b0fa-bbda53ae8b98",
+        "cfBundleShortVersionString": "2.47.3",
+        "cfBundleVersion": "46",
+        "state": {
+          "errors": [],
+          "warnings": [],
+          "infos": [],
+          "state": "COMPLETE"
+        },
+        "createdDate": "2026-10-20T23:07:39-07:00",
+        "uploadedDate": "2026-10-20T23:10:43-07:00"
+      }
+    ]
+  },
+  "betaMetadataReadback": {
+    "readAt": "2026-10-21T06:18:51.563937+00:00",
+    "zhHantDescriptionMatches": true,
+    "descriptionSha256": "2f981c6f36c0722bff24cdb701b979264afc6809269e0bf3c1a8c78251010ba3",
+    "reviewNotesVersionMatches": true,
+    "reviewNotesSha256": "b127cdd22666cc7633622878b0d0d4f60d39cdd9aee6887b2153d0f79d7ad88c",
+    "demoAccountRequired": false
   }
 }
