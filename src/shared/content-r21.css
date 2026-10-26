@@ -1,0 +1,30 @@
+/* R21 current rules override the historical lesson styles. */
+#content-r1 #content-controls [data-action][data-needed],#content-r1[data-kind=cake] #content-controls [data-action][data-needed][data-held=false],#content-r1[data-kind=crossing] #content-controls [data-action][data-wait]{background:#f5fbff!important;color:#143b61;outline:0!important;box-shadow:inset 0 -4px #b5d8e8!important;animation:none!important}
+#content-r1 #content-controls [data-action] span::after{content:none!important}
+#content-r1 #content-controls [data-action] svg{animation:none!important}
+#content-r1 #content-controls:has([data-action=recover-left]){grid-template-columns:repeat(2,minmax(60px,1fr))}
+#content-r1 #content-controls:has([data-action=escort]){grid-template-columns:1fr}
+#content-r1 #content-controls [data-action][data-held=true],#content-r1 #content-controls [data-action][aria-pressed=true]{background:#ffd344!important;box-shadow:inset 0 5px #d69a13!important}
+#content-r1[data-kind=cake] .cake-bay-mark,#content-r1 .content-route,#content-r1[data-kind=cake] .content-stamps{display:none!important}
+#content-r1[data-kind=cake] .force-readout small{display:none}
+#content-r1[data-kind=cake] .force-readout .force-meter i{background:#1479b8!important}
+#content-r1[data-kind=cake] .force-readout{min-width:108px}
+#content-r1[data-kind=cake] .force-label{font-size:14px;line-height:20px;font-weight:800}
+#content-r1[data-kind=crossing] .content-observe{font-size:15px;line-height:22px;white-space:nowrap}
+#content-r1[data-kind=crossing]:not([data-phase=done]) .content-scene-cue{display:block!important;top:36px!important;left:8px!important;right:auto!important;font-size:13px;line-height:18px;transform:none!important;translate:none!important}
+#content-r1[data-kind=crossing] .crossing-lookout{top:64px!important}
+#content-r1[data-kind=crossing] #content-controls [data-action=depart][aria-disabled=false]{background:#f5fbff;color:#143b61;box-shadow:inset 0 -4px #b5d8e8}
+#content-r1[data-kind=tickets] .ticket-boarding-bridge{height:46px!important;border:0!important;background:transparent url('/art/content-r21/boarding-step.webp') center/100% 100% no-repeat!important;box-shadow:none!important;z-index:14!important;filter:drop-shadow(0 2px #143b61)}
+#content-r1[data-kind=tickets] .ticket-boarding-bridge::after{content:'踏階';position:absolute;top:36px;left:50%;translate:-50% 0;background:#ffd344;color:#143b61;border:2px solid #143b61;border-radius:5px;font-size:13px;line-height:18px;font-weight:800;padding:0 4px;white-space:nowrap}
+#content-r1[data-kind=tickets] .boarding-friend{z-index:16!important}
+#content-r1[data-kind=tickets] .boarding-friend img{display:block!important;visibility:visible!important;opacity:1!important}
+@media(orientation:landscape) and (max-height:520px){
+ #content-r1[data-kind=tickets] .ticket-boarding-bridge{height:30px!important}
+ #content-r1[data-kind=tickets] .ticket-boarding-bridge::after{top:22px;font-size:10px;line-height:12px}
+ #content-r1[data-kind=crossing] .content-observe{font-size:12px;line-height:16px}
+}
+@media(max-width:360px) and (orientation:portrait){
+ #content-r1[data-kind=tickets] .ticket-boarding-bridge{height:34px!important}
+ #content-r1[data-kind=tickets] .ticket-boarding-bridge::after{top:26px;font-size:11px;line-height:14px}
+ #content-r1[data-kind=crossing] .content-observe{font-size:12px;line-height:16px}
+}

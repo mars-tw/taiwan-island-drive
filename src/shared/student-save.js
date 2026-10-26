@@ -1,5 +1,5 @@
 // One canonical student record. Legacy keys remain compatibility snapshots only.
-export const STUDENT_KEY = 'island-transport:student:v2';
+export const STUDENT_KEY = globalThis.__ISLAND_STORAGE_NAMESPACE__ || 'island-transport:student:v2';
 const sections = Object.freeze({
   'island-transport:passport:v1':'passport', 'island-transport:rewards:v1':'rewards',
   'island-transport:safety:v1':'safety', 'island-transport:settings:v1':'settings',

@@ -1,0 +1,68 @@
+/* Current live projection; historical styles stay available to historical tests. */
+#content-r1 .r33-main-road{display:none!important}
+#content-r1[data-kind=cake][data-stage="2"][data-phase] .content-scene[data-road-shape] .cake-road-view::before{background-size:200% 120%!important;background-position:var(--bay-pan,100%) center!important;inset:0!important;translate:0!important}
+#content-r1[data-kind=cake] .r31-road-marks{display:none!important}
+#content-r1 .r33-tray{position:absolute;left:4px;bottom:7px;width:166px;height:14px;background:#d5efff;border:4px solid #1479b8;border-radius:50%;box-shadow:0 4px #143b61;z-index:0}
+#content-r1[data-kind=cake] .cake-miniature .cake-rigid{transform:translateX(var(--roof-slide,0px)) rotate(calc(var(--lean-angle,0)*1deg))!important}
+#content-r1[data-kind=cake] .cake-miniature{--lean-angle:0}
+#content-r1[data-kind=cake] .content-force .force-readout .force-meter[data-tone=red] i{background:#d54a32!important}
+#content-r1[data-kind=cake] .content-force .force-readout .force-meter[data-tone=yellow] i{background:#ffd344!important}
+#content-r1[data-kind=cake] .content-force .force-readout .force-meter[data-tone=green] i{background:#58b85b!important}
+#content-r1 .force-readout>strong[hidden]{display:none!important}
+#content-r1 .r30-roof-gauge{display:none!important}
+#content-r1[data-kind=cake] .r32-magnify{left:8px!important;right:auto!important}
+#content-r1[data-kind=crossing] .crossing-traffic[data-yielding=true]::after{display:none!important}
+#content-r1 .r33-stop-line{position:absolute;width:5px;border:1px solid #143b61;background:white;z-index:5;pointer-events:none}
+#content-r1 .r33-stop-line[hidden]{display:none}
+#content-r1[data-kind=crossing] .crossing-traffic b{display:none!important}
+body dialog#content-r1[data-kind=crossing][data-phase=playing] #content-controls button[data-action=depart][data-locked=true]{background:#fff8d9!important;color:#143b61!important;border-color:#1479b8!important;filter:none!important;opacity:1!important}
+#content-r1[data-kind=crossing] #content-controls [data-action=depart][data-locked=true]{background:#fff8d9!important;color:#143b61!important;border-color:#1479b8!important;filter:none!important;box-shadow:0 3px #143b6133!important;opacity:1!important}
+#content-r1[data-kind=crossing] .r30-side-views section>div{height:64px!important;overflow:hidden;position:relative}
+#content-r1[data-kind=crossing] .r30-side-views section{height:auto!important;min-height:88px!important;overflow:visible!important}
+#content-r1[data-kind=crossing] .content-work>.r30-side-views{height:94px!important;min-height:94px!important}
+#content-r1[data-kind=crossing] .r32-road-thumb img{position:absolute!important;left:var(--thumb-x)!important;translate:-50% 0!important;top:4px!important;width:60px!important;height:36px!important;scale:var(--thumb-heading) 1!important;object-fit:contain!important;max-width:none!important}
+#content-r1[data-kind=crossing] .r32-road-thumb span{position:absolute;bottom:0;left:0;right:0;background:#fff8d9;font-size:11px}
+#content-r1 .content-scene[data-cabin=true] .ticket-seats{visibility:hidden!important}
+#content-r1 .r33-cabin-caption{display:flex;align-items:center;justify-content:center;gap:8px;min-height:32px;background:#fff8d9;font-size:14px;font-weight:900;color:#143b61}
+#content-r1 .r33-cabin-caption svg{width:28px!important;height:28px!important;flex:none}
+#content-r1 .r33-cabin-caption span{font-size:12px}
+#content-r1 .r33-compare-title{display:block;width:100%;text-align:center;font-size:11px;line-height:14px;color:#143b61}
+#content-r1 .r32-cabin-friend[data-seated=true]{height:43%!important;width:22%!important;clip-path:none!important}
+#content-r1 .r32-cabin-friend[data-bump=true]{rotate:-6deg;transform-origin:50% 100%}
+#content-r1 .r32-cabin-friend[data-seated=false]:not([data-pose=standing])>img,#content-r1 .r32-cabin-friend[data-pose=standing][data-cabin-friend="0"]>img,#content-r1 .r32-cabin-friend[data-pose=standing][data-cabin-friend="2"]>img{scale:-1 1}
+#content-r1 .r32-cabin-friend[data-seated=true]>b{top:-12px}
+/* R34: use the same near/far lane in the observation window as in the road. */
+#content-r1[data-kind=crossing] .crossing-panorama{z-index:auto}
+#content-r1[data-kind=crossing] .crossing-traffic{z-index:0!important}
+#content-r1[data-kind=crossing] .crossing-traffic{min-height:0!important;max-height:40px!important}
+#content-r1[data-kind=crossing] .content-coach[data-joined=true]{left:50%!important;right:auto!important;transform:translateX(-50%)!important;width:100px!important;max-width:28%;height:7.5%!important;max-height:40px!important;min-height:0!important}
+#content-r1[data-kind=crossing] .r32-road-thumb[data-lane=lower] img{top:16px!important}
+#content-r1[data-kind=crossing] .r32-road-thumb[data-lane=upper] img{top:0!important}
+/* A completion is one full painting, with no second horizon exposed above it. */
+#content-r1[data-kind=crossing][data-phase=done] .content-finale{inset:0!important}
+#content-r1[data-kind=crossing][data-phase=done] .content-finale>img{object-fit:cover!important;object-position:center!important}
+#content-r1[data-kind=crossing][data-phase=done] .crossing-panorama{display:none!important}
+@media(max-width:360px) and (orientation:portrait){
+ #content-r1 .r33-cabin-caption{font-size:12px;gap:4px;min-height:28px}
+ #content-r1 .r33-cabin-caption span{font-size:10px}
+ #content-r1[data-kind=crossing] .r30-side-views section>div{height:44px!important}
+ #content-r1[data-kind=crossing] .r32-road-thumb img{height:27px!important;top:0!important}
+ #content-r1[data-kind=crossing] .r32-road-thumb[data-lane=lower] img{top:5px!important}
+ #content-r1[data-kind=crossing][data-compact=true] .content-work>.r30-side-views{height:64px!important;min-height:64px!important}
+ #content-r1[data-kind=crossing] .r30-side-views section{min-height:58px!important}
+}
+@media(orientation:landscape) and (max-height:520px){
+ #content-r1[data-kind=tickets][data-phase=playing] .r30-comparison{top:20px!important;padding:2px!important;gap:0!important}
+ #content-r1[data-kind=tickets][data-phase=playing] .r32-compare-row{min-height:20px!important;gap:7px!important}
+ #content-r1[data-kind=tickets][data-phase=playing] .r32-compare-row>i,#content-r1[data-kind=tickets][data-phase=playing] .r32-compare-row svg{width:20px!important;height:20px!important}
+ #content-r1[data-kind=tickets][data-phase=playing] .r32-compare-row>b,#content-r1[data-kind=tickets][data-phase=playing] .r32-compare-row>span{font-size:10px!important;line-height:16px!important}
+ #content-r1[data-kind=tickets][data-phase=playing] .r33-compare-title{font-size:10px;line-height:12px}
+ #content-r1 .r33-cabin-caption{min-height:22px;font-size:11px}
+ #content-r1 .r33-cabin-caption svg{height:20px!important;width:20px!important}
+ #content-r1 .r33-cabin-caption span{font-size:10px}
+ #content-r1[data-kind=crossing] .r30-side-views section>div{height:40px!important}
+ #content-r1[data-kind=crossing] .r32-road-thumb img{height:26px!important;top:0!important}
+ #content-r1[data-kind=crossing] .r32-road-thumb[data-lane=lower] img{top:3px!important}
+ #content-r1[data-kind=crossing][data-compact=true] .content-work>.r30-side-views{height:62px!important;min-height:62px!important}
+ #content-r1[data-kind=crossing] .r30-side-views section{min-height:56px!important}
+}

@@ -1,0 +1,9 @@
+/* Sight masks and progress are interface symbols, using the existing palette. */
+#content-r1:not([data-kind=crossing]) .r37-sight,#content-r1:not([data-kind=crossing]) .r37-you,#content-r1:not([data-kind=crossing]) .r37-cross-progress{display:none!important}
+#content-r1[data-kind=crossing] .r37-sight{position:absolute;left:0;width:39%;z-index:3;pointer-events:none;background:repeating-linear-gradient(130deg,#dce4e8 0 12px,#edf3f5 12px 24px);border:2px dashed #52758c;box-sizing:border-box;display:flex;align-items:center;justify-content:center}
+#content-r1[data-kind=crossing] .r37-sight[data-side=right]{left:auto;right:0}
+#content-r1[data-kind=crossing] .crossing-panorama .crossing-waiting{z-index:6!important}
+#content-r1[data-kind=crossing] .r37-sight span{font-size:12px;font-weight:900;color:#143b61;background:#fff8d9;border-radius:8px;padding:3px}
+#content-r1[data-kind=crossing] .r37-sight[hidden],#content-r1[data-kind=crossing] .r37-you[hidden]{display:none}
+#content-r1[data-kind=crossing] .r37-you{position:absolute;z-index:22;translate:-50% 0;font-size:12px;line-height:17px;padding:0 5px;background:#ffd344;border:2px solid #143b61;border-radius:8px;color:#143b61;pointer-events:none}
+#content-r1[data-kind=crossing] .r37-cross-progress{position:absolute;left:15%;bottom:-29px;width:70%;height:7px;border:1px solid #143b61;border-radius:5px;background:linear-gradient(to right,#58b85b var(--cross-progress),#fff8d9 var(--cross-progress));box-shadow:0 0 0 2px #fff8d9}

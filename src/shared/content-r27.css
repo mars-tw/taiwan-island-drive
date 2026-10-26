@@ -1,0 +1,36 @@
+/* R27: visible semantics, delayed help and readable safety actions. */
+#content-r1[data-kind=cake] .cake-closeup::after{content:none!important}
+#content-r1 .cake-lean-legend,#content-r1 .cake-correct-legend{position:absolute;left:3px;right:3px;text-align:center;font-size:12px;font-weight:800;line-height:16px;background:#fff8d9;color:#b43827;border-radius:4px;z-index:8;white-space:nowrap}
+#content-r1 .cake-lean-legend{top:3px}
+#content-r1 .cake-correct-legend{bottom:2px;color:#237b43}
+#content-r1[data-kind=cake] .cake-closeup[data-show-lean=false] .cake-correct-legend{display:none}
+#content-r1[data-kind=cake] .cake-closeup[data-show-lean=false] .cake-lean-legend{color:#237b43}
+#content-r1[data-kind=cake] .content-scene-cue{max-width:calc(100% - 174px)!important;box-sizing:border-box}
+#content-r1[data-kind=cake] .cake-bay-mark{left:64%!important;bottom:25%!important;width:31%!important;height:23%!important;transform:none!important}
+#content-r1 #content-controls button[data-action][data-needed=false][data-held],
+#content-r1[data-kind][data-guided] #content-controls button[data-action][data-needed=false]{background:#f5fbff!important;color:#143b61!important;outline:0!important;box-shadow:inset 0 -4px #b5d8e8!important;animation:none!important}
+#content-r1 #content-controls button[data-action][data-needed=false]::after,#content-r1 #content-controls button[data-needed=false] span::after{content:none!important}
+#content-r1 #content-controls button[data-action][data-needed=false] svg{animation:none!important}
+#content-r1[data-kind][data-guided=true] #content-controls button[data-action][data-needed=true]{background:#ffd344!important;outline:3px solid #f46b27!important;box-shadow:inset 0 -3px #e4b32b!important}
+#content-r1[data-kind=crossing][data-guided] #content-controls button[data-action=depart][data-locked=true][data-needed]{background:#dce4e8!important;color:#465763!important;outline:0!important;box-shadow:inset 0 -3px #b8c4cc!important}
+#content-r1 .crossing-exit-path{position:absolute;inset:0;width:100%;height:100%;z-index:0;pointer-events:none}
+#content-r1[data-kind=crossing] .crossing-panorama .crossing-waiting{z-index:1}
+#content-r1 .crossing-exit-path path{fill:none;stroke:#fff8d9;stroke-width:1.2;stroke-dasharray:2 2;stroke-linecap:round;stroke-linejoin:round;filter:drop-shadow(0 1px 1px #143b61)}
+#content-r1 .crossing-exit-path path+path{stroke-dasharray:none;stroke-width:2}
+#content-r1:not([data-kind=crossing]) .crossing-exit-path{display:none}
+#content-r1[data-kind=crossing] .crossing-waiting [data-waiting=bike],#content-r1[data-kind=crossing] .content-walker[data-person=bike],#content-r1[data-kind=crossing] .crossing-arrived [data-arrived-friend=bike]{width:96px!important;height:90px!important;margin-left:-48px!important}
+#content-r1[data-kind=tickets] .content-stations button[data-wrong=true]{background:#eef1f3!important;border-color:#ac3a2a!important;box-shadow:0 3px #143b6150!important}
+#content-r1[data-kind=tickets] .content-stations button[data-hint=true]{background:#ffd344!important;border-color:#237b43!important}
+#content-r1[data-kind=tickets] .boarding-friend img{height:var(--rider-height,70px)!important}
+#content-r1[data-kind=tickets] .boarding-friend[data-entering=true] img{clip-path:inset(0 0 44% 0)!important;object-position:center bottom!important}
+#content-r1[data-kind=tickets] .boarding-friend[data-entering=true]>b{bottom:53px!important;background:#fff8d9!important;border:1px solid #1479b8}
+#content-r1[data-kind=tickets] .ticket-queue-path{display:none!important}
+@media(max-width:360px) and (orientation:portrait){
+ #content-r1[data-kind=cake] .content-scene-cue{max-width:calc(100% - 130px)!important}
+ #content-r1 .cake-lean-legend,#content-r1 .cake-correct-legend{font-size:10px;line-height:13px}
+ #content-r1[data-kind=crossing] .crossing-waiting [data-waiting=bike],#content-r1[data-kind=crossing] .content-walker[data-person=bike],#content-r1[data-kind=crossing] .crossing-arrived [data-arrived-friend=bike]{width:74px!important;height:68px!important;margin-left:-37px!important}
+}
+@media(orientation:landscape) and (max-height:520px){
+ #content-r1 .cake-lean-legend,#content-r1 .cake-correct-legend{font-size:10px;line-height:12px}
+ #content-r1[data-kind=crossing] .crossing-waiting [data-waiting=bike],#content-r1[data-kind=crossing] .content-walker[data-person=bike],#content-r1[data-kind=crossing] .crossing-arrived [data-arrived-friend=bike]{width:72px!important;height:66px!important;margin-left:-36px!important}
+}

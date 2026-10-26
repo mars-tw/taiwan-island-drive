@@ -1,0 +1,146 @@
+/* R30: the visible object, state and next action share one source of truth. */
+#content-r1 .r30-roof-gauge{position:absolute;left:100%;bottom:55%;width:75px;height:56px;background:#fff8d9e8;border:2px solid #1479b8;border-radius:12px;z-index:12}
+#content-r1 .r30-roof-gauge svg{width:100%;height:100%}
+#content-r1[data-kind=cake][data-phase=playing] #content-controls button[data-needed=true]{background:#ffd344!important;outline:3px solid #237b43!important;box-shadow:inset 0 -3px #dba630!important}
+#content-r1[data-kind=cake][data-phase=playing] #content-controls button[data-held=true][data-needed=false]{outline:0!important;background:#f4fbff!important;box-shadow:inset 0 2px #c4d9e4!important}
+#content-r1[data-kind=cake] .cake-closeup{pointer-events:none}
+#content-r1[data-kind=cake] .cake-timing{display:none!important}
+#content-r1 .r30-side-views{display:grid!important;grid-template-columns:1fr 1fr;gap:6px;top:76px!important;left:8px!important;right:8px!important;height:74px!important;border:0!important;background:none!important;box-shadow:none!important;overflow:visible!important}
+#content-r1[data-kind=crossing][data-phase] .content-scene .crossing-checks{display:none!important}
+#content-r1 .r30-side-views>section{border:3px solid #1479b8;border-radius:10px;overflow:hidden;background:#d5efff}
+#content-r1 .r30-side-views>section[data-stale=true]{border-color:#d54a32}
+#content-r1 .r30-side-views>section[data-focus=true]{box-shadow:0 0 0 2px #ffd344}
+#content-r1 .r30-side-views section>b{display:block;padding:2px 5px;background:#fff8d9;font-size:13px;line-height:20px;color:#143b61}
+#content-r1 .r30-side-views section>div{position:relative;height:44px;background:linear-gradient(#bde8f3 0 37%,#fff1c9 37% 100%)}
+#content-r1 .r30-side-views section img{width:82px!important;height:28px!important;left:calc(50% - 41px)!important;right:auto!important;bottom:16px!important}
+#content-r1 .r30-side-views [data-side=right] img{scale:-1 1!important}
+#content-r1 .r30-side-views section span{position:absolute;bottom:0;left:0;right:0;text-align:center;font-size:12px;line-height:17px;color:#143b61;background:#fff8d9}
+#content-r1 .r28-stage-cards button{justify-content:flex-start!important;min-height:165px!important;gap:6px!important}
+#content-r1 .r28-stage-cards button>b{font-size:14px;line-height:20px;white-space:nowrap}
+#content-r1 .r28-stage-cards button>span{font-size:12px!important;line-height:18px!important;white-space:normal}
+#content-r1 .r30-card-condition{height:76px;display:flex;flex-direction:column;align-items:center;justify-content:center;width:100%;color:#143b61}
+#content-r1 .r30-card-condition>.ticket-shape{width:70px!important;height:70px!important}
+#content-r1 .r30-route-preview{display:flex;align-items:center;justify-content:center;width:100%;gap:4px}
+#content-r1 .r30-route-preview svg{width:30px!important;height:40px!important;flex-shrink:1}
+#content-r1 .r30-route-preview>i{display:block;width:27px;height:36px;flex-shrink:0}
+#content-r1 .r30-route-preview>i>img{width:100%;height:100%;object-fit:contain}
+#content-r1 .r30-replay-change .r30-route-preview>i{display:none}
+#content-r1 .r30-traffic-preview{display:flex;align-items:center;gap:2px;height:42px}
+#content-r1 .r30-traffic-preview img{width:54px;height:35px;object-fit:contain}
+#content-r1 .r30-traffic-preview b{font-size:32px;line-height:35px}
+#content-r1 .r30-order{display:flex;align-items:center;justify-content:center;height:32px;width:100%}
+#content-r1 .r30-order img{width:24px;height:32px;object-fit:contain}
+#content-r1 .r30-order i{font-size:12px;font-style:normal}
+#content-r1 .r30-replay-change{display:grid;grid-template-columns:1fr 12px 1fr;align-items:center;width:100%;padding-top:4px;border-top:1px solid #1479b8}
+#content-r1 .r30-replay-change>div{min-width:0}
+#content-r1 .r30-replay-change .ticket-shape{width:34px!important;height:34px!important}
+#content-r1 .r30-replay-change .r30-route-preview svg{width:20px!important;height:27px!important}
+#content-r1 .r30-replay-change .r30-traffic-preview{height:24px;gap:0}
+#content-r1 .r30-replay-change .r30-traffic-preview img{width:20px;height:22px}
+#content-r1 .r30-replay-change .r30-traffic-preview b{font-size:22px;line-height:24px}
+#content-r1 .r30-replay-change .r30-order{display:none}
+#content-r1[data-kind=tickets][data-phase=playing] .r30-comparison{display:flex!important;flex-direction:column!important;position:absolute!important;top:100px!important;left:8px!important;right:8px!important;bottom:auto!important;height:auto!important;max-height:none!important;min-height:100px!important;padding:6px!important;border:3px solid #1479b8!important;border-radius:12px!important;background:#fff8d9!important;z-index:35!important;transform:none!important;gap:3px!important}
+#content-r1 .r30-pair{display:flex;align-items:center;justify-content:center;gap:14px}
+#content-r1 .r30-pair>div{position:relative;min-width:90px;display:flex;flex-direction:column;align-items:center;gap:2px}
+#content-r1 .r30-pair>div>img{width:44px;height:64px;position:absolute;right:65px;bottom:15px;object-fit:contain}
+#content-r1 .r30-pair>div>svg{width:64px!important;height:64px!important}
+#content-r1 .r30-pair>div>span{font-size:13px!important;line-height:18px!important;white-space:nowrap}
+#content-r1 .r30-pair>b{font-size:30px;line-height:36px}
+#content-r1 .r30-match{display:flex;justify-content:center;gap:18px}
+#content-r1 .r30-match>span{display:flex;align-items:center;gap:5px;font-weight:900;font-size:23px;line-height:25px;color:#237b43}
+#content-r1 .r30-match>span[data-match=false]{color:#d54a32;background:#ffe4cb;border-radius:6px}
+#content-r1 .r30-match svg{width:23px!important;height:23px!important}
+#content-r1 .outline-symbol g{fill:none!important}
+#content-r1 .color-dot{width:20px;height:20px;border-radius:50%;border:2px solid #143b61;box-sizing:border-box}
+#content-r1 .color-dot[data-color=blue]{background:#1479b8}
+#content-r1 .color-dot[data-color=orange]{background:#f46b27}
+#content-r1 .color-dot[data-color=green]{background:#58b85b}
+#content-r1 .r30-hand-ticket{display:block;position:absolute;right:-4px;bottom:26px;width:36px;height:40px;background:#fff8d9;border:2px solid #1479b8;border-radius:6px;z-index:4;box-shadow:0 2px 1px #143b6144;pointer-events:none}
+#content-r1 .r30-hand-ticket svg{width:100%;height:100%}
+#content-r1[data-kind=tickets][data-phase=playing] .boarding-friend[data-decision=true]{width:70px!important;height:90px!important;background:#fff8d959!important;border-radius:10px!important;z-index:40!important}
+#content-r1[data-kind=tickets][data-phase=playing] .boarding-friend[data-decision=true]>img{width:54px!important;height:75px!important;max-height:none!important}
+#content-r1[data-kind=tickets][data-phase=playing] .boarding-friend[data-decision=true]>b{top:-18px!important;bottom:auto!important;background:#fff8d9!important;line-height:17px!important}
+#content-r1[data-kind=tickets] .boarding-friend[aria-pressed=true]{outline:4px solid #237b43!important;box-shadow:0 0 0 3px #ffd344!important}
+#content-r1[data-kind=tickets][data-phase=playing] .r28-docked{display:none!important}
+#content-r1[data-kind=tickets][data-phase=playing] .content-stations button{translate:0 -20px!important}
+#content-r1[data-kind=tickets][data-phase=playing] [data-platform][data-reduced]{opacity:1!important}
+#content-r1[data-kind=tickets][data-phase=boarding] .boarding-friend[data-surface=aisle]>img{clip-path:inset(0 0 36% 0)!important;filter:brightness(.85)}
+@media(max-width:360px) and (orientation:portrait){
+ #content-r1 .r28-stage-cards button{min-height:128px!important;padding:2px!important;gap:2px!important}
+ #content-r1 .r28-stage-cards button>b{font-size:11px;line-height:16px}
+ #content-r1 .r28-stage-cards button>span{font-size:10px!important;line-height:14px!important}
+ #content-r1 .r30-card-condition{height:52px}
+ #content-r1 .r30-card-condition>.ticket-shape{width:48px!important;height:48px!important}
+ #content-r1 .r30-route-preview svg{width:30px!important;height:35px!important}
+ #content-r1 .r30-order img{width:17px;height:23px}
+ #content-r1 .r30-order{height:24px}
+ #content-r1 .r30-traffic-preview{height:26px}
+ #content-r1 .r30-traffic-preview img{width:37px;height:26px}
+ #content-r1 .r30-traffic-preview b{font-size:26px;line-height:26px}
+ #content-r1 .r30-side-views{top:88px!important;height:76px!important}
+ #content-r1 .r30-side-views section>div{height:44px}
+ #content-r1 .r30-side-views section img{height:26px!important;bottom:12px!important}
+ #content-r1 .r30-side-views section span{font-size:10px;line-height:13px}
+ #content-r1[data-kind=tickets][data-phase=playing] .r30-comparison{top:44px!important;min-height:67px!important;padding:3px!important;gap:0!important;flex-direction:row!important;justify-content:center!important;align-items:center!important}
+ #content-r1 .r30-pair{gap:3px}
+ #content-r1 .r30-pair>div{min-width:72px}
+ #content-r1 .r30-match{flex-direction:column;gap:2px}
+ #content-r1[data-kind=tickets][data-phase=playing] .content-stations button{top:calc(100% - 140px)!important;translate:0!important}
+ #content-r1 .r30-pair>div>svg{width:42px!important;height:42px!important}
+ #content-r1 .r30-pair>div>span{font-size:11px!important;line-height:14px!important}
+ #content-r1 .r30-pair>div>img{height:44px;width:30px;right:62px}
+ #content-r1 .r30-match svg{width:16px!important;height:16px!important}
+ #content-r1 .r30-match>span{font-size:16px;line-height:17px}
+ #content-r1 .color-dot{width:15px;height:15px}
+ #content-r1[data-kind=tickets][data-phase=playing] .boarding-friend[data-decision=true]{height:64px!important;width:60px!important}
+ #content-r1[data-kind=tickets][data-phase=playing] .boarding-friend[data-decision=true]>img{height:54px!important;width:38px!important}
+ #content-r1 .r30-hand-ticket{width:27px;height:29px;bottom:10px}
+}
+#content-r1[data-kind][data-phase] [hidden]{display:none!important}
+@media(orientation:landscape) and (min-height:521px) and (max-height:700px){
+ #content-r1[data-phase=ready] .content-intro{top:40px!important;min-height:104px!important;height:104px!important;display:flex!important;flex-direction:row!important;justify-content:center!important;gap:5px!important;padding:4px!important}
+ #content-r1[data-phase=ready] .content-intro img{width:74px!important;height:74px!important}
+ #content-r1[data-phase=ready] .content-intro span{font-size:12px!important}
+}
+#content-r1[data-kind=crossing][data-phase] .content-scene[data-compact=true] .content-observe{display:none!important}
+#content-r1[data-kind=crossing][data-phase] .content-scene[data-compact=true] .content-scene-cue{display:none!important}
+#content-r1[data-kind=crossing] .content-work>.r30-side-views{position:relative!important;top:auto!important;left:auto!important;right:auto!important;height:74px!important;min-height:74px!important;flex:none!important;margin:0 0 6px!important;width:100%!important;box-sizing:border-box!important}
+#content-r1[data-kind=crossing][data-compact=true] .content-work>.r30-side-views{height:44px!important;min-height:44px!important;gap:4px!important}
+#content-r1[data-kind=crossing][data-compact=true] .content-work>.r30-side-views section>b{font-size:10px!important;line-height:14px!important;padding:0 3px!important}
+#content-r1[data-kind=crossing][data-compact=true] .content-work>.r30-side-views section>div{height:24px!important}
+#content-r1[data-kind=crossing][data-compact=true] .content-work>.r30-side-views section img{height:17px!important;bottom:8px!important;width:52px!important;left:calc(50% - 26px)!important}
+#content-r1[data-kind=crossing][data-compact=true] .content-work>.r30-side-views section span{font-size:9px!important;line-height:10px!important}
+@media(orientation:landscape) and (max-height:520px){
+ #content-r1[data-kind=tickets][data-phase=playing] .content-stations button{top:calc(100% - 140px)!important;translate:0!important}
+ #content-r1 .r28-stage-cards button{min-height:100px!important;gap:1px!important}
+ #content-r1 .r28-stage-cards button>b{font-size:11px;line-height:16px}
+ #content-r1 .r30-card-condition{height:40px}
+ #content-r1 .r30-card-condition>.ticket-shape{width:38px!important;height:38px!important}
+ #content-r1 .r30-route-preview svg{width:29px!important;height:34px!important}
+ #content-r1 .r30-traffic-preview{height:23px}
+ #content-r1 .r30-traffic-preview img{width:34px;height:23px}
+ #content-r1 .r30-traffic-preview b{font-size:23px;line-height:23px}
+ #content-r1 .r30-order{height:17px}
+ #content-r1 .r30-order img{width:16px;height:17px}
+ #content-r1 .r30-replay-change{padding-top:0}
+ #content-r1 .r30-replay-change .ticket-shape{width:22px!important;height:22px!important}
+ #content-r1 .r30-side-views{top:85px!important;height:63px!important}
+ #content-r1 .r30-side-views section>b{font-size:11px;line-height:15px;padding:0 3px}
+ #content-r1 .r30-side-views section>div{height:42px}
+ #content-r1 .r30-side-views section img{height:26px!important;bottom:12px!important}
+ #content-r1 .r30-side-views section span{font-size:10px;line-height:13px}
+ #content-r1[data-kind=tickets][data-phase=playing] .r30-comparison{top:31px!important;left:4px!important;right:4px!important;min-height:46px!important;padding:2px!important;flex-direction:row!important;align-items:center!important;justify-content:center!important}
+ #content-r1 .r30-pair{gap:4px}
+ #content-r1 .r30-pair>div{min-width:62px}
+ #content-r1 .r30-pair>div>svg{width:34px!important;height:34px!important}
+ #content-r1 .r30-pair>div>span{font-size:9px!important;line-height:11px!important}
+ #content-r1 .r30-pair>div>img{height:34px;width:22px;right:45px;bottom:10px}
+ #content-r1 .r30-pair>b{font-size:20px;line-height:25px}
+ #content-r1 .r30-match{flex-direction:column;gap:0}
+ #content-r1 .r30-match>span{font-size:15px;line-height:17px;gap:2px}
+ #content-r1 .r30-match svg{width:15px!important;height:15px!important}
+ #content-r1 .color-dot{width:13px;height:13px}
+ #content-r1[data-kind=tickets][data-phase=playing] .boarding-friend[data-decision=true]{height:61px!important;width:60px!important}
+ #content-r1[data-kind=tickets][data-phase=playing] .boarding-friend[data-decision=true]>img{height:49px!important;width:35px!important}
+ #content-r1 .r30-hand-ticket{width:24px;height:28px;bottom:8px}
+}

@@ -1,0 +1,52 @@
+/* R24: scene controls are part of the place; feedback shares simulation state. */
+#content-r1 .hold-reason{position:absolute;left:50%;top:42%;translate:-50% -50%;z-index:30;max-width:92%;width:max-content;padding:8px 10px;border:3px solid #1479b8;border-radius:12px;background:#fff8d9;color:#143b61;font-size:16px;font-weight:900;box-shadow:0 3px #143b6150;pointer-events:none}
+#content-r1 .hold-reason[data-state=blocked]{border-color:#e46b28}
+#content-r1 [data-hold]{position:relative}
+#content-r1 .hold-progress{position:absolute;left:3px;top:50%;translate:0 -50%;width:48px!important;height:48px!important;pointer-events:none;overflow:visible;rotate:-90deg}
+#content-r1 .hold-progress circle{fill:none;stroke:#b9d8df;stroke-width:4}
+#content-r1 .hold-progress .hold-fill{stroke:#237b43;stroke-dasharray:var(--hold-progress) 100;stroke-linecap:round}
+#content-r1 [data-progress-state=paused] .hold-fill{stroke:#1479b8}
+#content-r1 [data-progress-state=blocked] .hold-fill{stroke:#d95623}
+#content-r1[data-kind=cake] #content-controls button[data-action][data-needed=true][data-held]{background:#ffd344!important;outline:3px solid #f46b27!important;box-shadow:inset 0 -3px #e4b32b!important}
+#content-r1[data-kind=cake] #content-controls button[data-action][data-needed][data-held] span::after{content:none!important}
+#content-r1[data-kind=cake] [data-needed=true]::after{content:'↑';position:absolute;right:5px;top:2px;color:#143b61;font-size:20px;animation:r24-guide .7s ease-in-out infinite alternate}
+@keyframes r24-guide{to{translate:0 5px}}
+#content-r1[data-kind=cake] .cake-upright{position:absolute;inset:0;opacity:.3;filter:drop-shadow(0 0 2px #fff);pointer-events:none}
+#content-r1[data-kind=cake] .cake-upright .cake-level-line,#content-r1[data-kind=cake] .cake-upright .cake-flag-tip{display:none}
+#content-r1[data-kind=cake] .cake-closeup[data-upright=true] .cake-rigid{filter:drop-shadow(0 0 4px #fff) drop-shadow(0 0 5px #58b85b)}
+#content-r1[data-kind=cake] .cake-closeup[data-warning=true] .cake-rigid{filter:drop-shadow(2px 0 1px #f46b27) drop-shadow(-2px 0 1px #f46b27)}
+#content-r1[data-kind=cake] .cake-timing{font-size:16px!important}
+#content-r1[data-kind=cake] .content-road-sign span{font-size:16px!important}
+#content-r1[data-kind=crossing] .crossing-panorama::before{background-image:url('/art/content-r24/crossing-harbor.webp')!important;transform:none!important}
+#content-r1[data-kind=crossing][data-stage="1"] .crossing-panorama::before{background-image:url('/art/content-r24/crossing-banyan.webp')!important}
+#content-r1[data-kind=crossing][data-stage="2"] .crossing-panorama::before{background-image:url('/art/content-r24/crossing-lighthouse.webp')!important}
+#content-r1[data-kind=crossing] .content-zebra{display:none!important}
+#content-r1[data-kind=crossing] .crossing-traffic{width:64px;height:36px;z-index:8}
+#content-r1[data-kind=crossing] .crossing-traffic b{top:-22px!important;left:var(--label-left)!important;white-space:nowrap;font-size:14px;line-height:18px;padding:0 4px}
+#content-r1[data-kind=crossing] .crossing-direction span{top:auto;bottom:auto;translate:-50% -50%;font-size:12px}
+#content-r1[data-kind=crossing] .crossing-direction .crossing-arrow{display:none!important}
+#content-r1[data-kind=crossing] .lane-direction{position:absolute;z-index:9;background:#fff8d9;color:#143b61;border:2px solid #1479b8;border-radius:5px;font-size:20px;line-height:22px;width:28px;text-align:center;pointer-events:none}
+#content-r1[data-kind=crossing] #content-controls button[data-action=depart][data-ready=true][data-needed=true][data-wait]{background:#ffd344!important;outline:3px solid #237b43!important;box-shadow:inset 0 -4px #e4b32b!important}
+#content-r1[data-kind=crossing] #content-controls button:disabled{filter:grayscale(1);opacity:.5}
+#content-r1[data-kind=tickets][data-stage="1"] .content-scene{background-image:url('/art/content-r24/station-banyan.webp')!important;background-position:center!important}
+#content-r1[data-kind=tickets][data-stage="2"] .content-scene{background-image:url('/art/content-r24/station-lighthouse.webp')!important;background-position:center!important}
+#content-r1[data-kind=tickets] .content-scene{background-size:100% 100%!important}
+#content-r1[data-kind=tickets] .content-stations{position:absolute!important;inset:0!important;z-index:20!important;pointer-events:none}
+#content-r1[data-kind=tickets] .content-stations button{position:absolute!important;top:var(--sign-top)!important;bottom:auto!important;transform:translateX(-50%)!important;width:64px!important;min-width:60px!important;height:64px!important;min-height:60px!important;padding:2px!important;border:3px solid #143b61!important;border-radius:9px!important;background:#fff8d9!important;overflow:visible!important;box-shadow:0 3px #143b6150!important;pointer-events:auto}
+#content-r1[data-kind=tickets] .content-stations button::after{display:block!important;content:'';position:absolute;left:calc(50% - 4px);top:100%;width:8px;height:20px!important;border:1px solid #143b61;background:#1479b8;z-index:-1}
+#content-r1[data-kind=tickets] .content-stations button::before{content:'';position:absolute;left:calc(50% - 16px);top:calc(100% + 18px);width:32px;height:5px;border:2px solid #143b61;background:#b5d8e8;border-radius:50%;z-index:-1}
+#content-r1[data-kind=tickets] .content-stations button .ticket-shape{height:32px!important;width:32px!important}
+#content-r1[data-kind=tickets] .content-stations button span{font-size:12px!important;line-height:16px!important;white-space:nowrap}
+#content-r1[data-kind=tickets] .content-stations button small{position:absolute;top:auto!important;bottom:100%;left:50%;translate:-50% 0;white-space:nowrap;width:max-content!important;height:auto!important;background:#fff8d9;border:2px solid #1479b8;border-radius:6px;padding:2px;font-size:11px!important;line-height:13px}
+#content-r1[data-kind=tickets] .content-stations button:disabled{pointer-events:none}
+#content-r1[data-kind=tickets] .content-passengers{z-index:22!important}
+#content-r1[data-kind=tickets] .content-stations button[aria-pressed=true]{background:#ffd344!important;border-color:#237b43!important}
+#content-r1[data-kind=tickets][data-phase=boarding] .content-stations button:not([aria-pressed=true]){visibility:visible;opacity:.65}
+#content-r1[data-kind=tickets] .ticket-queue-path{display:block!important;position:absolute;inset:0;width:100%;height:100%;z-index:15;pointer-events:none}
+#content-r1[data-kind=tickets] .ticket-queue-path path{fill:none;stroke:#fff8d9;stroke-width:5;stroke-dasharray:8 7;stroke-linecap:round;filter:drop-shadow(0 1px #143b61)}
+#content-r1[data-kind=tickets] .boarding-friend>b{top:auto!important;bottom:-1px!important;z-index:18}
+@media(orientation:landscape) and (max-height:520px){
+ #content-r1 .hold-reason{font-size:12px;padding:3px 6px;top:35%}
+ #content-r1[data-kind=crossing] .crossing-traffic{width:42px;height:22px}
+}
+@media(prefers-reduced-motion:reduce){#content-r1 [data-needed=true]::after{animation:none!important}}

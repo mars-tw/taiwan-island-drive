@@ -1,0 +1,33 @@
+/* R40 restricted repairs: no new controls and no lesson-state changes. */
+html body #content-r1[data-kind=cake] .cake-miniature{
+ bottom:auto!important;margin:0!important;translate:none!important;
+ transform:scale(var(--r40-roof-fit,.4))!important;transform-origin:86px 170px!important;
+}
+html body #content-r1[data-kind=tickets][data-phase=playing] .r33-compare-title,
+html body #content-r1[data-kind=tickets][data-phase=playing] .r32-compare-row{
+ display:grid!important;grid-template-columns:42px 70px 24px 70px 48px!important;
+ justify-content:center!important;gap:4px!important;align-items:center;justify-items:center;
+}
+html body #content-r1[data-kind=tickets] .r33-compare-title{font-size:12px!important;line-height:18px!important}
+html body #content-r1[data-kind=tickets] .content-scene[data-cabin=true]{background:#fff8d9!important}
+html body #content-r1[data-kind=tickets] .content-scene[data-cabin=true]::before,
+html body #content-r1[data-kind=tickets] .content-scene[data-cabin=true]::after{display:none!important}
+html body #content-r1[data-kind=tickets] .r35-standing{min-height:76px}
+html body #content-r1[data-kind=crossing] .r30-side-views section[data-zoom=true]{position:relative}
+/* Same road, but foreground waiting sprites must not cover approaching cars. */
+html body #content-r1[data-kind=crossing] .crossing-traffic{z-index:6!important}
+html body #content-r1[data-kind=crossing] .r35-observation{
+ position:absolute!important;background:#fff8d9!important;
+ top:0!important;bottom:0;left:0;right:0;width:100%!important;height:100%!important;z-index:3;
+ border:0;border-radius:8px;
+}
+html body #content-r1[data-kind=crossing] .r35-observation>b,
+html body #content-r1[data-kind=crossing] .r35-zoom-road span{font-size:11px;line-height:18px}
+html body #content-r1[data-kind=crossing] .r35-zoom-road{height:calc(100% - 18px)}
+@media(max-width:360px), (orientation:landscape) and (max-height:520px){
+ html body #content-r1[data-kind=tickets][data-phase=playing] .r33-compare-title,
+ html body #content-r1[data-kind=tickets][data-phase=playing] .r32-compare-row{
+  grid-template-columns:32px 64px 20px 64px 40px!important;gap:2px!important;
+ }
+ html body #content-r1[data-kind=tickets] .r33-compare-title{font-size:10px!important;line-height:14px!important}
+}

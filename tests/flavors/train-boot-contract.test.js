@@ -1,0 +1,6 @@
+import test from 'node:test';import assert from 'node:assert/strict';import fs from 'node:fs';
+const main=fs.readFileSync('src/games/train/main.js','utf8'),html=fs.readFileSync('flavors/taiwan-train-school/index.html','utf8');
+const ids=[...new Set([...main.matchAll(/\$\(['"]([^'"]+)['"]\)/g)].map(m=>m[1]))].sort();
+test('train flavor supplies every id required by real train main boot',()=>{assert.ok(ids.length>=60,`expected >=60 boot ids, got ${ids.length}`);for(const id of ids)assert.match(html,new RegExp(`id=["']${id}["']`),`missing #${id}`)});
+test('train flavor supplies boot structures, controls and dialogs',()=>{for(const token of ['class="scene"','class="coach"','class="next-station"','class="signal-instrument"','id="world"','id="settings-dialog"','id="result-dialog"','id="help-dialog"','data-route="coast"','data-lesson="lesson1"','id="pause"','id="resume"','id="replay"'])assert.ok(html.includes(token),`missing ${token}`)});
+test('train standalone identity, storage and return scope stay train-local',()=>{assert.ok(html.includes('data-flavor="taiwan-train-school"'));assert.ok(html.includes('tw.mars.trainschool.student.v1'));assert.ok(html.includes('content="../../"'));assert.doesNotMatch(html,/academy-start|島嶼交通學院<\/h1>/)});

@@ -1,0 +1,69 @@
+/* R32: free practice, a safe camera and an actual painted cabin. */
+#content-r1 .r32-magnify{position:absolute;right:8px;bottom:8px;z-index:45;width:92px;min-height:60px;border:3px solid #1479b8;border-radius:12px;background:#fff8d9;color:#143b61;font:inherit;font-size:13px}
+#content-r1[data-kind=cake][data-magnified=false] .cake-closeup{display:none!important}
+#content-r1[data-kind=cake][data-magnified=false] .cake-road-view{inset:110px 0 0!important}
+#content-r1[data-kind=cake][data-magnified=false] .content-force{left:8px!important;right:110px!important;top:36px!important;min-height:64px!important}
+#content-r1[data-kind=cake] .cake-road-view::before{content:'';position:absolute;inset:0;background:inherit;transform:scaleX(var(--road-mirror,1));pointer-events:none}
+#content-r1[data-kind=cake][data-phase] .content-scene[data-road-shape] .cake-road-view::before{inset:-20px 0!important;background:var(--r32-road-image) center/100% 100% no-repeat!important;transform:scaleX(var(--road-mirror,1))!important;translate:0 var(--r32-road-pan,0px)!important}
+#content-r1[data-kind=cake] .cake-closeup .cake-rigid{transform:translateX(var(--tray-slide,0px)) rotate(calc(var(--lean-angle,0)*1deg))!important}
+#content-r1[data-kind=cake] .cake-closeup{overflow:visible!important}
+#content-r1[data-kind=cake] .content-carrier{left:20%!important;width:60%!important;bottom:3%!important;height:60%!important}
+#content-r1 .r30-roof-gauge{left:-7%!important;bottom:5%!important;width:72px!important;height:54px!important}
+#content-r1[data-practice=true][data-kind=cake] #content-controls [data-action][data-needed=false]{background:#fff8d9!important;outline:none!important}
+#content-r1[data-practice=true] #content-controls [data-action][data-held=true]{background:#d5efff!important;box-shadow:inset 0 3px #1479b8!important}
+#content-r1[data-kind=crossing] .r32-road-thumb{background:url('/art/content-r2/crossing-banyan.webp') center 56%/100% 240%!important}
+#content-r1[data-kind=crossing] .r32-road-thumb::after{content:'';position:absolute;left:16%;right:16%;top:30%;height:9px;border-top:3px solid white;border-bottom:3px solid white;pointer-events:none}
+#content-r1[data-kind=crossing] .r32-road-thumb img{z-index:2}
+#content-r1[data-kind=crossing] .r32-road-thumb span{z-index:3}
+#content-r1 .crossing-traffic[data-yielding=true]::after{content:'Ⅱ';position:absolute;top:70%;left:calc(50% - 30px);width:60px;border-bottom:5px solid white;text-align:center;color:#d54a32;font-size:20px;font-weight:900}
+#content-r1[data-kind=crossing] .crossing-traffic b{left:calc(50% + var(--label-shift,0px))!important;font-size:12px!important}
+#content-r1 .r32-compare-row{display:flex;align-items:center;justify-content:center;gap:12px;min-height:44px;width:100%}
+#content-r1[data-kind=tickets][data-phase=playing] .r30-comparison{flex-direction:column!important}
+#content-r1 .r32-compare-row>b{font-size:16px}
+#content-r1 .r32-compare-row>i{display:flex;align-items:center;justify-content:center;width:36px!important;height:36px!important;flex:none;font-style:normal}
+#content-r1 .r32-compare-row svg{width:36px!important;height:36px!important}
+#content-r1 .r32-compare-row>strong{font-size:25px;width:24px;text-align:center}
+#content-r1 .r32-compare-row>span{font-size:14px!important;line-height:20px!important;min-width:58px}
+#content-r1 .r32-compare-row>b{line-height:20px!important}
+#content-r1[data-kind=tickets][data-phase=boarding] .boarding-friend[data-current=true]{outline:4px solid #1479b8!important;opacity:1!important;animation:r32-nod 1.6s ease-in-out infinite}
+#content-r1[data-kind=tickets][data-phase=boarding] .boarding-friend[data-current=false]{opacity:.45!important;filter:grayscale(.6)}
+#content-r1 .r32-cabin{position:absolute;left:6px;right:6px;top:90px;z-index:42;border:3px solid #1479b8;border-radius:14px;overflow:hidden;box-shadow:0 4px #143b6144;background:#fff8d9;pointer-events:none}
+#content-r1 .r32-cabin-art{position:relative;width:100%;aspect-ratio:1.5;overflow:hidden}
+#content-r1 .r32-cabin-art>img{position:absolute!important;inset:0!important;display:block!important;width:100%!important;height:100%!important;max-height:none!important;object-fit:fill!important}
+#content-r1 .r32-cabin-friend{position:absolute;width:19%;height:40%;translate:-50% 0;z-index:2}
+#content-r1 .r32-cabin-friend>img{width:100%!important;height:100%!important;object-fit:contain!important;object-position:bottom!important;max-height:none!important}
+#content-r1 .r32-cabin-friend>b{position:absolute;left:50%;top:-18px;translate:-50% 0;background:#fff8d9;border:2px solid #1479b8;border-radius:8px;font-size:12px;line-height:16px;white-space:nowrap;padding:0 3px}
+#content-r1 .r32-cabin-friend[data-seated=true]{height:30%;clip-path:inset(-25px 0 8% 0)}
+#content-r1 .content-scene[data-cabin=true] .boarding-friend[data-active=true],#content-r1 .content-scene[data-cabin=true] .ticket-seats [data-entering=true]{visibility:hidden!important}
+#content-r1 .content-scene[data-cabin=true] .boarding-friend[data-active=true]{opacity:0!important}
+#content-r1 .content-scene[data-cabin=true] .r28-docked{display:none!important}
+#content-r1[data-kind=tickets][data-phase=playing] .ticket-vehicle{visibility:visible!important;opacity:1!important}
+#content-r1 .r32-road-preview{width:54px!important;height:54px!important;object-fit:cover;border-radius:8px;border:2px solid #1479b8}
+#content-r1 .r30-replay-change .r30-route-preview>svg,#content-r1 .r30-replay-change .r30-route-preview>i{display:none!important}
+#content-r1 .r30-replay-change .ticket-shape{width:40px!important;height:40px!important}
+#content-r1 .r30-replay-change .r30-traffic-preview{height:40px!important}
+#content-r1 .r30-replay-change .r30-traffic-preview img{width:44px!important;height:36px!important}
+#content-r1 .r30-replay-change .r30-traffic-preview b{font-size:36px!important;line-height:38px!important}
+#content-r1 .r30-traffic-preview[data-source=right] img{scale:-1 1}
+@keyframes r32-nod{50%{translate:0 -3px}}
+@media(max-width:360px) and (orientation:portrait){
+ #content-r1 .r32-magnify{width:80px;right:5px}
+ #content-r1 .r32-compare-row{gap:7px;min-height:37px}
+ #content-r1 .r32-compare-row>b{font-size:12px}
+ #content-r1 .r32-compare-row>span{font-size:11px;min-width:48px}
+ #content-r1[data-kind=tickets][data-phase=playing] .r30-comparison{flex-direction:column!important;top:40px!important}
+ #content-r1[data-kind=tickets][data-phase=playing] .ticket-vehicle{top:126px!important;bottom:auto!important}
+ #content-r1 .r32-cabin{top:70px}
+ #content-r1 .r30-replay-change .r32-road-preview{width:36px!important;height:36px!important}
+ #content-r1[data-replay=true] .r28-stage-cards button{min-height:78px!important}
+}
+@media(orientation:landscape) and (max-height:520px){
+ #content-r1 .r32-magnify{right:8px;width:90px}
+ #content-r1[data-kind=cake][data-magnified=false] .cake-road-view{inset:0!important}
+ #content-r1[data-kind=cake][data-magnified=false] .content-force{top:8px!important;left:8px!important;width:135px;right:auto!important}
+ #content-r1 .r32-cabin{top:38px;left:10%;right:10%;max-height:calc(100% - 44px)}
+ #content-r1 .r32-cabin-art{max-height:calc(100vh - 105px)}
+ #content-r1 .r32-compare-row{gap:5px;min-height:35px}
+ #content-r1 .r32-compare-row>b,#content-r1 .r32-compare-row>span{font-size:11px}
+}
+@media(prefers-reduced-motion:reduce){#content-r1 .boarding-friend{animation:none!important}}

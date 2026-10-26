@@ -1,0 +1,42 @@
+/* Current, bounded corrections to the three existing lessons. */
+#content-r1[data-kind=cake]:not([data-phase=done]) .content-scene-cue{display:block!important;left:auto!important;right:4px!important;top:4px!important;transform:none!important;translate:none!important;font-size:12px;line-height:16px;max-width:calc(100% - 178px);padding:2px 4px;z-index:12}
+#content-r1[data-kind=cake] .cake-miniature{transform:scale(.82)!important}
+#content-r1[data-kind=cake] .cake-rigid{filter:drop-shadow(var(--cake-shadow,0px) 3px 1px #143b6160);transition:none!important}
+#content-r1[data-kind=cake] .cake-fixed-level{border-color:#1479b8!important}
+#content-r1[data-kind=cake] .cake-recovery{top:17%!important}
+#content-r1[data-kind=crossing] .crossing-checks{display:flex!important;position:absolute;top:68px!important;left:8px!important;right:auto;gap:5px;z-index:9;pointer-events:none}
+#content-r1[data-kind=crossing] .crossing-checks span{width:auto;white-space:nowrap;font-size:12px;line-height:18px;padding:0 4px;border:2px solid #1479b8;background:#fff8d9;border-radius:5px;color:#143b61}
+#content-r1[data-kind=crossing] .crossing-checks [data-checked=true]{border-color:#32813d;background:#e1f5de}
+#content-r1[data-kind=crossing] .crossing-lookout{top:96px!important}
+#content-r1[data-kind=crossing] #content-controls [data-checked]::after{content:none!important}
+#content-r1[data-kind=crossing] .content-walker[data-landed=true] .friend-number::after{content:' ✓';color:#237a36}
+#content-r1[data-kind=crossing] .crossing-traffic[data-approaching=true] img{rotate:90deg}
+#content-r1[data-kind=tickets][data-phase] .ticket-vehicle{width:var(--train-width,90%)!important}
+#content-r1[data-kind=tickets] .ticket-vehicle[data-reverse=true] .content-train{transform:scaleX(-1)!important}
+#content-r1[data-kind=tickets] .ticket-vehicle[data-reverse=true] .ticket-door{left:13%!important}
+#content-r1[data-kind=tickets] .boarding-friend>b{border-radius:6px!important;top:-18px!important;bottom:auto!important;font-size:12px;line-height:17px}
+#content-r1[data-kind=tickets] .boarding-friend[data-active=true]>b{display:block!important;background:#ffd344}
+#content-r1[data-kind=tickets] .boarding-friend[data-entering=true]{clip-path:none!important}
+#content-r1[data-kind=tickets] .ticket-counts span{font-size:15px!important;font-weight:800}
+#content-r1[data-kind=tickets] .ticket-boarding-bridge{height:54px!important;filter:drop-shadow(0 3px 1px #143b61)!important}
+#content-r1[data-kind=tickets] .ticket-boarding-bridge::after{top:58px!important;left:50%;font-size:13px;line-height:18px}
+#content-r1[data-kind=tickets] .ticket-boarding-bridge::before{content:'';position:absolute;top:80%;left:50%;height:17px;border-left:2px solid #143b61}
+#content-r1[data-kind=tickets][data-phase=boarding] .content-stations button:not([aria-pressed=true]){visibility:hidden;pointer-events:none}
+#content-r1[data-kind=tickets][data-stage="1"] .content-scene{background-position:45% center!important}
+#content-r1[data-kind=tickets][data-stage="2"] .content-scene{background-position:55% center!important}
+@media(max-width:360px) and (orientation:portrait){
+ #content-r1[data-kind=cake]:not([data-phase=done]) .content-scene-cue{max-width:calc(100% - 128px);font-size:10px;line-height:12px}
+ #content-r1[data-kind=crossing] .crossing-checks{top:62px!important;gap:2px}
+ #content-r1[data-kind=crossing] .crossing-checks span{font-size:10px;line-height:14px;padding:0 2px}
+ #content-r1[data-kind=crossing] .crossing-lookout{top:84px!important}
+ #content-r1[data-kind=tickets] .ticket-boarding-bridge{height:34px!important}
+ #content-r1[data-kind=tickets] .ticket-boarding-bridge::after{top:38px!important}
+}
+@media(orientation:landscape) and (max-height:520px){
+ #content-r1[data-kind=cake]:not([data-phase=done]) .content-scene-cue{max-width:calc(100% - 150px);font-size:10px;line-height:12px}
+ #content-r1[data-kind=crossing] .crossing-checks{top:62px!important;gap:2px}
+ #content-r1[data-kind=crossing] .crossing-checks span{font-size:10px;line-height:14px;padding:0 2px}
+ #content-r1[data-kind=crossing] .crossing-lookout{top:84px!important}
+ #content-r1[data-kind=tickets] .ticket-boarding-bridge{height:30px!important}
+ #content-r1[data-kind=tickets] .ticket-boarding-bridge::after{top:34px!important;font-size:10px;line-height:12px}
+}

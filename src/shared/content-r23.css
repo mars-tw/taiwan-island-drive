@@ -1,0 +1,14 @@
+/* R23: every instruction and contact surface describes the visible scene. */
+#content-r1[data-kind=crossing] .crossing-traffic img{rotate:0deg!important;transform:none!important}
+#content-r1[data-kind=crossing] .crossing-direction .crossing-arrow{top:20%!important;left:auto!important;right:6px;translate:0 0!important;font-size:18px;line-height:20px}
+#content-r1[data-kind=crossing] .crossing-arrived b{display:none!important}
+#content-r1[data-kind=crossing] .crossing-arrived .friend-number::after{content:' ✓';color:#237a36}
+#content-r1[data-kind=tickets] .ticket-platform-surface{position:absolute;left:0;right:0;bottom:0;z-index:13;pointer-events:none;background:url('/art/content-r12/station-low-platform.webp') center 63%/100% 625% no-repeat}
+#content-r1[data-kind=tickets] .ticket-platform-surface::before{content:'';position:absolute;left:0;right:0;top:0;height:12px;background:url('/art/r8/platform-floor.webp') center bottom/100% auto;transform:scaleY(-1)}
+#content-r1[data-kind=tickets] .ticket-boarding-bridge{height:var(--boarding-step-height)!important;z-index:14!important}
+#content-r1[data-kind=tickets] .ticket-boarding-bridge::after{top:5px!important;left:50%;font-size:11px;line-height:14px}
+#content-r1[data-kind=tickets] .ticket-boarding-bridge::before{display:none}
+#content-r1[data-kind=tickets] .content-passengers{z-index:16!important}
+#content-r1[data-kind=tickets] .content-scene[data-compact=true]{background-size:100% 100%!important}
+#content-r1[data-kind=cake][data-stage="1"] .cake-road-view::before{content:'';position:absolute;inset:0!important;background:url('/art/content-r19/cake-bends.webp') center/100% 100%!important;transform:none!important}
+#content-r1[data-kind=cake] .content-scene[data-road-shape=right] .cake-road-view::before{transform:scaleX(-1)!important}

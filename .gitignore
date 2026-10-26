@@ -49,3 +49,6 @@ output/
 .playwright-cli/
 .playwright/
 release/
+
+# Generated source/download archives are release assets, not Git source blobs.
+public/downloads/*.zip

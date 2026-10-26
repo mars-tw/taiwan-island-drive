@@ -1,0 +1,23 @@
+/* Identical four-cell layout in drive and support; no new controls. */
+html body #content-r1[data-kind=cake][data-phase=playing] #content-controls{
+ grid-template-columns:repeat(4,minmax(60px,1fr))!important;
+}
+html body #content-r1[data-kind=cake][data-phase=playing] #content-controls [data-action=listen]{grid-column:1/-1!important;grid-row:2!important}
+html body #content-r1[data-kind=cake][data-phase=playing] #content-hint{height:2.6em;min-height:2.6em;flex:none;box-sizing:border-box}
+html body #content-r1[data-kind=cake] #content-controls [data-action^=recover-] .r35-push{width:48px!important;height:26px!important}
+html body #content-r1[data-kind=cake] #content-controls [data-action^=recover-] .r35-push img{width:26px!important}
+html body #content-r1[data-kind=crossing] .r32-road-thumb{position:relative;background-position:center 57%!important;background-size:100% 220%!important;overflow:hidden}
+html body #content-r1[data-kind=crossing] .r32-road-thumb::after{display:none!important}
+html body #content-r1[data-kind=crossing] [data-observation-state=stopped] .r32-road-thumb::after{
+ display:block!important;content:'';position:absolute;left:var(--r41-stop-x);right:auto;
+ top:var(--r41-stop-top);height:var(--r41-stop-height);width:2px;
+ border:0;border-left:2px solid white;box-shadow:0 0 0 1px #1479b8;z-index:2;
+}
+/* Labels stay above the shoe baseline, wholly on the destination paving. */
+html body #content-r1[data-kind=crossing] [data-arrived-friend] .friend-number,
+html body #content-r1[data-kind=crossing] .content-walker[data-landed=true] .friend-number{
+ bottom:0!important;translate:-50% 0!important;line-height:13px!important;font-size:10px!important;
+}
+@media(orientation:landscape) and (max-height:520px){
+ html body #content-r1[data-kind=cake][data-phase=playing] #content-hint{height:36px;min-height:36px;font-size:12px;line-height:16px}
+}
