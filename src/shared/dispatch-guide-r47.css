@@ -1,0 +1,15 @@
+/* R47 math lesson guidance: one glowing next step, and a visible coach retry bubble. */
+html.art-r4 #math-lesson .dispatch-controls button.not-ready:last-child{background:#fff!important;border-color:#1479b8!important;box-shadow:0 3px 0 #105781!important}
+html.art-r4 #math-lesson .dispatch-controls button.next-step{background:#ffd344!important;border-color:#ad841b!important;box-shadow:0 3px 0 #ad841b!important;font-weight:900}
+html.art-r4 #math-lesson .dispatch-coach.is-retry{border-color:#f46b27!important;background:#fff4e8!important;color:#7a2d05}
+@media (prefers-reduced-motion:no-preference){
+ html.art-r4 #math-lesson .dispatch-controls button.next-step{animation:r47-next-glow 1.2s ease-in-out infinite alternate}
+ html.art-r4 #math-lesson .dispatch-coach.is-retry{animation:r47-retry-nudge .5s ease-in-out 1}
+}
+@keyframes r47-next-glow{from{outline:0 solid #ffd34400}to{outline:4px solid #ffd344aa}}
+@keyframes r47-retry-nudge{0%,100%{translate:0}25%{translate:-6px}75%{translate:6px}}
+/* Short landscape phones hide the coach; keep only the retry bubble so a wrong check is never silent. */
+@media (max-height:520px) and (orientation:landscape){
+ html.art-r4 #math-lesson .dispatch-coach.is-retry{display:flex!important;min-height:0!important;padding:4px 12px!important;margin:2px auto!important;font-size:12px}
+ html.art-r4 #math-lesson .dispatch-coach.is-retry>img{display:none}
+}

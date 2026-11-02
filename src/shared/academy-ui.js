@@ -1,7 +1,9 @@
 import './academy.css';
+import './dispatch-guide-r47.css';
 import {artImage} from './art-refresh.js';
 import {ACADEMY_CHAPTERS,academySummary,readAcademy,performDispatch,importTrainBackup} from './academy.js';
 import {dispatchMarkup,dispatchLesson} from '../games/math/dispatch.js';
+import {dispatchGuide} from './dispatch-guide-r47.js';
 import {launchJourney} from './passport.js';
 import {journeyById} from './journeys.js';
 import {studentSaved,readStudent} from './student-save.js';
@@ -84,6 +86,10 @@ export function installAcademy(){
     }
     if(['add','remove','to-front','to-rear'].includes(action))playChime('tap',{volume:.08});
     if(phase==='load'&&q.front===total){const ready=dialog.querySelector('[data-dispatch=check]');ready.textContent='坐好了，去分車 →';ready.classList.add('next-ready');cue.textContent='朋友坐好了！按橘色車票去分車。';}
+    // R47: a failed check is told by the coach (always on screen), and only one button glows next.
+    const guide=dispatchGuide({phase,action,message,front:q.front,total});
+    if(guide.retry){cue.textContent=guide.cue;coach.classList.add('is-retry');dialog.querySelector('.dispatch-feedback').hidden=true;}
+    if(guide.nextStep==='add'){dialog.querySelector('[data-dispatch=check]')?.classList.add('not-ready');dialog.querySelector('[data-dispatch=add]')?.classList.add('next-step');}
     dialog.querySelectorAll('[data-dispatch]').forEach(button=>button.onclick=()=>{if(paused||dialog.dataset.inTransit==='true')return;const action=button.dataset.dispatch,before=readAcademy().dispatch;const rects=new Map([...dialog.querySelectorAll('[data-passenger]')].map(e=>[e.dataset.passenger,e.getBoundingClientRect()]));const r=performDispatch(action,readSettings().childMode?'small':'medium');
       if(cast&&before.active&&r.state.active){const next=r.state.active;
         if(action==='add'&&next.front>before.active.front)cast.front.push(cast.queue.shift());
