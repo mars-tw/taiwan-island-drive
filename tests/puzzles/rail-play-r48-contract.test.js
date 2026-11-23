@@ -59,10 +59,11 @@ test('R48 registry: three puzzles for 拼搭與方向, two math games for 數學
   assert.deepEqual(math, ['數學', '數學']);
 });
 
-test('R48 temporary entry: one button in the train page settings, not on the home page', () => {
+test('R48 entries live in the math room: no trial button left on the train page', () => {
+  // 整合時規則改變：B 線的暫時試玩入口拿掉，五種玩法改由 academy-ui 的 registerRailGames 接進數學遊戲室。
   const train = read('train/index.html');
-  assert.match(train, /id="rail-play-trial"[^>]*>火車謎題與數學（試玩）</);
-  assert.match(train, /src="\/src\/games\/puzzles\/trial-entry\.js"/);
+  assert.doesNotMatch(train, /rail-play-trial|trial-entry/);
+  assert.match(read('src/shared/academy-ui.js'), /registerRailGames\(registerMathGame\)/);
   assert.doesNotMatch(read('index.html'), /rail-play/, 'home page entry belongs to the math room line');
   assert.doesNotMatch(read('src/games/train/main.js'), /rail-play|puzzles\//, 'train driving code is untouched');
 });

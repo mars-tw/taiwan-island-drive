@@ -13,6 +13,7 @@ import {pauseNativeGames,registerGameLifecycle,registerNativeOverlay} from './na
 import {installMathRoom} from '../games/math/room-ui.js';
 import {registerMathGame} from '../games/math/room-registry.js';
 import {roomLevel} from '../games/math/room-store.js';
+import {registerRailGames} from '../games/puzzles/math-room.js';
 
 export function installAcademy(){
   const start=document.getElementById('academy-start');if(!start)return;
@@ -110,6 +111,8 @@ export function installAcademy(){
   registerMathGame({id:'dispatch',category:'math',name:'拆合車廂調度台',icon:'🚃',description:'同一班列車，裝滿、分車，再算剩下。',levels:['small','medium','large'],order:5,
     status:()=>{const s=academySummary(),a=readAcademy();return {stamps:a.dispatch.completed,highlight:s.index===0,note:s.index===0?'主線第 1 章':a.dispatch.active&&a.dispatch.active.phase!=='done'?'調度到一半':''};},
     open:ctx=>{ctx.hideRoom();openDispatch(()=>ctx.exit());}});
+  // R48：火車謎題三種與新數學兩種（B 線）接進數學遊戲室。
+  registerRailGames(registerMathGame);
   start.onclick=()=>{const s=academySummary();if(s.next&&s.index>0){launchJourney(journeyById(s.next.id),{academy:true});return;}room.open('math');};
   const practice=document.getElementById('math-practice');practice.onclick=()=>room.open('math');
   dialog.addEventListener('cancel',e=>{e.preventDefault();close();});addEventListener('blur',pause);document.addEventListener('visibilitychange',()=>{if(document.hidden)pause();});
