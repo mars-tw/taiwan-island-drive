@@ -114,12 +114,12 @@ export function switchHint(round, result) {
   const attrs = round.attrs, train = result?.train || currentTrain(round);
   if (!train) return '全部列車都停好了！';
   const target = round.platforms.find(p => p.id === train.target);
-  if (!result || result.kind === 'start') return `${trainLabel(train, attrs)}要開到${platformLabel(target, attrs)}。點道岔換方向，看亮起來的路通到哪裡。`;
+  if (!result || result.kind === 'start') return `${trainLabel(train, attrs)}要開到${platformLabel(target, attrs)}。點黃色的箭頭換方向，看亮起來的路通到哪裡。`;
   if (result.kind === 'arrived') return isSwitchRoundDone(round) ? '全部列車都停好了！' : `${trainLabel(train, attrs)}到站了！下一列車也要找跟自己一樣的月台。`;
   if (result.kind === 'occupied') return '那個月台已經停了列車。換一條路，找和列車一樣的牌子。';
-  if (result.reason === 'shape') return '顏色對了，形狀不一樣。看看月台牌子上的形狀，再撥道岔。';
-  if (result.reason === 'color') return '形狀對了，顏色不一樣。看看月台牌子上的顏色，再撥道岔。';
-  return `${trainLabel(train, attrs)}要停${platformLabel(target, attrs)}。從起點沿著亮起來的路走，看看哪個道岔要換方向。`;
+  if (result.reason === 'shape') return '顏色對了，形狀不一樣。看看月台牌子上的形狀，再點黃色的箭頭。';
+  if (result.reason === 'color') return '形狀對了，顏色不一樣。看看月台牌子上的顏色，再點黃色的箭頭。';
+  return `${trainLabel(train, attrs)}要停${platformLabel(target, attrs)}。從起點沿著亮起來的路走，看看哪個黃色箭頭要換方向。`;
 }
 
 /** Geometry for drawing and for the departure animation, in abstract (u, v) units. */

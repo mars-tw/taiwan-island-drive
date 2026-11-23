@@ -54,6 +54,9 @@
 #math-room .room-card-later .room-card-icon{filter:grayscale(.6)}
 .room-later>summary{display:flex;align-items:center;min-height:60px;padding:0 12px;font-weight:800;cursor:pointer;border-radius:12px;background:#f2f8fb}
 .room-later .room-cards{margin-top:8px}
+.room-later>summary::-webkit-details-marker{display:none}
+.room-later>summary::after{content:'打開看看 ▾';margin-left:auto;color:var(--room-blue);font-weight:900}
+.room-later[open]>summary::after{content:'收起 ▴'}
 .room-notice{font-weight:800;color:#a2400b;min-height:1em}.room-notice:empty{display:none}
 .room-save-note{background:#fff0e5;border:2px solid #ce5d24;border-radius:12px;padding:6px 10px;font-weight:800}
 /* play */
@@ -275,6 +278,10 @@
  #math-room .room-nav{height:62px;min-height:62px}
  .room-body{padding:6px 12px 10px;gap:6px}
  .room-heading{padding:4px 10px;box-shadow:none}.room-heading p{display:none}
+ /* 橫放手機：卡片只留圖示和名稱、縮矮，至少露出兩排（年齡已在標題列，省掉分頁說明） */
+ .room-home .room-panel{padding:8px;gap:8px}.room-home .room-panel-note{display:none}
+ #math-room .room-card{min-height:72px;grid-template-columns:46px minmax(0,1fr) 22px;gap:8px;padding:6px 10px}
+ .room-card-icon{width:44px;height:44px;font-size:20px}.room-card-copy>span{display:none}
  .room-dock{padding:4px 8px}
  .room-play{grid-template-columns:84px minmax(0,1fr) minmax(176px,212px);grid-template-rows:minmax(0,1fr)}
  .room-play .room-bar{grid-column:1;grid-row:1;flex-direction:column;justify-content:flex-start;align-items:stretch;border-bottom:0;border-right:3px solid var(--room-blue);padding:6px 5px;gap:6px;min-height:0}
@@ -320,5 +327,12 @@
  #math-room .luggage-item span{display:none}#math-room .luggage-item{min-height:60px;padding:2px}#math-room .luggage-bin-label{min-height:60px;padding:4px}
  .sorting-track{padding-bottom:4px}.toy-engine{font-size:30px}
  .room-finish-card{padding:14px 20px}.room-finish-coach{display:none}
+}
+/* 橫放且夠寬（≥760px）：標題列和分頁併成一排，讓 6 張卡一次排得下 */
+@media (max-height:500px) and (orientation:landscape) and (min-width:760px){
+ .room-home .room-body{display:grid;grid-template-columns:auto minmax(0,1fr);align-content:start}
+ .room-home .room-body>*{grid-column:1/-1}
+ .room-home .room-heading{grid-column:1;grid-row:1;flex-wrap:nowrap}.room-home .room-heading h1{font-size:20px;white-space:nowrap}
+ .room-home .room-tabs{grid-column:2;grid-row:1}
 }
 @media (prefers-reduced-motion:reduce){#math-room .room-next,.room-finish-stamp{animation:none}}
