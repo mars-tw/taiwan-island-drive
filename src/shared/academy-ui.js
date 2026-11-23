@@ -10,11 +10,16 @@ import {studentSaved,readStudent} from './student-save.js';
 import {celebrate,playChime} from './celebrate.js';
 import {readSettings} from './settings.js';
 import {pauseNativeGames,registerGameLifecycle,registerNativeOverlay} from './native.js';
+import {installMathRoom} from '../games/math/room-ui.js';
+import {registerMathGame} from '../games/math/room-registry.js';
+import {roomLevel} from '../games/math/room-store.js';
 
 export function installAcademy(){
   const start=document.getElementById('academy-start');if(!start)return;
   const dialog=document.createElement('dialog');dialog.id='math-lesson';dialog.setAttribute('aria-label','列車數學課');document.body.append(dialog);
-  let paused=false,visible=false,cast=null;
+  let paused=false,visible=false,cast=null,returnTo=null;
+  // R48: the math entries open the game room; the dispatch lesson is its first math game.
+  const room=installMathRoom();
   function update(){const s=academySummary(),a=readAcademy();
     document.getElementById('academy-chapter').textContent=s.badge?'山海教室開課了！':`第 ${s.index+1} 章：${s.next.name}`;
     document.getElementById('academy-story').textContent=s.badge?'學員證收齊調度、接客、運送與找路紀錄。再跑一趟，或選交通工具練習。':s.next.story;
@@ -50,7 +55,7 @@ export function installAcademy(){
     const studentButton=passport.cloneNode(true);studentButton.onclick=()=>{pause();passport.click();};top.append(studentButton);
     const pauseButton=document.createElement('button');pauseButton.id='math-pause';pauseButton.textContent='暫停';pauseButton.setAttribute('aria-label','暫停列車數學課');pauseButton.onclick=pause;top.append(pauseButton);
     if(a.dispatch.active?.phase==='done'){
-      const next=document.createElement('button');next.id='math-next';next.textContent='去接朋友 →';next.onclick=()=>{close();launchJourney(journeyById('train-1'),{academy:true});};
+      const next=document.createElement('button');next.id='math-next';next.textContent='去接朋友 →';next.onclick=()=>{returnTo=null;close();launchJourney(journeyById('train-1'),{academy:true});};
       dialog.querySelector('.dispatch-controls').prepend(next);
       dialog.querySelector('[data-dispatch=start]').textContent='再開一班';
       dialog.querySelector('#dispatch-title').textContent='調度完成！';
@@ -90,7 +95,7 @@ export function installAcademy(){
     const guide=dispatchGuide({phase,action,message,front:q.front,total});
     if(guide.retry){cue.textContent=guide.cue;coach.classList.add('is-retry');dialog.querySelector('.dispatch-feedback').hidden=true;}
     if(guide.nextStep==='add'){dialog.querySelector('[data-dispatch=check]')?.classList.add('not-ready');dialog.querySelector('[data-dispatch=add]')?.classList.add('next-step');}
-    dialog.querySelectorAll('[data-dispatch]').forEach(button=>button.onclick=()=>{if(paused||dialog.dataset.inTransit==='true')return;const action=button.dataset.dispatch,before=readAcademy().dispatch;const rects=new Map([...dialog.querySelectorAll('[data-passenger]')].map(e=>[e.dataset.passenger,e.getBoundingClientRect()]));const r=performDispatch(action,readSettings().childMode?'small':'medium');
+    dialog.querySelectorAll('[data-dispatch]').forEach(button=>button.onclick=()=>{if(paused||dialog.dataset.inTransit==='true')return;const action=button.dataset.dispatch,before=readAcademy().dispatch;const rects=new Map([...dialog.querySelectorAll('[data-passenger]')].map(e=>[e.dataset.passenger,e.getBoundingClientRect()]));const r=performDispatch(action,roomLevel());
       if(cast&&before.active&&r.state.active){const next=r.state.active;
         if(action==='add'&&next.front>before.active.front)cast.front.push(cast.queue.shift());
         if(action==='remove'&&next.front<before.active.front)cast.queue.unshift(cast.front.pop());
@@ -99,14 +104,17 @@ export function installAcademy(){
       }
       render(r.message,rects,action);(dialog.querySelector(`[data-dispatch="${action}"]:not(:disabled)`)||dialog.querySelector('[data-dispatch]:not(:disabled)'))?.focus();if(r.state.completed>before.completed)celebrate({text:'數學調度章 ＋1',kind:'station',sound:!readSettings().muted});update();});
   }
-  function close(){visible=false;paused=false;dialog.close();update();start.focus();}
-  function pause(){if(!visible||paused)return;paused=true;const cover=document.createElement('section');cover.className='math-paused';cover.innerHTML='<h2>休息一下</h2><p>乘客和調度單都等你回來。</p><button id="math-resume">繼續調度</button><button id="math-leave">回學院</button>';dialog.append(cover);cover.querySelector('#math-resume').onclick=()=>{paused=false;render();dialog.querySelector('#math-pause').focus();};cover.querySelector('#math-leave').onclick=close;cover.querySelector('button').focus();}
-  start.onclick=()=>{const s=academySummary();if(s.next&&s.index>0){launchJourney(journeyById(s.next.id),{academy:true});return;}
-    pauseNativeGames();performDispatch('start',readSettings().childMode?'small':'medium');visible=true;paused=false;render();dialog.showModal();dialog.querySelector('[data-dispatch]')?.focus();};
-  const practice=document.getElementById('math-practice');practice.onclick=()=>{pauseNativeGames();performDispatch('start',readSettings().childMode?'small':'medium');visible=true;paused=false;render();dialog.showModal();};
+  function close(){visible=false;paused=false;dialog.close();update();const back=returnTo;returnTo=null;if(back)back();else start.focus();}
+  function pause(){if(!visible||paused)return;paused=true;const cover=document.createElement('section');cover.className='math-paused';cover.innerHTML='<h2>休息一下</h2><p>乘客和調度單都等你回來。</p><button id="math-resume">繼續調度</button><button id="math-leave">回學院</button>';dialog.append(cover);if(returnTo)cover.querySelector('#math-leave').textContent='回遊戲室';cover.querySelector('#math-resume').onclick=()=>{paused=false;render();dialog.querySelector('#math-pause').focus();};cover.querySelector('#math-leave').onclick=close;cover.querySelector('button').focus();}
+  function openDispatch(onClose=null){pauseNativeGames();performDispatch('start',roomLevel());visible=true;paused=false;returnTo=onClose;render();dialog.showModal();dialog.querySelector('[data-dispatch]')?.focus();}
+  registerMathGame({id:'dispatch',category:'math',name:'拆合車廂調度台',icon:'🚃',description:'同一班列車，裝滿、分車，再算剩下。',levels:['small','medium','large'],order:5,
+    status:()=>{const s=academySummary(),a=readAcademy();return {stamps:a.dispatch.completed,highlight:s.index===0,note:s.index===0?'主線第 1 章':a.dispatch.active&&a.dispatch.active.phase!=='done'?'調度到一半':''};},
+    open:ctx=>{ctx.hideRoom();openDispatch(()=>ctx.exit());}});
+  start.onclick=()=>{const s=academySummary();if(s.next&&s.index>0){launchJourney(journeyById(s.next.id),{academy:true});return;}room.open('math');};
+  const practice=document.getElementById('math-practice');practice.onclick=()=>room.open('math');
   dialog.addEventListener('cancel',e=>{e.preventDefault();close();});addEventListener('blur',pause);document.addEventListener('visibilitychange',()=>{if(document.hidden)pause();});
   registerGameLifecycle({getState:()=>({paused:!visible||paused}),pause});registerNativeOverlay({isOpen:()=>dialog.open,close});
   const file=document.getElementById('train-backup');file.onchange=async()=>{const selected=file.files?.[0],status=document.getElementById('train-import-status');if(!selected)return;
-    try {if(selected.size>262144)throw Error('備份太大，尚未匯入。');importTrainBackup(await selected.text());status.textContent=studentSaved()?'已保留原備份；數學進度已合併，沒有額外發星星。':'本次無法儲存；請保留原備份後再試。';update();}catch(e){status.textContent=e.message;}file.value='';};
+    try {if(selected.size>262144)throw Error('備份太大，尚未匯入。');importTrainBackup(await selected.text());status.textContent=studentSaved()?'已保留原備份；數學進度與舊集章已接回遊戲室，沒有額外發星星。':'本次無法儲存；請保留原備份後再試。';update();}catch(e){status.textContent=e.message;}file.value='';};
   addEventListener('studentchange',update);addEventListener('pageshow',update);update();
 }

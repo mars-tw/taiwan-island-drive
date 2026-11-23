@@ -1,5 +1,14 @@
 # CREDITS
 
+## R48 數學遊戲室（小小列車長玩法移植）
+
+- 來源：小小列車長／Taiwan Train Math 1.11.0，Copyright 2026 mars-tw。原 repo 已刪除，使用 `遊戲/_封存/小小列車長-1.11.0-原始碼-20261013/` 的唯讀完整副本，沒有寫入來源。
+- 移植 17 個不碰畫面的程式檔到 `src/games/math/`（engine、adventure、explorers、workshop、discovery、tickets、journeys、activities、learning-guide、learning-content、learning-ui、arithmetic-ui、adventure-ui、program-playback、story-model，以及引擎需要的 puzzle、train-images），程式 Apache-2.0；原教育文字 CC BY 4.0。每個檔頭加上署名與改動說明，邏輯沒有改，只拿掉 `?v=1.11.0` 匯入參數、統一換行。`data/trains.json` 原樣搬入（含每張實車照片的作者與授權文字，照片檔本身這輪沒有搬）。workshop／explorers／discovery／tickets／puzzle 五個 CSS 原樣搬入。
+- 原版 14 個測試檔（93 項）搬到 `tests/math/*-ported.test.js`，只改匯入路徑；三處「圖片檔存在」改成比對 1.11.0 圖片清單（`src/games/math/data/source-assets.json`，只有檔名、大小與 SHA-256），因為照片要等 C 線授權清單。
+- 遊戲室畫面、作答流程、集章與舊進度接回是學院新程式（MIT）；計數、排車廂、比一比與手機操作列的寫法改寫自原版 `src/app.js`，版面參考原版 CSS（Apache-2.0）。
+- 美術全部沿用學院既有素材（R5 月台、R5 乘客、R5 票卡、R6 海岸、R6 阿路教練），沒有新增圖片、沒有呼叫圖像模型；找不同、天平、行李等圖形是原版程式產生的 SVG。
+- 完整檔案、雜湊與改動見 `docs/r48-math-room-assets.json`；Apache 授權全文與原 NOTICE 在 `public/licenses/taiwan-train-math/`。
+
 ## 2.47.0 新內容第35輪
 
 - `image_gen.imagegen`四次生成：單手側推一稿、三位乘客扶門框姿勢兩稿、女孩髮色修整一稿，採用三張來源圖與四張runtime PNG。首稿姿勢圖集保留為製作紀錄；遊戲使用第二稿男孩與修色後女孩。模型slug未揭露，manifest記null；提示、原圖與SHA在 `docs/content/r35/art/`、`art-manifest.json`。Sharp只裁切及等比縮圖，沒有下載第三方美術。

@@ -7,6 +7,7 @@ import { isNativeBuild } from './shared/native.js';
 import { LobbyMusic } from './shared/lobby-music.js';
 import { installSafetyLesson } from './shared/safety-ui.js';
 import { installAcademy } from './shared/academy-ui.js';
+import { readRoom, roomLevel, setAgeBand } from './games/math/room-store.js';
 installSafetyLesson();
 installAcademy();
 import {installContentLessons} from './shared/content-r1-ui.js';
@@ -17,6 +18,7 @@ function showSettings(value = readSettings()) {
   $('family-sound').checked = !value.muted;
   $('family-quality').value = value.quality;
   $('family-badge').textContent = value.childMode ? '幼兒模式 · 3～5 歲' : '家長模式 · 完整操作';
+  $('math-age').value = roomLevel(readRoom(), value);
 }
 let shownTotal = null;
 function showRewards(rewards = readRewards()) {
@@ -31,6 +33,9 @@ $('home-settings').onclick = () => { showSettings(); $('family-dialog').showModa
 $('child-mode').onchange = event => updateSettings({ childMode: event.target.checked });
 $('family-sound').onchange = event => updateSettings({ muted: !event.target.checked });
 $('family-quality').onchange = event => updateSettings({ quality: event.target.value });
+// R48: math room age band (3～4／5～6／7～8). Until a parent picks one it follows child mode.
+$('math-age').onchange = event => setAgeBand(event.target.value);
+document.addEventListener('academy:open-family-settings', () => { showSettings(); $('family-dialog').showModal(); });
 subscribeSettings(showSettings); showSettings();
 subscribeRewards(showRewards); showRewards();
 addEventListener('pageshow', () => showRewards());

@@ -123,3 +123,16 @@ INCLUDING ANY GENERAL, SPECIAL, INDIRECT, INCIDENTAL, OR CONSEQUENTIAL
 DAMAGES, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
 FROM, OUT OF THE USE OR INABILITY TO USE THE FONT SOFTWARE OR FROM
 OTHER DEALINGS IN THE FONT SOFTWARE.
+
+=== Taiwan Train Math / 小小列車長 1.11.0 (math room, R48) ===
+
+Copyright 2026 mars-tw. Code licensed under the Apache License 2.0;
+original educational text under CC BY 4.0.
+Ported files: src/games/math/{engine,adventure,puzzle,explorers,workshop,
+discovery,tickets,journeys,train-images,activities,learning-guide,
+learning-content,learning-ui,arithmetic-ui,adventure-ui,program-playback,
+story-model}.js, src/games/math/styles/*.css and src/games/math/data/trains.json.
+Each ported file carries a notice that it was changed (header added, import
+cache queries removed, line endings normalised).
+Full licence: licenses/taiwan-train-math/LICENSE.txt
+Original NOTICE: licenses/taiwan-train-math/NOTICE.txt
