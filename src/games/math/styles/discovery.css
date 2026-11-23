@@ -1,0 +1,134 @@
+/* Ported from Taiwan Train Math 1.11.0 (src/discovery.css), Copyright 2026 mars-tw. Apache-2.0. Header added, line endings normalised. */
+.discovery-stage {
+  width: 100%;
+  min-width: 0;
+  max-width: 740px;
+  margin: 0 auto;
+  color: #294f47;
+}
+.mosaic-tools {
+  display: grid;
+  grid-template-columns: 112px minmax(0, 1fr);
+  align-items: start;
+  gap: 16px;
+  width: min(100%, 420px);
+  margin: 0 auto 12px;
+}
+.mosaic-sample { margin: 0; }
+.mosaic-sample figcaption { margin-bottom: 7px; font-size: 12px; font-weight: 700; line-height: 1.5; }
+.mosaic-reference-grid {
+  display: grid;
+  grid-template-columns: repeat(var(--mosaic-columns), minmax(0, 1fr));
+  gap: 1px;
+  width: 96px;
+  height: 96px;
+  padding: 2px;
+  border: 2px solid #92aea0;
+  border-radius: 5px;
+  background: #d1ded1;
+}
+.mosaic-mark { display: flex; align-items: center; justify-content: center; min-width: 0; font-size: 12px; line-height: 1; }
+.mosaic-green { background: #79a68a; color: #173e33; }
+.mosaic-orange { background: #edaf71; color: #65401d; }
+.mosaic-blue { background: #82b8cb; color: #214b60; }
+.mosaic-empty { background: #fffdf5; color: #a0afa2; }
+.mosaic-palette { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 6px; }
+.mosaic-color-choice {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  min-width: 48px;
+  min-height: 48px;
+  padding: 6px;
+  border: 2px solid #c3d1c2;
+  border-radius: 10px;
+  background: #fffdf5;
+  font-size: 13px;
+  line-height: 1.4;
+}
+.mosaic-color-choice[aria-pressed="true"] { border-color: #294f47; box-shadow: 0 0 0 1px #294f47; }
+.mosaic-swatch { display: inline-flex; align-items: center; justify-content: center; flex: 0 0 28px; width: 28px; height: 28px; border-radius: 5px; font-size: 20px; }
+.mosaic-eraser > span:first-child { flex: 0 0 28px; font-size: 23px; }
+.mosaic-brush-status { text-align: center; font-size: 13px; line-height: 1.6; margin: 10px 0 12px; }
+.mosaic-paint-board {
+  display: grid;
+  grid-template-columns: repeat(var(--mosaic-columns), minmax(48px, 1fr));
+  gap: 3px;
+  width: min(100%, 350px);
+  min-width: calc(var(--mosaic-columns) * 48px + (var(--mosaic-columns) - 1) * 3px + 2px);
+  padding: 1px;
+  border-radius: 9px;
+  background: #b4c8b6;
+  margin: 0 auto;
+}
+.mosaic-paint-cell {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 48px;
+  min-height: 48px;
+  aspect-ratio: 1;
+  width: 100%;
+  padding: 0;
+  border: 1px solid #b4c8b6;
+  border-radius: 5px;
+  font-size: 24px;
+  line-height: 1;
+  touch-action: manipulation;
+}
+.mosaic-paint-cell:disabled { opacity: 1; }
+.mosaic-paint-cell:focus-visible { outline: 3px solid #247fa5; outline-offset: 1px; z-index: 1; }
+.discovery-help { font-size: 13px; color: #657d70; line-height: 1.65; text-align: center; margin: 13px 0 8px; }
+.discovery-actions { display: flex; justify-content: center; align-items: center; gap: 10px; flex-wrap: wrap; margin-top: 12px; }
+.discovery-actions button { min-width: 48px; min-height: 48px; }
+.differences-progress { text-align: center; font-size: 15px; color: #397c6b; margin: 0 0 12px; }
+.differences-progress strong { font-size: 20px; }
+.difference-compare { display: grid; grid-template-columns: 128px minmax(150px, 1fr); gap: 10px; align-items: start; max-width: 640px; margin: 0 auto; }
+.difference-reference { margin: 0; min-width: 0; }
+.difference-reference-picture { border: 2px solid #b5c5b3; border-radius: 8px; overflow: hidden; width: fit-content; background: #e4eef0; }
+.difference-reference-art { display: block; width: 128px; height: 96px; }
+.difference-reference figcaption { margin-top: 7px; font-size: 12px; line-height: 1.6; }
+.difference-reference figcaption strong, .difference-reference figcaption span { display: block; }
+.difference-reference figcaption span { color: #657d70; font-size: 12px; }
+.difference-right { min-width: 0; }
+.difference-right-label { display: block; font-size: 13px; line-height: 1.5; margin-bottom: 6px; }
+.difference-grid { display: grid; grid-template-columns: repeat(3, minmax(48px, 1fr)); gap: 2px; padding: 1px; background: #a8bbad; border-radius: 8px; overflow: hidden; }
+.difference-cell {
+  position: relative;
+  display: flex;
+  align-items: stretch;
+  min-width: 48px;
+  min-height: 48px;
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  border: 0;
+  padding: 0;
+  background: #e4eef0;
+  touch-action: manipulation;
+}
+.difference-cell svg { display: block; width: 100%; height: 100%; }
+.difference-cell:focus-visible { z-index: 1; outline: 3px solid #247fa5; outline-offset: -3px; }
+.difference-cell.difference-found { box-shadow: inset 0 0 0 3px #2b7962; }
+.difference-cell:disabled { opacity: 1; }
+.difference-check { position: absolute; right: 3px; bottom: 3px; width: 21px; height: 21px; border-radius: 50%; background: #fffdf5; color: #257256; font-size: 15px; font-weight: 800; line-height: 21px; text-align: center; border: 1px solid #257256; }
+@media (min-width: 700px) {
+  .difference-compare { grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 18px; }
+  .difference-reference-picture { width: 100%; }
+  .difference-reference-art { width: 100%; height: auto; aspect-ratio: 4 / 3; }
+  .difference-reference figcaption, .difference-right-label { font-size: 15px; }
+}
+@media (max-width: 420px) {
+  .mosaic-tools { grid-template-columns: 96px minmax(0, 1fr); gap: 10px; margin-bottom: 8px; }
+  .mosaic-color-choice { flex-direction: column; gap: 2px; padding: 5px 2px; font-size: 12px; }
+  .mosaic-swatch { flex-basis: 22px; width: 22px; height: 22px; font-size: 17px; }
+  .mosaic-eraser > span:first-child { flex-basis: 22px; font-size: 20px; }
+  .mosaic-brush-status { font-size: 12px; margin: 8px 0; }
+  .discovery-help { font-size: 12px; margin: 10px 0 6px; }
+}
+@media (max-width: 350px) {
+  .difference-compare { grid-template-columns: 1fr; gap: 8px; }
+  .difference-reference { display: grid; grid-template-columns: 128px minmax(0, 1fr); gap: 10px; align-items: center; }
+  .difference-reference figcaption { margin: 0; }
+  .difference-right { width: min(100%, 240px); margin: 0 auto; }
+}

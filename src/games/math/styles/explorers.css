@@ -1,0 +1,214 @@
+/* Ported from Taiwan Train Math 1.11.0 (src/explorers.css), Copyright 2026 mars-tw. Apache-2.0. Header added, line endings normalised. */
+.explorer-stage {
+  width: 100%;
+  min-width: 0;
+  color: var(--ink, #203d40);
+}
+.explorer-instruction {
+  margin-bottom: 18px;
+  text-align: center;
+  color: var(--muted, #647875);
+  font-size: 0.93rem;
+}
+.luggage-rack {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 10px;
+  min-height: 92px;
+  padding: 14px;
+  border: 1px dashed #b9c8b7;
+  border-radius: 14px;
+  background: #f7f6eb;
+}
+.luggage-item {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-width: 44px;
+  min-height: 72px;
+  padding: 7px 5px;
+  border: 2px solid transparent;
+  border-radius: 10px;
+  background: #fffdf5;
+  font-size: 0.81rem;
+  line-height: 1.35;
+  text-align: center;
+}
+.luggage-item.luggage-selected {
+  border-color: #275f52;
+  box-shadow: 0 0 0 2px #d9e8d7;
+}
+.luggage-item small {
+  margin-top: 3px;
+  color: #275f52;
+  font-size: 0.72rem;
+}
+.luggage-symbol {
+  display: block;
+  flex: 0 0 auto;
+  width: 42px;
+  height: 42px;
+}
+.luggage-selection {
+  min-height: 44px;
+  padding: 11px 3px;
+  text-align: center;
+  font-size: 0.88rem;
+}
+.luggage-bins {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  align-items: start;
+  gap: 12px;
+}
+.luggage-bin {
+  min-width: 0;
+  overflow: hidden;
+  border: 1px solid #cbd3bd;
+  border-radius: 15px;
+  background: #eef2e6;
+}
+.luggage-bin-label {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  min-height: 100px;
+  padding: 9px 7px;
+  border: 0;
+  border-bottom: 1px solid #cbd3bd;
+  background: #e5eddd;
+  line-height: 1.35;
+}
+.luggage-bin-label:disabled {
+  opacity: 1;
+}
+.luggage-bin-label strong {
+  overflow-wrap: anywhere;
+  font-size: 0.91rem;
+}
+.luggage-bin-label > span {
+  margin-top: 4px;
+  color: #456456;
+  font-size: 0.78rem;
+}
+.luggage-bin-items {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 6px;
+  min-height: 70px;
+  padding: 8px;
+}
+.luggage-bin-items .luggage-item {
+  flex: 1 1 56px;
+  max-width: 94px;
+}
+.luggage-empty {
+  align-self: center;
+  grid-column: 1 / -1;
+  padding: 8px 2px;
+  color: #647875;
+  font-size: 0.83rem;
+  text-align: center;
+}
+.explorer-actions {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 20px;
+}
+.explorer-actions button {
+  min-height: 44px;
+  max-width: 100%;
+  white-space: normal;
+}
+.maze-board {
+  display: grid;
+  grid-template-columns: repeat(var(--maze-columns), minmax(0, 1fr));
+  width: min(100%, 340px);
+  aspect-ratio: 1;
+  margin: 0 auto;
+  overflow: hidden;
+  border: 2px solid #476557;
+  border-radius: 8px;
+  background: #fffaf0;
+}
+.maze-cell {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 0;
+  min-height: 0;
+  border: 2px solid transparent;
+  background: #f6f4e7;
+}
+.maze-cell.wall-up { border-top-color: #476557; }
+.maze-cell.wall-right { border-right-color: #476557; }
+.maze-cell.wall-down { border-bottom-color: #476557; }
+.maze-cell.wall-left { border-left-color: #476557; }
+.maze-cell.maze-current {
+  background: #edf2dc;
+}
+.maze-train {
+  z-index: 1;
+  font-size: clamp(18px, 5vw, 28px);
+  line-height: 1;
+}
+.maze-station,
+.maze-start {
+  padding: 1px 4px;
+  border-radius: 4px;
+  background: #e4c68f;
+  color: #4b4c30;
+  font-size: 0.8rem;
+  line-height: 1.3;
+}
+.maze-current .maze-station {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  font-size: 0.65rem;
+}
+.maze-status {
+  padding: 12px 0;
+  color: #647875;
+  font-size: 0.88rem;
+  text-align: center;
+}
+.maze-controls {
+  display: grid;
+  grid-template-columns: repeat(3, 52px);
+  grid-template-rows: repeat(2, 48px);
+  justify-content: center;
+  gap: 8px;
+}
+.maze-direction {
+  min-width: 48px;
+  min-height: 48px;
+  padding: 0;
+  border: 1px solid #bfd0bd;
+  border-radius: 12px;
+  background: #e9efdf;
+  font-size: 1.55rem;
+  font-weight: 700;
+}
+.maze-direction.move-up { grid-area: 1 / 2; }
+.maze-direction.move-left { grid-area: 2 / 1; }
+.maze-direction.move-down { grid-area: 2 / 2; }
+.maze-direction.move-right { grid-area: 2 / 3; }
+@media (max-width: 540px) {
+  .luggage-rack {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 8px;
+    padding: 10px;
+  }
+  .luggage-bins { gap: 8px; }
+  .luggage-bin-label strong { font-size: 0.83rem; }
+  .luggage-bin-items { padding: 6px; }
+}

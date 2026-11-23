@@ -1,0 +1,110 @@
+/* Ported from Taiwan Train Math 1.11.0 (src/tickets.css), Copyright 2026 mars-tw. Apache-2.0. Header added, line endings normalised. */
+.tickets-stage {
+  width: 100%;
+  max-width: 760px;
+  min-width: 0;
+  display: grid;
+  gap: 10px;
+}
+.tickets-stage button { min-width: 48px; min-height: 48px; touch-action: manipulation; }
+.tickets-stage button:focus-visible { outline: 3px solid #247fa5; outline-offset: 2px; }
+.tickets-instruction,
+.tickets-retry { margin: 0; color: var(--muted, #647875); font-size: 13px; line-height: 1.5; }
+.ticket-list { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); min-width: 0; gap: 10px; }
+.tickets-single .ticket-list { grid-template-columns: 1fr; width: min(100%, 320px); justify-self: center; }
+.fare-ticket {
+  min-width: 0;
+  border: 2px solid #cfdbcd;
+  border-radius: 11px;
+  background: #fffdf3;
+  padding: 6px;
+  box-shadow: 0 2px 5px #203d4009;
+}
+.fare-ticket.ticket-active { border-color: var(--green, #246b5e); background: #f7fbef; }
+.ticket-select {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  min-width: 0;
+  gap: 4px;
+  padding: 4px 2px;
+  background: none;
+  border: 0;
+  border-bottom: 1px dashed #b4c7b2;
+  border-radius: 0;
+  margin-bottom: 5px;
+}
+.ticket-destination { display: grid; min-width: 0; grid-template-columns: auto minmax(0, 1fr); align-items: center; gap: 3px; }
+.ticket-destination i { font-style: normal; font-size: 18px; }
+.ticket-destination strong { font-size: 14px; overflow-wrap: anywhere; line-height: 1.25; }
+.ticket-fare { flex-shrink: 0; color: var(--green, #246b5e); white-space: nowrap; }
+.ticket-fare b { font-size: 22px; font-variant-numeric: tabular-nums; }
+.ticket-fare small { font-size: 11px; margin-left: 2px; }
+.ticket-payments {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(48px, 1fr));
+  align-content: start;
+  gap: 4px;
+  min-height: 100px;
+  max-height: 104px;
+  overflow-y: auto;
+  overscroll-behavior: contain;
+  padding: 2px;
+  scrollbar-width: thin;
+}
+.ticket-empty { grid-column: 1 / -1; align-self: center; color: #8a9888; font-size: 12px; text-align: center; line-height: 1.5; }
+.ticket-paid-token,
+.wallet-token { display: grid; place-items: center; background: transparent; border: 0; border-radius: 9px; padding: 0; }
+.token-face {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 43px;
+  height: 43px;
+  border: 2px solid #c09b4b;
+  border-radius: 10px;
+  box-shadow: inset 0 0 0 2px #fff6d9;
+  background: #f0d78c;
+  color: #654d23;
+  gap: 1px;
+  pointer-events: none;
+}
+.token-face b { font-size: 23px; line-height: 1; font-variant-numeric: tabular-nums; }
+.token-face small { font-size: 10px; margin-top: 8px; }
+.token-2 { background: #e2e8db; border-color: #829b79; box-shadow: inset 0 0 0 2px #f8fcf0; color: #435d42; }
+.token-5 { background: #e8d0b0; border-color: #b48858; color: #6c4826; }
+.token-10 { background: #d9e8ed; border-color: #7fa2b2; box-shadow: inset 0 0 0 2px #f2fcff; color: #315a6b; }
+.ticket-paid-token:hover:not(:disabled), .wallet-token:hover:not(:disabled) { background: #e3eddc; }
+.ticket-paid-total { color: var(--green, #246b5e); font-size: 13px; font-weight: 700; text-align: center; margin-top: 5px; }
+.tickets-wallet { min-width: 0; padding: 8px; border-radius: 10px; border: 1px solid #d6e0d2; background: #e8f0e1; }
+.wallet-heading { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 4px; margin-bottom: 6px; }
+.wallet-heading strong { font-size: 14px; }
+.wallet-heading small { font-size: 11px; color: var(--muted, #647875); }
+.tickets-bank { display: grid; grid-template-columns: repeat(4, minmax(48px, 1fr)); gap: 4px; min-width: 0; }
+.token-used { border: 1px dashed #becbb9; opacity: 0.6 !important; }
+.token-used-mark { color: #8da187; font-size: 19px; }
+.tickets-result { grid-column: 1 / -1; text-align: center; font-weight: 700; color: var(--green, #246b5e); font-size: 15px; }
+.tickets-actions { grid-column: 1 / -1; display: flex; flex-wrap: wrap; gap: 6px; justify-content: space-between; align-items: center; }
+.tickets-actions:empty { display: none; }
+@media (min-width: 700px), (orientation: landscape) and (min-width: 560px) {
+  .tickets-stage { grid-template-columns: minmax(0, 1.25fr) minmax(224px, 0.8fr); align-items: start; gap: 12px; }
+  .tickets-instruction { grid-column: 1 / -1; }
+  .tickets-single .ticket-list { width: 100%; }
+  .tickets-retry { grid-column: 1 / -1; }
+}
+@media (max-width: 360px) {
+  .tickets-stage { gap: 8px; }
+  .ticket-list { gap: 6px; }
+  .fare-ticket { padding: 4px; }
+  .ticket-destination i { display: none; }
+  .ticket-destination strong { font-size: 13px; }
+  .ticket-fare b { font-size: 20px; }
+  .tickets-instruction { font-size: 12px; }
+}
+@media (orientation: landscape) and (max-height: 440px) and (min-width: 560px) {
+  .tickets-instruction { display: none; }
+  .ticket-payments { min-height: 48px; max-height: 52px; display: flex; overflow-x: auto; overflow-y: hidden; }
+  .ticket-paid-token { flex: 0 0 48px; }
+  .ticket-empty { align-self: center; }
+}

@@ -1,0 +1,257 @@
+/* Ported from Taiwan Train Math 1.11.0 (src/workshop.css), Copyright 2026 mars-tw. Apache-2.0. Header added, line endings normalised. */
+.workshop-stage {
+  width: 100%;
+  min-width: 0;
+  max-width: 700px;
+  display: grid;
+  gap: 12px;
+}
+.workshop-stage button {
+  min-width: 48px;
+  min-height: 48px;
+  touch-action: manipulation;
+}
+.workshop-stage button:focus-visible {
+  outline: 3px solid #247fa5;
+  outline-offset: 2px;
+}
+.workshop-note,
+.program-limit,
+.balance-status {
+  font-size: 13px;
+  line-height: 1.5;
+  color: var(--muted, #647875);
+}
+.program-steps {
+  grid-column: 1 / -1;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 3px 14px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  color: #365e53;
+  font-size: 14px;
+  line-height: 1.5;
+  font-weight: 700;
+}
+.program-steps span { color: #ad4b27; }
+.program-status {
+  margin: 0;
+  font-size: 14px;
+  line-height: 1.5;
+  color: #365e53;
+  overflow-wrap: anywhere;
+}
+.program-status[data-program-phase="blocked"],
+.program-status[data-program-phase="stopped"] { color: #984221; }
+.program-status[data-program-phase="arrived"] { font-weight: 700; }
+.program-map {
+  display: grid;
+  grid-template-columns: repeat(var(--program-columns), minmax(0, 1fr));
+  width: min(100%, 232px, 34dvh);
+  aspect-ratio: 1;
+  margin: 0 auto;
+  border: 3px solid #456f60;
+  border-radius: 8px;
+  overflow: hidden;
+  background: #fffdf5;
+}
+.program-cell {
+  position: relative;
+  display: grid;
+  place-items: center;
+  min-width: 0;
+  min-height: 0;
+  aspect-ratio: 1;
+  border: 2px solid transparent;
+  font-size: 13px;
+  color: #617867;
+}
+.program-cell.wall-up { border-top-color: #456f60; }
+.program-cell.wall-right { border-right-color: #456f60; }
+.program-cell.wall-down { border-bottom-color: #456f60; }
+.program-cell.wall-left { border-left-color: #456f60; }
+.program-visited { background: #dcecdc; }
+.program-train { font-size: clamp(15px, 5vw, 24px); z-index: 1; }
+.program-finish {
+  position: absolute;
+  right: 2px;
+  bottom: 1px;
+  font-size: 11px;
+  color: #ad4b27;
+  font-weight: 700;
+}
+.program-plan,
+.balance-work {
+  display: grid;
+  min-width: 0;
+  gap: 8px;
+  align-content: start;
+}
+.program-queue {
+  display: flex;
+  min-width: 0;
+  max-width: 100%;
+  gap: 6px;
+  overflow-x: auto;
+  padding: 4px 2px 7px;
+  overscroll-behavior-x: contain;
+  scrollbar-width: thin;
+}
+.program-command {
+  position: relative;
+  flex: 0 0 48px;
+  border: 1px solid #bdcdbf;
+  border-radius: 8px;
+  background: #fffdf7;
+  font-size: 25px;
+  padding: 6px 3px 2px;
+  color: var(--green, #246b5e);
+}
+.program-command small {
+  position: absolute;
+  top: 1px;
+  left: 5px;
+  font-size: 10px;
+  color: #77867a;
+}
+.program-plan-empty,
+.balance-empty {
+  display: flex;
+  align-items: center;
+  min-height: 48px;
+  font-size: 13px;
+  color: #77867a;
+}
+.program-directions {
+  display: grid;
+  grid-template-columns: repeat(3, 56px);
+  grid-template-rows: repeat(3, 56px);
+  grid-template-areas: ". up ." "left label right" ". down .";
+  gap: 6px;
+  justify-self: center;
+}
+.program-directions button {
+  min-width: 56px;
+  min-height: 56px;
+  border: 1px solid #bdcdbf;
+  border-radius: 8px;
+  background: white;
+  color: var(--green, #246b5e);
+  padding: 2px;
+  font-size: 24px;
+  line-height: 1;
+}
+.program-directions [data-program-direction="up"] { grid-area: up; }
+.program-directions [data-program-direction="right"] { grid-area: right; }
+.program-directions [data-program-direction="down"] { grid-area: down; }
+.program-directions [data-program-direction="left"] { grid-area: left; }
+.program-pad-label {
+  grid-area: label;
+  display: grid;
+  place-items: center;
+  font-size: 13px;
+  line-height: 1.3;
+  font-weight: 700;
+  color: #365e53;
+}
+.program-directions button span { display: block; margin-top: 3px; font-size: 11px; line-height: 1.2; }
+.program-limit { font-size: 11px; }
+.workshop-actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+}
+.workshop-actions:empty { display: none; }
+.cargo-balance {
+  display: block;
+  width: min(100%, 320px);
+  height: auto;
+  margin: auto;
+}
+.cargo-balance text { fill: #314b47; font-size: 10px; font-weight: 700; }
+.cargo-balance .balance-goal-number { font-size: 20px; }
+.balance-status { text-align: center; }
+.balance-success { color: var(--green, #246b5e); font-weight: 700; }
+.balance-supply {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(48px, 1fr));
+  gap: 7px;
+}
+.balance-supply button,
+.balance-load button {
+  display: grid;
+  place-items: center;
+  border: 1px solid #d4c6a9;
+  border-radius: 8px;
+  background: #fff8e8;
+  padding: 4px;
+  color: #685338;
+  line-height: 1.2;
+}
+.balance-supply button { grid-template-columns: auto auto; column-gap: 3px; }
+.balance-supply button > span { grid-row: span 2; font-size: 25px; }
+.balance-supply strong,
+.balance-load strong { font-size: 19px; }
+.balance-supply small,
+.balance-load small { font-size: 10px; }
+.balance-load {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(48px, 1fr));
+  min-width: 0;
+  gap: 6px;
+}
+.balance-load button > span { display: none; }
+.balance-load .balance-empty { grid-column: 1 / -1; }
+@media (min-width: 700px), (orientation: landscape) and (min-width: 560px) {
+  .workshop-stage { grid-template-columns: minmax(0, 1fr) minmax(220px, 1fr); align-items: center; gap: 18px; }
+  .program-map { width: min(100%, 310px, calc(100dvh - 195px)); }
+  .program-plan { gap: 10px; }
+  .balance-display { align-self: center; }
+}
+@media (orientation: landscape) and (min-width: 560px) {
+  .program-stage { grid-template-columns: minmax(80px, .45fr) minmax(0, 1.55fr); gap: 8px 12px; }
+  .program-plan { grid-template-columns: minmax(0, 1fr) 180px; gap: 6px 10px; align-items: center; }
+  .program-status, .program-queue, .program-limit, .program-plan .workshop-actions { grid-column: 1; }
+  .program-directions { grid-column: 2; grid-row: 1 / span 4; }
+  .program-limit { margin: 0; }
+}
+@media (orientation: landscape) and (max-height: 440px) and (min-width: 560px) {
+  .program-plan .workshop-note,
+  .balance-work .workshop-note { display: none; }
+  .cargo-balance { max-height: calc(100dvh - 231px); object-fit: contain; }
+  .balance-load { display: flex; max-width: 100%; overflow-x: auto; padding: 3px 0; }
+  .balance-load button { flex: 0 0 48px; }
+}
+@media (orientation: landscape) and (max-height: 360px) and (min-width: 560px) {
+  /* The two visible play steps replace the repeated title on short screens. */
+  .in-game[data-game="program"] .question-head { display: none; }
+  .in-game[data-game="program"] #main { padding-top: env(safe-area-inset-top, 0px); }
+  .in-game[data-game="program"] .game-panel { padding: 0 8px; }
+  .in-game[data-game="program"] .game-stage { margin: 0; padding: 0; }
+  .program-stage { gap: 0 10px; }
+  .program-steps { font-size: 12px; line-height: 1.2; }
+  .program-map { width: min(100%, 120px); }
+}
+@media (max-width: 360px) {
+  .workshop-stage { gap: 8px; }
+  .workshop-note, .balance-status { font-size: 12px; }
+  .program-plan, .balance-work { gap: 6px; }
+  .program-map { width: min(100%, 210px, 32dvh); }
+  .program-steps { font-size: 13px; }
+  .program-status { font-size: 13px; }
+}
+@media (orientation: portrait) and (max-width: 380px) and (max-height: 700px) {
+  .in-game[data-game="program"] .question-head { display: none; }
+  .program-map { width: min(100%, 130px); }
+  .program-plan { grid-template-columns: minmax(0, 1fr) 180px; gap: 5px 8px; align-items: center; }
+  .program-status, .program-queue, .program-limit, .program-plan .workshop-actions { grid-column: 1; }
+  .program-directions { grid-column: 2; grid-row: 1 / span 4; }
+  .program-limit { margin: 0; }
+}
+.program-command-blocked { border-color: #b95342; background: #ffe5db; color: #7c2a1e; }
+.program-command-current { outline: 3px solid #397f64; outline-offset: -3px; background: #d9f0d5; }

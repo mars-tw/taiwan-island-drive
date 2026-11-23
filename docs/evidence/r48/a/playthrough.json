@@ -1,0 +1,576 @@
+{
+ "build": "npm run build (vite preview, http://127.0.0.1:5181/)",
+ "renderer": "Playwright Chromium --disable-gpu, reducedMotion=reduce, hasTouch",
+ "method": "Each game opened from the room by clicking its card; every question solved with real clicks on the same buttons a child uses; every visible enabled control checked for >=60px, inside the viewport and not covered.",
+ "runs": [
+  {
+   "size": "desktop",
+   "viewport": "1366x768",
+   "ageBand": "large",
+   "games": {
+    "count": {
+     "questions": 5,
+     "stampsAfter": 1,
+     "finish": "數數看完成一輪！"
+    },
+    "order": {
+     "questions": 5,
+     "stampsAfter": 1,
+     "finish": "排車廂完成一輪！"
+    },
+    "compare": {
+     "questions": 5,
+     "stampsAfter": 1,
+     "finish": "比一比完成一輪！"
+    },
+    "boarding": {
+     "questions": 5,
+     "stampsAfter": 1,
+     "finish": "上車下車完成一輪！"
+    },
+    "pattern": {
+     "questions": 5,
+     "stampsAfter": 1,
+     "finish": "規律小火車完成一輪！"
+    },
+    "clock": {
+     "questions": 5,
+     "stampsAfter": 1,
+     "finish": "車站時鐘完成一輪！"
+    },
+    "differences": {
+     "questions": 5,
+     "stampsAfter": 1,
+     "finish": "眼力找不同完成一輪！"
+    },
+    "treasure": {
+     "questions": 5,
+     "stampsAfter": 1,
+     "finish": "山海尋寶完成一輪！"
+    },
+    "tracks": {
+     "questions": 5,
+     "stampsAfter": 1,
+     "finish": "路線小工程師完成一輪！"
+    },
+    "maze": {
+     "questions": 5,
+     "stampsAfter": 1,
+     "finish": "車站迷宮完成一輪！"
+    },
+    "program": {
+     "questions": 5,
+     "stampsAfter": 1,
+     "finish": "指令小司機完成一輪！"
+    },
+    "mosaic": {
+     "questions": 5,
+     "stampsAfter": 1,
+     "finish": "圖形拼搭完成一輪！"
+    },
+    "cargo": {
+     "questions": 5,
+     "stampsAfter": 1,
+     "finish": "貨物裝箱完成一輪！"
+    },
+    "luggage": {
+     "questions": 5,
+     "stampsAfter": 1,
+     "finish": "行李分類站完成一輪！"
+    },
+    "sharing": {
+     "questions": 5,
+     "stampsAfter": 1,
+     "finish": "列車點心派對完成一輪！"
+    },
+    "balance": {
+     "questions": 5,
+     "stampsAfter": 1,
+     "finish": "貨運天平完成一輪！"
+    },
+    "tickets": {
+     "questions": 5,
+     "stampsAfter": 1,
+     "finish": "車票小幫手完成一輪！"
+    }
+   },
+   "controlProblems": [],
+   "needsScrollOnFirstQuestion": [],
+   "pageErrors": []
+  },
+  {
+   "size": "desktop",
+   "viewport": "1366x768",
+   "ageBand": "medium",
+   "games": {
+    "count": {
+     "questions": 5,
+     "stampsAfter": 1,
+     "finish": "數數看完成一輪！"
+    },
+    "order": {
+     "questions": 5,
+     "stampsAfter": 1,
+     "finish": "排車廂完成一輪！"
+    },
+    "compare": {
+     "questions": 5,
+     "stampsAfter": 1,
+     "finish": "比一比完成一輪！"
+    },
+    "boarding": {
+     "questions": 5,
+     "stampsAfter": 1,
+     "finish": "上車下車完成一輪！"
+    },
+    "pattern": {
+     "questions": 5,
+     "stampsAfter": 1,
+     "finish": "規律小火車完成一輪！"
+    },
+    "clock": {
+     "questions": 5,
+     "stampsAfter": 1,
+     "finish": "車站時鐘完成一輪！"
+    },
+    "differences": {
+     "questions": 5,
+     "stampsAfter": 1,
+     "finish": "眼力找不同完成一輪！"
+    },
+    "treasure": {
+     "questions": 5,
+     "stampsAfter": 1,
+     "finish": "山海尋寶完成一輪！"
+    },
+    "tracks": {
+     "questions": 5,
+     "stampsAfter": 1,
+     "finish": "路線小工程師完成一輪！"
+    },
+    "maze": {
+     "questions": 5,
+     "stampsAfter": 1,
+     "finish": "車站迷宮完成一輪！"
+    },
+    "program": {
+     "questions": 5,
+     "stampsAfter": 1,
+     "finish": "指令小司機完成一輪！"
+    },
+    "mosaic": {
+     "questions": 5,
+     "stampsAfter": 1,
+     "finish": "圖形拼搭完成一輪！"
+    },
+    "cargo": {
+     "questions": 5,
+     "stampsAfter": 1,
+     "finish": "貨物裝箱完成一輪！"
+    },
+    "luggage": {
+     "questions": 5,
+     "stampsAfter": 1,
+     "finish": "行李分類站完成一輪！"
+    },
+    "sharing": {
+     "questions": 5,
+     "stampsAfter": 1,
+     "finish": "列車點心派對完成一輪！"
+    },
+    "balance": {
+     "questions": 5,
+     "stampsAfter": 1,
+     "finish": "貨運天平完成一輪！"
+    },
+    "tickets": {
+     "questions": 5,
+     "stampsAfter": 1,
+     "finish": "車票小幫手完成一輪！"
+    }
+   },
+   "controlProblems": [],
+   "needsScrollOnFirstQuestion": [],
+   "pageErrors": []
+  },
+  {
+   "size": "landscape",
+   "viewport": "844x390",
+   "ageBand": "large",
+   "games": {
+    "count": {
+     "questions": 5,
+     "stampsAfter": 1,
+     "finish": "數數看完成一輪！"
+    },
+    "order": {
+     "questions": 5,
+     "stampsAfter": 1,
+     "finish": "排車廂完成一輪！"
+    },
+    "compare": {
+     "questions": 5,
+     "stampsAfter": 1,
+     "finish": "比一比完成一輪！"
+    },
+    "boarding": {
+     "questions": 5,
+     "stampsAfter": 1,
+     "finish": "上車下車完成一輪！"
+    },
+    "pattern": {
+     "questions": 5,
+     "stampsAfter": 1,
+     "finish": "規律小火車完成一輪！"
+    },
+    "clock": {
+     "questions": 5,
+     "stampsAfter": 1,
+     "finish": "車站時鐘完成一輪！"
+    },
+    "differences": {
+     "questions": 5,
+     "stampsAfter": 1,
+     "finish": "眼力找不同完成一輪！"
+    },
+    "treasure": {
+     "questions": 5,
+     "stampsAfter": 1,
+     "finish": "山海尋寶完成一輪！"
+    },
+    "tracks": {
+     "questions": 5,
+     "stampsAfter": 1,
+     "finish": "路線小工程師完成一輪！"
+    },
+    "maze": {
+     "questions": 5,
+     "stampsAfter": 1,
+     "finish": "車站迷宮完成一輪！"
+    },
+    "program": {
+     "questions": 5,
+     "stampsAfter": 1,
+     "finish": "指令小司機完成一輪！"
+    },
+    "mosaic": {
+     "questions": 5,
+     "stampsAfter": 1,
+     "finish": "圖形拼搭完成一輪！"
+    },
+    "cargo": {
+     "questions": 5,
+     "stampsAfter": 1,
+     "finish": "貨物裝箱完成一輪！"
+    },
+    "luggage": {
+     "questions": 5,
+     "stampsAfter": 1,
+     "finish": "行李分類站完成一輪！"
+    },
+    "sharing": {
+     "questions": 5,
+     "stampsAfter": 1,
+     "finish": "列車點心派對完成一輪！"
+    },
+    "balance": {
+     "questions": 5,
+     "stampsAfter": 1,
+     "finish": "貨運天平完成一輪！"
+    },
+    "tickets": {
+     "questions": 5,
+     "stampsAfter": 1,
+     "finish": "車票小幫手完成一輪！"
+    }
+   },
+   "controlProblems": [],
+   "needsScrollOnFirstQuestion": [],
+   "pageErrors": []
+  },
+  {
+   "size": "landscape",
+   "viewport": "844x390",
+   "ageBand": "medium",
+   "games": {
+    "count": {
+     "questions": 5,
+     "stampsAfter": 1,
+     "finish": "數數看完成一輪！"
+    },
+    "order": {
+     "questions": 5,
+     "stampsAfter": 1,
+     "finish": "排車廂完成一輪！"
+    },
+    "compare": {
+     "questions": 5,
+     "stampsAfter": 1,
+     "finish": "比一比完成一輪！"
+    },
+    "boarding": {
+     "questions": 5,
+     "stampsAfter": 1,
+     "finish": "上車下車完成一輪！"
+    },
+    "pattern": {
+     "questions": 5,
+     "stampsAfter": 1,
+     "finish": "規律小火車完成一輪！"
+    },
+    "clock": {
+     "questions": 5,
+     "stampsAfter": 1,
+     "finish": "車站時鐘完成一輪！"
+    },
+    "differences": {
+     "questions": 5,
+     "stampsAfter": 1,
+     "finish": "眼力找不同完成一輪！"
+    },
+    "treasure": {
+     "questions": 5,
+     "stampsAfter": 1,
+     "finish": "山海尋寶完成一輪！"
+    },
+    "tracks": {
+     "questions": 5,
+     "stampsAfter": 1,
+     "finish": "路線小工程師完成一輪！"
+    },
+    "maze": {
+     "questions": 5,
+     "stampsAfter": 1,
+     "finish": "車站迷宮完成一輪！"
+    },
+    "program": {
+     "questions": 5,
+     "stampsAfter": 1,
+     "finish": "指令小司機完成一輪！"
+    },
+    "mosaic": {
+     "questions": 5,
+     "stampsAfter": 1,
+     "finish": "圖形拼搭完成一輪！"
+    },
+    "cargo": {
+     "questions": 5,
+     "stampsAfter": 1,
+     "finish": "貨物裝箱完成一輪！"
+    },
+    "luggage": {
+     "questions": 5,
+     "stampsAfter": 1,
+     "finish": "行李分類站完成一輪！"
+    },
+    "sharing": {
+     "questions": 5,
+     "stampsAfter": 1,
+     "finish": "列車點心派對完成一輪！"
+    },
+    "balance": {
+     "questions": 5,
+     "stampsAfter": 1,
+     "finish": "貨運天平完成一輪！"
+    },
+    "tickets": {
+     "questions": 5,
+     "stampsAfter": 1,
+     "finish": "車票小幫手完成一輪！"
+    }
+   },
+   "controlProblems": [],
+   "needsScrollOnFirstQuestion": [],
+   "pageErrors": []
+  },
+  {
+   "size": "phone",
+   "viewport": "390x844",
+   "ageBand": "medium",
+   "games": {
+    "count": {
+     "questions": 5,
+     "stampsAfter": 1,
+     "finish": "數數看完成一輪！"
+    },
+    "order": {
+     "questions": 5,
+     "stampsAfter": 1,
+     "finish": "排車廂完成一輪！"
+    },
+    "compare": {
+     "questions": 5,
+     "stampsAfter": 1,
+     "finish": "比一比完成一輪！"
+    },
+    "boarding": {
+     "questions": 5,
+     "stampsAfter": 1,
+     "finish": "上車下車完成一輪！"
+    },
+    "pattern": {
+     "questions": 5,
+     "stampsAfter": 1,
+     "finish": "規律小火車完成一輪！"
+    },
+    "clock": {
+     "questions": 5,
+     "stampsAfter": 1,
+     "finish": "車站時鐘完成一輪！"
+    },
+    "differences": {
+     "questions": 5,
+     "stampsAfter": 1,
+     "finish": "眼力找不同完成一輪！"
+    },
+    "treasure": {
+     "questions": 5,
+     "stampsAfter": 1,
+     "finish": "山海尋寶完成一輪！"
+    },
+    "tracks": {
+     "questions": 5,
+     "stampsAfter": 1,
+     "finish": "路線小工程師完成一輪！"
+    },
+    "maze": {
+     "questions": 5,
+     "stampsAfter": 1,
+     "finish": "車站迷宮完成一輪！"
+    },
+    "program": {
+     "questions": 5,
+     "stampsAfter": 1,
+     "finish": "指令小司機完成一輪！"
+    },
+    "mosaic": {
+     "questions": 5,
+     "stampsAfter": 1,
+     "finish": "圖形拼搭完成一輪！"
+    },
+    "cargo": {
+     "questions": 5,
+     "stampsAfter": 1,
+     "finish": "貨物裝箱完成一輪！"
+    },
+    "luggage": {
+     "questions": 5,
+     "stampsAfter": 1,
+     "finish": "行李分類站完成一輪！"
+    },
+    "sharing": {
+     "questions": 5,
+     "stampsAfter": 1,
+     "finish": "列車點心派對完成一輪！"
+    },
+    "balance": {
+     "questions": 5,
+     "stampsAfter": 1,
+     "finish": "貨運天平完成一輪！"
+    },
+    "tickets": {
+     "questions": 5,
+     "stampsAfter": 1,
+     "finish": "車票小幫手完成一輪！"
+    }
+   },
+   "controlProblems": [],
+   "needsScrollOnFirstQuestion": [
+    "boarding q1: arithmetic-keyboard"
+   ],
+   "pageErrors": []
+  },
+  {
+   "size": "phone",
+   "viewport": "390x844",
+   "ageBand": "small",
+   "games": {
+    "count": {
+     "questions": 3,
+     "stampsAfter": 1,
+     "finish": "數數看完成一輪！"
+    },
+    "order": {
+     "questions": 3,
+     "stampsAfter": 1,
+     "finish": "排車廂完成一輪！"
+    },
+    "pattern": {
+     "questions": 3,
+     "stampsAfter": 1,
+     "finish": "規律小火車完成一輪！"
+    },
+    "differences": {
+     "questions": 3,
+     "stampsAfter": 1,
+     "finish": "眼力找不同完成一輪！"
+    },
+    "treasure": {
+     "questions": 3,
+     "stampsAfter": 1,
+     "finish": "山海尋寶完成一輪！"
+    },
+    "tracks": {
+     "questions": 3,
+     "stampsAfter": 1,
+     "finish": "路線小工程師完成一輪！"
+    },
+    "maze": {
+     "questions": 3,
+     "stampsAfter": 1,
+     "finish": "車站迷宮完成一輪！"
+    },
+    "program": {
+     "questions": 3,
+     "stampsAfter": 1,
+     "finish": "指令小司機完成一輪！"
+    },
+    "mosaic": {
+     "questions": 3,
+     "stampsAfter": 1,
+     "finish": "圖形拼搭完成一輪！"
+    },
+    "cargo": {
+     "questions": 3,
+     "stampsAfter": 1,
+     "finish": "貨物裝箱完成一輪！"
+    },
+    "luggage": {
+     "questions": 3,
+     "stampsAfter": 1,
+     "finish": "行李分類站完成一輪！"
+    },
+    "sharing": {
+     "questions": 3,
+     "stampsAfter": 1,
+     "finish": "列車點心派對完成一輪！"
+    },
+    "balance": {
+     "questions": 3,
+     "stampsAfter": 1,
+     "finish": "貨運天平完成一輪！"
+    },
+    "tickets": {
+     "questions": 3,
+     "stampsAfter": 1,
+     "finish": "車票小幫手完成一輪！"
+    }
+   },
+   "controlProblems": [],
+   "needsScrollOnFirstQuestion": [],
+   "pageErrors": []
+  }
+ ],
+ "flows": {
+  "results": [
+   "phone: 列車數學課與數學遊戲室兩個入口都打開遊戲室，數學分頁第一張是調度台",
+   "landscape: 列車數學課與數學遊戲室兩個入口都打開遊戲室，數學分頁第一張是調度台",
+   "desktop: 列車數學課與數學遊戲室兩個入口都打開遊戲室，數學分頁第一張是調度台",
+   "desktop: 從遊戲室開調度台，按回學院後回到遊戲室，調度進度保留",
+   "desktop: 家長關卡後在家長設定選 7～8 歲，遊戲室與題目跟著換（上車下車最大 18）",
+   "phone: 答錯時阿路只講方法（沒有數字），提示鈕再給方法；答對才出現下一題；暫停、返回再繼續都接回同一題",
+   "phone: 學生證 archive 的備份與同網域 taiwan-train-math.v1 都接回集章冊（4 枚列車章、9 趟、4 份小禮物、2 條旅程），舊鍵壞掉不報錯也不掉章"
+  ],
+  "errors": []
+ }
+}

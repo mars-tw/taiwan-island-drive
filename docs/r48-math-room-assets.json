@@ -1,0 +1,353 @@
+{
+ "status": "VERIFIED",
+ "round": "R48 A line",
+ "sourceProject": "Taiwan Train Math / 小小列車長 1.11.0",
+ "sourceArchive": "遊戲/_封存/小小列車長-1.11.0-原始碼-20261013 (local read-only archive; original repo deleted, no commit hash available)",
+ "sourceWritesPerformed": false,
+ "license": {
+  "code": "Apache-2.0 (public/licenses/taiwan-train-math/LICENSE.txt)",
+  "educationalText": "CC-BY-4.0",
+  "notice": "public/licenses/taiwan-train-math/NOTICE.txt (verbatim)"
+ },
+ "files": [
+  {
+   "source": "src/engine.js",
+   "destination": "src/games/math/engine.js",
+   "license": "Apache-2.0 code; CC-BY-4.0 educational text",
+   "sourceSha256": "a1f85f44a957e1a511b0e3fdc6f52876062dbc89907976d2dfb01670e2216730",
+   "destinationSha256": "9645d2ed8bf6929b47d0a447ce3f4541eadd5b445c116d9f76a5735e2bbe56f7",
+   "modifications": "Attribution header; 8 import cache queries removed; CRLF to LF"
+  },
+  {
+   "source": "src/adventure.js",
+   "destination": "src/games/math/adventure.js",
+   "license": "Apache-2.0 code; CC-BY-4.0 educational text",
+   "sourceSha256": "6ca0d7d991f22d8502950a06bbf4481724625020cced039248799ba2f765b30a",
+   "destinationSha256": "64f2a950b91d0ac398648ec59e30a2459bf162bf89a5f3aeb88a830be73b5100",
+   "modifications": "Attribution header; CRLF to LF"
+  },
+  {
+   "source": "src/puzzle.js",
+   "destination": "src/games/math/puzzle.js",
+   "license": "Apache-2.0 code; CC-BY-4.0 educational text",
+   "sourceSha256": "07ea07dc0af1d5e866dd44cc3a2ef885e749dfe91548755da8d8dd6cb95826b4",
+   "destinationSha256": "b0e61969cfa4df3185ec6b76a43d41a599651adb738a9518eb899fc7a1f2036e",
+   "modifications": "Attribution header; CRLF to LF"
+  },
+  {
+   "source": "src/explorers.js",
+   "destination": "src/games/math/explorers.js",
+   "license": "Apache-2.0 code; CC-BY-4.0 educational text",
+   "sourceSha256": "dd5a28eff128d7afb353820358c023b44e70c94f9ee39a20882ede45c4cd0a53",
+   "destinationSha256": "f675aaba8615d08f0f4d349ab868f64a52f21c2c3c6c258c8d8d097158d51b91",
+   "modifications": "Attribution header; CRLF to LF"
+  },
+  {
+   "source": "src/workshop.js",
+   "destination": "src/games/math/workshop.js",
+   "license": "Apache-2.0 code; CC-BY-4.0 educational text",
+   "sourceSha256": "ce0cf75ffa529067e8e89e179183f4e0253613fc3af5ea91b059b582b44a56f4",
+   "destinationSha256": "7cd723bbbc51a33d0d10543fffedba590c7ebd9738d3b0a90ae42aa26265b3fd",
+   "modifications": "Attribution header; CRLF to LF"
+  },
+  {
+   "source": "src/discovery.js",
+   "destination": "src/games/math/discovery.js",
+   "license": "Apache-2.0 code; CC-BY-4.0 educational text",
+   "sourceSha256": "51130af844b132a571837b8c0deac2f0c75a1658ca75f239838563c16e659aec",
+   "destinationSha256": "ee42f203db8496683e193b0c9502fdc312937877945103c1143a01d543cb9a6c",
+   "modifications": "Attribution header; CRLF to LF"
+  },
+  {
+   "source": "src/tickets.js",
+   "destination": "src/games/math/tickets.js",
+   "license": "Apache-2.0 code; CC-BY-4.0 educational text",
+   "sourceSha256": "d69b2bbff8bdffc30556127aca67c596cb0f683d3add3736e11435e4df98d71f",
+   "destinationSha256": "047831e8c609f695fc74bc95bb95f0dffbb096f542d1b7256bac0954e77df878",
+   "modifications": "Attribution header; CRLF to LF"
+  },
+  {
+   "source": "src/journeys.js",
+   "destination": "src/games/math/journeys.js",
+   "license": "Apache-2.0 code; CC-BY-4.0 educational text",
+   "sourceSha256": "e6640414527681c87bc82556eb0035f12c8c9d674198f7e3eb1faedc3588ab67",
+   "destinationSha256": "36f19ee9fc77cbc9b7304205ac4e13a7d9a210a1ac22664460c41839e678c437",
+   "modifications": "Attribution header; CRLF to LF"
+  },
+  {
+   "source": "src/train-images.js",
+   "destination": "src/games/math/train-images.js",
+   "license": "Apache-2.0 code; CC-BY-4.0 educational text",
+   "sourceSha256": "396acfb6d65a52cbeecacd8ded3231cfb28c045469fbca38e4d4b79ba9fa2398",
+   "destinationSha256": "672418bd2bc0ef7b60fa05a7607ae9ec3bd0469b8b84dbde329c67708264fff1",
+   "modifications": "Attribution header; CRLF to LF"
+  },
+  {
+   "source": "src/activities.js",
+   "destination": "src/games/math/activities.js",
+   "license": "Apache-2.0 code; CC-BY-4.0 educational text",
+   "sourceSha256": "25b665e11a01b24b7fcb3a330c081d7e6e32ebef9c6aa0b747c50adcd5ab1530",
+   "destinationSha256": "f8ebbd15526c667cbc31d3b1a67a7c79d10990c5342aa3aa8454e3eb712eb852",
+   "modifications": "Attribution header; 1 import cache query removed; CRLF to LF"
+  },
+  {
+   "source": "src/learning-guide.js",
+   "destination": "src/games/math/learning-guide.js",
+   "license": "Apache-2.0 code; CC-BY-4.0 educational text",
+   "sourceSha256": "4844fc9768228eea9776e1051e5a0c2a62f893bd0a2017516555d1be86927ec9",
+   "destinationSha256": "36908adc0c2e5673e56951a8f697cdc6c32da205af3f62e49e83473350b0c0e2",
+   "modifications": "Attribution header; CRLF to LF"
+  },
+  {
+   "source": "src/learning-content.js",
+   "destination": "src/games/math/learning-content.js",
+   "license": "Apache-2.0 code; CC-BY-4.0 educational text",
+   "sourceSha256": "e59eda850c450dbae72e401be199167434010ee31723b386af5afbab1e598dd4",
+   "destinationSha256": "aa8ed05dbc7d334d8570c38efe921920893f10ac8463d4555543a81aa3fdf349",
+   "modifications": "Attribution header; CRLF to LF"
+  },
+  {
+   "source": "src/learning-ui.js",
+   "destination": "src/games/math/learning-ui.js",
+   "license": "Apache-2.0 code; CC-BY-4.0 educational text",
+   "sourceSha256": "f3b0176a487741f949d814e53000cb446c27b534e03dc5e3bfd286cd7fe1fb76",
+   "destinationSha256": "95a5d9e4d4a0966c99bffc4e31c83408ab47def1bb5301878a3770742c7176ab",
+   "modifications": "Attribution header; CRLF to LF"
+  },
+  {
+   "source": "src/arithmetic-ui.js",
+   "destination": "src/games/math/arithmetic-ui.js",
+   "license": "Apache-2.0 code; CC-BY-4.0 educational text",
+   "sourceSha256": "bddd63c7e47fba3df656a437e49a1db383f1bb4ca1c615719f7669fd219d55bf",
+   "destinationSha256": "8039128acce09aa9dae536fe432b39e8a6b362161a8a8f1a0373e1fe167228ed",
+   "modifications": "Attribution header; CRLF to LF"
+  },
+  {
+   "source": "src/adventure-ui.js",
+   "destination": "src/games/math/adventure-ui.js",
+   "license": "Apache-2.0 code; CC-BY-4.0 educational text",
+   "sourceSha256": "02f55303050d38d5bac45766d0926a12509472ccf13a64e4aa61396b0e5a5de5",
+   "destinationSha256": "6aa7f69965ac675ded6a33f2077dafd98ae47b9fa809367eb492285861e8b1a4",
+   "modifications": "Attribution header; 1 import cache query removed; CRLF to LF"
+  },
+  {
+   "source": "src/program-playback.js",
+   "destination": "src/games/math/program-playback.js",
+   "license": "Apache-2.0 code; CC-BY-4.0 educational text",
+   "sourceSha256": "9b404c30a8680339bd53eb9b9ec04908873d35500d0852c3734dbec86ab364e9",
+   "destinationSha256": "c834a7720dbdae2c46850503d13647dcfba5c91178aefc516acda3eeb4e0ea8e",
+   "modifications": "Attribution header; CRLF to LF"
+  },
+  {
+   "source": "src/story-model.js",
+   "destination": "src/games/math/story-model.js",
+   "license": "Apache-2.0 code; CC-BY-4.0 educational text",
+   "sourceSha256": "72187fa36f571b7ef713d7afd739a13798d6651f5eb2e54148dedfd4414c6161",
+   "destinationSha256": "f7dc1084ed45a1653e2159e741e9ce366a4a26315fad23522a1b00dd8c8fd75b",
+   "modifications": "Attribution header; CRLF to LF"
+  },
+  {
+   "source": "src/workshop.css",
+   "destination": "src/games/math/styles/workshop.css",
+   "license": "Apache-2.0",
+   "sourceSha256": "5c5c7be8a6a778bc32777c6c0930e37d1107cf80ed497d9a1f2128cfe17b8de5",
+   "destinationSha256": "2d8af163916ab290676595ffaec59ad2742fe71237ff86359595b681a5d8e09c",
+   "modifications": "Attribution comment; CRLF to LF; rules unchanged"
+  },
+  {
+   "source": "src/explorers.css",
+   "destination": "src/games/math/styles/explorers.css",
+   "license": "Apache-2.0",
+   "sourceSha256": "3b0a30643cad22fa562e86675c47575255348bdc4b9994811f675270e183f87e",
+   "destinationSha256": "411c4bdfb0461deda8c2a00f962a075a1ba40cd1971a4742f028375e47e46427",
+   "modifications": "Attribution comment; CRLF to LF; rules unchanged"
+  },
+  {
+   "source": "src/discovery.css",
+   "destination": "src/games/math/styles/discovery.css",
+   "license": "Apache-2.0",
+   "sourceSha256": "0be1fbecc55f92953f1d801b83692d6c4b54f544d9493f1e64fa8b0f0cb4547d",
+   "destinationSha256": "77ebd981e227d178c5d90184bc70ab98cd3951e8a4513232be32f43ed9b51094",
+   "modifications": "Attribution comment; CRLF to LF; rules unchanged"
+  },
+  {
+   "source": "src/tickets.css",
+   "destination": "src/games/math/styles/tickets.css",
+   "license": "Apache-2.0",
+   "sourceSha256": "348611a861a4e1773c34b0d105575af490f9d8e7d1b9dde81bc0881435eebca2",
+   "destinationSha256": "d58c4fdc0bb6302cbc5fa71e38baf79489490529f29c0d80e54a6e81ce5617f5",
+   "modifications": "Attribution comment; CRLF to LF; rules unchanged"
+  },
+  {
+   "source": "src/puzzle.css",
+   "destination": "src/games/math/styles/puzzle.css",
+   "license": "Apache-2.0",
+   "sourceSha256": "c6dd7350a80a87de751f7e1c10f559ecdce0df7f72b75523dee4115b0d6384fe",
+   "destinationSha256": "1d081f898c1a1993d05afaadc9c7ebdd94e5304d0ff5f5e2ffd12a995fb0c0be",
+   "modifications": "Attribution comment; CRLF to LF; rules unchanged"
+  },
+  {
+   "source": "data/trains.json",
+   "destination": "src/games/math/data/trains.json",
+   "license": "CC-BY-4.0 original text; reference-photo metadata keeps each photo author and licence",
+   "sourceSha256": "9a85193a93674d47621155e221c235af7f582c8cfdaf95d1771ea9211a737174",
+   "destinationSha256": "9a85193a93674d47621155e221c235af7f582c8cfdaf95d1771ea9211a737174",
+   "modifications": "none (byte-identical); photo files themselves are not copied in R48"
+  },
+  {
+   "source": "assets/images/*",
+   "destination": "src/games/math/data/source-assets.json",
+   "license": "Inventory of file names, sizes and SHA-256 only",
+   "sourceSha256": null,
+   "destinationSha256": "87c444dd0077ac1dc6da89a3e6bbfb9fb8aede95e0e62deaf9c58be742d93f2e",
+   "modifications": "Generated inventory; no image bytes copied"
+  },
+  {
+   "source": "tests/engine.test.mjs",
+   "destination": "tests/math/engine-ported.test.js",
+   "license": "Apache-2.0",
+   "sourceSha256": "8e99177d2e9f0f05310fd336b724aba885324746471428ad06380953185ed6ed",
+   "destinationSha256": "a6e32f3ad45a1f696dee8c605b11102a282e8872e125f935875bae9d673ad2e5",
+   "modifications": "Import and data paths; existsSync(t.image) checks src/games/math/data/source-assets.json (1.11.0 image inventory) instead of the working directory; assertion lines unchanged"
+  },
+  {
+   "source": "tests/adventure.test.mjs",
+   "destination": "tests/math/adventure-ported.test.js",
+   "license": "Apache-2.0",
+   "sourceSha256": "36c79a29957f0c88447e64e16cd2353a919eab134b7ffe7a4330c40859e2f76e",
+   "destinationSha256": "ff5be92c16759b122f22ef179b194582f3108e3e3db0d3b0385c196a699ec067",
+   "modifications": "Import and data paths"
+  },
+  {
+   "source": "tests/explorers.test.mjs",
+   "destination": "tests/math/explorers-ported.test.js",
+   "license": "Apache-2.0",
+   "sourceSha256": "af4a76a2af036108bdd9fea4253f0a09ea2d0e887c0d5cd531ad35ca786e9bf2",
+   "destinationSha256": "f3deb586622fe39415df7f9ad97fd3d133d30a3387990402b14469cd4ffa738a",
+   "modifications": "Import and data paths"
+  },
+  {
+   "source": "tests/workshop.test.mjs",
+   "destination": "tests/math/workshop-ported.test.js",
+   "license": "Apache-2.0",
+   "sourceSha256": "fbeca68497b36f6f5cff15ed0b74be49bfeceb7f299e856ac47e90bcb2d30937",
+   "destinationSha256": "122cb46e02b0447483e3689731a928524cae276cbf12f12cdb3907530ffcde5b",
+   "modifications": "Import and data paths"
+  },
+  {
+   "source": "tests/discovery.test.mjs",
+   "destination": "tests/math/discovery-ported.test.js",
+   "license": "Apache-2.0",
+   "sourceSha256": "e5228b4205b7a4489df37fd88ea81bdeb6228c12ea6425013aaf8e1340faec78",
+   "destinationSha256": "e9ad7bd34df5c5829317ef201af327db90d2d2b4d8760b642a466e29ebb8c1cb",
+   "modifications": "Import and data paths"
+  },
+  {
+   "source": "tests/tickets.test.mjs",
+   "destination": "tests/math/tickets-ported.test.js",
+   "license": "Apache-2.0",
+   "sourceSha256": "15e864ce48fe0da66d69d4b478ba630333a9e2527365d27dc5ac621e522b67da",
+   "destinationSha256": "b2a157e2d0dbd18a1422d6370f211613954c43173a1a02f1c0d9e5b093fc962e",
+   "modifications": "Import and data paths"
+  },
+  {
+   "source": "tests/journeys.test.mjs",
+   "destination": "tests/math/journeys-ported.test.js",
+   "license": "Apache-2.0",
+   "sourceSha256": "a267ecf23221fee61b2b493341a2d986a7c1846182387d97cabae4896656bb2d",
+   "destinationSha256": "8f842ad3801330961f3db2cab4c0afe7f5dc466c2778fe01fdb80baf4f6b7d8b",
+   "modifications": "Import and data paths; existsSync(route.image) checks the 1.11.0 image inventory; assertion lines unchanged"
+  },
+  {
+   "source": "tests/learning-guide.test.mjs",
+   "destination": "tests/math/learning-guide-ported.test.js",
+   "license": "Apache-2.0",
+   "sourceSha256": "7ce1b08efce00ab3a8a4bb21769467f46d8e9e5cae1005bdd472ab17864fc210",
+   "destinationSha256": "f8a9efb1a73c4c97423d0c8e64830ba2d8fe151849c66541610aee2fa66d223f",
+   "modifications": "Import and data paths"
+  },
+  {
+   "source": "tests/learning-content.test.mjs",
+   "destination": "tests/math/learning-content-ported.test.js",
+   "license": "Apache-2.0",
+   "sourceSha256": "b49066bd22e12adbb3674793662a36cb400df0c0740652f45295b3fd0c980fc6",
+   "destinationSha256": "4e8b925eef6e64f90564a892bbb7ed7c1f5e3ad55a81974867e77c3c92f3078e",
+   "modifications": "Import and data paths"
+  },
+  {
+   "source": "tests/learning-ui.test.mjs",
+   "destination": "tests/math/learning-ui-ported.test.js",
+   "license": "Apache-2.0",
+   "sourceSha256": "b6642c5c0a6d1569a83469764101d8d01c41795132fa64dafb9b02caba9a0019",
+   "destinationSha256": "e32c33bdbf9fefd12a35a44e9ffd6a2a92e9fb9f6012373d5614ef3a2623858f",
+   "modifications": "Import and data paths"
+  },
+  {
+   "source": "tests/arithmetic-ui.test.mjs",
+   "destination": "tests/math/arithmetic-ui-ported.test.js",
+   "license": "Apache-2.0",
+   "sourceSha256": "898dd769c94508a203d1cb4ccb5f683a57fb7b7b84921bd902ac79811a429c8a",
+   "destinationSha256": "ddd08c0a7190def25a36ec3c4690df7381c487dadd1a1a09c57d3b257ae7ade4",
+   "modifications": "Import and data paths"
+  },
+  {
+   "source": "tests/program-playback.test.mjs",
+   "destination": "tests/math/program-playback-ported.test.js",
+   "license": "Apache-2.0",
+   "sourceSha256": "aef433b72ac5ddf0e331933bf3880451b84dd1d9994855f94c8b877d874f5fa3",
+   "destinationSha256": "43f2d45581b6fd2478b019dad2af3c3619d79bfcc4b4d71b8b4d14467f68d8dc",
+   "modifications": "Import and data paths"
+  },
+  {
+   "source": "tests/puzzle.test.mjs",
+   "destination": "tests/math/puzzle-ported.test.js",
+   "license": "Apache-2.0",
+   "sourceSha256": "3ab7232a958b55d8500518420a78ebf67194312970babdc1f735312b662f4631",
+   "destinationSha256": "1a65dc08223e52b5c59a64cb0071690e130f6b34c384d31e37908004e3401095",
+   "modifications": "Import and data paths; existsSync(q.image) checks the 1.11.0 image inventory; assertion lines unchanged"
+  },
+  {
+   "source": "tests/adventure-ui.test.mjs",
+   "destination": "tests/math/adventure-ui-ported.test.js",
+   "license": "Apache-2.0",
+   "sourceSha256": "aa1abc59bee2556403379d305922a8f3bd4c4d7184cd7b768a1f5e5c84eb2c6d",
+   "destinationSha256": "84f0052198a9be12677ab12125bfb66cf193db47bfe96265040c2311da11ce90",
+   "modifications": "Import and data paths"
+  }
+ ],
+ "notPorted": {
+  "games": [
+   "identify",
+   "memory",
+   "puzzle"
+  ],
+  "reason": "need verified train photographs; photo files and their per-photo licences are left for the C line (puzzle.js, train-images.js and trains.json metadata are ported so the engine runs unchanged)",
+  "tests": [
+   "train-images.test.mjs (checks photo bytes)",
+   "engine/app/home/story UI tests that need the original page shell"
+  ],
+  "styles": [
+   "styles.css, immersive.css, story.css, mobile.css: game layouts rewritten in src/games/math/room.css with the academy palette"
+  ]
+ },
+ "newAcademyFiles": [
+  "src/games/math/room-registry.js",
+  "src/games/math/room-play.js",
+  "src/games/math/room-store.js",
+  "src/games/math/room-ui.js",
+  "src/games/math/room.css",
+  "src/games/math/legacy-trains.js",
+  "tests/math/room.test.js",
+  "docs/MATH_ROOM.md"
+ ],
+ "reusedAcademyArt": [
+  "public/art/r5/platform.webp",
+  "public/art/r5/passenger-*-0.png",
+  "public/art/r5/ticket.png",
+  "public/art/r6/coast.webp",
+  "public/art/r6/coach.png",
+  "public/art/r6/coach-cheer.png"
+ ],
+ "newRasterAssets": [],
+ "imageModelSlug": null
+}

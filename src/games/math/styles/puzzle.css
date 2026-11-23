@@ -1,0 +1,236 @@
+/* Ported from Taiwan Train Math 1.11.0 (src/puzzle.css), Copyright 2026 mars-tw. Apache-2.0. Header added, line endings normalised. */
+.puzzle-stage {
+  --puzzle-rim: #d4ded6;
+  --puzzle-empty: #e5ebe1;
+  width: 100%;
+  min-width: 0;
+  max-width: 640px;
+  display: grid;
+  gap: 14px;
+}
+.puzzle-toolbar,
+.puzzle-actions {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+.puzzle-toolbar button,
+.puzzle-actions button {
+  min-width: 48px;
+  min-height: 48px;
+  max-width: 100%;
+}
+.puzzle-progress {
+  color: var(--green, #246b5e);
+  font-size: 13px;
+  font-weight: 700;
+  font-variant-numeric: tabular-nums;
+}
+.puzzle-instruction {
+  color: var(--ink, #203d40);
+  font-size: 14px;
+  line-height: 1.65;
+}
+.puzzle-instruction span {
+  display: block;
+  color: var(--muted, #647875);
+  font-size: 12px;
+}
+.puzzle-board {
+  width: 100%;
+  min-width: 0;
+  min-height: calc(var(--puzzle-rows) * 48px);
+  aspect-ratio: 16 / 9;
+  display: grid;
+  grid-template-columns: repeat(var(--puzzle-columns), minmax(0, 1fr));
+  grid-template-rows: repeat(var(--puzzle-rows), minmax(0, 1fr));
+  gap: 0;
+  border-radius: 10px;
+  box-shadow: 0 0 0 2px var(--puzzle-rim), 0 4px 12px #203d400b;
+  background: var(--puzzle-empty);
+}
+.puzzle-slot {
+  position: relative;
+  min-width: 48px;
+  min-height: 48px;
+  width: 100%;
+  height: 100%;
+  padding: 0;
+  border: 0;
+  border-radius: 0;
+  background: transparent;
+  display: grid;
+  place-items: center;
+}
+.puzzle-slot::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  box-shadow: inset 0 0 0 1px #aebfb65c;
+  pointer-events: none;
+}
+.puzzle-slot.is-empty {
+  background: linear-gradient(145deg, #f1f4ed, var(--puzzle-empty));
+}
+.puzzle-empty-mark {
+  font-size: 21px;
+  color: #879b8b;
+  font-weight: 400;
+}
+.puzzle-tray {
+  display: grid;
+  grid-template-columns: repeat(var(--puzzle-columns), minmax(0, 1fr));
+  gap: 9px;
+  min-width: 0;
+  padding: 4px 0;
+}
+.puzzle-tray-piece {
+  position: relative;
+  min-width: 48px;
+  min-height: 48px;
+  padding: 4px;
+  border: 1px solid var(--puzzle-rim);
+  border-radius: 8px;
+  background: #fffdf6;
+  box-shadow: 0 2px 3px #203d4010;
+}
+.puzzle-piece-photo {
+  position: relative;
+  display: block;
+  width: 100%;
+  aspect-ratio: var(--puzzle-cell-ratio);
+  overflow: hidden;
+  background: #dde6df;
+  pointer-events: none;
+}
+/* Each piece contains the same full photo within a 16:9 frame, enlarged by the grid.
+   Moving a piece changes its slot; its photo crop always remains its own. */
+.puzzle-piece-photo img {
+  position: absolute;
+  left: calc(var(--puzzle-piece-x) * -100%);
+  top: calc(var(--puzzle-piece-y) * -100%);
+  width: calc(var(--puzzle-columns) * 100%);
+  height: calc(var(--puzzle-rows) * 100%);
+  max-width: none;
+  object-fit: contain;
+  object-position: 50% 50%;
+  user-select: none;
+  -webkit-user-drag: none;
+}
+.puzzle-piece-check {
+  position: absolute;
+  top: 2px;
+  right: 2px;
+  display: grid;
+  place-items: center;
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  background: var(--green, #246b5e);
+  color: white;
+  font-size: 13px;
+  opacity: 0;
+}
+.puzzle-tray-piece.is-selected,
+.puzzle-slot.is-selected {
+  outline: 3px solid var(--green, #246b5e);
+  outline-offset: 1px;
+  z-index: 2;
+}
+.puzzle-tray-piece.is-selected .puzzle-piece-check {
+  opacity: 1;
+}
+.puzzle-tray-piece:hover,
+.puzzle-slot:hover {
+  box-shadow: inset 0 0 0 2px #246b5e65;
+}
+.puzzle-stage button:focus-visible {
+  outline: 3px solid #247fa5;
+  outline-offset: 2px;
+  z-index: 3;
+}
+.puzzle-reference,
+.puzzle-complete-photo {
+  margin: 0;
+  width: 100%;
+  min-width: 0;
+}
+.puzzle-reference {
+  width: min(100%, 360px);
+  justify-self: center;
+}
+.puzzle-reference img,
+.puzzle-complete-photo img {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  object-fit: contain;
+  background: #dde6df;
+  object-position: 50% 50%;
+  border-radius: 10px;
+}
+.puzzle-reference figcaption {
+  padding-top: 6px;
+  font-size: 12px;
+  text-align: center;
+  color: var(--muted, #647875);
+}
+.puzzle-tray-empty {
+  grid-column: 1 / -1;
+  text-align: center;
+  padding: 10px 0;
+  color: var(--muted, #647875);
+  font-size: 13px;
+}
+.puzzle-success {
+  color: var(--green, #246b5e);
+  font-size: 16px;
+  font-weight: 700;
+  text-align: center;
+}
+.puzzle-success > span {
+  margin-right: 4px;
+}
+.puzzle-tray-piece,
+.puzzle-slot.is-filled {
+  touch-action: none;
+  user-select: none;
+  -webkit-user-select: none;
+}
+.puzzle-drag-source {
+  opacity: 0.35;
+}
+.puzzle-slot.puzzle-drop-target::after {
+  box-shadow: inset 0 0 0 3px var(--green, #246b5e);
+  background: #246b5e14;
+}
+.puzzle-drag-ghost {
+  position: fixed !important;
+  left: 0;
+  top: 0;
+  z-index: 10000;
+  margin: 0;
+  pointer-events: none !important;
+  opacity: 0.93 !important;
+  box-shadow: 0 8px 18px #203d4030;
+  outline: 2px solid var(--green, #246b5e);
+  outline-offset: 1px;
+  transition: none;
+  cursor: grabbing;
+}
+.puzzle-drag-ghost .puzzle-piece-check {
+  display: none;
+}
+@media (max-width: 360px) {
+  .puzzle-stage {
+    gap: 12px;
+  }
+  .puzzle-tray {
+    gap: 6px;
+  }
+  .puzzle-tray-piece {
+    padding: 3px;
+  }
+}
