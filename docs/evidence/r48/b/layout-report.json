@@ -1,0 +1,1112 @@
+{
+ "base": "http://127.0.0.1:5182/",
+ "when": "2026-11-24 00:16:26",
+ "renderer": "chromium --disable-gpu (SwiftShader)",
+ "runs": [
+  {
+   "size": "portrait",
+   "entry": {
+    "buttons": [
+     [
+      60,
+      60
+     ],
+     [
+      99,
+      60
+     ],
+     [
+      99,
+      60
+     ],
+     [
+      99,
+      60
+     ],
+     [
+      314,
+      74
+     ],
+     [
+      314,
+      74
+     ],
+     [
+      314,
+      74
+     ],
+     [
+      314,
+      74
+     ],
+     [
+      314,
+      74
+     ]
+    ],
+    "openedFromTrainPage": true,
+    "backToPicker": true
+   }
+  },
+  {
+   "states": {
+    "start": {
+     "buttons": 7,
+     "minW": 60,
+     "minH": 60,
+     "small": [],
+     "outside": [],
+     "overlaps": [],
+     "boardClipped": false,
+     "dialogInside": true,
+     "pageScroll": "none",
+     "coach": "藍色列車要開到藍色月台。點道岔換方向，看亮起來的路通到哪裡。",
+     "retry": false
+    },
+    "retry": {
+     "buttons": 7,
+     "minW": 60,
+     "minH": 60,
+     "small": [],
+     "outside": [],
+     "overlaps": [],
+     "boardClipped": false,
+     "dialogInside": true,
+     "pageScroll": "none",
+     "coach": "藍色列車要停藍色月台。從起點沿著亮起來的路走，看看哪個道岔要換方向。",
+     "retry": true
+    },
+    "win": {
+     "buttons": 5,
+     "minW": 60,
+     "minH": 60,
+     "small": [],
+     "outside": [],
+     "overlaps": [],
+     "boardClipped": false,
+     "dialogInside": true,
+     "pageScroll": "none",
+     "coach": "每一列車都開到自己的月台了！",
+     "retry": false
+    },
+    "levels": {
+     "buttons": 10,
+     "minW": 60,
+     "minH": 60,
+     "small": [],
+     "outside": [],
+     "overlaps": [],
+     "boardClipped": false,
+     "dialogInside": true,
+     "pageScroll": "none",
+     "coach": "每一列車都開到自己的月台了！",
+     "retry": false
+    }
+   },
+   "won": true,
+   "game": "switch-platform",
+   "size": "portrait",
+   "age": "3-4",
+   "level": 6
+  },
+  {
+   "states": {
+    "start": {
+     "buttons": 9,
+     "minW": 60,
+     "minH": 60,
+     "small": [],
+     "outside": [],
+     "overlaps": [],
+     "boardClipped": false,
+     "dialogInside": true,
+     "pageScroll": "none",
+     "coach": "照調車單的顏色排車廂：先推進去的停在最裡面。點車廂，再點要去的線。",
+     "retry": false
+    },
+    "retry": {
+     "buttons": 9,
+     "minW": 60,
+     "minH": 60,
+     "small": [],
+     "outside": [],
+     "overlaps": [],
+     "boardClipped": false,
+     "dialogInside": true,
+     "pageScroll": "none",
+     "coach": "側線一沒有車廂。先點有車廂的線。",
+     "retry": true
+    },
+    "beforeLast": {
+     "buttons": 9,
+     "minW": 60,
+     "minH": 60,
+     "small": [],
+     "outside": [],
+     "overlaps": [],
+     "boardClipped": false,
+     "dialogInside": true,
+     "pageScroll": "none",
+     "coach": "排好 2 節了！看調車單的下一節。",
+     "retry": false
+    },
+    "win": {
+     "buttons": 6,
+     "minW": 60,
+     "minH": 60,
+     "small": [],
+     "outside": [],
+     "overlaps": [],
+     "boardClipped": false,
+     "dialogInside": true,
+     "pageScroll": "none",
+     "coach": "用 4 步就排好了，車廂照順序出發！",
+     "retry": false
+    },
+    "levels": {
+     "buttons": 10,
+     "minW": 60,
+     "minH": 60,
+     "small": [],
+     "outside": [],
+     "overlaps": [],
+     "boardClipped": false,
+     "dialogInside": true,
+     "pageScroll": "none",
+     "coach": "用 4 步就排好了，車廂照順序出發！",
+     "retry": false
+    }
+   },
+   "dragWorked": true,
+   "won": true,
+   "game": "shunting-yard",
+   "size": "portrait",
+   "age": "3-4",
+   "level": 4
+  },
+  {
+   "states": {
+    "start": {
+     "buttons": 8,
+     "minW": 60,
+     "minH": 60,
+     "small": [],
+     "outside": [],
+     "overlaps": [],
+     "boardClipped": false,
+     "dialogInside": true,
+     "pageScroll": "none",
+     "coach": "點列車往前開一段。綠燈可以走，紅燈要停車等候。",
+     "retry": false
+    },
+    "retry": {
+     "buttons": 8,
+     "minW": 60,
+     "minH": 60,
+     "small": [],
+     "outside": [],
+     "overlaps": [],
+     "boardClipped": false,
+     "dialogInside": true,
+     "pageScroll": "none",
+     "coach": "前方列車尚未離開，紅燈停車等候。",
+     "retry": true
+    },
+    "win": {
+     "buttons": 6,
+     "minW": 60,
+     "minH": 60,
+     "small": [],
+     "outside": [],
+     "overlaps": [],
+     "boardClipped": false,
+     "dialogInside": true,
+     "pageScroll": "none",
+     "coach": "全部列車平安到站，號誌都看對了！",
+     "retry": false
+    },
+    "levels": {
+     "buttons": 10,
+     "minW": 60,
+     "minH": 60,
+     "small": [],
+     "outside": [],
+     "overlaps": [],
+     "boardClipped": false,
+     "dialogInside": true,
+     "pageScroll": "none",
+     "coach": "全部列車平安到站，號誌都看對了！",
+     "retry": false
+    }
+   },
+   "won": true,
+   "game": "single-line-meet",
+   "size": "portrait",
+   "age": "5-6",
+   "level": 2
+  },
+  {
+   "states": {
+    "start": {
+     "buttons": 6,
+     "minW": 60,
+     "minH": 60,
+     "small": [],
+     "outside": [],
+     "overlaps": [],
+     "boardClipped": false,
+     "dialogInside": true,
+     "pageScroll": "none",
+     "coach": "現在車上有幾人？",
+     "retry": false
+    },
+    "retry": {
+     "buttons": 6,
+     "minW": 60,
+     "minH": 60,
+     "small": [],
+     "outside": [],
+     "overlaps": [],
+     "boardClipped": false,
+     "dialogInside": true,
+     "pageScroll": "none",
+     "coach": "一個一個數座位上的朋友，數到最後一個就是答案。",
+     "retry": true
+    },
+    "win": {
+     "buttons": 6,
+     "minW": 60,
+     "minH": 60,
+     "small": [],
+     "outside": [],
+     "overlaps": [],
+     "boardClipped": false,
+     "dialogInside": true,
+     "pageScroll": "none",
+     "coach": "每一站的人數都算對了！",
+     "retry": false
+    },
+    "levels": {
+     "buttons": 10,
+     "minW": 60,
+     "minH": 60,
+     "small": [],
+     "outside": [],
+     "overlaps": [],
+     "boardClipped": false,
+     "dialogInside": true,
+     "pageScroll": "none",
+     "coach": "每一站的人數都算對了！",
+     "retry": false
+    }
+   },
+   "won": true,
+   "game": "boarding-count",
+   "size": "portrait",
+   "age": "3-4",
+   "level": 4
+  },
+  {
+   "states": {
+    "start": {
+     "buttons": 6,
+     "minW": 60,
+     "minH": 60,
+     "small": [],
+     "outside": [],
+     "overlaps": [],
+     "boardClipped": false,
+     "dialogInside": true,
+     "pageScroll": "none",
+     "coach": "紫色列車 4 點出發，坐 1 小時。幾點到星光？",
+     "retry": false
+    },
+    "retry": {
+     "buttons": 8,
+     "minW": 60,
+     "minH": 60,
+     "small": [],
+     "outside": [],
+     "overlaps": [],
+     "boardClipped": false,
+     "dialogInside": true,
+     "pageScroll": "none",
+     "coach": "短針往前走 1 格，就是過了 1 小時。從 4 開始，往前數 1 格。",
+     "retry": true
+    },
+    "win": {
+     "buttons": 6,
+     "minW": 60,
+     "minH": 60,
+     "small": [],
+     "outside": [],
+     "overlaps": [],
+     "boardClipped": false,
+     "dialogInside": true,
+     "pageScroll": "none",
+     "coach": "時刻表都排好了，每一班列車都準時！",
+     "retry": false
+    },
+    "levels": {
+     "buttons": 10,
+     "minW": 60,
+     "minH": 60,
+     "small": [],
+     "outside": [],
+     "overlaps": [],
+     "boardClipped": false,
+     "dialogInside": true,
+     "pageScroll": "none",
+     "coach": "時刻表都排好了，每一班列車都準時！",
+     "retry": false
+    }
+   },
+   "won": true,
+   "game": "platform-timetable",
+   "size": "portrait",
+   "age": "3-4",
+   "level": 3
+  },
+  {
+   "size": "portrait",
+   "pageErrors": []
+  },
+  {
+   "size": "landscape",
+   "entry": {
+    "buttons": [
+     [
+      60,
+      60
+     ],
+     [
+      238,
+      60
+     ],
+     [
+      238,
+      60
+     ],
+     [
+      238,
+      60
+     ],
+     [
+      238,
+      76
+     ],
+     [
+      238,
+      76
+     ],
+     [
+      238,
+      76
+     ],
+     [
+      238,
+      76
+     ],
+     [
+      238,
+      76
+     ]
+    ],
+    "openedFromTrainPage": true,
+    "backToPicker": true
+   }
+  },
+  {
+   "states": {
+    "start": {
+     "buttons": 7,
+     "minW": 60,
+     "minH": 60,
+     "small": [],
+     "outside": [],
+     "overlaps": [],
+     "boardClipped": false,
+     "dialogInside": true,
+     "pageScroll": "none",
+     "coach": "藍色列車要開到藍色月台。點道岔換方向，看亮起來的路通到哪裡。",
+     "retry": false
+    },
+    "retry": {
+     "buttons": 7,
+     "minW": 60,
+     "minH": 60,
+     "small": [],
+     "outside": [],
+     "overlaps": [],
+     "boardClipped": false,
+     "dialogInside": true,
+     "pageScroll": "none",
+     "coach": "藍色列車要停藍色月台。從起點沿著亮起來的路走，看看哪個道岔要換方向。",
+     "retry": true
+    },
+    "win": {
+     "buttons": 6,
+     "minW": 60,
+     "minH": 60,
+     "small": [],
+     "outside": [],
+     "overlaps": [],
+     "boardClipped": false,
+     "dialogInside": true,
+     "pageScroll": "none",
+     "coach": "列車開到對的月台了！",
+     "retry": false
+    },
+    "levels": {
+     "buttons": 10,
+     "minW": 60,
+     "minH": 60,
+     "small": [],
+     "outside": [],
+     "overlaps": [],
+     "boardClipped": false,
+     "dialogInside": true,
+     "pageScroll": "none",
+     "coach": "列車開到對的月台了！",
+     "retry": false
+    }
+   },
+   "won": true,
+   "game": "switch-platform",
+   "size": "landscape",
+   "age": "5-6",
+   "level": 4
+  },
+  {
+   "states": {
+    "start": {
+     "buttons": 9,
+     "minW": 60,
+     "minH": 60,
+     "small": [],
+     "outside": [],
+     "overlaps": [],
+     "boardClipped": false,
+     "dialogInside": true,
+     "pageScroll": "none",
+     "coach": "照調車單排車廂：先推進去的車廂會停在最裡面。點車廂，再點要去的線。",
+     "retry": false
+    },
+    "retry": {
+     "buttons": 9,
+     "minW": 60,
+     "minH": 60,
+     "small": [],
+     "outside": [],
+     "overlaps": [],
+     "boardClipped": false,
+     "dialogInside": true,
+     "pageScroll": "none",
+     "coach": "出發線沒有車廂。先點有車廂的線。",
+     "retry": true
+    },
+    "beforeLast": {
+     "buttons": 9,
+     "minW": 60,
+     "minH": 60,
+     "small": [],
+     "outside": [],
+     "overlaps": [],
+     "boardClipped": false,
+     "dialogInside": true,
+     "pageScroll": "none",
+     "coach": "排好 2 節了！看調車單的下一節。",
+     "retry": false
+    },
+    "win": {
+     "buttons": 6,
+     "minW": 60,
+     "minH": 60,
+     "small": [],
+     "outside": [],
+     "overlaps": [],
+     "boardClipped": false,
+     "dialogInside": true,
+     "pageScroll": "none",
+     "coach": "用 5 步就排好了，車廂照順序出發！",
+     "retry": false
+    },
+    "levels": {
+     "buttons": 10,
+     "minW": 60,
+     "minH": 60,
+     "small": [],
+     "outside": [],
+     "overlaps": [],
+     "boardClipped": false,
+     "dialogInside": true,
+     "pageScroll": "none",
+     "coach": "用 5 步就排好了，車廂照順序出發！",
+     "retry": false
+    }
+   },
+   "dragWorked": true,
+   "won": true,
+   "game": "shunting-yard",
+   "size": "landscape",
+   "age": "5-6",
+   "level": 4
+  },
+  {
+   "states": {
+    "start": {
+     "buttons": 8,
+     "minW": 60,
+     "minH": 60,
+     "small": [],
+     "outside": [],
+     "overlaps": [],
+     "boardClipped": false,
+     "dialogInside": true,
+     "pageScroll": "none",
+     "coach": "點列車往前開一段。綠燈可以走，紅燈要停車等候。",
+     "retry": false
+    },
+    "retry": {
+     "buttons": 9,
+     "minW": 60,
+     "minH": 60,
+     "small": [],
+     "outside": [],
+     "overlaps": [],
+     "boardClipped": false,
+     "dialogInside": true,
+     "pageScroll": "none",
+     "coach": "前方列車尚未離開，紅燈停車等候。",
+     "retry": true
+    },
+    "win": {
+     "buttons": 6,
+     "minW": 60,
+     "minH": 60,
+     "small": [],
+     "outside": [],
+     "overlaps": [],
+     "boardClipped": false,
+     "dialogInside": true,
+     "pageScroll": "none",
+     "coach": "全部列車平安到站，號誌都看對了！",
+     "retry": false
+    },
+    "levels": {
+     "buttons": 10,
+     "minW": 60,
+     "minH": 60,
+     "small": [],
+     "outside": [],
+     "overlaps": [],
+     "boardClipped": false,
+     "dialogInside": true,
+     "pageScroll": "none",
+     "coach": "全部列車平安到站，號誌都看對了！",
+     "retry": false
+    }
+   },
+   "won": true,
+   "game": "single-line-meet",
+   "size": "landscape",
+   "age": "5-6",
+   "level": 4
+  },
+  {
+   "states": {
+    "start": {
+     "buttons": 6,
+     "minW": 60,
+     "minH": 60,
+     "small": [],
+     "outside": [],
+     "overlaps": [],
+     "boardClipped": false,
+     "dialogInside": true,
+     "pageScroll": "none",
+     "coach": "現在車上有幾人？",
+     "retry": false
+    },
+    "retry": {
+     "buttons": 6,
+     "minW": 60,
+     "minH": 60,
+     "small": [],
+     "outside": [],
+     "overlaps": [],
+     "boardClipped": false,
+     "dialogInside": true,
+     "pageScroll": "none",
+     "coach": "一個一個數座位上的朋友，數到最後一個就是答案。",
+     "retry": true
+    },
+    "win": {
+     "buttons": 6,
+     "minW": 60,
+     "minH": 60,
+     "small": [],
+     "outside": [],
+     "overlaps": [],
+     "boardClipped": false,
+     "dialogInside": true,
+     "pageScroll": "none",
+     "coach": "每一站的人數都算對了！",
+     "retry": false
+    },
+    "levels": {
+     "buttons": 10,
+     "minW": 60,
+     "minH": 60,
+     "small": [],
+     "outside": [],
+     "overlaps": [],
+     "boardClipped": false,
+     "dialogInside": true,
+     "pageScroll": "none",
+     "coach": "每一站的人數都算對了！",
+     "retry": false
+    }
+   },
+   "won": true,
+   "game": "boarding-count",
+   "size": "landscape",
+   "age": "5-6",
+   "level": 4
+  },
+  {
+   "states": {
+    "start": {
+     "buttons": 6,
+     "minW": 60,
+     "minH": 60,
+     "small": [],
+     "outside": [],
+     "overlaps": [],
+     "boardClipped": false,
+     "dialogInside": true,
+     "pageScroll": "none",
+     "coach": "紫色列車 4 點半出發，坐 30 分鐘。幾點到星光？",
+     "retry": false
+    },
+    "retry": {
+     "buttons": 9,
+     "minW": 60,
+     "minH": 60,
+     "small": [],
+     "outside": [],
+     "overlaps": [],
+     "boardClipped": false,
+     "dialogInside": true,
+     "pageScroll": "none",
+     "coach": "長針從 6 再走半圈，回到 12，就到下一個整點了。",
+     "retry": true
+    },
+    "win": {
+     "buttons": 6,
+     "minW": 60,
+     "minH": 60,
+     "small": [],
+     "outside": [],
+     "overlaps": [],
+     "boardClipped": false,
+     "dialogInside": true,
+     "pageScroll": "none",
+     "coach": "時刻表都排好了，每一班列車都準時！",
+     "retry": false
+    },
+    "levels": {
+     "buttons": 10,
+     "minW": 60,
+     "minH": 60,
+     "small": [],
+     "outside": [],
+     "overlaps": [],
+     "boardClipped": false,
+     "dialogInside": true,
+     "pageScroll": "none",
+     "coach": "時刻表都排好了，每一班列車都準時！",
+     "retry": false
+    }
+   },
+   "won": true,
+   "game": "platform-timetable",
+   "size": "landscape",
+   "age": "5-6",
+   "level": 5
+  },
+  {
+   "size": "landscape",
+   "pageErrors": []
+  },
+  {
+   "size": "desktop",
+   "entry": {
+    "buttons": [
+     [
+      60,
+      60
+     ],
+     [
+      235,
+      60
+     ],
+     [
+      235,
+      60
+     ],
+     [
+      235,
+      60
+     ],
+     [
+      235,
+      76
+     ],
+     [
+      235,
+      76
+     ],
+     [
+      235,
+      76
+     ],
+     [
+      357,
+      74
+     ],
+     [
+      357,
+      74
+     ]
+    ],
+    "openedFromTrainPage": true,
+    "backToPicker": true
+   }
+  },
+  {
+   "states": {
+    "start": {
+     "buttons": 7,
+     "minW": 60,
+     "minH": 60,
+     "small": [],
+     "outside": [],
+     "overlaps": [],
+     "boardClipped": false,
+     "dialogInside": true,
+     "pageScroll": "none",
+     "coach": "紅色三角形列車要開到紅色三角形月台。點道岔換方向，看亮起來的路通到哪裡。",
+     "retry": false
+    },
+    "retry": {
+     "buttons": 7,
+     "minW": 60,
+     "minH": 60,
+     "small": [],
+     "outside": [],
+     "overlaps": [],
+     "boardClipped": false,
+     "dialogInside": true,
+     "pageScroll": "none",
+     "coach": "顏色對了，形狀不一樣。看看月台牌子上的形狀，再撥道岔。",
+     "retry": true
+    },
+    "win": {
+     "buttons": 6,
+     "minW": 60,
+     "minH": 60,
+     "small": [],
+     "outside": [],
+     "overlaps": [],
+     "boardClipped": false,
+     "dialogInside": true,
+     "pageScroll": "none",
+     "coach": "每一列車都開到自己的月台了！",
+     "retry": false
+    },
+    "levels": {
+     "buttons": 10,
+     "minW": 60,
+     "minH": 60,
+     "small": [],
+     "outside": [],
+     "overlaps": [],
+     "boardClipped": false,
+     "dialogInside": true,
+     "pageScroll": "none",
+     "coach": "每一列車都開到自己的月台了！",
+     "retry": false
+    }
+   },
+   "won": true,
+   "game": "switch-platform",
+   "size": "desktop",
+   "age": "7-8",
+   "level": 4
+  },
+  {
+   "states": {
+    "start": {
+     "buttons": 9,
+     "minW": 60,
+     "minH": 60,
+     "small": [],
+     "outside": [],
+     "overlaps": [],
+     "boardClipped": false,
+     "dialogInside": true,
+     "pageScroll": "none",
+     "coach": "照調車單排車廂：先推進去的車廂會停在最裡面。點車廂，再點要去的線。",
+     "retry": false
+    },
+    "retry": {
+     "buttons": 9,
+     "minW": 60,
+     "minH": 60,
+     "small": [],
+     "outside": [],
+     "overlaps": [],
+     "boardClipped": false,
+     "dialogInside": true,
+     "pageScroll": "none",
+     "coach": "側線一沒有車廂。先點有車廂的線。",
+     "retry": true
+    },
+    "beforeLast": {
+     "buttons": 9,
+     "minW": 60,
+     "minH": 60,
+     "small": [],
+     "outside": [],
+     "overlaps": [],
+     "boardClipped": false,
+     "dialogInside": true,
+     "pageScroll": "none",
+     "coach": "排好 3 節了！看調車單的下一節。",
+     "retry": false
+    },
+    "win": {
+     "buttons": 6,
+     "minW": 60,
+     "minH": 60,
+     "small": [],
+     "outside": [],
+     "overlaps": [],
+     "boardClipped": false,
+     "dialogInside": true,
+     "pageScroll": "none",
+     "coach": "10 步排好了，車廂照順序出發！",
+     "retry": false
+    },
+    "levels": {
+     "buttons": 10,
+     "minW": 60,
+     "minH": 60,
+     "small": [],
+     "outside": [],
+     "overlaps": [],
+     "boardClipped": false,
+     "dialogInside": true,
+     "pageScroll": "none",
+     "coach": "10 步排好了，車廂照順序出發！",
+     "retry": false
+    }
+   },
+   "dragWorked": true,
+   "won": true,
+   "game": "shunting-yard",
+   "size": "desktop",
+   "age": "7-8",
+   "level": 4
+  },
+  {
+   "states": {
+    "start": {
+     "buttons": 8,
+     "minW": 60,
+     "minH": 60,
+     "small": [],
+     "outside": [],
+     "overlaps": [],
+     "boardClipped": false,
+     "dialogInside": true,
+     "pageScroll": "none",
+     "coach": "紫色快車要比綠色慢車先到站。點列車往前開，紅燈要停。",
+     "retry": false
+    },
+    "retry": {
+     "buttons": 9,
+     "minW": 60,
+     "minH": 60,
+     "small": [],
+     "outside": [],
+     "overlaps": [],
+     "boardClipped": false,
+     "dialogInside": true,
+     "pageScroll": "none",
+     "coach": "前方列車尚未離開，紅燈停車等候。",
+     "retry": true
+    },
+    "win": {
+     "buttons": 6,
+     "minW": 60,
+     "minH": 60,
+     "small": [],
+     "outside": [],
+     "overlaps": [],
+     "boardClipped": false,
+     "dialogInside": true,
+     "pageScroll": "none",
+     "coach": "快車先到，慢車也平安到站。會車成功！",
+     "retry": false
+    },
+    "levels": {
+     "buttons": 10,
+     "minW": 60,
+     "minH": 60,
+     "small": [],
+     "outside": [],
+     "overlaps": [],
+     "boardClipped": false,
+     "dialogInside": true,
+     "pageScroll": "none",
+     "coach": "快車先到，慢車也平安到站。會車成功！",
+     "retry": false
+    }
+   },
+   "won": true,
+   "game": "single-line-meet",
+   "size": "desktop",
+   "age": "7-8",
+   "level": 4
+  },
+  {
+   "states": {
+    "start": {
+     "buttons": 4,
+     "minW": 60,
+     "minH": 60,
+     "small": [],
+     "outside": [],
+     "overlaps": [],
+     "boardClipped": false,
+     "dialogInside": true,
+     "pageScroll": "none",
+     "coach": "這一趟拉上窗簾，看不到車裡。記住每一站上車、下車的人數。杉林站上車 10 人。",
+     "retry": false
+    },
+    "retry": {
+     "buttons": 6,
+     "minW": 60,
+     "minH": 60,
+     "small": [],
+     "outside": [],
+     "overlaps": [],
+     "boardClipped": false,
+     "dialogInside": true,
+     "pageScroll": "none",
+     "coach": "先一站一站算：到森林站下車後，車上剩幾人？再從那個數往上數到 16，數了幾個，就是上車的人數。",
+     "retry": true
+    },
+    "win": {
+     "buttons": 5,
+     "minW": 60,
+     "minH": 60,
+     "small": [],
+     "outside": [],
+     "overlaps": [],
+     "boardClipped": false,
+     "dialogInside": true,
+     "pageScroll": "none",
+     "coach": "人數算對了，列車開往下一站！",
+     "retry": false
+    },
+    "levels": {
+     "buttons": 10,
+     "minW": 60,
+     "minH": 60,
+     "small": [],
+     "outside": [],
+     "overlaps": [],
+     "boardClipped": false,
+     "dialogInside": true,
+     "pageScroll": "none",
+     "coach": "人數算對了，列車開往下一站！",
+     "retry": false
+    }
+   },
+   "won": true,
+   "game": "boarding-count",
+   "size": "desktop",
+   "age": "7-8",
+   "level": 6
+  },
+  {
+   "states": {
+    "start": {
+     "buttons": 6,
+     "minW": 60,
+     "minH": 60,
+     "small": [],
+     "outside": [],
+     "overlaps": [],
+     "boardClipped": false,
+     "dialogInside": true,
+     "pageScroll": "none",
+     "coach": "紅色列車 1:55 出發，坐 15 分鐘。幾點到藍灣？",
+     "retry": false
+    },
+    "retry": {
+     "buttons": 10,
+     "minW": 60,
+     "minH": 60,
+     "small": [],
+     "outside": [],
+     "overlaps": [],
+     "boardClipped": false,
+     "dialogInside": true,
+     "pageScroll": "none",
+     "coach": "先算到下一個整點還要幾分鐘，再加上剩下的分鐘。",
+     "retry": true
+    },
+    "win": {
+     "buttons": 6,
+     "minW": 60,
+     "minH": 60,
+     "small": [],
+     "outside": [],
+     "overlaps": [],
+     "boardClipped": false,
+     "dialogInside": true,
+     "pageScroll": "none",
+     "coach": "時刻表都排好了，每一班列車都準時！",
+     "retry": false
+    },
+    "levels": {
+     "buttons": 10,
+     "minW": 60,
+     "minH": 60,
+     "small": [],
+     "outside": [],
+     "overlaps": [],
+     "boardClipped": false,
+     "dialogInside": true,
+     "pageScroll": "none",
+     "coach": "時刻表都排好了，每一班列車都準時！",
+     "retry": false
+    }
+   },
+   "won": true,
+   "game": "platform-timetable",
+   "size": "desktop",
+   "age": "7-8",
+   "level": 4
+  },
+  {
+   "size": "desktop",
+   "pageErrors": []
+  }
+ ],
+ "failures": []
+}

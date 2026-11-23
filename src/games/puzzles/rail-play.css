@@ -1,0 +1,213 @@
+/* R48 B line: rail puzzles and new math games. Everything is scoped to #rail-play so it looks
+   the same on the home page, the train page and the math room. Buttons are at least 60 px. */
+#rail-play{--rp-ink:#143b61;--rp-blue:#1479b8;--rp-paper:#fffaf0;--rp-gold:#ffd344;--rp-orange:#f46b27;--rp-green:#198968;
+  --rp-top:68px;position:fixed;inset:0;box-sizing:border-box;margin:auto;width:min(1040px,calc(100vw - 12px));height:min(800px,calc(100dvh - 12px));max-width:none;max-height:calc(100dvh - 12px);
+  padding:0;border:3px solid var(--rp-blue);border-radius:18px;background:linear-gradient(#bfe7ff,#e9f7ff 46%,#f6fbe8);color:var(--rp-ink);
+  font-family:'Microsoft JhengHei','PingFang TC','Noto Sans TC',sans-serif;overflow:hidden;font-size:16px;line-height:1.4;text-align:left}
+#rail-play::backdrop{background:#163d4fcc}
+#rail-play *,#rail-play *::before,#rail-play *::after{box-sizing:border-box}
+#rail-play button{font:800 17px 'Microsoft JhengHei','PingFang TC','Noto Sans TC',sans-serif;min-width:60px;min-height:60px;touch-action:manipulation;border:3px solid var(--rp-blue);border-radius:14px;background:#fff;color:var(--rp-ink);padding:6px 14px;cursor:pointer;box-shadow:0 3px 0 #105781;margin:0;line-height:1.2;text-shadow:none;letter-spacing:0;width:auto;height:auto;position:relative}
+#rail-play button:focus-visible{outline:4px solid var(--rp-orange);outline-offset:2px}
+#rail-play button:disabled{opacity:.45;cursor:default;box-shadow:none}
+#rail-play button:active:not(:disabled){transform:translateY(2px);box-shadow:0 1px 0 #105781}
+#rail-play button.rp-primary{background:var(--rp-orange);border-color:#b8460f;color:#fff;box-shadow:0 4px 0 #8f360b}
+#rail-play.is-busy .rp-stage button,#rail-play.is-busy .rp-controls button{pointer-events:none}
+#rail-play h1,#rail-play h2,#rail-play p{margin:0}
+.rp-page{height:100%;display:grid;grid-template-columns:minmax(0,1fr);grid-template-rows:var(--rp-top) minmax(0,1fr) auto auto;grid-template-areas:'top' 'stage' 'coach' 'controls'}
+.rp-top{grid-area:top;display:flex;align-items:center;gap:8px;padding:4px 8px;background:#fff;border-bottom:3px solid var(--rp-blue)}
+.rp-heading{flex:1;min-width:0;text-align:center}
+.rp-heading h1{font-size:clamp(17px,2.4vw,24px);white-space:nowrap;overflow:hidden;text-overflow:ellipsis;outline:none}
+.rp-level{display:block;font-size:13px;font-weight:700;color:#3d6a83;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+#rail-play .rp-back{padding:6px 10px;white-space:nowrap}
+#rail-play .rp-speak{font-size:22px;padding:4px}
+.rp-stage{grid-area:stage;min-height:0;min-width:0;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:6px;padding:8px;overflow:hidden;position:relative}
+.rp-coach{grid-area:coach;position:relative;display:flex;align-items:center;gap:10px;margin:0 auto 6px;width:min(720px,calc(100% - 16px));min-height:74px;background:#fff;border:3px solid var(--rp-blue);border-radius:22px;padding:6px 16px 6px 84px;font-size:17px;font-weight:700}
+.rp-coach-img{position:absolute;left:8px;bottom:0;width:66px;height:96px;object-fit:contain;object-position:bottom}
+.rp-coach.is-retry{border-color:var(--rp-orange);background:#fff4e8;color:#7a2d05}
+@media (prefers-reduced-motion:no-preference){.rp-coach.nudge{animation:rp-nudge .5s ease-in-out 1}}
+@keyframes rp-nudge{0%,100%{translate:0}25%{translate:-7px}75%{translate:7px}}
+.rp-controls{grid-area:controls;display:flex;flex-wrap:wrap;gap:8px;justify-content:center;padding:8px;background:#e8f4fb;border-top:2px solid #b7d8ec}
+.rp-controls button{flex:1 1 140px;max-width:320px}
+.rp-overlay{position:absolute;inset:var(--rp-top) 0 0 0;border-radius:0 0 15px 15px;display:flex;align-items:center;justify-content:center;background:#163d4fb3;padding:12px;z-index:5}
+.rp-overlay[hidden]{display:none}
+.rp-card{background:var(--rp-paper);border:3px solid var(--rp-blue);border-radius:22px;padding:18px;max-width:640px;width:100%;max-height:100%;overflow:auto;text-align:center;display:flex;flex-direction:column;gap:12px;align-items:center}
+.rp-card h2{font-size:clamp(22px,3.4vw,32px)}
+.rp-card-note{font-size:14px;color:#3d6a83}.rp-card-note.save-failed{color:#954b1e;font-weight:800}
+.rp-card-actions{display:flex;flex-wrap:wrap;gap:10px;justify-content:center;width:100%}.rp-card-actions button{flex:1 1 150px}
+.rp-win-coach{width:96px;height:140px;object-fit:contain}
+.rp-level-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px;width:100%}
+#rail-play .rp-level-grid button{display:flex;flex-direction:column;align-items:center;justify-content:center;min-height:72px}
+.rp-level-grid small{font-size:12px;font-weight:700;color:#3d6a83}
+#rail-play .rp-level-grid button.is-current{background:#fff4c4;border-color:#ad841b}
+/* Boards */
+.rp-board{position:relative;flex:none;max-width:100%}
+.rp-svg{position:absolute;inset:0;width:100%;height:100%;overflow:visible}
+.rp-hits{position:absolute;inset:0;pointer-events:none}
+#rail-play .rp-hits>*{pointer-events:auto;position:absolute;transform:translate(-50%,-50%)}
+.rp-grass{fill:#cbe9a6;stroke:#8fc46a;stroke-width:4}
+.rp-track{fill:none;stroke-linecap:butt;stroke-linejoin:round}
+.rp-track path{fill:none}
+.rp-track-glow{stroke:#ffd84a;stroke-linecap:round;opacity:.95}
+.rp-track-bed{stroke:#c9b99a}.rp-track-ties{stroke:#8a5a32}.rp-track-rail{stroke:#55636c}.rp-track-gap{stroke:#c9b99a}
+.rp-track.is-dim{opacity:.5}
+.rp-route-ghost{fill:none;stroke:none}
+.rp-platform{fill:#efe4cc;stroke:#9a8f7d;stroke-width:3}.rp-platform-edge{stroke:#ffd23f;stroke-width:6}
+.rp-buffer{fill:#d93a2b;stroke:#fff;stroke-width:3}
+.rp-plate-back{fill:#fff;stroke:#143b61;stroke-width:4}
+.rp-plate-shape{stroke:#143b61;stroke-width:2.5;stroke-linejoin:round}
+.rp-map-label{font:900 30px 'Microsoft JhengHei','PingFang TC',sans-serif;fill:#143b61;paint-order:stroke;stroke:#fff;stroke-width:6px}
+.rp-puzzled{font:900 64px 'Microsoft JhengHei',sans-serif;fill:#f46b27;paint-order:stroke;stroke:#fff;stroke-width:8px}
+@media (prefers-reduced-motion:no-preference){.rp-train.is-waiting .rp-train-body{animation:rp-idle 1.6s ease-in-out infinite}}
+@keyframes rp-idle{0%,100%{transform:translateY(0)}50%{transform:translateY(-3px)}}
+#rail-play .rp-switch{width:66px;height:66px;min-width:66px;min-height:66px;border-radius:50%;padding:0;background:#fff4c4;border-color:#ad841b;box-shadow:0 3px 0 #7d5e10}
+#rail-play .rp-switch.is-on-route{background:var(--rp-gold)}
+#rail-play .rp-switch:active:not(:disabled){transform:translate(-50%,-48%)}
+.rp-switch svg{width:44px;height:44px;display:block;margin:auto}
+.rp-switch path{fill:none;stroke:#143b61;stroke-width:7;stroke-linecap:round;stroke-linejoin:round}
+.rp-queue{display:flex;align-items:center;gap:6px;font-weight:800;font-size:15px;background:#fff;border:2px solid #b7d8ec;border-radius:999px;padding:2px 12px;flex:none}
+.rp-queue[hidden]{display:none}
+.rp-chip svg{width:34px;height:34px;display:block}
+/* Shunting yard */
+.rp-dispatch-card{display:flex;align-items:center;gap:8px;flex:none;background:#fff;border:2px solid #b7d8ec;border-radius:14px;padding:4px 10px;max-width:100%}
+.rp-dispatch-card>b{font-size:15px;white-space:nowrap}
+.rp-card-cars{display:flex;align-items:center;gap:4px;min-width:0}
+.rp-card-cars small{font-size:12px;color:#3d6a83;font-weight:700;white-space:nowrap}
+.rp-card-car{position:relative;display:block}
+.rp-card-car svg{width:62px;height:31px;display:block}
+.rp-card-car i{position:absolute;right:-2px;top:-6px;font-style:normal;font-weight:900;color:#fff;background:#198968;border-radius:50%;width:20px;height:20px;font-size:13px;line-height:20px;text-align:center}
+.rp-card-car.is-done svg{opacity:.55}
+.rp-car-badge{fill:#fff;stroke:#143b61;stroke-width:3}
+.rp-car-number{font:900 20px 'Microsoft JhengHei',sans-serif;fill:#143b61}
+.rp-track-name{font-size:24px}
+.rp-shunt-car.is-picked{filter:drop-shadow(0 0 6px #ffd344) drop-shadow(0 0 3px #ad841b)}
+@media (prefers-reduced-motion:no-preference){.rp-shunt-car.is-picked>*{animation:rp-lift .8s ease-in-out infinite alternate}}
+@keyframes rp-lift{from{transform:translateY(0)}to{transform:translateY(-6px)}}
+#rail-play .rp-track-hit{background:transparent;border:3px dashed transparent;box-shadow:none;min-height:64px}
+#rail-play .rp-track-hit:hover{border-color:#1479b880}
+#rail-play .rp-track-hit.is-selected{border-color:#ad841b;background:#ffd3442e}
+#rail-play .rp-track-hit:active:not(:disabled){transform:translate(-50%,-50%)}
+/* Single-line meet */
+.rp-meet-legend{display:flex;flex-wrap:wrap;justify-content:center;gap:4px 12px;font-weight:800;font-size:15px;background:#fff;border:2px solid #b7d8ec;border-radius:14px;padding:3px 12px;flex:none}
+.rp-legend-lamps{color:#3d6a83}
+.rp-side-cap{font:800 21px 'Microsoft JhengHei',sans-serif;fill:#7a4b00;paint-order:stroke;stroke:#fff;stroke-width:5px}
+.rp-train-tag{font:900 22px 'Microsoft JhengHei',sans-serif;fill:#143b61;paint-order:stroke;stroke:#fff;stroke-width:5px}
+.rp-arrived-mark{font:900 40px sans-serif;fill:#198968;paint-order:stroke;stroke:#fff;stroke-width:6px}
+.rp-train.is-arrived{opacity:.75}
+.rp-signal-head{fill:#22313a;stroke:#fff;stroke-width:3}
+.rp-lamp-red{fill:#5b2620}.rp-lamp-green{fill:#1d3d2a}
+.rp-signal.is-red .rp-lamp-red{fill:#ff3b2f}
+.rp-signal.is-green .rp-lamp-green{fill:#37e05f}
+#rail-play .rp-train-hit{width:64px;height:64px;min-width:64px;min-height:64px;padding:0;background:transparent;border:5px solid #1479b8;box-shadow:0 0 0 2px #fff,inset 0 0 0 2px #fff;font-size:22px;font-weight:900;color:#143b61;border-radius:22px!important}
+#rail-play .rp-train-hit.is-go{border-color:#2fbf55}
+#rail-play .rp-train-hit.is-wait{border-color:#e0442f;border-style:dashed}
+#rail-play .rp-train-hit span{position:absolute;right:-14px;top:-16px;background:#fff;border:3px solid currentColor;border-radius:50%;width:34px;height:34px;line-height:28px;font-size:20px}
+#rail-play .rp-train-hit.is-go span{color:#16843a}#rail-play .rp-train-hit.is-wait span{color:#b8281a}
+#rail-play .rp-train-hit:active:not(:disabled){transform:translate(-50%,-48%)}
+@media (prefers-reduced-motion:no-preference){#rail-play .rp-train-hit.is-go{animation:rp-go 1.4s ease-in-out infinite}}
+@keyframes rp-go{50%{box-shadow:0 0 0 7px #2fbf5555}}
+/* Boarding count */
+.rp-ride-route{display:flex;gap:6px;list-style:none;margin:0;padding:3px 10px;flex:none;background:#fff;border:2px solid #b7d8ec;border-radius:999px;font-weight:800;font-size:15px}
+.rp-ride-route li{color:#7a95a6}.rp-ride-route li+li:before{content:'→ ';color:#7a95a6}
+.rp-ride-route li[aria-current]{color:#143b61}.rp-ride-route li.is-past{color:#3d6a83}
+.rp-ride-scene{position:relative;flex:1 1 auto;min-height:0;width:100%;max-width:900px;border-radius:18px;overflow:hidden;background:#bfeaff url('/art/r5/platform.webp') center bottom/cover;border:3px solid #1479b8;display:flex;flex-direction:column;justify-content:flex-end;padding:8px}
+.rp-ride-sign{position:absolute;left:10px;top:8px;display:flex;flex-direction:column;gap:4px;align-items:flex-start;z-index:2}
+.rp-ride-sign b{background:#1479b8;color:#fff;border:3px solid #fff;border-radius:12px;padding:2px 14px;font-size:clamp(18px,2.6vw,26px);box-shadow:0 3px 0 #105781}
+.rp-ride-pills{display:flex;gap:6px;flex-wrap:wrap}
+.rp-pill{background:#fff;border:3px solid #1479b8;border-radius:999px;padding:2px 12px;font-weight:900;font-size:clamp(16px,2.2vw,22px)}
+.rp-pill.is-off{border-color:#e0442f;color:#a3261a}.rp-pill.is-on{border-color:#198968;color:#0b5c41}
+.rp-ride-count{position:absolute;right:10px;top:8px;z-index:2;background:#fff6d4;border:3px solid #1479b8;border-radius:14px;padding:2px 14px;font-weight:900;font-size:clamp(18px,2.6vw,26px);box-shadow:0 3px 0 #1479b8}
+.rp-ride-count.is-solved{background:#d6f5e6;border-color:#198968}
+.rp-ride-train{display:flex;gap:10px;align-items:flex-end;justify-content:center;width:100%;margin-bottom:34px}
+.rp-ride-car{position:relative;flex:0 1 560px;min-width:0;aspect-ratio:768/144;max-height:150px}
+.rp-ride-shell{position:absolute;inset:0;width:100%;height:100%;object-fit:fill;z-index:2;pointer-events:none}
+.rp-ride-seats{position:absolute;left:3.5%;right:15%;top:12%;bottom:30%;display:grid;grid-template-columns:repeat(5,1fr);z-index:1;background:#dff4ff}
+.seats-10 .rp-ride-seats{grid-template-columns:repeat(10,1fr)}
+.rp-seat{display:flex;align-items:flex-end;justify-content:center;overflow:hidden;min-width:0}
+.rp-seat img{width:100%;max-width:56px;height:100%;object-fit:contain;object-position:bottom}
+.rp-curtain{position:absolute;left:3.5%;right:15%;top:10%;bottom:28%;z-index:3;display:flex;align-items:center;justify-content:center;background:repeating-linear-gradient(90deg,#f5a25d 0 14px,#e8893f 14px 28px);color:#fff;font-weight:900;font-size:clamp(13px,1.8vw,18px);text-shadow:0 1px 2px #7a3a00;border-radius:6px}
+.rp-ride-platform{position:absolute;left:0;right:0;bottom:4px;height:64px;display:flex;justify-content:center;align-items:flex-end;pointer-events:none;z-index:4}
+.rp-walker{position:relative;width:40px;height:62px;display:block}
+.rp-walker img{position:absolute;inset:0;width:100%;height:100%;object-fit:contain}
+.rp-walker .rp-walk-b{opacity:0}
+@media (prefers-reduced-motion:no-preference){.rp-walker .rp-walk-a{animation:rp-step-a .26s steps(1) infinite}.rp-walker .rp-walk-b{animation:rp-step-b .26s steps(1) infinite}}
+@keyframes rp-step-a{50%{opacity:0}}@keyframes rp-step-b{50%{opacity:1}}
+.rp-trip-log{list-style:none;margin:0;padding:0;display:flex;flex-wrap:wrap;gap:4px 10px;justify-content:center;font-size:14px;font-weight:700;color:#3d6a83;flex:none}
+.rp-trip-log li{background:#fff;border-radius:10px;padding:1px 8px;border:1px solid #b7d8ec}
+#rail-play .rp-answer{font-size:24px;flex:1 1 110px}
+#rail-play .rp-answer.is-tried{text-decoration:line-through}
+#rail-play .rp-answer.is-right{background:#d6f5e6;border-color:#198968;opacity:1}
+/* Timetable */
+.rp-timetable{flex:none;width:min(720px,100%);background:#123049;color:#ffe9a3;border:4px solid #0b1f30;border-radius:14px;padding:6px 10px;box-shadow:0 4px 0 #0b1f30}
+.rp-timetable h2{font-size:clamp(15px,2vw,19px);color:#fff;text-align:center;margin-bottom:2px}
+.rp-tt-row{display:grid;grid-template-columns:1.5fr 1fr 1fr 1.1fr 1fr;gap:4px;align-items:center;padding:2px 6px;border-radius:8px;font-weight:800;font-size:clamp(14px,1.9vw,18px)}
+.ask-read .rp-tt-row{grid-template-columns:1.4fr 1fr 1fr}
+.rp-tt-row.is-head{color:#9fc6e4;font-size:13px}
+.rp-tt-row.is-current{background:#2b5b80;outline:2px solid #ffd344}
+.rp-tt-row.is-done{color:#b9f5c9}
+.rp-tt-train{display:flex;align-items:center;gap:6px;white-space:nowrap}.rp-tt-train i{width:14px;height:14px;border-radius:50%;flex:none;border:2px solid #fff}
+.rp-tt-row .is-filled{color:#7dffa0}
+.rp-tt-clocks{display:flex;gap:16px;justify-content:center;align-items:stretch;flex:1 1 auto;min-height:0;width:100%}
+.rp-clock{margin:0;display:flex;flex-direction:column;align-items:center;gap:2px;min-height:0;min-width:0;flex:0 1 230px}
+.rp-clock svg{flex:1 1 auto;min-height:0;width:100%;height:100%;max-height:210px}
+.rp-clock figcaption{font-weight:900;font-size:16px;background:#fff;border-radius:10px;padding:0 10px;border:2px solid #b7d8ec;white-space:nowrap}
+.rp-clock-face{fill:#fff;stroke:#143b61;stroke-width:6}
+.rp-tick{stroke:#7a95a6;stroke-width:2}.rp-tick.is-hour{stroke:#143b61;stroke-width:4}
+.rp-clock-num{font:900 22px 'Microsoft JhengHei',sans-serif;fill:#143b61}
+.rp-hand-hour{stroke:#e0442f;stroke-width:10;stroke-linecap:round}
+.rp-hand-minute{stroke:#1479b8;stroke-width:6;stroke-linecap:round}
+.rp-clock-pin{fill:#143b61}
+.rp-clock-unknown{display:none;font:900 76px 'Microsoft JhengHei',sans-serif;fill:#f46b27}
+.rp-clock.is-unknown .rp-clock-unknown{display:block}
+.rp-clock.is-unknown .rp-hand-hour,.rp-clock.is-unknown .rp-hand-minute{display:none}
+.rp-tt-stepper{display:flex;flex-wrap:wrap;gap:6px;justify-content:center;align-items:center;flex:none}
+.rp-tt-stepper[hidden]{display:none}
+.rp-tt-tally{width:100%;text-align:center;font-weight:800;font-size:14px;color:#3d6a83}
+#rail-play .rp-step{flex:0 1 auto;padding:4px 12px}
+.rp-tt-line{position:relative;flex:none;width:min(720px,100%);height:58px;--rp-runner-w:118px;background:linear-gradient(transparent 70%,#8a5a32 70% 74%,#c9b99a 74% 84%,#55636c 84% 88%,transparent 88%)}
+.rp-tt-sign{position:absolute;top:0;font-weight:900;font-size:14px;background:#1479b8;color:#fff;border-radius:8px;padding:0 8px}
+.rp-tt-sign.is-from{left:0}.rp-tt-sign.is-to{right:0}
+.rp-tt-train-img{position:absolute;left:2%;bottom:6px;width:var(--rp-runner-w);height:auto}
+.rp-defs{position:absolute;width:0;height:0}
+#rail-play .rp-time-answer{display:flex;align-items:center;justify-content:center;gap:8px;font-size:21px}
+.rp-time-answer svg{width:46px;height:46px;flex:none}
+.rp-mini-face{fill:#fff;stroke:#143b61;stroke-width:5}
+.rp-mini-hour{stroke:#e0442f;stroke-width:8;stroke-linecap:round}.rp-mini-minute{stroke:#1479b8;stroke-width:5;stroke-linecap:round}
+/* Phones held upright: a slimmer coach. */
+@media (max-width:600px) and (orientation:portrait){
+  #rail-play{--rp-top:64px}
+  .rp-page{grid-template-rows:var(--rp-top) minmax(0,1fr) auto auto}
+  .rp-top{gap:5px;padding:2px 5px}
+  #rail-play .rp-back{font-size:15px;padding:4px 8px}
+  .rp-coach{font-size:15px;min-height:66px;padding:5px 10px 5px 66px;margin-bottom:4px}
+  .rp-coach-img{width:54px;height:80px;left:5px}
+  .rp-controls{gap:6px;padding:6px}
+  .rp-controls button{flex-basis:100px;font-size:16px!important}
+  .rp-level-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .rp-card-car svg{width:44px;height:22px}.rp-dispatch-card{padding:3px 6px;gap:4px}.rp-dispatch-card>b{font-size:13px}
+  .rp-ride-train{flex-direction:column;align-items:center;gap:4px;margin-bottom:58px}.rp-ride-car{flex:none;width:100%}
+  .rp-ride-sign{left:6px;top:6px}.rp-ride-count{right:6px;top:6px}
+  .rp-tt-row{grid-template-columns:1.25fr .9fr .9fr 1fr .9fr;font-size:13px;gap:2px;padding:2px 3px}.rp-tt-train i{display:none}
+  .rp-tt-clocks{gap:8px}
+}
+/* Short landscape phones: stage on the left, coach and buttons in a side column. */
+@media (max-height:520px) and (orientation:landscape){
+  #rail-play{--rp-top:60px}
+  .rp-page{grid-template-columns:minmax(0,1fr) minmax(190px,31%);grid-template-rows:var(--rp-top) minmax(0,1fr) auto;grid-template-areas:'top top' 'stage coach' 'stage controls'}
+  .rp-top{padding:2px 6px}
+  .rp-coach{margin:6px 6px 4px 0;width:auto;align-self:start;min-height:62px;font-size:14px;padding:6px 10px 6px 52px;border-radius:16px}
+  .rp-coach-img{width:44px;height:64px;left:4px}
+  .rp-controls{flex-direction:column;flex-wrap:nowrap;justify-content:flex-end;margin:0 6px 6px 0;border:0;background:transparent;padding:0;gap:6px}
+  #rail-play .rp-controls button{flex:none;max-width:none;width:100%;font-size:15px!important;min-height:60px}
+  .rp-stage{padding:4px}
+  .rp-level-grid{grid-template-columns:repeat(3,minmax(0,1fr))}
+  .rp-card{padding:10px;gap:8px}.rp-win-coach{width:60px;height:86px}
+  .rp-card h2{font-size:20px}.rp-card>.rp-card-note:not(.save-failed){display:none}
+  #rail-play .rp-level-grid button{min-height:60px}.rp-level-grid{gap:6px}
+  .rp-overlay{padding:6px}
+  .rp-ride-route{font-size:13px;padding:1px 8px}.rp-trip-log{display:none}.rp-ride-train{margin-bottom:20px}.rp-ride-car{max-height:96px}
+  .rp-ride-platform{height:46px}.rp-walker{width:30px;height:46px}
+  .rp-timetable{padding:3px 6px}.rp-timetable h2{display:none}.rp-tt-row{font-size:13px;padding:1px 4px}.rp-tt-row.is-head{display:none}
+  .rp-tt-line{display:none}.rp-clock figcaption{font-size:13px}
+  #rail-play .rp-answer{font-size:19px}
+}
+@media (prefers-reduced-motion:reduce){#rail-play *{animation:none!important;transition:none!important}}
