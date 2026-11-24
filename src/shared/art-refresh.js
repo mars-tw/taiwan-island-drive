@@ -4,6 +4,7 @@ import './art-round6.css';
 import './art-round7.css';
 import './art-round8.css';
 import {appUrl} from './paths.js';
+import {t,setText,onLanguageChange} from './i18n.js';
 export function artImage(name,alt='',className=''){
   const r8={logo:'logo',badge:'coast-star','coast-sign':'coast-sign',panel:'ocean-ticket','train-platform':'train-platform','coach-safe-window':'coach-safe-window'};
   const newest=['coach-straight','coach-turn','coach-reward','coach-radio','panel','turn-sign','car-rear','flight-rear','finish-flag','badge','logo'].includes(name);
@@ -15,9 +16,9 @@ export function installArt(){
   document.documentElement.classList.add('art-r5','art-r6','art-r7','art-r8');
   const nav=document.querySelector('.academy-nav');
   if(nav)for(const [i,link] of [...nav.querySelectorAll('a')].entries()){
-    const label=link.querySelector('span');if(i===0)label.textContent='回學院';link.replaceChildren(artImage(['route-badge','car-rear','train','flight-rear'][i]),label);
+    const label=link.querySelector('span');if(i===0)setText(label,'回學院');link.replaceChildren(artImage(['route-badge','car-rear','train','flight-rear'][i]),label);
   }
-  const passport=document.querySelector('.passport-open');if(passport){passport.prepend(artImage('coach'));if(!document.body.dataset.game){const details=document.createElement('span');details.className='student-card-name';passport.append(details);const refresh=()=>{details.textContent=`小小學員 · ${document.querySelector('#star-total')?.textContent||0} 星`;};refresh();addEventListener('studentchange',refresh);}}
+  const passport=document.querySelector('.passport-open');if(passport){passport.prepend(artImage('coach'));if(!document.body.dataset.game){const details=document.createElement('span');details.className='student-card-name';passport.append(details);const refresh=()=>{details.textContent=t('小小學員 · {n} 星',{n:document.querySelector('#star-total')?.textContent||0});};refresh();addEventListener('studentchange',refresh);onLanguageChange(refresh);}}
   const coach=document.querySelector('.coach-label');
   if(coach)coach.prepend(artImage('coach','阿路教練','coach-avatar'));
   const flightBrand=document.querySelector('body[data-game=flight] #menu .brand');

@@ -1,4 +1,5 @@
 import { appUrl } from './paths.js';
+import { getLanguage,resolveSpeechLanguage } from './i18n.js';
 import '@capacitor/core';
 
 const defaultHost=()=>globalThis.window||globalThis;
@@ -12,6 +13,17 @@ export function selectLocalChineseVoice(voices=[]){
  ranked.sort((a,b)=>((b.lang==='zh-tw'?100:b.lang.includes('hant')?90:50)-(a.lang==='zh-tw'?100:a.lang.includes('hant')?90:50)));
  return ranked[0]||null;
 }
+const voiceLang=voice=>String(voice?.lang||'').replaceAll('_','-').toLowerCase();
+/** R50: an offline voice for the wanted language. Chinese keeps the Taiwan-first ranking above;
+ *  English prefers the exact locale, then US, then UK, then any English. Null means stay quiet. */
+export function selectLocalVoice(voices=[],lang='zh-TW'){
+ if(/^zh/i.test(lang))return selectLocalChineseVoice(voices);
+ const want=String(lang).toLowerCase(),base=want.split('-')[0];
+ const score=v=>v.lang===want?100:v.lang==='en-us'?80:v.lang==='en-gb'?70:50;
+ const ranked=voices.map((voice,index)=>({voice,index,lang:voiceLang(voice)})).filter(v=>(v.lang===base||v.lang.startsWith(base+'-'))&&v.voice.localService===true&&v.voice.networkConnectionRequired!==true);
+ ranked.sort((a,b)=>score(b)-score(a));
+ return ranked[0]||null;
+}
 export function gameIsRunning(state={}){return ['running','countdown'].includes(state.phase)||state.mode==='playing'||(state.paused===false&&state.completed!==true);}
 export function resolveCurrentGames(host=defaultHost()){
  const mode=host.document?.body?.dataset?.game;const entry=mode==='car'?host.__islandDrive:mode==='train'?host.__trainSchool:mode==='flight'?host.__flightSchool:null;
@@ -19,7 +31,7 @@ export function resolveCurrentGames(host=defaultHost()){
 }
 const loaders={App:()=>import('@capacitor/app').then(m=>m.App),Motion:()=>import('@capacitor/motion').then(m=>m.Motion),Preferences:()=>import('@capacitor/preferences').then(m=>m.Preferences),TextToSpeech:()=>import('@capacitor-community/text-to-speech').then(m=>m.TextToSpeech)};
 
-export function createNativeRuntime({host=defaultHost(),loadPlugin=name=>loaders[name](),resolveGames=()=>resolveCurrentGames(host),navigateHome=()=>host.location?.assign(appUrl()),closeDialog,mode=import.meta.env?.MODE}={}){
+export function createNativeRuntime({host=defaultHost(),loadPlugin=name=>loaders[name](),resolveGames=()=>resolveCurrentGames(host),navigateHome=()=>host.location?.assign(appUrl()),closeDialog,mode=import.meta.env?.MODE,language=getLanguage}={}){
  const plugins=new Map(),overlays=new Set(),handles=[],registeredGames=new Set(),backgroundCloses=new WeakSet();let initialized=false,active=true,speechSequence=0,ttsVoices=null,motionGranted=false;
  const status={native:isNative(host),build:isNativeBuild(host,mode),platform:host.Capacitor?.getPlatform?.()||'web',lifecycle:'idle',speech:'idle',motion:'off',hardwareVerified:false};
  const plugin=name=>{if(!plugins.has(name))plugins.set(name,Promise.resolve().then(()=>loadPlugin(name)));return plugins.get(name);};
@@ -40,21 +52,27 @@ export function createNativeRuntime({host=defaultHost(),loadPlugin=name=>loaders
  function foreground(){active=true;status.lifecycle='foreground-paused';/* Continue buttons own resumption; children never restart unexpectedly. */}
  async function handleBack(){if(closeTopDialog())return 'dialog';const entries=games();const running=entries.find(e=>gameIsRunning((e.game||e).getState?.()||{}));if(running){pauseGames();await stopSpeech();return 'paused';}if(host.document?.body?.dataset?.game||entries.length){navigateHome();return 'home';}if(status.native)try{await (await plugin('App')).minimizeApp();return 'minimized';}catch{}return 'home';}
  async function init(){if(initialized)return {...status};initialized=true;if(!status.native){status.lifecycle='web';return {...status};}host.document?.addEventListener?.('close',event=>{const fromBackground=backgroundCloses.has(event.target);backgroundCloses.delete(event.target);if(!active||fromBackground){event.stopImmediatePropagation();pauseGames();}},true);try{const app=await plugin('App');handles.push(await app.addListener('appStateChange',s=>s.isActive?foreground():background()));handles.push(await app.addListener('pause',background));handles.push(await app.addListener('resume',foreground));handles.push(await app.addListener('backButton',()=>{void handleBack();}));status.lifecycle='bound';}catch{status.lifecycle='unavailable';}return {...status};}
- async function speak(text,{lang='zh-TW',rate=.8,pitch=1.06,volume=1}={}){
+ async function speak(text,{lang,rate=.8,pitch=1.06,volume=1}={}){
   if(!active||!text)return {spoken:false,backend:'none'};
+  // R50: the voice follows the chosen language (an explicit lang still wins for Chinese text).
+  lang=resolveSpeechLanguage(text,lang,language());const chinese=/^zh/i.test(lang);
   const sequence=++speechSequence;
   if(status.native){try{
    const tts=await plugin('TextToSpeech');if(sequence!==speechSequence)return {spoken:false,backend:'none'};
    // Voice indices belong to the current installed engine list; never reuse a
    // stale index after the device's voices have changed.
    const result=await tts.getSupportedVoices();ttsVoices=result.voices||[];
-   const selected=selectLocalChineseVoice(ttsVoices);if(!selected){status.speech='text-only';return {spoken:false,backend:'none',reason:'no-local-chinese-voice'};}
+   const selected=selectLocalVoice(ttsVoices,lang);if(!selected){status.speech='text-only';return {spoken:false,backend:'none',reason:chinese?'no-local-chinese-voice':'no-local-voice'};}
    if(tts.isLanguageSupported&&(await tts.isLanguageSupported({lang:selected.voice.lang||lang})).supported!==true){status.speech='text-only';return {spoken:false,backend:'none',reason:'local-language-data-missing'};}
    if(sequence!==speechSequence||!active)return {spoken:false,backend:'none'};
    status.speech='native-local';await tts.speak({text,lang:selected.voice.lang||lang,voice:selected.index,rate,pitch,volume,category:'ambient',queueStrategy:0});return {spoken:sequence===speechSequence&&active,backend:'native-local'};
   }catch{if(sequence===speechSequence)status.speech='text-only';return {spoken:false,backend:'none',reason:'native-tts-unavailable'};}}
   if(!host.speechSynthesis||!host.SpeechSynthesisUtterance)return {spoken:false,backend:'none'};
-  try{host.speechSynthesis.cancel();const u=new host.SpeechSynthesisUtterance(text);u.lang=lang;u.rate=rate;u.pitch=pitch;u.volume=volume;const voices=host.speechSynthesis.getVoices?.()||[];u.voice=voices.find(v=>v.lang===lang)||voices.find(v=>v.lang?.startsWith('zh'))||null;host.speechSynthesis.speak(u);status.speech='browser';return {spoken:true,backend:'browser'};}catch{return {spoken:false,backend:'none'};}
+  try{host.speechSynthesis.cancel();const voices=host.speechSynthesis.getVoices?.()||[];
+   // No voice for a non-Chinese language on this device: stay quiet instead of reading English with a Chinese voice.
+   const voice=chinese?voices.find(v=>v.lang===lang)||voices.find(v=>v.lang?.startsWith('zh'))||null:voices.find(v=>voiceLang(v)===lang.toLowerCase())||voices.find(v=>voiceLang(v).split('-')[0]===lang.toLowerCase().split('-')[0])||null;
+   if(!chinese&&!voice&&voices.length){status.speech='text-only';return {spoken:false,backend:'none',reason:'no-voice-for-language'};}
+   const u=new host.SpeechSynthesisUtterance(text);u.lang=lang;u.rate=rate;u.pitch=pitch;u.volume=volume;u.voice=voice;host.speechSynthesis.speak(u);status.speech='browser';return {spoken:true,backend:'browser'};}catch{return {spoken:false,backend:'none'};}
  }
  async function requestMotion(){
   if(!status.native)return {granted:false,status:'web'};

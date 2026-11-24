@@ -4,6 +4,7 @@
 import { appUrl } from './paths.js';
 import { readSettings } from './settings.js';
 import { progressStorage } from './student-save.js';
+import { t } from './i18n.js';
 
 export const LOBBY_TRACK = 'audio/lobby-theme.m4a';
 export const MUSIC_PREFERENCE_KEY = 'island-transport:lobby-music:v1';
@@ -46,7 +47,7 @@ export class LobbyMusic {
     if (!this.button) return;
     const on = shouldPlayMusic({ muted: this.muted, preference: this.preference });
     this.button.setAttribute('aria-pressed', String(on));
-    this.button.setAttribute('aria-label', on ? '關閉大廳音樂' : '播放大廳音樂');
+    this.button.setAttribute('aria-label', t(on ? '關閉大廳音樂' : '播放大廳音樂'));
     this.button.textContent = on ? '♪' : '♪̸';
   }
 }

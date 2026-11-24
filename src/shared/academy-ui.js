@@ -14,26 +14,27 @@ import {installMathRoom} from '../games/math/room-ui.js';
 import {registerMathGame} from '../games/math/room-registry.js';
 import {roomLevel} from '../games/math/room-store.js';
 import {registerRailGames} from '../games/puzzles/math-room.js';
+import {t,setAttr,localize,onLanguageChange} from './i18n.js';
 
 export function installAcademy(){
   const start=document.getElementById('academy-start');if(!start)return;
-  const dialog=document.createElement('dialog');dialog.id='math-lesson';dialog.setAttribute('aria-label','列車數學課');document.body.append(dialog);
-  let paused=false,visible=false,cast=null,returnTo=null;
+  const dialog=document.createElement('dialog');dialog.id='math-lesson';setAttr(dialog,'aria-label','列車數學課');document.body.append(dialog);
+  let paused=false,visible=false,cast=null,returnTo=null,lastMessage='';
   // R48: the math entries open the game room; the dispatch lesson is its first math game.
   const room=installMathRoom();
   function update(){const s=academySummary(),a=readAcademy();
-    document.getElementById('academy-chapter').textContent=s.badge?'山海教室開課了！':`第 ${s.index+1} 章：${s.next.name}`;
-    document.getElementById('academy-story').textContent=s.badge?'學員證收齊調度、接客、運送與找路紀錄。再跑一趟，或選交通工具練習。':s.next.story;
-    start.textContent=s.badge?'再上列車數學課':s.index===0?(a.dispatch.active&&a.dispatch.active.phase!=='done'?'繼續列車數學課':'接下第一份調度單'):`繼續：${s.next.name}`;
-    document.getElementById('academy-route').textContent=ACADEMY_CHAPTERS.map((c,i)=>`${s.done[i]?'✓':'○'} ${c.name}`).join(' → ');
+    document.getElementById('academy-chapter').textContent=s.badge?t('山海教室開課了！'):t('第 {n} 章：{name}',{n:s.index+1,name:t(s.next.name)});
+    document.getElementById('academy-story').textContent=t(s.badge?'學員證收齊調度、接客、運送與找路紀錄。再跑一趟，或選交通工具練習。':s.next.story);
+    start.textContent=s.badge?t('再上列車數學課'):s.index===0?t(a.dispatch.active&&a.dispatch.active.phase!=='done'?'繼續列車數學課':'接下第一份調度單'):t('繼續：{name}',{name:t(s.next.name)});
+    document.getElementById('academy-route').textContent=ACADEMY_CHAPTERS.map((c,i)=>`${s.done[i]?'✓':'○'} ${t(c.name)}`).join(' → ');
     const coastal=Object.values(readStudent().sections.contentR1||{}).filter(r=>r?.completed).length;
-    document.getElementById('academy-record').textContent=`主線學生證 ${s.done.filter(Boolean).length}／4 章 · 獨立海岸 ${coastal}／3 課${s.mathBadge?' · 數學調度章':''}${s.badge?' · 山海同行章':''}${a.imported?' · 已保留小小列車長紀錄':''}`;
-    if(coastal===3&&s.index===0&&!a.dispatch.active)start.textContent='開始主線：列車數學課';
+    document.getElementById('academy-record').textContent=[t('主線學生證 {done}／4 章 · 獨立海岸 {coastal}／3 課',{done:s.done.filter(Boolean).length,coastal}),...(s.mathBadge?[t('數學調度章')]:[]),...(s.badge?[t('山海同行章')]:[]),...(a.imported?[t('已保留小小列車長紀錄')]:[])].join(' · ');
+    if(coastal===3&&s.index===0&&!a.dispatch.active)start.textContent=t('開始主線：列車數學課');
   }
   function render(message='',previous=new Map(),action=''){
-    const a=readAcademy();delete dialog.dataset.inTransit;dialog.innerHTML=dispatchMarkup(a.dispatch,message);
+    lastMessage=message;const a=readAcademy();delete dialog.dataset.inTransit;dialog.innerHTML=dispatchMarkup(a.dispatch,message);
     dialog.querySelectorAll('.dispatch-wheels').forEach(wheels=>{wheels.replaceChildren();for(let i=0;i<2;i++){const wheel=document.createElement('span');wheel.textContent='●';wheels.append(wheel);}});
-    if(a.dispatch.active?.phase==='intro')dialog.querySelector('.dispatch-instruction').textContent='海風站的朋友要去山海教室。一起請朋友上車，再分成兩車。';
+    if(a.dispatch.active?.phase==='intro')dialog.querySelector('.dispatch-instruction').textContent=t('海風站的朋友要去山海教室。一起請朋友上車，再分成兩車。');
     dialog.dataset.phase=a.dispatch.active?.phase;
     const phase=a.dispatch.active.phase,q=a.dispatch.active;
     const total=dispatchLesson(q.level,a.dispatch.completed-(phase==='done'?1:0)).total;
@@ -42,32 +43,32 @@ export function installAcademy(){
     for(const side of ['front','rear'])dialog.querySelectorAll(`.dispatch-carriage.${side} .occupied`).forEach((seat,index)=>seat.replaceChildren(passenger(cast[side][index])));
     dialog.querySelectorAll('.dispatch-carriage').forEach((carriage,i)=>{const shell=artImage(i?'carriage-orange':'carriage-blue','','carriage-shell');shell.src=shell.src.replace('/r4/','/r5/');carriage.append(shell);});
     const body=dialog.querySelector('.dispatch-body'),equation=dialog.querySelector('.dispatch-equation'),train=dialog.querySelector('.dispatch-train');
-    if(phase==='load')equation.textContent=`${q.front}／${dispatchLesson(q.level,a.dispatch.completed).total} 位朋友上車`;
+    if(phase==='load')equation.textContent=t('{n}／{total} 位朋友上車',{n:q.front,total:dispatchLesson(q.level,a.dispatch.completed).total});
     dialog.querySelector('.dispatch-feedback').hidden=!message||message.startsWith('再看看')||phase==='done'||(['split','subtract'].includes(phase)&&action==='check');
     if(['split','subtract'].includes(phase))body.insertBefore(equation,train);
-    if(['intro','load'].includes(phase)){const queue=document.createElement('div');queue.className='platform-queue';queue.setAttribute('aria-label','月台等車的朋友');for(const id of cast.queue)queue.append(passenger(id,false));body.insertBefore(queue,train);}
-    if(['subtract','done'].includes(phase)){const sign=document.createElement('span');sign.className='stay-sign';sign.textContent='留在海風站';dialog.querySelector('.dispatch-carriage.rear').append(sign);}
-    dialog.querySelector('.dispatch-coupler').textContent=['subtract','done'].includes(a.dispatch.active?.phase)?'分開':'相連';
+    if(['intro','load'].includes(phase)){const queue=document.createElement('div');queue.className='platform-queue';queue.setAttribute('aria-label',t('月台等車的朋友'));for(const id of cast.queue)queue.append(passenger(id,false));body.insertBefore(queue,train);}
+    if(['subtract','done'].includes(phase)){const sign=document.createElement('span');sign.className='stay-sign';sign.textContent=t('留在海風站');dialog.querySelector('.dispatch-carriage.rear').append(sign);}
+    dialog.querySelector('.dispatch-coupler').textContent=t(['subtract','done'].includes(a.dispatch.active?.phase)?'分開':'相連');
     const top=dialog.querySelector('.dispatch-top');top.classList.add('academy-nav');
     // Rebuild from the same global navigation, at the same x/y positions.
     top.replaceChildren(...[...document.querySelectorAll('body>.academy-nav>a')].map(e=>e.cloneNode(true)));
     top.querySelector('a').id='math-back';top.querySelector('a').onclick=e=>{e.preventDefault();close();};
     const passport=document.querySelector('body>.academy-nav [data-open-passport]');
     const studentButton=passport.cloneNode(true);studentButton.onclick=()=>{pause();passport.click();};top.append(studentButton);
-    const pauseButton=document.createElement('button');pauseButton.id='math-pause';pauseButton.textContent='暫停';pauseButton.setAttribute('aria-label','暫停列車數學課');pauseButton.onclick=pause;top.append(pauseButton);
+    const pauseButton=document.createElement('button');pauseButton.id='math-pause';pauseButton.textContent=t('暫停');pauseButton.setAttribute('aria-label',t('暫停列車數學課'));pauseButton.onclick=pause;top.append(pauseButton);
     if(a.dispatch.active?.phase==='done'){
-      const next=document.createElement('button');next.id='math-next';next.textContent='去接朋友 →';next.onclick=()=>{returnTo=null;close();launchJourney(journeyById('train-1'),{academy:true});};
+      const next=document.createElement('button');next.id='math-next';next.textContent=t('去接朋友 →');next.onclick=()=>{returnTo=null;close();launchJourney(journeyById('train-1'),{academy:true});};
       dialog.querySelector('.dispatch-controls').prepend(next);
-      dialog.querySelector('[data-dispatch=start]').textContent='再開一班';
-      dialog.querySelector('#dispatch-title').textContent='調度完成！';
+      dialog.querySelector('[data-dispatch=start]').textContent=t('再開一班');
+      dialog.querySelector('#dispatch-title').textContent=t('調度完成！');
       const awards=document.createElement('div');awards.className='dispatch-awards';const total=q.front+q.rear;
-      for(const [title,formula,icon] of [['合起來',`${q.front} ＋ ${q.rear} ＝ ${total}`,'badge'],['分開算',`${total} − ${q.rear} ＝ ${q.front}`,'route-badge']]){const card=document.createElement('section');card.className='math-award';card.append(artImage(icon));const label=document.createElement('strong');label.textContent=title;const number=document.createElement('b');number.textContent=formula;card.append(label,number);awards.append(card);}equation.replaceWith(awards);
-      const stage=document.createElement('div');stage.className='celebration-stage';stage.append(artImage('confetti','','celebration-confetti'),artImage('train-platform','列車停靠海風站，車輪接觸鐵軌','departure-train'));body.insertBefore(stage,awards);train.hidden=true;
+      for(const [title,formula,icon] of [['合起來',`${q.front} ＋ ${q.rear} ＝ ${total}`,'badge'],['分開算',`${total} − ${q.rear} ＝ ${q.front}`,'route-badge']]){const card=document.createElement('section');card.className='math-award';card.append(artImage(icon));const label=document.createElement('strong');label.textContent=t(title);const number=document.createElement('b');number.textContent=formula;card.append(label,number);awards.append(card);}equation.replaceWith(awards);
+      const stage=document.createElement('div');stage.className='celebration-stage';stage.append(artImage('confetti','','celebration-confetti'),artImage('train-platform',t('列車停靠海風站，車輪接觸鐵軌'),'departure-train'));body.insertBefore(stage,awards);train.hidden=true;
     }
-    const coach=document.createElement('div');coach.className='dispatch-coach';coach.append(artImage('coach','阿路教練'),artImage('coach-cheer','','coach-cheer'));const cue=document.createElement('span');cue.textContent={intro:'我是阿路！一起接朋友去山海教室。',load:'月台的朋友在等你，請他們上車吧！',split:'朋友換車廂，總人數一樣多。',subtract:'橘色車廂留下來，藍色車廂帶走幾人？',done:'你會合起來，也會分開算。綠旗出發！'}[phase];coach.append(cue);body.append(coach);
+    const coach=document.createElement('div');coach.className='dispatch-coach';coach.append(artImage('coach',t('阿路教練')),artImage('coach-cheer','','coach-cheer'));const cue=document.createElement('span');cue.textContent=t({intro:'我是阿路！一起接朋友去山海教室。',load:'月台的朋友在等你，請他們上車吧！',split:'朋友換車廂，總人數一樣多。',subtract:'橘色車廂留下來，藍色車廂帶走幾人？',done:'你會合起來，也會分開算。綠旗出發！'}[phase]);coach.append(cue);body.append(coach);
     if(phase==='done')body.querySelector('.celebration-stage').append(coach);
-    const note=document.createElement('p');note.className='math-save';note.setAttribute('role','status');note.hidden=studentSaved();note.textContent=studentSaved()?'學生證已存在這台裝置。':'這次無法儲存，關閉後可能不會保留。';dialog.querySelector('.dispatch-body').append(note);
-    if(!studentSaved()){note.classList.add('save-failed');const completed=dialog.querySelector('.dispatch-completed');if(completed)completed.textContent=`已完成 ${a.dispatch.completed} 班調度；本次尚未儲存。`;}
+    const note=document.createElement('p');note.className='math-save';note.setAttribute('role','status');note.hidden=studentSaved();note.textContent=t(studentSaved()?'學生證已存在這台裝置。':'這次無法儲存，關閉後可能不會保留。');dialog.querySelector('.dispatch-body').append(note);
+    if(!studentSaved()){note.classList.add('save-failed');const completed=dialog.querySelector('.dispatch-completed');if(completed)completed.textContent=t('已完成 {n} 班調度；本次尚未儲存。',{n:a.dispatch.completed});}
     if(!matchMedia('(prefers-reduced-motion: reduce)').matches){
       // An overlay lets the same child walk through the aisle above both window frames.
       // The duplicate is presentation only; seated identity/count and lesson state never change.
@@ -86,12 +87,12 @@ export function installAcademy(){
     }
     const moving=[...dialog.querySelectorAll('.passenger-transit')];
     if(moving.length){
-      const settledText=equation.textContent;equation.textContent='朋友正在上車／換車廂…';dialog.dataset.inTransit='true';
+      const settledText=equation.textContent;equation.textContent=t('朋友正在上車／換車廂…');dialog.dataset.inTransit='true';
       const active=[...dialog.querySelectorAll('[data-dispatch]:not(:disabled)')];active.forEach(b=>b.disabled=true);
       Promise.all(moving.flatMap(e=>e.getAnimations().map(a=>a.finished.catch(()=>{})))).then(()=>{if(!equation.isConnected)return;equation.textContent=settledText;delete dialog.dataset.inTransit;active.forEach(b=>b.disabled=false);});
     }
     if(['add','remove','to-front','to-rear'].includes(action))playChime('tap',{volume:.08});
-    if(phase==='load'&&q.front===total){const ready=dialog.querySelector('[data-dispatch=check]');ready.textContent='坐好了，去分車 →';ready.classList.add('next-ready');cue.textContent='朋友坐好了！按橘色車票去分車。';}
+    if(phase==='load'&&q.front===total){const ready=dialog.querySelector('[data-dispatch=check]');ready.textContent=t('坐好了，去分車 →');ready.classList.add('next-ready');cue.textContent=t('朋友坐好了！按橘色車票去分車。');}
     // R47: a failed check is told by the coach (always on screen), and only one button glows next.
     const guide=dispatchGuide({phase,action,message,front:q.front,total});
     if(guide.retry){cue.textContent=guide.cue;coach.classList.add('is-retry');dialog.querySelector('.dispatch-feedback').hidden=true;}
@@ -103,10 +104,10 @@ export function installAcademy(){
         if(action==='to-rear'&&next.rear>before.active.rear)cast.rear.push(cast.front.pop());
         if(action==='to-front'&&next.front>before.active.front)cast.front.push(cast.rear.pop());
       }
-      render(r.message,rects,action);(dialog.querySelector(`[data-dispatch="${action}"]:not(:disabled)`)||dialog.querySelector('[data-dispatch]:not(:disabled)'))?.focus();if(r.state.completed>before.completed)celebrate({text:'數學調度章 ＋1',kind:'station',sound:!readSettings().muted});update();});
+      render(r.message,rects,action);(dialog.querySelector(`[data-dispatch="${action}"]:not(:disabled)`)||dialog.querySelector('[data-dispatch]:not(:disabled)'))?.focus();if(r.state.completed>before.completed)celebrate({text:t('數學調度章 ＋1'),kind:'station',sound:!readSettings().muted});update();});
   }
   function close(){visible=false;paused=false;dialog.close();update();const back=returnTo;returnTo=null;if(back)back();else start.focus();}
-  function pause(){if(!visible||paused)return;paused=true;const cover=document.createElement('section');cover.className='math-paused';cover.innerHTML='<h2>休息一下</h2><p>乘客和調度單都等你回來。</p><button id="math-resume">繼續調度</button><button id="math-leave">回學院</button>';dialog.append(cover);if(returnTo)cover.querySelector('#math-leave').textContent='回遊戲室';cover.querySelector('#math-resume').onclick=()=>{paused=false;render();dialog.querySelector('#math-pause').focus();};cover.querySelector('#math-leave').onclick=close;cover.querySelector('button').focus();}
+  function pause(){if(!visible||paused)return;paused=true;const cover=document.createElement('section');cover.className='math-paused';cover.innerHTML='<h2>休息一下</h2><p>乘客和調度單都等你回來。</p><button id="math-resume">繼續調度</button><button id="math-leave">回學院</button>';dialog.append(cover);if(returnTo)cover.querySelector('#math-leave').textContent='回遊戲室';localize(cover);cover.querySelector('#math-resume').onclick=()=>{paused=false;render();dialog.querySelector('#math-pause').focus();};cover.querySelector('#math-leave').onclick=close;cover.querySelector('button').focus();}
   function openDispatch(onClose=null){pauseNativeGames();performDispatch('start',roomLevel());visible=true;paused=false;returnTo=onClose;render();dialog.showModal();dialog.querySelector('[data-dispatch]')?.focus();}
   registerMathGame({id:'dispatch',category:'math',name:'拆合車廂調度台',icon:'🚃',description:'同一班列車，裝滿、分車，再算剩下。',levels:['small','medium','large'],order:5,
     status:()=>{const s=academySummary(),a=readAcademy();return {stamps:a.dispatch.completed,highlight:s.index===0,note:s.index===0?'主線第 1 章':a.dispatch.active&&a.dispatch.active.phase!=='done'?'調度到一半':''};},
@@ -118,6 +119,8 @@ export function installAcademy(){
   dialog.addEventListener('cancel',e=>{e.preventDefault();close();});addEventListener('blur',pause);document.addEventListener('visibilitychange',()=>{if(document.hidden)pause();});
   registerGameLifecycle({getState:()=>({paused:!visible||paused}),pause});registerNativeOverlay({isOpen:()=>dialog.open,close});
   const file=document.getElementById('train-backup');file.onchange=async()=>{const selected=file.files?.[0],status=document.getElementById('train-import-status');if(!selected)return;
-    try {if(selected.size>262144)throw Error('備份太大，尚未匯入。');importTrainBackup(await selected.text());status.textContent=studentSaved()?'已保留原備份；數學進度與舊集章已接回遊戲室，沒有額外發星星。':'本次無法儲存；請保留原備份後再試。';update();}catch(e){status.textContent=e.message;}file.value='';};
+    try {if(selected.size>262144)throw Error('備份太大，尚未匯入。');importTrainBackup(await selected.text());status.textContent=t(studentSaved()?'已保留原備份；數學進度與舊集章已接回遊戲室，沒有額外發星星。':'本次無法儲存；請保留原備份後再試。');update();}catch(e){status.textContent=t(e.message);}file.value='';};
   addEventListener('studentchange',update);addEventListener('pageshow',update);update();
+  // R50: a language switch redraws the mission sign, and an open lesson in place (its state is untouched).
+  onLanguageChange(()=>{update();if(!visible)return;if(paused)localize(dialog.querySelector('.math-paused'));else render(lastMessage);});
 }

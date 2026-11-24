@@ -1,0 +1,1380 @@
+{
+ "base": "vite preview（npm run build 後的 dist），127.0.0.1:5187",
+ "renderer": "chromium headless shell 1228, --disable-gpu, SwiftShader",
+ "pageErrors": [],
+ "consoleErrors": [],
+ "note": "手機直向 body 的 scrollWidth 為 393（> 390）：改動前的 3c842f4 一樣是 393，來源是首頁教練插圖超出 3px，body 已 overflow-x:hidden，不會出現橫向捲動；非本輪造成，已從 clipped 排除。家長設定的「設定好了／Done」在對話框內捲動後檢查。",
+ "pages": [
+  {
+   "name": "home zh phone",
+   "screenshot": "home-zh-phone-390x844.jpg",
+   "htmlLang": "zh-Hant-TW",
+   "title": "島嶼交通學院｜汽車・火車・飛機",
+   "problems": [],
+   "clipped": [],
+   "buttons": [
+    {
+     "selector": "#language-toggle",
+     "text": "中文 English",
+     "w": 74,
+     "h": 60
+    },
+    {
+     "selector": "#home-settings",
+     "text": "家長設定",
+     "w": 72,
+     "h": 60
+    },
+    {
+     "selector": ".academy-nav a",
+     "text": "回學院",
+     "w": 73,
+     "h": 60
+    },
+    {
+     "selector": ".academy-nav a",
+     "text": "汽車",
+     "w": 73,
+     "h": 60
+    },
+    {
+     "selector": ".academy-nav a",
+     "text": "火車",
+     "w": 73,
+     "h": 60
+    },
+    {
+     "selector": ".academy-nav a",
+     "text": "飛機",
+     "w": 73,
+     "h": 60
+    },
+    {
+     "selector": "[data-open-passport]",
+     "text": "學生證",
+     "w": 98,
+     "h": 60
+    },
+    {
+     "selector": ".card-action",
+     "text": "出發上路 →",
+     "w": 129,
+     "h": 60
+    },
+    {
+     "selector": ".card-action",
+     "text": "準備出發 →",
+     "w": 129,
+     "h": 60
+    },
+    {
+     "selector": ".card-action",
+     "text": "開始飛行 →",
+     "w": 129,
+     "h": 60
+    },
+    {
+     "selector": "#academy-start",
+     "text": "接下第一份調度單",
+     "w": 239,
+     "h": 60
+    },
+    {
+     "selector": "#safety-start",
+     "text": "第一課：停、看、再出發",
+     "w": 120,
+     "h": 64
+    },
+    {
+     "selector": "#math-practice",
+     "text": "數學遊戲室",
+     "w": 120,
+     "h": 64
+    },
+    {
+     "selector": "#content-start",
+     "text": "海岸實作課 獨立・0／3 課",
+     "w": 120,
+     "h": 64
+    }
+   ],
+   "toggleOverlapsSettings": false,
+   "toggleOverlapsBrand": false
+  },
+  {
+   "name": "settings zh phone",
+   "screenshot": "settings-zh-phone-390x844.jpg",
+   "htmlLang": "zh-Hant-TW",
+   "title": "島嶼交通學院｜汽車・火車・飛機",
+   "problems": [],
+   "clipped": [],
+   "buttons": [
+    {
+     "selector": "[data-language-choice]",
+     "text": "中文",
+     "w": 60,
+     "h": 60
+    },
+    {
+     "selector": "[data-language-choice]",
+     "text": "English",
+     "w": 81,
+     "h": 60
+    },
+    {
+     "selector": "#family-dialog .close-dialog",
+     "text": "×",
+     "w": 60,
+     "h": 60
+    },
+    {
+     "selector": "#family-dialog .done-button",
+     "text": "設定好了",
+     "w": 295,
+     "h": 60
+    }
+   ]
+  },
+  {
+   "name": "switched zh->en phone",
+   "screenshot": "switched-zh-to-en-phone-390x844.jpg",
+   "htmlLang": "en",
+   "title": "Island Transport Academy | Car · Train · Plane",
+   "problems": [],
+   "clipped": [],
+   "buttons": [
+    {
+     "selector": "#language-toggle",
+     "text": "中文 English",
+     "w": 74,
+     "h": 60
+    },
+    {
+     "selector": "#home-settings",
+     "text": "Parent Settings",
+     "w": 112,
+     "h": 60
+    },
+    {
+     "selector": ".academy-nav a",
+     "text": "Home",
+     "w": 73,
+     "h": 60
+    },
+    {
+     "selector": ".academy-nav a",
+     "text": "Car",
+     "w": 73,
+     "h": 60
+    },
+    {
+     "selector": ".academy-nav a",
+     "text": "Train",
+     "w": 73,
+     "h": 60
+    },
+    {
+     "selector": ".academy-nav a",
+     "text": "Plane",
+     "w": 73,
+     "h": 60
+    },
+    {
+     "selector": "[data-open-passport]",
+     "text": "Student Card",
+     "w": 98,
+     "h": 60
+    },
+    {
+     "selector": ".card-action",
+     "text": "Let's drive →",
+     "w": 129,
+     "h": 60
+    },
+    {
+     "selector": ".card-action",
+     "text": "Get ready →",
+     "w": 129,
+     "h": 60
+    },
+    {
+     "selector": ".card-action",
+     "text": "Let's fly →",
+     "w": 129,
+     "h": 60
+    },
+    {
+     "selector": "#academy-start",
+     "text": "Start your first train job",
+     "w": 239,
+     "h": 60
+    },
+    {
+     "selector": "#safety-start",
+     "text": "Lesson 1: Stop, Look, Go",
+     "w": 120,
+     "h": 64
+    },
+    {
+     "selector": "#math-practice",
+     "text": "Math Playroom",
+     "w": 120,
+     "h": 64
+    },
+    {
+     "selector": "#content-start",
+     "text": "Coast Practice On your own · 0/3",
+     "w": 120,
+     "h": 64
+    }
+   ],
+   "visibleChineseOutsideLanguageSwitch": [],
+   "toggleOverlapsSettings": false,
+   "progressKept": true,
+   "savedLanguage": "en"
+  },
+  {
+   "name": "home en phone",
+   "screenshot": "home-en-phone-390x844.jpg",
+   "htmlLang": "en",
+   "title": "Island Transport Academy | Car · Train · Plane",
+   "problems": [],
+   "clipped": [],
+   "buttons": [
+    {
+     "selector": "#language-toggle",
+     "text": "中文 English",
+     "w": 74,
+     "h": 60
+    },
+    {
+     "selector": "#home-settings",
+     "text": "Parent Settings",
+     "w": 112,
+     "h": 60
+    },
+    {
+     "selector": ".academy-nav a",
+     "text": "Home",
+     "w": 73,
+     "h": 60
+    },
+    {
+     "selector": ".academy-nav a",
+     "text": "Car",
+     "w": 73,
+     "h": 60
+    },
+    {
+     "selector": ".academy-nav a",
+     "text": "Train",
+     "w": 73,
+     "h": 60
+    },
+    {
+     "selector": ".academy-nav a",
+     "text": "Plane",
+     "w": 73,
+     "h": 60
+    },
+    {
+     "selector": "[data-open-passport]",
+     "text": "Student Card",
+     "w": 98,
+     "h": 60
+    },
+    {
+     "selector": ".card-action",
+     "text": "Let's drive →",
+     "w": 129,
+     "h": 60
+    },
+    {
+     "selector": ".card-action",
+     "text": "Get ready →",
+     "w": 129,
+     "h": 60
+    },
+    {
+     "selector": ".card-action",
+     "text": "Let's fly →",
+     "w": 129,
+     "h": 60
+    },
+    {
+     "selector": "#academy-start",
+     "text": "Start your first train job",
+     "w": 239,
+     "h": 60
+    },
+    {
+     "selector": "#safety-start",
+     "text": "Lesson 1: Stop, Look, Go",
+     "w": 120,
+     "h": 64
+    },
+    {
+     "selector": "#math-practice",
+     "text": "Math Playroom",
+     "w": 120,
+     "h": 64
+    },
+    {
+     "selector": "#content-start",
+     "text": "Coast Practice On your own · 0/3",
+     "w": 120,
+     "h": 64
+    }
+   ],
+   "visibleChineseOutsideLanguageSwitch": [],
+   "toggleOverlapsSettings": false,
+   "toggleOverlapsBrand": false
+  },
+  {
+   "name": "settings en phone",
+   "screenshot": "settings-en-phone-390x844.jpg",
+   "htmlLang": "en",
+   "title": "Island Transport Academy | Car · Train · Plane",
+   "problems": [],
+   "clipped": [],
+   "buttons": [
+    {
+     "selector": "[data-language-choice]",
+     "text": "中文",
+     "w": 60,
+     "h": 60
+    },
+    {
+     "selector": "[data-language-choice]",
+     "text": "English",
+     "w": 81,
+     "h": 60
+    },
+    {
+     "selector": "#family-dialog .close-dialog",
+     "text": "×",
+     "w": 60,
+     "h": 60
+    },
+    {
+     "selector": "#family-dialog .done-button",
+     "text": "Done",
+     "w": 295,
+     "h": 60
+    }
+   ],
+   "visibleChineseOutsideLanguageSwitch": []
+  },
+  {
+   "name": "switched en->zh phone",
+   "screenshot": "switched-en-to-zh-phone-390x844.jpg",
+   "htmlLang": "zh-Hant-TW",
+   "title": "島嶼交通學院｜汽車・火車・飛機",
+   "problems": [],
+   "clipped": [],
+   "buttons": [
+    {
+     "selector": "#language-toggle",
+     "text": "中文 English",
+     "w": 74,
+     "h": 60
+    },
+    {
+     "selector": "#home-settings",
+     "text": "家長設定",
+     "w": 72,
+     "h": 60
+    },
+    {
+     "selector": ".academy-nav a",
+     "text": "回學院",
+     "w": 73,
+     "h": 60
+    },
+    {
+     "selector": ".academy-nav a",
+     "text": "汽車",
+     "w": 73,
+     "h": 60
+    },
+    {
+     "selector": ".academy-nav a",
+     "text": "火車",
+     "w": 73,
+     "h": 60
+    },
+    {
+     "selector": ".academy-nav a",
+     "text": "飛機",
+     "w": 73,
+     "h": 60
+    },
+    {
+     "selector": "[data-open-passport]",
+     "text": "學生證",
+     "w": 98,
+     "h": 60
+    },
+    {
+     "selector": ".card-action",
+     "text": "出發上路 →",
+     "w": 129,
+     "h": 60
+    },
+    {
+     "selector": ".card-action",
+     "text": "準備出發 →",
+     "w": 129,
+     "h": 60
+    },
+    {
+     "selector": ".card-action",
+     "text": "開始飛行 →",
+     "w": 129,
+     "h": 60
+    },
+    {
+     "selector": "#academy-start",
+     "text": "接下第一份調度單",
+     "w": 239,
+     "h": 60
+    },
+    {
+     "selector": "#safety-start",
+     "text": "第一課：停、看、再出發",
+     "w": 120,
+     "h": 64
+    },
+    {
+     "selector": "#math-practice",
+     "text": "數學遊戲室",
+     "w": 120,
+     "h": 64
+    },
+    {
+     "selector": "#content-start",
+     "text": "海岸實作課 獨立・0／3 課",
+     "w": 120,
+     "h": 64
+    }
+   ],
+   "toggleOverlapsSettings": false,
+   "progressKept": true,
+   "savedLanguage": "zh-Hant"
+  },
+  {
+   "name": "home zh landscape",
+   "screenshot": "home-zh-landscape-844x390.jpg",
+   "htmlLang": "zh-Hant-TW",
+   "title": "島嶼交通學院｜汽車・火車・飛機",
+   "problems": [],
+   "clipped": [],
+   "buttons": [
+    {
+     "selector": "#language-toggle",
+     "text": "中文 ／ English",
+     "w": 128,
+     "h": 60
+    },
+    {
+     "selector": "#home-settings",
+     "text": "家長設定",
+     "w": 60,
+     "h": 60
+    },
+    {
+     "selector": ".academy-nav a",
+     "text": "回學院",
+     "w": 158,
+     "h": 60
+    },
+    {
+     "selector": ".academy-nav a",
+     "text": "汽車",
+     "w": 158,
+     "h": 60
+    },
+    {
+     "selector": ".academy-nav a",
+     "text": "火車",
+     "w": 158,
+     "h": 60
+    },
+    {
+     "selector": ".academy-nav a",
+     "text": "飛機",
+     "w": 158,
+     "h": 60
+    },
+    {
+     "selector": "[data-open-passport]",
+     "text": "學生證",
+     "w": 213,
+     "h": 60
+    },
+    {
+     "selector": ".card-action",
+     "text": "出發上路",
+     "w": 124,
+     "h": 60
+    },
+    {
+     "selector": ".card-action",
+     "text": "準備出發",
+     "w": 124,
+     "h": 60
+    },
+    {
+     "selector": ".card-action",
+     "text": "開始飛行",
+     "w": 124,
+     "h": 60
+    },
+    {
+     "selector": "#academy-start",
+     "text": "接下第一份調度單",
+     "w": 285,
+     "h": 60
+    },
+    {
+     "selector": "#safety-start",
+     "text": "第一課：停、看、再出發",
+     "w": 133,
+     "h": 60
+    },
+    {
+     "selector": "#math-practice",
+     "text": "數學遊戲室",
+     "w": 133,
+     "h": 60
+    },
+    {
+     "selector": "#content-start",
+     "text": "海岸實作課 獨立・0／3 課",
+     "w": 133,
+     "h": 60
+    }
+   ],
+   "toggleOverlapsSettings": false,
+   "toggleOverlapsBrand": null
+  },
+  {
+   "name": "settings zh landscape",
+   "screenshot": "settings-zh-landscape-844x390.jpg",
+   "htmlLang": "zh-Hant-TW",
+   "title": "島嶼交通學院｜汽車・火車・飛機",
+   "problems": [],
+   "clipped": [],
+   "buttons": [
+    {
+     "selector": "[data-language-choice]",
+     "text": "中文",
+     "w": 60,
+     "h": 60
+    },
+    {
+     "selector": "[data-language-choice]",
+     "text": "English",
+     "w": 81,
+     "h": 60
+    },
+    {
+     "selector": "#family-dialog .close-dialog",
+     "text": "×",
+     "w": 60,
+     "h": 60
+    },
+    {
+     "selector": "#family-dialog .done-button",
+     "text": "設定好了",
+     "w": 370,
+     "h": 60
+    }
+   ]
+  },
+  {
+   "name": "switched zh->en landscape",
+   "screenshot": "switched-zh-to-en-landscape-844x390.jpg",
+   "htmlLang": "en",
+   "title": "Island Transport Academy | Car · Train · Plane",
+   "problems": [],
+   "clipped": [],
+   "buttons": [
+    {
+     "selector": "#language-toggle",
+     "text": "中文 ／ English",
+     "w": 128,
+     "h": 60
+    },
+    {
+     "selector": "#home-settings",
+     "text": "Parent Settings",
+     "w": 60,
+     "h": 60
+    },
+    {
+     "selector": ".academy-nav a",
+     "text": "Home",
+     "w": 158,
+     "h": 60
+    },
+    {
+     "selector": ".academy-nav a",
+     "text": "Car",
+     "w": 158,
+     "h": 60
+    },
+    {
+     "selector": ".academy-nav a",
+     "text": "Train",
+     "w": 158,
+     "h": 60
+    },
+    {
+     "selector": ".academy-nav a",
+     "text": "Plane",
+     "w": 158,
+     "h": 60
+    },
+    {
+     "selector": "[data-open-passport]",
+     "text": "Student Card",
+     "w": 213,
+     "h": 60
+    },
+    {
+     "selector": ".card-action",
+     "text": "Let's drive",
+     "w": 124,
+     "h": 60
+    },
+    {
+     "selector": ".card-action",
+     "text": "Get ready",
+     "w": 124,
+     "h": 60
+    },
+    {
+     "selector": ".card-action",
+     "text": "Let's fly",
+     "w": 124,
+     "h": 60
+    },
+    {
+     "selector": "#academy-start",
+     "text": "Start your first train job",
+     "w": 285,
+     "h": 60
+    },
+    {
+     "selector": "#safety-start",
+     "text": "Lesson 1: Stop, Look, Go",
+     "w": 133,
+     "h": 60
+    },
+    {
+     "selector": "#math-practice",
+     "text": "Math Playroom",
+     "w": 133,
+     "h": 60
+    },
+    {
+     "selector": "#content-start",
+     "text": "Coast Practice On your own · 0/3",
+     "w": 133,
+     "h": 60
+    }
+   ],
+   "visibleChineseOutsideLanguageSwitch": [],
+   "toggleOverlapsSettings": false,
+   "progressKept": true,
+   "savedLanguage": "en"
+  },
+  {
+   "name": "home en landscape",
+   "screenshot": "home-en-landscape-844x390.jpg",
+   "htmlLang": "en",
+   "title": "Island Transport Academy | Car · Train · Plane",
+   "problems": [],
+   "clipped": [],
+   "buttons": [
+    {
+     "selector": "#language-toggle",
+     "text": "中文 ／ English",
+     "w": 128,
+     "h": 60
+    },
+    {
+     "selector": "#home-settings",
+     "text": "Parent Settings",
+     "w": 60,
+     "h": 60
+    },
+    {
+     "selector": ".academy-nav a",
+     "text": "Home",
+     "w": 158,
+     "h": 60
+    },
+    {
+     "selector": ".academy-nav a",
+     "text": "Car",
+     "w": 158,
+     "h": 60
+    },
+    {
+     "selector": ".academy-nav a",
+     "text": "Train",
+     "w": 158,
+     "h": 60
+    },
+    {
+     "selector": ".academy-nav a",
+     "text": "Plane",
+     "w": 158,
+     "h": 60
+    },
+    {
+     "selector": "[data-open-passport]",
+     "text": "Student Card",
+     "w": 213,
+     "h": 60
+    },
+    {
+     "selector": ".card-action",
+     "text": "Let's drive",
+     "w": 124,
+     "h": 60
+    },
+    {
+     "selector": ".card-action",
+     "text": "Get ready",
+     "w": 124,
+     "h": 60
+    },
+    {
+     "selector": ".card-action",
+     "text": "Let's fly",
+     "w": 124,
+     "h": 60
+    },
+    {
+     "selector": "#academy-start",
+     "text": "Start your first train job",
+     "w": 285,
+     "h": 60
+    },
+    {
+     "selector": "#safety-start",
+     "text": "Lesson 1: Stop, Look, Go",
+     "w": 133,
+     "h": 60
+    },
+    {
+     "selector": "#math-practice",
+     "text": "Math Playroom",
+     "w": 133,
+     "h": 60
+    },
+    {
+     "selector": "#content-start",
+     "text": "Coast Practice On your own · 0/3",
+     "w": 133,
+     "h": 60
+    }
+   ],
+   "visibleChineseOutsideLanguageSwitch": [],
+   "toggleOverlapsSettings": false,
+   "toggleOverlapsBrand": null
+  },
+  {
+   "name": "settings en landscape",
+   "screenshot": "settings-en-landscape-844x390.jpg",
+   "htmlLang": "en",
+   "title": "Island Transport Academy | Car · Train · Plane",
+   "problems": [],
+   "clipped": [],
+   "buttons": [
+    {
+     "selector": "[data-language-choice]",
+     "text": "中文",
+     "w": 60,
+     "h": 60
+    },
+    {
+     "selector": "[data-language-choice]",
+     "text": "English",
+     "w": 81,
+     "h": 60
+    },
+    {
+     "selector": "#family-dialog .close-dialog",
+     "text": "×",
+     "w": 60,
+     "h": 60
+    },
+    {
+     "selector": "#family-dialog .done-button",
+     "text": "Done",
+     "w": 370,
+     "h": 60
+    }
+   ],
+   "visibleChineseOutsideLanguageSwitch": []
+  },
+  {
+   "name": "switched en->zh landscape",
+   "screenshot": "switched-en-to-zh-landscape-844x390.jpg",
+   "htmlLang": "zh-Hant-TW",
+   "title": "島嶼交通學院｜汽車・火車・飛機",
+   "problems": [],
+   "clipped": [],
+   "buttons": [
+    {
+     "selector": "#language-toggle",
+     "text": "中文 ／ English",
+     "w": 128,
+     "h": 60
+    },
+    {
+     "selector": "#home-settings",
+     "text": "家長設定",
+     "w": 60,
+     "h": 60
+    },
+    {
+     "selector": ".academy-nav a",
+     "text": "回學院",
+     "w": 158,
+     "h": 60
+    },
+    {
+     "selector": ".academy-nav a",
+     "text": "汽車",
+     "w": 158,
+     "h": 60
+    },
+    {
+     "selector": ".academy-nav a",
+     "text": "火車",
+     "w": 158,
+     "h": 60
+    },
+    {
+     "selector": ".academy-nav a",
+     "text": "飛機",
+     "w": 158,
+     "h": 60
+    },
+    {
+     "selector": "[data-open-passport]",
+     "text": "學生證",
+     "w": 213,
+     "h": 60
+    },
+    {
+     "selector": ".card-action",
+     "text": "出發上路",
+     "w": 124,
+     "h": 60
+    },
+    {
+     "selector": ".card-action",
+     "text": "準備出發",
+     "w": 124,
+     "h": 60
+    },
+    {
+     "selector": ".card-action",
+     "text": "開始飛行",
+     "w": 124,
+     "h": 60
+    },
+    {
+     "selector": "#academy-start",
+     "text": "接下第一份調度單",
+     "w": 285,
+     "h": 60
+    },
+    {
+     "selector": "#safety-start",
+     "text": "第一課：停、看、再出發",
+     "w": 133,
+     "h": 60
+    },
+    {
+     "selector": "#math-practice",
+     "text": "數學遊戲室",
+     "w": 133,
+     "h": 60
+    },
+    {
+     "selector": "#content-start",
+     "text": "海岸實作課 獨立・0／3 課",
+     "w": 133,
+     "h": 60
+    }
+   ],
+   "toggleOverlapsSettings": false,
+   "progressKept": true,
+   "savedLanguage": "zh-Hant"
+  },
+  {
+   "name": "home zh desktop",
+   "screenshot": "home-zh-desktop-1366x768.jpg",
+   "htmlLang": "zh-Hant-TW",
+   "title": "島嶼交通學院｜汽車・火車・飛機",
+   "problems": [],
+   "clipped": [],
+   "buttons": [
+    {
+     "selector": "#language-toggle",
+     "text": "中文 ／ English",
+     "w": 149,
+     "h": 60
+    },
+    {
+     "selector": "#home-settings",
+     "text": "家長設定",
+     "w": 92,
+     "h": 60
+    },
+    {
+     "selector": ".academy-nav a",
+     "text": "回學院",
+     "w": 255,
+     "h": 60
+    },
+    {
+     "selector": ".academy-nav a",
+     "text": "汽車",
+     "w": 255,
+     "h": 60
+    },
+    {
+     "selector": ".academy-nav a",
+     "text": "火車",
+     "w": 255,
+     "h": 60
+    },
+    {
+     "selector": ".academy-nav a",
+     "text": "飛機",
+     "w": 255,
+     "h": 60
+    },
+    {
+     "selector": "[data-open-passport]",
+     "text": "學生證",
+     "w": 345,
+     "h": 60
+    },
+    {
+     "selector": ".card-action",
+     "text": "出發上路 →",
+     "w": 204,
+     "h": 60
+    },
+    {
+     "selector": ".card-action",
+     "text": "準備出發 →",
+     "w": 204,
+     "h": 60
+    },
+    {
+     "selector": ".card-action",
+     "text": "開始飛行 →",
+     "w": 204,
+     "h": 60
+    },
+    {
+     "selector": "#academy-start",
+     "text": "接下第一份調度單",
+     "w": 745,
+     "h": 60
+    },
+    {
+     "selector": "#safety-start",
+     "text": "第一課：停、看、再出發",
+     "w": 421,
+     "h": 64
+    },
+    {
+     "selector": "#math-practice",
+     "text": "數學遊戲室",
+     "w": 421,
+     "h": 64
+    },
+    {
+     "selector": "#content-start",
+     "text": "海岸實作課 獨立・0／3 課",
+     "w": 421,
+     "h": 64
+    }
+   ],
+   "toggleOverlapsSettings": false,
+   "toggleOverlapsBrand": false
+  },
+  {
+   "name": "settings zh desktop",
+   "screenshot": "settings-zh-desktop-1366x768.jpg",
+   "htmlLang": "zh-Hant-TW",
+   "title": "島嶼交通學院｜汽車・火車・飛機",
+   "problems": [],
+   "clipped": [],
+   "buttons": [
+    {
+     "selector": "[data-language-choice]",
+     "text": "中文",
+     "w": 60,
+     "h": 60
+    },
+    {
+     "selector": "[data-language-choice]",
+     "text": "English",
+     "w": 81,
+     "h": 60
+    },
+    {
+     "selector": "#family-dialog .close-dialog",
+     "text": "×",
+     "w": 60,
+     "h": 60
+    },
+    {
+     "selector": "#family-dialog .done-button",
+     "text": "設定好了",
+     "w": 370,
+     "h": 60
+    }
+   ]
+  },
+  {
+   "name": "switched zh->en desktop",
+   "screenshot": "switched-zh-to-en-desktop-1366x768.jpg",
+   "htmlLang": "en",
+   "title": "Island Transport Academy | Car · Train · Plane",
+   "problems": [],
+   "clipped": [],
+   "buttons": [
+    {
+     "selector": "#language-toggle",
+     "text": "中文 ／ English",
+     "w": 149,
+     "h": 60
+    },
+    {
+     "selector": "#home-settings",
+     "text": "Parent Settings",
+     "w": 138,
+     "h": 60
+    },
+    {
+     "selector": ".academy-nav a",
+     "text": "Home",
+     "w": 255,
+     "h": 60
+    },
+    {
+     "selector": ".academy-nav a",
+     "text": "Car",
+     "w": 255,
+     "h": 60
+    },
+    {
+     "selector": ".academy-nav a",
+     "text": "Train",
+     "w": 255,
+     "h": 60
+    },
+    {
+     "selector": ".academy-nav a",
+     "text": "Plane",
+     "w": 255,
+     "h": 60
+    },
+    {
+     "selector": "[data-open-passport]",
+     "text": "Student Card",
+     "w": 345,
+     "h": 60
+    },
+    {
+     "selector": ".card-action",
+     "text": "Let's drive →",
+     "w": 204,
+     "h": 60
+    },
+    {
+     "selector": ".card-action",
+     "text": "Get ready →",
+     "w": 204,
+     "h": 60
+    },
+    {
+     "selector": ".card-action",
+     "text": "Let's fly →",
+     "w": 204,
+     "h": 60
+    },
+    {
+     "selector": "#academy-start",
+     "text": "Start your first train job",
+     "w": 745,
+     "h": 60
+    },
+    {
+     "selector": "#safety-start",
+     "text": "Lesson 1: Stop, Look, Go",
+     "w": 421,
+     "h": 64
+    },
+    {
+     "selector": "#math-practice",
+     "text": "Math Playroom",
+     "w": 421,
+     "h": 64
+    },
+    {
+     "selector": "#content-start",
+     "text": "Coast Practice On your own · 0/3",
+     "w": 421,
+     "h": 64
+    }
+   ],
+   "visibleChineseOutsideLanguageSwitch": [],
+   "toggleOverlapsSettings": false,
+   "progressKept": true,
+   "savedLanguage": "en"
+  },
+  {
+   "name": "home en desktop",
+   "screenshot": "home-en-desktop-1366x768.jpg",
+   "htmlLang": "en",
+   "title": "Island Transport Academy | Car · Train · Plane",
+   "problems": [],
+   "clipped": [],
+   "buttons": [
+    {
+     "selector": "#language-toggle",
+     "text": "中文 ／ English",
+     "w": 149,
+     "h": 60
+    },
+    {
+     "selector": "#home-settings",
+     "text": "Parent Settings",
+     "w": 138,
+     "h": 60
+    },
+    {
+     "selector": ".academy-nav a",
+     "text": "Home",
+     "w": 255,
+     "h": 60
+    },
+    {
+     "selector": ".academy-nav a",
+     "text": "Car",
+     "w": 255,
+     "h": 60
+    },
+    {
+     "selector": ".academy-nav a",
+     "text": "Train",
+     "w": 255,
+     "h": 60
+    },
+    {
+     "selector": ".academy-nav a",
+     "text": "Plane",
+     "w": 255,
+     "h": 60
+    },
+    {
+     "selector": "[data-open-passport]",
+     "text": "Student Card",
+     "w": 345,
+     "h": 60
+    },
+    {
+     "selector": ".card-action",
+     "text": "Let's drive →",
+     "w": 204,
+     "h": 60
+    },
+    {
+     "selector": ".card-action",
+     "text": "Get ready →",
+     "w": 204,
+     "h": 60
+    },
+    {
+     "selector": ".card-action",
+     "text": "Let's fly →",
+     "w": 204,
+     "h": 60
+    },
+    {
+     "selector": "#academy-start",
+     "text": "Start your first train job",
+     "w": 745,
+     "h": 60
+    },
+    {
+     "selector": "#safety-start",
+     "text": "Lesson 1: Stop, Look, Go",
+     "w": 421,
+     "h": 64
+    },
+    {
+     "selector": "#math-practice",
+     "text": "Math Playroom",
+     "w": 421,
+     "h": 64
+    },
+    {
+     "selector": "#content-start",
+     "text": "Coast Practice On your own · 0/3",
+     "w": 421,
+     "h": 64
+    }
+   ],
+   "visibleChineseOutsideLanguageSwitch": [],
+   "toggleOverlapsSettings": false,
+   "toggleOverlapsBrand": false
+  },
+  {
+   "name": "settings en desktop",
+   "screenshot": "settings-en-desktop-1366x768.jpg",
+   "htmlLang": "en",
+   "title": "Island Transport Academy | Car · Train · Plane",
+   "problems": [],
+   "clipped": [],
+   "buttons": [
+    {
+     "selector": "[data-language-choice]",
+     "text": "中文",
+     "w": 60,
+     "h": 60
+    },
+    {
+     "selector": "[data-language-choice]",
+     "text": "English",
+     "w": 81,
+     "h": 60
+    },
+    {
+     "selector": "#family-dialog .close-dialog",
+     "text": "×",
+     "w": 60,
+     "h": 60
+    },
+    {
+     "selector": "#family-dialog .done-button",
+     "text": "Done",
+     "w": 370,
+     "h": 60
+    }
+   ],
+   "visibleChineseOutsideLanguageSwitch": []
+  },
+  {
+   "name": "switched en->zh desktop",
+   "screenshot": "switched-en-to-zh-desktop-1366x768.jpg",
+   "htmlLang": "zh-Hant-TW",
+   "title": "島嶼交通學院｜汽車・火車・飛機",
+   "problems": [],
+   "clipped": [],
+   "buttons": [
+    {
+     "selector": "#language-toggle",
+     "text": "中文 ／ English",
+     "w": 149,
+     "h": 60
+    },
+    {
+     "selector": "#home-settings",
+     "text": "家長設定",
+     "w": 92,
+     "h": 60
+    },
+    {
+     "selector": ".academy-nav a",
+     "text": "回學院",
+     "w": 255,
+     "h": 60
+    },
+    {
+     "selector": ".academy-nav a",
+     "text": "汽車",
+     "w": 255,
+     "h": 60
+    },
+    {
+     "selector": ".academy-nav a",
+     "text": "火車",
+     "w": 255,
+     "h": 60
+    },
+    {
+     "selector": ".academy-nav a",
+     "text": "飛機",
+     "w": 255,
+     "h": 60
+    },
+    {
+     "selector": "[data-open-passport]",
+     "text": "學生證",
+     "w": 345,
+     "h": 60
+    },
+    {
+     "selector": ".card-action",
+     "text": "出發上路 →",
+     "w": 204,
+     "h": 60
+    },
+    {
+     "selector": ".card-action",
+     "text": "準備出發 →",
+     "w": 204,
+     "h": 60
+    },
+    {
+     "selector": ".card-action",
+     "text": "開始飛行 →",
+     "w": 204,
+     "h": 60
+    },
+    {
+     "selector": "#academy-start",
+     "text": "接下第一份調度單",
+     "w": 745,
+     "h": 60
+    },
+    {
+     "selector": "#safety-start",
+     "text": "第一課：停、看、再出發",
+     "w": 421,
+     "h": 64
+    },
+    {
+     "selector": "#math-practice",
+     "text": "數學遊戲室",
+     "w": 421,
+     "h": 64
+    },
+    {
+     "selector": "#content-start",
+     "text": "海岸實作課 獨立・0／3 課",
+     "w": 421,
+     "h": 64
+    }
+   ],
+   "toggleOverlapsSettings": false,
+   "progressKept": true,
+   "savedLanguage": "zh-Hant"
+  }
+ ]
+}

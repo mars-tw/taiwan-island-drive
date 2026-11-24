@@ -1,5 +1,6 @@
 import { isNativeBuild,pauseNativeGames,registerNativeOverlay } from './native.js';
 import { APP_REPOSITORY } from './paths.js';
+import { t,bindLocalized,onLanguageChange } from './i18n.js';
 
 function randomFraction(){if(globalThis.crypto?.getRandomValues){const data=new Uint32Array(1);crypto.getRandomValues(data);return data[0]/4294967296;}return Math.random();}
 export function createGateSession({random=randomFraction,now=()=>Date.now(),ttl=90000}={}){
@@ -10,19 +11,21 @@ export function linkPolicy(href,base,{native=false,download=false}={}){
  try{const url=new URL(href,base),origin=new URL(base);if(!['http:','https:','capacitor:','ionic:','mailto:','tel:'].includes(url.protocol))return {kind:'blocked',url:url.href};const external=url.protocol!==origin.protocol||url.host!==origin.host;const file=download||/\/downloads\/|\.(zip|blend|glb|apk|aab|ipa)(?:$|\?)/i.test(url.pathname);return {kind:external?'external':file?'download':'internal',url:url.href,nativeBlocked:native&&(external||file)};}catch{return {kind:'blocked',url:String(href||'')};}
 }
 const PARENT_SELECTOR='#home-settings,#settings-button,#settings,#advanced-toggle,#tilt-toggle,#tilt-settings-toggle,[data-parent-action]';
-let installed=false,dialog=null,pending=null;const approvedClicks=new WeakSet();
+let installed=false,dialog=null,pending=null,shownReason='',shownError='';const approvedClicks=new WeakSet();
 function makeDialog(){if(dialog)return dialog;dialog=document.createElement('dialog');dialog.id='parent-gate';dialog.setAttribute('aria-labelledby','parent-gate-title');dialog.innerHTML='<form id="parent-gate-form"><button type="button" id="parent-gate-close" aria-label="關閉家長驗證">×</button><p class="parent-gate-eyebrow">請家長幫忙</p><h2 id="parent-gate-title">家長確認</h2><p id="parent-gate-reason"></p><label for="parent-gate-answer">請家長計算下面的加法</label><p id="parent-gate-question"></p><input id="parent-gate-answer" inputmode="numeric" autocomplete="off" spellcheck="false" aria-describedby="parent-gate-error" placeholder="輸入答案"><p id="parent-gate-error" role="status"></p><div class="parent-gate-actions"><button type="button" id="parent-gate-cancel">取消</button><button type="submit" id="parent-gate-submit">驗證並繼續</button></div></form><section id="parent-gate-info" hidden><h2>請家長使用電腦版</h2><p>這個 App 不會開啟外部網站或下載檔案。家長可以在電腦版處理開源專案。</p><p id="parent-gate-address"></p><button id="parent-gate-info-close">關閉</button></section>';document.body.append(dialog);
+ // R50: the fixed words follow the language switch; the reason, sum and error are redrawn below.
+ bindLocalized(dialog);onLanguageChange(()=>{if(!dialog.open)return;dialog.querySelector('#parent-gate-reason').textContent=t(shownReason);if(shownError)dialog.querySelector('#parent-gate-error').textContent=t(shownError);if(pending){const q=pending.session.challenge();dialog.querySelector('#parent-gate-question').textContent=t('{left} ＋ {right} ＝ ？',{left:q.left,right:q.right});}});
  dialog.querySelector('#parent-gate-close').onclick=()=>cancelParentGate();dialog.querySelector('#parent-gate-cancel').onclick=()=>cancelParentGate();dialog.querySelector('#parent-gate-info-close').onclick=()=>dialog.close();
  dialog.addEventListener('cancel',event=>{event.preventDefault();cancelParentGate();});dialog.addEventListener('close',()=>{if(pending)settle(false);});
- dialog.querySelector('form').addEventListener('submit',event=>{event.preventDefault();if(!pending)return;const result=pending.session.check(dialog.querySelector('input').value);if(result.approved){settle(true);}else{dialog.querySelector('#parent-gate-error').textContent=result.reason==='incorrect'?'答案不對，請家長再算一次。':'請關閉視窗，再請家長確認。';if(result.reason!=='incorrect')dialog.querySelector('#parent-gate-submit').disabled=true;}});
+ dialog.querySelector('form').addEventListener('submit',event=>{event.preventDefault();if(!pending)return;const result=pending.session.check(dialog.querySelector('input').value);if(result.approved){settle(true);}else{shownError=result.reason==='incorrect'?'答案不對，請家長再算一次。':'請關閉視窗，再請家長確認。';dialog.querySelector('#parent-gate-error').textContent=t(shownError);if(result.reason!=='incorrect')dialog.querySelector('#parent-gate-submit').disabled=true;}});
  registerNativeOverlay({isOpen:()=>dialog.open,close:()=>cancelParentGate()});return dialog;
 }
 function settle(approved){if(!pending)return;const request=pending;pending=null;request.session.cancel();dialog?.close();request.resolve(approved);if(approved)request.onApproved?.();}
 export function cancelParentGate(){if(pending)settle(false);else dialog?.close();}
 export function requireParentGate(reason,onApproved){
  if(typeof document==='undefined'||pending)return Promise.resolve(false);
- pauseNativeGames();const d=makeDialog();d.querySelector('form').hidden=false;d.querySelector('#parent-gate-info').hidden=true;d.querySelector('#parent-gate-reason').textContent=reason||'這個步驟需要家長確認。';d.querySelector('#parent-gate-answer').value='';d.querySelector('#parent-gate-error').textContent='';d.querySelector('#parent-gate-submit').disabled=false;
- const session=createGateSession(),challenge=session.challenge();d.querySelector('#parent-gate-question').textContent=challenge.left+' ＋ '+challenge.right+' ＝ ？';
+ pauseNativeGames();const d=makeDialog();d.querySelector('form').hidden=false;d.querySelector('#parent-gate-info').hidden=true;shownReason=reason||'這個步驟需要家長確認。';shownError='';d.querySelector('#parent-gate-reason').textContent=t(shownReason);d.querySelector('#parent-gate-answer').value='';d.querySelector('#parent-gate-error').textContent='';d.querySelector('#parent-gate-submit').disabled=false;
+ const session=createGateSession(),challenge=session.challenge();d.querySelector('#parent-gate-question').textContent=t('{left} ＋ {right} ＝ ？',{left:challenge.left,right:challenge.right});
  return new Promise(resolve=>{pending={session,resolve,onApproved};d.showModal();d.querySelector('input').focus();});
 }
 function nativeInfo(address){const d=makeDialog();d.querySelector('form').hidden=true;d.querySelector('#parent-gate-info').hidden=false;d.querySelector('#parent-gate-address').textContent=address;d.showModal();}

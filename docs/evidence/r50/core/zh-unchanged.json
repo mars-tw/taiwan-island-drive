@@ -1,0 +1,94 @@
+{
+ "base": "3c842f4（改動前）",
+ "branch": "isl-r50-core（production build）",
+ "textCheck": {
+  "method": "中文模式逐一收集畫面文字節點、aria-label、alt、title、placeholder，以及 <html lang>、<title>、meta 描述；排除新加的語言切換鈕與家長設定的語言列。",
+  "screens": {
+   "home 390x844": {
+    "items": 194,
+    "identical": true,
+    "differences": []
+   },
+   "home 844x390": {
+    "items": 194,
+    "identical": true,
+    "differences": []
+   },
+   "home 1366x768": {
+    "items": 194,
+    "identical": true,
+    "differences": []
+   },
+   "parent gate": {
+    "items": 13,
+    "identical": true,
+    "differences": []
+   },
+   "parent settings": {
+    "items": 25,
+    "identical": true,
+    "differences": []
+   },
+   "student card": {
+    "items": 21,
+    "identical": true,
+    "differences": []
+   },
+   "safety lesson intro": {
+    "items": 40,
+    "identical": true,
+    "differences": []
+   },
+   "safety lesson playing": {
+    "items": 40,
+    "identical": true,
+    "differences": []
+   },
+   "car page frame": {
+    "items": 12,
+    "identical": true,
+    "differences": []
+   },
+   "car page all text": {
+    "items": 194,
+    "identical": true,
+    "differences": []
+   },
+   "train page frame": {
+    "items": 12,
+    "identical": true,
+    "differences": []
+   },
+   "train page all text": {
+    "items": 174,
+    "identical": false,
+    "differences": [
+     "-T 312",
+     "+T 311"
+    ],
+    "why": "火車課 3D 模擬的煞車缸壓即時讀數（312／311 kPa），兩次載入的時間點不同，與本輪無關"
+   },
+   "flight page frame": {
+    "items": 12,
+    "identical": true,
+    "differences": []
+   },
+   "flight page all text": {
+    "items": 139,
+    "identical": true,
+    "differences": []
+   }
+  }
+ },
+ "pixelCheck": {
+  "method": "中文模式、停用動畫，改動前與改動後同一台機器同一渲染器截圖逐像素比對（色差 > 24 才算），扣掉新加的切換鈕範圍。同一版本連拍兩次差異為 0（渲染可重現）。",
+  "results": {
+   "home 390x844": "相同",
+   "home 844x390": "相同",
+   "home 1366x768": "18 個像素不同：任務看板左下圓角與三顆星星徽章圓角的反鋸齒（最大色差 48），肉眼看不出",
+   "car 導覽列 三種尺寸": "相同",
+   "學生證視窗 1366x768": "只有背景遮罩下的新切換鈕不同",
+   "第一課安全觀察 1366x768": "相同"
+  }
+ }
+}

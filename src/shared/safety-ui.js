@@ -3,6 +3,7 @@ import {artImage} from './art-refresh.js';
 import {SafetyLesson,SAFETY_STOPS,createSafetyStorage} from './safety-lesson.js';
 import {appUrl} from './paths.js';
 import {registerGameLifecycle,registerNativeOverlay} from './native.js';
+import {t,bindLocalized,onLanguageChange} from './i18n.js';
 
 export function installSafetyLesson() {
   const opener=document.getElementById('safety-start');if(!opener)return;
@@ -18,27 +19,28 @@ export function installSafetyLesson() {
     <section id="safety-paused" hidden><h2>休息一下</h2><p>號誌與等候時間都停下來了。</p><button id="safety-resume">繼續觀察</button><button id="safety-leave">回大廳</button></section>`;
   document.body.append(dialog);
   dialog.querySelector('.safety-work').prepend(artImage('coach','阿路教練','safety-coach'));
+  bindLocalized(dialog); // R50: fixed words switch with the language; render() redraws the rest.
   const $=id=>dialog.querySelector(`#safety-${id}`);
-  function updateOpener(){const n=store.read().completed;opener.textContent=n===3?'安全觀察章：再練一次':n?`接著觀察：第 ${n+1} 站`:'第一課：停、看、再出發';}
+  function updateOpener(){const n=store.read().completed;opener.textContent=n===3?t('安全觀察章：再練一次'):n?t('接著觀察：第 {n} 站',{n:n+1}):t('第一課：停、看、再出發');}
   function render(){
     if(!lesson)return;
     const info=SAFETY_STOPS[lesson.stage],playing=lesson.phase==='playing',done=lesson.phase==='done',checkpoint=lesson.phase==='checkpoint';
     dialog.dataset.transport=info.mode;dialog.dataset.phase=lesson.phase;
     if($('image').dataset.mode!==info.mode){$('image').src=appUrl(`previews/${info.mode}.png`);$('image').dataset.mode=info.mode;}
-    $('step').textContent=done?'三站完成 · 安全觀察章':`第 ${lesson.stage+1} 站／共 3 站`;
-    $('title').textContent=done?'會等候，也會確認！':info.name;
-    $('rule').textContent=done?'把「先停穩、看清楚、再出發」帶進接下來的旅程。':info.rule;
-    $('signal').textContent=done?'安全觀察章':lesson.stage===0?(lesson.speed>0?'先煞停':lesson.clear?'綠燈 · 路口空了':'紅燈 · 路口通行中'):lesson.stage===1?(lesson.speed>0?'列車移動中':lesson.doors?(lesson.boarded?'朋友上車了':'朋友上車中'):(lesson.boarded?'車門已關好':'停穩了 · 可以開門')):(lesson.clear?'跑道空了':'跑道使用中');
-    $('detail').textContent=done?'公路、月台、跑道，都看清楚了。':lesson.stage<2?`移動速度 ${Math.ceil(lesson.speed)} · ${lesson.stage===1?(lesson.doors?'車門開啟':'車門關閉'):'煞停後開始觀察'}`:'先按等一等，再觀察跑道是否清空。';
+    $('step').textContent=done?t('三站完成 · 安全觀察章'):t('第 {n} 站／共 3 站',{n:lesson.stage+1});
+    $('title').textContent=t(done?'會等候，也會確認！':info.name);
+    $('rule').textContent=t(done?'把「先停穩、看清楚、再出發」帶進接下來的旅程。':info.rule);
+    $('signal').textContent=t(done?'安全觀察章':lesson.stage===0?(lesson.speed>0?'先煞停':lesson.clear?'綠燈 · 路口空了':'紅燈 · 路口通行中'):lesson.stage===1?(lesson.speed>0?'列車移動中':lesson.doors?(lesson.boarded?'朋友上車了':'朋友上車中'):(lesson.boarded?'車門已關好':'停穩了 · 可以開門')):(lesson.clear?'跑道空了':'跑道使用中'));
+    $('detail').textContent=done?t('公路、月台、跑道，都看清楚了。'):lesson.stage<2?t('移動速度 {speed} · {state}',{speed:Math.ceil(lesson.speed),state:t(lesson.stage===1?(lesson.doors?'車門開啟':'車門關閉'):'煞停後開始觀察')}):t('先按等一等，再觀察跑道是否清空。');
     $('meter').value=lesson.observed;
-    $('hint').textContent=lesson.message||(lesson.paused?'觀察已暫停。':checkpoint?'這一站完成，觀察紀錄已留下。':lesson.phase==='intro'?'先讀上面的提示，再開始操作。':done?'可以回大廳開汽車、火車或飛機。':lesson.ready?'條件都確認了，可以出發。':lesson.stage<2&&lesson.speed>0?'按住煞車，讓速度慢慢降到 0。':lesson.stage===0?'留在原地，等路口清空。':lesson.stage===1?(lesson.boarded?'關好車門再出發。':lesson.doors?'車門開著，等朋友上車。':'點開門接客。'):'點「等一等」，看跑道狀態變化。');
+    $('hint').textContent=t(lesson.message||(lesson.paused?'觀察已暫停。':checkpoint?'這一站完成，觀察紀錄已留下。':lesson.phase==='intro'?'先讀上面的提示，再開始操作。':done?'可以回大廳開汽車、火車或飛機。':lesson.ready?'條件都確認了，可以出發。':lesson.stage<2&&lesson.speed>0?'按住煞車，讓速度慢慢降到 0。':lesson.stage===0?'留在原地，等路口清空。':lesson.stage===1?(lesson.boarded?'關好車門再出發。':lesson.doors?'車門開著，等朋友上車。':'點開門接客。'):'點「等一等」，看跑道狀態變化。'));
     const shown={begin:lesson.phase==='intro',brake:playing&&lesson.stage<2,door:playing&&lesson.stage===1,wait:playing&&lesson.stage===2,depart:playing,next:checkpoint,replay:done,finish:done};
     for(const [id,show] of Object.entries(shown))$(id).hidden=!show;
-    $('door').textContent=lesson.doors?'關好車門':'開門接客';
+    $('door').textContent=t(lesson.doors?'關好車門':'開門接客');
     $('brake').setAttribute('aria-pressed',String(lesson.braking));
     $('pause').hidden=done||checkpoint||lesson.phase==='intro';
     $('paused').hidden=!lesson.paused;
-    $('save').textContent=store.saved?'每站完成後存在這台裝置；中途離開會從這一站重新觀察。':'這次無法儲存；關閉 App 後，觀察紀錄可能不會保留。';
+    $('save').textContent=t(store.saved?'每站完成後存在這台裝置；中途離開會從這一站重新觀察。':'這次無法儲存；關閉 App 後，觀察紀錄可能不會保留。');
     [...dialog.querySelectorAll('.safety-route span')].forEach((el,index)=>{el.classList.toggle('stamped',index<lesson.completed);el.setAttribute('aria-current',String(index===lesson.stage));});
   }
   function pause(){if(!visible||!lesson||lesson.phase!=='playing')return;lesson.pause();render();$('resume').focus();}
@@ -61,4 +63,5 @@ export function installSafetyLesson() {
   addEventListener('pagehide',()=>{lesson?.pause();cancelAnimationFrame(raf);});
   registerGameLifecycle({getState:()=>({paused:!visible||lesson?.paused!==false,completed:lesson?.phase==='done'}),pause});
   registerNativeOverlay({isOpen:()=>dialog.open,close});updateOpener();
+  onLanguageChange(()=>{updateOpener();render();});
 }

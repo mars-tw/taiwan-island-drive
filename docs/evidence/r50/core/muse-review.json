@@ -1,0 +1,43 @@
+{
+ "tool": "MUSE exec（雲端模型；--approval-mode never --disable-web-tools）",
+ "input": "英文模式截圖（首頁三尺寸、家長設定兩尺寸）＋ en-core 字典全文 259 條",
+ "round1": "總評：整體英文自然、親切，多數句子適合大人唸給 3～8 歲孩子聽；主要問題是少數動詞搭配、火車車廂用字，以及家長匯入說明的清晰度。\n\n**需要改**\n\n1｜[Now go home and drive a car, train or plane.]｜Now go home and drive a car or a train, or fly a plane.｜原句把 plane 接在 drive 後面，動詞搭配錯誤。\n2｜Job card: the front car takes {n}. Stop and pick up friends.｜Job card: The front train car takes {n} friends. Stop and pick up friends.｜原句沒說帶走幾位朋友，而且 car 容易誤解成汽車。\n3｜The orange car stays. How many ride in the blue car?｜The orange train car stays. How many friends ride in the blue train car?｜火車情境應明確寫 train car，避免和汽車課混淆。\n4｜I'm Alu! Let's take friends to Hill & Sea School.｜I'm Coach Alu! Let's take friends to Hill & Sea School.｜應使用固定名稱 Coach Alu，孩子也更容易辨認角色。\n5｜Friends at Sea Breeze Station need a ride. Fill the train, split it, then go!｜Friends at Sea Breeze Station need a ride. Fill the train, split it, and count!｜原句漏掉本章最重要的數學動作「算人數」。\n6｜Please use a computer｜Grown-ups, please use the computer version.｜中文原意是使用「電腦版」，原英文只說使用電腦。\n7｜A grown-up needs to check this step.｜A grown-up needs to approve this step.｜check 容易被理解成檢查，approve 才清楚表示家長核准。\n8｜Questions match the age: 3–4 up to 5, 5–6 up to 10, 7–8 up to 20.｜For ages 3–4, numbers up to 5; for ages 5–6, up to 10; for ages 7–8, up to 20.｜補上 numbers 後，家長能立刻知道 5、10、20 指題目數字範圍。\n9｜Pick the JSON backup saved in the old game's parent area. Train math picks up where it stopped. Old stamps (train stamps, trips, small gifts) go back into the Math Playroom stamp book. They do not turn into stars.｜Choose the JSON backup exported from the old game's Parent Settings. Your Train Math progress will continue. Old stamps go into the Math Playroom stamp book, not into stars.｜原句太長，parent area 也不自然，改後來源和結果更清楚。\n10｜Island Transport Academy: stop, look, then go. Train math, picking up friends, road trips and sky trails, all on one Student Card.｜Island Transport Academy: Stop, look, then go. Train Math, picking up friends, Road Supply Run and Find Sky Markers — all on one Student Card.｜Train Math 是固定用字應大寫，後半句也應對齊遊戲內的章節名稱。\n11｜Use airspeed, plane angle, throttle and flaps to learn take-off, turns and landing. Original Blender models and textures. An MIT open-source phone game.｜Use speed, tilt, throttle and flaps to learn how to take off, turn and land. Original Blender models and textures. An MIT open-source phone game.｜plane angle 不自然，airspeed 和 take-off 也偏難，改成孩子較容易理解的字。\n12｜Ease off the gas and turn,｜Slow down and turn,｜Ease off the gas 是大人開車術語，3～5 歲孩子不容易懂。\n13｜Bring in Taiwan Train Math records｜Import Taiwan Train Math records｜這是匯入檔案的操作，Import 比 Bring in 明確。\n14｜Grown-ups: please add these numbers｜Grown-ups, please add these numbers.｜對人說話時應用逗號，不宜用冒號。\n15｜These settings work for cars, trains and planes. Voices come from the phone. With no voice, tips still show on screen.｜These settings work for cars, trains and planes. Your phone provides the voice. If no voice is available, tips still appear on screen.｜原句 Voices come from the phone 略生硬，改後主詞和條件更清楚。\n16｜Finish a level to open the next one. Your stars are saved on this device.｜Finish a level to unlock the next one. Your stars are saved on this device.｜遊戲另有 Locked 用字，unlock 前後一致且更自然。\n17｜Every stamp is on your card! Play again, or pick a ride.｜You collected every stamp! Play again, or pick a ride.｜改成主動語態，對孩子的成就回饋更直接有力。\n18｜Your riders and job card will wait for you.｜Your friends and job card will wait for you.｜全遊戲多用 friends，riders 較生硬且不一致。\n19｜The train math progress is not complete, so nothing was added.｜The Train Math progress is incomplete, so nothing was imported.｜這是匯入失敗訊息，imported 比 added 精確，Train Math 也應大寫。\n20｜Picture of a blue sports car｜Blue sports car｜這是圖片替代文字，螢幕閱讀器通常已會說明是圖片，不必再加 Picture of；第 34、35 條同理。\n21｜Starts after the first tap on a phone.｜Sound starts after your first tap.｜原句缺少明確主詞，補上 Sound 後家長不需猜是什麼開始。\n22｜All checked. You can go!｜All clear. You can go!｜All clear 是「都確認安全、可以通行」的自然說法。\n23｜Stop, wait for green, and go when the road is clear.｜Stop, wait for the green light, and go when the road is clear.｜補上 the green light，孩子更容易把畫面號誌和文字連起來。\n24｜The lights and the timer are paused.｜The signals and timer are paused.｜交通情境中 signals 比籠統的 lights 更精確。\n25｜All 4 levels done! See your passport｜All 4 levels done! Look at your passport!｜See your passport 像提示去看，Look at 才是自然的兒童指示語。\n\n**截圖版面問題**\n\n- 手機直向、橫向與桌機首頁均未見英文被截斷或按鈕文字擠壞，主要按鈕邊框、箭頭和對比都清楚。\n- 手機直向的 Coach Alu 吉祥物右側略壓到章節卡邊緣，但未遮住文字或按鈕；橫向版的 Coach Alu 沒有名稱牌，夾在章節卡和車輛卡之間，較容易被誤認為背景裝飾。\n- 手機版語言切換把「中文／English」上下放在同一顆按鈕內，只有底線表示目前語言，較不像兩個可點選項，家長可能不知道點按後會切換。\n- 桌機版家長設定視窗在截圖可見範圍內未出現「Privacy and data on this device」連結和「Done」按鈕，若需捲動才能看到，畫面缺少捲軸或向下提示；手機版該連結也貼近視窗底部，下方項目容易被忽略。\n- 桌機版音樂按鈕只有音符圖示，沒有開啟／關閉狀態提示，家長難以一眼判斷目前是否有音樂。\n",
+ "decisions": {
+  "adopted": [
+   1,
+   2,
+   3,
+   4,
+   6,
+   7,
+   8,
+   9,
+   10,
+   11,
+   12,
+   13,
+   14,
+   15,
+   16,
+   17,
+   18,
+   19,
+   20,
+   21,
+   22,
+   23
+  ],
+  "notAdopted": {
+   "5": "首頁暫時文字忠於中文原句「再出發」，載入後即被章節故事取代",
+   "24": "用語表規定對孩子說 light，保留 lights",
+   "25": "按鈕文字保留較短的 See your passport"
+  },
+  "layout": {
+   "手機語言鈕不像兩段式開關": "已改：目前語言用黃色底標出",
+   "家長設定要捲動才看得到 Done": "改動前就需要捲動；本輪只在最上方加一列語言",
+   "教練插圖、橫向無名牌、音樂鈕狀態": "改動前既有設計，不屬本輪"
+  }
+ },
+ "round2": "總評：三張畫面與完整字典的英文已自然一致，兒童操作語句簡短清楚，家長專用說明也易懂，未再發現明顯錯誤或孩子難以理解的條目。\n\n無需再改。\n",
+ "note": "第二輪確認後，另修了一處只影響外觀的問題（學生證按鈕文字字級要和改動前一樣），英文字串沒有再變動；本資料夾的截圖是修正後的最終版。"
+}

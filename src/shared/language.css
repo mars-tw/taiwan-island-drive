@@ -1,0 +1,28 @@
+/* R50 language switch: 「中文／English」 on the home page and in Parent Settings. Always ≥60px. */
+.language-toggle{display:inline-flex;align-items:center;justify-content:center;gap:3px;min-width:60px;min-height:60px;padding:0 12px;white-space:nowrap;line-height:1.1;flex-shrink:0}
+/* The current language is a filled yellow pill, so the button reads as a two-way switch. */
+.language-toggle span{color:#4c6f88;font-weight:700;padding:3px 6px;border-radius:8px}
+.language-toggle span.is-current{color:#143b61;font-weight:900;background:#ffd344;box-shadow:inset 0 0 0 1px #d9a514}
+.language-toggle i{font-style:normal;color:#7d97a8}
+/* Same look as the Parent Settings button beside it; sits just before the header tools. */
+.home-header>.language-toggle{margin-left:auto;font-size:14px}
+html.art-r4 .home-header>.language-toggle{border:2px solid var(--art-blue);border-radius:20px;background:#fff;color:var(--art-ink);box-shadow:0 4px 0 #105781}
+.family-language .language-choice{display:flex;gap:8px;flex-shrink:0}
+.family-language .language-choice button{min-width:60px;min-height:60px;padding:0 14px;border-radius:14px;border:2px solid #1479b8;background:#fff;color:#143b61;font-size:14px;font-weight:800}
+.family-language .language-choice button[aria-pressed=true]{background:#1479b8;color:#fff}
+.family-language b{font-weight:700}
+/* Phone portrait: the header tools float on the right, so the switch sits beside the logo,
+   stacked 中文 over English to leave room for a wider "Parent Settings". */
+@media(max-width:600px){
+ .home-header>.language-toggle{margin-left:8px;margin-right:auto;font-size:12px;padding:0 8px;align-self:center;flex-direction:column;gap:4px}
+ .home-header>.language-toggle i{display:none}
+}
+/* Short portrait screens hide the header; keep the switch next to the fixed Parent Settings button. */
+@media(max-height:620px) and (orientation:portrait){
+ html.art-r4.art-r5.art-r6.art-r7 .home-header>.language-toggle{visibility:visible;position:fixed;top:72px;right:76px;z-index:6;margin:0}
+}
+/* Phone landscape: the header shrinks to a corner; the switch goes beside Parent Settings. */
+@media(max-height:520px) and (orientation:landscape){
+ html.art-r4.art-r5.art-r6.art-r7 .home-header{width:auto;gap:6px}
+ html.art-r4.art-r5.art-r6.art-r7 .home-header>.language-toggle{margin:0;font-size:12px;padding:0 8px}
+}

@@ -16,3 +16,5 @@
 #passport-dialog button:focus-visible,.passport-open:focus-visible{outline:3px solid #db5e29;outline-offset:2px}
 .journey-result p{font-size:14px;line-height:1.5;margin:8px 0;color:inherit}.journey-result button{min-height:60px;width:100%;font-size:15px;font-weight:800;background:#ffdb68;color:#173d47;border:2px solid #dba934;border-radius:8px;margin:4px 0}
 @media(max-height:520px) and (orientation:landscape){#passport-dialog{padding:10px 14px;border-radius:18px}.passport-header{margin-bottom:6px!important}#passport-title{font-size:20px}#passport-chapters{grid-template-columns:1fr 1fr;gap:6px}.passport-chapter{min-height:76px;padding:8px 10px}.passport-tabs{margin-bottom:6px;gap:6px}#passport-note{margin-top:6px}.journey-result p{font-size:12px;line-height:1.4;margin:4px 0}}
+/* R50: the Student Card label sits in its own span (so it can switch language); it must look exactly like the old bare text, not like a nav label. */
+.passport-open>span[data-i18n]{font:inherit}
