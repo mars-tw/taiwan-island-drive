@@ -97,7 +97,9 @@
 .dot-card.dice{grid-template-rows:repeat(3,12px)}
 .dot-p1{grid-area:1/1}.dot-p2{grid-area:1/2}.dot-p3{grid-area:1/3}.dot-p4{grid-area:2/1}.dot-p5{grid-area:2/2}.dot-p6{grid-area:2/3}.dot-p7{grid-area:3/1}.dot-p8{grid-area:3/2}.dot-p9{grid-area:3/3}
 .dot-card i{width:12px;height:12px;border-radius:50%;background:var(--room-green)}
-.zero-dots{font-size:16px}
+/* 上線前小修：0 是空的骰子格加大「0」 */
+.dot-card.dice-zero{display:grid;grid-template:1fr/1fr;place-items:center;width:46px;height:46px;border:3px dashed var(--room-green);border-radius:10px;background:#f2fbf6}
+.dot-card.dice-zero b{font:900 30px/1 'Microsoft JhengHei','PingFang TC',sans-serif;color:var(--room-green)}
 .stage-label{font-size:13px;font-weight:800;color:#276581}
 /* count */
 .passengers{display:flex;flex-wrap:wrap;justify-content:center;gap:8px;max-width:680px}

@@ -12,7 +12,7 @@ Fix round: Chinese line breaks only between words or after punctuation (card tex
 switch coach), no last line of one or two characters, room home text >= 12 px, one hint label, bigger passengers.
 Writes docs/evidence/r49/room-check.json and, with --shots, the evidence screenshots (JPEG).
 """
-import argparse, json, sys, time
+import argparse, json, re, sys, time
 sys.stdout.reconfigure(encoding="utf-8", errors="replace")
 from pathlib import Path
 from playwright.sync_api import sync_playwright
@@ -43,7 +43,12 @@ BREAKS = r"""
       lastTop = r.top; lines.at(-1).push(c.ch);
     });
     const last = lines.at(-1).join('').replace(/[，、。！？；：,.!?;:\s✓]/g, '');
-    out.push({ text: lines.map(l => l.join('')).join('｜'), split, shortLast: lines.length > 1 && [...last].length <= 2 });
+    const first = lines[0].join('').replace(/[，、。！？；：,.!?;:\s✓]/g, '');
+    // 上線前小修：第一行不可以只剩一個顏色、形狀或一個詞；顏色／形狀不可以跟後面的列車、月台分在兩行。
+    const COLOR = '(藍色|綠色|紫色|紅色|橘色|黃色)', SHAPE = '(圓形|三角形|方形|星星)', NOUN = '(列車|月台|車廂|箭頭|牌子)';
+    const loneFirst = lines.length > 1 && ([...first].length <= 2 || new RegExp(`^${COLOR}?${SHAPE}?${NOUN}?$`).test(first));
+    const nameSplit = lines.slice(1).some((l, i) => new RegExp(`(${COLOR}|${SHAPE})$`).test(lines[i].join('').replace(/\s/g, '')) && new RegExp(`^(${SHAPE}|${NOUN})`).test(l.join('')));
+    out.push({ text: lines.map(l => l.join('')).join('｜'), split, shortLast: lines.length > 1 && [...last].length <= 2, loneFirst, nameSplit });
   }
   return out;
 }
@@ -166,6 +171,7 @@ def run(base, shots, chrome=None):
               return { speaker: { w: Math.round(r.width), h: Math.round(r.height), bg: cs.backgroundColor, border: cs.borderTopColor, svg: !!s.querySelector('svg'), emoji: s.textContent.includes('🔊') },
                 coachFontPx: parseFloat(getComputedStyle(coach).fontSize), titleIcon: t ? t.naturalWidth > 0 : null,
                 hint: document.querySelector('#math-room .room-hint')?.textContent.trim(),
+                coachText: coach.innerText.trim(),
                 personH: Math.round(document.querySelector('#math-room .person')?.getBoundingClientRect().height || 0),
                 personImgH: Math.round(document.querySelector('#math-room .room-person')?.getBoundingClientRect().height || 0) }; }""")
             row['play']['breaks'] = page.evaluate(BREAKS, '#math-room .room-coach span, #room-question-title')
@@ -187,6 +193,17 @@ def run(base, shots, chrome=None):
                 coachFontPx: parseFloat(getComputedStyle(coach).fontSize), coachText: d.querySelector('.rp-cue').textContent }; }""")
             row['switch']['layout'] = measure(page, '#rail-play')
             row['switch']['breaks'] = page.evaluate(BREAKS, '#rail-play .rp-cue')
+            # 上線前小修：每一種顏色（＋形狀）列車／月台的開場提示都放進真的提示泡泡量一次，不只量這一關抽到的顏色。
+            row['switch']['allNames'] = page.evaluate("""async (breaks) => {
+              const { phraseHtml, LABEL_COLORS, LABEL_SHAPES } = await import('/src/shared/phrase-wrap.js');
+              const cue = document.querySelector('#rail-play .rp-cue'), keep = cue.innerHTML, measure = eval(breaks), bad = [];
+              for (const c of LABEL_COLORS) for (const s of ['', ...LABEL_SHAPES]) {
+                cue.innerHTML = phraseHtml(`${c}${s}列車要開到${c}${s}月台。點黃色的箭頭換方向，看亮起來的路通到哪裡。`);
+                for (const b of measure('#rail-play .rp-cue')) if (b.split.length || b.shortLast || b.loneFirst || b.nameSplit) bad.push(b.text);
+              }
+              cue.innerHTML = keep;
+              return { checked: LABEL_COLORS.length * (LABEL_SHAPES.length + 1), bad };
+            }""", BREAKS)
             if shots:
                 page.screenshot(path=str(OUT / f'switch-from-room-{tag}.jpg'), type='jpeg', quality=82)
             page.click('#rail-play .rp-back'); page.wait_for_timeout(600)
@@ -221,9 +238,14 @@ def summarize(report):
             for b in items:
                 if b['split']: problems.append(f'{t} {where}: word split {b["split"]} in {b["text"]}')
                 if b['shortLast']: problems.append(f'{t} {where}: short last line in {b["text"]}')
+                if b.get('loneFirst'): problems.append(f'{t} {where}: first line is a single word in {b["text"]}')
+                if b.get('nameSplit'): problems.append(f'{t} {where}: colour/shape split from its noun in {b["text"]}')
         for tab, i in row['tabs'].items():
             if i['smallText']: problems.append(f'{t} {tab} text under 12px: {i["smallText"][:4]}')
         if row['play']['hint'] != '☀ 想一想': problems.append(f'{t} hint label {row["play"]["hint"]!r}')
+        if row['play']['coachText'] != report[0]['play']['coachText'] or re.search('[・·•]', row['play']['coachText']):
+            problems.append(f'{t} counting hint text differs: {row["play"]["coachText"]!r}')
+        if row['switch']['allNames']['bad']: problems.append(f"{t} switch coach names: {row['switch']['allNames']['bad'][:3]}")
         sp = row['play']['speaker']
         if sp['emoji'] or not sp['svg'] or sp['w'] < 60 or sp['h'] < 60: problems.append(f'{t} room speaker {sp}')
         sw = row['switch']

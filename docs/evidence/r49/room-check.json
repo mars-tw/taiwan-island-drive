@@ -1,5 +1,5 @@
 {
- "checkedAt": "2026-11-24 11:01",
+ "checkedAt": "2026-11-24 11:12",
  "problems": [],
  "sizes": [
   {
@@ -158,47 +158,65 @@
       {
        "text": "同一班列車，裝滿、｜分車，再算剩下。",
        "split": [],
-       "shortLast": false
+       "shortLast": false,
+       "loneFirst": false,
+       "nameSplit": false
       },
       {
        "text": "點點乘客，數一數有幾位。",
        "split": [],
-       "shortLast": false
+       "shortLast": false,
+       "loneFirst": false,
+       "nameSplit": false
       },
       {
        "text": "點選數字，把車廂｜從小到大排好。",
        "split": [],
-       "shortLast": false
+       "shortLast": false,
+       "loneFirst": false,
+       "nameSplit": false
       },
       {
        "text": "看看車廂的規律，｜接上下一節。",
        "split": [],
-       "shortLast": false
+       "shortLast": false,
+       "loneFirst": false,
+       "nameSplit": false
       },
       {
        "text": "每站有人下車、有人上車，｜算算車上還有幾人。",
        "split": [],
-       "shortLast": false
+       "shortLast": false,
+       "loneFirst": false,
+       "nameSplit": false
       },
       {
        "text": "看出發時間和坐多久，｜算出幾點到站。",
        "split": [],
-       "shortLast": false
+       "shortLast": false,
+       "loneFirst": false,
+       "nameSplit": false
       },
       {
        "text": "把車票配對，找出｜哪邊比較多。",
        "split": [],
-       "shortLast": false
+       "shortLast": false,
+       "loneFirst": false,
+       "nameSplit": false
       },
       {
        "text": "讀乘客紀錄，｜自己算出上車下車的人數。",
        "split": [],
-       "shortLast": false
+       "shortLast": false,
+       "loneFirst": false,
+       "nameSplit": false
       },
       {
        "text": "看時針和分針，｜找到出發時間。",
        "split": [],
-       "shortLast": false
+       "shortLast": false,
+       "loneFirst": false,
+       "nameSplit": false
       }
      ],
      "smallText": []
@@ -297,12 +315,16 @@
       {
        "text": "比較兩幅車站風景，｜找出不同的地方。",
        "split": [],
-       "shortLast": false
+       "shortLast": false,
+       "loneFirst": false,
+       "nameSplit": false
       },
       {
-       "text": "探索風景，｜找到藏起來的小寶物。",
+       "text": "探索風景，找到｜藏起來的小寶物。",
        "split": [],
-       "shortLast": false
+       "shortLast": false,
+       "loneFirst": false,
+       "nameSplit": false
       }
      ],
      "smallText": []
@@ -448,39 +470,53 @@
      },
      "breaks": [
       {
-       "text": "轉轉軌道，｜接通列車到小站的路。",
+       "text": "轉轉軌道，接通｜列車到小站的路。",
        "split": [],
-       "shortLast": false
+       "shortLast": false,
+       "loneFirst": false,
+       "nameSplit": false
       },
       {
        "text": "自己找一條路，｜帶小火車走到終點站。",
        "split": [],
-       "shortLast": false
+       "shortLast": false,
+       "loneFirst": false,
+       "nameSplit": false
       },
       {
        "text": "先排好方向｜指令，再讓列車照計畫走。",
        "split": [],
-       "shortLast": false
+       "shortLast": false,
+       "loneFirst": false,
+       "nameSplit": false
       },
       {
        "text": "照著小圖，選色塊拼出｜自己的圖案。",
        "split": [],
-       "shortLast": false
+       "shortLast": false,
+       "loneFirst": false,
+       "nameSplit": false
       },
       {
        "text": "點黃色的箭頭換軌道，｜讓列車開到一樣｜顏色的月台。",
        "split": [],
-       "shortLast": false
+       "shortLast": false,
+       "loneFirst": false,
+       "nameSplit": false
       },
       {
        "text": "推拉車廂進出｜側線，排成調車單的順序。",
        "split": [],
-       "shortLast": false
+       "shortLast": false,
+       "loneFirst": false,
+       "nameSplit": false
       },
       {
        "text": "一條鐵軌兩列車，｜看號誌在避車道會車。",
        "split": [],
-       "shortLast": false
+       "shortLast": false,
+       "loneFirst": false,
+       "nameSplit": false
       }
      ],
      "smallText": []
@@ -612,27 +648,37 @@
       {
        "text": "親手放入貨物，裝到｜剛剛好的數量。",
        "split": [],
-       "shortLast": false
+       "shortLast": false,
+       "loneFirst": false,
+       "nameSplit": false
       },
       {
        "text": "看看顏色和形狀，｜把行李分進合適的籃子。",
        "split": [],
-       "shortLast": false
+       "shortLast": false,
+       "loneFirst": false,
+       "nameSplit": false
       },
       {
        "text": "親手分點心，｜讓朋友們一樣多。",
        "split": [],
-       "shortLast": false
+       "shortLast": false,
+       "loneFirst": false,
+       "nameSplit": false
       },
       {
        "text": "選好不同重量的貨物，｜讓兩邊一樣重。",
        "split": [],
-       "shortLast": false
+       "shortLast": false,
+       "loneFirst": false,
+       "nameSplit": false
       },
       {
        "text": "選目的地，分配｜有限的代幣，｜幫每張車票付剛好。",
        "split": [],
-       "shortLast": false
+       "shortLast": false,
+       "loneFirst": false,
+       "nameSplit": false
       }
      ],
      "smallText": []
@@ -650,22 +696,27 @@
     "coachFontPx": 18,
     "titleIcon": true,
     "hint": "☀ 想一想",
+    "coachText": "一位數一次，再選點點。",
     "personH": 118,
     "personImgH": 105,
     "breaks": [
      {
       "text": "月台有幾位乘客？",
       "split": [],
-      "shortLast": false
+      "shortLast": false,
+      "loneFirst": false,
+      "nameSplit": false
      },
      {
       "text": "一位數一次，再選點點。",
       "split": [],
-      "shortLast": false
+      "shortLast": false,
+      "loneFirst": false,
+      "nameSplit": false
      }
     ],
     "layout": {
-     "buttons": 9,
+     "buttons": 8,
      "small": [],
      "outsideViewport": [],
      "belowFold": 0,
@@ -688,7 +739,7 @@
      "svg": true
     },
     "coachFontPx": 17,
-    "coachText": "紫色列車要開到紫色月台。點黃色的箭頭換方向，看亮起來的路通到哪裡。",
+    "coachText": "藍色列車要開到藍色月台。點黃色的箭頭換方向，看亮起來的路通到哪裡。",
     "layout": {
      "buttons": 5,
      "small": [],
@@ -699,11 +750,17 @@
     },
     "breaks": [
      {
-      "text": "紫色列車要開到紫色月台。｜點黃色的箭頭換方向，｜看亮起來的路通到哪裡。",
+      "text": "藍色列車要開到藍色月台。｜點黃色的箭頭換方向，｜看亮起來的路通到哪裡。",
       "split": [],
-      "shortLast": false
+      "shortLast": false,
+      "loneFirst": false,
+      "nameSplit": false
      }
-    ]
+    ],
+    "allNames": {
+     "checked": 30,
+     "bad": []
+    }
    },
    "backToRoom": true,
    "errors": [],
@@ -1238,22 +1295,27 @@
     "coachFontPx": 16,
     "titleIcon": true,
     "hint": "☀ 想一想",
+    "coachText": "一位數一次，再選點點。",
     "personH": 74,
     "personImgH": 62,
     "breaks": [
      {
       "text": "月台有幾位乘客？",
       "split": [],
-      "shortLast": false
+      "shortLast": false,
+      "loneFirst": false,
+      "nameSplit": false
      },
      {
       "text": "一位數一次，再選點點。",
       "split": [],
-      "shortLast": false
+      "shortLast": false,
+      "loneFirst": false,
+      "nameSplit": false
      }
     ],
     "layout": {
-     "buttons": 7,
+     "buttons": 9,
      "small": [],
      "outsideViewport": [],
      "belowFold": 0,
@@ -1276,7 +1338,7 @@
      "svg": true
     },
     "coachFontPx": 16,
-    "coachText": "紫色列車要開到紫色月台。點黃色的箭頭換方向，看亮起來的路通到哪裡。",
+    "coachText": "藍色列車要開到藍色月台。點黃色的箭頭換方向，看亮起來的路通到哪裡。",
     "layout": {
      "buttons": 5,
      "small": [],
@@ -1287,11 +1349,17 @@
     },
     "breaks": [
      {
-      "text": "紫色｜列車要開到紫色月台。｜點黃色的箭頭換方向，｜看亮起來的路通到哪裡。",
+      "text": "藍色列車要開到｜藍色月台。｜點黃色的箭頭換方向，｜看亮起來的路通到哪裡。",
       "split": [],
-      "shortLast": false
+      "shortLast": false,
+      "loneFirst": false,
+      "nameSplit": false
      }
-    ]
+    ],
+    "allNames": {
+     "checked": 30,
+     "bad": []
+    }
    },
    "backToRoom": true,
    "errors": [],
@@ -1453,47 +1521,65 @@
       {
        "text": "同一班列車，裝滿、｜分車，再算剩下。",
        "split": [],
-       "shortLast": false
+       "shortLast": false,
+       "loneFirst": false,
+       "nameSplit": false
       },
       {
        "text": "點點乘客，｜數一數有幾位。",
        "split": [],
-       "shortLast": false
+       "shortLast": false,
+       "loneFirst": false,
+       "nameSplit": false
       },
       {
        "text": "點選數字，把車廂｜從小到大排好。",
        "split": [],
-       "shortLast": false
+       "shortLast": false,
+       "loneFirst": false,
+       "nameSplit": false
       },
       {
        "text": "看看車廂的規律，｜接上下一節。",
        "split": [],
-       "shortLast": false
+       "shortLast": false,
+       "loneFirst": false,
+       "nameSplit": false
       },
       {
        "text": "每站有人下車、｜有人上車，｜算算車上還有幾人。",
        "split": [],
-       "shortLast": false
+       "shortLast": false,
+       "loneFirst": false,
+       "nameSplit": false
       },
       {
        "text": "看出發時間和坐多久，｜算出幾點到站。",
        "split": [],
-       "shortLast": false
+       "shortLast": false,
+       "loneFirst": false,
+       "nameSplit": false
       },
       {
        "text": "把車票配對，找出｜哪邊比較多。",
        "split": [],
-       "shortLast": false
+       "shortLast": false,
+       "loneFirst": false,
+       "nameSplit": false
       },
       {
        "text": "讀乘客紀錄，自己｜算出上車下車的人數。",
        "split": [],
-       "shortLast": false
+       "shortLast": false,
+       "loneFirst": false,
+       "nameSplit": false
       },
       {
        "text": "看時針和分針，｜找到出發時間。",
        "split": [],
-       "shortLast": false
+       "shortLast": false,
+       "loneFirst": false,
+       "nameSplit": false
       }
      ],
      "smallText": []
@@ -1592,12 +1678,16 @@
       {
        "text": "比較兩幅車站風景，｜找出不同的地方。",
        "split": [],
-       "shortLast": false
+       "shortLast": false,
+       "loneFirst": false,
+       "nameSplit": false
       },
       {
-       "text": "探索風景，｜找到藏起來的小寶物。",
+       "text": "探索風景，找到｜藏起來的小寶物。",
        "split": [],
-       "shortLast": false
+       "shortLast": false,
+       "loneFirst": false,
+       "nameSplit": false
       }
      ],
      "smallText": []
@@ -1743,39 +1833,53 @@
      },
      "breaks": [
       {
-       "text": "轉轉軌道，｜接通列車到小站的路。",
+       "text": "轉轉軌道，接通｜列車到小站的路。",
        "split": [],
-       "shortLast": false
+       "shortLast": false,
+       "loneFirst": false,
+       "nameSplit": false
       },
       {
        "text": "自己找一條路，｜帶小火車走到終點站。",
        "split": [],
-       "shortLast": false
+       "shortLast": false,
+       "loneFirst": false,
+       "nameSplit": false
       },
       {
        "text": "先排好方向指令，｜再讓列車照計畫走。",
        "split": [],
-       "shortLast": false
+       "shortLast": false,
+       "loneFirst": false,
+       "nameSplit": false
       },
       {
        "text": "照著小圖，選色塊拼出｜自己的圖案。",
        "split": [],
-       "shortLast": false
+       "shortLast": false,
+       "loneFirst": false,
+       "nameSplit": false
       },
       {
        "text": "點黃色的箭頭換軌道，｜讓列車開到一樣｜顏色的月台。",
        "split": [],
-       "shortLast": false
+       "shortLast": false,
+       "loneFirst": false,
+       "nameSplit": false
       },
       {
        "text": "推拉車廂進出側線，｜排成調車單的順序。",
        "split": [],
-       "shortLast": false
+       "shortLast": false,
+       "loneFirst": false,
+       "nameSplit": false
       },
       {
        "text": "一條鐵軌兩列車，｜看號誌在避車道會車。",
        "split": [],
-       "shortLast": false
+       "shortLast": false,
+       "loneFirst": false,
+       "nameSplit": false
       }
      ],
      "smallText": []
@@ -1907,27 +2011,37 @@
       {
        "text": "親手放入貨物，裝到｜剛剛好的數量。",
        "split": [],
-       "shortLast": false
+       "shortLast": false,
+       "loneFirst": false,
+       "nameSplit": false
       },
       {
        "text": "看看顏色和形狀，｜把行李分進合適的籃子。",
        "split": [],
-       "shortLast": false
+       "shortLast": false,
+       "loneFirst": false,
+       "nameSplit": false
       },
       {
        "text": "親手分點心，｜讓朋友們一樣多。",
        "split": [],
-       "shortLast": false
+       "shortLast": false,
+       "loneFirst": false,
+       "nameSplit": false
       },
       {
        "text": "選好不同重量的貨物，｜讓兩邊一樣重。",
        "split": [],
-       "shortLast": false
+       "shortLast": false,
+       "loneFirst": false,
+       "nameSplit": false
       },
       {
        "text": "選目的地，分配｜有限的代幣，｜幫每張車票付剛好。",
        "split": [],
-       "shortLast": false
+       "shortLast": false,
+       "loneFirst": false,
+       "nameSplit": false
       }
      ],
      "smallText": []
@@ -1945,22 +2059,27 @@
     "coachFontPx": 18,
     "titleIcon": true,
     "hint": "☀ 想一想",
+    "coachText": "一位數一次，再選點點。",
     "personH": 118,
     "personImgH": 105,
     "breaks": [
      {
       "text": "月台有幾位乘客？",
       "split": [],
-      "shortLast": false
+      "shortLast": false,
+      "loneFirst": false,
+      "nameSplit": false
      },
      {
       "text": "一位數一次，再選點點。",
       "split": [],
-      "shortLast": false
+      "shortLast": false,
+      "loneFirst": false,
+      "nameSplit": false
      }
     ],
     "layout": {
-     "buttons": 11,
+     "buttons": 9,
      "small": [],
      "outsideViewport": [],
      "belowFold": 0,
@@ -1983,7 +2102,7 @@
      "svg": true
     },
     "coachFontPx": 19,
-    "coachText": "藍色列車要開到藍色月台。點黃色的箭頭換方向，看亮起來的路通到哪裡。",
+    "coachText": "紅色列車要開到紅色月台。點黃色的箭頭換方向，看亮起來的路通到哪裡。",
     "layout": {
      "buttons": 5,
      "small": [],
@@ -1994,11 +2113,17 @@
     },
     "breaks": [
      {
-      "text": "藍色列車要開到藍色月台。｜點黃色的箭頭換方向，看亮起來的路通到哪裡。",
+      "text": "紅色列車要開到紅色月台。｜點黃色的箭頭換方向，看亮起來的路通到哪裡。",
       "split": [],
-      "shortLast": false
+      "shortLast": false,
+      "loneFirst": false,
+      "nameSplit": false
      }
-    ]
+    ],
+    "allNames": {
+     "checked": 30,
+     "bad": []
+    }
    },
    "backToRoom": true,
    "errors": [],

@@ -64,3 +64,55 @@ test('R49 fix: one hint label everywhere, bigger counting passengers, and room t
   assert.match(css, /\.room-card-copy small\{font-size:13px;/, 'age line on cards 13 px');
   for (const [, size] of css.matchAll(/font-size:(\d+(?:\.\d+)?)px/g)) assert.ok(Number(size) >= 12, `room.css font-size ${size}px`);
 });
+
+// ---- 上線前小修（獨立複評 8.4 之後） ----
+import { LABEL_COLORS, LABEL_SHAPES, LABEL_NOUNS } from '../../src/shared/phrase-wrap.js';
+import { RAIL_COLORS, RAIL_SHAPES } from '../../src/games/puzzles/common.js';
+import { departTrain, switchLevels } from '../../src/games/puzzles/switch-platform.js';
+import { createRound, roundGuide } from '../../src/games/math/room-play.js';
+import { seededRandom } from '../../src/games/math/engine.js';
+
+test('R49 上線前: colour and shape names stay glued to 列車／月台 and the first line is never a single word', () => {
+  for (const c of Object.values(RAIL_COLORS)) assert.ok(LABEL_COLORS.includes(c.name), `${c.name} covered`);
+  for (const s of Object.values(RAIL_SHAPES)) assert.ok(LABEL_SHAPES.includes(s.name), `${s.name} covered`);
+  const names = [];
+  for (const c of LABEL_COLORS) for (const s of ['', ...LABEL_SHAPES]) for (const n of LABEL_NOUNS) names.push(c + s + n);
+  const hints = new Set();
+  for (const name of names) for (const other of names) hints.add(`${name}要開到${other}。點黃色的箭頭換方向，看亮起來的路通到哪裡。`);
+  for (const age of ['3-4', '5-6', '7-8']) for (let level = 0; level < switchLevels(age).length; level++) for (let seed = 1; seed < 25; seed++) {
+    let round = createSwitchRound({ age, level, seed });
+    hints.add(switchHint(round));
+    for (let n = 0; n < 4; n++) { const step = departTrain(round); hints.add(switchHint(step.round, step.result)); round = step.round; }
+  }
+  for (const text of hints) {
+    const html = phraseHtml(text), parts = html.split('<wbr>');
+    let at = 0;
+    for (const part of parts.slice(0, -1)) {
+      at += part.length;
+      for (const name of names) for (let i = text.indexOf(name); i >= 0; i = text.indexOf(name, i + 1))
+        assert.ok(at <= i || at >= i + name.length, `「${name}」 split in ${text}`);
+    }
+    if (parts.length > 1) {
+      const first = parts[0].replace(/[，、。！？]/g, '');
+      assert.ok(!names.includes(first) && !LABEL_COLORS.includes(first) && [...first].length > 2, `first line could be just 「${first}」 in ${text}`);
+    }
+  }
+});
+
+test('R49 上線前: zero is a picture (empty dice frame with a big 0), the label still says 沒有', () => {
+  const ui = read('src/games/math/room-ui.js'), css = read('src/games/math/room.css');
+  assert.match(ui, /n === 0 \? '<span class="dot-card dice dice-zero" aria-hidden="true"><b>0<\/b><\/span>'/);
+  assert.doesNotMatch(ui, /zero-dots|>沒有</, 'no 沒有 text on the button face');
+  assert.match(ui, /Number\(value\) === 0 \? '答案 0，沒有'/, 'screen readers still hear 沒有');
+  assert.match(css, /\.dot-card\.dice-zero\{[^}]*border:3px dashed/);
+  assert.match(css, /\.dot-card\.dice-zero b\{font:900 30px/);
+});
+
+test('R49 上線前: the counting hint uses the full-width comma at every age', () => {
+  for (const level of ['small', 'medium', 'large']) {
+    const round = createRound({ game: 'count', level, rng: seededRandom(5) });
+    const action = roundGuide(round).action;
+    assert.match(action, /^一位數一次，再選(點點|人數)。$/, action);
+    assert.doesNotMatch(action, /[・·•]/);
+  }
+});

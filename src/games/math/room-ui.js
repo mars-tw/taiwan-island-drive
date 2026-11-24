@@ -45,7 +45,8 @@ const DATA_ACTIONS = [['answer', 'answer'], ['count', 'count'], ['order', 'order
 const passenger = index => `<img class="room-person" src="${art(`r5/passenger-${index % 6 + 1}-0.png`)}" alt="" width="48" height="76" draggable="false">`;
 // R49 修正輪：答案點點照骰子排（4 是 2×2、5 是四角加中間、6 是兩直排），3 排成三角形；位置是 3×3 格子的 1～9 號。
 const DICE = { 1: [5], 2: [3, 7], 3: [2, 7, 9], 4: [1, 3, 7, 9], 5: [1, 3, 5, 7, 9], 6: [1, 3, 4, 6, 7, 9], 7: [1, 3, 4, 5, 6, 7, 9], 8: [1, 2, 3, 4, 6, 7, 8, 9], 9: [1, 2, 3, 4, 5, 6, 7, 8, 9] };
-const dotCard = n => n === 0 ? '<span class="zero-dots">沒有</span>' : DICE[n] ? `<span class="dot-card dice" aria-label="${n} 個點">${DICE[n].map(cell => `<i class="dot-p${cell}"></i>`).join('')}</span>` : `<span class="dot-card" aria-label="${n} 個點">${'<i></i>'.repeat(n)}</span>`;
+// 上線前小修：0 不再寫「沒有」兩個字（3～4 歲看不懂），改成空的骰子格加一個大「0」；按鈕的無障礙名稱仍說「沒有」。
+const dotCard = n => n === 0 ? '<span class="dot-card dice dice-zero" aria-hidden="true"><b>0</b></span>' : DICE[n] ? `<span class="dot-card dice" aria-label="${n} 個點">${DICE[n].map(cell => `<i class="dot-p${cell}"></i>`).join('')}</span>` : `<span class="dot-card" aria-label="${n} 個點">${'<i></i>'.repeat(n)}</span>`;
 const ticketPile = n => `<div class="ticket-pile">${'<span class="tiny-ticket" aria-hidden="true">🎟</span>'.repeat(n)}</div>`;
 function scene(round) {
   const q = currentQuestion(round);
@@ -69,7 +70,7 @@ function choices(round) {
   return `<div class="answers answers-${q.game}" role="group" aria-label="選一個答案">${q.choices.map(value => {
     const label = q.game === 'clock' ? clockLabel(value) : q.game === 'compare' ? { left: '左邊多', right: '右邊多', equal: '一樣多' }[value]
       : q.game === 'pattern' ? `${patternToken(q, value)}<small>${esc(patternName(q, value))}</small>` : q.level === 'small' ? dotCard(value) : value;
-    const aria = q.game === 'pattern' ? patternName(q, value) : q.game === 'compare' || q.game === 'clock' ? label : `答案 ${value}`;
+    const aria = q.game === 'pattern' ? patternName(q, value) : q.game === 'compare' || q.game === 'clock' ? label : Number(value) === 0 ? '答案 0，沒有' : `答案 ${value}`;
     return `<button type="button" class="answer-number" data-answer="${esc(value)}" aria-label="${esc(aria)}">${label}</button>`;
   }).join('')}</div>`;
 }
