@@ -86,10 +86,11 @@ test('R49 card and hint text is one step bigger, and the R48 landscape two-row g
   // R48 guard (tests/math/room-polish-r48.test.js) extended to the new icons: short landscape keeps cards short so six fit.
   const landscape = css.slice(css.indexOf('@media (max-height:500px) and (orientation:landscape){'));
   assert.match(landscape, /\.room-card-copy>span\{display:none\}/, 'descriptions still drop out on a short landscape screen');
-  assert.match(landscape, /#math-room \.room-card\{min-height:72px;grid-template-columns:46px minmax\(0,1fr\) 22px/);
-  assert.match(landscape, /\.room-card-icon\{width:44px;height:44px/);
+  // R49 修正輪：橫式卡片圖示 44 → 52 px（欄寬 46 → 54 px），卡片仍是 72 px 高，兩排六張照樣放得下。
+  assert.match(landscape, /#math-room \.room-card\{min-height:72px;grid-template-columns:54px minmax\(0,1fr\) 22px/);
+  assert.match(landscape, /\.room-card-icon\{width:52px;height:52px/);
   assert.match(landscape, /\.room-play \.room-coach\{[^}]*font-size:16px;/, 'sideways hint bubble 14 → 16 px');
-  assert.match(landscape, /#math-room \.room-tabs button\{flex-direction:column;[^}]*\}\s*\.room-tab-icon\{width:34px;height:34px\}/, 'tab icon above its name so the 60 px tab keeps one-line names');
+  assert.match(landscape, /#math-room \.room-tabs button\{flex-direction:column;[^}]*\}\s*\.room-tab-icon\{width:42px;height:42px\}/, 'tab icon (34 → 42 px in the fix round) above its name so names stay on one line');
   assert.match(css, /@media \(max-height:500px\) and \(orientation:landscape\) and \(min-width:760px\)\{[^}]*\.room-home \.room-body\{display:grid/, 'heading and tabs still share one row when wide enough');
 });
 

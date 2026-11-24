@@ -7,6 +7,7 @@ import { readSettings } from '../../shared/settings.js';
 import { speakNative, stopNativeSpeech, registerNativeOverlay } from '../../shared/native.js';
 import { celebrate, playChime } from '../../shared/celebrate.js';
 import { SPEAKER_ICON } from '../../shared/speaker-icon.js';
+import { phraseHtml } from '../../shared/phrase-wrap.js';
 import { normalizeAge, ageFromSettings, AGE_LABELS, newSeed } from './common.js';
 import { readProgress, recordClear, unlockedLevel } from './progress.js';
 
@@ -96,7 +97,7 @@ export function openRailGame(def, options = {}) {
 
   function speak(text) { if (!readSettings().muted && text) void speakNative(text, { rate: 0.8 }); }
   function say(text, { retry = false, voice = true } = {}) {
-    cue = text; cueText.textContent = text;
+    cue = text; cueText.innerHTML = phraseHtml(text); // R49 修正輪：只在詞和詞之間換行
     coach.classList.toggle('is-retry', retry);
     if (retry) { coach.classList.remove('nudge'); void coach.offsetWidth; coach.classList.add('nudge'); }
     if (voice) speak(text);

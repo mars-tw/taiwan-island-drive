@@ -8,6 +8,8 @@ Per size (390x844, 844x390, 1366x768): the four room tabs (every card icon is a 
 cards fully in view without scrolling, buttons >= 60 px, no horizontal overflow), one round of 數數看 (speaker
 button colour, coach text size), then 轉轍器分月台 opened from the room card (top-down train art, speaker colour,
 buttons >= 60 px inside the viewport, back to the room).
+Fix round: Chinese line breaks only between words or after punctuation (card text, hint bubbles, question,
+switch coach), no last line of one or two characters, room home text >= 12 px, one hint label, bigger passengers.
 Writes docs/evidence/r49/room-check.json and, with --shots, the evidence screenshots (JPEG).
 """
 import argparse, json, sys, time
@@ -18,6 +20,49 @@ from playwright.sync_api import sync_playwright
 SIZES = [('phone', 390, 844), ('landscape', 844, 390), ('desktop', 1366, 768)]
 TABS = ['math', 'observe', 'build', 'life']
 OUT = Path('docs/evidence/r49')
+
+BREAKS = r"""
+(selector) => {
+  const out = [];
+  for (const el of document.querySelectorAll(selector)) {
+    const box = el.getBoundingClientRect();
+    if (!box.width || getComputedStyle(el).display === 'none') continue;
+    const chars = []; let wbr = false;
+    const walk = n => { for (const c of n.childNodes) { if (c.nodeType === 3) { for (let i = 0; i < c.data.length; i++) { chars.push({ node: c, i, ch: c.data[i], wbr }); wbr = false; } } else if (c.nodeName === 'WBR') wbr = true; else if (c.nodeName !== 'IMG') walk(c); } };
+    walk(el);
+    const range = document.createRange(), lines = [[]], split = [];
+    let lastTop = null;
+    chars.forEach((c, k) => {
+      range.setStart(c.node, c.i); range.setEnd(c.node, c.i + 1);
+      const r = range.getClientRects()[0]; if (!r) return;
+      if (lastTop !== null && r.top > lastTop + r.height / 2) {
+        const prev = chars[k - 1].ch;
+        if (!/[，、。！？；：,.!?;:\s）」』]/.test(prev) && !c.wbr && !/\s/.test(c.ch)) split.push(lines.at(-1).join('').slice(-3) + '／' + c.ch);
+        lines.push([]);
+      }
+      lastTop = r.top; lines.at(-1).push(c.ch);
+    });
+    const last = lines.at(-1).join('').replace(/[，、。！？；：,.!?;:\s✓]/g, '');
+    out.push({ text: lines.map(l => l.join('')).join('｜'), split, shortLast: lines.length > 1 && [...last].length <= 2 });
+  }
+  return out;
+}
+"""
+
+SMALL_TEXT = r"""
+() => {
+  const d = document.getElementById('math-room'), bad = [];
+  for (const el of d.querySelectorAll('*')) {
+    if (el.closest('.room-nav') || el.closest('details:not([open]) .room-cards')) continue;
+    const own = [...el.childNodes].some(n => n.nodeType === 3 && n.data.trim());
+    if (!own) continue;
+    const r = el.getBoundingClientRect(), cs = getComputedStyle(el);
+    if (!r.width || cs.display === 'none' || cs.visibility === 'hidden') continue;
+    if (parseFloat(cs.fontSize) < 12) bad.push(`${el.textContent.trim().slice(0, 12)} ${cs.fontSize}`);
+  }
+  return bad;
+}
+"""
 
 MEASURE = r"""
 (scope) => {
@@ -108,6 +153,8 @@ def run(base, shots, chrome=None):
                 page.wait_for_timeout(350)
                 info = page.evaluate(ROOM)
                 info['layout'] = measure(page, '#math-room')
+                info['breaks'] = page.evaluate(BREAKS, '#math-room .room-panel .room-card-copy > span')
+                info['smallText'] = page.evaluate(SMALL_TEXT)
                 row['tabs'][tab] = info
                 if shots:
                     page.screenshot(path=str(OUT / f'room-{tab}-{tag}.jpg'), type='jpeg', quality=82)
@@ -117,7 +164,11 @@ def run(base, shots, chrome=None):
             row['play'] = page.evaluate("""() => { const s = document.querySelector('#math-room .room-speak'), r = s.getBoundingClientRect(), cs = getComputedStyle(s);
               const coach = document.querySelector('#math-room .room-coach span'), t = document.querySelector('.room-title-icon img');
               return { speaker: { w: Math.round(r.width), h: Math.round(r.height), bg: cs.backgroundColor, border: cs.borderTopColor, svg: !!s.querySelector('svg'), emoji: s.textContent.includes('🔊') },
-                coachFontPx: parseFloat(getComputedStyle(coach).fontSize), titleIcon: t ? t.naturalWidth > 0 : null }; }""")
+                coachFontPx: parseFloat(getComputedStyle(coach).fontSize), titleIcon: t ? t.naturalWidth > 0 : null,
+                hint: document.querySelector('#math-room .room-hint')?.textContent.trim(),
+                personH: Math.round(document.querySelector('#math-room .person')?.getBoundingClientRect().height || 0),
+                personImgH: Math.round(document.querySelector('#math-room .room-person')?.getBoundingClientRect().height || 0) }; }""")
+            row['play']['breaks'] = page.evaluate(BREAKS, '#math-room .room-coach span, #room-question-title')
             row['play']['layout'] = measure(page, '#math-room')
             if shots:
                 page.screenshot(path=str(OUT / f'play-count-{tag}.jpg'), type='jpeg', quality=82)
@@ -135,6 +186,7 @@ def run(base, shots, chrome=None):
                 speaker: { w: Math.round(r.width), h: Math.round(r.height), bg: cs.backgroundColor, border: cs.borderTopColor, svg: !!s.querySelector('svg') },
                 coachFontPx: parseFloat(getComputedStyle(coach).fontSize), coachText: d.querySelector('.rp-cue').textContent }; }""")
             row['switch']['layout'] = measure(page, '#rail-play')
+            row['switch']['breaks'] = page.evaluate(BREAKS, '#rail-play .rp-cue')
             if shots:
                 page.screenshot(path=str(OUT / f'switch-from-room-{tag}.jpg'), type='jpeg', quality=82)
             page.click('#rail-play .rp-back'); page.wait_for_timeout(600)
@@ -165,6 +217,13 @@ def summarize(report):
             for tab in ('math', 'build'):
                 n = row['tabs'][tab]['cardsInView']; total = len(row['tabs'][tab]['cards'])
                 if n < total: problems.append(f'{t} {tab}: only {n}/{total} cards in view (R48 guard)')
+        for where, items in [*((f'{tab} cards', i['breaks']) for tab, i in row['tabs'].items()), ('count hint', row['play']['breaks']), ('switch coach', row['switch']['breaks'])]:
+            for b in items:
+                if b['split']: problems.append(f'{t} {where}: word split {b["split"]} in {b["text"]}')
+                if b['shortLast']: problems.append(f'{t} {where}: short last line in {b["text"]}')
+        for tab, i in row['tabs'].items():
+            if i['smallText']: problems.append(f'{t} {tab} text under 12px: {i["smallText"][:4]}')
+        if row['play']['hint'] != '☀ 想一想': problems.append(f'{t} hint label {row["play"]["hint"]!r}')
         sp = row['play']['speaker']
         if sp['emoji'] or not sp['svg'] or sp['w'] < 60 or sp['h'] < 60: problems.append(f'{t} room speaker {sp}')
         sw = row['switch']
@@ -188,7 +247,8 @@ def main():
     (OUT / 'room-check.json').write_text(json.dumps({'checkedAt': time.strftime('%Y-%m-%d %H:%M'), 'problems': problems, 'sizes': report}, ensure_ascii=False, indent=1), encoding='utf-8')
     for row in report:
         print(row['tag'], {tab: f"{i['cardsInView']}/{len(i['cards'])} in view, desc {i['cardDescFontPx']}px" for tab, i in row['tabs'].items()},
-              'coach', row['play']['coachFontPx'], 'switch coach', row['switch']['coachFontPx'], 'portraitBoard', row['switch']['portraitBoard'])
+              'coach', row['play']['coachFontPx'], 'switch coach', row['switch']['coachFontPx'], 'portraitBoard', row['switch']['portraitBoard'],
+              'person', row['play']['personH'], row['play']['personImgH'], 'card icon', row['tabs']['math']['cards'][0]['icon']['w'], 'tab icon', row['tabs']['math']['tabs'][0]['icon']['w'])
     print('problems:', len(problems)); [print(' -', x) for x in problems]
     sys.exit(1 if problems else 0)
 

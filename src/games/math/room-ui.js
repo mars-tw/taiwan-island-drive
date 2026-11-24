@@ -22,6 +22,7 @@ import { readRoom, roomLevel, recordRound, syncLegacy, legacySummary } from './r
 import { gameIconPath, tabIconPath } from './room-icons.js';
 import { appUrl } from '../../shared/paths.js';
 import { SPEAKER_ICON } from '../../shared/speaker-icon.js';
+import { phraseHtml } from '../../shared/phrase-wrap.js';
 import { celebrate, playChime } from '../../shared/celebrate.js';
 import { readSettings, subscribeSettings } from '../../shared/settings.js';
 import { studentSaved } from '../../shared/student-save.js';
@@ -42,7 +43,9 @@ const DATA_ACTIONS = [['answer', 'answer'], ['count', 'count'], ['order', 'order
 
 // ---- 1.11.0 scene pieces not inside a ported *Scene function -------------
 const passenger = index => `<img class="room-person" src="${art(`r5/passenger-${index % 6 + 1}-0.png`)}" alt="" width="48" height="76" draggable="false">`;
-const dotCard = n => n === 0 ? '<span class="zero-dots">沒有</span>' : `<span class="dot-card" aria-label="${n} 個點">${'<i></i>'.repeat(n)}</span>`;
+// R49 修正輪：答案點點照骰子排（4 是 2×2、5 是四角加中間、6 是兩直排），3 排成三角形；位置是 3×3 格子的 1～9 號。
+const DICE = { 1: [5], 2: [3, 7], 3: [2, 7, 9], 4: [1, 3, 7, 9], 5: [1, 3, 5, 7, 9], 6: [1, 3, 4, 6, 7, 9], 7: [1, 3, 4, 5, 6, 7, 9], 8: [1, 2, 3, 4, 6, 7, 8, 9], 9: [1, 2, 3, 4, 5, 6, 7, 8, 9] };
+const dotCard = n => n === 0 ? '<span class="zero-dots">沒有</span>' : DICE[n] ? `<span class="dot-card dice" aria-label="${n} 個點">${DICE[n].map(cell => `<i class="dot-p${cell}"></i>`).join('')}</span>` : `<span class="dot-card" aria-label="${n} 個點">${'<i></i>'.repeat(n)}</span>`;
 const ticketPile = n => `<div class="ticket-pile">${'<span class="tiny-ticket" aria-hidden="true">🎟</span>'.repeat(n)}</div>`;
 function scene(round) {
   const q = currentQuestion(round);
@@ -53,7 +56,8 @@ function scene(round) {
   if (['tracks', 'sharing', 'treasure'].includes(q.game))
     return adventureScene(q, round).replace('src="assets/images/railway-world-v2.webp" alt="想像鐵道樂園尋寶風景"', `src="${art('r6/coast.webp')}" alt="海岸鐵道風景"`);
   if (['pattern', 'cargo', 'clock'].includes(q.game)) return activityScene(q, round, { esc, byId: () => null, image: () => '' });
-  if (q.game === 'count') return countingScene(q, round, { person: passenger });
+  // R49 修正輪：6 位以內的乘客放大約 1.5 倍（直式手機下方原本空一大片）。
+  if (q.game === 'count') return countingScene(q, round, { person: passenger }).replace('class="passengers ', `class="passengers ${q.count <= 6 ? 'few ' : ''}`);
   if (q.game === 'compare') return `<div class="compare-stage"><div><span class="stage-label">左邊的車票</span>${ticketPile(q.left)}</div><div><span class="stage-label">右邊的車票</span>${ticketPile(q.right)}</div></div>`;
   if (q.game === 'boarding') return arithmeticScene(q, { solved: round.solved, input: round.boardingInput, touch: !round.nativeKeyboard });
   if (q.game === 'order') return `<div class="sorting-stage"><span class="stage-label">點下面的數字，排進車廂</span><div class="sorting-track"><span class="toy-engine" aria-hidden="true">🚂</span>${q.answer.map((_, i) => `<button type="button" class="carriage-slot ${round.order[i] !== undefined ? 'filled' : ''}" data-remove-order="${i}" ${round.solved ? 'disabled' : ''} aria-label="第 ${i + 1} 節${round.order[i] !== undefined ? `，數字 ${round.order[i]}，點一下拿回來` : '，空車廂'}">${round.order[i] ?? '?'}</button>`).join('')}</div><div class="sorting-bank">${q.numbers.map(n => `<button type="button" class="number-carriage" data-order="${n}" ${round.order.includes(n) || round.solved ? 'disabled' : ''} aria-label="放入數字 ${n}">${n}</button>`).join('')}</div><div class="sort-actions"><button type="button" class="text-btn" id="order-reset" ${round.solved || !round.order.length ? 'disabled' : ''}>重新排</button><button type="button" class="primary-btn" id="order-submit" ${round.order.length !== q.answer.length || round.solved ? 'disabled' : ''}>排好了 ✓</button></div></div>`;
@@ -93,7 +97,7 @@ export function installMathRoom() {
   }
   const bar = (title, { back = '← 遊戲室', speakable = false, pausable = true, step = '' } = {}) =>
     `<header class="room-bar"><button type="button" data-room="back" class="room-back">${back}</button><h2 class="room-bar-title">${title}</h2>${step ? `<span class="room-bar-step" aria-hidden="true">${step}</span>` : ''}${speakable ? `<button type="button" data-room="speak" class="room-speak" aria-label="聽題目">${SPEAKER_ICON}</button>` : ''}${pausable ? '<button type="button" data-room="pause" class="room-pause">暫停</button>' : ''}</header>`;
-  const coach = (text, tone = '') => `<p class="room-coach ${tone ? `is-${tone}` : ''}" role="status" aria-live="polite"><img src="${art(`r6/${tone === 'success' ? 'coach-cheer' : 'coach'}.png`)}" alt="" width="60" height="80"><span>${esc(text)}</span></p>`;
+  const coach = (text, tone = '') => `<p class="room-coach ${tone ? `is-${tone}` : ''}" role="status" aria-live="polite"><img src="${art(`r6/${tone === 'success' ? 'coach-cheer' : 'coach'}.png`)}" alt="" width="60" height="80"><span>${phraseHtml(text)}</span></p>`;
   const saveNote = () => studentSaved() ? '' : '<p class="room-save-note" role="status">這次無法儲存，關掉後集章可能不會保留。</p>';
 
   function stampsFor(game, room) {
@@ -103,7 +107,7 @@ export function installMathRoom() {
   function statusFor(game) { try { return typeof game.status === 'function' ? game.status() || {} : {}; } catch { return {}; } }
   function card(game, room) {
     const status = statusFor(game), stamps = stampsFor(game, room), ageText = agesText(game.levels);
-    return `<button type="button" class="room-card ${game.playable ? '' : 'room-card-later'} ${status.highlight ? 'room-card-highlight' : ''}" data-room-game="${esc(game.id)}" aria-label="${esc(`${game.name}，${game.description}${game.playable ? '' : `適合 ${ageText}。`}`)}"><span class="room-card-icon${gameIconPath(game.id) ? ' has-art' : ''}" aria-hidden="true">${gameIcon(game.id, game.icon)}</span><span class="room-card-copy"><strong>${esc(game.name)}</strong><span>${esc(game.description)}</span><small>${status.note ? `<b>${esc(status.note)}</b> · ` : ''}${esc(ageText)}${stamps ? ` · ✦ ${stamps} 章` : ''}</small></span><b class="room-card-go" aria-hidden="true">${game.playable ? '→' : '⚙'}</b></button>`;
+    return `<button type="button" class="room-card ${game.playable ? '' : 'room-card-later'} ${status.highlight ? 'room-card-highlight' : ''}" data-room-game="${esc(game.id)}" aria-label="${esc(`${game.name}，${game.description}${game.playable ? '' : `適合 ${ageText}。`}`)}"><span class="room-card-icon${gameIconPath(game.id) ? ' has-art' : ''}" aria-hidden="true">${gameIcon(game.id, game.icon)}</span><span class="room-card-copy"><strong>${esc(game.name)}</strong><span>${phraseHtml(game.description)}</span><small>${status.note ? `<b>${esc(status.note)}</b> · ` : ''}${esc(ageText)}${stamps ? ` · ✦ ${stamps} 章` : ''}</small></span><b class="room-card-go" aria-hidden="true">${game.playable ? '→' : '⚙'}</b></button>`;
   }
   function homeView() {
     const room = readRoom(), lvl = level(), band = ageBand(lvl);
@@ -124,7 +128,7 @@ export function installMathRoom() {
     const readyText = { order: '排好了，按「排好了 ✓」看看。', luggage: '都放好了，按「分好了」看看。', sharing: '點心分完了，按「分好了 ✓」看看。', tickets: '都放了代幣，按「付好了 ✓」看看。', cargo: '裝好了就按「裝好了 ✓」。', balance: '放好了就按「秤秤看」。' }[q.game];
     const text = round.feedback || (ready ? readyText : guide.action);
     const title = `<span class="room-title-icon" aria-hidden="true">${gameIcon(q.game, game.icon, 36)}</span> ${esc(game.name)}`;
-    return `<section class="room-page room-play" data-game="${q.game}" data-solved="${round.solved}">${bar(title, { speakable: true, step: `${round.index + 1}／${round.questions.length}` })}<div class="room-body"><ol class="room-progress" aria-label="第 ${round.index + 1} 題，共 ${round.questions.length} 題">${progress}</ol><div class="question-head"><h1 id="room-question-title" tabindex="-1">${esc(guide.title)}</h1></div><div class="game-stage" id="room-stage">${scene(round)}</div></div><footer class="room-dock">${coach(text, round.tone)}${round.solved ? '' : choices(round)}<div class="room-dock-actions">${round.solved ? `<button type="button" data-room="next" class="room-primary room-next">${last ? '完成這一輪 ✦' : '下一題 →'}</button>` : '<button type="button" data-room="hint" class="room-hint" aria-label="一起想一想">☀ <span class="wide-only">一起</span>想一想</button>'}</div></footer></section>`;
+    return `<section class="room-page room-play" data-game="${q.game}" data-solved="${round.solved}">${bar(title, { speakable: true, step: `${round.index + 1}／${round.questions.length}` })}<div class="room-body"><ol class="room-progress" aria-label="第 ${round.index + 1} 題，共 ${round.questions.length} 題">${progress}</ol><div class="question-head"><h1 id="room-question-title" tabindex="-1">${phraseHtml(guide.title)}</h1></div><div class="game-stage" id="room-stage">${scene(round)}</div></div><footer class="room-dock">${coach(text, round.tone)}${round.solved ? '' : choices(round)}<div class="room-dock-actions">${round.solved ? `<button type="button" data-room="next" class="room-primary room-next">${last ? '完成這一輪 ✦' : '下一題 →'}</button>` : '<button type="button" data-room="hint" class="room-hint"><span aria-hidden="true">☀</span> 想一想</button>'}</div></footer></section>`;
   }
   function finishView() {
     const g = mathGame(ui.game), count = ui.last?.stamps || 0;

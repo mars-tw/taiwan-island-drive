@@ -37,7 +37,7 @@
 .room-heading-tools{display:flex;gap:8px;flex-wrap:wrap}
 #math-room .room-age,#math-room .room-stamp-button{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:2px;padding:4px 12px;line-height:1.15}
 #math-room .room-age strong,#math-room .room-stamp-button strong{font-size:20px}
-#math-room .room-age span,#math-room .room-stamp-button span{font-size:12px;font-weight:700}
+#math-room .room-age span,#math-room .room-stamp-button span{font-size:13px;font-weight:700}
 #math-room .room-stamp-button{background:#fff6d4}
 .room-resume{display:flex;align-items:center;gap:10px;background:#fff6d4;border:3px solid #bd8c06;border-radius:18px;padding:8px 12px}
 .room-resume>span{font-size:30px}.room-resume-icon{flex:none;width:48px;height:48px;border-radius:50%;border:2px solid var(--room-navy);overflow:hidden}.room-resume p{flex:1;display:flex;flex-direction:column}.room-resume small{font-size:13px}
@@ -56,6 +56,8 @@
 .room-card-icon.has-art{background:#fff;border-color:var(--room-navy);overflow:hidden}
 .room-card-copy{display:flex;flex-direction:column;gap:2px;min-width:0}
 .room-card-copy strong{font-size:18px}.room-card-copy span{font-size:15px;font-weight:600;line-height:1.35;color:#28506b}
+/* R49 修正輪：中文只在詞和詞之間、標點後換行（<wbr> 由 phrase-wrap.js 放），行長平均，最後一行不會只剩一兩個字 */
+.room-card-copy span,.room-coach span,#room-question-title{word-break:keep-all;overflow-wrap:anywhere;text-wrap:balance}
 .room-card-copy small{font-size:13px;font-weight:700;color:#7a5a00}.room-card-copy small b{color:#b34400}
 .room-card-go{font-size:22px;color:var(--room-orange)}
 #math-room .room-card-highlight{border-color:#ae470a;background:#fff3e8;box-shadow:0 0 0 4px #ffd8bd,0 3px 0 #ae470a}
@@ -91,6 +93,9 @@
 #math-room .answers-compare .answer-number,#math-room .answers-clock .answer-number{font-size:20px}
 #math-room .answer-number small{font-size:12px;font-weight:700}
 .dot-card{display:grid;grid-template-columns:repeat(3,12px);gap:5px;justify-content:center;align-content:center}
+/* R49 修正輪：骰子排法，點點放在 3×3 格子的固定位置 */
+.dot-card.dice{grid-template-rows:repeat(3,12px)}
+.dot-p1{grid-area:1/1}.dot-p2{grid-area:1/2}.dot-p3{grid-area:1/3}.dot-p4{grid-area:2/1}.dot-p5{grid-area:2/2}.dot-p6{grid-area:2/3}.dot-p7{grid-area:3/1}.dot-p8{grid-area:3/2}.dot-p9{grid-area:3/3}
 .dot-card i{width:12px;height:12px;border-radius:50%;background:var(--room-green)}
 .zero-dots{font-size:16px}
 .stage-label{font-size:13px;font-weight:800;color:#276581}
@@ -101,6 +106,8 @@
 .person>span{position:absolute;top:-4px;right:-4px;min-width:22px;height:22px;border-radius:50%;background:var(--room-green);color:#fff;font-size:13px;line-height:22px}
 .person>span:empty{display:none}
 .room-person{width:44px;height:70px;object-fit:contain;pointer-events:none}
+/* R49 修正輪：6 位以內的乘客放大約 1.5 倍（手機橫放的矮畫面除外） */
+@media (min-height:501px){#math-room .passengers.few .person{width:78px;height:118px}.passengers.few .room-person{width:66px;height:105px}}
 .count-status{font-size:14px;font-weight:700;color:#0d6a4b}
 .no-passengers{font-size:18px;padding:20px}
 /* compare */
@@ -131,7 +138,7 @@
 .cargo-wagon{background:#f0eddd;border:2px solid #a7b69a;border-bottom:8px solid #839372;border-radius:12px;padding:10px;text-align:center}
 .cargo-boxes{display:grid;grid-template-columns:repeat(5,minmax(60px,64px));justify-content:center;gap:8px;margin:8px auto}
 #math-room .cargo-box{min-height:60px;width:100%;background:#d5ad73;border:2px solid #a47b46;border-radius:8px;display:flex;align-items:center;justify-content:center;position:relative;color:#594428;font-size:28px;padding:0}
-.cargo-box small{position:absolute;bottom:1px;right:4px;font-size:11px;background:#eddfb9;border-radius:3px;padding:0 3px}
+.cargo-box small{position:absolute;bottom:1px;right:4px;font-size:12px;background:#eddfb9;border-radius:3px;padding:0 3px}
 .cargo-box.target-box{display:inline-flex;min-height:40px;width:40px;font-size:22px}
 .cargo-counter{font-size:16px}.cargo-counter strong{font-size:26px;color:#0d6a4b}
 /* clock */
@@ -280,9 +287,9 @@
  #math-room .arithmetic-answer{grid-column:2;grid-row:1/span 3}
 }
 /* phones: one-row dock */
-@media (max-width:560px){#math-room .room-hint .wide-only{display:none}#math-room .room-dock-actions .room-primary{flex-basis:120px}#math-room .mosaic-brush-status{display:none}
- #math-room .mosaic-tools{grid-template-columns:76px minmax(0,1fr);gap:6px;margin-bottom:6px}#math-room .mosaic-reference-grid{width:72px;height:72px}#math-room .mosaic-sample figcaption{font-size:11px;margin-bottom:2px}
- #math-room .mosaic-palette{grid-template-columns:repeat(4,minmax(60px,1fr));gap:4px}#math-room .mosaic-color-choice{flex-direction:column;gap:0;padding:2px;font-size:11px}}
+@media (max-width:560px){#math-room .room-dock-actions .room-primary{flex-basis:120px}#math-room .mosaic-brush-status{display:none}
+ #math-room .mosaic-tools{grid-template-columns:76px minmax(0,1fr);gap:6px;margin-bottom:6px}#math-room .mosaic-reference-grid{width:72px;height:72px}#math-room .mosaic-sample figcaption{font-size:12px;margin-bottom:2px}
+ #math-room .mosaic-palette{grid-template-columns:repeat(4,minmax(60px,1fr));gap:4px}#math-room .mosaic-color-choice{flex-direction:column;gap:0;padding:2px;font-size:12px}}
 #math-room .discovery-help{display:none}
 /* short landscape phones: controls column left, stage in the middle, coach and answers on the right */
 @media (max-height:500px) and (orientation:landscape){
@@ -291,11 +298,11 @@
  .room-heading{padding:4px 10px;box-shadow:none}.room-heading p{display:none}
  /* 橫放手機：卡片只留圖示和名稱、縮矮，至少露出兩排（年齡已在標題列，省掉分頁說明） */
  .room-home .room-panel{padding:8px;gap:8px}.room-home .room-panel-note{display:none}
- #math-room .room-card{min-height:72px;grid-template-columns:46px minmax(0,1fr) 22px;gap:8px;padding:6px 10px}
- .room-card-icon{width:44px;height:44px;font-size:20px}.room-card-copy>span{display:none}
+ #math-room .room-card{min-height:72px;grid-template-columns:54px minmax(0,1fr) 22px;gap:8px;padding:6px 10px}
+ .room-card-icon{width:52px;height:52px;font-size:20px}.room-card-copy>span{display:none}
  /* R49：分頁圖示在上、名稱在下，60px 高放得下，名稱不會被擠成兩行 */
  #math-room .room-tabs button{flex-direction:column;gap:1px;padding:2px 4px;font-size:13px;line-height:1.15}
- .room-tab-icon{width:34px;height:34px}
+ .room-tab-icon{width:42px;height:42px}
  .room-dock{padding:4px 8px}
  .room-play{grid-template-columns:84px minmax(0,1fr) minmax(176px,212px);grid-template-rows:minmax(0,1fr)}
  .room-play .room-bar{grid-column:1;grid-row:1;flex-direction:column;justify-content:flex-start;align-items:stretch;border-bottom:0;border-right:3px solid var(--room-blue);padding:6px 5px;gap:6px;min-height:0}
