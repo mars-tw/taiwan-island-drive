@@ -4,6 +4,7 @@ import { svgEl, artUrl } from './rail-shell.js';
 import { RAIL_COLORS } from './common.js';
 
 export const TRAIN_RATIO = 809 / 1942; // content-r3/train-side.webp height / width
+export const TRAIN_TOP_RATIO = 135 / 640; // r49/train-top.webp height / width (seen from above, nose to the right)
 
 /** Rail bed: ballast, sleepers, two rails. Returns the group. */
 export function drawTrack(parent, d, { lit = false, dim = false, width = 1 } = {}) {
@@ -48,8 +49,18 @@ export function drawCar(parent, x, y, w, color) {
 /**
  * A train facing +x. anchor 'front' puts the nose at (0,0); 'center' centres the whole consist.
  * Extra cars (beyond the two-car unit in the art) are coupled behind the engine.
+ * view 'top' (R49) draws the two-car unit seen from straight above, so it sits on a map track the right way
+ * whichever way the board turns (the side art turned 90° looked like a train lying beside the rails).
  */
-export function drawTrain(parent, { color = 'blue', length = 170, extraCars = 0, anchor = 'front', className = '' } = {}) {
+export function drawTrain(parent, { color = 'blue', length = 170, extraCars = 0, anchor = 'front', className = '', view = 'side' } = {}) {
+  if (view === 'top') {
+    const g = svgEl('g', { class: `rp-train is-top ${className}`.trim() }, parent);
+    const body = svgEl('g', { class: 'rp-train-body' }, g);
+    const h = length * TRAIN_TOP_RATIO, front = anchor === 'front' ? 0 : length / 2;
+    svgEl('image', { href: artUrl('trainTop'), x: front - length, y: -h / 2, width: length, height: h, filter: `url(#rp-hue-${color})`, preserveAspectRatio: 'none' }, body);
+    g.dataset.length = String(length);
+    return g;
+  }
   const g = svgEl('g', { class: `rp-train ${className}`.trim() }, parent);
   const body = svgEl('g', { class: 'rp-train-body' }, g);
   const h = length * TRAIN_RATIO, carW = length * 0.52, total = length + extraCars * (carW + 2);

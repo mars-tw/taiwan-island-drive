@@ -1,0 +1,1176 @@
+{
+ "round": "R49",
+ "date": "2026-11-24",
+ "status": "VERIFIED",
+ "tools": {
+  "gpt-image-2": {
+   "endpoint": "POST https://api.openai.com/v1/images/generations",
+   "model": "gpt-image-2",
+   "attempts": 2,
+   "images": 0,
+   "result": "BLOCKED：兩次都回 HTTP 429 insufficient_quota / credit_balance_exhausted（帳戶沒有額度），沒有產出任何圖；依規則不自動換成別的模型冒充。"
+  },
+  "grok": {
+   "cli": "Grok Build 1.0.89 (28be5bb1bf65)",
+   "tools": [
+    "image_gen",
+    "image_edit"
+   ],
+   "image_model_slug": null,
+   "note": "工具只說用 Imagine，沒有回報圖像模型 slug，所以記 null；呼叫它的代理模型是 grok-4.7-build。輸出是 JPEG。",
+   "image_gen_calls": 80,
+   "image_edit_calls": 13,
+   "images": 93,
+   "used": 28
+  },
+  "muse": {
+   "cli": "muse exec（--approval-mode never --disable-web-tools）",
+   "images": 0,
+   "role": "開工前訂風格規格；之後 9 次看總覽圖挑圖、盲測（64px／56px 圓形、順序打亂只標號碼）。MUSE 沒有出圖工具，沒有產圖。"
+  }
+ },
+ "style_spec": {
+  "outline": "墨藍 #143B61 粗外框（1024px 原圖約 16～20px）",
+  "shading": "平塗＋兩階明暗＋左上暖光",
+  "colors": [
+   "#1479B8",
+   "#FFD344",
+   "#F46B27",
+   "#58B85B",
+   "#FFFFFF"
+  ],
+  "background_by_tab": {
+   "math": "#FFF3C2",
+   "observe": "#DCF2DF",
+   "build": "#D9EEFA",
+   "life": "#FFE7D3"
+  },
+  "composition": "一個主角＋最多兩個小配角，主體在中央約 70% 直徑的圓內，四角只留底色；CSS 裁成圓形",
+  "text": "不放字；排車廂放 1、2、3，數學分頁放 ＋－＝"
+ },
+ "runtime_total_bytes": {
+  "icons_27": 114566,
+  "train_top": 12100,
+  "all": 126666
+ },
+ "license": "本專案以 Grok Build（xAI Imagine）生成並後製，隨本 MIT 專案提供；沒有使用第三方下載素材、字型或圖庫。",
+ "assets": [
+  {
+   "id": "dispatch",
+   "kind": "game-icon",
+   "category": "math",
+   "runtime": "public/art/r49/icons/dispatch.webp",
+   "runtime_sha256": "e59f15d0ded06a55dc040bbd2ede14a6d2a3e47702f81e9f6dd8f60ed73d4c71",
+   "runtime_size": [
+    192,
+    192
+   ],
+   "runtime_bytes": 4338,
+   "source": "docs/content/r49/art/source/dispatch.jpg",
+   "source_sha256": "6073e6ece8808d1faf9ee5127d537fa0d2832e5fbcb4011cf21ef85eee252e92",
+   "source_size": [
+    1024,
+    1024
+   ],
+   "source_format": "JPEG",
+   "steps": [
+    {
+     "tool": "Grok Build CLI 1.0.89 `image_gen` (xAI Imagine)",
+     "image_model_slug": null,
+     "prompt_version": "r49-icons-v13",
+     "aspect_ratio": "1:1",
+     "edit_of": null,
+     "round": "v13"
+    },
+    {
+     "tool": "Grok Build CLI 1.0.89 `image_edit` (xAI Imagine)",
+     "image_model_slug": null,
+     "prompt_version": "r49-icons-v14-edit",
+     "aspect_ratio": "source",
+     "edit_of": "v13",
+     "round": "v14e"
+    }
+   ],
+   "post": {
+    "script": "badge.py (scratchpad, not in repo)",
+    "background": "#FFF3C2",
+    "bg_coverage": 0.741,
+    "fill": 0.8,
+    "notes": "角落連通的底色＋相連的淡色光暈改成分頁平色；主體重新置中、最遠像素放在圓的 80% 半徑內；LANCZOS 縮成 192×192；WebP 品質 86。不用任何 AI 模型。"
+   },
+   "pick_reason": "第 8 輪盲測與單線會車互混（都是兩台車隔一段），改成兩節坐滿乘客的車廂拉開＋大雙向箭頭、沒有車頭；第 9 輪 MUSE 指箭頭太小，再用 image_edit 加大。"
+  },
+  {
+   "id": "count",
+   "kind": "game-icon",
+   "category": "math",
+   "runtime": "public/art/r49/icons/count.webp",
+   "runtime_sha256": "f9b1b1b4f9c07a1d078153b3da8dc8fa60c629eba4e078a2bff9269bdae8f0e9",
+   "runtime_size": [
+    192,
+    192
+   ],
+   "runtime_bytes": 5062,
+   "source": "docs/content/r49/art/source/count.jpg",
+   "source_sha256": "8fd4cc06a35260f70d451089e84b06b19f42ba9c2eb5d926af60202dd7512de8",
+   "source_size": [
+    1024,
+    1024
+   ],
+   "source_format": "JPEG",
+   "steps": [
+    {
+     "tool": "Grok Build CLI 1.0.89 `image_gen` (xAI Imagine)",
+     "image_model_slug": null,
+     "prompt_version": "r49-icons-v1",
+     "aspect_ratio": "1:1",
+     "edit_of": null,
+     "round": "v1"
+    }
+   ],
+   "post": {
+    "script": "badge.py (scratchpad, not in repo)",
+    "background": "#FFF3C2",
+    "bg_coverage": 0.774,
+    "fill": 0.8,
+    "notes": "角落連通的底色＋相連的淡色光暈改成分頁平色；主體重新置中、最遠像素放在圓的 80% 半徑內；LANCZOS 縮成 192×192；WebP 品質 86。不用任何 AI 模型。"
+   },
+   "pick_reason": "第 1 輪就採用：一排四位乘客，各輪盲測都對到「數數看」。"
+  },
+  {
+   "id": "order",
+   "kind": "game-icon",
+   "category": "math",
+   "runtime": "public/art/r49/icons/order.webp",
+   "runtime_sha256": "5e94c00279bb265d0a7b5c624a07d3750135b30310caa845731ba3d37977f32f",
+   "runtime_size": [
+    192,
+    192
+   ],
+   "runtime_bytes": 3572,
+   "source": "docs/content/r49/art/source/order.jpg",
+   "source_sha256": "e75b695eea2dfafe35bd74facc5546e21f68fc53e45e1db681a481e1f311226a",
+   "source_size": [
+    1024,
+    1024
+   ],
+   "source_format": "JPEG",
+   "steps": [
+    {
+     "tool": "Grok Build CLI 1.0.89 `image_gen` (xAI Imagine)",
+     "image_model_slug": null,
+     "prompt_version": "r49-icons-v12",
+     "aspect_ratio": "1:1",
+     "edit_of": null,
+     "round": "v12"
+    }
+   ],
+   "post": {
+    "script": "badge.py (scratchpad, not in repo)",
+    "background": "#FFF3C2",
+    "bg_coverage": 0.783,
+    "fill": 0.8,
+    "notes": "角落連通的底色＋相連的淡色光暈改成分頁平色；主體重新置中、最遠像素放在圓的 80% 半徑內；LANCZOS 縮成 192×192；WebP 品質 86。不用任何 AI 模型。"
+   },
+   "pick_reason": "1 2 3 車廂第 7 輪在 64px 糊掉；改成 1、虛線空格、3，大號 2 懸在空格上，第 9 輪 MUSE 評一眼就懂。"
+  },
+  {
+   "id": "compare",
+   "kind": "game-icon",
+   "category": "math",
+   "runtime": "public/art/r49/icons/compare.webp",
+   "runtime_sha256": "ab07a7004313b6fda33f13b9adaa06b69ec0ec93787a19453f0def8ef892a078",
+   "runtime_size": [
+    192,
+    192
+   ],
+   "runtime_bytes": 4784,
+   "source": "docs/content/r49/art/source/compare.jpg",
+   "source_sha256": "d846cc3511c1d42e83a13cbb149e427aa8b5452a80a3f92c812c9fffab629db9",
+   "source_size": [
+    1024,
+    1024
+   ],
+   "source_format": "JPEG",
+   "steps": [
+    {
+     "tool": "Grok Build CLI 1.0.89 `image_gen` (xAI Imagine)",
+     "image_model_slug": null,
+     "prompt_version": "r49-icons-v2",
+     "aspect_ratio": "1:1",
+     "edit_of": null,
+     "round": "v2"
+    },
+    {
+     "tool": "Grok Build CLI 1.0.89 `image_edit` (xAI Imagine)",
+     "image_model_slug": null,
+     "prompt_version": "r49-icons-v3-edit",
+     "aspect_ratio": "source",
+     "edit_of": "v2",
+     "round": "v3"
+    }
+   ],
+   "post": {
+    "script": "badge.py (scratchpad, not in repo)",
+    "background": "#FFF3C2",
+    "bg_coverage": 0.867,
+    "fill": 0.8,
+    "notes": "角落連通的底色＋相連的淡色光暈改成分頁平色；主體重新置中、最遠像素放在圓的 80% 半徑內；LANCZOS 縮成 192×192；WebP 品質 86。不用任何 AI 模型。"
+   },
+   "pick_reason": "第 1 輪兩疊條紋票像蛋糕；改成兩把扇形車票（左 2 右 5）並用 image_edit 拿掉綠色圓盤，第 2、9 輪盲測都對到；中途試過上下兩排票被看成時刻表，已退回本版。"
+  },
+  {
+   "id": "boarding",
+   "kind": "game-icon",
+   "category": "math",
+   "runtime": "public/art/r49/icons/boarding.webp",
+   "runtime_sha256": "fd55e828ed85fb47d21f7d0a6d94b60f0d7505c033ab8fb0aafa46c97ad5f7cb",
+   "runtime_size": [
+    192,
+    192
+   ],
+   "runtime_bytes": 4936,
+   "source": "docs/content/r49/art/source/boarding.jpg",
+   "source_sha256": "c260dce29cbc0205275fb25fe2759cc2aa8e24c281dcff8f267dbbea29dd4002",
+   "source_size": [
+    1024,
+    1024
+   ],
+   "source_format": "JPEG",
+   "steps": [
+    {
+     "tool": "Grok Build CLI 1.0.89 `image_gen` (xAI Imagine)",
+     "image_model_slug": null,
+     "prompt_version": "r49-icons-v12",
+     "aspect_ratio": "1:1",
+     "edit_of": null,
+     "round": "v12"
+    }
+   ],
+   "post": {
+    "script": "badge.py (scratchpad, not in repo)",
+    "background": "#FFF3C2",
+    "bg_coverage": 0.673,
+    "fill": 0.8,
+    "notes": "角落連通的底色＋相連的淡色光暈改成分頁平色；主體重新置中、最遠像素放在圓的 80% 半徑內；LANCZOS 縮成 192×192；WebP 品質 86。不用任何 AI 模型。"
+   },
+   "pick_reason": "車門特寫第 7 輪在 64px 被看成駕駛艙；改成正面大車門＋一進一出的孩子＋左右進出箭頭，第 9 輪一眼就懂。"
+  },
+  {
+   "id": "pattern",
+   "kind": "game-icon",
+   "category": "math",
+   "runtime": "public/art/r49/icons/pattern.webp",
+   "runtime_sha256": "9b79ca847f03f6a9ac166601f039a12719d060af9c20044e170d873b1b199ed8",
+   "runtime_size": [
+    192,
+    192
+   ],
+   "runtime_bytes": 3716,
+   "source": "docs/content/r49/art/source/pattern.jpg",
+   "source_sha256": "42b313ac79b5a31292be551ed9e5743881e6559acb2d33a43a27b4ced4290739",
+   "source_size": [
+    1024,
+    1024
+   ],
+   "source_format": "JPEG",
+   "steps": [
+    {
+     "tool": "Grok Build CLI 1.0.89 `image_gen` (xAI Imagine)",
+     "image_model_slug": null,
+     "prompt_version": "r49-icons-v6a",
+     "aspect_ratio": "1:1",
+     "edit_of": null,
+     "round": "v6a"
+    }
+   ],
+   "post": {
+    "script": "badge.py (scratchpad, not in repo)",
+    "background": "#FFF3C2",
+    "bg_coverage": 0.832,
+    "fill": 0.8,
+    "notes": "角落連通的底色＋相連的淡色光暈改成分頁平色；主體重新置中、最遠像素放在圓的 80% 半徑內；LANCZOS 縮成 192×192；WebP 品質 86。不用任何 AI 模型。"
+   },
+   "pick_reason": "原本小形狀在 56px 消失；改成平板車上紅球、藍三角、紅球、虛線空位，形狀放大，第 4 輪 MUSE 判採用。"
+  },
+  {
+   "id": "clock",
+   "kind": "game-icon",
+   "category": "math",
+   "runtime": "public/art/r49/icons/clock.webp",
+   "runtime_sha256": "b7068c0547010b5a5c4b71243de80f47b23ee4902c7487d9a4c86bf0616d489c",
+   "runtime_size": [
+    192,
+    192
+   ],
+   "runtime_bytes": 4734,
+   "source": "docs/content/r49/art/source/clock.jpg",
+   "source_sha256": "c5a0bd8abff38d8afea7b7ebf870b6b230be390c861c2170b6425851bf8a3783",
+   "source_size": [
+    1024,
+    1024
+   ],
+   "source_format": "JPEG",
+   "steps": [
+    {
+     "tool": "Grok Build CLI 1.0.89 `image_gen` (xAI Imagine)",
+     "image_model_slug": null,
+     "prompt_version": "r49-icons-v1",
+     "aspect_ratio": "1:1",
+     "edit_of": null,
+     "round": "v1"
+    }
+   ],
+   "post": {
+    "script": "badge.py (scratchpad, not in repo)",
+    "background": "#FFF3C2",
+    "bg_coverage": 0.764,
+    "fill": 0.8,
+    "notes": "角落連通的底色＋相連的淡色光暈改成分頁平色；主體重新置中、最遠像素放在圓的 80% 半徑內；LANCZOS 縮成 192×192；WebP 品質 86。不用任何 AI 模型。"
+   },
+   "pick_reason": "第 1 輪就採用：粗指針、只有刻度點、沒有數字。"
+  },
+  {
+   "id": "boarding-count",
+   "kind": "game-icon",
+   "category": "math",
+   "runtime": "public/art/r49/icons/boarding-count.webp",
+   "runtime_sha256": "c29b679909849d3138dae6fd6018ea31503e5a555b66e1670e181cb32bda403d",
+   "runtime_size": [
+    192,
+    192
+   ],
+   "runtime_bytes": 6046,
+   "source": "docs/content/r49/art/source/boarding-count.jpg",
+   "source_sha256": "c25958fe690f8d94391e438d7d57b4424bd354eb39c9837a017427282cda4635",
+   "source_size": [
+    1024,
+    1024
+   ],
+   "source_format": "JPEG",
+   "steps": [
+    {
+     "tool": "Grok Build CLI 1.0.89 `image_gen` (xAI Imagine)",
+     "image_model_slug": null,
+     "prompt_version": "r49-icons-v7a",
+     "aspect_ratio": "1:1",
+     "edit_of": null,
+     "round": "v7a"
+    },
+    {
+     "tool": "Grok Build CLI 1.0.89 `image_edit` (xAI Imagine)",
+     "image_model_slug": null,
+     "prompt_version": "r49-icons-v8-edit",
+     "aspect_ratio": "source",
+     "edit_of": "v7a",
+     "round": "v8e"
+    }
+   ],
+   "post": {
+    "script": "badge.py (scratchpad, not in repo)",
+    "background": "#FFF3C2",
+    "bg_coverage": 0.593,
+    "fill": 0.8,
+    "notes": "角落連通的底色＋相連的淡色光暈改成分頁平色；主體重新置中、最遠像素放在圓的 80% 半徑內；LANCZOS 縮成 192×192；WebP 品質 86。不用任何 AI 模型。"
+   },
+   "pick_reason": "第 1～3 版被看成船或跟上車下車撞；改成海浪站牌＋側面車廂＋底部海浪帶，再用 image_edit 把動物乘客換成孩子，第 9 輪盲測對到。"
+  },
+  {
+   "id": "platform-timetable",
+   "kind": "game-icon",
+   "category": "math",
+   "runtime": "public/art/r49/icons/platform-timetable.webp",
+   "runtime_sha256": "e1077710924744ce2a6cd301151e241e00a2d8a24eabf10d28866637abb0b52e",
+   "runtime_size": [
+    192,
+    192
+   ],
+   "runtime_bytes": 3628,
+   "source": "docs/content/r49/art/source/platform-timetable.jpg",
+   "source_sha256": "19386dc96b3a3bc76ad01a1780fd5f0e9b188655f690b6b49111539726b9b988",
+   "source_size": [
+    1024,
+    1024
+   ],
+   "source_format": "JPEG",
+   "steps": [
+    {
+     "tool": "Grok Build CLI 1.0.89 `image_gen` (xAI Imagine)",
+     "image_model_slug": null,
+     "prompt_version": "r49-icons-v2",
+     "aspect_ratio": "1:1",
+     "edit_of": null,
+     "round": "v2"
+    }
+   ],
+   "post": {
+    "script": "badge.py (scratchpad, not in repo)",
+    "background": "#FFF3C2",
+    "bg_coverage": 0.758,
+    "fill": 0.8,
+    "notes": "角落連通的底色＋相連的淡色光暈改成分頁平色；主體重新置中、最遠像素放在圓的 80% 半徑內；LANCZOS 縮成 192×192；WebP 品質 86。不用任何 AI 模型。"
+   },
+   "pick_reason": "第 2 版拿掉格子雜點，只留三條粗亮條＋小時鐘＋車頭，第 2 輪起採用。"
+  },
+  {
+   "id": "differences",
+   "kind": "game-icon",
+   "category": "observe",
+   "runtime": "public/art/r49/icons/differences.webp",
+   "runtime_sha256": "aaa1f31e9c036706167470528495f998313d19ff3c278b36fc6e23af5a7b6ce2",
+   "runtime_size": [
+    192,
+    192
+   ],
+   "runtime_bytes": 4074,
+   "source": "docs/content/r49/art/source/differences.jpg",
+   "source_sha256": "429d2c15c56984721dafe2ef0cd42f4d643d92e8e78927f684121aa06e483283",
+   "source_size": [
+    1024,
+    1024
+   ],
+   "source_format": "JPEG",
+   "steps": [
+    {
+     "tool": "Grok Build CLI 1.0.89 `image_gen` (xAI Imagine)",
+     "image_model_slug": null,
+     "prompt_version": "r49-icons-v2",
+     "aspect_ratio": "1:1",
+     "edit_of": null,
+     "round": "v2"
+    },
+    {
+     "tool": "Grok Build CLI 1.0.89 `image_edit` (xAI Imagine)",
+     "image_model_slug": null,
+     "prompt_version": "r49-icons-v3-edit",
+     "aspect_ratio": "source",
+     "edit_of": "v2",
+     "round": "v3"
+    }
+   ],
+   "post": {
+    "script": "badge.py (scratchpad, not in repo)",
+    "background": "#DCF2DF",
+    "bg_coverage": 0.807,
+    "fill": 0.8,
+    "notes": "角落連通的底色＋相連的淡色光暈改成分頁平色；主體重新置中、最遠像素放在圓的 80% 半徑內；LANCZOS 縮成 192×192；WebP 品質 86。不用任何 AI 模型。"
+   },
+   "pick_reason": "第 2 版兩張圖只差一面旗；image_edit 拿掉外圈深藍圓框，各輪盲測都對到。"
+  },
+  {
+   "id": "treasure",
+   "kind": "game-icon",
+   "category": "observe",
+   "runtime": "public/art/r49/icons/treasure.webp",
+   "runtime_sha256": "7d10a7506c6918624069f3c4c198c7df841407740c3487e348eced01c14e9570",
+   "runtime_size": [
+    192,
+    192
+   ],
+   "runtime_bytes": 4864,
+   "source": "docs/content/r49/art/source/treasure.jpg",
+   "source_sha256": "7cae61bbd648b43240e8a732fda3f6c0483f0a1df474799fc664b87fc1939efb",
+   "source_size": [
+    1024,
+    1024
+   ],
+   "source_format": "JPEG",
+   "steps": [
+    {
+     "tool": "Grok Build CLI 1.0.89 `image_gen` (xAI Imagine)",
+     "image_model_slug": null,
+     "prompt_version": "r49-icons-v1",
+     "aspect_ratio": "1:1",
+     "edit_of": null,
+     "round": "v1"
+    }
+   ],
+   "post": {
+    "script": "badge.py (scratchpad, not in repo)",
+    "background": "#DCF2DF",
+    "bg_coverage": 0.761,
+    "fill": 0.8,
+    "notes": "角落連通的底色＋相連的淡色光暈改成分頁平色；主體重新置中、最遠像素放在圓的 80% 半徑內；LANCZOS 縮成 192×192；WebP 品質 86。不用任何 AI 模型。"
+   },
+   "pick_reason": "第 1 輪就採用：海島＋寶箱。"
+  },
+  {
+   "id": "tracks",
+   "kind": "game-icon",
+   "category": "build",
+   "runtime": "public/art/r49/icons/tracks.webp",
+   "runtime_sha256": "c92b5adc2c182deeb3f32e67f0290f08fb98984a037d1f1d3bb0347e39e39a9b",
+   "runtime_size": [
+    192,
+    192
+   ],
+   "runtime_bytes": 5232,
+   "source": "docs/content/r49/art/source/tracks.jpg",
+   "source_sha256": "61ff5d500c0ff6d2d13f967600c8504396016f08db8e89a52623a77daa35ec6b",
+   "source_size": [
+    1024,
+    1024
+   ],
+   "source_format": "JPEG",
+   "steps": [
+    {
+     "tool": "Grok Build CLI 1.0.89 `image_gen` (xAI Imagine)",
+     "image_model_slug": null,
+     "prompt_version": "r49-icons-v6a",
+     "aspect_ratio": "1:1",
+     "edit_of": null,
+     "round": "v6a"
+    }
+   ],
+   "post": {
+    "script": "badge.py (scratchpad, not in repo)",
+    "background": "#D9EEFA",
+    "bg_coverage": 0.619,
+    "fill": 0.8,
+    "notes": "角落連通的底色＋相連的淡色光暈改成分頁平色；主體重新置中、最遠像素放在圓的 80% 半徑內；LANCZOS 縮成 192×192；WebP 品質 86。不用任何 AI 模型。"
+   },
+   "pick_reason": "原本跟「拼搭與方向」分頁都畫彎軌加箭頭；改成一塊方形軌道磚＋橘色旋轉箭頭＋工程帽，第 7、9 輪盲測對到。"
+  },
+  {
+   "id": "maze",
+   "kind": "game-icon",
+   "category": "build",
+   "runtime": "public/art/r49/icons/maze.webp",
+   "runtime_sha256": "ca553fbb34cf20b3f8bc7cc05dc407c5a320c9e64e4362bc208f56dc1dde0ae4",
+   "runtime_size": [
+    192,
+    192
+   ],
+   "runtime_bytes": 5000,
+   "source": "docs/content/r49/art/source/maze.jpg",
+   "source_sha256": "1e93a382e8eb8c44a23695e95158527cbd3078c6e7eaf0a8010588f58ae71473",
+   "source_size": [
+    1024,
+    1024
+   ],
+   "source_format": "JPEG",
+   "steps": [
+    {
+     "tool": "Grok Build CLI 1.0.89 `image_gen` (xAI Imagine)",
+     "image_model_slug": null,
+     "prompt_version": "r49-icons-v2",
+     "aspect_ratio": "1:1",
+     "edit_of": null,
+     "round": "v2"
+    },
+    {
+     "tool": "Grok Build CLI 1.0.89 `image_edit` (xAI Imagine)",
+     "image_model_slug": null,
+     "prompt_version": "r49-icons-v3-edit",
+     "aspect_ratio": "source",
+     "edit_of": "v2",
+     "round": "v3"
+    }
+   ],
+   "post": {
+    "script": "badge.py (scratchpad, not in repo)",
+    "background": "#D9EEFA",
+    "bg_coverage": 0.741,
+    "fill": 0.8,
+    "notes": "角落連通的底色＋相連的淡色光暈改成分頁平色；主體重新置中、最遠像素放在圓的 80% 半徑內；LANCZOS 縮成 192×192；WebP 品質 86。不用任何 AI 模型。"
+   },
+   "pick_reason": "第 2 版簡化牆面、虛線路徑；image_edit 拿掉綠色圓盤，各輪一眼就懂。"
+  },
+  {
+   "id": "program",
+   "kind": "game-icon",
+   "category": "build",
+   "runtime": "public/art/r49/icons/program.webp",
+   "runtime_sha256": "4efcb647df94051c7aa212755249d73273107a5b7d22b27630f3806bae91e2b9",
+   "runtime_size": [
+    192,
+    192
+   ],
+   "runtime_bytes": 4400,
+   "source": "docs/content/r49/art/source/program.jpg",
+   "source_sha256": "7eac537240e3cc6da9c672a62b275b2fb2884c0422e58fc474fc0995f3b9c2af",
+   "source_size": [
+    1024,
+    1024
+   ],
+   "source_format": "JPEG",
+   "steps": [
+    {
+     "tool": "Grok Build CLI 1.0.89 `image_gen` (xAI Imagine)",
+     "image_model_slug": null,
+     "prompt_version": "r49-icons-v12",
+     "aspect_ratio": "1:1",
+     "edit_of": null,
+     "round": "v12"
+    }
+   ],
+   "post": {
+    "script": "badge.py (scratchpad, not in repo)",
+    "background": "#D9EEFA",
+    "bg_coverage": 0.832,
+    "fill": 0.8,
+    "notes": "角落連通的底色＋相連的淡色光暈改成分頁平色；主體重新置中、最遠像素放在圓的 80% 半徑內；LANCZOS 縮成 192×192；WebP 品質 86。不用任何 AI 模型。"
+   },
+   "pick_reason": "三張箭頭卡＋火車第 7 輪被說看不到「司機」；改成戴帽小司機舉箭頭卡、前方虛線轉彎，第 9 輪一眼就懂。"
+  },
+  {
+   "id": "mosaic",
+   "kind": "game-icon",
+   "category": "build",
+   "runtime": "public/art/r49/icons/mosaic.webp",
+   "runtime_sha256": "39df5288be5542213b5bb4cdf524893087006757f912ac8c142e1d52b66e5290",
+   "runtime_size": [
+    192,
+    192
+   ],
+   "runtime_bytes": 3208,
+   "source": "docs/content/r49/art/source/mosaic.jpg",
+   "source_sha256": "e0a4765b4e5145b2aca26e4348d6405c07a153fea69be088cf69b96bc7b19442",
+   "source_size": [
+    1024,
+    1024
+   ],
+   "source_format": "JPEG",
+   "steps": [
+    {
+     "tool": "Grok Build CLI 1.0.89 `image_gen` (xAI Imagine)",
+     "image_model_slug": null,
+     "prompt_version": "r49-icons-v12",
+     "aspect_ratio": "1:1",
+     "edit_of": null,
+     "round": "v12"
+    }
+   ],
+   "post": {
+    "script": "badge.py (scratchpad, not in repo)",
+    "background": "#D9EEFA",
+    "bg_coverage": 0.819,
+    "fill": 0.8,
+    "notes": "角落連通的底色＋相連的淡色光暈改成分頁平色；主體重新置中、最遠像素放在圓的 80% 半徑內；LANCZOS 縮成 192×192；WebP 品質 86。不用任何 AI 模型。"
+   },
+   "pick_reason": "先前像卡車或時刻表方格；改成方塊、圓、三角拼成的小火車，紅三角正要放進虛線空位，第 9 輪一眼就懂。"
+  },
+  {
+   "id": "switch-platform",
+   "kind": "game-icon",
+   "category": "build",
+   "runtime": "public/art/r49/icons/switch-platform.webp",
+   "runtime_sha256": "c1367dae5dc32a5745d5eae7259c58e20402b0b981b29eaa8f2fded1c7e8474b",
+   "runtime_size": [
+    192,
+    192
+   ],
+   "runtime_bytes": 3716,
+   "source": "docs/content/r49/art/source/switch-platform.jpg",
+   "source_sha256": "7f5c064d66860c4d7a3fa41f2abebbba3096381c83e571564eedd94a7c4c8108",
+   "source_size": [
+    1024,
+    1024
+   ],
+   "source_format": "JPEG",
+   "steps": [
+    {
+     "tool": "Grok Build CLI 1.0.89 `image_gen` (xAI Imagine)",
+     "image_model_slug": null,
+     "prompt_version": "r49-icons-v1",
+     "aspect_ratio": "1:1",
+     "edit_of": null,
+     "round": "v1"
+    },
+    {
+     "tool": "Grok Build CLI 1.0.89 `image_edit` (xAI Imagine)",
+     "image_model_slug": null,
+     "prompt_version": "r49-icons-v3-edit",
+     "aspect_ratio": "source",
+     "edit_of": "v1",
+     "round": "v3"
+    },
+    {
+     "tool": "Grok Build CLI 1.0.89 `image_edit` (xAI Imagine)",
+     "image_model_slug": null,
+     "prompt_version": "r49-icons-v14-edit",
+     "aspect_ratio": "source",
+     "edit_of": "v3",
+     "round": "v14e"
+    }
+   ],
+   "post": {
+    "script": "badge.py (scratchpad, not in repo)",
+    "background": "#D9EEFA",
+    "bg_coverage": 0.904,
+    "fill": 0.8,
+    "notes": "角落連通的底色＋相連的淡色光暈改成分頁平色；主體重新置中、最遠像素放在圓的 80% 半徑內；LANCZOS 縮成 192×192；WebP 品質 86。不用任何 AI 模型。"
+   },
+   "pick_reason": "第 1 版 Y 形分岔最清楚，但有深藍外框；先用 image_edit 拿掉外框，第 9 輪被看成蝴蝶結，再拿掉兩旁綠色樹叢。"
+  },
+  {
+   "id": "shunting-yard",
+   "kind": "game-icon",
+   "category": "build",
+   "runtime": "public/art/r49/icons/shunting-yard.webp",
+   "runtime_sha256": "6c475171a699f29d2b26ccd118bef0f5974926ac9dff2e3d7ee5f4febf091c40",
+   "runtime_size": [
+    192,
+    192
+   ],
+   "runtime_bytes": 4388,
+   "source": "docs/content/r49/art/source/shunting-yard.jpg",
+   "source_sha256": "da86c6fd0b4463052e3270c8015e95b8db3fbf86e654e9aa89f2521a096a726a",
+   "source_size": [
+    1024,
+    1024
+   ],
+   "source_format": "JPEG",
+   "steps": [
+    {
+     "tool": "Grok Build CLI 1.0.89 `image_gen` (xAI Imagine)",
+     "image_model_slug": null,
+     "prompt_version": "r49-icons-v2",
+     "aspect_ratio": "1:1",
+     "edit_of": null,
+     "round": "v2"
+    },
+    {
+     "tool": "Grok Build CLI 1.0.89 `image_edit` (xAI Imagine)",
+     "image_model_slug": null,
+     "prompt_version": "r49-icons-v14-edit",
+     "aspect_ratio": "source",
+     "edit_of": "v2",
+     "round": "v14e"
+    }
+   ],
+   "post": {
+    "script": "badge.py (scratchpad, not in repo)",
+    "background": "#D9EEFA",
+    "bg_coverage": 0.737,
+    "fill": 0.8,
+    "notes": "角落連通的底色＋相連的淡色光暈改成分頁平色；主體重新置中、最遠像素放在圓的 80% 半徑內；LANCZOS 縮成 192×192；WebP 品質 86。不用任何 AI 模型。"
+   },
+   "pick_reason": "兩條平行側線、上下各兩節彩色貨車、小調車頭在推；第 9 輪被看成一列火車載方塊，用 image_edit 把兩條軌道拉開。"
+  },
+  {
+   "id": "single-line-meet",
+   "kind": "game-icon",
+   "category": "build",
+   "runtime": "public/art/r49/icons/single-line-meet.webp",
+   "runtime_sha256": "699cbad168937bac2d6fad375efd560eb055e2c2bf1a21ff28bfbd5af9430bfc",
+   "runtime_size": [
+    192,
+    192
+   ],
+   "runtime_bytes": 4204,
+   "source": "docs/content/r49/art/source/single-line-meet.jpg",
+   "source_sha256": "ae700133735f1082f9fc789abb7a6bde33658f518be5d52ce7ed9a197dc39594",
+   "source_size": [
+    1024,
+    1024
+   ],
+   "source_format": "JPEG",
+   "steps": [
+    {
+     "tool": "Grok Build CLI 1.0.89 `image_gen` (xAI Imagine)",
+     "image_model_slug": null,
+     "prompt_version": "r49-icons-v2",
+     "aspect_ratio": "1:1",
+     "edit_of": null,
+     "round": "v2"
+    }
+   ],
+   "post": {
+    "script": "badge.py (scratchpad, not in repo)",
+    "background": "#D9EEFA",
+    "bg_coverage": 0.837,
+    "fill": 0.8,
+    "notes": "角落連通的底色＋相連的淡色光暈改成分頁平色；主體重新置中、最遠像素放在圓的 80% 半徑內；LANCZOS 縮成 192×192；WebP 品質 86。不用任何 AI 模型。"
+   },
+   "pick_reason": "第 1 版直式細線 64px 只剩一條線；改成同一條軌道上兩台車頭相對、中間號誌，第 2 輪起採用。"
+  },
+  {
+   "id": "cargo",
+   "kind": "game-icon",
+   "category": "life",
+   "runtime": "public/art/r49/icons/cargo.webp",
+   "runtime_sha256": "701187275cc35deda0e9c1275bed6024c3a75c6c97de5b000a67902dd0697353",
+   "runtime_size": [
+    192,
+    192
+   ],
+   "runtime_bytes": 3594,
+   "source": "docs/content/r49/art/source/cargo.jpg",
+   "source_sha256": "89e68e33922d0ccc7144ce22fc606e584b7f00770c95b7598ff6b32e21be90aa",
+   "source_size": [
+    1024,
+    1024
+   ],
+   "source_format": "JPEG",
+   "steps": [
+    {
+     "tool": "Grok Build CLI 1.0.89 `image_gen` (xAI Imagine)",
+     "image_model_slug": null,
+     "prompt_version": "r49-icons-v1",
+     "aspect_ratio": "1:1",
+     "edit_of": null,
+     "round": "v1"
+    }
+   ],
+   "post": {
+    "script": "badge.py (scratchpad, not in repo)",
+    "background": "#FFE7D3",
+    "bg_coverage": 0.807,
+    "fill": 0.8,
+    "notes": "角落連通的底色＋相連的淡色光暈改成分頁平色；主體重新置中、最遠像素放在圓的 80% 半徑內；LANCZOS 縮成 192×192；WebP 品質 86。不用任何 AI 模型。"
+   },
+   "pick_reason": "第 1 輪就採用：敞篷貨車＋吊下最後一箱。"
+  },
+  {
+   "id": "luggage",
+   "kind": "game-icon",
+   "category": "life",
+   "runtime": "public/art/r49/icons/luggage.webp",
+   "runtime_sha256": "8798423230f75b8b111b9803a85044d412dc23fba95dde4aa404a7afac2c223f",
+   "runtime_size": [
+    192,
+    192
+   ],
+   "runtime_bytes": 3582,
+   "source": "docs/content/r49/art/source/luggage.jpg",
+   "source_sha256": "afa608a4e872cd6b16b4248e3025ee1a07111d2a180846e40617bd36e4b971be",
+   "source_size": [
+    1024,
+    1024
+   ],
+   "source_format": "JPEG",
+   "steps": [
+    {
+     "tool": "Grok Build CLI 1.0.89 `image_gen` (xAI Imagine)",
+     "image_model_slug": null,
+     "prompt_version": "r49-icons-v2",
+     "aspect_ratio": "1:1",
+     "edit_of": null,
+     "round": "v2"
+    }
+   ],
+   "post": {
+    "script": "badge.py (scratchpad, not in repo)",
+    "background": "#FFE7D3",
+    "bg_coverage": 0.83,
+    "fill": 0.8,
+    "notes": "角落連通的底色＋相連的淡色光暈改成分頁平色；主體重新置中、最遠像素放在圓的 80% 半徑內；LANCZOS 縮成 192×192；WebP 品質 86。不用任何 AI 模型。"
+   },
+   "pick_reason": "第 1 版編織籃縮小像小雞；改成三個光滑分類籃、三種形狀行李，第 2 輪起採用。"
+  },
+  {
+   "id": "sharing",
+   "kind": "game-icon",
+   "category": "life",
+   "runtime": "public/art/r49/icons/sharing.webp",
+   "runtime_sha256": "16aeee874d74b9e5a570b73d09e43775349db7375044a43ab16366cf012a1f0e",
+   "runtime_size": [
+    192,
+    192
+   ],
+   "runtime_bytes": 5868,
+   "source": "docs/content/r49/art/source/sharing.jpg",
+   "source_sha256": "167e21f5fce2e3efe475a266f3c6f38bb544010bf437195ca4b3dcdab2d01570",
+   "source_size": [
+    1024,
+    1024
+   ],
+   "source_format": "JPEG",
+   "steps": [
+    {
+     "tool": "Grok Build CLI 1.0.89 `image_gen` (xAI Imagine)",
+     "image_model_slug": null,
+     "prompt_version": "r49-icons-v2",
+     "aspect_ratio": "1:1",
+     "edit_of": null,
+     "round": "v2"
+    }
+   ],
+   "post": {
+    "script": "badge.py (scratchpad, not in repo)",
+    "background": "#FFE7D3",
+    "bg_coverage": 0.74,
+    "fill": 0.8,
+    "notes": "角落連通的底色＋相連的淡色光暈改成分頁平色；主體重新置中、最遠像素放在圓的 80% 半徑內；LANCZOS 縮成 192×192；WebP 品質 86。不用任何 AI 模型。"
+   },
+   "pick_reason": "第 1 版藍色圓盤最嚴重；改成圓桌三份點心＋三位朋友，各輪對到。"
+  },
+  {
+   "id": "balance",
+   "kind": "game-icon",
+   "category": "life",
+   "runtime": "public/art/r49/icons/balance.webp",
+   "runtime_sha256": "794758e8a9ffeeebe4308e06a44af3d9d5f7500277a62e32dab3594b5d5b4d0a",
+   "runtime_size": [
+    192,
+    192
+   ],
+   "runtime_bytes": 4566,
+   "source": "docs/content/r49/art/source/balance.jpg",
+   "source_sha256": "704bc083712f7e13dd0a191ccac4970abda87c444fd088570ba52dd90b266320",
+   "source_size": [
+    1024,
+    1024
+   ],
+   "source_format": "JPEG",
+   "steps": [
+    {
+     "tool": "Grok Build CLI 1.0.89 `image_gen` (xAI Imagine)",
+     "image_model_slug": null,
+     "prompt_version": "r49-icons-v1",
+     "aspect_ratio": "1:1",
+     "edit_of": null,
+     "round": "v1"
+    }
+   ],
+   "post": {
+    "script": "badge.py (scratchpad, not in repo)",
+    "background": "#FFE7D3",
+    "bg_coverage": 0.786,
+    "fill": 0.8,
+    "notes": "角落連通的底色＋相連的淡色光暈改成分頁平色；主體重新置中、最遠像素放在圓的 80% 半徑內；LANCZOS 縮成 192×192；WebP 品質 86。不用任何 AI 模型。"
+   },
+   "pick_reason": "第 1 輪就採用：兩盤平衡的天平。"
+  },
+  {
+   "id": "tickets",
+   "kind": "game-icon",
+   "category": "life",
+   "runtime": "public/art/r49/icons/tickets.webp",
+   "runtime_sha256": "155958ad97e8065f27a6473a83f10b46022b16ebf7d0d92d1825b0e36256a587",
+   "runtime_size": [
+    192,
+    192
+   ],
+   "runtime_bytes": 4710,
+   "source": "docs/content/r49/art/source/tickets.jpg",
+   "source_sha256": "a87b4b3ee3d6139a94a570c644bb668e3d6fbbd2a36f3fdb8a7a82cd8bdd5410",
+   "source_size": [
+    1024,
+    1024
+   ],
+   "source_format": "JPEG",
+   "steps": [
+    {
+     "tool": "Grok Build CLI 1.0.89 `image_gen` (xAI Imagine)",
+     "image_model_slug": null,
+     "prompt_version": "r49-icons-v1",
+     "aspect_ratio": "1:1",
+     "edit_of": null,
+     "round": "v1"
+    }
+   ],
+   "post": {
+    "script": "badge.py (scratchpad, not in repo)",
+    "background": "#FFE7D3",
+    "bg_coverage": 0.803,
+    "fill": 0.8,
+    "notes": "角落連通的底色＋相連的淡色光暈改成分頁平色；主體重新置中、最遠像素放在圓的 80% 半徑內；LANCZOS 縮成 192×192；WebP 品質 86。不用任何 AI 模型。"
+   },
+   "pick_reason": "第 1 輪就採用：車票＋三枚星星代幣。"
+  },
+  {
+   "id": "tab-math",
+   "kind": "tab-icon",
+   "category": "math",
+   "runtime": "public/art/r49/icons/tab-math.webp",
+   "runtime_sha256": "64a0af7424b4a36d7126e2e88bd84b503e5d7c6cc11219470237eae75c4bc352",
+   "runtime_size": [
+    192,
+    192
+   ],
+   "runtime_bytes": 2254,
+   "source": "docs/content/r49/art/source/tab-math.jpg",
+   "source_sha256": "9983bf4341e50d98a8c5142b439b19f2fec3b45a27b10e7a2c48435d8a022597",
+   "source_size": [
+    1024,
+    1024
+   ],
+   "source_format": "JPEG",
+   "steps": [
+    {
+     "tool": "Grok Build CLI 1.0.89 `image_gen` (xAI Imagine)",
+     "image_model_slug": null,
+     "prompt_version": "r49-icons-v9a",
+     "aspect_ratio": "1:1",
+     "edit_of": null,
+     "round": "v9a"
+    }
+   ],
+   "post": {
+    "script": "badge.py (scratchpad, not in repo)",
+    "background": "#FFF3C2",
+    "bg_coverage": 0.845,
+    "fill": 0.8,
+    "notes": "角落連通的底色＋相連的淡色光暈改成分頁平色；主體重新置中、最遠像素放在圓的 80% 半徑內；LANCZOS 縮成 192×192；WebP 品質 86。不用任何 AI 模型。"
+   },
+   "pick_reason": "1 2 3 積木跟排車廂撞，＋－＝積木又像三節車廂；改成大橘色加號＋小減號、小等號，第 6 輪起一眼就懂。"
+  },
+  {
+   "id": "tab-observe",
+   "kind": "tab-icon",
+   "category": "observe",
+   "runtime": "public/art/r49/icons/tab-observe.webp",
+   "runtime_sha256": "ba6dc3c09aed15df3eeb4f61b9922217469534fc5124684990b3dca9f2f57b39",
+   "runtime_size": [
+    192,
+    192
+   ],
+   "runtime_bytes": 3856,
+   "source": "docs/content/r49/art/source/tab-observe.jpg",
+   "source_sha256": "8593223737912c87dc5bd59fbbf1c8cc7e8f0005a93a5739f977045229e22cb4",
+   "source_size": [
+    1024,
+    1024
+   ],
+   "source_format": "JPEG",
+   "steps": [
+    {
+     "tool": "Grok Build CLI 1.0.89 `image_gen` (xAI Imagine)",
+     "image_model_slug": null,
+     "prompt_version": "r49-icons-v2",
+     "aspect_ratio": "1:1",
+     "edit_of": null,
+     "round": "v2"
+    }
+   ],
+   "post": {
+    "script": "badge.py (scratchpad, not in repo)",
+    "background": "#DCF2DF",
+    "bg_coverage": 0.735,
+    "fill": 0.8,
+    "notes": "角落連通的底色＋相連的淡色光暈改成分頁平色；主體重新置中、最遠像素放在圓的 80% 半徑內；LANCZOS 縮成 192×192；WebP 品質 86。不用任何 AI 模型。"
+   },
+   "pick_reason": "第 2 版只留放大鏡＋星星，跟眼力找不同分開，各輪對到。"
+  },
+  {
+   "id": "tab-build",
+   "kind": "tab-icon",
+   "category": "build",
+   "runtime": "public/art/r49/icons/tab-build.webp",
+   "runtime_sha256": "d38b5ef55ed9cee242965718ad4ee59f0921bf3348fa4f187ca42ae69f8da532",
+   "runtime_size": [
+    192,
+    192
+   ],
+   "runtime_bytes": 2556,
+   "source": "docs/content/r49/art/source/tab-build.jpg",
+   "source_sha256": "663029c528542eb4482d2caa3f4d7ce3098e1e5cf10966d7ca3f02cd4f6c0407",
+   "source_size": [
+    1024,
+    1024
+   ],
+   "source_format": "JPEG",
+   "steps": [
+    {
+     "tool": "Grok Build CLI 1.0.89 `image_gen` (xAI Imagine)",
+     "image_model_slug": null,
+     "prompt_version": "r49-icons-v10",
+     "aspect_ratio": "1:1",
+     "edit_of": null,
+     "round": "v10"
+    }
+   ],
+   "post": {
+    "script": "badge.py (scratchpad, not in repo)",
+    "background": "#D9EEFA",
+    "bg_coverage": 0.835,
+    "fill": 0.8,
+    "notes": "角落連通的底色＋相連的淡色光暈改成分頁平色；主體重新置中、最遠像素放在圓的 80% 半徑內；LANCZOS 縮成 192×192；WebP 品質 86。不用任何 AI 模型。"
+   },
+   "pick_reason": "彎軌加箭頭跟路線小工程師互換；改成積木塔＋綠色方向路牌，第 7 輪起對到。"
+  },
+  {
+   "id": "tab-life",
+   "kind": "tab-icon",
+   "category": "life",
+   "runtime": "public/art/r49/icons/tab-life.webp",
+   "runtime_sha256": "b067e5a052d71f6f94c970fce12a9ff8baf40f15ba43c973f8f591c07a752290",
+   "runtime_size": [
+    192,
+    192
+   ],
+   "runtime_bytes": 3678,
+   "source": "docs/content/r49/art/source/tab-life.jpg",
+   "source_sha256": "28b9e20ce85fb38168259f4001fbb758d2ef7034d5b5aae7bf818fc1f8e1ae7d",
+   "source_size": [
+    1024,
+    1024
+   ],
+   "source_format": "JPEG",
+   "steps": [
+    {
+     "tool": "Grok Build CLI 1.0.89 `image_gen` (xAI Imagine)",
+     "image_model_slug": null,
+     "prompt_version": "r49-icons-v10",
+     "aspect_ratio": "1:1",
+     "edit_of": null,
+     "round": "v10"
+    },
+    {
+     "tool": "Grok Build CLI 1.0.89 `image_edit` (xAI Imagine)",
+     "image_model_slug": null,
+     "prompt_version": "r49-icons-v11-edit",
+     "aspect_ratio": "source",
+     "edit_of": "v10",
+     "round": "v11e"
+    }
+   ],
+   "post": {
+    "script": "badge.py (scratchpad, not in repo)",
+    "background": "#FFE7D3",
+    "bg_coverage": 0.823,
+    "fill": 0.8,
+    "notes": "角落連通的底色＋相連的淡色光暈改成分頁平色；主體重新置中、最遠像素放在圓的 80% 半徑內；LANCZOS 縮成 192×192；WebP 品質 86。不用任何 AI 模型。"
+   },
+   "pick_reason": "行李箱＋便當跟行李分類站互換；改成禮物盒＋愛心，image_edit 拿掉淡藍圓盤，第 7 輪起對到。"
+  },
+  {
+   "id": "train-top",
+   "kind": "sprite",
+   "runtime": "public/art/r49/train-top.webp",
+   "runtime_sha256": "44bdff0d8136be6843acc33da53588a84d30031b68faf8265164fe63ae91c700",
+   "runtime_size": [
+    640,
+    135
+   ],
+   "runtime_bytes": 12100,
+   "source": "docs/content/r49/art/source/train-top.jpg",
+   "source_sha256": "c95a809521c1f2ba978e0381307b602507b27393bd838af90835e56c8deaabb2",
+   "source_size": [
+    1280,
+    720
+   ],
+   "source_format": "JPEG",
+   "steps": [
+    {
+     "tool": "Grok Build CLI 1.0.89 `image_gen` (xAI Imagine)",
+     "image_model_slug": null,
+     "prompt_version": "r49-train-v2",
+     "aspect_ratio": "16:9",
+     "round": "train-v2"
+    }
+   ],
+   "post": {
+    "script": "keytrain.py (scratchpad, not in repo)",
+    "key_rgb": [
+     254,
+     0,
+     170
+    ],
+    "hue_shift_deg": 5.6,
+    "alpha_corners": [
+     0,
+     0,
+     0,
+     0
+    ],
+    "alpha_occupancy": 0.884,
+    "magenta_fringe_px": 0,
+    "notes": "洋紅單色底按色距轉 alpha、只留最大連通物件、反混合去洋紅溢色、外框紫邊拉回藍灰、半透明外緣內縮 1px；色相對齊 content-r3/train-side.webp 的藍（215°），遊戲照舊用 hueRotate 濾鏡變綠／紫／紅；裁到外框加 6px 透明邊，640 寬 WebP。不用任何 AI 模型。"
+   },
+   "pick_reason": "三個俯視版本裡，兩節車廂＋中間通道最像火車而不像公車；車頭圓弧、擋風玻璃、車燈指出方向；全車只有藍與中性灰，色相旋轉後四色都乾淨。"
+  }
+ ]
+}

@@ -1,0 +1,1683 @@
+{
+ "checkedAt": "2026-11-24 10:44",
+ "problems": [],
+ "sizes": [
+  {
+   "tag": "phone",
+   "w": 390,
+   "h": 844,
+   "tabs": {
+    "math": {
+     "tabs": [
+      {
+       "id": "math",
+       "w": 173,
+       "h": 60,
+       "inView": true,
+       "icon": {
+        "src": "tab-math.webp",
+        "loaded": true,
+        "w": 44,
+        "h": 44
+       },
+       "labelOneLine": true
+      },
+      {
+       "id": "observe",
+       "w": 173,
+       "h": 60,
+       "inView": true,
+       "icon": {
+        "src": "tab-observe.webp",
+        "loaded": true,
+        "w": 44,
+        "h": 44
+       },
+       "labelOneLine": true
+      },
+      {
+       "id": "build",
+       "w": 173,
+       "h": 60,
+       "inView": true,
+       "icon": {
+        "src": "tab-build.webp",
+        "loaded": true,
+        "w": 44,
+        "h": 44
+       },
+       "labelOneLine": true
+      },
+      {
+       "id": "life",
+       "w": 173,
+       "h": 60,
+       "inView": true,
+       "icon": {
+        "src": "tab-life.webp",
+        "loaded": true,
+        "w": 44,
+        "h": 44
+       },
+       "labelOneLine": true
+      }
+     ],
+     "cards": [
+      {
+       "id": "dispatch",
+       "h": 107,
+       "fullyInView": true,
+       "icon": {
+        "src": "dispatch.webp",
+        "loaded": true,
+        "w": 56,
+        "h": 56
+       }
+      },
+      {
+       "id": "count",
+       "h": 87,
+       "fullyInView": true,
+       "icon": {
+        "src": "count.webp",
+        "loaded": true,
+        "w": 56,
+        "h": 56
+       }
+      },
+      {
+       "id": "order",
+       "h": 107,
+       "fullyInView": true,
+       "icon": {
+        "src": "order.webp",
+        "loaded": true,
+        "w": 56,
+        "h": 56
+       }
+      },
+      {
+       "id": "pattern",
+       "h": 107,
+       "fullyInView": false,
+       "icon": {
+        "src": "pattern.webp",
+        "loaded": true,
+        "w": 56,
+        "h": 56
+       }
+      },
+      {
+       "id": "boarding-count",
+       "h": 107,
+       "fullyInView": false,
+       "icon": {
+        "src": "boarding-count.webp",
+        "loaded": true,
+        "w": 56,
+        "h": 56
+       }
+      },
+      {
+       "id": "platform-timetable",
+       "h": 107,
+       "fullyInView": false,
+       "icon": {
+        "src": "platform-timetable.webp",
+        "loaded": true,
+        "w": 56,
+        "h": 56
+       }
+      }
+     ],
+     "later": [
+      {
+       "id": "compare",
+       "icon": true
+      },
+      {
+       "id": "boarding",
+       "icon": true
+      },
+      {
+       "id": "clock",
+       "icon": true
+      }
+     ],
+     "cardsInView": 3,
+     "cardDescFontPx": 15,
+     "layout": {
+      "buttons": 12,
+      "small": [],
+      "outsideViewport": [],
+      "belowFold": 3,
+      "overlaps": [],
+      "horizontalOverflow": false
+     }
+    },
+    "observe": {
+     "tabs": [
+      {
+       "id": "math",
+       "w": 173,
+       "h": 60,
+       "inView": true,
+       "icon": {
+        "src": "tab-math.webp",
+        "loaded": true,
+        "w": 44,
+        "h": 44
+       },
+       "labelOneLine": true
+      },
+      {
+       "id": "observe",
+       "w": 173,
+       "h": 60,
+       "inView": true,
+       "icon": {
+        "src": "tab-observe.webp",
+        "loaded": true,
+        "w": 44,
+        "h": 44
+       },
+       "labelOneLine": true
+      },
+      {
+       "id": "build",
+       "w": 173,
+       "h": 60,
+       "inView": true,
+       "icon": {
+        "src": "tab-build.webp",
+        "loaded": true,
+        "w": 44,
+        "h": 44
+       },
+       "labelOneLine": true
+      },
+      {
+       "id": "life",
+       "w": 173,
+       "h": 60,
+       "inView": true,
+       "icon": {
+        "src": "tab-life.webp",
+        "loaded": true,
+        "w": 44,
+        "h": 44
+       },
+       "labelOneLine": true
+      }
+     ],
+     "cards": [
+      {
+       "id": "differences",
+       "h": 107,
+       "fullyInView": true,
+       "icon": {
+        "src": "differences.webp",
+        "loaded": true,
+        "w": 56,
+        "h": 56
+       }
+      },
+      {
+       "id": "treasure",
+       "h": 107,
+       "fullyInView": true,
+       "icon": {
+        "src": "treasure.webp",
+        "loaded": true,
+        "w": 56,
+        "h": 56
+       }
+      }
+     ],
+     "later": [],
+     "cardsInView": 2,
+     "cardDescFontPx": 15,
+     "layout": {
+      "buttons": 8,
+      "small": [],
+      "outsideViewport": [],
+      "belowFold": 0,
+      "overlaps": [],
+      "horizontalOverflow": false
+     }
+    },
+    "build": {
+     "tabs": [
+      {
+       "id": "math",
+       "w": 173,
+       "h": 60,
+       "inView": true,
+       "icon": {
+        "src": "tab-math.webp",
+        "loaded": true,
+        "w": 44,
+        "h": 44
+       },
+       "labelOneLine": true
+      },
+      {
+       "id": "observe",
+       "w": 173,
+       "h": 60,
+       "inView": true,
+       "icon": {
+        "src": "tab-observe.webp",
+        "loaded": true,
+        "w": 44,
+        "h": 44
+       },
+       "labelOneLine": true
+      },
+      {
+       "id": "build",
+       "w": 173,
+       "h": 60,
+       "inView": true,
+       "icon": {
+        "src": "tab-build.webp",
+        "loaded": true,
+        "w": 44,
+        "h": 44
+       },
+       "labelOneLine": true
+      },
+      {
+       "id": "life",
+       "w": 173,
+       "h": 60,
+       "inView": true,
+       "icon": {
+        "src": "tab-life.webp",
+        "loaded": true,
+        "w": 44,
+        "h": 44
+       },
+       "labelOneLine": true
+      }
+     ],
+     "cards": [
+      {
+       "id": "tracks",
+       "h": 107,
+       "fullyInView": true,
+       "icon": {
+        "src": "tracks.webp",
+        "loaded": true,
+        "w": 56,
+        "h": 56
+       }
+      },
+      {
+       "id": "maze",
+       "h": 107,
+       "fullyInView": true,
+       "icon": {
+        "src": "maze.webp",
+        "loaded": true,
+        "w": 56,
+        "h": 56
+       }
+      },
+      {
+       "id": "program",
+       "h": 107,
+       "fullyInView": true,
+       "icon": {
+        "src": "program.webp",
+        "loaded": true,
+        "w": 56,
+        "h": 56
+       }
+      },
+      {
+       "id": "mosaic",
+       "h": 107,
+       "fullyInView": false,
+       "icon": {
+        "src": "mosaic.webp",
+        "loaded": true,
+        "w": 56,
+        "h": 56
+       }
+      },
+      {
+       "id": "switch-platform",
+       "h": 107,
+       "fullyInView": false,
+       "icon": {
+        "src": "switch-platform.webp",
+        "loaded": true,
+        "w": 56,
+        "h": 56
+       }
+      },
+      {
+       "id": "shunting-yard",
+       "h": 107,
+       "fullyInView": false,
+       "icon": {
+        "src": "shunting-yard.webp",
+        "loaded": true,
+        "w": 56,
+        "h": 56
+       }
+      }
+     ],
+     "later": [
+      {
+       "id": "single-line-meet",
+       "icon": true
+      }
+     ],
+     "cardsInView": 3,
+     "cardDescFontPx": 15,
+     "layout": {
+      "buttons": 12,
+      "small": [],
+      "outsideViewport": [],
+      "belowFold": 3,
+      "overlaps": [],
+      "horizontalOverflow": false
+     }
+    },
+    "life": {
+     "tabs": [
+      {
+       "id": "math",
+       "w": 173,
+       "h": 60,
+       "inView": true,
+       "icon": {
+        "src": "tab-math.webp",
+        "loaded": true,
+        "w": 44,
+        "h": 44
+       },
+       "labelOneLine": true
+      },
+      {
+       "id": "observe",
+       "w": 173,
+       "h": 60,
+       "inView": true,
+       "icon": {
+        "src": "tab-observe.webp",
+        "loaded": true,
+        "w": 44,
+        "h": 44
+       },
+       "labelOneLine": true
+      },
+      {
+       "id": "build",
+       "w": 173,
+       "h": 60,
+       "inView": true,
+       "icon": {
+        "src": "tab-build.webp",
+        "loaded": true,
+        "w": 44,
+        "h": 44
+       },
+       "labelOneLine": true
+      },
+      {
+       "id": "life",
+       "w": 173,
+       "h": 60,
+       "inView": true,
+       "icon": {
+        "src": "tab-life.webp",
+        "loaded": true,
+        "w": 44,
+        "h": 44
+       },
+       "labelOneLine": true
+      }
+     ],
+     "cards": [
+      {
+       "id": "cargo",
+       "h": 107,
+       "fullyInView": true,
+       "icon": {
+        "src": "cargo.webp",
+        "loaded": true,
+        "w": 56,
+        "h": 56
+       }
+      },
+      {
+       "id": "luggage",
+       "h": 107,
+       "fullyInView": true,
+       "icon": {
+        "src": "luggage.webp",
+        "loaded": true,
+        "w": 56,
+        "h": 56
+       }
+      },
+      {
+       "id": "sharing",
+       "h": 107,
+       "fullyInView": true,
+       "icon": {
+        "src": "sharing.webp",
+        "loaded": true,
+        "w": 56,
+        "h": 56
+       }
+      },
+      {
+       "id": "balance",
+       "h": 107,
+       "fullyInView": false,
+       "icon": {
+        "src": "balance.webp",
+        "loaded": true,
+        "w": 56,
+        "h": 56
+       }
+      },
+      {
+       "id": "tickets",
+       "h": 107,
+       "fullyInView": false,
+       "icon": {
+        "src": "tickets.webp",
+        "loaded": true,
+        "w": 56,
+        "h": 56
+       }
+      }
+     ],
+     "later": [],
+     "cardsInView": 3,
+     "cardDescFontPx": 15,
+     "layout": {
+      "buttons": 11,
+      "small": [],
+      "outsideViewport": [],
+      "belowFold": 2,
+      "overlaps": [],
+      "horizontalOverflow": false
+     }
+    }
+   },
+   "play": {
+    "speaker": {
+     "w": 60,
+     "h": 60,
+     "bg": "rgb(255, 211, 68)",
+     "border": "rgb(20, 59, 97)",
+     "svg": true,
+     "emoji": false
+    },
+    "coachFontPx": 18,
+    "titleIcon": true,
+    "layout": {
+     "buttons": 8,
+     "small": [],
+     "outsideViewport": [],
+     "belowFold": 0,
+     "overlaps": [],
+     "horizontalOverflow": false
+    }
+   },
+   "switch": {
+    "portraitBoard": true,
+    "trainArt": [
+     "train-top.webp"
+    ],
+    "topView": true,
+    "waitingTransform": "translate(300.0 190.0) rotate(90.0)",
+    "speaker": {
+     "w": 60,
+     "h": 60,
+     "bg": "rgb(255, 211, 68)",
+     "border": "rgb(20, 59, 97)",
+     "svg": true
+    },
+    "coachFontPx": 17,
+    "coachText": "綠色列車要開到綠色月台。點黃色的箭頭換方向，看亮起來的路通到哪裡。",
+    "layout": {
+     "buttons": 5,
+     "small": [],
+     "outsideViewport": [],
+     "belowFold": 0,
+     "overlaps": [],
+     "horizontalOverflow": false
+    }
+   },
+   "backToRoom": true,
+   "errors": [],
+   "devServerOnly": []
+  },
+  {
+   "tag": "landscape",
+   "w": 844,
+   "h": 390,
+   "tabs": {
+    "math": {
+     "tabs": [
+      {
+       "id": "math",
+       "w": 116,
+       "h": 74,
+       "inView": true,
+       "icon": {
+        "src": "tab-math.webp",
+        "loaded": true,
+        "w": 34,
+        "h": 34
+       },
+       "labelOneLine": true
+      },
+      {
+       "id": "observe",
+       "w": 116,
+       "h": 74,
+       "inView": true,
+       "icon": {
+        "src": "tab-observe.webp",
+        "loaded": true,
+        "w": 34,
+        "h": 34
+       },
+       "labelOneLine": true
+      },
+      {
+       "id": "build",
+       "w": 116,
+       "h": 74,
+       "inView": true,
+       "icon": {
+        "src": "tab-build.webp",
+        "loaded": true,
+        "w": 34,
+        "h": 34
+       },
+       "labelOneLine": true
+      },
+      {
+       "id": "life",
+       "w": 116,
+       "h": 74,
+       "inView": true,
+       "icon": {
+        "src": "tab-life.webp",
+        "loaded": true,
+        "w": 34,
+        "h": 34
+       },
+       "labelOneLine": true
+      }
+     ],
+     "cards": [
+      {
+       "id": "dispatch",
+       "h": 72,
+       "fullyInView": true,
+       "icon": {
+        "src": "dispatch.webp",
+        "loaded": true,
+        "w": 44,
+        "h": 44
+       }
+      },
+      {
+       "id": "count",
+       "h": 72,
+       "fullyInView": true,
+       "icon": {
+        "src": "count.webp",
+        "loaded": true,
+        "w": 44,
+        "h": 44
+       }
+      },
+      {
+       "id": "order",
+       "h": 72,
+       "fullyInView": true,
+       "icon": {
+        "src": "order.webp",
+        "loaded": true,
+        "w": 44,
+        "h": 44
+       }
+      },
+      {
+       "id": "pattern",
+       "h": 72,
+       "fullyInView": true,
+       "icon": {
+        "src": "pattern.webp",
+        "loaded": true,
+        "w": 44,
+        "h": 44
+       }
+      },
+      {
+       "id": "boarding-count",
+       "h": 72,
+       "fullyInView": true,
+       "icon": {
+        "src": "boarding-count.webp",
+        "loaded": true,
+        "w": 44,
+        "h": 44
+       }
+      },
+      {
+       "id": "platform-timetable",
+       "h": 72,
+       "fullyInView": true,
+       "icon": {
+        "src": "platform-timetable.webp",
+        "loaded": true,
+        "w": 44,
+        "h": 44
+       }
+      }
+     ],
+     "later": [
+      {
+       "id": "compare",
+       "icon": true
+      },
+      {
+       "id": "boarding",
+       "icon": true
+      },
+      {
+       "id": "clock",
+       "icon": true
+      }
+     ],
+     "cardsInView": 6,
+     "cardDescFontPx": null,
+     "layout": {
+      "buttons": 12,
+      "small": [],
+      "outsideViewport": [],
+      "belowFold": 0,
+      "overlaps": [],
+      "horizontalOverflow": false
+     }
+    },
+    "observe": {
+     "tabs": [
+      {
+       "id": "math",
+       "w": 116,
+       "h": 74,
+       "inView": true,
+       "icon": {
+        "src": "tab-math.webp",
+        "loaded": true,
+        "w": 34,
+        "h": 34
+       },
+       "labelOneLine": true
+      },
+      {
+       "id": "observe",
+       "w": 116,
+       "h": 74,
+       "inView": true,
+       "icon": {
+        "src": "tab-observe.webp",
+        "loaded": true,
+        "w": 34,
+        "h": 34
+       },
+       "labelOneLine": true
+      },
+      {
+       "id": "build",
+       "w": 116,
+       "h": 74,
+       "inView": true,
+       "icon": {
+        "src": "tab-build.webp",
+        "loaded": true,
+        "w": 34,
+        "h": 34
+       },
+       "labelOneLine": true
+      },
+      {
+       "id": "life",
+       "w": 116,
+       "h": 74,
+       "inView": true,
+       "icon": {
+        "src": "tab-life.webp",
+        "loaded": true,
+        "w": 34,
+        "h": 34
+       },
+       "labelOneLine": true
+      }
+     ],
+     "cards": [
+      {
+       "id": "differences",
+       "h": 72,
+       "fullyInView": true,
+       "icon": {
+        "src": "differences.webp",
+        "loaded": true,
+        "w": 44,
+        "h": 44
+       }
+      },
+      {
+       "id": "treasure",
+       "h": 72,
+       "fullyInView": true,
+       "icon": {
+        "src": "treasure.webp",
+        "loaded": true,
+        "w": 44,
+        "h": 44
+       }
+      }
+     ],
+     "later": [],
+     "cardsInView": 2,
+     "cardDescFontPx": null,
+     "layout": {
+      "buttons": 8,
+      "small": [],
+      "outsideViewport": [],
+      "belowFold": 0,
+      "overlaps": [],
+      "horizontalOverflow": false
+     }
+    },
+    "build": {
+     "tabs": [
+      {
+       "id": "math",
+       "w": 116,
+       "h": 74,
+       "inView": true,
+       "icon": {
+        "src": "tab-math.webp",
+        "loaded": true,
+        "w": 34,
+        "h": 34
+       },
+       "labelOneLine": true
+      },
+      {
+       "id": "observe",
+       "w": 116,
+       "h": 74,
+       "inView": true,
+       "icon": {
+        "src": "tab-observe.webp",
+        "loaded": true,
+        "w": 34,
+        "h": 34
+       },
+       "labelOneLine": true
+      },
+      {
+       "id": "build",
+       "w": 116,
+       "h": 74,
+       "inView": true,
+       "icon": {
+        "src": "tab-build.webp",
+        "loaded": true,
+        "w": 34,
+        "h": 34
+       },
+       "labelOneLine": true
+      },
+      {
+       "id": "life",
+       "w": 116,
+       "h": 74,
+       "inView": true,
+       "icon": {
+        "src": "tab-life.webp",
+        "loaded": true,
+        "w": 34,
+        "h": 34
+       },
+       "labelOneLine": true
+      }
+     ],
+     "cards": [
+      {
+       "id": "tracks",
+       "h": 72,
+       "fullyInView": true,
+       "icon": {
+        "src": "tracks.webp",
+        "loaded": true,
+        "w": 44,
+        "h": 44
+       }
+      },
+      {
+       "id": "maze",
+       "h": 72,
+       "fullyInView": true,
+       "icon": {
+        "src": "maze.webp",
+        "loaded": true,
+        "w": 44,
+        "h": 44
+       }
+      },
+      {
+       "id": "program",
+       "h": 72,
+       "fullyInView": true,
+       "icon": {
+        "src": "program.webp",
+        "loaded": true,
+        "w": 44,
+        "h": 44
+       }
+      },
+      {
+       "id": "mosaic",
+       "h": 72,
+       "fullyInView": true,
+       "icon": {
+        "src": "mosaic.webp",
+        "loaded": true,
+        "w": 44,
+        "h": 44
+       }
+      },
+      {
+       "id": "switch-platform",
+       "h": 72,
+       "fullyInView": true,
+       "icon": {
+        "src": "switch-platform.webp",
+        "loaded": true,
+        "w": 44,
+        "h": 44
+       }
+      },
+      {
+       "id": "shunting-yard",
+       "h": 72,
+       "fullyInView": true,
+       "icon": {
+        "src": "shunting-yard.webp",
+        "loaded": true,
+        "w": 44,
+        "h": 44
+       }
+      }
+     ],
+     "later": [
+      {
+       "id": "single-line-meet",
+       "icon": true
+      }
+     ],
+     "cardsInView": 6,
+     "cardDescFontPx": null,
+     "layout": {
+      "buttons": 12,
+      "small": [],
+      "outsideViewport": [],
+      "belowFold": 0,
+      "overlaps": [],
+      "horizontalOverflow": false
+     }
+    },
+    "life": {
+     "tabs": [
+      {
+       "id": "math",
+       "w": 116,
+       "h": 74,
+       "inView": true,
+       "icon": {
+        "src": "tab-math.webp",
+        "loaded": true,
+        "w": 34,
+        "h": 34
+       },
+       "labelOneLine": true
+      },
+      {
+       "id": "observe",
+       "w": 116,
+       "h": 74,
+       "inView": true,
+       "icon": {
+        "src": "tab-observe.webp",
+        "loaded": true,
+        "w": 34,
+        "h": 34
+       },
+       "labelOneLine": true
+      },
+      {
+       "id": "build",
+       "w": 116,
+       "h": 74,
+       "inView": true,
+       "icon": {
+        "src": "tab-build.webp",
+        "loaded": true,
+        "w": 34,
+        "h": 34
+       },
+       "labelOneLine": true
+      },
+      {
+       "id": "life",
+       "w": 116,
+       "h": 74,
+       "inView": true,
+       "icon": {
+        "src": "tab-life.webp",
+        "loaded": true,
+        "w": 34,
+        "h": 34
+       },
+       "labelOneLine": true
+      }
+     ],
+     "cards": [
+      {
+       "id": "cargo",
+       "h": 72,
+       "fullyInView": true,
+       "icon": {
+        "src": "cargo.webp",
+        "loaded": true,
+        "w": 44,
+        "h": 44
+       }
+      },
+      {
+       "id": "luggage",
+       "h": 72,
+       "fullyInView": true,
+       "icon": {
+        "src": "luggage.webp",
+        "loaded": true,
+        "w": 44,
+        "h": 44
+       }
+      },
+      {
+       "id": "sharing",
+       "h": 72,
+       "fullyInView": true,
+       "icon": {
+        "src": "sharing.webp",
+        "loaded": true,
+        "w": 44,
+        "h": 44
+       }
+      },
+      {
+       "id": "balance",
+       "h": 72,
+       "fullyInView": true,
+       "icon": {
+        "src": "balance.webp",
+        "loaded": true,
+        "w": 44,
+        "h": 44
+       }
+      },
+      {
+       "id": "tickets",
+       "h": 72,
+       "fullyInView": true,
+       "icon": {
+        "src": "tickets.webp",
+        "loaded": true,
+        "w": 44,
+        "h": 44
+       }
+      }
+     ],
+     "later": [],
+     "cardsInView": 5,
+     "cardDescFontPx": null,
+     "layout": {
+      "buttons": 11,
+      "small": [],
+      "outsideViewport": [],
+      "belowFold": 0,
+      "overlaps": [],
+      "horizontalOverflow": false
+     }
+    }
+   },
+   "play": {
+    "speaker": {
+     "w": 71,
+     "h": 60,
+     "bg": "rgb(255, 211, 68)",
+     "border": "rgb(20, 59, 97)",
+     "svg": true,
+     "emoji": false
+    },
+    "coachFontPx": 16,
+    "titleIcon": true,
+    "layout": {
+     "buttons": 10,
+     "small": [],
+     "outsideViewport": [],
+     "belowFold": 0,
+     "overlaps": [],
+     "horizontalOverflow": false
+    }
+   },
+   "switch": {
+    "portraitBoard": false,
+    "trainArt": [
+     "train-top.webp"
+    ],
+    "topView": true,
+    "waitingTransform": "translate(190.0 300.0) rotate(0.0)",
+    "speaker": {
+     "w": 60,
+     "h": 60,
+     "bg": "rgb(255, 211, 68)",
+     "border": "rgb(20, 59, 97)",
+     "svg": true
+    },
+    "coachFontPx": 16,
+    "coachText": "紅色列車要開到紅色月台。點黃色的箭頭換方向，看亮起來的路通到哪裡。",
+    "layout": {
+     "buttons": 5,
+     "small": [],
+     "outsideViewport": [],
+     "belowFold": 0,
+     "overlaps": [],
+     "horizontalOverflow": false
+    }
+   },
+   "backToRoom": true,
+   "errors": [],
+   "devServerOnly": []
+  },
+  {
+   "tag": "desktop",
+   "w": 1366,
+   "h": 768,
+   "tabs": {
+    "math": {
+     "tabs": [
+      {
+       "id": "math",
+       "w": 235,
+       "h": 60,
+       "inView": true,
+       "icon": {
+        "src": "tab-math.webp",
+        "loaded": true,
+        "w": 44,
+        "h": 44
+       },
+       "labelOneLine": true
+      },
+      {
+       "id": "observe",
+       "w": 235,
+       "h": 60,
+       "inView": true,
+       "icon": {
+        "src": "tab-observe.webp",
+        "loaded": true,
+        "w": 44,
+        "h": 44
+       },
+       "labelOneLine": true
+      },
+      {
+       "id": "build",
+       "w": 235,
+       "h": 60,
+       "inView": true,
+       "icon": {
+        "src": "tab-build.webp",
+        "loaded": true,
+        "w": 44,
+        "h": 44
+       },
+       "labelOneLine": true
+      },
+      {
+       "id": "life",
+       "w": 235,
+       "h": 60,
+       "inView": true,
+       "icon": {
+        "src": "tab-life.webp",
+        "loaded": true,
+        "w": 44,
+        "h": 44
+       },
+       "labelOneLine": true
+      }
+     ],
+     "cards": [
+      {
+       "id": "dispatch",
+       "h": 107,
+       "fullyInView": true,
+       "icon": {
+        "src": "dispatch.webp",
+        "loaded": true,
+        "w": 56,
+        "h": 56
+       }
+      },
+      {
+       "id": "count",
+       "h": 107,
+       "fullyInView": true,
+       "icon": {
+        "src": "count.webp",
+        "loaded": true,
+        "w": 56,
+        "h": 56
+       }
+      },
+      {
+       "id": "order",
+       "h": 107,
+       "fullyInView": true,
+       "icon": {
+        "src": "order.webp",
+        "loaded": true,
+        "w": 56,
+        "h": 56
+       }
+      },
+      {
+       "id": "pattern",
+       "h": 107,
+       "fullyInView": true,
+       "icon": {
+        "src": "pattern.webp",
+        "loaded": true,
+        "w": 56,
+        "h": 56
+       }
+      },
+      {
+       "id": "boarding-count",
+       "h": 107,
+       "fullyInView": true,
+       "icon": {
+        "src": "boarding-count.webp",
+        "loaded": true,
+        "w": 56,
+        "h": 56
+       }
+      },
+      {
+       "id": "platform-timetable",
+       "h": 107,
+       "fullyInView": true,
+       "icon": {
+        "src": "platform-timetable.webp",
+        "loaded": true,
+        "w": 56,
+        "h": 56
+       }
+      }
+     ],
+     "later": [
+      {
+       "id": "compare",
+       "icon": true
+      },
+      {
+       "id": "boarding",
+       "icon": true
+      },
+      {
+       "id": "clock",
+       "icon": true
+      }
+     ],
+     "cardsInView": 6,
+     "cardDescFontPx": 15,
+     "layout": {
+      "buttons": 12,
+      "small": [],
+      "outsideViewport": [],
+      "belowFold": 0,
+      "overlaps": [],
+      "horizontalOverflow": false
+     }
+    },
+    "observe": {
+     "tabs": [
+      {
+       "id": "math",
+       "w": 235,
+       "h": 60,
+       "inView": true,
+       "icon": {
+        "src": "tab-math.webp",
+        "loaded": true,
+        "w": 44,
+        "h": 44
+       },
+       "labelOneLine": true
+      },
+      {
+       "id": "observe",
+       "w": 235,
+       "h": 60,
+       "inView": true,
+       "icon": {
+        "src": "tab-observe.webp",
+        "loaded": true,
+        "w": 44,
+        "h": 44
+       },
+       "labelOneLine": true
+      },
+      {
+       "id": "build",
+       "w": 235,
+       "h": 60,
+       "inView": true,
+       "icon": {
+        "src": "tab-build.webp",
+        "loaded": true,
+        "w": 44,
+        "h": 44
+       },
+       "labelOneLine": true
+      },
+      {
+       "id": "life",
+       "w": 235,
+       "h": 60,
+       "inView": true,
+       "icon": {
+        "src": "tab-life.webp",
+        "loaded": true,
+        "w": 44,
+        "h": 44
+       },
+       "labelOneLine": true
+      }
+     ],
+     "cards": [
+      {
+       "id": "differences",
+       "h": 107,
+       "fullyInView": true,
+       "icon": {
+        "src": "differences.webp",
+        "loaded": true,
+        "w": 56,
+        "h": 56
+       }
+      },
+      {
+       "id": "treasure",
+       "h": 107,
+       "fullyInView": true,
+       "icon": {
+        "src": "treasure.webp",
+        "loaded": true,
+        "w": 56,
+        "h": 56
+       }
+      }
+     ],
+     "later": [],
+     "cardsInView": 2,
+     "cardDescFontPx": 15,
+     "layout": {
+      "buttons": 8,
+      "small": [],
+      "outsideViewport": [],
+      "belowFold": 0,
+      "overlaps": [],
+      "horizontalOverflow": false
+     }
+    },
+    "build": {
+     "tabs": [
+      {
+       "id": "math",
+       "w": 235,
+       "h": 60,
+       "inView": true,
+       "icon": {
+        "src": "tab-math.webp",
+        "loaded": true,
+        "w": 44,
+        "h": 44
+       },
+       "labelOneLine": true
+      },
+      {
+       "id": "observe",
+       "w": 235,
+       "h": 60,
+       "inView": true,
+       "icon": {
+        "src": "tab-observe.webp",
+        "loaded": true,
+        "w": 44,
+        "h": 44
+       },
+       "labelOneLine": true
+      },
+      {
+       "id": "build",
+       "w": 235,
+       "h": 60,
+       "inView": true,
+       "icon": {
+        "src": "tab-build.webp",
+        "loaded": true,
+        "w": 44,
+        "h": 44
+       },
+       "labelOneLine": true
+      },
+      {
+       "id": "life",
+       "w": 235,
+       "h": 60,
+       "inView": true,
+       "icon": {
+        "src": "tab-life.webp",
+        "loaded": true,
+        "w": 44,
+        "h": 44
+       },
+       "labelOneLine": true
+      }
+     ],
+     "cards": [
+      {
+       "id": "tracks",
+       "h": 107,
+       "fullyInView": true,
+       "icon": {
+        "src": "tracks.webp",
+        "loaded": true,
+        "w": 56,
+        "h": 56
+       }
+      },
+      {
+       "id": "maze",
+       "h": 107,
+       "fullyInView": true,
+       "icon": {
+        "src": "maze.webp",
+        "loaded": true,
+        "w": 56,
+        "h": 56
+       }
+      },
+      {
+       "id": "program",
+       "h": 107,
+       "fullyInView": true,
+       "icon": {
+        "src": "program.webp",
+        "loaded": true,
+        "w": 56,
+        "h": 56
+       }
+      },
+      {
+       "id": "mosaic",
+       "h": 128,
+       "fullyInView": true,
+       "icon": {
+        "src": "mosaic.webp",
+        "loaded": true,
+        "w": 56,
+        "h": 56
+       }
+      },
+      {
+       "id": "switch-platform",
+       "h": 128,
+       "fullyInView": true,
+       "icon": {
+        "src": "switch-platform.webp",
+        "loaded": true,
+        "w": 56,
+        "h": 56
+       }
+      },
+      {
+       "id": "shunting-yard",
+       "h": 128,
+       "fullyInView": true,
+       "icon": {
+        "src": "shunting-yard.webp",
+        "loaded": true,
+        "w": 56,
+        "h": 56
+       }
+      }
+     ],
+     "later": [
+      {
+       "id": "single-line-meet",
+       "icon": true
+      }
+     ],
+     "cardsInView": 6,
+     "cardDescFontPx": 15,
+     "layout": {
+      "buttons": 12,
+      "small": [],
+      "outsideViewport": [],
+      "belowFold": 0,
+      "overlaps": [],
+      "horizontalOverflow": false
+     }
+    },
+    "life": {
+     "tabs": [
+      {
+       "id": "math",
+       "w": 235,
+       "h": 60,
+       "inView": true,
+       "icon": {
+        "src": "tab-math.webp",
+        "loaded": true,
+        "w": 44,
+        "h": 44
+       },
+       "labelOneLine": true
+      },
+      {
+       "id": "observe",
+       "w": 235,
+       "h": 60,
+       "inView": true,
+       "icon": {
+        "src": "tab-observe.webp",
+        "loaded": true,
+        "w": 44,
+        "h": 44
+       },
+       "labelOneLine": true
+      },
+      {
+       "id": "build",
+       "w": 235,
+       "h": 60,
+       "inView": true,
+       "icon": {
+        "src": "tab-build.webp",
+        "loaded": true,
+        "w": 44,
+        "h": 44
+       },
+       "labelOneLine": true
+      },
+      {
+       "id": "life",
+       "w": 235,
+       "h": 60,
+       "inView": true,
+       "icon": {
+        "src": "tab-life.webp",
+        "loaded": true,
+        "w": 44,
+        "h": 44
+       },
+       "labelOneLine": true
+      }
+     ],
+     "cards": [
+      {
+       "id": "cargo",
+       "h": 107,
+       "fullyInView": true,
+       "icon": {
+        "src": "cargo.webp",
+        "loaded": true,
+        "w": 56,
+        "h": 56
+       }
+      },
+      {
+       "id": "luggage",
+       "h": 107,
+       "fullyInView": true,
+       "icon": {
+        "src": "luggage.webp",
+        "loaded": true,
+        "w": 56,
+        "h": 56
+       }
+      },
+      {
+       "id": "sharing",
+       "h": 107,
+       "fullyInView": true,
+       "icon": {
+        "src": "sharing.webp",
+        "loaded": true,
+        "w": 56,
+        "h": 56
+       }
+      },
+      {
+       "id": "balance",
+       "h": 107,
+       "fullyInView": true,
+       "icon": {
+        "src": "balance.webp",
+        "loaded": true,
+        "w": 56,
+        "h": 56
+       }
+      },
+      {
+       "id": "tickets",
+       "h": 107,
+       "fullyInView": true,
+       "icon": {
+        "src": "tickets.webp",
+        "loaded": true,
+        "w": 56,
+        "h": 56
+       }
+      }
+     ],
+     "later": [],
+     "cardsInView": 5,
+     "cardDescFontPx": 15,
+     "layout": {
+      "buttons": 11,
+      "small": [],
+      "outsideViewport": [],
+      "belowFold": 0,
+      "overlaps": [],
+      "horizontalOverflow": false
+     }
+    }
+   },
+   "play": {
+    "speaker": {
+     "w": 60,
+     "h": 60,
+     "bg": "rgb(255, 211, 68)",
+     "border": "rgb(20, 59, 97)",
+     "svg": true,
+     "emoji": false
+    },
+    "coachFontPx": 18,
+    "titleIcon": true,
+    "layout": {
+     "buttons": 8,
+     "small": [],
+     "outsideViewport": [],
+     "belowFold": 0,
+     "overlaps": [],
+     "horizontalOverflow": false
+    }
+   },
+   "switch": {
+    "portraitBoard": false,
+    "trainArt": [
+     "train-top.webp"
+    ],
+    "topView": true,
+    "waitingTransform": "translate(190.0 300.0) rotate(0.0)",
+    "speaker": {
+     "w": 60,
+     "h": 60,
+     "bg": "rgb(255, 211, 68)",
+     "border": "rgb(20, 59, 97)",
+     "svg": true
+    },
+    "coachFontPx": 19,
+    "coachText": "紅色列車要開到紅色月台。點黃色的箭頭換方向，看亮起來的路通到哪裡。",
+    "layout": {
+     "buttons": 5,
+     "small": [],
+     "outsideViewport": [],
+     "belowFold": 0,
+     "overlaps": [],
+     "horizontalOverflow": false
+    }
+   },
+   "backToRoom": true,
+   "errors": [],
+   "devServerOnly": [
+    "403 @fontsource/barlow-condensed/files/barlow-condensed-latin-600-normal.woff2",
+    "403 @fontsource/barlow-condensed/files/barlow-condensed-latin-600-normal.woff"
+   ]
+  }
+ ]
+}

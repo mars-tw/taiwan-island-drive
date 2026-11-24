@@ -19,7 +19,9 @@ import { createProgramPlayback } from './program-playback.js';
 import { ROOM_CATEGORIES, ageBand, agesText, mathGame, mathGames } from './room-registry.js';
 import { createRound, act, currentQuestion, roundGuide } from './room-play.js';
 import { readRoom, roomLevel, recordRound, syncLegacy, legacySummary } from './room-store.js';
+import { gameIconPath, tabIconPath } from './room-icons.js';
 import { appUrl } from '../../shared/paths.js';
+import { SPEAKER_ICON } from '../../shared/speaker-icon.js';
 import { celebrate, playChime } from '../../shared/celebrate.js';
 import { readSettings, subscribeSettings } from '../../shared/settings.js';
 import { studentSaved } from '../../shared/student-save.js';
@@ -27,6 +29,10 @@ import { speakNative, stopNativeSpeech, pauseNativeGames, registerGameLifecycle,
 
 const esc = value => String(value).replace(/[&<>"']/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' })[c]);
 const art = path => appUrl(`art/${path}`);
+// R49：玩法與分頁的圓形徽章圖；沒有圖的玩法仍顯示原本的文字符號（都只是裝飾，名稱在旁邊的文字裡）。
+const iconImg = (path, size) => `<img class="room-icon-img" src="${appUrl(path)}" alt="" width="${size}" height="${size}" decoding="async" draggable="false">`;
+const gameIcon = (id, fallback, size = 56) => { const path = gameIconPath(id); return path ? iconImg(path, size) : esc(fallback); };
+const tabIcon = (id, fallback) => { const path = tabIconPath(id); return path ? iconImg(path, 44) : esc(fallback); };
 // Same submit/reset buttons the 1.11.0 phone layout moved into the bottom action dock.
 const PRIMARY = { boarding: 'boarding-submit', luggage: 'luggage-submit', tracks: 'tracks-submit', sharing: 'sharing-submit', order: 'order-submit', cargo: 'cargo-submit', program: 'program-run', balance: 'balance-check', mosaic: 'mosaic-submit', tickets: 'tickets-check' };
 const DOCK_RESET = { sharing: ['sharing-reset', '重分'], program: ['program-reset', '重排'], mosaic: ['mosaic-reset', '清空'], tickets: ['tickets-reset', '取回'], maze: ['maze-reset', '回起點'], luggage: ['luggage-reset', '重放'], tracks: ['tracks-reset', '重鋪'] };
@@ -86,7 +92,7 @@ export function installMathRoom() {
     return holder.outerHTML;
   }
   const bar = (title, { back = '← 遊戲室', speakable = false, pausable = true, step = '' } = {}) =>
-    `<header class="room-bar"><button type="button" data-room="back" class="room-back">${back}</button><h2 class="room-bar-title">${title}</h2>${step ? `<span class="room-bar-step" aria-hidden="true">${step}</span>` : ''}${speakable ? '<button type="button" data-room="speak" class="room-speak" aria-label="聽題目">🔊</button>' : ''}${pausable ? '<button type="button" data-room="pause" class="room-pause">暫停</button>' : ''}</header>`;
+    `<header class="room-bar"><button type="button" data-room="back" class="room-back">${back}</button><h2 class="room-bar-title">${title}</h2>${step ? `<span class="room-bar-step" aria-hidden="true">${step}</span>` : ''}${speakable ? `<button type="button" data-room="speak" class="room-speak" aria-label="聽題目">${SPEAKER_ICON}</button>` : ''}${pausable ? '<button type="button" data-room="pause" class="room-pause">暫停</button>' : ''}</header>`;
   const coach = (text, tone = '') => `<p class="room-coach ${tone ? `is-${tone}` : ''}" role="status" aria-live="polite"><img src="${art(`r6/${tone === 'success' ? 'coach-cheer' : 'coach'}.png`)}" alt="" width="60" height="80"><span>${esc(text)}</span></p>`;
   const saveNote = () => studentSaved() ? '' : '<p class="room-save-note" role="status">這次無法儲存，關掉後集章可能不會保留。</p>';
 
@@ -97,15 +103,15 @@ export function installMathRoom() {
   function statusFor(game) { try { return typeof game.status === 'function' ? game.status() || {} : {}; } catch { return {}; } }
   function card(game, room) {
     const status = statusFor(game), stamps = stampsFor(game, room), ageText = agesText(game.levels);
-    return `<button type="button" class="room-card ${game.playable ? '' : 'room-card-later'} ${status.highlight ? 'room-card-highlight' : ''}" data-room-game="${esc(game.id)}" aria-label="${esc(`${game.name}，${game.description}${game.playable ? '' : `適合 ${ageText}。`}`)}"><span class="room-card-icon" aria-hidden="true">${esc(game.icon)}</span><span class="room-card-copy"><strong>${esc(game.name)}</strong><span>${esc(game.description)}</span><small>${status.note ? `<b>${esc(status.note)}</b> · ` : ''}${esc(ageText)}${stamps ? ` · ✦ ${stamps} 章` : ''}</small></span><b class="room-card-go" aria-hidden="true">${game.playable ? '→' : '⚙'}</b></button>`;
+    return `<button type="button" class="room-card ${game.playable ? '' : 'room-card-later'} ${status.highlight ? 'room-card-highlight' : ''}" data-room-game="${esc(game.id)}" aria-label="${esc(`${game.name}，${game.description}${game.playable ? '' : `適合 ${ageText}。`}`)}"><span class="room-card-icon${gameIconPath(game.id) ? ' has-art' : ''}" aria-hidden="true">${gameIcon(game.id, game.icon)}</span><span class="room-card-copy"><strong>${esc(game.name)}</strong><span>${esc(game.description)}</span><small>${status.note ? `<b>${esc(status.note)}</b> · ` : ''}${esc(ageText)}${stamps ? ` · ✦ ${stamps} 章` : ''}</small></span><b class="room-card-go" aria-hidden="true">${game.playable ? '→' : '⚙'}</b></button>`;
   }
   function homeView() {
     const room = readRoom(), lvl = level(), band = ageBand(lvl);
     const total = mathGames().reduce((sum, game) => sum + stampsFor(game, room), 0);
-    const tabs = ROOM_CATEGORIES.map(group => `<button type="button" role="tab" id="room-tab-${group.id}" data-room-tab="${group.id}" aria-selected="${group.id === ui.category}" aria-controls="room-panel" tabindex="${group.id === ui.category ? 0 : -1}"><span aria-hidden="true">${esc(group.icon)}</span><strong>${esc(group.name)}</strong></button>`).join('');
+    const tabs = ROOM_CATEGORIES.map(group => `<button type="button" role="tab" id="room-tab-${group.id}" data-room-tab="${group.id}" aria-selected="${group.id === ui.category}" aria-controls="room-panel" tabindex="${group.id === ui.category ? 0 : -1}"><span class="room-tab-icon" aria-hidden="true">${tabIcon(group.id, group.icon)}</span><strong>${esc(group.name)}</strong></button>`).join('');
     const games = mathGames({ category: ui.category, level: lvl });
     const now = games.filter(g => g.playable), later = games.filter(g => !g.playable);
-    const resume = ui.round && !ui.round.finished ? `<section class="room-resume"><span aria-hidden="true">${esc(GAMES[ui.round.game].icon)}</span><p><strong>繼續剛剛的${esc(GAMES[ui.round.game].name)}</strong><small>第 ${ui.round.index + 1}／${ui.round.questions.length} 題</small></p><button type="button" data-room="resume-round" class="room-primary">繼續玩 →</button></section>` : '';
+    const resume = ui.round && !ui.round.finished ? `<section class="room-resume"><span class="room-resume-icon" aria-hidden="true">${gameIcon(ui.round.game, GAMES[ui.round.game].icon, 48)}</span><p><strong>繼續剛剛的${esc(GAMES[ui.round.game].name)}</strong><small>第 ${ui.round.index + 1}／${ui.round.questions.length} 題</small></p><button type="button" data-room="resume-round" class="room-primary">繼續玩 →</button></section>` : '';
     return `<section class="room-page room-home">${nav()}<div class="room-body"><header class="room-heading"><div><h1 id="math-room-title">數學遊戲室</h1><p>選一個遊戲，玩完一輪蓋一個章。</p></div><div class="room-heading-tools"><button type="button" class="room-age" data-room="age" data-parent-action aria-label="目前 ${band.label}，請家長在設定裡換年齡"><strong>${band.label}</strong><span>家長換年齡 ⚙</span></button><button type="button" class="room-stamp-button" data-room="stamps" aria-label="打開集章冊，已蓋 ${total} 個章"><strong>✦ ${total}</strong><span>集章冊</span></button></div></header>${resume}<div class="room-tabs" role="tablist" aria-label="遊戲分類">${tabs}</div><section class="room-panel" id="room-panel" role="tabpanel" aria-labelledby="room-tab-${ui.category}"><p class="room-panel-note">${band.label} · ${now.length} 種可以玩</p><div class="room-cards">${now.map(g => card(g, room)).join('')}</div>${later.length ? `<details class="room-later"><summary>大一點再玩 · ${later.length} 種</summary><div class="room-cards">${later.map(g => card(g, room)).join('')}</div></details>` : ''}<p class="room-notice" role="status">${esc(ui.notice)}</p></section>${saveNote()}</div></section>`;
   }
   function playView() {
@@ -117,23 +123,23 @@ export function installMathRoom() {
       cargo: () => round.cargo > 0, balance: () => round.workshop.weights.length > 0 }[q.game]?.() || false);
     const readyText = { order: '排好了，按「排好了 ✓」看看。', luggage: '都放好了，按「分好了」看看。', sharing: '點心分完了，按「分好了 ✓」看看。', tickets: '都放了代幣，按「付好了 ✓」看看。', cargo: '裝好了就按「裝好了 ✓」。', balance: '放好了就按「秤秤看」。' }[q.game];
     const text = round.feedback || (ready ? readyText : guide.action);
-    const title = `<span aria-hidden="true">${esc(game.icon)}</span> ${esc(game.name)}`;
+    const title = `<span class="room-title-icon" aria-hidden="true">${gameIcon(q.game, game.icon, 36)}</span> ${esc(game.name)}`;
     return `<section class="room-page room-play" data-game="${q.game}" data-solved="${round.solved}">${bar(title, { speakable: true, step: `${round.index + 1}／${round.questions.length}` })}<div class="room-body"><ol class="room-progress" aria-label="第 ${round.index + 1} 題，共 ${round.questions.length} 題">${progress}</ol><div class="question-head"><h1 id="room-question-title" tabindex="-1">${esc(guide.title)}</h1></div><div class="game-stage" id="room-stage">${scene(round)}</div></div><footer class="room-dock">${coach(text, round.tone)}${round.solved ? '' : choices(round)}<div class="room-dock-actions">${round.solved ? `<button type="button" data-room="next" class="room-primary room-next">${last ? '完成這一輪 ✦' : '下一題 →'}</button>` : '<button type="button" data-room="hint" class="room-hint" aria-label="一起想一想">☀ <span class="wide-only">一起</span>想一想</button>'}</div></footer></section>`;
   }
   function finishView() {
     const g = mathGame(ui.game), count = ui.last?.stamps || 0;
-    return `<section class="room-page room-finish">${bar('完成一輪！', { pausable: false })}<div class="room-body"><div class="room-finish-card"><span class="room-finish-stamp" aria-hidden="true">${esc(g?.icon || '✦')}</span><h1 tabindex="-1" id="room-finish-title">${esc(g?.name || '')}完成一輪！</h1><p>集章冊多了一個章，這個遊戲已經蓋了 <strong>${count}</strong> 個。</p><img class="room-finish-coach" src="${art('r6/coach-cheer.png')}" alt="阿路教練揮旗說做得好" width="120" height="160"></div>${saveNote()}</div><footer class="room-dock"><div class="room-dock-actions"><button type="button" data-room="again">再玩一輪</button><button type="button" data-room="home" class="room-primary">回遊戲室 →</button></div></footer></section>`;
+    return `<section class="room-page room-finish">${bar('完成一輪！', { pausable: false })}<div class="room-body"><div class="room-finish-card"><span class="room-finish-stamp${gameIconPath(ui.game) ? ' has-art' : ''}" aria-hidden="true">${gameIcon(ui.game, g?.icon || '✦', 76)}</span><h1 tabindex="-1" id="room-finish-title">${esc(g?.name || '')}完成一輪！</h1><p>集章冊多了一個章，這個遊戲已經蓋了 <strong>${count}</strong> 個。</p><img class="room-finish-coach" src="${art('r6/coach-cheer.png')}" alt="阿路教練揮旗說做得好" width="120" height="160"></div>${saveNote()}</div><footer class="room-dock"><div class="room-dock-actions"><button type="button" data-room="again">再玩一輪</button><button type="button" data-room="home" class="room-primary">回遊戲室 →</button></div></footer></section>`;
   }
   function stampsView() {
     const room = readRoom(), legacy = legacySummary(syncLegacy());
     const games = mathGames();
-    const tiles = games.map(g => { const n = stampsFor(g, room); return `<li class="${n ? 'has-stamp' : ''}"><span aria-hidden="true">${esc(g.icon)}</span><strong>${esc(g.name)}</strong><small>${n ? `✦ ${n} 章` : '還沒蓋章'}</small></li>`; }).join('');
+    const tiles = games.map(g => { const n = stampsFor(g, room); return `<li class="${n ? 'has-stamp' : ''}"><span class="room-stamp-icon" aria-hidden="true">${gameIcon(g.id, g.icon, 48)}</span><strong>${esc(g.name)}</strong><small>${n ? `✦ ${n} 章` : '還沒蓋章'}</small></li>`; }).join('');
     const old = legacy.any ? `<section class="room-legacy" aria-labelledby="room-legacy-title"><h2 id="room-legacy-title">小小列車長的舊集章</h2><p>從${legacy.sources.map(s => s === 'archive' ? '家長帶入的備份' : '這個網站以前的存檔').join('和')}接回來了。</p><ul class="room-legacy-totals"><li><strong>${legacy.trips}</strong> 趟旅程</li><li><strong>${legacy.trains.length}</strong> 枚列車章</li><li><strong>${legacy.souvenirs.length}</strong> 份小禮物</li><li><strong>${legacy.journeys.length}</strong> 條主題旅程</li></ul>${legacy.trains.length ? `<ul class="room-legacy-trains">${legacy.trains.map(name => `<li>🚆 ${esc(name)}</li>`).join('')}</ul>` : ''}${legacy.souvenirs.length ? `<p class="room-legacy-gifts">${legacy.souvenirs.map(item => `<span>${esc(item.icon)} ${esc(item.name)}</span>`).join('')}</p>` : ''}${legacy.journeys.length ? `<p class="room-legacy-gifts">${legacy.journeys.map(route => `<span>${esc(route.icon)} ${esc(route.name)}</span>`).join('')}</p>` : ''}</section>` : '<p class="room-legacy-empty">玩過小小列車長嗎？家長可以在「家長設定」帶入舊備份，舊集章會出現在這裡。</p>';
     return `<section class="room-page room-stamps">${bar('集章冊', { pausable: false })}<div class="room-body"><p class="room-stamps-note">玩完一輪，就蓋一個章。</p><ul class="room-stamp-grid">${tiles}</ul>${old}</div></section>`;
   }
   function externalView() {
     const g = mathGame(ui.game);
-    return `<section class="room-page room-external">${bar(`<span aria-hidden="true">${esc(g?.icon || '')}</span> <span class="room-external-title">${esc(g?.name || '')}</span>`)}<div class="room-body room-external-stage" id="room-external-stage"></div></section>`;
+    return `<section class="room-page room-external">${bar(`<span class="room-title-icon" aria-hidden="true">${gameIcon(g?.id, g?.icon || '', 36)}</span> <span class="room-external-title">${esc(g?.name || '')}</span>`)}<div class="room-body room-external-stage" id="room-external-stage"></div></section>`;
   }
 
   function moveToDock() {
