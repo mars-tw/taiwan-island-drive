@@ -6,11 +6,14 @@ import { appUrl } from '../../shared/paths.js';
 import { readSettings } from '../../shared/settings.js';
 import { speakNative, stopNativeSpeech, registerNativeOverlay } from '../../shared/native.js';
 import { celebrate, playChime } from '../../shared/celebrate.js';
+import { SPEAKER_ICON } from '../../shared/speaker-icon.js';
+import { phraseHtml } from '../../shared/phrase-wrap.js';
 import { normalizeAge, ageFromSettings, AGE_LABELS, newSeed } from './common.js';
 import { readProgress, recordClear, unlockedLevel } from './progress.js';
 
 export const RAIL_ART = Object.freeze({
   train: 'art/content-r3/train-side.webp',
+  trainTop: 'art/r49/train-top.webp', // R49：從正上方看的兩節列車（轉轍器分月台用）
   carBlue: 'art/r5/carriage-blue.png',
   carOrange: 'art/r5/carriage-orange.png',
 });
@@ -83,7 +86,8 @@ export function openRailGame(def, options = {}) {
   htmlEl('h1', { id: 'rail-play-title', tabindex: '-1' }, heading, def.title);
   const levelTag = htmlEl('span', { class: 'rp-level' }, heading);
   const listButton = htmlEl('button', { type: 'button', class: 'rp-list', 'aria-label': '選關卡' }, top, '關卡');
-  const speakButton = htmlEl('button', { type: 'button', class: 'rp-speak', 'aria-label': '再唸一次' }, top, '🔊');
+  const speakButton = htmlEl('button', { type: 'button', class: 'rp-speak', 'aria-label': '再唸一次' }, top);
+  speakButton.innerHTML = SPEAKER_ICON; // R49：固定墨藍色喇叭圖，取代會變淡灰的 🔊 表情符號
   const stage = htmlEl('div', { class: 'rp-stage' }, page);
   const coach = htmlEl('div', { class: 'rp-coach', role: 'status', 'aria-live': 'polite' }, page);
   coach.append(artImage('coach', '阿路教練', 'rp-coach-img'));
@@ -93,7 +97,7 @@ export function openRailGame(def, options = {}) {
 
   function speak(text) { if (!readSettings().muted && text) void speakNative(text, { rate: 0.8 }); }
   function say(text, { retry = false, voice = true } = {}) {
-    cue = text; cueText.textContent = text;
+    cue = text; cueText.innerHTML = phraseHtml(text); // R49 修正輪：只在詞和詞之間換行
     coach.classList.toggle('is-retry', retry);
     if (retry) { coach.classList.remove('nudge'); void coach.offsetWidth; coach.classList.add('nudge'); }
     if (voice) speak(text);

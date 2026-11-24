@@ -8,6 +8,8 @@ import {
 } from './switch-platform.js';
 
 const W = 1060, H = 600, TRAIN_LEN = 170;
+// R49: the board is a map seen from above, so the trains are drawn from above too (portrait and landscape).
+const VIEW = 'top';
 const focusOf = l => `${l.switches} 個道岔・${l.trains} 列車${l.attrs === 'both' ? '・顏色和形狀' : ''}`;
 
 function mount(ctx) {
@@ -63,7 +65,7 @@ function mount(ctx) {
     // Parked trains.
     for (const [platform, trainId] of Object.entries(round.parked)) {
       const t = round.trains.find(x => x.id === trainId), [x, y] = map(TRAIN_STOP_U, layout.platforms[platform].v);
-      const g = drawTrain(svg, { color: t.color, length: TRAIN_LEN });
+      const g = drawTrain(svg, { color: t.color, length: TRAIN_LEN, view: VIEW });
       g.setAttribute('transform', `translate(${x} ${y}) rotate(${portrait ? 90 : 0})`);
       drawPlate(svg, x - (portrait ? 58 : TRAIN_LEN * 0.5), y - (portrait ? TRAIN_LEN * 0.5 : 58), 26, t.color, t.shape, 'rp-train-plate is-parked');
     }
@@ -71,7 +73,7 @@ function mount(ctx) {
     const train = currentTrain(round);
     trainGroup = plateGroup = null;
     if (train) {
-      trainGroup = drawTrain(svg, { color: train.color, length: TRAIN_LEN, className: 'is-waiting' });
+      trainGroup = drawTrain(svg, { color: train.color, length: TRAIN_LEN, className: 'is-waiting', view: VIEW });
       plateGroup = drawPlate(svg, 0, 0, 28, train.color, train.shape, 'rp-train-plate');
       const [x, y] = map(TRAIN_WAIT_U, layout.entry[1]);
       poseTrain({ x, y }, portrait ? 90 : 0);

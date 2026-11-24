@@ -19,9 +19,14 @@
 .rp-heading h1{font-size:clamp(17px,2.4vw,24px);white-space:nowrap;overflow:hidden;text-overflow:ellipsis;outline:none}
 .rp-level{display:block;font-size:13px;font-weight:700;color:#3d6a83;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
 #rail-play .rp-back{padding:6px 10px;white-space:nowrap}
-#rail-play .rp-speak{font-size:22px;padding:4px}
+/* R49：喇叭鈕改號誌黃底、墨藍粗框，看得出可以按（橘色留給「出發」） */
+#rail-play .rp-speak{padding:0;display:grid;place-items:center;background:var(--rp-gold);border-color:var(--rp-ink);box-shadow:0 3px 0 var(--rp-ink)}
+#rail-play .rp-speak svg{width:30px;height:30px;display:block}
+#rail-play .rp-speak:active:not(:disabled){box-shadow:0 1px 0 var(--rp-ink)}
 .rp-stage{grid-area:stage;min-height:0;min-width:0;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:6px;padding:8px;overflow:hidden;position:relative}
-.rp-coach{grid-area:coach;position:relative;display:flex;align-items:center;gap:10px;margin:0 auto 6px;width:min(720px,calc(100% - 16px));min-height:74px;background:#fff;border:3px solid var(--rp-blue);border-radius:22px;padding:6px 16px 6px 84px;font-size:17px;font-weight:700}
+.rp-coach{grid-area:coach;position:relative;display:flex;align-items:center;gap:10px;margin:0 auto 6px;width:min(720px,calc(100% - 16px));min-height:74px;background:#fff;border:3px solid var(--rp-blue);border-radius:22px;padding:6px 16px 6px 84px;font-size:19px;font-weight:700;line-height:1.35}
+/* R49 修正輪：提示只在詞和詞之間、標點後換行，行長平均 */
+.rp-cue{word-break:keep-all;overflow-wrap:anywhere;text-wrap:balance}
 .rp-coach-img{position:absolute;left:8px;bottom:0;width:66px;height:96px;object-fit:contain;object-position:bottom}
 .rp-coach.is-retry{border-color:var(--rp-orange);background:#fff4e8;color:#7a2d05}
 @media (prefers-reduced-motion:no-preference){.rp-coach.nudge{animation:rp-nudge .5s ease-in-out 1}}
@@ -59,6 +64,9 @@
 .rp-puzzled{font:900 64px 'Microsoft JhengHei',sans-serif;fill:#f46b27;paint-order:stroke;stroke:#fff;stroke-width:8px}
 @media (prefers-reduced-motion:no-preference){.rp-train.is-waiting .rp-train-body{animation:rp-idle 1.6s ease-in-out infinite}}
 @keyframes rp-idle{0%,100%{transform:translateY(0)}50%{transform:translateY(-3px)}}
+/* R49：俯視列車停著等出發時，沿著軌道前後輕輕動，不往旁邊跳 */
+@media (prefers-reduced-motion:no-preference){.rp-train.is-top.is-waiting .rp-train-body{animation-name:rp-idle-top}}
+@keyframes rp-idle-top{0%,100%{transform:translateX(0)}50%{transform:translateX(3px)}}
 #rail-play .rp-switch{width:66px;height:66px;min-width:66px;min-height:66px;border-radius:50%;padding:0;background:#fff4c4;border-color:#ad841b;box-shadow:0 3px 0 #7d5e10}
 #rail-play .rp-switch.is-on-route{background:var(--rp-gold)}
 #rail-play .rp-switch:active:not(:disabled){transform:translate(-50%,-48%)}
@@ -178,7 +186,7 @@
   .rp-page{grid-template-rows:var(--rp-top) minmax(0,1fr) auto auto}
   .rp-top{gap:5px;padding:2px 5px}
   #rail-play .rp-back{font-size:15px;padding:4px 8px}
-  .rp-coach{font-size:15px;min-height:66px;padding:5px 10px 5px 66px;margin-bottom:4px}
+  .rp-coach{font-size:17px;min-height:66px;padding:5px 10px 5px 66px;margin-bottom:4px}
   .rp-coach-img{width:54px;height:80px;left:5px}
   .rp-controls{gap:6px;padding:6px}
   .rp-controls button{flex-basis:100px;font-size:16px!important}
@@ -194,7 +202,7 @@
   #rail-play{--rp-top:60px}
   .rp-page{grid-template-columns:minmax(0,1fr) minmax(190px,31%);grid-template-rows:var(--rp-top) minmax(0,1fr) auto;grid-template-areas:'top top' 'stage coach' 'stage controls'}
   .rp-top{padding:2px 6px}
-  .rp-coach{margin:6px 6px 4px 0;width:auto;align-self:start;min-height:62px;font-size:14px;padding:6px 10px 6px 52px;border-radius:16px}
+  .rp-coach{margin:6px 6px 4px 0;width:auto;align-self:start;min-height:62px;font-size:16px;padding:6px 10px 6px 52px;border-radius:16px}
   .rp-coach-img{width:44px;height:64px;left:4px}
   .rp-controls{flex-direction:column;flex-wrap:nowrap;justify-content:flex-end;margin:0 6px 6px 0;border:0;background:transparent;padding:0;gap:6px}
   #rail-play .rp-controls button{flex:none;max-width:none;width:100%;font-size:15px!important;min-height:60px}

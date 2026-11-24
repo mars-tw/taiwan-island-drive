@@ -1,0 +1,237 @@
+{
+ "round": "R49",
+ "note": "每張最終圖的完整提示（生成與 image_edit 各一筆，依順序）。",
+ "records": [
+  {
+   "id": "dispatch",
+   "round": "v15b",
+   "tool": "image_gen",
+   "prompt_version": "r49-fix-v15",
+   "prompt": "Children's storybook sticker icon for a train-themed learning game for 3 to 8 year olds. Subject: three-quarter front view close-up of two chunky sea-blue passenger carriages full of round smiling passenger faces, being coupled together: their big yellow couplers almost touch in the middle, and one big coral-orange double-headed arrow floats right above the coupling. The carriages are big and fill the picture. Style: extra-thick chunky dark ink-navy (#143B61) outlines, rounded toy proportions, flat color fills with only two-step shading and a small highlight from warm upper-left light; colors sea blue #1479B8, sunflower yellow #FFD344, coral orange #F46B27, grass green #58B85B and white, at most five colors. Composition: square 1:1, one bold main subject plus at most two small helper objects, centered, in a compact roughly square arrangement that fills most of the frame with a small even margin. Background: one flat solid pale cream yellow color #FFF3C2 filling the whole square, no gradient, no texture, no border, no ring, no shadow on the background. Do not draw any circle frame, round badge, ring, disc, halo or plate-shaped backdrop behind or around the subject; the subject stands directly on the flat background. Big simple shapes, very little small detail, no thin lines, readable at 64 pixels. No text, no letters and no numbers anywhere in the image."
+  },
+  {
+   "id": "count",
+   "round": "v1",
+   "tool": "image_gen",
+   "prompt_version": "r49-icons-v1",
+   "prompt": "Children's storybook sticker icon for a train-themed learning game for 3 to 8 year olds. Subject: a neat row of four small cute passengers standing side by side, round heads with dot eyes and smiles, each in a different simple outfit color (blue, yellow, orange, green); a small orange star sparkle sits above the first passenger as if it was just counted. Style: chunky dark ink-navy (#143B61) outlines, rounded toy proportions, flat color fills with only two-step shading and a small highlight from warm upper-left light; colors sea blue #1479B8, sunflower yellow #FFD344, coral orange #F46B27, grass green #58B85B and white, at most five colors. Composition: square 1:1, one bold main subject plus at most two small helper objects, centered; the whole drawing fits inside a centered circle whose diameter is about 70 percent of the image width and nothing touches that circle, so the outer ring and the four corners are plain background. Background: one flat solid pale cream yellow color #FFF3C2 filling the whole square, no gradient, no texture, no border, no ring, no shadow on the background. Big simple shapes, very little small detail, no thin lines, readable at 64 pixels. No text, no letters and no numbers anywhere in the image."
+  },
+  {
+   "id": "order",
+   "round": "v15a",
+   "tool": "image_gen",
+   "prompt_version": "r49-fix-v15",
+   "prompt": "Children's storybook sticker icon for a train-themed learning game for 3 to 8 year olds. Subject: three toy passenger carriages coupled in a row on a short track, growing from small to medium to large from left to right: a small sea-blue carriage, a medium sunflower-yellow carriage and a large coral-orange carriage, each with wheels and windows, and one big bold navy digit on each side: 1 on the small one, 2 on the medium one, 3 on the large one. Style: extra-thick chunky dark ink-navy (#143B61) outlines, rounded toy proportions, flat color fills with only two-step shading and a small highlight from warm upper-left light; colors sea blue #1479B8, sunflower yellow #FFD344, coral orange #F46B27, grass green #58B85B and white, at most five colors. Composition: square 1:1, one bold main subject plus at most two small helper objects, centered, in a compact roughly square arrangement that fills most of the frame with a small even margin. Background: one flat solid pale cream yellow color #FFF3C2 filling the whole square, no gradient, no texture, no border, no ring, no shadow on the background. Do not draw any circle frame, round badge, ring, disc, halo or plate-shaped backdrop behind or around the subject; the subject stands directly on the flat background. Big simple shapes, very little small detail, no thin lines, readable at 64 pixels. The only writing allowed is the three digits 1, 2 and 3 as described; no other text or letters."
+  },
+  {
+   "id": "compare",
+   "round": "v2",
+   "tool": "image_gen",
+   "prompt_version": "r49-icons-v2",
+   "prompt": "Children's storybook sticker icon for a train-themed learning game for 3 to 8 year olds. Subject: two fans of train tickets lying side by side: on the left a small fan of two tickets, on the right a clearly bigger fan of five tickets; every ticket is a crisp white rectangle with notched edges, a coral-orange top band and a tiny sea-blue train printed in the middle; a small yellow star floats above the bigger fan. No stacks, no layers, no cream. Style: chunky dark ink-navy (#143B61) outlines, rounded toy proportions, flat color fills with only two-step shading and a small highlight from warm upper-left light; colors sea blue #1479B8, sunflower yellow #FFD344, coral orange #F46B27, grass green #58B85B and white, at most five colors. Composition: square 1:1, one bold main subject plus at most two small helper objects, centered; the whole drawing fits inside a centered circle whose diameter is about 70 percent of the image width and nothing touches that circle, so the outer ring and the four corners are plain background. Background: one flat solid pale cream yellow color #FFF3C2 filling the whole square, no gradient, no texture, no border, no ring, no shadow on the background. Do not draw any circle frame, round badge, ring, disc, halo or plate-shaped backdrop behind or around the subject; the subject stands directly on the flat background. Big simple shapes, very little small detail, no thin lines, readable at 64 pixels. No text, no letters and no numbers anywhere in the image."
+  },
+  {
+   "id": "compare",
+   "round": "v3",
+   "tool": "image_edit",
+   "prompt_version": "r49-icons-v3-edit",
+   "prompt": "Remove the big green circle behind the ticket fans. The whole background becomes one flat solid pale cream yellow #FFF3C2 color with no circle, ring, disc or halo anywhere. Keep the subject, its drawing style, outlines, colors and position exactly the same."
+  },
+  {
+   "id": "boarding",
+   "round": "v12",
+   "tool": "image_gen",
+   "prompt_version": "r49-icons-v12",
+   "prompt": "Children's storybook sticker icon for a train-themed learning game for 3 to 8 year olds. Subject: straight-on close-up of a big open sea-blue train door that fills half of the picture; one child steps in through the door and one child steps out of it; a huge green arrow on the left points into the door and a huge orange arrow on the right points out of the door, each arrow about one third of the picture tall. Style: chunky dark ink-navy (#143B61) outlines, rounded toy proportions, flat color fills with only two-step shading and a small highlight from warm upper-left light; colors sea blue #1479B8, sunflower yellow #FFD344, coral orange #F46B27, grass green #58B85B and white, at most five colors. Composition: square 1:1, one bold main subject plus at most two small helper objects, centered; the whole drawing fits inside a centered circle whose diameter is about 70 percent of the image width and nothing touches that circle, so the outer ring and the four corners are plain background. Background: one flat solid pale cream yellow color #FFF3C2 filling the whole square, no gradient, no texture, no border, no ring, no shadow on the background. Do not draw any circle frame, round badge, ring, disc, halo or plate-shaped backdrop behind or around the subject; the subject stands directly on the flat background. Big simple shapes, very little small detail, no thin lines, readable at 64 pixels. No text, no letters and no numbers anywhere in the image."
+  },
+  {
+   "id": "pattern",
+   "round": "v6a",
+   "tool": "image_gen",
+   "prompt_version": "r49-icons-v6a",
+   "prompt": "Children's storybook sticker icon for a train-themed learning game for 3 to 8 year olds. Subject: one long low flat toy railway wagon on small wheels carrying four big chunky shape blocks standing in a row that fill almost the whole width of the picture: a red ball, a blue triangle block, a red ball, and an empty dashed-outline spot at the end. The shapes are as big and tall as possible; the wagon is only a thin platform under them. Style: chunky dark ink-navy (#143B61) outlines, rounded toy proportions, flat color fills with only two-step shading and a small highlight from warm upper-left light; colors sea blue #1479B8, sunflower yellow #FFD344, coral orange #F46B27, grass green #58B85B and white, at most five colors. Composition: square 1:1, one bold main subject plus at most two small helper objects, centered; the whole drawing fits inside a centered circle whose diameter is about 70 percent of the image width and nothing touches that circle, so the outer ring and the four corners are plain background. Background: one flat solid pale cream yellow color #FFF3C2 filling the whole square, no gradient, no texture, no border, no ring, no shadow on the background. Do not draw any circle frame, round badge, ring, disc, halo or plate-shaped backdrop behind or around the subject; the subject stands directly on the flat background. Big simple shapes, very little small detail, no thin lines, readable at 64 pixels. No text, no letters and no numbers anywhere in the image."
+  },
+  {
+   "id": "clock",
+   "round": "v1",
+   "tool": "image_gen",
+   "prompt_version": "r49-icons-v1",
+   "prompt": "Children's storybook sticker icon for a train-themed learning game for 3 to 8 year olds. Subject: a big round white station clock with a thick sea-blue rim on a short post with a small yellow roof cap; twelve chunky dot marks around the face instead of numbers, a short thick hour hand and a long minute hand clearly pointing in different directions. Style: chunky dark ink-navy (#143B61) outlines, rounded toy proportions, flat color fills with only two-step shading and a small highlight from warm upper-left light; colors sea blue #1479B8, sunflower yellow #FFD344, coral orange #F46B27, grass green #58B85B and white, at most five colors. Composition: square 1:1, one bold main subject plus at most two small helper objects, centered; the whole drawing fits inside a centered circle whose diameter is about 70 percent of the image width and nothing touches that circle, so the outer ring and the four corners are plain background. Background: one flat solid pale cream yellow color #FFF3C2 filling the whole square, no gradient, no texture, no border, no ring, no shadow on the background. Big simple shapes, very little small detail, no thin lines, readable at 64 pixels. No text, no letters and no numbers anywhere in the image."
+  },
+  {
+   "id": "boarding-count",
+   "round": "v7a",
+   "tool": "image_gen",
+   "prompt_version": "r49-icons-v7a",
+   "prompt": "Children's storybook sticker icon for a train-themed learning game for 3 to 8 year olds. Subject: on the left a big round seaside station sign on a post showing one bold blue ocean wave symbol; on the right a big sea-blue passenger carriage seen from the side with its door open, one large passenger stepping down from the door and one large passenger waiting to step up; a thick band of bold blue waves runs along the bottom. The sign and the carriage fill most of the picture. No arrows. Style: chunky dark ink-navy (#143B61) outlines, rounded toy proportions, flat color fills with only two-step shading and a small highlight from warm upper-left light; colors sea blue #1479B8, sunflower yellow #FFD344, coral orange #F46B27, grass green #58B85B and white, at most five colors. Composition: square 1:1, one bold main subject plus at most two small helper objects, centered; the whole drawing fits inside a centered circle whose diameter is about 70 percent of the image width and nothing touches that circle, so the outer ring and the four corners are plain background. Background: one flat solid pale cream yellow color #FFF3C2 filling the whole square, no gradient, no texture, no border, no ring, no shadow on the background. Do not draw any circle frame, round badge, ring, disc, halo or plate-shaped backdrop behind or around the subject; the subject stands directly on the flat background. Big simple shapes, very little small detail, no thin lines, readable at 64 pixels. No text, no letters and no numbers anywhere in the image."
+  },
+  {
+   "id": "boarding-count",
+   "round": "v8e",
+   "tool": "image_edit",
+   "prompt_version": "r49-icons-v8-edit",
+   "prompt": "Replace the two animal passengers with two cheerful human children passengers in the same poses and positions: one child in a yellow cap and orange shirt stepping down from the door, one child in a green shirt waiting to step up. Keep the round wave station sign, the sea-blue carriage, the bold wave band, the flat solid pale cream yellow #FFF3C2 background, the drawing style, outlines and colors exactly the same. No circle, ring, disc or halo."
+  },
+  {
+   "id": "platform-timetable",
+   "round": "v15a",
+   "tool": "image_gen",
+   "prompt_version": "r49-fix-v15",
+   "prompt": "Children's storybook sticker icon for a train-themed learning game for 3 to 8 year olds. Subject: a smiling sea-blue toy train engine stopped at a short platform; right above the platform hangs a big round white station clock with thick navy hands, and under the clock a small dark-blue timetable sign with two yellow rows. The train and the clock are the two biggest things. Style: extra-thick chunky dark ink-navy (#143B61) outlines, rounded toy proportions, flat color fills with only two-step shading and a small highlight from warm upper-left light; colors sea blue #1479B8, sunflower yellow #FFD344, coral orange #F46B27, grass green #58B85B and white, at most five colors. Composition: square 1:1, one bold main subject plus at most two small helper objects, centered, in a compact roughly square arrangement that fills most of the frame with a small even margin. Background: one flat solid pale cream yellow color #FFF3C2 filling the whole square, no gradient, no texture, no border, no ring, no shadow on the background. Do not draw any circle frame, round badge, ring, disc, halo or plate-shaped backdrop behind or around the subject; the subject stands directly on the flat background. Big simple shapes, very little small detail, no thin lines, readable at 64 pixels. No text, no letters and no numbers anywhere in the image."
+  },
+  {
+   "id": "differences",
+   "round": "v2",
+   "tool": "image_gen",
+   "prompt_version": "r49-icons-v2",
+   "prompt": "Children's storybook sticker icon for a train-themed learning game for 3 to 8 year olds. Subject: two small framed pictures side by side showing the same simple station house; the left house has a green flag on its roof, the right house has no flag; a big yellow sparkle star marks the empty spot on the right roof; a small orange magnifying glass sits at the lower right corner of the right frame. Style: chunky dark ink-navy (#143B61) outlines, rounded toy proportions, flat color fills with only two-step shading and a small highlight from warm upper-left light; colors sea blue #1479B8, sunflower yellow #FFD344, coral orange #F46B27, grass green #58B85B and white, at most five colors. Composition: square 1:1, one bold main subject plus at most two small helper objects, centered; the whole drawing fits inside a centered circle whose diameter is about 70 percent of the image width and nothing touches that circle, so the outer ring and the four corners are plain background. Background: one flat solid pale mint green color #DCF2DF filling the whole square, no gradient, no texture, no border, no ring, no shadow on the background. Do not draw any circle frame, round badge, ring, disc, halo or plate-shaped backdrop behind or around the subject; the subject stands directly on the flat background. Big simple shapes, very little small detail, no thin lines, readable at 64 pixels. No text, no letters and no numbers anywhere in the image."
+  },
+  {
+   "id": "differences",
+   "round": "v3",
+   "tool": "image_edit",
+   "prompt_version": "r49-icons-v3-edit",
+   "prompt": "Remove the thin dark navy circle outline around the two pictures. The whole background becomes one flat solid pale mint green #DCF2DF color with no circle, ring, disc or halo anywhere. Keep the subject, its drawing style, outlines, colors and position exactly the same."
+  },
+  {
+   "id": "treasure",
+   "round": "v1",
+   "tool": "image_gen",
+   "prompt_version": "r49-icons-v1",
+   "prompt": "Children's storybook sticker icon for a train-themed learning game for 3 to 8 year olds. Subject: a golden treasure chest half hidden behind a rounded green hill, with a bright sparkle shining from the chest, small blue sea waves at the bottom of the hill. Style: chunky dark ink-navy (#143B61) outlines, rounded toy proportions, flat color fills with only two-step shading and a small highlight from warm upper-left light; colors sea blue #1479B8, sunflower yellow #FFD344, coral orange #F46B27, grass green #58B85B and white, at most five colors. Composition: square 1:1, one bold main subject plus at most two small helper objects, centered; the whole drawing fits inside a centered circle whose diameter is about 70 percent of the image width and nothing touches that circle, so the outer ring and the four corners are plain background. Background: one flat solid pale mint green color #DCF2DF filling the whole square, no gradient, no texture, no border, no ring, no shadow on the background. Big simple shapes, very little small detail, no thin lines, readable at 64 pixels. No text, no letters and no numbers anywhere in the image."
+  },
+  {
+   "id": "tracks",
+   "round": "v15a",
+   "tool": "image_gen",
+   "prompt_version": "r49-fix-v15",
+   "prompt": "Children's storybook sticker icon for a train-themed learning game for 3 to 8 year olds. Subject: seen from directly above, two big square cream puzzle tiles side by side, each printed with a chunky toy railway track piece with brown wooden sleepers and two grey rails: the left tile shows a straight piece, the right tile shows a curved piece and is tilted a little as if it is being turned, with one short curved orange arrow at its top corner. No round arrow around the tiles, no circle. Style: extra-thick chunky dark ink-navy (#143B61) outlines, rounded toy proportions, flat color fills with only two-step shading and a small highlight from warm upper-left light; colors sea blue #1479B8, sunflower yellow #FFD344, coral orange #F46B27, grass green #58B85B and white, at most five colors. Composition: square 1:1, one bold main subject plus at most two small helper objects, centered, in a compact roughly square arrangement that fills most of the frame with a small even margin. Background: one flat solid pale sky blue color #D9EEFA filling the whole square, no gradient, no texture, no border, no ring, no shadow on the background. Do not draw any circle frame, round badge, ring, disc, halo or plate-shaped backdrop behind or around the subject; the subject stands directly on the flat background. Big simple shapes, very little small detail, no thin lines, readable at 64 pixels. No text, no letters and no numbers anywhere in the image."
+  },
+  {
+   "id": "maze",
+   "round": "v2",
+   "tool": "image_gen",
+   "prompt_version": "r49-icons-v2",
+   "prompt": "Children's storybook sticker icon for a train-themed learning game for 3 to 8 year olds. Subject: seen from directly above, a simple square maze with only a few thick green hedge walls, a dashed path winding through it, a tiny sea-blue engine seen from above at the bottom-left entrance and a small station house with an orange roof at the top-right exit. Style: chunky dark ink-navy (#143B61) outlines, rounded toy proportions, flat color fills with only two-step shading and a small highlight from warm upper-left light; colors sea blue #1479B8, sunflower yellow #FFD344, coral orange #F46B27, grass green #58B85B and white, at most five colors. Composition: square 1:1, one bold main subject plus at most two small helper objects, centered; the whole drawing fits inside a centered circle whose diameter is about 70 percent of the image width and nothing touches that circle, so the outer ring and the four corners are plain background. Background: one flat solid pale sky blue color #D9EEFA filling the whole square, no gradient, no texture, no border, no ring, no shadow on the background. Do not draw any circle frame, round badge, ring, disc, halo or plate-shaped backdrop behind or around the subject; the subject stands directly on the flat background. Big simple shapes, very little small detail, no thin lines, readable at 64 pixels. No text, no letters and no numbers anywhere in the image."
+  },
+  {
+   "id": "maze",
+   "round": "v3",
+   "tool": "image_edit",
+   "prompt_version": "r49-icons-v3-edit",
+   "prompt": "Remove the big green round disc behind the maze; the maze square itself with its hedge walls stays. The whole background becomes one flat solid pale sky blue #D9EEFA color with no circle, ring, disc or halo anywhere. Keep the subject, its drawing style, outlines, colors and position exactly the same."
+  },
+  {
+   "id": "program",
+   "round": "v15a",
+   "tool": "image_gen",
+   "prompt_version": "r49-fix-v15",
+   "prompt": "Children's storybook sticker icon for a train-themed learning game for 3 to 8 year olds. Subject: a cheerful child train driver in a sea-blue cap leans out of the cab window of a small sea-blue toy engine and holds up one big sunflower-yellow card with a thick navy turn-right arrow; the engine and the driver are big and fill the picture. Style: extra-thick chunky dark ink-navy (#143B61) outlines, rounded toy proportions, flat color fills with only two-step shading and a small highlight from warm upper-left light; colors sea blue #1479B8, sunflower yellow #FFD344, coral orange #F46B27, grass green #58B85B and white, at most five colors. Composition: square 1:1, one bold main subject plus at most two small helper objects, centered, in a compact roughly square arrangement that fills most of the frame with a small even margin. Background: one flat solid pale sky blue color #D9EEFA filling the whole square, no gradient, no texture, no border, no ring, no shadow on the background. Do not draw any circle frame, round badge, ring, disc, halo or plate-shaped backdrop behind or around the subject; the subject stands directly on the flat background. Big simple shapes, very little small detail, no thin lines, readable at 64 pixels. No text, no letters and no numbers anywhere in the image."
+  },
+  {
+   "id": "mosaic",
+   "round": "v12",
+   "tool": "image_gen",
+   "prompt_version": "r49-icons-v12",
+   "prompt": "Children's storybook sticker icon for a train-themed learning game for 3 to 8 year olds. Subject: a simple toy train engine picture made by fitting together big chunky flat shape pieces: a sea-blue rectangle body, a sunflower-yellow square cab, two coral-orange circle wheels and a red triangle at the front; the red triangle is lifted just above its own empty dashed triangle outline, about to be placed. Not a grid, not a table. Style: chunky dark ink-navy (#143B61) outlines, rounded toy proportions, flat color fills with only two-step shading and a small highlight from warm upper-left light; colors sea blue #1479B8, sunflower yellow #FFD344, coral orange #F46B27, grass green #58B85B and white, at most five colors. Composition: square 1:1, one bold main subject plus at most two small helper objects, centered; the whole drawing fits inside a centered circle whose diameter is about 70 percent of the image width and nothing touches that circle, so the outer ring and the four corners are plain background. Background: one flat solid pale sky blue color #D9EEFA filling the whole square, no gradient, no texture, no border, no ring, no shadow on the background. Do not draw any circle frame, round badge, ring, disc, halo or plate-shaped backdrop behind or around the subject; the subject stands directly on the flat background. Big simple shapes, very little small detail, no thin lines, readable at 64 pixels. No text, no letters and no numbers anywhere in the image."
+  },
+  {
+   "id": "switch-platform",
+   "round": "v15b",
+   "tool": "image_gen",
+   "prompt_version": "r49-fix-v15",
+   "prompt": "Children's storybook sticker icon for a train-themed learning game for 3 to 8 year olds. Subject: seen from directly above, a chunky railway track with brown wooden sleepers and two grey rails comes up from the bottom and splits into two branches like the letter Y; at the fork sits a big rounded-square sunflower-yellow button with a thick navy arrow pointing to the left branch; a short bright green train seen from above comes up the stem toward the fork; at the end of the left branch a round white sign with a big blue circle on it, at the end of the right branch a round white sign with a big green square on it. Style: extra-thick chunky dark ink-navy (#143B61) outlines, rounded toy proportions, flat color fills with only two-step shading and a small highlight from warm upper-left light; colors sea blue #1479B8, sunflower yellow #FFD344, coral orange #F46B27, grass green #58B85B and white, at most five colors. Composition: square 1:1, one bold main subject plus at most two small helper objects, centered, in a compact roughly square arrangement that fills most of the frame with a small even margin. Background: one flat solid pale sky blue color #D9EEFA filling the whole square, no gradient, no texture, no border, no ring, no shadow on the background. Do not draw any circle frame, round badge, ring, disc, halo or plate-shaped backdrop behind or around the subject; the subject stands directly on the flat background. Big simple shapes, very little small detail, no thin lines, readable at 64 pixels. No text, no letters and no numbers anywhere in the image."
+  },
+  {
+   "id": "shunting-yard",
+   "round": "v15a",
+   "tool": "image_gen",
+   "prompt_version": "r49-fix-v15",
+   "prompt": "Children's storybook sticker icon for a train-themed learning game for 3 to 8 year olds. Subject: seen from directly above, a railway yard: one chunky track with brown sleepers and grey rails comes in from the left and splits into four parallel sidings stacked from top to bottom like a ladder; short boxcars in red, yellow, green and blue stand on different sidings; a small sea-blue shunting engine waits on the entry track. Style: extra-thick chunky dark ink-navy (#143B61) outlines, rounded toy proportions, flat color fills with only two-step shading and a small highlight from warm upper-left light; colors sea blue #1479B8, sunflower yellow #FFD344, coral orange #F46B27, grass green #58B85B and white, at most five colors. Composition: square 1:1, one bold main subject plus at most two small helper objects, centered, in a compact roughly square arrangement that fills most of the frame with a small even margin. Background: one flat solid pale sky blue color #D9EEFA filling the whole square, no gradient, no texture, no border, no ring, no shadow on the background. Do not draw any circle frame, round badge, ring, disc, halo or plate-shaped backdrop behind or around the subject; the subject stands directly on the flat background. Big simple shapes, very little small detail, no thin lines, readable at 64 pixels. No text, no letters and no numbers anywhere in the image."
+  },
+  {
+   "id": "single-line-meet",
+   "round": "v15b",
+   "tool": "image_gen",
+   "prompt_version": "r49-fix-v15",
+   "prompt": "Children's storybook sticker icon for a train-themed learning game for 3 to 8 year olds. Subject: side view of one single straight railway track: a big sea-blue toy engine on the left facing right and a big coral-orange toy engine on the right facing left, nose to nose with a small gap; between them a tall signal post with one big glowing red lamp. Each engine is about forty percent of the picture width. Style: extra-thick chunky dark ink-navy (#143B61) outlines, rounded toy proportions, flat color fills with only two-step shading and a small highlight from warm upper-left light; colors sea blue #1479B8, sunflower yellow #FFD344, coral orange #F46B27, grass green #58B85B and white, at most five colors. Composition: square 1:1, one bold main subject plus at most two small helper objects, centered, in a compact roughly square arrangement that fills most of the frame with a small even margin. Background: one flat solid pale sky blue color #D9EEFA filling the whole square, no gradient, no texture, no border, no ring, no shadow on the background. Do not draw any circle frame, round badge, ring, disc, halo or plate-shaped backdrop behind or around the subject; the subject stands directly on the flat background. Big simple shapes, very little small detail, no thin lines, readable at 64 pixels. No text, no letters and no numbers anywhere in the image."
+  },
+  {
+   "id": "cargo",
+   "round": "v1",
+   "tool": "image_gen",
+   "prompt_version": "r49-icons-v1",
+   "prompt": "Children's storybook sticker icon for a train-themed learning game for 3 to 8 year olds. Subject: side view of an open freight wagon with four neat cardboard boxes inside and one more cardboard box being lowered into the last empty space from above. Style: chunky dark ink-navy (#143B61) outlines, rounded toy proportions, flat color fills with only two-step shading and a small highlight from warm upper-left light; colors sea blue #1479B8, sunflower yellow #FFD344, coral orange #F46B27, grass green #58B85B and white, at most five colors. Composition: square 1:1, one bold main subject plus at most two small helper objects, centered; the whole drawing fits inside a centered circle whose diameter is about 70 percent of the image width and nothing touches that circle, so the outer ring and the four corners are plain background. Background: one flat solid pale peach color #FFE7D3 filling the whole square, no gradient, no texture, no border, no ring, no shadow on the background. Big simple shapes, very little small detail, no thin lines, readable at 64 pixels. No text, no letters and no numbers anywhere in the image."
+  },
+  {
+   "id": "luggage",
+   "round": "v2",
+   "tool": "image_gen",
+   "prompt_version": "r49-icons-v2",
+   "prompt": "Children's storybook sticker icon for a train-themed learning game for 3 to 8 year olds. Subject: three smooth sorting baskets in a row (sea blue, sunflower yellow, coral orange, plain sides, no weave pattern), each holding one piece of luggage of the same color but a clearly different shape: a tall rectangular suitcase, a round duffel bag and a square backpack. Style: chunky dark ink-navy (#143B61) outlines, rounded toy proportions, flat color fills with only two-step shading and a small highlight from warm upper-left light; colors sea blue #1479B8, sunflower yellow #FFD344, coral orange #F46B27, grass green #58B85B and white, at most five colors. Composition: square 1:1, one bold main subject plus at most two small helper objects, centered; the whole drawing fits inside a centered circle whose diameter is about 70 percent of the image width and nothing touches that circle, so the outer ring and the four corners are plain background. Background: one flat solid pale peach color #FFE7D3 filling the whole square, no gradient, no texture, no border, no ring, no shadow on the background. Do not draw any circle frame, round badge, ring, disc, halo or plate-shaped backdrop behind or around the subject; the subject stands directly on the flat background. Big simple shapes, very little small detail, no thin lines, readable at 64 pixels. No text, no letters and no numbers anywhere in the image."
+  },
+  {
+   "id": "sharing",
+   "round": "v2",
+   "tool": "image_gen",
+   "prompt_version": "r49-icons-v2",
+   "prompt": "Children's storybook sticker icon for a train-themed learning game for 3 to 8 year olds. Subject: a small round picnic table with three equal plates on it, each plate holding exactly one red apple and one round cookie, and the smiling heads of three little friends (blue cap, yellow cap, green cap) peeking over the far edge of the table. Style: chunky dark ink-navy (#143B61) outlines, rounded toy proportions, flat color fills with only two-step shading and a small highlight from warm upper-left light; colors sea blue #1479B8, sunflower yellow #FFD344, coral orange #F46B27, grass green #58B85B and white, at most five colors. Composition: square 1:1, one bold main subject plus at most two small helper objects, centered; the whole drawing fits inside a centered circle whose diameter is about 70 percent of the image width and nothing touches that circle, so the outer ring and the four corners are plain background. Background: one flat solid pale peach color #FFE7D3 filling the whole square, no gradient, no texture, no border, no ring, no shadow on the background. Do not draw any circle frame, round badge, ring, disc, halo or plate-shaped backdrop behind or around the subject; the subject stands directly on the flat background. Big simple shapes, very little small detail, no thin lines, readable at 64 pixels. No text, no letters and no numbers anywhere in the image."
+  },
+  {
+   "id": "balance",
+   "round": "v1",
+   "tool": "image_gen",
+   "prompt_version": "r49-icons-v1",
+   "prompt": "Children's storybook sticker icon for a train-themed learning game for 3 to 8 year olds. Subject: a big golden two-pan balance scale standing perfectly level; the left pan holds a small brown cargo box and the right pan holds two small sea-blue weight blocks. Style: chunky dark ink-navy (#143B61) outlines, rounded toy proportions, flat color fills with only two-step shading and a small highlight from warm upper-left light; colors sea blue #1479B8, sunflower yellow #FFD344, coral orange #F46B27, grass green #58B85B and white, at most five colors. Composition: square 1:1, one bold main subject plus at most two small helper objects, centered; the whole drawing fits inside a centered circle whose diameter is about 70 percent of the image width and nothing touches that circle, so the outer ring and the four corners are plain background. Background: one flat solid pale peach color #FFE7D3 filling the whole square, no gradient, no texture, no border, no ring, no shadow on the background. Big simple shapes, very little small detail, no thin lines, readable at 64 pixels. No text, no letters and no numbers anywhere in the image."
+  },
+  {
+   "id": "tickets",
+   "round": "v1",
+   "tool": "image_gen",
+   "prompt_version": "r49-icons-v1",
+   "prompt": "Children's storybook sticker icon for a train-themed learning game for 3 to 8 year olds. Subject: a big orange-and-white train ticket with a small train silhouette printed on it, and three round golden tokens each stamped with a star lined up beside the ticket. Style: chunky dark ink-navy (#143B61) outlines, rounded toy proportions, flat color fills with only two-step shading and a small highlight from warm upper-left light; colors sea blue #1479B8, sunflower yellow #FFD344, coral orange #F46B27, grass green #58B85B and white, at most five colors. Composition: square 1:1, one bold main subject plus at most two small helper objects, centered; the whole drawing fits inside a centered circle whose diameter is about 70 percent of the image width and nothing touches that circle, so the outer ring and the four corners are plain background. Background: one flat solid pale peach color #FFE7D3 filling the whole square, no gradient, no texture, no border, no ring, no shadow on the background. Big simple shapes, very little small detail, no thin lines, readable at 64 pixels. No text, no letters and no numbers anywhere in the image."
+  },
+  {
+   "id": "tab-math",
+   "round": "v9a",
+   "tool": "image_gen",
+   "prompt_version": "r49-icons-v9a",
+   "prompt": "Children's storybook sticker icon for a train-themed learning game for 3 to 8 year olds. Subject: one giant chunky coral-orange plus sign in the center like a thick puffy sticker, with a smaller sea-blue minus sign floating at its upper right and a smaller sunflower-yellow equals sign floating at its lower left. No blocks, no boxes, no carriages. Style: chunky dark ink-navy (#143B61) outlines, rounded toy proportions, flat color fills with only two-step shading and a small highlight from warm upper-left light; colors sea blue #1479B8, sunflower yellow #FFD344, coral orange #F46B27, grass green #58B85B and white, at most five colors. Composition: square 1:1, one bold main subject plus at most two small helper objects, centered; the whole drawing fits inside a centered circle whose diameter is about 70 percent of the image width and nothing touches that circle, so the outer ring and the four corners are plain background. Background: one flat solid pale cream yellow color #FFF3C2 filling the whole square, no gradient, no texture, no border, no ring, no shadow on the background. Do not draw any circle frame, round badge, ring, disc, halo or plate-shaped backdrop behind or around the subject; the subject stands directly on the flat background. Big simple shapes, very little small detail, no thin lines, readable at 64 pixels. The only marks allowed are the plus, minus and equals signs as described; no letters, no numbers."
+  },
+  {
+   "id": "tab-observe",
+   "round": "v2",
+   "tool": "image_gen",
+   "prompt_version": "r49-icons-v2",
+   "prompt": "Children's storybook sticker icon for a train-themed learning game for 3 to 8 year olds. Subject: a big coral-orange magnifying glass; inside the round lens there is one big sunflower-yellow star. Nothing else. Style: chunky dark ink-navy (#143B61) outlines, rounded toy proportions, flat color fills with only two-step shading and a small highlight from warm upper-left light; colors sea blue #1479B8, sunflower yellow #FFD344, coral orange #F46B27, grass green #58B85B and white, at most five colors. Composition: square 1:1, one bold main subject plus at most two small helper objects, centered; the whole drawing fits inside a centered circle whose diameter is about 70 percent of the image width and nothing touches that circle, so the outer ring and the four corners are plain background. Background: one flat solid pale mint green color #DCF2DF filling the whole square, no gradient, no texture, no border, no ring, no shadow on the background. Do not draw any circle frame, round badge, ring, disc, halo or plate-shaped backdrop behind or around the subject; the subject stands directly on the flat background. Big simple shapes, very little small detail, no thin lines, readable at 64 pixels. No text, no letters and no numbers anywhere in the image."
+  },
+  {
+   "id": "tab-build",
+   "round": "v10",
+   "tool": "image_gen",
+   "prompt_version": "r49-icons-v10",
+   "prompt": "Children's storybook sticker icon for a train-themed learning game for 3 to 8 year olds. Subject: three stacked chunky toy building blocks (sea blue at the bottom, sunflower yellow in the middle, coral orange on top) with a green wooden direction signpost arrow sticking out sideways from the top block. Style: chunky dark ink-navy (#143B61) outlines, rounded toy proportions, flat color fills with only two-step shading and a small highlight from warm upper-left light; colors sea blue #1479B8, sunflower yellow #FFD344, coral orange #F46B27, grass green #58B85B and white, at most five colors. Composition: square 1:1, one bold main subject plus at most two small helper objects, centered; the whole drawing fits inside a centered circle whose diameter is about 70 percent of the image width and nothing touches that circle, so the outer ring and the four corners are plain background. Background: one flat solid pale sky blue color #D9EEFA filling the whole square, no gradient, no texture, no border, no ring, no shadow on the background. Do not draw any circle frame, round badge, ring, disc, halo or plate-shaped backdrop behind or around the subject; the subject stands directly on the flat background. Big simple shapes, very little small detail, no thin lines, readable at 64 pixels. No text, no letters and no numbers anywhere in the image."
+  },
+  {
+   "id": "tab-life",
+   "round": "v10",
+   "tool": "image_gen",
+   "prompt_version": "r49-icons-v10",
+   "prompt": "Children's storybook sticker icon for a train-themed learning game for 3 to 8 year olds. Subject: a coral-orange gift box with a sunflower-yellow ribbon bow, and one big red heart floating just above it. Style: chunky dark ink-navy (#143B61) outlines, rounded toy proportions, flat color fills with only two-step shading and a small highlight from warm upper-left light; colors sea blue #1479B8, sunflower yellow #FFD344, coral orange #F46B27, grass green #58B85B and white, at most five colors. Composition: square 1:1, one bold main subject plus at most two small helper objects, centered; the whole drawing fits inside a centered circle whose diameter is about 70 percent of the image width and nothing touches that circle, so the outer ring and the four corners are plain background. Background: one flat solid pale peach color #FFE7D3 filling the whole square, no gradient, no texture, no border, no ring, no shadow on the background. Do not draw any circle frame, round badge, ring, disc, halo or plate-shaped backdrop behind or around the subject; the subject stands directly on the flat background. Big simple shapes, very little small detail, no thin lines, readable at 64 pixels. No text, no letters and no numbers anywhere in the image."
+  },
+  {
+   "id": "tab-life",
+   "round": "v11e",
+   "tool": "image_edit",
+   "prompt_version": "r49-icons-v11-edit",
+   "prompt": "Remove the pale blue round disc behind the gift box. The whole background becomes one flat solid pale peach #FFE7D3 color with no circle, ring, disc or halo anywhere. Keep the gift box, ribbon, heart, grass, drawing style, outlines, colors and position exactly the same."
+  },
+  {
+   "id": "train-top",
+   "round": "train-v2",
+   "tool": "image_gen",
+   "prompt_version": "r49-train-v2",
+   "prompt": "A short two-car toy passenger train: a front car with a rounded bullet nose on the right and a second car coupled behind it on the left, joined by a grey accordion gangway. Seen from directly above (strict top-down bird's-eye view like a toy train on a play map; no side walls, no wheels visible), lying horizontally with its nose pointing to the RIGHT. Cute children's storybook toy style: chunky dark charcoal-grey (#2E3A46) outlines, rounded corners, flat colors with two-step shading and a soft highlight strip along the upper roof edge. The roof and body are one single saturated sea blue (#1F6FD1); details are only pale grey-blue (#EAF4FA), white and mid grey. Absolutely no yellow, orange, green or red anywhere on the train. Centered with wide empty margin on all sides. Background: flat solid pure magenta #FF00FF filling the whole image, no shadow, no ground, no rails, no texture. No text. The nose has a big curved white wraparound windshield and two small round white headlights at the tip; the tail end of the rear car is flat. Each roof has two rounded grey air-conditioner boxes. Total length about 5 times its width."
+  }
+ ]
+}
