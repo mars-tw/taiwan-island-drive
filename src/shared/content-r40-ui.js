@@ -1,5 +1,6 @@
 import {CAKE_SUPPORT} from './content-r39-ui.js';
 import {observationBox,CROSSING_ROADS} from './content-r35-scene.js';
+import {t} from './i18n.js';
 
 // Roof coordinates are in the carrier's untransformed frame. Changing lean
 // changes only the rigid assembly rotation, never these coordinates or scale.
@@ -32,7 +33,7 @@ export function renderR40({g,view,scene,miniature,cabin}){
  if(g.kind==='tickets'){
   const compare=scene.querySelector('.r30-comparison');
   if(compare&&!compare.hidden){
-   compare.querySelector('.r33-compare-title').innerHTML='<span></span><b>你的車票</b><span></span><b>這個月台</b><span></span>';
+   compare.querySelector('.r33-compare-title').innerHTML='<span></span><b>'+t('你的車票')+'</b><span></span><b>'+t('這個月台')+'</b><span></span>';
   }
   if(!cabin.hidden){
    const standing=cabin.querySelector('.r35-standing');
@@ -41,7 +42,7 @@ export function renderR40({g,view,scene,miniature,cabin}){
     // Keep the existing escort-button ring as the sole circle; the cabin
     // retains its accessible progressbar and a persistent numerical readout.
     standing.querySelector('svg').remove();
-    standing.querySelector('b').textContent=percent+'%・'+(g.escortStable>=.65?'站穩了':g.input.escort?'按住站穩':'已暫停');
+    standing.querySelector('b').textContent=percent+'%・'+t(g.escortStable>=.65?'站穩了':g.input.escort?'按住站穩':'已暫停');
    }
   }
  }

@@ -54,8 +54,20 @@ const FULLY_TRANSLATED = [
   ...['audio', 'config', 'game', 'main', 'physics', 'rewards', 'world'].map(name => `src/games/train/${name}.js`),
   'src/shared/journeys.js', 'src/shared/child-display.js', 'src/shared/content-text.js', 'src/shared/content-r1.js', 'src/shared/content-r1-ui.js',
   ...readdirSync('src/shared').filter(name => { const m = /^content-r(\d+)(?:-scene|-ui|-feedback)?\.js$/.exec(name); return m && +m[1] >= 2 && +m[1] <= 25; }).map(name => `src/shared/${name}`),
+  // L3b: flight + content-r26..r43 (content-r35-scene.js / content-r35-ui.js are SHA256-locked by R38 and localized at runtime via renderR43)
+  'src/games/flight/audio.js', 'src/games/flight/child-instructions.js', 'src/games/flight/child-pilot.js', 'src/games/flight/config.js',
+  'src/games/flight/flight-plans.js', 'src/games/flight/game.js', 'src/games/flight/instruments.js', 'src/games/flight/main.js',
+  'src/games/flight/mission.js', 'src/games/flight/physics.js', 'src/games/flight/rewards.js', 'src/games/flight/scenery.js',
+  'src/games/flight/voice.js', 'src/games/flight/world.js',
+  'src/shared/content-r26.js', 'src/shared/content-r26-scene.js', 'src/shared/content-r27.js', 'src/shared/content-r27-scene.js',
+  'src/shared/content-r28.js', 'src/shared/content-r28-scene.js', 'src/shared/content-r29.js', 'src/shared/content-r29-scene.js',
+  'src/shared/content-r30.js', 'src/shared/content-r30-scene.js', 'src/shared/content-r31.js', 'src/shared/content-r31-scene.js',
+  'src/shared/content-r32.js', 'src/shared/content-r32-scene.js', 'src/shared/content-r33.js', 'src/shared/content-r33-scene.js',
+  'src/shared/content-r35.js', 'src/shared/content-r37-scene.js', 'src/shared/content-r37-ui.js', 'src/shared/content-r39-ui.js',
+  'src/shared/content-r40-ui.js', 'src/shared/content-r41-scene.js', 'src/shared/content-r41-ui.js', 'src/shared/content-r42-scene.js',
+  'src/shared/content-r42-ui.js', 'src/shared/content-r43-scene.js', 'src/shared/content-r43-ui.js',
 ];
-const HTML_SCOPE = { 'index.html': 'all', 'car/index.html': 'all', 'train/index.html': 'all', 'flight/index.html': 'head' };
+const HTML_SCOPE = { 'index.html': 'all', 'car/index.html': 'all', 'train/index.html': 'all', 'flight/index.html': 'all' };
 // 不給玩家看、或刻意不翻的中文（每一條寫原因）。
 const NOT_UI = [
   { file: 'src/shared/academy-ui.js', text: '再看看', why: '比對 dispatch 訊息開頭，用來決定要不要顯示，不會顯示在畫面上' },
@@ -70,6 +82,10 @@ const NOT_UI = [
   { file: 'src/games/car/game.js', text: '顯示連線中斷，請重新整理遊戲。', why: 'Error 訊息只印到 console；畫面上的提示是 main.js 另一句已翻好的句子' },
   { file: 'src/games/train/main.js', text: '站', why: '接在站名後組成完整站名（藍灣站）再整句 t()，單獨不會顯示' },
   { file: 'src/games/train/world.js', text: '站', why: '同上：3D 站牌把站名接成完整站名後才翻' },
+  // L3b internal string matchers / rewriters
+  ...['燈塔', '港', '岩', '農', '觀景'].map(text => ({ file: 'src/games/flight/scenery.js', text, why: '比對 flight-plans 中文地標名以決定 3D 建物類型，不顯示在畫面上' })),
+  ...['亮起的手，', '看蛋糕歪哪邊，', '快到托盤邊，', '歪得很大，', '推回托盤中央', '慢慢扶回正', '推回中央'].map(text => ({ file: 'src/shared/content-r39-ui.js', text, why: '改寫 R35 中文句子用的內部片段；改寫後的完整句皆已收進 en-scenes.js' })),
+  ...['亮起的手，', '看蛋糕歪哪邊，', '亮起的手', '快到托盤邊，', '歪得很大，', '推回托盤中央', '慢慢扶回正', '推回中央'].map(text => ({ file: 'src/shared/content-r41-scene.js', text, why: '改寫 R35 中文句子用的內部片段；改寫後的完整句皆已收進 en-scenes.js' })),
 ];
 
 test('R50 every dictionary file is loaded by i18n.js and no key has two different translations', () => {

@@ -1,4 +1,5 @@
 import {pavementLocation,arrivedCount,wrongSupportText,observationState,observationProjection,LANDING_PROGRESS,PAVEMENTS} from './content-r41-scene.js';
+import {t} from './i18n.js';
 
 // Alpha canvas foot baselines are shared by each pose family (400px canvas).
 // The geometry verifier independently reads the actual source alpha pixels.
@@ -49,7 +50,7 @@ export function renderR41({g,view,dialog,scene,sideView}){
  }
  const landed=arrivedCount(g);
  scene.dataset.arrivedCount=String(landed);
- scene.querySelector('.content-observe').textContent=`已到對岸 ${landed}/3 人`;
+ scene.querySelector('.content-observe').textContent=t('已到對岸 {n}/3 人',{n:landed});
  // Both cards always use the same original-road crop. The old expiring
  // magnifier can no longer replace a stopped-car card with a different view.
  const zoom=dialog.querySelector('.r35-observation');if(zoom)zoom.hidden=true;
@@ -57,7 +58,7 @@ export function renderR41({g,view,dialog,scene,sideView}){
  for(const card of sideView.querySelectorAll('section[data-side]')){
   const side=card.dataset.side,state=observationState(view,side),thumb=card.querySelector('.r32-road-thumb');
   card.dataset.observationState=state;
-  card.querySelector('b').textContent=(side==='left'?'← 左邊':'右邊 →')+'・'+({unseen:'還沒看',approaching:'車正在接近',stopped:'車停在線前',clear:'路面淨空'}[state]);
+  card.querySelector('b').textContent=t(side==='left'?'← 左邊':'右邊 →')+'・'+t({unseen:'還沒看',approaching:'車正在接近',stopped:'車停在線前',clear:'路面淨空'}[state]);
   thumb.style.setProperty('background-image',state==='unseen'?'none':getComputedStyle(scene.querySelector('.crossing-panorama'),'::before').backgroundImage,'important');
   const box=observationProjection(view,g.stage,thumb.clientWidth,thumb.clientHeight),im=thumb.querySelector('img');
   thumb.dataset.laneTop=String(box.laneTop);thumb.dataset.laneBottom=String(box.laneBottom);

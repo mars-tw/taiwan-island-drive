@@ -7,5 +7,5 @@ const REWARDS = Object.freeze({
 });
 export function rewardForEvent(event) {
   const text = REWARDS[event?.type];
-  return text ? { stars: 1, text: event.type === 'landmark' && event.label ? `到了，${event.label}！` : text } : null;
+  return text ? { stars: 1, text: event.type === 'landmark' && event.label ? '到了，{place}！'.replace('{place}', event.label) : text } : null;
 }

@@ -106,6 +106,7 @@
   - 火車站（遊戲自創，翻意思）：海風 Sea Breeze、藍灣 Blue Bay、山海 Hill & Sea、河畔 Riverside、星光 Starlight、城市 City、杉林 Cedar Grove、雲霧 Misty Cloud、森林 Forest，加「站」就是 … Station；起點站 Start Station、終點站 Last Stop。
   - 海岸實作課的站：海風站 Sea Breeze Station、榕樹站 Banyan Station、燈塔站 Lighthouse Station。
   - 海岸實作課的人物：小朋友 Kid、腳踏車 Bike、奶奶 Grandma；上車的三位朋友：小安 An、小晴 Ching、小宇 Yu。
+- **L3b 新增地點與角色名**：海岸坡 Coast Hill、燈塔雙彎 Lighthouse Bends、休息灣 rest bay、分享站 Sharing Stop、海風路口 Sea Breeze Crossing、榕樹路口 Banyan Crossing、燈塔路口 Lighthouse Crossing、縱谷練習場 Rift Valley Field、澎湖離島 Penghu Islands、都會河岸 City Riverside；小安 An、小柏 Bo、小晴 Ching、小宇 Yu、阿嬤／奶奶 Grandma。
 - 新增地名時，把它補進本表，再寫進自己那條線的字典。
 
 ## 三之一、數學遊戲室與火車謎題（L2）常用詞

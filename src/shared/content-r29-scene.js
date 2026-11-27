@@ -1,24 +1,25 @@
 import {drivingCue as previousDriving,boardingCue as previousBoarding,stageBrief as previousBrief,queuePosition as previousQueue,ticketSceneGeometry,holdFeedback as previousHold} from './content-r28-scene.js';
 import {queueFrame} from './content-r10-scene.js';
 import {FRIEND_NAMES} from './content-r29.js';
+import {t} from './i18n.js';
 export * from './content-r28-scene.js';
 export const STOP_RULES={cake:['慢慢上坡','兩個彎','停穩再起步'],crossing:['看清兩邊','看清兩邊','離場再看'],tickets:['形狀、顏色都一樣','形狀、顏色都一樣','形狀、顏色都一樣']};
-export function stageBrief(g,stage=g.stage){return g.kind==='tickets'?['比形狀和顏色','再比形狀和顏色','兩樣都要相同'][stage]:previousBrief(g,stage);}
+export function stageBrief(g,stage=g.stage){return g.kind==='tickets'?t(['比形狀和顏色','再比形狀和顏色','兩樣都要相同'][stage]):previousBrief(g,stage);}
 export function drivingCue(g){
- if(g.bayRestarted&&g.distance<55)return {action:'go',text:g.distance<51?'按住踏板，慢慢離開格子。':'回到主路，慢慢向前。'};
- if(g.bayStopped&&g.restReady&&!g.bayRestarted)return {action:'go',text:'蛋糕坐穩了，按住踏板出灣。'};
- if(g.recoveryActive&&g.speed<2&&!g.recoveryWrong&&!g.input.brake)return {action:g.balanceLean>0?'recover-left':'recover-right',text:'慢慢向中間扶，蛋糕會坐穩。'};
+ if(g.bayRestarted&&g.distance<55)return {action:'go',text:t(g.distance<51?'按住踏板，慢慢離開格子。':'回到主路，慢慢向前。')};
+ if(g.bayStopped&&g.restReady&&!g.bayRestarted)return {action:'go',text:t('蛋糕坐穩了，按住踏板出灣。')};
+ if(g.recoveryActive&&g.speed<2&&!g.recoveryWrong&&!g.input.brake)return {action:g.balanceLean>0?'recover-left':'recover-right',text:t('慢慢向中間扶，蛋糕會坐穩。')};
  return previousDriving(g);
 }
 export function departReasons(g){
- if(g.canDepart)return ['路面淨空，可以出發'];
+ if(g.canDepart)return [t('路面淨空，可以出發')];
  const reasons=[];
- if(g.speed>.05)reasons.push('先停穩');
- if(g.trafficActive)reasons.push('還有一台車');
- if(g.crossTime>0)reasons.push('等'+FRIEND_NAMES[g.crossingPerson]+'到對岸');
- else if(g.crossed<3)reasons.push('還有'+(3-g.crossed)+'位朋友');
- for(const side of ['left','right'])if(!g.looked[side])reasons.push('再看'+(side==='left'?'左':'右')+'邊');
- if(!g.trafficConfirmed&&!g.trafficActive)reasons.push('先確認來車');
+ if(g.speed>.05)reasons.push(t('先停穩'));
+ if(g.trafficActive)reasons.push(t('還有一台車'));
+ if(g.crossTime>0)reasons.push(t('等{name}到對岸',{name:t(FRIEND_NAMES[g.crossingPerson])}));
+ else if(g.crossed<3)reasons.push(t('還有{n}位朋友',{n:3-g.crossed}));
+ for(const side of ['left','right'])if(!g.looked[side])reasons.push(t(side==='left'?'再看左邊':'再看右邊'));
+ if(!g.trafficConfirmed&&!g.trafficActive)reasons.push(t('先確認來車'));
  return reasons;
 }
 export function crossingLocation(who,phase,progress=0,stage=0,order=['child','bike','grandma']){
@@ -32,10 +33,10 @@ export function crossingLocation(who,phase,progress=0,stage=0,order=['child','bi
 export function boardingCue(g){
  if(g.doorStage!=='boarding')return previousBoarding(g);
  const original=previousBoarding(g);
- if(g.escortGate&&!g.escortGateReleased)return {...original,text:'到門邊先放開，等他站穩。'};
- if(g.escortGateReleased&&g.standStillTime<.45)return {...original,text:'放開等一等，讓朋友站穩。'};
- if(queueFrame(g.boardTime,g.boardingIndex).progress>=.35&&!g.escortGateReleased)return {...original,text:'到門邊先放開，等他站穩。'};
- if(!g.holdGuideSeen)return {...original,text:'手指按住，陪朋友走；到門邊放開。'};
+ if(g.escortGate&&!g.escortGateReleased)return {...original,text:t('到門邊先放開，等他站穩。')};
+ if(g.escortGateReleased&&g.standStillTime<.45)return {...original,text:t('放開等一等，讓朋友站穩。')};
+ if(queueFrame(g.boardTime,g.boardingIndex).progress>=.35&&!g.escortGateReleased)return {...original,text:t('到門邊先放開，等他站穩。')};
+ if(!g.holdGuideSeen)return {...original,text:t('手指按住，陪朋友走；到門邊放開。')};
  return original;
 }
 export function holdFeedback(g){

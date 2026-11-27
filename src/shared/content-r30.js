@@ -16,7 +16,7 @@ export class ContentLesson extends PreviousLesson {
   if(this.speed>.05){this.choiceHint='先煞車停穩，再看。';return;}
   this.focus=side;this.viewVisit[side]=true;this.facts[side+'Views']++;
   if(this.staleSide===side&&this.trafficActive){this.choiceHint='新車還在，等車過了再看。';return;}
-  if(this.staleSide&&side!==this.staleSide){this.choiceHint='另一邊有新車，再看'+(this.staleSide==='left'?'左':'右')+'邊。';return;}
+  if(this.staleSide&&side!==this.staleSide){this.choiceHint=this.staleSide==='left'?'另一邊有新車，再看左邊。':'另一邊有新車，再看右邊。';return;}
   this.looked[side]=true;this.choiceHint='';this.wrongLook='';
   if(side===this.trafficSource)this.trafficConfirmed=true;
   if(side===this.staleSide){this.staleSide='';this.refreshes++;}
@@ -24,7 +24,7 @@ export class ContentLesson extends PreviousLesson {
   if(this.looked.left&&this.looked.right&&!this.trafficActive&&!this.staleSide){this.friendConfirmed=true;this.confirmDelay=.45;this.facts.confirmations++;}
  }
  depart(){
-  if(this.kind==='crossing'&&!this.canDepart){this.facts.blockedStarts++;this.choiceHint=this.staleSide?'新車來了，再看'+(this.staleSide==='left'?'左':'右')+'邊。':this.trafficActive?'還有車，先等。':this.crossed<3?'等朋友到對岸。':'先看清兩邊。';return false;}
+  if(this.kind==='crossing'&&!this.canDepart){this.facts.blockedStarts++;this.choiceHint=this.staleSide?(this.staleSide==='left'?'新車來了，再看左邊。':'新車來了，再看右邊。'):this.trafficActive?'還有車，先等。':this.crossed<3?'等朋友到對岸。':'先看清兩邊。';return false;}
   return super.depart();
  }
  update(seconds){
@@ -42,7 +42,7 @@ export class ContentLesson extends PreviousLesson {
   if(!this.newTraffic&&this.crossed===0&&this.crossTime>=this.crossingDuration*.26){
    this.newTraffic=true;this.newTrafficTime=0;this.staleSide=this.trafficSource;
    this.looked[this.staleSide]=false;this.trafficConfirmed=false;this.friendConfirmed=false;
-   this.choiceHint='新車接近，等朋友過，再看'+(this.staleSide==='left'?'左':'右')+'邊。';
+   this.choiceHint=this.staleSide==='left'?'新車接近，等朋友過，再看左邊。':'新車接近，等朋友過，再看右邊。';
   }
   if(this.crossTime>0||this.friendConfirmed&&!this.trafficActive&&!this.staleSide){
    if(this.confirmDelay>0){this.confirmDelay=Math.max(0,this.confirmDelay-dt);return;}

@@ -18,7 +18,7 @@ export class ContentLesson extends PreviousLesson {
  get bend(){const first=[1,-1,1][this.stage]*((this.layoutSeed||0)%2?-1:1);return this.stage===1&&this.distance>29?-first:first;}
  get trafficSource(){const first=this.stage===1?'right':'left';return (this.layoutSeed||0)%2?(first==='left'?'right':'left'):first;}
  get lookSequence(){const first=this.trafficSource,other=first==='left'?'right':'left';return this.stage===2?[first,other,first]:[first,other];}
- get target(){const target=super.target;if(!(this.layoutSeed||0))return target;const colors=['blue','orange','green'],color=colors[(colors.indexOf(target.color)+this.layoutSeed)%3],names={blue:'藍',orange:'橘',green:'綠'};return {...target,color,name:names[color]+{circle:'圓形',triangle:'三角形',square:'正方形'}[target.shape]};}
+ get target(){const target=super.target;if(!(this.layoutSeed||0))return target;const colors=['blue','orange','green'],color=colors[(colors.indexOf(target.color)+this.layoutSeed)%3],names={blue:{circle:'藍圓形',triangle:'藍三角形',square:'藍正方形'},orange:{circle:'橘圓形',triangle:'橘三角形',square:'橘正方形'},green:{circle:'綠圓形',triangle:'綠三角形',square:'綠正方形'}};return {...target,color,name:names[color][target.shape]};}
  get canDepart(){return super.canDepart&&!this.trafficActive&&this.trafficConfirmed;}
  chooseStage(index){if(this.phase!=='ready'||!Number.isInteger(index)||index<0||index>2)return false;this.stage=index;this.reset();return true;}
  snapshot(){const s=super.snapshot();return {...s,stage:this.phase==='checkpoint'?this.nextStage:this.stage,visited:[...(this.visited||[])],contentVersion:28};}
@@ -33,7 +33,7 @@ export class ContentLesson extends PreviousLesson {
   if(this.trafficActive&&side===this.trafficSource)this.trafficConfirmed=true;
   if(this.friendConfirmed||this.crossTime>0||this.crossed===3){this.choiceHint='';return;}
   if(this.stage===2&&this.lookStep===2&&this.trafficActive){this.choiceHint='來車還沒過完，先等。';return;}
-  if(side!==this.lookSequence[this.lookStep]){this.mistake();this.wrongLook=side;this.choiceHint=this.hintLevel===1?'看看還沒確認的那一邊。':`再看${this.lookSequence[this.lookStep]==='left'?'左':'右'}邊。`;return;}
+  if(side!==this.lookSequence[this.lookStep]){this.mistake();this.wrongLook=side;this.choiceHint=this.hintLevel===1?'看看還沒確認的那一邊。':this.lookSequence[this.lookStep]==='left'?'再看左邊。':'再看右邊。';return;}
   this.looked[side]=true;this.lookStep++;this.facts[side+'Views']++;this.choiceHint='';this.wrongLook='';
   if(this.stage===2&&this.lookStep===2)this.looked[this.trafficSource]=false;
   if(this.lookStep===this.lookSequence.length){this.friendConfirmed=true;this.confirmDelay=.65;this.facts.confirmations++;}

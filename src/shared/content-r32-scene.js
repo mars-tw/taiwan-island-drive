@@ -1,6 +1,7 @@
 import {cakeView as oldCake,crossingView as oldCrossing,boardingCue as oldBoarding,holdFeedback as oldHold,ticketSceneGeometry as oldGeometry,carGround as oldGround,cakeAngle,CROSSING_ROADS} from './content-r31-scene.js';
 import {queueFrame} from './content-r10-scene.js';
 import {PASSENGER_NAMES} from './content-r32.js';
+import {t,translateText} from './i18n.js';
 export * from './content-r31-scene.js';
 const clamp=(v,a=0,b=1)=>Math.max(a,Math.min(b,v));
 export function roadPicture(g,preview=false){
@@ -19,27 +20,29 @@ export function cakeView(g){
  if(g.stage===2&&g.distance>=40)road.shape=(g.layoutSeed||0)%2?'right':'left';
  let text=old.text,status=old.status;
  if(g.practice){
-  text=edge?'滑到托盤邊了，試著救回來。':g.recoveryWrong?'越扶越歪了，換個方法。':Math.abs(slide)>8?'蛋糕滑動了，看看車速。':angle?'看蛋糕歪哪邊，自己扶。':g.inBend?(g.speed===0?'踏板和轉向可以一起按。':'看路彎向哪邊，自己試試。'):g.distance>=55?'分享站到了，自己停穩。':old.id==='parked'?'休息好了，自己慢慢出灣。':g.stage===2&&g.distance>=42&&!g.bayStopped?'進灣了，自己決定何時停。':'輕踩或放開，看看蛋糕。';
+  text=t(edge?'滑到托盤邊了，試著救回來。':g.recoveryWrong?'越扶越歪了，換個方法。':Math.abs(slide)>8?'蛋糕滑動了，看看車速。':angle?'看蛋糕歪哪邊，自己扶。':g.inBend?(g.speed===0?'踏板和轉向可以一起按。':'看路彎向哪邊，自己試試。'):g.distance>=55?'分享站到了，自己停穩。':old.id==='parked'?'休息好了，自己慢慢出灣。':g.stage===2&&g.distance>=42&&!g.bayStopped?'進灣了，自己決定何時停。':'輕踩或放開，看看蛋糕。');
  }
- if(edge)status='快到托盤邊';else if(Math.abs(slide)>8)status='蛋糕滑動了';
- return Object.freeze({...old,title:g.practice?`第 ${g.stage+1} 站・${['海岸坡','燈塔雙彎','休息灣'][g.stage]}`:old.title,pose:Object.freeze(pose),ground:carGround(g),shift:slide,edge,status,text,road,
+ if(edge)status=t('快到托盤邊');else if(Math.abs(slide)>8)status=t('蛋糕滑動了');
+ return Object.freeze({...old,title:g.practice?t('第 {n} 站・{name}',{n:g.stage+1,name:t(['海岸坡','燈塔雙彎','休息灣'][g.stage])}):old.title,pose:Object.freeze(pose),ground:carGround(g),shift:slide,edge,status,text,road,
   fill:angle===0?100:old.fill,highlight:g.practice?'':old.highlight,action:g.practice?'':old.action,
   roadArt:roadPicture(g),mirrored:roadPicture(g).mirror});
 }
 export function crossingView(g){
  const old=oldCrossing(g),side=g.trafficSource,time=g.newTraffic?g.newTrafficTime:g.trafficTime,total=g.newTraffic?3.2:[2.8,3.8,3.2][g.stage];
  const yielding=g.newTraffic&&g.crossTime>0&&g.crossed===0;
- const t=clamp(time/total),travel=yielding?clamp(time/.3)*.16:clamp((t-.09)/.91)*.84+.16;
+ const p=clamp(time/total),travel=yielding?clamp(time/.3)*.16:clamp((p-.09)/.91)*.84+.16;
  const x=side==='left'?4+92*travel:96-92*travel;
- const traffic=Object.freeze({...old.traffic,x,top:CROSSING_ROADS[g.stage].center-5,yielding,motion:yielding?'讓行':t<.28?'接近':t>.78?'離開':'通過'});
- const sides=Object.freeze(Object.fromEntries(Object.entries(old.sides).map(([s,v])=>[s,Object.freeze({...v,road:!v.observed?v.road:v.car?(yielding?'車停在線前':'車正在'+traffic.motion):'路面淨空'})])));
+ const traffic=Object.freeze({...old.traffic,x,top:CROSSING_ROADS[g.stage].center-5,yielding,motion:yielding?'讓行':p<.28?'接近':p>.78?'離開':'通過'});
+ // R50: motion stays a Chinese code word (data-motion); the road line is one whole sentence.
+ const moving={接近:'車正在接近',通過:'車正在通過',離開:'車正在離開',讓行:'車正在讓行'};
+ const sides=Object.freeze(Object.fromEntries(Object.entries(old.sides).map(([s,v])=>[s,Object.freeze({...v,road:!v.observed?v.road:t(v.car?(yielding?'車停在線前':moving[traffic.motion]):'路面淨空')})])));
  let text=old.text;
- if(yielding)text='車在線前等，朋友先過。';
- if(g.practice&&g.safetyNotice>0&&g.choiceHint)text=g.choiceHint;
+ if(yielding)text=t('車在線前等，朋友先過。');
+ if(g.practice&&g.safetyNotice>0&&g.choiceHint)text=translateText(g.choiceHint);
  return Object.freeze({...old,text,note:text,action:g.practice?'':old.action,sides,traffic,player:Object.freeze({...old.player,forward:old.player.forward*1.65})});
 }
 export function boardingCue(g){
- if(g.doorStage==='awaiting'){const name=PASSENGER_NAMES[g.boardingIndex];return {action:g.chosenPassenger>=0?'board':'',label:g.chosenPassenger>=0?`邀${name}上車`:`點${name}的車票`,text:`輪到${name}，${g.chosenPassenger>=0?'邀請上車。':'點亮框。'}`};}
+ if(g.doorStage==='awaiting'){const name=t(PASSENGER_NAMES[g.boardingIndex]);return {action:g.chosenPassenger>=0?'board':'',label:t(g.chosenPassenger>=0?'邀{name}上車':'點{name}的車票',{name}),text:t(g.chosenPassenger>=0?'輪到{name}，邀請上車。':'輪到{name}，點亮框。',{name})};}
  const old=oldBoarding(g);return {...old,text:old.text?.replaceAll('他','朋友'),label:old.label?.replaceAll('他','朋友')};
 }
 export function holdFeedback(g){const h=oldHold(g);return g.kind==='tickets'?{...h,reason:h.reason?.replaceAll('他','朋友')}:h;}
