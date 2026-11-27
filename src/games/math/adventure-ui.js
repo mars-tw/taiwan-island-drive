@@ -2,12 +2,16 @@
 // Code: Apache-2.0; original educational text: CC-BY-4.0.
 // Changed for the academy: header added, "?v=1.11.0" import cache queries removed, line endings normalised; logic unchanged.
 // See public/licenses/taiwan-train-math/NOTICE.txt and docs/r48-math-room-assets.json.
+// R50: on-screen text goes through t()/tx() for the Chinese/English switch; the Chinese output is unchanged.
 import { railLinks, DIRECTIONS, SOUVENIRS, SOUVENIR_THEMES } from "./adventure.js";
+import { t, isEnglish } from "../../shared/i18n.js";
+import { tx } from "./room-text.js";
 const treasureIcons = {
   star: { icon: "✦", name: "星星" },
   leaf: { icon: "🍃", name: "葉子" },
   shell: { icon: "🐚", name: "貝殼" },
 };
+const FRIENDS = ["小熊", "小兔", "小貓熊"];
 function arrivingTrain(q) {
   const direction = (from, to) =>
     to === from - q.columns
@@ -44,30 +48,33 @@ export function railDrawing(kind, rotation, ghost = false) {
 }
 export function adventureScene(q, trip) {
   if (q.game === "tracks")
-    return `<div class="tracks-stage"><div class="track-signs"><span>🚆 起點 →</span><span>終點小站 🏠</span></div><div class="rail-puzzle ${trip.solved ? "connected" : ""}" style="--columns:${q.columns}">${q.tiles
+    return `<div class="tracks-stage"><div class="track-signs"><span>🚆 ${t("起點")} →</span><span>${t("終點小站")} 🏠</span></div><div class="rail-puzzle ${trip.solved ? "connected" : ""}" style="--columns:${q.columns}">${q.tiles
       .map(
         (tile, i) =>
-          `<button class="rail-tile ${tile.kind === "empty" ? "scenery-tile" : ""} ${i === q.start ? "rail-start" : ""} ${i === q.finish ? "rail-finish" : ""}" data-rotate="${i}" ${tile.kind === "empty" || trip.solved ? "disabled" : ""} aria-label="第 ${i + 1} 格${
+          `<button class="rail-tile ${tile.kind === "empty" ? "scenery-tile" : ""} ${i === q.start ? "rail-start" : ""} ${i === q.finish ? "rail-finish" : ""}" data-rotate="${i}" ${tile.kind === "empty" || trip.solved ? "disabled" : ""} aria-label="${giftEsc(
             tile.kind === "empty"
-              ? "，草地"
-              : `，${tile.kind === "curve" ? "彎" : "直"}軌道，接往${railLinks(
-                  tile.kind,
-                  trip.rotations[i],
-                )
-                  .map((d) => DIRECTIONS[d])
-                  .join("和")}，點一下轉向`
-          }">${tile.kind === "empty" ? '<span aria-hidden="true">🌳</span>' : `<svg viewBox="0 0 100 100" aria-hidden="true">${railDrawing(tile.kind, trip.rotations[i])}</svg>`}${i === q.start ? '<i class="track-endpoint" aria-hidden="true">起</i>' : i === q.finish ? '<i class="track-endpoint" aria-hidden="true">站</i>' : ""}</button>`,
+              ? t("第 {n} 格，草地", { n: i + 1 })
+              : t(tile.kind === "curve" ? "第 {n} 格，彎軌道，接往{dirs}，點一下轉向" : "第 {n} 格，直軌道，接往{dirs}，點一下轉向", {
+                  n: i + 1,
+                  dirs: railLinks(
+                    tile.kind,
+                    trip.rotations[i],
+                  )
+                    .map((d) => t(DIRECTIONS[d]))
+                    .join(isEnglish() ? " and " : "和"),
+                }),
+          )}">${tile.kind === "empty" ? '<span aria-hidden="true">🌳</span>' : `<svg viewBox="0 0 100 100" aria-hidden="true">${railDrawing(tile.kind, trip.rotations[i])}</svg>`}${i === q.start ? `<i class="track-endpoint" aria-hidden="true">${t("起")}</i>` : i === q.finish ? `<i class="track-endpoint" aria-hidden="true">${t("站")}</i>` : ""}</button>`,
       )
       .join(
         "",
-      )}${trip.solved ? arrivingTrain(q) : ""}</div>${trip.solved ? '<div class="track-arrival"><span aria-hidden="true">🚄</span><strong>路接通了，列車到站！</strong></div>' : '<p class="track-instruction">每點一下，軌道轉四分之一圈。從「起」跟著走到「站」。</p>'}<div class="adventure-actions"><button class="text-btn" id="tracks-reset" ${trip.solved ? "disabled" : ""}>重新鋪一次</button><button class="primary-btn" id="tracks-submit" ${trip.solved ? "disabled" : ""}>讓列車出發 →</button></div></div>`;
+      )}${trip.solved ? arrivingTrain(q) : ""}</div>${trip.solved ? `<div class="track-arrival"><span aria-hidden="true">🚄</span><strong>${t("路接通了，列車到站！")}</strong></div>` : `<p class="track-instruction">${t("每點一下，軌道轉四分之一圈。從「起」跟著走到「站」。")}</p>`}<div class="adventure-actions"><button class="text-btn" id="tracks-reset" ${trip.solved ? "disabled" : ""}>${t("重新鋪一次")}</button><button class="primary-btn" id="tracks-submit" ${trip.solved ? "disabled" : ""}>${t("讓列車出發 →")}</button></div></div>`;
   if (q.game === "sharing") {
     const left = q.total - trip.shares.reduce((a, b) => a + b, 0);
-    return `<div class="sharing-stage"><div class="picnic-basket"><span class="stage-label">列車點心籃 · 還有 ${left} 份</span><div>${Array.from({ length: left }, () => `<span aria-hidden="true">${q.food}</span>`).join("") || "<strong>點心都分好了，看看每位是否一樣多。</strong>"}</div></div><div class="picnic-friends" style="--friends:${q.friends}">${trip.shares.map((n, i) => `<div class="picnic-friend"><span class="friend-face" aria-hidden="true">${["🐻", "🐰", "🐼"][i]}</span><strong>${["小熊", "小兔", "小貓熊"][i]} · ${n} 份</strong><div class="picnic-plate">${Array.from({ length: n }, (_, j) => `<button data-return-snack="${i}" ${trip.solved ? "disabled" : ""} aria-label="從${["小熊", "小兔", "小貓熊"][i]}搬回第 ${j + 1} 份點心">${q.food}</button>`).join("") || "<span>小盤子</span>"}</div><button class="secondary-btn" data-share="${i}" ${left === 0 || trip.solved ? "disabled" : ""}>給${["小熊", "小兔", "小貓熊"][i]} 1 份</button></div>`).join("")}</div><div class="adventure-actions"><button id="sharing-reset" class="text-btn" ${trip.solved ? "disabled" : ""}>全部放回籃子</button><button id="sharing-submit" class="primary-btn" ${trip.solved || left > 0 ? "disabled" : ""}>大家一樣多了 ✓</button></div></div>`;
+    return `<div class="sharing-stage"><div class="picnic-basket"><span class="stage-label">${t("列車點心籃 · 還有 {n} 份", { n: left })}</span><div>${Array.from({ length: left }, () => `<span aria-hidden="true">${q.food}</span>`).join("") || `<strong>${t("點心都分好了，看看每位是否一樣多。")}</strong>`}</div></div><div class="picnic-friends" style="--friends:${q.friends}">${trip.shares.map((n, i) => `<div class="picnic-friend"><span class="friend-face" aria-hidden="true">${["🐻", "🐰", "🐼"][i]}</span><strong>${t("{name} · {n} 份", { name: t(FRIENDS[i]), n })}</strong><div class="picnic-plate">${Array.from({ length: n }, (_, j) => `<button data-return-snack="${i}" ${trip.solved ? "disabled" : ""} aria-label="${giftEsc(t("從{name}搬回第 {n} 份點心", { name: t(FRIENDS[i]), n: j + 1 }))}">${q.food}</button>`).join("") || `<span>${t("小盤子")}</span>`}</div><button class="secondary-btn" data-share="${i}" ${left === 0 || trip.solved ? "disabled" : ""}>${t("給{name} 1 份", { name: t(FRIENDS[i]) })}</button></div>`).join("")}</div><div class="adventure-actions"><button id="sharing-reset" class="text-btn" ${trip.solved ? "disabled" : ""}>${t("全部放回籃子")}</button><button id="sharing-submit" class="primary-btn" ${trip.solved || left > 0 ? "disabled" : ""}>${t("大家一樣多了 ✓")}</button></div></div>`;
   }
   if (q.game === "treasure") {
     const found = trip.found.size;
-    return `<div class="treasure-stage"><div class="treasure-toolbar"><span>尋找 <b>${treasureIcons[q.target].icon} ${treasureIcons[q.target].name}</b></span><strong>已找到 ${found} / ${q.answer}</strong></div><div class="treasure-landscape ${trip.solved ? "treasure-complete" : ""}" style="--treasure-columns:${q.items.length === 9 ? 3 : 4}"><img src="assets/images/railway-world-v2.webp" alt="想像鐵道樂園尋寶風景" width="1672" height="941" loading="lazy"><div class="treasure-items">${q.items.map((kind, i) => `<button class="treasure-item kind-${kind} ${trip.found.has(i) ? "found" : ""} " data-find="${i}" ${trip.solved || trip.found.has(i) ? "disabled" : ""} aria-label="第 ${i + 1} 個，${treasureIcons[kind].name}${trip.found.has(i) ? "，已找到" : ""}"><span aria-hidden="true">${treasureIcons[kind].icon}</span>${trip.found.has(i) ? '<i aria-hidden="true">✓</i>' : ""}</button>`).join("")}</div>${trip.solved ? '<div class="treasure-message"><span aria-hidden="true">✉ ✦</span><strong>寶物都找到了！</strong></div>' : ""}</div><p class="treasure-help">找到的會留下亮亮記號，慢慢找就好。</p></div>`;
+    return `<div class="treasure-stage"><div class="treasure-toolbar"><span>${t("尋找 {item}", { item: `<b>${treasureIcons[q.target].icon} ${t(treasureIcons[q.target].name)}</b>` })}</span><strong>${t("已找到 {found} / {total}", { found, total: q.answer })}</strong></div><div class="treasure-landscape ${trip.solved ? "treasure-complete" : ""}" style="--treasure-columns:${q.items.length === 9 ? 3 : 4}"><img src="assets/images/railway-world-v2.webp" alt="${giftEsc(t("想像鐵道樂園尋寶風景"))}" width="1672" height="941" loading="lazy"><div class="treasure-items">${q.items.map((kind, i) => `<button class="treasure-item kind-${kind} ${trip.found.has(i) ? "found" : ""} " data-find="${i}" ${trip.solved || trip.found.has(i) ? "disabled" : ""} aria-label="${giftEsc(t(trip.found.has(i) ? "第 {n} 個，{name}，已找到" : "第 {n} 個，{name}", { n: i + 1, name: t(treasureIcons[kind].name, { n: 1 }) }))}"><span aria-hidden="true">${treasureIcons[kind].icon}</span>${trip.found.has(i) ? '<i aria-hidden="true">✓</i>' : ""}</button>`).join("")}</div>${trip.solved ? `<div class="treasure-message"><span aria-hidden="true">✉ ✦</span><strong>${t("寶物都找到了！")}</strong></div>` : ""}</div><p class="treasure-help">${t("找到的會留下亮亮記號，慢慢找就好。")}</p></div>`;
   }
   return "";
 }
@@ -122,33 +129,33 @@ const giftShapes = {
 function souvenirArt(item) {
   const shape = giftShapes[item.id] || giftShapes.spark;
   const wind = item.playKind === "wind" && !shape.includes("gift-rotor") && !shape.includes("gift-sway") ? " gift-sway" : "";
-  return `<div class="gift-visual theme-${giftEsc(item.theme)}" aria-hidden="true"><svg class="gift-svg" viewBox="0 0 120 100" focusable="false"><ellipse class="gift-halo gift-glow" cx="60" cy="52" rx="48" ry="42" fill="#f7d965"/><ellipse class="gift-shadow" cx="60" cy="91" rx="33" ry="4" fill="#2b5148" opacity=".12"/><g class="gift-object${wind}" stroke="#2b5148" stroke-width="2.5" stroke-linejoin="round" fill="none">${shape}</g><g class="gift-stamp-mark" transform="translate(86 26) rotate(-15)"><circle r="18" fill="#fff4d5" stroke="#c36e4a" stroke-width="3"/><text y="5" text-anchor="middle" fill="#a64e31" font-size="16" font-weight="700">旅</text></g></svg></div>`;
+  return `<div class="gift-visual theme-${giftEsc(item.theme)}" aria-hidden="true"><svg class="gift-svg" viewBox="0 0 120 100" focusable="false"><ellipse class="gift-halo gift-glow" cx="60" cy="52" rx="48" ry="42" fill="#f7d965"/><ellipse class="gift-shadow" cx="60" cy="91" rx="33" ry="4" fill="#2b5148" opacity=".12"/><g class="gift-object${wind}" stroke="#2b5148" stroke-width="2.5" stroke-linejoin="round" fill="none">${shape}</g><g class="gift-stamp-mark" transform="translate(86 26) rotate(-15)"><circle r="18" fill="#fff4d5" stroke="#c36e4a" stroke-width="3"/><text y="5" text-anchor="middle" fill="#a64e31" font-size="16" font-weight="700">${t("旅")}</text></g></svg></div>`;
 }
 export function giftDetailMarkup(item, { esc = giftEsc, titleId = "gift-detail-title" } = {}) {
   if (!item) return "";
   const theme = SOUVENIR_THEMES.find((entry) => entry.id === item.theme);
-  return `<div class="gift-detail gift-widget theme-${esc(item.theme)}" data-gift-widget="${esc(item.id)}" data-play-kind="${esc(item.playKind)}">${souvenirArt(item)}<span class="gift-theme-label">${esc(theme?.name || "旅途小禮物")}</span><h2 id="${esc(titleId)}">${esc(item.name)}</h2><p class="gift-story">${esc(item.story)}</p><button type="button" class="secondary-btn gift-play-button" data-play-gift="${esc(item.id)}">玩玩小禮物</button><p class="gift-play-feedback" data-gift-feedback role="status" aria-live="polite">${giftPlayHelp[item.playKind] || "點一下，和小禮物玩一會兒。"}</p></div>`;
+  return `<div class="gift-detail gift-widget theme-${esc(item.theme)}" data-gift-widget="${esc(item.id)}" data-play-kind="${esc(item.playKind)}">${souvenirArt(item)}<span class="gift-theme-label">${esc(tx(theme?.name || "旅途小禮物"))}</span><h2 id="${esc(titleId)}">${esc(tx(item.name))}</h2><p class="gift-story">${esc(tx(item.story))}</p><button type="button" class="secondary-btn gift-play-button" data-play-gift="${esc(item.id)}">${t("玩玩小禮物")}</button><p class="gift-play-feedback" data-gift-feedback role="status" aria-live="polite">${t(giftPlayHelp[item.playKind] || "點一下，和小禮物玩一會兒。")}</p></div>`;
 }
 export function souvenirMarkup(trip, { esc = giftEsc } = {}) {
   if (trip.gift)
-    return `<div class="souvenir-envelope gift-opened"><span class="gift-collected-note">已放進你的鐵道護照 ✓</span>${giftDetailMarkup(trip.gift, { esc, titleId: "trip-gift-title" })}<a href="#stamps" class="text-link">打開旅途收藏冊 →</a></div>`;
+    return `<div class="souvenir-envelope gift-opened"><span class="gift-collected-note">${t("已放進你的鐵道護照 ✓")}</span>${giftDetailMarkup(trip.gift, { esc, titleId: "trip-gift-title" })}<a href="#stamps" class="text-link">${t("打開旅途收藏冊 →")}</a></div>`;
   if (trip.giftChoices?.length) {
     const choices = trip.giftChoices.slice(0, 3);
-    return `<div class="souvenir-envelope gift-choice-envelope"><span class="gift-envelope-label">這趟旅程的小發現</span><h2>挑一份，帶回收藏冊</h2><p>選好小禮物後，還可以點一下玩玩看。</p><div class="gift-choices">${choices.map((item) => {
+    return `<div class="souvenir-envelope gift-choice-envelope"><span class="gift-envelope-label">${t("這趟旅程的小發現")}</span><h2>${t("挑一份，帶回收藏冊")}</h2><p>${t("選好小禮物後，還可以點一下玩玩看。")}</p><div class="gift-choices">${choices.map((item) => {
       const theme = SOUVENIR_THEMES.find((entry) => entry.id === item.theme);
-      return `<button type="button" class="souvenir-choice theme-${esc(item.theme)}" data-gift-choice="${esc(item.id)}" aria-label="收藏${esc(item.name)}">${souvenirArt(item)}<span class="gift-theme-label">${esc(theme?.name || "旅途小禮物")}</span><strong>${esc(item.name)}</strong><span class="gift-choice-story">${esc(item.story)}</span><span class="gift-choice-action">收藏這份 →</span></button>`;
-    }).join("")}</div><small>每趟任選一份；所有列車和遊戲都能直接玩。</small></div>`;
+      return `<button type="button" class="souvenir-choice theme-${esc(item.theme)}" data-gift-choice="${esc(item.id)}" aria-label="${esc(t("收藏{name}", { name: tx(item.name) }))}">${souvenirArt(item)}<span class="gift-theme-label">${esc(tx(theme?.name || "旅途小禮物"))}</span><strong>${esc(tx(item.name))}</strong><span class="gift-choice-story">${esc(tx(item.story))}</span><span class="gift-choice-action">${t("收藏這份 →")}</span></button>`;
+    }).join("")}</div><small>${t("每趟任選一份；所有列車和遊戲都能直接玩。")}</small></div>`;
   }
-  return '<div class="souvenir-envelope gift-ready"><svg class="gift-envelope-art" viewBox="0 0 120 90" aria-hidden="true" focusable="false"><rect x="12" y="20" width="96" height="60" rx="8" fill="#fff7dc" stroke="#537b70" stroke-width="3"/><path d="m14 24 46 31 46-31m-92 52 31-29m59 29-30-29" fill="none" stroke="#537b70" stroke-width="3"/><circle cx="60" cy="51" r="13" fill="#df995b"/><path d="m60 41 3 6 7 1-5 5 1 7-6-3-6 3 1-7-5-5 7-1Z" fill="#fff7dc"/></svg><h2>旅途的小禮物，到了！</h2><p>打開信封，挑一份喜歡的小發現。</p><button id="gift-open" class="primary-btn">打開紀念信封 →</button><small>每趟任選一份；所有列車和遊戲都能直接玩。</small></div>';
+  return `<div class="souvenir-envelope gift-ready"><svg class="gift-envelope-art" viewBox="0 0 120 90" aria-hidden="true" focusable="false"><rect x="12" y="20" width="96" height="60" rx="8" fill="#fff7dc" stroke="#537b70" stroke-width="3"/><path d="m14 24 46 31 46-31m-92 52 31-29m59 29-30-29" fill="none" stroke="#537b70" stroke-width="3"/><circle cx="60" cy="51" r="13" fill="#df995b"/><path d="m60 41 3 6 7 1-5 5 1 7-6-3-6 3 1-7-5-5 7-1Z" fill="#fff7dc"/></svg><h2>${t("旅途的小禮物，到了！")}</h2><p>${t("打開信封，挑一份喜歡的小發現。")}</p><button id="gift-open" class="primary-btn">${t("打開紀念信封 →")}</button><small>${t("每趟任選一份；所有列車和遊戲都能直接玩。")}</small></div>`;
 }
 export function souvenirCollection(progress, { esc = giftEsc } = {}) {
   const collected = new Set(progress?.souvenirs || []);
   const count = SOUVENIRS.filter((item) => collected.has(item.id)).length;
-  return `<section class="souvenir-collection souvenir-book" aria-labelledby="souvenir-title"><div class="souvenir-book-heading"><div><span class="gift-envelope-label">把小發現，收成一本書</span><h2 id="souvenir-title">旅途收藏冊</h2></div><div class="souvenir-total"><strong>${count} / ${SOUVENIRS.length}</strong><span>已收藏</span></div></div><p>收齊一頁，就多一枚套組小印章。已收藏的小禮物，隨時可以點開玩。</p>${count ? "" : '<p class="souvenir-empty-note">完成一趟旅程，打開信封，挑你的第一份小禮物吧。</p>'}<div class="souvenir-theme-pages">${SOUVENIR_THEMES.map((theme) => {
+  return `<section class="souvenir-collection souvenir-book" aria-labelledby="souvenir-title"><div class="souvenir-book-heading"><div><span class="gift-envelope-label">${t("把小發現，收成一本書")}</span><h2 id="souvenir-title">${t("旅途收藏冊")}</h2></div><div class="souvenir-total"><strong>${count} / ${SOUVENIRS.length}</strong><span>${t("已收藏")}</span></div></div><p>${t("收齊一頁，就多一枚套組小印章。已收藏的小禮物，隨時可以點開玩。")}</p>${count ? "" : `<p class="souvenir-empty-note">${t("完成一趟旅程，打開信封，挑你的第一份小禮物吧。")}</p>`}<div class="souvenir-theme-pages">${SOUVENIR_THEMES.map((theme) => {
     const items = SOUVENIRS.filter((item) => item.theme === theme.id);
     const owned = items.filter((item) => collected.has(item.id)).length;
-    return `<section class="souvenir-theme-page theme-${esc(theme.id)}" aria-labelledby="souvenir-theme-${esc(theme.id)}"><div class="souvenir-theme-heading"><span class="souvenir-theme-icon" aria-hidden="true">${theme.icon}</span><div><h3 id="souvenir-theme-${esc(theme.id)}">${esc(theme.name)}</h3><p>${esc(theme.description)}</p></div></div><div class="souvenir-theme-progress"><progress value="${owned}" max="${items.length}" aria-label="${esc(theme.name)}已收藏 ${owned} 款，共 ${items.length} 款"></progress><span>${owned} / ${items.length}</span></div><div class="souvenir-grid souvenir-theme-grid">${items.map((item, index) => collected.has(item.id)
-      ? `<button type="button" class="souvenir-slot gift-owned" data-inspect-gift="${esc(item.id)}" aria-label="打開${esc(item.name)}，已收藏">${souvenirArt(item)}<strong>${esc(item.name)}</strong><span class="souvenir-slot-note">點開玩玩</span></button>`
-      : `<div class="souvenir-slot gift-locked" aria-label="${esc(theme.name)}第 ${index + 1} 格，還沒收藏"><div class="gift-silhouette">${souvenirArt(item)}</div><strong>還沒遇見</strong><span class="souvenir-slot-note">旅途中找找看</span></div>`).join("")}</div>${owned === items.length ? '<div class="souvenir-set-stamp" role="status"><span aria-hidden="true">✦</span> 全套收藏 <span aria-hidden="true">✓</span></div>' : `<p class="souvenir-page-note">這一頁還有 ${items.length - owned} 份小發現。</p>`}</section>`;
+    return `<section class="souvenir-theme-page theme-${esc(theme.id)}" aria-labelledby="souvenir-theme-${esc(theme.id)}"><div class="souvenir-theme-heading"><span class="souvenir-theme-icon" aria-hidden="true">${theme.icon}</span><div><h3 id="souvenir-theme-${esc(theme.id)}">${esc(tx(theme.name))}</h3><p>${esc(tx(theme.description))}</p></div></div><div class="souvenir-theme-progress"><progress value="${owned}" max="${items.length}" aria-label="${esc(t("{theme}已收藏 {owned} 款，共 {total} 款", { theme: tx(theme.name), owned, total: items.length }))}"></progress><span>${owned} / ${items.length}</span></div><div class="souvenir-grid souvenir-theme-grid">${items.map((item, index) => collected.has(item.id)
+      ? `<button type="button" class="souvenir-slot gift-owned" data-inspect-gift="${esc(item.id)}" aria-label="${esc(t("打開{name}，已收藏", { name: tx(item.name) }))}">${souvenirArt(item)}<strong>${esc(tx(item.name))}</strong><span class="souvenir-slot-note">${t("點開玩玩")}</span></button>`
+      : `<div class="souvenir-slot gift-locked" aria-label="${esc(t("{theme}第 {n} 格，還沒收藏", { theme: tx(theme.name), n: index + 1 }))}"><div class="gift-silhouette">${souvenirArt(item)}</div><strong>${t("還沒遇見")}</strong><span class="souvenir-slot-note">${t("旅途中找找看")}</span></div>`).join("")}</div>${owned === items.length ? `<div class="souvenir-set-stamp" role="status"><span aria-hidden="true">✦</span> ${t("全套收藏")} <span aria-hidden="true">✓</span></div>` : `<p class="souvenir-page-note">${t("這一頁還有 {n} 份小發現。", { n: items.length - owned })}</p>`}</section>`;
   }).join("")}</div></section>`;
 }

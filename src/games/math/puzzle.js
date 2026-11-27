@@ -2,6 +2,11 @@
 // Code: Apache-2.0; original educational text: CC-BY-4.0.
 // Changed for the academy: header added, line endings normalised; logic unchanged.
 // See public/licenses/taiwan-train-math/NOTICE.txt and docs/r48-math-room-assets.json.
+// R50 (academy): Chinese/English switch. Questions keep Chinese text (filled with zh()); the
+// scene translates at display time with t()/tx(). Chinese output is unchanged.
+import { t } from "../../shared/i18n.js";
+import { zh, tx } from "./room-text.js";
+
 const PUZZLE_SIZES = {
   small: { columns: 2, rows: 2 },
   medium: { columns: 3, rows: 2 },
@@ -63,7 +68,7 @@ export function createPuzzleQuestion({ level, train, trains, rng = Math.random }
   return {
     game: "puzzle", level, target: train.id, image, trainName: train.name,
     ...size, pieces, answer,
-    prompt: `把${train.name}的照片拼回來。`,
+    prompt: zh("把{name}的照片拼回來。", { name: train.name }),
     hint: "先看看照片裡的車頭、軌道和天空，再找能接在一起的邊緣。",
   };
 }
@@ -107,7 +112,7 @@ export function puzzleScene(q, trip, { esc = escapeHtml } = {}) {
   const state = validState(q, trip?.puzzle) ? trip.puzzle : newPuzzleState(q);
   const style = `--puzzle-columns:${q.columns};--puzzle-rows:${q.rows};--puzzle-cell-ratio:${16 * q.rows}/${9 * q.columns}`;
   if (trip?.solved)
-    return `<div class="puzzle-stage puzzle-solved" style="${style}"><div class="puzzle-complete-photo"><img src="${esc(image)}" alt="${esc(q.trainName)}的完整照片" draggable="false"></div><p class="puzzle-success"><span aria-hidden="true">✓</span> ${count} 片拼好了！${esc(q.trainName)}可以出發囉。</p></div>`;
+    return `<div class="puzzle-stage puzzle-solved" style="${style}"><div class="puzzle-complete-photo"><img src="${esc(image)}" alt="${esc(t("{name}的完整照片", { name: tx(q.trainName) }))}" draggable="false"></div><p class="puzzle-success"><span aria-hidden="true">✓</span> ${t("{n} 片拼好了！{name}可以出發囉。", { n: count, name: esc(tx(q.trainName)) })}</p></div>`;
 
   const placed = new Set(state.placements.filter((piece) => piece !== null));
   const pieces = Array.isArray(q.pieces) && q.pieces.length === count &&
@@ -115,17 +120,18 @@ export function puzzleScene(q, trip, { esc = escapeHtml } = {}) {
     ? q.pieces.filter((piece) => !placed.has(piece)) : [];
   const occupied = placed.size;
   const board = state.placements.map((piece, slot) => {
-    const action = state.selectedPiece !== null ? "放入選好的拼圖" : piece === null ? "空格" : "取回這片拼圖";
-    return `<button type="button" class="puzzle-slot ${piece === null ? "is-empty" : "is-filled"} ${piece !== null && piece === state.selectedPiece ? "is-selected" : ""}" data-puzzle-slot="${slot}" ${piece !== null ? `data-puzzle-piece-id="${piece}"` : ""} aria-label="拼圖格，第 ${slot + 1} 格，${action}">${piece === null ? '<span class="puzzle-empty-mark" aria-hidden="true">＋</span>' : piecePhoto(q, piece, esc)}</button>`;
+    // One whole sentence per square state, so English keeps its own word order.
+    const action = state.selectedPiece !== null ? "拼圖格，第 {n} 格，放入選好的拼圖" : piece === null ? "拼圖格，第 {n} 格，空格" : "拼圖格，第 {n} 格，取回這片拼圖";
+    return `<button type="button" class="puzzle-slot ${piece === null ? "is-empty" : "is-filled"} ${piece !== null && piece === state.selectedPiece ? "is-selected" : ""}" data-puzzle-slot="${slot}" ${piece !== null ? `data-puzzle-piece-id="${piece}"` : ""} aria-label="${esc(t(action, { n: slot + 1 }))}">${piece === null ? '<span class="puzzle-empty-mark" aria-hidden="true">＋</span>' : piecePhoto(q, piece, esc)}</button>`;
   }).join("");
-  const tray = pieces.map((piece, index) => `<button type="button" class="puzzle-tray-piece ${state.selectedPiece === piece ? "is-selected" : ""}" data-puzzle-piece="${piece}" aria-label="拼圖盤第 ${index + 1} 片${state.selectedPiece === piece ? "，已選取" : "，選取這片"}" aria-pressed="${state.selectedPiece === piece}">${piecePhoto(q, piece, esc)}<span class="puzzle-piece-check" aria-hidden="true">${state.selectedPiece === piece ? "✓" : ""}</span></button>`).join("");
+  const tray = pieces.map((piece, index) => `<button type="button" class="puzzle-tray-piece ${state.selectedPiece === piece ? "is-selected" : ""}" data-puzzle-piece="${piece}" aria-label="${esc(t(state.selectedPiece === piece ? "拼圖盤第 {n} 片，已選取" : "拼圖盤第 {n} 片，選取這片", { n: index + 1 }))}" aria-pressed="${state.selectedPiece === piece}">${piecePhoto(q, piece, esc)}<span class="puzzle-piece-check" aria-hidden="true">${state.selectedPiece === piece ? "✓" : ""}</span></button>`).join("");
 
   return `<div class="puzzle-stage" style="${style}">
-    <div class="puzzle-toolbar"><span class="puzzle-progress">已放 ${occupied}／${count} 片</span><button type="button" id="puzzle-preview" class="secondary-btn" aria-expanded="${state.preview}" aria-controls="puzzle-reference">${state.preview ? "收起原圖" : "看看原圖"}</button></div>
-    ${state.preview ? `<figure class="puzzle-reference" id="puzzle-reference"><img src="${esc(image)}" alt="${esc(q.trainName)}的原圖" draggable="false"><figcaption>看看車頭和風景，再自己試著拼。</figcaption></figure>` : '<div id="puzzle-reference" hidden></div>'}
-    <p class="puzzle-instruction" id="puzzle-instruction">${state.selectedPiece === null ? "拖一片到空格，或先點一片再點空格。" : "拼圖選好了，點一格放進去。"}<span>點已放的拼圖可以取回；放進有拼圖的格子可以換片。</span></p>
-    <div class="puzzle-board" role="group" aria-label="照片拼圖板" aria-describedby="puzzle-instruction">${board}</div>
-    <div class="puzzle-tray" role="group" aria-label="打散的照片拼圖">${tray || '<p class="puzzle-tray-empty">照片放好了，看看有沒有接起來。</p>'}</div>
-    <div class="puzzle-actions"><button type="button" id="puzzle-reset" class="text-btn" ${occupied === 0 && state.selectedPiece === null && !state.preview ? "disabled" : ""}>全部取回</button><button type="button" id="puzzle-submit" class="primary-btn" ${occupied !== count ? "disabled" : ""}>拼好了，送出 ✓</button></div>
+    <div class="puzzle-toolbar"><span class="puzzle-progress">${t("已放 {n}／{count} 片", { n: occupied, count })}</span><button type="button" id="puzzle-preview" class="secondary-btn" aria-expanded="${state.preview}" aria-controls="puzzle-reference">${t(state.preview ? "收起原圖" : "看看原圖")}</button></div>
+    ${state.preview ? `<figure class="puzzle-reference" id="puzzle-reference"><img src="${esc(image)}" alt="${esc(t("{name}的原圖", { name: tx(q.trainName) }))}" draggable="false"><figcaption>${t("看看車頭和風景，再自己試著拼。")}</figcaption></figure>` : '<div id="puzzle-reference" hidden></div>'}
+    <p class="puzzle-instruction" id="puzzle-instruction">${t(state.selectedPiece === null ? "拖一片到空格，或先點一片再點空格。" : "拼圖選好了，點一格放進去。")}<span>${t("點已放的拼圖可以取回；放進有拼圖的格子可以換片。")}</span></p>
+    <div class="puzzle-board" role="group" aria-label="${esc(t("照片拼圖板"))}" aria-describedby="puzzle-instruction">${board}</div>
+    <div class="puzzle-tray" role="group" aria-label="${esc(t("打散的照片拼圖"))}">${tray || `<p class="puzzle-tray-empty">${t("照片放好了，看看有沒有接起來。")}</p>`}</div>
+    <div class="puzzle-actions"><button type="button" id="puzzle-reset" class="text-btn" ${occupied === 0 && state.selectedPiece === null && !state.preview ? "disabled" : ""}>${t("全部取回")}</button><button type="button" id="puzzle-submit" class="primary-btn" ${occupied !== count ? "disabled" : ""}>${t("拼好了，送出 ✓")}</button></div>
   </div>`;
 }

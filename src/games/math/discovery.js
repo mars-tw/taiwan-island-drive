@@ -2,6 +2,11 @@
 // Code: Apache-2.0; original educational text: CC-BY-4.0.
 // Changed for the academy: header added, line endings normalised; logic unchanged.
 // See public/licenses/taiwan-train-math/NOTICE.txt and docs/r48-math-room-assets.json.
+// R50 (academy): Chinese/English switch. Questions keep Chinese text (filled with zh()); the
+// scene translates at display time with t()/tx(). Chinese output is unchanged.
+import { t } from "../../shared/i18n.js";
+import { zh, tx } from "./room-text.js";
+
 export const MOSAIC_PALETTE = [
   { id: "green", name: "綠色圓點", symbol: "●", color: "#79a68a" },
   { id: "orange", name: "橘色三角", symbol: "▲", color: "#edaf71" },
@@ -55,7 +60,7 @@ export function createMosaicQuestion({ level, rng = Math.random }) {
     palette: MOSAIC_PALETTE.map((color) => ({ ...color })),
     templateId: template.id, templateName: template.name, mirrored, colorRotation,
     target, answer: [...target],
-    prompt: `照著小樣本，把${template.name}的圖形拼出來。`,
+    prompt: zh("照著小樣本，把{name}的圖形拼出來。", { name: template.name }),
     hint: "先看小圖的空格和色塊，再從一排慢慢拼。畫錯時，可以選橡皮擦。",
   };
 }
@@ -74,7 +79,7 @@ export function createDifferencesQuestion({ level, rng = Math.random }) {
   return {
     game: "differences", level, columns: 3, rows: 3, sceneTheme: theme.id,
     itemsLeft, itemsRight, differences, answer: differences.length,
-    prompt: `比較兩幅${theme.name}圖，找出 ${differences.length} 處不同。`,
+    prompt: zh("比較兩幅{name}圖，找出 {n} 處不同。", { name: theme.name, n: differences.length }),
     hint: "看看形狀、方向和數量，找到不同就點右圖。一次比較一區就好。",
   };
 }
@@ -180,13 +185,13 @@ export function discoveryScene(q, trip = {}, { esc = escapeHTML } = {}) {
     const cells = Array.from({ length: columns * columns }, (_, index) => paintMetadata(state.mosaicCells?.[index]));
     const filled = cells.some((color) => color.id !== "empty");
     const brush = paintMetadata(state.mosaicColor);
-    return `<div class="discovery-stage mosaic-stage" style="--mosaic-columns:${columns}"><div class="mosaic-tools"><figure class="mosaic-sample"><figcaption>參考小圖 · ${esc(q.templateName)}</figcaption><div class="mosaic-reference-grid" role="img" aria-label="參考圖案，照著位置與色塊拼搭">${q.target.map((id) => { const color = paintMetadata(id); return `<span class="mosaic-mark mosaic-${color.id}" aria-hidden="true">${color.symbol}</span>`; }).join("")}</div></figure><div class="mosaic-palette" role="group" aria-label="選擇色塊或橡皮擦">${q.palette.map((color) => `<button type="button" class="mosaic-color-choice" data-mosaic-color="${esc(color.id)}" aria-label="選擇${esc(color.name)}" aria-pressed="${state.mosaicColor === color.id}" ${solved ? "disabled" : ""}><span class="mosaic-swatch mosaic-${paintMetadata(color.id).id}" aria-hidden="true">${esc(color.symbol)}</span><span>${esc(color.name)}</span></button>`).join("")}<button type="button" class="mosaic-color-choice mosaic-eraser" data-mosaic-color="empty" aria-label="選擇橡皮擦" aria-pressed="${state.mosaicColor === "empty"}" ${solved ? "disabled" : ""}><span aria-hidden="true">⌫</span><span>橡皮擦</span></button></div></div><p class="mosaic-brush-status" role="status">現在使用：${brush.id === "empty" ? "橡皮擦" : brush.name}。每點一下，畫一格。</p><div class="mosaic-paint-board" role="group" aria-label="圖形拼搭畫板">${cells.map((color, index) => `<button type="button" class="mosaic-paint-cell mosaic-${color.id}" data-mosaic-cell="${index}" aria-label="畫板第 ${index + 1} 格，${color.name}" ${solved ? "disabled" : ""}><span aria-hidden="true">${color.symbol || "＋"}</span></button>`).join("")}</div><p class="discovery-help">${esc(q.hint)}</p><div class="discovery-actions"><button type="button" id="mosaic-reset" class="text-btn" ${solved || !filled ? "disabled" : ""}>全部清空</button><button type="button" id="mosaic-submit" class="primary-btn" ${solved || !filled ? "disabled" : ""}>拼好了，送出 ✓</button></div></div>`;
+    return `<div class="discovery-stage mosaic-stage" style="--mosaic-columns:${columns}"><div class="mosaic-tools"><figure class="mosaic-sample"><figcaption>${t("參考小圖 · {name}", { name: esc(tx(q.templateName)) })}</figcaption><div class="mosaic-reference-grid" role="img" aria-label="${esc(t("參考圖案，照著位置與色塊拼搭"))}">${q.target.map((id) => { const color = paintMetadata(id); return `<span class="mosaic-mark mosaic-${color.id}" aria-hidden="true">${color.symbol}</span>`; }).join("")}</div></figure><div class="mosaic-palette" role="group" aria-label="${esc(t("選擇色塊或橡皮擦"))}">${q.palette.map((color) => `<button type="button" class="mosaic-color-choice" data-mosaic-color="${esc(color.id)}" aria-label="${esc(t("選擇{name}", { name: tx(color.name) }))}" aria-pressed="${state.mosaicColor === color.id}" ${solved ? "disabled" : ""}><span class="mosaic-swatch mosaic-${paintMetadata(color.id).id}" aria-hidden="true">${esc(color.symbol)}</span><span>${esc(tx(color.name))}</span></button>`).join("")}<button type="button" class="mosaic-color-choice mosaic-eraser" data-mosaic-color="empty" aria-label="${esc(t("選擇橡皮擦"))}" aria-pressed="${state.mosaicColor === "empty"}" ${solved ? "disabled" : ""}><span aria-hidden="true">⌫</span><span>${t("橡皮擦")}</span></button></div></div><p class="mosaic-brush-status" role="status">${t("現在使用：{name}。每點一下，畫一格。", { name: brush.id === "empty" ? t("橡皮擦") : tx(brush.name) })}</p><div class="mosaic-paint-board" role="group" aria-label="${esc(t("圖形拼搭畫板"))}">${cells.map((color, index) => `<button type="button" class="mosaic-paint-cell mosaic-${color.id}" data-mosaic-cell="${index}" aria-label="${esc(t("畫板第 {n} 格，{name}", { n: index + 1, name: tx(color.name) }))}" ${solved ? "disabled" : ""}><span aria-hidden="true">${color.symbol || "＋"}</span></button>`).join("")}</div><p class="discovery-help">${esc(tx(q.hint))}</p><div class="discovery-actions"><button type="button" id="mosaic-reset" class="text-btn" ${solved || !filled ? "disabled" : ""}>${t("全部清空")}</button><button type="button" id="mosaic-submit" class="primary-btn" ${solved || !filled ? "disabled" : ""}>${t("拼好了，送出 ✓")}</button></div></div>`;
   }
   if (q.game === "differences") {
     const theme = DIFFERENCE_THEMES.find((item) => item.id === q.sceneTheme) || DIFFERENCE_THEMES[0];
     const found = state.differencesFound instanceof Set ? state.differencesFound : new Set();
     const goal = DIFFERENCE_COUNTS[q.level] || 3;
-    return `<div class="discovery-stage differences-stage"><div class="differences-progress" role="status" aria-live="polite">已找到 <strong>${found.size}／${goal}</strong> 處</div><div class="difference-compare"><figure class="difference-reference"><div class="difference-reference-picture" role="img" aria-label="左圖，作為比較參考">${referenceScene(q, theme)}</div><figcaption><strong>左圖 · 看看原樣</strong><span>比一比形狀，再點右圖。</span></figcaption></figure><div class="difference-right"><strong class="difference-right-label">右圖 · 點不同的地方</strong><div class="difference-grid" role="group" aria-label="右圖，分成九個區域">${q.itemsRight.slice(0, 9).map((item, index) => `<button type="button" class="difference-cell ${found.has(index) ? "difference-found" : ""}" data-difference-cell="${index}" aria-label="右圖第 ${index + 1} 區${found.has(index) ? "，已找到" : ""}" ${solved || found.has(index) ? "disabled" : ""}><svg viewBox="0 0 120 90" aria-hidden="true" focusable="false">${sceneCell(item, index, theme)}</svg>${found.has(index) ? '<span class="difference-check" aria-hidden="true">✓</span>' : ""}</button>`).join("")}</div></div></div><p class="discovery-help">${esc(q.hint)}</p></div>`;
+    return `<div class="discovery-stage differences-stage"><div class="differences-progress" role="status" aria-live="polite">${t("已找到 {open}{found}／{goal}{close} 處", { open: "<strong>", found: found.size, goal, close: "</strong>" })}</div><div class="difference-compare"><figure class="difference-reference"><div class="difference-reference-picture" role="img" aria-label="${esc(t("左圖，作為比較參考"))}">${referenceScene(q, theme)}</div><figcaption><strong>${t("左圖 · 看看原樣")}</strong><span>${t("比一比形狀，再點右圖。")}</span></figcaption></figure><div class="difference-right"><strong class="difference-right-label">${t("右圖 · 點不同的地方")}</strong><div class="difference-grid" role="group" aria-label="${esc(t("右圖，分成九個區域"))}">${q.itemsRight.slice(0, 9).map((item, index) => `<button type="button" class="difference-cell ${found.has(index) ? "difference-found" : ""}" data-difference-cell="${index}" aria-label="${esc(t(found.has(index) ? "右圖第 {n} 區，已找到" : "右圖第 {n} 區", { n: index + 1 }))}" ${solved || found.has(index) ? "disabled" : ""}><svg viewBox="0 0 120 90" aria-hidden="true" focusable="false">${sceneCell(item, index, theme)}</svg>${found.has(index) ? '<span class="difference-check" aria-hidden="true">✓</span>' : ""}</button>`).join("")}</div></div></div><p class="discovery-help">${esc(tx(q.hint))}</p></div>`;
   }
   return "";
 }

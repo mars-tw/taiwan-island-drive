@@ -2,6 +2,10 @@
 // Code: Apache-2.0; original educational text: CC-BY-4.0.
 // Changed for the academy: header added, line endings normalised; logic unchanged.
 // See public/licenses/taiwan-train-math/NOTICE.txt and docs/r48-math-room-assets.json.
+// R50 (academy): photoLabel() is a caption, so it returns text in the current language
+// (Chinese output unchanged).
+import { t } from "../../shared/i18n.js";
+
 const LOCAL_PHOTO = /^assets\/images\/real-[a-z0-9-]+\.(?:jpg|png|webp)$/;
 export function verifiedPhoto(train) {
   const p = train?.referencePhoto;
@@ -38,6 +42,6 @@ export function puzzlePhotoTrains(trains) {
 }
 export function photoLabel(train) {
   const p = verifiedPhoto(train);
-  if (!p) return "正確實車照片待補";
-  return p.view === "interior" ? "實車內裝照片" : train.status === "future" ? "抵台實車・尚未營運" : "實車照片";
+  if (!p) return t("正確實車照片待補");
+  return t(p.view === "interior" ? "實車內裝照片" : train.status === "future" ? "抵台實車・尚未營運" : "實車照片");
 }

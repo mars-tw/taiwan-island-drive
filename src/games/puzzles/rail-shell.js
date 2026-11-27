@@ -8,6 +8,8 @@ import { speakNative, stopNativeSpeech, registerNativeOverlay } from '../../shar
 import { celebrate, playChime } from '../../shared/celebrate.js';
 import { SPEAKER_ICON } from '../../shared/speaker-icon.js';
 import { phraseHtml } from '../../shared/phrase-wrap.js';
+import { t, onLanguageChange } from '../../shared/i18n.js';
+import { zh, tx } from '../math/room-text.js';
 import { normalizeAge, ageFromSettings, AGE_LABELS, newSeed } from './common.js';
 import { readProgress, recordClear, unlockedLevel } from './progress.js';
 
@@ -65,6 +67,8 @@ function ensureDialog() {
  * def: { id, title, levels(age) -> [{focus?}], mount(ctx) -> { destroy?() } }
  * options: { age, level, seed, onClose, onWin, backLabel }
  *  - onWin({ level, age }): a level was cleared (the math room stamps it and shows its own celebration).
+ * R50: games hand the shell Chinese source text (say, win, button labels and aria-labels, title, focus, backLabel);
+ * the shell shows and speaks it in the current language with tx(), and re-labels itself when the language changes.
  */
 export function openRailGame(def, options = {}) {
   if (current) current.close({ silent: true });
@@ -75,37 +79,43 @@ export function openRailGame(def, options = {}) {
   const box = ensureDialog();
   const opener = document.activeElement;
   let level = Number.isInteger(options.level) ? Math.max(0, Math.min(levels.length - 1, options.level)) : unlockedLevel(readProgress(), def.id, age);
-  let game = null, token = 0, busy = false, cue = '', resizeFns = [], observer = null, closed = false;
+  let game = null, token = 0, busy = false, cue = '', resizeFns = [], languageFns = [], observer = null, closed = false, overlayBuild = null;
+  const buttonSources = new WeakMap(); // button → its Chinese label / aria-label and what was last painted
 
   box.dataset.game = def.id;
   box.innerHTML = '';
   const page = htmlEl('section', { class: 'rp-page' }, box);
   const top = htmlEl('header', { class: 'rp-top' }, page);
-  const back = htmlEl('button', { type: 'button', class: 'rp-back', 'aria-label': options.backLabel || '回去' }, top, `← ${options.backLabel || '回去'}`);
+  const backText = () => tx(options.backLabel || '回去');
+  const back = htmlEl('button', { type: 'button', class: 'rp-back', 'aria-label': backText() }, top, `← ${backText()}`);
   const heading = htmlEl('div', { class: 'rp-heading' }, top);
-  htmlEl('h1', { id: 'rail-play-title', tabindex: '-1' }, heading, def.title);
+  const titleEl = htmlEl('h1', { id: 'rail-play-title', tabindex: '-1' }, heading, tx(def.title));
   const levelTag = htmlEl('span', { class: 'rp-level' }, heading);
-  const listButton = htmlEl('button', { type: 'button', class: 'rp-list', 'aria-label': '選關卡' }, top, '關卡');
-  const speakButton = htmlEl('button', { type: 'button', class: 'rp-speak', 'aria-label': '再唸一次' }, top);
+  const listButton = htmlEl('button', { type: 'button', class: 'rp-list', 'aria-label': t('選關卡') }, top, t('關卡'));
+  const speakButton = htmlEl('button', { type: 'button', class: 'rp-speak', 'aria-label': t('再唸一次') }, top);
   speakButton.innerHTML = SPEAKER_ICON; // R49：固定墨藍色喇叭圖，取代會變淡灰的 🔊 表情符號
   const stage = htmlEl('div', { class: 'rp-stage' }, page);
   const coach = htmlEl('div', { class: 'rp-coach', role: 'status', 'aria-live': 'polite' }, page);
-  coach.append(artImage('coach', '阿路教練', 'rp-coach-img'));
+  const coachImg = artImage('coach', t('阿路教練'), 'rp-coach-img');
+  coach.append(coachImg);
   const cueText = htmlEl('span', { class: 'rp-cue' }, coach);
   const controls = htmlEl('footer', { class: 'rp-controls' }, page);
-  const overlay = htmlEl('section', { class: 'rp-overlay', hidden: true, 'aria-modal': 'true', role: 'dialog', 'aria-label': '關卡' }, box);
+  const overlay = htmlEl('section', { class: 'rp-overlay', hidden: true, 'aria-modal': 'true', role: 'dialog', 'aria-label': t('關卡') }, box);
 
-  function speak(text) { if (!readSettings().muted && text) void speakNative(text, { rate: 0.8 }); }
+  // R50: speech and the cue follow the current language; `cue` keeps the Chinese source for a later switch.
+  function speak(text) { if (!readSettings().muted && text) void speakNative(tx(text), { rate: 0.8 }); }
   function say(text, { retry = false, voice = true } = {}) {
-    cue = text; cueText.innerHTML = phraseHtml(text); // R49 修正輪：只在詞和詞之間換行
+    cue = text; text = tx(text); cueText.innerHTML = phraseHtml(text); // R49 修正輪：只在詞和詞之間換行
     coach.classList.toggle('is-retry', retry);
     if (retry) { coach.classList.remove('nudge'); void coach.offsetWidth; coach.classList.add('nudge'); }
     if (voice) speak(text);
   }
   function setBusy(flag) { busy = !!flag; box.classList.toggle('is-busy', busy); }
+  // Labels and aria-labels are Chinese source (or already English); html: true labels are ready-made HTML and stay as given.
   function button(label, { onClick, primary = false, className = '', ariaLabel, disabled = false, parent = controls, html = false } = {}) {
-    const b = htmlEl('button', { type: 'button', class: `${primary ? 'rp-primary ' : ''}${className}`.trim(), 'aria-label': ariaLabel, disabled }, parent);
-    if (html) b.innerHTML = label; else b.textContent = label;
+    const b = htmlEl('button', { type: 'button', class: `${primary ? 'rp-primary ' : ''}${className}`.trim(), 'aria-label': typeof ariaLabel === 'string' ? tx(ariaLabel) : ariaLabel, disabled }, parent);
+    if (html) b.innerHTML = label; else b.textContent = tx(label);
+    buttonSources.set(b, { label, ariaLabel, html, text: b.textContent, aria: b.getAttribute('aria-label') });
     if (onClick) b.addEventListener('click', event => { if (busy || closed) return; onClick(event); });
     return b;
   }
@@ -114,22 +124,24 @@ export function openRailGame(def, options = {}) {
   // The card covers the play area only, so 回去／關卡／🔊 in the top bar always stay reachable.
   const behind = () => [stage, coach, controls];
   function showOverlay(build) {
+    overlayBuild = build;
     overlay.replaceChildren(); overlay.hidden = false; for (const el of behind()) { el.setAttribute('aria-hidden', 'true'); el.inert = true; }
     const card = htmlEl('div', { class: 'rp-card' }, overlay); build(card);
     card.querySelector('button')?.focus();
   }
-  function hideOverlay() { overlay.hidden = true; overlay.replaceChildren(); for (const el of behind()) { el.removeAttribute('aria-hidden'); el.inert = false; } }
+  function hideOverlay() { overlayBuild = null; overlay.hidden = true; overlay.replaceChildren(); for (const el of behind()) { el.removeAttribute('aria-hidden'); el.inert = false; } }
 
   function showLevels() {
     const unlocked = unlockedLevel(readProgress(), def.id, age);
     showOverlay(card => {
-      htmlEl('h2', {}, card, `${def.title}・選關卡`);
-      htmlEl('p', { class: 'rp-card-note' }, card, `${AGE_LABELS[age]} · 完成一關就打開下一關。`);
+      htmlEl('h2', {}, card, t('{title}・選關卡', { title: tx(def.title) }));
+      htmlEl('p', { class: 'rp-card-note' }, card, t('{age} · 完成一關就打開下一關。', { age: t(AGE_LABELS[age]) }));
       const grid = htmlEl('div', { class: 'rp-level-grid' }, card);
       levels.forEach((info, i) => {
         const open = i <= unlocked;
-        const b = button(open ? `第 ${i + 1} 關` : `第 ${i + 1} 關 🔒`, { parent: grid, disabled: !open, className: i === level ? 'is-current' : '', ariaLabel: `第 ${i + 1} 關${info.focus ? `，${info.focus}` : ''}${open ? '' : '，還沒打開'}`, onClick: () => { hideOverlay(); start(i); } });
-        if (info.focus) htmlEl('small', {}, b, info.focus);
+        const aria = info.focus ? (open ? '第 {n} 關，{focus}' : '第 {n} 關，{focus}，還沒打開') : (open ? '第 {n} 關' : '第 {n} 關，還沒打開');
+        const b = button(zh(open ? '第 {n} 關' : '第 {n} 關 🔒', { n: i + 1 }), { parent: grid, disabled: !open, className: i === level ? 'is-current' : '', ariaLabel: zh(aria, { n: i + 1, focus: info.focus }), onClick: () => { hideOverlay(); start(i); } });
+        if (info.focus) htmlEl('small', {}, b, tx(info.focus));
       });
       button('回到這一關', { parent: card, className: 'rp-card-back', onClick: hideOverlay });
     });
@@ -138,17 +150,17 @@ export function openRailGame(def, options = {}) {
   function win(text = '全部完成了！') {
     const myToken = token, saved = recordClear(def.id, age, level);
     if (options.onWin) { try { options.onWin({ level, age }); } catch { /* The host's stamp must never block the win card. */ } }
-    else celebrate({ text: `第 ${level + 1} 關完成！`, kind: 'station', sound: !readSettings().muted, big: true });
+    else celebrate({ text: t('第 {n} 關完成！', { n: level + 1 }), kind: 'station', sound: !readSettings().muted, big: true });
     say(text, { voice: true });
     setTimeout(() => {
       if (myToken !== token || closed) return;
       const last = level >= levels.length - 1;
       showOverlay(card => {
         card.classList.add('rp-win');
-        card.append(artImage('coach-cheer', '阿路教練舉起綠旗', 'rp-win-coach'));
-        htmlEl('h2', {}, card, last ? `${levels.length} 關全部完成！` : `第 ${level + 1} 關完成！`);
-        htmlEl('p', {}, card, text);
-        if (!saved) htmlEl('p', { class: 'rp-card-note save-failed' }, card, '這次無法儲存，關閉後可能不會保留。');
+        card.append(artImage('coach-cheer', t('阿路教練舉起綠旗'), 'rp-win-coach'));
+        htmlEl('h2', {}, card, last ? t('{n} 關全部完成！', { n: levels.length }) : t('第 {n} 關完成！', { n: level + 1 }));
+        htmlEl('p', {}, card, tx(text));
+        if (!saved) htmlEl('p', { class: 'rp-card-note save-failed' }, card, t('這次無法儲存，關閉後可能不會保留。'));
         const row = htmlEl('div', { class: 'rp-card-actions' }, card);
         if (!last) button('下一關 →', { parent: row, primary: true, onClick: () => { hideOverlay(); start(level + 1); } });
         button('再玩一次', { parent: row, primary: last, onClick: () => { hideOverlay(); start(level); } });
@@ -160,9 +172,9 @@ export function openRailGame(def, options = {}) {
   function start(index, seed = newSeed()) {
     token += 1; setBusy(false);
     try { game?.destroy?.(); } catch { /* A broken teardown must not trap the child in the dialog. */ }
-    resizeFns = []; stage.replaceChildren(); controls.replaceChildren(); coach.classList.remove('is-retry');
+    resizeFns = []; languageFns = []; stage.replaceChildren(); controls.replaceChildren(); coach.classList.remove('is-retry');
     level = Math.max(0, Math.min(levels.length - 1, index));
-    levelTag.textContent = `${AGE_LABELS[age]} · 第 ${level + 1}／${levels.length} 關`;
+    showLevelTag();
     box.dataset.level = String(level + 1);
     const myToken = token;
     const ctx = {
@@ -172,14 +184,39 @@ export function openRailGame(def, options = {}) {
       tap: () => playChime('tap', { volume: 0.06 }),
       chime: kind => playChime(kind),
       onResize: fn => resizeFns.push(fn),
+      // R50: fn() runs after a language switch while this level is open (redraw stage text); cleared on restart and close.
+      onLanguageChange: fn => languageFns.push(fn),
       restart: () => start(level),
     };
     game = def.mount(ctx) || null;
   }
 
+  function showLevelTag() { levelTag.textContent = t('{age} · 第 {n}／{total} 關', { age: t(AGE_LABELS[age]), n: level + 1, total: levels.length }); }
+  /** R50 language switch: the shell's own words, the cue, the game's stage (if it asked), an open card, then the buttons. */
+  function relabel() {
+    back.setAttribute('aria-label', backText()); back.textContent = `← ${backText()}`;
+    titleEl.textContent = tx(def.title);
+    listButton.setAttribute('aria-label', t('選關卡')); listButton.textContent = t('關卡');
+    speakButton.setAttribute('aria-label', t('再唸一次'));
+    coachImg.alt = t('阿路教練');
+    overlay.setAttribute('aria-label', t('關卡'));
+    showLevelTag();
+    if (cue) cueText.innerHTML = phraseHtml(tx(cue));
+    for (const fn of languageFns) { try { fn(); } catch (error) { console.error(error); } }
+    if (!overlay.hidden && overlayBuild) showOverlay(overlayBuild);
+    for (const b of box.querySelectorAll('button')) {
+      const src = buttonSources.get(b);
+      if (!src) continue;
+      // Only words the shell painted itself: a game that drew its own icon or text inside the button keeps it.
+      if (!src.html && src.label && !b.childElementCount && b.textContent === src.text) b.textContent = src.text = tx(src.label);
+      if (typeof src.ariaLabel === 'string' && b.getAttribute('aria-label') === src.aria) { src.aria = tx(src.ariaLabel); b.setAttribute('aria-label', src.aria); }
+    }
+  }
+  const stopLanguage = onLanguageChange(() => { if (!closed) relabel(); });
+
   function close({ silent = false } = {}) {
     if (closed) return;
-    closed = true; token += 1;
+    closed = true; token += 1; stopLanguage();
     try { game?.destroy?.(); } catch { /* ignore */ }
     observer?.disconnect();
     void stopNativeSpeech();

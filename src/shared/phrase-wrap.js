@@ -22,7 +22,8 @@ const PUNCT = /[，、。！？；：,.!?;:\s「」『』（）]/;
 /** Escaped HTML for one line of child-facing Chinese text, with <wbr> only between two real (2+ character) words. */
 export function phraseHtml(text, { segment = segmenter } = {}) {
   const value = String(text ?? '');
-  if (!segment) return esc(value);
+  // R50：英文（沒有中文字的句子）不套中文黏詞規則，照一般單字在空格處換行。
+  if (!segment || !CJK.test(value)) return esc(value);
   const inside = new Set(), before = new Set();
   for (const word of KEEP) for (let at = value.indexOf(word); at >= 0; at = value.indexOf(word, at + 1)) for (let i = 1; i < word.length; i++) inside.add(at + i);
   for (const m of value.matchAll(LABEL)) {

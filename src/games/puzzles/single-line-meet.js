@@ -1,6 +1,7 @@
 // R48 B line puzzle 3: 單線會車. DOM-free block-signal rules shared with train lesson 3 (號誌與限速).
 // A single-track block holds one train. A passing station has a main track and a shorter 避車道.
 import { normalizeAge, RAIL_COLORS } from './common.js';
+import { zh } from '../math/room-text.js';
 
 export const MEET_GAME = Object.freeze({ id: 'single-line-meet', title: '單線會車', room: '拼搭與方向', ages: '5～8 歲' });
 
@@ -94,24 +95,24 @@ export function moveTrain(round, id, track) {
 }
 
 export function meetMessage(round, result) {
-  const station = pos => `${locationName(round, pos)}站`;
-  if (!result) return round.goal ? `${meetTrainLabel(trainById(round, round.goal[0]))}要比${meetTrainLabel(trainById(round, round.goal[1]))}先到站。點列車往前開，紅燈要停。` : '點列車往前開一段。綠燈可以走，紅燈要停車等候。';
-  if (result.needsChoice) return `進${station(result.next)}：要走主線，還是進避車道等？`;
+  const station = pos => zh('{name}站', { name: locationName(round, pos) });
+  if (!result) return round.goal ? zh('{first}要比{second}先到站。點列車往前開，紅燈要停。', { first: meetTrainLabel(trainById(round, round.goal[0])), second: meetTrainLabel(trainById(round, round.goal[1])) }) : '點列車往前開一段。綠燈可以走，紅燈要停車等候。';
+  if (result.needsChoice) return zh('進{station}：要走主線，還是進避車道等？', { station: station(result.next) });
   if (!result.ok) {
     const train = trainById(round, result.train);
     if (result.reason === 'block') return '前方列車尚未離開，紅燈停車等候。';
-    if (result.reason === 'full') return `${station(result.next)}兩條線都有列車，紅燈等一等。`;
-    if (result.reason === 'short') return `${train ? meetTrainLabel(train) : '這列車'}太長，進不了避車道；主線上有車，紅燈等一等。`;
+    if (result.reason === 'full') return zh('{station}兩條線都有列車，紅燈等一等。', { station: station(result.next) });
+    if (result.reason === 'short') return train ? zh('{train}太長，進不了避車道；主線上有車，紅燈等一等。', { train: meetTrainLabel(train) }) : '這列車太長，進不了避車道；主線上有車，紅燈等一等。';
     if (result.reason === 'queue') return '前面的列車還沒出發，排隊等一等。';
     return '這列車已經到站了。';
   }
   if (result.status === 'won') return '全部列車平安到站！號誌都看對了。';
-  if (result.status === 'order-miss') return `${meetTrainLabel(trainById(round, round.goal[1]))}先到了，可是${meetTrainLabel(trainById(round, round.goal[0]))}要先到喔。倒回幾步，讓慢車進避車道。`;
+  if (result.status === 'order-miss') return zh('{second}先到了，可是{first}要先到喔。倒回幾步，讓慢車進避車道。', { second: meetTrainLabel(trainById(round, round.goal[1])), first: meetTrainLabel(trainById(round, round.goal[0])) });
   if (result.status === 'stuck') return '大家都在等紅燈，誰也動不了。按「倒回一步」，換個順序試試。';
-  if (result.to.arrived) return `${meetTrainLabel(result.to)}到${station(result.to.pos)}了！`;
-  if (result.to.track === 'side') return `${meetTrainLabel(result.to)}進避車道等候，主線讓給別的列車。`;
-  if (round.kinds[result.to.pos] === 'block') return `${meetTrainLabel(result.to)}開進單線，號誌轉紅，對面的車要等。`;
-  return `${meetTrainLabel(result.to)}停在${station(result.to.pos)}主線。`;
+  if (result.to.arrived) return zh('{train}到{station}了！', { train: meetTrainLabel(result.to), station: station(result.to.pos) });
+  if (result.to.track === 'side') return zh('{train}進避車道等候，主線讓給別的列車。', { train: meetTrainLabel(result.to) });
+  if (round.kinds[result.to.pos] === 'block') return zh('{train}開進單線，號誌轉紅，對面的車要等。', { train: meetTrainLabel(result.to) });
+  return zh('{train}停在{station}主線。', { train: meetTrainLabel(result.to), station: station(result.to.pos) });
 }
 
 /** Breadth-first search over whole-line states: fewest moves to a win, and whether a trap exists. */

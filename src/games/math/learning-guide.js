@@ -1,9 +1,11 @@
 // Ported from Taiwan Train Math 1.11.0 (src/learning-guide.js), Copyright 2026 mars-tw.
 // Code: Apache-2.0; original educational text: CC-BY-4.0.
 // Changed for the academy: header added, line endings normalised; logic unchanged.
+// R50: sentences built from parts use zh() (same Chinese output) so the room can show them in English.
 // See public/licenses/taiwan-train-math/NOTICE.txt and docs/r48-math-room-assets.json.
 // Presentation only: use public question descriptions and work already visible
 // on screen. Do not inspect solutions, option banks, routes or hidden matches.
+import { zh } from "./room-text.js";
 const GUIDES = {
   count: { title: "月台有幾位乘客？", action: "數一數，再選一樣多的答案。", help: "每位只數一次；點過的可以做記號。", success: "一位配一個數，最後的數表示總人數。" },
   identify: { title: "找題目中的列車。", action: "點你找到的列車卡。", help: "看看車頭和車身，再對照列車名稱。", success: "列車的外形、名稱和型號能幫你辨認。" },
@@ -36,14 +38,14 @@ function publicTitle(game, prompt, fallback) {
   const text = prompt.trim().replace(/^請/, "");
   let found;
   if (game === "boarding" && (found = text.match(/^車上有\s*(\d+)\s*人，(又上來|下車)\s*(\d+)\s*人，(?:現在有|還有)幾人[？?]$/)))
-    return `車上 ${found[1]} 人，${found[2] === "下車" ? "下車" : "上車"} ${found[3]} 人。${found[2] === "下車" ? "還有" : "現在"}幾人？`;
-  if (game === "cargo" && (found = text.match(/裝\s*(\d+)\s*箱貨物/))) return `裝 ${found[1]} 箱貨物。`;
-  if (game === "sharing" && (found = text.match(/把\s*(\d+)\s*份點心，分給\s*(\d+)\s*位朋友/))) return `${found[1]} 份給 ${found[2]} 位，全分完、一樣多。`;
-  if (game === "treasure" && (found = text.match(/找出\s*(\d+)\s*個(.+?)[。.]?$/))) return `找 ${found[1]} 個${found[2].replace(/[。.]$/, "")}。`;
-  if (game === "puzzle" && (found = text.match(/^把(.+)的照片拼回來[。.]?$/))) return `拼回${found[1]}的照片。`;
-  if (game === "balance" && (found = text.match(/和\s*(\d+)\s*公斤(?:的貨物)?一樣重/))) return `配到和 ${found[1]} 公斤一樣重。`;
-  if (game === "mosaic" && (found = text.match(/^照著小樣本，把(.+)的圖形拼出來[。.]?$/))) return `照小圖拼${found[1]}。`;
-  if (game === "differences" && (found = text.match(/^比較兩幅(.+)圖，找出\s*(\d+)\s*處不同[。.]?$/))) return `${found[1]}：找 ${found[2]} 處不同。`;
+    return zh(found[2] === "下車" ? "車上 {start} 人，下車 {change} 人。還有幾人？" : "車上 {start} 人，上車 {change} 人。現在幾人？", { start: found[1], change: found[3] });
+  if (game === "cargo" && (found = text.match(/裝\s*(\d+)\s*箱貨物/))) return zh("裝 {n} 箱貨物。", { n: found[1] });
+  if (game === "sharing" && (found = text.match(/把\s*(\d+)\s*份點心，分給\s*(\d+)\s*位朋友/))) return zh("{snacks} 份給 {friends} 位，全分完、一樣多。", { snacks: found[1], friends: found[2] });
+  if (game === "treasure" && (found = text.match(/找出\s*(\d+)\s*個(.+?)[。.]?$/))) return zh("找 {n} 個{item}。", { n: found[1], item: found[2].replace(/[。.]$/, "") });
+  if (game === "puzzle" && (found = text.match(/^把(.+)的照片拼回來[。.]?$/))) return zh("拼回{train}的照片。", { train: found[1] });
+  if (game === "balance" && (found = text.match(/和\s*(\d+)\s*公斤(?:的貨物)?一樣重/))) return zh("配到和 {n} 公斤一樣重。", { n: found[1] });
+  if (game === "mosaic" && (found = text.match(/^照著小樣本，把(.+)的圖形拼出來[。.]?$/))) return zh("照小圖拼{shape}。", { shape: found[1] });
+  if (game === "differences" && (found = text.match(/^比較兩幅(.+)圖，找出\s*(\d+)\s*處不同[。.]?$/))) return zh("{scene}：找 {n} 處不同。", { scene: found[1], n: found[2] });
   if (game === "identify") return text.replace(/^找到型號是\s*/, "找型號 ").replace(/^找到/, "找");
   if (game === "tickets" && !/\d/.test(text)) return text.includes("兩張") ? "幫兩張車票付剛好的點數。" : "用代幣付剛好的票價。";
   // Unknown older/newer wording keeps every public fact, including a train
@@ -81,9 +83,9 @@ export function learningGuide(q, trip = {}) {
       const basicPrompt = typeof prompt !== "string" || !prompt.trim() || [
         "看看顏色，把行李放進同色的籃子。", "看看形狀，把行李放進同形狀的籃子。", "顏色和形狀都要相同，幫行李找到籃子。",
       ].includes(prompt.trim().replace(/^請/, ""));
-      if (basicPrompt) guide.title = q.criteria === "both" ? "同色又同形狀的行李放一起。" : `同${q.criteria === "color" ? "色" : "形狀"}的行李放一起。`;
-      guide.help = q.criteria === "both" ? "先比顏色，再比形狀，兩個都要相同。" : `看看${criterion}，再跟籃子標示比一比。`;
-      guide.success = `按照${criterion}，把行李分好了。`;
+      if (basicPrompt) guide.title = q.criteria === "both" ? "同色又同形狀的行李放一起。" : q.criteria === "color" ? "同色的行李放一起。" : "同形狀的行李放一起。";
+      guide.help = q.criteria === "both" ? "先比顏色，再比形狀，兩個都要相同。" : zh("看看{criterion}，再跟籃子標示比一比。", { criterion });
+      guide.success = zh("按照{criterion}，把行李分好了。", { criterion });
     }
     if (isIndex(trip?.explorer?.luggageSelected)) guide.action = "點想放的籃子。";
   }

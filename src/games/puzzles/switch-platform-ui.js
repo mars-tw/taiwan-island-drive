@@ -2,6 +2,8 @@
 import { openRailGame, createBoard, colorFilters, svgEl, htmlEl, moveAlong, wait } from './rail-shell.js';
 import { drawTrack, drawPlate, drawTrain, segmentsToPath } from './rail-art.js';
 import { RAIL_COLORS } from './common.js';
+import { t } from '../../shared/i18n.js';
+import { zh, tx } from '../math/room-text.js';
 import {
   SWITCH_GAME, SWITCH_LAYOUTS, TRACK_END_U, TRAIN_STOP_U, TRAIN_WAIT_U, LEG_U, switchLevels, createSwitchRound, routeFor, toggleSwitch,
   departTrain, switchHint, currentTrain, isSwitchRoundDone, legSegments, routeSegments, trainLabel, platformLabel,
@@ -10,12 +12,13 @@ import {
 const W = 1060, H = 600, TRAIN_LEN = 170;
 // R49: the board is a map seen from above, so the trains are drawn from above too (portrait and landscape).
 const VIEW = 'top';
-const focusOf = l => `${l.switches} 個道岔・${l.trains} 列車${l.attrs === 'both' ? '・顏色和形狀' : ''}`;
+// Level notes stay Chinese source; the shell shows them with tx().
+const focusOf = l => zh(l.attrs === 'both' ? '{switches} 個道岔・{trains} 列車・顏色和形狀' : '{switches} 個道岔・{trains} 列車', { switches: l.switches, trains: l.trains });
 
 function mount(ctx) {
   let round = createSwitchRound({ age: ctx.age, level: ctx.level, seed: ctx.seed });
   const layout = SWITCH_LAYOUTS[round.layout];
-  const queue = htmlEl('div', { class: 'rp-queue', 'aria-label': '等一下要出發的列車' }, ctx.stage);
+  const queue = htmlEl('div', { class: 'rp-queue', 'aria-label': t('等一下要出發的列車') }, ctx.stage);
   const board = createBoard(ctx.stage, 'rp-switch-board');
   let portrait = false, map = (u, v) => [u, v], trainGroup = null, plateGroup = null;
 
@@ -61,7 +64,7 @@ function mount(ctx) {
       drawPlate(svg, x, y, 34, p.color, p.shape, 'rp-sign');
     }
     const [ex, ey] = portrait ? map(30, layout.entry[1] + 92) : map(30, layout.entry[1] + 82);
-    const startTag = svgEl('text', { x: ex, y: ey, class: 'rp-map-label', 'text-anchor': portrait ? 'middle' : 'start' }, svg); startTag.textContent = '起點';
+    const startTag = svgEl('text', { x: ex, y: ey, class: 'rp-map-label', 'text-anchor': portrait ? 'middle' : 'start' }, svg); startTag.textContent = t('起點');
     // Parked trains.
     for (const [platform, trainId] of Object.entries(round.parked)) {
       const t = round.trains.find(x => x.id === trainId), [x, y] = map(TRAIN_STOP_U, layout.platforms[platform].v);
@@ -85,7 +88,7 @@ function mount(ctx) {
       const onRoute = route.nodes.includes(id);
       const b = ctx.button('', {
         parent: board.hits, className: `rp-switch${onRoute ? ' is-on-route' : ''}`,
-        ariaLabel: `道岔 ${id.slice(1)}：現在往${round.switches[id] ? (portrait ? '右' : '下') : (portrait ? '左' : '上')}，點一下換方向`,
+        ariaLabel: zh(round.switches[id] ? (portrait ? '道岔 {n}：現在往右，點一下換方向' : '道岔 {n}：現在往下，點一下換方向') : (portrait ? '道岔 {n}：現在往左，點一下換方向' : '道岔 {n}：現在往上，點一下換方向'), { n: id.slice(1) }),
         onClick: () => flip(id),
       });
       b.innerHTML = `<svg viewBox="-32 -32 64 64" aria-hidden="true"><g transform="rotate(${angle.toFixed(0)})"><path d="M-18 0H14" /><path d="M4 -12L18 0L4 12" /></g></svg>`;
@@ -100,11 +103,11 @@ function mount(ctx) {
     const waiting = round.trains.slice(round.current + 1);
     queue.hidden = !waiting.length;
     if (!waiting.length) return;
-    htmlEl('span', {}, queue, '下一班：');
-    for (const t of waiting) {
-      const chip = htmlEl('span', { class: 'rp-chip', 'aria-label': trainLabel(t, round.attrs) }, queue);
+    htmlEl('span', {}, queue, t('下一班：'));
+    for (const train of waiting) {
+      const chip = htmlEl('span', { class: 'rp-chip', 'aria-label': tx(trainLabel(train, round.attrs)) }, queue);
       const svg = svgEl('svg', { viewBox: '-30 -30 60 60', 'aria-hidden': 'true' }, chip);
-      drawPlate(svg, 0, 0, 27, t.color, t.shape);
+      drawPlate(svg, 0, 0, 27, train.color, train.shape);
     }
   }
 
@@ -112,7 +115,7 @@ function mount(ctx) {
     round = toggleSwitch(round, id); ctx.tap();
     const route = routeFor(round.layout, round.switches), p = round.platforms.find(x => x.id === route.platform);
     draw();
-    ctx.say(`路通到${platformLabel(p, round.attrs)}。${round.parked[p.id] ? '那裡已經有列車了。' : ''}`, { voice: true });
+    ctx.say(zh(round.parked[p.id] ? '路通到{platform}。那裡已經有列車了。' : '路通到{platform}。', { platform: platformLabel(p, round.attrs) }), { voice: true });
     board.hits.querySelector(`[data-switch="${id}"]`)?.focus();
   }
 
@@ -123,7 +126,7 @@ function mount(ctx) {
     const stopU = result.kind === 'occupied' ? 640 : TRAIN_STOP_U;
     const path = svgEl('path', { d: segmentsToPath(routeSegments(before.layout, result.route.nodes, stopU), map), class: 'rp-route-ghost' }, board.svg);
     board.svg.append(trainGroup, plateGroup);
-    ctx.say(`${trainLabel(result.train, before.attrs)}出發！`, { voice: false });
+    ctx.say(zh('{train}出發！', { train: trainLabel(result.train, before.attrs) }), { voice: false });
     const ok = await moveAlong(trainGroup, path, { duration: 2000, alive: ctx.alive, transform: (p, a) => { poseTrain(p, a); return trainGroup.getAttribute('transform'); } });
     if (!ok) return;
     if (result.kind === 'arrived') {
@@ -148,6 +151,8 @@ function mount(ctx) {
   ctx.setControls([{ label: '出發 ▶', primary: true, className: 'rp-go', onClick: go }]);
   draw();
   ctx.onResize(() => { if (!ctx.isBusy()) draw(); else board.fit(); });
+  // R50: a language switch redraws the board text (the shell re-labels the cue and the buttons).
+  ctx.onLanguageChange?.(() => { queue.setAttribute('aria-label', t('等一下要出發的列車')); if (!ctx.isBusy()) draw(); });
   ctx.say(switchHint(round, { kind: 'start' }));
   return { destroy() {}, get round() { return round; } };
 }

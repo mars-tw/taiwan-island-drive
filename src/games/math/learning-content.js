@@ -31,7 +31,9 @@ const sourceRows = [
   ["guishan", "觀光署：龜山島的名稱與地形", "https://spotlightaward.taiwan.net.tw/tourpage.php?id=e9ebf622-aa04-4944-b9e6-c91a87572469&tag=4"],
   ["gaomei", "觀光署：高美濕地", "https://www.taiwan.net.tw/m1.aspx?id=R117&sNo=0001112"],
   ["changhua", "台鐵：彰化扇形車庫", "https://www.railway.gov.tw/tra-tip-web/tip/tip00H/tipH21/view?tripNo=4eb4b3c1edd64221bcf1c7c912670d0c"],
-  ["vehicle-mover", "鐵道局：九曲堂側線事故調查中的車輛調動機資料", "https://www.rb.gov.tw/public/upimgs/A00/111/臺鐵110年7月28日九曲堂側線出軌事故專案調查報告.pdf"],
+  // R50: the PDF file name is Chinese; it is a link, not player text, so it is kept percent-encoded here.
+  // decodeURI() gives back exactly the original address (…/111/臺鐵110年7月28日九曲堂側線出軌事故專案調查報告.pdf).
+  ["vehicle-mover", "鐵道局：九曲堂側線事故調查中的車輛調動機資料", decodeURI("https://www.rb.gov.tw/public/upimgs/A00/111/%E8%87%BA%E9%90%B5110%E5%B9%B47%E6%9C%8828%E6%97%A5%E4%B9%9D%E6%9B%B2%E5%A0%82%E5%81%B4%E7%B7%9A%E5%87%BA%E8%BB%8C%E4%BA%8B%E6%95%85%E5%B0%88%E6%A1%88%E8%AA%BF%E6%9F%A5%E5%A0%B1%E5%91%8A.pdf")],
 ];
 export const LEARNING_SOURCES = Object.freeze(Object.fromEntries(sourceRows.map(([id, title, url]) =>
   [id, Object.freeze({ id, title, url, checkedAt })])));

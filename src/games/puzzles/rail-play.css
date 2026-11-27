@@ -194,6 +194,9 @@
   .rp-card-car svg{width:44px;height:22px}.rp-dispatch-card{padding:3px 6px;gap:4px}.rp-dispatch-card>b{font-size:13px}
   .rp-ride-train{flex-direction:column;align-items:center;gap:4px;margin-bottom:58px}.rp-ride-car{flex:none;width:100%}
   .rp-ride-sign{left:6px;top:6px}.rp-ride-count{right:6px;top:6px}
+  html[lang=en] #rail-play .rp-back,html[lang=en] #rail-play .rp-levels{font-size:14px;padding:4px 6px}
+  html[lang=en] .rp-ride-sign b,html[lang=en] .rp-ride-count{font-size:14px;padding:2px 8px}
+  html[lang=en] .rp-tt-line{height:68px}
   .rp-tt-row{grid-template-columns:1.25fr .9fr .9fr 1fr .9fr;font-size:13px;gap:2px;padding:2px 3px}.rp-tt-train i{display:none}
   .rp-tt-clocks{gap:8px}
 }

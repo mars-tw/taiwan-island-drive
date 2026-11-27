@@ -12,7 +12,7 @@
 #math-room button:focus-visible,#math-room a:focus-visible,#math-room summary:focus-visible{outline:3px solid #ce5d24;outline-offset:2px}
 #math-room .room-primary{background:var(--room-orange);border-color:#ae470a;color:#0c2742;box-shadow:0 4px 0 #ae470a}
 #math-room .room-primary:disabled{background:#ffe3d1;box-shadow:none}
-.room-page{height:100%;display:grid;grid-template-rows:auto minmax(0,1fr) auto;min-height:0}
+.room-page{height:100%;display:grid;grid-template-columns:minmax(0,1fr);grid-template-rows:auto minmax(0,1fr) auto;min-height:0}
 .room-body{min-height:0;overflow:auto;overscroll-behavior:contain;padding:12px 18px 18px;display:flex;flex-direction:column;gap:12px}
 .room-body>*{flex-shrink:0}
 /* academy navigation, rebuilt from the page header like the dispatch lesson */
@@ -68,6 +68,8 @@
 .room-later>summary::-webkit-details-marker{display:none}
 .room-later>summary::after{content:'打開看看 ▾';margin-left:auto;color:var(--room-blue);font-weight:900}
 .room-later[open]>summary::after{content:'收起 ▴'}
+/* R50：CSS 的 content 不會被翻譯，英文另外寫 */
+html[lang=en] .room-later>summary::after{content:'Show me ▾'}html[lang=en] .room-later[open]>summary::after{content:'Hide ▴'}
 .room-notice{font-weight:800;color:#a2400b;min-height:1em}.room-notice:empty{display:none}
 .room-save-note{background:#fff0e5;border:2px solid #ce5d24;border-radius:12px;padding:6px 10px;font-weight:800}
 /* play */
@@ -290,6 +292,10 @@
 }
 /* phones: one-row dock */
 @media (max-width:560px){#math-room .room-dock-actions .room-primary{flex-basis:120px}#math-room .mosaic-brush-status{display:none}
+ html[lang=en] .room-bar{gap:4px;padding:4px 6px}
+ html[lang=en] #math-room .room-back,html[lang=en] #math-room .room-pause{padding:4px 6px;font-size:14px}
+ html[lang=en] .room-bar-title{font-size:15px}
+ html[lang=en] .room-title-icon{width:28px;height:28px}
  #math-room .mosaic-tools{grid-template-columns:76px minmax(0,1fr);gap:6px;margin-bottom:6px}#math-room .mosaic-reference-grid{width:72px;height:72px}#math-room .mosaic-sample figcaption{font-size:12px;margin-bottom:2px}
  #math-room .mosaic-palette{grid-template-columns:repeat(4,minmax(60px,1fr));gap:4px}#math-room .mosaic-color-choice{flex-direction:column;gap:0;padding:2px;font-size:12px}}
 #math-room .discovery-help{display:none}

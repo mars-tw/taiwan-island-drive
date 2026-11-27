@@ -1,6 +1,8 @@
 // R48 B line math 2: 月台時刻表. DOM-free timetable generator and checker on a 12-hour clock.
 // Times are minutes after midnight, always between 1:00 and 12:55, so no board ever wraps past 12.
+// R50: every sentence here stays Chinese (zh() only fills in values); the screen shows it through tx().
 import { normalizeAge, createRng, randInt, pickOne, shuffled, stationNames, RAIL_COLORS } from '../puzzles/common.js';
+import { zh } from './room-text.js';
 
 export const TIMETABLE_GAME = Object.freeze({ id: 'platform-timetable', title: '月台時刻表', room: '數學', ages: '3～8 歲' });
 
@@ -41,14 +43,14 @@ export const clockParts = minutes => ({ hour: Math.floor(minutes / 60), minute: 
 /** 3 點、3 點半、8 點 15 分 */
 export function timeWords(minutes) {
   const { hour, minute } = clockParts(minutes);
-  return minute === 0 ? `${hour} 點` : minute === 30 ? `${hour} 點半` : `${hour} 點 ${minute} 分`;
+  return minute === 0 ? zh('{hour} 點', { hour }) : minute === 30 ? zh('{hour} 點半', { hour }) : zh('{hour} 點 {minute} 分', { hour, minute });
 }
 export const digital = minutes => { const { hour, minute } = clockParts(minutes); return `${hour}:${String(minute).padStart(2, '0')}`; };
 export function rideWords(minutes) {
   const h = Math.floor(minutes / 60), m = minutes % 60;
-  if (!h) return `${m} 分鐘`;
-  if (!m) return `${h} 小時`;
-  return m === 30 ? `${h} 個半小時` : `${h} 小時 ${m} 分鐘`;
+  if (!h) return zh('{n} 分鐘', { n: m });
+  if (!m) return zh('{n} 小時', { n: h });
+  return m === 30 ? zh('{n} 個半小時', { n: h }) : zh('{h} 小時 {m} 分鐘', { h, m });
 }
 const MIN = 60, MAX = 12 * 60 + 55;
 const inRange = t => Number.isInteger(t) && t >= MIN && t <= MAX;
@@ -98,7 +100,7 @@ export function createTimetableRound({ age = '5-6', level = 0, seed = 1 } = {}) 
     if (cfg.cross === false && minute + ride >= 60) continue;
     if (cfg.cross === true && minute + ride <= 60) continue;
     used.add(depart);
-    const row = { id: `r${rows.length + 1}`, color: colors[rows.length], train: `${RAIL_COLORS[colors[rows.length]].name}列車`, to: destinations[rows.length], depart, ride, arrive, ask: cfg.ask };
+    const row = { id: `r${rows.length + 1}`, color: colors[rows.length], train: zh('{color}列車', { color: RAIL_COLORS[colors[rows.length]].name }), to: destinations[rows.length], depart, ride, arrive, ask: cfg.ask };
     row.answer = cfg.ask === 'read' || cfg.ask === 'depart' ? depart : cfg.ask === 'ride' ? ride : arrive;
     const { close, far } = distractors(cfg, row, row.answer), others = [...close.slice(0, 1), ...shuffled(rng, close.slice(1)), ...far].slice(0, 2);
     row.choices = [row.answer, ...others].sort((a, b) => a - b);
@@ -110,8 +112,9 @@ export function createTimetableRound({ age = '5-6', level = 0, seed = 1 } = {}) 
 }
 
 export const choiceWords = (round, value) => (round.ask === 'ride' ? rideWords(value) : round.age === '7-8' ? digital(value) : timeWords(value));
-/** Time inside a sentence: 「3 點出發」 or 「8:15 出發」. */
-const at = (round, value) => (round.age === '7-8' ? `${digital(value)} ` : timeWords(value));
+/** Time inside a sentence: 「3 點出發」 or 「8:15 出發」 (7～8 歲 reads the digital time, followed by a space). */
+const digitalAt = round => round.age === '7-8';
+const at = (round, value) => (digitalAt(round) ? digital(value) : timeWords(value));
 
 export function checkTimetable(round, rowIndex, value) {
   const row = round.rows[rowIndex];
@@ -128,7 +131,7 @@ export function timetableHint(round, rowIndex) {
   if (round.ask === 'read') return minute === 30 ? '長針指著 6 是半點。短針在兩個數字中間，看它剛走過哪一個數字。' : '看短針指著哪個數字；長針指著 12，就是整點。';
   if (round.ask === 'ride') return '從出發時間開始，長針 5 分、5 分往前走，數到到站時間，一共走了幾分鐘？';
   if (round.ask === 'depart') return '從到站時間往回撥：長針倒退坐車的分鐘數，經過 12 時，短針也要退一格。';
-  if (row.ride % 60 === 0) return `短針往前走 1 格，就是過了 1 小時。從 ${hour} 開始，往前數 ${row.ride / 60} 格。`;
+  if (row.ride % 60 === 0) return zh('短針往前走 1 格，就是過了 1 小時。從 {hour} 開始，往前數 {n} 格。', { hour, n: row.ride / 60 });
   if (row.ride === 30) return minute === 30 ? '長針從 6 再走半圈，回到 12，就到下一個整點了。' : '長針走半圈是 30 分鐘，會從 12 走到 6。';
   if (row.ride % 30 === 0) return '先加整整的小時，再加 30 分鐘（長針走半圈）。';
   if (minute + row.ride > 60) return `先算到下一個整點還要幾分鐘，再加上剩下的分鐘。`;
@@ -154,8 +157,9 @@ export function handAngles(minutes) {
 export function rowQuestion(round, rowIndex) {
   const row = round.rows[rowIndex];
   if (!row) return '';
-  if (round.ask === 'read') return `看時鐘：${row.train}幾點出發？`;
-  if (round.ask === 'ride') return `${row.train} ${digital(row.depart)} 出發，${digital(row.arrive)} 到${row.to}。坐了多久？`;
-  if (round.ask === 'depart') return `${row.train}坐 ${rideWords(row.ride)}，${at(round, row.arrive)}到${row.to}。幾點出發？`;
-  return `${row.train} ${at(round, row.depart)}出發，坐 ${rideWords(row.ride)}。幾點到${row.to}？`;
+  const train = row.train, station = row.to, ride = rideWords(row.ride);
+  if (round.ask === 'read') return zh('看時鐘：{train}幾點出發？', { train });
+  if (round.ask === 'ride') return zh('{train} {depart} 出發，{arrive} 到{station}。坐了多久？', { train, depart: digital(row.depart), arrive: digital(row.arrive), station });
+  if (round.ask === 'depart') return zh(digitalAt(round) ? '{train}坐 {ride}，{time} 到{station}。幾點出發？' : '{train}坐 {ride}，{time}到{station}。幾點出發？', { train, ride, time: at(round, row.arrive), station });
+  return zh(digitalAt(round) ? '{train} {time} 出發，坐 {ride}。幾點到{station}？' : '{train} {time}出發，坐 {ride}。幾點到{station}？', { train, time: at(round, row.depart), ride, station });
 }

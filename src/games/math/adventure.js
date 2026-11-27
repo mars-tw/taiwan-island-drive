@@ -2,6 +2,8 @@
 // Code: Apache-2.0; original educational text: CC-BY-4.0.
 // Changed for the academy: header added, line endings normalised; logic unchanged.
 // See public/licenses/taiwan-train-math/NOTICE.txt and docs/r48-math-room-assets.json.
+// R50: questions stay Chinese (zh() fills the values); the room translates prompts, hints and souvenir text with tx() when it shows them.
+import { zh } from "./room-text.js";
 export const DIRECTIONS = ["上", "右", "下", "左"];
 export const SOUVENIR_THEMES = [
   { id: "station", name: "車站工具", icon: "🎟", description: "小站長的口袋裡，裝著出發的準備。" },
@@ -295,7 +297,7 @@ export function createAdventureQuestion({
       total: friends * each,
       food,
       answer: Array(friends).fill(each),
-      prompt: `把 ${friends * each} 份點心，分給 ${friends} 位朋友，讓每位一樣多。`,
+      prompt: zh("把 {total} 份點心，分給 {friends} 位朋友，讓每位一樣多。", { total: friends * each, friends }),
       hint: "一次給每位朋友一份，再分下一輪。多了可以搬回點心籃。",
     };
   }
@@ -322,8 +324,8 @@ export function createAdventureQuestion({
       items,
       target: kind,
       answer: target,
-      prompt: `山海風景裡，找出 ${target} 個${names[kind]}。`,
-      hint: `只找${names[kind]}，每個點一次。找到的會亮起來；其他小東西可以下次再看。`,
+      prompt: zh("山海風景裡，找出 {n} 個{item}。", { n: target, item: names[kind] }),
+      hint: zh("只找{item}，每個點一次。找到的會亮起來；其他小東西可以下次再看。", { item: names[kind] }),
     };
   }
   throw new Error("Unknown adventure");

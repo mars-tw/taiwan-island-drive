@@ -82,7 +82,29 @@
   汐止 Xizhi、奮起湖 Fenqihu、大慶 Daqing、花東海岸 Hualien–Taitung Coast。車站寫成「Xizhi Station」。
 - **遊戲自創的站名**：翻意思，讓孩子聽得懂。已定：海風站 Sea Breeze Station（句中可簡稱 Sea Breeze）、轉運站 Transfer Station。
   其他照同一個方式：花園站 Garden Station、榕樹站 Banyan Station、森林站 Forest Station、鐘樓站 Clock Tower Station、燈塔小站 Lighthouse Stop。
+- L2 補（火車課路線站名，數學遊戲室與火車謎題共用；L3 的火車課若顯示同一個站名，英文要一字不差）：
+  海風 Sea Breeze、藍灣 Blue Bay、山海 Hill & Sea、河畔 Riverside、星光 Starlight、城市 City、杉林 Cedar Grove、雲霧 Misty Cloud、森林 Forest。
+  車票小幫手的目的地：山谷站 Valley Station、小港站 Little Harbor Station（其餘見上一行）。
 - 新增地名時，把它補進本表，再寫進自己那條線的字典。
+
+## 三之一、數學遊戲室與火車謎題（L2）常用詞
+
+| 中文 | English | 說明 |
+| --- | --- | --- |
+| 遊戲室 | Playroom | 「回遊戲室」= Back to Playroom |
+| 一輪（遊戲室玩一次） | round | 「玩完一輪蓋一個章」= Finish a round to get a stamp. |
+| 題 | question | 「第 2 題」= Question 2 |
+| 集章冊 | stamp book | 蓋章 = get a stamp |
+| 關卡、第 N 關（謎題） | level / Level N | 同上方「關」 |
+| 轉轍器、換軌箭頭 | switch | 「點黃色的箭頭」= Tap the yellow arrow |
+| 側線 | side track | 調車場 = train yard |
+| 避車道、會車 | passing track / pass | 「在避車道會車」= pass on the passing track |
+| 時刻表 | timetable | 出發時間 = leaves at；到站 = arrives |
+| 代幣 | coin | 車票小幫手；「3 點」的代幣 = a 3 coin；票價 = fare |
+| 點心 | snack | |
+| 行李 | bag | 籃子 = basket |
+| 貨物、箱 | box | 「裝 3 箱」= Load 3 boxes |
+| 想一想（提示鈕） | Hint | 按了會給方法提示 |
 
 ## 四、寫法小規則
 

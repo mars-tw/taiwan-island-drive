@@ -1,18 +1,33 @@
 // R48 B line math 1 screen: the train stops station by station; friends get off, then on.
+// R50: sentences stay Chinese in the game state. The shell translates what it is handed (say, win, button
+// labels); this file's own text goes through show(), which keeps the Chinese and redraws after a language switch.
 import { openRailGame, htmlEl, wait, reducedMotion } from '../puzzles/rail-shell.js';
 import { appUrl } from '../../shared/paths.js';
 import { artImage } from '../../shared/art-refresh.js';
+import { onLanguageChange } from '../../shared/i18n.js';
+import { zh, tx } from './room-text.js';
 import { BOARDING_GAME, boardingLevels, createBoardingTrip, checkBoarding, stopSentence, questionText } from './boarding-count.js';
 
 const head = id => appUrl(`art/r4/passenger-${(id % 6) + 1}.png`);
+
+/** Text (or one attribute) shown in the current language; relabel() repaints everything after a switch. */
+function textBook() {
+  const items = new Map();
+  const paint = (el, attr, text) => { if (attr) el.setAttribute(attr, tx(text)); else el.textContent = tx(text); };
+  return {
+    show(el, text, attr = '') { if (!items.has(el)) items.set(el, {}); items.get(el)[attr] = text; paint(el, attr, text); return el; },
+    relabel() { for (const [el, texts] of items) { if (!el.isConnected) { items.delete(el); continue; } for (const [attr, text] of Object.entries(texts)) paint(el, attr, text); } },
+  };
+}
 
 function mount(ctx) {
   const trip = createBoardingTrip({ age: ctx.age, level: ctx.level, seed: ctx.seed });
   const perCar = trip.max === 5 ? 5 : 10, carCount = trip.max === 20 ? 2 : 1;
   let riders = [], nextId = 0, qIndex = 0;
+  const { show, relabel } = textBook();
 
-  const route = htmlEl('ol', { class: 'rp-ride-route', 'aria-label': '路線' }, ctx.stage);
-  trip.stops.forEach(stop => htmlEl('li', {}, route, stop.station));
+  const route = show(htmlEl('ol', { class: 'rp-ride-route' }, ctx.stage), '路線', 'aria-label');
+  trip.stops.forEach(stop => show(htmlEl('li', {}, route), stop.station));
   const scene = htmlEl('div', { class: `rp-ride-scene seats-${perCar}${trip.hidden ? ' is-curtained' : ''}` }, ctx.stage);
   const sign = htmlEl('div', { class: 'rp-ride-sign' }, scene);
   const signName = htmlEl('b', {}, sign);
@@ -25,10 +40,10 @@ function mount(ctx) {
     const grid = htmlEl('div', { class: 'rp-ride-seats' }, car);
     for (let s = 0; s < perCar; s++) seats.push(htmlEl('span', { class: 'rp-seat' }, grid));
     htmlEl('img', { class: 'rp-ride-shell', src: appUrl('art/r5/carriage-blue.png'), alt: '', 'aria-hidden': 'true' }, car);
-    if (trip.hidden) htmlEl('div', { class: 'rp-curtain', 'aria-hidden': 'true' }, car, '拉上窗簾・用想的');
+    if (trip.hidden) show(htmlEl('div', { class: 'rp-curtain', 'aria-hidden': 'true' }, car), '拉上窗簾・用想的');
   }
   const platform = htmlEl('div', { class: 'rp-ride-platform', 'aria-hidden': 'true' }, scene);
-  const log = htmlEl('ol', { class: 'rp-trip-log', 'aria-label': '乘車紀錄' }, ctx.stage);
+  const log = show(htmlEl('ol', { class: 'rp-trip-log' }, ctx.stage), '乘車紀錄', 'aria-label');
 
   function paintSeats() {
     seats.forEach((seat, i) => {
@@ -37,22 +52,23 @@ function mount(ctx) {
       if (i < riders.length) htmlEl('img', { src: head(riders[i]), alt: '' }, seat);
     });
     const n = riders.length;
-    count.textContent = trip.hidden ? '車上：？ 人' : `車上：${n} 人`;
-    count.setAttribute('aria-label', trip.hidden ? '車上的人數藏起來了' : `車上 ${n} 人`);
+    show(count, trip.hidden ? '車上：？ 人' : zh('車上：{n} 人', { n }));
+    show(count, trip.hidden ? '車上的人數藏起來了' : zh('車上 {n} 人', { n }), 'aria-label');
   }
   function setStation(i) {
     route.querySelectorAll('li').forEach((li, k) => { li.toggleAttribute('aria-current', k === i); li.classList.toggle('is-past', k < i); });
-    signName.textContent = `${trip.stops[i].station}站`;
+    show(signName, zh('{name}站', { name: trip.stops[i].station }));
   }
   function showPills(stop, i, hideOn = false) {
     pills.replaceChildren();
-    if (stop.off) htmlEl('span', { class: 'rp-pill is-off' }, pills, `下車 ${stop.off} 人`);
-    if (stop.on || hideOn) htmlEl('span', { class: 'rp-pill is-on' }, pills, hideOn ? '上車 ？ 人' : `上車 ${stop.on} 人`);
+    if (stop.off) show(htmlEl('span', { class: 'rp-pill is-off' }, pills), zh('下車 {n} 人', { n: stop.off }));
+    if (stop.on || hideOn) show(htmlEl('span', { class: 'rp-pill is-on' }, pills), hideOn ? '上車 ？ 人' : zh('上車 {n} 人', { n: stop.on }));
     if (!i && !stop.off) pills.firstChild?.classList.add('is-first');
   }
   function addLog(stop, i, hideOn = false) {
-    const text = hideOn ? stopSentence({ ...stop, on: 0 }, i) + (stop.off ? '，上車 ？ 人' : '上車 ？ 人') : stopSentence(stop, i);
-    htmlEl('li', {}, log, text);
+    // Hidden 「上車 ？ 人」: the reverse question always sits at a later stop where friends got off first.
+    const hidden = () => (i && stop.off ? zh('{station}站下車 {off} 人，上車 {on} 人', { station: stop.station, off: stop.off, on: '？' }) : zh('{station}站上車 {n} 人', { station: stop.station, n: '？' }));
+    show(htmlEl('li', {}, log), hideOn ? hidden() : stopSentence(stop, i));
   }
 
   async function walk(kind, n) {
@@ -83,11 +99,12 @@ function mount(ctx) {
     ctx.setBusy(true); ctx.setControls([]);
     const stop = trip.stops[i], q = trip.questions[qIndex], missing = q?.type === 'missing' && q.after === i;
     setStation(i); showPills(stop, i, missing);
-    const intro = i === 0 ? (trip.hidden ? '這一趟拉上窗簾，看不到車裡。記住每一站上車、下車的人數。' : '看看每一站有幾人下車、幾人上車。') : '';
-    ctx.say(`${intro}${missing ? `${stop.station}站下車 ${stop.off} 人，又上來一些人。` : `${stopSentence(stop, i)}。`}`, { voice: true });
+    const sentence = missing ? zh('{station}站下車 {n} 人，又上來一些人。', { station: stop.station, n: stop.off }) : `${stopSentence(stop, i)}。`;
+    const intro = trip.hidden ? '這一趟拉上窗簾，看不到車裡。記住每一站上車、下車的人數。{stop}' : '看看每一站有幾人下車、幾人上車。{stop}';
+    ctx.say(i === 0 ? zh(intro, { stop: sentence }) : sentence, { voice: true });
     if (!(await drive('in'))) return;
     if (stop.off && !(await walk('off', stop.off))) return;
-    if (missing) { riders.push(...Array.from({ length: stop.on }, () => nextId++)); paintSeats(); count.textContent = `車上：${stop.after} 人`; }
+    if (missing) { riders.push(...Array.from({ length: stop.on }, () => nextId++)); paintSeats(); show(count, zh('車上：{n} 人', { n: stop.after })); }
     else if (stop.on && !(await walk('on', stop.on))) return;
     addLog(stop, i, missing);
     ctx.setBusy(false);
@@ -95,26 +112,28 @@ function mount(ctx) {
   }
   function nextButton(i) {
     const lastStop = i >= trip.stops.length - 1;
-    ctx.setControls([{ label: lastStop ? '列車出發 ▶' : `開往${trip.stops[i + 1].station}站 ▶`, primary: true, onClick: () => leave(i) }]);
+    ctx.setControls([{ label: lastStop ? '列車出發 ▶' : zh('開往{station}站 ▶', { station: trip.stops[i + 1].station }), primary: true, onClick: () => leave(i) }]);
     ctx.controls.querySelector('button')?.focus();
   }
   function ask(i) {
     const q = trip.questions[qIndex];
     ctx.say(questionText(trip, qIndex));
-    const buttons = ctx.setControls(q.choices.map(value => ({ label: `${value} 人`, className: 'rp-answer', onClick: () => answer(i, value) })));
+    const buttons = ctx.setControls(q.choices.map(value => ({ label: zh('{n} 人', { n: value }), className: 'rp-answer', onClick: () => answer(i, value) })));
+    // The shell translates the label, so answers are matched by value, not by the text on the button.
+    buttons.forEach((b, k) => { if (b) b.dataset.value = String(q.choices[k]); });
     buttons[0]?.focus();
   }
   async function answer(i, value) {
     const q = trip.questions[qIndex], result = checkBoarding(trip, qIndex, value);
     if (!result.correct) {
       ctx.say(result.hint, { retry: true });
-      ctx.controls.querySelectorAll('button').forEach(b => { if (b.textContent === `${value} 人`) { b.classList.add('is-tried'); b.disabled = true; } });
+      ctx.controls.querySelectorAll('button').forEach(b => { if (b.dataset.value === String(value)) { b.classList.add('is-tried'); b.disabled = true; } });
       return;
     }
     ctx.chime('star');
-    ctx.controls.querySelectorAll('button').forEach(b => { b.disabled = true; if (b.textContent === `${value} 人`) b.classList.add('is-right'); });
-    if (q.type === 'missing') { log.lastChild.textContent = stopSentence(trip.stops[i], i); showPills(trip.stops[i], i); ctx.say(`答對了！${trip.stops[i].station}站上車 ${q.answer} 人。`); }
-    else { count.textContent = `車上：${q.answer} 人`; count.classList.add('is-solved'); ctx.say(`答對了！車上有 ${q.answer} 人。`); }
+    ctx.controls.querySelectorAll('button').forEach(b => { b.disabled = true; if (b.dataset.value === String(value)) b.classList.add('is-right'); });
+    if (q.type === 'missing') { show(log.lastChild, stopSentence(trip.stops[i], i)); showPills(trip.stops[i], i); ctx.say(zh('答對了！{station}站上車 {n} 人。', { station: trip.stops[i].station, n: q.answer })); }
+    else { show(count, zh('車上：{n} 人', { n: q.answer })); count.classList.add('is-solved'); ctx.say(zh('答對了！車上有 {n} 人。', { n: q.answer })); }
     qIndex += 1;
     await wait(700); if (!ctx.alive()) return;
     nextButton(i);
@@ -131,8 +150,9 @@ function mount(ctx) {
   }
 
   paintSeats();
+  const stopListening = onLanguageChange(relabel);
   void runStop(0);
-  return { destroy() {}, get trip() { return trip; }, get question() { return trip.questions[qIndex] || null; } };
+  return { destroy() { stopListening(); }, get trip() { return trip; }, get question() { return trip.questions[qIndex] || null; } };
 }
 
 export function openBoardingCount(options = {}) {

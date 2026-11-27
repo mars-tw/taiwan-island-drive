@@ -4,6 +4,9 @@
 // See public/licenses/taiwan-train-math/NOTICE.txt and docs/r48-math-room-assets.json.
 // Story places are imaginary. Keep this module independent of the game engine
 // so both journey generation and home rendering can read the same route data.
+// R50: the route data stays Chinese; journeyMarkup translates at render time (t/tx).
+import { t, joinList } from "../../shared/i18n.js";
+import { tx } from "./room-text.js";
 const routeData = [
   {
     id: "forest", name: "森林郵差", icon: "✉", themeCSS: "journey-forest",
@@ -115,9 +118,11 @@ export function journeyMarkup({ level = "small", completed = [], availableGames 
   const available = new Set(Array.isArray(availableGames) ? availableGames.filter(game => typeof game === "string") : []);
   const travelled = new Set(Array.isArray(completed) ? completed.filter(id => journeyById(id)) : []);
   const stops = STOPS[level];
-  return `<section class="journeys-section" id="theme-journeys" aria-labelledby="journeys-title"><div class="journeys-heading"><div><small>選一趟故事旅程</small><h2 id="journeys-title">${escape("今天想去哪裡？")}</h2></div><p>${escape(`每趟 ${stops} 站，沿途換個任務，幫小站完成一件事。`)}</p></div><p class="journeys-note">${escape("這些是想像的主題旅程，圖片是情境插圖。每站的任務會輪替，玩過也能再出發。")}</p><div class="journey-grid">${JOURNEYS.map(route => {
+  // R50: the heading was plain markup before; escapeHtml (not the caller's esc) keeps the Chinese output identical.
+  return `<section class="journeys-section" id="theme-journeys" aria-labelledby="journeys-title"><div class="journeys-heading"><div><small>${escapeHtml(t("選一趟故事旅程"))}</small><h2 id="journeys-title">${escape(t("今天想去哪裡？"))}</h2></div><p>${escape(t("每趟 {n} 站，沿途換個任務，幫小站完成一件事。", { n: stops }))}</p></div><p class="journeys-note">${escape(t("這些是想像的主題旅程，圖片是情境插圖。每站的任務會輪替，玩過也能再出發。"))}</p><div class="journey-grid">${JOURNEYS.map(route => {
     const games = journeyGames(route).filter(game => available.has(game));
     const playable = games.length >= stops, completed = travelled.has(route.id);
-    return `<button type="button" class="journey-card ${escape(route.themeCSS)} ${completed ? "journey-travelled" : ""}" data-journey="${escape(route.id)}" ${playable ? "" : "disabled"} aria-label="${escape(`${route.name}，${stops} 站主題旅程${completed ? "，已旅行，可以再次出發" : "，開始旅行"}`)}"><span class="journey-photo"><img src="${escape(route.image)}" alt="" aria-hidden="true" width="1200" height="675" loading="lazy" decoding="async"><span class="journey-icon" aria-hidden="true">${escape(route.icon)}</span>${completed ? `<span class="journey-badge">${escape("✓ 已旅行")}</span>` : ""}</span><span class="journey-card-copy"><strong>${escape(route.name)}</strong><span class="journey-description">${escape(route.description)}</span><span class="journey-task-list">${escape(games.map(game => GAME_LABELS[game]).join("、"))}</span><span class="journey-card-footer"><span>${escape(`${stops} 站 · ${games.length} 種任務輪替`)}</span><b>${escape(playable ? completed ? "再出發 →" : "開始旅行 →" : "換個難度再出發")}</b></span></span></button>`;
+    const label = { name: tx(route.name), n: stops };
+    return `<button type="button" class="journey-card ${escape(route.themeCSS)} ${completed ? "journey-travelled" : ""}" data-journey="${escape(route.id)}" ${playable ? "" : "disabled"} aria-label="${escape(completed ? t("{name}，{n} 站主題旅程，已旅行，可以再次出發", label) : t("{name}，{n} 站主題旅程，開始旅行", label))}"><span class="journey-photo"><img src="${escape(route.image)}" alt="" aria-hidden="true" width="1200" height="675" loading="lazy" decoding="async"><span class="journey-icon" aria-hidden="true">${escape(route.icon)}</span>${completed ? `<span class="journey-badge">${escape(t("✓ 已旅行"))}</span>` : ""}</span><span class="journey-card-copy"><strong>${escape(tx(route.name))}</strong><span class="journey-description">${escape(tx(route.description))}</span><span class="journey-task-list">${escape(joinList(games.map(game => t(GAME_LABELS[game]))))}</span><span class="journey-card-footer"><span>${escape(t("{stops} 站 · {count} 種任務輪替", { stops, count: games.length }))}</span><b>${escape(t(playable ? completed ? "再出發 →" : "開始旅行 →" : "換個難度再出發"))}</b></span></span></button>`;
   }).join("")}</div></section>`;
 }

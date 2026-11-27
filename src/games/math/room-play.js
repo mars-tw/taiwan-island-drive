@@ -10,6 +10,8 @@ import { newTicketsState, selectTicket, payToken, returnToken, ticketTotals } fr
 import { learningGuide } from './learning-guide.js';
 import { parseArithmeticAnswer } from './arithmetic-ui.js';
 import { ROUND_GAMES } from './room-registry.js';
+// R50：回饋句子留在中文（測試與畫面都靠它），遊戲室畫面顯示時才翻成英文。
+import { zh } from './room-text.js';
 
 function questionState(q) {
   return {
@@ -39,12 +41,12 @@ function answer(round, value) {
   if (round.solved) return result('noop', round);
   if (isCorrect(q, value)) {
     round.solved = true;
-    say(round, 'success', `完成了！${learningGuide(q, round).success}`);
+    say(round, 'success', zh('完成了！{text}', { text: learningGuide(q, round).success }));
     return result('correct', round);
   }
   round.attempts++;
   // 答錯只教方法：用玩法的「這樣想」提示，不出現答案。
-  say(round, 'retry', `再想一次。${learningGuide(q, round).help}`);
+  say(round, 'retry', zh('再想一次。{text}', { text: learningGuide(q, round).help }));
   return result('wrong', round);
 }
 function changed(round, update) {
@@ -112,7 +114,7 @@ export function act(round, action = {}) {
     case 'boarding-submit': {
       if (q.game !== 'boarding') return result('noop', round);
       const number = parseArithmeticAnswer(round.boardingInput, LEVELS[q.level].max);
-      if (number === null) { say(round, 'hint', `請輸入 0 到 ${LEVELS[q.level].max} 的數字。`); return result('blocked', round); }
+      if (number === null) { say(round, 'hint', zh('請輸入 0 到 {max} 的數字。', { max: LEVELS[q.level].max })); return result('blocked', round); }
       return answer(round, number);
     }
     // 貨物裝箱
@@ -140,7 +142,7 @@ export function act(round, action = {}) {
       if (q.items[index] !== q.target) { say(round, 'hint', '這也是風景裡的小發現。再看看，我們要找題目裡的寶物。'); return result('blocked', round); }
       round.found.add(index);
       if (round.found.size === q.answer) return answer(round, q.answer);
-      say(round, 'progress', `找到第 ${round.found.size} 個了！`);
+      say(round, 'progress', zh('找到第 {n} 個了！', { n: round.found.size }));
       return result('changed', round);
     // 行李分類
     case 'luggage-item': return q.game === 'luggage' ? changed(round, () => { round.explorer = selectLuggage(q, round.explorer, index); }) : result('noop', round);

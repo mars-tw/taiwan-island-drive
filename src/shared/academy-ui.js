@@ -15,6 +15,7 @@ import {registerMathGame} from '../games/math/room-registry.js';
 import {roomLevel} from '../games/math/room-store.js';
 import {registerRailGames} from '../games/puzzles/math-room.js';
 import {t,setAttr,localize,onLanguageChange} from './i18n.js';
+import {tx} from '../games/math/room-text.js';
 
 export function installAcademy(){
   const start=document.getElementById('academy-start');if(!start)return;
@@ -95,7 +96,7 @@ export function installAcademy(){
     if(phase==='load'&&q.front===total){const ready=dialog.querySelector('[data-dispatch=check]');ready.textContent=t('坐好了，去分車 →');ready.classList.add('next-ready');cue.textContent=t('朋友坐好了！按橘色車票去分車。');}
     // R47: a failed check is told by the coach (always on screen), and only one button glows next.
     const guide=dispatchGuide({phase,action,message,front:q.front,total});
-    if(guide.retry){cue.textContent=guide.cue;coach.classList.add('is-retry');dialog.querySelector('.dispatch-feedback').hidden=true;}
+    if(guide.retry){cue.textContent=guide.cue;coach.classList.add('is-retry');cue.textContent=tx(guide.cue);dialog.querySelector('.dispatch-feedback').hidden=true;}
     if(guide.nextStep==='add'){dialog.querySelector('[data-dispatch=check]')?.classList.add('not-ready');dialog.querySelector('[data-dispatch=add]')?.classList.add('next-step');}
     dialog.querySelectorAll('[data-dispatch]').forEach(button=>button.onclick=()=>{if(paused||dialog.dataset.inTransit==='true')return;const action=button.dataset.dispatch,before=readAcademy().dispatch;const rects=new Map([...dialog.querySelectorAll('[data-passenger]')].map(e=>[e.dataset.passenger,e.getBoundingClientRect()]));const r=performDispatch(action,roomLevel());
       if(cast&&before.active&&r.state.active){const next=r.state.active;

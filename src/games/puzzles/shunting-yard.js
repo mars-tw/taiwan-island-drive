@@ -1,6 +1,7 @@
 // R48 B line puzzle 2: 調車場排車廂. DOM-free rules, levels and a tiny breadth-first solver.
 // Each track is a stub siding: index 0 is the buffer stop, the last car is next to the shunting engine.
 import { normalizeAge, createRng, shuffled, randInt, RAIL_COLORS } from './common.js';
+import { zh } from '../math/room-text.js';
 
 export const SHUNTING_GAME = Object.freeze({ id: 'shunting-yard', title: '調車場排車廂', room: '拼搭與方向', ages: '5～8 歲（3～4 歲簡化版）' });
 export const SHUNTING_TRACKS = Object.freeze(['a', 'b', 'out']);
@@ -67,7 +68,7 @@ export function createShuntingRound({ age = '5-6', level = 0, seed = 1 } = {}) {
 }
 
 export const carById = (round, id) => round.cars.find(c => c.id === id);
-export const carLabel = (round, id) => { const car = carById(round, id); return `${round.numbers ? `${car.number} 號` : ''}${RAIL_COLORS[car.color].name}車廂`; };
+export const carLabel = (round, id) => { const car = carById(round, id), color = RAIL_COLORS[car.color].name; return round.numbers ? zh('{n} 號{color}車廂', { n: car.number, color }) : color + '車廂'; };
 export const isShuntingSolved = round => round.tracks.out.length === round.target.length && round.tracks.out.every((id, i) => id === round.target[i]);
 export const shuntingPrefix = round => { let k = 0; while (k < round.tracks.out.length && round.tracks.out[k] === round.target[k]) k++; return k; };
 export const movableCar = (round, track) => round.tracks[track]?.at(-1) || null;
@@ -91,13 +92,14 @@ export function shuntingHint(round) {
   if (isShuntingSolved(round)) return '車廂排好了！調車機要把列車拉出去囉。';
   const k = shuntingPrefix(round);
   if (round.tracks.out.length > k) return '出發線最外面的車廂順序不對。先把它拉出來，放到側線。';
-  const next = round.target[k], label = `${round.numbers ? ' ' : ''}${carLabel(round, next)}`;
+  // Numbered cars keep the space after 是 (「下一節是 2 號藍色車廂」); each spacing is its own sentence key.
+  const next = round.target[k], label = carLabel(round, next), spaced = round.numbers;
   for (const track of ['a', 'b']) {
     const at = round.tracks[track].indexOf(next);
     if (at < 0) continue;
     const blockers = round.tracks[track].length - 1 - at;
-    if (!blockers) return `看調車單，下一節是${label}。它沒有被擋住，可以推進出發線。`;
-    return `下一節是${label}，前面有 ${blockers} 節車廂擋住。先把擋路的車廂移到另一條側線。`;
+    if (!blockers) return zh(spaced ? '看調車單，下一節是 {label}。它沒有被擋住，可以推進出發線。' : '看調車單，下一節是{label}。它沒有被擋住，可以推進出發線。', { label });
+    return zh(spaced ? '下一節是 {label}，前面有 {n} 節車廂擋住。先把擋路的車廂移到另一條側線。' : '下一節是{label}，前面有 {n} 節車廂擋住。先把擋路的車廂移到另一條側線。', { label, n: blockers });
   }
   return '看調車單，從最裡面那一節開始排。';
 }

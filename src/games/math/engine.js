@@ -1,6 +1,7 @@
 // Ported from Taiwan Train Math 1.11.0 (src/engine.js), Copyright 2026 mars-tw.
 // Code: Apache-2.0; original educational text: CC-BY-4.0.
 // Changed for the academy: header added, "?v=1.11.0" import cache queries removed, line endings normalised; logic unchanged.
+// R50: sentences with numbers or names use zh() (same Chinese output) so the room can show them in English.
 // See public/licenses/taiwan-train-math/NOTICE.txt and docs/r48-math-room-assets.json.
 import { createAdventureQuestion, SOUVENIRS } from "./adventure.js";
 import { createPuzzleQuestion } from "./puzzle.js";
@@ -10,6 +11,7 @@ import { createMosaicQuestion, createDifferencesQuestion } from "./discovery.js"
 import { journeyById, journeyGames } from "./journeys.js";
 import { photoGameTrains, puzzlePhotoTrains, samePhotoIdentity } from "./train-images.js";
 import { createTicketsQuestion } from "./tickets.js";
+import { zh } from "./room-text.js";
 export const V15_GAME_IDS = Object.freeze(["count", "identify", "boarding", "order", "compare", "pattern", "cargo", "memory", "clock", "tracks", "sharing", "treasure", "puzzle", "luggage", "maze"]);
 export const V17_GAME_IDS = Object.freeze([...V15_GAME_IDS, "program", "balance", "mosaic", "differences"]);
 export const LEVELS = {
@@ -157,7 +159,7 @@ export const SHAPES = {
 };
 export function clockLabel(value) {
   const hour = Math.floor(value / 60);
-  return `${hour} 點${value % 60 ? "半" : "整"}`;
+  return zh(value % 60 ? "{hour} 點半" : "{hour} 點整", { hour });
 }
 export function newMemoryState() {
   return { open: [], matched: [], turns: 0 };
@@ -438,8 +440,8 @@ export function questionFor({
       level,
       answer,
       max: cfg.max,
-      prompt: `請幫貨運列車裝 ${answer} 箱貨物。`,
-      hint: `每箱算一個。目標是 ${answer} 箱，多了可以點貨物搬回來。`,
+      prompt: zh("請幫貨運列車裝 {n} 箱貨物。", { n: answer }),
+      hint: zh("每箱算一個。目標是 {n} 箱，多了可以點貨物搬回來。", { n: answer }),
     };
   }
   if (game === "memory") {
@@ -533,8 +535,8 @@ export function questionFor({
       target: targetTrain.id,
       prompt:
         level === "large" && targetTrain.modelKind === "type"
-          ? `請找到型號是 ${targetTrain.model} 的列車。`
-          : `請找到${targetTrain.name}。`,
+          ? zh("請找到型號是 {model} 的列車。", { model: targetTrain.model })
+          : zh("請找到{name}。", { name: targetTrain.name }),
       answer: targetTrain.id,
       choices,
       hint: "看看車頭和車身的樣子，再對照題目中的列車名稱或型號。",
@@ -596,8 +598,8 @@ export function questionFor({
       choices: options(answer, cfg.max, 3, rng),
       prompt:
         operation === "add"
-          ? `車上有 ${start} 人，又上來 ${change} 人，現在有幾人？`
-          : `車上有 ${start} 人，下車 ${change} 人，還有幾人？`,
+          ? zh("車上有 {start} 人，又上來 {change} 人，現在有幾人？", { start, change })
+          : zh("車上有 {start} 人，下車 {change} 人，還有幾人？", { start, change }),
       hint: operation === "add"
         ? "上車會讓人數增加。從原本的人數往上加，把增加的人數算進去。"
         : "下車會讓人數減少。從原本的人數往下減，把離開的人數扣掉。",

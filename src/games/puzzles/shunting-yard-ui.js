@@ -2,6 +2,8 @@
 import { openRailGame, createBoard, colorFilters, svgEl, htmlEl, moveAlong, wait } from './rail-shell.js';
 import { drawTrack, drawCar, drawTrain } from './rail-art.js';
 import { RAIL_COLORS } from './common.js';
+import { t } from '../../shared/i18n.js';
+import { zh, tx } from '../math/room-text.js';
 import {
   SHUNTING_GAME, SHUNTING_TRACKS, TRACK_NAMES, shuntingLevels, createShuntingRound, shuntMove, isShuntingSolved, shuntingHint,
   shuntingIntro, shuntingPrefix, carById, carLabel, movableCar,
@@ -37,24 +39,24 @@ function mount(ctx) {
   let round = createShuntingRound({ age: ctx.age, level: ctx.level, seed: ctx.seed });
   const history = [];
   let selected = null, portrait = false, g = null, carGroups = new Map(), drag = null, skipClick = false;
-  const card = htmlEl('div', { class: 'rp-dispatch-card', 'aria-label': '調車單' }, ctx.stage);
+  const card = htmlEl('div', { class: 'rp-dispatch-card', 'aria-label': t('調車單') }, ctx.stage);
   const board = createBoard(ctx.stage, 'rp-shunt-board');
 
   function renderCard() {
     card.replaceChildren();
-    htmlEl('b', {}, card, '調車單');
+    htmlEl('b', {}, card, t('調車單'));
     const row = htmlEl('div', { class: 'rp-card-cars' }, card);
-    htmlEl('small', {}, row, '最裡面');
+    htmlEl('small', {}, row, t('最裡面'));
     const done = shuntingPrefix(round);
     round.target.forEach((id, i) => {
-      const car = carById(round, id), chip = htmlEl('span', { class: `rp-card-car${i < done ? ' is-done' : ''}`, 'aria-label': `第 ${i + 1} 節：${carLabel(round, id)}${i < done ? '，排好了' : ''}` }, row);
+      const car = carById(round, id), chip = htmlEl('span', { class: `rp-card-car${i < done ? ' is-done' : ''}`, 'aria-label': t(i < done ? '第 {n} 節：{car}，排好了' : '第 {n} 節：{car}', { n: i + 1, car: tx(carLabel(round, id)) }) }, row);
       const svg = svgEl('svg', { viewBox: '0 0 80 40', 'aria-hidden': 'true' }, chip);
       colorFilters(svg, [RAIL_COLORS[car.color]]);
       drawCar(svg, 2, 6, 76, car.color);
-      if (round.numbers) { svgEl('circle', { cx: 40, cy: 16, r: 13, class: 'rp-car-badge' }, svg); const t = svgEl('text', { x: 40, y: 21.5, class: 'rp-car-number', 'text-anchor': 'middle' }, svg); t.textContent = String(car.number); }
+      if (round.numbers) { svgEl('circle', { cx: 40, cy: 16, r: 13, class: 'rp-car-badge' }, svg); const num = svgEl('text', { x: 40, y: 21.5, class: 'rp-car-number', 'text-anchor': 'middle' }, svg); num.textContent = String(car.number); }
       if (i < done) htmlEl('i', { 'aria-hidden': 'true' }, chip, '✓');
     });
-    htmlEl('small', {}, row, '出口');
+    htmlEl('small', {}, row, t('出口'));
   }
 
   function carNode(svg, id) {
@@ -84,7 +86,7 @@ function mount(ctx) {
       const v = g.rows[t], [bx, by] = g.map(g.x0 - 10, v);
       svgEl('rect', { x: bx - (portrait ? 22 : 6), y: by - (portrait ? 6 : 22), width: portrait ? 44 : 12, height: portrait ? 12 : 44, rx: 4, class: 'rp-buffer' }, svg);
       const [lx, ly] = portrait ? g.map(g.x0 - 34, v) : g.map(g.x0 + 4, v + 56);
-      const label = svgEl('text', { x: lx, y: ly, class: 'rp-map-label rp-track-name', 'text-anchor': portrait ? 'middle' : 'start' }, svg); label.textContent = TRACK_NAMES[t];
+      const label = svgEl('text', { x: lx, y: ly, class: 'rp-map-label rp-track-name', 'text-anchor': portrait ? 'middle' : 'start' }, svg); label.textContent = tx(TRACK_NAMES[t]);
       round.tracks[t].forEach((id, i) => {
         const node = carNode(svg, id);
         node.setAttribute('transform', at(g.slot(i), v));
@@ -95,7 +97,7 @@ function mount(ctx) {
       const count = round.tracks[t].length, outer = movableCar(round, t);
       const hit = ctx.button('', {
         parent: board.hits, className: `rp-track-hit${selected === t ? ' is-selected' : ''}`,
-        ariaLabel: `${TRACK_NAMES[t]}：${count ? `${count} 節車廂，最外面是${carLabel(round, outer)}` : '空的'}${selected && selected !== t ? '。點這裡，把車廂移過來' : ''}`,
+        ariaLabel: zh(count ? (selected && selected !== t ? '{track}：{n} 節車廂，最外面是{car}。點這裡，把車廂移過來' : '{track}：{n} 節車廂，最外面是{car}') : (selected && selected !== t ? '{track}：空的。點這裡，把車廂移過來' : '{track}：空的'), { track: TRACK_NAMES[t], n: count, car: count ? carLabel(round, outer) : '' }),
         onClick: () => { if (skipClick) { skipClick = false; return; } choose(t); },
       });
       hit.dataset.track = t;
@@ -109,9 +111,9 @@ function mount(ctx) {
 
   function choose(track) {
     if (selected === null) {
-      if (!round.tracks[track].length) { ctx.say(`${TRACK_NAMES[track]}沒有車廂。先點有車廂的線。`, { retry: true }); return; }
+      if (!round.tracks[track].length) { ctx.say(zh('{track}沒有車廂。先點有車廂的線。', { track: TRACK_NAMES[track] }), { retry: true }); return; }
       selected = track; ctx.tap(); draw();
-      ctx.say(`拉出${round.numbers ? ' ' : ''}${carLabel(round, movableCar(round, track))}。要推到哪一條線？`, { voice: false });
+      ctx.say(zh(round.numbers ? '拉出 {car}。要推到哪一條線？' : '拉出{car}。要推到哪一條線？', { car: carLabel(round, movableCar(round, track)) }), { voice: false });
       board.hits.querySelector(`[data-track="${track}"]`)?.focus();
       return;
     }
@@ -140,8 +142,8 @@ function mount(ctx) {
     if (result.kind === 'solved') { await departure(); return; }
     ctx.setBusy(false);
     if (result.kind === 'oops') ctx.say('這節不是調車單上的下一節。可以把它拉出來，再試一次。', { retry: true });
-    else if (result.kind === 'good') { ctx.chime('star'); ctx.say(`排好 ${shuntingPrefix(round)} 節了！看調車單的下一節。`); }
-    else ctx.say(`${carLabel(round, result.car)}停在${TRACK_NAMES[to]}。`, { voice: false });
+    else if (result.kind === 'good') { ctx.chime('star'); ctx.say(zh('排好 {n} 節了！看調車單的下一節。', { n: shuntingPrefix(round) })); }
+    else ctx.say(zh({ a: '{car}停在側線一。', b: '{car}停在側線二。', out: '{car}停在出發線。' }[to], { car: carLabel(round, result.car) }), { voice: false });
   }
 
   async function departure() {
@@ -158,7 +160,7 @@ function mount(ctx) {
     await moveAlong(consist, path2, { duration: 2200, alive: ctx.alive, transform: p => `translate(${p.x.toFixed(1)} ${p.y.toFixed(1)})` });
     if (!ctx.alive()) return;
     ctx.setBusy(false);
-    ctx.win(round.moves <= round.fewest ? `用 ${round.moves} 步就排好了，車廂照順序出發！` : `${round.moves} 步排好了，車廂照順序出發！`);
+    ctx.win(zh(round.moves <= round.fewest ? '用 {n} 步就排好了，車廂照順序出發！' : '{n} 步排好了，車廂照順序出發！', { n: round.moves }));
   }
 
   // Drag between tracks: pointer down on one track, release over another.
@@ -198,6 +200,8 @@ function mount(ctx) {
   ]);
   draw();
   ctx.onResize(() => { if (!ctx.isBusy()) draw(); else board.fit(); });
+  // R50: a language switch redraws the yard and the dispatch card (the shell re-labels the cue and the buttons).
+  ctx.onLanguageChange?.(() => { card.setAttribute('aria-label', t('調車單')); if (!ctx.isBusy()) draw(); });
   ctx.say(shuntingIntro(round));
   return { destroy() { drag = null; }, get round() { return round; } };
 }

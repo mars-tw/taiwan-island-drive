@@ -1,6 +1,8 @@
 // R48 B line math 1: 海風站上下車. DOM-free trip generator and checker.
 // Each stop: some passengers get off, then some get on. Station names come from the train routes.
+// R50: every sentence here stays Chinese (zh() only fills in values); the screen shows it through tx().
 import { normalizeAge, createRng, randInt, numberChoices, stationNames } from '../puzzles/common.js';
+import { zh } from './room-text.js';
 
 export const BOARDING_GAME = Object.freeze({ id: 'boarding-count', title: '海風站上下車', room: '數學', ages: '3～8 歲' });
 export const BOARDING_MAX = Object.freeze({ '3-4': 5, '5-6': 10, '7-8': 20 });
@@ -115,28 +117,30 @@ export function boardingHint(trip, questionIndex) {
   if (!q) return '';
   if (q.type === 'missing') {
     const stop = trip.stops[q.stop];
-    return `先一站一站算：到${stop.station}站下車後，車上剩幾人？再從那個數往上數到 ${stop.after}，數了幾個，就是上車的人數。`;
+    return zh('先一站一站算：到{station}站下車後，車上剩幾人？再從那個數往上數到 {n}，數了幾個，就是上車的人數。', { station: stop.station, n: stop.after });
   }
-  if (trip.ask === 'end' && q.after > 1) return `一站一站算：先算${trip.stops[1].station}站，記住人數，再算${trip.stops[q.after].station}站。下車往回數，上車往上數。`;
+  if (trip.ask === 'end' && q.after > 1) return zh('一站一站算：先算{first}站，記住人數，再算{last}站。下車往回數，上車往上數。', { first: trip.stops[1].station, last: trip.stops[q.after].station });
   const stop = trip.stops[q.after];
   if (q.after === 0 && trip.ask === 'each') return '一個一個數座位上的朋友，數到最後一個就是答案。';
-  if (trip.cross === 'up') return `從 ${stop.before} 開始，先補到 10，再加上剩下的人。`;
-  if (trip.cross === 'down') return `從 ${stop.before} 開始，先減到 10，再減掉剩下的人。`;
-  if (stop.off && stop.on) return `先算下車：從 ${stop.before} 往回數 ${stop.off} 個；再算上車：往上數 ${stop.on} 個。`;
-  if (stop.off) return `從 ${stop.before} 開始，往回數 ${stop.off} 個。`;
-  return `從 ${stop.before} 開始，往上數 ${stop.on} 個。`;
+  if (trip.cross === 'up') return zh('從 {from} 開始，先補到 10，再加上剩下的人。', { from: stop.before });
+  if (trip.cross === 'down') return zh('從 {from} 開始，先減到 10，再減掉剩下的人。', { from: stop.before });
+  if (stop.off && stop.on) return zh('先算下車：從 {from} 往回數 {off} 個；再算上車：往上數 {on} 個。', { from: stop.before, off: stop.off, on: stop.on });
+  if (stop.off) return zh('從 {from} 開始，往回數 {n} 個。', { from: stop.before, n: stop.off });
+  return zh('從 {from} 開始，往上數 {n} 個。', { from: stop.before, n: stop.on });
 }
 
+// One whole sentence per case (English word order differs), so no half sentences are glued together.
 export function stopSentence(stop, index) {
-  if (index === 0) return `${stop.station}站上車 ${stop.on} 人`;
-  const parts = [];
-  if (stop.off) parts.push(`下車 ${stop.off} 人`);
-  if (stop.on) parts.push(`上車 ${stop.on} 人`);
-  return `${stop.station}站${parts.join('，')}`;
+  const station = stop.station;
+  if (index === 0) return zh('{station}站上車 {n} 人', { station, n: stop.on });
+  if (stop.off && stop.on) return zh('{station}站下車 {off} 人，上車 {on} 人', { station, off: stop.off, on: stop.on });
+  if (stop.off) return zh('{station}站下車 {n} 人', { station, n: stop.off });
+  if (stop.on) return zh('{station}站上車 {n} 人', { station, n: stop.on });
+  return zh('{name}站', { name: station });
 }
 export function questionText(trip, questionIndex) {
   const q = trip.questions[questionIndex];
   if (!q) return '';
-  if (q.type === 'missing') { const stop = trip.stops[q.stop]; return `${stop.station}站下車 ${stop.off} 人，又上來一些人，現在車上有 ${stop.after} 人。${stop.station}站上車幾人？`; }
+  if (q.type === 'missing') { const stop = trip.stops[q.stop]; return zh('{station}站下車 {off} 人，又上來一些人，現在車上有 {after} 人。{station}站上車幾人？', { station: stop.station, off: stop.off, after: stop.after }); }
   return q.after === trip.stops.length - 1 && trip.stops.length > 1 ? '列車要開往下一站了。現在車上有幾人？' : '現在車上有幾人？';
 }

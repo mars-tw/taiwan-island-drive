@@ -2,6 +2,11 @@
 // Code: Apache-2.0; original educational text: CC-BY-4.0.
 // Changed for the academy: header added, line endings normalised; logic unchanged.
 // See public/licenses/taiwan-train-math/NOTICE.txt and docs/r48-math-room-assets.json.
+// R50 (academy): Chinese/English switch. Questions keep Chinese text (filled with zh()); the
+// scene translates at display time with t()/tx(). Chinese output is unchanged.
+import { t } from "../../shared/i18n.js";
+import { zh, tx } from "./room-text.js";
+
 export const PROGRAM_DIRECTIONS = {
   up: { bit: 1, opposite: 4, dx: 0, dy: -1, name: "上", symbol: "↑" },
   right: { bit: 2, opposite: 8, dx: 1, dy: 0, name: "右", symbol: "→" },
@@ -111,7 +116,7 @@ export function createBalanceQuestion({ level, rng = Math.random }) {
   const target = bank[indexFor(bank.length, rng)];
   return {
     game: "balance", level, target, allowedWeights: [...cfg.weights], maxBoxes: cfg.boxes,
-    answer: target, prompt: `幫貨運列車配好重量，和 ${target} 公斤的貨物一樣重。`,
+    answer: target, prompt: zh("幫貨運列車配好重量，和 {n} 公斤的貨物一樣重。", { n: target }),
     hint: "看看每箱的重量，試著搭配不同的貨物；檢查後可以搬回來調整。",
   };
 }
@@ -205,8 +210,11 @@ function scale(q, state) {
     const x = 23 + index % 4 * 19, y = left + 41 - Math.floor(index / 4) * 19;
     return `<g><rect x="${x}" y="${y}" width="17" height="17" rx="3" fill="#efd29b" stroke="#685338"/><text x="${x + 8.5}" y="${y + 12}" text-anchor="middle">${value}</text></g>`;
   }).join("");
-  return `<svg class="cargo-balance" viewBox="0 0 320 166" role="img" aria-label="貨運天平，${!state.balanceChecked ? "待檢查，先保持水平" : tilt < 0 ? "左邊比較重" : tilt > 0 ? "右邊比較重" : "兩邊平衡"}"><path d="M160 49 139 144h42Z" fill="#8db3a4" stroke="#42675d" stroke-width="3"/><path d="M58 ${left} 262 ${right}" fill="none" stroke="#365e53" stroke-width="7" stroke-linecap="round"/><circle cx="160" cy="58" r="7" fill="#df6939"/><path d="M58 ${left} 18 ${left + 63}h82Z M262 ${right} 222 ${right + 63}h82Z" fill="none" stroke="#78958a" stroke-width="2"/><rect x="13" y="${left + 61}" width="92" height="10" rx="5" fill="#365e53"/><rect x="217" y="${right + 61}" width="92" height="10" rx="5" fill="#365e53"/>${freight}<rect x="240" y="${right + 22}" width="44" height="37" rx="5" fill="#d9e6ee" stroke="#547687" stroke-width="2"/><text class="balance-goal-number" x="262" y="${right + 45}" text-anchor="middle">${q.target}</text><text x="262" y="${right + 56}" text-anchor="middle">公斤</text><path d="M123 146h74" stroke="#365e53" stroke-width="7" stroke-linecap="round"/></svg>`;
+  return `<svg class="cargo-balance" viewBox="0 0 320 166" role="img" aria-label="${escHtml(t(!state.balanceChecked ? "貨運天平，待檢查，先保持水平" : tilt < 0 ? "貨運天平，左邊比較重" : tilt > 0 ? "貨運天平，右邊比較重" : "貨運天平，兩邊平衡"))}"><path d="M160 49 139 144h42Z" fill="#8db3a4" stroke="#42675d" stroke-width="3"/><path d="M58 ${left} 262 ${right}" fill="none" stroke="#365e53" stroke-width="7" stroke-linecap="round"/><circle cx="160" cy="58" r="7" fill="#df6939"/><path d="M58 ${left} 18 ${left + 63}h82Z M262 ${right} 222 ${right + 63}h82Z" fill="none" stroke="#78958a" stroke-width="2"/><rect x="13" y="${left + 61}" width="92" height="10" rx="5" fill="#365e53"/><rect x="217" y="${right + 61}" width="92" height="10" rx="5" fill="#365e53"/>${freight}<rect x="240" y="${right + 22}" width="44" height="37" rx="5" fill="#d9e6ee" stroke="#547687" stroke-width="2"/><text class="balance-goal-number" x="262" y="${right + 45}" text-anchor="middle">${q.target}</text><text x="262" y="${right + 56}" text-anchor="middle">${t("公斤")}</text><path d="M123 146h74" stroke="#365e53" stroke-width="7" stroke-linecap="round"/></svg>`;
 }
+// One whole sentence per board square (the train can stand on the end square).
+const programCellLabel = (train, finish) => train && finish ? "第 {row} 排，第 {col} 格，列車在這裡，終點"
+  : train ? "第 {row} 排，第 {col} 格，列車在這裡" : finish ? "第 {row} 排，第 {col} 格，終點" : "第 {row} 排，第 {col} 格";
 export function workshopScene(q, trip, { esc = escHtml } = {}) {
   if (!q || !["program", "balance"].includes(q.game)) return "";
   const solved = Boolean(trip?.solved), fallback = newWorkshopState(q);
@@ -220,25 +228,25 @@ export function workshopScene(q, trip, { esc = escHtml } = {}) {
     const pastJourney = !state.programChecked && state.programTrace.length > 1;
     const position = running || pastJourney ? state.programPosition : execution ? execution.position : q.start;
     const visited = new Set(running || pastJourney ? state.programTrace : execution ? execution.trace : []);
-    const place = `第 ${Math.floor(position / q.columns) + 1} 排、第 ${position % q.columns + 1} 格`;
+    const row = Math.floor(position / q.columns) + 1, col = position % q.columns + 1;
     const phase = running ? "running" : !execution ? "planning" : execution.arrived ? "arrived" : execution.blocked ? "blocked" : "stopped";
-    const status = running ? `正在走第 ${Math.max(1, state.programTrace.length - 1)} 步，想改計畫可以先按「停車」。` : !execution
-      ? pastJourney ? "指令和停車位置還在，按「出發」從起點再走一次。"
-        : state.commands.length ? `已排 ${state.commands.length} 步，按「出發」看火車走。` : "列車還沒出發。先按方向排計畫。"
-      : execution.arrived ? "照計畫到站了！列車停在終點站。"
-        : execution.blocked ? `第 ${execution.trace.length} 步遇到牆，列車停在${place}。改好指令，再按「出發」。`
-          : `指令跑完了，列車停在${place}，還沒到站。改好指令，再按「出發」。`;
-    const board = q.walls.map((walls, index) => `<span class="program-cell ${Object.entries(PROGRAM_DIRECTIONS).filter(([, direction]) => walls & direction.bit).map(([name]) => `wall-${name}`).join(" ")} ${visited.has(index) ? "program-visited" : ""}" data-program-cell="${index}" aria-label="第 ${Math.floor(index / q.columns) + 1} 排，第 ${index % q.columns + 1} 格${index === position ? "，列車在這裡" : ""}${index === q.finish ? "，終點" : ""}">${index === position ? '<span class="program-train" aria-hidden="true">🚆</span>' : index === q.start ? '<span aria-hidden="true">起</span>' : ""}${index === q.finish ? '<span class="program-finish" aria-hidden="true">站</span>' : ""}</span>`).join("");
-    return `<div class="workshop-stage program-stage"><ol class="program-steps" aria-label="玩法步驟"><li><span aria-hidden="true">①</span> 按方向排計畫</li><li><span aria-hidden="true">②</span> 按出發看火車走</li></ol><div class="program-map" style="--program-columns:${q.columns}" role="group" aria-label="指令路線圖">${board}</div><div class="program-plan"><p class="program-status" data-program-phase="${phase}" role="status">${esc(status)}</p><div class="program-queue" role="group" aria-label="已排好的指令，按出發才會依序執行">${state.commands.map((direction, index) => `<button type="button" class="program-command ${execution?.blocked && index === execution.trace.length - 1 ? "program-command-blocked" : running && index === Math.max(0, state.programTrace.length - 2) ? "program-command-current" : ""}" data-program-remove="${index}" aria-label="第 ${index + 1} 步，往${PROGRAM_DIRECTIONS[direction].name}，刪除這一步" ${locked ? "disabled" : ""}><small>${index + 1}</small>${PROGRAM_DIRECTIONS[direction].symbol}</button>`).join("") || '<span class="program-plan-empty">計畫空空的，先按方向排一步。</span>'}</div><div class="program-directions" role="group" aria-label="排方向指令，按出發才會移動"><span class="program-pad-label" aria-hidden="true">排指令</span>${Object.entries(PROGRAM_DIRECTIONS).map(([name, direction]) => `<button type="button" data-program-direction="${name}" aria-label="排一個往${direction.name}的指令" ${locked || state.commands.length >= q.maxCommands ? "disabled" : ""}>${direction.symbol}<span>排往${direction.name}</span></button>`).join("")}</div><p class="program-limit">${state.commands.length >= q.maxCommands ? `計畫已滿 ${q.maxCommands} 步，點指令刪除或按「重排」。` : `已排 ${state.commands.length}／${q.maxCommands} 步，點指令可以刪除。`}</p><div class="workshop-actions"><button type="button" id="program-reset" class="text-btn" ${locked ? "disabled" : ""}>清空計畫</button><button type="button" id="program-run" class="primary-btn" ${locked || !state.commands.length ? "disabled" : ""}>出發，看火車走 →</button></div></div></div>`;
+    const status = running ? t("正在走第 {n} 步，想改計畫可以先按「停車」。", { n: Math.max(1, state.programTrace.length - 1) }) : !execution
+      ? pastJourney ? t("指令和停車位置還在，按「出發」從起點再走一次。")
+        : state.commands.length ? t("已排 {n} 步，按「出發」看火車走。", { n: state.commands.length }) : t("列車還沒出發。先按方向排計畫。")
+      : execution.arrived ? t("照計畫到站了！列車停在終點站。")
+        : execution.blocked ? t("第 {n} 步遇到牆，列車停在第 {row} 排、第 {col} 格。改好指令，再按「出發」。", { n: execution.trace.length, row, col })
+          : t("指令跑完了，列車停在第 {row} 排、第 {col} 格，還沒到站。改好指令，再按「出發」。", { row, col });
+    const board = q.walls.map((walls, index) => `<span class="program-cell ${Object.entries(PROGRAM_DIRECTIONS).filter(([, direction]) => walls & direction.bit).map(([name]) => `wall-${name}`).join(" ")} ${visited.has(index) ? "program-visited" : ""}" data-program-cell="${index}" aria-label="${esc(t(programCellLabel(index === position, index === q.finish), { row: Math.floor(index / q.columns) + 1, col: index % q.columns + 1 }))}">${index === position ? '<span class="program-train" aria-hidden="true">🚆</span>' : index === q.start ? `<span aria-hidden="true">${t("起")}</span>` : ""}${index === q.finish ? `<span class="program-finish" aria-hidden="true">${t("站")}</span>` : ""}</span>`).join("");
+    return `<div class="workshop-stage program-stage"><ol class="program-steps" aria-label="${esc(t("玩法步驟"))}"><li><span aria-hidden="true">①</span> ${t("按方向排計畫")}</li><li><span aria-hidden="true">②</span> ${t("按出發看火車走")}</li></ol><div class="program-map" style="--program-columns:${q.columns}" role="group" aria-label="${esc(t("指令路線圖"))}">${board}</div><div class="program-plan"><p class="program-status" data-program-phase="${phase}" role="status">${esc(status)}</p><div class="program-queue" role="group" aria-label="${esc(t("已排好的指令，按出發才會依序執行"))}">${state.commands.map((direction, index) => `<button type="button" class="program-command ${execution?.blocked && index === execution.trace.length - 1 ? "program-command-blocked" : running && index === Math.max(0, state.programTrace.length - 2) ? "program-command-current" : ""}" data-program-remove="${index}" aria-label="${esc(t("第 {n} 步，往{dir}，刪除這一步", { n: index + 1, dir: tx(PROGRAM_DIRECTIONS[direction].name) }))}" ${locked ? "disabled" : ""}><small>${index + 1}</small>${PROGRAM_DIRECTIONS[direction].symbol}</button>`).join("") || `<span class="program-plan-empty">${t("計畫空空的，先按方向排一步。")}</span>`}</div><div class="program-directions" role="group" aria-label="${esc(t("排方向指令，按出發才會移動"))}"><span class="program-pad-label" aria-hidden="true">${t("排指令")}</span>${Object.entries(PROGRAM_DIRECTIONS).map(([name, direction]) => `<button type="button" data-program-direction="${name}" aria-label="${esc(t("排一個往{dir}的指令", { dir: tx(direction.name) }))}" ${locked || state.commands.length >= q.maxCommands ? "disabled" : ""}>${direction.symbol}<span>${t("排往{dir}", { dir: tx(direction.name) })}</span></button>`).join("")}</div><p class="program-limit">${state.commands.length >= q.maxCommands ? t("計畫已滿 {n} 步，點指令刪除或按「重排」。", { n: q.maxCommands }) : t("已排 {n}／{max} 步，點指令可以刪除。", { n: state.commands.length, max: q.maxCommands })}</p><div class="workshop-actions"><button type="button" id="program-reset" class="text-btn" ${locked ? "disabled" : ""}>${t("清空計畫")}</button><button type="button" id="program-run" class="primary-btn" ${locked || !state.commands.length ? "disabled" : ""}>${t("出發，看火車走 →")}</button></div></div></div>`;
   }
   if (q.game === "balance") {
     if (!balanceValid(q)) return "";
     const state = balanceStateValid(q, trip?.workshop) ? trip.workshop : fallback;
-    const status = solved ? `總共 ${weightTotal(q, state.weights)} 公斤，剛好一樣重。`
-      : !state.balanceChecked ? "貨物放好再檢查，天平現在保持水平。"
+    const status = solved ? t("總共 {n} 公斤，剛好一樣重。", { n: weightTotal(q, state.weights) })
+      : t(!state.balanceChecked ? "貨物放好再檢查，天平現在保持水平。"
         : state.balanceTilt < 0 ? "你放的這一邊比較重，調整貨物再試。"
-          : state.balanceTilt > 0 ? "你放的這一邊比較輕，調整貨物再試。" : "天平水平了，可以再檢查一次。";
-    return `<div class="workshop-stage balance-stage"><div class="balance-display">${scale(q, state)}<p class="balance-status ${solved ? "balance-success" : ""}" role="status">${esc(status)}</p></div><div class="balance-work"><p class="workshop-note">選一箱放上左邊；點已放的貨物可以搬回。</p><div class="balance-supply" role="group" aria-label="可選的貨物重量">${q.allowedWeights.map(value => `<button type="button" data-balance-weight="${value}" ${solved || state.weights.length >= q.maxBoxes ? "disabled" : ""}><span aria-hidden="true">▣</span><strong>${value}</strong><small>公斤</small></button>`).join("")}</div><div class="balance-load" role="group" aria-label="已放的貨物">${state.weights.map((value, index) => `<button type="button" data-balance-remove="${index}" aria-label="搬回第 ${index + 1} 箱，${value} 公斤" ${solved ? "disabled" : ""}><span aria-hidden="true">▣</span><strong>${value}</strong><small>公斤 · 搬回</small></button>`).join("") || '<p class="balance-empty">左邊還沒放貨物。</p>'}</div><div class="workshop-actions"><button type="button" id="balance-reset" class="text-btn" ${solved ? "disabled" : ""}>全部搬回</button><button type="button" id="balance-check" class="primary-btn" ${solved || !state.weights.length ? "disabled" : ""}>放好了，秤秤看 ✓</button></div></div></div>`;
+          : state.balanceTilt > 0 ? "你放的這一邊比較輕，調整貨物再試。" : "天平水平了，可以再檢查一次。");
+    return `<div class="workshop-stage balance-stage"><div class="balance-display">${scale(q, state)}<p class="balance-status ${solved ? "balance-success" : ""}" role="status">${esc(status)}</p></div><div class="balance-work"><p class="workshop-note">${t("選一箱放上左邊；點已放的貨物可以搬回。")}</p><div class="balance-supply" role="group" aria-label="${esc(t("可選的貨物重量"))}">${q.allowedWeights.map(value => `<button type="button" data-balance-weight="${value}" ${solved || state.weights.length >= q.maxBoxes ? "disabled" : ""}><span aria-hidden="true">▣</span><strong>${value}</strong><small>${t("公斤")}</small></button>`).join("")}</div><div class="balance-load" role="group" aria-label="${esc(t("已放的貨物"))}">${state.weights.map((value, index) => `<button type="button" data-balance-remove="${index}" aria-label="${esc(t("搬回第 {n} 箱，{kg} 公斤", { n: index + 1, kg: value }))}" ${solved ? "disabled" : ""}><span aria-hidden="true">▣</span><strong>${value}</strong><small>${t("公斤 · 搬回")}</small></button>`).join("") || `<p class="balance-empty">${t("左邊還沒放貨物。")}</p>`}</div><div class="workshop-actions"><button type="button" id="balance-reset" class="text-btn" ${solved ? "disabled" : ""}>${t("全部搬回")}</button><button type="button" id="balance-check" class="primary-btn" ${solved || !state.weights.length ? "disabled" : ""}>${t("放好了，秤秤看 ✓")}</button></div></div></div>`;
   }
   return "";
 }

@@ -2,6 +2,8 @@
 import { openRailGame, createBoard, colorFilters, svgEl, htmlEl, moveAlong } from './rail-shell.js';
 import { drawTrack, drawTrain, drawSignal } from './rail-art.js';
 import { RAIL_COLORS } from './common.js';
+import { t, isEnglish } from '../../shared/i18n.js';
+import { zh, tx } from '../math/room-text.js';
 import {
   MEET_GAME, meetLevels, createMeetRound, canMove, moveTrain, meetStatus, meetMessage, meetTrainLabel, locationName, trainById,
 } from './single-line-meet.js';
@@ -71,12 +73,13 @@ function mount(ctx) {
       svgEl('rect', { x: Math.min(ax, bx), y: Math.min(ay, by), width: Math.abs(bx - ax), height: Math.abs(by - ay), class: 'rp-platform' }, svg);
       // Upright phones: names sit after the platform so they never run off the left edge.
       const [nx, ny] = portrait ? map(u + half + 42, v - 13) : map(u, v - 52);
-      const name = svgEl('text', { x: nx, y: ny, class: 'rp-map-label', 'text-anchor': 'middle' }, svg); name.textContent = `${locationName(round, i)}站`;
+      // English map labels give the name only ("Sea Breeze"): "… Station" is too wide beside an upright phone's track.
+      const name = svgEl('text', { x: nx, y: ny, class: 'rp-map-label', 'text-anchor': 'middle' }, svg); name.textContent = isEnglish() ? tx(locationName(round, i)) : zh('{name}站', { name: locationName(round, i) });
       if (kind === 'station') {
         const [cx, cy] = map(u, portrait ? (SIDE_V + MAIN_V) / 2 : SIDE_V + 50);
         const cap = svgEl('text', { x: cx, y: cy, class: 'rp-side-cap', 'text-anchor': 'middle' }, svg);
-        if (portrait) { svgEl('tspan', { x: cx, dy: -6 }, cap).textContent = '避車道'; svgEl('tspan', { x: cx, dy: 26 }, cap).textContent = `停 ${round.stations[i].side} 節`; }
-        else cap.textContent = `避車道・停 ${round.stations[i].side} 節`;
+        if (portrait) { svgEl('tspan', { x: cx, dy: -6 }, cap).textContent = t('避車道'); svgEl('tspan', { x: cx, dy: 26 }, cap).textContent = t('停 {n} 節', { n: round.stations[i].side }); }
+        else cap.textContent = t('避車道・停 {n} 節', { n: round.stations[i].side });
       }
     });
     // Rails: the single main line, the passing loops and terminal parking stubs.
@@ -94,7 +97,7 @@ function mount(ctx) {
       const g = drawTrain(svg, { color: t.color, length: LOCO, extraCars: Math.max(0, t.cars - 2), anchor: 'center', className: t.arrived ? 'is-arrived' : '' });
       g.dataset.train = t.id;
       g.setAttribute('transform', pose(t, x, y, baseAngle(t)));
-      if (t.kind) { const [lx, ly] = map(u, v + 42); const tag = svgEl('text', { x: lx, y: ly + (portrait ? 0 : 10), class: 'rp-train-tag', 'text-anchor': 'middle' }, svg); tag.textContent = t.kind === 'express' ? '快車' : '慢車'; }
+      if (t.kind) { const [lx, ly] = map(u, v + 42); const tag = svgEl('text', { x: lx, y: ly + (portrait ? 0 : 10), class: 'rp-train-tag', 'text-anchor': 'middle' }, svg); tag.textContent = tx(t.kind === 'express' ? '快車' : '慢車'); }
       if (t.arrived) { const [cx, cy] = map(u + t.dir * (trainLength(t.cars) / 2 + 26), v); const ok = svgEl('text', { x: cx, y: cy + 12, class: 'rp-arrived-mark', 'text-anchor': 'middle' }, svg); ok.textContent = '✓'; continue; }
       const check = canMove(round, t.id);
       if (check.reason === 'queue') continue;
@@ -102,7 +105,7 @@ function mount(ctx) {
       drawSignal(svg, sx, sy, check.ok ? 'green' : 'red', 0.9);
       const ring = ctx.button('', {
         parent: board.hits, className: `rp-train-hit ${check.ok ? 'is-go' : 'is-wait'}`,
-        ariaLabel: `${meetTrainLabel(t)}，在${locationName(round, t.pos)}，${check.ok ? '綠燈，可以往前開' : '紅燈，要等一等'}`,
+        ariaLabel: zh(check.ok ? '{train}，在{place}，綠燈，可以往前開' : '{train}，在{place}，紅燈，要等一等', { train: meetTrainLabel(t), place: locationName(round, t.pos) }),
         onClick: () => tapTrain(t.id),
       });
       ring.dataset.train = t.id;
@@ -116,9 +119,8 @@ function mount(ctx) {
 
   function renderLegend() {
     legend.replaceChildren();
-    const goal = round.goal ? `${meetTrainLabel(trainById(round, round.goal[0]))}要先到` : '每列車都開到對面的車站';
-    htmlEl('span', {}, legend, `目標：${goal}`);
-    htmlEl('span', { class: 'rp-legend-lamps' }, legend, '綠燈走・紅燈等');
+    htmlEl('span', {}, legend, round.goal ? t('目標：{train}要先到', { train: tx(meetTrainLabel(trainById(round, round.goal[0]))) }) : t('目標：每列車都開到對面的車站'));
+    htmlEl('span', { class: 'rp-legend-lamps' }, legend, t('綠燈走・紅燈等'));
   }
 
   function controls(mode = 'normal') {
@@ -185,6 +187,8 @@ function mount(ctx) {
 
   draw(); controls();
   ctx.onResize(() => { if (!ctx.isBusy()) draw(); else board.fit(); });
+  // R50: a language switch redraws the line and the legend (the shell re-labels the cue and the buttons).
+  ctx.onLanguageChange?.(() => { if (!ctx.isBusy()) draw(); });
   ctx.say(meetMessage(round));
   return { destroy() {}, get round() { return round; } };
 }

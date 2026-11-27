@@ -1,6 +1,7 @@
 // R48 B line puzzle 1: 轉轍器分月台. DOM-free rules, levels and track geometry.
 // Coordinates are abstract: u runs along the travel direction (0..1000), v runs across (0..600).
 import { normalizeAge, createRng, shuffled, RAIL_COLORS, RAIL_SHAPES } from './common.js';
+import { zh } from '../math/room-text.js';
 
 export const SWITCH_GAME = Object.freeze({ id: 'switch-platform', title: '轉轍器分月台', room: '拼搭與方向', ages: '4～8 歲' });
 
@@ -90,8 +91,9 @@ export const isSwitchRoundDone = round => round.current >= round.trains.length;
 export const currentTrain = round => round.trains[round.current] || null;
 
 export const plateLabel = (plate, attrs) => `${RAIL_COLORS[plate.color].name}${attrs === 'both' ? RAIL_SHAPES[plate.shape].name : ''}`;
-export const trainLabel = (train, attrs) => `${plateLabel(train, attrs)}列車`;
-export const platformLabel = (platform, attrs) => `${plateLabel(platform, attrs)}月台`;
+// R50: whole labels are dictionary keys (「藍色圓形列車」→ "blue circle train"), so no short {x}列車 pattern is needed.
+export const trainLabel = (train, attrs) => plateLabel(train, attrs) + '列車';
+export const platformLabel = (platform, attrs) => plateLabel(platform, attrs) + '月台';
 
 /** Sends the waiting train along the lit route. Wrong platforms are a rehearsal: the train backs up. */
 export function departTrain(round) {
@@ -114,12 +116,12 @@ export function switchHint(round, result) {
   const attrs = round.attrs, train = result?.train || currentTrain(round);
   if (!train) return '全部列車都停好了！';
   const target = round.platforms.find(p => p.id === train.target);
-  if (!result || result.kind === 'start') return `${trainLabel(train, attrs)}要開到${platformLabel(target, attrs)}。點黃色的箭頭換方向，看亮起來的路通到哪裡。`;
-  if (result.kind === 'arrived') return isSwitchRoundDone(round) ? '全部列車都停好了！' : `${trainLabel(train, attrs)}到站了！下一列車也要找跟自己一樣的月台。`;
+  if (!result || result.kind === 'start') return zh('{train}要開到{platform}。點黃色的箭頭換方向，看亮起來的路通到哪裡。', { train: trainLabel(train, attrs), platform: platformLabel(target, attrs) });
+  if (result.kind === 'arrived') return isSwitchRoundDone(round) ? '全部列車都停好了！' : zh('{train}到站了！下一列車也要找跟自己一樣的月台。', { train: trainLabel(train, attrs) });
   if (result.kind === 'occupied') return '那個月台已經停了列車。換一條路，找和列車一樣的牌子。';
   if (result.reason === 'shape') return '顏色對了，形狀不一樣。看看月台牌子上的形狀，再點黃色的箭頭。';
   if (result.reason === 'color') return '形狀對了，顏色不一樣。看看月台牌子上的顏色，再點黃色的箭頭。';
-  return `${trainLabel(train, attrs)}要停${platformLabel(target, attrs)}。從起點沿著亮起來的路走，看看哪個黃色箭頭要換方向。`;
+  return zh('{train}要停{platform}。從起點沿著亮起來的路走，看看哪個黃色箭頭要換方向。', { train: trainLabel(train, attrs), platform: platformLabel(target, attrs) });
 }
 
 /** Geometry for drawing and for the departure animation, in abstract (u, v) units. */

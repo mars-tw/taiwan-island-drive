@@ -23,12 +23,33 @@ const placeholders = text => [...String(text).matchAll(/\{(\w+)\}/g)].map(m => m
 const FULLY_TRANSLATED = [
   'src/home.js', 'src/shared/bootstrap.js', 'src/shared/parent-gate.js', 'src/shared/safety-ui.js', 'src/shared/safety-lesson.js',
   'src/shared/academy.js', 'src/shared/academy-ui.js', 'src/shared/passport.js', 'src/shared/lobby-music.js', 'src/shared/language-ui.js',
+  // L2: 數學遊戲室、火車謎題、中文換行
+  'src/shared/phrase-wrap.js',
+  'src/games/math/activities.js', 'src/games/math/adventure-ui.js', 'src/games/math/adventure.js', 'src/games/math/arithmetic-ui.js',
+  'src/games/math/boarding-count-ui.js', 'src/games/math/boarding-count.js', 'src/games/math/discovery.js', 'src/games/math/dispatch.js',
+  'src/games/math/engine.js', 'src/games/math/explorers.js', 'src/games/math/journeys.js', 'src/games/math/learning-content.js',
+  'src/games/math/learning-guide.js', 'src/games/math/learning-ui.js', 'src/games/math/legacy-trains.js', 'src/games/math/platform-timetable-ui.js',
+  'src/games/math/platform-timetable.js', 'src/games/math/program-playback.js', 'src/games/math/puzzle.js', 'src/games/math/room-icons.js',
+  'src/games/math/room-play.js', 'src/games/math/room-registry.js', 'src/games/math/room-store.js', 'src/games/math/room-text.js',
+  'src/games/math/room-ui.js', 'src/games/math/story-model.js', 'src/games/math/tickets.js', 'src/games/math/train-images.js', 'src/games/math/workshop.js',
+  'src/games/puzzles/catalog.js', 'src/games/puzzles/common.js', 'src/games/puzzles/index.js', 'src/games/puzzles/math-room.js',
+  'src/games/puzzles/progress.js', 'src/games/puzzles/rail-art.js', 'src/games/puzzles/rail-shell.js',
+  'src/games/puzzles/shunting-yard-ui.js', 'src/games/puzzles/shunting-yard.js',
+  'src/games/puzzles/single-line-meet-ui.js', 'src/games/puzzles/single-line-meet.js',
+  'src/games/puzzles/switch-platform-ui.js', 'src/games/puzzles/switch-platform.js',
 ];
 const HTML_SCOPE = { 'index.html': 'all', 'car/index.html': 'head', 'train/index.html': 'head', 'flight/index.html': 'head' };
 // 不給玩家看、或刻意不翻的中文（每一條寫原因）。
 const NOT_UI = [
   { file: 'src/shared/academy-ui.js', text: '再看看', why: '比對 dispatch 訊息開頭，用來決定要不要顯示，不會顯示在畫面上' },
   { file: 'src/shared/language-ui.js', text: '中文', why: '語言切換鈕固定顯示中文與 English 兩個名稱（translate="no"）' },
+  { file: 'src/games/math/learning-guide.js', text: '下車', why: '比對出題文字中的動詞，決定組句方向，不會直接顯示' },
+  { file: 'src/games/math/learning-guide.js', text: '找型號', why: '把中文提示縮短為標題的字串取代規則，不會直接顯示給英文玩家' },
+  { file: 'src/games/math/learning-guide.js', text: '找', why: '把中文提示縮短為標題的字串取代規則，不會直接顯示給英文玩家' },
+  { file: 'src/games/math/learning-guide.js', text: '兩張', why: '比對出題文字是否含兩張車票，不會直接顯示' },
+  ...['下一節', '上一節', '下一題', '上一站', '下一班', '一樣重', '一樣長', '箭頭', '牌子'].map(text => ({
+    file: 'src/shared/phrase-wrap.js', text, why: '中文模式斷詞黏字表（英文模式略過此表），不會直接顯示在畫面上',
+  })),
 ];
 
 test('R50 every dictionary file is loaded by i18n.js and no key has two different translations', () => {
