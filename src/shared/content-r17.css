@@ -60,3 +60,6 @@
  #content-r1[data-kind=crossing] .crossing-lookout{top:30px!important}
  #content-r1[data-kind=crossing] .content-coach{width:60px!important;height:60px!important;right:calc(50% - 30px)!important}
 }
+/* R50: English words for the Chinese labels above. :where() keeps the same specificity, so later rounds that hide these labels still win in both languages. */
+:where(html[lang=en]) #content-r1[data-kind=cake] #content-controls [data-needed=true][data-held=false] span::after{content:'Next'}
+:where(html[lang=en]) #content-r1[data-kind=crossing] [data-wrong-look=true] span::after{content:'You tapped this first'}

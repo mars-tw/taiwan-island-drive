@@ -28,3 +28,7 @@
  #content-r1[data-kind=tickets] .ticket-boarding-bridge::after{top:26px;font-size:11px;line-height:14px}
  #content-r1[data-kind=crossing] .content-observe{font-size:12px;line-height:16px}
 }
+/* R50: English words for the Chinese labels above. :where() keeps the same specificity, so later rounds that hide these labels still win in both languages. */
+:where(html[lang=en]) #content-r1[data-kind=tickets] .ticket-boarding-bridge::after{content:'Step'}
+/* R50: English stage names are longer. Let the title wrap. Chinese stays one line. */
+html[lang="en"] #content-r1 .r28-stage-cards button>b{white-space:normal;line-height:1.15;text-align:center}

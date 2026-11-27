@@ -74,6 +74,20 @@
 | 出發 | go | 「確認出發」= Check and go |
 | 繼續 | continue / keep going | 按鈕用 Continue；鼓勵句用 Keep going |
 | 這台裝置 | this device | 存檔說明 |
+| 油門 | gas | 「自動油門」= Auto gas；按鈕「油門」= Gas |
+| 踏板 | pedal | 海岸實作課的行車鍵；「按住踏板」= Hold the pedal |
+| 方向盤、手機方向盤 | wheel / Phone wheel | 汽車課；「觸控轉向」= Touch steering、「回正」= Center |
+| 視角 | View | 汽車、火車切換鏡頭的按鈕 |
+| 自由駕駛／計時挑戰 | Free Drive / Time Challenge | 汽車課兩種玩法 |
+| 島嶼公路 | Island Roads | 汽車課的遊戲名稱 |
+| 主電源 | Main power | 火車駕駛台 |
+| 關門確認 | Close & check | 火車按鈕（關門並確認） |
+| 輔助模式／進階模式 | Assist Mode / Advanced Mode | 火車課（幼兒模式照第一張表） |
+| 休息灣、臨停灣 | rest bay | 海岸實作課蛋糕車停靠處 |
+| 斑馬線 | crosswalk | |
+| 車票 | ticket | 海岸實作課的形狀車票；「藍圓形」= blue circle（顏色＋形狀，小寫放在句中） |
+| 踏階 | step | 火車門口的踏階；「收踏階」= Fold step |
+| 扶正、回穩 | steady | 「向左扶」= Push left；「蛋糕坐穩了」= The cake is steady |
 
 ## 三、地名與站名
 
@@ -82,6 +96,13 @@
   汐止 Xizhi、奮起湖 Fenqihu、大慶 Daqing、花東海岸 Hualien–Taitung Coast。車站寫成「Xizhi Station」。
 - **遊戲自創的站名**：翻意思，讓孩子聽得懂。已定：海風站 Sea Breeze Station（句中可簡稱 Sea Breeze）、轉運站 Transfer Station。
   其他照同一個方式：花園站 Garden Station、榕樹站 Banyan Station、森林站 Forest Station、鐘樓站 Clock Tower Station、燈塔小站 Lighthouse Stop。
+- **L3a 已定的名稱**（汽車課、火車課、海岸實作課）：
+  - 汽車路線：花蓮・東海岸 Hualien · East Coast、嘉義・阿里山 Chiayi · Alishan、台北・夜未眠 Taipei · City Nights、屏東・墾丁 Pingtung · Kenting。
+  - 汽車車款：海風 GT Seabreeze GT、山岳 RS Ridgeline RS、旅人 X Roamer X、漫遊號 Wander Van。
+  - 火車路線：花東海岸 Hualien–Taitung Coast、台北城市 Taipei City、阿里山森林 Alishan Forest。
+  - 火車站（遊戲自創，翻意思）：海風 Sea Breeze、藍灣 Blue Bay、山海 Hill & Sea、河畔 Riverside、星光 Starlight、城市 City、杉林 Cedar、雲霧 Misty、森林 Forest，加「站」就是 … Station；起點站 Start Station、終點站 Last Stop。
+  - 海岸實作課的站：海風站 Sea Breeze Station、榕樹站 Banyan Station、燈塔站 Lighthouse Station。
+  - 海岸實作課的人物：小朋友 Kid、腳踏車 Bike、奶奶 Grandma；上車的三位朋友：小安 An、小晴 Ching、小宇 Yu。
 - 新增地名時，把它補進本表，再寫進自己那條線的字典。
 
 ## 四、寫法小規則

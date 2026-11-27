@@ -26,15 +26,17 @@ export function installArt(){
   if(flightBrand){const tools=document.createElement('div');tools.className='flight-menu-tools';const extra=document.querySelector('.extra-activities'),parent=document.querySelector('.parent-settings');parent.before(tools);tools.append(extra,parent);extra.querySelector('summary').textContent='更多玩法';parent.querySelector('summary').textContent='家長設定';extra.addEventListener('toggle',()=>extra.querySelector('summary').textContent=extra.open?'尋寶／郵差':'更多玩法');parent.addEventListener('toggle',()=>{if(parent.open)extra.open=false;});}
   if(document.body.dataset.game==='car'){
     const intro=document.querySelector('#menu .intro'),hero=document.createElement('div');hero.className='car-hero';
-    const picture=artImage('coupe-0','海風 GT 雙門跑車','car-preview-image');picture.id='car-preview-image';hero.append(picture,artImage('coach','阿路教練陪你開車','car-menu-coach'));
+    const picture=artImage('coupe-0',`${t('海風 GT')} ${t('雙門跑車')}`,'car-preview-image');picture.id='car-preview-image';const menuCoach=artImage('coach',t('阿路教練陪你開車'),'car-menu-coach');hero.append(picture,menuCoach);
     const label=document.createElement('div');label.className='car-hero-label';label.append(document.querySelector('#vehicle-name'),document.querySelector('#vehicle-category'));hero.append(label);intro.append(hero);
-    const settings=document.querySelector('#settings-button');settings.setAttribute('aria-label','家長駕駛設定');hero.append(settings);
-    const hudCoach=document.createElement('div');hudCoach.className='drive-coach';hudCoach.dataset.pose='straight';hudCoach.append(artImage('coach-safe-window','阿路教練在完整車窗內繫好安全帶'));const cue=document.createElement('span');cue.textContent='一起沿海岸前進';hudCoach.append(cue);document.querySelector('#hud').append(hudCoach);
-    const speed=document.createElement('div');speed.className='speed-steps';speed.setAttribute('role','meter');speed.setAttribute('aria-label','行車速度');speed.setAttribute('aria-valuemin','0');speed.setAttribute('aria-valuemax','5');speed.innerHTML='<span>慢慢開</span><div>'+Array.from({length:5},()=>'<i></i>').join('')+'</div>';document.querySelector('.speedometer').append(speed);
+    const settings=document.querySelector('#settings-button');settings.setAttribute('aria-label',t('家長駕駛設定'));hero.append(settings);
+    const hudCoach=document.createElement('div');hudCoach.className='drive-coach';hudCoach.dataset.pose='straight';hudCoach.append(artImage('coach-safe-window',t('阿路教練在完整車窗內繫好安全帶')));const cue=document.createElement('span');cue.textContent=t('一起沿海岸前進');hudCoach.append(cue);document.querySelector('#hud').append(hudCoach);
+    const speed=document.createElement('div');speed.className='speed-steps';speed.setAttribute('role','meter');speed.setAttribute('aria-label',t('行車速度'));speed.setAttribute('aria-valuemin','0');speed.setAttribute('aria-valuemax','5');speed.innerHTML='<span>'+t('慢慢開')+'</span><div>'+Array.from({length:5},()=>'<i></i>').join('')+'</div>';document.querySelector('.speedometer').append(speed);
     // Secondary equipment stays available in the existing pause surface.
     const equipment=document.createElement('div');equipment.className='pause-equipment';document.querySelector('#pause-overlay .overlay-card').append(equipment);equipment.append(document.querySelector('.tilt-toolbar'),document.querySelector('#camera-button'));
     const star=document.querySelector('#hud-stars>b');star.replaceChildren(artImage('badge'));
     const selected=window.__islandDrive?.getSelected();if(selected){const row=['#3b9297','#eece89','#edeeee','#cf725b','#3c4351'].indexOf(selected.paint);picture.src=appUrl(`art/r6/${selected.vehicleId}-${row}.png`);}
+    // R50: labels this block wrote follow a language switch (the car page redraws the preview picture's alt itself).
+    onLanguageChange(()=>{menuCoach.alt=t('阿路教練陪你開車');settings.setAttribute('aria-label',t('家長駕駛設定'));speed.setAttribute('aria-label',t('行車速度'));});
   }
   if(document.body.dataset.game==='flight'){
     const hudCoach=document.createElement('div');hudCoach.className='flying-coach';hudCoach.append(artImage('coach-radio','阿路教練透過無線電指引當前目標'));document.querySelector('.lesson-prompt').prepend(hudCoach);

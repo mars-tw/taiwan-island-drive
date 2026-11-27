@@ -1,4 +1,5 @@
 import { isNative,requestNativeMotion,subscribeNativeMotion } from '../../shared/native.js';
+import { t } from '../../shared/i18n.js';
 const bounded = value => Math.max(-1, Math.min(1, Number.isFinite(value) ? value : 0));
 
 /** Device axes are rotated into the current screen's left/right axis. Degrees. */
@@ -52,12 +53,12 @@ export class TiltController {
     const native=isNative(this.host);
     if (!this.host.isSecureContext&&!native) {
       this.status = 'insecure'; this.notify();
-      this.onNotice('手機方向盤需要 HTTPS，請從正式遊戲網址開啟。'); return false;
+      this.onNotice(t('手機方向盤需要 HTTPS，請從正式遊戲網址開啟。')); return false;
     }
     const Orientation = this.host.DeviceOrientationEvent;
     if (!Orientation) {
       this.status = 'unsupported'; this.notify();
-      this.onNotice('這個瀏覽器不支援方向感測，請繼續使用觸控轉向。'); return false;
+      this.onNotice(t('這個瀏覽器不支援方向感測，請繼續使用觸控轉向。')); return false;
     }
     const generation = ++this.generation;
     this.pending = true; this.status = 'permission'; this.notify();
@@ -66,7 +67,7 @@ export class TiltController {
       if(native){
         const permission=await this.nativeMotionBridge.request();
         if(generation!==this.generation)return false;
-        if(!permission.granted){this.pending=false;this.status=permission.status||'denied';this.notify();this.onNotice('方向感測尚未開啟，請由家長確認權限，或使用觸控轉向。');return false;}
+        if(!permission.granted){this.pending=false;this.status=permission.status||'denied';this.notify();this.onNotice(t('方向感測尚未開啟，請由家長確認權限，或使用觸控轉向。'));return false;}
         const remove=await this.nativeMotionBridge.subscribe(this.handleOrientation);
         if(generation!==this.generation){void remove();return false;}this.nativeRemove=remove;
       }else if (typeof Orientation.requestPermission === 'function') {
@@ -74,7 +75,7 @@ export class TiltController {
         if (generation !== this.generation) return false;
         if (result !== 'granted') {
           this.pending = false; this.status = 'denied'; this.notify();
-          this.onNotice('方向感測權限未開啟。請允許 Safari 的動作與方向存取，或使用觸控轉向。'); return false;
+          this.onNotice(t('方向感測權限未開啟。請允許 Safari 的動作與方向存取，或使用觸控轉向。')); return false;
         }
       }
       if (generation !== this.generation) return false;
@@ -84,13 +85,13 @@ export class TiltController {
       this.host.addEventListener('orientationchange', this.handleScreenChange);
       this.host.screen?.orientation?.addEventListener('change', this.handleScreenChange);
       this.waitForSensor(); this.notify(); this.raf = this.host.requestAnimationFrame(this.tick);
-      this.onNotice('雙手握住手機，保持舒服的角度，正在等待方向感測。'); return true;
+      this.onNotice(t('雙手握住手機，保持舒服的角度，正在等待方向感測。')); return true;
     } catch (error) {
       if (generation !== this.generation) return false;
       this.pending = false; this.status = 'error'; this.notify();
-      this.onNotice(error?.name === 'NotAllowedError'
+      this.onNotice(t(error?.name === 'NotAllowedError'
         ? '請親自點「手機方向盤」並允許動作與方向存取，再試一次。'
-        : '無法取得方向感測權限，請檢查瀏覽器設定，或使用觸控轉向。');
+        : '無法取得方向感測權限，請檢查瀏覽器設定，或使用觸控轉向。'));
       return false;
     }
   }
@@ -99,7 +100,7 @@ export class TiltController {
     this.host.clearTimeout(this.timeout);
     this.timeout = this.host.setTimeout(() => {
       if (this.enabled && this.status === 'waiting') {
-        this.disable('unavailable'); this.onNotice('沒有收到方向感測資料，已切回觸控轉向。請檢查手機感測器與瀏覽器權限。');
+        this.disable('unavailable'); this.onNotice(t('沒有收到方向感測資料，已切回觸控轉向。請檢查手機感測器與瀏覽器權限。'));
       }
     }, 5000);
   }
@@ -113,7 +114,7 @@ export class TiltController {
     if (this.active) this.awaitFresh = false;
     if (this.neutral === null) {
       this.neutral = raw; this.status = 'ready'; this.resetSteer(); this.host.clearTimeout(this.timeout); this.notify();
-      this.onNotice('方向盤已回正。左右傾斜手機轉向，右手按油門；偏了可點「回正」。');
+      this.onNotice(t('方向盤已回正。左右傾斜手機轉向，右手按油門；偏了可點「回正」。'));
     }
   }
   handleScreenChange() {
@@ -125,9 +126,9 @@ export class TiltController {
   }
   calibrate() {
     if (!this.enabled || this.raw === null || this.now() - this.lastSample > 1000) {
-      this.onNotice('還沒有新的方向感測資料，請移動一下手機後再回正。'); return false;
+      this.onNotice(t('還沒有新的方向感測資料，請移動一下手機後再回正。')); return false;
     }
-    this.neutral = this.raw; this.resetSteer(); this.notify(); this.onNotice('已回正，現在的握持角度就是直行。'); return true;
+    this.neutral = this.raw; this.resetSteer(); this.notify(); this.onNotice(t('已回正，現在的握持角度就是直行。')); return true;
   }
   setActive(active) {
     const next = Boolean(active);

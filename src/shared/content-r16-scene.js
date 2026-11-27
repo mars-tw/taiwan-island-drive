@@ -1,6 +1,7 @@
 import {drivingCue as previousDriving,crossingCue as previousCrossing,boardingCue as previousBoarding,crossingLocation as previousLocation,stability as previousStability} from './content-r15-scene.js';
 import {PASSENGER_NAMES} from './content-r16.js';
 export {pedalState,ticketSceneGeometry,ticketDoorState,bendTravel,STOP_X,FRONT_RAIL,WHEEL_BOTTOM,DOOR_SILL} from './content-r15-scene.js';
+import {fill} from './content-text.js';
 export function queuePosition(door,index,progress,thresholdBottom,width=360){
  const t=Math.max(0,Math.min(1,progress/.58)),side=door>50?-1:1;
  const step=Math.min(64,(width-70)/2),near=Math.max(side>0?35:35+2*step,Math.min(side>0?width-35-2*step:width-35,door*width/100+side*50));
@@ -16,7 +17,7 @@ export function drivingCue(g){
  if(!held&&lean>=3)return {action:'',status:'回穩中',release:true,text:'已放開，等蛋糕坐穩。'};
  if(g.inBend){
   if(lean>=18)return {action:'',status:'快到盤邊',release:true,text:'快滑到盤邊了，放開一下。'};
-  return {action:side,status:held?'轉彎中・很穩':lean<3?'坐穩了':'過彎中',text:!held?`坐穩了，再按${name}繼續。`:`${side==='left'?'左':'右'}彎到了，按住${name}。`};
+  return {action:side,status:held?'轉彎中・很穩':lean<3?'坐穩了':'過彎中',text:!held?fill('坐穩了，再按{name}繼續。',{name}):fill('{side}彎到了，按住{name}。',{side:side==='left'?'左':'右',name})};
  }
  const cue=previousDriving(g);return {...cue,status:cue.action==='brake'?'慢慢停穩':cue.release?'回穩中':held?'慢慢前進':'坐穩了'};
 }
@@ -38,7 +39,7 @@ export function crossingTraffic(g){
 export function boardingCue(g){
  if(g.doorStage==='awaiting'){
   const chosen=g.chosenPassenger===g.boardingIndex,name=PASSENGER_NAMES[g.boardingIndex];
-  return {action:chosen?'board':'',label:chosen?`請${name}上車`:'先點一位朋友',text:g.choiceHint||(chosen?`選好了，請${name}上車。`:'點月台上的朋友，再邀請上車。')};
+  return {action:chosen?'board':'',label:chosen?fill('請{name}上車',{name}):'先點一位朋友',text:g.choiceHint||(chosen?fill('選好了，請{name}上車。',{name}):'點月台上的朋友，再邀請上車。')};
  }
  return previousBoarding(g);
 }

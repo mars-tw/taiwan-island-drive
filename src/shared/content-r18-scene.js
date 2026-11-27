@@ -1,6 +1,7 @@
 import {drivingCue as previousDriving,stability as previousStability,crossingCue as previousCrossing,lessonResult as previousResult} from './content-r17-scene.js';
 import {FRIEND_NAMES} from './content-r18.js';
 export {pedalState,boardingCue,crossingLocation,queuePosition,ticketSceneGeometry,ticketMismatch,ticketDoorState,bendTravel,STOP_X,FRONT_RAIL,WHEEL_BOTTOM,DOOR_SILL} from './content-r17-scene.js';
+import {fill} from './content-text.js';
 
 export function drivingCue(g){
  if(g.hazardStop)return {action:'',release:true,status:g.speed>.05?'慢慢停下':'等待回穩',text:'放開，等蛋糕回中央。'};
@@ -29,10 +30,10 @@ export function landedFriends(g){return Math.min(3,g.crossed+(g.crossTime>0&&g.c
 export function completedCrossings(g){return g.completed?3:Math.min(3,g.stage+(landedFriends(g)===3?1:0));}
 export function crossingCue(g){
  if(g.choiceHint)return {...previousCrossing(g),text:g.choiceHint};
- if(g.crossTime>0&&g.crossTime/g.crossingDuration>=.82)return {action:'',state:'已到岸',text:`${FRIEND_NAMES[g.crossingPerson]}到了，走到空位。`};
+ if(g.crossTime>0&&g.crossTime/g.crossingDuration>=.82)return {action:'',state:'已到岸',text:fill('{name}到了，走到空位。',{name:FRIEND_NAMES[g.crossingPerson]})};
  if(g.phase==='playing'&&g.crossTime===0&&g.focus!=='center'&&g.crossed<3){
   const cue=previousCrossing(g),o=observation(g),side=g.focus==='left'?'左':'右';
-  return {...cue,text:o.target==='來車'?`${side}邊有車，先等一等。`:`${side}邊沒車。${!g.looked.right?'再看右邊。':g.trafficActive?'另一邊有車，繼續等。':'等朋友過街。'}`};
+  return {...cue,text:o.target==='來車'?fill('{side}邊有車，先等一等。',{side}):fill(!g.looked.right?'{side}邊沒車。再看右邊。':g.trafficActive?'{side}邊沒車。另一邊有車，繼續等。':'{side}邊沒車。等朋友過街。',{side})};
  }
  return previousCrossing(g);
 }
