@@ -1,6 +1,7 @@
 import {drivingCue as previousDriving,stability as previousStability,crossingCue as previousCrossing,crossingTraffic,ticketDoorState as previousDoors} from './content-r18-scene.js';
 import {FRIEND_NAMES} from './content-r19.js';
 export {pedalState,boardingCue,crossingLocation,queuePosition,ticketSceneGeometry,ticketMismatch,bendTravel,lessonResult,STOP_X,FRONT_RAIL,WHEEL_BOTTOM,DOOR_SILL,crossingTraffic} from './content-r18-scene.js';
+import {fill} from './content-text.js';
 
 export function drivingCue(g){
  if(g.hazardStop||g.recoveryLocked)return {action:'',release:true,status:'回穩中',text:'放開，等蛋糕回中央。'};
@@ -25,9 +26,9 @@ export function observation(g){
 }
 export function trafficLabelPosition(g,width,labelWidth=44){return Math.max(2,Math.min(width-labelWidth-2,crossingTraffic(g).x*width/100-labelWidth/2));}
 export function crossingCue(g){
- if(g.crossTime>0)return {action:'',state:'等朋友到岸',text:g.crossTime/g.crossingDuration>=.82?'沿對岸走到空位，再換下一位。':`${FRIEND_NAMES[g.crossingPerson]}正在過街，等到對岸。`};
+ if(g.crossTime>0)return {action:'',state:'等朋友到岸',text:g.crossTime/g.crossingDuration>=.82?'沿對岸走到空位，再換下一位。':fill('{name}正在過街，等到對岸。',{name:FRIEND_NAMES[g.crossingPerson]})};
  const cue=previousCrossing(g);
- if(g.arrivalNotice>0)return {...cue,text:`${FRIEND_NAMES[g.lastArrived]}到空位了。`};
+ if(g.arrivalNotice>0)return {...cue,text:fill('{name}到空位了。',{name:FRIEND_NAMES[g.lastArrived]})};
  return cue;
 }
 export function departLabel(g){

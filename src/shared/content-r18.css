@@ -28,3 +28,5 @@
  #content-r1[data-kind=tickets][data-phase] .ticket-counts,#content-r1[data-kind=tickets][data-phase]:has(.ticket-comparison:not(:empty)) .ticket-counts{top:24px!important}
 }
 #content-r1[data-kind=tickets] .content-scene{background-size:100% 100%!important;background-position:center top!important}
+/* R50: English words for the Chinese labels above. :where() keeps the same specificity, so later rounds that hide these labels still win in both languages. */
+:where(html[lang=en]) #content-r1[data-kind=cake] #content-controls [data-recovering=true] span::after{content:'Waiting to settle'!important}

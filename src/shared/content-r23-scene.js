@@ -1,5 +1,6 @@
 import {drivingCue as previousDriving,crossingCue as previousCrossing,landedFriends} from './content-r22-scene.js';
 export * from './content-r22-scene.js';
+import {fill} from './content-text.js';
 
 // These names describe the actual artwork, including the left-curving bay exit.
 export function cakeRoadState(g){
@@ -8,8 +9,8 @@ export function cakeRoadState(g){
 }
 export function drivingCue(g){
  const c=previousDriving(g),road=cakeRoadState(g);
- if(c.action==='go'&&!(g.bayStopped&&!g.bayRestarted))return {...c,text:`前方${road.label}，照顧蛋糕。`};
- if(g.inBend&&c.action===road.shape)return {...c,text:`前方${road.label}，看路牌。`};
+ if(c.action==='go'&&!(g.bayStopped&&!g.bayRestarted))return {...c,text:fill('前方{label}，照顧蛋糕。',{label:road.label})};
+ if(g.inBend&&c.action===road.shape)return {...c,text:fill('前方{label}，看路牌。',{label:road.label})};
  return c;
 }
 export function crossingTraffic(g){
@@ -23,11 +24,11 @@ export function observation(g){
  return {x:target?car.x:g.focus==='left'?18:82,y:car.top+4,target:target?'來車':'空車道入口'};
 }
 export function trafficLabelPosition(g,width,labelWidth=44){return Math.max(2,Math.min(width-labelWidth-2,crossingTraffic(g).x*width/100-labelWidth/2));}
-export function crossingDestination(g){return `對岸${landedFriends(g)===3?' ✓':''}`;}
+export function crossingDestination(g){return '對岸'+(landedFriends(g)===3?' ✓':'');}
 export function crossingCue(g){
  if(g.phase==='playing'&&g.stage===2&&g.lookStep===2&&!g.friendConfirmed&&!g.choiceHint&&(!g.trafficActive||g.recheckTime>=1.4))return {action:'look-left',text:'左邊還要再確認。'};
  const c=previousCrossing(g);
- if(!g.choiceHint&&g.crossTime>0&&g.crossTime/g.crossingDuration<.18)return {...c,text:`${{child:'小朋友',bike:'腳踏車',grandma:'奶奶'}[g.crossingPerson]}準備過街。`};
+ if(!g.choiceHint&&g.crossTime>0&&g.crossTime/g.crossingDuration<.18)return {...c,text:fill('{name}準備過街。',{name:{child:'小朋友',bike:'腳踏車',grandma:'奶奶'}[g.crossingPerson]})};
  return c;
 }
 

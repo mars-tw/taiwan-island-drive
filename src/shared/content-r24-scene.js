@@ -2,13 +2,14 @@ import {drivingCue as previousDriving,crossingCue as previousCrossing,boardingCu
 import {CROSSING_ORDERS} from './content-r1.js';
 import {queueFrame} from './content-r10-scene.js';
 export * from './content-r23-scene.js';
+import {fill} from './content-text.js';
 const clamp=(v,a=0,b=1)=>Math.max(a,Math.min(b,v));
 // Same signed pose in the inset and on the roof; 20% is 16 degrees.
 export function cakeAngle(g){return clamp((g.balanceLean||0)*2.5,-78,78);}
 export function stability(g){const lean=Math.abs(g.balanceLean||0);return {status:lean===0?'坐穩了':g.recoveryActive?'回穩中':'傾斜中',fill:lean===0?100:Math.min(99,100-Math.round(Math.min(32,lean)/32*100))};}
 export function drivingCue(g){
  const cue=previousDriving(g);
- if(g.recoveryActive)return {...cue,text:g.recoveryWrong?'越扶越歪，換另一邊。':`蛋糕偏${g.balanceLean>0?'右':'左'}，按住${g.balanceLean>0?'左':'右'}邊扶正。`};
+ if(g.recoveryActive)return {...cue,text:g.recoveryWrong?'越扶越歪，換另一邊。':fill('蛋糕偏{lean}，按住{side}邊扶正。',{lean:g.balanceLean>0?'右':'左',side:g.balanceLean>0?'左':'右'})};
  return cue;
 }
 // Bounds measured on the generated, full-frame paintings: top/bottom/center.

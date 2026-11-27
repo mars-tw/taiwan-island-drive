@@ -1,3 +1,4 @@
+import {fill} from './content-text.js';
 const clamp=(v,a,b)=>Math.max(a,Math.min(b,v));
 
 // Input, palette and text describe the same physical pedal state.
@@ -11,7 +12,7 @@ export function crossingCue(g){
  if(g.crossTime>0||g.confirmDelay>0)return {action:'',text:'等朋友到對岸'};
  if(!g.looked.left)return {action:'look-left',text:'← 先看左邊'};
  if(!g.looked.right)return {action:'look-right',text:'→ 再看右邊'};
- if(!g.friendConfirmed)return {action:`look-${g.decisionSide}`,text:`${g.decisionSide==='left'?'←':'→'} 再確認朋友`};
+ if(!g.friendConfirmed)return {action:`look-${g.decisionSide}`,text:fill('{arrow} 再確認朋友',{arrow:g.decisionSide==='left'?'←':'→'})};
  return {action:'',text:'請朋友慢慢過'};
 }
 // Passengers finish at t=1.01. Retract step, THEN slide door shut, THEN confirm.
@@ -42,7 +43,7 @@ export function cakeStatus(g){
 }
 export function lessonResult(g){
  const f=g.facts;
- if(g.kind==='cake')return {title:'三站完成・蛋糕送到了',learned:'會放開放慢，也會停穩再起步',detail:f.recoveries?`全程回穩 ${f.recoveries} 次，蛋糕回穩了。`:'蛋糕坐穩了，和朋友一起分享。',practice:f.assists?'慢行幫忙陪你走，下次也能繼續練。':'下次看著蛋糕，提早放開踏板。'};
- if(g.kind==='crossing')return {title:'三站完成・謝謝你等我們',learned:`${f.waited} 位朋友都等到了`,detail:f.blockedStarts?'每位都重新看左右，提醒後再安全出發。':'每位都重新看左右，等到岸才出發。',practice:'下次試試自己認出哪一側還有朋友。'};
- return {title:'三站完成・大家坐好了',learned:`形狀和顏色都對上，${f.boarded} 位坐好了`,detail:f.reselections?`全程自己改選 ${f.reselections} 次，再停穩開門。`:'全程停對月台，等大家坐好再關門。',practice:'下次先看形狀，再確認顏色。'};
+ if(g.kind==='cake')return {title:'三站完成・蛋糕送到了',learned:'會放開放慢，也會停穩再起步',detail:f.recoveries?fill('全程回穩 {n} 次，蛋糕回穩了。',{n:f.recoveries}):'蛋糕坐穩了，和朋友一起分享。',practice:f.assists?'慢行幫忙陪你走，下次也能繼續練。':'下次看著蛋糕，提早放開踏板。'};
+ if(g.kind==='crossing')return {title:'三站完成・謝謝你等我們',learned:fill('{n} 位朋友都等到了',{n:f.waited}),detail:f.blockedStarts?'每位都重新看左右，提醒後再安全出發。':'每位都重新看左右，等到岸才出發。',practice:'下次試試自己認出哪一側還有朋友。'};
+ return {title:'三站完成・大家坐好了',learned:fill('形狀和顏色都對上，{n} 位坐好了',{n:f.boarded}),detail:f.reselections?fill('全程自己改選 {n} 次，再停穩開門。',{n:f.reselections}):'全程停對月台，等大家坐好再關門。',practice:'下次先看形狀，再確認顏色。'};
 }

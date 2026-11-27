@@ -1,5 +1,6 @@
 import {drivingCue as previousDriving,crossingCue as previousCrossing,crossingLocation as previousLocation} from './content-r13-scene.js';
 export {pedalState,ticketSceneGeometry,STOP_X,FRONT_RAIL,WHEEL_BOTTOM,DOOR_SILL} from './content-r13-scene.js';
+import {fill} from './content-text.js';
 const clamp=(v,a,b)=>Math.max(a,Math.min(b,v));
 
 // The meter has exactly one input: absolute roll. Pedal/assist flags cannot recolor it.
@@ -10,12 +11,12 @@ export function stability(g){
 export function drivingCue(g){
  if(g.phase==='delivering')return {action:'',text:'正在送達，等車停到桌邊。'};
  const cue=previousDriving(g);
- if(!cue.release&&['left','right'].includes(cue.action))return {...cue,text:`按住${cue.action==='left'?'左轉':'右轉'}，沿車道慢慢走。`};
+ if(!cue.release&&['left','right'].includes(cue.action))return {...cue,text:fill('按住{turn}，沿車道慢慢走。',{turn:cue.action==='left'?'左轉':'右轉'})};
  return cue;
 }
 export function crossingCue(g){
  if(g.phase==='departing')return {action:'',text:'出發中'};
- if(g.crossTime>0)return {action:'',text:`${{child:'小朋友',bike:'腳踏車',grandma:'奶奶'}[g.crossingPerson]}正在過街，等到對岸。`};
+ if(g.crossTime>0)return {action:'',text:fill('{name}正在過街，等到對岸。',{name:{child:'小朋友',bike:'腳踏車',grandma:'奶奶'}[g.crossingPerson]})};
  if(g.confirmDelay>0&&!g.trafficActive)return {action:'',text:'朋友準備過街，等一等。'};
  return previousCrossing(g);
 }

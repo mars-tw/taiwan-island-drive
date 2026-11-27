@@ -2,13 +2,14 @@ import {drivingCue as previousDriving,crossingCue as previousCrossing,crossingTr
 import {crossingLocation as previousLocation} from './content-r17-scene.js';
 import {FRIEND_NAMES} from './content-r22.js';
 export {pedalState,ticketMismatch,ticketDoorState,boardingCue,lessonResult,bendTravel,observation,trafficLabelPosition,completedCrossings,departLabel,STOP_X,FRONT_RAIL,WHEEL_BOTTOM,DOOR_SILL} from './content-r21-scene.js';
+import {fill} from './content-text.js';
 export const TICKET_STATIONS=['海風站','榕樹站','燈塔站'];
 export function cakeAngle(g){return Math.max(-52,Math.min(52,(g.balanceLean||0)*1.9));}
 export function cakeShift(g){return Math.max(-10,Math.min(10,(g.balanceLean||0)/32*10));}
 export function stability(g){const fill=100-Math.round(Math.min(32,Math.abs(g.balanceLean||0))/32*100);return {status:drivingCue(g).status,fill};}
 export function drivingCue(g){
  const c=previousDriving(g);
- if(g.wrongTurnNotice>0&&!g.recoveryActive)return {...c,text:`這裡是${g.bend<0?'左':'右'}彎喔，再選一次。`};
+ if(g.wrongTurnNotice>0&&!g.recoveryActive)return {...c,text:fill('這裡是{side}彎喔，再選一次。',{side:g.bend<0?'左':'右'})};
  if(g.bayStopped&&!g.bayRestarted&&!g.recoveryActive)return {...c,text:'休息好了，可以出發了。'};
  return c;
 }
@@ -20,8 +21,8 @@ export function crossingLocation(who,phase,progress=0,stage=0){
  return p;
 }
 export function crossingCue(g){
- if(g.phase==='playing'&&g.crossTime>0&&g.crossTime/g.crossingDuration>=.82)return {action:'',text:`${FRIEND_NAMES[g.crossingPerson]}到對岸了。`};
- if(g.arrivalNotice>0&&!g.choiceHint)return {action:'',text:`${FRIEND_NAMES[g.lastArrived]}到對岸了。`};
+ if(g.phase==='playing'&&g.crossTime>0&&g.crossTime/g.crossingDuration>=.82)return {action:'',text:fill('{name}到對岸了。',{name:FRIEND_NAMES[g.crossingPerson]})};
+ if(g.arrivalNotice>0&&!g.choiceHint)return {action:'',text:fill('{name}到對岸了。',{name:FRIEND_NAMES[g.lastArrived]})};
  if(g.stage===2&&g.lookStep===2&&!g.friendConfirmed&&!g.choiceHint)return {action:'look-left',text:'左邊又有車，請再看左邊。'};
  return previousCrossing(g);
 }

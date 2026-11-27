@@ -1,9 +1,10 @@
 import {drivingCue as previousDriving,holdFeedback as previousHold,stability as previousStability,queuePosition as previousQueue} from './content-r24-scene.js';
 export * from './content-r24-scene.js';
+import {fill} from './content-text.js';
 
 export function drivingCue(g){
  const cue=previousDriving(g);
- if(g.recoveryActive)return {...cue,text:g.recoveryWrong?`越扶越歪，改按${g.balanceLean>0?'左':'右'}邊。`:cue.text};
+ if(g.recoveryActive)return {...cue,text:g.recoveryWrong?fill('越扶越歪，改按{side}邊。',{side:g.balanceLean>0?'左':'右'}):cue.text};
  return cue;
 }
 export function holdFeedback(g){

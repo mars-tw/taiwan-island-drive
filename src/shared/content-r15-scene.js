@@ -1,6 +1,7 @@
 import {drivingCue as legacyDriving,crossingLocation,queuePosition,stability,pedalState,ticketSceneGeometry,STOP_X,FRONT_RAIL,WHEEL_BOTTOM,DOOR_SILL} from './content-r14-scene.js';
 import {ticketDoorState as legacyDoors,lessonResult} from './content-r11-scene.js';
 import {FRIEND_NAMES,PASSENGER_NAMES} from './content-r15.js';
+import {fill} from './content-text.js';
 export {crossingLocation,queuePosition,stability,pedalState,ticketSceneGeometry,STOP_X,FRONT_RAIL,WHEEL_BOTTOM,DOOR_SILL,lessonResult};
 export function bendTravel(g){
  if(g.stage!==1)return null;
@@ -20,11 +21,11 @@ export function crossingCue(g){
  if(g.speed>0)return {action:'brake',state:'先停下',text:'按住停下，停在線前。'};
  if(g.crossed===3)return {action:'depart',state:'可以出發',text:'朋友都到岸了，可以出發。'};
  const name=FRIEND_NAMES[g.crossingPerson];
- if(g.crossTime>0)return {action:'',state:'正在過街',text:`${name}正在過街，等到對岸。`};
- if(!g.looked.left)return {action:'look-left',state:'看左',text:`${name}先過，先看左邊。`};
+ if(g.crossTime>0)return {action:'',state:'正在過街',text:fill('{name}正在過街，等到對岸。',{name})};
+ if(!g.looked.left)return {action:'look-left',state:'看左',text:fill('{name}先過，先看左邊。',{name})};
  if(!g.looked.right)return {action:'look-right',state:'看右',text:'左邊看過了，再看右邊。'};
  if(g.trafficActive)return {action:'',state:'正在等來車',text:'來車通過中，先等一等。'};
- return {action:'',state:'準備過街',text:`${name}準備過街，等一等。`};
+ return {action:'',state:'準備過街',text:fill('{name}準備過街，等一等。',{name})};
 }
 export function ticketDoorState(g){
  if(g.phase==='boarding'&&g.doorStage==='close-ready')return {state:'close-ready',open:1,step:0};
@@ -34,8 +35,8 @@ export function boardingCue(g){
  const name=PASSENGER_NAMES[g.boardingIndex];
  return {
   opening:{action:'',text:'車門打開中，等一等。',label:'正在開門'},
-  awaiting:{action:'board',text:`請${name}上車。`,label:`請${name}上車`},
-  boarding:{action:'',text:`${name}正在上車。`,label:'正在上車'},
+  awaiting:{action:'board',text:fill('請{name}上車。',{name}),label:fill('請{name}上車',{name})},
+  boarding:{action:'',text:fill('{name}正在上車。',{name}),label:'正在上車'},
   'retract-ready':{action:'retract',text:'三位坐好了，按收踏階。',label:'收踏階'},
   retracting:{action:'',text:'正在收踏階，門還開著。',label:'正在收踏階'},
   'close-ready':{action:'close-door',text:'踏階收好了，按關門。',label:'關門'},

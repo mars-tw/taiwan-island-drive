@@ -1,5 +1,6 @@
 import {ContentLesson as PreviousLesson,PASSENGER_NAMES} from './content-r15.js';
 export {FRIEND_NAMES,PASSENGER_NAMES} from './content-r15.js';
+import {fill} from './content-text.js';
 
 export class ContentLesson extends PreviousLesson {
  reset(){super.reset();this.chosenPassenger=-1;this.choiceHint='';}
@@ -10,7 +11,7 @@ export class ContentLesson extends PreviousLesson {
  }
  choosePassenger(index){
   if(this.paused||this.phase!=='boarding'||this.doorStage!=='awaiting'||!Number.isInteger(index)||index<0||index>2)return false;
-  if(index!==this.boardingIndex){this.chosenPassenger=-1;this.choiceHint=`${PASSENGER_NAMES[this.boardingIndex]}先上車，再輪到你。`;return false;}
+  if(index!==this.boardingIndex){this.chosenPassenger=-1;this.choiceHint=fill('{name}先上車，再輪到你。',{name:PASSENGER_NAMES[this.boardingIndex]});return false;}
   this.chosenPassenger=index;this.choiceHint='';return true;
  }
  boardFriend(){
