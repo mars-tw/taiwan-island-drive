@@ -1,0 +1,7 @@
+{
+  "attempted": "2026-11-27",
+  "command": "muse exec --prompt-file isl50-muse-prompt.txt --image home, math, car, train, flight, coast, crossing phone shots --approval-mode never --disable-request-user-input --disable-web-tools",
+  "result": "429",
+  "detail": "Subscription quota exhausted. Usage window resets at 2026-11-30T00:00:00Z. No review text was returned.",
+  "request_id": "99527b93-c7fc-4787-8446-3b3d69e755a6"
+}
