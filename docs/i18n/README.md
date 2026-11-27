@@ -106,8 +106,8 @@ onLanguageChange(() => { if (visible) render(); });
 
 ### 圖片裡的中文
 
-`alt` 用 `bindLocalized` 或 `t()` 翻。圖片本身烘進去的中文（例如首頁的 `art/r8/logo.png`「島嶼交通學院」字樣、站牌圖）英文模式仍顯示中文，
-需要另做英文版圖片，另案盤點。
+`alt` 用 `bindLocalized` 或 `t()` 翻。首頁字標已有英文版：英文模式用 `art/r8/logo-en.png`，中文模式仍用 `art/r8/logo.png`。
+其他烘進圖裡的中文（舊版字標、站牌圖）英文模式仍是中文，另案盤點見 [R50-DEFERRED.md](R50-DEFERRED.md)。
 
 ## 測試（`tests/shared/i18n-r50.test.js`）
 

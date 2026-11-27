@@ -8,7 +8,8 @@ import { LobbyMusic } from './shared/lobby-music.js';
 import { installSafetyLesson } from './shared/safety-ui.js';
 import { installAcademy } from './shared/academy-ui.js';
 import { readRoom, roomLevel, setAgeBand } from './games/math/room-store.js';
-import { t, bindLocalized, localize, onLanguageChange } from './shared/i18n.js';
+import { t, bindLocalized, localize, onLanguageChange, getLanguage } from './shared/i18n.js';
+import { applyBrandWordmark } from './shared/brand-wordmark.js';
 import { createLanguageToggle, createLanguageSetting } from './shared/language-ui.js';
 installSafetyLesson();
 installAcademy();
@@ -50,7 +51,9 @@ const music = new LobbyMusic($('music-toggle'));
 void music.init();
 window.__lobbyMusic = music;
 subscribeSettings(value => music.setMuted(value.muted));
-onLanguageChange(() => { showSettings(); showRewards(); music.sync(); });
+function syncWordmark() { applyBrandWordmark(document, getLanguage()); }
+syncWordmark();
+onLanguageChange(() => { showSettings(); showRewards(); music.sync(); syncWordmark(); });
 
 let installation;
 if(!isNativeBuild())addEventListener('beforeinstallprompt', event => { event.preventDefault(); installation = event; $('install-app').hidden = false; });

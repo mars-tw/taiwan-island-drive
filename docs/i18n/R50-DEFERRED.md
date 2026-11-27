@@ -1,13 +1,14 @@
-# 第 50 輪另案待辦（這一輪不做）
+# 第 50 輪另案待辦
 
-版本 2.51.0 已把畫面上的文字接上英文。下面兩件事留到下一輪，這一輪沒有改圖。
+版本 2.51.0 已把畫面上的文字接上英文。首頁英文標誌已經補上並接到英文模式。各線圖片裡烘進去的中文仍列在下面，那些圖沒有改像素。
 
-## 首頁標誌要出英文版
+## 首頁標誌英文版（已完成）
 
-- 現在首頁抬頭用的是 `public/art/r8/logo.png`。
-- 圖裡寫的是「島嶼交通學院」。英文模式的替代文字已經是 Island Transport Academy，圖本身仍是中文。
-- 上一輪指定的繪圖額度用完，所以沒有重畫。下一輪再做一張英文標誌，接到同一個位置。
-- 舊檔也有同樣的中文字標，現在的首頁沒有用到它們：`public/art/r4/logo.png`、`public/art/r5/logo.png`、`public/art/r6/logo.png`、`public/art/r7/logo.png`。
+- 英文模式（`en`）首頁 `.brand-wordmark` 改用 `public/art/r8/logo-en.png`。上排是 ISLAND，下排是 TRANSPORT ACADEMY，透明背景。
+- 中文模式（`zh-Hant`，畫面語系 `zh-TW`）仍用 `public/art/r8/logo.png`。這個中文圖檔沒有改過。
+- `index.html` 預設仍寫中文標誌。進英文時由 `src/home.js` 換圖，切回中文再換回來。
+- 建置的預快取會收進 `public` 裡的 png，所以 `art/r8/logo-en.png` 會進 `dist/precache.json`。`public/sw.js` 照清單抓，不用單獨加檔名。
+- 舊的中文字標還在素材夾，現在的首頁沒有掛上：`public/art/r4/logo.png`、`public/art/r5/logo.png`、`public/art/r6/logo.png`、`public/art/r7/logo.png`。
 
 ## 各線盤到的圖片中文
 
@@ -15,7 +16,7 @@
 
 | 檔案 | 圖裡的字 | 出現位置 |
 | --- | --- | --- |
-| `public/art/r8/logo.png` | 島嶼交通學院 | 首頁抬頭的字標。英文模式看得到這張圖。 |
+| `public/art/r8/logo.png` | 島嶼交通學院 | 中文模式的首頁字標。英文模式改看 `public/art/r8/logo-en.png`。 |
 | `public/art/r4/logo.png` | 島嶼交通學院 | 舊版字標，留在素材夾，現在的首頁沒有掛上。 |
 | `public/art/r5/logo.png` | 島嶼交通學院 | 同上。 |
 | `public/art/r6/logo.png` | 島嶼交通學院 | 同上。 |
