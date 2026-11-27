@@ -1,4 +1,5 @@
 // R39 changes cake presentation only; the R35 physics and other lessons stay intact.
+import {t} from './i18n.js';
 export const CAKE_SUPPORT = Object.freeze({
  width:180,height:180,pivotX:86,pivotY:170,
  baseLeft:32,baseRight:140,baseBottom:171,
@@ -49,7 +50,7 @@ export function renderR39({g,view,dialog,scene,miniature,closeup}){
  }
  // A neutral challenge must not continue to tell the child to find a lit hand.
  if(g.phase==='playing'){
-  const text=view.text.replace('亮起的手，','看蛋糕歪哪邊，').replace('快到托盤邊，','歪得很大，').replace('推回托盤中央','慢慢扶回正').replace('推回中央','慢慢扶回正');
+  const text=t(view.text.replace('亮起的手，','看蛋糕歪哪邊，').replace('快到托盤邊，','歪得很大，').replace('推回托盤中央','慢慢扶回正').replace('推回中央','慢慢扶回正'));
   dialog.querySelector('#content-hint').textContent=text;scene.dataset.stateText=text;
  }
 }

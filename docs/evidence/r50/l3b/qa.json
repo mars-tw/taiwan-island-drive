@@ -1,0 +1,206 @@
+{
+  "pageErrors": [],
+  "consoleErrors": [],
+  "checks": [
+    {
+      "label": "flight-start-phone-390x844",
+      "vw": 390,
+      "vh": 844,
+      "overflowX": false,
+      "smallBtns": [],
+      "hanNodes": []
+    },
+    {
+      "label": "flight-playing-phone-390x844",
+      "vw": 390,
+      "vh": 844,
+      "overflowX": false,
+      "smallBtns": [],
+      "hanNodes": []
+    },
+    {
+      "label": "flight-end-phone-390x844",
+      "vw": 390,
+      "vh": 844,
+      "overflowX": false,
+      "smallBtns": [],
+      "hanNodes": []
+    },
+    {
+      "label": "scene-cake-phone-390x844",
+      "vw": 390,
+      "vh": 844,
+      "overflowX": true,
+      "smallBtns": [],
+      "hanNodes": [
+        "回學院",
+        "把蛋糕平穩送到",
+        "暫停",
+        "穩定度 100%",
+        "✓ 坐穩參照",
+        "收起特寫",
+        "左轉",
+        "右轉",
+        "煞車",
+        "再聽一次"
+      ]
+    },
+    {
+      "label": "scene-crossing-phone-390x844",
+      "vw": 390,
+      "vh": 844,
+      "overflowX": true,
+      "smallBtns": [],
+      "hanNodes": [
+        "回學院",
+        "路口停看等",
+        "暫停",
+        "停下",
+        "看左邊",
+        "看右邊",
+        "再聽一次"
+      ]
+    },
+    {
+      "label": "flight-start-landscape-844x390",
+      "vw": 844,
+      "vh": 390,
+      "overflowX": false,
+      "smallBtns": [],
+      "hanNodes": []
+    },
+    {
+      "label": "flight-playing-landscape-844x390",
+      "vw": 844,
+      "vh": 390,
+      "overflowX": false,
+      "smallBtns": [],
+      "hanNodes": []
+    },
+    {
+      "label": "flight-end-landscape-844x390",
+      "vw": 844,
+      "vh": 390,
+      "overflowX": false,
+      "smallBtns": [],
+      "hanNodes": []
+    },
+    {
+      "label": "scene-cake-landscape-844x390",
+      "vw": 844,
+      "vh": 390,
+      "overflowX": false,
+      "smallBtns": [],
+      "hanNodes": [
+        "回學院",
+        "把蛋糕平穩送到",
+        "暫停",
+        "穩定度 100%",
+        "✓ 坐穩參照",
+        "收起特寫",
+        "左轉",
+        "右轉",
+        "煞車",
+        "再聽一次"
+      ]
+    },
+    {
+      "label": "scene-crossing-landscape-844x390",
+      "vw": 844,
+      "vh": 390,
+      "overflowX": false,
+      "smallBtns": [],
+      "hanNodes": [
+        "回學院",
+        "路口停看等",
+        "暫停",
+        "停下",
+        "看左邊",
+        "看右邊",
+        "再聽一次"
+      ]
+    },
+    {
+      "label": "flight-start-desktop-1366x768",
+      "vw": 1366,
+      "vh": 768,
+      "overflowX": false,
+      "smallBtns": [],
+      "hanNodes": []
+    },
+    {
+      "label": "flight-playing-desktop-1366x768",
+      "vw": 1366,
+      "vh": 768,
+      "overflowX": false,
+      "smallBtns": [],
+      "hanNodes": []
+    },
+    {
+      "label": "flight-end-desktop-1366x768",
+      "vw": 1366,
+      "vh": 768,
+      "overflowX": false,
+      "smallBtns": [],
+      "hanNodes": []
+    },
+    {
+      "label": "scene-cake-desktop-1366x768",
+      "vw": 1366,
+      "vh": 768,
+      "overflowX": false,
+      "smallBtns": [],
+      "hanNodes": [
+        "回學院",
+        "把蛋糕平穩送到",
+        "暫停",
+        "穩定度 100%",
+        "✓ 坐穩參照",
+        "收起特寫",
+        "左轉",
+        "右轉",
+        "煞車",
+        "再聽一次"
+      ]
+    },
+    {
+      "label": "scene-crossing-desktop-1366x768",
+      "vw": 1366,
+      "vh": 768,
+      "overflowX": false,
+      "smallBtns": [],
+      "hanNodes": [
+        "回學院",
+        "路口停看等",
+        "暫停",
+        "停下",
+        "看左邊",
+        "看右邊",
+        "再聽一次"
+      ]
+    }
+  ],
+  "screenshots": [
+    "flight-start-en-phone-390x844.jpg",
+    "flight-playing-en-phone-390x844.jpg",
+    "flight-end-en-phone-390x844.jpg",
+    "scene-cake-en-phone-390x844.jpg",
+    "scene-crossing-en-phone-390x844.jpg",
+    "flight-start-en-landscape-844x390.jpg",
+    "flight-playing-en-landscape-844x390.jpg",
+    "flight-end-en-landscape-844x390.jpg",
+    "scene-cake-en-landscape-844x390.jpg",
+    "scene-crossing-en-landscape-844x390.jpg",
+    "flight-start-en-desktop-1366x768.jpg",
+    "flight-playing-en-desktop-1366x768.jpg",
+    "flight-end-en-desktop-1366x768.jpg",
+    "scene-cake-en-desktop-1366x768.jpg",
+    "scene-crossing-en-desktop-1366x768.jpg"
+  ],
+  "zhCheck": {
+    "lang": "zh-Hant-TW",
+    "title": "交通學院・飛機課｜起飛、導航、降落",
+    "startBtn": "出發✈",
+    "heading": "今天，飛去哪裡？"
+  }
+}

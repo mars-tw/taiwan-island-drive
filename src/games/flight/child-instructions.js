@@ -8,7 +8,7 @@ export function childAction(s){
  if(p.stage==='stopping'||p.stage==='parked')return ['慢慢停好','■',false];
  if(s.lesson==='treasure')return ['繼續找星星','★',false];
  if(s.lesson==='mail')return ['郵件送達中','✉',false];
- if(s.lesson==='tour')return [mission.targetLabel?'飛往'+mission.targetLabel:'一起看風景','◎',false];
+ if(s.lesson==='tour')return [mission.targetLabel?'飛往{place}'.replace('{place}',mission.targetLabel):'一起看風景','◎',false];
  if(s.lesson==='navigation')return ['跟著圓圈飛','◎',false];
  return ['助飛中','―',false];
 }

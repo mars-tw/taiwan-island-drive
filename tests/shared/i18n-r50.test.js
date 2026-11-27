@@ -23,12 +23,28 @@ const placeholders = text => [...String(text).matchAll(/\{(\w+)\}/g)].map(m => m
 const FULLY_TRANSLATED = [
   'src/home.js', 'src/shared/bootstrap.js', 'src/shared/parent-gate.js', 'src/shared/safety-ui.js', 'src/shared/safety-lesson.js',
   'src/shared/academy.js', 'src/shared/academy-ui.js', 'src/shared/passport.js', 'src/shared/lobby-music.js', 'src/shared/language-ui.js',
+  // L3b: flight + content-r26..r43 (content-r35-scene.js / content-r35-ui.js are SHA256-locked by R38 and localized at runtime via renderR43)
+  'src/games/flight/audio.js', 'src/games/flight/child-instructions.js', 'src/games/flight/child-pilot.js', 'src/games/flight/config.js',
+  'src/games/flight/flight-plans.js', 'src/games/flight/game.js', 'src/games/flight/instruments.js', 'src/games/flight/main.js',
+  'src/games/flight/mission.js', 'src/games/flight/physics.js', 'src/games/flight/rewards.js', 'src/games/flight/scenery.js',
+  'src/games/flight/voice.js', 'src/games/flight/world.js',
+  'src/shared/content-r26.js', 'src/shared/content-r26-scene.js', 'src/shared/content-r27.js', 'src/shared/content-r27-scene.js',
+  'src/shared/content-r28.js', 'src/shared/content-r28-scene.js', 'src/shared/content-r29.js', 'src/shared/content-r29-scene.js',
+  'src/shared/content-r30.js', 'src/shared/content-r30-scene.js', 'src/shared/content-r31.js', 'src/shared/content-r31-scene.js',
+  'src/shared/content-r32.js', 'src/shared/content-r32-scene.js', 'src/shared/content-r33.js', 'src/shared/content-r33-scene.js',
+  'src/shared/content-r35.js', 'src/shared/content-r37-scene.js', 'src/shared/content-r37-ui.js', 'src/shared/content-r39-ui.js',
+  'src/shared/content-r40-ui.js', 'src/shared/content-r41-scene.js', 'src/shared/content-r41-ui.js', 'src/shared/content-r42-scene.js',
+  'src/shared/content-r42-ui.js', 'src/shared/content-r43-scene.js', 'src/shared/content-r43-ui.js',
 ];
-const HTML_SCOPE = { 'index.html': 'all', 'car/index.html': 'head', 'train/index.html': 'head', 'flight/index.html': 'head' };
+const HTML_SCOPE = { 'index.html': 'all', 'car/index.html': 'head', 'train/index.html': 'head', 'flight/index.html': 'all' };
 // 不給玩家看、或刻意不翻的中文（每一條寫原因）。
 const NOT_UI = [
   { file: 'src/shared/academy-ui.js', text: '再看看', why: '比對 dispatch 訊息開頭，用來決定要不要顯示，不會顯示在畫面上' },
   { file: 'src/shared/language-ui.js', text: '中文', why: '語言切換鈕固定顯示中文與 English 兩個名稱（translate="no"）' },
+  // L3b internal string matchers / rewriters
+  ...['燈塔', '港', '岩', '農', '觀景'].map(text => ({ file: 'src/games/flight/scenery.js', text, why: '比對 flight-plans 中文地標名以決定 3D 建物類型，不顯示在畫面上' })),
+  ...['亮起的手，', '看蛋糕歪哪邊，', '快到托盤邊，', '歪得很大，', '推回托盤中央', '慢慢扶回正', '推回中央'].map(text => ({ file: 'src/shared/content-r39-ui.js', text, why: '改寫 R35 中文句子用的內部片段；改寫後的完整句皆已收進 en-scenes.js' })),
+  ...['亮起的手，', '看蛋糕歪哪邊，', '亮起的手', '快到托盤邊，', '歪得很大，', '推回托盤中央', '慢慢扶回正', '推回中央'].map(text => ({ file: 'src/shared/content-r41-scene.js', text, why: '改寫 R35 中文句子用的內部片段；改寫後的完整句皆已收進 en-scenes.js' })),
 ];
 
 test('R50 every dictionary file is loaded by i18n.js and no key has two different translations', () => {

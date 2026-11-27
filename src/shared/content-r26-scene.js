@@ -1,33 +1,36 @@
 import {drivingCue as previousDriving,crossingCue as previousCrossing,holdFeedback as previousHold,boardingCue as previousBoarding,DOOR_SILL} from './content-r25-scene.js';
 import {FRIEND_NAMES,PASSENGER_NAMES} from './content-r24.js';
 import {queueFrame} from './content-r10-scene.js';
+import {t} from './i18n.js';
 export * from './content-r25-scene.js';
 
-export function stability(g){
+// R50: the rules below compare the Chinese status; stability() shows it in the chosen language.
+function leanStatus(g){
  const lean=Math.abs(g.balanceLean||0),fill=lean===0?100:Math.min(99,100-Math.round(Math.min(32,lean)/32*100));
  const direction=(g.input?.['recover-right']?1:0)-(g.input?.['recover-left']?1:0);
  const status=lean===0?'坐穩了':g.recoveryActive?(direction*(g.balanceLean||0)>0?'越來越歪':direction?'回穩中':'等你扶正'):fill>=95?'快扶正了':'傾斜中';
  return {status,fill};
 }
+export function stability(g){const s=leanStatus(g);return {status:t(s.status),fill:s.fill};}
 export function drivingCue(g){
  const cue=previousDriving(g);
- if(g.recoveryActive){const side=g.balanceLean>0?'左':'右',status=stability(g).status;return {...cue,status,text:status==='越來越歪'?`越扶越歪，改按${side}邊。`:status==='等你扶正'?`等你扶正，按住${side}邊。`:`向${side}扶，慢慢回中央。`};}
- if(g.bayStopped&&!g.bayRestarted)return {action:g.bayRestTime<.6?'':'go',status:stability(g).status,text:g.bayRestTime<.6?'停穩了，讓蛋糕休息一下。':'休息好了，可以出發了。'};
- if(g.stage===2&&g.distance>=42&&!g.bayStopped)return {action:'brake',status:stability(g).status,text:'休息灣到了，按住煞車停穩。'};
+ if(g.recoveryActive){const left=g.balanceLean>0,status=leanStatus(g).status;return {...cue,status:t(status),text:t(status==='越來越歪'?(left?'越扶越歪，改按左邊。':'越扶越歪，改按右邊。'):status==='等你扶正'?(left?'等你扶正，按住左邊。':'等你扶正，按住右邊。'):left?'向左扶，慢慢回中央。':'向右扶，慢慢回中央。')};}
+ if(g.bayStopped&&!g.bayRestarted)return {action:g.bayRestTime<.6?'':'go',status:stability(g).status,text:t(g.bayRestTime<.6?'停穩了，讓蛋糕休息一下。':'休息好了，可以出發了。')};
+ if(g.stage===2&&g.distance>=42&&!g.bayStopped)return {action:'brake',status:stability(g).status,text:t('休息灣到了，按住煞車停穩。')};
  return {...cue,status:stability(g).status};
 }
 export function holdFeedback(g){
  if(g.kind==='cake'&&g.recoveryActive)return {...previousHold(g),reason:drivingCue(g).text};
- if(g.kind==='tickets'&&g.phase==='boarding'&&g.doorStage==='boarding')return {...previousHold(g),reason:g.input.escort?'':g.escortStarted?'放開了，朋友等你再按住。':'按住陪上車。'};
+ if(g.kind==='tickets'&&g.phase==='boarding'&&g.doorStage==='boarding')return {...previousHold(g),reason:g.input.escort?'':t(g.escortStarted?'放開了，朋友等你再按住。':'按住陪上車。')};
  return previousHold(g);
 }
 export function crossingCue(g){
- if(g.crossTime>0&&g.crossTime/g.crossingDuration>=.82)return {action:'',text:`${FRIEND_NAMES[g.crossingPerson]}到對岸了，等他站好。`};
- if(g.crossTime>0)return {action:'',text:`現在輪到：${FRIEND_NAMES[g.crossingPerson]}。還有人在過街。`};
+ if(g.crossTime>0&&g.crossTime/g.crossingDuration>=.82)return {action:'',text:t('{name}到對岸了，等他站好。',{name:t(FRIEND_NAMES[g.crossingPerson])})};
+ if(g.crossTime>0)return {action:'',text:t('現在輪到：{name}。還有人在過街。',{name:t(FRIEND_NAMES[g.crossingPerson])})};
  return previousCrossing(g);
 }
 export function boardingCue(g){
- if(g.doorStage==='boarding'&&queueFrame(g.boardTime,g.boardingIndex).seated)return {action:'escort',hold:true,label:'陪他坐穩',text:`${PASSENGER_NAMES[g.boardingIndex]}坐好了，繼續按住陪他坐穩。`};
+ if(g.doorStage==='boarding'&&queueFrame(g.boardTime,g.boardingIndex).seated)return {action:'escort',hold:true,label:t('陪他坐穩'),text:t('{name}坐好了，繼續按住陪他坐穩。',{name:t(PASSENGER_NAMES[g.boardingIndex])})};
  return previousBoarding(g);
 }
 

@@ -4,7 +4,7 @@ import './art-round6.css';
 import './art-round7.css';
 import './art-round8.css';
 import {appUrl} from './paths.js';
-import {t,setText,onLanguageChange} from './i18n.js';
+import {t,setText,setAttr,onLanguageChange} from './i18n.js';
 export function artImage(name,alt='',className=''){
   const r8={logo:'logo',badge:'coast-star','coast-sign':'coast-sign',panel:'ocean-ticket','train-platform':'train-platform','coach-safe-window':'coach-safe-window'};
   const newest=['coach-straight','coach-turn','coach-reward','coach-radio','panel','turn-sign','car-rear','flight-rear','finish-flag','badge','logo'].includes(name);
@@ -22,8 +22,8 @@ export function installArt(){
   const coach=document.querySelector('.coach-label');
   if(coach)coach.prepend(artImage('coach','阿路教練','coach-avatar'));
   const flightBrand=document.querySelector('body[data-game=flight] #menu .brand');
-  if(flightBrand){const tag=document.createElement('div');tag.className='flight-coach';tag.append(artImage('coach','阿路教練'));const text=document.createElement('span');text.textContent='阿路教練陪你飛';tag.append(text);flightBrand.append(tag);}
-  if(flightBrand){const tools=document.createElement('div');tools.className='flight-menu-tools';const extra=document.querySelector('.extra-activities'),parent=document.querySelector('.parent-settings');parent.before(tools);tools.append(extra,parent);extra.querySelector('summary').textContent='更多玩法';parent.querySelector('summary').textContent='家長設定';extra.addEventListener('toggle',()=>extra.querySelector('summary').textContent=extra.open?'尋寶／郵差':'更多玩法');parent.addEventListener('toggle',()=>{if(parent.open)extra.open=false;});}
+  if(flightBrand){const tag=document.createElement('div');tag.className='flight-coach';tag.append(setAttr(artImage('coach'),'alt','阿路教練'));const text=document.createElement('span');setText(text,'阿路教練陪你飛');tag.append(text);flightBrand.append(tag);}
+  if(flightBrand){const tools=document.createElement('div');tools.className='flight-menu-tools';const extra=document.querySelector('.extra-activities'),parent=document.querySelector('.parent-settings');parent.before(tools);tools.append(extra,parent);setText(extra.querySelector('summary'),'更多玩法');setText(parent.querySelector('summary'),'家長設定');extra.addEventListener('toggle',()=>setText(extra.querySelector('summary'),extra.open?'尋寶／郵差':'更多玩法'));parent.addEventListener('toggle',()=>{if(parent.open)extra.open=false;});}
   if(document.body.dataset.game==='car'){
     const intro=document.querySelector('#menu .intro'),hero=document.createElement('div');hero.className='car-hero';
     const picture=artImage('coupe-0','海風 GT 雙門跑車','car-preview-image');picture.id='car-preview-image';hero.append(picture,artImage('coach','阿路教練陪你開車','car-menu-coach'));
@@ -37,7 +37,7 @@ export function installArt(){
     const selected=window.__islandDrive?.getSelected();if(selected){const row=['#3b9297','#eece89','#edeeee','#cf725b','#3c4351'].indexOf(selected.paint);picture.src=appUrl(`art/r6/${selected.vehicleId}-${row}.png`);}
   }
   if(document.body.dataset.game==='flight'){
-    const hudCoach=document.createElement('div');hudCoach.className='flying-coach';hudCoach.append(artImage('coach-radio','阿路教練透過無線電指引當前目標'));document.querySelector('.lesson-prompt').prepend(hudCoach);
+    const hudCoach=document.createElement('div');hudCoach.className='flying-coach';hudCoach.append(setAttr(artImage('coach-radio'),'alt','阿路教練透過無線電指引當前目標'));document.querySelector('.lesson-prompt').prepend(hudCoach);
     document.querySelector('.flight-top .top-actions').prepend(document.querySelector('#instrument-toggle'));
   }
 }

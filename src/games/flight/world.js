@@ -6,6 +6,10 @@ import {RoomEnvironment} from 'three/addons/environments/RoomEnvironment.js';
 import {MAPS,RUNWAY} from './config.js';
 import {WAYPOINTS} from './mission.js';
 import {FlightScenery} from './scenery.js';
+import {getLanguage,translateText} from '../../shared/i18n.js';
+// R50: target labels stay Chinese (the scenery and missions read them); the sign shows the
+// chosen language. fill() builds a label from its dictionary key.
+const fill=(key,n)=>key.replace('{n}',n);
 
 export function aircraftQuaternion(s){return new THREE.Quaternion().setFromEuler(new THREE.Euler(-s.pitch,-s.heading,s.bank,'YXZ'));}
 
@@ -16,7 +20,7 @@ export class FlightWorld{
   this.camera=new THREE.PerspectiveCamera(58,1,.08,46000);this.group=new THREE.Group();this.scene.add(this.group);this.scene.add(new THREE.HemisphereLight(0xdce9f0,0x6f7967,1.65));
   const sun=new THREE.DirectionalLight(0xfff0d8,2.6);sun.castShadow=true;sun.shadow.mapSize.set(1024,1024);sun.shadow.camera.left=-95;sun.shadow.camera.right=95;sun.shadow.camera.top=95;sun.shadow.camera.bottom=-95;sun.shadow.camera.near=1;sun.shadow.camera.far=1700;sun.shadow.bias=-.00015;this.scene.add(sun,sun.target);this.sun=sun;
   this.aircraft=new THREE.Group();this.cab=new THREE.Group();this.scene.add(this.aircraft,this.cab);this.aircraft.name='PlayerAircraft';this.cab.name='PlayerCockpit';this.props=[];this.surfaces=[];this.loaded=false;this.view='chase';this.gates=[];this.markerRoot=new THREE.Group();this.scene.add(this.markerRoot);this.markerSignature='';this.viewport={width:1,height:1};this.lastAircraftPosition=new THREE.Vector3(1e9,1e9,1e9);this.modelBounds=new THREE.Box3(new THREE.Vector3(-5.8,0,-4.3),new THREE.Vector3(5.8,3.3,4.3));this.cameraNeedsSnap=true;this.time=0;
-  this.parcel=new THREE.Group();this.parcel.name='PhysicalFallingParcel';const parcel=new THREE.Mesh(new THREE.BoxGeometry(2.2,1.6,1.7),new THREE.MeshStandardMaterial({color:0xbfa574,roughness:.85}));this.parcel.add(parcel);const tape=new THREE.Mesh(new THREE.BoxGeometry(.35,1.64,1.74),new THREE.MeshStandardMaterial({color:0xe8dcc0,roughness:.8}));this.parcel.add(tape);this.parcelLabel=this.markerLabel('郵件');this.parcelLabel.scale.set(18,3.4,1);this.parcelLabel.position.y=4;this.parcel.add(this.parcelLabel);this.parcel.visible=false;this.scene.add(this.parcel);
+  this.parcel=new THREE.Group();this.parcel.name='PhysicalFallingParcel';const parcel=new THREE.Mesh(new THREE.BoxGeometry(2.2,1.6,1.7),new THREE.MeshStandardMaterial({color:0xbfa574,roughness:.85}));this.parcel.add(parcel);const tape=new THREE.Mesh(new THREE.BoxGeometry(.35,1.64,1.74),new THREE.MeshStandardMaterial({color:0xe8dcc0,roughness:.8}));this.parcel.add(tape);this.parcelLabel=this.markerLabel('郵件');this.parcelLabelLanguage=getLanguage();this.parcelLabel.scale.set(18,3.4,1);this.parcelLabel.position.y=4;this.parcel.add(this.parcelLabel);this.parcel.visible=false;this.scene.add(this.parcel);
   this.coastBackdrop=new THREE.TextureLoader().load(assetUrl('art/r8/airborne-coast.webp'));this.coastBackdrop.colorSpace=THREE.SRGBColorSpace;this.coastBackdrop.wrapS=THREE.RepeatWrapping;this.setMap('coast');this.observeStage();this.resize();this.loadAssets();
  }
  async loadAssets(){
@@ -40,11 +44,12 @@ export class FlightWorld{
  resize(){
   this.observeStage();const parent=this.canvas.parentElement;if(!parent)return;const w=Math.round(parent.clientWidth),h=Math.round(parent.clientHeight);if(w<=0||h<=0)return;if(this.viewport.width===w&&this.viewport.height===h)return;this.viewport={width:w,height:h};this.renderer.setSize(w,h,false);this.camera.aspect=w/h;this.camera.updateProjectionMatrix();this.cameraNeedsSnap=true;
  }
- markerLabel(text){const c=document.createElement('canvas');c.width=512;c.height=96;const ctx=c.getContext('2d');const label=/^星星/.test(text)?`⭐ ${text}`:text;ctx.fillStyle='#fff3b0';ctx.strokeStyle='#ffb000';ctx.lineWidth=6;ctx.beginPath();if(ctx.roundRect)ctx.roundRect(4,4,504,88,44);else ctx.rect(4,4,504,88);ctx.fill();ctx.stroke();ctx.fillStyle='#5a3b00';ctx.font='bold 40px sans-serif';ctx.textAlign='center';ctx.fillText(label,256,63);const texture=new THREE.CanvasTexture(c);texture.colorSpace=THREE.SRGBColorSpace;const sprite=new THREE.Sprite(new THREE.SpriteMaterial({map:texture,depthTest:false,transparent:true,opacity:.95,toneMapped:false}));sprite.scale.set(170,32,1);return sprite;}
+ markerLabel(text){const c=document.createElement('canvas');c.width=512;c.height=96;const ctx=c.getContext('2d');const shown=translateText(text),label=/^星星/.test(text)?`⭐ ${shown}`:shown;ctx.fillStyle='#fff3b0';ctx.strokeStyle='#ffb000';ctx.lineWidth=6;ctx.beginPath();if(ctx.roundRect)ctx.roundRect(4,4,504,88,44);else ctx.rect(4,4,504,88);ctx.fill();ctx.stroke();ctx.fillStyle='#5a3b00';ctx.font='bold 40px sans-serif';const width=ctx.measureText(label).width;if(width>470)ctx.font=`bold ${Math.floor(40*470/width)}px sans-serif`;ctx.textAlign='center';ctx.fillText(label,256,63);const texture=new THREE.CanvasTexture(c);texture.colorSpace=THREE.SRGBColorSpace;const sprite=new THREE.Sprite(new THREE.SpriteMaterial({map:texture,depthTest:false,transparent:true,opacity:.95,toneMapped:false}));sprite.scale.set(170,32,1);return sprite;}
  starGeometry(radius){const shape=new THREE.Shape();for(let i=0;i<10;i++){const angle=i*Math.PI/5-Math.PI/2,r=i%2?radius*.43:radius,x=Math.cos(angle)*r,y=Math.sin(angle)*r;i?shape.lineTo(x,y):shape.moveTo(x,y);}shape.closePath();return new THREE.ExtrudeGeometry(shape,{depth:3,bevelEnabled:false});}
  updateMarkers(mission,menu){
-  const targets=mission?.targets?.length?mission.targets:mission?.mode==='navigation'?WAYPOINTS.map((w,i)=>({...w,id:`nav-${i}`,label:`導航 ${i+1}`,kind:'navigation',radius:70,visited:i<mission.passed})):[];
-  const signature=targets.map(t=>`${t.id}:${t.kind}:${t.x}:${t.y}:${t.z}`).join('|');
+  const targets=mission?.targets?.length?mission.targets:mission?.mode==='navigation'?WAYPOINTS.map((w,i)=>({...w,id:`nav-${i}`,label:fill('導航 {n}',i+1),kind:'navigation',radius:70,visited:i<mission.passed})):[];
+  if(this.parcelLabelLanguage!==getLanguage()){const old=this.parcelLabel,next=this.markerLabel('郵件');next.scale.copy(old.scale);next.position.copy(old.position);this.parcel.remove(old);old.material.map?.dispose();old.material.dispose();this.parcel.add(next);this.parcelLabel=next;this.parcelLabelLanguage=getLanguage();}
+  const signature=getLanguage()+'|'+targets.map(t=>`${t.id}:${t.kind}:${t.x}:${t.y}:${t.z}`).join('|');
   if(signature!==this.markerSignature){
    this.markerRoot.traverse(o=>{o.geometry?.dispose();if(o.material){o.material.map?.dispose();o.material.dispose();}});this.markerRoot.clear();this.gates=[];
    for(const [i,t] of targets.entries()){
@@ -52,7 +57,7 @@ export class FlightWorld{
     if(t.kind==='star'||t.kind==='treasure'||!t.kind&&mission?.mode==='treasure'){marker=new THREE.Mesh(this.starGeometry(radius*.34),mat);g.add(marker);const ringMat=mat.clone();ringMat.color.setHex(0xfff0a0);ringMat.opacity=.8;const ring=new THREE.Mesh(new THREE.TorusGeometry(radius,2.4,6,48),ringMat);g.add(ring);}
     else if(t.kind==='delivery'||t.kind==='mail'||!t.kind&&mission?.mode==='mail'){marker=new THREE.Mesh(new THREE.TorusGeometry(Math.min(radius,75),2.6,5,40),mat);marker.rotation.x=-Math.PI/2;marker.position.y=1.2;g.add(marker);const pole=new THREE.Mesh(new THREE.CylinderGeometry(1.5,1.5,105,6),new THREE.MeshBasicMaterial({color:0x95bdc6,transparent:true,opacity:.34}));pole.position.y=52;g.add(pole);}
     else{marker=new THREE.Mesh(new THREE.TorusGeometry(radius,2.5,6,44),mat);g.add(marker);}
-    const label=this.markerLabel(t.label||`目的地 ${i+1}`);label.position.y=radius+25;g.add(label);this.markerRoot.add(g);this.gates.push(g);g.userData={targetIndex:i,marker,label,kind:t.kind,radius};
+    const label=this.markerLabel(t.label||fill('目的地 {n}',i+1));label.position.y=radius+25;g.add(label);this.markerRoot.add(g);this.gates.push(g);g.userData={targetIndex:i,marker,label,kind:t.kind,radius};
    }this.markerSignature=signature;
   }
   this.markerRoot.visible=!menu;

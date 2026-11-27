@@ -1,4 +1,5 @@
 import {CROSSING_ROADS,cakeView as previousCakeView} from './content-r35-scene.js';
+import {t} from './i18n.js';
 
 // Measured on the full-frame R24 paintings, in percent. These strips are
 // paving, between the traffic kerb and the mouth of the player's side road.
@@ -25,11 +26,12 @@ export function arrivedCount(g){
 }
 export function wrongSupportText(view,input){
  if(!view.support||!input['recover-'+view.warningSide]||input['recover-'+view.support])return '';
- const lean=view.warningSide==='left'?'左':'右',push=view.support==='left'?'左':'右';
- return `推錯邊了，蛋糕往${lean}歪，要往${push}扶。`;
+ const lean=view.warningSide==='left',push=view.support==='left';
+ return t(lean?(push?'推錯邊了，蛋糕往左歪，要往左扶。':'推錯邊了，蛋糕往左歪，要往右扶。'):push?'推錯邊了，蛋糕往右歪，要往左扶。':'推錯邊了，蛋糕往右歪，要往右扶。');
 }
 export function cakeHint(view,input){
- return wrongSupportText(view,input)||view.text.replace('亮起的手，','看蛋糕歪哪邊，').replace('亮起的手','看蛋糕歪哪邊，').replace('快到托盤邊，','歪得很大，').replace('推回托盤中央','慢慢扶回正').replace('推回中央','慢慢扶回正');
+ // R50: reword the Chinese sentence (textKey), then show it in the chosen language.
+ return wrongSupportText(view,input)||t((view.textKey??view.text).replace('亮起的手，','看蛋糕歪哪邊，').replace('亮起的手','看蛋糕歪哪邊，').replace('快到托盤邊，','歪得很大，').replace('推回托盤中央','慢慢扶回正').replace('推回中央','慢慢扶回正'));
 }
 export function cakeView(g){
  const view=previousCakeView(g),text=cakeHint(view,g.input);

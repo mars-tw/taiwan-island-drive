@@ -1,4 +1,5 @@
 import {crossingArrivalHint,clearFaceLabel,trainWindow} from './content-r42-scene.js';
+import {t} from './i18n.js';
 const trainAnchors=new WeakMap();
 
 export function renderR42({g,view,dialog,scene,miniature,closeup}){
@@ -35,10 +36,10 @@ export function renderR42({g,view,dialog,scene,miniature,closeup}){
   const compare=dialog.querySelector('.r30-comparison'),work=dialog.querySelector('.content-work');
   if(innerWidth>innerHeight&&innerHeight<=520&&g.phase==='playing'){
    if(compare.parentElement!==work)work.prepend(compare);
-   compare.querySelector('.r33-compare-title').innerHTML='<span></span><b>你的車票</b><span></span><b>這個月台</b><span></span>';
+   compare.querySelector('.r33-compare-title').innerHTML='<span></span><b>'+t('你的車票')+'</b><span></span><b>'+t('這個月台')+'</b><span></span>';
   }else if(compare.parentElement!==scene)scene.append(compare);
   for(const swatch of compare.querySelectorAll('.r32-compare-row .color-dot')){
-   swatch.dataset.sample='color-bar';swatch.setAttribute('aria-label',({green:'綠色',blue:'藍色',orange:'橘色'})[swatch.dataset.color]||'待選顏色');
+   swatch.dataset.sample='color-bar';swatch.setAttribute('aria-label',t(({green:'綠色',blue:'藍色',orange:'橘色'})[swatch.dataset.color]||'待選顏色'));
   }
   // All exterior phases share the exact same car, scale and track. Only x
   // advances at departure. Keep this projection independent of the work panel.

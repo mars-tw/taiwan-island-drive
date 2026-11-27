@@ -1,4 +1,6 @@
 /** Original Taiwan-inspired scaled sightseeing points; not geographical data. */
+// R50: labels stay Chinese (scenery matches words in them); fill() builds one from its dictionary key.
+const fill=(key,n)=>key.replace('{n}',n);
 export const NAVIGATION_POINTS=[{x:0,y:145,z:500},{x:150,y:145,z:1000},{x:260,y:145,z:1510}];
 const TOUR={
  coast:[['海岸燈塔',-700,240,2500],['海灣小港',800,260,5700],['海蝕岩島',-600,280,9000]],
@@ -8,8 +10,8 @@ const TOUR={
 };
 export function getFlightTargets(mode,map='coast'){
  let points=[];
- if(mode==='navigation')points=NAVIGATION_POINTS.map((p,i)=>({...p,label:`導航圈 ${i+1}`,kind:'ring',radius:100}));
- if(mode==='treasure')points=[[0,160,550],[60,170,1000],[140,160,1450],[220,175,1900],[240,170,2350],[220,180,2800]].map(([x,y,z],i)=>({x,y,z,label:`星星 ${i+1}`,kind:'star',radius:135}));
+ if(mode==='navigation')points=NAVIGATION_POINTS.map((p,i)=>({...p,label:fill('導航圈 {n}',i+1),kind:'ring',radius:100}));
+ if(mode==='treasure')points=[[0,160,550],[60,170,1000],[140,160,1450],[220,175,1900],[240,170,2350],[220,180,2800]].map(([x,y,z],i)=>({x,y,z,label:fill('星星 {n}',i+1),kind:'star',radius:135}));
  if(mode==='mail')points=[{x:-150,y:0,z:1100,label:'第一座郵箱',kind:'mail',radius:180,flightAltitude:125},{x:220,y:0,z:2300,label:'第二座郵箱',kind:'mail',radius:180,flightAltitude:125}];
  if(mode==='tour')points=(TOUR[map]||TOUR.coast).map(([label,x,y,z])=>({label,x,y,z,kind:'landmark',radius:450,dwellSeconds:3}));
  return points.map((p,i)=>({id:`${mode}-${map}-${i+1}`,visited:false,...p}));

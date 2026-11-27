@@ -3,6 +3,8 @@ import {queueFrame} from './content-r10-scene.js';
 export {FRIEND_NAMES,PASSENGER_NAMES,FRIEND_NUMBERS} from './content-r32.js';
 const clamp=(v,a,b)=>Math.max(a,Math.min(b,v));
 export const BOARDING_STOPS=Object.freeze([.69,.86]);
+// R50: the hint stays Chinese in the lesson state; the screen translates it. fill() builds it from its dictionary key.
+const fill=(key,name)=>key.replace('{name}',name);
 
 export class ContentLesson extends PreviousLesson {
  get bend(){return this.kind==='cake'&&this.stage===2?((this.layoutSeed||0)%2?1:-1):super.bend;}
@@ -11,7 +13,7 @@ export class ContentLesson extends PreviousLesson {
  depart(){
   const ok=super.depart();
   if(!ok&&this.kind==='crossing'){
-   this.choiceHint=this.speed>.05?'先煞車停穩。':this.crossTime>0?`等${FRIEND_NAMES[this.crossingPerson]}走到對岸。`:this.trafficActive?`${this.trafficSource==='left'?'左':'右'}邊有車，先等。`:this.staleSide?`車過了，再看${this.staleSide==='left'?'左':'右'}邊。`:this.crossed<3?`等${FRIEND_NAMES[this.crossingPerson]}過街。`:'再看清楚兩邊。';
+   this.choiceHint=this.speed>.05?'先煞車停穩。':this.crossTime>0?fill('等{name}走到對岸。',FRIEND_NAMES[this.crossingPerson]):this.trafficActive?(this.trafficSource==='left'?'左邊有車，先等。':'右邊有車，先等。'):this.staleSide?(this.staleSide==='left'?'車過了，再看左邊。':'車過了，再看右邊。'):this.crossed<3?fill('等{name}過街。',FRIEND_NAMES[this.crossingPerson]):'再看清楚兩邊。';
   }return ok;
  }
  update(seconds){

@@ -82,6 +82,7 @@
   汐止 Xizhi、奮起湖 Fenqihu、大慶 Daqing、花東海岸 Hualien–Taitung Coast。車站寫成「Xizhi Station」。
 - **遊戲自創的站名**：翻意思，讓孩子聽得懂。已定：海風站 Sea Breeze Station（句中可簡稱 Sea Breeze）、轉運站 Transfer Station。
   其他照同一個方式：花園站 Garden Station、榕樹站 Banyan Station、森林站 Forest Station、鐘樓站 Clock Tower Station、燈塔小站 Lighthouse Stop。
+- **L3b 新增地點與角色名**：海岸坡 Coast Hill、燈塔雙彎 Lighthouse Twin Bends、休息灣 Rest Bay、分享站 Sharing Stop、海風路口 Sea Breeze Crossing、榕樹路口 Banyan Crossing、燈塔路口 Lighthouse Crossing、縱谷練習場 Rift Valley Field、澎湖離島 Penghu Islands、都會河岸 City Riverside；小安 An、小柏 Bo、小晴 Qing、小宇 Yu、阿嬤／奶奶 Grandma。
 - 新增地名時，把它補進本表，再寫進自己那條線的字典。
 
 ## 四、寫法小規則

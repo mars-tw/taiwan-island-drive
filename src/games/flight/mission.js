@@ -2,6 +2,9 @@ import { FEET,KNOTS,G } from './physics.js';
 import { RUNWAY,MAP_EXTENT } from './config.js';
 import { NAVIGATION_POINTS,getFlightTargets,getFlightTarget } from './flight-plans.js';
 export const WAYPOINTS=NAVIGATION_POINTS;
+// R50: messages stay Chinese in the mission state (tests and rules read them); the screen
+// translates them when drawn. fill() builds a message from its dictionary key.
+const fill=(key,params)=>key.replace(/\{(\w+)\}/g,(whole,name)=>params[name]??whole);
 export function newMission(mode,map='coast',options={}){
  let targets=getFlightTargets(mode,map);
  if(Number.isInteger(options.targets)&&options.targets>0)targets=targets.slice(0,options.targets);
@@ -43,15 +46,15 @@ export function updateMission(m,s,dt,{progressPaused=false}={}){
  }else if(m.mode==='navigation'||m.mode==='treasure'||m.mode==='tour'){
   const target=getFlightTarget(m);m.stage='flying';
   if(target){const distance=Math.hypot(s.position.x-target.x,s.position.y-target.y,s.position.z-target.z);
-   m.message=m.mode==='treasure'?'飛向'+target.label+'，寶藏就在前面。':m.mode==='tour'?'飛向'+target.label+'，看看那裡的風景。':'飛向第 '+(m.passed+1)+' 個金色圓圈。';
+   m.message=m.mode==='treasure'?fill('飛向{place}，寶藏就在前面。',{place:target.label}):m.mode==='tour'?fill('飛向{place}，看看那裡的風景。',{place:target.label}):fill('飛向第 {n} 個金色圓圈。',{n:m.passed+1});
    if(distance<target.radius){m.stableTime+=dt;if(m.mode!=='tour'||(Math.abs(s.bank)<.35&&m.stableTime>=target.dwellSeconds)){target.visited=true;m.passed++;m.phase=m.passed;m.stableTime=0;event(m,m.mode==='treasure'?'star':m.mode==='tour'?'landmark':'ring',target.label,s);}}
    else m.stableTime=0;
   }
   m.progress=m.total?m.passed/m.total:0;
-  if(m.passed===m.total)finish(m,m.mode==='treasure'?`${m.total} 份寶藏都找到了！`:m.mode==='tour'?`${m.total} 個景點都看到了！`:'金色圓圈都飛過了！');
+  if(m.passed===m.total)finish(m,m.mode==='treasure'?fill('{n} 份寶藏都找到了！',{n:m.total}):m.mode==='tour'?fill('{n} 個景點都看到了！',{n:m.total}):'金色圓圈都飛過了！');
  }else if(m.mode==='mail'){
-  m.stage=m.activeParcel?'dropping':'delivering';const target=getFlightTarget(m);m.message=m.activeParcel?'郵件慢慢落下來了。':target?'飛向'+target.label+'，把郵件送過去。':'郵件都送到了。';mailDelivery(m,s);m.phase=m.passed;m.progress=m.passed/m.total;
-  if(m.passed===m.total)finish(m,`${m.total} 份郵件都送到了！`);
+  m.stage=m.activeParcel?'dropping':'delivering';const target=getFlightTarget(m);m.message=m.activeParcel?'郵件慢慢落下來了。':target?fill('飛向{place}，把郵件送過去。',{place:target.label}):'郵件都送到了。';mailDelivery(m,s);m.phase=m.passed;m.progress=m.passed/m.total;
+  if(m.passed===m.total)finish(m,fill('{n} 份郵件都送到了！',{n:m.total}));
  }else if(m.mode==='landing'){
   m.stage=s.grounded?'stopping':'landing';m.message=s.grounded?'慢慢停下來，這次不用一直按住。':'對準跑道，我們慢慢下降。';m.progress=s.grounded?.85:Math.max(0,Math.min(.8,.8-s.position.y/120));
   if(s.grounded&&s.touchdown){m.phase=1;if(s.touchdown.onRunway&&s.airspeed<1.5&&s.throttle<.1){finish(m,'降落完成！飛機安全停好了。');m.score=Math.max(60,100-Math.round(Math.abs(s.touchdown.verticalSpeed)*8));}}

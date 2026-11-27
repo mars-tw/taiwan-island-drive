@@ -34,3 +34,13 @@ body[data-game=flight].academy-game{--academy-nav-height:calc(46px + env(safe-ar
  .dispatch-card .select-row{margin-top:12px}
 }
 .flight-top .top-actions button{min-width:44px;min-height:44px}
+
+/* R50: English map names are longer than the four Chinese characters. Wrap them. Chinese stays one line. */
+html[lang=en].art-r4.art-r5.art-r6 body[data-game=flight] .dispatch-card [data-flight-map]{min-height:104px;overflow:visible}
+html[lang=en].art-r4.art-r5.art-r6 body[data-game=flight] [data-flight-map] strong{white-space:normal;font-size:11px;line-height:1.15;text-align:center;padding:3px 2px 4px}
+/* R50: English place names are longer. Narrow portrait uses two columns and wraps. Chinese layout is unchanged (html lang=en only). */
+@media (max-width:720px) and (orientation:portrait) {
+  html[lang="en"].art-r4.art-r5.art-r6 body[data-game=flight] .flight-map-cards { grid-template-columns: 1fr 1fr; }
+  html[lang="en"].art-r4.art-r5.art-r6 body[data-game=flight] .dispatch-card [data-flight-map] { height: auto; min-height: 78px; overflow: hidden; }
+  html[lang="en"].art-r4.art-r5.art-r6 body[data-game=flight] [data-flight-map] strong { white-space: normal; line-height: 1.15; text-align: center; padding: 3px 4px 5px; }
+}
